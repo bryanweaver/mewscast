@@ -99,7 +99,7 @@ class ContentGenerator:
             print(f"✗ Error generating content: {e}")
             # Fallback tweet in cat reporter style
             return {
-                'tweet': f"Breaking mews: Updates on {selected_topic}. Stay tuned for fur-ther details. #BreakingMews",
+                'tweet': f"This reporter is looking into {selected_topic}.\n\nFur-ther details coming soon from my perch.",
                 'needs_source_reply': False,
                 'story_metadata': None
             }
@@ -142,14 +142,23 @@ STYLE:
 
 FORMAT:
 - Maximum {self.max_length} characters (strict!)
+- Use line breaks (\\n) between distinct thoughts/sentences for readability
 - NO emojis (very rare exceptions only)
-- Hashtags are good (especially #BreakingMews for branding)
-- Add relevant trending hashtags when appropriate
+- Hashtags: place at the end, never repeat the same hashtag
+- For ACTUAL breaking news: can start with "#BreakingMews: [content]"
+- For commentary/trends: skip "Breaking mews" phrase entirely - it's not breaking
 - Don't use quotes around the tweet
 - Write as if filing a news report
 
+EXAMPLES OF GOOD STRUCTURE:
+Breaking news: "#BreakingMews: Senate passes bill 68-32\\n\\nBipartisan wins happen when pressure mounts. #Politics"
+Commentary: "Gen Z trends shifting again.\\n\\nPaws for thought—cycles repeat. #Culture"
+
 AVOID:
 - {avoid_str}
+- Using "Breaking mews" for non-urgent stories or commentary
+- Cramming sentences together without line breaks
+- Repeating hashtags (especially #BreakingMews at start AND end)
 - Clickbait or engagement farming
 - Forced cat puns that don't fit
 - Being overly partisan (populist lean is OK)
