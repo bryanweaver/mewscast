@@ -55,12 +55,14 @@ print(f"✓ Has story metadata: {story_meta is not None}")
 print("\n3. Testing source reply generation...")
 if needs_source and story_meta:
     source_reply = generator.generate_source_reply(tweet_text, story_meta)
-    print(f"✓ Generated source reply ({len(source_reply)} chars):")
-    print(f"  {source_reply}")
+    print(f"✓ Generated source reply:")
+    print(f"  {source_reply[:80]}...")
 
-    # Verify URL is present
-    if story_meta.get('url') in source_reply:
-        print(f"✓ URL correctly included in reply")
+    # Verify URL is the ONLY content (for full link preview)
+    if source_reply == story_meta.get('url'):
+        print(f"✓ Source reply is URL only (enables full link preview card)")
+    elif story_meta.get('url') in source_reply:
+        print(f"⚠️  URL present but has additional text (may reduce preview quality)")
     else:
         print(f"✗ URL missing from reply!")
         sys.exit(1)

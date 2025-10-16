@@ -215,9 +215,9 @@ Just return the tweet text itself, nothing else."""
 
         # Build source reply with URL if available
         if url:
-            # X/Twitter generates link preview cards when URL is posted
-            # Keep it simple - just the URL so X shows the preview card
-            reply = f"📰 Source:\n\n{url}"
+            # X/Twitter only shows full link preview cards when posting JUST the URL
+            # Any text before URL prevents preview from showing
+            reply = url
         else:
             # Fallback format without URL
             context = story_metadata.get('context', '')
@@ -227,7 +227,7 @@ Just return the tweet text itself, nothing else."""
             if len(reply) > self.max_length:
                 reply = reply[:self.max_length - 3] + "..."
 
-        print(f"✓ Generated source reply ({len(reply)} chars raw, ~23 chars when posted to X)")
+        print(f"✓ Generated source reply (URL only for full link preview card)")
         return reply
 
     def generate_reply(self, original_tweet: str, context: Optional[str] = None) -> str:
