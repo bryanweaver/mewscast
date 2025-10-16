@@ -163,17 +163,25 @@ STYLE:
 
 FORMAT:
 - Maximum {self.max_length} characters (strict!)
-- Use line breaks (\\n) between distinct thoughts/sentences for readability
+- Use ACTUAL line breaks between distinct thoughts/sentences for readability
 - NO emojis (very rare exceptions only)
 - Hashtags: place at the end, never repeat the same hashtag
 - For ACTUAL breaking news: can start with "#BreakingMews: [content]"
 - For commentary/trends: skip "Breaking mews" phrase entirely - it's not breaking
 - Don't use quotes around the tweet
 - Write as if filing a news report
+- IMPORTANT: Use real line breaks, not \\n escape sequences
 
 EXAMPLES OF GOOD STRUCTURE:
-Breaking news: "#BreakingMews: Senate passes bill 68-32\\n\\nBipartisan wins happen when pressure mounts. #Politics"
-Commentary: "Gen Z trends shifting again.\\n\\nPaws for thought—cycles repeat. #Culture"
+Breaking news:
+"#BreakingMews: Senate passes bill 68-32
+
+Bipartisan wins happen when pressure mounts. #Politics"
+
+Commentary:
+"Gen Z trends shifting again.
+
+Paws for thought—cycles repeat. #Culture"
 
 AVOID:
 - {avoid_str}
@@ -299,21 +307,24 @@ Generate a SHORT image prompt (max 200 chars) for an AI image generator that wou
 Requirements:
 - Professional news/editorial illustration style
 - Bold, clean, modern digital art aesthetic
-- Relevant to the topic
+- MUST visually represent the MAIN IDEA of the story (not just the surface topic)
+- Show people/action relevant to the story (e.g., if about "choosing intimacy," show friends together, not isolation)
 - Suitable for social media (no text in image)
-- Not too literal - think metaphorical/symbolic
-- Cat reporter aesthetic where appropriate
+- Think about what SCENE or IMAGE best captures the story's meaning
+- Avoid generic or contradictory imagery
 
 Examples:
-- "Editorial illustration: US Capitol with infrastructure construction, professional news style, bold colors"
-- "Modern digital art: Economic chart with upward arrows, professional blue and gold palette"
-- "Clean vector illustration: Globe with news icons, professional journalism aesthetic"
+- Story about "Gen Z choosing intimacy over influencers" → "Group of diverse young friends laughing together in cozy cafe setting, warm lighting, authentic connection, modern editorial photography style"
+- Story about "Senate infrastructure bill" → "US Capitol with construction equipment, professional news illustration, bold patriotic colors"
+- Story about "economic growth" → "Upward trending arrow with business professionals celebrating, modern clean vector illustration"
+
+Analyze the tweet carefully and create a prompt that captures the ESSENCE and EMOTION of the story, not just keywords.
 
 Just return the SHORT image prompt itself, nothing else."""
 
             message = self.client.messages.create(
                 model=self.model,
-                max_tokens=150,
+                max_tokens=200,  # Increased for more detailed, contextual prompts
                 messages=[
                     {"role": "user", "content": prompt_request}
                 ]
