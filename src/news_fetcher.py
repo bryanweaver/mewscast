@@ -1,7 +1,6 @@
 """
-Google Trends integration for fetching real trending topics
+Google News RSS integration for fetching real news articles
 """
-from pytrends.request import TrendReq
 import feedparser
 import random
 from typing import List, Dict, Optional
@@ -9,137 +8,89 @@ import time
 
 
 class NewsFetcher:
-    """Fetches real trending topics from Google Trends"""
+    """Fetches real news articles from Google News RSS"""
 
     def __init__(self):
-        """Initialize Google Trends client"""
-        self.pytrends = TrendReq(hl='en-US', tz=360)
+        """Initialize news fetcher with search categories"""
+        # News categories to search (aligned with bot's focus)
+        self.news_categories = [
+            "US politics",
+            "Congress",
+            "Senate",
+            "economy",
+            "inflation",
+            "business news",
+            "technology",
+            "innovation",
+            "national news",
+            "UAP sighting",
+            "UFO disclosure",
+            "government transparency"
+        ]
 
     def get_trending_topics(self, count: int = 5, categories: List[str] = None) -> List[Dict]:
         """
-        Fetch trending topics from Google Trends
+        Fetch real news articles directly from Google News RSS
 
         Args:
-            count: Number of trending topics to fetch
-            categories: List of categories to focus on (e.g., ['politics', 'national'])
+            count: Number of articles to fetch
+            categories: List of categories to search (optional, uses defaults if not provided)
 
         Returns:
-            List of dictionaries with 'title' and 'context' for each trending topic
+            List of dictionaries with 'title', 'context', 'url', 'source' for each article
         """
-        try:
-            # Fetch real-time trending searches for United States
-            trending = self.pytrends.trending_searches(pn='united_states')
+        articles = []
+        search_categories = categories if categories else random.sample(self.news_categories, min(3, len(self.news_categories)))
 
-            if trending is not None and not trending.empty:
-                # Get top trending topics
-                topics = trending[0].tolist()[:count * 2]  # Get more to filter
+        print(f"🔍 Searching Google News RSS for categories: {', '.join(search_categories)}")
 
-                # Filter for news-worthy topics (avoid celebrity gossip, sports scores, etc)
-                filtered_topics = []
-                for topic in topics:
-                    topic_lower = topic.lower()
-                    # Focus on political, national, economic topics
-                    if any(keyword in topic_lower for keyword in [
-                        'president', 'senate', 'house', 'congress', 'bill', 'law',
-                        'election', 'vote', 'policy', 'government', 'trump', 'biden',
-                        'economy', 'inflation', 'jobs', 'market', 'crisis', 'war',
-                        'protest', 'strike', 'court', 'supreme', 'federal', 'state'
-                    ]):
-                        # Try to fetch actual article for this topic
-                        article = self.get_article_for_topic(topic)
+        for category in search_categories:
+            # Search Google News RSS for this category
+            article = self.get_article_for_topic(category)
 
-                        if article:
-                            # Use real article data
-                            filtered_topics.append({
-                                'title': article['title'],
-                                'context': article['description'][:200],  # Limit description length
-                                'url': article['url'],
-                                'source': article['source']
-                            })
-                        else:
-                            # Fallback to just the trending topic
-                            filtered_topics.append({
-                                'title': topic,
-                                'context': f"Currently trending on Google Trends",
-                                'source': 'Google Trends US'
-                            })
+            if article:
+                articles.append({
+                    'title': article['title'],
+                    'context': article['description'][:200],  # Limit description
+                    'url': article['url'],
+                    'source': article['source']
+                })
 
-                        if len(filtered_topics) >= count:
-                            break
+            # Stop if we have enough
+            if len(articles) >= count:
+                break
 
-                # If we filtered too much, use original topics with articles
-                if len(filtered_topics) < count:
-                    for topic in topics[:count]:
-                        if topic not in [t['title'] for t in filtered_topics]:
-                            # Try to fetch article
-                            article = self.get_article_for_topic(topic)
+            # Small delay to be respectful to Google
+            time.sleep(0.5)
 
-                            if article:
-                                filtered_topics.append({
-                                    'title': article['title'],
-                                    'context': article['description'][:200],
-                                    'url': article['url'],
-                                    'source': article['source']
-                                })
-                            else:
-                                filtered_topics.append({
-                                    'title': topic,
-                                    'context': f"Currently trending on Google Trends",
-                                    'source': 'Google Trends US'
-                                })
+        # If we still don't have enough, search more categories
+        if len(articles) < count:
+            remaining_categories = [c for c in self.news_categories if c not in search_categories]
+            random.shuffle(remaining_categories)
 
-                            if len(filtered_topics) >= count:
-                                break
+            for category in remaining_categories[:count - len(articles)]:
+                article = self.get_article_for_topic(category)
+                if article:
+                    articles.append({
+                        'title': article['title'],
+                        'context': article['description'][:200],
+                        'url': article['url'],
+                        'source': article['source']
+                    })
+                time.sleep(0.5)
 
-                print(f"✓ Fetched {len(filtered_topics)} trending topics with articles")
-                return filtered_topics[:count]
+        if articles:
+            print(f"✓ Fetched {len(articles)} articles from Google News RSS")
+            return articles
 
-        except Exception as e:
-            print(f"✗ Error fetching Google Trends: {e}")
-
-        # Fallback to general topics if Google Trends fails
-        print("ℹ️  Using fallback topics (Google Trends unavailable)")
-        fallback = [
-            {'title': 'economy and inflation', 'context': 'General topic', 'source': 'Fallback', 'url': None},
-            {'title': 'political landscape', 'context': 'General topic', 'source': 'Fallback', 'url': None},
-            {'title': 'technology innovation', 'context': 'General topic', 'source': 'Fallback', 'url': None},
-            {'title': 'national policy', 'context': 'General topic', 'source': 'Fallback', 'url': None},
-            {'title': 'cultural trends', 'context': 'General topic', 'source': 'Fallback', 'url': None}
-        ]
-        return random.sample(fallback, min(count, len(fallback)))
-
-    def get_topic_context(self, topic: str) -> Optional[Dict]:
-        """
-        Get additional context about a trending topic
-
-        Args:
-            topic: The trending topic to get context for
-
-        Returns:
-            Dictionary with topic details or None
-        """
-        try:
-            # Build interest over time
-            self.pytrends.build_payload([topic], timeframe='now 1-d')
-
-            # Get related queries
-            related = self.pytrends.related_queries()
-
-            context = {
-                'title': topic,
-                'related_queries': [],
-                'source': 'Google Trends'
-            }
-
-            if topic in related and related[topic]['top'] is not None:
-                top_queries = related[topic]['top']['query'].tolist()[:5]
-                context['related_queries'] = top_queries
-
-            return context
-
-        except Exception as e:
-            print(f"Note: Could not fetch context for '{topic}': {e}")
-            return None
+        # Ultimate fallback - should rarely happen
+        print("⚠️  Warning: Could not fetch any articles. Using minimal fallback.")
+        return [{
+            'title': 'Breaking news developments',
+            'context': 'Real-time news analysis from multiple sources',
+            'url': 'https://news.google.com',
+            'source': 'Google News'
+        }]
 
     def get_article_for_topic(self, topic: str) -> Optional[Dict]:
         """

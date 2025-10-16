@@ -62,7 +62,8 @@ class ContentGenerator:
             print(f"📰 Generating cat news about: {selected_topic}")
 
         # Determine if this is a specific story that needs sourcing
-        is_specific_story = story_metadata is not None and story_metadata.get('source') != 'Fallback'
+        # ALWAYS post source reply if we have story metadata
+        is_specific_story = story_metadata is not None
 
         # Build article details string if we have metadata
         article_details = None
@@ -305,7 +306,8 @@ The tweet says: {tweet_text}
 Generate a SHORT image prompt (max 200 chars) for an AI image generator that would create a professional, editorial-style illustration for this news story.
 
 Requirements:
-- Professional news/editorial illustration style in LANDSCAPE (16:9) format
+- **WIDESCREEN LANDSCAPE format** - think cinematic, horizontal, wide angle
+- Professional news/editorial illustration style
 - Bold, clean, modern digital art aesthetic
 - MUST visually represent the MAIN IDEA of the story (not just the surface topic)
 - Show people/action relevant to the story (e.g., if about "choosing intimacy," show friends together, not isolation)

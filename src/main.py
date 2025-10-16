@@ -105,9 +105,7 @@ def post_scheduled_tweet():
             tweet_id = post_result['id']
             print(f"✅ Tweet posted! ID: {tweet_id}")
 
-            # Record post to history for deduplication
-            if selected_story and selected_story.get('source') != 'Fallback':
-                tracker.record_post(selected_story, tweet_id)
+            reply_tweet_id = None
 
             # If it's a specific story, auto-reply with source
             if needs_source and story_meta:
@@ -118,9 +116,14 @@ def post_scheduled_tweet():
                 reply_result = bot.reply_to_tweet(tweet_id, source_reply)
 
                 if reply_result:
-                    print(f"✅ Source reply posted! ID: {reply_result['id']}")
+                    reply_tweet_id = reply_result['id']
+                    print(f"✅ Source reply posted! ID: {reply_tweet_id}")
                 else:
                     print(f"⚠️  Main tweet posted but source reply failed")
+
+            # Record post to history for deduplication (with reply ID if posted)
+            if selected_story:
+                tracker.record_post(selected_story, tweet_id, reply_tweet_id)
 
             print(f"\n{'='*60}")
             print(f"✅ SUCCESS! News report filed.")

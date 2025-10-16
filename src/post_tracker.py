@@ -134,20 +134,22 @@ class PostTracker:
 
         return False
 
-    def record_post(self, story_metadata: Dict, tweet_id: str):
+    def record_post(self, story_metadata: Dict, tweet_id: str, reply_tweet_id: str = None):
         """
         Record a successful post to history
 
         Args:
             story_metadata: Story dict with 'title', 'url', 'source'
             tweet_id: Posted tweet ID
+            reply_tweet_id: Optional reply tweet ID (for source citations)
         """
         post_record = {
             'timestamp': datetime.now(timezone.utc).isoformat(),
             'topic': story_metadata.get('title', 'Unknown'),
             'url': story_metadata.get('url'),
             'tweet_id': tweet_id,
-            'source': story_metadata.get('source', 'Unknown')
+            'source': story_metadata.get('source', 'Unknown'),
+            'reply_tweet_id': reply_tweet_id  # Track if source reply was posted
         }
 
         self.posts.append(post_record)
@@ -199,3 +201,19 @@ class PostTracker:
 
         print(f"✓ Filtered {len(stories)} stories → {len(unique_stories)} unique")
         return unique_stories
+
+    def get_posts_needing_replies(self) -> List[Dict]:
+        """
+        Get posts that have URLs but no source reply yet
+
+        Returns:
+            List of post records that need source replies
+        """
+        posts_needing_replies = []
+
+        for post in self.posts:
+            # Has URL but no reply posted yet
+            if post.get('url') and not post.get('reply_tweet_id'):
+                posts_needing_replies.append(post)
+
+        return posts_needing_replies
