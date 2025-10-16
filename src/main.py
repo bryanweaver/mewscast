@@ -5,15 +5,17 @@ Main entry point for scheduled posts and automation
 import os
 import sys
 import random
+import time
 from datetime import datetime
 from dotenv import load_dotenv
 
 from content_generator import ContentGenerator
 from twitter_bot import TwitterBot
+from news_fetcher import NewsFetcher
 
 
 def post_scheduled_tweet():
-    """Generate and post a scheduled news cat tweet"""
+    """Generate and post a scheduled news cat tweet with Google Trends"""
     print(f"\n{'='*60}")
     print(f"Mewscast - News Reporter Cat")
     print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
@@ -27,26 +29,53 @@ def post_scheduled_tweet():
         print("📡 Connecting to X...")
         bot = TwitterBot()
 
-        # Fetch trending topics
-        print("🔍 Fetching trending topics from X...")
-        trending_topics = bot.get_trending_topics(count=5)
+        print("📰 Fetching trending topics from Google Trends...")
+        news_fetcher = NewsFetcher()
 
-        # Pick a random trending topic
-        selected_trend = random.choice(trending_topics) if trending_topics else None
-        if selected_trend:
-            print(f"📰 Selected trending topic: {selected_trend}\n")
+        # Fetch real trending topics
+        trending_stories = news_fetcher.get_trending_topics(count=5)
 
-        # Generate cat news content
-        tweet_text = generator.generate_tweet(trending_topic=selected_trend)
+        # Pick a random trending story
+        selected_story = random.choice(trending_stories) if trending_stories else None
 
-        # Post to X
+        if selected_story:
+            print(f"📰 Selected: {selected_story['title']}")
+            print(f"   Source: {selected_story['source']}\n")
+
+        # Generate cat news content with story metadata
+        result = generator.generate_tweet(
+            trending_topic=selected_story['title'] if selected_story else None,
+            story_metadata=selected_story
+        )
+
+        tweet_text = result['tweet']
+        needs_source = result['needs_source_reply']
+        story_meta = result['story_metadata']
+
+        # Post main tweet to X
         print(f"📤 Filing news report to X...")
         print(f"   Content: \"{tweet_text}\"\n")
-        result = bot.post_tweet(tweet_text)
+        post_result = bot.post_tweet(tweet_text)
 
-        if result:
+        if post_result:
+            tweet_id = post_result['id']
+            print(f"✅ Tweet posted! ID: {tweet_id}")
+
+            # If it's a specific story, auto-reply with source
+            if needs_source and story_meta:
+                print(f"\n📎 Posting source citation reply...")
+                time.sleep(2)  # Brief pause before reply
+
+                source_reply = generator.generate_source_reply(tweet_text, story_meta)
+                reply_result = bot.reply_to_tweet(tweet_id, source_reply)
+
+                if reply_result:
+                    print(f"✅ Source reply posted! ID: {reply_result['id']}")
+                else:
+                    print(f"⚠️  Main tweet posted but source reply failed")
+
             print(f"\n{'='*60}")
-            print(f"✅ SUCCESS! Tweet posted.")
+            print(f"✅ SUCCESS! News report filed.")
             print(f"{'='*60}\n")
             return True
         else:
@@ -58,6 +87,8 @@ def post_scheduled_tweet():
     except Exception as e:
         print(f"\n{'='*60}")
         print(f"❌ ERROR: {e}")
+        import traceback
+        traceback.print_exc()
         print(f"{'='*60}\n")
         return False
 

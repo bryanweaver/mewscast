@@ -51,7 +51,7 @@ content:
 
   # Content generation
   ai_provider: "anthropic"  # or "openai"
-  model: "claude-3-5-sonnet-20241022"  # or "gpt-4o-mini" for OpenAI
+  model: "claude-sonnet-4-5-20250929"  # Claude 4.5 Sonnet (latest)
 
 scheduling:
   # When to post (cron format for GitHub Actions)

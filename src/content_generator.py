@@ -3,7 +3,7 @@ AI-powered content generation using Anthropic Claude
 """
 import os
 from anthropic import Anthropic
-from typing import Optional, List
+from typing import Optional, List, Dict
 import yaml
 import random
 
@@ -35,16 +35,21 @@ class ContentGenerator:
         self.max_length = self.config['content']['max_length']
         self.avoid_topics = self.config['safety']['avoid_topics']
 
-    def generate_tweet(self, topic: Optional[str] = None, trending_topic: Optional[str] = None) -> str:
+    def generate_tweet(self, topic: Optional[str] = None, trending_topic: Optional[str] = None,
+                      story_metadata: Optional[Dict] = None) -> Dict:
         """
         Generate a news cat reporter tweet
 
         Args:
             topic: General news category (optional, uses random if not provided)
             trending_topic: Specific trending topic from X (takes priority)
+            story_metadata: Dictionary with 'title', 'context', 'source' for real trending stories
 
         Returns:
-            Generated tweet text in news cat reporter style
+            Dictionary with:
+                - 'tweet': Generated tweet text
+                - 'needs_source_reply': Boolean indicating if source reply needed
+                - 'story_metadata': Original story metadata (if provided)
         """
         # Prefer trending topic, fallback to general topic
         if trending_topic:
@@ -56,7 +61,10 @@ class ContentGenerator:
             selected_topic = random.choice(self.topics)
             print(f"📰 Generating cat news about: {selected_topic}")
 
-        prompt = self._build_news_cat_prompt(selected_topic)
+        # Determine if this is a specific story that needs sourcing
+        is_specific_story = story_metadata is not None and story_metadata.get('source') != 'Fallback'
+
+        prompt = self._build_news_cat_prompt(selected_topic, is_specific_story=is_specific_story)
 
         try:
             message = self.client.messages.create(
@@ -80,18 +88,39 @@ class ContentGenerator:
                 tweet = tweet[:self.max_length - 3] + "..."
 
             print(f"✓ Generated cat news ({len(tweet)} chars): {tweet[:60]}...")
-            return tweet
+
+            return {
+                'tweet': tweet,
+                'needs_source_reply': is_specific_story,
+                'story_metadata': story_metadata
+            }
 
         except Exception as e:
             print(f"✗ Error generating content: {e}")
             # Fallback tweet in cat reporter style
-            return f"Breaking mews: Updates on {selected_topic}. Stay tuned for fur-ther details. #BreakingMews"
+            return {
+                'tweet': f"Breaking mews: Updates on {selected_topic}. Stay tuned for fur-ther details. #BreakingMews",
+                'needs_source_reply': False,
+                'story_metadata': None
+            }
 
-    def _build_news_cat_prompt(self, topic: str) -> str:
+    def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False) -> str:
         """Build the news cat reporter prompt for Claude"""
         avoid_str = ", ".join(self.avoid_topics)
         cat_vocab_str = ", ".join(self.cat_vocabulary[:8])  # Show examples
         guidelines_str = "\n- ".join(self.editorial_guidelines)
+
+        # Add specific guidance for real trending stories
+        story_guidance = ""
+        if is_specific_story:
+            story_guidance = """
+IMPORTANT - Real Story Coverage:
+- This is a real trending topic, not commentary
+- Provide objective analysis and context
+- Avoid fabricating specific details (numbers, locations, quotes)
+- Focus on general significance and implications
+- A source citation will be added in a follow-up reply
+"""
 
         prompt = f"""You are a professional news reporter who happens to be a cat. Generate a single tweet reporting on: {topic}
 
@@ -103,7 +132,7 @@ CHARACTER:
 
 CONTENT GUIDELINES:
 - {guidelines_str}
-
+{story_guidance}
 STYLE:
 - {self.style}
 - Fact-based reporting with context
@@ -124,10 +153,36 @@ AVOID:
 - Clickbait or engagement farming
 - Forced cat puns that don't fit
 - Being overly partisan (populist lean is OK)
+- Fabricating specific details like exact numbers, times, locations
 
 Just return the tweet text itself, nothing else."""
 
         return prompt
+
+    def generate_source_reply(self, original_tweet: str, story_metadata: Dict) -> str:
+        """
+        Generate a source citation reply to the original tweet
+
+        Args:
+            original_tweet: The tweet to reply to with source
+            story_metadata: Dictionary with 'title', 'context', 'source'
+
+        Returns:
+            Source citation tweet text
+        """
+        title = story_metadata.get('title', 'Story')
+        context = story_metadata.get('context', '')
+        source = story_metadata.get('source', 'Google Trends')
+
+        # Build source reply
+        reply = f"Source: {title}\n{context}\nVia {source}"
+
+        # Ensure it fits
+        if len(reply) > self.max_length:
+            reply = reply[:self.max_length - 3] + "..."
+
+        print(f"✓ Generated source reply ({len(reply)} chars)")
+        return reply
 
     def generate_reply(self, original_tweet: str, context: Optional[str] = None) -> str:
         """
