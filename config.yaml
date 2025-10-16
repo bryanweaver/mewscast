@@ -1,0 +1,51 @@
+# Mewscast Bot Configuration
+
+bot:
+  name: "mewscast"
+  version: "0.1.0"
+
+content:
+  # Topics/themes for your bot to post about
+  topics:
+    - "software development"
+    - "tech trends"
+    - "developer productivity"
+    - "coding tips"
+    - "AI and automation"
+    - "startup building"
+
+  # Tone and style
+  style: "casual and helpful"
+  max_length: 280  # Twitter character limit
+
+  # Content generation
+  ai_provider: "anthropic"  # or "openai"
+  model: "claude-3-5-sonnet-20241022"  # or "gpt-4o-mini" for OpenAI
+
+scheduling:
+  # When to post (cron format for GitHub Actions)
+  # Free tier limit: 17 posts/24hrs - we'll use 3-5/day for growth
+  post_times:
+    - "0 13 * * *"  # 1 PM UTC = 9 AM EST / 6 AM PST (morning)
+    - "0 17 * * *"  # 5 PM UTC = 1 PM EST / 10 AM PST (midday)
+    - "0 22 * * *"  # 10 PM UTC = 6 PM EST / 3 PM PST (evening)
+
+engagement:
+  # Reply automation (optional)
+  # Free tier: 1 request/15min = 96/day (plenty of room!)
+  # Check mentions 3-4x/day for engagement
+  auto_reply: false  # Can enable once you have regular mentions
+  reply_to_mentions: true  # Builds community faster
+  reply_to_keywords: []
+
+safety:
+  # Content filtering
+  avoid_topics:
+    - "politics"
+    - "religion"
+    - "crypto scams"
+    - "medical advice"
+
+  # Rate limiting (free tier: 17 tweets/24hrs)
+  max_posts_per_day: 5  # Aggressive growth mode (still 30% of limit)
+  min_hours_between_posts: 4  # Space out posts for better reach
