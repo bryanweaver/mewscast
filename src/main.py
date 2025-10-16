@@ -1,9 +1,10 @@
 """
-Mewscast - AI-powered Twitter bot
+Mewscast - AI-powered X news reporter cat bot
 Main entry point for scheduled posts and automation
 """
 import os
 import sys
+import random
 from datetime import datetime
 from dotenv import load_dotenv
 
@@ -12,26 +13,34 @@ from twitter_bot import TwitterBot
 
 
 def post_scheduled_tweet():
-    """Generate and post a scheduled tweet"""
+    """Generate and post a scheduled news cat tweet"""
     print(f"\n{'='*60}")
-    print(f"Mewscast Bot - Scheduled Post")
+    print(f"Mewscast - News Reporter Cat")
     print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
     print(f"{'='*60}\n")
 
     try:
         # Initialize components
-        print("🤖 Initializing content generator...")
+        print("🐱 Initializing news cat reporter...")
         generator = ContentGenerator()
 
-        print("🐦 Initializing Twitter bot...")
+        print("📡 Connecting to X...")
         bot = TwitterBot()
 
-        # Generate content
-        print("✍️  Generating tweet content...")
-        tweet_text = generator.generate_tweet()
+        # Fetch trending topics
+        print("🔍 Fetching trending topics from X...")
+        trending_topics = bot.get_trending_topics(count=5)
 
-        # Post to Twitter
-        print(f"📤 Posting to Twitter...")
+        # Pick a random trending topic
+        selected_trend = random.choice(trending_topics) if trending_topics else None
+        if selected_trend:
+            print(f"📰 Selected trending topic: {selected_trend}\n")
+
+        # Generate cat news content
+        tweet_text = generator.generate_tweet(trending_topic=selected_trend)
+
+        # Post to X
+        print(f"📤 Filing news report to X...")
         print(f"   Content: \"{tweet_text}\"\n")
         result = bot.post_tweet(tweet_text)
 
@@ -54,9 +63,9 @@ def post_scheduled_tweet():
 
 
 def reply_to_mentions():
-    """Check mentions and reply to them"""
+    """Check mentions and reply as news cat reporter"""
     print(f"\n{'='*60}")
-    print(f"Mewscast Bot - Reply Mode")
+    print(f"Mewscast - Checking Mentions")
     print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
     print(f"{'='*60}\n")
 

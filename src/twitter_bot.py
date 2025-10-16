@@ -120,3 +120,61 @@ class TwitterBot:
         except tweepy.TweepyException as e:
             print(f"✗ Error fetching timeline: {e}")
             return []
+
+    def get_trending_topics(self, count: int = 5) -> list:
+        """
+        Get trending topics from X
+
+        Tries multiple methods:
+        1. Search recent popular tweets for hashtags (Free tier: 96/day)
+        2. Fallback to general news topics
+
+        Args:
+            count: Number of trending topics to retrieve
+
+        Returns:
+            List of trending topic strings
+        """
+        # Method 1: Search recent tweets for popular hashtags
+        # Free tier: 1 request/15min = plenty for our use case
+        try:
+            # Search for highly engaged recent tweets
+            search_query = "lang:en -is:retweet min_faves:1000"
+            response = self.client.search_recent_tweets(
+                query=search_query,
+                max_results=10,
+                tweet_fields=['public_metrics', 'entities']
+            )
+
+            if response.data:
+                # Extract hashtags and keywords from popular tweets
+                keywords = set()
+                for tweet in response.data:
+                    if hasattr(tweet, 'entities') and tweet.entities:
+                        # Get hashtags
+                        if 'hashtags' in tweet.entities:
+                            for hashtag in tweet.entities['hashtags']:
+                                keywords.add(hashtag['tag'])
+                        # Get cashtags (stock symbols - often trending)
+                        if 'cashtags' in tweet.entities:
+                            for cashtag in tweet.entities['cashtags']:
+                                keywords.add(f"${cashtag['tag']}")
+
+                trends = list(keywords)[:count]
+                if trends:
+                    print(f"✓ Extracted {len(trends)} trending topics from popular tweets")
+                    return trends
+
+        except tweepy.TweepyException as e:
+            print(f"Note: Search trending not available ({e})")
+
+        # Method 2: Fallback to general news topics
+        fallback_topics = [
+            "breaking news",
+            "economy",
+            "technology",
+            "politics",
+            "business"
+        ]
+        print(f"ℹ️  Using fallback topics (trending API limited on Free tier)")
+        return fallback_topics[:count]

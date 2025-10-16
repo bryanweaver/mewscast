@@ -5,10 +5,11 @@ import os
 from anthropic import Anthropic
 from typing import Optional, List
 import yaml
+import random
 
 
 class ContentGenerator:
-    """Generates tweet content using Claude AI"""
+    """Generates news cat reporter tweet content using Claude AI"""
 
     def __init__(self, config_path: str = None):
         """Initialize content generator with configuration"""
@@ -28,29 +29,39 @@ class ContentGenerator:
         self.model = self.config['content']['model']
         self.topics = self.config['content']['topics']
         self.style = self.config['content']['style']
+        self.persona = self.config['content'].get('persona', 'news reporter')
+        self.cat_vocabulary = self.config['content'].get('cat_vocabulary', [])
+        self.editorial_guidelines = self.config['content'].get('editorial_guidelines', [])
         self.max_length = self.config['content']['max_length']
         self.avoid_topics = self.config['safety']['avoid_topics']
 
-    def generate_tweet(self, topic: Optional[str] = None) -> str:
+    def generate_tweet(self, topic: Optional[str] = None, trending_topic: Optional[str] = None) -> str:
         """
-        Generate a single tweet using Claude
+        Generate a news cat reporter tweet
 
         Args:
-            topic: Specific topic to tweet about (optional, uses random if not provided)
+            topic: General news category (optional, uses random if not provided)
+            trending_topic: Specific trending topic from X (takes priority)
 
         Returns:
-            Generated tweet text
+            Generated tweet text in news cat reporter style
         """
-        if topic is None:
-            import random
-            topic = random.choice(self.topics)
+        # Prefer trending topic, fallback to general topic
+        if trending_topic:
+            selected_topic = trending_topic
+            print(f"📰 Generating cat news about trending topic: {trending_topic}")
+        elif topic:
+            selected_topic = topic
+        else:
+            selected_topic = random.choice(self.topics)
+            print(f"📰 Generating cat news about: {selected_topic}")
 
-        prompt = self._build_prompt(topic)
+        prompt = self._build_news_cat_prompt(selected_topic)
 
         try:
             message = self.client.messages.create(
                 model=self.model,
-                max_tokens=300,
+                max_tokens=350,
                 messages=[
                     {"role": "user", "content": prompt}
                 ]
@@ -58,32 +69,61 @@ class ContentGenerator:
 
             tweet = message.content[0].text.strip()
 
+            # Remove any quotes around the tweet if Claude added them
+            if tweet.startswith('"') and tweet.endswith('"'):
+                tweet = tweet[1:-1]
+            if tweet.startswith("'") and tweet.endswith("'"):
+                tweet = tweet[1:-1]
+
             # Ensure it fits within character limit
             if len(tweet) > self.max_length:
                 tweet = tweet[:self.max_length - 3] + "..."
 
-            print(f"✓ Generated tweet ({len(tweet)} chars): {tweet[:50]}...")
+            print(f"✓ Generated cat news ({len(tweet)} chars): {tweet[:60]}...")
             return tweet
 
         except Exception as e:
             print(f"✗ Error generating content: {e}")
-            # Fallback tweet
-            return f"Just thinking about {topic} today... #dev"
+            # Fallback tweet in cat reporter style
+            return f"Breaking mews: Updates on {selected_topic}. Stay tuned for fur-ther details. #BreakingMews"
 
-    def _build_prompt(self, topic: str) -> str:
-        """Build the prompt for Claude"""
+    def _build_news_cat_prompt(self, topic: str) -> str:
+        """Build the news cat reporter prompt for Claude"""
         avoid_str = ", ".join(self.avoid_topics)
+        cat_vocab_str = ", ".join(self.cat_vocabulary[:8])  # Show examples
+        guidelines_str = "\n- ".join(self.editorial_guidelines)
 
-        prompt = f"""Generate a single engaging tweet about: {topic}
+        prompt = f"""You are a professional news reporter who happens to be a cat. Generate a single tweet reporting on: {topic}
 
-Requirements:
-- Maximum {self.max_length} characters (this is strict!)
-- Tone: {self.style}
-- Make it interesting, authentic, and valuable to readers
-- Do NOT include hashtags unless they feel natural
-- Avoid topics like: {avoid_str}
-- Don't use quotes around the tweet - just return the raw text
-- Make it sound like a real person, not a bot
+CHARACTER:
+- Professional journalist cat who takes news seriously
+- Use cat-themed wordplay naturally (not forced)
+- Examples: "{cat_vocab_str}"
+- Goal: Be the most respected feline in news
+
+CONTENT GUIDELINES:
+- {guidelines_str}
+
+STYLE:
+- {self.style}
+- Fact-based reporting with context
+- Center-right/populist perspective where relevant
+- Human interest angle
+- Professional but with occasional cheeky cat phrases
+
+FORMAT:
+- Maximum {self.max_length} characters (strict!)
+- NO emojis (very rare exceptions only)
+- Hashtags are good (especially #BreakingMews for branding)
+- Add relevant trending hashtags when appropriate
+- Don't use quotes around the tweet
+- Write as if filing a news report
+
+AVOID:
+- {avoid_str}
+- Clickbait or engagement farming
+- Forced cat puns that don't fit
+- Being overly partisan (populist lean is OK)
 
 Just return the tweet text itself, nothing else."""
 
@@ -91,25 +131,30 @@ Just return the tweet text itself, nothing else."""
 
     def generate_reply(self, original_tweet: str, context: Optional[str] = None) -> str:
         """
-        Generate a reply to a tweet
+        Generate a cat reporter reply to a tweet
 
         Args:
             original_tweet: The tweet to reply to
             context: Additional context (optional)
 
         Returns:
-            Generated reply text
+            Generated reply text in cat reporter style
         """
-        prompt = f"""Generate a helpful, friendly reply to this tweet:
+        cat_vocab_str = ", ".join(self.cat_vocabulary[:5])
+
+        prompt = f"""You are a professional news reporter cat replying to this tweet:
 
 "{original_tweet}"
 
-Requirements:
+Reply as the news cat reporter:
+- {self.style}
+- Use cat wordplay naturally: {cat_vocab_str}
+- Add value to the conversation
+- Stay on-brand as a news reporter
+- Be engaging but professional
 - Maximum {self.max_length} characters
-- Tone: {self.style}
-- Be helpful and add value
-- Don't be spammy or promotional
-- Keep it conversational
+- NO emojis (rare exceptions)
+- Hashtags OK if relevant
 {f"- Context: {context}" if context else ""}
 
 Just return the reply text itself, nothing else."""
@@ -125,12 +170,16 @@ Just return the reply text itself, nothing else."""
 
             reply = message.content[0].text.strip()
 
+            # Remove quotes if present
+            if reply.startswith('"') and reply.endswith('"'):
+                reply = reply[1:-1]
+
             if len(reply) > self.max_length:
                 reply = reply[:self.max_length - 3] + "..."
 
-            print(f"✓ Generated reply ({len(reply)} chars)")
+            print(f"✓ Generated cat reply ({len(reply)} chars)")
             return reply
 
         except Exception as e:
             print(f"✗ Error generating reply: {e}")
-            return "Thanks for sharing! 👍"
+            return "Thanks for sharing! This reporter is taking notes. #BreakingMews"
