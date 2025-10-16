@@ -206,9 +206,9 @@ Just return the tweet text itself, nothing else."""
 
         # Build source reply with URL if available
         if url:
-            # Note: X/Twitter automatically shortens URLs to t.co links (23 chars)
-            # So we don't need to worry about URL length - X handles it
-            reply = f"📰 Source:\n\n{url}\n\nVia {source}"
+            # X/Twitter generates link preview cards when URL is posted
+            # Keep it simple - just the URL so X shows the preview card
+            reply = f"📰 Source:\n\n{url}"
         else:
             # Fallback format without URL
             context = story_metadata.get('context', '')
