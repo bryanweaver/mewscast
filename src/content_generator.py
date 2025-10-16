@@ -64,7 +64,15 @@ class ContentGenerator:
         # Determine if this is a specific story that needs sourcing
         is_specific_story = story_metadata is not None and story_metadata.get('source') != 'Fallback'
 
-        prompt = self._build_news_cat_prompt(selected_topic, is_specific_story=is_specific_story)
+        # Build article details string if we have metadata
+        article_details = None
+        if is_specific_story and story_metadata:
+            article_details = f"Title: {story_metadata.get('title', '')}\n"
+            if story_metadata.get('context'):
+                article_details += f"Summary: {story_metadata.get('context', '')}"
+
+        prompt = self._build_news_cat_prompt(selected_topic, is_specific_story=is_specific_story,
+                                             article_details=article_details)
 
         try:
             message = self.client.messages.create(
@@ -104,7 +112,8 @@ class ContentGenerator:
                 'story_metadata': None
             }
 
-    def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False) -> str:
+    def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False,
+                               article_details: str = None) -> str:
         """Build the news cat reporter prompt for Claude"""
         avoid_str = ", ".join(self.avoid_topics)
         cat_vocab_str = ", ".join(self.cat_vocabulary[:8])  # Show examples
@@ -112,7 +121,19 @@ class ContentGenerator:
 
         # Add specific guidance for real trending stories
         story_guidance = ""
-        if is_specific_story:
+        if is_specific_story and article_details:
+            story_guidance = f"""
+IMPORTANT - Real Story Coverage:
+- You are writing about this actual article:
+  {article_details}
+
+- Write cat news commentary based on the article above
+- Provide objective analysis and context from the article
+- Do NOT fabricate specific details not in the article
+- Focus on significance and implications
+- A source citation will be added in a follow-up reply
+"""
+        elif is_specific_story:
             story_guidance = """
 IMPORTANT - Real Story Coverage:
 - This is a real trending topic, not commentary
@@ -174,23 +195,30 @@ Just return the tweet text itself, nothing else."""
 
         Args:
             original_tweet: The tweet to reply to with source
-            story_metadata: Dictionary with 'title', 'context', 'source'
+            story_metadata: Dictionary with 'title', 'context', 'source', 'url' (optional)
 
         Returns:
             Source citation tweet text
         """
         title = story_metadata.get('title', 'Story')
-        context = story_metadata.get('context', '')
+        url = story_metadata.get('url')
         source = story_metadata.get('source', 'Google Trends')
 
-        # Build source reply
-        reply = f"Source: {title}\n{context}\nVia {source}"
+        # Build source reply with URL if available
+        if url:
+            # Note: X/Twitter automatically shortens URLs to t.co links (23 chars)
+            # So we don't need to worry about URL length - X handles it
+            reply = f"📰 Source:\n\n{url}\n\nVia {source}"
+        else:
+            # Fallback format without URL
+            context = story_metadata.get('context', '')
+            reply = f"Source: {title}\n{context}\nVia {source}"
 
-        # Ensure it fits
-        if len(reply) > self.max_length:
-            reply = reply[:self.max_length - 3] + "..."
+            # Ensure it fits (only needed for non-URL fallback)
+            if len(reply) > self.max_length:
+                reply = reply[:self.max_length - 3] + "..."
 
-        print(f"✓ Generated source reply ({len(reply)} chars)")
+        print(f"✓ Generated source reply ({len(reply)} chars raw, ~23 chars when posted to X)")
         return reply
 
     def generate_reply(self, original_tweet: str, context: Optional[str] = None) -> str:
