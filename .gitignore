@@ -41,3 +41,7 @@ logs/
 
 # Cache
 .cache/
+
+# Temporary files
+temp_image.png
+*.tmp

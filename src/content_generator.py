@@ -275,3 +275,64 @@ Just return the reply text itself, nothing else."""
         except Exception as e:
             print(f"✗ Error generating reply: {e}")
             return "Thanks for sharing! This reporter is taking notes. #BreakingMews"
+
+    def generate_image_prompt(self, topic: str, tweet_text: str) -> str:
+        """
+        Generate an image prompt for Grok based on the news topic
+
+        Args:
+            topic: The news topic
+            tweet_text: The generated tweet text
+
+        Returns:
+            Image generation prompt for Grok
+        """
+        try:
+            prompt_request = f"""You are helping create an image for a news cat reporter bot on X/Twitter.
+
+The news topic is: {topic}
+
+The tweet says: {tweet_text}
+
+Generate a SHORT image prompt (max 200 chars) for an AI image generator that would create a professional, editorial-style illustration for this news story.
+
+Requirements:
+- Professional news/editorial illustration style
+- Bold, clean, modern digital art aesthetic
+- Relevant to the topic
+- Suitable for social media (no text in image)
+- Not too literal - think metaphorical/symbolic
+- Cat reporter aesthetic where appropriate
+
+Examples:
+- "Editorial illustration: US Capitol with infrastructure construction, professional news style, bold colors"
+- "Modern digital art: Economic chart with upward arrows, professional blue and gold palette"
+- "Clean vector illustration: Globe with news icons, professional journalism aesthetic"
+
+Just return the SHORT image prompt itself, nothing else."""
+
+            message = self.client.messages.create(
+                model=self.model,
+                max_tokens=150,
+                messages=[
+                    {"role": "user", "content": prompt_request}
+                ]
+            )
+
+            image_prompt = message.content[0].text.strip()
+
+            # Remove quotes if Claude added them
+            if image_prompt.startswith('"') and image_prompt.endswith('"'):
+                image_prompt = image_prompt[1:-1]
+
+            # Limit to 200 chars for Grok
+            if len(image_prompt) > 200:
+                image_prompt = image_prompt[:200]
+
+            print(f"✓ Generated image prompt: {image_prompt}")
+            return image_prompt
+
+        except Exception as e:
+            print(f"✗ Error generating image prompt: {e}")
+            # Fallback to simple prompt
+            return f"Professional editorial news illustration about {topic[:50]}"

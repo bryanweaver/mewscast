@@ -6,12 +6,15 @@ import os
 import sys
 import random
 import time
+import yaml
 from datetime import datetime
 from dotenv import load_dotenv
 
 from content_generator import ContentGenerator
 from twitter_bot import TwitterBot
 from news_fetcher import NewsFetcher
+from image_generator import ImageGenerator
+from post_tracker import PostTracker
 
 
 def post_scheduled_tweet():
@@ -22,6 +25,11 @@ def post_scheduled_tweet():
     print(f"{'='*60}\n")
 
     try:
+        # Load config for deduplication settings
+        config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
+        with open(config_path, 'r') as f:
+            config = yaml.safe_load(f)
+
         # Initialize components
         print("🐱 Initializing news cat reporter...")
         generator = ContentGenerator()
@@ -32,11 +40,25 @@ def post_scheduled_tweet():
         print("📰 Fetching trending topics from Google Trends...")
         news_fetcher = NewsFetcher()
 
+        # Initialize post tracker for deduplication
+        dedup_config = config.get('deduplication', {})
+        tracker = PostTracker(config=dedup_config)
+
         # Fetch real trending topics
         trending_stories = news_fetcher.get_trending_topics(count=5)
 
-        # Pick a random trending story
-        selected_story = random.choice(trending_stories) if trending_stories else None
+        # Filter out duplicates
+        print("🔍 Checking for duplicate stories...")
+        unique_stories = tracker.filter_duplicates(trending_stories)
+
+        # If all were duplicates, fetch more stories
+        if not unique_stories and trending_stories:
+            print("⚠️  All stories were duplicates, fetching more...")
+            more_stories = news_fetcher.get_trending_topics(count=10)
+            unique_stories = tracker.filter_duplicates(more_stories)
+
+        # Pick a random unique story
+        selected_story = random.choice(unique_stories) if unique_stories else None
 
         if selected_story:
             print(f"📰 Selected: {selected_story['title']}")
@@ -52,14 +74,40 @@ def post_scheduled_tweet():
         needs_source = result['needs_source_reply']
         story_meta = result['story_metadata']
 
-        # Post main tweet to X
+        # Try to generate image (with graceful fallback)
+        image_path = None
+        try:
+            print(f"🎨 Attempting to generate image with Grok...")
+            img_generator = ImageGenerator()
+
+            # Generate image prompt using Claude
+            image_prompt = generator.generate_image_prompt(selected_story['title'] if selected_story else "news", tweet_text)
+
+            # Generate image using Grok
+            image_path = img_generator.generate_image(image_prompt)
+
+        except Exception as e:
+            print(f"⚠️  Image generation failed: {e}")
+            print(f"   Continuing without image...")
+
+        # Post main tweet to X (with or without image)
         print(f"📤 Filing news report to X...")
-        print(f"   Content: \"{tweet_text}\"\n")
-        post_result = bot.post_tweet(tweet_text)
+        print(f"   Content: \"{tweet_text}\"")
+
+        if image_path:
+            print(f"   Image: {image_path}\n")
+            post_result = bot.post_tweet_with_image(tweet_text, image_path)
+        else:
+            print(f"   (No image attached)\n")
+            post_result = bot.post_tweet(tweet_text)
 
         if post_result:
             tweet_id = post_result['id']
             print(f"✅ Tweet posted! ID: {tweet_id}")
+
+            # Record post to history for deduplication
+            if selected_story and selected_story.get('source') != 'Fallback':
+                tracker.record_post(selected_story, tweet_id)
 
             # If it's a specific story, auto-reply with source
             if needs_source and story_meta:

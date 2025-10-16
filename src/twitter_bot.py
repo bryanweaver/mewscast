@@ -32,6 +32,15 @@ class TwitterBot:
             wait_on_rate_limit=True
         )
 
+        # Initialize v1.1 API for media upload
+        auth = tweepy.OAuth1UserHandler(
+            self.api_key,
+            self.api_secret,
+            self.access_token,
+            self.access_token_secret
+        )
+        self.api_v1 = tweepy.API(auth)
+
     def post_tweet(self, text: str) -> Optional[dict]:
         """
         Post a tweet to your timeline
@@ -52,6 +61,45 @@ class TwitterBot:
             return response.data
         except tweepy.TweepyException as e:
             print(f"✗ Error posting tweet: {e}")
+            return None
+
+    def post_tweet_with_image(self, text: str, image_path: str) -> Optional[dict]:
+        """
+        Post a tweet with an attached image
+
+        Args:
+            text: The tweet content (max 280 characters)
+            image_path: Path to the image file to attach
+
+        Returns:
+            Tweet data if successful, None if failed
+        """
+        try:
+            if len(text) > 280:
+                print(f"Warning: Tweet too long ({len(text)} chars). Truncating...")
+                text = text[:277] + "..."
+
+            # Upload media using v1.1 API
+            print(f"📤 Uploading image: {image_path}")
+            media = self.api_v1.media_upload(filename=image_path)
+            media_id = media.media_id
+
+            print(f"✓ Image uploaded! Media ID: {media_id}")
+
+            # Post tweet with media using v2 API
+            response = self.client.create_tweet(
+                text=text,
+                media_ids=[media_id]
+            )
+
+            print(f"✓ Tweet with image posted successfully! ID: {response.data['id']}")
+            return response.data
+
+        except tweepy.TweepyException as e:
+            print(f"✗ Error posting tweet with image: {e}")
+            return None
+        except FileNotFoundError:
+            print(f"✗ Error: Image file not found: {image_path}")
             return None
 
     def reply_to_tweet(self, tweet_id: str, text: str) -> Optional[dict]:

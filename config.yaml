@@ -80,3 +80,10 @@ safety:
   # Rate limiting (free tier: 17 tweets/24hrs)
   max_posts_per_day: 5  # Aggressive growth mode (still 30% of limit)
   min_hours_between_posts: 4  # Space out posts for better reach
+
+deduplication:
+  # Prevent posting duplicate or repetitive stories
+  enabled: true
+  topic_cooldown_hours: 48  # Don't repeat similar topics within 48 hours
+  url_deduplication: true    # Never repost the same article URL
+  max_history_days: 7        # Keep 7 days of post history
