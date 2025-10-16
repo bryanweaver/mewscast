@@ -51,6 +51,13 @@ print(f"  {tweet_text}")
 print(f"\n✓ Needs source reply: {needs_source}")
 print(f"✓ Has story metadata: {story_meta is not None}")
 
+# Verify source indicator is present
+if needs_source and " 📰↓" in tweet_text:
+    print(f"✓ Source indicator (📰↓) present in tweet")
+elif needs_source:
+    print(f"✗ Source indicator missing from tweet that needs source!")
+    sys.exit(1)
+
 # Test 3: Generate source reply
 print("\n3. Testing source reply generation...")
 if needs_source and story_meta:

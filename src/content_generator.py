@@ -92,9 +92,18 @@ class ContentGenerator:
             if tweet.startswith("'") and tweet.endswith("'"):
                 tweet = tweet[1:-1]
 
-            # Ensure it fits within character limit
-            if len(tweet) > self.max_length:
-                tweet = tweet[:self.max_length - 3] + "..."
+            # Add source indicator if this story will have a source reply
+            source_indicator = " 📰↓"
+            if is_specific_story:
+                # Reserve space for source indicator
+                max_content_length = self.max_length - len(source_indicator)
+                if len(tweet) > max_content_length:
+                    tweet = tweet[:max_content_length - 3] + "..."
+                tweet += source_indicator
+            else:
+                # No source reply, use full character limit
+                if len(tweet) > self.max_length:
+                    tweet = tweet[:self.max_length - 3] + "..."
 
             print(f"✓ Generated cat news ({len(tweet)} chars): {tweet[:60]}...")
 
