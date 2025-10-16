@@ -305,20 +305,26 @@ The tweet says: {tweet_text}
 Generate a SHORT image prompt (max 200 chars) for an AI image generator that would create a professional, editorial-style illustration for this news story.
 
 Requirements:
-- Professional news/editorial illustration style
+- Professional news/editorial illustration style in LANDSCAPE (16:9) format
 - Bold, clean, modern digital art aesthetic
 - MUST visually represent the MAIN IDEA of the story (not just the surface topic)
 - Show people/action relevant to the story (e.g., if about "choosing intimacy," show friends together, not isolation)
+- **IMPORTANT: Include a professional news reporter cat in the scene MOST OF THE TIME** (80%+ of images should feature the cat reporter)
+- The cat should be: anthropomorphic tabby cat in reporter attire (press badge, notepad), serious professional demeanor
+- Cat can be: reporting on scene, interviewing subjects, observing from newsdesk, etc.
 - Suitable for social media (no text in image)
 - Think about what SCENE or IMAGE best captures the story's meaning
 - Avoid generic or contradictory imagery
 
-Examples:
-- Story about "Gen Z choosing intimacy over influencers" → "Group of diverse young friends laughing together in cozy cafe setting, warm lighting, authentic connection, modern editorial photography style"
-- Story about "Senate infrastructure bill" → "US Capitol with construction equipment, professional news illustration, bold patriotic colors"
-- Story about "economic growth" → "Upward trending arrow with business professionals celebrating, modern clean vector illustration"
+Examples WITH cat reporter (PREFERRED):
+- Story about "Gen Z choosing intimacy over influencers" → "Orange tabby cat reporter with press badge interviewing diverse group of young friends in cozy cafe, notepad in paw, warm lighting, modern editorial photography"
+- Story about "Senate infrastructure bill" → "Professional cat reporter in suit broadcasting from US Capitol with construction cranes, holding microphone, bold patriotic colors, breaking news style"
+- Story about "economic growth" → "Tabby cat news anchor at desk with upward trending charts behind, wearing glasses and press badge, celebratory business scene, clean illustration"
 
-Analyze the tweet carefully and create a prompt that captures the ESSENCE and EMOTION of the story, not just keywords.
+Examples WITHOUT cat (use sparingly for very specific stories):
+- Story about "intimate moment" where cat would detract → "Close-up of hands holding, warm lighting, authentic human connection"
+
+Analyze the tweet carefully and create a prompt that captures the ESSENCE and EMOTION of the story. INCLUDE THE CAT REPORTER unless it would significantly harm the story's message.
 
 Just return the SHORT image prompt itself, nothing else."""
 
@@ -345,5 +351,5 @@ Just return the SHORT image prompt itself, nothing else."""
 
         except Exception as e:
             print(f"✗ Error generating image prompt: {e}")
-            # Fallback to simple prompt
-            return f"Professional editorial news illustration about {topic[:50]}"
+            # Fallback to simple prompt with cat reporter
+            return f"Professional tabby cat news reporter covering {topic[:80]}, landscape editorial illustration, 16:9 format"

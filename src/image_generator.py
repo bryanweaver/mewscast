@@ -39,9 +39,13 @@ class ImageGenerator:
             print(f"   Prompt: {prompt[:80]}...")
 
             # Call Grok image generation API
+            # Note: Grok doesn't support size parameter, we specify landscape in prompt
+            # Add aspect ratio instruction to prompt
+            landscape_prompt = f"{prompt}, landscape orientation 16:9 aspect ratio"
+
             response = self.client.images.generate(
                 model=self.model,
-                prompt=prompt,
+                prompt=landscape_prompt,
                 n=1  # Generate 1 image
             )
 
