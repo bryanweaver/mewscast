@@ -23,13 +23,14 @@ class TwitterBot:
             raise ValueError("Missing X API credentials. Check your .env file.")
 
         # Initialize tweepy client (v2 API)
+        # wait_on_rate_limit=False so GitHub Actions fail fast instead of waiting
         self.client = tweepy.Client(
             bearer_token=self.bearer_token,
             consumer_key=self.api_key,
             consumer_secret=self.api_secret,
             access_token=self.access_token,
             access_token_secret=self.access_token_secret,
-            wait_on_rate_limit=True
+            wait_on_rate_limit=False  # Fail fast on rate limits (important for CI/CD)
         )
 
         # Initialize v1.1 API for media upload
@@ -59,6 +60,11 @@ class TwitterBot:
             response = self.client.create_tweet(text=text)
             print(f"✓ Tweet posted successfully! ID: {response.data['id']}")
             return response.data
+        except tweepy.TooManyRequests as e:
+            print(f"✗ Rate limit exceeded! Free tier: 50 posts/24hrs")
+            print(f"   Wait until rate limit resets and try again")
+            print(f"   Error: {e}")
+            raise  # Re-raise to make GitHub Actions fail
         except tweepy.TweepyException as e:
             print(f"✗ Error posting tweet: {e}")
             return None
@@ -95,6 +101,11 @@ class TwitterBot:
             print(f"✓ Tweet with image posted successfully! ID: {response.data['id']}")
             return response.data
 
+        except tweepy.TooManyRequests as e:
+            print(f"✗ Rate limit exceeded! Free tier: 50 posts/24hrs")
+            print(f"   Wait until rate limit resets and try again")
+            print(f"   Error: {e}")
+            raise  # Re-raise to make GitHub Actions fail
         except tweepy.TweepyException as e:
             print(f"✗ Error posting tweet with image: {e}")
             return None
@@ -123,6 +134,11 @@ class TwitterBot:
             )
             print(f"✓ Reply posted successfully! ID: {response.data['id']}")
             return response.data
+        except tweepy.TooManyRequests as e:
+            print(f"✗ Rate limit exceeded! Free tier: 50 posts/24hrs")
+            print(f"   Wait until rate limit resets and try again")
+            print(f"   Error: {e}")
+            raise  # Re-raise to make GitHub Actions fail
         except tweepy.TweepyException as e:
             print(f"✗ Error posting reply: {e}")
             return None
