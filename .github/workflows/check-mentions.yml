@@ -1,15 +1,19 @@
 name: Check Mentions & Reply
 
 on:
-  # Check for mentions 3x daily for engagement
-  schedule:
-    - cron: '30 14 * * *'  # 2:30 PM UTC (between morning & midday posts)
-    - cron: '30 18 * * *'  # 6:30 PM UTC (between midday & evening posts)
-    - cron: '30 23 * * *'  # 11:30 PM UTC (after evening posts)
-    # Uncomment for more frequent checks (still well under 96/day limit):
-    # - cron: '30 3 * * *'   # Late night check
+  # DISABLED: Check for mentions consumes READ quota (100/month limit)
+  # Mention checking uses ~3 READ operations per day = 90/month
+  # Combined with testing, this exceeds our 100 READS/month free tier limit
+  #
+  # To re-enable mention checking, upgrade to Basic tier ($200/month)
+  # or uncomment the schedule below:
+  #
+  # schedule:
+  #   - cron: '30 14 * * *'  # 2:30 PM UTC (between morning & midday posts)
+  #   - cron: '30 18 * * *'  # 6:30 PM UTC (between midday & evening posts)
+  #   - cron: '30 23 * * *'  # 11:30 PM UTC (after evening posts)
 
-  # Allow manual triggering
+  # Allow manual triggering (still uses READ quota)
   workflow_dispatch:
 
 jobs:
