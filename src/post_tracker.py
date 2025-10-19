@@ -64,6 +64,7 @@ class PostTracker:
 
         url = story_metadata.get('url')
         title = story_metadata.get('title', '')
+        source = story_metadata.get('source', '')
 
         # Level 1: Exact URL match (HARD BLOCK)
         if url and self.config.get('url_deduplication', True):
@@ -71,7 +72,13 @@ class PostTracker:
                 print(f"✗ Duplicate URL detected: {url[:60]}...")
                 return True
 
-        # Level 2: Topic similarity check (SOFT BLOCK)
+        # Level 2: Source deduplication (HARD BLOCK) - never use same source twice
+        source_cooldown_hours = self.config.get('source_cooldown_hours', 168)  # Default 7 days
+        if source and self._source_posted(source, hours=source_cooldown_hours):
+            print(f"✗ Source already used recently: {source}")
+            return True
+
+        # Level 3: Topic similarity check (SOFT BLOCK)
         cooldown_hours = self.config.get('topic_cooldown_hours', 48)
         if self._similar_topic_posted(title, hours=cooldown_hours):
             print(f"✗ Similar topic posted recently: {title[:60]}...")
@@ -84,6 +91,35 @@ class PostTracker:
         for post in self.posts:
             if post.get('url') == url:
                 return True
+        return False
+
+    def _source_posted(self, source: str, hours: int = 168) -> bool:
+        """
+        Check if source was already posted within cooldown period
+
+        Args:
+            source: News source name to check
+            hours: Cooldown period in hours (default 7 days)
+
+        Returns:
+            True if source found within cooldown period
+        """
+        if not source:
+            return False
+
+        cutoff_time = datetime.now(timezone.utc) - timedelta(hours=hours)
+
+        for post in self.posts:
+            # Check timestamp
+            post_time = datetime.fromisoformat(post['timestamp'].replace('Z', '+00:00'))
+            if post_time < cutoff_time:
+                continue  # Too old, outside cooldown period
+
+            # Check if same source
+            post_source = post.get('source', '')
+            if post_source == source:
+                return True
+
         return False
 
     def _similar_topic_posted(self, title: str, hours: int = 48) -> bool:
