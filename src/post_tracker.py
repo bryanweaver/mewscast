@@ -49,12 +49,13 @@ class PostTracker:
         except IOError as e:
             print(f"⚠️  Could not save post history: {e}")
 
-    def is_duplicate(self, story_metadata: Dict) -> bool:
+    def is_duplicate(self, story_metadata: Dict, post_content: str = None) -> bool:
         """
         Check if story is a duplicate of recently posted content
 
         Args:
             story_metadata: Story dict with 'title', 'url', 'source'
+            post_content: The generated post text to check for similarity
 
         Returns:
             True if duplicate, False if original
@@ -78,7 +79,13 @@ class PostTracker:
             print(f"✗ Source already used recently: {source}")
             return True
 
-        # Level 3: Topic similarity check (SOFT BLOCK)
+        # Level 3: Content similarity check (HARD BLOCK) - check actual post text
+        content_cooldown_hours = self.config.get('content_cooldown_hours', 72)  # Default 3 days
+        if post_content and self._similar_content_posted(post_content, hours=content_cooldown_hours):
+            print(f"✗ Similar content posted recently")
+            return True
+
+        # Level 4: Topic similarity check (SOFT BLOCK)
         cooldown_hours = self.config.get('topic_cooldown_hours', 48)
         if self._similar_topic_posted(title, hours=cooldown_hours):
             print(f"✗ Similar topic posted recently: {title[:60]}...")
@@ -170,13 +177,80 @@ class PostTracker:
 
         return False
 
-    def record_post(self, story_metadata: Dict, tweet_id: str = None, reply_tweet_id: str = None,
-                    bluesky_uri: str = None, bluesky_reply_uri: str = None):
+    def _similar_content_posted(self, content: str, hours: int = 72) -> bool:
+        """
+        Check if similar content was posted within cooldown period
+
+        Args:
+            content: Post content text to check
+            hours: Cooldown period in hours (default 3 days)
+
+        Returns:
+            True if similar content found within cooldown period
+        """
+        if not content:
+            return False
+
+        # Extract keywords from content (lowercase, remove common words and cat phrases)
+        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+                      'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'been', 'be',
+                      'this', 'that', 'it', 'can', 'will', 'cat', 'mews', 'purr', 'paws',
+                      'fur', 'whisker', 'perch', 'meow'}
+
+        # Clean content: remove hashtags, URLs, and source indicator
+        import re
+        clean_content = re.sub(r'#\w+', '', content)  # Remove hashtags
+        clean_content = re.sub(r'http\S+', '', clean_content)  # Remove URLs
+        clean_content = re.sub(r'📰↓', '', clean_content)  # Remove source indicator
+
+        content_words = set(clean_content.lower().split()) - stop_words
+
+        if len(content_words) < 3:
+            return False  # Content too short to compare meaningfully
+
+        cutoff_time = datetime.now(timezone.utc) - timedelta(hours=hours)
+
+        for post in self.posts:
+            # Check timestamp
+            post_time = datetime.fromisoformat(post['timestamp'].replace('Z', '+00:00'))
+            if post_time < cutoff_time:
+                continue  # Too old, outside cooldown period
+
+            # Extract keywords from historical post content
+            post_content = post.get('content', '')
+            if not post_content:
+                continue  # No content stored (old format)
+
+            # Clean historical content same way
+            clean_post_content = re.sub(r'#\w+', '', post_content)
+            clean_post_content = re.sub(r'http\S+', '', clean_post_content)
+            clean_post_content = re.sub(r'📰↓', '', clean_post_content)
+
+            post_words = set(clean_post_content.lower().split()) - stop_words
+
+            if len(post_words) < 3:
+                continue
+
+            # Calculate keyword overlap
+            common_words = content_words & post_words
+            overlap_ratio = len(common_words) / max(len(content_words), len(post_words))
+
+            # Higher threshold for content (70%) than topic (60%)
+            # because content is more specific
+            if overlap_ratio > 0.70:
+                print(f"   Content similarity: {overlap_ratio:.1%} with post from {post_time.strftime('%Y-%m-%d')}")
+                return True
+
+        return False
+
+    def record_post(self, story_metadata: Dict, post_content: str = None, tweet_id: str = None,
+                    reply_tweet_id: str = None, bluesky_uri: str = None, bluesky_reply_uri: str = None):
         """
         Record a successful post to history
 
         Args:
             story_metadata: Story dict with 'title', 'url', 'source'
+            post_content: The actual text content of the post
             tweet_id: Posted tweet ID (X/Twitter)
             reply_tweet_id: Optional reply tweet ID (X/Twitter)
             bluesky_uri: Posted skeet URI (Bluesky)
@@ -187,6 +261,7 @@ class PostTracker:
             'topic': story_metadata.get('title', 'Unknown'),
             'url': story_metadata.get('url'),
             'source': story_metadata.get('source', 'Unknown'),
+            'content': post_content,  # Store actual post text for better deduplication
             'x_tweet_id': tweet_id,  # X/Twitter
             'x_reply_tweet_id': reply_tweet_id,
             'bluesky_uri': bluesky_uri,  # Bluesky

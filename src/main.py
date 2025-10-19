@@ -83,6 +83,13 @@ def post_scheduled_tweet():
         needs_source = result['needs_source_reply']
         story_meta = result['story_metadata']
 
+        # Check if this content is too similar to recent posts
+        if selected_story and tracker.is_duplicate(selected_story, post_content=tweet_text):
+            print(f"\n{'='*60}")
+            print(f"⚠️  Generated content too similar to recent post - skipping")
+            print(f"{'='*60}\n")
+            return False
+
         # Try to generate image (with graceful fallback)
         image_path = None
         try:
@@ -176,6 +183,7 @@ def post_scheduled_tweet():
         if selected_story and (x_success or bluesky_success):
             tracker.record_post(
                 selected_story,
+                post_content=tweet_text,
                 tweet_id=tweet_id,
                 reply_tweet_id=reply_tweet_id,
                 bluesky_uri=bluesky_uri,
