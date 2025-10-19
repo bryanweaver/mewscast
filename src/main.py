@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 
 from content_generator import ContentGenerator
 from twitter_bot import TwitterBot
+from bluesky_bot import BlueskyBot
 from news_fetcher import NewsFetcher
 from image_generator import ImageGenerator
 from post_tracker import PostTracker
@@ -35,7 +36,15 @@ def post_scheduled_tweet():
         generator = ContentGenerator()
 
         print("📡 Connecting to X...")
-        bot = TwitterBot()
+        twitter_bot = TwitterBot()
+
+        print("🦋 Connecting to Bluesky...")
+        try:
+            bluesky_bot = BlueskyBot()
+        except Exception as e:
+            print(f"⚠️  Bluesky connection failed: {e}")
+            print(f"   Continuing with X only...")
+            bluesky_bot = None
 
         print("📰 Fetching trending topics from Google Trends...")
         news_fetcher = NewsFetcher()
@@ -90,48 +99,103 @@ def post_scheduled_tweet():
             print(f"⚠️  Image generation failed: {e}")
             print(f"   Continuing without image...")
 
-        # Post main tweet to X (with or without image)
+        # Post to X (with or without image)
         print(f"📤 Filing news report to X...")
         print(f"   Content: \"{tweet_text}\"")
 
+        tweet_id = None
+        reply_tweet_id = None
+        x_success = False
+
         if image_path:
             print(f"   Image: {image_path}\n")
-            post_result = bot.post_tweet_with_image(tweet_text, image_path)
+            x_result = twitter_bot.post_tweet_with_image(tweet_text, image_path)
         else:
             print(f"   (No image attached)\n")
-            post_result = bot.post_tweet(tweet_text)
+            x_result = twitter_bot.post_tweet(tweet_text)
 
-        if post_result:
-            tweet_id = post_result['id']
-            print(f"✅ Tweet posted! ID: {tweet_id}")
+        if x_result:
+            tweet_id = x_result['id']
+            print(f"✅ X post successful! ID: {tweet_id}")
+            x_success = True
 
-            reply_tweet_id = None
-
-            # If it's a specific story, auto-reply with source
+            # Post source reply on X
             if needs_source and story_meta:
-                print(f"\n📎 Posting source citation reply...")
+                print(f"📎 Posting source citation reply on X...")
                 time.sleep(2)  # Brief pause before reply
 
                 source_reply = generator.generate_source_reply(tweet_text, story_meta)
-                reply_result = bot.reply_to_tweet(tweet_id, source_reply)
+                x_reply_result = twitter_bot.reply_to_tweet(tweet_id, source_reply)
 
-                if reply_result:
-                    reply_tweet_id = reply_result['id']
-                    print(f"✅ Source reply posted! ID: {reply_tweet_id}")
+                if x_reply_result:
+                    reply_tweet_id = x_reply_result['id']
+                    print(f"✅ X source reply posted! ID: {reply_tweet_id}")
                 else:
-                    print(f"⚠️  Main tweet posted but source reply failed")
+                    print(f"⚠️  X source reply failed")
+        else:
+            print(f"❌ X post failed")
 
-            # Record post to history for deduplication (with reply ID if posted)
-            if selected_story:
-                tracker.record_post(selected_story, tweet_id, reply_tweet_id)
+        # Post to Bluesky (with or without image)
+        bluesky_uri = None
+        bluesky_reply_uri = None
+        bluesky_success = False
 
+        if bluesky_bot:
+            print(f"\n🦋 Filing news report to Bluesky...")
+            print(f"   Content: \"{tweet_text}\"")
+
+            if image_path:
+                print(f"   Image: {image_path}\n")
+                bluesky_result = bluesky_bot.post_skeet_with_image(tweet_text, image_path)
+            else:
+                print(f"   (No image attached)\n")
+                bluesky_result = bluesky_bot.post_skeet(tweet_text)
+
+            if bluesky_result:
+                bluesky_uri = bluesky_result['uri']
+                print(f"✅ Bluesky post successful! URI: {bluesky_uri}")
+                bluesky_success = True
+
+                # Post source reply on Bluesky
+                if needs_source and story_meta:
+                    print(f"📎 Posting source citation reply on Bluesky...")
+                    time.sleep(2)  # Brief pause before reply
+
+                    source_reply = generator.generate_source_reply(tweet_text, story_meta)
+                    bluesky_reply_result = bluesky_bot.reply_to_skeet(bluesky_uri, source_reply)
+
+                    if bluesky_reply_result:
+                        bluesky_reply_uri = bluesky_reply_result['uri']
+                        print(f"✅ Bluesky source reply posted! URI: {bluesky_reply_uri}")
+                    else:
+                        print(f"⚠️  Bluesky source reply failed")
+            else:
+                print(f"❌ Bluesky post failed")
+
+        # Record post to history (with IDs from both platforms)
+        if selected_story and (x_success or bluesky_success):
+            tracker.record_post(
+                selected_story,
+                tweet_id=tweet_id,
+                reply_tweet_id=reply_tweet_id,
+                bluesky_uri=bluesky_uri,
+                bluesky_reply_uri=bluesky_reply_uri
+            )
+
+        # Determine overall success
+        if x_success or bluesky_success:
             print(f"\n{'='*60}")
-            print(f"✅ SUCCESS! News report filed.")
+            platforms_posted = []
+            if x_success:
+                platforms_posted.append("X")
+            if bluesky_success:
+                platforms_posted.append("Bluesky")
+            print(f"✅ SUCCESS! News report filed to: {', '.join(platforms_posted)}")
             print(f"{'='*60}\n")
             return True
         else:
             print(f"\n{'='*60}")
-            print(f"❌ FAILED to post tweet.")
+            print(f"❌ FAILED to post to any platform.")
             print(f"{'='*60}\n")
             return False
 

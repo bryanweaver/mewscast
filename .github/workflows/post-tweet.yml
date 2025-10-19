@@ -36,7 +36,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Generate and post tweet
+      - name: Generate and post to X and Bluesky
         env:
           # X API credentials (set these in GitHub Secrets)
           X_API_KEY: ${{ secrets.X_API_KEY }}
@@ -44,6 +44,10 @@ jobs:
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+
+          # Bluesky credentials (set these in GitHub Secrets)
+          BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
 
           # AI API keys (set in GitHub Secrets)
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

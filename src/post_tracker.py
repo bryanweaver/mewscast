@@ -170,22 +170,27 @@ class PostTracker:
 
         return False
 
-    def record_post(self, story_metadata: Dict, tweet_id: str, reply_tweet_id: str = None):
+    def record_post(self, story_metadata: Dict, tweet_id: str = None, reply_tweet_id: str = None,
+                    bluesky_uri: str = None, bluesky_reply_uri: str = None):
         """
         Record a successful post to history
 
         Args:
             story_metadata: Story dict with 'title', 'url', 'source'
-            tweet_id: Posted tweet ID
-            reply_tweet_id: Optional reply tweet ID (for source citations)
+            tweet_id: Posted tweet ID (X/Twitter)
+            reply_tweet_id: Optional reply tweet ID (X/Twitter)
+            bluesky_uri: Posted skeet URI (Bluesky)
+            bluesky_reply_uri: Optional reply skeet URI (Bluesky)
         """
         post_record = {
             'timestamp': datetime.now(timezone.utc).isoformat(),
             'topic': story_metadata.get('title', 'Unknown'),
             'url': story_metadata.get('url'),
-            'tweet_id': tweet_id,
             'source': story_metadata.get('source', 'Unknown'),
-            'reply_tweet_id': reply_tweet_id  # Track if source reply was posted
+            'x_tweet_id': tweet_id,  # X/Twitter
+            'x_reply_tweet_id': reply_tweet_id,
+            'bluesky_uri': bluesky_uri,  # Bluesky
+            'bluesky_reply_uri': bluesky_reply_uri
         }
 
         self.posts.append(post_record)
