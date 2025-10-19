@@ -6,6 +6,7 @@ from anthropic import Anthropic
 from typing import Optional, List, Dict
 import yaml
 import random
+from datetime import datetime
 
 
 class ContentGenerator:
@@ -31,6 +32,9 @@ class ContentGenerator:
         self.style = self.config['content']['style']
         self.persona = self.config['content'].get('persona', 'news reporter')
         self.cat_vocabulary = self.config['content'].get('cat_vocabulary', [])
+        self.engagement_hooks = self.config['content'].get('engagement_hooks', [])
+        self.time_of_day = self.config['content'].get('time_of_day', {})
+        self.cat_humor = self.config['content'].get('cat_humor', [])
         self.editorial_guidelines = self.config['content'].get('editorial_guidelines', [])
         self.max_length = self.config['content']['max_length']
         self.avoid_topics = self.config['safety']['avoid_topics']
@@ -126,8 +130,24 @@ class ContentGenerator:
                                article_details: str = None) -> str:
         """Build the news cat reporter prompt for Claude"""
         avoid_str = ", ".join(self.avoid_topics)
-        cat_vocab_str = ", ".join(self.cat_vocabulary[:8])  # Show examples
+        cat_vocab_str = ", ".join(self.cat_vocabulary[:10])  # Show examples
         guidelines_str = "\n- ".join(self.editorial_guidelines)
+
+        # Determine time of day for context
+        hour = datetime.now().hour
+        if 5 <= hour < 12:
+            time_period = "morning"
+        elif 12 <= hour < 18:
+            time_period = "afternoon"
+        else:
+            time_period = "evening"
+
+        time_phrases = self.time_of_day.get(time_period, [])
+        time_phrases_str = ", ".join(time_phrases) if time_phrases else ""
+
+        # Get examples of new features
+        engagement_str = ", ".join(self.engagement_hooks[:3]) if self.engagement_hooks else ""
+        cat_humor_str = ", ".join(self.cat_humor) if self.cat_humor else ""
 
         # Add specific guidance for real trending stories
         story_guidance = ""
@@ -164,15 +184,25 @@ CHARACTER:
 CONTENT GUIDELINES:
 - {guidelines_str}
 {story_guidance}
-STYLE:
+STYLE & VOICE:
 - {self.style}
 - Fact-based reporting with context
-- Center-right/populist perspective where relevant
-- Human interest angle
+- Populist/skeptical perspective: Question power, follow the money, focus on regular people
+- Human interest angle first
 - Professional but with occasional cheeky cat phrases
 
+TIME CONTEXT:
+- It's currently {time_period}
+- Optional {time_period} phrases: {time_phrases_str}
+- Use naturally if appropriate, or skip entirely
+
+NEW VOICE FEATURES (use occasionally, not every tweet):
+- Cat observer angle: "Watching humans [do thing]. Here's what this cat sees..."
+- Self-aware humor (can extend slightly past {self.max_length}): {cat_humor_str}
+- Engagement hooks at end: {engagement_str}
+
 FORMAT:
-- Maximum {self.max_length} characters (strict!)
+- Maximum {self.max_length} characters (can extend slightly for self-aware humor)
 - Use ACTUAL line breaks between distinct thoughts/sentences for readability
 - NO emojis (very rare exceptions only)
 - Hashtags: place at the end, never repeat the same hashtag
@@ -193,6 +223,16 @@ Commentary:
 
 Paws for thought—cycles repeat. #Culture"
 
+Skeptical populist angle:
+"White House announces new program. Interesting timing.
+
+Follow the money—who benefits? #Politics"
+
+Cat observer angle:
+"Watching humans debate this for weeks.
+
+Even this cat can see the real issue is [X]. Thoughts?"
+
 AVOID:
 - {avoid_str}
 - Using "Breaking mews" for non-urgent stories or commentary
@@ -202,6 +242,7 @@ AVOID:
 - Forced cat puns that don't fit
 - Being overly partisan (populist lean is OK)
 - Fabricating specific details like exact numbers, times, locations
+- Overusing new features—mix them naturally with standard reporting
 
 Just return the tweet text itself, nothing else."""
 
