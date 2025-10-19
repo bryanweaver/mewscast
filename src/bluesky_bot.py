@@ -99,7 +99,7 @@ class BlueskyBot:
         Reply to a specific skeet
 
         Args:
-            parent_uri: URI of the post to reply to
+            parent_uri: URI of the post to reply to (format: at://did/collection/rkey)
             text: Reply content
 
         Returns:
@@ -109,15 +109,37 @@ class BlueskyBot:
             if len(text) > 300:
                 text = text[:297] + "..."
 
-            # Get the parent post to build reply reference
-            parent_post = self.client.get_post(parent_uri)
+            # Parse AT URI: at://did:plc:xxx/app.bsky.feed.post/rkey
+            # Extract repo (DID) and rkey
+            parts = parent_uri.replace('at://', '').split('/')
+            if len(parts) != 3:
+                raise ValueError(f"Invalid AT URI format: {parent_uri}")
 
-            # Create reply reference
+            repo_did = parts[0]  # did:plc:xxx
+            collection = parts[1]  # app.bsky.feed.post
+            rkey = parts[2]  # post ID
+
+            # Get the parent post using repo and rkey
             from atproto import models
 
+            parent_ref = models.ComAtprotoRepoStrongRef.Main(
+                uri=parent_uri,
+                cid=''  # We'll let atproto fetch the CID
+            )
+
+            # Get the actual post to get its CID
+            post_thread = self.client.app.bsky.feed.get_post_thread({'uri': parent_uri})
+            parent_cid = post_thread.thread.post.cid
+
+            # Create proper references with CIDs
+            parent_ref_with_cid = models.ComAtprotoRepoStrongRef.Main(
+                uri=parent_uri,
+                cid=parent_cid
+            )
+
             reply_ref = models.AppBskyFeedPost.ReplyRef(
-                parent=models.create_strong_ref(parent_post),
-                root=models.create_strong_ref(parent_post)
+                parent=parent_ref_with_cid,
+                root=parent_ref_with_cid  # Same as parent since it's direct reply
             )
 
             # Post reply
