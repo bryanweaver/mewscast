@@ -129,21 +129,59 @@ class BlueskyBot:
                 root=parent_ref
             )
 
-            # Create link card embed
-            # atproto SDK should automatically fetch metadata and create preview
+            # Create link card embed using atproto models
+            # Fetch URL metadata
             print(f"📎 Creating link card for: {url[:60]}...")
 
-            response = self.client.send_post(
-                text=url,
-                reply_to=reply_ref,
-                embed_external={'uri': url}  # This tells atproto to create a link card
-            )
+            # Use atproto to create external embed with link metadata
+            import requests
+            from bs4 import BeautifulSoup
 
-            print(f"✓ Reply with link card posted! URI: {response.uri}")
-            return {
-                'uri': response.uri,
-                'cid': response.cid
-            }
+            # Fetch page metadata
+            try:
+                headers = {'User-Agent': 'Mozilla/5.0'}
+                page_response = requests.get(url, headers=headers, timeout=5)
+                soup = BeautifulSoup(page_response.content, 'html.parser')
+
+                # Extract metadata
+                title = soup.find('meta', property='og:title')
+                description = soup.find('meta', property='og:description')
+                image = soup.find('meta', property='og:image')
+
+                external = models.AppBskyEmbedExternal.External(
+                    uri=url,
+                    title=(title['content'] if title else url)[:300],
+                    description=(description['content'] if description else '')[:300],
+                    thumb=None  # Could upload image here if needed
+                )
+
+                embed = models.AppBskyEmbedExternal.Main(external=external)
+
+                response = self.client.send_post(
+                    text=url,
+                    reply_to=reply_ref,
+                    embed=embed
+                )
+
+                print(f"✓ Reply with link card posted! URI: {response.uri}")
+                return {
+                    'uri': response.uri,
+                    'cid': response.cid
+                }
+
+            except Exception as embed_error:
+                print(f"⚠️  Link card creation failed: {embed_error}")
+                # Fall back to simple post without embed
+                response = self.client.send_post(
+                    text=url,
+                    reply_to=reply_ref
+                )
+
+                print(f"✓ Reply posted (text only): {response.uri}")
+                return {
+                    'uri': response.uri,
+                    'cid': response.cid
+                }
 
         except Exception as e:
             print(f"✗ Error posting reply with link: {e}")
