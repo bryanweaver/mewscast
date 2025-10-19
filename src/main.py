@@ -99,41 +99,44 @@ def post_scheduled_tweet():
             print(f"⚠️  Image generation failed: {e}")
             print(f"   Continuing without image...")
 
-        # Post to X (with or without image)
-        print(f"📤 Filing news report to X...")
-        print(f"   Content: \"{tweet_text}\"")
+        # TEMPORARILY DISABLED - Testing Bluesky only
+        # # Post to X (with or without image)
+        # print(f"📤 Filing news report to X...")
+        # print(f"   Content: \"{tweet_text}\"")
 
         tweet_id = None
         reply_tweet_id = None
         x_success = False
 
-        if image_path:
-            print(f"   Image: {image_path}\n")
-            x_result = twitter_bot.post_tweet_with_image(tweet_text, image_path)
-        else:
-            print(f"   (No image attached)\n")
-            x_result = twitter_bot.post_tweet(tweet_text)
+        print(f"⚠️  X posting temporarily disabled for Bluesky testing")
 
-        if x_result:
-            tweet_id = x_result['id']
-            print(f"✅ X post successful! ID: {tweet_id}")
-            x_success = True
+        # if image_path:
+        #     print(f"   Image: {image_path}\n")
+        #     x_result = twitter_bot.post_tweet_with_image(tweet_text, image_path)
+        # else:
+        #     print(f"   (No image attached)\n")
+        #     x_result = twitter_bot.post_tweet(tweet_text)
 
-            # Post source reply on X
-            if needs_source and story_meta:
-                print(f"📎 Posting source citation reply on X...")
-                time.sleep(2)  # Brief pause before reply
+        # if x_result:
+        #     tweet_id = x_result['id']
+        #     print(f"✅ X post successful! ID: {tweet_id}")
+        #     x_success = True
 
-                source_reply = generator.generate_source_reply(tweet_text, story_meta)
-                x_reply_result = twitter_bot.reply_to_tweet(tweet_id, source_reply)
+        #     # Post source reply on X
+        #     if needs_source and story_meta:
+        #         print(f"📎 Posting source citation reply on X...")
+        #         time.sleep(2)  # Brief pause before reply
 
-                if x_reply_result:
-                    reply_tweet_id = x_reply_result['id']
-                    print(f"✅ X source reply posted! ID: {reply_tweet_id}")
-                else:
-                    print(f"⚠️  X source reply failed")
-        else:
-            print(f"❌ X post failed")
+        #         source_reply = generator.generate_source_reply(tweet_text, story_meta)
+        #         x_reply_result = twitter_bot.reply_to_tweet(tweet_id, source_reply)
+
+        #         if x_reply_result:
+        #             reply_tweet_id = x_reply_result['id']
+        #             print(f"✅ X source reply posted! ID: {reply_tweet_id}")
+        #         else:
+        #             print(f"⚠️  X source reply failed")
+        # else:
+        #     print(f"❌ X post failed")
 
         # Post to Bluesky (with or without image)
         bluesky_uri = None
