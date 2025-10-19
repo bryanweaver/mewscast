@@ -7,7 +7,7 @@ import requests
 from typing import List, Dict, Optional
 import time
 import re
-import base64
+from googlenewsdecoder import gnewsdecoder
 
 
 class NewsFetcher:
@@ -33,7 +33,7 @@ class NewsFetcher:
 
     def resolve_google_news_url(self, google_url: str) -> str:
         """
-        Resolve Google News proxy URL to the actual article URL
+        Resolve Google News proxy URL to the actual article URL using googlenewsdecoder
 
         Args:
             google_url: Google News RSS article URL
@@ -42,100 +42,19 @@ class NewsFetcher:
             Actual article URL, or original URL if resolution fails
         """
         try:
-            # Method 1: Decode base64-encoded URL from Google News RSS link
-            # Google News URLs look like: https://news.google.com/rss/articles/CBMi...?oc=5
-            # The part after "articles/" is a base64-encoded string containing the actual URL
+            # Use googlenewsdecoder library (updated Jan 2025)
+            print(f"   📡 Decoding Google News URL...")
+            result = gnewsdecoder(google_url, interval=1)
 
-            # Extract the encoded article ID
-            match = re.search(r'/articles/([^?]+)', google_url)
-            if match:
-                encoded_id = match.group(1)
-
-                # Try to decode the base64 (add padding if needed)
-                try:
-                    # Add padding to make length multiple of 4
-                    padding = (4 - len(encoded_id) % 4) % 4
-                    encoded_id_padded = encoded_id + ('=' * padding)
-
-                    # Decode base64
-                    decoded = base64.urlsafe_b64decode(encoded_id_padded).decode('utf-8', errors='ignore')
-
-                    # Try multiple URL extraction patterns
-                    url_patterns = [
-                        r'https?://(?!news\.google\.com)(?!www\.google\.com)[^\s"\'\x00-\x1f\x80-\xff]+',
-                        r'https?://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,}[^\s"\'\x00-\x1f\x80-\xff]*',
-                    ]
-
-                    for pattern in url_patterns:
-                        urls = re.findall(pattern, decoded)
-                        # Filter out Google URLs
-                        non_google_urls = [u for u in urls if 'google.com' not in u and 'google.co' not in u]
-
-                        if non_google_urls:
-                            # Clean the URL - remove any trailing junk
-                            actual_url = non_google_urls[0].split('\x00')[0].split('\x08')[0].rstrip('\x00\x08')
-
-                            # Validate URL structure
-                            if actual_url.startswith('http') and '.' in actual_url:
-                                print(f"   ✓ Decoded URL: {actual_url[:80]}...")
-                                return actual_url
-
-                except Exception as decode_error:
-                    print(f"   ⚠️  Base64 decode failed: {decode_error}")
-
-            # Method 2: Try to extract URL from redirect chain
-            print(f"   Trying redirect method...")
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-            }
-
-            # First, try HEAD request (faster)
-            try:
-                response = requests.head(
-                    google_url,
-                    allow_redirects=True,
-                    timeout=5,
-                    headers=headers
-                )
-                if response.url and 'google.com' not in response.url and 'google.co' not in response.url:
-                    print(f"   ✓ Resolved via HEAD redirect: {response.url[:80]}...")
-                    return response.url
-            except:
-                pass  # Fall through to GET method
-
-            # Fall back to GET request
-            response = requests.get(
-                google_url,
-                allow_redirects=True,
-                timeout=10,
-                headers=headers
-            )
-
-            # Check final URL
-            if response.url and 'google.com' not in response.url and 'google.co' not in response.url:
-                print(f"   ✓ Resolved via GET redirect: {response.url[:80]}...")
-                return response.url
-
-            # Method 3: Try to extract URL from HTML response
-            if response.text:
-                # Look for canonical URL in meta tags
-                canonical_match = re.search(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']', response.text)
-                if canonical_match:
-                    canonical_url = canonical_match.group(1)
-                    if 'google.com' not in canonical_url:
-                        print(f"   ✓ Extracted canonical URL: {canonical_url[:80]}...")
-                        return canonical_url
-
-                # Look for og:url meta tag
-                og_url_match = re.search(r'<meta[^>]+property=["\']og:url["\'][^>]+content=["\']([^"\']+)["\']', response.text)
-                if og_url_match:
-                    og_url = og_url_match.group(1)
-                    if 'google.com' not in og_url:
-                        print(f"   ✓ Extracted og:url: {og_url[:80]}...")
-                        return og_url
-
-            print(f"   ⚠️  Could not extract actual URL, using Google News URL")
-            return google_url
+            if result.get("status"):
+                decoded_url = result["decoded_url"]
+                print(f"   ✓ Decoded URL: {decoded_url[:80]}...")
+                return decoded_url
+            else:
+                error_msg = result.get("message", "Unknown error")
+                print(f"   ⚠️  Decoder failed: {error_msg}")
+                print(f"   Using original Google News URL as fallback")
+                return google_url
 
         except Exception as e:
             print(f"   ⚠️  Could not resolve URL: {e}")

@@ -108,6 +108,17 @@ class BlueskyBot:
             Post data if successful, None if failed
         """
         try:
+            # Bluesky has a 300 character limit on post text
+            # If URL is too long, skip the reply (shouldn't happen with decoded URLs)
+            if len(url) > 300:
+                print(f"⚠️  URL too long for Bluesky ({len(url)} chars > 300)")
+                # Check if it's a Google News URL that failed to decode
+                if 'news.google.com' in url:
+                    print(f"   Google News URL not decoded - skipping Bluesky source reply")
+                else:
+                    print(f"   Article URL unexpectedly long - skipping Bluesky source reply")
+                return None
+
             # Parse AT URI to get components
             parts = parent_uri.replace('at://', '').split('/')
             if len(parts) != 3:
