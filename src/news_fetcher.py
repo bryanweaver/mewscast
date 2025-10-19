@@ -60,38 +60,79 @@ class NewsFetcher:
                     # Decode base64
                     decoded = base64.urlsafe_b64decode(encoded_id_padded).decode('utf-8', errors='ignore')
 
-                    # Extract URL from decoded string using regex
-                    # Look for http/https URLs that are NOT google.com
-                    url_pattern = r'https?://(?!.*google\.com)[^\s"\'\x00-\x1f]+'
-                    urls = re.findall(url_pattern, decoded)
+                    # Try multiple URL extraction patterns
+                    url_patterns = [
+                        r'https?://(?!news\.google\.com)(?!www\.google\.com)[^\s"\'\x00-\x1f\x80-\xff]+',
+                        r'https?://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,}[^\s"\'\x00-\x1f\x80-\xff]*',
+                    ]
 
-                    if urls:
-                        # Return the first non-Google URL found
-                        actual_url = urls[0].rstrip('\x00')  # Remove null bytes
-                        print(f"   ✓ Decoded URL: {actual_url[:80]}...")
-                        return actual_url
+                    for pattern in url_patterns:
+                        urls = re.findall(pattern, decoded)
+                        # Filter out Google URLs
+                        non_google_urls = [u for u in urls if 'google.com' not in u and 'google.co' not in u]
+
+                        if non_google_urls:
+                            # Clean the URL - remove any trailing junk
+                            actual_url = non_google_urls[0].split('\x00')[0].split('\x08')[0].rstrip('\x00\x08')
+
+                            # Validate URL structure
+                            if actual_url.startswith('http') and '.' in actual_url:
+                                print(f"   ✓ Decoded URL: {actual_url[:80]}...")
+                                return actual_url
 
                 except Exception as decode_error:
                     print(f"   ⚠️  Base64 decode failed: {decode_error}")
 
-            # Method 2: Follow HTTP redirects as fallback
+            # Method 2: Try to extract URL from redirect chain
             print(f"   Trying redirect method...")
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
             }
 
+            # First, try HEAD request (faster)
+            try:
+                response = requests.head(
+                    google_url,
+                    allow_redirects=True,
+                    timeout=5,
+                    headers=headers
+                )
+                if response.url and 'google.com' not in response.url and 'google.co' not in response.url:
+                    print(f"   ✓ Resolved via HEAD redirect: {response.url[:80]}...")
+                    return response.url
+            except:
+                pass  # Fall through to GET method
+
+            # Fall back to GET request
             response = requests.get(
                 google_url,
                 allow_redirects=True,
                 timeout=10,
                 headers=headers
             )
-            actual_url = response.url
 
-            # If still on Google domain after redirects, extraction failed
-            if 'google.com' not in actual_url and 'google.co' not in actual_url:
-                print(f"   ✓ Resolved via redirect: {actual_url[:80]}...")
-                return actual_url
+            # Check final URL
+            if response.url and 'google.com' not in response.url and 'google.co' not in response.url:
+                print(f"   ✓ Resolved via GET redirect: {response.url[:80]}...")
+                return response.url
+
+            # Method 3: Try to extract URL from HTML response
+            if response.text:
+                # Look for canonical URL in meta tags
+                canonical_match = re.search(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']', response.text)
+                if canonical_match:
+                    canonical_url = canonical_match.group(1)
+                    if 'google.com' not in canonical_url:
+                        print(f"   ✓ Extracted canonical URL: {canonical_url[:80]}...")
+                        return canonical_url
+
+                # Look for og:url meta tag
+                og_url_match = re.search(r'<meta[^>]+property=["\']og:url["\'][^>]+content=["\']([^"\']+)["\']', response.text)
+                if og_url_match:
+                    og_url = og_url_match.group(1)
+                    if 'google.com' not in og_url:
+                        print(f"   ✓ Extracted og:url: {og_url[:80]}...")
+                        return og_url
 
             print(f"   ⚠️  Could not extract actual URL, using Google News URL")
             return google_url
