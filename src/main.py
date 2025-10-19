@@ -169,7 +169,17 @@ def post_scheduled_tweet():
                     time.sleep(2)  # Brief pause before reply
 
                     source_reply = generator.generate_source_reply(tweet_text, story_meta)
-                    bluesky_reply_result = bluesky_bot.reply_to_skeet(bluesky_uri, source_reply)
+
+                    # Check if source reply is just a URL (for link card)
+                    import re
+                    is_url_only = bool(re.match(r'^https?://\S+$', source_reply.strip()))
+
+                    if is_url_only:
+                        # Use link card method for URL-only replies
+                        bluesky_reply_result = bluesky_bot.reply_to_skeet_with_link(bluesky_uri, source_reply.strip())
+                    else:
+                        # Use regular reply for text content
+                        bluesky_reply_result = bluesky_bot.reply_to_skeet(bluesky_uri, source_reply)
 
                     if bluesky_reply_result:
                         bluesky_reply_uri = bluesky_reply_result['uri']

@@ -3,7 +3,9 @@ Bluesky integration using atproto
 """
 import os
 from atproto import Client
+from atproto import models
 from typing import Optional
+import re
 
 
 class BlueskyBot:
@@ -93,6 +95,61 @@ class BlueskyBot:
         except Exception as e:
             print(f"✗ Error posting skeet with image: {e}")
             return None
+
+    def reply_to_skeet_with_link(self, parent_uri: str, url: str) -> Optional[dict]:
+        """
+        Reply to a skeet with a URL that shows a link preview card
+
+        Args:
+            parent_uri: URI of the post to reply to
+            url: URL to post as a link card
+
+        Returns:
+            Post data if successful, None if failed
+        """
+        try:
+            # Parse AT URI to get components
+            parts = parent_uri.replace('at://', '').split('/')
+            if len(parts) != 3:
+                raise ValueError(f"Invalid AT URI format: {parent_uri}")
+
+            # Get the post thread to fetch parent CID
+            post_thread = self.client.app.bsky.feed.get_post_thread({'uri': parent_uri})
+            parent_cid = post_thread.thread.post.cid
+
+            # Create parent reference
+            parent_ref = models.ComAtprotoRepoStrongRef.Main(
+                uri=parent_uri,
+                cid=parent_cid
+            )
+
+            # Create reply reference
+            reply_ref = models.AppBskyFeedPost.ReplyRef(
+                parent=parent_ref,
+                root=parent_ref
+            )
+
+            # Create link card embed
+            # atproto SDK should automatically fetch metadata and create preview
+            print(f"📎 Creating link card for: {url[:60]}...")
+
+            response = self.client.send_post(
+                text=url,
+                reply_to=reply_ref,
+                embed_external={'uri': url}  # This tells atproto to create a link card
+            )
+
+            print(f"✓ Reply with link card posted! URI: {response.uri}")
+            return {
+                'uri': response.uri,
+                'cid': response.cid
+            }
+
+        except Exception as e:
+            print(f"✗ Error posting reply with link: {e}")
+            # Fall back to regular reply
+            print(f"   Trying fallback to text-only reply...")
+            return self.reply_to_skeet(parent_uri, url)
 
     def reply_to_skeet(self, parent_uri: str, text: str) -> Optional[dict]:
         """
