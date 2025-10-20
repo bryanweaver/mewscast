@@ -63,12 +63,21 @@ def rebuild_history_from_x():
         print("⚠️  No tweets found!")
         return
 
-    print(f"✓ Found {len(tweets.data)} posts\n")
+    print(f"✓ Found {len(tweets.data)} total tweets\n")
+
+    # Filter to only mewscast bot posts (those with source indicator)
+    bot_posts = []
+    for tweet in tweets.data:
+        # Only include posts with the 📰↓ source indicator (bot's signature)
+        if '📰↓' in tweet.text:
+            bot_posts.append(tweet)
+
+    print(f"✓ Filtered to {len(bot_posts)} @mewscast bot posts (with 📰↓)\n")
 
     # Build history records
     history_records = []
 
-    for tweet in reversed(tweets.data):  # Process oldest first
+    for tweet in sorted(bot_posts, key=lambda t: t.created_at):  # Process oldest first
         print(f"Processing tweet {tweet.id}...")
         print(f"  Posted: {tweet.created_at}")
         print(f"  Text: {tweet.text[:80]}...\n")
