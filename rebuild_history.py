@@ -25,10 +25,11 @@ def rebuild_history_from_x():
     print("🔗 Connecting to X API...")
     bot = TwitterBot()
 
-    # Get bot's user ID
-    me = bot.client.get_me()
-    my_user_id = me.data.id
-    print(f"✓ Connected as user ID: {my_user_id}\n")
+    # Get @mewscast user ID
+    mewscast_user = bot.client.get_user(username='mewscast')
+    mewscast_user_id = mewscast_user.data.id
+    print(f"✓ Connected to X API")
+    print(f"✓ Found @mewscast user ID: {mewscast_user_id}\n")
 
     # Fetch all tweets from the bot's timeline
     print("📥 Fetching all posts from timeline...")
@@ -39,7 +40,7 @@ def rebuild_history_from_x():
     # Fetch multiple pages to get all tweets
     while True:
         response = bot.client.get_users_tweets(
-            id=my_user_id,
+            id=mewscast_user_id,
             max_results=100,  # Maximum allowed by API
             tweet_fields=['created_at', 'text', 'conversation_id'],
             exclude=['retweets'],  # Get main posts and their replies
