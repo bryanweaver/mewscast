@@ -17,6 +17,9 @@ on:
   #   branches:
   #     - main
 
+permissions:
+  contents: write  # Allow workflow to commit and push changes
+
 jobs:
   post-tweet:
     runs-on: ubuntu-latest
@@ -58,6 +61,14 @@ jobs:
         run: |
           cd src
           python main.py
+
+      - name: Commit updated post history
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add posts_history.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update post history [skip ci]" && git push)
 
       - name: Report status
         if: always()

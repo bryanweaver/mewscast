@@ -11,14 +11,20 @@ from typing import Dict, List, Optional
 class PostTracker:
     """Tracks posted stories to prevent duplicates"""
 
-    def __init__(self, history_file: str = "posts_history.json", config: Dict = None):
+    def __init__(self, history_file: str = None, config: Dict = None):
         """
         Initialize post tracker
 
         Args:
-            history_file: Path to JSON file storing post history
+            history_file: Path to JSON file storing post history (defaults to ../posts_history.json from src/)
             config: Configuration dict with deduplication settings
         """
+        # Default to project root (parent directory of src/)
+        if history_file is None:
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            project_root = os.path.dirname(script_dir)
+            history_file = os.path.join(project_root, "posts_history.json")
+
         self.history_file = history_file
         self.config = config or {
             'enabled': True,
