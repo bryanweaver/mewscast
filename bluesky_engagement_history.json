@@ -24,6 +24,11 @@
       "did": "did:plc:odrbwj3lkbkvyz4igxa7auzw",
       "handle": "comadacomaco.bsky.social",
       "timestamp": "2025-10-23T22:34:30.990627"
+    },
+    {
+      "did": "did:plc:cppvrj7riw7yvvrwwu6gjj26",
+      "handle": "captnsteve.bsky.social",
+      "timestamp": "2025-10-23T23:02:42.913199"
     }
   ],
   "liked_posts": [
@@ -61,6 +66,11 @@
       "uri": "at://did:plc:odrbwj3lkbkvyz4igxa7auzw/app.bsky.feed.post/3m3vaa26wgs23",
       "author": "comadacomaco.bsky.social",
       "timestamp": "2025-10-23T22:34:30.864408"
+    },
+    {
+      "uri": "at://did:plc:cppvrj7riw7yvvrwwu6gjj26/app.bsky.feed.post/3m3umehhzpk2k",
+      "author": "captnsteve.bsky.social",
+      "timestamp": "2025-10-23T23:02:42.789089"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
