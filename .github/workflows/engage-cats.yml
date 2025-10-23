@@ -1,11 +1,10 @@
 name: Engage with Cat Community
 
 on:
-  # Schedule: Every 30 minutes for max engagement
-  # 2 searches per hour = 48/day = 50% of 96/day search limit
-  # Alternates between following accounts and liking posts
-  schedule:
-    - cron: '*/30 * * * *'  # Every 30 minutes
+  # Schedule: DISABLED - Monthly search cap exceeded on X API Free tier
+  # Will re-enable on November 1st when cap resets
+  # schedule:
+  #   - cron: '*/30 * * * *'  # Every 30 minutes
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
@@ -49,8 +48,14 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add engagement_history.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update engagement history [skip ci]" && git push)
+          # Only add file if it exists
+          if [ -f engagement_history.json ]; then
+            git add engagement_history.json
+            # Only commit and push if there are changes
+            git diff --quiet && git diff --staged --quiet || (git commit -m "Update engagement history [skip ci]" && git push)
+          else
+            echo "No engagement history file created yet"
+          fi
 
       - name: Report status
         if: always()

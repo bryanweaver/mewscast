@@ -45,8 +45,14 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add bluesky_engagement_history.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update Bluesky engagement history [skip ci]" && git push)
+          # Only add file if it exists
+          if [ -f bluesky_engagement_history.json ]; then
+            git add bluesky_engagement_history.json
+            # Only commit and push if there are changes
+            git diff --quiet && git diff --staged --quiet || (git commit -m "Update Bluesky engagement history [skip ci]" && git push)
+          else
+            echo "No Bluesky engagement history file created yet"
+          fi
 
       - name: Report status
         if: always()
