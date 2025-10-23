@@ -276,6 +276,8 @@ class BlueskyEngagementBot:
                     'uri': post.uri,
                     'cid': post.cid,
                     'author': post.author.handle,
+                    'author_did': post.author.did,
+                    'author_obj': post.author,  # Store full author object for follow check
                     'text': post.record.text[:100] if hasattr(post.record, 'text') else '',
                     'likes': likes,
                     'reposts': reposts
@@ -315,6 +317,56 @@ class BlueskyEngagementBot:
             self._save_engagement_history()
 
             print(f"✓ Liked post from @{post['author']}")
+
+            # BONUS: Try to follow the author of this post if they're worth following
+            followed_dids = [entry['did'] for entry in self.engagement_history.get('followed_users', [])]
+            author = post['author_obj']
+
+            # Check if we should follow this author
+            if post['author_did'] not in followed_dids:
+                # Check if they're a good account to follow
+                followers = author.followers_count if hasattr(author, 'followers_count') else 0
+                following = author.follows_count if hasattr(author, 'follows_count') else 0
+
+                # Quality checks
+                should_follow = True
+
+                if followers < 50 or followers > 50000:
+                    should_follow = False  # Outside ideal range
+                    print(f"   → Skipping follow (followers: {followers})")
+                elif following > 0 and followers > 0:
+                    follow_ratio = following / followers
+                    if follow_ratio > 5:
+                        should_follow = False  # Follow spammer
+                        print(f"   → Skipping follow (bad ratio: {follow_ratio:.1f})")
+
+                if should_follow:
+                    try:
+                        print(f"\n👤 Bonus: Following @{post['author']} (author of liked post)")
+                        print(f"   Followers: {followers}")
+
+                        # Follow the account
+                        created_at_follow = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
+                        self.client.app.bsky.graph.follow.create(
+                            self.client.me.did,
+                            {
+                                'subject': post['author_did'],
+                                'createdAt': created_at_follow
+                            }
+                        )
+
+                        # Log the follow
+                        self.engagement_history.setdefault('followed_users', []).append({
+                            'did': post['author_did'],
+                            'handle': post['author'],
+                            'timestamp': datetime.now().isoformat()
+                        })
+                        self._save_engagement_history()
+
+                        print(f"✓ Followed @{post['author']}")
+                    except Exception as e:
+                        print(f"✗ Could not follow @{post['author']}: {e}")
+
             return True
 
         except Exception as e:
@@ -323,7 +375,11 @@ class BlueskyEngagementBot:
 
     def run_engagement_cycle(self):
         """
-        Run one engagement cycle: follow 1 account, like 1 post
+        Run one engagement cycle:
+        1. Try to find cat account to follow (from search)
+        2. Try to find cat post to like
+        3. If post is liked, try to follow that post's author too
+
         This should be called every 30 minutes
         """
         print("\n" + "="*80)
