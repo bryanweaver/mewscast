@@ -133,6 +133,14 @@ class ContentGenerator:
         cat_vocab_str = ", ".join(self.cat_vocabulary[:10])  # Show examples
         guidelines_str = "\n- ".join(self.editorial_guidelines)
 
+        # Calculate actual max length for the prompt
+        # If specific story, we'll add " 📰↓" (4 chars) after, so reduce limit
+        source_indicator_length = 4  # " 📰↓"
+        if is_specific_story:
+            prompt_max_length = self.max_length - source_indicator_length
+        else:
+            prompt_max_length = self.max_length
+
         # Determine time of day for context
         hour = datetime.now().hour
         if 5 <= hour < 12:
@@ -212,7 +220,7 @@ CAT VOICE FEATURES (use frequently to show personality):
 - Engagement hooks at end: {engagement_str} (occasional)
 
 FORMAT:
-- Maximum {self.max_length} characters (STRICT - source indicator adds more)
+- Maximum {prompt_max_length} characters (STRICT - this is the HARD LIMIT)
 - Use ACTUAL line breaks between distinct thoughts/sentences for readability
 - Be clever but make sure it fits - don't get cut off mid-thought
 - NO emojis (very rare exceptions only)
@@ -220,6 +228,7 @@ FORMAT:
 - Don't use quotes around the tweet
 - Write as if filing a news report
 - IMPORTANT: Use real line breaks, not \\n escape sequences
+- Must fit completely within {prompt_max_length} chars - NO EXCEPTIONS
 
 EXAMPLES OF GOOD STRUCTURE (note cat references in each):
 
