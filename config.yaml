@@ -9,18 +9,24 @@ content:
   # Persona
   persona: "professional news reporter cat"
 
-  # News categories to report on
+  # News categories to report on (SPICY AND ENGAGING)
   topics:
-    - "breaking news"
-    - "politics (center-right/populist)"
-    - "economy and business"
-    - "technology and innovation"
-    - "human interest stories"
-    - "cultural moments"
-    - "international events"
-    - "trending topics on X"
-    - "UFO/UAP sightings and reports"
-    - "government UFO/UAP disclosures"
+    - "breaking political scandals"
+    - "Congress chaos and dysfunction"
+    - "Supreme Court bombshells"
+    - "Trump latest developments"
+    - "Biden administration controversies"
+    - "stock market volatility"
+    - "crypto crashes and surges"
+    - "tech layoffs and Silicon Valley drama"
+    - "Elon Musk latest moves"
+    - "AI breakthroughs and concerns"
+    - "UFO Pentagon disclosures"
+    - "FBI investigations"
+    - "corruption exposed"
+    - "viral celebrity controversies"
+    - "international crises"
+    - "Wall Street scandals"
 
   # Cat-themed vocabulary for natural wordplay
   # Context-specific - use naturally when they fit the story
@@ -86,13 +92,15 @@ content:
     - "meow-mentous"
     - "catnip for readers"
 
-  # Engagement hooks (occasional questions to audience)
+  # Engagement hooks (occasional questions to audience - use sparingly)
   engagement_hooks:
-    - "What's your take from your perch?"
-    - "Tell this cat what you think"
-    - "Thoughts?"
-    - "Your perspective?"
-    - "Am I missing something?"
+    - "What's your take?"
+    - "Am I missing something here?"
+    - "Thoughts from your perch?"
+    - "What do you see that I don't?"
+    - "Tell me what this cat's missing"
+    - "Your take?"
+    - "Seeing this differently?"
 
   # Time-of-day phrases for personality
   time_of_day:
@@ -146,11 +154,16 @@ content:
 
 scheduling:
   # When to post (cron format for GitHub Actions)
-  # Free tier limit: 17 posts/24hrs - we'll use 3-5/day for growth
+  # Free tier limit: 50 posts/24hrs - AGGRESSIVE GROWTH MODE
+  # Using 8 posts/day = 16% of limit (plenty of room for replies/engagement)
   post_times:
-    - "0 13 * * *"  # 1 PM UTC = 9 AM EST / 6 AM PST (morning)
-    - "0 17 * * *"  # 5 PM UTC = 1 PM EST / 10 AM PST (midday)
-    - "0 22 * * *"  # 10 PM UTC = 6 PM EST / 3 PM PST (evening)
+    - "0 2 * * *"   # 2 AM UTC = 10 PM EST / 7 PM PST (late night)
+    - "0 6 * * *"   # 6 AM UTC = 2 AM EST / 11 PM PST (overnight)
+    - "0 10 * * *"  # 10 AM UTC = 6 AM EST / 3 AM PST (early morning)
+    - "0 13 * * *"  # 1 PM UTC = 9 AM EST / 6 AM PST (morning prime)
+    - "0 16 * * *"  # 4 PM UTC = 12 PM EST / 9 AM PST (midday)
+    - "0 19 * * *"  # 7 PM UTC = 3 PM EST / 12 PM PST (afternoon)
+    - "0 22 * * *"  # 10 PM UTC = 6 PM EST / 3 PM PST (evening prime)
 
 engagement:
   # Reply automation (optional)

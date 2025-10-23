@@ -380,24 +380,28 @@ Generate a SHORT image prompt (max 200 chars) for an AI image generator that cap
 
 CRITICAL REQUIREMENTS:
 - **WIDESCREEN LANDSCAPE format** - cinematic, horizontal composition
+- **CAT MUST BE IN EVERY IMAGE** - MANDATORY, non-negotiable, always visible
 - Image MUST be directly relevant to the story content (not generic)
 - Capture the EMOTION and ESSENCE of the story, not just literal elements
 - Think: What visual would make someone stop scrolling?
+- Cat can be protagonist (center) or observer (background), but MUST be present
 
-CAT REPORTER PRESENCE (vary naturally):
-- 40% CAT AS PROTAGONIST: Actively investigating/reporting (rifling files, confronting subjects, climbing steps, in action)
-- 30% CAT AS OBSERVER: Present but background (watching from newsdesk, perched above, corner of scene)
-- 30% PURE DRAMA, NO CAT: When full emotional impact needs human focus or landscape
+CAT REPORTER PRESENCE (MANDATORY - EVERY IMAGE MUST HAVE A CAT):
+- 60% CAT AS PROTAGONIST: Front and center, actively investigating/reporting (rifling files, confronting subjects, dramatic action)
+- 40% CAT AS OBSERVER: Present but background (watching from newsdesk, perched above, corner of scene, witnessing)
+- 0% NO CAT: NEVER acceptable - this is a cat news reporter, cat MUST be visible in every image
 
-VISUAL STYLE ROTATION (match to story tone):
-- **Political scandal/investigation** → Film noir/detective (dramatic shadows, high contrast, tense)
-- **Breaking political news** → Photojournalism (gritty, documentary, in-the-moment)
-- **Power plays/corruption** → Political editorial cartoon (bold, satirical, exaggerated)
-- **Human interest** → Warm documentary photography (intimate, authentic, hopeful)
-- **Major events** → Cinematic movie poster (dramatic, epic, high stakes)
-- **Tech/innovation** → Modern sleek design (bold colors, futuristic, clean)
-- **UFO/mysteries** → Atmospheric noir (moody, mysterious, cinematic)
-- **Economic** → Bold graphic design (strong colors, charts, dynamic)
+VISUAL STYLE ROTATION (match to story tone - CAT ALWAYS PRESENT):
+- **Political scandal/investigation** → Dramatic noir thriller with detective cat (smoke, shadows, tension, cat investigating)
+- **Breaking political news** → Raw photojournalism with reporter cat on scene (chaos, urgency, cat witnessing history)
+- **Power plays/corruption** → Bold satirical editorial with cat exposing truth (exaggerated, striking, cat as truth-teller)
+- **Human interest** → Powerful documentary with empathetic cat observer (intimate, cat connecting with subjects)
+- **Major events** → Epic blockbuster poster with cat protagonist (massive scale, cat in action, cinematic)
+- **Tech/innovation** → Cyberpunk futuristic with tech-savvy cat (neon, dramatic, cat with future tech)
+- **UFO/mysteries** → Cinematic sci-fi thriller with cat investigating (eerie lighting, cat witnessing unexplained)
+- **Economic** → Striking infographic art with cat analyzing data (bold visual, cat making connections)
+- **Celebrity/Entertainment** → Paparazzi aesthetic with reporter cat on scene (flashy, bold, cat getting the scoop)
+- **Crisis/Breaking** → Apocalyptic cinematic with brave reporter cat (dramatic scale, cat documenting crisis)
 
 EXAMPLES BY STORY TYPE:
 
@@ -410,16 +414,18 @@ Political news (photojournalism, cat in scene):
 Corruption story (political cartoon, cat as protagonist):
 "Bold editorial illustration: Cat reporter following trail of money from Capitol to fat cats in suits, satirical style, high contrast colors"
 
-Human interest (no cat, pure emotion):
-"Intimate documentary shot: Close-up of elderly hands holding young child's hands, warm golden hour lighting, authentic human connection"
+Human interest (cat as empathetic observer):
+"Intimate documentary: Tabby cat reporter observing from windowsill as elderly person embraces child, warm golden hour lighting, cat's reflective expression, hope and connection"
 
 UFO story (atmospheric with cat):
 "Cinematic wide shot: Tabby reporter observing glowing UFO over desert at night, eerie atmospheric lighting, X-Files aesthetic, mysterious"
 
-Economic news (graphic design, cat observer):
-"Bold graphic design: Upward trending arrow charts with small cat reporter in corner taking notes, dynamic angles, modern business aesthetic"
+Economic news (cat analyzing data):
+"Bold infographic art: Tabby reporter cat pointing at massive rising debt chart, dramatic scale showing tiny people vs huge numbers, stark contrast, visual metaphor"
 
 Analyze the tweet and topic. Choose style that matches the story's TONE. Make it visually compelling and story-specific.
+
+REMEMBER: Cat reporter MUST be in the image. No exceptions. Every single image needs the cat visible.
 
 Just return the SHORT image prompt itself, nothing else."""
 
@@ -446,5 +452,5 @@ Just return the SHORT image prompt itself, nothing else."""
 
         except Exception as e:
             print(f"✗ Error generating image prompt: {e}")
-            # Fallback to simple prompt with cat reporter
-            return f"Professional tabby cat news reporter covering {topic[:80]}, landscape editorial illustration, 16:9 format"
+            # Fallback to dramatic prompt with cat reporter ALWAYS
+            return f"Dramatic film noir: Tabby detective cat investigating {topic[:60]}, cinematic lighting, widescreen landscape, press badge visible"

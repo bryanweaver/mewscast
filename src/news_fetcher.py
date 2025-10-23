@@ -16,19 +16,24 @@ class NewsFetcher:
     def __init__(self):
         """Initialize news fetcher with search categories"""
         # News categories to search (aligned with bot's focus)
+        # SPICY TOPICS that people actually care about
         self.news_categories = [
-            "US politics",
-            "Congress",
-            "Senate",
-            "economy",
-            "inflation",
-            "business news",
-            "technology",
-            "innovation",
-            "national news",
-            "UAP sighting",
-            "UFO disclosure",
-            "government transparency"
+            "Trump indictment",
+            "Biden scandal",
+            "Congress chaos",
+            "Supreme Court ruling",
+            "stock market crash",
+            "Bitcoin surge",
+            "Elon Musk",
+            "AI breakthrough",
+            "UFO Pentagon disclosure",
+            "FBI investigation",
+            "corruption scandal",
+            "tech layoffs",
+            "Silicon Valley drama",
+            "celebrity controversy",
+            "viral news",
+            "breaking international crisis"
         ]
 
     def resolve_google_news_url(self, google_url: str) -> str:
@@ -148,17 +153,46 @@ class NewsFetcher:
                 print(f"   No articles found for '{topic}'")
                 return None
 
-            # Filter for reputable US news sources
+            # Filter for MAJOR news sources only (no local/college papers!)
+            # Prioritize sources that cover big, national/international stories
             preferred_sources = [
-                'Reuters', 'Associated Press', 'AP News', 'The New York Times',
-                'The Washington Post', 'CNN', 'BBC', 'NPR', 'Bloomberg',
-                'Politico', 'The Hill', 'USA Today', 'Fox News', 'NBC News',
-                'CBS News', 'ABC News'
+                # Top Tier - Breaking news & major stories
+                'Reuters', 'Associated Press', 'AP News', 'Bloomberg',
+                'The Wall Street Journal', 'Financial Times',
+
+                # Major National Papers
+                'The New York Times', 'The Washington Post', 'USA Today',
+
+                # TV News (high engagement)
+                'CNN', 'Fox News', 'NBC News', 'CBS News', 'ABC News', 'MSNBC',
+
+                # Political Coverage
+                'Politico', 'The Hill', 'Axios', 'Punchbowl News',
+
+                # Tech & Business
+                'TechCrunch', 'The Verge', 'Ars Technica', 'CNBC', 'Business Insider',
+
+                # International
+                'BBC', 'The Guardian', 'Al Jazeera',
+
+                # Entertainment/Viral (high engagement)
+                'TMZ', 'Variety', 'Hollywood Reporter', 'People'
+            ]
+
+            # BLACKLIST: Never use these boring sources
+            blacklist_sources = [
+                'Daily Pennsylvanian', 'Idaho Press', 'College', 'University',
+                'Local', 'Gazette', 'Tribune', 'Herald', 'Observer',
+                'Community News', 'Patch', 'Town', 'City Council'
             ]
 
             # Try to find article from preferred source first
-            for entry in feed.entries[:10]:  # Check first 10 results
+            for entry in feed.entries[:15]:  # Check first 15 results (increased for better filtering)
                 source = entry.get('source', {}).get('title', 'Unknown')
+
+                # Skip blacklisted sources (boring local news)
+                if any(bad in source for bad in blacklist_sources):
+                    continue
 
                 # Check if from preferred source
                 if any(pref in source for pref in preferred_sources):
