@@ -1,0 +1,63 @@
+name: Engage with Cat Community
+
+on:
+  # Schedule: Every 30 minutes for max engagement
+  # 2 searches per hour = 48/day = 50% of 96/day search limit
+  # Alternates between following accounts and liking posts
+  schedule:
+    - cron: '*/30 * * * *'  # Every 30 minutes
+
+  # Allow manual triggering from GitHub Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write  # Allow workflow to commit engagement history
+
+jobs:
+  engage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Engage with cat community
+        env:
+          # X API credentials (set these in GitHub Secrets)
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          cd src
+          python engagement_bot.py
+
+      - name: Commit updated engagement history
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add engagement_history.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update engagement history [skip ci]" && git push)
+
+      - name: Report status
+        if: always()
+        run: |
+          if [ $? -eq 0 ]; then
+            echo "✅ Engagement cycle completed!"
+          else
+            echo "❌ Engagement cycle failed"
+            exit 1
+          fi
