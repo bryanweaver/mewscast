@@ -9,6 +9,11 @@
       "did": "did:plc:ojm57d2zpzgsedw5rhpbdvh2",
       "handle": "baileyblaze.bsky.social",
       "timestamp": "2025-10-23T21:02:18.606534"
+    },
+    {
+      "did": "did:plc:5eaoowkkejvmiqdraw5qsuje",
+      "handle": "rubythepuppy.bsky.social",
+      "timestamp": "2025-10-23T21:31:51.769548"
     }
   ],
   "liked_posts": [
@@ -31,6 +36,11 @@
       "uri": "at://did:plc:ojm57d2zpzgsedw5rhpbdvh2/app.bsky.feed.post/3m3va2vbgkk2n",
       "author": "baileyblaze.bsky.social",
       "timestamp": "2025-10-23T21:02:18.469059"
+    },
+    {
+      "uri": "at://did:plc:5eaoowkkejvmiqdraw5qsuje/app.bsky.feed.post/3m3v7zebxes2l",
+      "author": "rubythepuppy.bsky.social",
+      "timestamp": "2025-10-23T21:31:51.536347"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
