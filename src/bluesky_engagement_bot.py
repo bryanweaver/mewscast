@@ -137,7 +137,7 @@ class BlueskyEngagementBot:
                 # - Bio mentions cats
                 followers = author.followers_count if hasattr(author, 'followers_count') else 0
                 following = author.follows_count if hasattr(author, 'follows_count') else 0
-                bio = author.description.lower() if author.description else ""
+                bio = author.description.lower() if hasattr(author, 'description') and author.description else ""
 
                 # Quality checks
                 if followers < 50 or followers > 50000:
@@ -185,11 +185,13 @@ class BlueskyEngagementBot:
             print(f"   Bio: {account['bio']}...")
 
             # Follow the account
+            # Format datetime in ISO 8601 format with 'Z' suffix for UTC
+            created_at = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
             self.client.app.bsky.graph.follow.create(
                 self.client.me.did,
                 {
                     'subject': account['did'],
-                    'createdAt': datetime.now().isoformat()
+                    'createdAt': created_at
                 }
             )
 
@@ -291,6 +293,8 @@ class BlueskyEngagementBot:
             print(f"   Engagement: {post['likes']} likes, {post['reposts']} reposts")
 
             # Like the post
+            # Format datetime in ISO 8601 format with 'Z' suffix for UTC
+            created_at = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
             self.client.app.bsky.feed.like.create(
                 self.client.me.did,
                 {
@@ -298,7 +302,7 @@ class BlueskyEngagementBot:
                         'uri': post['uri'],
                         'cid': post['cid']
                     },
-                    'createdAt': datetime.now().isoformat()
+                    'createdAt': created_at
                 }
             )
 
