@@ -74,6 +74,11 @@
       "did": "did:plc:myriyrdx3cxudoj4orbsgyrm",
       "handle": "wackelkasper.bsky.social",
       "timestamp": "2025-10-24T09:34:35.600055"
+    },
+    {
+      "did": "did:plc:rc6vff3hc2qtfsswsi6fv6or",
+      "handle": "misslizzy.bsky.social",
+      "timestamp": "2025-10-24T10:03:00.348811"
     }
   ],
   "liked_posts": [
@@ -211,6 +216,11 @@
       "uri": "at://did:plc:myriyrdx3cxudoj4orbsgyrm/app.bsky.feed.post/3m3wk3a2c3s2s",
       "author": "wackelkasper.bsky.social",
       "timestamp": "2025-10-24T09:34:35.386314"
+    },
+    {
+      "uri": "at://did:plc:rc6vff3hc2qtfsswsi6fv6or/app.bsky.feed.post/3m3wflvhyok2r",
+      "author": "misslizzy.bsky.social",
+      "timestamp": "2025-10-24T10:03:00.167254"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
