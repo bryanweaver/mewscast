@@ -39,6 +39,11 @@
       "did": "did:plc:kxojr7pw5afqibihqmgugj57",
       "handle": "aubryjoi.bsky.social",
       "timestamp": "2025-10-24T00:05:41.872808"
+    },
+    {
+      "did": "did:plc:xts2ui2jxnfpijz2o6oixska",
+      "handle": "kylie.hater.club",
+      "timestamp": "2025-10-24T00:46:50.505601"
     }
   ],
   "liked_posts": [
@@ -91,6 +96,11 @@
       "uri": "at://did:plc:kxojr7pw5afqibihqmgugj57/app.bsky.feed.post/3m3vkac6un22v",
       "author": "aubryjoi.bsky.social",
       "timestamp": "2025-10-24T00:05:41.674322"
+    },
+    {
+      "uri": "at://did:plc:xts2ui2jxnfpijz2o6oixska/app.bsky.feed.post/3m3vmzazzic2z",
+      "author": "kylie.hater.club",
+      "timestamp": "2025-10-24T00:46:50.296090"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
