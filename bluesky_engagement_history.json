@@ -99,6 +99,11 @@
       "did": "did:plc:kgo62qsg6on2uhtskfny7yjf",
       "handle": "violight-bug.bsky.social",
       "timestamp": "2025-10-24T12:44:38.678199"
+    },
+    {
+      "did": "did:plc:l4xsetiqikazofprzgufuimk",
+      "handle": "zanypanda.bsky.social",
+      "timestamp": "2025-10-24T13:11:20.517203"
     }
   ],
   "liked_posts": [
@@ -266,6 +271,11 @@
       "uri": "at://did:plc:kgo62qsg6on2uhtskfny7yjf/app.bsky.feed.post/3m3vxycyppc2f",
       "author": "violight-bug.bsky.social",
       "timestamp": "2025-10-24T12:44:38.472198"
+    },
+    {
+      "uri": "at://did:plc:l4xsetiqikazofprzgufuimk/app.bsky.feed.post/3m3w7jcfp722k",
+      "author": "zanypanda.bsky.social",
+      "timestamp": "2025-10-24T13:11:20.343258"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
