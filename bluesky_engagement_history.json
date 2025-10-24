@@ -44,6 +44,11 @@
       "did": "did:plc:xts2ui2jxnfpijz2o6oixska",
       "handle": "kylie.hater.club",
       "timestamp": "2025-10-24T00:46:50.505601"
+    },
+    {
+      "did": "did:plc:mbp2iotx5kjhhihxbgo3fnoh",
+      "handle": "johnmaen.bsky.social",
+      "timestamp": "2025-10-24T01:29:29.818323"
     }
   ],
   "liked_posts": [
@@ -101,6 +106,11 @@
       "uri": "at://did:plc:xts2ui2jxnfpijz2o6oixska/app.bsky.feed.post/3m3vmzazzic2z",
       "author": "kylie.hater.club",
       "timestamp": "2025-10-24T00:46:50.296090"
+    },
+    {
+      "uri": "at://did:plc:mbp2iotx5kjhhihxbgo3fnoh/app.bsky.feed.post/3m3qp3rftjk2j",
+      "author": "johnmaen.bsky.social",
+      "timestamp": "2025-10-24T01:29:29.589903"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
