@@ -129,6 +129,11 @@
       "did": "did:plc:ect55neoh4oqfuh62sp6xeqz",
       "handle": "bloowee.bsky.social",
       "timestamp": "2025-10-24T15:34:52.493569"
+    },
+    {
+      "did": "did:plc:fs5wew5ej4nsvl3igicsdlvg",
+      "handle": "wijsgeer.bsky.social",
+      "timestamp": "2025-10-24T16:02:57.986554"
     }
   ],
   "liked_posts": [
@@ -326,6 +331,11 @@
       "uri": "at://did:plc:ect55neoh4oqfuh62sp6xeqz/app.bsky.feed.post/3m3wxkh2mmk2x",
       "author": "bloowee.bsky.social",
       "timestamp": "2025-10-24T15:34:52.263915"
+    },
+    {
+      "uri": "at://did:plc:fs5wew5ej4nsvl3igicsdlvg/app.bsky.feed.post/3m3wvczghbc26",
+      "author": "wijsgeer.bsky.social",
+      "timestamp": "2025-10-24T16:02:57.767414"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
