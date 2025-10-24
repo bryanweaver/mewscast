@@ -49,6 +49,11 @@
       "did": "did:plc:mbp2iotx5kjhhihxbgo3fnoh",
       "handle": "johnmaen.bsky.social",
       "timestamp": "2025-10-24T01:29:29.818323"
+    },
+    {
+      "did": "did:plc:oqsgrpwpczsjzhdvp73zn4ex",
+      "handle": "holmiesathome.bsky.social",
+      "timestamp": "2025-10-24T02:07:48.840133"
     }
   ],
   "liked_posts": [
@@ -111,6 +116,11 @@
       "uri": "at://did:plc:mbp2iotx5kjhhihxbgo3fnoh/app.bsky.feed.post/3m3qp3rftjk2j",
       "author": "johnmaen.bsky.social",
       "timestamp": "2025-10-24T01:29:29.589903"
+    },
+    {
+      "uri": "at://did:plc:oqsgrpwpczsjzhdvp73zn4ex/app.bsky.feed.post/3m3vlwxh5ts2c",
+      "author": "holmiesathome.bsky.social",
+      "timestamp": "2025-10-24T02:07:48.614822"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
