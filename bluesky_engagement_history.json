@@ -134,6 +134,11 @@
       "did": "did:plc:fs5wew5ej4nsvl3igicsdlvg",
       "handle": "wijsgeer.bsky.social",
       "timestamp": "2025-10-24T16:02:57.986554"
+    },
+    {
+      "did": "did:plc:vdabazxnghujbebpi2ektqgi",
+      "handle": "celestepewter.bsky.social",
+      "timestamp": "2025-10-24T19:32:03.761332"
     }
   ],
   "liked_posts": [
@@ -366,6 +371,11 @@
       "uri": "at://did:plc:xyotsp3ijpwhgh3jymclgyxi/app.bsky.feed.post/3m3xj6qu56s27",
       "author": "twiggyleafcreate.bsky.social",
       "timestamp": "2025-10-24T19:02:25.060763"
+    },
+    {
+      "uri": "at://did:plc:vdabazxnghujbebpi2ektqgi/app.bsky.feed.post/3m3xjnbrq722p",
+      "author": "celestepewter.bsky.social",
+      "timestamp": "2025-10-24T19:32:03.041580"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
