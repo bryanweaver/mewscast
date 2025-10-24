@@ -188,8 +188,45 @@ safety:
 deduplication:
   # Prevent posting duplicate or repetitive stories
   enabled: true
-  topic_cooldown_hours: 48   # Don't repeat similar topics within 48 hours
+  topic_cooldown_hours: 72   # Don't repeat similar topics within 72 hours (3 days)
+  topic_similarity_threshold: 0.40  # 40% keyword overlap = duplicate (was 60%, lowered to catch edge cases)
   content_cooldown_hours: 72 # Don't post similar content within 72 hours (3 days)
+  content_similarity_threshold: 0.65  # 65% content overlap = duplicate (was 70%)
   source_cooldown_hours: 2160 # Never use same source within 90 days (2160 hours)
   url_deduplication: true    # Never repost the same article URL
   max_history_days: 90       # Keep 90 days of post history
+
+  # Allow updates to previously covered stories
+  allow_updates: true        # If true, similar stories with update indicators are allowed
+  update_keywords:           # Keywords that indicate this is an update/development
+    - "update"
+    - "breaking"
+    - "just"
+    - "now"
+    - "latest"
+    - "new"
+    - "charged"
+    - "convicted"
+    - "arrested"
+    - "released"
+    - "sentenced"
+    - "announced"
+    - "confirmed"
+    - "denied"
+    - "reverses"
+    - "overturned"
+    - "escalates"
+    - "responds"
+    - "fires back"
+    - "doubles down"
+    - "backs down"
+    - "resigns"
+    - "appointed"
+    - "elected"
+    - "voted"
+    - "passes"
+    - "fails"
+    - "after"
+    - "following"
+    - "amid"
+    - "in wake of"

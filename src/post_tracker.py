@@ -135,6 +135,32 @@ class PostTracker:
 
         return False
 
+    def _is_update_story(self, title: str) -> bool:
+        """
+        Check if story title contains update indicators
+
+        Args:
+            title: Article title to check
+
+        Returns:
+            True if title contains update keywords
+        """
+        if not self.config.get('allow_updates', True):
+            return False
+
+        update_keywords = self.config.get('update_keywords', [])
+        if not update_keywords:
+            return False
+
+        title_lower = title.lower()
+
+        # Check for update keywords
+        for keyword in update_keywords:
+            if keyword in title_lower:
+                return True
+
+        return False
+
     def _similar_topic_posted(self, title: str, hours: int = 48) -> bool:
         """
         Check if similar topic was posted within cooldown period
@@ -160,6 +186,9 @@ class PostTracker:
 
         cutoff_time = datetime.now(timezone.utc) - timedelta(hours=hours)
 
+        # Get threshold from config (default 45%)
+        threshold = self.config.get('topic_similarity_threshold', 0.45)
+
         for post in self.posts:
             # Check timestamp
             post_time = datetime.fromisoformat(post['timestamp'].replace('Z', '+00:00'))
@@ -173,13 +202,32 @@ class PostTracker:
             if len(post_words) < 2:
                 continue
 
-            # Calculate keyword overlap
+            # Calculate keyword overlap with improved matching
             common_words = title_words & post_words
-            overlap_ratio = len(common_words) / max(len(title_words), len(post_words))
 
-            # If >60% keyword overlap, consider it similar
-            if overlap_ratio > 0.6:
-                return True
+            # Also check for word stems (deploy/deployment, etc.)
+            stem_matches = 0
+            for tw in title_words:
+                for pw in post_words:
+                    if tw not in common_words and pw not in common_words:
+                        # Check if words share significant prefix (stem matching)
+                        if len(tw) >= 4 and len(pw) >= 4:
+                            if tw[:4] == pw[:4] or tw[:5] == pw[:5]:
+                                stem_matches += 0.5  # Partial credit for stem match
+
+            effective_overlap = len(common_words) + stem_matches
+            overlap_ratio = effective_overlap / max(len(title_words), len(post_words))
+
+            # Use configurable threshold (default 45%)
+            if overlap_ratio >= threshold:
+                # Check if this is an update to a previous story
+                if self._is_update_story(title):
+                    print(f"   Topic similarity: {overlap_ratio:.1%} with '{post_title[:60]}...'")
+                    print(f"   ✓ But story contains update indicators - allowing as new development")
+                    return False  # Allow updates through
+                else:
+                    print(f"   Topic similarity: {overlap_ratio:.1%} with '{post_title[:60]}...'")
+                    return True
 
         return False
 
@@ -241,9 +289,10 @@ class PostTracker:
             common_words = content_words & post_words
             overlap_ratio = len(common_words) / max(len(content_words), len(post_words))
 
-            # Higher threshold for content (70%) than topic (60%)
-            # because content is more specific
-            if overlap_ratio > 0.70:
+            # Get threshold from config (default 65%)
+            threshold = self.config.get('content_similarity_threshold', 0.65)
+
+            if overlap_ratio >= threshold:
                 print(f"   Content similarity: {overlap_ratio:.1%} with post from {post_time.strftime('%Y-%m-%d')}")
                 return True
 
