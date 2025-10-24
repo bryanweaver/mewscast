@@ -69,6 +69,11 @@
       "did": "did:plc:maydb63u4rzkjnoe2r3fwklj",
       "handle": "chrispco.bsky.social",
       "timestamp": "2025-10-24T07:03:08.211670"
+    },
+    {
+      "did": "did:plc:myriyrdx3cxudoj4orbsgyrm",
+      "handle": "wackelkasper.bsky.social",
+      "timestamp": "2025-10-24T09:34:35.600055"
     }
   ],
   "liked_posts": [
@@ -201,6 +206,11 @@
       "uri": "at://did:plc:y3ol2xg6s6hh3jha4mb5n35t/app.bsky.feed.post/3m3wbrs6pas2x",
       "author": "coreyjwhite.com",
       "timestamp": "2025-10-24T09:02:57.615084"
+    },
+    {
+      "uri": "at://did:plc:myriyrdx3cxudoj4orbsgyrm/app.bsky.feed.post/3m3wk3a2c3s2s",
+      "author": "wackelkasper.bsky.social",
+      "timestamp": "2025-10-24T09:34:35.386314"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
