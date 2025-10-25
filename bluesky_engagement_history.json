@@ -149,6 +149,11 @@
       "did": "did:plc:ggk5iorblekim65knokejdgx",
       "handle": "ashthestampede.bsky.social",
       "timestamp": "2025-10-24T20:35:01.796365"
+    },
+    {
+      "did": "did:plc:laj5amfs6thxmv4kw5ui5dyk",
+      "handle": "joeybuckaroo.pmd.social",
+      "timestamp": "2025-10-25T16:02:52.445447"
     }
   ],
   "liked_posts": [
@@ -571,6 +576,11 @@
       "uri": "at://did:plc:qnwrertmdznkkexzktkweuvb/app.bsky.feed.post/3m3z6tvgmws2q",
       "author": "edithcharles.bsky.social",
       "timestamp": "2025-10-25T15:32:06.070181"
+    },
+    {
+      "uri": "at://did:plc:laj5amfs6thxmv4kw5ui5dyk/app.bsky.feed.post/3m3y4fabh3c2u",
+      "author": "joeybuckaroo.pmd.social",
+      "timestamp": "2025-10-25T16:02:52.326199"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
