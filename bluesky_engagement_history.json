@@ -154,6 +154,11 @@
       "did": "did:plc:laj5amfs6thxmv4kw5ui5dyk",
       "handle": "joeybuckaroo.pmd.social",
       "timestamp": "2025-10-25T16:02:52.445447"
+    },
+    {
+      "did": "did:plc:kc4mpwrbwwzrvw6nh5pdwrhg",
+      "handle": "masterful-debaiter.bsky.social",
+      "timestamp": "2025-10-25T16:36:44.400554"
     }
   ],
   "liked_posts": [
@@ -581,6 +586,11 @@
       "uri": "at://did:plc:laj5amfs6thxmv4kw5ui5dyk/app.bsky.feed.post/3m3y4fabh3c2u",
       "author": "joeybuckaroo.pmd.social",
       "timestamp": "2025-10-25T16:02:52.326199"
+    },
+    {
+      "uri": "at://did:plc:kc4mpwrbwwzrvw6nh5pdwrhg/app.bsky.feed.post/3m3zhlkldp22e",
+      "author": "masterful-debaiter.bsky.social",
+      "timestamp": "2025-10-25T16:36:44.174776"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
