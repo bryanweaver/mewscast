@@ -161,6 +161,39 @@ class PostTracker:
 
         return False
 
+    def _extract_proper_nouns(self, text: str) -> set:
+        """
+        Extract likely proper nouns (capitalized words) from text
+        These are weighted more heavily as they identify specific stories
+
+        Args:
+            text: Text to extract from
+
+        Returns:
+            Set of lowercase proper nouns
+        """
+        import re
+        # Find words that start with capital letters (but not sentence starts)
+        words = text.split()
+        proper_nouns = set()
+
+        for i, word in enumerate(words):
+            # Clean punctuation
+            clean_word = re.sub(r'[^\w]', '', word)
+
+            # Skip if empty, single char, or common stop words
+            if len(clean_word) <= 1 or clean_word.lower() in {'the', 'a', 'an'}:
+                continue
+
+            # If word starts with capital and isn't at sentence start
+            if clean_word[0].isupper():
+                # Skip common sentence starters
+                if i == 0 or clean_word in {'The', 'A', 'An', 'This', 'That', 'These', 'Those'}:
+                    continue
+                proper_nouns.add(clean_word.lower())
+
+        return proper_nouns
+
     def _similar_topic_posted(self, title: str, hours: int = 48) -> bool:
         """
         Check if similar topic was posted within cooldown period
@@ -181,13 +214,16 @@ class PostTracker:
 
         title_words = set(title.lower().split()) - stop_words
 
+        # Extract proper nouns for entity-based matching (e.g., "Cupertino", "Trump")
+        title_nouns = self._extract_proper_nouns(title)
+
         if len(title_words) < 2:
             return False  # Title too short to compare
 
         cutoff_time = datetime.now(timezone.utc) - timedelta(hours=hours)
 
-        # Get threshold from config (default 45%)
-        threshold = self.config.get('topic_similarity_threshold', 0.45)
+        # Get threshold from config (default 40%)
+        threshold = self.config.get('topic_similarity_threshold', 0.40)
 
         for post in self.posts:
             # Check timestamp
@@ -198,11 +234,26 @@ class PostTracker:
             # Extract keywords from historical post
             post_title = post.get('topic', '')
             post_words = set(post_title.lower().split()) - stop_words
+            post_nouns = self._extract_proper_nouns(post_title)
 
             if len(post_words) < 2:
                 continue
 
-            # Calculate keyword overlap with improved matching
+            # LEVEL 1: Check if 2+ significant proper nouns match (high confidence duplicate)
+            # This catches cases like "Cupertino" where the core entity is the same
+            # even if surrounding details differ
+            common_nouns = title_nouns & post_nouns
+            if len(common_nouns) >= 2 and len(title_nouns) >= 2:
+                # Multiple specific entities match = same story
+                print(f"   Entity match: {list(common_nouns)[:3]} in '{post_title[:60]}...'")
+                print(f"   Strong indicator of duplicate story")
+                # Still check for update keywords
+                if self._is_update_story(title):
+                    print(f"   ✓ But story contains update indicators - allowing as new development")
+                    return False
+                return True
+
+            # LEVEL 2: Calculate keyword overlap with improved matching
             common_words = title_words & post_words
 
             # Also check for word stems (deploy/deployment, etc.)
@@ -218,7 +269,7 @@ class PostTracker:
             effective_overlap = len(common_words) + stem_matches
             overlap_ratio = effective_overlap / max(len(title_words), len(post_words))
 
-            # Use configurable threshold (default 45%)
+            # Use configurable threshold (default 40%)
             if overlap_ratio >= threshold:
                 # Check if this is an update to a previous story
                 if self._is_update_story(title):
