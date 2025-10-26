@@ -46,39 +46,52 @@ def post_scheduled_tweet():
             print(f"   Continuing with X only...")
             bluesky_bot = None
 
-        print("📰 Fetching trending topics from Google Trends...")
+        print("📰 Initializing news fetcher...")
         news_fetcher = NewsFetcher()
 
         # Initialize post tracker for deduplication
         dedup_config = config.get('deduplication', {})
         tracker = PostTracker(config=dedup_config)
 
-        # Fetch real trending topics
-        trending_stories = news_fetcher.get_trending_topics(count=5)
+        # NEW FLOW: Pick topic first, then find source article
+        # Try up to 10 topics to find a unique story
+        selected_story = None
+        topics_to_try = random.sample(news_fetcher.news_categories,
+                                     min(10, len(news_fetcher.news_categories)))
 
-        # Filter out duplicates
-        print("🔍 Checking for duplicate stories...")
-        unique_stories = tracker.filter_duplicates(trending_stories)
+        print(f"🔍 Searching for unique story across {len(topics_to_try)} topics...")
 
-        # If all were duplicates, fetch more stories
-        if not unique_stories and trending_stories:
-            print("⚠️  All stories were duplicates, fetching more...")
-            more_stories = news_fetcher.get_trending_topics(count=10)
-            unique_stories = tracker.filter_duplicates(more_stories)
+        for topic in topics_to_try:
+            print(f"   Trying topic: {topic}")
 
-        # Pick a random unique story
-        selected_story = random.choice(unique_stories) if unique_stories else None
+            # Get article for this specific topic
+            article = news_fetcher.get_article_for_topic(topic)
 
-        if selected_story:
-            print(f"📰 Selected: {selected_story['title']}")
-            print(f"   Source: {selected_story['source']}\n")
-        else:
+            if not article:
+                print(f"   ✗ No articles found for this topic")
+                continue
+
+            # Check if this article is a duplicate
+            if tracker.is_duplicate(article):
+                print(f"   ✗ Article is duplicate, trying next topic...")
+                continue
+
+            # Found a unique article!
+            selected_story = article
+            print(f"   ✓ Found unique story!")
+            break
+
+        if not selected_story:
             # CRITICAL: Never post without a source story and URL
             print(f"\n{'='*60}")
-            print(f"❌ No unique stories available with sources")
+            print(f"❌ No unique stories available across all topics")
             print(f"   Cannot post without source URL for citation")
             print(f"{'='*60}\n")
             return False
+
+        print(f"\n📰 Selected: {selected_story['title']}")
+        print(f"   Source: {selected_story['source']}")
+        print(f"   URL: {selected_story.get('url', 'N/A')}\n")
 
         # Generate cat news content with story metadata
         result = generator.generate_tweet(
