@@ -8,6 +8,8 @@ from typing import List, Dict, Optional
 import time
 import re
 from googlenewsdecoder import gnewsdecoder
+from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 
 
 class NewsFetcher:
@@ -188,10 +190,26 @@ class NewsFetcher:
             ]
 
             # Collect multiple articles from preferred sources
+            # CRITICAL: Only get recent news (last 3 days max)
+            cutoff_date = datetime.now(timezone.utc) - timedelta(days=3)
             articles = []
+
             for entry in feed.entries[:30]:  # Check first 30 results for more depth
                 if len(articles) >= max_articles:
                     break
+
+                # Check article date FIRST - skip old news
+                published_str = entry.get('published', '')
+                if published_str:
+                    try:
+                        published_date = parsedate_to_datetime(published_str)
+                        if published_date < cutoff_date:
+                            # Skip articles older than 3 days
+                            continue
+                    except Exception as e:
+                        # If we can't parse the date, skip the article to be safe
+                        print(f"   ⚠️  Could not parse date for article, skipping")
+                        continue
 
                 source = entry.get('source', {}).get('title', 'Unknown')
 
@@ -209,7 +227,8 @@ class NewsFetcher:
                         'description': entry.get('summary', ''),
                         'url': actual_url,
                         'source': source,
-                        'published': entry.get('published', '')
+                        'published': published_str,
+                        'published_date': published_date.isoformat() if published_str else None
                     }
                     articles.append(article)
 
