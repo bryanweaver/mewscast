@@ -217,22 +217,6 @@ class NewsFetcher:
                 print(f"✓ Found {len(articles)} articles from major sources")
             return articles
 
-            # If no preferred source found, use first result
-            entry = feed.entries[0]
-
-            # Resolve Google News proxy URL to actual article URL
-            actual_url = self.resolve_google_news_url(entry.link)
-
-            article = {
-                'title': entry.title,
-                'description': entry.get('summary', ''),
-                'url': actual_url,
-                'source': entry.get('source', {}).get('title', 'Google News'),
-                'published': entry.get('published', '')
-            }
-            print(f"✓ Found article from {article['source']}")
-            return article
-
         except Exception as e:
-            print(f"✗ Error fetching article for '{topic}': {e}")
-            return None
+            print(f"✗ Error fetching articles for '{topic}': {e}")
+            return []
