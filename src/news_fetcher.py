@@ -18,24 +18,105 @@ class NewsFetcher:
     def __init__(self):
         """Initialize news fetcher with search categories"""
         # News categories to search (aligned with bot's focus)
-        # SPICY TOPICS that people actually care about
+        # GENERIC TOPICS covering all major news areas
         self.news_categories = [
-            "Trump indictment",
-            "Biden scandal",
-            "Congress chaos",
-            "Supreme Court ruling",
-            "stock market crash",
-            "Bitcoin surge",
-            "Elon Musk",
-            "AI breakthrough",
+            # Politics (12)
+            "presidential controversy",
+            "Congressional scandal",
+            "Supreme Court decision",
+            "White House crisis",
+            "political corruption charges",
+            "election interference",
+            "government shutdown",
+            "Senate filibuster battle",
+            "campaign finance violation",
+            "political resignation",
+            "executive order backlash",
+            "impeachment proceedings",
+
+            # Economy/Finance (10)
+            "stock market volatility",
+            "cryptocurrency crash",
+            "Federal Reserve rates",
+            "corporate bankruptcy",
+            "CEO ousted scandal",
+            "major company layoffs",
+            "inflation report shock",
+            "gas prices spike",
+            "recession warning",
+            "bank collapse",
+
+            # Tech (8)
+            "Big Tech antitrust",
+            "major data breach",
+            "social media controversy",
+            "AI safety concerns",
+            "tech billionaire scandal",
+            "platform censorship battle",
+            "ransomware attack",
+            "tech monopoly lawsuit",
+
+            # International (8)
+            "international military conflict",
+            "diplomatic crisis",
+            "trade war escalation",
+            "border security crisis",
+            "terrorism threat",
+            "foreign election interference",
+            "international sanctions",
+            "nuclear weapons threat",
+
+            # Crime/Justice (8)
+            "high-profile arrest",
+            "FBI raid investigation",
+            "mass shooting incident",
+            "police brutality case",
+            "celebrity criminal charges",
+            "organized crime bust",
+            "domestic terrorism plot",
+            "cartel drug bust",
+
+            # Business/Labor (6)
+            "merger blocked antitrust",
+            "labor union strike",
+            "corporate fraud scandal",
+            "insider trading charges",
+            "massive product recall",
+            "whistleblower lawsuit",
+
+            # Culture/Sports (6)
+            "celebrity arrest scandal",
+            "viral social media controversy",
+            "sports betting investigation",
+            "athlete doping scandal",
+            "streaming service drama",
+            "influencer exposed fraud",
+
+            # UAP/UFO & Disclosure (6)
             "UFO Pentagon disclosure",
-            "FBI investigation",
-            "corruption scandal",
-            "tech layoffs",
-            "Silicon Valley drama",
-            "celebrity controversy",
-            "viral news",
-            "breaking international crisis"
+            "UAP Congressional hearing",
+            "alien technology claims",
+            "military UFO encounter",
+            "government UFO coverup",
+            "extraterrestrial evidence",
+
+            # Space (6)
+            "NASA mission breakthrough",
+            "SpaceX launch incident",
+            "astronaut emergency",
+            "space station crisis",
+            "asteroid threat warning",
+            "Mars discovery announcement",
+
+            # Science/Health (8)
+            "pandemic outbreak warning",
+            "vaccine controversy",
+            "medical breakthrough",
+            "climate crisis report",
+            "environmental disaster",
+            "nuclear accident",
+            "disease outbreak",
+            "scientific fraud exposed"
         ]
 
     def resolve_google_news_url(self, google_url: str) -> str:
