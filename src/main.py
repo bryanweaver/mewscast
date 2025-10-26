@@ -54,10 +54,10 @@ def post_scheduled_tweet():
         tracker = PostTracker(config=dedup_config)
 
         # NEW FLOW: Pick topic first, then find source article
-        # Try up to 10 topics to find a unique story
+        # Try up to 40 topics to find a unique story (we have 78 total)
         selected_story = None
         topics_to_try = random.sample(news_fetcher.news_categories,
-                                     min(10, len(news_fetcher.news_categories)))
+                                     min(40, len(news_fetcher.news_categories)))
 
         print(f"🔍 Searching for unique story across {len(topics_to_try)} topics...")
 
