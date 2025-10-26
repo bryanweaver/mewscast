@@ -164,6 +164,11 @@
       "did": "did:plc:zhfrkbrn55w476l6abgqkb6t",
       "handle": "edoublea.com",
       "timestamp": "2025-10-26T07:31:55.139636"
+    },
+    {
+      "did": "did:plc:sl6vbab32zslpxiwt2njboke",
+      "handle": "katrinal10n.bsky.social",
+      "timestamp": "2025-10-26T09:02:32.234170"
     }
   ],
   "liked_posts": [
@@ -751,6 +756,11 @@
       "uri": "at://did:plc:zyemgc7o6zip7ha26nxfmey2/app.bsky.feed.post/3m43e63ckgs27",
       "author": "mithmeoi.bsky.social",
       "timestamp": "2025-10-26T08:35:33.129113"
+    },
+    {
+      "uri": "at://did:plc:sl6vbab32zslpxiwt2njboke/app.bsky.feed.post/3m43ac5ynus2c",
+      "author": "katrinal10n.bsky.social",
+      "timestamp": "2025-10-26T09:02:32.030897"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
