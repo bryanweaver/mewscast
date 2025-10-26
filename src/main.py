@@ -72,6 +72,13 @@ def post_scheduled_tweet():
         if selected_story:
             print(f"📰 Selected: {selected_story['title']}")
             print(f"   Source: {selected_story['source']}\n")
+        else:
+            # CRITICAL: Never post without a source story and URL
+            print(f"\n{'='*60}")
+            print(f"❌ No unique stories available with sources")
+            print(f"   Cannot post without source URL for citation")
+            print(f"{'='*60}\n")
+            return False
 
         # Generate cat news content with story metadata
         result = generator.generate_tweet(
