@@ -64,22 +64,27 @@ def post_scheduled_tweet():
         for topic in topics_to_try:
             print(f"   Trying topic: {topic}")
 
-            # Get article for this specific topic
-            article = news_fetcher.get_article_for_topic(topic)
+            # Get multiple articles for this specific topic (up to 10)
+            articles = news_fetcher.get_articles_for_topic(topic, max_articles=10)
 
-            if not article:
+            if not articles:
                 print(f"   ✗ No articles found for this topic")
                 continue
 
-            # Check if this article is a duplicate
-            if tracker.is_duplicate(article):
-                print(f"   ✗ Article is duplicate, trying next topic...")
-                continue
+            # Check each article from this topic for duplicates
+            for article in articles:
+                if tracker.is_duplicate(article):
+                    print(f"   ✗ Duplicate: {article['source']} - {article['title'][:50]}...")
+                    continue
 
-            # Found a unique article!
-            selected_story = article
-            print(f"   ✓ Found unique story!")
-            break
+                # Found a unique article!
+                selected_story = article
+                print(f"   ✓ Found unique story!")
+                break
+
+            # If we found a story, stop trying topics
+            if selected_story:
+                break
 
         if not selected_story:
             # CRITICAL: Never post without a source story and URL

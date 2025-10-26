@@ -129,15 +129,16 @@ class NewsFetcher:
             'source': 'Google News'
         }]
 
-    def get_article_for_topic(self, topic: str) -> Optional[Dict]:
+    def get_articles_for_topic(self, topic: str, max_articles: int = 10) -> List[Dict]:
         """
-        Fetch actual news article from Google News RSS for a topic
+        Fetch multiple news articles from Google News RSS for a topic
 
         Args:
             topic: The trending topic to search for
+            max_articles: Maximum number of articles to return (default 10)
 
         Returns:
-            Dictionary with 'title', 'description', 'url', 'source' or None
+            List of article dictionaries with 'title', 'description', 'url', 'source'
         """
         try:
             # Build Google News RSS search URL
@@ -151,7 +152,7 @@ class NewsFetcher:
 
             if not feed.entries:
                 print(f"   No articles found for '{topic}'")
-                return None
+                return []
 
             # Filter for MAJOR news sources only (no local/college papers!)
             # Prioritize sources that cover big, national/international stories
@@ -186,8 +187,12 @@ class NewsFetcher:
                 'Community News', 'Patch', 'Town', 'City Council'
             ]
 
-            # Try to find article from preferred source first
-            for entry in feed.entries[:15]:  # Check first 15 results (increased for better filtering)
+            # Collect multiple articles from preferred sources
+            articles = []
+            for entry in feed.entries[:30]:  # Check first 30 results for more depth
+                if len(articles) >= max_articles:
+                    break
+
                 source = entry.get('source', {}).get('title', 'Unknown')
 
                 # Skip blacklisted sources (boring local news)
@@ -206,8 +211,11 @@ class NewsFetcher:
                         'source': source,
                         'published': entry.get('published', '')
                     }
-                    print(f"✓ Found article from {source}")
-                    return article
+                    articles.append(article)
+
+            if articles:
+                print(f"✓ Found {len(articles)} articles from major sources")
+            return articles
 
             # If no preferred source found, use first result
             entry = feed.entries[0]
