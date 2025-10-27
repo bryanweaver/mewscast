@@ -174,6 +174,11 @@
       "did": "did:plc:qboo4mroiramoz3pw5a3n4mb",
       "handle": "chonkyjack.bsky.social",
       "timestamp": "2025-10-26T09:32:11.357961"
+    },
+    {
+      "did": "did:plc:7pdt545qzhcl23k3vrzqzufr",
+      "handle": "dargentoalexandro.bsky.social",
+      "timestamp": "2025-10-27T08:04:07.178144"
     }
   ],
   "liked_posts": [
@@ -976,6 +981,11 @@
       "uri": "at://did:plc:e3tntfgsjpfkbwoh6r4y2gx5/app.bsky.feed.post/3m42fg46e6c2y",
       "author": "jennifermccool.bsky.social",
       "timestamp": "2025-10-27T07:33:46.868629"
+    },
+    {
+      "uri": "at://did:plc:7pdt545qzhcl23k3vrzqzufr/app.bsky.feed.post/3m456oo4me22h",
+      "author": "dargentoalexandro.bsky.social",
+      "timestamp": "2025-10-27T08:04:06.968250"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
