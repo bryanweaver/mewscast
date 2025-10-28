@@ -199,6 +199,11 @@
       "did": "did:plc:bz3e5qrfgan6hulka3rodktm",
       "handle": "realheathcliffs.bsky.social",
       "timestamp": "2025-10-28T04:02:50.785599"
+    },
+    {
+      "did": "did:plc:ycpagjehf6qcotxek5vsfyqe",
+      "handle": "johnjethi.bsky.social",
+      "timestamp": "2025-10-28T04:36:52.840474"
     }
   ],
   "liked_posts": [
@@ -1171,6 +1176,11 @@
       "uri": "at://did:plc:bz3e5qrfgan6hulka3rodktm/app.bsky.feed.post/3m46zceings2q",
       "author": "realheathcliffs.bsky.social",
       "timestamp": "2025-10-28T04:02:50.664813"
+    },
+    {
+      "uri": "at://did:plc:ycpagjehf6qcotxek5vsfyqe/app.bsky.feed.post/3m46zwnibvc2k",
+      "author": "johnjethi.bsky.social",
+      "timestamp": "2025-10-28T04:36:52.611094"
     }
   ],
   "last_cleanup": "2025-10-23T20:37:18.728610"
