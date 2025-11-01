@@ -269,6 +269,11 @@
       "did": "did:plc:yd5dsa6xqw5aim77xek56zyp",
       "handle": "rachelgoes262.bsky.social",
       "timestamp": "2025-11-01T20:02:34.352812"
+    },
+    {
+      "did": "did:plc:cogcxvsluthb2ki25nnvbpyc",
+      "handle": "solorpglist.com",
+      "timestamp": "2025-11-01T20:32:38.445408"
     }
   ],
   "liked_posts": [
@@ -2301,6 +2306,11 @@
       "uri": "at://did:plc:yd5dsa6xqw5aim77xek56zyp/app.bsky.feed.post/3m4kqenqbpn2q",
       "author": "rachelgoes262.bsky.social",
       "timestamp": "2025-11-01T20:02:34.137254"
+    },
+    {
+      "uri": "at://did:plc:cogcxvsluthb2ki25nnvbpyc/app.bsky.feed.post/3m4l7d3332222",
+      "author": "solorpglist.com",
+      "timestamp": "2025-11-01T20:32:38.314633"
     }
   ],
   "last_cleanup": "2025-10-30T21:02:49.951045"
