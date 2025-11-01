@@ -259,6 +259,11 @@
       "did": "did:plc:gvhhwatzuoqotwfhc42c3v4t",
       "handle": "katewin05.bsky.social",
       "timestamp": "2025-10-29T11:02:20.106033"
+    },
+    {
+      "did": "did:plc:kvcjbj7i4nleifl3la6dzob2",
+      "handle": "raizap.com",
+      "timestamp": "2025-11-01T19:31:37.165644"
     }
   ],
   "liked_posts": [
@@ -2281,6 +2286,11 @@
       "uri": "at://did:plc:zxmzcxgrwskfqnows62ednyt/app.bsky.feed.post/3m4l6aydl5c23",
       "author": "pistiye.bsky.social",
       "timestamp": "2025-11-01T19:02:10.484758"
+    },
+    {
+      "uri": "at://did:plc:kvcjbj7i4nleifl3la6dzob2/app.bsky.feed.post/3m4jtji7i2c2a",
+      "author": "raizap.com",
+      "timestamp": "2025-11-01T19:31:36.977043"
     }
   ],
   "last_cleanup": "2025-10-30T21:02:49.951045"
