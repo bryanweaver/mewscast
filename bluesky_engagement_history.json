@@ -279,6 +279,11 @@
       "did": "did:plc:qog5bgliv7ovvnjsi6rbqwzj",
       "handle": "fembdsm.bsky.social",
       "timestamp": "2025-11-02T17:32:40.849984"
+    },
+    {
+      "did": "did:plc:fleo4jxvo4g2ingp5y4tnzze",
+      "handle": "dingusabdl.bsky.social",
+      "timestamp": "2025-11-02T18:02:41.287071"
     }
   ],
   "liked_posts": [
@@ -2521,6 +2526,11 @@
       "uri": "at://did:plc:qog5bgliv7ovvnjsi6rbqwzj/app.bsky.feed.post/3m4nzq4dlek25",
       "author": "fembdsm.bsky.social",
       "timestamp": "2025-11-02T17:32:40.718419"
+    },
+    {
+      "uri": "at://did:plc:fleo4jxvo4g2ingp5y4tnzze/app.bsky.feed.post/3m4nzzh5by22g",
+      "author": "dingusabdl.bsky.social",
+      "timestamp": "2025-11-02T18:02:41.101995"
     }
   ],
   "last_cleanup": "2025-10-30T21:02:49.951045"
