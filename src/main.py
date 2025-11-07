@@ -53,38 +53,60 @@ def post_scheduled_tweet():
         dedup_config = config.get('deduplication', {})
         tracker = PostTracker(config=dedup_config)
 
-        # NEW FLOW: Pick topic first, then find source article
-        # Try up to 40 topics to find a unique story (we have 78 total)
+        # NEW FLOW: Prioritize what's ACTUALLY trending right now
+        # This ensures we cover major breaking news (elections, crises, etc.)
+        # instead of randomly selecting from static topic list
+        #
+        # Step 1: Get top stories from Google News (what's breaking NOW)
+        # Step 2: If no unique top stories, fall back to category search
         selected_story = None
-        topics_to_try = random.sample(news_fetcher.news_categories,
-                                     min(40, len(news_fetcher.news_categories)))
 
-        print(f"🔍 Searching for unique story across {len(topics_to_try)} topics...")
+        print(f"🔥 Phase 1: Checking TOP STORIES (what's trending NOW)...")
+        top_stories = news_fetcher.get_top_stories(max_stories=20)
 
-        for topic in topics_to_try:
-            print(f"   Trying topic: {topic}")
-
-            # Get multiple articles for this specific topic (up to 10)
-            articles = news_fetcher.get_articles_for_topic(topic, max_articles=10)
-
-            if not articles:
-                print(f"   ✗ No articles found for this topic")
+        # Try top stories first (these are what's actually important RIGHT NOW)
+        for article in top_stories:
+            if tracker.is_duplicate(article):
+                print(f"   ✗ Duplicate: {article['source']} - {article['title'][:50]}...")
                 continue
 
-            # Check each article from this topic for duplicates
-            for article in articles:
-                if tracker.is_duplicate(article):
-                    print(f"   ✗ Duplicate: {article['source']} - {article['title'][:50]}...")
+            # Found a unique top story!
+            selected_story = article
+            print(f"   ✓ Found trending story!")
+            break
+
+        # If no unique top stories, fall back to category search
+        if not selected_story:
+            print(f"\n📰 Phase 2: Searching category-based topics...")
+            topics_to_try = random.sample(news_fetcher.news_categories,
+                                         min(40, len(news_fetcher.news_categories)))
+
+            print(f"🔍 Trying {len(topics_to_try)} topics...")
+
+            for topic in topics_to_try:
+                print(f"   Trying topic: {topic}")
+
+                # Get multiple articles for this specific topic (up to 10)
+                articles = news_fetcher.get_articles_for_topic(topic, max_articles=10)
+
+                if not articles:
+                    print(f"   ✗ No articles found for this topic")
                     continue
 
-                # Found a unique article!
-                selected_story = article
-                print(f"   ✓ Found unique story!")
-                break
+                # Check each article from this topic for duplicates
+                for article in articles:
+                    if tracker.is_duplicate(article):
+                        print(f"   ✗ Duplicate: {article['source']} - {article['title'][:50]}...")
+                        continue
 
-            # If we found a story, stop trying topics
-            if selected_story:
-                break
+                    # Found a unique article!
+                    selected_story = article
+                    print(f"   ✓ Found unique story!")
+                    break
+
+                # If we found a story, stop trying topics
+                if selected_story:
+                    break
 
         if not selected_story:
             # CRITICAL: Never post without a source story and URL

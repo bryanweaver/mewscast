@@ -320,3 +320,148 @@ class NewsFetcher:
         except Exception as e:
             print(f"✗ Error fetching articles for '{topic}': {e}")
             return []
+
+    def get_top_stories(self, max_stories: int = 20) -> List[Dict]:
+        """
+        Fetch current top stories from Google News main feed
+        This shows what's ACTUALLY trending right now
+
+        Args:
+            max_stories: Maximum number of top stories to fetch
+
+        Returns:
+            List of article dictionaries with 'title', 'description', 'url', 'source', 'published'
+        """
+        try:
+            # Google News Top Stories RSS feed (US)
+            rss_url = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"
+
+            print(f"🔥 Fetching TOP STORIES from Google News (what's trending NOW)...")
+
+            # Parse RSS feed
+            feed = feedparser.parse(rss_url)
+
+            if not feed.entries:
+                print(f"   ⚠️  No top stories found")
+                return []
+
+            # Get top stories from major sources
+            articles = []
+
+            # Preferred sources (same as get_articles_for_topic)
+            preferred_sources = [
+                'Reuters', 'Associated Press', 'AP News', 'Bloomberg',
+                'The Wall Street Journal', 'Financial Times',
+                'The New York Times', 'The Washington Post', 'USA Today',
+                'CNN', 'BBC', 'NBC News', 'CBS News', 'ABC News', 'NPR',
+                'Fox News', 'MSNBC', 'Politico', 'The Hill',
+                'CNBC', 'Forbes', 'Business Insider', 'MarketWatch',
+                'The Guardian', 'The Atlantic', 'Time', 'Newsweek',
+                'Axios', 'ProPublica', 'The Independent',
+                'Al Jazeera', 'The Economist'
+            ]
+
+            for entry in feed.entries[:max_stories]:
+                # Extract source from entry
+                source = entry.get('source', {}).get('title', 'Unknown')
+
+                # Get published date
+                published_str = entry.get('published', '')
+                published_date = None
+                if published_str:
+                    try:
+                        published_date = parsedate_to_datetime(published_str)
+                    except:
+                        pass
+
+                # Prioritize major sources
+                if any(pref in source for pref in preferred_sources):
+                    actual_url = self.resolve_google_news_url(entry.link)
+
+                    article = {
+                        'title': entry.title,
+                        'description': entry.get('summary', ''),
+                        'url': actual_url,
+                        'source': source,
+                        'published': published_str,
+                        'published_date': published_date.isoformat() if published_date else None
+                    }
+                    articles.append(article)
+
+            if articles:
+                print(f"✓ Found {len(articles)} top stories from major sources")
+                for i, article in enumerate(articles[:5], 1):
+                    print(f"   {i}. {article['source']}: {article['title'][:60]}...")
+
+            return articles
+
+        except Exception as e:
+            print(f"✗ Error fetching top stories: {e}")
+            return []
+
+    def extract_trending_topics(self, top_stories: List[Dict]) -> List[str]:
+        """
+        Extract trending topics/keywords from top story headlines
+        This identifies what's actually news-worthy RIGHT NOW
+
+        Args:
+            top_stories: List of top story articles
+
+        Returns:
+            List of trending topic strings (most frequent keywords/entities)
+        """
+        import re
+        from collections import Counter
+
+        if not top_stories:
+            return []
+
+        # Extract all words from headlines
+        all_words = []
+        proper_nouns = []
+
+        # Common stop words to ignore
+        stop_words = {
+            'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+            'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'been', 'be',
+            'this', 'that', 'these', 'those', 'it', 'can', 'will', 'says', 'after',
+            'has', 'have', 'had', 'not', 'what', 'who', 'why', 'how', 'new'
+        }
+
+        for story in top_stories:
+            title = story.get('title', '')
+
+            # Split into words
+            words = re.findall(r'\b[a-zA-Z]+\b', title)
+
+            for word in words:
+                word_lower = word.lower()
+
+                # Skip stop words and short words
+                if word_lower in stop_words or len(word) < 3:
+                    continue
+
+                # If capitalized, it's likely a proper noun (person, place, organization)
+                if word[0].isupper():
+                    proper_nouns.append(word)
+
+                all_words.append(word_lower)
+
+        # Count frequency of terms
+        word_counts = Counter(all_words)
+        noun_counts = Counter(proper_nouns)
+
+        # Prioritize proper nouns (specific entities) and frequent keywords
+        trending = []
+
+        # Add top proper nouns (people, places, orgs - these are specific stories)
+        for noun, count in noun_counts.most_common(10):
+            if count >= 2:  # Appeared in 2+ headlines = trending
+                trending.append(noun)
+
+        # Add top keywords (general topics)
+        for word, count in word_counts.most_common(10):
+            if count >= 2 and word not in [t.lower() for t in trending]:
+                trending.append(word)
+
+        return trending[:15]  # Top 15 trending topics

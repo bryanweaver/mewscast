@@ -9,7 +9,15 @@ content:
   # Persona
   persona: "professional news reporter cat"
 
+  # Story selection strategy:
+  # 1. FIRST: Check Google News Top Stories (what's trending RIGHT NOW)
+  #    - Covers breaking news, elections, major events as they happen
+  #    - Ensures we don't miss important stories
+  # 2. FALLBACK: Search specific news categories if no unique top stories
+  #    - Provides variety and depth coverage
+
   # News categories to report on (SPICY AND ENGAGING)
+  # Used as fallback when top stories are exhausted
   topics:
     - "breaking political scandals"
     - "Congress chaos and dysfunction"
