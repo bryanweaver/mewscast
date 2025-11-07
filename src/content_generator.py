@@ -404,6 +404,14 @@ CRITICAL REQUIREMENTS:
 - Think: What visual would make someone stop scrolling?
 - Cat can be protagonist (center) or observer (background), but MUST be present
 
+CONTENT MODERATION - AVOID THESE (will be rejected by AI):
+- NO sick/injured people, especially children
+- NO violence, weapons, or explicit medical imagery
+- NO graphic suffering or disturbing content
+- USE metaphors and symbols instead of literal depictions
+- FOCUS on broader context (empty vaccine bottles, warning signs) not trauma
+- For health stories: show prevention/consequences symbolically, not suffering
+
 CAT REPORTER PRESENCE (MANDATORY - EVERY IMAGE MUST HAVE A CAT):
 - 60% CAT AS PROTAGONIST: Front and center, actively investigating/reporting (rifling files, confronting subjects, dramatic action)
 - 40% CAT AS OBSERVER: Present but background (watching from newsdesk, perched above, corner of scene, witnessing)
@@ -440,6 +448,9 @@ UFO story (atmospheric with cat):
 
 Economic news (cat analyzing data):
 "Bold infographic art: Tabby reporter cat pointing at massive rising debt chart, dramatic scale showing tiny people vs huge numbers, stark contrast, visual metaphor"
+
+Health/medical news (symbolic, NO sick people):
+"Cinematic shot: Tabby reporter cat examining empty vaccine vials and warning signs, dramatic lighting emphasizing consequences, metaphorical approach"
 
 Analyze the tweet and topic. Choose style that matches the story's TONE. Make it visually compelling and story-specific.
 
