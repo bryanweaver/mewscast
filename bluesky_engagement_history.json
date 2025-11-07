@@ -339,6 +339,11 @@
       "did": "did:plc:q2sr4iwib2h3dcxcewyoowea",
       "handle": "idabeware.blacksky.app",
       "timestamp": "2025-11-07T16:37:07.575379"
+    },
+    {
+      "did": "did:plc:pij6zvbqt7vwi25sapuqpkdh",
+      "handle": "kimisayswhat.bsky.social",
+      "timestamp": "2025-11-07T17:02:30.503218"
     }
   ],
   "liked_posts": [
@@ -3661,6 +3666,11 @@
       "uri": "at://did:plc:q2sr4iwib2h3dcxcewyoowea/app.bsky.feed.post/3m52ikr3p5c2e",
       "author": "idabeware.blacksky.app",
       "timestamp": "2025-11-07T16:37:07.370427"
+    },
+    {
+      "uri": "at://did:plc:pij6zvbqt7vwi25sapuqpkdh/app.bsky.feed.post/3m4zumjlcf223",
+      "author": "kimisayswhat.bsky.social",
+      "timestamp": "2025-11-07T17:02:30.320150"
     }
   ],
   "last_cleanup": "2025-11-06T21:33:24.684241"
