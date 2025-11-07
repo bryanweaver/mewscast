@@ -79,19 +79,13 @@ class PostTracker:
                 print(f"✗ Duplicate URL detected: {url[:60]}...")
                 return True
 
-        # Level 2: Source deduplication (HARD BLOCK) - never use same source twice
-        source_cooldown_hours = self.config.get('source_cooldown_hours', 168)  # Default 7 days
-        if source and self._source_posted(source, hours=source_cooldown_hours):
-            print(f"✗ Source already used recently: {source}")
-            return True
-
-        # Level 3: Content similarity check (HARD BLOCK) - check actual post text
+        # Level 2: Content similarity check (HARD BLOCK) - check actual post text
         content_cooldown_hours = self.config.get('content_cooldown_hours', 72)  # Default 3 days
         if post_content and self._similar_content_posted(post_content, hours=content_cooldown_hours):
             print(f"✗ Similar content posted recently")
             return True
 
-        # Level 4: Topic similarity check (SOFT BLOCK)
+        # Level 3: Topic similarity check (SOFT BLOCK)
         cooldown_hours = self.config.get('topic_cooldown_hours', 48)
         if self._similar_topic_posted(title, hours=cooldown_hours):
             print(f"✗ Similar topic posted recently: {title[:60]}...")

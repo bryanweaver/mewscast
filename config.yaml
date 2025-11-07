@@ -192,7 +192,6 @@ deduplication:
   topic_similarity_threshold: 0.40  # 40% keyword overlap = duplicate (was 60%, lowered to catch edge cases)
   content_cooldown_hours: 72 # Don't post similar content within 72 hours (3 days)
   content_similarity_threshold: 0.65  # 65% content overlap = duplicate (was 70%)
-  source_cooldown_hours: 120 # Don't use same source within 5 days (120 hours)
   url_deduplication: true    # Never repost the same article URL
   max_history_days: 90       # Keep 90 days of post history
 
