@@ -354,6 +354,11 @@
       "did": "did:plc:n3gwydnlhxitqhbn75wfucca",
       "handle": "65nicnac.bsky.social",
       "timestamp": "2025-11-08T10:02:42.860496"
+    },
+    {
+      "did": "did:plc:smhqduhph6iojeavhcjdetn7",
+      "handle": "hermitheidi.bsky.social",
+      "timestamp": "2025-11-08T10:35:03.864296"
     }
   ],
   "liked_posts": [
@@ -3846,6 +3851,11 @@
       "uri": "at://did:plc:n3gwydnlhxitqhbn75wfucca/app.bsky.feed.post/3m54cps3hs22j",
       "author": "65nicnac.bsky.social",
       "timestamp": "2025-11-08T10:02:42.631155"
+    },
+    {
+      "uri": "at://did:plc:smhqduhph6iojeavhcjdetn7/app.bsky.feed.post/3m54enco4vc2w",
+      "author": "hermitheidi.bsky.social",
+      "timestamp": "2025-11-08T10:35:03.639906"
     }
   ],
   "last_cleanup": "2025-11-06T21:33:24.684241"
