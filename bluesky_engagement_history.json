@@ -374,6 +374,11 @@
       "did": "did:plc:uk2wnfiht4fj23jxvffdrok4",
       "handle": "jennyleeshee.bsky.social",
       "timestamp": "2025-11-08T22:33:14.805743"
+    },
+    {
+      "did": "did:plc:ab6j4u3qbhkqyagbyt6uypok",
+      "handle": "dagmarfaye.bsky.social",
+      "timestamp": "2025-11-08T23:02:30.437819"
     }
   ],
   "liked_posts": [
@@ -3981,6 +3986,11 @@
       "uri": "at://did:plc:uk2wnfiht4fj23jxvffdrok4/app.bsky.feed.post/3m55nbltkwk2f",
       "author": "jennyleeshee.bsky.social",
       "timestamp": "2025-11-08T22:33:14.676038"
+    },
+    {
+      "uri": "at://did:plc:ab6j4u3qbhkqyagbyt6uypok/app.bsky.feed.post/3m55n7zpmr22i",
+      "author": "dagmarfaye.bsky.social",
+      "timestamp": "2025-11-08T23:02:30.313477"
     }
   ],
   "last_cleanup": "2025-11-06T21:33:24.684241"
