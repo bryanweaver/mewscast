@@ -399,6 +399,11 @@
       "did": "did:plc:kyk7zrxy433jfglgxvgyr2y7",
       "handle": "bloodlesscoup.bsky.social",
       "timestamp": "2025-11-09T05:34:05.798655"
+    },
+    {
+      "did": "did:plc:exxuoika2qlqlk7oidz3pkq7",
+      "handle": "skwinnicki.bsky.social",
+      "timestamp": "2025-11-09T06:02:44.376629"
     }
   ],
   "liked_posts": [
@@ -4066,6 +4071,11 @@
       "uri": "at://did:plc:kyk7zrxy433jfglgxvgyr2y7/app.bsky.feed.post/3m55yujex2222",
       "author": "bloodlesscoup.bsky.social",
       "timestamp": "2025-11-09T05:34:05.557879"
+    },
+    {
+      "uri": "at://did:plc:exxuoika2qlqlk7oidz3pkq7/app.bsky.feed.post/3m562oy4a222t",
+      "author": "skwinnicki.bsky.social",
+      "timestamp": "2025-11-09T06:02:44.163522"
     }
   ],
   "last_cleanup": "2025-11-06T21:33:24.684241"
