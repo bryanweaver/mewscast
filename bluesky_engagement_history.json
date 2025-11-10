@@ -429,6 +429,11 @@
       "did": "did:plc:bsvqlf3otde77d4easq5swhs",
       "handle": "monicapotts.bsky.social",
       "timestamp": "2025-11-10T18:02:59.074549"
+    },
+    {
+      "did": "did:plc:whr3ajncrdud3gzc6vvp7h6w",
+      "handle": "wanderolah.bsky.social",
+      "timestamp": "2025-11-10T18:40:27.329450"
     }
   ],
   "liked_posts": [
@@ -4446,6 +4451,11 @@
       "uri": "at://did:plc:bsvqlf3otde77d4easq5swhs/app.bsky.feed.post/3m5bxeuzj6c2t",
       "author": "monicapotts.bsky.social",
       "timestamp": "2025-11-10T18:02:58.832635"
+    },
+    {
+      "uri": "at://did:plc:whr3ajncrdud3gzc6vvp7h6w/app.bsky.feed.post/3m5c2saj6pk27",
+      "author": "wanderolah.bsky.social",
+      "timestamp": "2025-11-10T18:40:27.123827"
     }
   ],
   "last_cleanup": "2025-11-06T21:33:24.684241"
