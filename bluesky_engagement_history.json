@@ -419,6 +419,11 @@
       "did": "did:plc:iwl3yxbegpmgysqrk2hwncgl",
       "handle": "hlkfotos.com",
       "timestamp": "2025-11-09T19:31:47.161755"
+    },
+    {
+      "did": "did:plc:53loy74xjwu3gdjts22b52f3",
+      "handle": "jake-needs-coffee.bsky.social",
+      "timestamp": "2025-11-10T17:34:29.084449"
     }
   ],
   "liked_posts": [
@@ -4426,6 +4431,11 @@
       "uri": "at://did:plc:usnbdpdkeu5wmc4jof2xeknw/app.bsky.feed.post/3m5c3uax4dc2z",
       "author": "jackh97.bsky.social",
       "timestamp": "2025-11-10T17:02:25.976479"
+    },
+    {
+      "uri": "at://did:plc:53loy74xjwu3gdjts22b52f3/app.bsky.feed.post/3m5aru7o6es2e",
+      "author": "jake-needs-coffee.bsky.social",
+      "timestamp": "2025-11-10T17:34:28.820980"
     }
   ],
   "last_cleanup": "2025-11-06T21:33:24.684241"
