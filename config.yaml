@@ -200,18 +200,18 @@ deduplication:
   topic_similarity_threshold: 0.40  # 40% keyword overlap = duplicate (was 60%, lowered to catch edge cases)
   content_cooldown_hours: 72 # Don't post similar content within 72 hours (3 days)
   content_similarity_threshold: 0.65  # 65% content overlap = duplicate (was 70%)
+  source_cooldown_hours: 0   # Allow same source for different stories (set to 0 to disable source blocking)
   url_deduplication: true    # Never repost the same article URL
   max_history_days: 90       # Keep 90 days of post history
 
   # Allow updates to previously covered stories
   allow_updates: true        # If true, similar stories with update indicators are allowed
-  update_keywords:           # Keywords that indicate this is an update/development
+  update_keywords:           # Keywords that indicate ACTUAL NEW DEVELOPMENT (not just generic news words)
     - "update"
     - "breaking"
     - "just"
     - "now"
     - "latest"
-    - "new"
     - "charged"
     - "convicted"
     - "arrested"
@@ -223,17 +223,12 @@ deduplication:
     - "reverses"
     - "overturned"
     - "escalates"
-    - "responds"
-    - "fires back"
-    - "doubles down"
-    - "backs down"
     - "resigns"
     - "appointed"
     - "elected"
     - "voted"
     - "passes"
     - "fails"
-    - "after"
-    - "following"
-    - "amid"
-    - "in wake of"
+    # REMOVED too-generic words that appear in most headlines:
+    # "new", "responds", "fires back", "doubles down", "backs down",
+    # "after", "following", "amid", "in wake of"
