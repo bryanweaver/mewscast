@@ -45,6 +45,8 @@ content:
     - "from my perch"
     - "whisker away"
     - "nine lives worth of news"
+    - "meow about that"
+    - "meow hear this"
 
     # Investigative/Suspicious
     - "smell something fishy"
@@ -62,6 +64,9 @@ content:
     - "the tail tells a different story"
     - "not buying the catnip"
     - "this cat's not buying it"
+    - "meow come?"
+    - "meow way that's true"
+    - "sounds fishy to this cat right meow"
 
     # Power/Politics
     - "fat cat donors"
@@ -84,6 +89,11 @@ content:
     - "nine lives wouldn't be enough"
     - "right meow"
     - "meow is the time"
+    - "what happens meow"
+    - "happening right meow"
+    - "meow or never"
+    - "the question right meow"
+    - "focus right meow"
 
     # Outcomes/Results
     - "landed on all fours"
@@ -99,6 +109,11 @@ content:
     - "claw-ver analysis"
     - "meow-mentous"
     - "catnip for readers"
+    - "meow that's interesting"
+    - "meow we're talking"
+    - "meow you see it"
+    - "the real question meow"
+    - "what matters meow"
 
   # Engagement hooks (occasional questions to audience - use sparingly)
   engagement_hooks:
@@ -131,6 +146,9 @@ content:
     - "Filing this report between naps"
     - "This reporter is sharpening claws for"
     - "Watching humans"
+    - "Meow's the time to ask"
+    - "This cat's been watching, and meow I've seen enough"
+    - "Reporting right meow from"
 
   # Editorial guidelines
   editorial_guidelines:
@@ -202,7 +220,7 @@ deduplication:
   content_similarity_threshold: 0.65  # 65% content overlap = duplicate (was 70%)
   source_cooldown_hours: 0   # Allow same source for different stories (set to 0 to disable source blocking)
   url_deduplication: true    # Never repost the same article URL
-  max_history_days: 90       # Keep 90 days of post history
+  max_history_days: 30       # Keep 30 days of post history
 
   # Allow updates to previously covered stories
   allow_updates: true        # If true, similar stories with update indicators are allowed

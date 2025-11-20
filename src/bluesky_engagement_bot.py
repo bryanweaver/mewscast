@@ -85,7 +85,7 @@ class BlueskyEngagementBot:
             return False
 
     def _cleanup_old_history(self):
-        """Remove entries older than 90 days to keep file manageable"""
+        """Remove entries older than 30 days to keep file manageable"""
         last_cleanup = datetime.fromisoformat(self.engagement_history.get('last_cleanup', datetime.now().isoformat()))
 
         # Only cleanup once per week
@@ -93,7 +93,7 @@ class BlueskyEngagementBot:
             return
 
         print("🧹 Cleaning up old Bluesky engagement history...")
-        cutoff_date = datetime.now() - timedelta(days=90)
+        cutoff_date = datetime.now() - timedelta(days=30)
 
         # Keep only recent follows
         if self.engagement_history.get('followed_users'):
