@@ -619,6 +619,11 @@
       "did": "did:plc:f25eqvf4djeexuixuv22njra",
       "handle": "pinninazero.bsky.social",
       "timestamp": "2025-11-20T02:13:45.220431"
+    },
+    {
+      "did": "did:plc:oeauzovaotrdrou2gwi6kkcn",
+      "handle": "davelikesmovies.bsky.social",
+      "timestamp": "2025-11-21T13:38:02.857965"
     }
   ],
   "liked_posts": [
@@ -7061,6 +7066,11 @@
       "uri": "at://did:plc:sh3b5zbo4zcdrpneu32pbi3e/app.bsky.feed.post/3m65aecibgk25",
       "author": "miikajohannes.bsky.social",
       "timestamp": "2025-11-21T13:10:01.970964"
+    },
+    {
+      "uri": "at://did:plc:oeauzovaotrdrou2gwi6kkcn/app.bsky.feed.post/3m65euthuqc25",
+      "author": "davelikesmovies.bsky.social",
+      "timestamp": "2025-11-21T13:38:02.657879"
     }
   ],
   "last_cleanup": "2025-11-20T22:33:31.481267"
