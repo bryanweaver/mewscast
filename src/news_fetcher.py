@@ -10,6 +10,7 @@ import re
 from googlenewsdecoder import gnewsdecoder
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+from bs4 import BeautifulSoup
 
 
 class NewsFetcher:
@@ -147,6 +148,79 @@ class NewsFetcher:
         except Exception as e:
             print(f"   ⚠️  Could not resolve URL: {e}")
             return google_url  # Fallback to original URL
+
+    def fetch_article_content(self, url: str) -> Optional[str]:
+        """
+        Fetch and parse full article content from URL
+
+        Args:
+            url: Article URL to fetch
+
+        Returns:
+            Extracted article text (first ~1500 chars), or None if fetch fails
+        """
+        try:
+            print(f"   📄 Fetching article content from: {url[:60]}...")
+
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            }
+
+            response = requests.get(url, headers=headers, timeout=10)
+            response.raise_for_status()
+
+            soup = BeautifulSoup(response.content, 'html.parser')
+
+            # Remove script and style elements
+            for script in soup(["script", "style", "nav", "footer", "header"]):
+                script.decompose()
+
+            # Try to find article content using common tags/classes
+            article_content = None
+
+            # Try common article container selectors
+            selectors = [
+                'article',
+                '[role="main"]',
+                '.article-body',
+                '.article-content',
+                '.story-body',
+                '.post-content',
+                '#article-body',
+                '.entry-content'
+            ]
+
+            for selector in selectors:
+                element = soup.select_one(selector)
+                if element:
+                    article_content = element
+                    break
+
+            # Fallback: get all paragraphs
+            if not article_content:
+                paragraphs = soup.find_all('p')
+                if paragraphs:
+                    article_content = ' '.join([p.get_text() for p in paragraphs[:10]])
+            else:
+                article_content = article_content.get_text()
+
+            if article_content:
+                # Clean up whitespace
+                article_content = ' '.join(article_content.split())
+
+                # Limit to first ~1500 chars (enough context, not overwhelming)
+                if len(article_content) > 1500:
+                    article_content = article_content[:1500] + "..."
+
+                print(f"   ✓ Extracted {len(article_content)} chars of article content")
+                return article_content
+
+            print(f"   ⚠️  Could not extract article content")
+            return None
+
+        except Exception as e:
+            print(f"   ⚠️  Error fetching article: {e}")
+            return None
 
     def get_trending_topics(self, count: int = 5, categories: List[str] = None) -> List[Dict]:
         """

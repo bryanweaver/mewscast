@@ -262,3 +262,38 @@ class BlueskyBot:
         except Exception as e:
             print(f"✗ Error posting reply: {e}")
             return None
+
+    def delete_post(self, post_uri: str) -> bool:
+        """
+        Delete a post
+
+        Args:
+            post_uri: URI of the post to delete (format: at://did/collection/rkey)
+
+        Returns:
+            True if successful, False if failed
+        """
+        try:
+            # Parse AT URI to get repo and rkey
+            parts = post_uri.replace('at://', '').split('/')
+            if len(parts) != 3:
+                raise ValueError(f"Invalid AT URI format: {post_uri}")
+
+            repo_did = parts[0]
+            collection = parts[1]
+            rkey = parts[2]
+
+            # Delete the post
+            self.client.com.atproto.repo.delete_record(
+                models.ComAtprotoRepoDeleteRecord.Data(
+                    repo=repo_did,
+                    collection=collection,
+                    rkey=rkey
+                )
+            )
+
+            print(f"✓ Post deleted successfully! URI: {post_uri}")
+            return True
+        except Exception as e:
+            print(f"✗ Error deleting post: {e}")
+            return False

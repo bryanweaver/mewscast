@@ -120,6 +120,14 @@ def post_scheduled_tweet():
         print(f"   Source: {selected_story['source']}")
         print(f"   URL: {selected_story.get('url', 'N/A')}\n")
 
+        # Fetch full article content for better context
+        if selected_story.get('url'):
+            article_content = news_fetcher.fetch_article_content(selected_story['url'])
+            if article_content:
+                selected_story['article_content'] = article_content
+            else:
+                print(f"   ⚠️  Using title and description only (article fetch failed)")
+
         # Generate cat news content with story metadata
         result = generator.generate_tweet(
             trending_topic=selected_story['title'] if selected_story else None,

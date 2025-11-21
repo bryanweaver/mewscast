@@ -73,7 +73,10 @@ class ContentGenerator:
         article_details = None
         if is_specific_story and story_metadata:
             article_details = f"Title: {story_metadata.get('title', '')}\n"
-            if story_metadata.get('context'):
+            article_details += f"Source: {story_metadata.get('source', '')}\n"
+            if story_metadata.get('article_content'):
+                article_details += f"Article Content:\n{story_metadata.get('article_content', '')}\n"
+            elif story_metadata.get('context'):
                 article_details += f"Summary: {story_metadata.get('context', '')}"
 
         prompt = self._build_news_cat_prompt(selected_topic, is_specific_story=is_specific_story,
@@ -161,23 +164,41 @@ class ContentGenerator:
         story_guidance = ""
         if is_specific_story and article_details:
             story_guidance = f"""
-IMPORTANT - Real Story Coverage:
+CRITICAL - Real Story Coverage (MUST FOLLOW):
 - You are writing about this actual article:
   {article_details}
 
-- Write cat news commentary based on the article above
-- Provide objective analysis and context from the article
-- Do NOT fabricate specific details not in the article
-- Focus on significance and implications
-- A source citation will be added in a follow-up reply
+STRICT RULES - DO NOT BREAK THESE:
+1. USE ONLY information explicitly stated in the article above
+2. DO NOT invent names, locations, positions, titles, or facts
+3. DO NOT guess at details not mentioned in the article
+4. If a detail is unclear or missing, leave it out entirely
+5. When mentioning people: Use ONLY the exact titles/positions stated in the article
+6. When mentioning locations: Use ONLY the exact places stated in the article
+7. Double-check every fact against the article before including it
+
+ACCEPTABLE:
+- General commentary on implications and significance
+- Raising questions about what's stated in the article
+- Expressing skepticism or analysis based on stated facts
+
+NOT ACCEPTABLE (WILL CAUSE ERRORS):
+- Saying "Virginia Dem" when article says "NYC Mayor-elect"
+- Adding details about someone's position that aren't in the article
+- Inventing context or background not provided
+- Guessing at state/location if not explicitly mentioned
+
+Remember: It's better to be vague than wrong. Stick to what's in the article.
+A source citation will be added in a follow-up reply.
 """
         elif is_specific_story:
             story_guidance = """
-IMPORTANT - Real Story Coverage:
+CRITICAL - Real Story Coverage:
 - This is a real trending topic, not commentary
 - Provide objective analysis and context
-- Avoid fabricating specific details (numbers, locations, quotes)
-- Focus on general significance and implications
+- DO NOT fabricate ANY specific details (numbers, locations, titles, quotes, positions)
+- DO NOT guess at information not provided
+- Focus on general significance and implications only
 - A source citation will be added in a follow-up reply
 """
 
@@ -284,6 +305,9 @@ AVOID:
 - Making multiple scattered points that don't connect coherently
 - Hedging when you should call it out
 - Going over the character limit - make it fit!
+
+FINAL REMINDER FOR REAL STORIES:
+If you're writing about a specific article with provided content, you MUST use ONLY facts from that article. Do not add information from your training data or make assumptions. Accuracy is critical.
 
 Just return the tweet text itself, nothing else."""
 

@@ -143,6 +143,24 @@ class TwitterBot:
             print(f"✗ Error posting reply: {e}")
             return None
 
+    def delete_tweet(self, tweet_id: str) -> bool:
+        """
+        Delete a tweet
+
+        Args:
+            tweet_id: ID of the tweet to delete
+
+        Returns:
+            True if successful, False if failed
+        """
+        try:
+            self.client.delete_tweet(tweet_id)
+            print(f"✓ Tweet deleted successfully! ID: {tweet_id}")
+            return True
+        except tweepy.TweepyException as e:
+            print(f"✗ Error deleting tweet: {e}")
+            return False
+
     def get_mentions(self, max_results: int = 10) -> list:
         """
         Get recent mentions of your account
