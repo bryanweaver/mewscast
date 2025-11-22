@@ -1,0 +1,15 @@
+# CODEOWNERS file
+# This file defines who owns code in this repository
+# Code owners are automatically requested for review when someone opens a PR
+
+# Global owner - Bryan Weaver owns all files
+* @bryanweaver
+
+# Specific file ownership (optional - uncomment to use)
+# /src/**/*.py @bryanweaver
+# /docs/**/*.md @bryanweaver
+# /.github/workflows/*.yml @bryanweaver
+# /config.yaml @bryanweaver
+
+# Documentation
+# When someone opens a PR, GitHub will automatically request a review from @bryanweaver
