@@ -1,14 +1,18 @@
 """
 Rebuild posts_history.json from X timeline
 Fetches all bot posts and reconstructs the history file for deduplication
+
+Usage: python scripts/rebuild_history.py
+(Run from repository root)
 """
 import sys
+import os
 import json
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 
-# Add src to path
-sys.path.insert(0, 'src')
+# Add src to path (works from repo root)
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src'))
 
 from twitter_bot import TwitterBot
 

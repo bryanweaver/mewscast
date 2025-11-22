@@ -190,16 +190,34 @@ safety:
 ```
 mewscast/
 ├── .github/
-│   └── workflows/
-│       └── post-tweet.yml      # GitHub Actions workflow
-├── src/
+│   └── workflows/          # GitHub Actions workflows
+│       ├── post-tweet.yml      # Main posting workflow
+│       ├── engage-cats.yml     # X engagement automation
+│       └── engage-cats-bluesky.yml  # Bluesky engagement
+├── src/                    # Source code
 │   ├── main.py                 # Main entry point
-│   ├── twitter_bot.py          # Twitter API integration
-│   └── content_generator.py   # AI content generation
-├── config.yaml                 # Bot configuration
-├── requirements.txt            # Python dependencies
-├── .env.example                # Environment variables template
-└── README.md
+│   ├── twitter_bot.py          # X/Twitter API integration
+│   ├── bluesky_bot.py          # Bluesky API integration
+│   ├── content_generator.py    # AI content generation (Claude)
+│   ├── image_generator.py      # AI image generation (Grok)
+│   ├── news_fetcher.py         # Google News RSS fetching
+│   ├── post_tracker.py         # Deduplication & history
+│   └── engagement_bot.py       # Engagement automation
+├── docs/                   # Documentation
+│   ├── SETUP_GUIDE.md          # Detailed setup instructions
+│   ├── SECURITY_AUDIT.md       # Security audit report
+│   ├── GROWTH_STRATEGY.md      # Growth & monetization tips
+│   └── README_ENGAGEMENT.md    # Engagement bot docs
+├── scripts/                # Utility scripts
+│   ├── rebuild_history.py      # Rebuild post history from X
+│   └── filter_history.py       # Clean up post history
+├── config.yaml             # Bot configuration
+├── posts_history.json      # Post deduplication history
+├── bluesky_engagement_history.json  # Bluesky follows/likes
+├── requirements.txt        # Python dependencies
+├── .env.example            # Environment variables template
+├── LICENSE                 # MIT License
+└── README.md               # This file
 ```
 
 ## Tips for Growth
@@ -262,7 +280,7 @@ This repository has been thoroughly audited for security:
 - ✅ No PII or sensitive data in commit history
 - ✅ Proper .gitignore configuration
 
-See [SECURITY_AUDIT.md](SECURITY_AUDIT.md) for full security audit details.
+See [docs/SECURITY_AUDIT.md](docs/SECURITY_AUDIT.md) for full security audit details.
 
 ## License
 
@@ -290,6 +308,13 @@ SOFTWARE.
 
 See [LICENSE](LICENSE) file for full license text.
 
+## Documentation
+
+- **[Setup Guide](docs/SETUP_GUIDE.md)** - Detailed setup instructions
+- **[Security Audit](docs/SECURITY_AUDIT.md)** - Security audit report
+- **[Growth Strategy](docs/GROWTH_STRATEGY.md)** - Growth & monetization tips
+- **[Engagement Guide](docs/README_ENGAGEMENT.md)** - Engagement automation docs
+
 ## Contributing
 
 PRs welcome! Some ideas:
@@ -297,13 +322,14 @@ PRs welcome! Some ideas:
 - Analytics dashboard
 - Multiple AI provider support
 - Content scheduling calendar
-- Image generation integration
 - Thread support
+- Multi-account management
 
 ## Support
 
-- Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/mewscast/issues)
-- Twitter: Share your bot and tag your experience!
+- **Issues**: [GitHub Issues](https://github.com/bryanweaver/mewscast/issues)
+- **X/Twitter**: [@mewscast](https://x.com/mewscast)
+- **Bluesky**: [@mewscast.bsky.social](https://bsky.app/profile/mewscast.bsky.social)
 
 ---
 
