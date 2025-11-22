@@ -45,3 +45,10 @@ logs/
 # Temporary files
 temp_image.png
 *.tmp
+
+# Claude Code settings (local IDE config)
+.claude/
+
+# Debug and temporary test files
+debug_*.py
+=*
