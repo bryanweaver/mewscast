@@ -112,19 +112,37 @@ git push -u origin main
 
 2. Add secrets to your GitHub repository:
    - Go to your repo → Settings → Secrets and variables → Actions
-   - Add these secrets:
-     - `TWITTER_API_KEY`
-     - `TWITTER_API_SECRET`
-     - `TWITTER_ACCESS_TOKEN`
-     - `TWITTER_ACCESS_TOKEN_SECRET`
-     - `TWITTER_BEARER_TOKEN`
-     - `ANTHROPIC_API_KEY`
+   - Click "New repository secret" and add each of these:
+
+   **X/Twitter API Credentials:**
+   - `X_API_KEY` - Your X API key
+   - `X_API_SECRET` - Your X API secret
+   - `X_ACCESS_TOKEN` - Your X access token
+   - `X_ACCESS_TOKEN_SECRET` - Your X access token secret
+   - `X_BEARER_TOKEN` - Your X bearer token
+
+   **Bluesky Credentials:**
+   - `BLUESKY_USERNAME` - Your Bluesky handle (e.g., `yourname.bsky.social`)
+   - `BLUESKY_PASSWORD` - Your Bluesky app password (from Settings → App Passwords)
+
+   **AI API Keys:**
+   - `ANTHROPIC_API_KEY` - Your Anthropic API key (for Claude)
+   - `X_AI_API_KEY` - Your X AI API key (for Grok image generation)
 
 3. Enable GitHub Actions:
    - Go to Actions tab
    - Enable workflows if prompted
+   - You should see workflows: "Post Scheduled Tweet", "Engage Cats (X)", "Engage Cats (Bluesky)"
 
-4. That's it! Your bot will now post automatically based on the schedule in `.github/workflows/post-tweet.yml`
+4. Test the workflow:
+   - Go to Actions tab → "Post Scheduled Tweet"
+   - Click "Run workflow" → "Run workflow"
+   - Watch it run and check for any errors
+
+5. That's it! Your bot will now:
+   - Post automatically 7 times per day (schedule in `.github/workflows/post-tweet.yml`)
+   - Auto-engage with cat accounts on X and Bluesky
+   - Commit post history after each successful post
 
 ## Usage
 
