@@ -1,32 +1,51 @@
 # Mewscast
 
-AI-powered Twitter/X automation bot that posts scheduled content using Claude AI. Built for developers who want a cheap, low-maintenance way to maintain an active Twitter presence.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: anthropic](https://img.shields.io/badge/AI-Claude%204.5-purple.svg)](https://www.anthropic.com)
+
+AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky using Claude AI. Fetches real news from Google News, generates witty commentary with full article context, and posts automatically with proper source citations.
 
 ## Features
 
-- Automated scheduled posts using GitHub Actions (free!)
-- AI-generated content using Anthropic's Claude
-- Twitter/X API v2 integration
-- Reply automation (optional)
-- Configurable topics, style, and posting schedule
-- Near-zero cost operation ($2-10/month for API usage only)
+### Content Generation
+- **Real News Sourcing**: Fetches trending stories from Google News RSS
+- **Full Article Parsing**: Reads complete articles (not just headlines) for accurate commentary
+- **AI-Powered Commentary**: Uses Claude 4.5 Sonnet for sharp, witty news analysis
+- **Fact-Checking**: Strict validation to prevent fabrication or hallucination
+- **Cat Personality**: Professional news reporter... who happens to be a cat 🐱
+
+### Multi-Platform Posting
+- **X/Twitter**: Posts with AI-generated images (via Grok) and source citations
+- **Bluesky**: Cross-posts to Bluesky with link cards
+- **Deduplication**: Never posts the same story twice (72-hour cooldown)
+
+### Automation & Cost
+- **GitHub Actions**: Free automated posting (7 posts/day)
+- **Engagement Bot**: Auto-follows cat accounts and likes cat posts on Bluesky
+- **Near-Zero Cost**: $20-50/month for API usage (Anthropic + Grok images)
+- **No Server Needed**: Runs entirely on GitHub Actions
 
 ## Cost Breakdown
 
-- **GitHub Actions**: FREE (2,000 minutes/month for private repos, unlimited for public)
-- **Anthropic API**: ~$1-5/month (Claude 3.5 Sonnet at $3 per million tokens)
-- **Twitter API**: FREE (with approved developer account)
+- **GitHub Actions**: FREE (unlimited for public repos)
+- **Anthropic API**: ~$10-20/month (Claude 4.5 Sonnet for content generation)
+- **X/Twitter API**: FREE (Basic tier - 50 posts/24hrs)
+- **Grok API**: ~$10-20/month (Image generation via X AI)
+- **Bluesky**: FREE (no API costs)
 
-**Total: $2-10/month**
+**Total: $20-50/month** (varies with posting frequency)
 
 ## Quick Start
 
 ### 1. Prerequisites
 
 - Python 3.11+
-- Twitter Developer Account
-- Anthropic API key
-- GitHub account (for free hosting)
+- X/Twitter Developer Account (Free tier)
+- Bluesky Account (with app password)
+- Anthropic API key (Claude 4.5 Sonnet)
+- X AI API key (for Grok image generation)
+- GitHub account (for free hosting via Actions)
 
 ### 2. Get API Credentials
 
@@ -235,9 +254,41 @@ Want more features? Consider:
 - **Multiple accounts**: Run one instance per account
 - **Analytics**: Track engagement and optimize content
 
+## Security
+
+This repository has been thoroughly audited for security:
+- ✅ No hardcoded credentials or API keys
+- ✅ All secrets managed via environment variables and GitHub Secrets
+- ✅ No PII or sensitive data in commit history
+- ✅ Proper .gitignore configuration
+
+See [SECURITY_AUDIT.md](SECURITY_AUDIT.md) for full security audit details.
+
 ## License
 
-MIT License - feel free to fork and customize!
+MIT License
+
+Copyright (c) 2025 Bryan Weaver
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+See [LICENSE](LICENSE) file for full license text.
 
 ## Contributing
 
