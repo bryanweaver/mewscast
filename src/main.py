@@ -65,14 +65,21 @@ def post_scheduled_tweet():
         top_stories = news_fetcher.get_top_stories(max_stories=20)
 
         # Try top stories first (these are what's actually important RIGHT NOW)
+        story_status = None
         for article in top_stories:
-            if tracker.is_duplicate(article):
+            status = tracker.check_story_status(article)
+
+            if status['is_duplicate']:
                 print(f"   ✗ Duplicate: {article['source']} - {article['title'][:50]}...")
                 continue
 
-            # Found a unique top story!
+            # Found a unique story (could be new or update)
             selected_story = article
-            print(f"   ✓ Found trending story!")
+            story_status = status
+            if status['is_update']:
+                print(f"   ✓ Found UPDATE to existing story!")
+            else:
+                print(f"   ✓ Found trending story!")
             break
 
         # If no unique top stories, fall back to category search
@@ -95,13 +102,19 @@ def post_scheduled_tweet():
 
                 # Check each article from this topic for duplicates
                 for article in articles:
-                    if tracker.is_duplicate(article):
+                    status = tracker.check_story_status(article)
+
+                    if status['is_duplicate']:
                         print(f"   ✗ Duplicate: {article['source']} - {article['title'][:50]}...")
                         continue
 
-                    # Found a unique article!
+                    # Found a unique article (could be new or update)
                     selected_story = article
-                    print(f"   ✓ Found unique story!")
+                    story_status = status
+                    if status['is_update']:
+                        print(f"   ✓ Found UPDATE to existing story!")
+                    else:
+                        print(f"   ✓ Found unique story!")
                     break
 
                 # If we found a story, stop trying topics
@@ -129,9 +142,16 @@ def post_scheduled_tweet():
                 print(f"   ⚠️  Using title and description only (article fetch failed)")
 
         # Generate cat news content with story metadata
+        # If this is an update, pass previous posts for context
+        previous_posts = None
+        if story_status and story_status.get('is_update'):
+            previous_posts = story_status.get('previous_posts', [])
+            print(f"   📋 Providing context from {len(previous_posts)} previous post(s)")
+
         result = generator.generate_tweet(
             trending_topic=selected_story['title'] if selected_story else None,
-            story_metadata=selected_story
+            story_metadata=selected_story,
+            previous_posts=previous_posts
         )
 
         tweet_text = result['tweet']
@@ -139,11 +159,14 @@ def post_scheduled_tweet():
         story_meta = result['story_metadata']
 
         # Check if this content is too similar to recent posts
-        if selected_story and tracker.is_duplicate(selected_story, post_content=tweet_text):
-            print(f"\n{'='*60}")
-            print(f"⚠️  Generated content too similar to recent post - skipping")
-            print(f"{'='*60}\n")
-            return False
+        # BUT: Allow updates through (they already passed check_story_status)
+        if selected_story and not (story_status and story_status.get('is_update')):
+            content_check = tracker.check_story_status(selected_story, post_content=tweet_text)
+            if content_check['is_duplicate']:
+                print(f"\n{'='*60}")
+                print(f"⚠️  Generated content too similar to recent post - skipping")
+                print(f"{'='*60}\n")
+                return False
 
         # Try to generate image (with graceful fallback)
         image_path = None
