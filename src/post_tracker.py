@@ -194,9 +194,12 @@ class PostTracker:
         update_keywords = self.config.get('update_keywords', default_keywords)
         title_lower = title.lower()
 
-        # Check for update keywords
+        # Check for update keywords with word boundaries to avoid false matches
+        # (e.g., "now" shouldn't match "known", "after" shouldn't match "afternoon")
+        import re
         for keyword in update_keywords:
-            if keyword in title_lower:
+            # Use word boundaries to match whole words only
+            if re.search(r'\b' + re.escape(keyword) + r'\b', title_lower):
                 return True
 
         return False
