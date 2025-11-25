@@ -6,6 +6,48 @@
 
 AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky using Claude AI. Fetches real news from Google News, generates witty commentary with full article context, and posts automatically with proper source citations.
 
+## Table of Contents
+
+- [Features](#features)
+  - [Content Generation](#content-generation)
+  - [Multi-Platform Posting](#multi-platform-posting)
+  - [Automation & Cost](#automation--cost)
+- [Cost Breakdown](#cost-breakdown)
+- [Quick Start](#quick-start)
+  - [Prerequisites](#1-prerequisites)
+  - [Get API Credentials](#2-get-api-credentials)
+  - [Local Setup](#3-local-setup)
+  - [Configure Your Bot](#4-configure-your-bot)
+  - [Test Locally](#5-test-locally)
+  - [Deploy to GitHub Actions](#6-deploy-to-github-actions-free-hosting)
+- [Usage](#usage)
+  - [Run Modes](#run-modes)
+  - [Manual Trigger](#manual-trigger-github)
+  - [Customize Schedule](#customize-schedule)
+- [Media Literacy Feature](#media-literacy-feature)
+  - [How It Works](#how-it-works)
+  - [What It Detects](#what-it-detects)
+  - [Example Outputs](#example-outputs)
+  - [Severity Thresholds](#severity-thresholds)
+- [Configuration Options](#configuration-options)
+- [Project Structure](#project-structure)
+- [Tips for Growth](#tips-for-growth)
+  - [Getting to 500 Followers](#getting-to-500-followers-for-x-creator-program)
+  - [Monetization Strategy](#monetization-strategy)
+  - [Cost Optimization](#cost-optimization)
+- [Testing](#testing)
+  - [Running Tests](#running-tests)
+  - [Test Coverage](#test-coverage)
+  - [Writing New Tests](#writing-new-tests)
+  - [Test Files](#test-files)
+- [Troubleshooting](#troubleshooting)
+- [Scaling Up](#scaling-up)
+- [Security](#security)
+- [License](#license)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Support](#support)
+
 ## Features
 
 ### Content Generation
@@ -272,11 +314,7 @@ mewscast/
 ├── tests/                  # Test suite
 │   ├── __init__.py             # Test package initialization
 │   └── test_media_literacy.py  # Media literacy tests (13 test cases)
-├── docs/                   # Documentation
-│   ├── SETUP_GUIDE.md          # Detailed setup instructions
-│   ├── SECURITY_AUDIT.md       # Security audit report
-│   ├── GROWTH_STRATEGY.md      # Growth & monetization tips
-│   └── README_ENGAGEMENT.md    # Engagement bot docs
+├── docs/                   # Documentation (see Documentation section)
 ├── scripts/                # Utility scripts
 │   ├── rebuild_history.py      # Rebuild post history from X
 │   └── filter_history.py       # Clean up post history
