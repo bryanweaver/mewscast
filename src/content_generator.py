@@ -76,7 +76,7 @@ class ContentGenerator:
         use_media_literacy_prompt = False
 
         if is_specific_story and story_metadata and story_metadata.get('article_content'):
-            print(f"🔍 Analyzing article for media literacy issues...")
+            print("🔍 Analyzing article for media literacy issues...")
             media_issues = self.analyze_media_literacy(story_metadata)
 
             if media_issues.get('has_issues', False):
@@ -87,22 +87,20 @@ class ContentGenerator:
                 if severity in ['medium', 'high']:
                     use_media_literacy_prompt = True
                     print(f"⚠️  Media literacy issues detected: {severity} severity, {num_issues} issue(s)")
-                    print(f"   Will address these issues in the post")
+                    print("   Will address these issues in the post")
                 else:
-                    print(f"ℹ️  Minor media literacy issues found ({severity} severity)")
-                    print(f"   Using standard approach - issues not severe enough for media literacy response")
+                    print(f"INFO: Minor media literacy issues found ({severity} severity)")
+                    print("   Using standard approach - issues not severe enough for media literacy response")
             else:
-                print(f"✓ No significant media literacy issues found")
-                print(f"   Using standard populist cat-snark approach")
+                print("✓ No significant media literacy issues found")
+                print("   Using standard populist cat-snark approach")
 
         # Build appropriate prompt based on media literacy analysis
         if use_media_literacy_prompt:
             # Use media literacy prompt to address the issues
             prompt = self._build_media_literacy_prompt(
-                selected_topic,
                 story_metadata,
-                media_issues,
-                previous_posts
+                media_issues
             )
         else:
             # Use regular news cat prompt (existing behavior)
@@ -112,8 +110,8 @@ class ContentGenerator:
             if is_specific_story and story_metadata:
                 # Validate we have actual content (not just title/description)
                 if not story_metadata.get('article_content'):
-                    print(f"⚠️  WARNING: No article content available - should not generate tweet")
-                    print(f"   (This prevents 'can't read the article' tweets)")
+                    print("⚠️  WARNING: No article content available - should not generate tweet")
+                    print("   (This prevents 'can't read the article' tweets)")
                     # Still generate but with extra safeguards in prompt
 
                 article_details = f"Title: {story_metadata.get('title', '')}\n"
@@ -162,8 +160,8 @@ class ContentGenerator:
                         print(f"⚠️  Media literacy post too long ({len(tweet)} chars), regenerating (attempt {retry_count + 1}/{max_retries})...")
                         # Add stricter instruction to the prompt for retry
                         prompt = prompt.replace(
-                            "Maximum 265 characters",
-                            f"CRITICAL: Maximum {max_content_length} characters INCLUDING SPACES. Current attempt was {len(tweet)} chars - TOO LONG! Make it SHORTER!"
+                            "STRICT LIMIT: 265 characters MAXIMUM (Twitter will cut you off!)",
+                            f"STRICT LIMIT: {max_content_length} characters MAXIMUM - YOUR LAST ATTEMPT WAS {len(tweet)} CHARS (TOO LONG!). BE MORE CONCISE!"
                         )
                         continue
                     else:
@@ -589,8 +587,8 @@ Return ONLY the JSON object, nothing else."""
             print(f"✗ Error analyzing media literacy: {e}")
             return {'has_issues': False, 'issues': [], 'severity': None}
 
-    def _build_media_literacy_prompt(self, topic: str, story_metadata: Dict,
-                                   media_issues: Dict, previous_posts: Optional[List[Dict]] = None) -> str:
+    def _build_media_literacy_prompt(self, story_metadata: Dict,
+                                   media_issues: Dict) -> str:
         """Build a prompt for responding to media literacy issues"""
 
         title = story_metadata.get('title', '')
@@ -601,20 +599,11 @@ Return ONLY the JSON object, nothing else."""
         # Format issues for the prompt
         issues_str = "\n".join([f"- {issue}" for issue in issues_list])
 
-        # Get cat vocabulary and guidelines
+        # Get cat vocabulary for the prompt
         cat_vocab_str = ", ".join(self.cat_vocabulary[:10])
-        guidelines_str = "\n- ".join(self.editorial_guidelines)
 
-        # Determine time of day for context
-        hour = datetime.now().hour
-        if 5 <= hour < 12:
-            time_period = "morning"
-        elif 12 <= hour < 18:
-            time_period = "afternoon"
-        else:
-            time_period = "evening"
-
-        time_phrases = self.time_of_day.get(time_period, [])
+        # Note: Time-of-day and editorial guidelines are currently omitted from this prompt
+        # to keep it extremely concise and focused on the media literacy callout
 
         prompt = f"""You are a professional news reporter cat who SPECIALIZES in media literacy. You've identified serious issues with this article:
 
