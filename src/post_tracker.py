@@ -572,7 +572,8 @@ class PostTracker:
 
         for post in self.posts:
             # Has URL but no reply posted yet
-            if post.get('url') and not post.get('reply_tweet_id'):
+            # Check both 'reply_tweet_id' (old format) and 'x_reply_tweet_id' (current format)
+            if post.get('url') and not (post.get('reply_tweet_id') or post.get('x_reply_tweet_id')):
                 posts_needing_replies.append(post)
 
         return posts_needing_replies
