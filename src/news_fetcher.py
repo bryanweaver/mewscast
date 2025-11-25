@@ -229,9 +229,77 @@ class NewsFetcher:
                     print(f"   ⚠️  Article content too short ({len(article_content)} chars) - likely extraction failed")
                     return None
 
-                # Limit to first ~1500 chars (enough context, not overwhelming)
+                # Check for paywall/incomplete content indicators
+                paywall_indicators = [
+                    'subscribe to continue',
+                    'subscription required',
+                    'sign in to read',
+                    'create a free account',
+                    'register to continue',
+                    'already a subscriber',
+                    'to continue reading',
+                    'unlock this article',
+                    'premium content',
+                    'members only',
+                    'log in to access',
+                    'start your free trial',
+                    'subscribe now',
+                    'for full access'
+                ]
+
+                content_lower = article_content.lower()
+                for indicator in paywall_indicators:
+                    if indicator in content_lower:
+                        print(f"   ⚠️  Paywall detected ('{indicator}') - skipping article")
+                        return None
+
+                # Truncate at sentence boundary instead of arbitrary char limit
+                # Target ~1500 chars but ensure we end at a complete sentence
                 if len(article_content) > 1500:
-                    article_content = article_content[:1500] + "..."
+                    # Find the last sentence-ending punctuation before 1500 chars
+                    truncated = article_content[:1500]
+
+                    # Look for last sentence boundary (. ! ?)
+                    last_period = truncated.rfind('. ')
+                    last_exclaim = truncated.rfind('! ')
+                    last_question = truncated.rfind('? ')
+                    last_quote_period = truncated.rfind('." ')
+
+                    # Find the latest sentence boundary
+                    boundaries = [b for b in [last_period, last_exclaim, last_question, last_quote_period] if b > 0]
+
+                    if boundaries:
+                        # Cut at the last complete sentence
+                        cut_point = max(boundaries) + 1  # Include the punctuation
+                        if cut_point > 500:  # Ensure we have enough content
+                            article_content = truncated[:cut_point].strip()
+                        else:
+                            # No good sentence boundary found, use full 1500
+                            article_content = truncated
+                    else:
+                        # No sentence boundaries found, keep full truncation
+                        article_content = truncated
+
+                # Final check: ensure content doesn't end mid-sentence
+                # Complete sentences end with . ! ? or closing quote after punctuation
+                last_char = article_content.rstrip()[-1] if article_content.rstrip() else ''
+                if last_char not in '.!?"\'':
+                    # Content appears to end mid-sentence - likely incomplete
+                    # Try to find last complete sentence
+                    last_period = article_content.rfind('. ')
+                    last_exclaim = article_content.rfind('! ')
+                    last_question = article_content.rfind('? ')
+
+                    boundaries = [b for b in [last_period, last_exclaim, last_question] if b > 200]
+
+                    if boundaries:
+                        cut_point = max(boundaries) + 1
+                        article_content = article_content[:cut_point].strip()
+                        print(f"   ⚠️  Fixed mid-sentence cutoff, trimmed to complete sentence")
+                    else:
+                        # Can't find a complete sentence - content likely too fragmented
+                        print(f"   ⚠️  Article content ends mid-sentence and no complete sentences found - likely incomplete extraction")
+                        return None
 
                 print(f"   ✓ Extracted {len(article_content)} chars of article content")
                 return article_content
