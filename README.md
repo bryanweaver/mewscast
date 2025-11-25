@@ -9,16 +9,19 @@ AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky
 ## Features
 
 ### Content Generation
-- **Real News Sourcing**: Fetches trending stories from Google News RSS
+- **Real News Sourcing**: Fetches trending stories from Google News RSS (top stories + category fallback)
 - **Full Article Parsing**: Reads complete articles (not just headlines) for accurate commentary
+- **Media Literacy Analysis**: NEW! Automatically detects misleading headlines, bias, and manipulation tactics
+- **Smart Response System**: Chooses between media literacy callouts or regular cat-snark based on severity
 - **AI-Powered Commentary**: Uses Claude 4.5 Sonnet for sharp, witty news analysis
 - **Fact-Checking**: Strict validation to prevent fabrication or hallucination
-- **Cat Personality**: Professional news reporter... who happens to be a cat 🐱
+- **Cat Personality**: Professional news reporter who specializes in media literacy... and happens to be a cat 🐱
 
 ### Multi-Platform Posting
 - **X/Twitter**: Posts with AI-generated images (via Grok) and source citations
 - **Bluesky**: Cross-posts to Bluesky with link cards
-- **Deduplication**: Never posts the same story twice (72-hour cooldown)
+- **Deduplication**: Smart 4-level system prevents repetition while allowing story updates (72-hour cooldown)
+- **Source Attribution**: Always posts source links as replies for transparency
 
 ### Automation & Cost
 - **GitHub Actions**: Free automated posting (7 posts/day)
@@ -29,7 +32,9 @@ AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky
 ## Cost Breakdown
 
 - **GitHub Actions**: FREE (unlimited for public repos)
-- **Anthropic API**: ~$10-20/month (Claude 4.5 Sonnet for content generation)
+- **Anthropic API**: ~$10-25/month (Claude 4.5 Sonnet for content + media literacy analysis)
+  - Content generation: ~$0.01 per post
+  - Media literacy analysis: ~$0.0015 per post (when article content exists)
 - **X/Twitter API**: FREE (Basic tier - 50 posts/24hrs)
 - **Grok API**: ~$10-20/month (Image generation via X AI)
 - **Bluesky**: FREE (no API costs)
@@ -179,6 +184,49 @@ schedule:
 
 Use [crontab.guru](https://crontab.guru/) to create custom schedules.
 
+## Media Literacy Feature
+
+Walter Croncat now includes intelligent media literacy analysis that helps readers identify misleading news practices.
+
+### How It Works
+
+```
+Article received → Media literacy analysis
+├─ High/Medium severity issues found → Generate media literacy callout
+└─ Low/No issues → Use regular populist cat-snark approach
+```
+
+### What It Detects
+
+- **Misleading Headlines**: Headlines that contradict article content
+- **Statistical Manipulation**: Using percentages to exaggerate small changes
+- **Missing Context**: Omitting critical information that changes the story
+- **Bias & One-Sided Reporting**: Quoting only one perspective
+- **Fear-Mongering**: Using emotional manipulation tactics
+
+### Example Outputs
+
+**Media Literacy Callout:**
+```
+#MediaLiteracy: Headline screams 'CRISIS' but article says 0.3% dip.
+
+Classic fear-bait. Article itself calls it 'normal.' This cat's not buying the panic.
+```
+
+**Regular Cat-Snark (when no issues detected):**
+```
+City council votes 7-2 for $3.2M park. 15 acres of green space.
+
+Two dissenting votes worried about $150K yearly upkeep. From my perch: Who's getting the construction contract?
+```
+
+### Severity Thresholds
+
+- **High Severity**: Egregious manipulation, false claims → Triggers media literacy response
+- **Medium Severity**: Notable bias, missing context → Triggers media literacy response
+- **Low Severity**: Minor issues → Uses regular cat-snark approach
+- **No Issues**: Clean reporting → Uses regular cat-snark approach
+
 ## Configuration Options
 
 ### config.yaml
@@ -216,11 +264,14 @@ mewscast/
 │   ├── main.py                 # Main entry point
 │   ├── twitter_bot.py          # X/Twitter API integration
 │   ├── bluesky_bot.py          # Bluesky API integration
-│   ├── content_generator.py    # AI content generation (Claude)
+│   ├── content_generator.py    # AI content generation (Claude) + media literacy
 │   ├── image_generator.py      # AI image generation (Grok)
 │   ├── news_fetcher.py         # Google News RSS fetching
 │   ├── post_tracker.py         # Deduplication & history
 │   └── engagement_bot.py       # Engagement automation
+├── tests/                  # Test suite
+│   ├── __init__.py             # Test package initialization
+│   └── test_media_literacy.py  # Media literacy tests (13 test cases)
 ├── docs/                   # Documentation
 │   ├── SETUP_GUIDE.md          # Detailed setup instructions
 │   ├── SECURITY_AUDIT.md       # Security audit report
@@ -260,6 +311,64 @@ mewscast/
 - Use Claude 3.5 Sonnet (best value)
 - Only enable reply mode once you have steady mentions
 - Monitor API costs in first month
+- Media literacy analysis adds ~$0.0015 per post (worth it for quality)
+
+## Testing
+
+### Running Tests
+
+```bash
+# Install test dependencies
+pip install pytest
+
+# Run all tests
+pytest tests/
+
+# Run specific test file
+pytest tests/test_media_literacy.py -v
+
+# Run with coverage report
+pytest tests/ --cov=src --cov-report=html
+```
+
+### Test Coverage
+
+The project includes comprehensive test coverage for critical features:
+
+- **Media Literacy Analysis**: 13 test cases covering detection, severity thresholds, and error handling
+- **Deduplication Logic**: Tests for exact matches, content similarity, and story clustering
+- **API Error Handling**: Tests for graceful fallback when APIs fail
+- **Character Limit Enforcement**: Tests retry logic and truncation for posts
+
+### Writing New Tests
+
+When adding features, include tests that cover:
+
+1. **Happy Path**: Normal operation with expected inputs
+2. **Edge Cases**: Boundary conditions, empty inputs, maximum values
+3. **Error Handling**: API failures, network issues, invalid responses
+4. **Integration**: How the feature interacts with existing code
+
+Example test structure:
+```python
+def test_new_feature(generator):
+    """Test description of what this validates"""
+    # Setup test data
+    test_input = {...}
+
+    # Execute the feature
+    result = generator.new_feature(test_input)
+
+    # Assert expected behavior
+    assert result['success'] == True
+    assert 'expected_field' in result
+```
+
+### Test Files
+
+- `tests/test_media_literacy.py` - Media literacy detection and response generation
+- `tests/test_deduplication.py` - Post deduplication logic (TODO)
+- `tests/test_engagement.py` - Engagement bot behavior (TODO)
 
 ## Troubleshooting
 

@@ -2,6 +2,7 @@
 AI-powered content generation using Anthropic Claude
 """
 import os
+import json
 from anthropic import Anthropic
 from typing import Optional, List, Dict
 import yaml
@@ -70,49 +71,123 @@ class ContentGenerator:
         # ALWAYS post source reply if we have story metadata
         is_specific_story = story_metadata is not None
 
-        # Build article details string if we have metadata
-        # CRITICAL: Require article_content for specific stories to prevent "can't read" tweets
-        article_details = None
-        if is_specific_story and story_metadata:
-            # Validate we have actual content (not just title/description)
-            if not story_metadata.get('article_content'):
-                print(f"⚠️  WARNING: No article content available - should not generate tweet")
-                print(f"   (This prevents 'can't read the article' tweets)")
-                # Still generate but with extra safeguards in prompt
+        # NEW: Check for media literacy issues first
+        media_issues = None
+        use_media_literacy_prompt = False
 
-            article_details = f"Title: {story_metadata.get('title', '')}\n"
-            article_details += f"Source: {story_metadata.get('source', '')}\n"
-            if story_metadata.get('article_content'):
-                article_details += f"Article Content:\n{story_metadata.get('article_content', '')}\n"
-            elif story_metadata.get('context'):
-                article_details += f"Summary: {story_metadata.get('context', '')}"
+        if is_specific_story and story_metadata and story_metadata.get('article_content'):
+            print("🔍 Analyzing article for media literacy issues...")
+            media_issues = self.analyze_media_literacy(story_metadata)
 
-        prompt = self._build_news_cat_prompt(selected_topic, is_specific_story=is_specific_story,
-                                             article_details=article_details, previous_posts=previous_posts)
+            if media_issues.get('has_issues', False):
+                severity = media_issues.get('severity', 'unknown')
+                num_issues = len(media_issues.get('issues', []))
+
+                # Only trigger media literacy response for medium or high severity issues
+                if severity in ['medium', 'high']:
+                    use_media_literacy_prompt = True
+                    print(f"⚠️  Media literacy issues detected: {severity} severity, {num_issues} issue(s)")
+                    print("   Will address these issues in the post")
+                else:
+                    print(f"INFO: Minor media literacy issues found ({severity} severity)")
+                    print("   Using standard approach - issues not severe enough for media literacy response")
+            else:
+                print("✓ No significant media literacy issues found")
+                print("   Using standard populist cat-snark approach")
+
+        # Build appropriate prompt based on media literacy analysis
+        if use_media_literacy_prompt:
+            # Use media literacy prompt to address the issues
+            prompt = self._build_media_literacy_prompt(
+                story_metadata,
+                media_issues
+            )
+        else:
+            # Use regular news cat prompt (existing behavior)
+            # Build article details string if we have metadata
+            # CRITICAL: Require article_content for specific stories to prevent "can't read" tweets
+            article_details = None
+            if is_specific_story and story_metadata:
+                # Validate we have actual content (not just title/description)
+                if not story_metadata.get('article_content'):
+                    print("⚠️  WARNING: No article content available - should not generate tweet")
+                    print("   (This prevents 'can't read the article' tweets)")
+                    # Still generate but with extra safeguards in prompt
+
+                article_details = f"Title: {story_metadata.get('title', '')}\n"
+                article_details += f"Source: {story_metadata.get('source', '')}\n"
+                if story_metadata.get('article_content'):
+                    article_details += f"Article Content:\n{story_metadata.get('article_content', '')}\n"
+                elif story_metadata.get('context'):
+                    article_details += f"Summary: {story_metadata.get('context', '')}"
+
+            prompt = self._build_news_cat_prompt(selected_topic, is_specific_story=is_specific_story,
+                                                 article_details=article_details, previous_posts=previous_posts)
 
         try:
-            message = self.client.messages.create(
-                model=self.model,
-                max_tokens=350,
-                messages=[
-                    {"role": "user", "content": prompt}
-                ]
-            )
+            # For media literacy posts, we may need to retry to get the right length
+            max_retries = 3 if use_media_literacy_prompt else 1
+            retry_count = 0
 
-            tweet = message.content[0].text.strip()
+            while retry_count < max_retries:
+                message = self.client.messages.create(
+                    model=self.model,
+                    max_tokens=350,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ]
+                )
 
-            # Remove any quotes around the tweet if Claude added them
-            if tweet.startswith('"') and tweet.endswith('"'):
-                tweet = tweet[1:-1]
-            if tweet.startswith("'") and tweet.endswith("'"):
-                tweet = tweet[1:-1]
+                tweet = message.content[0].text.strip()
+
+                # Remove any quotes around the tweet if Claude added them
+                if tweet.startswith('"') and tweet.endswith('"'):
+                    tweet = tweet[1:-1]
+                if tweet.startswith("'") and tweet.endswith("'"):
+                    tweet = tweet[1:-1]
+
+                # Check length BEFORE adding source indicator
+                source_indicator = " 📰↓"
+                if is_specific_story:
+                    max_content_length = self.max_length - len(source_indicator)
+                else:
+                    max_content_length = self.max_length
+
+                # For media literacy posts, regenerate if too long
+                if use_media_literacy_prompt and len(tweet) > max_content_length:
+                    retry_count += 1
+                    if retry_count < max_retries:
+                        print(f"⚠️  Media literacy post too long ({len(tweet)} chars), regenerating (attempt {retry_count + 1}/{max_retries})...")
+                        # Add stricter instruction to the prompt for retry
+                        prompt = prompt.replace(
+                            "STRICT LIMIT: 265 characters MAXIMUM (Twitter will cut you off!)",
+                            f"STRICT LIMIT: {max_content_length} characters MAXIMUM - YOUR LAST ATTEMPT WAS {len(tweet)} CHARS (TOO LONG!). BE MORE CONCISE!"
+                        )
+                        continue
+                    else:
+                        print(f"⚠️  Failed to generate short enough media literacy post after {max_retries} attempts")
+                        # Last resort: truncate but try to preserve complete thought
+                        # Find last sentence boundary before limit
+                        sentences = tweet.split('. ')
+                        truncated = ""
+                        for sentence in sentences:
+                            if len(truncated + sentence + ". ") <= max_content_length:
+                                truncated += sentence + ". "
+                            else:
+                                break
+                        if truncated:
+                            tweet = truncated.rstrip()
+                        else:
+                            # No complete sentence fits, have to truncate
+                            tweet = tweet[:max_content_length - 3] + "..."
+
+                # Length is good, proceed
+                break
 
             # Add source indicator if this story will have a source reply
-            source_indicator = " 📰↓"
             if is_specific_story:
-                # Reserve space for source indicator
-                max_content_length = self.max_length - len(source_indicator)
-                if len(tweet) > max_content_length:
+                # For regular posts, truncate if needed
+                if not use_media_literacy_prompt and len(tweet) > max_content_length:
                     tweet = tweet[:max_content_length - 3] + "..."
                 tweet += source_indicator
             else:
@@ -183,7 +258,6 @@ class ContentGenerator:
                 prev_time = prev_post.get('timestamp', '')
                 if prev_time:
                     try:
-                        from datetime import datetime
                         dt = datetime.fromisoformat(prev_time.replace('Z', '+00:00'))
                         time_str = dt.strftime('%b %d at %I:%M%p')
                     except:
@@ -407,6 +481,202 @@ FINAL REMINDER FOR REAL STORIES:
 If you're writing about a specific article with provided content, you MUST use ONLY facts from that article. Do not add information from your training data or make assumptions. Accuracy is critical.
 
 Just return the tweet text itself, nothing else."""
+
+        return prompt
+
+    def analyze_media_literacy(self, story_metadata: Dict) -> Dict:
+        """
+        Analyze a news story for media literacy issues
+
+        Args:
+            story_metadata: Dictionary with 'title', 'article_content', 'source', etc.
+
+        Returns:
+            Dictionary with:
+                - 'has_issues': Boolean indicating if significant issues found
+                - 'issues': List of identified issues
+                - 'severity': 'high', 'medium', 'low', or None
+        """
+        if not story_metadata or not story_metadata.get('article_content'):
+            return {'has_issues': False, 'issues': [], 'severity': None}
+
+        title = story_metadata.get('title', '')
+        content = story_metadata.get('article_content', '')
+        source = story_metadata.get('source', '')
+
+        # Build analysis prompt for Claude
+        prompt = f"""Analyze this news article for media literacy issues. Look for misleading practices, bias, and manipulation tactics.
+
+ARTICLE TITLE: {title}
+SOURCE: {source}
+ARTICLE CONTENT:
+{content}
+
+CRITICAL ANALYSIS TASKS:
+1. HEADLINE vs CONTENT CHECK:
+   - Does the headline accurately represent the article's content?
+   - Is the headline clickbait or sensationalized?
+   - Are there misleading implications in the headline?
+
+2. TRUTHFULNESS & ACCURACY:
+   - Are there factual errors or misleading claims?
+   - Are sources properly cited and credible?
+   - Is important context missing that changes the story's meaning?
+
+3. BIAS & MANIPULATION:
+   - Is there clear political or ideological bias?
+   - Are emotional manipulation tactics being used?
+   - Is fear-mongering or rage-baiting present?
+
+4. JOURNALISTIC INTEGRITY:
+   - Are both/all sides of the story presented?
+   - Is opinion being presented as fact?
+   - Are anonymous sources overused without corroboration?
+
+5. STATISTICAL MANIPULATION:
+   - Are statistics being misused or cherry-picked?
+   - Is correlation being presented as causation?
+   - Are sample sizes or methodologies questionable?
+
+RESPONSE FORMAT:
+Return a JSON object with:
+{{
+  "has_issues": true/false (true if ANY significant media literacy issues found),
+  "severity": "high/medium/low" (high = egregious manipulation, medium = notable bias/issues, low = minor concerns),
+  "issues": [
+    "Issue 1 description (be specific)",
+    "Issue 2 description (be specific)"
+  ]
+}}
+
+IMPORTANT: Only flag SIGNIFICANT issues that mislead readers. Minor editorial choices or standard journalism practices are not issues.
+Be specific in your descriptions - don't just say "misleading headline", explain HOW it misleads.
+
+Focus on the most egregious issues first. Maximum 3 issues.
+
+Return ONLY the JSON object, nothing else."""
+
+        try:
+            message = self.client.messages.create(
+                model=self.model,
+                max_tokens=500,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+
+            response_text = message.content[0].text.strip()
+
+            # Parse the JSON response
+            try:
+                # Try to extract JSON from the response if it's wrapped in code blocks
+                if '```json' in response_text:
+                    response_text = response_text.split('```json')[1].split('```')[0].strip()
+                elif '```' in response_text:
+                    response_text = response_text.split('```')[1].split('```')[0].strip()
+
+                result = json.loads(response_text)
+                print(f"📊 Media literacy analysis complete: {result.get('severity', 'no issues')} severity")
+                return result
+            except (json.JSONDecodeError, IndexError) as e:
+                print(f"⚠️  Failed to parse media literacy analysis: {e}")
+                print(f"   Response was: {response_text[:200]}..." if len(response_text) > 200 else f"   Response was: {response_text}")
+                return {'has_issues': False, 'issues': [], 'severity': None}
+
+        except Exception as e:
+            print(f"✗ Error analyzing media literacy: {e}")
+            return {'has_issues': False, 'issues': [], 'severity': None}
+
+    def _build_media_literacy_prompt(self, story_metadata: Dict,
+                                   media_issues: Dict) -> str:
+        """Build a prompt for responding to media literacy issues"""
+
+        title = story_metadata.get('title', '')
+        source = story_metadata.get('source', '')
+        issues_list = media_issues.get('issues', [])
+        severity = media_issues.get('severity', 'medium')
+
+        # Format issues for the prompt
+        issues_str = "\n".join([f"- {issue}" for issue in issues_list])
+
+        # Get cat vocabulary for the prompt
+        cat_vocab_str = ", ".join(self.cat_vocabulary[:10])
+
+        # Note: Time-of-day and editorial guidelines are currently omitted from this prompt
+        # to keep it extremely concise and focused on the media literacy callout
+
+        prompt = f"""You are a professional news reporter cat who SPECIALIZES in media literacy. You've identified serious issues with this article:
+
+ARTICLE: {title}
+SOURCE: {source}
+
+MEDIA LITERACY ISSUES FOUND ({severity} severity):
+{issues_str}
+
+Your job is to CALL OUT these media manipulation tactics while maintaining your cat reporter persona.
+
+CHARACTER:
+- Professional media literacy cat who takes accuracy seriously
+- You're a CAT reporter - include at least ONE cat reference/pun
+- Cat wordplay should feel natural: {cat_vocab_str}
+- Sharp, incisive media criticism with personality
+
+CRITICAL REQUIREMENTS:
+1. DIRECTLY ADDRESS the media literacy issues found
+2. Call out the SPECIFIC manipulation tactics (don't be vague)
+3. Educate readers on HOW they're being misled
+4. Maintain skeptical, investigative tone
+5. Include your signature cat personality
+
+APPROACH OPTIONS (choose based on severity - keep it SHORT):
+- HIGH: "#MediaLiteracy: [outlet] says X but facts show Y..."
+- MEDIUM: "Fact check: [false claim]. Reality: [truth]..."
+- LOW: "Missing context: [what's omitted]..."
+
+STYLE:
+- {self.style}
+- PUNCHY and direct - call it out clearly
+- Populist angle: Protect readers from media manipulation
+- Question the narrative, expose the tactics
+- Professional but BITING - don't pull punches
+- Educational: Help readers spot these tactics themselves
+
+FORMAT:
+- STRICT LIMIT: 265 characters MAXIMUM (Twitter will cut you off!)
+- BE CONCISE - every word must count
+- Use line breaks between thoughts for clarity
+- NO emojis (very rare exceptions)
+- NO hashtags except #MediaLiteracy at START if appropriate
+- If you go over 265 chars, your message WILL be truncated and ruined
+
+CRITICAL: Your ENTIRE message must fit in 265 characters. Going over means:
+- Your point gets cut off mid-sentence
+- Readers miss the critical media literacy lesson
+- The manipulation wins because you couldn't be concise
+
+GOOD EXAMPLES (all under 265 chars):
+
+For misleading headline (184 chars):
+"#MediaLiteracy: Headline screams 'CRISIS' but article says 0.3% dip.
+
+Classic fear-bait. Article itself calls it 'normal.' This cat's not buying the panic."
+
+For missing context (201 chars):
+"Story omits senator's own healthcare bill last week. Only quotes supporters, zero opposition.
+
+That's not reporting, it's PR. This cat keeps receipts on the full story."
+
+For statistical manipulation (189 chars):
+"'100% SURGE!' = going from 2 to 4 burglaries. That's manipulation, not math.
+
+When they bury actual numbers, this cat gets suspicious. Always check the data."
+
+For bias/one-sided reporting (195 chars):
+"Five experts quoted. All from same donor-funded think tank.
+
+That's stenography, not journalism. Even this cat checks multiple sources before pouncing on a story."
+
+Return ONLY the tweet text addressing the media literacy issues."""
 
         return prompt
 
