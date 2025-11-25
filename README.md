@@ -475,10 +475,7 @@ See [LICENSE](LICENSE) file for full license text.
 
 ## Documentation
 
-- **[Setup Guide](docs/SETUP_GUIDE.md)** - Detailed setup instructions
-- **[Security Audit](docs/SECURITY_AUDIT.md)** - Security audit report
-- **[Growth Strategy](docs/GROWTH_STRATEGY.md)** - Growth & monetization tips
-- **[Engagement Guide](docs/README_ENGAGEMENT.md)** - Engagement automation docs
+Additional documentation can be found in the `docs/` directory.
 
 ## Contributing
 
