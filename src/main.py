@@ -59,13 +59,16 @@ def post_scheduled_tweet():
         #
         # Step 1: Get top stories from Google News (what's breaking NOW)
         # Step 2: If no unique top stories, fall back to category search
+        # Step 3: Verify we can fetch article content before selecting (prevent "can't read" tweets)
         selected_story = None
+
+        # Collect all potential articles first with their status
+        candidate_articles = []  # List of (article, status) tuples
 
         print(f"🔥 Phase 1: Checking TOP STORIES (what's trending NOW)...")
         top_stories = news_fetcher.get_top_stories(max_stories=20)
 
-        # Try top stories first (these are what's actually important RIGHT NOW)
-        story_status = None
+        # Add unique top stories to candidates
         for article in top_stories:
             status = tracker.check_story_status(article)
 
@@ -73,34 +76,25 @@ def post_scheduled_tweet():
                 print(f"   ✗ Duplicate: {article['source']} - {article['title'][:50]}...")
                 continue
 
-            # Found a unique story (could be new or update)
-            selected_story = article
-            story_status = status
+            # Store article with its status for later use
+            candidate_articles.append((article, status))
             if status['is_update']:
-                print(f"   ✓ Found UPDATE to existing story!")
+                print(f"   ✓ Added UPDATE candidate: {article['source']} - {article['title'][:50]}...")
             else:
-                print(f"   ✓ Found trending story!")
-            break
+                print(f"   ✓ Added candidate: {article['source']} - {article['title'][:50]}...")
 
-        # If no unique top stories, fall back to category search
-        if not selected_story:
-            print(f"\n📰 Phase 2: Searching category-based topics...")
+        # If we need more candidates, search category-based topics
+        if len(candidate_articles) < 10:
+            print(f"\n📰 Phase 2: Searching category-based topics for more candidates...")
             topics_to_try = random.sample(news_fetcher.news_categories,
-                                         min(40, len(news_fetcher.news_categories)))
-
-            print(f"🔍 Trying {len(topics_to_try)} topics...")
+                                         min(20, len(news_fetcher.news_categories)))
 
             for topic in topics_to_try:
-                print(f"   Trying topic: {topic}")
+                if len(candidate_articles) >= 20:  # Stop when we have enough candidates
+                    break
 
-                # Get multiple articles for this specific topic (up to 10)
-                articles = news_fetcher.get_articles_for_topic(topic, max_articles=10)
+                articles = news_fetcher.get_articles_for_topic(topic, max_articles=5)
 
-                if not articles:
-                    print(f"   ✗ No articles found for this topic")
-                    continue
-
-                # Check each article from this topic for duplicates
                 for article in articles:
                     status = tracker.check_story_status(article)
 
@@ -108,38 +102,44 @@ def post_scheduled_tweet():
                         print(f"   ✗ Duplicate: {article['source']} - {article['title'][:50]}...")
                         continue
 
-                    # Found a unique article (could be new or update)
-                    selected_story = article
-                    story_status = status
+                    # Store article with its status
+                    candidate_articles.append((article, status))
                     if status['is_update']:
-                        print(f"   ✓ Found UPDATE to existing story!")
+                        print(f"   ✓ Added UPDATE candidate from {topic}: {article['title'][:50]}...")
                     else:
-                        print(f"   ✓ Found unique story!")
-                    break
+                        print(f"   ✓ Added candidate from {topic}: {article['title'][:50]}...")
 
-                # If we found a story, stop trying topics
-                if selected_story:
+        print(f"\n🔍 Phase 3: Testing {len(candidate_articles)} candidate articles for readability...")
+
+        # Now try to fetch content for each candidate until we find one that works
+        selected_story = None
+        story_status = None
+        for i, (article, status) in enumerate(candidate_articles, 1):
+            print(f"\n📰 Attempting article {i}/{len(candidate_articles)}: {article['title'][:60]}...")
+            print(f"   Source: {article['source']}")
+            print(f"   URL: {article.get('url', 'N/A')}")
+
+            if article.get('url'):
+                article_content = news_fetcher.fetch_article_content(article['url'])
+                if article_content:
+                    article['article_content'] = article_content
+                    selected_story = article
+                    story_status = status  # Keep the status for this article
+                    print(f"   ✅ SUCCESS! Fetched {len(article_content)} chars of content")
                     break
+                else:
+                    print(f"   ❌ Could not fetch content - trying next article...")
+            else:
+                print(f"   ❌ No URL available - trying next article...")
 
         if not selected_story:
-            # CRITICAL: Never post without a source story and URL
+            # CRITICAL: Never post without successfully fetching article content
             print(f"\n{'='*60}")
-            print(f"❌ No unique stories available across all topics")
-            print(f"   Cannot post without source URL for citation")
+            print(f"❌ Could not fetch content for any of {len(candidate_articles)} articles")
+            print(f"   Cannot post without readable article content")
+            print(f"   (This prevents 'can't read the article' tweets)")
             print(f"{'='*60}\n")
             return False
-
-        print(f"\n📰 Selected: {selected_story['title']}")
-        print(f"   Source: {selected_story['source']}")
-        print(f"   URL: {selected_story.get('url', 'N/A')}\n")
-
-        # Fetch full article content for better context
-        if selected_story.get('url'):
-            article_content = news_fetcher.fetch_article_content(selected_story['url'])
-            if article_content:
-                selected_story['article_content'] = article_content
-            else:
-                print(f"   ⚠️  Using title and description only (article fetch failed)")
 
         # Generate cat news content with story metadata
         # If this is an update, pass previous posts for context

@@ -163,10 +163,16 @@ class NewsFetcher:
             print(f"   📄 Fetching article content from: {url[:60]}...")
 
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Encoding': 'gzip, deflate',
+                'DNT': '1',
+                'Connection': 'keep-alive',
+                'Upgrade-Insecure-Requests': '1'
             }
 
-            response = requests.get(url, headers=headers, timeout=10)
+            response = requests.get(url, headers=headers, timeout=15, allow_redirects=True)
             response.raise_for_status()
 
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -178,7 +184,7 @@ class NewsFetcher:
             # Try to find article content using common tags/classes
             article_content = None
 
-            # Try common article container selectors
+            # Try common article container selectors (expanded list)
             selectors = [
                 'article',
                 '[role="main"]',
@@ -187,7 +193,17 @@ class NewsFetcher:
                 '.story-body',
                 '.post-content',
                 '#article-body',
-                '.entry-content'
+                '.entry-content',
+                '.content-body',
+                '.story-content',
+                'main article',
+                '.article__body',
+                '.article-text',
+                '.story-text',
+                '.body-content',
+                '[itemprop="articleBody"]',
+                '.post-body',
+                '.news-body'
             ]
 
             for selector in selectors:
@@ -208,6 +224,11 @@ class NewsFetcher:
                 # Clean up whitespace
                 article_content = ' '.join(article_content.split())
 
+                # Require minimum content length (at least 200 chars for meaningful content)
+                if len(article_content) < 200:
+                    print(f"   ⚠️  Article content too short ({len(article_content)} chars) - likely extraction failed")
+                    return None
+
                 # Limit to first ~1500 chars (enough context, not overwhelming)
                 if len(article_content) > 1500:
                     article_content = article_content[:1500] + "..."
@@ -215,7 +236,7 @@ class NewsFetcher:
                 print(f"   ✓ Extracted {len(article_content)} chars of article content")
                 return article_content
 
-            print(f"   ⚠️  Could not extract article content")
+            print(f"   ⚠️  Could not extract article content from HTML")
             return None
 
         except Exception as e:

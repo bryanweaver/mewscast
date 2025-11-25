@@ -71,8 +71,15 @@ class ContentGenerator:
         is_specific_story = story_metadata is not None
 
         # Build article details string if we have metadata
+        # CRITICAL: Require article_content for specific stories to prevent "can't read" tweets
         article_details = None
         if is_specific_story and story_metadata:
+            # Validate we have actual content (not just title/description)
+            if not story_metadata.get('article_content'):
+                print(f"⚠️  WARNING: No article content available - should not generate tweet")
+                print(f"   (This prevents 'can't read the article' tweets)")
+                # Still generate but with extra safeguards in prompt
+
             article_details = f"Title: {story_metadata.get('title', '')}\n"
             article_details += f"Source: {story_metadata.get('source', '')}\n"
             if story_metadata.get('article_content'):
@@ -258,6 +265,9 @@ STRICT RULES - DO NOT BREAK THESE:
 5. When mentioning people: Use ONLY the exact titles/positions stated in the article
 6. When mentioning locations: Use ONLY the exact places stated in the article
 7. Double-check every fact against the article before including it
+8. NEVER mention that you can't read the article or don't have details
+9. NEVER say "I don't have information" or similar phrases
+10. If content is limited, focus on the headline and general topic only
 
 ACCEPTABLE:
 - General commentary on implications and significance
@@ -281,6 +291,9 @@ CRITICAL - Real Story Coverage:
 - DO NOT fabricate ANY specific details (numbers, locations, titles, quotes, positions)
 - DO NOT guess at information not provided
 - Focus on general significance and implications only
+- NEVER mention that you can't read or access the article
+- NEVER say "I don't have details" or similar phrases
+- If information is limited, comment on the general topic/trend only
 - A source citation will be added in a follow-up reply
 """
 
