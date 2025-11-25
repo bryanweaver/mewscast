@@ -40,7 +40,7 @@ class ContentGenerator:
         self.avoid_topics = self.config['safety']['avoid_topics']
 
     def generate_tweet(self, topic: Optional[str] = None, trending_topic: Optional[str] = None,
-                      story_metadata: Optional[Dict] = None) -> Dict:
+                      story_metadata: Optional[Dict] = None, previous_posts: Optional[List[Dict]] = None) -> Dict:
         """
         Generate a news cat reporter tweet
 
@@ -48,6 +48,7 @@ class ContentGenerator:
             topic: General news category (optional, uses random if not provided)
             trending_topic: Specific trending topic from X (takes priority)
             story_metadata: Dictionary with 'title', 'context', 'source' for real trending stories
+            previous_posts: List of previous related posts (for updates/developing stories)
 
         Returns:
             Dictionary with:
@@ -87,7 +88,7 @@ class ContentGenerator:
                 article_details += f"Summary: {story_metadata.get('context', '')}"
 
         prompt = self._build_news_cat_prompt(selected_topic, is_specific_story=is_specific_story,
-                                             article_details=article_details)
+                                             article_details=article_details, previous_posts=previous_posts)
 
         try:
             message = self.client.messages.create(
@@ -137,7 +138,7 @@ class ContentGenerator:
             }
 
     def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False,
-                               article_details: str = None) -> str:
+                               article_details: str = None, previous_posts: Optional[List[Dict]] = None) -> str:
         """Build the news cat reporter prompt for Claude"""
         avoid_str = ", ".join(self.avoid_topics)
         cat_vocab_str = ", ".join(self.cat_vocabulary[:10])  # Show examples
@@ -169,6 +170,87 @@ class ContentGenerator:
 
         # Add specific guidance for real trending stories
         story_guidance = ""
+        update_guidance = ""
+
+        # Check if this is an update to previous coverage
+        if previous_posts and len(previous_posts) > 0:
+            # Format previous posts for context
+            prev_context = []
+            for i, prev in enumerate(previous_posts[:2], 1):  # Show up to 2 most recent
+                prev_post = prev.get('post', {})
+                prev_content = prev_post.get('content', '')
+                prev_title = prev_post.get('topic', '')
+                prev_time = prev_post.get('timestamp', '')
+                if prev_time:
+                    try:
+                        from datetime import datetime
+                        dt = datetime.fromisoformat(prev_time.replace('Z', '+00:00'))
+                        time_str = dt.strftime('%b %d at %I:%M%p')
+                    except:
+                        time_str = 'recently'
+                else:
+                    time_str = 'recently'
+
+                prev_context.append(f"Post #{i} ({time_str}):\n   Title: {prev_title}\n   Content: {prev_content}")
+
+            prev_context_str = "\n\n".join(prev_context)
+
+            update_guidance = f"""
+🚨 CRITICAL - THIS IS AN UPDATE/DEVELOPMENT TO A PREVIOUS STORY 🚨
+
+You have ALREADY posted about this story:
+{prev_context_str}
+
+MANDATORY REQUIREMENTS (WILL FAIL IF NOT FOLLOWED):
+1. Your post MUST start with one of these labels:
+   - "UPDATE:" (for new developments)
+   - "DEVELOPING:" (for ongoing situations)
+   - "REACTION:" (for responses to previous events)
+   - "WALKBACK:" (for reversals/retractions)
+   - "BREAKING UPDATE:" (for major new developments)
+
+2. You MUST explicitly highlight what's NEW or DIFFERENT:
+   - What changed since your last post?
+   - What's the new development?
+   - Who responded/reacted?
+   - What contradicts or updates previous information?
+
+3. You MUST make the progression clear:
+   - Use phrases like "After [previous event], now..."
+   - "Within 24 hours: [first thing], then [second thing]"
+   - "First [X], now [Y]"
+
+4. DO NOT just repeat the same information in different words
+   - If there's nothing genuinely new, you should be blocked from posting
+   - Find the actual development or change
+
+EXAMPLES OF GOOD UPDATE POSTS:
+
+"UPDATE: Trump says he wasn't threatening death after calling Dems' video "seditious behavior, punishable by death."
+
+Within 24 hours: accusation, then walkback.
+
+Watching humans move goalposts. This cat smells something fishy."
+
+"DEVELOPING: MTG quits Congress effective Jan 5. Says she won't be "battered wife" after Trump fallout.
+
+AOC pounces: Greene timed exit right after pension vests. Even this cat can smell the timing on that one."
+
+"REACTION: After dropping ALL fossil fuel language, COP30 now claims progress.
+
+Reality check: "voluntary agreement to begin discussions on a roadmap."
+
+This cat's not impressed by a promise to talk about maybe planning something later."
+
+BAD EXAMPLES (WILL BE REJECTED):
+- Repeating the same story without highlighting what's new
+- No UPDATE/DEVELOPING label when required
+- Vague references to "developments" without specifying what changed
+- Not acknowledging you already covered this story
+
+Remember: Readers saw your first post. They need to know WHY you're posting again.
+"""
+
         if is_specific_story and article_details:
             story_guidance = f"""
 CRITICAL - Real Story Coverage (MUST FOLLOW):
@@ -216,6 +298,8 @@ CRITICAL - Real Story Coverage:
 """
 
         prompt = f"""You are a professional news reporter who happens to be a cat. Generate a single tweet reporting on: {topic}
+
+{update_guidance}
 
 CHARACTER:
 - Professional journalist cat who takes news seriously

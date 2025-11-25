@@ -55,9 +55,70 @@ class PostTracker:
         except IOError as e:
             print(f"⚠️  Could not save post history: {e}")
 
+    def check_story_status(self, story_metadata: Dict, post_content: str = None) -> Dict:
+        """
+        Check if story is related to recent posts and return context
+
+        Args:
+            story_metadata: Story dict with 'title', 'url', 'source'
+            post_content: The generated post text to check for similarity
+
+        Returns:
+            Dictionary with:
+                - 'is_duplicate': True if exact duplicate (BLOCK)
+                - 'is_update': True if update to existing story (ALLOW with context)
+                - 'previous_posts': List of related previous posts
+                - 'cluster_info': Information about the story cluster
+        """
+        if not self.config.get('enabled', True):
+            return {'is_duplicate': False, 'is_update': False, 'previous_posts': [], 'cluster_info': None}
+
+        url = story_metadata.get('url')
+        title = story_metadata.get('title', '')
+
+        # Level 1: Exact URL match (HARD BLOCK)
+        if url and self.config.get('url_deduplication', True):
+            if self._url_posted(url):
+                print(f"✗ Duplicate URL detected: {url[:60]}...")
+                return {'is_duplicate': True, 'is_update': False, 'previous_posts': [], 'cluster_info': None}
+
+        # Level 2: Content similarity check (HARD BLOCK) - check actual post text
+        content_cooldown_hours = self.config.get('content_cooldown_hours', 72)  # Default 3 days
+        if post_content and self._similar_content_posted(post_content, hours=content_cooldown_hours):
+            print(f"✗ Similar content posted recently")
+            return {'is_duplicate': True, 'is_update': False, 'previous_posts': [], 'cluster_info': None}
+
+        # Level 3: Story cluster check - find related posts
+        cluster_result = self._find_story_cluster(title)
+
+        if cluster_result['related_posts']:
+            # Check if this is an update (has update keywords) or just a repeat
+            if self._is_update_story(title):
+                print(f"✓ Update to existing story - will require differentiation")
+                return {
+                    'is_duplicate': False,
+                    'is_update': True,
+                    'previous_posts': cluster_result['related_posts'],
+                    'cluster_info': cluster_result['cluster_info']
+                }
+            else:
+                # Related story without update indicators - might be too similar
+                # Use stricter threshold
+                similarity = cluster_result['cluster_info'].get('max_similarity', 0)
+                threshold = self.config.get('topic_similarity_threshold', 0.40)
+
+                if similarity >= threshold:
+                    print(f"✗ Similar topic posted recently: {title[:60]}...")
+                    return {'is_duplicate': True, 'is_update': False, 'previous_posts': [], 'cluster_info': None}
+
+        return {'is_duplicate': False, 'is_update': False, 'previous_posts': [], 'cluster_info': None}
+
     def is_duplicate(self, story_metadata: Dict, post_content: str = None) -> bool:
         """
         Check if story is a duplicate of recently posted content
+
+        DEPRECATED: Use check_story_status() for richer context
+        This method maintained for backward compatibility
 
         Args:
             story_metadata: Story dict with 'title', 'url', 'source'
@@ -66,32 +127,8 @@ class PostTracker:
         Returns:
             True if duplicate, False if original
         """
-        if not self.config.get('enabled', True):
-            return False
-
-        url = story_metadata.get('url')
-        title = story_metadata.get('title', '')
-        source = story_metadata.get('source', '')
-
-        # Level 1: Exact URL match (HARD BLOCK)
-        if url and self.config.get('url_deduplication', True):
-            if self._url_posted(url):
-                print(f"✗ Duplicate URL detected: {url[:60]}...")
-                return True
-
-        # Level 2: Content similarity check (HARD BLOCK) - check actual post text
-        content_cooldown_hours = self.config.get('content_cooldown_hours', 72)  # Default 3 days
-        if post_content and self._similar_content_posted(post_content, hours=content_cooldown_hours):
-            print(f"✗ Similar content posted recently")
-            return True
-
-        # Level 3: Topic similarity check (SOFT BLOCK)
-        cooldown_hours = self.config.get('topic_cooldown_hours', 48)
-        if self._similar_topic_posted(title, hours=cooldown_hours):
-            print(f"✗ Similar topic posted recently: {title[:60]}...")
-            return True
-
-        return False
+        result = self.check_story_status(story_metadata, post_content)
+        return result['is_duplicate']
 
     def _url_posted(self, url: str) -> bool:
         """Check if URL was already posted"""
@@ -139,21 +176,130 @@ class PostTracker:
         Returns:
             True if title contains update keywords
         """
-        if not self.config.get('allow_updates', True):
-            return False
+        # Default update keywords if not configured
+        default_keywords = [
+            'update', 'updates', 'updated',
+            'breaking', 'developing',
+            'now', 'just', 'latest',
+            'reaction', 'responds', 'respond', 'response', 'reacts',
+            'after', 'following',
+            'says', 'claims', 'denies',
+            'walkback', 'reversal', 'u-turn',
+            'backlash', 'fallout', 'aftermath',
+            'shocked', 'surprise', 'surprising',
+            'announces', 'announcement',
+            'hits back', 'fires back', 'claps back'
+        ]
 
-        update_keywords = self.config.get('update_keywords', [])
-        if not update_keywords:
-            return False
-
+        update_keywords = self.config.get('update_keywords', default_keywords)
         title_lower = title.lower()
 
-        # Check for update keywords
+        # Check for update keywords with word boundaries to avoid false matches
+        # (e.g., "now" shouldn't match "known", "after" shouldn't match "afternoon")
+        import re
         for keyword in update_keywords:
-            if keyword in title_lower:
+            # Use word boundaries to match whole words only
+            if re.search(r'\b' + re.escape(keyword) + r'\b', title_lower):
                 return True
 
         return False
+
+    def _find_story_cluster(self, title: str, hours: int = 48) -> Dict:
+        """
+        Find posts related to the same story cluster
+
+        Args:
+            title: Article title to check
+            hours: Lookback period in hours (default 48)
+
+        Returns:
+            Dictionary with:
+                - 'related_posts': List of related post records
+                - 'cluster_info': Dict with similarity scores and entities
+        """
+        if not title:
+            return {'related_posts': [], 'cluster_info': None}
+
+        # Extract keywords and entities from title
+        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+                      'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'been', 'be'}
+
+        title_words = set(title.lower().split()) - stop_words
+        title_nouns = self._extract_proper_nouns(title)
+
+        if len(title_words) < 2:
+            return {'related_posts': [], 'cluster_info': None}
+
+        cutoff_time = datetime.now(timezone.utc) - timedelta(hours=hours)
+        related_posts = []
+        max_similarity = 0.0
+
+        for post in self.posts:
+            # Check timestamp
+            post_time = datetime.fromisoformat(post['timestamp'].replace('Z', '+00:00'))
+            if post_time < cutoff_time:
+                continue  # Too old
+
+            # Extract keywords from historical post
+            post_title = post.get('topic', '')
+            post_words = set(post_title.lower().split()) - stop_words
+            post_nouns = self._extract_proper_nouns(post_title)
+
+            if len(post_words) < 2:
+                continue
+
+            # Check entity overlap (proper nouns)
+            common_nouns = title_nouns & post_nouns
+
+            # Calculate keyword similarity with stem matching
+            common_words = title_words & post_words
+
+            # Add stem matching for better keyword detection
+            stem_matches = 0
+            for tw in title_words:
+                for pw in post_words:
+                    if tw not in common_words and pw not in common_words:
+                        # Check if words share significant prefix (stem matching)
+                        if len(tw) >= 4 and len(pw) >= 4:
+                            if tw[:5] == pw[:5] or tw[:6] == pw[:6]:
+                                stem_matches += 0.5  # Partial credit for stem match
+
+            effective_overlap = len(common_words) + stem_matches
+            overlap_ratio = effective_overlap / max(len(title_words), len(post_words))
+
+            # Boost similarity if proper nouns match
+            if len(common_nouns) >= 2:
+                # Multiple entities match - strong signal
+                similarity_score = max(overlap_ratio + 0.3, 0.8)
+            elif len(common_nouns) == 1 and len(title_nouns) >= 1:
+                # One entity matches - moderate signal
+                similarity_score = overlap_ratio + 0.2
+            else:
+                similarity_score = overlap_ratio
+
+            # Consider it related if similarity is high enough
+            # Use lower threshold here (25%) to catch more potential updates
+            if similarity_score >= 0.25:
+                related_posts.append({
+                    'post': post,
+                    'similarity': similarity_score,
+                    'common_entities': list(common_nouns)
+                })
+                max_similarity = max(max_similarity, similarity_score)
+
+        # Sort by similarity (most similar first)
+        related_posts.sort(key=lambda x: x['similarity'], reverse=True)
+
+        cluster_info = {
+            'max_similarity': max_similarity,
+            'num_related': len(related_posts),
+            'entities': list(title_nouns)
+        }
+
+        return {
+            'related_posts': related_posts[:3],  # Return top 3 most similar
+            'cluster_info': cluster_info
+        }
 
     def _extract_proper_nouns(self, text: str) -> set:
         """
@@ -179,10 +325,10 @@ class PostTracker:
             if len(clean_word) <= 1 or clean_word.lower() in {'the', 'a', 'an'}:
                 continue
 
-            # If word starts with capital and isn't at sentence start
+            # If word starts with capital
             if clean_word[0].isupper():
                 # Skip common sentence starters
-                if i == 0 or clean_word in {'The', 'A', 'An', 'This', 'That', 'These', 'Those'}:
+                if clean_word in {'The', 'A', 'An', 'This', 'That', 'These', 'Those', 'It', 'He', 'She'}:
                     continue
                 proper_nouns.add(clean_word.lower())
 
@@ -429,7 +575,8 @@ class PostTracker:
 
         for post in self.posts:
             # Has URL but no reply posted yet
-            if post.get('url') and not post.get('reply_tweet_id'):
+            # Check both 'reply_tweet_id' (old format) and 'x_reply_tweet_id' (current format)
+            if post.get('url') and not (post.get('reply_tweet_id') or post.get('x_reply_tweet_id')):
                 posts_needing_replies.append(post)
 
         return posts_needing_replies
