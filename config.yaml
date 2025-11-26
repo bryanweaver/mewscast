@@ -211,6 +211,12 @@ safety:
   max_posts_per_day: 5  # Aggressive growth mode (still 30% of limit)
   min_hours_between_posts: 4  # Space out posts for better reach
 
+post_angles:
+  # Two approaches, randomly selected (same catty tone, different focus)
+  # "populist" = follow the money, who benefits, regular folks angle
+  # "framing" = how media spins it, what's buried, narrative tactics
+  framing_chance: 0.5  # 50% chance to focus on media framing vs populist angle
+
 deduplication:
   # Prevent posting duplicate or repetitive stories
   enabled: true
