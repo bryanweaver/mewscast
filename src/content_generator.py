@@ -713,32 +713,56 @@ Just return the reply text itself, nothing else."""
             print(f"✗ Error generating reply: {e}")
             return "Thanks for sharing! This reporter is taking notes. #BreakingMews"
 
-    def generate_image_prompt(self, topic: str, tweet_text: str) -> str:
+    def generate_image_prompt(self, topic: str, tweet_text: str, article_content: str = None) -> str:
         """
         Generate an image prompt for Grok based on the news topic
 
         Args:
             topic: The news topic
             tweet_text: The generated tweet text
+            article_content: Full article content for extracting visual details
 
         Returns:
             Image generation prompt for Grok
         """
         try:
+            # Build article context section if available
+            article_section = ""
+            if article_content:
+                # Truncate to reasonable length for the prompt
+                truncated_content = article_content[:1500] if len(article_content) > 1500 else article_content
+                article_section = f"""
+FULL ARTICLE CONTENT (extract visual details from this):
+{truncated_content}
+
+"""
+
             prompt_request = f"""You are helping create an engaging, visually striking image for a news cat reporter bot on X/Twitter.
 
 The news topic is: {topic}
 
 The tweet says: {tweet_text}
-
+{article_section}
 Generate a SHORT image prompt (max 200 chars) for an AI image generator that captures this story visually.
+
+CRITICAL - STORY-SPECIFIC IMAGERY:
+Your #1 job is to extract SPECIFIC visual details from the article that make THIS story unique.
+- What LOCATION is mentioned? (Hong Kong skyline, Capitol building, Brazilian conference hall, etc.)
+- What OBJECTS are central to the story? (bamboo scaffolding, pension documents, oil barrels, etc.)
+- What SCENE is described? (high-rise fire, resignation announcement, climate summit, etc.)
+- What makes this story VISUALLY DISTINCT from others?
+
+AVOID GENERIC IMAGERY:
+- DON'T default to "cat examining papers under desk lamp" - that's lazy
+- DON'T use generic "noir detective" unless the story actually involves investigation
+- DON'T ignore specific locations/objects mentioned in the article
+- DO create a scene that could ONLY belong to THIS specific story
 
 CRITICAL REQUIREMENTS:
 - **WIDESCREEN LANDSCAPE format** - cinematic, horizontal composition
 - **CAT MUST BE IN EVERY IMAGE** - MANDATORY, non-negotiable, always visible
-- Image MUST be directly relevant to the story content (not generic)
-- Capture the EMOTION and ESSENCE of the story, not just literal elements
-- Think: What visual would make someone stop scrolling?
+- Image MUST be directly relevant to the SPECIFIC story content
+- Extract the most visually striking element from the article
 - Cat can be protagonist (center) or observer (background), but MUST be present
 
 CONTENT MODERATION - AVOID THESE (will be rejected by AI):
@@ -746,54 +770,28 @@ CONTENT MODERATION - AVOID THESE (will be rejected by AI):
 - NO violence, weapons, or explicit medical imagery
 - NO graphic suffering or disturbing content
 - USE metaphors and symbols instead of literal depictions
-- FOCUS on broader context (empty vaccine bottles, warning signs) not trauma
-- For health stories: show prevention/consequences symbolically, not suffering
 
-CAT REPORTER PRESENCE (MANDATORY - EVERY IMAGE MUST HAVE A CAT):
-- 60% CAT AS PROTAGONIST: Front and center, actively investigating/reporting (rifling files, confronting subjects, dramatic action)
-- 40% CAT AS OBSERVER: Present but background (watching from newsdesk, perched above, corner of scene, witnessing)
-- 0% NO CAT: NEVER acceptable - this is a cat news reporter, cat MUST be visible in every image
+GOOD vs BAD EXAMPLES:
 
-VISUAL STYLE ROTATION (match to story tone - CAT ALWAYS PRESENT):
-- **Political scandal/investigation** → Dramatic noir thriller with detective cat (smoke, shadows, tension, cat investigating)
-- **Breaking political news** → Raw photojournalism with reporter cat on scene (chaos, urgency, cat witnessing history)
-- **Power plays/corruption** → Bold satirical editorial with cat exposing truth (exaggerated, striking, cat as truth-teller)
-- **Human interest** → Powerful documentary with empathetic cat observer (intimate, cat connecting with subjects)
-- **Major events** → Epic blockbuster poster with cat protagonist (massive scale, cat in action, cinematic)
-- **Tech/innovation** → Cyberpunk futuristic with tech-savvy cat (neon, dramatic, cat with future tech)
-- **UFO/mysteries** → Cinematic sci-fi thriller with cat investigating (eerie lighting, cat witnessing unexplained)
-- **Economic** → Striking infographic art with cat analyzing data (bold visual, cat making connections)
-- **Celebrity/Entertainment** → Paparazzi aesthetic with reporter cat on scene (flashy, bold, cat getting the scoop)
-- **Crisis/Breaking** → Apocalyptic cinematic with brave reporter cat (dramatic scale, cat documenting crisis)
+Hong Kong high-rise fire story:
+BAD: "Noir detective cat examining documents under desk lamp" (generic, ignores story)
+GOOD: "Cinematic: Tabby reporter cat on Hong Kong rooftop, bamboo scaffolding ablaze on high-rise behind, orange glow, dramatic night scene"
 
-EXAMPLES BY STORY TYPE:
+MTG resignation story:
+BAD: "Cat at desk looking at papers" (generic)
+GOOD: "Wide shot: Cat reporter at Capitol steps watching lone figure walk away, pension papers scattered in wind, dramatic sunset"
 
-Scandal/investigation (noir style with cat):
-"Film noir: Tabby detective cat in trench coat examining documents under desk lamp, smoke and shadows, high contrast, 1940s detective aesthetic"
+Climate summit story:
+BAD: "Cat with globe" (generic environmental)
+GOOD: "Cat reporter in Brazil conference hall, delegates arguing, oil barrel vs wind turbine symbols clashing, tense atmosphere"
 
-Political news (photojournalism, cat in scene):
-"Documentary photo: Small cat reporter dwarfed by massive Capitol building, lone figure facing power, dramatic sunset, David vs Goliath"
+Ukraine peace plan story:
+BAD: "Cat looking at map" (generic)
+GOOD: "Split screen: Cat reporter between Kyiv skyline and Thanksgiving dinner table, peace document floating between, surreal juxtaposition"
 
-Corruption story (political cartoon, cat as protagonist):
-"Bold editorial illustration: Cat reporter following trail of money from Capitol to fat cats in suits, satirical style, high contrast colors"
+REMEMBER: Extract what's UNIQUE about THIS story. The cat witnesses/investigates the SPECIFIC scene described.
 
-Human interest (cat as empathetic observer):
-"Intimate documentary: Tabby cat reporter observing from windowsill as elderly person embraces child, warm golden hour lighting, cat's reflective expression, hope and connection"
-
-UFO story (atmospheric with cat):
-"Cinematic wide shot: Tabby reporter observing glowing UFO over desert at night, eerie atmospheric lighting, X-Files aesthetic, mysterious"
-
-Economic news (cat analyzing data):
-"Bold infographic art: Tabby reporter cat pointing at massive rising debt chart, dramatic scale showing tiny people vs huge numbers, stark contrast, visual metaphor"
-
-Health/medical news (symbolic, NO sick people):
-"Cinematic shot: Tabby reporter cat examining empty vaccine vials and warning signs, dramatic lighting emphasizing consequences, metaphorical approach"
-
-Analyze the tweet and topic. Choose style that matches the story's TONE. Make it visually compelling and story-specific.
-
-REMEMBER: Cat reporter MUST be in the image. No exceptions. Every single image needs the cat visible.
-
-Just return the SHORT image prompt itself, nothing else."""
+Just return the SHORT image prompt itself (max 200 chars), nothing else."""
 
             message = self.client.messages.create(
                 model=self.model,

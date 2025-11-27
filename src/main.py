@@ -175,8 +175,12 @@ def post_scheduled_tweet():
             print(f"🎨 Attempting to generate image with Grok...")
             img_generator = ImageGenerator()
 
-            # Generate image prompt using Claude
-            image_prompt = generator.generate_image_prompt(selected_story['title'] if selected_story else "news", tweet_text)
+            # Generate image prompt using Claude (with full article for story-specific imagery)
+            image_prompt = generator.generate_image_prompt(
+                selected_story['title'] if selected_story else "news",
+                tweet_text,
+                article_content=selected_story.get('article_content') if selected_story else None
+            )
 
             # Generate image using Grok
             image_path = img_generator.generate_image(image_prompt)
