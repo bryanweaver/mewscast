@@ -684,6 +684,11 @@
       "did": "did:plc:ib5koctqxghjussex3atvqlf",
       "handle": "lillyfinch.bsky.social",
       "timestamp": "2025-11-27T18:02:41.620766"
+    },
+    {
+      "did": "did:plc:sfichlc25a4wuzsqyqauuvq3",
+      "handle": "afizgig.bsky.social",
+      "timestamp": "2025-11-27T18:39:53.696492"
     }
   ],
   "liked_posts": [
@@ -7471,6 +7476,11 @@
       "uri": "at://did:plc:ib5koctqxghjussex3atvqlf/app.bsky.feed.post/3m6mms4qcbc2i",
       "author": "lillyfinch.bsky.social",
       "timestamp": "2025-11-27T18:02:41.188219"
+    },
+    {
+      "uri": "at://did:plc:sfichlc25a4wuzsqyqauuvq3/app.bsky.feed.post/3m6mxrl2qkc2n",
+      "author": "afizgig.bsky.social",
+      "timestamp": "2025-11-27T18:39:53.255078"
     }
   ],
   "last_cleanup": "2025-11-20T22:33:31.481267"
