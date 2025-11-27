@@ -8,6 +8,7 @@ from typing import Optional, List, Dict
 import yaml
 import random
 from datetime import datetime
+from prompt_loader import get_prompt_loader
 
 
 class ContentGenerator:
@@ -43,6 +44,9 @@ class ContentGenerator:
         # Post angle settings (populist vs framing)
         post_angles = self.config.get('post_angles', {})
         self.framing_chance = post_angles.get('framing_chance', 0.5)
+
+        # Initialize prompt loader
+        self.prompts = get_prompt_loader()
 
     def generate_tweet(self, topic: Optional[str] = None, trending_topic: Optional[str] = None,
                       story_metadata: Optional[Dict] = None, previous_posts: Optional[List[Dict]] = None) -> Dict:
@@ -195,18 +199,11 @@ class ContentGenerator:
         Returns:
             Shortened tweet text
         """
-        prompt = f"""This tweet is {len(tweet)} characters but must be {max_length} characters MAXIMUM.
-
-CURRENT TWEET:
-{tweet}
-
-Shorten it to fit in {max_length} characters while:
-1. Keeping the core news point and cat personality
-2. Preserving any cat puns/wordplay if possible
-3. Maintaining line breaks for readability
-4. NOT cutting off words mid-way
-
-Return ONLY the shortened tweet, nothing else."""
+        prompt = self.prompts.load_shorten_tweet(
+            current_length=len(tweet),
+            max_length=max_length,
+            tweet=tweet
+        )
 
         try:
             message = self.client.messages.create(
@@ -234,13 +231,13 @@ Return ONLY the shortened tweet, nothing else."""
 
     def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False,
                                article_details: str = None, previous_posts: Optional[List[Dict]] = None) -> str:
-        """Build the news cat reporter prompt for Claude"""
+        """Build the news cat reporter prompt for Claude using prompt templates"""
+        # Prepare config-based values
         avoid_str = ", ".join(self.avoid_topics)
-        cat_vocab_str = ", ".join(self.cat_vocabulary[:10])  # Show examples
+        cat_vocab_str = ", ".join(self.cat_vocabulary[:10])
         guidelines_str = "\n- ".join(self.editorial_guidelines)
 
         # Calculate actual max length for the prompt
-        # If specific story, we'll add " 📰↓" (4 chars) after, so reduce limit
         source_indicator_length = 4  # " 📰↓"
         if is_specific_story:
             prompt_max_length = self.max_length - source_indicator_length
@@ -259,19 +256,17 @@ Return ONLY the shortened tweet, nothing else."""
         time_phrases = self.time_of_day.get(time_period, [])
         time_phrases_str = ", ".join(time_phrases) if time_phrases else ""
 
-        # Get examples of new features
         engagement_str = ", ".join(self.engagement_hooks[:3]) if self.engagement_hooks else ""
         cat_humor_str = ", ".join(self.cat_humor) if self.cat_humor else ""
 
-        # Add specific guidance for real trending stories
+        # Build conditional sections
         story_guidance = ""
         update_guidance = ""
 
         # Check if this is an update to previous coverage
         if previous_posts and len(previous_posts) > 0:
-            # Format previous posts for context
             prev_context = []
-            for i, prev in enumerate(previous_posts[:2], 1):  # Show up to 2 most recent
+            for i, prev in enumerate(previous_posts[:2], 1):
                 prev_post = prev.get('post', {})
                 prev_content = prev_post.get('content', '')
                 prev_title = prev_post.get('topic', '')
@@ -284,225 +279,32 @@ Return ONLY the shortened tweet, nothing else."""
                         time_str = 'recently'
                 else:
                     time_str = 'recently'
-
                 prev_context.append(f"Post #{i} ({time_str}):\n   Title: {prev_title}\n   Content: {prev_content}")
 
             prev_context_str = "\n\n".join(prev_context)
+            update_guidance = self.prompts.load_update_guidance(prev_context_str=prev_context_str)
 
-            update_guidance = f"""
-🚨 CRITICAL - THIS IS AN UPDATE/DEVELOPMENT TO A PREVIOUS STORY 🚨
-
-You have ALREADY posted about this story:
-{prev_context_str}
-
-MANDATORY REQUIREMENTS (WILL FAIL IF NOT FOLLOWED):
-1. Your post MUST start with one of these labels:
-   - "UPDATE:" (for new developments)
-   - "DEVELOPING:" (for ongoing situations)
-   - "REACTION:" (for responses to previous events)
-   - "WALKBACK:" (for reversals/retractions)
-   - "BREAKING UPDATE:" (for major new developments)
-
-2. You MUST explicitly highlight what's NEW or DIFFERENT:
-   - What changed since your last post?
-   - What's the new development?
-   - Who responded/reacted?
-   - What contradicts or updates previous information?
-
-3. You MUST make the progression clear:
-   - Use phrases like "After [previous event], now..."
-   - "Within 24 hours: [first thing], then [second thing]"
-   - "First [X], now [Y]"
-
-4. DO NOT just repeat the same information in different words
-   - If there's nothing genuinely new, you should be blocked from posting
-   - Find the actual development or change
-
-EXAMPLES OF GOOD UPDATE POSTS:
-
-"UPDATE: Trump says he wasn't threatening death after calling Dems' video "seditious behavior, punishable by death."
-
-Within 24 hours: accusation, then walkback.
-
-Watching humans move goalposts. This cat smells something fishy."
-
-"DEVELOPING: MTG quits Congress effective Jan 5. Says she won't be "battered wife" after Trump fallout.
-
-AOC pounces: Greene timed exit right after pension vests. Even this cat can smell the timing on that one."
-
-"REACTION: After dropping ALL fossil fuel language, COP30 now claims progress.
-
-Reality check: "voluntary agreement to begin discussions on a roadmap."
-
-This cat's not impressed by a promise to talk about maybe planning something later."
-
-BAD EXAMPLES (WILL BE REJECTED):
-- Repeating the same story without highlighting what's new
-- No UPDATE/DEVELOPING label when required
-- Vague references to "developments" without specifying what changed
-- Not acknowledging you already covered this story
-
-Remember: Readers saw your first post. They need to know WHY you're posting again.
-"""
-
+        # Build story guidance based on what info we have
         if is_specific_story and article_details:
-            story_guidance = f"""
-CRITICAL - Real Story Coverage (MUST FOLLOW):
-- You are writing about this actual article:
-  {article_details}
-
-STRICT RULES - DO NOT BREAK THESE:
-1. USE ONLY information explicitly stated in the article above
-2. DO NOT invent names, locations, positions, titles, or facts
-3. DO NOT guess at details not mentioned in the article
-4. If a detail is unclear or missing, leave it out entirely
-5. When mentioning people: Use ONLY the exact titles/positions stated in the article
-6. When mentioning locations: Use ONLY the exact places stated in the article
-7. Double-check every fact against the article before including it
-8. NEVER mention that you can't read the article or don't have details
-9. NEVER say "I don't have information" or similar phrases
-10. If content is limited, focus on the headline and general topic only
-
-ACCEPTABLE:
-- General commentary on implications and significance
-- Raising questions about what's stated in the article
-- Expressing skepticism or analysis based on stated facts
-
-NOT ACCEPTABLE (WILL CAUSE ERRORS):
-- Saying "Virginia Dem" when article says "NYC Mayor-elect"
-- Adding details about someone's position that aren't in the article
-- Inventing context or background not provided
-- Guessing at state/location if not explicitly mentioned
-
-Remember: It's better to be vague than wrong. Stick to what's in the article.
-A source citation will be added in a follow-up reply.
-"""
+            story_guidance = self.prompts.load_story_guidance_with_article(article_details=article_details)
         elif is_specific_story:
-            story_guidance = """
-CRITICAL - Real Story Coverage:
-- This is a real trending topic, not commentary
-- Provide objective analysis and context
-- DO NOT fabricate ANY specific details (numbers, locations, titles, quotes, positions)
-- DO NOT guess at information not provided
-- Focus on general significance and implications only
-- NEVER mention that you can't read or access the article
-- NEVER say "I don't have details" or similar phrases
-- If information is limited, comment on the general topic/trend only
-- A source citation will be added in a follow-up reply
-"""
+            story_guidance = self.prompts.load_story_guidance_generic()
 
-        prompt = f"""You are a professional news reporter who happens to be a cat. Generate a single tweet reporting on: {topic}
-
-{update_guidance}
-
-CHARACTER:
-- Professional journalist cat who takes news seriously
-- You're a CAT reporter - include at least ONE cat reference/pun per tweet
-- Cat wordplay should feel natural but be PRESENT in most tweets
-- Context-specific phrases available: {cat_vocab_str}
-- Goal: Sharp, engaging reporting with personality that readers trust
-
-CONTENT GUIDELINES:
-- {guidelines_str}
-{story_guidance}
-STYLE & VOICE:
-- {self.style}
-- PUNCHY over polite - tight, declarative sentences
-- VERY POPULIST: Regular people vs. elites/establishment - always
-- Center politically, not left or right
-- Question power and official narratives - spare the spin
-- Follow the money - who's getting paid?
-- Fact-based with EDGE - call it what it is
-- Make ONE sharp point - don't scatter
-- Strong verbs, cut fluff, impact over explanation
-- Point out subtext - what they're NOT saying matters
-- Professional with BITE - not milquetoast
-- Let readers connect dots themselves
-
-TIME CONTEXT:
-- It's currently {time_period}
-- Optional {time_period} phrases: {time_phrases_str}
-- Use naturally if appropriate, or skip entirely
-
-CAT VOICE FEATURES (use frequently to show personality):
-- Cat observer angle: "Watching humans [do thing]. Here's what this cat sees..." (use often)
-- Self-aware humor: {cat_humor_str} (use regularly)
-- Cat perspective: Reference being a cat, having nine lives, perching, etc.
-- Natural wordplay: Work in one pun naturally per tweet when possible
-- Engagement hooks at end: {engagement_str} (occasional)
-
-FORMAT:
-- Maximum {prompt_max_length} characters (STRICT - this is the HARD LIMIT)
-- Use ACTUAL line breaks between distinct thoughts/sentences for readability
-- Be clever but make sure it fits - don't get cut off mid-thought
-- NO emojis (very rare exceptions only)
-- NO hashtags EXCEPT #BreakingMews at the START for actual breaking news only
-- Don't use quotes around the tweet
-- Write as if filing a news report
-- IMPORTANT: Use real line breaks, not \\n escape sequences
-- Must fit completely within {prompt_max_length} chars - NO EXCEPTIONS
-
-EXAMPLES OF GOOD STRUCTURE (note cat references in each):
-
-Breaking news with cat voice:
-"#BreakingMews: Senate passes bill 68-32.
-
-Rare bipartisan moment. Even this cat is surprised. Pressure from regular folks works."
-
-Regular news with subtle pun:
-"GOP caves on shutdown. Again.
-
-Chaos works for the loudest voice in the room. Fat cats always land on their feet."
-
-Sharp populist angle with cat observer:
-"New $2B program announced. Watch who gets contracts.
-
-Follow the money. This reporter's seen enough to know how it ends."
-
-Investigative tone with cat wordplay:
-"Senate bill passes at midnight. Zero public hearings.
-
-Timing smells fishy to this cat. Who benefits from the rush?"
-
-Calling out subtext with cat perspective:
-"Three days of headlines about AI video.
-
-Translation: Real policy buried on page 6. From my perch, pattern's clear."
-
-Skeptical/critical with natural pun:
-"Administration promises 'transparency' on classified docs.
-
-This cat's not buying the catnip. Watch what they do, not what they say."
-
-Economic news with cat reference:
-"Debt hits $38 trillion. Fastest climb since pandemic.
-
-Someone's spending their nine lives worth of money. Guess who pays?"
-
-AVOID:
-- {avoid_str}
-- Using any hashtags except #BreakingMews at the start
-- Using #BreakingMews for non-breaking stories or commentary
-- Putting hashtags at the end of posts
-- Milquetoast, wishy-washy commentary
-- Over-explaining - let readers connect dots
-- Cramming sentences together without line breaks
-- Clickbait or engagement farming
-- Being TOO serious - you're a cat! Show some personality
-- Zero cat references in a tweet - you're a CAT reporter, act like it
-- Overusing the same puns (vary your wordplay)
-- Being left or right partisan (center/populist is good)
-- Fabricating specific details like exact numbers, times, locations
-- Making multiple scattered points that don't connect coherently
-- Hedging when you should call it out
-- Going over the character limit - make it fit!
-
-FINAL REMINDER FOR REAL STORIES:
-If you're writing about a specific article with provided content, you MUST use ONLY facts from that article. Do not add information from your training data or make assumptions. Accuracy is critical.
-
-Just return the tweet text itself, nothing else."""
-
-        return prompt
+        # Load main prompt template and fill in values
+        return self.prompts.load_tweet_prompt(
+            topic=topic,
+            update_guidance=update_guidance,
+            cat_vocab_str=cat_vocab_str,
+            guidelines_str=guidelines_str,
+            story_guidance=story_guidance,
+            style=self.style,
+            time_period=time_period,
+            time_phrases_str=time_phrases_str,
+            cat_humor_str=cat_humor_str,
+            engagement_str=engagement_str,
+            prompt_max_length=prompt_max_length,
+            avoid_str=avoid_str
+        )
 
     def analyze_media_framing(self, story_metadata: Dict) -> Dict:
         """
@@ -518,27 +320,11 @@ Just return the tweet text itself, nothing else."""
         content = story_metadata.get('article_content', '')
         source = story_metadata.get('source', '')
 
-        prompt = f"""Quick check: Is there an interesting framing angle in this article worth noting?
-
-HEADLINE: {title}
-SOURCE: {source}
-CONTENT: {content}
-
-Look for ONE of these (pick the most notable):
-- Headline vs reality gap (clickbait, buried lede, sensationalized)
-- One-sided sourcing (only quotes one perspective)
-- Missing context that changes the story
-- Timing/placement that seems strategic
-- Numbers used misleadingly
-
-Return JSON:
-{{
-  "has_issues": true/false,
-  "angle": "Brief 10-word description of the framing issue" or null
-}}
-
-Only flag if there's something genuinely interesting to point out. Most articles are fine.
-Return ONLY JSON."""
+        prompt = self.prompts.load_framing_analysis(
+            title=title,
+            source=source,
+            content=content
+        )
 
         try:
             message = self.client.messages.create(
@@ -566,65 +352,21 @@ Return ONLY JSON."""
 
         title = story_metadata.get('title', '')
         source = story_metadata.get('source', '')
-        content = story_metadata.get('article_content', '')
+        content = story_metadata.get('article_content', '')[:800]  # Truncate for prompt
         framing_angle = media_issues.get('angle', '')
 
         cat_vocab_str = ", ".join(self.cat_vocabulary[:10])
         cat_humor_str = ", ".join(self.cat_humor) if self.cat_humor else ""
 
-        prompt = f"""You are a news reporter cat commenting on this story. You noticed something about HOW it's framed:
-
-ARTICLE: {title}
-SOURCE: {source}
-FRAMING NOTE: {framing_angle}
-CONTENT: {content[:800]}
-
-Write a catty, punny post about this story. Work in the framing angle naturally - don't lecture about it, just note it with a wink. Same vibe as your regular posts.
-
-CHARACTER:
-- Catty news reporter with sharp eye for spin
-- Include cat puns/wordplay: {cat_vocab_str}
-- Self-aware humor: {cat_humor_str}
-- Playful skeptic, not preachy professor
-
-APPROACH (pick one naturally):
-- Note the headline vs reality with a quip
-- Point out who's NOT quoted with a raised eyebrow
-- Mention what's buried in paragraph 10
-- Question the timing with cat curiosity
-
-STYLE:
-- {self.style}
-- LIGHT and CATTY - you're amused, not outraged
-- Punny and fun - this is entertainment
-- Sharp observation, not a lecture
-- Let readers connect dots themselves
-
-FORMAT:
-- Max 265 characters (STRICT)
-- Line breaks between thoughts
-- NO hashtags
-- NO emojis
-- Be clever and concise
-
-EXAMPLES:
-
-"Headline: 'ECONOMY IN FREEFALL'
-Article: 0.2% dip, experts call it 'normal fluctuation.'
-
-This cat read past the scary font. Maybe you should too."
-
-"Five experts quoted. All from the same think tank.
-
-Funny how that works. This cat likes to check the guest list before believing the party line."
-
-"Buried in paragraph 12: the whole premise falls apart.
-
-Classic. This cat always reads to the end. The good stuff's usually hiding."
-
-Return ONLY the tweet text."""
-
-        return prompt
+        return self.prompts.load_framing_tweet(
+            title=title,
+            source=source,
+            framing_angle=framing_angle,
+            content=content,
+            cat_vocab_str=cat_vocab_str,
+            cat_humor_str=cat_humor_str,
+            style=self.style
+        )
 
     def generate_source_reply(self, original_tweet: str, story_metadata: Dict) -> str:
         """
@@ -670,23 +412,15 @@ Return ONLY the tweet text."""
             Generated reply text in cat reporter style
         """
         cat_vocab_str = ", ".join(self.cat_vocabulary[:5])
+        context_line = f"- Context: {context}" if context else ""
 
-        prompt = f"""You are a professional news reporter cat replying to this tweet:
-
-"{original_tweet}"
-
-Reply as the news cat reporter:
-- {self.style}
-- Use cat wordplay naturally: {cat_vocab_str}
-- Add value to the conversation
-- Stay on-brand as a news reporter
-- Be engaging but professional
-- Maximum {self.max_length} characters
-- NO emojis (rare exceptions)
-- NO hashtags
-{f"- Context: {context}" if context else ""}
-
-Just return the reply text itself, nothing else."""
+        prompt = self.prompts.load_reply(
+            original_tweet=original_tweet,
+            style=self.style,
+            cat_vocab_str=cat_vocab_str,
+            max_length=self.max_length,
+            context_line=context_line
+        )
 
         try:
             message = self.client.messages.create(
@@ -729,7 +463,6 @@ Just return the reply text itself, nothing else."""
             # Build article context section if available
             article_section = ""
             if article_content:
-                # Truncate to reasonable length for the prompt
                 truncated_content = article_content[:1500] if len(article_content) > 1500 else article_content
                 article_section = f"""
 FULL ARTICLE CONTENT (extract visual details from this):
@@ -737,61 +470,11 @@ FULL ARTICLE CONTENT (extract visual details from this):
 
 """
 
-            prompt_request = f"""You are helping create an engaging, visually striking image for a news cat reporter bot on X/Twitter.
-
-The news topic is: {topic}
-
-The tweet says: {tweet_text}
-{article_section}
-Generate a SHORT image prompt (max 200 chars) for an AI image generator that captures this story visually.
-
-CRITICAL - STORY-SPECIFIC IMAGERY:
-Your #1 job is to extract SPECIFIC visual details from the article that make THIS story unique.
-- What LOCATION is mentioned? (Hong Kong skyline, Capitol building, Brazilian conference hall, etc.)
-- What OBJECTS are central to the story? (bamboo scaffolding, pension documents, oil barrels, etc.)
-- What SCENE is described? (high-rise fire, resignation announcement, climate summit, etc.)
-- What makes this story VISUALLY DISTINCT from others?
-
-AVOID GENERIC IMAGERY:
-- DON'T default to "cat examining papers under desk lamp" - that's lazy
-- DON'T use generic "noir detective" unless the story actually involves investigation
-- DON'T ignore specific locations/objects mentioned in the article
-- DO create a scene that could ONLY belong to THIS specific story
-
-CRITICAL REQUIREMENTS:
-- **WIDESCREEN LANDSCAPE format** - cinematic, horizontal composition
-- **CAT MUST BE IN EVERY IMAGE** - MANDATORY, non-negotiable, always visible
-- Image MUST be directly relevant to the SPECIFIC story content
-- Extract the most visually striking element from the article
-- Cat can be protagonist (center) or observer (background), but MUST be present
-
-CONTENT MODERATION - AVOID THESE (will be rejected by AI):
-- NO sick/injured people, especially children
-- NO violence, weapons, or explicit medical imagery
-- NO graphic suffering or disturbing content
-- USE metaphors and symbols instead of literal depictions
-
-GOOD vs BAD EXAMPLES:
-
-Hong Kong high-rise fire story:
-BAD: "Noir detective cat examining documents under desk lamp" (generic, ignores story)
-GOOD: "Cinematic: Tabby reporter cat on Hong Kong rooftop, bamboo scaffolding ablaze on high-rise behind, orange glow, dramatic night scene"
-
-MTG resignation story:
-BAD: "Cat at desk looking at papers" (generic)
-GOOD: "Wide shot: Cat reporter at Capitol steps watching lone figure walk away, pension papers scattered in wind, dramatic sunset"
-
-Climate summit story:
-BAD: "Cat with globe" (generic environmental)
-GOOD: "Cat reporter in Brazil conference hall, delegates arguing, oil barrel vs wind turbine symbols clashing, tense atmosphere"
-
-Ukraine peace plan story:
-BAD: "Cat looking at map" (generic)
-GOOD: "Split screen: Cat reporter between Kyiv skyline and Thanksgiving dinner table, peace document floating between, surreal juxtaposition"
-
-REMEMBER: Extract what's UNIQUE about THIS story. The cat witnesses/investigates the SPECIFIC scene described.
-
-Just return the SHORT image prompt itself (max 200 chars), nothing else."""
+            prompt_request = self.prompts.load_image_prompt(
+                topic=topic,
+                tweet_text=tweet_text,
+                article_section=article_section
+            )
 
             message = self.client.messages.create(
                 model=self.model,
