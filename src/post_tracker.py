@@ -490,7 +490,8 @@ class PostTracker:
         return False
 
     def record_post(self, story_metadata: Dict, post_content: str = None, tweet_id: str = None,
-                    reply_tweet_id: str = None, bluesky_uri: str = None, bluesky_reply_uri: str = None):
+                    reply_tweet_id: str = None, bluesky_uri: str = None, bluesky_reply_uri: str = None,
+                    image_prompt: str = None):
         """
         Record a successful post to history
 
@@ -501,6 +502,7 @@ class PostTracker:
             reply_tweet_id: Optional reply tweet ID (X/Twitter)
             bluesky_uri: Posted skeet URI (Bluesky)
             bluesky_reply_uri: Optional reply skeet URI (Bluesky)
+            image_prompt: The prompt used to generate the image
         """
         post_record = {
             'timestamp': datetime.now(timezone.utc).isoformat(),
@@ -508,6 +510,7 @@ class PostTracker:
             'url': story_metadata.get('url'),
             'source': story_metadata.get('source', 'Unknown'),
             'content': post_content,  # Store actual post text for better deduplication
+            'image_prompt': image_prompt,  # Store image generation prompt
             'x_tweet_id': tweet_id,  # X/Twitter
             'x_reply_tweet_id': reply_tweet_id,
             'bluesky_uri': bluesky_uri,  # Bluesky

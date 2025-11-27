@@ -170,6 +170,7 @@ def post_scheduled_tweet():
 
         # Try to generate image (with graceful fallback)
         image_path = None
+        image_prompt = None
         try:
             print(f"🎨 Attempting to generate image with Grok...")
             img_generator = ImageGenerator()
@@ -275,7 +276,8 @@ def post_scheduled_tweet():
                 tweet_id=tweet_id,
                 reply_tweet_id=reply_tweet_id,
                 bluesky_uri=bluesky_uri,
-                bluesky_reply_uri=bluesky_reply_uri
+                bluesky_reply_uri=bluesky_reply_uri,
+                image_prompt=image_prompt
             )
 
         # Determine overall success
