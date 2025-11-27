@@ -136,18 +136,36 @@ class ContentGenerator:
             if tweet.startswith("'") and tweet.endswith("'"):
                 tweet = tweet[1:-1]
 
-            # Add source indicator if this story will have a source reply
+            # Calculate target length (reserve space for source indicator if needed)
             source_indicator = " 📰↓"
             if is_specific_story:
-                # Reserve space for source indicator
                 max_content_length = self.max_length - len(source_indicator)
-                if len(tweet) > max_content_length:
-                    tweet = tweet[:max_content_length - 3] + "..."
-                tweet += source_indicator
             else:
-                # No source reply, use full character limit
-                if len(tweet) > self.max_length:
-                    tweet = tweet[:self.max_length - 3] + "..."
+                max_content_length = self.max_length
+
+            # Retry mechanism: if too long, ask Claude to shorten (up to 3 attempts)
+            max_retries = 3
+            for attempt in range(max_retries):
+                if len(tweet) <= max_content_length:
+                    break  # Fits within limit, we're done
+
+                if attempt < max_retries - 1:
+                    # Ask Claude to shorten
+                    print(f"⚠️  Tweet too long ({len(tweet)} chars > {max_content_length}). Asking Claude to shorten (attempt {attempt + 1})...")
+                    tweet = self._shorten_tweet(tweet, max_content_length)
+                else:
+                    # Final attempt failed, truncate at word boundary as last resort
+                    print(f"⚠️  Still too long after retries. Truncating at word boundary...")
+                    cutoff = max_content_length - 3
+                    last_space = tweet.rfind(' ', 0, cutoff)
+                    if last_space > cutoff // 2:
+                        tweet = tweet[:last_space] + "..."
+                    else:
+                        tweet = tweet[:cutoff] + "..."
+
+            # Add source indicator if this story will have a source reply
+            if is_specific_story:
+                tweet += source_indicator
 
             print(f"✓ Generated cat news ({len(tweet)} chars): {tweet[:60]}...")
 
@@ -165,6 +183,54 @@ class ContentGenerator:
                 'needs_source_reply': False,
                 'story_metadata': None
             }
+
+    def _shorten_tweet(self, tweet: str, max_length: int) -> str:
+        """
+        Ask Claude to shorten a tweet that exceeds the character limit.
+
+        Args:
+            tweet: The tweet text that's too long
+            max_length: Maximum allowed characters
+
+        Returns:
+            Shortened tweet text
+        """
+        prompt = f"""This tweet is {len(tweet)} characters but must be {max_length} characters MAXIMUM.
+
+CURRENT TWEET:
+{tweet}
+
+Shorten it to fit in {max_length} characters while:
+1. Keeping the core news point and cat personality
+2. Preserving any cat puns/wordplay if possible
+3. Maintaining line breaks for readability
+4. NOT cutting off words mid-way
+
+Return ONLY the shortened tweet, nothing else."""
+
+        try:
+            message = self.client.messages.create(
+                model=self.model,
+                max_tokens=300,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+
+            shortened = message.content[0].text.strip()
+
+            # Remove quotes if Claude added them
+            if shortened.startswith('"') and shortened.endswith('"'):
+                shortened = shortened[1:-1]
+            if shortened.startswith("'") and shortened.endswith("'"):
+                shortened = shortened[1:-1]
+
+            print(f"   ✓ Shortened to {len(shortened)} chars")
+            return shortened
+
+        except Exception as e:
+            print(f"   ✗ Error shortening: {e}")
+            return tweet  # Return original if shortening fails
 
     def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False,
                                article_details: str = None, previous_posts: Optional[List[Dict]] = None) -> str:
