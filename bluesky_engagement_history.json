@@ -459,6 +459,11 @@
       "did": "did:plc:abv47bjgzjgoh3yrygwoi36x",
       "handle": "whistberry.bsky.social",
       "timestamp": "2025-12-01T15:36:37.976574"
+    },
+    {
+      "did": "did:plc:ghslu3l6iyikxboo35oqa5su",
+      "handle": "tiffanytroia.bsky.social",
+      "timestamp": "2025-12-01T16:02:52.913047"
     }
   ],
   "liked_posts": [
@@ -7001,6 +7006,11 @@
       "uri": "at://did:plc:abv47bjgzjgoh3yrygwoi36x/app.bsky.feed.post/3m6wm5prvic2l",
       "author": "whistberry.bsky.social",
       "timestamp": "2025-12-01T15:36:37.518364"
+    },
+    {
+      "uri": "at://did:plc:ghslu3l6iyikxboo35oqa5su/app.bsky.feed.post/3m6woxs4r4c2x",
+      "author": "tiffanytroia.bsky.social",
+      "timestamp": "2025-12-01T16:02:52.696269"
     }
   ],
   "last_cleanup": "2025-11-27T22:34:52.933556"
