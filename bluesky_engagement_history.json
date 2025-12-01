@@ -454,6 +454,11 @@
       "did": "did:plc:j6swuebmw4chknpzjymehksp",
       "handle": "catsyblue.bsky.social",
       "timestamp": "2025-12-01T15:02:48.404183"
+    },
+    {
+      "did": "did:plc:abv47bjgzjgoh3yrygwoi36x",
+      "handle": "whistberry.bsky.social",
+      "timestamp": "2025-12-01T15:36:37.976574"
     }
   ],
   "liked_posts": [
@@ -6991,6 +6996,11 @@
       "uri": "at://did:plc:j6swuebmw4chknpzjymehksp/app.bsky.feed.post/3m6vwc2rxis2c",
       "author": "catsyblue.bsky.social",
       "timestamp": "2025-12-01T15:02:47.957950"
+    },
+    {
+      "uri": "at://did:plc:abv47bjgzjgoh3yrygwoi36x/app.bsky.feed.post/3m6wm5prvic2l",
+      "author": "whistberry.bsky.social",
+      "timestamp": "2025-12-01T15:36:37.518364"
     }
   ],
   "last_cleanup": "2025-11-27T22:34:52.933556"
