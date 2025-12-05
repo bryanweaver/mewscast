@@ -434,6 +434,11 @@
       "did": "did:plc:vzjxu676d3m23vgdfwozl35z",
       "handle": "xhxixdxdxexnx.bsky.social",
       "timestamp": "2025-12-05T10:02:39.850155"
+    },
+    {
+      "did": "did:plc:xvcwx7qqttteuaiakmmqvmwq",
+      "handle": "chimoora.zone",
+      "timestamp": "2025-12-05T10:37:41.132184"
     }
   ],
   "liked_posts": [
@@ -6221,6 +6226,11 @@
       "uri": "at://did:plc:vzjxu676d3m23vgdfwozl35z/app.bsky.feed.post/3m77rsdhgwc22",
       "author": "xhxixdxdxexnx.bsky.social",
       "timestamp": "2025-12-05T10:02:39.651796"
+    },
+    {
+      "uri": "at://did:plc:xvcwx7qqttteuaiakmmqvmwq/app.bsky.feed.post/3m76y45kh6c2q",
+      "author": "chimoora.zone",
+      "timestamp": "2025-12-05T10:37:40.936346"
     }
   ],
   "last_cleanup": "2025-12-04T22:35:17.154728"
