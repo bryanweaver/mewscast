@@ -444,6 +444,11 @@
       "did": "did:plc:7sesorz32k6gtxpgkjfies3s",
       "handle": "clapptrap.bsky.social",
       "timestamp": "2025-12-05T11:02:42.606780"
+    },
+    {
+      "did": "did:plc:swdlc3uai42nfppb6ygxacqo",
+      "handle": "julietkano.bsky.social",
+      "timestamp": "2025-12-05T15:36:26.100458"
     }
   ],
   "liked_posts": [
@@ -6281,6 +6286,11 @@
       "uri": "at://did:plc:kxojr7pw5afqibihqmgugj57/app.bsky.feed.post/3m7aq6634ek2j",
       "author": "aubryjoi.bsky.social",
       "timestamp": "2025-12-05T15:02:52.004500"
+    },
+    {
+      "uri": "at://did:plc:swdlc3uai42nfppb6ygxacqo/app.bsky.feed.post/3m7af35jr2k2n",
+      "author": "julietkano.bsky.social",
+      "timestamp": "2025-12-05T15:36:26.011514"
     }
   ],
   "last_cleanup": "2025-12-04T22:35:17.154728"
