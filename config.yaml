@@ -172,7 +172,7 @@ content:
 
   # Tone and style
   style: "serious journalist with cheeky feline wordplay"
-  max_length: 265  # X character limit (reserve space for source indicator)
+  max_length: 250  # X character limit (with buffer to avoid mid-thought truncation)
 
   # Content generation
   ai_provider: "anthropic"  # or "openai"
