@@ -529,6 +529,11 @@
       "did": "did:plc:qvytd366ui55e6y4qfox5rme",
       "handle": "karenkaspar.bsky.social",
       "timestamp": "2025-12-08T18:42:48.047978"
+    },
+    {
+      "did": "did:plc:izfd4s3zez77rfgs7nsrbcs4",
+      "handle": "teresalouise.bsky.social",
+      "timestamp": "2025-12-08T19:02:24.577636"
     }
   ],
   "liked_posts": [
@@ -7086,6 +7091,11 @@
       "uri": "at://did:plc:qvytd366ui55e6y4qfox5rme/app.bsky.feed.post/3m7imzsscps2o",
       "author": "karenkaspar.bsky.social",
       "timestamp": "2025-12-08T18:42:47.834695"
+    },
+    {
+      "uri": "at://did:plc:izfd4s3zez77rfgs7nsrbcs4/app.bsky.feed.post/3m7i24ereuc23",
+      "author": "teresalouise.bsky.social",
+      "timestamp": "2025-12-08T19:02:24.409656"
     }
   ],
   "last_cleanup": "2025-12-04T22:35:17.154728"
