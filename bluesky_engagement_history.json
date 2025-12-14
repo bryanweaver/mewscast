@@ -434,6 +434,11 @@
       "did": "did:plc:6yrgtp2iujar4fyu7hblkauv",
       "handle": "katbrush.art",
       "timestamp": "2025-12-14T16:02:40.061581"
+    },
+    {
+      "did": "did:plc:z3pl4dvmhm43th7dpujbtosh",
+      "handle": "davidniallwilson.com",
+      "timestamp": "2025-12-14T16:37:30.533916"
     }
   ],
   "liked_posts": [
@@ -6776,6 +6781,11 @@
       "uri": "at://did:plc:6yrgtp2iujar4fyu7hblkauv/app.bsky.feed.post/3m7xgl7o4ec2l",
       "author": "katbrush.art",
       "timestamp": "2025-12-14T16:02:39.917453"
+    },
+    {
+      "uri": "at://did:plc:z3pl4dvmhm43th7dpujbtosh/app.bsky.feed.post/3m7w73kqsyk2h",
+      "author": "davidniallwilson.com",
+      "timestamp": "2025-12-14T16:37:30.324808"
     }
   ],
   "last_cleanup": "2025-12-11T22:36:47.116030"
