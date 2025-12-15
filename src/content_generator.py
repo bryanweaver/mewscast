@@ -167,6 +167,13 @@ class ContentGenerator:
                     else:
                         tweet = tweet[:cutoff] + "..."
 
+            # Validate content before posting - catch problematic outputs
+            validation_result = self._validate_tweet_content(tweet)
+            if not validation_result['valid']:
+                print(f"⚠️  Content validation FAILED: {validation_result['reason']}")
+                print(f"   Rejected content: {tweet[:100]}...")
+                return None  # Signal to skip this article
+
             # Add source indicator if this story will have a source reply
             if is_specific_story:
                 tweet += source_indicator
@@ -228,6 +235,74 @@ class ContentGenerator:
         except Exception as e:
             print(f"   ✗ Error shortening: {e}")
             return tweet  # Return original if shortening fails
+
+    def _validate_tweet_content(self, tweet: str) -> dict:
+        """
+        Validate tweet content for prohibited patterns.
+        Returns dict with 'valid' bool and 'reason' if invalid.
+        """
+        tweet_lower = tweet.lower()
+
+        # Patterns that indicate meta-commentary about inability to report
+        meta_commentary_patterns = [
+            "i cannot",
+            "i can't",
+            "cannot generate",
+            "cannot write",
+            "can't generate",
+            "can't write",
+            "unable to",
+            "don't have information",
+            "don't have details",
+            "don't have enough",
+            "do not have information",
+            "no information available",
+            "article doesn't",
+            "article does not",
+            "article won't",
+            "article will not",
+            "content provided",
+            "content only shows",
+            "paywall",
+            "subscription required",
+            "subscription page",
+            "following strict rules",
+            "without the actual",
+            "not the actual article",
+            "can't access",
+            "cannot access",
+        ]
+
+        for pattern in meta_commentary_patterns:
+            if pattern in tweet_lower:
+                return {
+                    'valid': False,
+                    'reason': f"Contains meta-commentary pattern: '{pattern}'"
+                }
+
+        # Patterns that indicate claiming news is fake
+        fake_news_patterns = [
+            "never happened",
+            "didn't happen",
+            "did not happen",
+            "complete fiction",
+            "totally fiction",
+            "fabricated",
+            "made up story",
+            "fake news",
+            "not real",
+            "doesn't exist",
+            "does not exist",
+        ]
+
+        for pattern in fake_news_patterns:
+            if pattern in tweet_lower:
+                return {
+                    'valid': False,
+                    'reason': f"Contains fake-news claim pattern: '{pattern}'"
+                }
+
+        return {'valid': True, 'reason': None}
 
     def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False,
                                article_details: str = None, previous_posts: Optional[List[Dict]] = None) -> str:
