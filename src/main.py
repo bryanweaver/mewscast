@@ -109,64 +109,70 @@ def post_scheduled_tweet():
                     else:
                         print(f"   ✓ Added candidate from {topic}: {article['title'][:50]}...")
 
-        print(f"\n🔍 Phase 3: Testing {len(candidate_articles)} candidate articles for readability...")
+        print(f"\n🔍 Phase 3: Testing {len(candidate_articles)} candidate articles...")
 
-        # Now try to fetch content for each candidate until we find one that works
+        # Try each candidate until we get valid content AND valid generated tweet
         selected_story = None
         story_status = None
+        result = None
+
         for i, (article, status) in enumerate(candidate_articles, 1):
             print(f"\n📰 Attempting article {i}/{len(candidate_articles)}: {article['title'][:60]}...")
             print(f"   Source: {article['source']}")
             print(f"   URL: {article.get('url', 'N/A')}")
 
-            if article.get('url'):
-                article_content = news_fetcher.fetch_article_content(article['url'])
-                if article_content:
-                    article['article_content'] = article_content
-                    selected_story = article
-                    story_status = status  # Keep the status for this article
-                    print(f"   ✅ SUCCESS! Fetched {len(article_content)} chars of content")
-                    break
-                else:
-                    print(f"   ❌ Could not fetch content - trying next article...")
-            else:
+            # Step 1: Try to fetch article content
+            if not article.get('url'):
                 print(f"   ❌ No URL available - trying next article...")
+                continue
 
-        if not selected_story:
-            # CRITICAL: Never post without successfully fetching article content
+            article_content = news_fetcher.fetch_article_content(article['url'])
+            if not article_content:
+                print(f"   ❌ Could not fetch content - trying next article...")
+                continue
+
+            article['article_content'] = article_content
+            print(f"   ✅ Fetched {len(article_content)} chars of content")
+
+            # Step 2: Generate tweet and validate
+            previous_posts = None
+            if status and status.get('is_update'):
+                previous_posts = status.get('previous_posts', [])
+                print(f"   📋 Providing context from {len(previous_posts)} previous post(s)")
+
+            result = generator.generate_tweet(
+                trending_topic=article['title'],
+                story_metadata=article,
+                previous_posts=previous_posts
+            )
+
+            # Check if generation succeeded (validation passed)
+            if result is None:
+                print(f"   ❌ Content validation failed - trying next article...")
+                continue
+
+            # Step 3: Check for duplicate content
+            if not (status and status.get('is_update')):
+                content_check = tracker.check_story_status(article, post_content=result['tweet'])
+                if content_check['is_duplicate']:
+                    print(f"   ❌ Generated content too similar to recent post - trying next article...")
+                    continue
+
+            # Success! We have valid content
+            selected_story = article
+            story_status = status
+            print(f"   ✅ Valid tweet generated!")
+            break
+
+        if not selected_story or not result:
             print(f"\n{'='*60}")
-            print(f"❌ Could not fetch content for any of {len(candidate_articles)} articles")
-            print(f"   Cannot post without readable article content")
-            print(f"   (This prevents 'can't read the article' tweets)")
+            print(f"❌ Could not generate valid content for any of {len(candidate_articles)} articles")
             print(f"{'='*60}\n")
             return False
-
-        # Generate cat news content with story metadata
-        # If this is an update, pass previous posts for context
-        previous_posts = None
-        if story_status and story_status.get('is_update'):
-            previous_posts = story_status.get('previous_posts', [])
-            print(f"   📋 Providing context from {len(previous_posts)} previous post(s)")
-
-        result = generator.generate_tweet(
-            trending_topic=selected_story['title'] if selected_story else None,
-            story_metadata=selected_story,
-            previous_posts=previous_posts
-        )
 
         tweet_text = result['tweet']
         needs_source = result['needs_source_reply']
         story_meta = result['story_metadata']
-
-        # Check if this content is too similar to recent posts
-        # BUT: Allow updates through (they already passed check_story_status)
-        if selected_story and not (story_status and story_status.get('is_update')):
-            content_check = tracker.check_story_status(selected_story, post_content=tweet_text)
-            if content_check['is_duplicate']:
-                print(f"\n{'='*60}")
-                print(f"⚠️  Generated content too similar to recent post - skipping")
-                print(f"{'='*60}\n")
-                return False
 
         # Try to generate image (with graceful fallback)
         image_path = None
