@@ -1,0 +1,140 @@
+name: Post Correction
+
+on:
+  # Manual trigger only - never scheduled
+  workflow_dispatch:
+    inputs:
+      x_tweet_id:
+        description: 'X Tweet ID to reply to'
+        required: true
+        type: string
+      bluesky_uri:
+        description: 'Bluesky post URI to reply to'
+        required: true
+        type: string
+      correction_text:
+        description: 'Correction message (max 280 chars)'
+        required: true
+        type: string
+      post_to_x:
+        description: 'Post correction to X'
+        required: true
+        type: boolean
+        default: true
+      post_to_bluesky:
+        description: 'Post correction to Bluesky'
+        required: true
+        type: boolean
+        default: true
+
+jobs:
+  post-correction:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate input
+        run: |
+          CORRECTION="${{ inputs.correction_text }}"
+          LENGTH=${#CORRECTION}
+          echo "Correction length: $LENGTH characters"
+          if [ $LENGTH -gt 280 ]; then
+            echo "ERROR: Correction text exceeds 280 characters ($LENGTH)"
+            exit 1
+          fi
+          echo "Correction text is valid"
+
+      - name: Post correction
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          X_TWEET_ID: ${{ inputs.x_tweet_id }}
+          BLUESKY_URI: ${{ inputs.bluesky_uri }}
+          CORRECTION_TEXT: ${{ inputs.correction_text }}
+          POST_TO_X: ${{ inputs.post_to_x }}
+          POST_TO_BLUESKY: ${{ inputs.post_to_bluesky }}
+        run: |
+          cd src
+          python -c "
+import os
+import sys
+
+# Add src to path
+sys.path.insert(0, '.')
+
+from twitter_bot import TwitterBot
+from bluesky_bot import BlueskyBot
+
+x_tweet_id = os.environ.get('X_TWEET_ID')
+bluesky_uri = os.environ.get('BLUESKY_URI')
+correction = os.environ.get('CORRECTION_TEXT')
+post_to_x = os.environ.get('POST_TO_X', 'true').lower() == 'true'
+post_to_bluesky = os.environ.get('POST_TO_BLUESKY', 'true').lower() == 'true'
+
+print(f'Posting correction ({len(correction)} chars):')
+print(f'---')
+print(correction)
+print(f'---')
+print()
+
+success = True
+
+if post_to_x:
+    print(f'[X] Posting correction as reply to tweet {x_tweet_id}...')
+    try:
+        twitter_bot = TwitterBot()
+        x_result = twitter_bot.reply_to_tweet(x_tweet_id, correction)
+        if x_result:
+            print(f'[OK] X correction posted! ID: {x_result[\"id\"]}')
+        else:
+            print('[FAIL] X correction failed')
+            success = False
+    except Exception as e:
+        print(f'[FAIL] X error: {e}')
+        success = False
+else:
+    print('[SKIP] X posting disabled')
+
+print()
+
+if post_to_bluesky:
+    print(f'[BSKY] Posting correction as reply to {bluesky_uri}...')
+    try:
+        bluesky_bot = BlueskyBot()
+        bsky_result = bluesky_bot.reply_to_skeet(bluesky_uri, correction)
+        if bsky_result:
+            print(f'[OK] Bluesky correction posted! URI: {bsky_result[\"uri\"]}')
+        else:
+            print('[FAIL] Bluesky correction failed')
+            success = False
+    except Exception as e:
+        print(f'[FAIL] Bluesky error: {e}')
+        success = False
+else:
+    print('[SKIP] Bluesky posting disabled')
+
+print()
+if success:
+    print('[DONE] Correction posting complete!')
+else:
+    print('[WARN] Some corrections failed - check logs above')
+    sys.exit(1)
+"
