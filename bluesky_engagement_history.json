@@ -499,6 +499,11 @@
       "did": "did:plc:vrse4thhls2ldgr6cpyn5rxs",
       "handle": "kadath.bsky.social",
       "timestamp": "2025-12-16T17:38:06.582989"
+    },
+    {
+      "did": "did:plc:emnnxoxmjrx2yzphmo6zswbb",
+      "handle": "srqaltruist.bsky.social",
+      "timestamp": "2025-12-16T20:02:43.117803"
     }
   ],
   "liked_posts": [
@@ -7331,6 +7336,11 @@
       "uri": "at://did:plc:w6k5ff2uuowtlofdmmjwujcr/app.bsky.feed.post/3m7xzl7roxc2f",
       "author": "dj-acid-reflux.bsky.social",
       "timestamp": "2025-12-16T19:33:20.968217"
+    },
+    {
+      "uri": "at://did:plc:emnnxoxmjrx2yzphmo6zswbb/app.bsky.feed.post/3ma45asrdbk2q",
+      "author": "srqaltruist.bsky.social",
+      "timestamp": "2025-12-16T20:02:42.986958"
     }
   ],
   "last_cleanup": "2025-12-11T22:36:47.116030"
