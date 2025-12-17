@@ -319,8 +319,10 @@ class ContentGenerator:
         else:
             prompt_max_length = self.max_length
 
-        # Determine time of day for context
-        hour = datetime.now().hour
+        # Determine time of day and current date for context
+        now = datetime.now()
+        current_date = now.strftime("%B %d, %Y")  # e.g., "December 16, 2025"
+        hour = now.hour
         if 5 <= hour < 12:
             time_period = "morning"
         elif 12 <= hour < 18:
@@ -373,6 +375,7 @@ class ContentGenerator:
             guidelines_str=guidelines_str,
             story_guidance=story_guidance,
             style=self.style,
+            current_date=current_date,
             time_period=time_period,
             time_phrases_str=time_phrases_str,
             cat_humor_str=cat_humor_str,
