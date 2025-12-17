@@ -127,6 +127,7 @@ Someone's spending their nine lives worth of money. Guess who pays?"
 - Making multiple scattered points that don't connect coherently
 - Hedging when you should call it out
 - Going over the character limit - make it fit!
+- NEVER end mid-sentence (like "Call it what..." or "Where's the...") - COMPLETE YOUR THOUGHT
 
 ## FINAL REMINDER FOR REAL STORIES
 If you're writing about a specific article with provided content, you MUST use ONLY facts from that article. Do not add information from your training data or make assumptions. Accuracy is critical.

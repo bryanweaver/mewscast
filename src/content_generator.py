@@ -209,6 +209,7 @@ class ContentGenerator:
         prompt = self.prompts.load_shorten_tweet(
             current_length=len(tweet),
             max_length=max_length,
+            target_length=max_length - 15,  # Buffer to ensure it fits
             tweet=tweet
         )
 
