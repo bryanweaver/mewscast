@@ -424,6 +424,11 @@
       "did": "did:plc:plw2na5s52o7jk77tnfv6j6n",
       "handle": "befuddledblaire.bsky.social",
       "timestamp": "2025-12-19T03:02:07.817418"
+    },
+    {
+      "did": "did:plc:55gqtc4xwdw5aihqxrtlnf2k",
+      "handle": "allieshabay.bsky.social",
+      "timestamp": "2025-12-19T03:49:44.487420"
     }
   ],
   "liked_posts": [
@@ -6176,6 +6181,11 @@
       "uri": "at://did:plc:plw2na5s52o7jk77tnfv6j6n/app.bsky.feed.post/3mac2cwebfk2s",
       "author": "befuddledblaire.bsky.social",
       "timestamp": "2025-12-19T03:02:07.727929"
+    },
+    {
+      "uri": "at://did:plc:55gqtc4xwdw5aihqxrtlnf2k/app.bsky.feed.post/3macr6eu6dc2h",
+      "author": "allieshabay.bsky.social",
+      "timestamp": "2025-12-19T03:49:44.249745"
     }
   ],
   "last_cleanup": "2025-12-18T23:02:34.306872"
