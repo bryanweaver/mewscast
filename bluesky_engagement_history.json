@@ -449,6 +449,11 @@
       "did": "did:plc:r32nrscwyzf5oxi5ap34mfgm",
       "handle": "elrubino.bsky.social",
       "timestamp": "2025-12-20T13:08:56.878344"
+    },
+    {
+      "did": "did:plc:247r4pqjbead3ja4gi6luuqv",
+      "handle": "sinmachine.is.severed.fyi",
+      "timestamp": "2025-12-20T14:02:27.605970"
     }
   ],
   "liked_posts": [
@@ -6496,6 +6501,11 @@
       "uri": "at://did:plc:r32nrscwyzf5oxi5ap34mfgm/app.bsky.feed.post/3magbcout2k2y",
       "author": "elrubino.bsky.social",
       "timestamp": "2025-12-20T13:08:56.785861"
+    },
+    {
+      "uri": "at://did:plc:247r4pqjbead3ja4gi6luuqv/app.bsky.feed.post/3mage2vdr4c2j",
+      "author": "sinmachine.is.severed.fyi",
+      "timestamp": "2025-12-20T14:02:27.429638"
     }
   ],
   "last_cleanup": "2025-12-18T23:02:34.306872"
