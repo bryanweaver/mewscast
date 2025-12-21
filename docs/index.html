@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mewscast Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 0.875rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        .section {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Platform Comparison */
+        .platform-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .platform-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .platform-card.bluesky {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            border: 1px solid #bae6fd;
+        }
+
+        .platform-card.x {
+            background: linear-gradient(135deg, #f3f4f6 0%, #fafafa 100%);
+            border: 1px solid #e5e7eb;
+        }
+
+        .platform-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .platform-card.bluesky .platform-name {
+            color: #0369a1;
+        }
+
+        .platform-card.x .platform-name {
+            color: #374151;
+        }
+
+        .platform-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .platform-stat {
+            text-align: center;
+        }
+
+        .platform-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .platform-stat-label {
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        .comparison-insight {
+            text-align: center;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: #fefce8;
+            border: 1px solid #fde047;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            color: #713f12;
+        }
+
+        /* Charts Grid */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .charts-grid, .platform-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-container {
+            position: relative;
+            height: 250px;
+        }
+
+        /* Topic Keywords */
+        .topics-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .topic-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background: #f3f4f6;
+            border-radius: 20px;
+            font-size: 0.8125rem;
+        }
+
+        .topic-tag-count {
+            background: #e5e7eb;
+            padding: 0.125rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        .topic-tag-engagement {
+            color: #22c55e;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        /* Posts List */
+        .posts-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.375rem 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+            font-size: 0.75rem;
+        }
+
+        .filter-btn.active {
+            background: #111;
+            color: white;
+            border-color: #111;
+        }
+
+        .post-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+            background: white;
+        }
+
+        .post-header {
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+        .post-header:hover {
+            background: #fafafa;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .post-source {
+            color: #666;
+            background: #f3f4f6;
+            padding: 0.125rem 0.5rem;
+            border-radius: 3px;
+        }
+
+        .post-date {
+            color: #999;
+        }
+
+        .post-content {
+            font-size: 0.875rem;
+            color: #333;
+            margin-bottom: 0.75rem;
+        }
+
+        .post-platforms {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .post-platform-stats {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+        }
+
+        .post-platform-stats.bluesky {
+            background: #e0f2fe;
+        }
+
+        .post-platform-stats.x {
+            background: #f3f4f6;
+        }
+
+        .post-platform-stats.no-data {
+            background: #f9fafb;
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .platform-label {
+            font-weight: 600;
+            min-width: 40px;
+        }
+
+        .post-platform-stats.bluesky .platform-label {
+            color: #0369a1;
+        }
+
+        .post-platform-stats.x .platform-label {
+            color: #374151;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .stat-icon {
+            opacity: 0.7;
+        }
+
+        .post-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .post-link {
+            font-size: 0.75rem;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .post-link:hover {
+            text-decoration: underline;
+        }
+
+        .post-expanded {
+            display: none;
+            padding: 1rem;
+            border-top: 1px solid #e0e0e0;
+            background: #fafafa;
+        }
+
+        .post-item.expanded .post-expanded {
+            display: block;
+        }
+
+        .post-chart-container {
+            height: 180px;
+            position: relative;
+        }
+
+        .expand-icon {
+            float: right;
+            color: #999;
+            font-size: 0.75rem;
+            transition: transform 0.2s;
+        }
+
+        .post-item.expanded .expand-icon {
+            transform: rotate(90deg);
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+
+        /* Impressions highlight */
+        .impressions {
+            color: #6366f1;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mewscast Analytics</h1>
+            <span class="last-updated" id="lastUpdated">Loading...</span>
+        </header>
+
+        <!-- Platform Comparison -->
+        <div class="section">
+            <h2>Platform Comparison</h2>
+            <div class="platform-comparison" id="platformComparison">
+                <!-- Populated by JS -->
+            </div>
+            <div class="comparison-insight" id="comparisonInsight"></div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="charts-grid">
+            <div class="section">
+                <h2>Top Sources</h2>
+                <div class="chart-container">
+                    <canvas id="sourcesChart"></canvas>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Engagement Over Time</h2>
+                <div class="chart-container">
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Topic Keywords -->
+        <div class="section">
+            <h2>Top Topics</h2>
+            <div class="topics-list" id="topicsList">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <!-- Posts List -->
+        <div class="section">
+            <div class="posts-header">
+                <h2>All Posts</h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bluesky">Bluesky</button>
+                    <button class="filter-btn" data-filter="x">X</button>
+                </div>
+            </div>
+            <div id="postsList">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data will be embedded here by the Python script
+        const ANALYTICS_DATA = /* ANALYTICS_DATA_PLACEHOLDER */ {"posts": {}, "last_updated": null} /* END_ANALYTICS_DATA */;
+
+        // Helper functions
+        function formatNumber(n) {
+            if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+            if (n >= 1000) return (n / 1000).toFixed(1) + 'k';
+            return n.toString();
+        }
+
+        function getBlueskyLink(uri) {
+            const match = uri.match(/app\.bsky\.feed\.post\/(.+)$/);
+            if (match) return `https://bsky.app/profile/mewscast.bsky.social/post/${match[1]}`;
+            return null;
+        }
+
+        function getXLink(postId) {
+            const tweetId = postId.replace('x:', '');
+            return `https://x.com/mewscast/status/${tweetId}`;
+        }
+
+        function getLatestMetrics(post) {
+            if (!post.snapshots || post.snapshots.length === 0) return null;
+            return post.snapshots[post.snapshots.length - 1];
+        }
+
+        function getTotalEngagement(metrics) {
+            if (!metrics) return 0;
+            return (metrics.likes || 0) + (metrics.reposts || metrics.retweets || 0) + (metrics.replies || 0);
+        }
+
+        // Extract keywords from topics
+        function extractKeywords(posts) {
+            const keywords = {};
+            const stopWords = new Set(['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'as', 'is', 'was', 'are', 'were', 'been', 'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'can', 'this', 'that', 'these', 'those', 'it', 'its', 'from', 'says', 'said', 'new', 'after', 'over', 'into', 'about', 'up', 'out', 'how', 'why', 'what', 'when', 'where', 'who', 'which']);
+
+            for (const [id, post] of Object.entries(posts)) {
+                const topic = post.topic || '';
+                const words = topic.toLowerCase().match(/\b[a-z]{4,}\b/g) || [];
+                const metrics = getLatestMetrics(post);
+                const engagement = getTotalEngagement(metrics);
+
+                for (const word of words) {
+                    if (stopWords.has(word)) continue;
+                    if (!keywords[word]) {
+                        keywords[word] = { count: 0, totalEngagement: 0 };
+                    }
+                    keywords[word].count++;
+                    keywords[word].totalEngagement += engagement;
+                }
+            }
+
+            return Object.entries(keywords)
+                .map(([word, data]) => ({
+                    word,
+                    count: data.count,
+                    avgEngagement: data.count > 0 ? data.totalEngagement / data.count : 0
+                }))
+                .filter(k => k.count >= 2)
+                .sort((a, b) => b.avgEngagement - a.avgEngagement)
+                .slice(0, 15);
+        }
+
+        // Group posts by content for side-by-side comparison
+        function groupPostsByContent() {
+            const posts = ANALYTICS_DATA.posts;
+            const groups = {};
+
+            for (const [id, post] of Object.entries(posts)) {
+                // Use posted_at as the grouping key (same content posted at same time)
+                const key = post.posted_at;
+                if (!groups[key]) {
+                    groups[key] = {
+                        posted_at: post.posted_at,
+                        content: post.content,
+                        source: post.source,
+                        topic: post.topic,
+                        bluesky: null,
+                        x: null
+                    };
+                }
+                if (post.platform === 'bluesky') {
+                    groups[key].bluesky = { id, ...post };
+                } else {
+                    groups[key].x = { id, ...post };
+                }
+            }
+
+            return Object.values(groups).sort((a, b) =>
+                new Date(b.posted_at) - new Date(a.posted_at)
+            );
+        }
+
+        // Render platform comparison
+        function renderPlatformComparison() {
+            const posts = ANALYTICS_DATA.posts;
+            const blueskyPosts = Object.values(posts).filter(p => p.platform === 'bluesky');
+            const xPosts = Object.values(posts).filter(p => p.platform === 'x');
+
+            const blueskyStats = {
+                count: blueskyPosts.length,
+                likes: 0, reposts: 0, replies: 0
+            };
+            const xStats = {
+                count: xPosts.length,
+                likes: 0, retweets: 0, replies: 0, impressions: 0
+            };
+
+            for (const post of blueskyPosts) {
+                const m = getLatestMetrics(post);
+                if (m) {
+                    blueskyStats.likes += m.likes || 0;
+                    blueskyStats.reposts += m.reposts || 0;
+                    blueskyStats.replies += m.replies || 0;
+                }
+            }
+
+            for (const post of xPosts) {
+                const m = getLatestMetrics(post);
+                if (m) {
+                    xStats.likes += m.likes || 0;
+                    xStats.retweets += m.retweets || 0;
+                    xStats.replies += m.replies || 0;
+                    xStats.impressions += m.impressions || 0;
+                }
+            }
+
+            const bskyAvgLikes = blueskyStats.count > 0 ? (blueskyStats.likes / blueskyStats.count).toFixed(1) : 0;
+            const xAvgLikes = xStats.count > 0 ? (xStats.likes / xStats.count).toFixed(1) : 0;
+
+            document.getElementById('platformComparison').innerHTML = `
+                <div class="platform-card bluesky">
+                    <div class="platform-name">Bluesky</div>
+                    <div class="platform-stats">
+                        <div class="platform-stat">
+                            <div class="platform-stat-value">${blueskyStats.count}</div>
+                            <div class="platform-stat-label">Posts</div>
+                        </div>
+                        <div class="platform-stat">
+                            <div class="platform-stat-value">${bskyAvgLikes}</div>
+                            <div class="platform-stat-label">Avg Likes</div>
+                        </div>
+                        <div class="platform-stat">
+                            <div class="platform-stat-value">${formatNumber(blueskyStats.likes)}</div>
+                            <div class="platform-stat-label">Total Likes</div>
+                        </div>
+                        <div class="platform-stat">
+                            <div class="platform-stat-value">${formatNumber(blueskyStats.reposts)}</div>
+                            <div class="platform-stat-label">Reposts</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-card x">
+                    <div class="platform-name">X (Twitter)</div>
+                    <div class="platform-stats">
+                        <div class="platform-stat">
+                            <div class="platform-stat-value">${xStats.count}</div>
+                            <div class="platform-stat-label">Posts</div>
+                        </div>
+                        <div class="platform-stat">
+                            <div class="platform-stat-value">${xAvgLikes}</div>
+                            <div class="platform-stat-label">Avg Likes</div>
+                        </div>
+                        <div class="platform-stat">
+                            <div class="platform-stat-value">${formatNumber(xStats.likes)}</div>
+                            <div class="platform-stat-label">Total Likes</div>
+                        </div>
+                        <div class="platform-stat">
+                            <div class="platform-stat-value impressions">${formatNumber(xStats.impressions)}</div>
+                            <div class="platform-stat-label">Views</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Comparison insight
+            const insight = document.getElementById('comparisonInsight');
+            if (bskyAvgLikes > 0 && xAvgLikes > 0) {
+                const ratio = (bskyAvgLikes / xAvgLikes).toFixed(1);
+                if (ratio > 1) {
+                    insight.textContent = `Bluesky gets ${ratio}x more likes per post on average`;
+                } else if (ratio < 1) {
+                    insight.textContent = `X gets ${(1/ratio).toFixed(1)}x more likes per post on average`;
+                } else {
+                    insight.textContent = `Both platforms perform similarly`;
+                }
+            } else {
+                insight.style.display = 'none';
+            }
+        }
+
+        // Render sources chart
+        function renderSourcesChart() {
+            const posts = ANALYTICS_DATA.posts;
+            const sources = {};
+
+            for (const [id, post] of Object.entries(posts)) {
+                const source = post.source || 'Unknown';
+                if (!sources[source]) {
+                    sources[source] = { count: 0, engagement: 0 };
+                }
+                sources[source].count++;
+                sources[source].engagement += getTotalEngagement(getLatestMetrics(post));
+            }
+
+            const sorted = Object.entries(sources)
+                .map(([name, data]) => ({
+                    name,
+                    avgEngagement: data.count > 0 ? data.engagement / data.count : 0,
+                    count: data.count
+                }))
+                .sort((a, b) => b.avgEngagement - a.avgEngagement)
+                .slice(0, 8);
+
+            const ctx = document.getElementById('sourcesChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sorted.map(s => s.name),
+                    datasets: [{
+                        label: 'Avg Engagement',
+                        data: sorted.map(s => s.avgEngagement.toFixed(1)),
+                        backgroundColor: '#0ea5e9',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Render timeline chart
+        function renderTimelineChart() {
+            const posts = ANALYTICS_DATA.posts;
+            const blueskyByDate = {};
+            const xByDate = {};
+
+            for (const [id, post] of Object.entries(posts)) {
+                const isBluesky = post.platform === 'bluesky';
+                const target = isBluesky ? blueskyByDate : xByDate;
+
+                for (const snapshot of post.snapshots || []) {
+                    const date = snapshot.timestamp.split('T')[0];
+                    if (!target[date]) target[date] = 0;
+                    target[date] += (snapshot.likes || 0) + (snapshot.reposts || snapshot.retweets || 0);
+                }
+            }
+
+            const allDates = [...new Set([...Object.keys(blueskyByDate), ...Object.keys(xByDate)])].sort();
+
+            if (allDates.length === 0) {
+                document.getElementById('timelineChart').parentElement.innerHTML = '<div class="no-data">No timeline data yet</div>';
+                return;
+            }
+
+            const ctx = document.getElementById('timelineChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: allDates.map(d => new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })),
+                    datasets: [
+                        {
+                            label: 'Bluesky',
+                            data: allDates.map(d => blueskyByDate[d] || 0),
+                            borderColor: '#0ea5e9',
+                            backgroundColor: 'rgba(14, 165, 233, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'X',
+                            data: allDates.map(d => xByDate[d] || 0),
+                            borderColor: '#6b7280',
+                            backgroundColor: 'rgba(107, 114, 128, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Render topics
+        function renderTopics() {
+            const keywords = extractKeywords(ANALYTICS_DATA.posts);
+            const container = document.getElementById('topicsList');
+
+            if (keywords.length === 0) {
+                container.innerHTML = '<div class="no-data">No topic data yet</div>';
+                return;
+            }
+
+            container.innerHTML = keywords.map(k => `
+                <div class="topic-tag">
+                    <span>${k.word}</span>
+                    <span class="topic-tag-count">${k.count} posts</span>
+                    <span class="topic-tag-engagement">${k.avgEngagement.toFixed(1)} avg</span>
+                </div>
+            `).join('');
+        }
+
+        // Render posts list
+        function renderPostsList(filter = 'all') {
+            const groups = groupPostsByContent();
+            const container = document.getElementById('postsList');
+
+            const filtered = groups.filter(g => {
+                if (filter === 'all') return true;
+                if (filter === 'bluesky') return g.bluesky !== null;
+                if (filter === 'x') return g.x !== null;
+                return true;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = '<div class="no-data">No posts yet</div>';
+                return;
+            }
+
+            container.innerHTML = filtered.map((group, index) => {
+                const bskyMetrics = group.bluesky ? getLatestMetrics(group.bluesky) : null;
+                const xMetrics = group.x ? getLatestMetrics(group.x) : null;
+
+                const date = new Date(group.posted_at).toLocaleDateString('en-US', {
+                    month: 'short', day: 'numeric', year: 'numeric'
+                });
+
+                const bskyLink = group.bluesky ? getBlueskyLink(group.bluesky.id) : null;
+                const xLink = group.x ? getXLink(group.x.id) : null;
+
+                return `
+                    <div class="post-item" data-index="${index}">
+                        <div class="post-header" onclick="togglePost(${index})">
+                            <span class="expand-icon">&#9654;</span>
+                            <div class="post-meta">
+                                <span class="post-source">${group.source || 'Unknown'}</span>
+                                <span class="post-date">${date}</span>
+                            </div>
+                            <div class="post-content">${group.content || 'No content'}</div>
+                            <div class="post-platforms">
+                                ${bskyMetrics ? `
+                                    <div class="post-platform-stats bluesky">
+                                        <span class="platform-label">BSKY</span>
+                                        <span class="stat-item"><span class="stat-icon">&#10084;</span> ${bskyMetrics.likes || 0}</span>
+                                        <span class="stat-item"><span class="stat-icon">&#128257;</span> ${bskyMetrics.reposts || 0}</span>
+                                        <span class="stat-item"><span class="stat-icon">&#128172;</span> ${bskyMetrics.replies || 0}</span>
+                                    </div>
+                                ` : '<div class="post-platform-stats no-data">BSKY: No data</div>'}
+                                ${xMetrics ? `
+                                    <div class="post-platform-stats x">
+                                        <span class="platform-label">X</span>
+                                        <span class="stat-item"><span class="stat-icon">&#10084;</span> ${xMetrics.likes || 0}</span>
+                                        <span class="stat-item"><span class="stat-icon">&#128257;</span> ${xMetrics.retweets || 0}</span>
+                                        <span class="stat-item"><span class="stat-icon">&#128172;</span> ${xMetrics.replies || 0}</span>
+                                        ${xMetrics.impressions ? `<span class="stat-item impressions"><span class="stat-icon">&#128065;</span> ${formatNumber(xMetrics.impressions)}</span>` : ''}
+                                    </div>
+                                ` : '<div class="post-platform-stats no-data">X: No data</div>'}
+                            </div>
+                            <div class="post-links">
+                                ${bskyLink ? `<a href="${bskyLink}" target="_blank" class="post-link" onclick="event.stopPropagation()">View on Bluesky</a>` : ''}
+                                ${xLink ? `<a href="${xLink}" target="_blank" class="post-link" onclick="event.stopPropagation()">View on X</a>` : ''}
+                            </div>
+                        </div>
+                        <div class="post-expanded">
+                            <div class="post-chart-container">
+                                <canvas id="postChart${index}"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            window.postGroups = filtered;
+        }
+
+        // Toggle post expansion
+        function togglePost(index) {
+            const item = document.querySelector(`.post-item[data-index="${index}"]`);
+            const wasExpanded = item.classList.contains('expanded');
+
+            document.querySelectorAll('.post-item').forEach(el => el.classList.remove('expanded'));
+
+            if (!wasExpanded) {
+                item.classList.add('expanded');
+                renderPostChart(index);
+            }
+        }
+
+        // Render individual post chart
+        function renderPostChart(index) {
+            const group = window.postGroups[index];
+            const canvas = document.getElementById(`postChart${index}`);
+            const ctx = canvas.getContext('2d');
+
+            if (canvas.chart) canvas.chart.destroy();
+
+            const datasets = [];
+
+            if (group.bluesky && group.bluesky.snapshots) {
+                const snapshots = group.bluesky.snapshots;
+                datasets.push({
+                    label: 'Bluesky Likes',
+                    data: snapshots.map(s => ({ x: s.timestamp.split('T')[0], y: s.likes || 0 })),
+                    borderColor: '#0ea5e9',
+                    backgroundColor: 'rgba(14, 165, 233, 0.1)',
+                    fill: false,
+                    tension: 0.3
+                });
+            }
+
+            if (group.x && group.x.snapshots) {
+                const snapshots = group.x.snapshots;
+                datasets.push({
+                    label: 'X Likes',
+                    data: snapshots.map(s => ({ x: s.timestamp.split('T')[0], y: s.likes || 0 })),
+                    borderColor: '#6b7280',
+                    backgroundColor: 'rgba(107, 114, 128, 0.1)',
+                    fill: false,
+                    tension: 0.3
+                });
+            }
+
+            if (datasets.length === 0) {
+                canvas.parentElement.innerHTML = '<div class="no-data">No trend data yet</div>';
+                return;
+            }
+
+            // Get all dates
+            const allDates = [...new Set(datasets.flatMap(d => d.data.map(p => p.x)))].sort();
+
+            canvas.chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: allDates.map(d => new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })),
+                    datasets: datasets.map(ds => ({
+                        ...ds,
+                        data: allDates.map(date => {
+                            const point = ds.data.find(p => p.x === date);
+                            return point ? point.y : null;
+                        })
+                    }))
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderPostsList(btn.dataset.filter);
+            });
+        });
+
+        // Initialize
+        function init() {
+            if (ANALYTICS_DATA.last_updated) {
+                const date = new Date(ANALYTICS_DATA.last_updated);
+                document.getElementById('lastUpdated').textContent =
+                    `Last updated: ${date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })}`;
+            } else {
+                document.getElementById('lastUpdated').textContent = 'No data yet';
+            }
+
+            renderPlatformComparison();
+            renderSourcesChart();
+            renderTimelineChart();
+            renderTopics();
+            renderPostsList();
+        }
+
+        init();
+    </script>
+</body>
+</html>
