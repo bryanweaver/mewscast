@@ -352,9 +352,11 @@ def generate_dashboard(history):
     data_json = json.dumps(history, ensure_ascii=False)
 
     # Replace the placeholder with actual data
+    # Use re.DOTALL so .*? matches across newlines (in case of previously corrupted data)
+    # Use lambda to prevent re.sub from interpreting \n in JSON as backreferences
     pattern = r'/\* ANALYTICS_DATA_PLACEHOLDER \*/.*?/\* END_ANALYTICS_DATA \*/'
     replacement = f'/* ANALYTICS_DATA_PLACEHOLDER */ {data_json} /* END_ANALYTICS_DATA */'
-    html = re.sub(pattern, replacement, html)
+    html = re.sub(pattern, lambda m: replacement, html, flags=re.DOTALL)
 
     # Write the updated HTML
     with open(DASHBOARD_FILE, 'w', encoding='utf-8') as f:
