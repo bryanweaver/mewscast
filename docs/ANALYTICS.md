@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2025-12-21 21:28 UTC*
+*Last updated: 2025-12-21 23:01 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,7 +13,7 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 174 | - |
-| Likes | 252 | +0 |
+| Likes | 251 | +0 |
 | Reposts | 7 | +0 |
 | Replies | 175 | - |
 
@@ -53,4 +53,4 @@ Article says broader market ac...
 
 ---
 
-*Data snapshots: 440 total across 272 posts*
+*Data snapshots: 709 total across 272 posts*
