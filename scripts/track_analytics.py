@@ -91,7 +91,7 @@ def fetch_bluesky_metrics(posts):
 
 
 def fetch_x_metrics(posts):
-    """Fetch current metrics from X (graceful failure)"""
+    """Fetch current metrics from X using batch requests (up to 100 per call)"""
     try:
         from twitter_bot import TwitterBot
         bot = TwitterBot()
@@ -100,27 +100,34 @@ def fetch_x_metrics(posts):
         print(f"Could not connect to X (continuing without): {e}")
         return {}
 
-    metrics = {}
-    for post in posts:
-        tweet_id = post.get('x_tweet_id')
-        if not tweet_id:
-            continue
+    # Collect all tweet IDs
+    tweet_ids = [post.get('x_tweet_id') for post in posts if post.get('x_tweet_id')]
+    if not tweet_ids:
+        return {}
 
+    metrics = {}
+    batch_size = 100  # X API allows up to 100 tweets per request
+
+    # Process in batches
+    for i in range(0, len(tweet_ids), batch_size):
+        batch = tweet_ids[i:i + batch_size]
         try:
-            tweet = bot.client.get_tweet(
-                tweet_id,
+            response = bot.client.get_tweets(
+                batch,
                 tweet_fields=['public_metrics', 'created_at']
             )
-            if tweet.data:
-                m = tweet.data.public_metrics
-                metrics[tweet_id] = {
-                    "likes": m.get('like_count', 0),
-                    "retweets": m.get('retweet_count', 0),
-                    "replies": m.get('reply_count', 0),
-                    "impressions": m.get('impression_count', 0),
-                }
+            if response.data:
+                for tweet in response.data:
+                    m = tweet.public_metrics
+                    metrics[str(tweet.id)] = {
+                        "likes": m.get('like_count', 0),
+                        "retweets": m.get('retweet_count', 0),
+                        "replies": m.get('reply_count', 0),
+                        "impressions": m.get('impression_count', 0),
+                    }
+            print(f"Fetched batch {i//batch_size + 1}: {len(response.data) if response.data else 0} tweets")
         except Exception as e:
-            print(f"Could not fetch X tweet {tweet_id}: {e}")
+            print(f"Could not fetch X batch {i//batch_size + 1}: {e}")
 
     return metrics
 
