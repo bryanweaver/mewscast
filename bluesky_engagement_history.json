@@ -489,6 +489,11 @@
       "did": "did:plc:dnasdrejui4cejydosm7beyg",
       "handle": "veronicaf.bsky.social",
       "timestamp": "2025-12-22T22:36:34.681190"
+    },
+    {
+      "did": "did:plc:hhsza4eu26dilxjhvb352qz7",
+      "handle": "sarahquaint.bsky.social",
+      "timestamp": "2025-12-22T23:02:29.977476"
     }
   ],
   "liked_posts": [
@@ -7011,6 +7016,11 @@
       "uri": "at://did:plc:dnasdrejui4cejydosm7beyg/app.bsky.feed.post/3mambpyvb5226",
       "author": "veronicaf.bsky.social",
       "timestamp": "2025-12-22T22:36:34.481321"
+    },
+    {
+      "uri": "at://did:plc:hhsza4eu26dilxjhvb352qz7/app.bsky.feed.post/3mam74cgxnc2p",
+      "author": "sarahquaint.bsky.social",
+      "timestamp": "2025-12-22T23:02:29.880847"
     }
   ],
   "last_cleanup": "2025-12-18T23:02:34.306872"
