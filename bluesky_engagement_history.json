@@ -479,6 +479,11 @@
       "did": "did:plc:lalpy4mz4zl3xvkjsrjkmxjd",
       "handle": "gvlaw.bsky.social",
       "timestamp": "2025-12-20T20:34:33.314891"
+    },
+    {
+      "did": "did:plc:bekpvo7u6rv7ijokurvji6ml",
+      "handle": "lpcprof.bsky.social",
+      "timestamp": "2025-12-22T22:02:27.973946"
     }
   ],
   "liked_posts": [
@@ -6991,6 +6996,11 @@
       "uri": "at://did:plc:asg3nyddlq4dmrmw64jbbdij/app.bsky.feed.post/3mam3aftsmk2l",
       "author": "catslife786.bsky.social",
       "timestamp": "2025-12-22T21:33:51.438817"
+    },
+    {
+      "uri": "at://did:plc:bekpvo7u6rv7ijokurvji6ml/app.bsky.feed.post/3malyt6i7ss25",
+      "author": "lpcprof.bsky.social",
+      "timestamp": "2025-12-22T22:02:27.798212"
     }
   ],
   "last_cleanup": "2025-12-18T23:02:34.306872"
