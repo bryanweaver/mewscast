@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2025-12-21 23:01 UTC*
+*Last updated: 2025-12-22 23:01 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,26 +12,32 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 174 | - |
-| Likes | 251 | +0 |
-| Reposts | 7 | +0 |
-| Replies | 175 | - |
+| Posts tracked | 175 | - |
+| Likes | 270 | +6 |
+| Reposts | 9 | +1 |
+| Replies | 176 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 98 | - |
+| Posts tracked | 97 | - |
 | Likes | 2 | +0 |
-| Retweets | 3 | - |
-| Replies | 98 | - |
+| Retweets | 2 | - |
+| Replies | 97 | - |
 
 ---
 
 ## Top Performers
 
+**[BLUESKY]** 14 likes, 1 reposts
+> Scientists found 20+ new species 330 feet deep in Pacific coral reefs near Guam....
+
 **[BLUESKY]** 12 likes, 0 reposts
 > Brian Walshe, 50, gets life without parole for murdering wife Anna on New Year's...
+
+**[BLUESKY]** 8 likes, 1 reposts
+> 130,000 homes and businesses lost power in San Francisco Saturday afternoon. One...
 
 **[BLUESKY]** 7 likes, 1 reposts
 > Headline promises "tributes" from Billy Crystal and Albert Brooks.
@@ -41,16 +47,6 @@ Article deli...
 **[BLUESKY]** 6 likes, 1 reposts
 > Trump speech on inflation barely mentions inflation. Spends time on anti-immigra...
 
-**[BLUESKY]** 7 likes, 0 reposts
-> Taipei knife attack kills 3, injures 9 during rush hour. Suspect set off smoke b...
-
-**[BLUESKY]** 5 likes, 0 reposts
-> Headline says Dow hits record high!
-
-*licks paw*
-
-Article says broader market ac...
-
 ---
 
-*Data snapshots: 709 total across 272 posts*
+*Data snapshots: 949 total across 272 posts*
