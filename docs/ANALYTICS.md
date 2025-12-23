@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2025-12-22 23:01 UTC*
+*Last updated: 2025-12-23 23:01 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,10 +12,10 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 175 | - |
-| Likes | 270 | +6 |
-| Reposts | 9 | +1 |
-| Replies | 176 | - |
+| Posts tracked | 182 | - |
+| Likes | 305 | +15 |
+| Reposts | 11 | +1 |
+| Replies | 185 | - |
 
 ### X (Twitter)
 
@@ -30,23 +30,21 @@ Tracking engagement for posts from the last 30 days.
 
 ## Top Performers
 
-**[BLUESKY]** 14 likes, 1 reposts
+**[BLUESKY]** 15 likes, 1 reposts
+> This cat's fur is standing on end reading CNN call Bari Weiss "CBS editor-in-chi...
+
+**[BLUESKY]** 15 likes, 1 reposts
 > Scientists found 20+ new species 330 feet deep in Pacific coral reefs near Guam....
 
 **[BLUESKY]** 12 likes, 0 reposts
 > Brian Walshe, 50, gets life without parole for murdering wife Anna on New Year's...
 
+**[BLUESKY]** 9 likes, 1 reposts
+> Mexican Navy plane carrying medical patient crashes off Galveston. Five dead, tw...
+
 **[BLUESKY]** 8 likes, 1 reposts
 > 130,000 homes and businesses lost power in San Francisco Saturday afternoon. One...
 
-**[BLUESKY]** 7 likes, 1 reposts
-> Headline promises "tributes" from Billy Crystal and Albert Brooks.
-
-Article deli...
-
-**[BLUESKY]** 6 likes, 1 reposts
-> Trump speech on inflation barely mentions inflation. Spends time on anti-immigra...
-
 ---
 
-*Data snapshots: 949 total across 272 posts*
+*Data snapshots: 1131 total across 279 posts*
