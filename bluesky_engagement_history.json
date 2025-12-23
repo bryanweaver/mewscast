@@ -529,6 +529,11 @@
       "did": "did:plc:gzhvnp6t4exzofisjhc64bxt",
       "handle": "ehtretamano.bsky.social",
       "timestamp": "2025-12-23T20:02:25.368755"
+    },
+    {
+      "did": "did:plc:vfoghb6ay4irf7xusrr5wkbp",
+      "handle": "viridianth.bsky.social",
+      "timestamp": "2025-12-23T20:35:59.295142"
     }
   ],
   "liked_posts": [
@@ -7251,6 +7256,11 @@
       "uri": "at://did:plc:gzhvnp6t4exzofisjhc64bxt/app.bsky.feed.post/3mantomwp6c2q",
       "author": "ehtretamano.bsky.social",
       "timestamp": "2025-12-23T20:02:25.277690"
+    },
+    {
+      "uri": "at://did:plc:vfoghb6ay4irf7xusrr5wkbp/app.bsky.feed.post/3maoezw4fts2i",
+      "author": "viridianth.bsky.social",
+      "timestamp": "2025-12-23T20:35:59.102907"
     }
   ],
   "last_cleanup": "2025-12-18T23:02:34.306872"
