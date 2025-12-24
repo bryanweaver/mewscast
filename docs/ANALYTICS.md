@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2025-12-23 23:01 UTC*
+*Last updated: 2025-12-24 23:01 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,10 +12,10 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 182 | - |
-| Likes | 305 | +15 |
-| Reposts | 11 | +1 |
-| Replies | 185 | - |
+| Posts tracked | 189 | - |
+| Likes | 318 | +0 |
+| Reposts | 10 | -1 |
+| Replies | 192 | - |
 
 ### X (Twitter)
 
@@ -30,7 +30,7 @@ Tracking engagement for posts from the last 30 days.
 
 ## Top Performers
 
-**[BLUESKY]** 15 likes, 1 reposts
+**[BLUESKY]** 15 likes, 0 reposts
 > This cat's fur is standing on end reading CNN call Bari Weiss "CBS editor-in-chi...
 
 **[BLUESKY]** 15 likes, 1 reposts
@@ -47,4 +47,4 @@ Tracking engagement for posts from the last 30 days.
 
 ---
 
-*Data snapshots: 1131 total across 279 posts*
+*Data snapshots: 1320 total across 286 posts*
