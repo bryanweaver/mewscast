@@ -559,6 +559,11 @@
       "did": "did:plc:pn6iiko3clkzosdxqbqkv6by",
       "handle": "leventturedi.bsky.social",
       "timestamp": "2025-12-24T23:02:25.807707"
+    },
+    {
+      "did": "did:plc:aseo6zz4mqzbl5ad67clnhax",
+      "handle": "lucysmooshy.bsky.social",
+      "timestamp": "2025-12-24T23:33:47.720621"
     }
   ],
   "liked_posts": [
@@ -7531,6 +7536,11 @@
       "uri": "at://did:plc:pn6iiko3clkzosdxqbqkv6by/app.bsky.feed.post/3maqhedkoos2r",
       "author": "leventturedi.bsky.social",
       "timestamp": "2025-12-24T23:02:25.583251"
+    },
+    {
+      "uri": "at://did:plc:aseo6zz4mqzbl5ad67clnhax/app.bsky.feed.post/3mapyy6vxms24",
+      "author": "lucysmooshy.bsky.social",
+      "timestamp": "2025-12-24T23:33:47.547320"
     }
   ],
   "last_cleanup": "2025-12-18T23:02:34.306872"
