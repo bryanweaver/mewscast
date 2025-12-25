@@ -564,6 +564,11 @@
       "did": "did:plc:aseo6zz4mqzbl5ad67clnhax",
       "handle": "lucysmooshy.bsky.social",
       "timestamp": "2025-12-24T23:33:47.720621"
+    },
+    {
+      "did": "did:plc:46mkz6szefrerfjv6lexuga6",
+      "handle": "jamielynnkitten.bsky.social",
+      "timestamp": "2025-12-25T00:06:22.840348"
     }
   ],
   "liked_posts": [
@@ -7541,6 +7546,11 @@
       "uri": "at://did:plc:aseo6zz4mqzbl5ad67clnhax/app.bsky.feed.post/3mapyy6vxms24",
       "author": "lucysmooshy.bsky.social",
       "timestamp": "2025-12-24T23:33:47.547320"
+    },
+    {
+      "uri": "at://did:plc:46mkz6szefrerfjv6lexuga6/app.bsky.feed.post/3margrxjwlk2v",
+      "author": "jamielynnkitten.bsky.social",
+      "timestamp": "2025-12-25T00:06:22.655685"
     }
   ],
   "last_cleanup": "2025-12-18T23:02:34.306872"
