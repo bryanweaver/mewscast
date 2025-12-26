@@ -454,6 +454,11 @@
       "did": "did:plc:v65cphbf2saky27vubmuwjjm",
       "handle": "caydencailean.bsky.social",
       "timestamp": "2025-12-26T03:49:54.266245"
+    },
+    {
+      "did": "did:plc:n4dkbjvwhftj3znel36cyrlr",
+      "handle": "sesurescue.bsky.social",
+      "timestamp": "2025-12-26T06:02:56.361218"
     }
   ],
   "liked_posts": [
@@ -6796,6 +6801,11 @@
       "uri": "at://did:plc:sugl22jdjx4hcavpkw2wrfdx/app.bsky.feed.post/3matxvvms322g",
       "author": "weirwoodtreehug.bsky.social",
       "timestamp": "2025-12-26T05:36:55.166053"
+    },
+    {
+      "uri": "at://did:plc:n4dkbjvwhftj3znel36cyrlr/app.bsky.feed.post/3matzd45o7k2n",
+      "author": "sesurescue.bsky.social",
+      "timestamp": "2025-12-26T06:02:56.092617"
     }
   ],
   "last_cleanup": "2025-12-25T23:34:02.665595"
