@@ -484,6 +484,11 @@
       "did": "did:plc:zljl4mam4gzrsu5lhrjkyyym",
       "handle": "rozlovesfood.bsky.social",
       "timestamp": "2025-12-29T06:43:31.832227"
+    },
+    {
+      "did": "did:plc:asg3nyddlq4dmrmw64jbbdij",
+      "handle": "catslife786.bsky.social",
+      "timestamp": "2025-12-29T07:05:34.782174"
     }
   ],
   "liked_posts": [
@@ -7506,6 +7511,11 @@
       "uri": "at://did:plc:zljl4mam4gzrsu5lhrjkyyym/app.bsky.feed.post/3mb3yjeahqk25",
       "author": "rozlovesfood.bsky.social",
       "timestamp": "2025-12-29T06:43:31.653650"
+    },
+    {
+      "uri": "at://did:plc:asg3nyddlq4dmrmw64jbbdij/app.bsky.feed.post/3mb4autgeac2o",
+      "author": "catslife786.bsky.social",
+      "timestamp": "2025-12-29T07:05:34.674527"
     }
   ],
   "last_cleanup": "2025-12-25T23:34:02.665595"
