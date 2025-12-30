@@ -499,6 +499,11 @@
       "did": "did:plc:yql7ljerznvxgw224siz3mt6",
       "handle": "ravenmichiru.bsky.social",
       "timestamp": "2025-12-29T08:02:53.239625"
+    },
+    {
+      "did": "did:plc:zt2vrxu2gkiqnwqqnzmxemrb",
+      "handle": "bearsgetcrafty.bsky.social",
+      "timestamp": "2025-12-30T15:36:30.362879"
     }
   ],
   "liked_posts": [
@@ -7826,6 +7831,11 @@
       "uri": "at://did:plc:udpth4uptghf6sxpgqqladkv/app.bsky.feed.post/3mb74of2cpw2z",
       "author": "justdog.photos",
       "timestamp": "2025-12-30T15:02:39.261024"
+    },
+    {
+      "uri": "at://did:plc:zt2vrxu2gkiqnwqqnzmxemrb/app.bsky.feed.post/3mb7nx45o2c2p",
+      "author": "bearsgetcrafty.bsky.social",
+      "timestamp": "2025-12-30T15:36:30.093355"
     }
   ],
   "last_cleanup": "2025-12-25T23:34:02.665595"
