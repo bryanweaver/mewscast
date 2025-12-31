@@ -519,6 +519,11 @@
       "did": "did:plc:5bk3nzptyymx7xvtd3vzd3vh",
       "handle": "elliejoypanic.bsky.social",
       "timestamp": "2025-12-31T00:06:24.999489"
+    },
+    {
+      "did": "did:plc:udpth4uptghf6sxpgqqladkv",
+      "handle": "justdog.photos",
+      "timestamp": "2025-12-31T00:47:03.235286"
     }
   ],
   "liked_posts": [
@@ -7931,6 +7936,11 @@
       "uri": "at://did:plc:5bk3nzptyymx7xvtd3vzd3vh/app.bsky.feed.post/3mba7sk7d222k",
       "author": "elliejoypanic.bsky.social",
       "timestamp": "2025-12-31T00:06:24.819449"
+    },
+    {
+      "uri": "at://did:plc:udpth4uptghf6sxpgqqladkv/app.bsky.feed.post/3mba2geey2h2i",
+      "author": "justdog.photos",
+      "timestamp": "2025-12-31T00:47:03.083349"
     }
   ],
   "last_cleanup": "2025-12-25T23:34:02.665595"
