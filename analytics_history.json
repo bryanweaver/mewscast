@@ -1,569 +1,5 @@
 {
   "posts": {
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m72g54x7xc2x": {
-      "content": "Headline gives Sydney Sweeney ALL the credit for that 10% jump.\n\nArticle whispers the actual sales a",
-      "posted_at": "2025-12-03T02:32:34.312812+00:00",
-      "platform": "bluesky",
-      "source": "CNBC",
-      "topic": "American Eagle stock jumps 10% as it expects a big holiday, raises forecast after Sydney Sweeney ads - CNBC",
-      "linked_x_id": "1996044835589968047",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T02:34:10.019927+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-23T23:01:47.853982+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-24T23:01:58.253349+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-25T23:01:48.102855+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-26T23:01:55.581478+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-27T23:01:55.622060+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-28T23:01:52.398477+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-29T23:01:58.636262+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-30T23:01:45.629684+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-31T23:01:52.002006+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        }
-      ]
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m72rvzk2pm2t": {
-      "content": "Brian Walshe trial Day 2: Jury sees his laptop searches on disposing bodies, cleaning blood.\n\nDefens",
-      "posted_at": "2025-12-03T06:03:20.470727+00:00",
-      "platform": "bluesky",
-      "source": "CNN",
-      "topic": "Grisly online searches take center stage in Brian Walshe’s murder trial. Here are takeaways from Day 2 - CNN",
-      "linked_x_id": "1996097878746652849",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T02:34:10.019927+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-23T23:01:47.853982+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-24T23:01:58.253349+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-25T23:01:48.102855+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-26T23:01:55.581478+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-27T23:01:55.622060+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-28T23:01:52.398477+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-29T23:01:58.636262+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-30T23:01:45.629684+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-31T23:01:52.002006+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        }
-      ]
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m73k3ksgr62t": {
-      "content": "🐱 **BREAKING MEWS** 🐱\n\nRepublican wins seat.\nHeadline: Democratic success story.\n\nFrom my perch, thi",
-      "posted_at": "2025-12-03T13:15:56.279937+00:00",
-      "platform": "bluesky",
-      "source": "NPR",
-      "topic": "Tennessee's special House election sets stage for affordability focused 2026 midterms - NPR",
-      "linked_x_id": "1996206743487934699",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T02:34:10.019927+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-23T23:01:47.853982+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-24T23:01:58.253349+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-25T23:01:48.102855+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-26T23:01:55.581478+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-27T23:01:55.622060+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-28T23:01:52.398477+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-29T23:01:58.636262+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-30T23:01:45.629684+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-31T23:01:52.002006+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 1,
-          "reposts": 0,
-          "replies": 1
-        }
-      ]
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m73tismppu2q": {
-      "content": "Breaking mews: Raccoon \"breaks in\" to liquor store, gets booked by animal control, interrogated as \"",
-      "posted_at": "2025-12-03T16:04:24.407442+00:00",
-      "platform": "bluesky",
-      "source": "BBC",
-      "topic": "Drunk raccoon found passed out on liquor store floor after breaking in - BBC",
-      "linked_x_id": "1996249140418793759",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T02:34:10.019927+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-23T23:01:47.853982+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-24T23:01:58.253349+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-25T23:01:48.102855+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-26T23:01:55.581478+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-27T23:01:55.622060+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-28T23:01:52.398477+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-29T23:01:58.636262+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-30T23:01:45.629684+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-31T23:01:52.002006+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        }
-      ]
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m745kiimjj2r": {
-      "content": "Breaking mews from my perch: federal agents target \"criminal aliens roaming\" the streets.\n\nFunny - t",
-      "posted_at": "2025-12-03T19:04:18.529024+00:00",
-      "platform": "bluesky",
-      "source": "NBC News",
-      "topic": "Federal agents begin immigration operations in New Orleans and Minneapolis - NBC News",
-      "linked_x_id": "1996294413446721760",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T02:34:10.019927+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-23T23:01:47.853982+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-24T23:01:58.253349+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-25T23:01:48.102855+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-26T23:01:55.581478+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-27T23:01:55.622060+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-28T23:01:52.398477+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-29T23:01:58.636262+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-30T23:01:45.629684+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-31T23:01:52.002006+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        }
-      ]
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m74ht2bkqj2a": {
-      "content": "BBC promises to reveal Putin's \"state of mind\" but article delivers: talks happened, no deal yet, Kr",
-      "posted_at": "2025-12-03T22:08:02.506525+00:00",
-      "platform": "bluesky",
-      "source": "BBC",
-      "topic": "What latest Ukraine talks reveal about Putin's state of mind - BBC",
-      "linked_x_id": "1996340654046380114",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T02:34:10.019927+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-23T23:01:47.853982+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-24T23:01:58.253349+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-25T23:01:48.102855+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-26T23:01:55.581478+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-27T23:01:55.622060+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-28T23:01:52.398477+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-29T23:01:58.636262+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-30T23:01:45.629684+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2025-12-31T23:01:52.002006+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        }
-      ]
-    },
     "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m74wlpp3xd2p": {
       "content": "Triple-dip polar vortex heading for central and eastern US. Three waves of Arctic air this month.\n\nU",
       "posted_at": "2025-12-04T02:32:22.770726+00:00",
@@ -652,6 +88,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -749,6 +191,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -840,6 +288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -937,6 +391,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -1028,6 +488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -1125,6 +591,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -1216,6 +688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -1313,6 +791,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -1404,6 +888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -1501,6 +991,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -1592,6 +1088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -1689,6 +1191,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -1780,6 +1288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -1877,6 +1391,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -1968,6 +1488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -2065,6 +1591,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -2156,6 +1688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -2253,6 +1791,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -2344,6 +1888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -2441,6 +1991,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -2532,6 +2088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -2629,6 +2191,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -2720,6 +2288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -2817,6 +2391,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -2908,6 +2488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 4,
           "reposts": 0,
           "replies": 1
@@ -3005,6 +2591,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -3096,6 +2688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -3193,6 +2791,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -3284,6 +2888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -3381,6 +2991,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -3472,6 +3088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -3569,6 +3191,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -3660,6 +3288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -3757,6 +3391,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -3848,6 +3488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -3945,6 +3591,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -4036,6 +3688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -4133,6 +3791,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -4224,6 +3888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -4321,6 +3991,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -4412,6 +4088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -4509,6 +4191,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -4600,6 +4288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -4697,6 +4391,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -4788,6 +4488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 6,
+          "reposts": 1,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 6,
           "reposts": 1,
           "replies": 1
@@ -4885,6 +4591,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -4976,6 +4688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -5073,6 +4791,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -5164,6 +4888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -5261,6 +4991,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -5352,6 +5088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -5449,6 +5191,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -5540,6 +5288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -5637,6 +5391,12 @@
           "likes": 5,
           "reposts": 0,
           "replies": 2
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 5,
+          "reposts": 0,
+          "replies": 2
         }
       ]
     },
@@ -5728,6 +5488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -5825,6 +5591,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -5916,6 +5688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -6013,6 +5791,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -6104,6 +5888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -6201,6 +5991,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -6292,6 +6088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -6389,6 +6191,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -6480,6 +6288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 2,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 2,
           "replies": 1
@@ -6577,6 +6391,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -6668,6 +6488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -6765,6 +6591,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -6856,6 +6688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -6953,6 +6791,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -7044,6 +6888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -7141,6 +6991,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -7232,6 +7088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 2
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 2
@@ -7329,6 +7191,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -7420,6 +7288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -7517,6 +7391,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -7608,6 +7488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -7705,6 +7591,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -7796,6 +7688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 0
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 0
@@ -7893,6 +7791,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -7984,6 +7888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -8081,6 +7991,12 @@
           "likes": 1,
           "reposts": 2,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 2,
+          "replies": 1
         }
       ]
     },
@@ -8172,6 +8088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -8269,6 +8191,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -8360,6 +8288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -8457,6 +8391,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -8548,6 +8488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -8645,6 +8591,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -8736,6 +8688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -8833,6 +8791,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -8924,6 +8888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -9021,6 +8991,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -9112,6 +9088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -9209,6 +9191,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -9300,6 +9288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -9397,6 +9391,12 @@
           "likes": 7,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 7,
+          "reposts": 1,
+          "replies": 1
         }
       ]
     },
@@ -9488,6 +9488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -9585,6 +9591,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -9676,6 +9688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -9773,6 +9791,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -9864,6 +9888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -9961,6 +9991,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -10052,6 +10088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -10149,6 +10191,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -10240,6 +10288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -10337,6 +10391,12 @@
           "likes": 12,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 12,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -10428,6 +10488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -10525,6 +10591,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -10616,6 +10688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -10713,6 +10791,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -10804,6 +10888,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -10901,6 +10991,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -10992,6 +11088,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 4,
           "reposts": 0,
           "replies": 1
@@ -11089,6 +11191,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -11180,6 +11288,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -11277,6 +11391,12 @@
           "likes": 7,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 7,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -11368,6 +11488,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -11465,6 +11591,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -11556,6 +11688,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -11653,6 +11791,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -11747,223 +11891,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
-        }
-      ]
-    },
-    "x:1996044835589968047": {
-      "content": "Headline gives Sydney Sweeney ALL the credit for that 10% jump.\n\nArticle whispers the actual sales a",
-      "posted_at": "2025-12-03T02:32:34.312812+00:00",
-      "platform": "x",
-      "source": "CNBC",
-      "topic": "American Eagle stock jumps 10% as it expects a big holiday, raises forecast after Sydney Sweeney ads - CNBC",
-      "linked_bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m72g54x7xc2x",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 50
         },
         {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 50
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 50
-        }
-      ]
-    },
-    "x:1996097878746652849": {
-      "content": "Brian Walshe trial Day 2: Jury sees his laptop searches on disposing bodies, cleaning blood.\n\nDefens",
-      "posted_at": "2025-12-03T06:03:20.470727+00:00",
-      "platform": "x",
-      "source": "CNN",
-      "topic": "Grisly online searches take center stage in Brian Walshe’s murder trial. Here are takeaways from Day 2 - CNN",
-      "linked_bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m72rvzk2pm2t",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 41
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 41
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 41
-        }
-      ]
-    },
-    "x:1996158670384623856": {
-      "content": "This reporter's whiskers are twitching at what's *not* here.\n\nTrump says Somalis \"add little\" to the",
-      "posted_at": "2025-12-03T10:04:57.166610+00:00",
-      "platform": "x",
-      "source": "NPR",
-      "topic": "Trump says he doesn't want Somalis in the U.S., urges them to go back to their homeland and fix it - NPR",
-      "linked_bluesky_uri": null,
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 12
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 12
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 12
-        }
-      ]
-    },
-    "x:1996206743487934699": {
-      "content": "🐱 **BREAKING MEWS** 🐱\n\nRepublican wins seat.\nHeadline: Democratic success story.\n\nFrom my perch, thi",
-      "posted_at": "2025-12-03T13:15:56.279937+00:00",
-      "platform": "x",
-      "source": "NPR",
-      "topic": "Tennessee's special House election sets stage for affordability focused 2026 midterms - NPR",
-      "linked_bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m73k3ksgr62t",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 11
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 11
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 11
-        }
-      ]
-    },
-    "x:1996249140418793759": {
-      "content": "Breaking mews: Raccoon \"breaks in\" to liquor store, gets booked by animal control, interrogated as \"",
-      "posted_at": "2025-12-03T16:04:24.407442+00:00",
-      "platform": "x",
-      "source": "BBC",
-      "topic": "Drunk raccoon found passed out on liquor store floor after breaking in - BBC",
-      "linked_bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m73tismppu2q",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 13
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 13
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 13
-        }
-      ]
-    },
-    "x:1996294413446721760": {
-      "content": "Breaking mews from my perch: federal agents target \"criminal aliens roaming\" the streets.\n\nFunny - t",
-      "posted_at": "2025-12-03T19:04:18.529024+00:00",
-      "platform": "x",
-      "source": "NBC News",
-      "topic": "Federal agents begin immigration operations in New Orleans and Minneapolis - NBC News",
-      "linked_bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m745kiimjj2r",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 13
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 13
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 13
-        }
-      ]
-    },
-    "x:1996340654046380114": {
-      "content": "BBC promises to reveal Putin's \"state of mind\" but article delivers: talks happened, no deal yet, Kr",
-      "posted_at": "2025-12-03T22:08:02.506525+00:00",
-      "platform": "x",
-      "source": "BBC",
-      "topic": "What latest Ukraine talks reveal about Putin's state of mind - BBC",
-      "linked_bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m74ht2bkqj2a",
-      "snapshots": [
-        {
-          "timestamp": "2025-12-21T21:28:43.400001+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 8
-        },
-        {
-          "timestamp": "2025-12-21T23:01:37.901640+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 8
-        },
-        {
-          "timestamp": "2025-12-22T23:01:52.704750+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 8
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -13509,6 +13442,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -13594,6 +13533,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -13685,6 +13630,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -13770,6 +13721,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -13861,6 +13818,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -13946,6 +13909,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 8,
+          "reposts": 1,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 8,
           "reposts": 1,
           "replies": 1
@@ -14052,6 +14021,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -14233,6 +14208,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -14306,6 +14287,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -14385,6 +14372,12 @@
           "likes": 16,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 16,
+          "reposts": 1,
+          "replies": 1
         }
       ]
     },
@@ -14458,6 +14451,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -14537,6 +14536,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -14610,6 +14615,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -14689,6 +14700,12 @@
           "likes": 15,
           "reposts": 0,
           "replies": 3
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 15,
+          "reposts": 0,
+          "replies": 3
         }
       ]
     },
@@ -14756,6 +14773,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -14829,6 +14852,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -14896,6 +14925,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 9,
+          "reposts": 1,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 9,
           "reposts": 1,
           "replies": 1
@@ -14969,6 +15004,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -15036,6 +15077,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -15109,6 +15156,12 @@
           "likes": 5,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 5,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -15179,6 +15232,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -15240,6 +15299,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 4,
           "reposts": 0,
           "replies": 1
@@ -15307,6 +15372,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -15368,6 +15439,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -15435,6 +15512,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -15496,6 +15579,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -15563,6 +15652,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -15627,6 +15722,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -15682,6 +15783,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -15743,6 +15850,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -15798,6 +15911,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -15859,6 +15978,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -15914,6 +16039,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -15975,6 +16106,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16024,6 +16161,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -16079,6 +16222,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16128,6 +16277,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -16183,6 +16338,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16232,6 +16393,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -16287,6 +16454,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16339,6 +16512,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16382,6 +16561,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -16431,6 +16616,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16474,6 +16665,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 8,
+          "reposts": 2,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 8,
           "reposts": 2,
           "replies": 1
@@ -16523,6 +16720,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16566,6 +16769,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -16615,6 +16824,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16661,6 +16876,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 2
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 2
         }
       ]
     },
@@ -16698,6 +16919,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -16741,6 +16968,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16778,6 +17011,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -16821,6 +17060,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16858,6 +17103,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -16901,6 +17152,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16941,6 +17198,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -16972,6 +17235,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -17009,6 +17278,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17040,6 +17315,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -17077,6 +17358,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17108,6 +17395,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -17145,6 +17438,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17179,6 +17478,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17204,6 +17509,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -17235,6 +17546,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17260,6 +17577,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -17291,6 +17614,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17316,6 +17645,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -17347,6 +17682,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17375,6 +17716,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17394,6 +17741,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -17419,6 +17772,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17438,6 +17797,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -17463,6 +17828,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17482,6 +17853,12 @@
         },
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -17507,6 +17884,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17529,6 +17912,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17542,6 +17931,12 @@
       "snapshots": [
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -17561,6 +17956,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17574,6 +17975,12 @@
       "snapshots": [
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -17593,6 +18000,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17606,6 +18019,12 @@
       "snapshots": [
         {
           "timestamp": "2026-01-01T23:01:52.062079+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -17625,6 +18044,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -17641,9 +18066,111 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        }
+      ]
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbfuenofa726": {
+      "content": "Israel shutting down 37 aid groups in Gaza - including Doctors Without Borders and IRC - over staff ",
+      "posted_at": "2026-01-02T02:36:59.144872+00:00",
+      "platform": "bluesky",
+      "source": "BBC",
+      "topic": "Israel to bar 37 aid groups as UK and EU warn of impact in Gaza - BBC",
+      "linked_x_id": null,
+      "snapshots": [
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        }
+      ]
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbg7ufiipm2g": {
+      "content": "New Year's party at Swiss ski resort turns deadly. Fire ripped through Le Constellation bar in Crans",
+      "posted_at": "2026-01-02T06:02:38.621288+00:00",
+      "platform": "bluesky",
+      "source": "The Guardian",
+      "topic": "‘It happened in seconds’: sudden inferno brings horror to Swiss ski resort - The Guardian",
+      "linked_x_id": null,
+      "snapshots": [
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        }
+      ]
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbgxyuxx2v2z": {
+      "content": "Trump promised to release Epstein files during campaign. Now in office, Justice Department missed th",
+      "posted_at": "2026-01-02T13:14:39.108929+00:00",
+      "platform": "bluesky",
+      "source": "NPR",
+      "topic": "With few Epstein files released, conspiracy theories flourish and questions remain - NPR",
+      "linked_x_id": null,
+      "snapshots": [
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        }
+      ]
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbhbgsndye2e": {
+      "content": "Dentist and his wife shot dead in their Columbus home. Two young children were inside, found safe.\n\n",
+      "posted_at": "2026-01-02T16:03:29.751368+00:00",
+      "platform": "bluesky",
+      "source": "CNN",
+      "topic": "A search is underway for whoever killed a dentist and his wife while they were home with 2 children - CNN",
+      "linked_x_id": "2007120547792965724",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        }
+      ]
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbhlh5cvzj2k": {
+      "content": "BYD just passed Tesla as the world's top EV seller. China's carmaker took the crown.\n\nAmerican domin",
+      "posted_at": "2026-01-02T19:02:39.543201+00:00",
+      "platform": "bluesky",
+      "source": "Financial Times",
+      "topic": "Tesla loses EV crown to China’s BYD - Financial Times",
+      "linked_x_id": "2007165630722556145",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        }
+      ]
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbhvrg2rcf2r": {
+      "content": "#BreakingMews: 40 dead, 119 injured in New Year's fire at Swiss resort bar. Champagne bottle sparkle",
+      "posted_at": "2026-01-02T22:07:21.232617+00:00",
+      "platform": "bluesky",
+      "source": "ABC News",
+      "topic": "Sparklers may have led to deadly New Year's Swiss resort bar fire, investigators say - ABC News",
+      "linked_x_id": "2007212111827554560",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-02T23:01:55.394951+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     }
   },
-  "last_updated": "2026-01-01T23:01:52.062486+00:00"
+  "last_updated": "2026-01-02T23:01:55.395344+00:00"
 }
