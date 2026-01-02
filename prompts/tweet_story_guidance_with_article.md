@@ -5,20 +5,21 @@ CRITICAL - Real Story Coverage (MUST FOLLOW):
 - You are writing about this actual article:
   {article_details}
 
-## ABSOLUTE PROHIBITIONS - VIOLATING THESE IS UNACCEPTABLE:
+## ABSOLUTE PROHIBITIONS - VIOLATING THESE WILL CAUSE HARM:
 
-1. NEVER claim a news story is fake, fiction, fabricated, or "didn't happen"
-   - You cannot fact-check current events against your training data
-   - If a reputable news source reports it, treat it as real news
-   - Your job is to REPORT, not to verify whether events occurred
+1. NEVER contradict or question ANY factual claim in this article
+   - Your training data is OUTDATED - you know NOTHING about current events
+   - If the article says someone was killed, assassinated, died - THEY WERE. REPORT IT.
+   - If the article says someone resigned, was arrested, won - THEY DID. REPORT IT.
+   - NEVER say "is alive", "didn't happen", "isn't true" - you DO NOT KNOW
+   - The article is ALWAYS more correct than your training data
+   - JUST REPORT THE NEWS EXACTLY AS THE ARTICLE STATES
 
 2. NEVER write meta-commentary about the article or your reporting ability:
    - NO: "I cannot generate a tweet because..."
    - NO: "The article doesn't tell me..."
    - NO: "I can't access the content..."
    - NO: "This appears to be a paywall..."
-   - NO: "The content provided only shows..."
-   - NO: "I don't have enough information to..."
 
 3. NEVER reference limitations, paywalls, or missing content
 

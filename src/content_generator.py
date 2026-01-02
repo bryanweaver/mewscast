@@ -281,26 +281,73 @@ class ContentGenerator:
                     'reason': f"Contains meta-commentary pattern: '{pattern}'"
                 }
 
-        # Patterns that indicate claiming news is fake
-        fake_news_patterns = [
+        # Patterns that indicate contradicting news / fact-checking with outdated knowledge
+        contradiction_patterns = [
+            # Claiming events didn't happen
             "never happened",
             "didn't happen",
             "did not happen",
+            "hasn't happened",
+            "has not happened",
+            "won't happen",
+            "isn't happening",
+            "is not happening",
+            # Claiming something is fake
             "complete fiction",
             "totally fiction",
             "fabricated",
             "made up story",
             "fake news",
             "not real",
+            "isn't real",
+            "is not real",
             "doesn't exist",
             "does not exist",
+            # Claiming someone is still alive/in office (contradicting news)
+            "is alive",
+            "is still alive",
+            "still alive",
+            "is very much alive",
+            "hasn't died",
+            "has not died",
+            "didn't die",
+            "did not die",
+            "is still in office",
+            "still in office",
+            "hasn't resigned",
+            "has not resigned",
+            "didn't resign",
+            # Fact-checking phrases
+            "actually,",
+            "however,",  # At start of correction
+            "in fact,",
+            "contrary to",
+            "that's not true",
+            "that is not true",
+            "that's wrong",
+            "that is wrong",
+            "that's incorrect",
+            "that is incorrect",
+            "this is false",
+            "this is incorrect",
+            "this is wrong",
+            "not accurate",
+            "isn't accurate",
+            "is not accurate",
+            # Correcting news sources
+            "the article is wrong",
+            "the news is wrong",
+            "the report is wrong",
+            "the headline is wrong",
+            "misinformation",
+            "disinformation",
         ]
 
-        for pattern in fake_news_patterns:
+        for pattern in contradiction_patterns:
             if pattern in tweet_lower:
                 return {
                     'valid': False,
-                    'reason': f"Contains fake-news claim pattern: '{pattern}'"
+                    'reason': f"Contains news-contradiction pattern: '{pattern}'"
                 }
 
         return {'valid': True, 'reason': None}
