@@ -484,6 +484,11 @@
       "did": "did:plc:hbuxqfv2u2az2as4g4yr2h6x",
       "handle": "albarevale.bsky.social",
       "timestamp": "2026-01-01T23:34:38.322436"
+    },
+    {
+      "did": "did:plc:eyx525bwmc6l4uhng6pi4tii",
+      "handle": "thaumatropia.bsky.social",
+      "timestamp": "2026-01-02T00:06:28.077784"
     }
   ],
   "liked_posts": [
@@ -7116,6 +7121,11 @@
       "uri": "at://did:plc:hbuxqfv2u2az2as4g4yr2h6x/app.bsky.feed.post/3mbfihqk3sk2x",
       "author": "albarevale.bsky.social",
       "timestamp": "2026-01-01T23:34:38.229424"
+    },
+    {
+      "uri": "at://did:plc:eyx525bwmc6l4uhng6pi4tii/app.bsky.feed.post/3mbfhowp5bk2v",
+      "author": "thaumatropia.bsky.social",
+      "timestamp": "2026-01-02T00:06:27.983577"
     }
   ],
   "last_cleanup": "2026-01-01T23:34:37.856132"
