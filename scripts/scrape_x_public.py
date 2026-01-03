@@ -58,8 +58,12 @@ async def scrape_x_profile(username: str = "mewscast") -> dict:
             print(f"Navigating to {url}")
             await page.goto(url, wait_until="networkidle", timeout=30000)
 
-            # Wait for profile to load
-            await page.wait_for_timeout(3000)
+            # Wait for profile to load - need extra time for X's heavy JS
+            await page.wait_for_timeout(5000)
+
+            # Debug: Log page title to verify we loaded correctly
+            title = await page.title()
+            print(f"Page title: {title}")
 
             # Get follower/following counts from the profile header
             # These are usually in links like "/username/followers"
@@ -86,15 +90,35 @@ async def scrape_x_profile(username: str = "mewscast") -> dict:
             except Exception as e:
                 print(f"Error getting follower counts: {e}")
 
-            # Scroll to load tweets
-            await page.evaluate("window.scrollBy(0, 500)")
-            await page.wait_for_timeout(2000)
+            # Scroll to load tweets and wait for them to appear
+            print("Scrolling to load tweets...")
+            await page.evaluate("window.scrollBy(0, 800)")
+            await page.wait_for_timeout(3000)
+
+            # Try to wait for tweets to appear
+            try:
+                await page.wait_for_selector('article[data-testid="tweet"]', timeout=10000)
+                print("Tweet selector found!")
+            except Exception as e:
+                print(f"Tweet selector timeout: {e}")
+                # Debug: Check what elements are on the page
+                article_count = await page.locator('article').count()
+                print(f"Found {article_count} article elements on page")
+
+                # Try alternative selectors
+                cell_count = await page.locator('[data-testid="cellInnerDiv"]').count()
+                print(f"Found {cell_count} cellInnerDiv elements")
+
+            # Take a debug screenshot
+            screenshot_path = "x_debug_screenshot.png"
+            await page.screenshot(path=screenshot_path)
+            print(f"Saved debug screenshot to {screenshot_path}")
 
             # Get tweet metrics from the timeline
             # Look for tweet articles
             tweets = page.locator('article[data-testid="tweet"]')
             tweet_count = await tweets.count()
-            print(f"Found {tweet_count} tweets on page")
+            print(f"Found {tweet_count} tweets with data-testid='tweet'")
 
             for i in range(min(tweet_count, 20)):  # Limit to 20 tweets
                 try:
