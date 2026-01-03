@@ -36,6 +36,14 @@ jobs:
         run: |
           python scripts/scrape_x_public.py --username mewscast --update-analytics
 
+      - name: Upload debug screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x-debug-screenshot
+          path: x_debug_screenshot.png
+          retention-days: 3
+
       - name: Commit scraped data
         if: success()
         run: |
