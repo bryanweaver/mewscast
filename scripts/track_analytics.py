@@ -190,7 +190,7 @@ def update_history(history, posts, bluesky_metrics, x_metrics):
             metrics = bluesky_metrics[uri]
             if uri not in history["posts"]:
                 history["posts"][uri] = {
-                    "content": post.get('content', '')[:100],
+                    "content": post.get('content', ''),
                     "posted_at": post.get('timestamp'),
                     "platform": "bluesky",
                     "source": source,
@@ -218,7 +218,7 @@ def update_history(history, posts, bluesky_metrics, x_metrics):
             metrics = x_metrics[tweet_id]
             if key not in history["posts"]:
                 history["posts"][key] = {
-                    "content": post.get('content', '')[:100],
+                    "content": post.get('content', ''),
                     "posted_at": post.get('timestamp'),
                     "platform": "x",
                     "source": source,
