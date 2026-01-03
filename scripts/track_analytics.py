@@ -60,7 +60,7 @@ def get_posts_in_window(posts, days=TRAILING_DAYS):
 
 
 def fetch_bluesky_metrics(posts):
-    """Fetch current metrics from Bluesky"""
+    """Fetch current metrics from Bluesky including images"""
     try:
         from bluesky_bot import BlueskyBot
         bot = BlueskyBot()
@@ -79,10 +79,25 @@ def fetch_bluesky_metrics(posts):
             thread = bot.client.app.bsky.feed.get_post_thread({'uri': uri})
             if thread and thread.thread:
                 post_data = thread.thread.post
+
+                # Extract image URL from embed if present
+                image_url = None
+                if hasattr(post_data, 'embed') and post_data.embed:
+                    embed = post_data.embed
+                    # Check for images embed
+                    if hasattr(embed, 'images') and embed.images:
+                        # Get the first image's fullsize URL
+                        image_url = embed.images[0].fullsize
+                    # Check for external embed with thumbnail
+                    elif hasattr(embed, 'external') and embed.external:
+                        if hasattr(embed.external, 'thumb') and embed.external.thumb:
+                            image_url = embed.external.thumb
+
                 metrics[uri] = {
                     "likes": post_data.like_count or 0,
                     "reposts": post_data.repost_count or 0,
                     "replies": post_data.reply_count or 0,
+                    "image_url": image_url,
                 }
         except Exception as e:
             print(f"Could not fetch Bluesky post: {e}")
@@ -112,18 +127,45 @@ def fetch_x_metrics(posts):
     for i in range(0, len(tweet_ids), batch_size):
         batch = tweet_ids[i:i + batch_size]
         try:
+            # Request media attachments along with metrics
             response = bot.client.get_tweets(
                 batch,
-                tweet_fields=['public_metrics', 'created_at']
+                tweet_fields=['public_metrics', 'created_at', 'attachments'],
+                expansions=['attachments.media_keys'],
+                media_fields=['url', 'preview_image_url', 'type']
             )
+
+            # Build media lookup from includes
+            media_lookup = {}
+            if response.includes and 'media' in response.includes:
+                for media in response.includes['media']:
+                    media_lookup[media.media_key] = media
+
             if response.data:
                 for tweet in response.data:
                     m = tweet.public_metrics
+
+                    # Try to get image URL from attachments
+                    image_url = None
+                    if hasattr(tweet, 'attachments') and tweet.attachments:
+                        media_keys = tweet.attachments.get('media_keys', [])
+                        for key in media_keys:
+                            if key in media_lookup:
+                                media = media_lookup[key]
+                                # Prefer url for images, preview_image_url for videos
+                                if hasattr(media, 'url') and media.url:
+                                    image_url = media.url
+                                    break
+                                elif hasattr(media, 'preview_image_url') and media.preview_image_url:
+                                    image_url = media.preview_image_url
+                                    break
+
                     metrics[str(tweet.id)] = {
                         "likes": m.get('like_count', 0),
                         "retweets": m.get('retweet_count', 0),
                         "replies": m.get('reply_count', 0),
                         "impressions": m.get('impression_count', 0),
+                        "image_url": image_url,
                     }
             print(f"Fetched batch {i//batch_size + 1}: {len(response.data) if response.data else 0} tweets")
         except Exception as e:
@@ -140,10 +182,12 @@ def update_history(history, posts, bluesky_metrics, x_metrics):
         # Extract source and topic
         source = post.get('source', 'Unknown')
         topic = post.get('topic', '')
+        article_url = post.get('url', '')
 
         # Bluesky
         uri = post.get('bluesky_uri')
         if uri and uri in bluesky_metrics:
+            metrics = bluesky_metrics[uri]
             if uri not in history["posts"]:
                 history["posts"][uri] = {
                     "content": post.get('content', '')[:100],
@@ -151,18 +195,27 @@ def update_history(history, posts, bluesky_metrics, x_metrics):
                     "platform": "bluesky",
                     "source": source,
                     "topic": topic,
+                    "article_url": article_url,
                     "linked_x_id": post.get('x_tweet_id'),
                     "snapshots": []
                 }
+
+            # Store image URL at post level (only once, when first found)
+            if metrics.get('image_url') and not history["posts"][uri].get('image_url'):
+                history["posts"][uri]["image_url"] = metrics['image_url']
+
+            # Add snapshot without image_url (it's stored at post level)
+            snapshot_data = {k: v for k, v in metrics.items() if k != 'image_url'}
             history["posts"][uri]["snapshots"].append({
                 "timestamp": now,
-                **bluesky_metrics[uri]
+                **snapshot_data
             })
 
         # X
         tweet_id = post.get('x_tweet_id')
         if tweet_id and tweet_id in x_metrics:
             key = f"x:{tweet_id}"
+            metrics = x_metrics[tweet_id]
             if key not in history["posts"]:
                 history["posts"][key] = {
                     "content": post.get('content', '')[:100],
@@ -170,12 +223,20 @@ def update_history(history, posts, bluesky_metrics, x_metrics):
                     "platform": "x",
                     "source": source,
                     "topic": topic,
+                    "article_url": article_url,
                     "linked_bluesky_uri": post.get('bluesky_uri'),
                     "snapshots": []
                 }
+
+            # Store image URL at post level (only once, when first found)
+            if metrics.get('image_url') and not history["posts"][key].get('image_url'):
+                history["posts"][key]["image_url"] = metrics['image_url']
+
+            # Add snapshot without image_url (it's stored at post level)
+            snapshot_data = {k: v for k, v in metrics.items() if k != 'image_url'}
             history["posts"][key]["snapshots"].append({
                 "timestamp": now,
-                **x_metrics[tweet_id]
+                **snapshot_data
             })
 
     return history
