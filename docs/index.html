@@ -59,6 +59,66 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Follower Stats */
+        .follower-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+
+        .follower-stat-card {
+            text-align: center;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            min-width: 150px;
+        }
+
+        .follower-stat-card.bluesky {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            border: 1px solid #bae6fd;
+        }
+
+        .follower-stat-card.x {
+            background: linear-gradient(135deg, #f3f4f6 0%, #fafafa 100%);
+            border: 1px solid #e5e7eb;
+        }
+
+        .follower-stat-card .platform-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .follower-stat-card.bluesky .platform-name {
+            color: #0369a1;
+        }
+
+        .follower-stat-card.x .platform-name {
+            color: #374151;
+        }
+
+        .follower-stat-card .follower-count {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .follower-stat-card .follower-change {
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .follower-stat-card .follower-change.positive {
+            color: #16a34a;
+        }
+
+        .follower-stat-card .follower-change.negative {
+            color: #dc2626;
+        }
+
         /* Platform Comparison */
         .platform-comparison {
             display: grid;
@@ -400,6 +460,17 @@
             <h1>Mewscast Analytics</h1>
             <span class="last-updated" id="lastUpdated">Loading...</span>
         </header>
+
+        <!-- Follower Growth -->
+        <div class="section">
+            <h2>Follower Growth</h2>
+            <div class="follower-stats" id="followerStats">
+                <!-- Populated by JS -->
+            </div>
+            <div class="chart-container" style="height: 200px;">
+                <canvas id="followerChart"></canvas>
+            </div>
+        </div>
 
         <!-- Platform Comparison -->
         <div class="section">
@@ -936,6 +1007,126 @@
         }
 
         // Filter buttons
+        // Render follower growth chart and stats
+        function renderFollowerChart() {
+            const container = document.getElementById('followerStats');
+            const followerHistory = ANALYTICS_DATA.follower_history || { x: [], bluesky: [] };
+
+            // Get latest follower counts
+            const latestBluesky = followerHistory.bluesky && followerHistory.bluesky.length > 0
+                ? followerHistory.bluesky[followerHistory.bluesky.length - 1]
+                : null;
+            const latestX = followerHistory.x && followerHistory.x.length > 0
+                ? followerHistory.x[followerHistory.x.length - 1]
+                : null;
+
+            // Calculate change (compare to oldest in history or 7 days ago)
+            const getChange = (history) => {
+                if (!history || history.length < 2) return null;
+                const latest = history[history.length - 1].followers;
+                // Find entry from ~7 days ago or oldest
+                const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+                let compareEntry = history[0];
+                for (const entry of history) {
+                    if (new Date(entry.timestamp) <= weekAgo) {
+                        compareEntry = entry;
+                    }
+                }
+                return latest - compareEntry.followers;
+            };
+
+            const blueskyChange = getChange(followerHistory.bluesky);
+            const xChange = getChange(followerHistory.x);
+
+            // Render stats cards
+            container.innerHTML = `
+                <div class="follower-stat-card bluesky">
+                    <div class="platform-name">Bluesky</div>
+                    <div class="follower-count">${latestBluesky ? latestBluesky.followers.toLocaleString() : '—'}</div>
+                    ${blueskyChange !== null ? `<div class="follower-change ${blueskyChange >= 0 ? 'positive' : 'negative'}">${blueskyChange >= 0 ? '+' : ''}${blueskyChange} this week</div>` : ''}
+                </div>
+                <div class="follower-stat-card x">
+                    <div class="platform-name">X</div>
+                    <div class="follower-count">${latestX ? latestX.followers.toLocaleString() : '—'}</div>
+                    ${xChange !== null ? `<div class="follower-change ${xChange >= 0 ? 'positive' : 'negative'}">${xChange >= 0 ? '+' : ''}${xChange} this week</div>` : ''}
+                </div>
+            `;
+
+            // Render chart
+            const canvas = document.getElementById('followerChart');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            const datasets = [];
+
+            if (followerHistory.bluesky && followerHistory.bluesky.length > 0) {
+                datasets.push({
+                    label: 'Bluesky Followers',
+                    data: followerHistory.bluesky.map(s => ({
+                        x: s.timestamp.split('T')[0],
+                        y: s.followers
+                    })),
+                    borderColor: '#0ea5e9',
+                    backgroundColor: 'rgba(14, 165, 233, 0.1)',
+                    fill: true,
+                    tension: 0.3
+                });
+            }
+
+            if (followerHistory.x && followerHistory.x.length > 0) {
+                datasets.push({
+                    label: 'X Followers',
+                    data: followerHistory.x.map(s => ({
+                        x: s.timestamp.split('T')[0],
+                        y: s.followers
+                    })),
+                    borderColor: '#6b7280',
+                    backgroundColor: 'rgba(107, 114, 128, 0.1)',
+                    fill: true,
+                    tension: 0.3
+                });
+            }
+
+            if (datasets.length === 0) {
+                canvas.parentElement.innerHTML = '<div class="no-data">No follower data yet. Data will appear after the next analytics run.</div>';
+                return;
+            }
+
+            // Get all dates
+            const allDates = [...new Set(datasets.flatMap(d => d.data.map(p => p.x)))].sort();
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: allDates.map(d => new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })),
+                    datasets: datasets.map(ds => ({
+                        ...ds,
+                        data: allDates.map(date => {
+                            const point = ds.data.find(p => p.x === date);
+                            return point ? point.y : null;
+                        })
+                    }))
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            ticks: {
+                                callback: function(value) {
+                                    return value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -954,6 +1145,7 @@
                 document.getElementById('lastUpdated').textContent = 'No data yet';
             }
 
+            renderFollowerChart();
             renderPlatformComparison();
             renderSourcesChart();
             renderTimelineChart();
