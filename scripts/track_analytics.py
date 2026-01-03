@@ -27,8 +27,12 @@ def load_analytics_history():
     """Load existing analytics history or create empty structure"""
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {"posts": {}, "last_updated": None}
+            history = json.load(f)
+            # Ensure follower_history exists
+            if "follower_history" not in history:
+                history["follower_history"] = {"x": [], "bluesky": []}
+            return history
+    return {"posts": {}, "follower_history": {"x": [], "bluesky": []}, "last_updated": None}
 
 
 def save_analytics_history(history):
@@ -57,6 +61,25 @@ def get_posts_in_window(posts, days=TRAILING_DAYS):
         except:
             continue
     return recent
+
+
+def fetch_bluesky_follower_count():
+    """Fetch current follower count from Bluesky"""
+    try:
+        from bluesky_bot import BlueskyBot
+        bot = BlueskyBot()
+
+        # Get profile info
+        profile = bot.client.app.bsky.actor.get_profile({'actor': bot.client.me.did})
+
+        return {
+            "followers": profile.followers_count or 0,
+            "following": profile.follows_count or 0,
+            "posts": profile.posts_count or 0
+        }
+    except Exception as e:
+        print(f"Could not fetch Bluesky follower count: {e}")
+        return None
 
 
 def fetch_bluesky_metrics(posts):
@@ -454,6 +477,22 @@ def main():
     print("\nFetching Bluesky metrics...")
     bluesky_metrics = fetch_bluesky_metrics(recent_posts)
     print(f"Got metrics for {len(bluesky_metrics)} Bluesky posts")
+
+    # Fetch Bluesky follower count
+    print("\nFetching Bluesky follower count...")
+    bluesky_followers = fetch_bluesky_follower_count()
+    if bluesky_followers:
+        print(f"Bluesky followers: {bluesky_followers['followers']}")
+        analytics_history["follower_history"]["bluesky"].append({
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            **bluesky_followers
+        })
+        # Keep only last 90 days
+        cutoff = datetime.now(timezone.utc) - timedelta(days=90)
+        analytics_history["follower_history"]["bluesky"] = [
+            s for s in analytics_history["follower_history"]["bluesky"]
+            if datetime.fromisoformat(s["timestamp"].replace('Z', '+00:00')) > cutoff
+        ]
 
     print("\nFetching X metrics...")
     x_metrics = fetch_x_metrics(recent_posts)
