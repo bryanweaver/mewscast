@@ -539,6 +539,11 @@
       "did": "did:plc:tzh74kkpdt5anzz6yqnx3lzt",
       "handle": "romanpiso.bsky.social",
       "timestamp": "2026-01-03T13:38:31.336837"
+    },
+    {
+      "did": "did:plc:6fzthh5xfd3ol7t4wvhqfms5",
+      "handle": "luxomancer.bsky.social",
+      "timestamp": "2026-01-03T14:02:29.511226"
     }
   ],
   "liked_posts": [
@@ -7526,6 +7531,11 @@
       "uri": "at://did:plc:tzh74kkpdt5anzz6yqnx3lzt/app.bsky.feed.post/3mbjjnbqsfs2j",
       "author": "romanpiso.bsky.social",
       "timestamp": "2026-01-03T13:38:31.118472"
+    },
+    {
+      "uri": "at://did:plc:6fzthh5xfd3ol7t4wvhqfms5/app.bsky.feed.post/3mbjed7jhn22q",
+      "author": "luxomancer.bsky.social",
+      "timestamp": "2026-01-03T14:02:29.321990"
     }
   ],
   "last_cleanup": "2026-01-01T23:34:37.856132"
