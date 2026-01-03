@@ -504,6 +504,11 @@
       "did": "did:plc:thst2kggjvgnlmufo2hlgdag",
       "handle": "rotten-milo.bsky.social",
       "timestamp": "2026-01-03T09:02:26.385408"
+    },
+    {
+      "did": "did:plc:233r27spesiq57rjzp56wh3x",
+      "handle": "canijustread.bsky.social",
+      "timestamp": "2026-01-03T09:34:51.123686"
     }
   ],
   "liked_posts": [
@@ -7446,6 +7451,11 @@
       "uri": "at://did:plc:thst2kggjvgnlmufo2hlgdag/app.bsky.feed.post/3mbfoebulqc25",
       "author": "rotten-milo.bsky.social",
       "timestamp": "2026-01-03T09:02:26.168061"
+    },
+    {
+      "uri": "at://did:plc:233r27spesiq57rjzp56wh3x/app.bsky.feed.post/3mbiko7emzc2a",
+      "author": "canijustread.bsky.social",
+      "timestamp": "2026-01-03T09:34:51.028782"
     }
   ],
   "last_cleanup": "2026-01-01T23:34:37.856132"
