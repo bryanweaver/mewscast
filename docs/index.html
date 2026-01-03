@@ -242,6 +242,40 @@
             color: #999;
         }
 
+        .post-body {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .post-image {
+            flex-shrink: 0;
+            width: 100px;
+            height: 68px;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #f3f4f6;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-image.no-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 1.25rem;
+        }
+
+        .post-text {
+            flex: 1;
+            min-width: 0;
+        }
+
         .post-content {
             font-size: 0.875rem;
             color: #333;
@@ -490,14 +524,20 @@
                         content: post.content,
                         source: post.source,
                         topic: post.topic,
+                        article_url: post.article_url,
+                        image_url: post.image_url || null,
                         bluesky: null,
                         x: null
                     };
                 }
                 if (post.platform === 'bluesky') {
                     groups[key].bluesky = { id, ...post };
+                    // Prefer bluesky image
+                    if (post.image_url) groups[key].image_url = post.image_url;
                 } else {
                     groups[key].x = { id, ...post };
+                    // Use X image if no bluesky image
+                    if (post.image_url && !groups[key].image_url) groups[key].image_url = post.image_url;
                 }
             }
 
@@ -769,7 +809,12 @@
                                 <span class="post-source">${group.source || 'Unknown'}</span>
                                 <span class="post-date">${date}</span>
                             </div>
-                            <div class="post-content">${group.content || 'No content'}</div>
+                            <div class="post-body">
+                                ${group.image_url ? \`<div class="post-image"><img src="\${group.image_url}" alt="Post image" loading="lazy" onerror="this.parentElement.innerHTML='🐱'"></div>\` : '<div class="post-image no-image">🐱</div>'}
+                                <div class="post-text">
+                                    <div class="post-content">\${group.content || 'No content'}</div>
+                                </div>
+                            </div>
                             <div class="post-platforms">
                                 ${bskyMetrics ? `
                                     <div class="post-platform-stats bluesky">
