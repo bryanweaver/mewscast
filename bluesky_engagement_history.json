@@ -524,6 +524,11 @@
       "did": "did:plc:5h5jfgi7vuqp4bkfogcntzep",
       "handle": "garius.bsky.social",
       "timestamp": "2026-01-03T11:02:16.669881"
+    },
+    {
+      "did": "did:plc:wdnqku37zhgiypbh5e27wgrj",
+      "handle": "samtang.bsky.social",
+      "timestamp": "2026-01-03T11:32:33.728500"
     }
   ],
   "liked_posts": [
@@ -7486,6 +7491,11 @@
       "uri": "at://did:plc:5h5jfgi7vuqp4bkfogcntzep/app.bsky.feed.post/3mbj6p6xwu22s",
       "author": "garius.bsky.social",
       "timestamp": "2026-01-03T11:02:16.580517"
+    },
+    {
+      "uri": "at://did:plc:wdnqku37zhgiypbh5e27wgrj/app.bsky.feed.post/3mbhbe6chek2n",
+      "author": "samtang.bsky.social",
+      "timestamp": "2026-01-03T11:32:33.529873"
     }
   ],
   "last_cleanup": "2026-01-01T23:34:37.856132"
