@@ -1,9 +1,9 @@
 name: Scrape X Public Data
 
 on:
-  # Run daily after track-analytics (which runs at 11 PM UTC)
+  # Run daily BEFORE track-analytics (which runs at 11 PM UTC)
   schedule:
-    - cron: '30 23 * * *'
+    - cron: '45 22 * * *'
 
   # Allow manual triggering
   workflow_dispatch:
