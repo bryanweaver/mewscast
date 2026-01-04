@@ -44,22 +44,24 @@ async def scrape_x_profile(username: str = "mewscast") -> dict:
     }
 
     async with async_playwright() as p:
-        # Use Firefox as it's less likely to be detected
-        browser = await p.firefox.launch(headless=True)
+        # Use Chromium with mobile user agent - X often shows more content to mobile
+        browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(
-            viewport={"width": 1280, "height": 720},
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0"
+            viewport={"width": 430, "height": 932},  # iPhone 14 Pro Max dimensions
+            user_agent="Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+            is_mobile=True,
+            has_touch=True
         )
         page = await context.new_page()
 
         try:
-            # Navigate to profile
-            url = f"https://x.com/{username}"
-            print(f"Navigating to {url}")
+            # Navigate to profile - use mobile.twitter.com for better mobile experience
+            url = f"https://mobile.twitter.com/{username}"
+            print(f"Navigating to {url} (mobile)")
             await page.goto(url, wait_until="networkidle", timeout=30000)
 
-            # Wait for profile to load - need extra time for X's heavy JS
-            await page.wait_for_timeout(5000)
+            # Wait for profile to load - mobile may need more time
+            await page.wait_for_timeout(7000)
 
             # Debug: Log page title to verify we loaded correctly
             title = await page.title()
