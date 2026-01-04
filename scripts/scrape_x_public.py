@@ -55,10 +55,10 @@ async def scrape_x_profile(username: str = "mewscast") -> dict:
         page = await context.new_page()
 
         try:
-            # Navigate to profile - use mobile.twitter.com for better mobile experience
-            url = f"https://mobile.twitter.com/{username}"
-            print(f"Navigating to {url} (mobile)")
-            await page.goto(url, wait_until="networkidle", timeout=30000)
+            # Navigate to profile with mobile device emulation
+            url = f"https://x.com/{username}"
+            print(f"Navigating to {url} (with mobile UA)")
+            await page.goto(url, wait_until="domcontentloaded", timeout=30000)
 
             # Wait for profile to load - mobile may need more time
             await page.wait_for_timeout(7000)
