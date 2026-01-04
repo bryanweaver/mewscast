@@ -60,8 +60,21 @@ async def scrape_x_profile(username: str = "mewscast") -> dict:
             print(f"Navigating to {url} (with mobile UA)")
             await page.goto(url, wait_until="domcontentloaded", timeout=30000)
 
-            # Wait for profile to load - mobile may need more time
-            await page.wait_for_timeout(7000)
+            # Wait for initial load
+            await page.wait_for_timeout(3000)
+
+            # Handle mobile interstitial - click "Continue on web" if present
+            try:
+                continue_link = page.get_by_text("Continue on web", exact=True)
+                if await continue_link.count() > 0:
+                    print("Found mobile interstitial, clicking 'Continue on web'...")
+                    await continue_link.click()
+                    await page.wait_for_timeout(5000)
+            except Exception as e:
+                print(f"No interstitial found or click failed: {e}")
+
+            # Wait for profile content to load
+            await page.wait_for_timeout(4000)
 
             # Debug: Log page title to verify we loaded correctly
             title = await page.title()
