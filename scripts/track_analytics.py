@@ -201,6 +201,19 @@ def update_history(history, posts, bluesky_metrics, x_metrics):
     """Add new snapshot to history for each post"""
     now = datetime.now(timezone.utc).isoformat()
 
+    # Build a lookup for full content from posts
+    content_lookup = {}
+    for post in posts:
+        if post.get('bluesky_uri'):
+            content_lookup[post['bluesky_uri']] = post.get('content', '')
+        if post.get('x_tweet_id'):
+            content_lookup[f"x:{post['x_tweet_id']}"] = post.get('content', '')
+
+    # Refresh truncated content in existing posts
+    for key, post_data in history["posts"].items():
+        if key in content_lookup and len(content_lookup[key]) > len(post_data.get('content', '')):
+            post_data['content'] = content_lookup[key]
+
     for post in posts:
         # Extract source and topic
         source = post.get('source', 'Unknown')
