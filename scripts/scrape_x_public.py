@@ -1,6 +1,10 @@
 """
 Scrape public X (Twitter) profile data using Playwright.
 No login required - only scrapes publicly visible data.
+
+NOTE: X blocks tweet content for non-logged-in users as of 2024.
+This scraper successfully gets follower/following counts but cannot
+access individual tweets or engagement metrics without authentication.
 """
 import json
 import os
@@ -105,35 +109,20 @@ async def scrape_x_profile(username: str = "mewscast") -> dict:
             except Exception as e:
                 print(f"Error getting follower counts: {e}")
 
-            # Scroll to load tweets and wait for them to appear
-            print("Scrolling to load tweets...")
-            await page.evaluate("window.scrollBy(0, 800)")
-            await page.wait_for_timeout(3000)
-
-            # Try to wait for tweets to appear
-            try:
-                await page.wait_for_selector('article[data-testid="tweet"]', timeout=10000)
-                print("Tweet selector found!")
-            except Exception as e:
-                print(f"Tweet selector timeout: {e}")
-                # Debug: Check what elements are on the page
-                article_count = await page.locator('article').count()
-                print(f"Found {article_count} article elements on page")
-
-                # Try alternative selectors
-                cell_count = await page.locator('[data-testid="cellInnerDiv"]').count()
-                print(f"Found {cell_count} cellInnerDiv elements")
-
-            # Take a debug screenshot
+            # Take a debug screenshot for troubleshooting
             screenshot_path = "x_debug_screenshot.png"
             await page.screenshot(path=screenshot_path)
             print(f"Saved debug screenshot to {screenshot_path}")
 
-            # Get tweet metrics from the timeline
-            # Look for tweet articles
+            # Note: X blocks tweets for non-logged-in users
+            # The code below attempts to scrape tweets but will likely find none
+            # Keeping it in case X changes this behavior
+            await page.evaluate("window.scrollBy(0, 800)")
+            await page.wait_for_timeout(2000)
+
+            # Get tweet metrics from the timeline (usually blocked by X)
             tweets = page.locator('article[data-testid="tweet"]')
             tweet_count = await tweets.count()
-            print(f"Found {tweet_count} tweets with data-testid='tweet'")
 
             for i in range(min(tweet_count, 20)):  # Limit to 20 tweets
                 try:
@@ -188,7 +177,16 @@ async def scrape_x_profile(username: str = "mewscast") -> dict:
         finally:
             await browser.close()
 
-    print(f"Scraped {len(result['tweets'])} tweets, {result['followers']} followers")
+    if result['followers'] > 0:
+        print(f"Successfully scraped profile: {result['followers']} followers, {result['following']} following")
+    else:
+        print("Warning: Could not get follower counts")
+
+    if len(result['tweets']) == 0:
+        print("Note: X blocks tweets for non-logged-in users (expected behavior)")
+    else:
+        print(f"Unexpectedly found {len(result['tweets'])} tweets!")
+
     return result
 
 
