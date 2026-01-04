@@ -574,6 +574,11 @@
       "did": "did:plc:iakwduzzcaynnteansr6d7m4",
       "handle": "tangentsafari.bsky.social",
       "timestamp": "2026-01-04T02:45:21.003939"
+    },
+    {
+      "did": "did:plc:25r6yfsln5zgk5f6gw24y3dh",
+      "handle": "inertia-raptor.bsky.social",
+      "timestamp": "2026-01-04T04:20:42.279632"
     }
   ],
   "liked_posts": [
@@ -7686,6 +7691,11 @@
       "uri": "at://did:plc:izfd4s3zez77rfgs7nsrbcs4/app.bsky.feed.post/3mbkmsq672k25",
       "author": "teresalouise.bsky.social",
       "timestamp": "2026-01-04T03:32:24.631712"
+    },
+    {
+      "uri": "at://did:plc:25r6yfsln5zgk5f6gw24y3dh/app.bsky.feed.post/3mbkzojf2tc2s",
+      "author": "inertia-raptor.bsky.social",
+      "timestamp": "2026-01-04T04:20:42.103525"
     }
   ],
   "last_cleanup": "2026-01-01T23:34:37.856132"
