@@ -771,21 +771,44 @@
         // Render timeline chart
         function renderTimelineChart() {
             const posts = ANALYTICS_DATA.posts;
+
+            // Collect all unique dates from snapshots
+            const allDatesSet = new Set();
+            for (const post of Object.values(posts)) {
+                for (const snapshot of post.snapshots || []) {
+                    allDatesSet.add(snapshot.timestamp.split('T')[0]);
+                }
+            }
+            const allDates = [...allDatesSet].sort();
+
+            // For each date, calculate total engagement using latest snapshot for each post
             const blueskyByDate = {};
             const xByDate = {};
 
-            for (const [id, post] of Object.entries(posts)) {
-                const isBluesky = post.platform === 'bluesky';
-                const target = isBluesky ? blueskyByDate : xByDate;
+            for (const date of allDates) {
+                let blueskyTotal = 0;
+                let xTotal = 0;
 
-                for (const snapshot of post.snapshots || []) {
-                    const date = snapshot.timestamp.split('T')[0];
-                    if (!target[date]) target[date] = 0;
-                    target[date] += (snapshot.likes || 0) + (snapshot.reposts || snapshot.retweets || 0);
+                for (const post of Object.values(posts)) {
+                    // Find the latest snapshot on or before this date
+                    const validSnapshots = (post.snapshots || [])
+                        .filter(s => s.timestamp.split('T')[0] <= date)
+                        .sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+
+                    if (validSnapshots.length > 0) {
+                        const latest = validSnapshots[0];
+                        const engagement = (latest.likes || 0) + (latest.reposts || latest.retweets || 0);
+                        if (post.platform === 'bluesky') {
+                            blueskyTotal += engagement;
+                        } else {
+                            xTotal += engagement;
+                        }
+                    }
                 }
-            }
 
-            const allDates = [...new Set([...Object.keys(blueskyByDate), ...Object.keys(xByDate)])].sort();
+                blueskyByDate[date] = blueskyTotal;
+                xByDate[date] = xTotal;
+            }
 
             if (allDates.length === 0) {
                 document.getElementById('timelineChart').parentElement.innerHTML = '<div class="no-data">No timeline data yet</div>';
