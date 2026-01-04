@@ -569,6 +569,11 @@
       "did": "did:plc:rz7ixyyf27wa55xophug62uo",
       "handle": "laserlady.bsky.social",
       "timestamp": "2026-01-04T01:30:47.626860"
+    },
+    {
+      "did": "did:plc:iakwduzzcaynnteansr6d7m4",
+      "handle": "tangentsafari.bsky.social",
+      "timestamp": "2026-01-04T02:45:21.003939"
     }
   ],
   "liked_posts": [
@@ -7671,6 +7676,11 @@
       "uri": "at://did:plc:rz7ixyyf27wa55xophug62uo/app.bsky.feed.post/3mbklfmqtic2v",
       "author": "laserlady.bsky.social",
       "timestamp": "2026-01-04T01:30:47.413963"
+    },
+    {
+      "uri": "at://did:plc:iakwduzzcaynnteansr6d7m4/app.bsky.feed.post/3mbkshpstlk2w",
+      "author": "tangentsafari.bsky.social",
+      "timestamp": "2026-01-04T02:45:20.825245"
     }
   ],
   "last_cleanup": "2026-01-01T23:34:37.856132"
