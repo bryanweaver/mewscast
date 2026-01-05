@@ -33,7 +33,19 @@ def main():
             with open(history_path, 'r') as f:
                 history = json.load(f)
         else:
-            history = {'sessions': [], 'liked_uris': []}
+            history = {}
+
+        # Ensure required keys exist
+        if 'sessions' not in history:
+            history['sessions'] = []
+        if 'liked_uris' not in history:
+            history['liked_uris'] = []
+
+        # Also pull URIs from existing liked_posts if present (old format)
+        if 'liked_posts' in history:
+            for post in history['liked_posts']:
+                if 'uri' in post and post['uri'] not in history['liked_uris']:
+                    history['liked_uris'].append(post['uri'])
 
         # Build cache of already-liked URIs
         liked_cache = set(history.get('liked_uris', []))
@@ -58,8 +70,6 @@ def main():
         })
 
         # Add newly liked URIs to cache
-        if 'liked_uris' not in history:
-            history['liked_uris'] = []
         history['liked_uris'].extend(result.get('liked_uris', []))
 
         # Dedupe URIs
