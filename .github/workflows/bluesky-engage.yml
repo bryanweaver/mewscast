@@ -1,0 +1,66 @@
+name: Bluesky Engagement
+
+on:
+  # Run 4 times a day to catch mentions
+  schedule:
+    - cron: '30 5 * * *'   # 5:30 AM UTC
+    - cron: '30 11 * * *'  # 11:30 AM UTC
+    - cron: '30 17 * * *'  # 5:30 PM UTC
+    - cron: '30 23 * * *'  # 11:30 PM UTC
+
+  # Allow manual triggering
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  engage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Random delay
+        run: |
+          # Random delay 1-5 minutes
+          DELAY=$((RANDOM % 300 + 60))
+          echo "Waiting ${DELAY} seconds..."
+          sleep $DELAY
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Like mentions on Bluesky
+        env:
+          BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+        run: |
+          python scripts/bluesky_engage.py
+
+      - name: Commit engagement history
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add bluesky_engagement_history.json
+
+          if ! git diff --staged --quiet; then
+            git commit -m "Update Bluesky engagement history [skip ci]"
+
+            for i in {1..3}; do
+              git pull --rebase origin main && git push && break || {
+                echo "Push failed (attempt $i/3), retrying..."
+                sleep $((i * 2))
+              }
+            done
+          fi
