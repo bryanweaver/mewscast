@@ -28,6 +28,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Random delay to avoid bot detection
+        run: |
+          # Random delay between 1-15 minutes to appear more human-like
+          DELAY=$((RANDOM % 900 + 60))
+          echo "Waiting ${DELAY} seconds before posting..."
+          sleep $DELAY
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
