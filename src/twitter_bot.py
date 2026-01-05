@@ -67,6 +67,10 @@ class TwitterBot:
             raise  # Re-raise to make GitHub Actions fail
         except tweepy.TweepyException as e:
             print(f"✗ Error posting tweet: {e}")
+            # Print more details for debugging
+            if hasattr(e, 'response') and e.response is not None:
+                print(f"   Response status: {e.response.status_code}")
+                print(f"   Response text: {e.response.text}")
             return None
 
     def post_tweet_with_image(self, text: str, image_path: str) -> Optional[dict]:
@@ -108,6 +112,10 @@ class TwitterBot:
             raise  # Re-raise to make GitHub Actions fail
         except tweepy.TweepyException as e:
             print(f"✗ Error posting tweet with image: {e}")
+            # Print more details for debugging
+            if hasattr(e, 'response') and e.response is not None:
+                print(f"   Response status: {e.response.status_code}")
+                print(f"   Response text: {e.response.text}")
             return None
         except FileNotFoundError:
             print(f"✗ Error: Image file not found: {image_path}")
