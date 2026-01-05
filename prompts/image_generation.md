@@ -23,7 +23,8 @@ Your #1 job is to extract SPECIFIC visual details from the article that make THI
 
 ## CRITICAL REQUIREMENTS
 - **WIDESCREEN LANDSCAPE format** - cinematic, horizontal composition
-- **CAT MUST BE IN EVERY IMAGE** - MANDATORY, non-negotiable, always visible
+- **BROWN TABBY CAT MUST BE IN EVERY IMAGE** - Walter is a brown tabby reporter cat
+- The cat MUST be visible - MANDATORY, non-negotiable
 - Image MUST be directly relevant to the SPECIFIC story content
 - Extract the most visually striking element from the article
 - Cat can be protagonist (center) or observer (background), but MUST be present
@@ -38,20 +39,20 @@ Your #1 job is to extract SPECIFIC visual details from the article that make THI
 
 Hong Kong high-rise fire story:
 BAD: "Noir detective cat examining documents under desk lamp" (generic, ignores story)
-GOOD: "Cinematic: Tabby reporter cat on Hong Kong rooftop, bamboo scaffolding ablaze on high-rise behind, orange glow, dramatic night scene"
+GOOD: "Cinematic: Brown tabby reporter cat on Hong Kong rooftop, bamboo scaffolding ablaze on high-rise behind, orange glow, dramatic night scene"
 
 MTG resignation story:
 BAD: "Cat at desk looking at papers" (generic)
-GOOD: "Wide shot: Cat reporter at Capitol steps watching lone figure walk away, pension papers scattered in wind, dramatic sunset"
+GOOD: "Wide shot: Brown tabby reporter at Capitol steps watching lone figure walk away, pension papers scattered in wind, dramatic sunset"
 
 Climate summit story:
 BAD: "Cat with globe" (generic environmental)
-GOOD: "Cat reporter in Brazil conference hall, delegates arguing, oil barrel vs wind turbine symbols clashing, tense atmosphere"
+GOOD: "Brown tabby reporter cat in Brazil conference hall, delegates arguing, oil barrel vs wind turbine symbols clashing, tense atmosphere"
 
 Ukraine peace plan story:
 BAD: "Cat looking at map" (generic)
-GOOD: "Split screen: Cat reporter between Kyiv skyline and Thanksgiving dinner table, peace document floating between, surreal juxtaposition"
+GOOD: "Split screen: Brown tabby reporter between Kyiv skyline and Thanksgiving dinner table, peace document floating between, surreal juxtaposition"
 
-REMEMBER: Extract what's UNIQUE about THIS story. The cat witnesses/investigates the SPECIFIC scene described.
+REMEMBER: Walter is a BROWN TABBY cat. Extract what's UNIQUE about THIS story. The cat witnesses/investigates the SPECIFIC scene described.
 
 Just return the SHORT image prompt itself (max 200 chars), nothing else.
