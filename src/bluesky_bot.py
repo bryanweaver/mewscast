@@ -263,6 +263,110 @@ class BlueskyBot:
             print(f"✗ Error posting reply: {e}")
             return None
 
+    def like_post(self, uri: str, cid: str) -> bool:
+        """
+        Like a post on Bluesky
+
+        Args:
+            uri: AT URI of the post to like
+            cid: CID of the post to like
+
+        Returns:
+            True if successful, False if failed
+        """
+        try:
+            self.client.like(uri, cid)
+            print(f"✓ Liked post: {uri}")
+            return True
+        except Exception as e:
+            print(f"✗ Error liking post: {e}")
+            return False
+
+    def get_notifications(self, limit: int = 50) -> list:
+        """
+        Get recent notifications (mentions, replies, likes, reposts, follows)
+
+        Args:
+            limit: Maximum notifications to fetch
+
+        Returns:
+            List of notification objects
+        """
+        try:
+            response = self.client.app.bsky.notification.list_notifications(
+                {'limit': limit}
+            )
+            return response.notifications if response.notifications else []
+        except Exception as e:
+            print(f"✗ Error fetching notifications: {e}")
+            return []
+
+    def get_mentions(self, limit: int = 50) -> list:
+        """
+        Get posts that mention us (filtered from notifications)
+
+        Args:
+            limit: Maximum notifications to check
+
+        Returns:
+            List of posts that mention us
+        """
+        notifications = self.get_notifications(limit)
+        mentions = []
+
+        for notif in notifications:
+            # Filter for mentions and replies
+            if notif.reason in ['mention', 'reply']:
+                mentions.append({
+                    'uri': notif.uri,
+                    'cid': notif.cid,
+                    'author': notif.author.handle,
+                    'reason': notif.reason,
+                    'indexed_at': notif.indexed_at,
+                    'is_read': notif.is_read
+                })
+
+        return mentions
+
+    def like_mentions(self, limit: int = 50, liked_cache: set = None) -> dict:
+        """
+        Like all posts that mention us (that we haven't already liked)
+
+        Args:
+            limit: Maximum notifications to check
+            liked_cache: Set of URIs we've already liked (to avoid duplicates)
+
+        Returns:
+            Dict with counts of liked and skipped posts, and URIs liked
+        """
+        mentions = self.get_mentions(limit)
+        liked = 0
+        skipped = 0
+        already_liked = 0
+        liked_uris = []
+
+        if liked_cache is None:
+            liked_cache = set()
+
+        for mention in mentions:
+            uri = mention['uri']
+
+            # Skip if we've already liked this
+            if uri in liked_cache:
+                already_liked += 1
+                continue
+
+            # Try to like the post
+            if self.like_post(uri, mention['cid']):
+                liked += 1
+                liked_uris.append(uri)
+            else:
+                # Likely already liked or error
+                skipped += 1
+
+        print(f"📊 Liked {liked} mentions, skipped {skipped}, already in cache {already_liked}")
+        return {'liked': liked, 'skipped': skipped, 'already_cached': already_liked, 'liked_uris': liked_uris}
+
     def delete_post(self, post_uri: str) -> bool:
         """
         Delete a post
