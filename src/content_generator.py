@@ -49,7 +49,8 @@ class ContentGenerator:
         self.prompts = get_prompt_loader()
 
     def generate_tweet(self, topic: Optional[str] = None, trending_topic: Optional[str] = None,
-                      story_metadata: Optional[Dict] = None, previous_posts: Optional[List[Dict]] = None) -> Dict:
+                      story_metadata: Optional[Dict] = None, previous_posts: Optional[List[Dict]] = None,
+                      platform: Optional[str] = None) -> Dict:
         """
         Generate a news cat reporter tweet
 
@@ -58,6 +59,7 @@ class ContentGenerator:
             trending_topic: Specific trending topic from X (takes priority)
             story_metadata: Dictionary with 'title', 'context', 'source' for real trending stories
             previous_posts: List of previous related posts (for updates/developing stories)
+            platform: 'x', 'bluesky', or None for default prompt style
 
         Returns:
             Dictionary with:
@@ -121,7 +123,8 @@ class ContentGenerator:
                     article_details += f"Summary: {story_metadata.get('context', '')}"
 
             prompt = self._build_news_cat_prompt(selected_topic, is_specific_story=is_specific_story,
-                                                 article_details=article_details, previous_posts=previous_posts)
+                                                 article_details=article_details, previous_posts=previous_posts,
+                                                 platform=platform)
 
         try:
             message = self.client.messages.create(
@@ -353,8 +356,13 @@ class ContentGenerator:
         return {'valid': True, 'reason': None}
 
     def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False,
-                               article_details: str = None, previous_posts: Optional[List[Dict]] = None) -> str:
-        """Build the news cat reporter prompt for Claude using prompt templates"""
+                               article_details: str = None, previous_posts: Optional[List[Dict]] = None,
+                               platform: str = None) -> str:
+        """Build the news cat reporter prompt for Claude using prompt templates
+
+        Args:
+            platform: 'x', 'bluesky', or None for default prompt
+        """
         # Prepare config-based values
         avoid_str = ", ".join(self.avoid_topics)
         cat_vocab_str = ", ".join(self.cat_vocabulary[:10])
@@ -415,8 +423,9 @@ class ContentGenerator:
         elif is_specific_story:
             story_guidance = self.prompts.load_story_guidance_generic()
 
-        # Load main prompt template and fill in values
+        # Load main prompt template and fill in values (platform-specific if specified)
         return self.prompts.load_tweet_prompt(
+            platform=platform,
             topic=topic,
             update_guidance=update_guidance,
             cat_vocab_str=cat_vocab_str,

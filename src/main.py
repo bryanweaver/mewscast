@@ -140,10 +140,12 @@ def post_scheduled_tweet():
                 previous_posts = status.get('previous_posts', [])
                 print(f"   📋 Providing context from {len(previous_posts)} previous post(s)")
 
+            # Generate for Bluesky first (our primary/working platform)
             result = generator.generate_tweet(
                 trending_topic=article['title'],
                 story_metadata=article,
-                previous_posts=previous_posts
+                previous_posts=previous_posts,
+                platform='bluesky'
             )
 
             # Check if generation succeeded (validation passed)
@@ -170,9 +172,20 @@ def post_scheduled_tweet():
             print(f"{'='*60}\n")
             return False
 
-        tweet_text = result['tweet']
+        bluesky_text = result['tweet']
         needs_source = result['needs_source_reply']
         story_meta = result['story_metadata']
+
+        # Generate X-specific content with different tone
+        print(f"📝 Generating X-specific version...")
+        x_result = generator.generate_tweet(
+            trending_topic=selected_story['title'],
+            story_metadata=selected_story,
+            previous_posts=previous_posts if story_status and story_status.get('is_update') else None,
+            platform='x'
+        )
+        x_text = x_result['tweet'] if x_result else bluesky_text
+        print(f"   ✅ X version generated!")
 
         # Try to generate image (with graceful fallback)
         image_path = None
@@ -182,9 +195,10 @@ def post_scheduled_tweet():
             img_generator = ImageGenerator()
 
             # Generate image prompt using Claude (with full article for story-specific imagery)
+            # Use bluesky text since it's more straightforward
             image_prompt = generator.generate_image_prompt(
                 selected_story['title'] if selected_story else "news",
-                tweet_text,
+                bluesky_text,
                 article_content=selected_story.get('article_content') if selected_story else None
             )
 
@@ -195,9 +209,9 @@ def post_scheduled_tweet():
             print(f"⚠️  Image generation failed: {e}")
             print(f"   Continuing without image...")
 
-        # Post to X (with or without image)
+        # Post to X (with or without image) - uses X-specific tone
         print(f"📤 Filing news report to X...")
-        print(f"   Content: \"{tweet_text}\"")
+        print(f"   Content: \"{x_text}\"")
 
         tweet_id = None
         reply_tweet_id = None
@@ -205,10 +219,10 @@ def post_scheduled_tweet():
 
         if image_path:
             print(f"   Image: {image_path}\n")
-            x_result = twitter_bot.post_tweet_with_image(tweet_text, image_path)
+            x_result = twitter_bot.post_tweet_with_image(x_text, image_path)
         else:
             print(f"   (No image attached)\n")
-            x_result = twitter_bot.post_tweet(tweet_text)
+            x_result = twitter_bot.post_tweet(x_text)
 
         if x_result:
             tweet_id = x_result['id']
@@ -220,7 +234,7 @@ def post_scheduled_tweet():
                 print(f"📎 Posting source citation reply on X...")
                 time.sleep(2)  # Brief pause before reply
 
-                source_reply = generator.generate_source_reply(tweet_text, story_meta)
+                source_reply = generator.generate_source_reply(x_text, story_meta)
                 x_reply_result = twitter_bot.reply_to_tweet(tweet_id, source_reply)
 
                 if x_reply_result:
@@ -238,14 +252,14 @@ def post_scheduled_tweet():
 
         if bluesky_bot:
             print(f"\n🦋 Filing news report to Bluesky...")
-            print(f"   Content: \"{tweet_text}\"")
+            print(f"   Content: \"{bluesky_text}\"")
 
             if image_path:
                 print(f"   Image: {image_path}\n")
-                bluesky_result = bluesky_bot.post_skeet_with_image(tweet_text, image_path)
+                bluesky_result = bluesky_bot.post_skeet_with_image(bluesky_text, image_path)
             else:
                 print(f"   (No image attached)\n")
-                bluesky_result = bluesky_bot.post_skeet(tweet_text)
+                bluesky_result = bluesky_bot.post_skeet(bluesky_text)
 
             if bluesky_result:
                 bluesky_uri = bluesky_result['uri']
@@ -257,7 +271,7 @@ def post_scheduled_tweet():
                     print(f"📎 Posting source citation reply on Bluesky...")
                     time.sleep(2)  # Brief pause before reply
 
-                    source_reply = generator.generate_source_reply(tweet_text, story_meta)
+                    source_reply = generator.generate_source_reply(bluesky_text, story_meta)
 
                     # Check if source reply is just a URL (for link card)
                     import re
@@ -279,10 +293,11 @@ def post_scheduled_tweet():
                 print(f"❌ Bluesky post failed")
 
         # Record post to history (with IDs from both platforms)
+        # Use bluesky_text as canonical content since Bluesky is our primary platform
         if selected_story and (x_success or bluesky_success):
             tracker.record_post(
                 selected_story,
-                post_content=tweet_text,
+                post_content=bluesky_text,
                 tweet_id=tweet_id,
                 reply_tweet_id=reply_tweet_id,
                 bluesky_uri=bluesky_uri,

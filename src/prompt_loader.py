@@ -73,9 +73,19 @@ class PromptLoader:
             result = result.replace(placeholder, str(value))
         return result
 
-    def load_tweet_prompt(self, **kwargs) -> str:
-        """Load the main tweet generation prompt"""
-        return self.load("tweet_generation.md", **kwargs)
+    def load_tweet_prompt(self, platform: str = None, **kwargs) -> str:
+        """Load the tweet generation prompt, optionally platform-specific
+
+        Args:
+            platform: 'x', 'bluesky', or None for default
+            **kwargs: Values to substitute into the template
+        """
+        if platform == 'x':
+            return self.load("tweet_generation_x.md", **kwargs)
+        elif platform == 'bluesky':
+            return self.load("tweet_generation_bluesky.md", **kwargs)
+        else:
+            return self.load("tweet_generation.md", **kwargs)
 
     def load_image_prompt(self, **kwargs) -> str:
         """Load the image generation prompt"""
