@@ -79,11 +79,6 @@
             border: 1px solid #bae6fd;
         }
 
-        .follower-stat-card.x {
-            background: linear-gradient(135deg, #f3f4f6 0%, #fafafa 100%);
-            border: 1px solid #e5e7eb;
-        }
-
         .follower-stat-card .platform-name {
             font-size: 0.75rem;
             font-weight: 600;
@@ -94,10 +89,6 @@
 
         .follower-stat-card.bluesky .platform-name {
             color: #0369a1;
-        }
-
-        .follower-stat-card.x .platform-name {
-            color: #374151;
         }
 
         .follower-stat-card .follower-count {
@@ -137,11 +128,6 @@
             border: 1px solid #bae6fd;
         }
 
-        .platform-card.x {
-            background: linear-gradient(135deg, #f3f4f6 0%, #fafafa 100%);
-            border: 1px solid #e5e7eb;
-        }
-
         .platform-name {
             font-size: 0.875rem;
             font-weight: 600;
@@ -152,10 +138,6 @@
 
         .platform-card.bluesky .platform-name {
             color: #0369a1;
-        }
-
-        .platform-card.x .platform-name {
-            color: #374151;
         }
 
         .platform-stats {
@@ -365,10 +347,6 @@
             background: #e0f2fe;
         }
 
-        .post-platform-stats.x {
-            background: #f3f4f6;
-        }
-
         .post-platform-stats.no-data {
             background: #f9fafb;
             color: #9ca3af;
@@ -382,10 +360,6 @@
 
         .post-platform-stats.bluesky .platform-label {
             color: #0369a1;
-        }
-
-        .post-platform-stats.x .platform-label {
-            color: #374151;
         }
 
         .stat-item {
@@ -472,13 +446,13 @@
             </div>
         </div>
 
-        <!-- Platform Comparison -->
+        <!-- Platform Stats -->
         <div class="section">
-            <h2>Platform Comparison</h2>
+            <h2>Bluesky Stats</h2>
             <div class="platform-comparison" id="platformComparison">
                 <!-- Populated by JS -->
             </div>
-            <div class="comparison-insight" id="comparisonInsight"></div>
+            <div class="comparison-insight" id="comparisonInsight" style="display:none;"></div>
         </div>
 
         <!-- Charts Row -->
@@ -512,7 +486,6 @@
                 <div class="filter-bar">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="bluesky">Bluesky</button>
-                    <button class="filter-btn" data-filter="x">X</button>
                 </div>
             </div>
             <div id="postsList">
@@ -536,11 +509,6 @@
             const match = uri.match(/app\.bsky\.feed\.post\/(.+)$/);
             if (match) return `https://bsky.app/profile/mewscast.bsky.social/post/${match[1]}`;
             return null;
-        }
-
-        function getXLink(postId) {
-            const tweetId = postId.replace('x:', '');
-            return `https://x.com/mewscast/status/${tweetId}`;
         }
 
         function getLatestMetrics(post) {
@@ -601,18 +569,12 @@
                         topic: post.topic,
                         article_url: post.article_url,
                         image_url: post.image_url || null,
-                        bluesky: null,
-                        x: null
+                        bluesky: null
                     };
                 }
                 if (post.platform === 'bluesky') {
                     groups[key].bluesky = { id, ...post };
-                    // Prefer bluesky image
                     if (post.image_url) groups[key].image_url = post.image_url;
-                } else {
-                    groups[key].x = { id, ...post };
-                    // Use X image if no bluesky image
-                    if (post.image_url && !groups[key].image_url) groups[key].image_url = post.image_url;
                 }
             }
 
@@ -621,19 +583,14 @@
             );
         }
 
-        // Render platform comparison
+        // Render platform stats (Bluesky only)
         function renderPlatformComparison() {
             const posts = ANALYTICS_DATA.posts;
             const blueskyPosts = Object.values(posts).filter(p => p.platform === 'bluesky');
-            const xPosts = Object.values(posts).filter(p => p.platform === 'x');
 
             const blueskyStats = {
                 count: blueskyPosts.length,
                 likes: 0, reposts: 0, replies: 0
-            };
-            const xStats = {
-                count: xPosts.length,
-                likes: 0, retweets: 0, replies: 0, impressions: 0
             };
 
             for (const post of blueskyPosts) {
@@ -645,21 +602,10 @@
                 }
             }
 
-            for (const post of xPosts) {
-                const m = getLatestMetrics(post);
-                if (m) {
-                    xStats.likes += m.likes || 0;
-                    xStats.retweets += m.retweets || 0;
-                    xStats.replies += m.replies || 0;
-                    xStats.impressions += m.impressions || 0;
-                }
-            }
-
             const bskyAvgLikes = blueskyStats.count > 0 ? (blueskyStats.likes / blueskyStats.count).toFixed(1) : 0;
-            const xAvgLikes = xStats.count > 0 ? (xStats.likes / xStats.count).toFixed(1) : 0;
 
             document.getElementById('platformComparison').innerHTML = `
-                <div class="platform-card bluesky">
+                <div class="platform-card bluesky" style="max-width: 400px;">
                     <div class="platform-name">Bluesky</div>
                     <div class="platform-stats">
                         <div class="platform-stat">
@@ -680,43 +626,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="platform-card x">
-                    <div class="platform-name">X (Twitter)</div>
-                    <div class="platform-stats">
-                        <div class="platform-stat">
-                            <div class="platform-stat-value">${xStats.count}</div>
-                            <div class="platform-stat-label">Posts</div>
-                        </div>
-                        <div class="platform-stat">
-                            <div class="platform-stat-value">${xAvgLikes}</div>
-                            <div class="platform-stat-label">Avg Likes</div>
-                        </div>
-                        <div class="platform-stat">
-                            <div class="platform-stat-value">${formatNumber(xStats.likes)}</div>
-                            <div class="platform-stat-label">Total Likes</div>
-                        </div>
-                        <div class="platform-stat">
-                            <div class="platform-stat-value impressions">${formatNumber(xStats.impressions)}</div>
-                            <div class="platform-stat-label">Views</div>
-                        </div>
-                    </div>
-                </div>
             `;
 
-            // Comparison insight
-            const insight = document.getElementById('comparisonInsight');
-            if (bskyAvgLikes > 0 && xAvgLikes > 0) {
-                const ratio = (bskyAvgLikes / xAvgLikes).toFixed(1);
-                if (ratio > 1) {
-                    insight.textContent = `Bluesky gets ${ratio}x more likes per post on average`;
-                } else if (ratio < 1) {
-                    insight.textContent = `X gets ${(1/ratio).toFixed(1)}x more likes per post on average`;
-                } else {
-                    insight.textContent = `Both platforms perform similarly`;
-                }
-            } else {
-                insight.style.display = 'none';
-            }
+            // Hide comparison insight since we only have one platform
+            document.getElementById('comparisonInsight').style.display = 'none';
         }
 
         // Render sources chart
@@ -829,14 +742,6 @@
                             fill: true,
                             tension: 0.3
                         },
-                        {
-                            label: 'X',
-                            data: allDates.map(d => xByDate[d] || 0),
-                            borderColor: '#6b7280',
-                            backgroundColor: 'rgba(107, 114, 128, 0.1)',
-                            fill: true,
-                            tension: 0.3
-                        }
                     ]
                 },
                 options: {
@@ -879,7 +784,6 @@
             const filtered = groups.filter(g => {
                 if (filter === 'all') return true;
                 if (filter === 'bluesky') return g.bluesky !== null;
-                if (filter === 'x') return g.x !== null;
                 return true;
             });
 
@@ -890,14 +794,12 @@
 
             container.innerHTML = filtered.map((group, index) => {
                 const bskyMetrics = group.bluesky ? getLatestMetrics(group.bluesky) : null;
-                const xMetrics = group.x ? getLatestMetrics(group.x) : null;
 
                 const date = new Date(group.posted_at).toLocaleDateString('en-US', {
                     month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'
                 });
 
                 const bskyLink = group.bluesky ? getBlueskyLink(group.bluesky.id) : null;
-                const xLink = group.x ? getXLink(group.x.id) : null;
 
                 return `
                     <div class="post-item" data-index="${index}">
@@ -922,19 +824,9 @@
                                         <span class="stat-item"><span class="stat-icon">&#128172;</span> ${bskyMetrics.replies || 0}</span>
                                     </div>
                                 ` : '<div class="post-platform-stats no-data">BSKY: No data</div>'}
-                                ${xMetrics ? `
-                                    <div class="post-platform-stats x">
-                                        <span class="platform-label">X</span>
-                                        <span class="stat-item"><span class="stat-icon">&#10084;</span> ${xMetrics.likes || 0}</span>
-                                        <span class="stat-item"><span class="stat-icon">&#128257;</span> ${xMetrics.retweets || 0}</span>
-                                        <span class="stat-item"><span class="stat-icon">&#128172;</span> ${xMetrics.replies || 0}</span>
-                                        ${xMetrics.impressions ? `<span class="stat-item impressions"><span class="stat-icon">&#128065;</span> ${formatNumber(xMetrics.impressions)}</span>` : ''}
-                                    </div>
-                                ` : '<div class="post-platform-stats no-data">X: No data</div>'}
                             </div>
                             <div class="post-links">
                                 ${bskyLink ? `<a href="${bskyLink}" target="_blank" class="post-link" onclick="event.stopPropagation()">View on Bluesky</a>` : ''}
-                                ${xLink ? `<a href="${xLink}" target="_blank" class="post-link" onclick="event.stopPropagation()">View on X</a>` : ''}
                             </div>
                         </div>
                         <div class="post-expanded">
@@ -984,18 +876,6 @@
                 });
             }
 
-            if (group.x && group.x.snapshots) {
-                const snapshots = group.x.snapshots;
-                datasets.push({
-                    label: 'X Likes',
-                    data: snapshots.map(s => ({ x: s.timestamp.split('T')[0], y: s.likes || 0 })),
-                    borderColor: '#6b7280',
-                    backgroundColor: 'rgba(107, 114, 128, 0.1)',
-                    fill: false,
-                    tension: 0.3
-                });
-            }
-
             if (datasets.length === 0) {
                 canvas.parentElement.innerHTML = '<div class="no-data">No trend data yet</div>';
                 return;
@@ -1033,14 +913,11 @@
         // Render follower growth chart and stats
         function renderFollowerChart() {
             const container = document.getElementById('followerStats');
-            const followerHistory = ANALYTICS_DATA.follower_history || { x: [], bluesky: [] };
+            const followerHistory = ANALYTICS_DATA.follower_history || { bluesky: [] };
 
             // Get latest follower counts
             const latestBluesky = followerHistory.bluesky && followerHistory.bluesky.length > 0
                 ? followerHistory.bluesky[followerHistory.bluesky.length - 1]
-                : null;
-            const latestX = followerHistory.x && followerHistory.x.length > 0
-                ? followerHistory.x[followerHistory.x.length - 1]
                 : null;
 
             // Calculate change (compare to oldest in history or 7 days ago)
@@ -1059,19 +936,13 @@
             };
 
             const blueskyChange = getChange(followerHistory.bluesky);
-            const xChange = getChange(followerHistory.x);
 
-            // Render stats cards
+            // Render stats cards (Bluesky only)
             container.innerHTML = `
                 <div class="follower-stat-card bluesky">
                     <div class="platform-name">Bluesky</div>
                     <div class="follower-count">${latestBluesky ? latestBluesky.followers.toLocaleString() : '—'}</div>
                     ${blueskyChange !== null ? `<div class="follower-change ${blueskyChange >= 0 ? 'positive' : 'negative'}">${blueskyChange >= 0 ? '+' : ''}${blueskyChange} this week</div>` : ''}
-                </div>
-                <div class="follower-stat-card x">
-                    <div class="platform-name">X</div>
-                    <div class="follower-count">${latestX ? latestX.followers.toLocaleString() : '—'}</div>
-                    ${xChange !== null ? `<div class="follower-change ${xChange >= 0 ? 'positive' : 'negative'}">${xChange >= 0 ? '+' : ''}${xChange} this week</div>` : ''}
                 </div>
             `;
 
@@ -1096,19 +967,7 @@
                 });
             }
 
-            if (followerHistory.x && followerHistory.x.length > 0) {
-                datasets.push({
-                    label: 'X Followers',
-                    data: followerHistory.x.map(s => ({
-                        x: s.timestamp.split('T')[0],
-                        y: s.followers
-                    })),
-                    borderColor: '#6b7280',
-                    backgroundColor: 'rgba(107, 114, 128, 0.1)',
-                    fill: true,
-                    tension: 0.3
-                });
-            }
+            // X follower tracking removed - focusing on Bluesky only
 
             if (datasets.length === 0) {
                 canvas.parentElement.innerHTML = '<div class="no-data">No follower data yet. Data will appear after the next analytics run.</div>';
