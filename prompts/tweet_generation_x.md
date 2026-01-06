@@ -86,6 +86,8 @@ DO NOT: Distort facts, make things up, or contradict the article. Just emphasize
 - Write as if filing a news report with attitude
 - IMPORTANT: Use real line breaks, not \n escape sequences
 - Must fit completely within {prompt_max_length} chars - NO EXCEPTIONS
+- NEVER trail off with "..." mid-thought - COMPLETE your sentences
+- If a thought doesn't fit, cut the entire thought - don't truncate it
 
 ## EXAMPLES OF GOOD X-STYLE STRUCTURE
 
