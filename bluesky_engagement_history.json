@@ -569,6 +569,11 @@
       "did": "did:plc:onaf7axypwdps2ce5btav7cc",
       "handle": "laylapiglet.com",
       "timestamp": "2026-01-09T17:37:41.611758"
+    },
+    {
+      "did": "did:plc:zxgeogcd3kfvbx3o36seqmph",
+      "handle": "grahamrickson.bsky.social",
+      "timestamp": "2026-01-09T18:03:06.679680"
     }
   ],
   "liked_posts": [
@@ -7326,6 +7331,11 @@
       "uri": "at://did:plc:onaf7axypwdps2ce5btav7cc/app.bsky.feed.post/3mbyv4z3fx22y",
       "author": "laylapiglet.com",
       "timestamp": "2026-01-09T17:37:41.492571"
+    },
+    {
+      "uri": "at://did:plc:zxgeogcd3kfvbx3o36seqmph/app.bsky.feed.post/3mbyk355xmc2k",
+      "author": "grahamrickson.bsky.social",
+      "timestamp": "2026-01-09T18:03:06.483670"
     }
   ],
   "last_cleanup": "2026-01-09T00:06:24.301716",
