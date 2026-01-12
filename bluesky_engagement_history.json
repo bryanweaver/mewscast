@@ -609,6 +609,11 @@
       "did": "did:plc:rtd3jsvucvxxzfwiriu4hjok",
       "handle": "simondiamond.bsky.social",
       "timestamp": "2026-01-10T04:10:53.813850"
+    },
+    {
+      "did": "did:plc:nf52fscqsnudyh6wyv3dhluu",
+      "handle": "rainbowofcrazy.bsky.social",
+      "timestamp": "2026-01-12T00:47:07.156405"
     }
   ],
   "liked_posts": [
@@ -7876,6 +7881,11 @@
       "uri": "at://did:plc:v576cagizia56fnz2shggofp/app.bsky.feed.post/3mc6hrifib22z",
       "author": "kevinlikesmaps.bsky.social",
       "timestamp": "2026-01-12T00:06:40.812203"
+    },
+    {
+      "uri": "at://did:plc:nf52fscqsnudyh6wyv3dhluu/app.bsky.feed.post/3mc6rzlv5sc2q",
+      "author": "rainbowofcrazy.bsky.social",
+      "timestamp": "2026-01-12T00:47:07.070364"
     }
   ],
   "last_cleanup": "2026-01-09T00:06:24.301716",
