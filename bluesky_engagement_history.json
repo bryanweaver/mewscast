@@ -709,6 +709,11 @@
       "did": "did:plc:oaasfvlbrzjckqsxwihcvylo",
       "handle": "somesangheili.bsky.social",
       "timestamp": "2026-01-13T11:35:15.684046"
+    },
+    {
+      "did": "did:plc:whgi6xb67v564gd7vxhmfbut",
+      "handle": "artiacinsomnist.bsky.social",
+      "timestamp": "2026-01-13T12:03:11.383711"
     }
   ],
   "liked_posts": [
@@ -8301,6 +8306,11 @@
       "uri": "at://did:plc:oaasfvlbrzjckqsxwihcvylo/app.bsky.feed.post/3mcc654a5ts23",
       "author": "somesangheili.bsky.social",
       "timestamp": "2026-01-13T11:35:15.474481"
+    },
+    {
+      "uri": "at://did:plc:whgi6xb67v564gd7vxhmfbut/app.bsky.feed.post/3mcc35yjg3c27",
+      "author": "artiacinsomnist.bsky.social",
+      "timestamp": "2026-01-13T12:03:11.189977"
     }
   ],
   "last_cleanup": "2026-01-09T00:06:24.301716",
