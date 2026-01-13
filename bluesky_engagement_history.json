@@ -704,6 +704,11 @@
       "did": "did:plc:e77kvbwnamzxlllnkumjpu4y",
       "handle": "doodlecats.com",
       "timestamp": "2026-01-13T11:02:19.875698"
+    },
+    {
+      "did": "did:plc:oaasfvlbrzjckqsxwihcvylo",
+      "handle": "somesangheili.bsky.social",
+      "timestamp": "2026-01-13T11:35:15.684046"
     }
   ],
   "liked_posts": [
@@ -8291,6 +8296,11 @@
       "uri": "at://did:plc:e77kvbwnamzxlllnkumjpu4y/app.bsky.feed.post/3mccejlvsx427",
       "author": "doodlecats.com",
       "timestamp": "2026-01-13T11:02:19.621900"
+    },
+    {
+      "uri": "at://did:plc:oaasfvlbrzjckqsxwihcvylo/app.bsky.feed.post/3mcc654a5ts23",
+      "author": "somesangheili.bsky.social",
+      "timestamp": "2026-01-13T11:35:15.474481"
     }
   ],
   "last_cleanup": "2026-01-09T00:06:24.301716",
