@@ -1,18 +1,6 @@
 {
   "posts": [
     {
-      "timestamp": "2025-12-14T22:07:21.737689+00:00",
-      "topic": "US envoys arrive in Berlin for latest round of Ukraine peace talks with Zelenskyy - NPR",
-      "url": "https://www.npr.org/2025/12/14/g-s1-102218/us-envoys-arrive-in-berlin-for-more-ukraine-peace-talks",
-      "source": "NPR",
-      "content": "This reporter is looking into US envoys arrive in Berlin for latest round of Ukraine peace talks with Zelenskyy - NPR.\n\nFur-ther details coming soon from my perch.",
-      "image_prompt": "Dramatic film noir: Tabby detective cat investigating US envoys arrive in Berlin for latest round of Ukraine peace, cinematic lighting, widescreen landscape, press badge visible",
-      "x_tweet_id": "2000326768885129269",
-      "x_reply_tweet_id": null,
-      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3m7y4vzj6u32j",
-      "bluesky_reply_uri": null
-    },
-    {
       "timestamp": "2025-12-15T02:36:54.015045+00:00",
       "topic": "Pilot narrowly avoids \u2018midair collision\u2019 with US air force plane near Venezuela - The Guardian",
       "url": "https://www.theguardian.com/us-news/2025/dec/14/jetblue-pilot-avoids-midair-collision-air-force-venezuela",
@@ -2543,6 +2531,18 @@
       "x_reply_tweet_id": "2011155822810734611",
       "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcdbh3mwbe2j",
       "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcdbh6jhn72k"
+    },
+    {
+      "timestamp": "2026-01-13T22:12:01.201833+00:00",
+      "topic": "Boeing outsold Airbus last year for first time since 2018, deliveries rise to 600 - CNBC",
+      "url": "https://www.cnbc.com/2026/01/13/boeing-orders-deliveries.html",
+      "source": "CNBC",
+      "content": "Boeing outsold Airbus for the first time since 2018 \u2014 1,173 net orders vs 889.\n\nDelivered 600 planes (most since 2018), though Airbus still led with 793.\n\nRecovery after the deadly Max crashes. They're clawing back market share. \ud83d\udcf0\u2193",
+      "image_prompt": "Wide shot: Brown tabby reporter cat at Boeing Renton factory floor, gleaming 737 Max planes in assembly line, workers celebrating, \"1,173\" scoreboard above, cinematic industrial drama",
+      "x_tweet_id": "2011199556869132501",
+      "x_reply_tweet_id": "2011199566968943022",
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcdl5vlydg2k",
+      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcdl5yet462k"
     }
   ]
 }
