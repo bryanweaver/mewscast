@@ -689,6 +689,11 @@
       "did": "did:plc:qmd4qn56vjiomfs7gct4arrx",
       "handle": "markschofield.bsky.social",
       "timestamp": "2026-01-13T07:36:56.529288"
+    },
+    {
+      "did": "did:plc:ciz6gcvxxzifbqrcun63iqve",
+      "handle": "amcatanzaro.bsky.social",
+      "timestamp": "2026-01-13T08:02:45.855974"
     }
   ],
   "liked_posts": [
@@ -8241,6 +8246,11 @@
       "uri": "at://did:plc:qmd4qn56vjiomfs7gct4arrx/app.bsky.feed.post/3mcbioxsqsc22",
       "author": "markschofield.bsky.social",
       "timestamp": "2026-01-13T07:36:56.354697"
+    },
+    {
+      "uri": "at://did:plc:ciz6gcvxxzifbqrcun63iqve/app.bsky.feed.post/3mcbfngjas22f",
+      "author": "amcatanzaro.bsky.social",
+      "timestamp": "2026-01-13T08:02:45.660886"
     }
   ],
   "last_cleanup": "2026-01-09T00:06:24.301716",
