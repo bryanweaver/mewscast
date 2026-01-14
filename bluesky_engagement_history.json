@@ -759,6 +759,11 @@
       "did": "did:plc:bosb6f5l2mlodytwutzwms76",
       "handle": "cattownyarns.bsky.social",
       "timestamp": "2026-01-14T16:03:05.182997"
+    },
+    {
+      "did": "did:plc:bn22ngbvsglbpjh3am4g4qui",
+      "handle": "fistfulofcrits.bsky.social",
+      "timestamp": "2026-01-14T16:42:46.189342"
     }
   ],
   "liked_posts": [
@@ -8596,6 +8601,11 @@
       "uri": "at://did:plc:bosb6f5l2mlodytwutzwms76/app.bsky.feed.post/3mcdw2th4fs2j",
       "author": "cattownyarns.bsky.social",
       "timestamp": "2026-01-14T16:03:04.981668"
+    },
+    {
+      "uri": "at://did:plc:bn22ngbvsglbpjh3am4g4qui/app.bsky.feed.post/3mcfgz7elw224",
+      "author": "fistfulofcrits.bsky.social",
+      "timestamp": "2026-01-14T16:42:45.995204"
     }
   ],
   "last_cleanup": "2026-01-09T00:06:24.301716",
