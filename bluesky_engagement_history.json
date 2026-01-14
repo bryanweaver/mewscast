@@ -729,6 +729,11 @@
       "did": "did:plc:uoyg7pfgsasblska3nfmcxjo",
       "handle": "babayagatherealone.bsky.social",
       "timestamp": "2026-01-14T11:35:36.618589"
+    },
+    {
+      "did": "did:plc:swdlc3uai42nfppb6ygxacqo",
+      "handle": "julietkano.bsky.social",
+      "timestamp": "2026-01-14T12:02:55.884056"
     }
   ],
   "liked_posts": [
@@ -8526,6 +8531,11 @@
       "uri": "at://did:plc:uoyg7pfgsasblska3nfmcxjo/app.bsky.feed.post/3mcdndpwgpe2w",
       "author": "babayagatherealone.bsky.social",
       "timestamp": "2026-01-14T11:35:36.437678"
+    },
+    {
+      "uri": "at://did:plc:swdlc3uai42nfppb6ygxacqo/app.bsky.feed.post/3mcev4dvvu22r",
+      "author": "julietkano.bsky.social",
+      "timestamp": "2026-01-14T12:02:55.713095"
     }
   ],
   "last_cleanup": "2026-01-09T00:06:24.301716",
