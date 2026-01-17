@@ -724,6 +724,11 @@
       "did": "did:plc:3ptit4iqakowozqvamzauimv",
       "handle": "twosense.bsky.social",
       "timestamp": "2026-01-16T19:32:31.459776"
+    },
+    {
+      "did": "did:plc:olm4gviqaooq4mieyuc22elb",
+      "handle": "ink-witch.bsky.social",
+      "timestamp": "2026-01-17T00:06:16.852130"
     }
   ],
   "liked_posts": [
@@ -7491,6 +7496,11 @@
       "uri": "at://did:plc:o4ydjo2lszrhsdbshfpflqcc/app.bsky.feed.post/3mckzsyutl227",
       "author": "wannabeyourdog2.bsky.social",
       "timestamp": "2026-01-16T23:34:34.701034"
+    },
+    {
+      "uri": "at://did:plc:olm4gviqaooq4mieyuc22elb/app.bsky.feed.post/3mckyvcquss2j",
+      "author": "ink-witch.bsky.social",
+      "timestamp": "2026-01-17T00:06:16.651882"
     }
   ],
   "last_cleanup": "2026-01-16T00:06:36.887533",
