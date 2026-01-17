@@ -744,6 +744,11 @@
       "did": "did:plc:jgi2wv2mk2wklder6dw7brhw",
       "handle": "cheray.bsky.social",
       "timestamp": "2026-01-17T23:02:30.007057"
+    },
+    {
+      "did": "did:plc:cfcnluzwlof3qkppfmlmuxhm",
+      "handle": "baldurbjarnason.com",
+      "timestamp": "2026-01-17T23:33:50.231270"
     }
   ],
   "liked_posts": [
@@ -7726,6 +7731,11 @@
       "uri": "at://did:plc:jgi2wv2mk2wklder6dw7brhw/app.bsky.feed.post/3mcnpgjsvz22z",
       "author": "cheray.bsky.social",
       "timestamp": "2026-01-17T23:02:29.818772"
+    },
+    {
+      "uri": "at://did:plc:cfcnluzwlof3qkppfmlmuxhm/app.bsky.feed.post/3mcnpf66w522p",
+      "author": "baldurbjarnason.com",
+      "timestamp": "2026-01-17T23:33:50.056673"
     }
   ],
   "last_cleanup": "2026-01-16T00:06:36.887533",
