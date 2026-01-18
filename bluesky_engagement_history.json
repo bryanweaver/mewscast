@@ -759,6 +759,11 @@
       "did": "did:plc:m5ne7vyaraacg6ham7oyvaek",
       "handle": "mekivafimex.bsky.social",
       "timestamp": "2026-01-18T11:32:17.415735"
+    },
+    {
+      "did": "did:plc:e34rhtwwn2p5vmltsleivfxd",
+      "handle": "annenc.bsky.social",
+      "timestamp": "2026-01-18T12:02:41.184343"
     }
   ],
   "liked_posts": [
@@ -7851,6 +7856,11 @@
       "uri": "at://did:plc:m5ne7vyaraacg6ham7oyvaek/app.bsky.feed.post/3mcoroig3xc2w",
       "author": "mekivafimex.bsky.social",
       "timestamp": "2026-01-18T11:32:17.235352"
+    },
+    {
+      "uri": "at://did:plc:e34rhtwwn2p5vmltsleivfxd/app.bsky.feed.post/3mcozpdvg2c2q",
+      "author": "annenc.bsky.social",
+      "timestamp": "2026-01-18T12:02:40.981336"
     }
   ],
   "last_cleanup": "2026-01-16T00:06:36.887533",
