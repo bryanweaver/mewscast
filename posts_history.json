@@ -1,18 +1,6 @@
 {
   "posts": [
     {
-      "timestamp": "2025-12-20T13:11:15.249482+00:00",
-      "topic": "What AI data centers are doing to your electric bill : Planet Money - NPR",
-      "url": "https://www.npr.org/2025/12/19/nx-s1-5649814/ai-data-center-electricity-bill",
-      "source": "NPR",
-      "content": "US spending more on AI data centers than it spent building the entire interstate highway system.\n\nNPR traces one Ohio electric bill to find why prices are jumping. Spoiler: your lights are powering ChatGPT.\n\nThis cat smells a cost shift. \ud83d\udcf0\u2193",
-      "image_prompt": "Cinematic: Reporter cat in Ohio power plant control room, massive AI data center visible through window, electric meters spinning wildly, interstate highway fading into server racks",
-      "x_tweet_id": "2002366158100484601",
-      "x_reply_tweet_id": "2002366167575347616",
-      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3magbqtgyf72t",
-      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3magbqwfwea2u"
-    },
-    {
       "timestamp": "2025-12-20T16:03:25.409447+00:00",
       "topic": "Trump announces lower drug price deals with 9 pharmaceutical companies - ABC News",
       "url": "https://abcnews.go.com/Business/wireStory/trump-announces-lower-drug-price-deals-9-pharmaceutical-128568583",
@@ -2531,6 +2519,18 @@
       "x_reply_tweet_id": "2013192873965965569",
       "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcrfr7ehmi2z",
       "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcrfrbzalq2v"
+    },
+    {
+      "timestamp": "2026-01-19T13:21:12.438702+00:00",
+      "topic": "White House press secretary tells CBS \u2018we\u2019ll sue your ass off\u2019 if it edits Trump interview - The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jan/18/white-house-press-secretary-cbs-trump-interview",
+      "source": "The Guardian",
+      "content": "White House press sec caught on tape threatening CBS: \"We'll sue your ass off\" if they edit Trump's interview.\n\nCBS parent company already paid Trump $16m over editing disputes.\n\nThis cat smells something fishy. \ud83d\udcf0\u2193",
+      "image_prompt": "Wide shot: Brown tabby reporter cat in White House Press Briefing Room, CBS camera crew filming, tense standoff atmosphere, microphones and recording equipment prominent, official podium",
+      "x_tweet_id": "2013240301562089487",
+      "x_reply_tweet_id": "2013240311531925618",
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcrqcbc5ru2j",
+      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcrqcdrkx427"
     }
   ]
 }
