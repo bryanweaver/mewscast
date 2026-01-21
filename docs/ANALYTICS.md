@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-01-20 23:01 UTC*
+*Last updated: 2026-01-21 23:03 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,28 +13,22 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 209 | - |
-| Likes | 337 | +0 |
-| Reposts | 16 | +0 |
-| Replies | 218 | - |
+| Likes | 303 | +0 |
+| Reposts | 15 | +0 |
+| Replies | 216 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 78 | - |
+| Posts tracked | 71 | - |
 | Likes | 1 | +0 |
 | Retweets | 1 | - |
-| Replies | 79 | - |
+| Replies | 71 | - |
 
 ---
 
 ## Top Performers
-
-**[BLUESKY]** 16 likes, 1 reposts
-> Scientists found 20+ new species 330 feet deep in Pacific coral reefs near Guam....
-
-**[BLUESKY]** 15 likes, 0 reposts
-> This cat's fur is standing on end reading CNN call Bari Weiss "CBS editor-in-chi...
 
 **[BLUESKY]** 9 likes, 1 reposts
 > Mexican Navy plane carrying medical patient crashes off Galveston. Five dead, tw...
@@ -45,6 +39,12 @@ Tracking engagement for posts from the last 30 days.
 **[BLUESKY]** 8 likes, 1 reposts
 > Aldrich Ames, one of America's most notorious spies, has died in federal prison ...
 
+**[BLUESKY]** 5 likes, 0 reposts
+> #BreakingMews: Minnesota Gov. Tim Walz drops reelection bid amid viral video con...
+
+**[BLUESKY]** 4 likes, 1 reposts
+> Trump admin tried to cut $2 billion in mental health programs Tuesday. After mas...
+
 ---
 
-*Data snapshots: 3811 total across 287 posts*
+*Data snapshots: 3759 total across 280 posts*
