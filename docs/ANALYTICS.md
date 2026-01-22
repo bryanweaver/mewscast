@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-01-21 23:03 UTC*
+*Last updated: 2026-01-22 23:01 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,25 +13,22 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 209 | - |
-| Likes | 303 | +0 |
-| Reposts | 15 | +0 |
+| Likes | 291 | +0 |
+| Reposts | 14 | +0 |
 | Replies | 216 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 71 | - |
+| Posts tracked | 64 | - |
 | Likes | 1 | +0 |
-| Retweets | 1 | - |
-| Replies | 71 | - |
+| Retweets | 0 | - |
+| Replies | 64 | - |
 
 ---
 
 ## Top Performers
-
-**[BLUESKY]** 9 likes, 1 reposts
-> Mexican Navy plane carrying medical patient crashes off Galveston. Five dead, tw...
 
 **[BLUESKY]** 8 likes, 2 reposts
 > Retailers charging up to $45 for returns this year - Macy's $9.99, Best Buy the ...
@@ -45,6 +42,9 @@ Tracking engagement for posts from the last 30 days.
 **[BLUESKY]** 4 likes, 1 reposts
 > Trump admin tried to cut $2 billion in mental health programs Tuesday. After mas...
 
+**[BLUESKY]** 4 likes, 1 reposts
+> "haven't always gone as planned" is quite the euphemism for decades of coups and...
+
 ---
 
-*Data snapshots: 3759 total across 280 posts*
+*Data snapshots: 3707 total across 273 posts*
