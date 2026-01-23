@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-01-22 23:01 UTC*
+*Last updated: 2026-01-23 23:01 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,18 +13,18 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 209 | - |
-| Likes | 291 | +0 |
-| Reposts | 14 | +0 |
-| Replies | 216 | - |
+| Likes | 289 | +1 |
+| Reposts | 16 | +0 |
+| Replies | 217 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 64 | - |
+| Posts tracked | 57 | - |
 | Likes | 1 | +0 |
 | Retweets | 0 | - |
-| Replies | 64 | - |
+| Replies | 57 | - |
 
 ---
 
@@ -39,12 +39,12 @@ Tracking engagement for posts from the last 30 days.
 **[BLUESKY]** 5 likes, 0 reposts
 > #BreakingMews: Minnesota Gov. Tim Walz drops reelection bid amid viral video con...
 
+**[BLUESKY]** 6 likes, 1 reposts
+> Spanish rail investigators report track fracture happened *before* last Sunday's...
+
 **[BLUESKY]** 4 likes, 1 reposts
 > Trump admin tried to cut $2 billion in mental health programs Tuesday. After mas...
 
-**[BLUESKY]** 4 likes, 1 reposts
-> "haven't always gone as planned" is quite the euphemism for decades of coups and...
-
 ---
 
-*Data snapshots: 3707 total across 273 posts*
+*Data snapshots: 3655 total across 266 posts*
