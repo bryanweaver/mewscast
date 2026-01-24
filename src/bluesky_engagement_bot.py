@@ -46,6 +46,29 @@ class BlueskyEngagementBot:
             json.dump(self.engagement_history, f, indent=2)
         print(f"✓ Saved Bluesky engagement history")
 
+    def _is_post_liked(self, uri: str) -> bool:
+        """
+        Check if we have already liked a post via Bluesky API.
+        This is the authoritative check - our local history is just a cache.
+
+        Args:
+            uri: AT URI of the post to check
+
+        Returns:
+            True if already liked, False otherwise
+        """
+        try:
+            response = self.client.app.bsky.feed.get_posts({'uris': [uri]})
+            if response.posts:
+                post = response.posts[0]
+                # viewer.like contains the URI of our like record if we've liked it
+                if hasattr(post, 'viewer') and post.viewer and hasattr(post.viewer, 'like') and post.viewer.like:
+                    return True
+            return False
+        except Exception as e:
+            print(f"✗ Error checking if post liked: {e}")
+            return False
+
     def _check_follow_ratio_safe(self) -> bool:
         """
         Check if our follow ratio is safe before following more accounts
@@ -85,7 +108,7 @@ class BlueskyEngagementBot:
             return False
 
     def _cleanup_old_history(self):
-        """Remove entries older than 30 days to keep file manageable"""
+        """Remove entries older than 90 days to keep file manageable"""
         last_cleanup = datetime.fromisoformat(self.engagement_history.get('last_cleanup', datetime.now().isoformat()))
 
         # Only cleanup once per week
@@ -93,7 +116,7 @@ class BlueskyEngagementBot:
             return
 
         print("🧹 Cleaning up old Bluesky engagement history...")
-        cutoff_date = datetime.now() - timedelta(days=30)
+        cutoff_date = datetime.now() - timedelta(days=90)
 
         # Keep only recent follows
         if self.engagement_history.get('followed_users'):
@@ -339,6 +362,11 @@ class BlueskyEngagementBot:
             print(f"\n❤️  Liking post from @{post['author']}")
             print(f"   Text: {post['text']}...")
             print(f"   Engagement: {post['likes']} likes, {post['reposts']} reposts")
+
+            # Check if we've already liked this post (authoritative API check)
+            if self._is_post_liked(post['uri']):
+                print(f"⏭ Already liked this post, skipping")
+                return False
 
             # Like the post
             # Format datetime in ISO 8601 format with 'Z' suffix for UTC

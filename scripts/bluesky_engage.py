@@ -82,9 +82,12 @@ def main():
             if datetime.fromisoformat(s['timestamp'].replace('Z', '+00:00')).timestamp() > cutoff
         ]
 
-        # Keep only last 1000 liked URIs (to prevent file bloat)
-        if len(history['liked_uris']) > 1000:
-            history['liked_uris'] = history['liked_uris'][-1000:]
+        # Keep liked URIs cache larger to prevent re-liking old posts
+        # The main protection is marking notifications as read, but this serves as backup
+        # Note: Previously 1000 limit caused re-likes when old URIs were trimmed but
+        # notifications persisted. Increased to 10000 for ~2+ years of history.
+        if len(history['liked_uris']) > 10000:
+            history['liked_uris'] = history['liked_uris'][-10000:]
 
         with open(history_path, 'w') as f:
             json.dump(history, f, indent=2)
