@@ -74,18 +74,15 @@ class PromptLoader:
         return result
 
     def load_tweet_prompt(self, platform: str = None, **kwargs) -> str:
-        """Load the tweet generation prompt, optionally platform-specific
+        """Load the tweet generation prompt
 
         Args:
-            platform: 'x', 'bluesky', or None for default
+            platform: 'x', 'bluesky', or None (all use same prompt now)
             **kwargs: Values to substitute into the template
         """
-        if platform == 'x':
-            return self.load("tweet_generation_x.md", **kwargs)
-        elif platform == 'bluesky':
-            return self.load("tweet_generation_bluesky.md", **kwargs)
-        else:
-            return self.load("tweet_generation.md", **kwargs)
+        # Use unified Bluesky prompt for all platforms
+        # X-specific version was retired since engagement didn't improve
+        return self.load("tweet_generation_bluesky.md", **kwargs)
 
     def load_image_prompt(self, **kwargs) -> str:
         """Load the image generation prompt"""
