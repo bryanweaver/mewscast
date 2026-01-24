@@ -263,18 +263,46 @@ class BlueskyBot:
             print(f"✗ Error posting reply: {e}")
             return None
 
+    def is_post_liked(self, uri: str) -> bool:
+        """
+        Check if we have already liked a post.
+
+        Args:
+            uri: AT URI of the post to check
+
+        Returns:
+            True if already liked, False otherwise
+        """
+        try:
+            response = self.client.app.bsky.feed.get_posts({'uris': [uri]})
+            if response.posts:
+                post = response.posts[0]
+                # viewer.like contains the URI of our like record if we've liked it
+                if hasattr(post, 'viewer') and post.viewer and hasattr(post.viewer, 'like') and post.viewer.like:
+                    return True
+            return False
+        except Exception as e:
+            print(f"✗ Error checking if post liked: {e}")
+            # If we can't check, assume not liked to avoid blocking legitimate likes
+            return False
+
     def like_post(self, uri: str, cid: str) -> bool:
         """
-        Like a post on Bluesky
+        Like a post on Bluesky (only if not already liked)
 
         Args:
             uri: AT URI of the post to like
             cid: CID of the post to like
 
         Returns:
-            True if successful, False if failed
+            True if successfully liked, False if already liked or failed
         """
         try:
+            # Check if we've already liked this post
+            if self.is_post_liked(uri):
+                print(f"⏭ Already liked post: {uri}")
+                return False
+
             self.client.like(uri, cid)
             print(f"✓ Liked post: {uri}")
             return True
