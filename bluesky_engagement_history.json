@@ -684,6 +684,11 @@
       "did": "did:plc:bzy5rjjduvvkxno5xe3evl3f",
       "handle": "lollardfish.bsky.social",
       "timestamp": "2026-01-25T01:30:54.501883"
+    },
+    {
+      "did": "did:plc:652s3shexz4iirxcubjkuhkd",
+      "handle": "shop.zandraillustration.com",
+      "timestamp": "2026-01-25T02:46:25.893782"
     }
   ],
   "liked_posts": [
@@ -7731,6 +7736,11 @@
       "uri": "at://did:plc:bzy5rjjduvvkxno5xe3evl3f/app.bsky.feed.post/3md7kdynxxc2g",
       "author": "lollardfish.bsky.social",
       "timestamp": "2026-01-25T01:30:54.310035"
+    },
+    {
+      "uri": "at://did:plc:652s3shexz4iirxcubjkuhkd/app.bsky.feed.post/3md7joncuak2y",
+      "author": "shop.zandraillustration.com",
+      "timestamp": "2026-01-25T02:46:25.717687"
     }
   ],
   "last_cleanup": "2026-01-23T00:07:15.626462",
