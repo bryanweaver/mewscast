@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-01-24 23:01 UTC*
+*Last updated: 2026-01-25 23:01 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,28 +13,28 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 210 | - |
-| Likes | 297 | +2 |
-| Reposts | 17 | +0 |
+| Likes | 309 | +1 |
+| Reposts | 21 | +2 |
 | Replies | 218 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 51 | - |
+| Posts tracked | 44 | - |
 | Likes | 1 | +0 |
 | Retweets | 0 | - |
-| Replies | 51 | - |
+| Replies | 44 | - |
 
 ---
 
 ## Top Performers
 
+**[BLUESKY]** 9 likes, 3 reposts
+> Spanish rail investigators report track fracture happened *before* last Sunday's...
+
 **[BLUESKY]** 8 likes, 2 reposts
 > Retailers charging up to $45 for returns this year - Macy's $9.99, Best Buy the ...
-
-**[BLUESKY]** 8 likes, 1 reposts
-> Spanish rail investigators report track fracture happened *before* last Sunday's...
 
 **[BLUESKY]** 8 likes, 1 reposts
 > Aldrich Ames, one of America's most notorious spies, has died in federal prison ...
@@ -47,4 +47,4 @@ Tracking engagement for posts from the last 30 days.
 
 ---
 
-*Data snapshots: 3641 total across 261 posts*
+*Data snapshots: 3590 total across 254 posts*
