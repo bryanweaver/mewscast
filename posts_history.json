@@ -1,18 +1,6 @@
 {
   "posts": [
     {
-      "timestamp": "2025-12-27T06:02:37.224181+00:00",
-      "topic": "Thousands of US flights disrupted as winter storm looms - BBC",
-      "url": "https://www.bbc.com/news/articles/c0je0l55zq3o",
-      "source": "BBC",
-      "content": "1,600 flights cancelled, 7,400 delayed as Northeast braces for winter storm. JFK, Newark, LaGuardia hit hardest.\n\n9 inches of snow expected in NYC. Peak holiday travel meets peak chaos.\n\nThis cat's fur is standing on end for stranded travelers. \ud83d\udcf0\u2193",
-      "image_prompt": "Widescreen: Orange tabby reporter cat at snowy JFK airport window, planes grounded on tarmac blanketed in snow, travelers silhouetted behind, blizzard swirling, dramatic winter chaos",
-      "x_tweet_id": "2004795006272381387",
-      "x_reply_tweet_id": "2004795016112148781",
-      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3max52tiudl24",
-      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3max52vz3wo2t"
-    },
-    {
       "timestamp": "2025-12-27T10:04:12.812349+00:00",
       "topic": "Planning to return unwanted Christmas gifts? You may be charged fees. - CBS News",
       "url": "https://www.cbsnews.com/news/unwanted-christmas-gifts-returns-charged-fees/",
@@ -2531,6 +2519,18 @@
       "x_reply_tweet_id": "2015620330774225335",
       "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdcarcx4j22p",
       "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdcarflain2n"
+    },
+    {
+      "timestamp": "2026-01-26T06:19:50.566234+00:00",
+      "topic": "Japan returns pandas to China amid strained ties - BBC",
+      "url": "https://www.bbc.com/news/articles/c8d0l778dero",
+      "source": "BBC",
+      "content": "Thousands lined Tokyo's Ueno zoo to say goodbye to twin pandas Xiao Xiao and Lei Lei, heading back to China Tuesday.\n\nTheir departure leaves Japan panda-less for the first time since 1972\u2014as Tokyo-Beijing ties hit historic lows. \ud83d\udcf0\u2193",
+      "image_prompt": "Cinematic wide shot: Brown tabby reporter cat at Ueno Zoo gates, emotional crowds waving goodbye to twin pandas departing in transport, Tokyo skyline backdrop, bittersweet atmosphere",
+      "x_tweet_id": "2015670976197931452",
+      "x_reply_tweet_id": "2015670985702125810",
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdclzaqqex2i",
+      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdclzdcsf32b"
     }
   ]
 }
