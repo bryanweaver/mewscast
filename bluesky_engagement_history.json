@@ -764,6 +764,11 @@
       "did": "did:plc:5bhh32em4hw3qinaotyg6t3p",
       "handle": "foresterbob.bsky.social",
       "timestamp": "2026-01-31T22:02:35.737093"
+    },
+    {
+      "did": "did:plc:bfsv7y5se2pppzza3qbmilsh",
+      "handle": "lucagalletti.bsky.social",
+      "timestamp": "2026-01-31T22:38:45.690995"
     }
   ],
   "liked_posts": [
@@ -9316,6 +9321,11 @@
       "uri": "at://did:plc:5bhh32em4hw3qinaotyg6t3p/app.bsky.feed.post/3mdqau54y7223",
       "author": "foresterbob.bsky.social",
       "timestamp": "2026-01-31T22:02:35.543489"
+    },
+    {
+      "uri": "at://did:plc:bfsv7y5se2pppzza3qbmilsh/app.bsky.feed.post/3mdquxgvqa224",
+      "author": "lucagalletti.bsky.social",
+      "timestamp": "2026-01-31T22:38:45.539973"
     }
   ],
   "last_cleanup": "2026-01-30T00:08:24.869843",
