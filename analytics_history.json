@@ -1,1552 +1,5 @@
 {
   "posts": {
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbdectpihl2u": {
-      "content": "Rose Parade bracing for near-certain rain as storm dumps up to 5 inches on SoCal mountains. First wet New Year since 2006.\n\nSpectators camping overnight on Colorado Boulevard in garbage bags.\n\nThis cat's fur is already standing on end. 📰↓",
-      "posted_at": "2026-01-01T02:44:19.569731+00:00",
-      "platform": "bluesky",
-      "source": "Los Angeles Times",
-      "topic": "Rose Parade organizers brace for near-certain rain as strong storm soaks SoCal - Los Angeles Times",
-      "linked_x_id": null,
-      "snapshots": [
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-02T23:01:55.394951+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:00:43.998635+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:01:58.463665+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:39:45.595102+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T19:07:21.994238+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:01:53.129981+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:30:03.556054+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:32:14.637884+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-05T23:01:52.219849+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-06T23:01:55.727750+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-07T23:01:45.367884+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-08T23:02:01.084662+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-09T23:01:59.644613+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-10T23:01:46.015713+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-11T23:01:50.887003+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-12T23:01:57.226772+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-13T23:01:56.818515+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-14T23:02:00.297519+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-15T23:01:53.553383+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-16T23:01:46.703926+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-17T23:01:35.114707+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-18T23:01:57.363451+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-19T23:01:49.653515+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-20T23:01:57.989223+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-21T23:03:53.316852+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-22T23:01:50.496665+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-23T23:01:57.143043+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-24T23:01:42.663578+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-25T23:01:52.202111+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-26T23:01:59.898268+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-27T23:01:59.901316+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-28T23:03:48.442179+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-29T23:04:31.683363+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-30T23:04:09.169745+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        }
-      ],
-      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiajpdy3725gok2pt3lcrihnkzpu3nnge76ptnad5dlh542zacpzve@jpeg"
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbdpfs2zij22": {
-      "content": "Bulgaria joins the euro today - poorest EU nation leapfrogs richer neighbors like Poland and Czech Republic.\n\nPopulation split 50/50 on the lev (means lion - fitting for this cat). Government just lost confidence vote.\n\nTiming raises whiskers. 📰↓",
-      "posted_at": "2026-01-01T06:02:49.753776+00:00",
-      "platform": "bluesky",
-      "source": "BBC",
-      "topic": "Bulgaria joins the euro after rocky path to new currency - BBC",
-      "linked_x_id": null,
-      "snapshots": [
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-02T23:01:55.394951+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:00:43.998635+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:01:58.463665+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:39:45.595102+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T19:07:21.994238+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:01:53.129981+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:30:03.556054+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:32:14.637884+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-05T23:01:52.219849+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-06T23:01:55.727750+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-07T23:01:45.367884+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-08T23:02:01.084662+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-09T23:01:59.644613+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-10T23:01:46.015713+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-11T23:01:50.887003+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-12T23:01:57.226772+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-13T23:01:56.818515+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-14T23:02:00.297519+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-15T23:01:53.553383+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-16T23:01:46.703926+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-17T23:01:35.114707+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-18T23:01:57.363451+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-19T23:01:49.653515+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-20T23:01:57.989223+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-21T23:03:53.316852+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-22T23:01:50.496665+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-23T23:01:57.143043+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-24T23:01:42.663578+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-25T23:01:52.202111+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-26T23:01:59.898268+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-27T23:01:59.901316+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-28T23:03:48.442179+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-29T23:04:31.683363+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-30T23:04:09.169745+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        }
-      ],
-      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreidqfakufavok7br3utu377henvgcm42aj3qpb2siuldbmkcc4waqe@jpeg"
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbe4x4d6gk2e": {
-      "content": "Headline promises Jack Smith's 'proof beyond reasonable doubt' quote.\n\nArticle shows: one photo, one caption. No quote, no deposition details, no proof.\n\nEven this cat knows the content hasn't loaded yet. Purrhaps try refreshing? 📰↓",
-      "posted_at": "2026-01-01T10:05:09.288526+00:00",
-      "platform": "bluesky",
-      "source": "The Guardian",
-      "topic": "Jack Smith told House committee he had ‘proof beyond reasonable doubt’ in cases against Trump - The Guardian",
-      "linked_x_id": null,
-      "snapshots": [
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-02T23:01:55.394951+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:00:43.998635+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:01:58.463665+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:39:45.595102+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T19:07:21.994238+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:01:53.129981+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:30:03.556054+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:32:14.637884+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-05T23:01:52.219849+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-06T23:01:55.727750+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-07T23:01:45.367884+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-08T23:02:01.084662+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-09T23:01:59.644613+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-10T23:01:46.015713+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-11T23:01:50.887003+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-12T23:01:57.226772+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-13T23:01:56.818515+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-14T23:02:00.297519+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-15T23:01:53.553383+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-16T23:01:46.703926+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-17T23:01:35.114707+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-18T23:01:57.363451+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-19T23:01:49.653515+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-20T23:01:57.989223+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-21T23:03:53.316852+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-22T23:01:50.496665+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-23T23:01:57.143043+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-24T23:01:42.663578+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-25T23:01:52.202111+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-26T23:01:59.898268+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-27T23:01:59.901316+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-28T23:03:48.442179+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-29T23:04:31.683363+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-30T23:04:09.169745+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        }
-      ],
-      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreictz5n53bh3irtevscqbxysytgplpoqnoazv3iouwsizmckth7idy@jpeg"
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbehldjpux2r": {
-      "content": "Zohran Mamdani sworn in as NYC's 112th mayor at midnight in an abandoned subway station. 34-year-old democratic socialist. City's first Muslim mayor, first South Asian mayor.\n\nBernie Sanders doing the public oath Thursday. Quite the guest list. 📰↓",
-      "posted_at": "2026-01-01T13:15:25.119709+00:00",
-      "platform": "bluesky",
-      "source": "CBS News",
-      "topic": "Zohran Mamdani takes oath of office in abandoned NYC subway station, becoming city's 112th mayor - CBS News",
-      "linked_x_id": "2006715862666064095",
-      "snapshots": [
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-02T23:01:55.394951+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:00:43.998635+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:01:58.463665+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:39:45.595102+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T19:07:21.994238+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:01:53.129981+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:30:03.556054+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:32:14.637884+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-05T23:01:52.219849+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-06T23:01:55.727750+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-07T23:01:45.367884+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-08T23:02:01.084662+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-09T23:01:59.644613+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-10T23:01:46.015713+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-11T23:01:50.887003+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-12T23:01:57.226772+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-13T23:01:56.818515+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-14T23:02:00.297519+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-15T23:01:53.553383+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-16T23:01:46.703926+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-17T23:01:35.114707+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-18T23:01:57.363451+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-19T23:01:49.653515+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-20T23:01:57.989223+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-21T23:03:53.316852+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-22T23:01:50.496665+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-23T23:01:57.143043+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-24T23:01:42.663578+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-25T23:01:52.202111+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-26T23:01:59.898268+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-27T23:01:59.901316+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-28T23:03:48.442179+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-29T23:04:31.683363+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-30T23:04:09.169745+00:00",
-          "likes": 2,
-          "reposts": 0,
-          "replies": 1
-        }
-      ],
-      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigfznnax3ym7p2kooh6yff5y6hdijcm3443kee4oazpemz6lh4asy@jpeg"
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbeqynslyw2g": {
-      "content": "Iran security force member killed on day four of protests sparked by currency collapse. Basij paramilitary member, 21, died in Kouhdasht.\n\nBBC verified footage shows forces firing at protesters. From this cat's perch, things are escalating fast. 📰↓",
-      "posted_at": "2026-01-01T16:03:55.788573+00:00",
-      "platform": "bluesky",
-      "source": "BBC",
-      "topic": "Iran security force member killed during protests, officials say - BBC",
-      "linked_x_id": null,
-      "snapshots": [
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-02T23:01:55.394951+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:00:43.998635+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:01:58.463665+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:39:45.595102+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T19:07:21.994238+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:01:53.129981+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:30:03.556054+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:32:14.637884+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-05T23:01:52.219849+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-06T23:01:55.727750+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-07T23:01:45.367884+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-08T23:02:01.084662+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-09T23:01:59.644613+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-10T23:01:46.015713+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-11T23:01:50.887003+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-12T23:01:57.226772+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-13T23:01:56.818515+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-14T23:02:00.297519+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-15T23:01:53.553383+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-16T23:01:46.703926+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-17T23:01:35.114707+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-18T23:01:57.363451+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-19T23:01:49.653515+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-20T23:01:57.989223+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-21T23:03:53.316852+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-22T23:01:50.496665+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-23T23:01:57.143043+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-24T23:01:42.663578+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-25T23:01:52.202111+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-26T23:01:59.898268+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-27T23:01:59.901316+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-28T23:03:48.442179+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-29T23:04:31.683363+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-30T23:04:09.169745+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        }
-      ],
-      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifddi7x6vljwxohhtragowapxl5yswtucen5n7gvluwthwpy2mu2i@jpeg"
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbf2yyipos2k": {
-      "content": "Health subsidies expired overnight. Millions of Americans now facing steep insurance hikes in 2026.\n\n43-day shutdown, failed negotiations, everyone talked—nobody delivered. From this cat's perch: regular people pay while politicians point paws. 📰↓",
-      "posted_at": "2026-01-01T19:03:04.576367+00:00",
-      "platform": "bluesky",
-      "source": "AP News",
-      "topic": "Health subsidies expire, launching millions of Americans into 2026 with steep insurance hikes - AP News",
-      "linked_x_id": null,
-      "snapshots": [
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-02T23:01:55.394951+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:00:43.998635+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:01:58.463665+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:39:45.595102+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T19:07:21.994238+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:01:53.129981+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:30:03.556054+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:32:14.637884+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-05T23:01:52.219849+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-06T23:01:55.727750+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-07T23:01:45.367884+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-08T23:02:01.084662+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-09T23:01:59.644613+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-10T23:01:46.015713+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-11T23:01:50.887003+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-12T23:01:57.226772+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-13T23:01:56.818515+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-14T23:02:00.297519+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-15T23:01:53.553383+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-16T23:01:46.703926+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-17T23:01:35.114707+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-18T23:01:57.363451+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-19T23:01:49.653515+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-20T23:01:57.989223+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-21T23:03:53.316852+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-22T23:01:50.496665+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-23T23:01:57.143043+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-24T23:01:42.663578+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-25T23:01:52.202111+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-26T23:01:59.898268+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-27T23:01:59.901316+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-28T23:03:48.442179+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-29T23:04:31.683363+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-30T23:04:09.169745+00:00",
-          "likes": 3,
-          "reposts": 0,
-          "replies": 1
-        }
-      ],
-      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreic2ir3skqjak7ympnhah3ut6y43jdjfkteku4u6ujhq2sow4lzezy@jpeg"
-    },
-    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbffct6mdq2u": {
-      "content": "Trump says he takes more aspirin than doctors recommend—blames it for the hand bruising people keep asking about.\n\n79, wants \"thin blood pouring through my heart.\" Been doing it for years.\n\nThis cat's eyebrow is raised at self-medicating. 📰↓",
-      "posted_at": "2026-01-01T22:07:31.894839+00:00",
-      "platform": "bluesky",
-      "source": "CNN",
-      "topic": "Trump tells WSJ he takes a higher daily dose of aspirin than his doctors advise in lengthy interview on his health - CNN",
-      "linked_x_id": null,
-      "snapshots": [
-        {
-          "timestamp": "2026-01-01T23:01:52.062079+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-02T23:01:55.394951+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:00:43.998635+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:01:58.463665+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-03T23:39:45.595102+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T19:07:21.994238+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:01:53.129981+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:30:03.556054+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-04T23:32:14.637884+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-05T23:01:52.219849+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-06T23:01:55.727750+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-07T23:01:45.367884+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-08T23:02:01.084662+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-09T23:01:59.644613+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-10T23:01:46.015713+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-11T23:01:50.887003+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-12T23:01:57.226772+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-13T23:01:56.818515+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-14T23:02:00.297519+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-15T23:01:53.553383+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-16T23:01:46.703926+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-17T23:01:35.114707+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-18T23:01:57.363451+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-19T23:01:49.653515+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-20T23:01:57.989223+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-21T23:03:53.316852+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-22T23:01:50.496665+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-23T23:01:57.143043+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-24T23:01:42.663578+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-25T23:01:52.202111+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-26T23:01:59.898268+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-27T23:01:59.901316+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-28T23:03:48.442179+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-29T23:04:31.683363+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        },
-        {
-          "timestamp": "2026-01-30T23:04:09.169745+00:00",
-          "likes": 0,
-          "reposts": 0,
-          "replies": 1
-        }
-      ],
-      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibqekzsmkmyrf4eslz4xs74dhrv3thxt6tnkz535w7p64sp6hcyje@jpeg"
-    },
     "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbfuenofa726": {
       "content": "Israel shutting down 37 aid groups in Gaza - including Doctors Without Borders and IRC - over staff info disputes.\n\nUK, EU, and 10 countries warn: This blocks life-saving aid when people need it most.\n\nEven this cat smells something wrong here. 📰↓",
       "posted_at": "2026-01-02T02:36:59.144872+00:00",
@@ -1755,6 +208,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -1973,6 +432,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifmclniy6sbcja2s4dwhrhykw6w6cscb7w7hto3l36bmoopgmwanu@jpeg"
@@ -2185,6 +650,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -2403,6 +874,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihxr2wd43pb6xjsrgx2l2bavoeyii5tke6wwwqcy57wzeff7xem4e@jpeg"
@@ -2615,6 +1092,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -2833,6 +1316,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreia3qjri2of6su3lsb7jau7olmoqpyiddgkmltcpr6xwlkt5ual44i@jpeg"
@@ -3040,6 +1529,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 4,
           "reposts": 0,
           "replies": 1
@@ -3253,6 +1748,12 @@
           "likes": 2,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreicqp3pdoumqzrsj5yoe7qsdllu47v43nplrdi6yqdlydj2frl3ydq@jpeg"
@@ -3460,6 +1961,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -3673,6 +2180,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibmciytggenzrlsmf2wjvtcdusgkon5omqtw3ta5rm7vdxb3esfnu@jpeg"
@@ -3880,6 +2393,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -4093,6 +2612,12 @@
           "likes": 4,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihsfh6q7fzrms5yvrd2babqqjgq4ge77pmyk5abuvnrq3bbg4naqe@jpeg"
@@ -4303,6 +2828,12 @@
           "likes": 1,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreidqayey4g264dawi7dk5mtwfz4up7o47wtngbict6cj7sypfutvsa@jpeg"
@@ -4492,6 +3023,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 1,
+          "replies": 2
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 1,
           "replies": 2
@@ -4687,6 +3224,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreid46jqrbdrtvpm4ofscmcu5rxp755qmssowrqwtytzfwzlpnozrae@jpeg"
@@ -4876,6 +3419,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -5071,6 +3620,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiholxzwnppifmt2i6f46aom2frdhu3uxilrjclhkbvt6lzxjvahhq@jpeg"
@@ -5263,6 +3818,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiborkli25ewfenb266hi3xdqtvnn7jl2jgou3nbapiwpnnqhwv424@jpeg"
@@ -5452,6 +4013,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -5653,6 +4220,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreieqwzjwrch2awpkrpzadvairvypd23thdd4vy4mozltxvly3247ue@jpeg"
@@ -5818,6 +4391,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -5989,6 +4568,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifyk33qsmjfcfqgt4anyuj7cydrhz6zhpsgpzjuu7njslnutbtbre@jpeg"
@@ -6154,6 +4739,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -6325,6 +4916,12 @@
           "likes": 5,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 5,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreie5yoof73uzefsd6rvmafpow7qjbccrbmhuwukc3wjt3jozpeemoy@jpeg"
@@ -6490,6 +5087,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -6661,6 +5264,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigkd6cc4sago2lbpypwevpizpqcyxlwxwiudrvwvw7725t4rlxh5a@jpeg"
@@ -6829,6 +5438,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreih42obivel77vw4hzffwzsex4b7ayudzujezxifyuywccqzj6m7j4@jpeg"
@@ -6988,6 +5603,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -7153,6 +5774,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigk5spime5r5hezn2bfgzrqfr3tc3zi6p7mbsvbexko4hbtdscuoq@jpeg"
@@ -7312,6 +5939,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 5,
+          "reposts": 0,
+          "replies": 4
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 5,
           "reposts": 0,
           "replies": 4
@@ -7477,6 +6110,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiajwmxjpuabifsuaqpqkc2l6v65luuavokqflky5eqcnd5ah4terq@jpeg"
@@ -7636,6 +6275,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -7801,6 +6446,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreieypdcsku6k6fpa7afye65azqtytzulamskmtyqkmefjx3obktz24@jpeg"
@@ -7963,6 +6614,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihj3enswih3xmiax4xm4bndkh6fxehtoxhoyox2gmvzsizsm6cxsa@jpeg"
@@ -8116,6 +6773,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -8275,6 +6938,12 @@
           "likes": 8,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 8,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigmnoaiabe7wa6cndrs5jvc2dl7tuhszyc4jqgntmud3cagsndywq@jpeg"
@@ -8428,6 +7097,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -8587,6 +7262,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigbsm2gxtejxsc2yq5z3rvuqowf3inlhxmcpvydesbyfrtomqh3qm@jpeg"
@@ -8740,6 +7421,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -8899,6 +7586,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreib646jmiiqiyekf5ejtzafuh637zmy534ytkarh4djc4aosjrwv5q@jpeg"
@@ -9055,6 +7748,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreih5dqhh6m7ftcwsevcxd3t5m4rhaysw5og3f36sf3vmobraljthzi@jpeg"
@@ -9202,6 +7901,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -9355,6 +8060,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreie4idgd2dnxa73zloxtkflpdbysdtcdzkbj2yrf3h6bqqpfr6ymwi@jpeg"
@@ -9505,6 +8216,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifonygflaqf3h6yqmmuazfexj6ay53ww3igoy4mxk4yo27j4qhwwa@jpeg"
@@ -9652,6 +8369,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -9823,6 +8546,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihz4d5bjuiqs4kn6b33oh4bw5furueouxcuoc5rjrin4b7preq7fe@jpeg"
@@ -9973,6 +8702,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 2
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 2
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibcivlecxvtuqmzwjusllmc2hfi7rmg4zhof2jyvwyd4pegl4wff4@jpeg"
@@ -10114,6 +8849,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -10261,6 +9002,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifxfotnzqrqutiuxs6xrd3h4trilmgtsow5ds3vqgsaxu7pfwq2wm@jpeg"
@@ -10402,6 +9149,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -10549,6 +9302,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiaajo46efjrhcy6wcmiv442yzlqtjr2yhcchamdxio2ey57wta6ji@jpeg"
@@ -10690,6 +9449,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -10837,6 +9602,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifx4geqlagdvlouz223uzctkgthpim4azlre5nccm5fz63yioflfq@jpeg"
@@ -10981,6 +9752,12 @@
           "likes": 1,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifq3jqxkak4hxlxfmduaxn53ngznuyew5ya5q62py6ldaqu42tuju@jpeg"
@@ -11116,6 +9893,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -11257,6 +10040,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreie6r77hysqqzx4niizuv5futggaoxf7xijybnngdefiby7bmfgnei@jpeg"
@@ -11392,6 +10181,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -11533,6 +10328,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihusfknx57up7tb35gyl3yiqh47pzttpzryhyyyjxdl5nmskygmdi@jpeg"
@@ -11668,6 +10469,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -11809,6 +10616,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreig2xqjvwsjtleoh7fw4pqpooilo2uorvsbfgi22aqdrbiynnihqnm@jpeg"
@@ -11947,6 +10760,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihkdpo22ykkyq4fcrobiamldnch6hsr2fxf5xtnlhbav3vb66pzbq@jpeg"
@@ -12076,6 +10895,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -12211,6 +11036,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibjzm7r3xhpehhh3h4biqsdint5mjximj5q2wot433njj3ueqnoyi@jpeg"
@@ -12340,6 +11171,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -12475,6 +11312,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibytfbgook7vaq2k3bg2ylm25mem6qz4q5pyg72yf2qoctibzwa5e@jpeg"
@@ -12604,6 +11447,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -12739,6 +11588,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigb2rtp6x3uixq4nawmjmthyem7ysfy72q64npans67e2feq2uyyu@jpeg"
@@ -12871,6 +11726,12 @@
           "likes": 2,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihtdl5naahtld6efixps5dizktkuufkhlb4orlvu3vbne6t72pfnu@jpeg"
@@ -12994,6 +11855,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 1,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 1,
           "replies": 1
@@ -13123,6 +11990,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibbnogt77qpuyilsfwrfofwmga4dnz5zveht3czkd6jjeyj4zwfyu@jpeg"
@@ -13246,6 +12119,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 2
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 2
@@ -13375,6 +12254,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreic4nsjwxc7553j6rtt6wqn7goy7wfkyekeol3grnygamsjbjfblca@jpeg"
@@ -13498,6 +12383,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -13627,6 +12518,12 @@
           "likes": 2,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibbg6z4hn77pgovq3goqfusryknryvsvu7npzmftac7b6jxbgvlye@jpeg"
@@ -13753,6 +12650,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihunojoqeys534sidnxzom4xwnhvimdkvyf4fqwhyba53dpiam4im@jpeg"
@@ -13870,6 +12773,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -13993,6 +12902,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifl3gnltjt4zr52do5xlxw4tabwbjw3vojimeycv5jjqxweg2wexi@jpeg"
@@ -14110,6 +13025,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -14233,6 +13154,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiafsiil7caxysh6ypuqo6nhhpmztxk2nclutein3hu2adfwdie76m@jpeg"
@@ -14350,6 +13277,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -14473,6 +13406,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreic73i5lllopdgrzzirzk6iildmakthtinqrjjpgbykydtvyqco524@jpeg"
@@ -14593,6 +13532,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreias3xj35jdnnf3xj32gkoqjggy44yz2w7t4efe7oy2soz5mpn4sfq@jpeg"
@@ -14704,6 +13649,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -14821,6 +13772,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiczw53bmt6tk7de3ivkkwvp5cyoq6hd5vnidw4cbrll25vfh2w6bm@jpeg"
@@ -14932,6 +13889,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 0
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 0
@@ -15049,6 +14012,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreia3rszakqqd62barzfdifjketefu4xdyaqtsdflf5ips7mnhehs3i@jpeg"
@@ -15160,6 +14129,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -15277,6 +14252,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihnxlc7an4a6a6xycdtvd3egdwy4nqkufguyhgik6xz4jwnuvbb6y@jpeg"
@@ -15391,6 +14372,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibbkov4imegrgoj5krwwzq6zmx7z6buazi2m6xemhidusazy5ojyu@jpeg"
@@ -15496,6 +14483,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -15607,6 +14600,12 @@
           "likes": 4,
           "reposts": 1,
           "replies": 2
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 1,
+          "replies": 2
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreidx6pxgy3k37q3uytgx3d5bolvk3crv4ppogb2birehebah33qasu@jpeg"
@@ -15712,6 +14711,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -15823,6 +14828,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreih6c3nbddbjeaa6iah7t5miwswp5lflnluhoj6eea3vhb2gxlvrqe@jpeg"
@@ -15928,6 +14939,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -16039,6 +15056,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreidm4ody2fk6zhumybnfmdeoi3quhwan5jvmgu2dewj4uudgnw25w4@jpeg"
@@ -16147,35 +15170,15 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifgcpjutve2gpv2vsv5jcfv5mttjfdznskseowiu7tmqybrfvlxui@jpeg"
-    },
-    "x:2006715862666064095": {
-      "content": "Zohran Mamdani sworn in as NYC's 112th mayor at midnight in an abandoned subway station. 34-year-old democratic socialist. City's first Muslim mayor, first South Asian mayor.\n\nBernie Sanders doing the public oath Thursday. Quite the guest list. 📰↓",
-      "posted_at": "2026-01-01T13:15:25.119709+00:00",
-      "platform": "x",
-      "source": "CBS News",
-      "topic": "Zohran Mamdani takes oath of office in abandoned NYC subway station, becoming city's 112th mayor - CBS News",
-      "article_url": "https://www.cbsnews.com/newyork/news/zohran-mamdani-new-york-city-mayor-takes-oath-of-office-old-city-hall-subway-station/",
-      "linked_bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mbehldjpux2r",
-      "snapshots": [
-        {
-          "timestamp": "2026-01-16T23:01:46.703926+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 54
-        },
-        {
-          "timestamp": "2026-01-17T23:01:35.114707+00:00",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 1,
-          "impressions": 54
-        }
-      ],
-      "image_url": "https://pbs.twimg.com/media/G9lJcWxaMAkCY4v.jpg"
     },
     "x:2007120547792965724": {
       "content": "Dentist and his wife shot dead in their Columbus home. Two young children were inside, found safe.\n\nNo forced entry. No weapon at scene. Killer still out there.\n\nThis cat's fur is standing on end - someone walked right in. 📰↓",
@@ -16665,6 +15668,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreige77zhs5idv42gbfjiyausce3n4ewlv52ksnfot3jy3fmu3pcx3m@jpeg"
@@ -16764,6 +15773,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -16869,6 +15884,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreickjirasgi4wrpgkvy424s6benxj3u5wceblw2cn7sbvcgob2kmti@jpeg"
@@ -16968,6 +15989,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -17073,6 +16100,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihaoda4fp4cxbnb4m22hyy4lvul7chzr2nokb45qdu4glumbqddtu@jpeg"
@@ -17175,6 +16208,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibzcs6uph6ixem76ezfcyqybbf6poubojeerkyavrwbjwtz7r626u@jpeg"
@@ -17274,6 +16313,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -17506,6 +16551,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigm6helovyscswtudlqygefcxfxxvkwiouhhxvtthrmtlslfbg3ee@jpeg"
@@ -17599,6 +16650,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -17698,6 +16755,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifsmyz6rpkvc6nnbgss6ce7lbwz5qtrhpnbfsbb2iuqoevloxz5h4@jpeg"
@@ -17791,6 +16854,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 1,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 1,
           "replies": 1
@@ -17890,6 +16959,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigjs7qfvlptmcvjhw7ppe7oxjwf5c3w7z3dribn3tpwr7htbjo54m@jpeg"
@@ -17983,6 +17058,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -18082,6 +17163,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigkfu3h5syoxy35gllsxsxde2nigjytw4dfsypa73wds56zrvxriu@jpeg"
@@ -18169,6 +17256,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 3,
+          "reposts": 1,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 3,
           "reposts": 1,
           "replies": 1
@@ -18262,6 +17355,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiaewlvnwduc3wq2ioodie6u2icdlozsbxtgw3q2ohfnyysefzzpiq@jpeg"
@@ -18349,6 +17448,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -18442,6 +17547,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihqjvrvu7h3h3xki3qfc7mzfzmzjzkoz6tdlxtsvalghzsqcjdlzy@jpeg"
@@ -18529,6 +17640,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -18622,6 +17739,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigdt7tmj5wls7r7tlih4gqsfdg36zkzccml3bdm3psd6c3csjpcri@jpeg"
@@ -18712,6 +17835,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreia7zj2novjqztposcnngnkxqsizbjjstv5j3pscvnxsnfv7i4f4ru@jpeg"
@@ -18793,6 +17922,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -18880,6 +18015,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreia5z3zgbht6kgb76urw2rylzhz3e7afi5yi2svczcg66xml6ocvx4@jpeg"
@@ -18961,6 +18102,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -19048,6 +18195,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreih6hpwaivktspcf2kvi4ndcqzr3smayoirqb63lax6ei2miiydley@jpeg"
@@ -19129,6 +18282,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -19216,6 +18375,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiegnihnbkksbzmhw4tjcx3s7squh6hwomobd32l4ekcdg46t7wg2y@jpeg"
@@ -19300,6 +18465,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiaoij27tdtqtcvppwnh4glf33kmijehpzq2odasln6uxwx5zp5zwq@jpeg"
@@ -19375,6 +18546,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -19456,6 +18633,12 @@
           "likes": 3,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiae3gqyvebog4cdvlxyz7cjax2ymgcxuiaougqodktctyufhwdqyu@jpeg"
@@ -19531,6 +18714,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -19612,6 +18801,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihshhyn6iawfctwf5xh7izdb6v3zmjpb2zdfiresvqrz5auor6mau@jpeg"
@@ -19687,6 +18882,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -19768,6 +18969,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigjcfzyztjlz54n5lwhz5f65um7tjua3su4tcd2nlve7kalmrbjgu@jpeg"
@@ -19846,6 +19053,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigeefvevudvypxdrmuyo2kalern4mzxbalmzgvienidj65sgsleaq@jpeg"
@@ -19915,6 +19128,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -19990,6 +19209,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreic2yxp4i62d6vrvt4cj35omqguitmzibpo2fuoykhlyjz2w54xt5a@jpeg"
@@ -20059,6 +19284,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -20134,6 +19365,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreieqrn4mwqfzydoqil25hkvfnhtad5jdbabnhlnec3sylnld62fyfm@jpeg"
@@ -20203,6 +19440,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -20278,6 +19521,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreidyjudr2byx7zfsiyrzvu4kq6b2rkdx2jpgqudiafpjizgkdoxb2q@jpeg"
@@ -20350,6 +19599,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiangkglg6565r6hcfxoqzyroubnxcz6wo6r22jkhbhczkhja45zde@jpeg"
@@ -20416,6 +19671,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ]
     },
@@ -20478,6 +19739,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -20547,6 +19814,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiaak42cijgqqiuwkmfwxz2bazh6dy32wllaqqubyyb6z7x33f2no4@jpeg"
@@ -20610,6 +19883,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -20679,6 +19958,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreic3a5h2drg2r6oudvssletegv36ci2hvqw7xxvejbbvntkpxmnhfi@jpeg"
@@ -20742,6 +20027,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -20811,6 +20102,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiclwtyikspjilfdn52vqy4gzqmr32anpyt2macsebiqa2dlqja3ni@jpeg"
@@ -20868,6 +20165,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -20931,6 +20234,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigfimnfxmrknq74rqv6fbnyn4ahdp4yspztoibp3kvlic2tvgi4dm@jpeg"
@@ -20988,6 +20297,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -21051,6 +20366,12 @@
           "likes": 2,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreidlau5kxbzryy2gsjcn3uisxwowd5tbjxm2fa7mv6ntayg7x3baae@jpeg"
@@ -21108,6 +20429,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -21171,6 +20498,12 @@
           "likes": 9,
           "reposts": 3,
           "replies": 2
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 9,
+          "reposts": 3,
+          "replies": 2
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreida4j2qzmsix2clln73u24yo4pbza4w7t4lfgj4mbakhd5kg3tbky@jpeg"
@@ -21231,6 +20564,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifmdjrihb3xejuldzpz7wpeypmd2bgoxf3ayt2y636snds6bvtedu@jpeg"
@@ -21282,6 +20621,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -21339,6 +20684,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigbmgvm3w6qz4q26xxzuk4hn2xaqdcolgy3bqkmuuxrwu5pu7p5q4@jpeg"
@@ -21390,6 +20741,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -21447,6 +20804,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiarqbxtvb7w3i4yek7bdrnyqx7a6gulaedm7jjgayge5wpdndporu@jpeg"
@@ -21498,6 +20861,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 1,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 1,
           "replies": 1
@@ -21555,6 +20924,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiahtbkcp6uyba6gvms3depvziehnb6knlxedj6yo7emoqzcaq2ej4@jpeg"
@@ -21609,6 +20984,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreid5k6dqll5gv4zbkhp3qpjlika3rfy6rxcsmw7tmiarumg7cmr6jq@jpeg"
@@ -21654,6 +21035,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -21705,6 +21092,12 @@
           "likes": 5,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 5,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreieppxnkehldfiymti4cfyrs52dgnffxoug5ryhecsqohvc5zofyq4@jpeg"
@@ -21750,6 +21143,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -21801,6 +21200,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiaa5eobmhp57h4xhlc4nowblutospa4g7tsdagyclglgg4u2qz27u@jpeg"
@@ -21846,6 +21251,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -21897,6 +21308,12 @@
           "likes": 1,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigzgomzfhvkfzq7tu6gwit5is4geu74b5zze5nyp277fvrii5wyqi@jpeg"
@@ -21945,6 +21362,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifbmei6x4hndea6lgkcuu22koxffq7mdlykhde3oiiixhubvb73v4@jpeg"
@@ -21984,6 +21407,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 2
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 2
@@ -22029,6 +21458,12 @@
           "likes": 4,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreieeybxmjybzk3vtq2srkscnwnrubdq43igsjqjknq5wvh6fihgjti@jpeg"
@@ -22068,6 +21503,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -22113,6 +21554,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibl4fzcvj6jezlggkymrd5gbvw7ddjjfc2jm5tymzpwkmpob2v7fi@jpeg"
@@ -22152,6 +21599,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -22197,6 +21650,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifkwvcgrxjunke5qivc6nkft4cr2xrtmfpvujx7sr4askppr5zdce@jpeg"
@@ -22239,6 +21698,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreie4vnfitbr366gseg5ga7bvhlyyq3nqaj4vjm3gwbr4v6b3ezbufu@jpeg"
@@ -22272,6 +21737,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -22311,6 +21782,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifrn7wgr7x5z3dkoddw3drjc37xqyy7olybtuzzahjfc33ql2pxxe@jpeg"
@@ -22344,6 +21821,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -22383,6 +21866,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiarvavraeqgnz2yrtw2h7n5h3rrucllj7hrlros6m542b33ohqezu@jpeg"
@@ -22416,6 +21905,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -22455,6 +21950,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiax2qcogxi5uynf23reur3dj3jbgpltwkshemnyaduard6pdkwaea@jpeg"
@@ -22491,6 +21992,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigbvq6zgnpuvq4te37pickil6xmrn5lkssqppylzp3ohwvd64qeh4@jpeg"
@@ -22518,6 +22025,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -22551,6 +22064,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifl6s3sramwb7csxabtfx7bjlgqr564cfuhi77xjcl7imcd5u6bsi@jpeg"
@@ -22578,6 +22097,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -22611,6 +22136,12 @@
           "likes": 3,
           "reposts": 1,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreidyyie2qpw5aywoo6vlgf7bn536jppoixhicilyvcv4u3uahe7mz4@jpeg"
@@ -22638,6 +22169,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -22671,6 +22208,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreid3hw5flrncgmfmx3ovmt2bbd4juwuak6isjucdomotxgqyx36a6a@jpeg"
@@ -22701,6 +22244,12 @@
           "likes": 0,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreidwtzcs74s5gjkyev3pcdwzrvx3yicqshudba6fbrednsp4msf6ee@jpeg"
@@ -22722,6 +22271,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -22749,6 +22304,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigrfittheqpiwz5l5pwyg2o52innzjz5zperdxx7rggymacmfo6oe@jpeg"
@@ -22770,6 +22331,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 3,
           "reposts": 0,
           "replies": 1
@@ -22797,6 +22364,12 @@
           "likes": 1,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibbdbwoas4x7ed4mf357rtsxwtiaqo633omacgio4ukvswcptu5li@jpeg"
@@ -22818,6 +22391,12 @@
         },
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 2,
           "reposts": 0,
           "replies": 1
@@ -22845,6 +22424,12 @@
           "likes": 4,
           "reposts": 2,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 4,
+          "reposts": 2,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreids3rjxwpw2vgjnqnpa6z7w3onswfkuczmfnj44xpiittkfwprobe@jpeg"
@@ -22869,6 +22454,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreie4ffvszewzijd5nnip3mf2yd4ykxbbtga5gsyqe4im7t4opwlaiy@jpeg"
@@ -22884,6 +22475,12 @@
       "snapshots": [
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -22905,6 +22502,12 @@
           "likes": 3,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibbr2ozpjj7paxnrx4cmue2pd53guh2xcai2xa2stwnp2ifd75qya@jpeg"
@@ -22920,6 +22523,12 @@
       "snapshots": [
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 1,
           "reposts": 0,
           "replies": 1
@@ -22941,6 +22550,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 3,
+          "reposts": 1,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreid6za5ov3a4pz2vvyxrnqsguu73tbqy6nqce3tiilpylabvpn4tue@jpeg"
@@ -22956,6 +22571,12 @@
       "snapshots": [
         {
           "timestamp": "2026-01-30T23:04:09.169745+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
           "likes": 0,
           "reposts": 0,
           "replies": 1
@@ -22977,6 +22598,12 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreifj2qklloxrqrjwht56ac5j7ajtbd3jhcv777xo5o2vnktqjih6qu@jpeg"
@@ -22995,12 +22622,144 @@
           "likes": 2,
           "reposts": 0,
           "replies": 1
+        },
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
         }
       ],
       "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreidsyggl7r5xsuh5cizveltqx4htbv3lok3avlu7nxr7vfinb6fcey@jpeg"
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdospyclbc22": {
+      "content": "Israel now accepts Gaza health ministry death toll is broadly accurate: 70,000 Palestinians killed since October 2023.\n\nThis cat notices the U-turn. For years they called it \"Hamas propaganda.\" Meow they confirm what the numbers showed all along. 📰↓",
+      "posted_at": "2026-01-31T02:51:52.772897+00:00",
+      "platform": "bluesky",
+      "source": "The Guardian",
+      "topic": "Israel accepts health authorities’ Gaza death toll is broadly accurate, saying 70,000 have died - The Guardian",
+      "article_url": "https://www.theguardian.com/world/2026/jan/30/israel-military-gaza-death-toll-broadly-accurate",
+      "linked_x_id": "2017430580263014788",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1
+        }
+      ],
+      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihpj6nbsowloabq5xxl5lvewjdtwro34srmjt5ouafhvcwkay46mi@jpeg"
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdp5z6e7562p": {
+      "content": "DOJ opens civil rights probe into Alex Pretti shooting by federal agents in Minneapolis.\n\nPretti was killed Jan. 24 while recording Border Patrol on his phone. Shot multiple times during arrest attempt.\n\nThis cat smells something fishy. 📰↓",
+      "posted_at": "2026-01-31T06:13:52.533496+00:00",
+      "platform": "bluesky",
+      "source": "NPR",
+      "topic": "Alex Pretti shooting by federal agents in Minneapolis prompts DOJ civil rights probe - NPR",
+      "article_url": "https://www.npr.org/2026/01/30/nx-s1-5694313/alex-pretti-shooting-doj-civil-rights-investigation",
+      "linked_x_id": "2017481413327474769",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        }
+      ],
+      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreiguez7dp3o7uxzoouruxet34e7jscle4lpzhnrdeiz5la6q3lg4w4@jpeg"
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdplmjmp6g2h": {
+      "content": "DHS claimed teacher Marimar Martinez \"rammed\" a Border Patrol vehicle. NPR found agents shot at her five times after she honked to warn neighbors.\n\nThis cat smells something fishy about official narratives. Pattern of false claims from DHS. 📰↓",
+      "posted_at": "2026-01-31T10:17:20.634484+00:00",
+      "platform": "bluesky",
+      "source": "NPR",
+      "topic": "DHS keeps making false claims about people. It's part of a broader pattern - NPR",
+      "article_url": "https://www.npr.org/2026/01/31/nx-s1-5690124/ice-alex-pretti-immigration-unproven-claims-dhs-enforcement-arrests",
+      "linked_x_id": "2017542682420121679",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        }
+      ],
+      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibvzuzpn7qsxazsxbxvamrhxnjjybdeq6jxqdq3mwd2llk5jsksjm@jpeg"
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdpwdu6ab72f": {
+      "content": "#BreakingMews: Bomb cyclone bearing down on Southeast. 27 million under winter storm warnings from Georgia to Virginia.\n\nBlizzard conditions, hurricane-force winds possible by Saturday night.\n\nThis cat's fur is standing on end. 📰↓",
+      "posted_at": "2026-01-31T13:29:20.568049+00:00",
+      "platform": "bluesky",
+      "source": "CNN",
+      "topic": "Most snow in years, blizzard conditions possible in parts of Southeast from powerful bomb cyclone - CNN",
+      "article_url": "https://www.cnn.com/2026/01/30/weather/bomb-cyclone-winter-storm-southeast-climate-hnk",
+      "linked_x_id": "2017591002546991304",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 2,
+          "reposts": 0,
+          "replies": 1
+        }
+      ],
+      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreigm5ra7qhiuieiwke45rarlqfdcsfa73oja6hv2td5jpymwl5ehzq@jpeg"
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdq7pwt5ut27": {
+      "content": "\"GOP majority narrows\" says the headline.\n\nTwo Democrats competing for an already-Democratic seat, CNN tells us.\n\nEven this cat knows that's not how math works. Replacing a D with a D doesn't narrow the GOP side.\n\nFishy framing detected. 📰↓",
+      "posted_at": "2026-01-31T16:17:09.751319+00:00",
+      "platform": "bluesky",
+      "source": "CNN",
+      "topic": "A US House special election in Texas is set to narrow the GOP majority even further - CNN",
+      "article_url": "https://www.cnn.com/2026/01/31/politics/texas-18th-special-election-democrats-republicans",
+      "linked_x_id": "2017633235656716339",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        }
+      ],
+      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreig5wtffan67emjzccys7otviijrxl3y2lwy4klautbf7ce2e7y22m@jpeg"
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdqjafwits2i": {
+      "content": "Over 200 killed in mine collapse in DR Congo. Women and children among the dead mining coltan—the mineral in our phones.\n\nMine under rebel control, poorly maintained. Heavy rains triggered collapse.\n\nThis cat's heart breaks. They deserved safety. 📰↓",
+      "posted_at": "2026-01-31T19:07:25.948481+00:00",
+      "platform": "bluesky",
+      "source": "BBC",
+      "topic": "DR Congo: More than 200 killed in mine collapse - BBC",
+      "article_url": "https://www.bbc.com/news/articles/cly381dvnvzo",
+      "linked_x_id": "2017676085970813408",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 1,
+          "reposts": 0,
+          "replies": 1
+        }
+      ],
+      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreihajth7gn6nlg52kzy5mkuswupy2zf4v7feuy6ctih5c7ndeibdli@jpeg"
+    },
+    "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mdqtxcnhwy2s": {
+      "content": "\"Agents were pursuing an immigrant when they killed Alex Pretti\"\n\nEven this cat notices the headline leads with the chase, not the victim. Pretti's death gets framed as a side effect.\n\nFrom my perch: burying the lede, human edition. 📰↓",
+      "posted_at": "2026-01-31T22:19:11.739483+00:00",
+      "platform": "bluesky",
+      "source": "CBS News",
+      "topic": "Agents were pursuing an immigrant when they killed Alex Pretti. Now, he shares his story. - CBS News",
+      "article_url": "https://www.cbsnews.com/news/jose-huerta-chuma-alex-pretti-minneapolis-shooting/",
+      "linked_x_id": "2017724343619334284",
+      "snapshots": [
+        {
+          "timestamp": "2026-01-31T23:02:09.658050+00:00",
+          "likes": 7,
+          "reposts": 1,
+          "replies": 1
+        }
+      ],
+      "image_url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c6zobiwguxel3fcov34h46pw/bafkreibbdkb7pruhvuhjhcropcbrru6i2helqegeajlxtq3izahshkfife@jpeg"
     }
   },
-  "last_updated": "2026-01-30T23:04:09.170501+00:00",
+  "last_updated": "2026-01-31T23:02:09.658630+00:00",
   "follower_history": {
     "x": [
       {
@@ -23210,6 +22969,12 @@
         "followers": 162,
         "following": 408,
         "posts": 1383
+      },
+      {
+        "timestamp": "2026-01-31T23:02:09.350011+00:00",
+        "followers": 164,
+        "following": 411,
+        "posts": 1397
       }
     ]
   }
