@@ -804,6 +804,11 @@
       "did": "did:plc:gs7bz7xprm2vtmc6f423xgqr",
       "handle": "authoross.bsky.social",
       "timestamp": "2026-02-01T18:03:39.238461"
+    },
+    {
+      "did": "did:plc:z3vj3sznbplg35cnfx4dtvss",
+      "handle": "takahanazawa.bsky.social",
+      "timestamp": "2026-02-01T18:43:35.639272"
     }
   ],
   "liked_posts": [
@@ -9531,6 +9536,11 @@
       "uri": "at://did:plc:gs7bz7xprm2vtmc6f423xgqr/app.bsky.feed.post/3mdsr35nlis2m",
       "author": "authoross.bsky.social",
       "timestamp": "2026-02-01T18:03:39.119833"
+    },
+    {
+      "uri": "at://did:plc:z3vj3sznbplg35cnfx4dtvss/app.bsky.feed.post/3mdqw4qbb7c2q",
+      "author": "takahanazawa.bsky.social",
+      "timestamp": "2026-02-01T18:43:35.546698"
     }
   ],
   "last_cleanup": "2026-01-30T00:08:24.869843",
