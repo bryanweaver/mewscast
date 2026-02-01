@@ -794,6 +794,11 @@
       "did": "did:plc:wtukxuaev6b4naqtjiyauakc",
       "handle": "yuzu.scares.men",
       "timestamp": "2026-02-01T17:05:38.038480"
+    },
+    {
+      "did": "did:plc:lg2xp6schzv6dcdpqm3gbmki",
+      "handle": "sirlariato.bsky.social",
+      "timestamp": "2026-02-01T17:39:14.489942"
     }
   ],
   "liked_posts": [
@@ -9511,6 +9516,11 @@
       "uri": "at://did:plc:wtukxuaev6b4naqtjiyauakc/app.bsky.feed.post/3mdss6yr63c24",
       "author": "yuzu.scares.men",
       "timestamp": "2026-02-01T17:05:37.866049"
+    },
+    {
+      "uri": "at://did:plc:lg2xp6schzv6dcdpqm3gbmki/app.bsky.feed.post/3mdso3alcyc2o",
+      "author": "sirlariato.bsky.social",
+      "timestamp": "2026-02-01T17:39:14.396595"
     }
   ],
   "last_cleanup": "2026-01-30T00:08:24.869843",
