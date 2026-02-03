@@ -829,6 +829,11 @@
       "did": "did:plc:mv425hvx3optro26poswyemy",
       "handle": "mentova.bsky.social",
       "timestamp": "2026-02-03T00:54:27.398642"
+    },
+    {
+      "did": "did:plc:z4lb75pduziqigl3napyjzka",
+      "handle": "alyossan.art",
+      "timestamp": "2026-02-03T01:31:43.950202"
     }
   ],
   "liked_posts": [
@@ -9786,6 +9791,11 @@
       "uri": "at://did:plc:mv425hvx3optro26poswyemy/app.bsky.feed.post/3mdukattnzs2k",
       "author": "mentova.bsky.social",
       "timestamp": "2026-02-03T00:54:27.305240"
+    },
+    {
+      "uri": "at://did:plc:z4lb75pduziqigl3napyjzka/app.bsky.feed.post/3mdw3t46xls2h",
+      "author": "alyossan.art",
+      "timestamp": "2026-02-03T01:31:43.850357"
     }
   ],
   "last_cleanup": "2026-01-30T00:08:24.869843",
