@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-02-03 23:05 UTC*
+*Last updated: 2026-02-04 23:04 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,19 +12,19 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 209 | - |
-| Likes | 330 | +1 |
-| Reposts | 24 | +0 |
-| Replies | 217 | - |
+| Posts tracked | 208 | - |
+| Likes | 335 | +8 |
+| Reposts | 25 | +0 |
+| Replies | 215 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 15 | - |
+| Posts tracked | 8 | - |
 | Likes | 1 | +0 |
 | Retweets | 0 | - |
-| Replies | 15 | - |
+| Replies | 8 | - |
 
 ---
 
@@ -44,9 +44,9 @@ Even this cat ...
 **[BLUESKY]** 5 likes, 0 reposts
 > #BreakingMews: Minnesota Gov. Tim Walz drops reelection bid amid viral video con...
 
-**[BLUESKY]** 4 likes, 1 reposts
-> Trump admin tried to cut $2 billion in mental health programs Tuesday. After mas...
+**[BLUESKY]** 8 likes, 1 reposts
+> This reporter is looking into ‘Humiliated’ Andrew moves out of Royal Lodge - The...
 
 ---
 
-*Data snapshots: 3278 total across 224 posts*
+*Data snapshots: 3231 total across 216 posts*
