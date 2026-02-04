@@ -844,6 +844,11 @@
       "did": "did:plc:iuhdyl3dws3ibsxyclelqd3b",
       "handle": "anthrodiva.bsky.social",
       "timestamp": "2026-02-04T21:42:21.677099"
+    },
+    {
+      "did": "did:plc:borbymqaw6hwzt2anawvqeem",
+      "handle": "spotteajj.bsky.social",
+      "timestamp": "2026-02-04T22:03:12.371198"
     }
   ],
   "liked_posts": [
@@ -10211,6 +10216,11 @@
       "uri": "at://did:plc:iuhdyl3dws3ibsxyclelqd3b/app.bsky.feed.post/3me2ssbxczc2w",
       "author": "anthrodiva.bsky.social",
       "timestamp": "2026-02-04T21:42:21.525804"
+    },
+    {
+      "uri": "at://did:plc:borbymqaw6hwzt2anawvqeem/app.bsky.feed.post/3me2ubizptk2x",
+      "author": "spotteajj.bsky.social",
+      "timestamp": "2026-02-04T22:03:12.174825"
     }
   ],
   "last_cleanup": "2026-01-30T00:08:24.869843",
