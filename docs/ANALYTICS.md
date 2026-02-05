@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-02-04 23:04 UTC*
+*Last updated: 2026-02-05 23:04 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,18 +13,18 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 208 | - |
-| Likes | 335 | +8 |
-| Reposts | 25 | +0 |
-| Replies | 215 | - |
+| Likes | 337 | +2 |
+| Reposts | 27 | +0 |
+| Replies | 212 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 8 | - |
+| Posts tracked | 6 | - |
 | Likes | 1 | +0 |
 | Retweets | 0 | - |
-| Replies | 8 | - |
+| Replies | 6 | - |
 
 ---
 
@@ -32,6 +32,9 @@ Tracking engagement for posts from the last 30 days.
 
 **[BLUESKY]** 9 likes, 3 reposts
 > Spanish rail investigators report track fracture happened *before* last Sunday's...
+
+**[BLUESKY]** 10 likes, 1 reposts
+> This reporter is looking into ‘Humiliated’ Andrew moves out of Royal Lodge - The...
 
 **[BLUESKY]** 8 likes, 1 reposts
 > Aldrich Ames, one of America's most notorious spies, has died in federal prison ...
@@ -41,12 +44,9 @@ Tracking engagement for posts from the last 30 days.
 
 Even this cat ...
 
-**[BLUESKY]** 5 likes, 0 reposts
-> #BreakingMews: Minnesota Gov. Tim Walz drops reelection bid amid viral video con...
-
-**[BLUESKY]** 8 likes, 1 reposts
-> This reporter is looking into ‘Humiliated’ Andrew moves out of Royal Lodge - The...
+**[BLUESKY]** 4 likes, 1 reposts
+> Trump admin tried to cut $2 billion in mental health programs Tuesday. After mas...
 
 ---
 
-*Data snapshots: 3231 total across 216 posts*
+*Data snapshots: 3225 total across 214 posts*
