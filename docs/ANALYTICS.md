@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-02-07 23:04 UTC*
+*Last updated: 2026-02-08 23:07 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,9 +13,9 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 208 | - |
-| Likes | 335 | +1 |
-| Reposts | 27 | +0 |
-| Replies | 211 | - |
+| Likes | 339 | +2 |
+| Reposts | 30 | +0 |
+| Replies | 212 | - |
 
 ### X (Twitter)
 
@@ -28,7 +28,7 @@ Tracking engagement for posts from the last 30 days.
 **[BLUESKY]** 9 likes, 3 reposts
 > Spanish rail investigators report track fracture happened *before* last Sunday's...
 
-**[BLUESKY]** 10 likes, 1 reposts
+**[BLUESKY]** 11 likes, 1 reposts
 > This reporter is looking into ‘Humiliated’ Andrew moves out of Royal Lodge - The...
 
 **[BLUESKY]** 8 likes, 1 reposts
@@ -44,4 +44,4 @@ Even this cat ...
 
 ---
 
-*Data snapshots: 3243 total across 208 posts*
+*Data snapshots: 3241 total across 208 posts*
