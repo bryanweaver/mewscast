@@ -1079,6 +1079,11 @@
       "did": "did:plc:zuhd53uu2d6vdob3qewkeksw",
       "handle": "lexidh.catpasity.com",
       "timestamp": "2026-02-11T16:20:09.308528"
+    },
+    {
+      "did": "did:plc:si6eafkslqmm77xindgqfb4k",
+      "handle": "laweyd.bsky.social",
+      "timestamp": "2026-02-11T16:47:51.311286"
     }
   ],
   "liked_posts": [
@@ -11846,6 +11851,11 @@
       "uri": "at://did:plc:zuhd53uu2d6vdob3qewkeksw/app.bsky.feed.post/3melmwtfdgc2q",
       "author": "lexidh.catpasity.com",
       "timestamp": "2026-02-11T16:20:09.184442"
+    },
+    {
+      "uri": "at://did:plc:si6eafkslqmm77xindgqfb4k/app.bsky.feed.post/3mejwc4wbs22b",
+      "author": "laweyd.bsky.social",
+      "timestamp": "2026-02-11T16:47:51.214431"
     }
   ],
   "last_cleanup": "2026-02-06T00:09:48.353589",
