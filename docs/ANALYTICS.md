@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-02-10 23:12 UTC*
+*Last updated: 2026-02-11 23:06 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,9 +13,9 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 208 | - |
-| Likes | 346 | +0 |
-| Reposts | 31 | +0 |
-| Replies | 213 | - |
+| Likes | 365 | +14 |
+| Reposts | 32 | +2 |
+| Replies | 212 | - |
 
 ### X (Twitter)
 
@@ -24,6 +24,11 @@ Tracking engagement for posts from the last 30 days.
 ---
 
 ## Top Performers
+
+**[BLUESKY]** 17 likes, 2 reposts
+> Minneapolis now has daily deportation flights under Operation Metro Surge.
+
+Nick...
 
 **[BLUESKY]** 9 likes, 3 reposts
 > Spanish rail investigators report track fracture happened *before* last Sunday's...
@@ -39,9 +44,6 @@ Even this cat ...
 **[BLUESKY]** 4 likes, 1 reposts
 > Trump admin tried to cut $2 billion in mental health programs Tuesday. After mas...
 
-**[BLUESKY]** 5 likes, 1 reposts
-> Massive protests in Minneapolis, NYC, San Francisco, Boston, Providence after fe...
-
 ---
 
-*Data snapshots: 3237 total across 208 posts*
+*Data snapshots: 3235 total across 208 posts*
