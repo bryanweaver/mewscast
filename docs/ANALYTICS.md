@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-02-11 23:06 UTC*
+*Last updated: 2026-02-12 23:04 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,9 +13,9 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 208 | - |
-| Likes | 365 | +14 |
-| Reposts | 32 | +2 |
-| Replies | 212 | - |
+| Likes | 393 | +17 |
+| Reposts | 46 | +10 |
+| Replies | 213 | - |
 
 ### X (Twitter)
 
@@ -25,7 +25,7 @@ Tracking engagement for posts from the last 30 days.
 
 ## Top Performers
 
-**[BLUESKY]** 17 likes, 2 reposts
+**[BLUESKY]** 22 likes, 4 reposts
 > Minneapolis now has daily deportation flights under Operation Metro Surge.
 
 Nick...
@@ -36,14 +36,14 @@ Nick...
 **[BLUESKY]** 11 likes, 1 reposts
 > This reporter is looking into ‘Humiliated’ Andrew moves out of Royal Lodge - The...
 
+**[BLUESKY]** 7 likes, 3 reposts
+> Russian drone strike kills a Ukrainian father and his three toddlers—twin boys I...
+
 **[BLUESKY]** 8 likes, 1 reposts
 > "Agents were pursuing an immigrant when they killed Alex Pretti"
 
 Even this cat ...
 
-**[BLUESKY]** 4 likes, 1 reposts
-> Trump admin tried to cut $2 billion in mental health programs Tuesday. After mas...
-
 ---
 
-*Data snapshots: 3235 total across 208 posts*
+*Data snapshots: 3233 total across 208 posts*
