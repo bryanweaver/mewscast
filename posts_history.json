@@ -1,18 +1,6 @@
 {
   "posts": [
     {
-      "timestamp": "2026-01-15T06:04:09.701680+00:00",
-      "topic": "Trump administration rolls back $2 billion mental health, addiction grant cuts - NPR",
-      "url": "https://www.npr.org/2026/01/14/nx-s1-5677714/trump-administration-mental-health-addiction-grant-cuts-restored",
-      "source": "NPR",
-      "content": "Trump admin tried to cut $2 billion in mental health programs Tuesday. After massive backlash, they reversed course.\n\nThis cat smells chaos. Providers had zero warning\u2014real lives caught in the whiplash.\n\nWho benefits from this mess? \ud83d\udcf0\u2193",
-      "image_prompt": "Cinematic: Brown tabby reporter cat in chaotic government office, letters flying everywhere mid-reversal, some marked \"TERMINATED\" others \"RESTORED\", syringes/Naloxone vials on desk, whiplash motion b",
-      "x_tweet_id": "2011680762370678914",
-      "x_reply_tweet_id": "2011680772122423646",
-      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcgvz34uc72j",
-      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mcgvz5yljc2g"
-    },
-    {
       "timestamp": "2026-01-15T10:20:29.833140+00:00",
       "topic": "U.S. freezes new immigrant visas for 75 countries: See the full list - CNBC",
       "url": "https://www.cnbc.com/2026/01/15/us-stops-immigrant-visas-for-75-countries-see-the-full-list.html",
@@ -2495,6 +2483,18 @@
       "x_reply_tweet_id": "2022507188963401939",
       "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3merzxflgaz22",
       "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3merzxijvwg2n"
+    },
+    {
+      "timestamp": "2026-02-14T06:14:36.271120+00:00",
+      "topic": "\u2018A different set of rules\u2019: thermal drone footage shows Musk\u2019s AI power plant flouting clean air regulations - The Guardian",
+      "url": "https://www.theguardian.com/environment/2026/feb/13/elon-musk-xai-datacenters-air-pollution-mississippi",
+      "source": "The Guardian",
+      "content": "Thermal drone footage caught Musk's xAI running 15 unpermitted gas turbines at its Mississippi AI plant - defying EPA clean air rules.\n\nState says no permit needed because they're on trailers.\n\nRules for thee but not for billionaires. \ud83d\udcf0\u2193",
+      "image_prompt": "Cinematic wide: Brown tabby reporter cat near industrial gas turbines mounted on trailers, thermal camera view showing heat signatures, Mississippi facility, dramatic infrared glow, EPA violation scen",
+      "x_tweet_id": null,
+      "x_reply_tweet_id": null,
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3meselenphr2h",
+      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3meselhduiq2v"
     }
   ]
 }
