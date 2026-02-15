@@ -1369,6 +1369,11 @@
       "did": "did:plc:mwuw4lezgo7w3tcsjpjeqrrl",
       "handle": "supersciencegrl.co.uk",
       "timestamp": "2026-02-15T15:38:08.939175"
+    },
+    {
+      "did": "did:plc:jfm6lmavpepsj4fe6l6z4vhq",
+      "handle": "untonuggan.myatproto.social",
+      "timestamp": "2026-02-15T16:03:09.898718"
     }
   ],
   "liked_posts": [
@@ -12986,6 +12991,11 @@
       "uri": "at://did:plc:mwuw4lezgo7w3tcsjpjeqrrl/app.bsky.feed.post/3mevjscmzt22r",
       "author": "supersciencegrl.co.uk",
       "timestamp": "2026-02-15T15:38:08.721376"
+    },
+    {
+      "uri": "at://did:plc:jfm6lmavpepsj4fe6l6z4vhq/app.bsky.feed.post/3mevmzh45g22s",
+      "author": "untonuggan.myatproto.social",
+      "timestamp": "2026-02-15T16:03:09.801230"
     }
   ],
   "last_cleanup": "2026-02-13T00:10:29.489079",
