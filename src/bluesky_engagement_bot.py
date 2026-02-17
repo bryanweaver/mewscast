@@ -69,6 +69,27 @@ class BlueskyEngagementBot:
             print(f"✗ Error checking if post liked: {e}")
             return False
 
+    def _is_post_reposted(self, uri: str) -> bool:
+        """
+        Check if we have already reposted a post via Bluesky API.
+
+        Args:
+            uri: AT URI of the post to check
+
+        Returns:
+            True if already reposted, False otherwise
+        """
+        try:
+            response = self.client.app.bsky.feed.get_posts({'uris': [uri]})
+            if response.posts:
+                post = response.posts[0]
+                if hasattr(post, 'viewer') and post.viewer and hasattr(post.viewer, 'repost') and post.viewer.repost:
+                    return True
+            return False
+        except Exception as e:
+            print(f"✗ Error checking if post reposted: {e}")
+            return False
+
     def _check_follow_ratio_safe(self) -> bool:
         """
         Check if our follow ratio is safe before following more accounts
@@ -139,6 +160,17 @@ class BlueskyEngagementBot:
             removed = original_count - len(self.engagement_history['liked_posts'])
             if removed > 0:
                 print(f"   Removed {removed} old like records")
+
+        # Keep only recent reposts
+        if self.engagement_history.get('reposted_posts'):
+            original_count = len(self.engagement_history['reposted_posts'])
+            self.engagement_history['reposted_posts'] = [
+                entry for entry in self.engagement_history['reposted_posts']
+                if datetime.fromisoformat(entry.get('timestamp', datetime.now().isoformat())) > cutoff_date
+            ]
+            removed = original_count - len(self.engagement_history['reposted_posts'])
+            if removed > 0:
+                print(f"   Removed {removed} old repost records")
 
         self.engagement_history['last_cleanup'] = datetime.now().isoformat()
         self._save_engagement_history()
@@ -484,6 +516,162 @@ class BlueskyEngagementBot:
             print(f"✗ Error finding/liking cat post on Bluesky: {e}")
             return False
 
+    def find_and_repost_cat_rescue(self) -> bool:
+        """
+        Find and repost a post about cats needing homes/rescue.
+
+        Looks for posts where someone is trying to find homes for cats
+        and is asking for reposts/signal boosts. These posts typically
+        have pictures of the cats.
+
+        Returns:
+            True if successfully reposted, False otherwise
+        """
+        print("\n🐱 Searching for cat rescue posts to repost on Bluesky...")
+
+        # Search terms targeting rescue/rehoming posts asking for reposts
+        search_terms = [
+            "cats need homes please repost",
+            "cat needs a home repost",
+            "foster cats please share",
+            "adopt cats please boost",
+            "cat rescue repost",
+            "rehome cats please share",
+            "cats looking for homes",
+            "kittens need homes repost",
+            "cat adoption please repost",
+            "save cats repost",
+            "urgent cat rescue",
+            "cats need rescue please boost",
+        ]
+
+        search_query = random.choice(search_terms)
+
+        try:
+            response = self.client.app.bsky.feed.search_posts({
+                'q': search_query,
+                'limit': 25
+            })
+
+            if not response.posts:
+                print(f"   No results for '{search_query}'")
+                return False
+
+            # Filter for quality rescue posts
+            candidate_posts = []
+            reposted_uris = [entry['uri'] for entry in self.engagement_history.get('reposted_posts', [])]
+
+            for post in response.posts:
+                # Skip if already reposted (local cache check)
+                if post.uri in reposted_uris:
+                    continue
+
+                # Skip our own posts
+                if post.author.handle == self.username.replace('.bsky.social', ''):
+                    continue
+
+                post_text = post.record.text.lower() if hasattr(post.record, 'text') else ""
+
+                # Must be asking for reposts/shares/boosts
+                repost_keywords = ['repost', 'boost', 'signal boost', 'please share', 'pls share',
+                                   'please rt', 'pls rt', 'share this', 'spread the word']
+                if not any(kw in post_text for kw in repost_keywords):
+                    continue
+
+                # Must be about cats needing homes
+                rescue_keywords = ['need home', 'needs home', 'needs a home', 'need a home',
+                                   'looking for home', 'looking for a home', 'needs foster',
+                                   'need foster', 'adopt', 'rescue', 'rehome', 'shelter',
+                                   'forever home', 'foster', 'stray', 'abandoned']
+                cat_keywords = ['cat', 'cats', 'kitten', 'kittens', 'kitty', 'kitties', 'feline']
+
+                has_rescue = any(kw in post_text for kw in rescue_keywords)
+                has_cat = any(kw in post_text for kw in cat_keywords)
+
+                if not (has_rescue and has_cat):
+                    continue
+
+                # Must have images (pictures of the cats)
+                has_images = False
+                if hasattr(post.record, 'embed') and post.record.embed:
+                    embed = post.record.embed
+                    embed_type = getattr(embed, 'py_type', '')
+                    if 'image' in embed_type.lower():
+                        has_images = True
+                    # Also check for recordWithMedia (quote post with images)
+                    elif 'recordWithMedia' in embed_type:
+                        if hasattr(embed, 'media'):
+                            media_type = getattr(embed.media, 'py_type', '')
+                            if 'image' in media_type.lower():
+                                has_images = True
+
+                if not has_images:
+                    continue
+
+                # Check recency - rescue posts stay relevant longer (within 72 hours)
+                created_at = datetime.fromisoformat(post.indexed_at.replace('Z', '+00:00'))
+                if datetime.now(created_at.tzinfo) - created_at > timedelta(hours=72):
+                    continue
+
+                likes = post.like_count if hasattr(post, 'like_count') else 0
+                reposts = post.repost_count if hasattr(post, 'repost_count') else 0
+
+                candidate_posts.append({
+                    'uri': post.uri,
+                    'cid': post.cid,
+                    'author': post.author.handle,
+                    'author_did': post.author.did,
+                    'text': post.record.text[:150] if hasattr(post.record, 'text') else '',
+                    'likes': likes,
+                    'reposts': reposts
+                })
+
+            if not candidate_posts:
+                print(f"   No qualifying cat rescue posts found")
+                return False
+
+            # Pick a post - prefer ones with more engagement (more likely legitimate)
+            candidate_posts.sort(key=lambda p: p['likes'] + p['reposts'], reverse=True)
+            post = candidate_posts[0]
+
+            print(f"\n🔁 Reposting cat rescue post from @{post['author']}")
+            print(f"   Text: {post['text']}...")
+            print(f"   Engagement: {post['likes']} likes, {post['reposts']} reposts")
+
+            # Check if we've already reposted this post (authoritative API check)
+            if self._is_post_reposted(post['uri']):
+                print(f"⏭ Already reposted this post, skipping")
+                return False
+
+            # Repost it
+            created_at = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
+            self.client.app.bsky.feed.repost.create(
+                self.client.me.did,
+                {
+                    'subject': {
+                        'uri': post['uri'],
+                        'cid': post['cid']
+                    },
+                    'createdAt': created_at
+                }
+            )
+
+            # Log the repost
+            self.engagement_history.setdefault('reposted_posts', []).append({
+                'uri': post['uri'],
+                'author': post['author'],
+                'text': post['text'][:100],
+                'timestamp': datetime.now().isoformat()
+            })
+            self._save_engagement_history()
+
+            print(f"✓ Reposted cat rescue post from @{post['author']}")
+            return True
+
+        except Exception as e:
+            print(f"✗ Error finding/reposting cat rescue post on Bluesky: {e}")
+            return False
+
     def run_engagement_cycle(self):
         """
         Run one engagement cycle:
@@ -492,6 +680,7 @@ class BlueskyEngagementBot:
         3. Auto-follow rules:
            - If we didn't follow a cat account: ALWAYS follow the post author
            - If we did follow a cat account: Try to follow post author (if they qualify)
+        4. Try to find and repost a cat rescue post
 
         This guarantees we follow at least 1 account per cycle (if we like a post)
 
@@ -508,6 +697,7 @@ class BlueskyEngagementBot:
         # Track success
         follow_success = False
         like_success = False
+        repost_success = False
 
         # Try to follow a cat account
         try:
@@ -521,17 +711,25 @@ class BlueskyEngagementBot:
         except Exception as e:
             print(f"✗ Like attempt failed: {e}")
 
+        # Try to find and repost a cat rescue post
+        try:
+            repost_success = self.find_and_repost_cat_rescue()
+        except Exception as e:
+            print(f"✗ Repost attempt failed: {e}")
+
         # Summary
         print("\n" + "="*80)
         print("BLUESKY ENGAGEMENT SUMMARY")
         print("="*80)
         print(f"✓ Followed: {1 if follow_success else 0} account")
         print(f"✓ Liked: {1 if like_success else 0} post")
+        print(f"✓ Reposted: {1 if repost_success else 0} cat rescue post")
         print(f"Total followed: {len(self.engagement_history.get('followed_users', []))} accounts")
         print(f"Total liked: {len(self.engagement_history.get('liked_posts', []))} posts")
+        print(f"Total reposted: {len(self.engagement_history.get('reposted_posts', []))} rescue posts")
         print("="*80)
 
-        return follow_success or like_success
+        return follow_success or like_success or repost_success
 
 
 if __name__ == "__main__":
