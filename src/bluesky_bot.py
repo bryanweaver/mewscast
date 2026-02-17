@@ -6,6 +6,7 @@ from atproto import Client
 from atproto import models
 from typing import Optional
 import re
+from content_generator import _truncate_at_sentence
 
 
 class BlueskyBot:
@@ -42,7 +43,7 @@ class BlueskyBot:
         try:
             if len(text) > 300:
                 print(f"Warning: Post too long ({len(text)} chars). Truncating...")
-                text = text[:297] + "..."
+                text = _truncate_at_sentence(text, 300)
 
             response = self.client.send_post(text=text)
             print(f"✓ Skeet posted successfully! URI: {response.uri}")
@@ -68,7 +69,7 @@ class BlueskyBot:
         try:
             if len(text) > 300:
                 print(f"Warning: Post too long ({len(text)} chars). Truncating...")
-                text = text[:297] + "..."
+                text = _truncate_at_sentence(text, 300)
 
             # Read image file
             with open(image_path, 'rb') as f:
@@ -213,7 +214,7 @@ class BlueskyBot:
         """
         try:
             if len(text) > 300:
-                text = text[:297] + "..."
+                text = _truncate_at_sentence(text, 300)
 
             # Parse AT URI: at://did:plc:xxx/app.bsky.feed.post/rkey
             # Extract repo (DID) and rkey
