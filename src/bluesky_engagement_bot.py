@@ -640,7 +640,7 @@ class BlueskyEngagementBot:
 
             # Check if we've already reposted this post (authoritative API check)
             if self._is_post_reposted(post['uri']):
-                print(f"⏭ Already reposted this post, skipping")
+                print("⏭ Already reposted this post, skipping")
                 return False
 
             # Repost it
