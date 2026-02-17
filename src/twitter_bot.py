@@ -4,6 +4,7 @@ Twitter/X bot integration using tweepy
 import os
 import tweepy
 from typing import Optional
+from content_generator import _truncate_at_sentence
 
 
 class TwitterBot:
@@ -55,7 +56,7 @@ class TwitterBot:
         try:
             if len(text) > 280:
                 print(f"Warning: Tweet too long ({len(text)} chars). Truncating...")
-                text = text[:277] + "..."
+                text = _truncate_at_sentence(text, 280)
 
             response = self.client.create_tweet(text=text)
             print(f"✓ Tweet posted successfully! ID: {response.data['id']}")
@@ -87,7 +88,7 @@ class TwitterBot:
         try:
             if len(text) > 280:
                 print(f"Warning: Tweet too long ({len(text)} chars). Truncating...")
-                text = text[:277] + "..."
+                text = _truncate_at_sentence(text, 280)
 
             # Upload media using v1.1 API
             print(f"📤 Uploading image: {image_path}")
@@ -134,7 +135,7 @@ class TwitterBot:
         """
         try:
             if len(text) > 280:
-                text = text[:277] + "..."
+                text = _truncate_at_sentence(text, 280)
 
             response = self.client.create_tweet(
                 text=text,

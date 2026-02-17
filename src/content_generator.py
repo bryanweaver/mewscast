@@ -11,6 +11,45 @@ from datetime import datetime
 from prompt_loader import get_prompt_loader
 
 
+def _truncate_at_sentence(text: str, max_length: int) -> str:
+    """
+    Truncate text at the last complete sentence that fits within max_length.
+    Avoids mid-sentence cuts with '...' by finding natural break points.
+    Falls back to dropping the last incomplete line if no sentence boundary found.
+    """
+    if len(text) <= max_length:
+        return text
+
+    truncated = text[:max_length]
+
+    # Try to find the last sentence-ending punctuation that fits
+    # Look for '. ', '! ', '? ', '.\n', '!\n', '?\n', or end-of-sentence at boundary
+    best_cut = -1
+    for i in range(len(truncated) - 1, 0, -1):
+        if truncated[i] in '.!?' and (i == len(truncated) - 1 or truncated[i + 1] in ' \n'):
+            best_cut = i + 1
+            break
+        # Also check for sentence ending right at a newline
+        if truncated[i] == '\n' and i > 0 and truncated[i - 1] in '.!?':
+            best_cut = i
+            break
+
+    if best_cut > max_length // 3:  # Only use if we keep at least 1/3 of content
+        return truncated[:best_cut].rstrip()
+
+    # Fallback: cut at last newline (drop the incomplete last line)
+    last_newline = truncated.rfind('\n')
+    if last_newline > max_length // 3:
+        return truncated[:last_newline].rstrip()
+
+    # Final fallback: cut at last space, no "..."
+    last_space = truncated.rfind(' ')
+    if last_space > max_length // 3:
+        return truncated[:last_space].rstrip()
+
+    return truncated.rstrip()
+
+
 class ContentGenerator:
     """Generates news cat reporter tweet content using Claude AI"""
 
@@ -161,14 +200,9 @@ class ContentGenerator:
                     print(f"⚠️  Tweet too long ({len(tweet)} chars > {max_content_length}). Asking Claude to shorten (attempt {attempt + 1})...")
                     tweet = self._shorten_tweet(tweet, max_content_length)
                 else:
-                    # Final attempt failed, truncate at word boundary as last resort
-                    print(f"⚠️  Still too long after retries. Truncating at word boundary...")
-                    cutoff = max_content_length - 3
-                    last_space = tweet.rfind(' ', 0, cutoff)
-                    if last_space > cutoff // 2:
-                        tweet = tweet[:last_space] + "..."
-                    else:
-                        tweet = tweet[:cutoff] + "..."
+                    # Final attempt failed, truncate at sentence boundary as last resort
+                    print(f"⚠️  Still too long after retries. Truncating at sentence boundary...")
+                    tweet = _truncate_at_sentence(tweet, max_content_length)
 
             # Validate content before posting - catch problematic outputs
             validation_result = self._validate_tweet_content(tweet)
@@ -353,6 +387,37 @@ class ContentGenerator:
                     'reason': f"Contains news-contradiction pattern: '{pattern}'"
                 }
 
+        # Temporal skepticism patterns - questioning article dates/timelines
+        temporal_skepticism_patterns = [
+            "the date says",
+            "the date is wrong",
+            "dates are wrong",
+            "date seems off",
+            "dates seem off",
+            "calendar is broken",
+            "calendar is wrong",
+            "time-travel",
+            "time travel",
+            "quite the typo",
+            "that's a typo",
+            "that is a typo",
+            "must be a typo",
+            "seems like a typo",
+            "dates don't match",
+            "dates don't add up",
+            "date doesn't add up",
+            "but the date",
+            "headline, but the date",
+            "in the headline, but",
+        ]
+
+        for pattern in temporal_skepticism_patterns:
+            if pattern in tweet_lower:
+                return {
+                    'valid': False,
+                    'reason': f"Contains temporal skepticism pattern: '{pattern}'"
+                }
+
         return {'valid': True, 'reason': None}
 
     def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False,
@@ -378,6 +443,7 @@ class ContentGenerator:
         # Determine time of day and current date for context
         now = datetime.now()
         current_date = now.strftime("%B %d, %Y")  # e.g., "December 16, 2025"
+        day_of_week = now.strftime("%A")  # e.g., "Monday"
         hour = now.hour
         if 5 <= hour < 12:
             time_period = "morning"
@@ -433,6 +499,7 @@ class ContentGenerator:
             story_guidance=story_guidance,
             style=self.style,
             current_date=current_date,
+            day_of_week=day_of_week,
             time_period=time_period,
             time_phrases_str=time_phrases_str,
             cat_humor_str=cat_humor_str,
@@ -530,7 +597,7 @@ class ContentGenerator:
 
             # Ensure it fits (only needed for non-URL fallback)
             if len(reply) > self.max_length:
-                reply = reply[:self.max_length - 3] + "..."
+                reply = _truncate_at_sentence(reply, self.max_length)
 
         print(f"✓ Generated source reply (URL only for full link preview card)")
         return reply
@@ -573,7 +640,7 @@ class ContentGenerator:
                 reply = reply[1:-1]
 
             if len(reply) > self.max_length:
-                reply = reply[:self.max_length - 3] + "..."
+                reply = _truncate_at_sentence(reply, self.max_length)
 
             print(f"✓ Generated cat reply ({len(reply)} chars)")
             return reply
