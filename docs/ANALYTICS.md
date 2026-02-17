@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-02-16 23:05 UTC*
+*Last updated: 2026-02-17 23:04 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,16 +13,16 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 208 | - |
-| Likes | 386 | +1 |
-| Reposts | 50 | +0 |
-| Replies | 215 | - |
+| Likes | 388 | +2 |
+| Reposts | 49 | +0 |
+| Replies | 214 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 100 | - |
-| Likes | 6 | +0 |
+| Likes | 7 | +0 |
 | Retweets | 3 | - |
 | Replies | 104 | - |
 
@@ -30,7 +30,7 @@ Tracking engagement for posts from the last 30 days.
 
 ## Top Performers
 
-**[BLUESKY]** 22 likes, 4 reposts
+**[BLUESKY]** 23 likes, 4 reposts
 > Minneapolis now has daily deportation flights under Operation Metro Surge.
 
 Nick...
@@ -51,4 +51,4 @@ Even this cat ...
 
 ---
 
-*Data snapshots: 3325 total across 308 posts*
+*Data snapshots: 3416 total across 308 posts*
