@@ -627,7 +627,7 @@ class BlueskyEngagementBot:
                 })
 
             if not candidate_posts:
-                print(f"   No qualifying cat rescue posts found")
+                print("   No qualifying cat rescue posts found")
                 return False
 
             # Pick a post - prefer ones with more engagement (more likely legitimate)
