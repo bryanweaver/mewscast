@@ -374,6 +374,179 @@ def reply_to_mentions():
         return False
 
 
+def post_battle():
+    """Generate and post a 'Battle of the Political Sides' special edition"""
+    print(f"\n{'='*60}")
+    print(f"Mewscast - SPECIAL EDITION: Battle of the Political Sides")
+    print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    print(f"{'='*60}\n")
+
+    try:
+        from battle_post import BattlePostGenerator
+
+        # Get optional topic from CLI args
+        topic = None
+        if len(sys.argv) > 3:
+            topic = " ".join(sys.argv[3:])
+        elif len(sys.argv) > 2 and sys.argv[1] != "special":
+            topic = " ".join(sys.argv[2:])
+
+        if topic:
+            print(f"🥊 Topic: {topic}")
+        else:
+            print(f"🥊 Auto-selecting trending topic...")
+
+        # Initialize battle generator
+        battle_gen = BattlePostGenerator()
+
+        # Find matching stories from both sides
+        battle_data = battle_gen.find_matching_stories(topic)
+        if not battle_data:
+            print(f"\n❌ Could not find matching coverage from both outlets.")
+            print(f"   Try specifying a topic: python src/main.py special battle \"topic here\"")
+            return False
+
+        article_a = battle_data['article_a']
+        article_b = battle_data['article_b']
+        pair = battle_data['source_pair']
+
+        print(f"\n{'='*60}")
+        print(f"🥊 BATTLE FOUND!")
+        print(f"   {pair['source_a']}: {article_a['title'][:60]}...")
+        print(f"   {pair['source_b']}: {article_b['title'][:60]}...")
+        print(f"{'='*60}\n")
+
+        # Generate the comparison post
+        result = battle_gen.generate_battle_post(battle_data)
+        if not result:
+            print(f"❌ Could not generate battle post")
+            return False
+
+        post_text = result['post_text']
+        sources_text = result['sources_text']
+
+        print(f"\n📝 Battle Post:\n{post_text}\n")
+        print(f"📎 Sources:\n{sources_text}\n")
+
+        # Initialize bots
+        print("📡 Connecting to X...")
+        twitter_bot = TwitterBot()
+
+        print("🦋 Connecting to Bluesky...")
+        try:
+            bluesky_bot = BlueskyBot()
+        except Exception as e:
+            print(f"⚠️  Bluesky connection failed: {e}")
+            bluesky_bot = None
+
+        # Try to generate image
+        image_path = None
+        try:
+            print(f"🎨 Generating battle image...")
+            img_generator = ImageGenerator()
+            generator = ContentGenerator()
+            image_prompt = generator.generate_image_prompt(
+                f"Political battle: {battle_data['topic']}",
+                post_text,
+                article_content=f"{article_a.get('article_content', '')[:300]}"
+            )
+            image_path = img_generator.generate_image(image_prompt)
+        except Exception as e:
+            print(f"⚠️  Image generation failed: {e}")
+
+        # Post to X
+        tweet_id = None
+        x_success = False
+        print(f"\n📤 Posting battle to X...")
+        if image_path:
+            x_result = twitter_bot.post_tweet_with_image(post_text, image_path)
+        else:
+            x_result = twitter_bot.post_tweet(post_text)
+
+        if x_result:
+            tweet_id = x_result['id']
+            print(f"✅ X post successful! ID: {tweet_id}")
+            x_success = True
+
+            # Post sources as reply
+            time.sleep(2)
+            source_reply = twitter_bot.reply_to_tweet(tweet_id, sources_text)
+            if source_reply:
+                print(f"✅ X sources reply posted!")
+        else:
+            print(f"❌ X post failed")
+
+        # Post to Bluesky
+        bluesky_uri = None
+        bluesky_success = False
+        if bluesky_bot:
+            print(f"\n🦋 Posting battle to Bluesky...")
+            if image_path:
+                bs_result = bluesky_bot.post_skeet_with_image(post_text, image_path)
+            else:
+                bs_result = bluesky_bot.post_skeet(post_text)
+
+            if bs_result:
+                bluesky_uri = bs_result['uri']
+                print(f"✅ Bluesky post successful! URI: {bluesky_uri}")
+                bluesky_success = True
+
+                # Post sources as reply
+                time.sleep(2)
+                # Post source A URL first
+                reply_a = bluesky_bot.reply_to_skeet_with_link(
+                    bluesky_uri, article_a['url']
+                )
+                if reply_a:
+                    print(f"✅ Bluesky {pair['source_a']} source reply posted!")
+                    # Post source B as reply to source A reply
+                    time.sleep(1)
+                    reply_b = bluesky_bot.reply_to_skeet_with_link(
+                        reply_a['uri'], article_b['url']
+                    )
+                    if reply_b:
+                        print(f"✅ Bluesky {pair['source_b']} source reply posted!")
+            else:
+                print(f"❌ Bluesky post failed")
+
+        # Record to post history
+        if x_success or bluesky_success:
+            config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
+            with open(config_path, 'r') as f:
+                config = yaml.safe_load(f)
+            dedup_config = config.get('deduplication', {})
+            tracker = PostTracker(config=dedup_config)
+
+            # Record using article_a as the primary story reference
+            tracker.record_post(
+                article_a,
+                post_content=post_text,
+                tweet_id=tweet_id,
+                bluesky_uri=bluesky_uri
+            )
+
+            print(f"\n{'='*60}")
+            platforms = []
+            if x_success:
+                platforms.append("X")
+            if bluesky_success:
+                platforms.append("Bluesky")
+            print(f"✅ BATTLE POSTED to: {', '.join(platforms)}")
+            print(f"{'='*60}\n")
+            return True
+
+        print(f"\n❌ Failed to post battle to any platform")
+        return False
+
+    except Exception as e:
+        print(f"\n{'='*60}")
+        print(f"❌ ERROR: {e}")
+        import traceback
+        traceback.print_exc()
+        print(f"{'='*60}\n")
+        return False
+
+
 def main():
     """Main entry point"""
     # Load environment variables
@@ -395,9 +568,19 @@ def main():
         success1 = post_scheduled_tweet()
         success2 = reply_to_mentions()
         success = success1 and success2
+    elif mode == "special":
+        # Special edition posts
+        special_type = sys.argv[2] if len(sys.argv) > 2 else None
+        if special_type == "battle":
+            success = post_battle()
+        else:
+            print(f"❌ Unknown special post type: {special_type}")
+            print("Available special types:")
+            print("  battle [topic]  - Battle of the Political Sides")
+            sys.exit(1)
     else:
         print(f"❌ Unknown mode: {mode}")
-        print("Available modes: scheduled, reply, both")
+        print("Available modes: scheduled, reply, both, special")
         sys.exit(1)
 
     # Exit with appropriate code for CI/CD
