@@ -183,16 +183,68 @@ class BattlePostGenerator:
             print(f"   ⚠️  Error searching {source_name}: {e}")
             return None
 
+    def _check_article_consistency(self, client, model: str,
+                                     source_a: str, title_a: str, content_a: str,
+                                     source_b: str, title_b: str, content_b: str,
+                                     topic: str) -> Dict:
+        """
+        Pre-check whether two articles are actually about the same story/event.
+
+        Returns dict with 'is_consistent' bool and 'reason' string.
+        Articles about different people, events, or topics should not be compared.
+        """
+        consistency_prompt = (
+            f"You are checking whether two news articles cover the SAME story or event, "
+            f"making them suitable for a side-by-side media comparison.\n\n"
+            f"Search topic: {topic}\n\n"
+            f"## ARTICLE A: {source_a}\n"
+            f"Headline: {title_a}\n"
+            f"Content preview: {content_a[:500]}\n\n"
+            f"## ARTICLE B: {source_b}\n"
+            f"Headline: {title_b}\n"
+            f"Content preview: {content_b[:500]}\n\n"
+            f"## CHECK:\n"
+            f"1. Are these articles about the SAME specific event, person, or news story?\n"
+            f"2. Or are they about DIFFERENT stories that merely share a general topic?\n"
+            f"   (e.g., two different people both involved in 'politics' is NOT a match)\n\n"
+            f"Respond in this exact format:\n"
+            f"SAME_STORY: yes/no\n"
+            f"REASON: [brief explanation]\n"
+        )
+
+        try:
+            message = client.messages.create(
+                model=model,
+                max_tokens=200,
+                messages=[{"role": "user", "content": consistency_prompt}]
+            )
+
+            response = message.content[0].text.strip().lower()
+            is_consistent = 'same_story: yes' in response or 'same_story:yes' in response
+            reason = ''
+            if 'reason:' in response:
+                reason = response.split('reason:', 1)[1].strip()
+
+            return {'is_consistent': is_consistent, 'reason': reason}
+
+        except Exception as e:
+            print(f"   ⚠️  Consistency check failed: {e}")
+            # If the check fails, allow it to proceed (fail-open for API errors only)
+            return {'is_consistent': True, 'reason': 'consistency check unavailable'}
+
     def generate_battle_post(self, battle_data: Dict) -> Optional[Dict]:
         """
         Generate Walter Croncat's comparison post from both articles.
 
         Uses a multi-pass approach:
+        0. Pre-check that articles are about the same story
         1. Generate initial comparison post
         2. Verify claims against both source articles
         3. If verification finds issues, regenerate with corrections
+        4. If still inconsistent after correction, FAIL (return None)
 
-        Returns dict with 'post_text' and 'sources_text' for thread format.
+        Returns dict with 'post_text' and 'sources_text' for thread format,
+        or None if articles are inconsistent or generation fails verification.
         """
         article_a = battle_data['article_a']
         article_b = battle_data['article_b']
@@ -206,6 +258,30 @@ class BattlePostGenerator:
 
         content_a = article_a.get('article_content', '')[:800]
         content_b = article_b.get('article_content', '')[:800]
+
+        # === PASS 0: Pre-check article consistency ===
+        try:
+            from anthropic import Anthropic
+            client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+            model = self.config['content']['model']
+        except Exception as e:
+            print(f"❌ Error initializing API client: {e}")
+            return None
+
+        print("   🔍 Pass 0: Checking if articles cover the same story...")
+        consistency = self._check_article_consistency(
+            client, model,
+            pair['source_a'], article_a['title'], content_a,
+            pair['source_b'], article_b['title'], content_b,
+            topic
+        )
+
+        if not consistency['is_consistent']:
+            print(f"   ❌ Articles are NOT about the same story: {consistency['reason']}")
+            print(f"   Skipping this pair - need articles covering the same event.")
+            return None
+
+        print(f"   ✅ Articles confirmed to be about the same story")
 
         # Build the battle prompt — uses source_a/source_b, no left/right labels
         prompt = self.prompts.load("battle_comparison.md",
@@ -221,10 +297,6 @@ class BattlePostGenerator:
         )
 
         try:
-            from anthropic import Anthropic
-            client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-            model = self.config['content']['model']
-
             # === PASS 1: Generate initial comparison ===
             print("   📝 Pass 1: Generating initial comparison...")
             message = client.messages.create(
@@ -242,6 +314,12 @@ class BattlePostGenerator:
                 post_text = post_text[1:-1]
 
             print(f"   Draft ({len(post_text)} chars): {post_text[:80]}...")
+
+            # === Self-reference check: detect AI meta-commentary ===
+            if self._has_self_referential_content(post_text):
+                print(f"   ❌ Generated text contains AI meta-commentary instead of a real comparison.")
+                print(f"   Refusing to post self-referential content.")
+                return None
 
             # === PASS 2: Verify accuracy against sources ===
             print("   🔍 Pass 2: Verifying claims against source articles...")
@@ -279,6 +357,12 @@ class BattlePostGenerator:
 
                 print(f"   Corrected ({len(post_text)} chars): {post_text[:80]}...")
 
+                # Check corrected version for self-reference too
+                if self._has_self_referential_content(post_text):
+                    print(f"   ❌ Corrected text still contains AI meta-commentary.")
+                    print(f"   Refusing to post self-referential content.")
+                    return None
+
                 # === PASS 4: Final verification ===
                 print("   🔍 Pass 4: Final verification...")
                 final_check = self._verify_battle_post(
@@ -288,8 +372,9 @@ class BattlePostGenerator:
                 )
 
                 if final_check['has_issues']:
-                    print(f"   ⚠️  Still has issues after correction: {final_check['issues']}")
-                    print(f"   Proceeding with best effort (issues were minor enough)")
+                    print(f"   ❌ Still has issues after correction: {final_check['issues']}")
+                    print(f"   Refusing to post inconsistent content.")
+                    return None
                 else:
                     print(f"   ✅ Final verification passed!")
             else:
@@ -324,6 +409,51 @@ class BattlePostGenerator:
         except Exception as e:
             print(f"❌ Error generating battle post: {e}")
             return None
+
+    def _has_self_referential_content(self, post_text: str) -> bool:
+        """
+        Detect if the AI generated meta-commentary about the articles
+        instead of an actual comparison post.
+
+        Catches outputs like "these articles are about different people",
+        "I notice these cover different subjects", etc.
+        """
+        text_lower = post_text.lower()
+
+        # Patterns that indicate the AI is talking ABOUT the articles
+        # rather than writing a comparison AS Walter Croncat
+        self_ref_patterns = [
+            "different people",
+            "different person",
+            "different subject",
+            "different stor",
+            "not the same story",
+            "not the same event",
+            "not about the same",
+            "don't cover the same",
+            "don't actually cover",
+            "aren't about the same",
+            "these articles are about",
+            "these articles aren't",
+            "these articles don't",
+            "i notice",
+            "i can't compare",
+            "i cannot compare",
+            "unable to compare",
+            "not comparable",
+            "apples and oranges",
+            "two different",
+            "two entirely different",
+            "not related",
+            "unrelated stories",
+        ]
+
+        for pattern in self_ref_patterns:
+            if pattern in text_lower:
+                print(f"   Detected self-referential pattern: '{pattern}'")
+                return True
+
+        return False
 
     def _verify_battle_post(self, client, model: str, post_text: str,
                             left_source: str, left_title: str, left_content: str,
