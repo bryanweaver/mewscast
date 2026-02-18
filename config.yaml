@@ -36,84 +36,162 @@ content:
     - "international crises"
     - "Wall Street scandals"
 
-  # Cat-themed vocabulary for natural wordplay
-  # Context-specific - use naturally when they fit the story
-  cat_vocabulary:
-    # Basic/Generic (use sparingly)
+  # Cat-themed vocabulary organized by news context
+  # Each category has keywords that trigger it + phrases that fit that context
+  # The vocab selector matches story headlines against keywords to pick the right puns
+  cat_vocabulary_by_topic:
+
+    politics:
+      keywords: ["president", "congress", "senate", "election", "vote", "campaign", "democrat", "republican", "governor", "mayor", "legislation", "bill", "law", "policy", "political", "partisan", "bipartisan", "lobby", "caucus", "filibuster", "veto", "executive order", "white house", "capitol", "parliament", "trump", "biden"]
+      phrases:
+        - "paw-litical"
+        - "marking territory"
+        - "hissing match"
+        - "claws out on the floor"
+        - "a real cat fight on the hill"
+        - "someone just coughed up a hairball of a policy"
+        - "this cat sees a turf war"
+        - "fur flying in the chamber"
+        - "herding cats on the hill"
+        - "litter-ally rewriting the rules"
+        - "someone's sharpening their claws"
+
+    finance:
+      keywords: ["stock", "market", "wall street", "economy", "inflation", "fed", "bank", "billion", "million", "investment", "hedge fund", "crypto", "bitcoin", "gdp", "recession", "earnings", "profit", "revenue", "interest rate", "dow", "nasdaq", "s&p", "ipo", "merger", "acquisition", "trade", "tariff"]
+      phrases:
+        - "following the kibble trail"
+        - "fat cats winning again"
+        - "who gets the cream?"
+        - "cream rises to the top"
+        - "someone's hoarding all the treats"
+        - "this cat can smell the tuna"
+        - "a very expensive scratching post"
+        - "the fat cats are purring"
+        - "knocking things off the shelf... like stock prices"
+        - "this cat's portfolio just used up a life"
+        - "chasing the red dot of returns"
+
+    scandal:
+      keywords: ["scandal", "corruption", "fraud", "indicted", "charged", "arrest", "investigation", "probe", "FBI", "DOJ", "subpoena", "coverup", "whistleblower", "allegation", "misconduct", "bribe", "embezzle", "launder", "guilty", "plea deal", "conspiracy"]
+      phrases:
+        - "curiosity didn't kill this cat, but what I found might"
+        - "this cat's nose is twitching"
+        - "someone forgot to bury this in the litter box"
+        - "the tail tells a different story"
+        - "not buying the catnip"
+        - "on the prowl for answers"
+        - "this cat followed the yarn and look where it leads"
+        - "claw-ver attempt at a coverup"
+        - "someone's been a bad kitty"
+        - "caught with their paw in the treat jar"
+        - "this cat didn't need nine lives to figure this out"
+
+    tech:
+      keywords: ["tech", "AI", "artificial intelligence", "google", "apple", "meta", "microsoft", "amazon", "silicon valley", "startup", "software", "data", "privacy", "algorithm", "robot", "chatbot", "social media", "app", "hack", "cyber", "elon musk", "chip", "semiconductor", "openai"]
+      phrases:
+        - "this cat's curiosity is piqued"
+        - "chasing the laser pointer of innovation"
+        - "even cats know that's a black box"
+        - "someone just knocked the internet off the table"
+        - "this cat's watching the mice build a mousetrap"
+        - "purr-ocessing this development"
+        - "fur-ther disruption ahead"
+        - "the real meow-chine learning here"
+        - "this cat preferred the old scratching post"
+        - "cat-alog of concerns growing"
+
+    conflict:
+      keywords: ["war", "military", "missile", "bomb", "troops", "invasion", "attack", "defense", "NATO", "nuclear", "weapon", "soldier", "ceasefire", "drone", "airstrike", "sanction", "conflict", "battle", "siege", "Ukraine", "Russia", "Gaza", "Israel", "Iran", "China", "Taiwan", "tension"]
+      phrases:
+        - "fur standing on end"
+        - "this cat's hackles are up"
+        - "backed into a corner"
+        - "showing claws"
+        - "a real cat-and-mouse standoff"
+        - "nine lives wouldn't be enough"
+        - "hair-raising developments"
+        - "this cat's watching from a safe perch"
+        - "territorial as it gets"
+        - "someone's arching their back"
+
+    crime:
+      keywords: ["murder", "killed", "shooting", "robbery", "theft", "prison", "sentence", "trial", "jury", "verdict", "gang", "cartel", "trafficking", "kidnap", "assault", "suspect", "victim", "homicide", "felony"]
+      phrases:
+        - "this cat's whiskers are tingling"
+        - "something doesn't smell right"
+        - "prowling through the details"
+        - "this cat's seen the dark alley"
+        - "night watch report"
+        - "the evidence trail has this cat's attention"
+        - "sharper claws needed for this one"
+        - "even alley cats know better"
+
+    environment:
+      keywords: ["climate", "environment", "hurricane", "earthquake", "flood", "wildfire", "storm", "tornado", "pollution", "emission", "carbon", "ocean", "species", "wildlife", "conservation", "EPA", "drought", "warming", "temperature", "weather", "solar", "renewable"]
+      phrases:
+        - "this cat doesn't like the forecast"
+        - "even cats know: don't mess with Mother Nature"
+        - "landing on shaky ground"
+        - "this cat's fur is standing up for a reason"
+        - "a cat-astrophe in the making"
+        - "the canary... er, bird in the coal mine"
+        - "nature's claws are out"
+        - "not the kind of water this cat wants"
+        - "even a cat can read the weather on this one"
+
+    health:
+      keywords: ["health", "covid", "vaccine", "hospital", "doctor", "FDA", "drug", "pharma", "cancer", "disease", "outbreak", "pandemic", "medical", "surgery", "patient", "WHO", "CDC", "mental health", "opioid", "overdose"]
+      phrases:
+        - "this cat's taking a paws for concern"
+        - "not exactly a clean bill of health"
+        - "nine lives, and this cat wants to keep all of them"
+        - "what the vet isn't telling you"
+        - "fur-ther study needed"
+        - "this cat's purr-scription: transparency"
+        - "the cure might be worse than the hairball"
+        - "sick as a... well, not a cat"
+
+    entertainment:
+      keywords: ["movie", "film", "music", "celebrity", "award", "oscar", "grammy", "album", "concert", "TV", "Netflix", "Disney", "streaming", "Hollywood", "box office", "star", "actor", "singer", "sports", "NFL", "NBA", "Super Bowl", "Olympic", "World Cup", "game"]
+      phrases:
+        - "this cat's got a front row seat"
+        - "catnip for the timeline"
+        - "purr-formance review"
+        - "the plot thickens like a good bowl of cream"
+        - "this cat rates it: two paws up"
+        - "litter-ally everyone's talking about it"
+        - "meow that's entertainment"
+        - "star power or just a laser pointer?"
+        - "cat-ch of the day"
+        - "this cat calls foul"
+
+    international:
+      keywords: ["UN", "summit", "treaty", "diplomat", "ambassador", "foreign", "global", "trade deal", "G7", "G20", "EU", "European", "Asia", "Africa", "Middle East", "Latin America", "border", "immigration", "refugee", "asylum", "coup", "protest"]
+      phrases:
+        - "from my international perch"
+        - "this cat's passport is full"
+        - "territorial disputes... this cat gets it"
+        - "a whisker away from escalation"
+        - "crossing borders and red lines"
+        - "the world's a big scratching post"
+        - "this cat's watching from across the pond"
+        - "fur-eign affairs getting interesting"
+
+  # Fallback/universal phrases - used when no topic category matches
+  # or mixed in alongside topic-specific ones
+  cat_vocabulary_universal:
     - "breaking mews"
-    - "mews of the day"
     - "from my perch"
-    - "whisker away"
-    - "nine lives worth of news"
-    - "meow about that"
     - "meow hear this"
-
-    # Investigative/Suspicious
-    - "smell something fishy"
-    - "hair standing on end"
-    - "scaredy-cat move"
-    - "showing claws"
-    - "claws out"
-    - "on the prowl"
-    - "pouncing on this story"
-    - "curiosity didn't kill this cat"
-
-    # Skeptical/Critical
-    - "litter-ally"
-    - "cat-astrophic"
-    - "the tail tells a different story"
-    - "not buying the catnip"
-    - "this cat's not buying it"
-    - "meow come?"
-    - "meow way that's true"
-    - "sounds fishy to this cat right meow"
-
-    # Power/Politics
-    - "fat cat donors"
-    - "top of the food chain"
-    - "marking territory"
-    - "hissing match"
-    - "backed into a corner"
-    - "paw-litical"
-
-    # Money/Corruption
-    - "who's feeding this?"
-    - "following the kibble trail"
-    - "who gets the cream?"
-    - "fat cats winning again"
-    - "cream rises to the top"
-
-    # Time/Urgency
-    - "hair-raising"
-    - "quick as a cat"
-    - "nine lives wouldn't be enough"
+    - "paws for thought"
+    - "purr-spective"
+    - "meow about that"
     - "right meow"
-    - "meow is the time"
-    - "what happens meow"
-    - "happening right meow"
-    - "meow or never"
-    - "the question right meow"
-    - "focus right meow"
-
-    # Outcomes/Results
+    - "this cat's watching"
+    - "meow-mentous"
+    - "meow we're talking"
     - "landed on all fours"
     - "used up another life"
-    - "always lands on their feet"
-    - "land on your feet"
-    - "landing on my paws"
-
-    # Thought/Analysis
-    - "purr-spective"
-    - "paws for thought"
-    - "fur-ther details"
-    - "claw-ver analysis"
-    - "meow-mentous"
-    - "catnip for readers"
-    - "meow that's interesting"
-    - "meow we're talking"
-    - "meow you see it"
-    - "the real question meow"
-    - "what matters meow"
 
   # Engagement hooks (occasional questions to audience - use sparingly)
   engagement_hooks:
