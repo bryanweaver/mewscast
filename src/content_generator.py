@@ -3,6 +3,7 @@ AI-powered content generation using Anthropic Claude
 """
 import os
 import json
+import re
 from anthropic import Anthropic
 from typing import Optional, List, Dict
 import yaml
@@ -72,7 +73,12 @@ class ContentGenerator:
         self.topics = self.config['content']['topics']
         self.style = self.config['content']['style']
         self.persona = self.config['content'].get('persona', 'news reporter')
-        self.cat_vocabulary = self.config['content'].get('cat_vocabulary', [])
+        self.vocab_by_topic = self.config['content'].get('cat_vocabulary_by_topic', {})
+        self.vocab_universal = self.config['content'].get('cat_vocabulary_universal', [])
+        # Legacy fallback: if old flat list exists and new structure doesn't
+        if not self.vocab_by_topic:
+            self.vocab_by_topic = {}
+            self.vocab_universal = self.config['content'].get('cat_vocabulary', [])
         self.engagement_hooks = self.config['content'].get('engagement_hooks', [])
         self.time_of_day = self.config['content'].get('time_of_day', {})
         self.cat_humor = self.config['content'].get('cat_humor', [])
@@ -80,12 +86,121 @@ class ContentGenerator:
         self.max_length = self.config['content']['max_length']
         self.avoid_topics = self.config['safety']['avoid_topics']
 
+        # Load recently used phrases for anti-repetition
+        self._recent_phrases_file = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+            'recent_vocab.json'
+        )
+
         # Post angle settings (populist vs framing)
         post_angles = self.config.get('post_angles', {})
         self.framing_chance = post_angles.get('framing_chance', 0.5)
 
+        # How many recent phrases to track for anti-repetition
+        self._recent_phrases_limit = 20
+
         # Initialize prompt loader
         self.prompts = get_prompt_loader()
+
+    def _select_vocab_for_story(self, topic: str, article_details: str = None) -> str:
+        """
+        Match story content against vocab categories and return relevant phrases.
+
+        Combines text from the topic/headline and article content, matches against
+        category keywords, picks the best-matching categories, and filters out
+        recently used phrases to prevent repetition.
+
+        Returns a formatted string of suggested phrases for the prompt.
+        """
+        # Build searchable text from headline + article content
+        search_text = topic.lower()
+        if article_details:
+            search_text += " " + article_details[:500].lower()
+
+        # Score each category by keyword hits
+        category_scores = {}
+        for category, data in self.vocab_by_topic.items():
+            keywords = data.get('keywords', [])
+            score = sum(1 for kw in keywords if kw.lower() in search_text)
+            if score > 0:
+                category_scores[category] = score
+
+        # Pick phrases from matched categories (sorted by relevance)
+        matched_phrases = []
+        if category_scores:
+            # Sort by score descending, take top 2 categories
+            top_categories = sorted(category_scores, key=category_scores.get, reverse=True)[:2]
+            for cat in top_categories:
+                phrases = self.vocab_by_topic[cat].get('phrases', [])
+                matched_phrases.extend(phrases)
+                print(f"   🐱 Vocab match: '{cat}' ({category_scores[cat]} keyword hits)")
+
+        # Always mix in some universal phrases for variety
+        universal_sample = random.sample(
+            self.vocab_universal,
+            min(3, len(self.vocab_universal))
+        )
+        matched_phrases.extend(universal_sample)
+
+        # If no categories matched at all, use universal only
+        if not category_scores:
+            matched_phrases = list(self.vocab_universal)
+            print("   🐱 Vocab: no topic match, using universal phrases")
+
+        # Filter out recently used phrases
+        recent = self._load_recent_phrases()
+        available = [p for p in matched_phrases if p not in recent]
+
+        # If filtering removed everything, allow all but still note it
+        if not available:
+            available = matched_phrases
+
+        # Shuffle so Claude doesn't always pick the first one
+        random.shuffle(available)
+
+        # Take a reasonable subset (not too many, not too few)
+        selected = available[:8]
+
+        return ", ".join(selected)
+
+    def _load_recent_phrases(self) -> List[str]:
+        """Load the list of recently used phrases from disk."""
+        try:
+            if os.path.exists(self._recent_phrases_file):
+                with open(self._recent_phrases_file, 'r') as f:
+                    data = json.load(f)
+                    return data.get('recent_phrases', [])
+        except (json.JSONDecodeError, IOError):
+            pass
+        return []
+
+    def _record_used_phrase(self, tweet_text: str):
+        """
+        Scan generated tweet text for any known phrases and record them.
+        Keeps a rolling window of recently used phrases.
+        """
+        tweet_lower = tweet_text.lower()
+        recent = self._load_recent_phrases()
+
+        # Check all phrases across all categories + universal
+        all_phrases = list(self.vocab_universal)
+        for data in self.vocab_by_topic.values():
+            all_phrases.extend(data.get('phrases', []))
+
+        for phrase in all_phrases:
+            # Check if the phrase (or a close variation) appears in the tweet
+            if phrase.lower() in tweet_lower:
+                if phrase not in recent:
+                    recent.append(phrase)
+
+        # Keep only the most recent N phrases
+        recent = recent[-self._recent_phrases_limit:]
+
+        try:
+            with open(self._recent_phrases_file, 'w') as f:
+                json.dump({'recent_phrases': recent}, f, indent=2)
+        except IOError as e:
+            print(f"   ⚠️  Could not save recent phrases: {e}")
 
     def generate_tweet(self, topic: Optional[str] = None, trending_topic: Optional[str] = None,
                       story_metadata: Optional[Dict] = None, previous_posts: Optional[List[Dict]] = None,
@@ -210,6 +325,9 @@ class ContentGenerator:
                 print(f"⚠️  Content validation FAILED: {validation_result['reason']}")
                 print(f"   Rejected content: {tweet[:100]}...")
                 return None  # Signal to skip this article
+
+            # Track which vocab phrases were used for anti-repetition
+            self._record_used_phrase(tweet)
 
             # Add source indicator if this story will have a source reply
             if is_specific_story:
@@ -430,7 +548,7 @@ class ContentGenerator:
         """
         # Prepare config-based values
         avoid_str = ", ".join(self.avoid_topics)
-        cat_vocab_str = ", ".join(self.cat_vocabulary[:10])
+        cat_vocab_str = self._select_vocab_for_story(topic, article_details)
         guidelines_str = "\n- ".join(self.editorial_guidelines)
 
         # Calculate actual max length for the prompt
@@ -557,7 +675,8 @@ class ContentGenerator:
         content = story_metadata.get('article_content', '')[:800]  # Truncate for prompt
         framing_angle = media_issues.get('angle', '')
 
-        cat_vocab_str = ", ".join(self.cat_vocabulary[:10])
+        article_text = f"Title: {title}\n{content}"
+        cat_vocab_str = self._select_vocab_for_story(title, article_text)
         cat_humor_str = ", ".join(self.cat_humor) if self.cat_humor else ""
 
         return self.prompts.load_framing_tweet(
@@ -613,7 +732,7 @@ class ContentGenerator:
         Returns:
             Generated reply text in cat reporter style
         """
-        cat_vocab_str = ", ".join(self.cat_vocabulary[:5])
+        cat_vocab_str = self._select_vocab_for_story(original_tweet, context)
         context_line = f"- Context: {context}" if context else ""
 
         prompt = self.prompts.load_reply(
