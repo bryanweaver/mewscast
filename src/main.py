@@ -399,27 +399,52 @@ def post_battle():
         # Initialize battle generator
         battle_gen = BattlePostGenerator()
 
-        # Find matching stories from both sides
-        battle_data = battle_gen.find_matching_stories(topic)
-        if not battle_data:
-            print(f"\n❌ Could not find matching coverage from both outlets.")
-            print(f"   Try specifying a topic: python src/main.py special battle \"topic here\"")
-            return False
+        # Find matching stories and generate post (with retry on inconsistency)
+        max_attempts = 3
+        result = None
+        tried_pairs = []  # Track which source pairs we've tried
 
-        article_a = battle_data['article_a']
-        article_b = battle_data['article_b']
-        pair = battle_data['source_pair']
+        for attempt in range(1, max_attempts + 1):
+            print(f"\n🥊 Attempt {attempt}/{max_attempts}...")
 
-        print(f"\n{'='*60}")
-        print(f"🥊 BATTLE FOUND!")
-        print(f"   {pair['source_a']}: {article_a['title'][:60]}...")
-        print(f"   {pair['source_b']}: {article_b['title'][:60]}...")
-        print(f"{'='*60}\n")
+            # Find matching stories from both sides
+            battle_data = battle_gen.find_matching_stories(topic)
+            if not battle_data:
+                print(f"   ❌ Could not find matching coverage from both outlets.")
+                if attempt < max_attempts:
+                    print(f"   Retrying with different sources...")
+                    continue
+                break
 
-        # Generate the comparison post
-        result = battle_gen.generate_battle_post(battle_data)
+            article_a = battle_data['article_a']
+            article_b = battle_data['article_b']
+            pair = battle_data['source_pair']
+
+            # Skip pairs we've already tried
+            pair_key = f"{pair['source_a']}_{pair['source_b']}_{article_a['url']}_{article_b['url']}"
+            if pair_key in tried_pairs:
+                print(f"   Already tried this pair, skipping...")
+                continue
+            tried_pairs.append(pair_key)
+
+            print(f"\n{'='*60}")
+            print(f"🥊 BATTLE FOUND!")
+            print(f"   {pair['source_a']}: {article_a['title'][:60]}...")
+            print(f"   {pair['source_b']}: {article_b['title'][:60]}...")
+            print(f"{'='*60}\n")
+
+            # Generate the comparison post
+            result = battle_gen.generate_battle_post(battle_data)
+            if result:
+                break  # Success!
+
+            print(f"   ❌ Battle post generation failed (inconsistent or invalid)")
+            if attempt < max_attempts:
+                print(f"   Retrying with different articles...")
+
         if not result:
-            print(f"❌ Could not generate battle post")
+            print(f"\n❌ Could not generate a valid battle post after {max_attempts} attempts.")
+            print(f"   Try specifying a different topic: python src/main.py special battle \"topic here\"")
             return False
 
         post_text = result['post_text']
