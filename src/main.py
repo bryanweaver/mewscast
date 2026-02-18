@@ -457,12 +457,9 @@ def post_battle():
         print("📡 Connecting to X...")
         twitter_bot = TwitterBot()
 
-        print("🦋 Connecting to Bluesky...")
-        try:
-            bluesky_bot = BlueskyBot()
-        except Exception as e:
-            print(f"⚠️  Bluesky connection failed: {e}")
-            bluesky_bot = None
+        # Bluesky battle posts disabled until ready
+        # TODO: Re-enable Bluesky for battle posts when ready
+        bluesky_bot = None
 
         # Generate split-screen battle image
         image_path = None
