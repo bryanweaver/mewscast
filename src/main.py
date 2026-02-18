@@ -439,20 +439,15 @@ def post_battle():
             print(f"⚠️  Bluesky connection failed: {e}")
             bluesky_bot = None
 
-        # Try to generate image
+        # Generate split-screen battle image
         image_path = None
         try:
-            print(f"🎨 Generating battle image...")
-            img_generator = ImageGenerator()
-            generator = ContentGenerator()
-            image_prompt = generator.generate_image_prompt(
-                f"Political battle: {battle_data['topic']}",
-                post_text,
-                article_content=f"{article_a.get('article_content', '')[:300]}"
-            )
-            image_path = img_generator.generate_image(image_prompt)
+            print(f"🎨 Generating split-screen battle image...")
+            from battle_image import BattleImageGenerator
+            battle_img = BattleImageGenerator()
+            image_path = battle_img.generate(battle_data)
         except Exception as e:
-            print(f"⚠️  Image generation failed: {e}")
+            print(f"⚠️  Battle image generation failed: {e}")
 
         # Post to X
         tweet_id = None
