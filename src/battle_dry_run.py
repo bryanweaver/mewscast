@@ -6,6 +6,9 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(__file__))
 
+# Patch ContentGenerator to skip API key check for dry run
+os.environ.setdefault("ANTHROPIC_API_KEY", "dry-run-placeholder")
+
 from battle_post import BattlePostGenerator
 from battle_image import BattleImageGenerator
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
