@@ -266,39 +266,44 @@ special_posts:
     enabled: true
 
     # Source pairs: outlets that tend to frame stories differently
-    # The post compares HOW they cover it, not WHO is "right" or "left"
+    # Left-leaning: CNN, BBC, WaPo, NYT, NPR
+    # Right-leaning: Fox News, NY Post, Newsmax
     source_pairs:
       - source_a: "CNN"
         source_b: "Fox News"
-      - source_a: "MSNBC"
-        source_b: "Daily Wire"
+      - source_a: "CNN"
+        source_b: "New York Post"
+      - source_a: "The New York Times"
+        source_b: "Fox News"
       - source_a: "The New York Times"
         source_b: "New York Post"
       - source_a: "The Washington Post"
-        source_b: "The Wall Street Journal"
-      - source_a: "The Guardian"
-        source_b: "Daily Mail"
-      - source_a: "NBC News"
-        source_b: "Newsmax"
+        source_b: "Fox News"
+      - source_a: "The Washington Post"
+        source_b: "New York Post"
       - source_a: "NPR"
-        source_b: "Breitbart"
+        source_b: "Fox News"
+      - source_a: "NPR"
+        source_b: "Newsmax"
+      - source_a: "BBC"
+        source_b: "Fox News"
+      - source_a: "BBC"
+        source_b: "New York Post"
+      - source_a: "CNN"
+        source_b: "Newsmax"
+      - source_a: "The New York Times"
+        source_b: "Newsmax"
 
     # Google News search domains for each outlet
     source_domains:
       "CNN": "cnn.com"
       "Fox News": "foxnews.com"
-      "MSNBC": "msnbc.com"
-      "Daily Wire": "dailywire.com"
       "The New York Times": "nytimes.com"
       "New York Post": "nypost.com"
       "The Washington Post": "washingtonpost.com"
-      "The Wall Street Journal": "wsj.com"
-      "The Guardian": "theguardian.com"
-      "Daily Mail": "dailymail.co.uk"
-      "NBC News": "nbcnews.com"
-      "Newsmax": "newsmax.com"
+      "BBC": "bbc.com"
       "NPR": "npr.org"
-      "Breitbart": "breitbart.com"
+      "Newsmax": "newsmax.com"
 
     # How many characters for battle posts (thread format)
     # Post 1: The comparison/verdict
