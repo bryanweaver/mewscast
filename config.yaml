@@ -256,6 +256,60 @@ content:
   ai_provider: "anthropic"  # or "openai"
   model: "claude-sonnet-4-5-20250929"  # Claude 4.5 Sonnet (latest)
 
+# Special edition post types (manually triggered)
+special_posts:
+  battle:
+    # "Battle of the Political Sides" - compare two outlets' coverage of same story
+    # Triggered manually: python src/main.py special battle [optional-topic]
+    # We DON'T label outlets as "left" or "right" - we let the framing speak for itself.
+    # The pairs are chosen because they tend to frame the same events differently.
+    enabled: true
+
+    # Source pairs: outlets that tend to frame stories differently
+    # Left-leaning: CNN, BBC, WaPo, NYT, NPR
+    # Right-leaning: Fox News, NY Post, Newsmax
+    source_pairs:
+      - source_a: "CNN"
+        source_b: "Fox News"
+      - source_a: "CNN"
+        source_b: "New York Post"
+      - source_a: "The New York Times"
+        source_b: "Fox News"
+      - source_a: "The New York Times"
+        source_b: "New York Post"
+      - source_a: "The Washington Post"
+        source_b: "Fox News"
+      - source_a: "The Washington Post"
+        source_b: "New York Post"
+      - source_a: "NPR"
+        source_b: "Fox News"
+      - source_a: "NPR"
+        source_b: "Newsmax"
+      - source_a: "BBC"
+        source_b: "Fox News"
+      - source_a: "BBC"
+        source_b: "New York Post"
+      - source_a: "CNN"
+        source_b: "Newsmax"
+      - source_a: "The New York Times"
+        source_b: "Newsmax"
+
+    # Google News search domains for each outlet
+    source_domains:
+      "CNN": "cnn.com"
+      "Fox News": "foxnews.com"
+      "The New York Times": "nytimes.com"
+      "New York Post": "nypost.com"
+      "The Washington Post": "washingtonpost.com"
+      "BBC": "bbc.com"
+      "NPR": "npr.org"
+      "Newsmax": "newsmax.com"
+
+    # How many characters for battle posts (thread format)
+    # Post 1: The comparison/verdict
+    # Post 2 (reply): Sources cited
+    max_length: 280  # Slightly more room for the comparison format
+
 scheduling:
   # When to post (cron format for GitHub Actions)
   # Free tier limit: 50 posts/24hrs - AGGRESSIVE GROWTH MODE
