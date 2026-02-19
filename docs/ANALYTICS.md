@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-02-18 23:06 UTC*
+*Last updated: 2026-02-19 23:06 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,18 +13,18 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 208 | - |
-| Likes | 402 | +1 |
-| Reposts | 50 | +0 |
+| Likes | 404 | +5 |
+| Reposts | 51 | +2 |
 | Replies | 214 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 93 | - |
-| Likes | 7 | +0 |
+| Posts tracked | 86 | - |
+| Likes | 6 | +0 |
 | Retweets | 3 | - |
-| Replies | 97 | - |
+| Replies | 89 | - |
 
 ---
 
@@ -35,7 +35,7 @@ Tracking engagement for posts from the last 30 days.
 
 Nick...
 
-**[BLUESKY]** 16 likes, 0 reposts
+**[BLUESKY]** 21 likes, 1 reposts
 > Scientists just caught footage of a sleeper shark cruising Antarctic waters at 3...
 
 **[BLUESKY]** 9 likes, 3 reposts
@@ -49,4 +49,4 @@ Nick...
 
 ---
 
-*Data snapshots: 3400 total across 301 posts*
+*Data snapshots: 3384 total across 294 posts*
