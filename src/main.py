@@ -542,6 +542,172 @@ def post_battle():
         return False
 
 
+def post_positive_news():
+    """Generate and post a 'Positive News' special report"""
+    print(f"\n{'='*60}")
+    print(f"Mewscast - SPECIAL REPORT: Positive News")
+    print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    print(f"{'='*60}\n")
+
+    try:
+        from positive_news_post import PositiveNewsGenerator
+
+        # Get optional topic from CLI args
+        topic = None
+        if len(sys.argv) > 3:
+            topic = " ".join(sys.argv[3:])
+        elif len(sys.argv) > 2 and sys.argv[1] != "special":
+            topic = " ".join(sys.argv[2:])
+
+        if topic:
+            print(f"🌟 Topic: {topic}")
+        else:
+            print(f"🌟 Auto-searching for positive news...")
+
+        # Initialize positive news generator
+        positive_gen = PositiveNewsGenerator()
+
+        # Find a positive story
+        story_data = positive_gen.find_positive_story(topic)
+        if not story_data:
+            print(f"\n❌ Could not find a positive news story.")
+            print(f"   Try specifying a topic: python src/main.py special positive \"topic here\"")
+            return False
+
+        article = story_data['article']
+
+        print(f"\n{'='*60}")
+        print(f"🌟 POSITIVE STORY FOUND!")
+        print(f"   {article['source']}: {article['title'][:60]}...")
+        print(f"{'='*60}\n")
+
+        # Generate the post
+        result = positive_gen.generate_positive_post(story_data)
+        if not result:
+            print(f"❌ Could not generate positive news post")
+            return False
+
+        post_text = result['post_text']
+
+        print(f"\n📝 Positive News Post:\n{post_text}\n")
+
+        # Initialize bots
+        print("📡 Connecting to X...")
+        twitter_bot = TwitterBot()
+
+        print("🦋 Connecting to Bluesky...")
+        try:
+            bluesky_bot = BlueskyBot()
+        except Exception as e:
+            print(f"⚠️  Bluesky connection failed: {e}")
+            bluesky_bot = None
+
+        # Generate image
+        image_path = None
+        image_prompt = None
+        try:
+            print(f"🎨 Generating image...")
+            img_generator = ImageGenerator()
+            generator = ContentGenerator()
+            image_prompt = generator.generate_image_prompt(
+                article['title'],
+                post_text,
+                article_content=article.get('article_content')
+            )
+            image_path = img_generator.generate_image(image_prompt)
+        except Exception as e:
+            print(f"⚠️  Image generation failed: {e}")
+
+        # Add source indicator
+        source_indicator = " 📰↓"
+        post_text_with_indicator = post_text + source_indicator
+
+        # Post to X
+        tweet_id = None
+        x_success = False
+        print(f"\n📤 Posting positive news to X...")
+        if image_path:
+            x_result = twitter_bot.post_tweet_with_image(post_text_with_indicator, image_path)
+        else:
+            x_result = twitter_bot.post_tweet(post_text_with_indicator)
+
+        if x_result:
+            tweet_id = x_result['id']
+            print(f"✅ X post successful! ID: {tweet_id}")
+            x_success = True
+
+            # Post source as reply
+            time.sleep(2)
+            source_reply = article['url']
+            reply_result = twitter_bot.reply_to_tweet(tweet_id, source_reply)
+            if reply_result:
+                print(f"✅ X source reply posted!")
+        else:
+            print(f"❌ X post failed")
+
+        # Post to Bluesky
+        bluesky_uri = None
+        bluesky_success = False
+        if bluesky_bot:
+            print(f"\n🦋 Posting positive news to Bluesky...")
+            if image_path:
+                bs_result = bluesky_bot.post_skeet_with_image(post_text_with_indicator, image_path)
+            else:
+                bs_result = bluesky_bot.post_skeet(post_text_with_indicator)
+
+            if bs_result:
+                bluesky_uri = bs_result['uri']
+                print(f"✅ Bluesky post successful! URI: {bluesky_uri}")
+                bluesky_success = True
+
+                # Post source as reply with link card
+                time.sleep(2)
+                reply_result = bluesky_bot.reply_to_skeet_with_link(
+                    bluesky_uri, article['url']
+                )
+                if reply_result:
+                    print(f"✅ Bluesky source reply posted!")
+            else:
+                print(f"❌ Bluesky post failed")
+
+        # Record to post history
+        if x_success or bluesky_success:
+            config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
+            with open(config_path, 'r') as f:
+                config = yaml.safe_load(f)
+            dedup_config = config.get('deduplication', {})
+            tracker = PostTracker(config=dedup_config)
+
+            tracker.record_post(
+                article,
+                post_content=post_text_with_indicator,
+                tweet_id=tweet_id,
+                bluesky_uri=bluesky_uri,
+                image_prompt=image_prompt
+            )
+
+            print(f"\n{'='*60}")
+            platforms = []
+            if x_success:
+                platforms.append("X")
+            if bluesky_success:
+                platforms.append("Bluesky")
+            print(f"✅ POSITIVE NEWS POSTED to: {', '.join(platforms)}")
+            print(f"{'='*60}\n")
+            return True
+
+        print(f"\n❌ Failed to post positive news to any platform")
+        return False
+
+    except Exception as e:
+        print(f"\n{'='*60}")
+        print(f"❌ ERROR: {e}")
+        import traceback
+        traceback.print_exc()
+        print(f"{'='*60}\n")
+        return False
+
+
 def main():
     """Main entry point"""
     # Load environment variables
@@ -568,10 +734,13 @@ def main():
         special_type = sys.argv[2] if len(sys.argv) > 2 else None
         if special_type == "battle":
             success = post_battle()
+        elif special_type == "positive":
+            success = post_positive_news()
         else:
             print(f"❌ Unknown special post type: {special_type}")
             print("Available special types:")
-            print("  battle [topic]  - Battle of the Political Sides")
+            print("  battle [topic]    - Battle of the Political Sides")
+            print("  positive [topic]  - Positive News Special Report")
             sys.exit(1)
     else:
         print(f"❌ Unknown mode: {mode}")
