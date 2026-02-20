@@ -310,6 +310,13 @@ special_posts:
     # Post 2 (reply): Sources cited
     max_length: 280  # Slightly more room for the comparison format
 
+  positive_news:
+    # "Positive News Special Report" - find and share uplifting stories
+    # Triggered manually: python src/main.py special positive [optional-topic]
+    # Walter Croncat's good news beat - warm, sincere, still journalistic
+    enabled: true
+    max_length: 280
+
 scheduling:
   # When to post (cron format for GitHub Actions)
   # Free tier limit: 50 posts/24hrs - AGGRESSIVE GROWTH MODE
