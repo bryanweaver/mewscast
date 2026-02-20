@@ -21,7 +21,7 @@ class ImageGenerator:
             api_key=api_key,
             base_url="https://api.x.ai/v1"
         )
-        self.model = "grok-2-image-1212"
+        self.model = "grok-imagine-image"
 
     def generate_image(self, prompt: str, save_path: str = "temp_image.png") -> Optional[str]:
         """
