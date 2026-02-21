@@ -27,7 +27,7 @@ Create a SHORT image prompt (max 200 chars) for an AI image generator that shows
 - Left and right cats should be DIFFERENT breeds/colors to visually distinguish the sides
 - Walter (brown tabby) is the CENTRAL investigator figure - close-up, facing camera
 - The scenes should reflect the ACTUAL FRAMING differences between the outlets
-- Widescreen landscape format, cinematic lighting
+- Horizontal landscape format, cinematic lighting
 - Clear visual divide between the two sides
 
 ## CONTENT MODERATION - AVOID THESE
