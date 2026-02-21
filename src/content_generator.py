@@ -821,4 +821,4 @@ FULL ARTICLE CONTENT (extract visual details from this):
         except Exception as e:
             print(f"✗ Error generating image prompt: {e}")
             # Fallback to dramatic prompt with cat reporter ALWAYS
-            return f"Dramatic film noir: Tabby detective cat investigating {topic[:60]}, cinematic lighting, widescreen landscape, press badge visible"
+            return f"Close-up: Brown tabby reporter cat investigating {topic[:60]}, cinematic lighting, landscape format, press badge visible"

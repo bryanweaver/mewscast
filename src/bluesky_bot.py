@@ -2,11 +2,16 @@
 Bluesky integration using atproto
 """
 import os
+import io
 from atproto import Client
 from atproto import models
 from typing import Optional
 import re
+from PIL import Image
 from content_generator import _truncate_at_sentence
+
+# Bluesky hard limit: 1,000,000 bytes for image uploads
+BLUESKY_MAX_IMAGE_BYTES = 1_000_000
 
 
 class BlueskyBot:
@@ -55,9 +60,60 @@ class BlueskyBot:
             print(f"✗ Error posting skeet: {e}")
             return None
 
+    def _optimize_image_for_bluesky(self, image_path: str) -> tuple:
+        """
+        Optimize an image for Bluesky: read dimensions for aspect ratio,
+        compress to JPEG if needed to fit under 1MB limit.
+
+        Returns:
+            (image_bytes, width, height) tuple
+        """
+        img = Image.open(image_path)
+        width, height = img.size
+        print(f"   Original image: {width}x{height}")
+
+        # Convert to RGB if necessary (e.g. RGBA PNGs)
+        if img.mode in ('RGBA', 'P'):
+            img = img.convert('RGB')
+
+        # First try: read raw file bytes to see if already small enough
+        with open(image_path, 'rb') as f:
+            raw_bytes = f.read()
+
+        if len(raw_bytes) <= BLUESKY_MAX_IMAGE_BYTES and image_path.lower().endswith(('.jpg', '.jpeg')):
+            print(f"   Image already under 1MB ({len(raw_bytes):,} bytes), using as-is")
+            return raw_bytes, width, height
+
+        # Compress as JPEG, starting at quality 90 and reducing until under 1MB
+        for quality in (90, 80, 70, 60, 50):
+            buffer = io.BytesIO()
+            img.save(buffer, format='JPEG', quality=quality, optimize=True)
+            image_data = buffer.getvalue()
+            if len(image_data) <= BLUESKY_MAX_IMAGE_BYTES:
+                print(f"   Compressed to JPEG quality={quality} ({len(image_data):,} bytes)")
+                return image_data, width, height
+
+        # Last resort: resize down to fit
+        scale = 0.75
+        while scale > 0.25:
+            new_w, new_h = int(width * scale), int(height * scale)
+            resized = img.resize((new_w, new_h), Image.LANCZOS)
+            buffer = io.BytesIO()
+            resized.save(buffer, format='JPEG', quality=70, optimize=True)
+            image_data = buffer.getvalue()
+            if len(image_data) <= BLUESKY_MAX_IMAGE_BYTES:
+                print(f"   Resized to {new_w}x{new_h} + JPEG q=70 ({len(image_data):,} bytes)")
+                return image_data, new_w, new_h
+            scale -= 0.1
+
+        # Fallback: return whatever we have at smallest scale
+        print(f"   Warning: Could not compress under 1MB, using best effort ({len(image_data):,} bytes)")
+        return image_data, new_w, new_h
+
     def post_skeet_with_image(self, text: str, image_path: str) -> Optional[dict]:
         """
-        Post a skeet with an attached image
+        Post a skeet with an attached image, optimized for Bluesky display.
+        Automatically compresses images under 1MB and sends aspect ratio metadata.
 
         Args:
             text: The post content (max 300 characters, we use 280 for compatibility)
@@ -71,20 +127,25 @@ class BlueskyBot:
                 print(f"Warning: Post too long ({len(text)} chars). Truncating...")
                 text = _truncate_at_sentence(text, 300)
 
-            # Read image file
-            with open(image_path, 'rb') as f:
-                image_data = f.read()
+            print(f"📤 Optimizing image for Bluesky: {image_path}")
+            image_data, width, height = self._optimize_image_for_bluesky(image_path)
 
-            print(f"📤 Uploading image: {image_path}")
+            # Build aspect ratio metadata so Bluesky renders correctly
+            aspect_ratio = models.AppBskyEmbedDefs.AspectRatio(
+                width=width,
+                height=height
+            )
 
-            # Post with image using atproto
+            # Post with image and aspect ratio
             response = self.client.send_image(
                 text=text,
                 image=image_data,
-                image_alt="News reporter cat illustration"
+                image_alt="News reporter cat illustration",
+                image_aspect_ratio=aspect_ratio
             )
 
             print(f"✓ Skeet with image posted successfully! URI: {response.uri}")
+            print(f"   Aspect ratio sent: {width}:{height}")
             return {
                 'uri': response.uri,
                 'cid': response.cid

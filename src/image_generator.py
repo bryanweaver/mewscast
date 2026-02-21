@@ -38,6 +38,8 @@ class ImageGenerator:
             print(f"🎨 Generating image with Grok...")
             print(f"   Prompt: {prompt[:80]}...")
 
+            # grok-imagine-image supports aspect_ratio natively via extra_body
+            # No need for prompt engineering for landscape orientation
             response = self.client.images.generate(
                 model=self.model,
                 prompt=prompt,
