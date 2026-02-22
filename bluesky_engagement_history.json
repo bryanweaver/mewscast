@@ -1484,6 +1484,11 @@
       "did": "did:plc:fmplnzz3rv4b7pbpyxaytats",
       "handle": "theoreticalfire.bsky.social",
       "timestamp": "2026-02-22T18:04:12.164579"
+    },
+    {
+      "did": "did:plc:m4np6kytnurvrd6g7nsev5h4",
+      "handle": "finfunnels.gay",
+      "timestamp": "2026-02-22T18:43:30.711163"
     }
   ],
   "liked_posts": [
@@ -14636,6 +14641,11 @@
       "uri": "at://did:plc:fmplnzz3rv4b7pbpyxaytats/app.bsky.feed.post/3mfhnsmkd7s2c",
       "author": "theoreticalfire.bsky.social",
       "timestamp": "2026-02-22T18:04:11.966340"
+    },
+    {
+      "uri": "at://did:plc:m4np6kytnurvrd6g7nsev5h4/app.bsky.feed.post/3mfhow6xz7s2i",
+      "author": "finfunnels.gay",
+      "timestamp": "2026-02-22T18:43:30.504821"
     }
   ],
   "last_cleanup": "2026-02-20T00:51:23.397902",
