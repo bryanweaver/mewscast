@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-02-21 23:02 UTC*
+*Last updated: 2026-02-22 23:03 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,18 +13,18 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 212 | - |
-| Likes | 411 | +0 |
-| Reposts | 53 | +0 |
-| Replies | 220 | - |
+| Likes | 406 | +1 |
+| Reposts | 49 | +0 |
+| Replies | 221 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 72 | - |
+| Posts tracked | 65 | - |
 | Likes | 6 | +0 |
-| Retweets | 2 | - |
-| Replies | 74 | - |
+| Retweets | 1 | - |
+| Replies | 67 | - |
 
 ---
 
@@ -38,15 +38,17 @@ Nick...
 **[BLUESKY]** 21 likes, 1 reposts
 > Scientists just caught footage of a sleeper shark cruising Antarctic waters at 3...
 
-**[BLUESKY]** 9 likes, 3 reposts
-> Spanish rail investigators report track fracture happened *before* last Sunday's...
-
 **[BLUESKY]** 11 likes, 1 reposts
 > This reporter is looking into ‘Humiliated’ Andrew moves out of Royal Lodge - The...
 
 **[BLUESKY]** 7 likes, 3 reposts
 > Russian drone strike kills a Ukrainian father and his three toddlers—twin boys I...
 
+**[BLUESKY]** 8 likes, 1 reposts
+> "Agents were pursuing an immigrant when they killed Alex Pretti"
+
+Even this cat ...
+
 ---
 
-*Data snapshots: 3359 total across 284 posts*
+*Data snapshots: 3347 total across 277 posts*
