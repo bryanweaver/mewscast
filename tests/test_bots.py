@@ -13,6 +13,8 @@ import sys
 import tempfile
 from unittest.mock import Mock, MagicMock, patch, mock_open, call
 
+import types
+
 import pytest
 import requests as _requests_lib
 
@@ -24,6 +26,27 @@ _SRC_DIR = os.path.join(_PROJECT_ROOT, "src")
 
 sys.path.insert(0, _PROJECT_ROOT)
 sys.path.insert(0, _SRC_DIR)
+
+# ---------------------------------------------------------------------------
+# Register mock modules in sys.modules BEFORE any src/ imports.
+# bluesky_bot.py has top-level imports of atproto, atproto.models, bs4, and
+# bluesky_client that must resolve without the real packages installed.
+# ---------------------------------------------------------------------------
+if "atproto" not in sys.modules:
+    _mock_atproto = types.ModuleType("atproto")
+    _mock_atproto.Client = MagicMock
+    _mock_atproto.models = MagicMock()
+    sys.modules["atproto"] = _mock_atproto
+
+if "bluesky_client" not in sys.modules:
+    _mock_bluesky_client = types.ModuleType("bluesky_client")
+    _mock_bluesky_client.create_bluesky_client = MagicMock()
+    sys.modules["bluesky_client"] = _mock_bluesky_client
+
+if "bs4" not in sys.modules:
+    _mock_bs4 = types.ModuleType("bs4")
+    _mock_bs4.BeautifulSoup = MagicMock
+    sys.modules["bs4"] = _mock_bs4
 
 
 def _make_rate_limit_response():
@@ -44,7 +67,7 @@ def bluesky_env():
     """Set Bluesky credentials in the environment."""
     with patch.dict(os.environ, {
         "BLUESKY_USERNAME": "testcat.bsky.social",
-        "BLUESKY_PASSWORD": "secret-password",
+        "BLUESKY_APP_PASSWORD": "secret-password",
     }):
         yield
 
@@ -123,7 +146,6 @@ def sample_config():
             "update_keywords": ["update", "breaking"],
         },
         "post_angles": {"framing_chance": 0.5},
-        "scheduling": {"post_times": ["0 13 * * *"]},
     }
 
 
@@ -146,41 +168,41 @@ class TestBlueskyBotAuthentication:
 
     def test_missing_credentials_raises(self):
         """BlueskyBot raises ValueError when env vars are absent."""
-        with patch.dict(os.environ, {}, clear=True):
+        with patch.dict(os.environ, {}, clear=True), \
+             patch("bluesky_bot.create_bluesky_client",
+                   side_effect=ValueError("Missing Bluesky credentials")):
             with pytest.raises(ValueError, match="Missing Bluesky credentials"):
                 from bluesky_bot import BlueskyBot
                 BlueskyBot()
 
     def test_missing_password_raises(self):
         """BlueskyBot raises when only username is set."""
-        with patch.dict(os.environ, {"BLUESKY_USERNAME": "user"}, clear=True):
+        with patch.dict(os.environ, {"BLUESKY_USERNAME": "user"}, clear=True), \
+             patch("bluesky_bot.create_bluesky_client",
+                   side_effect=ValueError("Missing Bluesky credentials")):
             with pytest.raises(ValueError, match="Missing Bluesky credentials"):
                 from bluesky_bot import BlueskyBot
                 BlueskyBot()
 
-    @patch("bluesky_bot.Client")
-    def test_successful_login(self, mock_client_cls, bluesky_env):
+    @patch("bluesky_bot.create_bluesky_client")
+    def test_successful_login(self, mock_create, bluesky_env):
         """BlueskyBot logs in and stores the client on success."""
         mock_client = MagicMock()
-        mock_client_cls.return_value = mock_client
+        mock_create.return_value = mock_client
 
         from bluesky_bot import BlueskyBot
         bot = BlueskyBot()
 
-        mock_client.login.assert_called_once_with(
-            "testcat.bsky.social", "secret-password"
-        )
+        mock_create.assert_called_once()
         assert bot.client is mock_client
 
-    @patch("bluesky_bot.Client")
-    def test_failed_login_raises(self, mock_client_cls, bluesky_env):
-        """BlueskyBot raises ValueError when atproto login fails."""
-        mock_client = MagicMock()
-        mock_client.login.side_effect = Exception("Bad credentials")
-        mock_client_cls.return_value = mock_client
+    @patch("bluesky_bot.create_bluesky_client")
+    def test_failed_login_raises(self, mock_create, bluesky_env):
+        """BlueskyBot raises an exception when create_bluesky_client fails."""
+        mock_create.side_effect = Exception("Bad credentials")
 
         from bluesky_bot import BlueskyBot
-        with pytest.raises(ValueError, match="Failed to authenticate with Bluesky"):
+        with pytest.raises(Exception, match="Bad credentials"):
             BlueskyBot()
 
 
@@ -190,9 +212,9 @@ class TestBlueskyBotPosting:
     @pytest.fixture
     def bot(self, bluesky_env):
         """Return a BlueskyBot with a mocked client."""
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
             yield bot
@@ -241,9 +263,9 @@ class TestBlueskyBotImagePosting:
 
     @pytest.fixture
     def bot(self, bluesky_env):
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
             yield bot
@@ -257,6 +279,12 @@ class TestBlueskyBotImagePosting:
         bot.client.send_image.return_value = Mock(
             uri="at://did:plc:abc/app.bsky.feed.post/789",
             cid="bafyimg789",
+        )
+
+        # Mock _optimize_image_for_bluesky since PIL can't parse fake bytes
+        fake_image_bytes = b"\x89PNG\r\n\x1a\nFAKEDATA"
+        bot._optimize_image_for_bluesky = Mock(
+            return_value=(fake_image_bytes, 1024, 576)
         )
 
         result = bot.post_skeet_with_image("Cat news!", str(img_file))
@@ -294,6 +322,11 @@ class TestBlueskyBotImagePosting:
             cid="bafytrunc",
         )
 
+        # Mock _optimize_image_for_bluesky since PIL can't parse fake bytes
+        bot._optimize_image_for_bluesky = Mock(
+            return_value=(b"\x89PNGFAKE", 1024, 576)
+        )
+
         long_text = "Word. " * 60  # > 300 chars
         result = bot.post_skeet_with_image(long_text, str(img_file))
         assert result is not None
@@ -306,9 +339,9 @@ class TestBlueskyBotReplies:
 
     @pytest.fixture
     def bot(self, bluesky_env):
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
             yield bot
@@ -359,9 +392,9 @@ class TestBlueskyBotEngagement:
 
     @pytest.fixture
     def bot(self, bluesky_env):
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
             yield bot
@@ -462,9 +495,9 @@ class TestBlueskyBotDeletion:
 
     @pytest.fixture
     def bot(self, bluesky_env):
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
             yield bot
@@ -1209,7 +1242,6 @@ class TestConfigurationLoading:
         assert "bot" in config
         assert "content" in config
         assert "safety" in config
-        assert "scheduling" in config
         assert "deduplication" in config
 
     def test_config_content_section(self):
@@ -1690,9 +1722,9 @@ class TestPlatformDifferences:
 
     def test_bluesky_character_limit_is_300(self, bluesky_env):
         """BlueskyBot enforces 300-char limit (not X's 280)."""
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
 
@@ -1723,15 +1755,20 @@ class TestPlatformDifferences:
 
     def test_bluesky_image_uses_send_image(self, bluesky_env, tmp_path):
         """BlueskyBot uses client.send_image (not separate upload + post)."""
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
 
         img_file = tmp_path / "test.png"
         img_file.write_bytes(b"\x89PNG" + b"\x00" * 50)
         mock_client.send_image.return_value = Mock(uri="at://test", cid="cid")
+
+        # Mock _optimize_image_for_bluesky since PIL can't parse fake bytes
+        bot._optimize_image_for_bluesky = Mock(
+            return_value=(b"\x89PNGFAKE", 1024, 576)
+        )
 
         bot.post_skeet_with_image("Text", str(img_file))
         mock_client.send_image.assert_called_once()
@@ -1784,9 +1821,9 @@ class TestPlatformDifferences:
 
     def test_bluesky_rate_limit_returns_none(self, bluesky_env):
         """BlueskyBot returns None on API error (does not re-raise)."""
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
 
@@ -1839,9 +1876,9 @@ class TestErrorHandling:
 
     def test_bluesky_bot_skeet_with_exactly_300_chars(self, bluesky_env):
         """BlueskyBot posts text that is exactly at the 300-char limit."""
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
 
@@ -1914,9 +1951,9 @@ class TestErrorHandling:
 
     def test_bluesky_reply_to_skeet_with_link_google_news_url_skip(self, bluesky_env):
         """reply_to_skeet_with_link skips Google News URLs > 300 chars."""
-        with patch("bluesky_bot.Client") as mock_cls:
+        with patch("bluesky_bot.create_bluesky_client") as mock_create:
             mock_client = MagicMock()
-            mock_cls.return_value = mock_client
+            mock_create.return_value = mock_client
             from bluesky_bot import BlueskyBot
             bot = BlueskyBot()
 

@@ -9,6 +9,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from twitter_bot import TwitterBot
 
+CAT_KEYWORDS = ['cat', 'kitten', 'feline', 'meow', 'kitty', 'tabby', 'cats', 'kittens']
+
 
 class EngagementBot:
     """Automates engagement with cat community on X"""
@@ -52,7 +54,7 @@ class EngagementBot:
             original_count = len(self.engagement_history['followed_users'])
             self.engagement_history['followed_users'] = [
                 entry for entry in self.engagement_history['followed_users']
-                if datetime.fromisoformat(entry.get('timestamp', datetime.now().isoformat())) > cutoff_date
+                if datetime.fromisoformat(entry.get('timestamp', '2000-01-01T00:00:00')) > cutoff_date
             ]
             removed = original_count - len(self.engagement_history['followed_users'])
             if removed > 0:
@@ -63,7 +65,7 @@ class EngagementBot:
             original_count = len(self.engagement_history['liked_tweets'])
             self.engagement_history['liked_tweets'] = [
                 entry for entry in self.engagement_history['liked_tweets']
-                if datetime.fromisoformat(entry.get('timestamp', datetime.now().isoformat())) > cutoff_date
+                if datetime.fromisoformat(entry.get('timestamp', '2000-01-01T00:00:00')) > cutoff_date
             ]
             removed = original_count - len(self.engagement_history['liked_tweets'])
             if removed > 0:
@@ -143,8 +145,7 @@ class EngagementBot:
                     continue  # Verified accounts rarely follow back
 
                 # Check if actually cat-related
-                cat_keywords = ['cat', 'kitten', 'feline', 'meow', 'kitty', 'tabby']
-                if not any(keyword in bio for keyword in cat_keywords):
+                if not any(keyword in bio for keyword in CAT_KEYWORDS):
                     continue
 
                 # Prefer accounts with good follow ratio (not follow-spammers)

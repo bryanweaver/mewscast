@@ -9,6 +9,7 @@ import os
 import textwrap
 from typing import Dict, Optional
 
+from content_generator import _strip_quotes
 from prompt_loader import get_prompt_loader
 
 
@@ -128,10 +129,7 @@ class BattleImageGenerator:
             image_prompt = message.content[0].text.strip()
 
             # Clean up quotes
-            if image_prompt.startswith('"') and image_prompt.endswith('"'):
-                image_prompt = image_prompt[1:-1]
-            if image_prompt.startswith("'") and image_prompt.endswith("'"):
-                image_prompt = image_prompt[1:-1]
+            image_prompt = _strip_quotes(image_prompt)
 
             # Enforce 200-char limit for Grok
             if len(image_prompt) > 200:

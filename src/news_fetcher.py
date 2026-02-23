@@ -11,6 +11,7 @@ from googlenewsdecoder import gnewsdecoder
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from bs4 import BeautifulSoup
+from content_generator import _truncate_at_sentence
 
 
 class NewsFetcher:
@@ -18,6 +19,42 @@ class NewsFetcher:
 
     def __init__(self):
         """Initialize news fetcher with search categories"""
+        # Preferred major news sources (union of all usage sites)
+        self.preferred_sources = [
+            # Top Tier - Breaking news & major stories
+            'Reuters', 'Associated Press', 'AP News', 'Bloomberg',
+            'The Wall Street Journal', 'Financial Times',
+
+            # Major National Papers
+            'The New York Times', 'The Washington Post', 'USA Today',
+
+            # TV News (high engagement)
+            'CNN', 'Fox News', 'NBC News', 'CBS News', 'ABC News', 'MSNBC', 'NPR',
+
+            # Political Coverage
+            'Politico', 'The Hill', 'Axios', 'Punchbowl News',
+
+            # Tech & Business
+            'TechCrunch', 'The Verge', 'Ars Technica', 'CNBC', 'Business Insider',
+            'Forbes', 'MarketWatch',
+
+            # International
+            'BBC', 'The Guardian', 'Al Jazeera', 'The Independent', 'The Economist',
+
+            # News Magazines & Analysis
+            'The Atlantic', 'Time', 'Newsweek', 'ProPublica',
+
+            # Entertainment/Viral (high engagement)
+            'TMZ', 'Variety', 'Hollywood Reporter', 'People'
+        ]
+
+        # BLACKLIST: Never use these boring sources
+        self.blacklist_sources = [
+            'Daily Pennsylvanian', 'Idaho Press', 'College', 'University',
+            'Local', 'Gazette', 'Tribune', 'Herald', 'Observer',
+            'Community News', 'Patch', 'Town', 'City Council'
+        ]
+
         # News categories to search (aligned with bot's focus)
         # GENERIC TOPICS covering all major news areas
         self.news_categories = [
@@ -254,52 +291,7 @@ class NewsFetcher:
                         return None
 
                 # Truncate at sentence boundary instead of arbitrary char limit
-                # Target ~1500 chars but ensure we end at a complete sentence
-                if len(article_content) > 1500:
-                    # Find the last sentence-ending punctuation before 1500 chars
-                    truncated = article_content[:1500]
-
-                    # Look for last sentence boundary (. ! ?)
-                    last_period = truncated.rfind('. ')
-                    last_exclaim = truncated.rfind('! ')
-                    last_question = truncated.rfind('? ')
-                    last_quote_period = truncated.rfind('." ')
-
-                    # Find the latest sentence boundary
-                    boundaries = [b for b in [last_period, last_exclaim, last_question, last_quote_period] if b > 0]
-
-                    if boundaries:
-                        # Cut at the last complete sentence
-                        cut_point = max(boundaries) + 1  # Include the punctuation
-                        if cut_point > 500:  # Ensure we have enough content
-                            article_content = truncated[:cut_point].strip()
-                        else:
-                            # No good sentence boundary found, use full 1500
-                            article_content = truncated
-                    else:
-                        # No sentence boundaries found, keep full truncation
-                        article_content = truncated
-
-                # Final check: ensure content doesn't end mid-sentence
-                # Complete sentences end with . ! ? or closing quote after punctuation
-                last_char = article_content.rstrip()[-1] if article_content.rstrip() else ''
-                if last_char not in '.!?"\'':
-                    # Content appears to end mid-sentence - likely incomplete
-                    # Try to find last complete sentence
-                    last_period = article_content.rfind('. ')
-                    last_exclaim = article_content.rfind('! ')
-                    last_question = article_content.rfind('? ')
-
-                    boundaries = [b for b in [last_period, last_exclaim, last_question] if b > 200]
-
-                    if boundaries:
-                        cut_point = max(boundaries) + 1
-                        article_content = article_content[:cut_point].strip()
-                        print(f"   ⚠️  Fixed mid-sentence cutoff, trimmed to complete sentence")
-                    else:
-                        # Can't find a complete sentence - content likely too fragmented
-                        print(f"   ⚠️  Article content ends mid-sentence and no complete sentences found - likely incomplete extraction")
-                        return None
+                article_content = _truncate_at_sentence(article_content, 1500)
 
                 print(f"   ✓ Extracted {len(article_content)} chars of article content")
                 return article_content
@@ -400,39 +392,6 @@ class NewsFetcher:
                 print(f"   No articles found for '{topic}'")
                 return []
 
-            # Filter for MAJOR news sources only (no local/college papers!)
-            # Prioritize sources that cover big, national/international stories
-            preferred_sources = [
-                # Top Tier - Breaking news & major stories
-                'Reuters', 'Associated Press', 'AP News', 'Bloomberg',
-                'The Wall Street Journal', 'Financial Times',
-
-                # Major National Papers
-                'The New York Times', 'The Washington Post', 'USA Today',
-
-                # TV News (high engagement)
-                'CNN', 'Fox News', 'NBC News', 'CBS News', 'ABC News', 'MSNBC',
-
-                # Political Coverage
-                'Politico', 'The Hill', 'Axios', 'Punchbowl News',
-
-                # Tech & Business
-                'TechCrunch', 'The Verge', 'Ars Technica', 'CNBC', 'Business Insider',
-
-                # International
-                'BBC', 'The Guardian', 'Al Jazeera',
-
-                # Entertainment/Viral (high engagement)
-                'TMZ', 'Variety', 'Hollywood Reporter', 'People'
-            ]
-
-            # BLACKLIST: Never use these boring sources
-            blacklist_sources = [
-                'Daily Pennsylvanian', 'Idaho Press', 'College', 'University',
-                'Local', 'Gazette', 'Tribune', 'Herald', 'Observer',
-                'Community News', 'Patch', 'Town', 'City Council'
-            ]
-
             # Collect multiple articles from preferred sources
             # CRITICAL: Only get recent news (last 3 days max)
             cutoff_date = datetime.now(timezone.utc) - timedelta(days=3)
@@ -458,11 +417,11 @@ class NewsFetcher:
                 source = entry.get('source', {}).get('title', 'Unknown')
 
                 # Skip blacklisted sources (boring local news)
-                if any(bad in source for bad in blacklist_sources):
+                if any(bad in source for bad in self.blacklist_sources):
                     continue
 
                 # Check if from preferred source
-                if any(pref in source for pref in preferred_sources):
+                if any(pref in source for pref in self.preferred_sources):
                     # Resolve Google News proxy URL to actual article URL
                     actual_url = self.resolve_google_news_url(entry.link)
 
@@ -511,19 +470,6 @@ class NewsFetcher:
             # Get top stories from major sources
             articles = []
 
-            # Preferred sources (same as get_articles_for_topic)
-            preferred_sources = [
-                'Reuters', 'Associated Press', 'AP News', 'Bloomberg',
-                'The Wall Street Journal', 'Financial Times',
-                'The New York Times', 'The Washington Post', 'USA Today',
-                'CNN', 'BBC', 'NBC News', 'CBS News', 'ABC News', 'NPR',
-                'Fox News', 'MSNBC', 'Politico', 'The Hill',
-                'CNBC', 'Forbes', 'Business Insider', 'MarketWatch',
-                'The Guardian', 'The Atlantic', 'Time', 'Newsweek',
-                'Axios', 'ProPublica', 'The Independent',
-                'Al Jazeera', 'The Economist'
-            ]
-
             for entry in feed.entries[:max_stories]:
                 # Extract source from entry
                 source = entry.get('source', {}).get('title', 'Unknown')
@@ -538,7 +484,7 @@ class NewsFetcher:
                         pass
 
                 # Prioritize major sources
-                if any(pref in source for pref in preferred_sources):
+                if any(pref in source for pref in self.preferred_sources):
                     actual_url = self.resolve_google_news_url(entry.link)
 
                     article = {
@@ -573,7 +519,6 @@ class NewsFetcher:
         Returns:
             List of trending topic strings (most frequent keywords/entities)
         """
-        import re
         from collections import Counter
 
         if not top_stories:

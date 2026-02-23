@@ -16,19 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
 
       - name: Track analytics
         env:
@@ -41,7 +30,7 @@ jobs:
 
           # Bluesky credentials
           BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
-          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
         run: |
           python scripts/track_analytics.py
 

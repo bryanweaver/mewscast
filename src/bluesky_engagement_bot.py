@@ -7,7 +7,9 @@ import random
 import json
 from datetime import datetime, timedelta
 from pathlib import Path
-from atproto import Client
+from bluesky_client import create_bluesky_client
+
+CAT_KEYWORDS = ['cat', 'kitten', 'feline', 'meow', 'kitty', 'tabby', 'cats', 'kittens']
 
 
 class BlueskyEngagementBot:
@@ -15,16 +17,8 @@ class BlueskyEngagementBot:
 
     def __init__(self):
         """Initialize Bluesky engagement bot"""
+        self.client = create_bluesky_client()
         self.username = os.getenv("BLUESKY_USERNAME")
-        self.password = os.getenv("BLUESKY_PASSWORD")
-
-        if not all([self.username, self.password]):
-            raise ValueError("Missing Bluesky credentials. Check your .env file.")
-
-        # Initialize atproto client
-        self.client = Client()
-        self.client.login(self.username, self.password)
-        print(f"✓ Logged into Bluesky as @{self.username}")
 
         self.engagement_log_path = Path(__file__).parent.parent / "bluesky_engagement_history.json"
         self.engagement_history = self._load_engagement_history()
@@ -100,8 +94,8 @@ class BlueskyEngagementBot:
         try:
             # Get our own profile stats
             profile = self.client.app.bsky.actor.get_profile({'actor': self.client.me.did})
-            my_followers = profile.followers_count if hasattr(profile, 'followers_count') else 0
-            my_following = profile.follows_count if hasattr(profile, 'follows_count') else 0
+            my_followers = getattr(profile, 'followers_count', 0)
+            my_following = getattr(profile, 'follows_count', 0)
 
             # Calculate ratio
             if my_followers == 0:
@@ -144,7 +138,7 @@ class BlueskyEngagementBot:
             original_count = len(self.engagement_history['followed_users'])
             self.engagement_history['followed_users'] = [
                 entry for entry in self.engagement_history['followed_users']
-                if datetime.fromisoformat(entry.get('timestamp', datetime.now().isoformat())) > cutoff_date
+                if datetime.fromisoformat(entry.get('timestamp', '2000-01-01T00:00:00')) > cutoff_date
             ]
             removed = original_count - len(self.engagement_history['followed_users'])
             if removed > 0:
@@ -155,7 +149,7 @@ class BlueskyEngagementBot:
             original_count = len(self.engagement_history['liked_posts'])
             self.engagement_history['liked_posts'] = [
                 entry for entry in self.engagement_history['liked_posts']
-                if datetime.fromisoformat(entry.get('timestamp', datetime.now().isoformat())) > cutoff_date
+                if datetime.fromisoformat(entry.get('timestamp', '2000-01-01T00:00:00')) > cutoff_date
             ]
             removed = original_count - len(self.engagement_history['liked_posts'])
             if removed > 0:
@@ -166,7 +160,7 @@ class BlueskyEngagementBot:
             original_count = len(self.engagement_history['reposted_posts'])
             self.engagement_history['reposted_posts'] = [
                 entry for entry in self.engagement_history['reposted_posts']
-                if datetime.fromisoformat(entry.get('timestamp', datetime.now().isoformat())) > cutoff_date
+                if datetime.fromisoformat(entry.get('timestamp', '2000-01-01T00:00:00')) > cutoff_date
             ]
             removed = original_count - len(self.engagement_history['reposted_posts'])
             if removed > 0:
@@ -174,6 +168,40 @@ class BlueskyEngagementBot:
 
         self.engagement_history['last_cleanup'] = datetime.now().isoformat()
         self._save_engagement_history()
+
+    def _follow_account(self, did: str, handle: str) -> bool:
+        """
+        Follow an account and record it in engagement history.
+
+        Args:
+            did: The DID of the account to follow
+            handle: The handle of the account (for logging)
+
+        Returns:
+            True if successfully followed, False otherwise
+        """
+        try:
+            created_at = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
+            self.client.app.bsky.graph.follow.create(
+                self.client.me.did,
+                {
+                    'subject': did,
+                    'createdAt': created_at
+                }
+            )
+
+            self.engagement_history.setdefault('followed_users', []).append({
+                'did': did,
+                'handle': handle,
+                'timestamp': datetime.now().isoformat()
+            })
+            self._save_engagement_history()
+
+            print(f"✓ Followed @{handle}")
+            return True
+        except Exception as e:
+            print(f"✗ Could not follow @{handle}: {e}")
+            return False
 
     def find_and_follow_cat_account(self) -> bool:
         """
@@ -233,8 +261,8 @@ class BlueskyEngagementBot:
                 # Filter criteria for Bluesky:
                 # - Has reasonable follower count (50-50K)
                 # - Bio mentions cats
-                followers = author.followers_count if hasattr(author, 'followers_count') else 0
-                following = author.follows_count if hasattr(author, 'follows_count') else 0
+                followers = getattr(author, 'followers_count', 0)
+                following = getattr(author, 'follows_count', 0)
                 bio = author.description.lower() if hasattr(author, 'description') and author.description else ""
 
                 # Quality checks
@@ -242,11 +270,10 @@ class BlueskyEngagementBot:
                     continue  # Too small (likely inactive) or too big (won't follow back)
 
                 # Check if actually cat-related
-                cat_keywords = ['cat', 'kitten', 'feline', 'meow', 'kitty', 'tabby', 'cats']
-                if not any(keyword in bio for keyword in cat_keywords):
+                if not any(keyword in bio for keyword in CAT_KEYWORDS):
                     # Also check if their post is actually about cats
                     post_text = post.record.text.lower() if hasattr(post.record, 'text') else ""
-                    if not any(keyword in post_text for keyword in cat_keywords):
+                    if not any(keyword in post_text for keyword in CAT_KEYWORDS):
                         continue
 
                 # Prefer accounts with good follow ratio (not follow-spammers)
@@ -283,26 +310,7 @@ class BlueskyEngagementBot:
             print(f"   Bio: {account['bio']}...")
 
             # Follow the account
-            # Format datetime in ISO 8601 format with 'Z' suffix for UTC
-            created_at = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
-            self.client.app.bsky.graph.follow.create(
-                self.client.me.did,
-                {
-                    'subject': account['did'],
-                    'createdAt': created_at
-                }
-            )
-
-            # Log the follow
-            self.engagement_history.setdefault('followed_users', []).append({
-                'did': account['did'],
-                'handle': account['handle'],
-                'timestamp': datetime.now().isoformat()
-            })
-            self._save_engagement_history()
-
-            print(f"✓ Followed @{account['handle']}")
-            return True
+            return self._follow_account(account['did'], account['handle'])
 
         except Exception as e:
             print(f"✗ Error finding/following cat account on Bluesky: {e}")
@@ -362,8 +370,8 @@ class BlueskyEngagementBot:
                 # Filter criteria:
                 # - Has some engagement (5-5000 likes = quality but not mega-viral)
                 # - Recent (within last 48 hours - Bluesky moves slower than X)
-                likes = post.like_count if hasattr(post, 'like_count') else 0
-                reposts = post.repost_count if hasattr(post, 'repost_count') else 0
+                likes = getattr(post, 'like_count', 0)
+                reposts = getattr(post, 'repost_count', 0)
 
                 if likes < 3 or likes > 5000:
                     continue  # Too little engagement or mega-viral
@@ -431,8 +439,8 @@ class BlueskyEngagementBot:
             # Check if we should follow this author
             if post['author_did'] not in followed_dids:
                 # Check if they're a good account to follow
-                followers = author.followers_count if hasattr(author, 'followers_count') else 0
-                following = author.follows_count if hasattr(author, 'follows_count') else 0
+                followers = getattr(author, 'followers_count', 0)
+                following = getattr(author, 'follows_count', 0)
 
                 # NEW RULE: If we didn't follow a proper cat account, ALWAYS follow this author
                 if not already_followed_account:
@@ -441,31 +449,9 @@ class BlueskyEngagementBot:
                         print(f"   → Skipping auto-follow of @{post['author']} (ratio check failed)")
                     else:
                         # Guaranteed follow since we didn't find a proper cat account
-                        try:
-                            print(f"\n👤 Auto-follow: @{post['author']} (no cat account found, following post author)")
-                            print(f"   Followers: {followers}")
-
-                            # Follow the account
-                            created_at_follow = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
-                            self.client.app.bsky.graph.follow.create(
-                                self.client.me.did,
-                                {
-                                    'subject': post['author_did'],
-                                    'createdAt': created_at_follow
-                                }
-                            )
-
-                            # Log the follow
-                            self.engagement_history.setdefault('followed_users', []).append({
-                                'did': post['author_did'],
-                                'handle': post['author'],
-                                'timestamp': datetime.now().isoformat()
-                            })
-                            self._save_engagement_history()
-
-                            print(f"✓ Followed @{post['author']}")
-                        except Exception as e:
-                            print(f"✗ Could not follow @{post['author']}: {e}")
+                        print(f"\n👤 Auto-follow: @{post['author']} (no cat account found, following post author)")
+                        print(f"   Followers: {followers}")
+                        self._follow_account(post['author_did'], post['author'])
                 else:
                     # Already followed a proper cat account, use quality checks
                     should_follow = True
@@ -484,31 +470,9 @@ class BlueskyEngagementBot:
                         if not self._check_follow_ratio_safe():
                             print(f"   → Skipping bonus follow of @{post['author']} (ratio check failed)")
                         else:
-                            try:
-                                print(f"\n👤 Bonus follow: @{post['author']} (author of liked post)")
-                                print(f"   Followers: {followers}")
-
-                                # Follow the account
-                                created_at_follow = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
-                                self.client.app.bsky.graph.follow.create(
-                                    self.client.me.did,
-                                    {
-                                        'subject': post['author_did'],
-                                        'createdAt': created_at_follow
-                                    }
-                                )
-
-                                # Log the follow
-                                self.engagement_history.setdefault('followed_users', []).append({
-                                    'did': post['author_did'],
-                                    'handle': post['author'],
-                                    'timestamp': datetime.now().isoformat()
-                                })
-                                self._save_engagement_history()
-
-                                print(f"✓ Followed @{post['author']}")
-                            except Exception as e:
-                                print(f"✗ Could not follow @{post['author']}: {e}")
+                            print(f"\n👤 Bonus follow: @{post['author']} (author of liked post)")
+                            print(f"   Followers: {followers}")
+                            self._follow_account(post['author_did'], post['author'])
 
             return True
 
@@ -613,8 +577,8 @@ class BlueskyEngagementBot:
                 if datetime.now(created_at.tzinfo) - created_at > timedelta(hours=72):
                     continue
 
-                likes = post.like_count if hasattr(post, 'like_count') else 0
-                reposts = post.repost_count if hasattr(post, 'repost_count') else 0
+                likes = getattr(post, 'like_count', 0)
+                reposts = getattr(post, 'repost_count', 0)
 
                 candidate_posts.append({
                     'uri': post.uri,

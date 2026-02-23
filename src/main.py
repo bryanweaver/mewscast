@@ -3,6 +3,7 @@ Mewscast - AI-powered X news reporter cat bot
 Main entry point for scheduled posts and automation
 """
 import os
+import re
 import sys
 import random
 import time
@@ -18,6 +19,13 @@ from image_generator import ImageGenerator
 from post_tracker import PostTracker
 
 
+def _load_config():
+    """Load the project config.yaml and return parsed dict."""
+    config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
+    with open(config_path, 'r') as f:
+        return yaml.safe_load(f)
+
+
 def post_scheduled_tweet():
     """Generate and post a scheduled news cat tweet with Google Trends"""
     print(f"\n{'='*60}")
@@ -27,9 +35,7 @@ def post_scheduled_tweet():
 
     try:
         # Load config for deduplication settings
-        config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
-        with open(config_path, 'r') as f:
-            config = yaml.safe_load(f)
+        config = _load_config()
 
         # Initialize components
         print("🐱 Initializing news cat reporter...")
@@ -60,7 +66,6 @@ def post_scheduled_tweet():
         # Step 1: Get top stories from Google News (what's breaking NOW)
         # Step 2: If no unique top stories, fall back to category search
         # Step 3: Verify we can fetch article content before selecting (prevent "can't read" tweets)
-        selected_story = None
 
         # Collect all potential articles first with their status
         candidate_articles = []  # List of (article, status) tuples
@@ -144,8 +149,7 @@ def post_scheduled_tweet():
             result = generator.generate_tweet(
                 trending_topic=article['title'],
                 story_metadata=article,
-                previous_posts=previous_posts,
-                platform='bluesky'
+                previous_posts=previous_posts
             )
 
             # Check if generation succeeded (validation passed)
@@ -181,8 +185,7 @@ def post_scheduled_tweet():
         x_result = generator.generate_tweet(
             trending_topic=selected_story['title'],
             story_metadata=selected_story,
-            previous_posts=previous_posts if story_status and story_status.get('is_update') else None,
-            platform='x'
+            previous_posts=previous_posts if story_status and story_status.get('is_update') else None
         )
         x_text = x_result['tweet'] if x_result else bluesky_text
         print(f"   ✅ X version generated!")
@@ -274,7 +277,6 @@ def post_scheduled_tweet():
                     source_reply = generator.generate_source_reply(bluesky_text, story_meta)
 
                     # Check if source reply is just a URL (for link card)
-                    import re
                     is_url_only = bool(re.match(r'^https?://\S+$', source_reply.strip()))
 
                     if is_url_only:
@@ -506,9 +508,7 @@ def post_battle():
 
         # Record to post history
         if x_success or bluesky_success:
-            config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
-            with open(config_path, 'r') as f:
-                config = yaml.safe_load(f)
+            config = _load_config()
             dedup_config = config.get('deduplication', {})
             tracker = PostTracker(config=dedup_config)
 
@@ -672,9 +672,7 @@ def post_positive_news():
 
         # Record to post history
         if x_success or bluesky_success:
-            config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
-            with open(config_path, 'r') as f:
-                config = yaml.safe_load(f)
+            config = _load_config()
             dedup_config = config.get('deduplication', {})
             tracker = PostTracker(config=dedup_config)
 
