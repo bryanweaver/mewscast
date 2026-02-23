@@ -313,7 +313,11 @@ mewscast/
 │   └── engagement_bot.py       # Engagement automation
 ├── tests/                  # Test suite
 │   ├── __init__.py             # Test package initialization
-│   └── test_media_literacy.py  # Media literacy tests (13 test cases)
+│   ├── test_media_literacy.py  # Media literacy analysis (13 tests)
+│   ├── test_deduplication.py   # Post deduplication logic (74 tests)
+│   ├── test_engagement.py      # Engagement bot behavior (95 tests)
+│   ├── test_content_generator.py  # Content generation pipeline (114 tests)
+│   └── test_bots.py            # Bot posting pipeline (118 tests)
 ├── docs/                   # Documentation (see Documentation section)
 ├── scripts/                # Utility scripts
 │   ├── rebuild_history.py      # Rebuild post history from X
@@ -371,12 +375,13 @@ pytest tests/ --cov=src --cov-report=html
 
 ### Test Coverage
 
-The project includes comprehensive test coverage for critical features:
+The project includes a comprehensive test suite of 414 tests across 5 test files, covering all source modules:
 
-- **Media Literacy Analysis**: 13 test cases covering detection, severity thresholds, and error handling
-- **Deduplication Logic**: Tests for exact matches, content similarity, and story clustering
-- **API Error Handling**: Tests for graceful fallback when APIs fail
-- **Character Limit Enforcement**: Tests retry logic and truncation for posts
+- **Media Literacy Analysis** (`test_media_literacy.py`, 13 tests): Detection, severity thresholds, and error handling
+- **Deduplication Logic** (`test_deduplication.py`, 74 tests): Exact URL matching, topic similarity, content similarity, story clustering, update detection, and post history management
+- **Engagement Bots** (`test_engagement.py`, 95 tests): Target filtering, history tracking, follow-ratio checks, repost logic, engagement cycle orchestration, and API error handling for both X/Twitter and Bluesky bots
+- **Content Generation Pipeline** (`test_content_generator.py`, 114 tests): ContentGenerator, PromptLoader, and NewsFetcher — including AI response validation, media literacy integration, character limit enforcement, and retry logic
+- **Bot Posting Pipeline** (`test_bots.py`, 118 tests): Bluesky bot, Twitter/X bot, image generator, configuration loading, and main pipeline orchestration
 
 ### Writing New Tests
 
@@ -404,9 +409,11 @@ def test_new_feature(generator):
 
 ### Test Files
 
-- `tests/test_media_literacy.py` - Media literacy detection and response generation
-- `tests/test_deduplication.py` - Post deduplication logic (TODO)
-- `tests/test_engagement.py` - Engagement bot behavior (TODO)
+- `tests/test_media_literacy.py` - Media literacy detection and response generation (13 tests)
+- `tests/test_deduplication.py` - Post deduplication logic (74 tests)
+- `tests/test_engagement.py` - Engagement bot behavior for X/Twitter and Bluesky (95 tests)
+- `tests/test_content_generator.py` - Content generation pipeline including PromptLoader and NewsFetcher (114 tests)
+- `tests/test_bots.py` - Bot posting pipeline including image generation and main orchestration (118 tests)
 
 ## Troubleshooting
 
