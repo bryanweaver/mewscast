@@ -24,11 +24,7 @@ AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky
   - [Run Modes](#run-modes)
   - [Manual Trigger](#manual-trigger-github)
   - [Customize Schedule](#customize-schedule)
-- [Media Literacy Feature](#media-literacy-feature)
-  - [How It Works](#how-it-works)
-  - [What It Detects](#what-it-detects)
-  - [Example Outputs](#example-outputs)
-  - [Severity Thresholds](#severity-thresholds)
+- [Media Framing Analysis](#media-framing-analysis)
 - [Configuration Options](#configuration-options)
 - [Project Structure](#project-structure)
 - [Tips for Growth](#tips-for-growth)
@@ -53,17 +49,20 @@ AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky
 ### Content Generation
 - **Real News Sourcing**: Fetches trending stories from Google News RSS (top stories + category fallback)
 - **Full Article Parsing**: Reads complete articles (not just headlines) for accurate commentary
-- **Media Literacy Analysis**: NEW! Automatically detects misleading headlines, bias, and manipulation tactics
-- **Smart Response System**: Chooses between media literacy callouts or regular cat-snark based on severity
+- **Media Framing Analysis**: Occasionally analyzes how media frames stories and adds commentary on notable framing angles
 - **AI-Powered Commentary**: Uses Claude 4.5 Sonnet for sharp, witty news analysis
 - **Fact-Checking**: Strict validation to prevent fabrication or hallucination
-- **Cat Personality**: Professional news reporter who specializes in media literacy... and happens to be a cat 🐱
+- **Cat Personality**: Professional news reporter who happens to be a cat
 
 ### Multi-Platform Posting
 - **X/Twitter**: Posts with AI-generated images (via Grok) and source citations
 - **Bluesky**: Cross-posts to Bluesky with link cards
 - **Deduplication**: Smart 4-level system prevents repetition while allowing story updates (72-hour cooldown)
 - **Source Attribution**: Always posts source links as replies for transparency
+
+### In-Progress Features
+- **Battle Posts** (not yet working): Side-by-side comparison of how two news sources cover the same story, with AI-generated split-screen cat images
+- **Positive Mews** (needs minor fixes): Dedicated positive/uplifting news posts to balance out the regular news cycle
 
 ### Automation & Cost
 - **GitHub Actions**: Free automated posting (7 posts/day)
@@ -74,9 +73,8 @@ AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky
 ## Cost Breakdown
 
 - **GitHub Actions**: FREE (unlimited for public repos)
-- **Anthropic API**: ~$10-25/month (Claude 4.5 Sonnet for content + media literacy analysis)
+- **Anthropic API**: ~$10-25/month (Claude 4.5 Sonnet for content generation)
   - Content generation: ~$0.01 per post
-  - Media literacy analysis: ~$0.0015 per post (when article content exists)
 - **X/Twitter API**: FREE (Basic tier - 50 posts/24hrs)
 - **Grok API**: ~$10-20/month (Image generation via X AI)
 - **Bluesky**: FREE (no API costs)
@@ -226,48 +224,9 @@ schedule:
 
 Use [crontab.guru](https://crontab.guru/) to create custom schedules.
 
-## Media Literacy Feature
+## Media Framing Analysis
 
-Walter Croncat now includes intelligent media literacy analysis that helps readers identify misleading news practices.
-
-### How It Works
-
-```
-Article received → Media literacy analysis
-├─ High/Medium severity issues found → Generate media literacy callout
-└─ Low/No issues → Use regular populist cat-snark approach
-```
-
-### What It Detects
-
-- **Misleading Headlines**: Headlines that contradict article content
-- **Statistical Manipulation**: Using percentages to exaggerate small changes
-- **Missing Context**: Omitting critical information that changes the story
-- **Bias & One-Sided Reporting**: Quoting only one perspective
-- **Fear-Mongering**: Using emotional manipulation tactics
-
-### Example Outputs
-
-**Media Literacy Callout:**
-```
-#MediaLiteracy: Headline screams 'CRISIS' but article says 0.3% dip.
-
-Classic fear-bait. Article itself calls it 'normal.' This cat's not buying the panic.
-```
-
-**Regular Cat-Snark (when no issues detected):**
-```
-City council votes 7-2 for $3.2M park. 15 acres of green space.
-
-Two dissenting votes worried about $150K yearly upkeep. From my perch: Who's getting the construction contract?
-```
-
-### Severity Thresholds
-
-- **High Severity**: Egregious manipulation, false claims → Triggers media literacy response
-- **Medium Severity**: Notable bias, missing context → Triggers media literacy response
-- **Low Severity**: Minor issues → Uses regular cat-snark approach
-- **No Issues**: Clean reporting → Uses regular cat-snark approach
+When generating posts from specific news stories, the bot has a configurable chance (default 50%) to analyze how the media frames the story. If notable framing angles are found, the post incorporates that perspective instead of the default cat-snark approach. This is handled by `analyze_media_framing()` in `content_generator.py` and uses the `analyze_framing.md` and `tweet_framing.md` prompt templates.
 
 ## Configuration Options
 
@@ -310,7 +269,11 @@ mewscast/
 │   ├── image_generator.py      # AI image generation (Grok)
 │   ├── news_fetcher.py         # Google News RSS fetching
 │   ├── post_tracker.py         # Deduplication & history
-│   └── engagement_bot.py       # Engagement automation
+│   ├── engagement_bot.py       # Engagement automation
+│   ├── battle_post.py          # Battle posts - WIP
+│   ├── battle_image.py         # Battle image generation - WIP
+│   ├── battle_dry_run.py       # Battle dry run testing - WIP
+│   └── positive_news_post.py   # Positive news posts - WIP
 ├── tests/                  # Test suite
 │   ├── __init__.py             # Test package initialization
 │   ├── test_media_literacy.py  # Media literacy analysis (13 tests)
@@ -353,7 +316,7 @@ mewscast/
 - Use Claude 3.5 Sonnet (best value)
 - Only enable reply mode once you have steady mentions
 - Monitor API costs in first month
-- Media literacy analysis adds ~$0.0015 per post (worth it for quality)
+- Media framing analysis is lightweight and adds minimal cost per post
 
 ## Testing
 
