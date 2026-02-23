@@ -26,6 +26,7 @@ jobs:
           echo "Waiting ${DELAY} seconds..."
           sleep $DELAY
 
+      - uses: actions/checkout@v4
       - name: Setup environment
         uses: ./.github/actions/setup-python-env
 
