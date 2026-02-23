@@ -11,8 +11,13 @@ os.environ.setdefault("ANTHROPIC_API_KEY", "dry-run-placeholder")
 
 from battle_post import BattlePostGenerator
 from battle_image import BattleImageGenerator
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import random
+
+try:
+    from PIL import Image, ImageDraw, ImageFont
+    PIL_AVAILABLE = True
+except ImportError:
+    PIL_AVAILABLE = False
 
 
 def create_mock_battle_image(battle_data: dict, save_path: str = "/tmp/battle_dry_run.png"):
@@ -20,6 +25,10 @@ def create_mock_battle_image(battle_data: dict, save_path: str = "/tmp/battle_dr
     Create a mock split-screen image without Grok API.
     Uses Pillow to generate a stylized placeholder, then applies the real overlay.
     """
+    if not PIL_AVAILABLE:
+        print("Pillow not installed - skipping mock image generation")
+        return None
+
     width, height = 1200, 675
     img = Image.new("RGB", (width, height))
     draw = ImageDraw.Draw(img)

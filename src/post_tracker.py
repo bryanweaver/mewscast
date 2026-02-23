@@ -4,8 +4,15 @@ Prevents posting duplicate stories or repeating topics too frequently
 """
 import json
 import os
+import re
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional
+
+_BASE_STOP_WORDS = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+                    'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'been', 'be'}
+_CONTENT_STOP_WORDS = _BASE_STOP_WORDS | {'this', 'that', 'it', 'can', 'will',
+                                           'cat', 'mews', 'purr', 'paws', 'fur',
+                                           'whisker', 'perch', 'meow'}
 
 
 class PostTracker:
@@ -113,23 +120,6 @@ class PostTracker:
 
         return {'is_duplicate': False, 'is_update': False, 'previous_posts': [], 'cluster_info': None}
 
-    def is_duplicate(self, story_metadata: Dict, post_content: str = None) -> bool:
-        """
-        Check if story is a duplicate of recently posted content
-
-        DEPRECATED: Use check_story_status() for richer context
-        This method maintained for backward compatibility
-
-        Args:
-            story_metadata: Story dict with 'title', 'url', 'source'
-            post_content: The generated post text to check for similarity
-
-        Returns:
-            True if duplicate, False if original
-        """
-        result = self.check_story_status(story_metadata, post_content)
-        return result['is_duplicate']
-
     def _url_posted(self, url: str) -> bool:
         """Check if URL was already posted"""
         for post in self.posts:
@@ -196,7 +186,6 @@ class PostTracker:
 
         # Check for update keywords with word boundaries to avoid false matches
         # (e.g., "now" shouldn't match "known", "after" shouldn't match "afternoon")
-        import re
         for keyword in update_keywords:
             # Use word boundaries to match whole words only
             if re.search(r'\b' + re.escape(keyword) + r'\b', title_lower):
@@ -221,10 +210,7 @@ class PostTracker:
             return {'related_posts': [], 'cluster_info': None}
 
         # Extract keywords and entities from title
-        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
-                      'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'been', 'be'}
-
-        title_words = set(title.lower().split()) - stop_words
+        title_words = set(title.lower().split()) - _BASE_STOP_WORDS
         title_nouns = self._extract_proper_nouns(title)
 
         if len(title_words) < 2:
@@ -242,7 +228,7 @@ class PostTracker:
 
             # Extract keywords from historical post
             post_title = post.get('topic', '')
-            post_words = set(post_title.lower().split()) - stop_words
+            post_words = set(post_title.lower().split()) - _BASE_STOP_WORDS
             post_nouns = self._extract_proper_nouns(post_title)
 
             if len(post_words) < 2:
@@ -312,7 +298,6 @@ class PostTracker:
         Returns:
             Set of lowercase proper nouns
         """
-        import re
         # Find words that start with capital letters (but not sentence starts)
         words = text.split()
         proper_nouns = set()
@@ -334,94 +319,6 @@ class PostTracker:
 
         return proper_nouns
 
-    def _similar_topic_posted(self, title: str, hours: int = 48) -> bool:
-        """
-        Check if similar topic was posted within cooldown period
-
-        Args:
-            title: Article title to check
-            hours: Cooldown period in hours
-
-        Returns:
-            True if similar topic found within cooldown period
-        """
-        if not title:
-            return False
-
-        # Extract keywords from title (lowercase, remove common words)
-        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
-                      'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'been', 'be'}
-
-        title_words = set(title.lower().split()) - stop_words
-
-        # Extract proper nouns for entity-based matching (e.g., "Cupertino", "Trump")
-        title_nouns = self._extract_proper_nouns(title)
-
-        if len(title_words) < 2:
-            return False  # Title too short to compare
-
-        cutoff_time = datetime.now(timezone.utc) - timedelta(hours=hours)
-
-        # Get threshold from config (default 40%)
-        threshold = self.config.get('topic_similarity_threshold', 0.40)
-
-        for post in self.posts:
-            # Check timestamp
-            post_time = datetime.fromisoformat(post['timestamp'].replace('Z', '+00:00'))
-            if post_time < cutoff_time:
-                continue  # Too old, outside cooldown period
-
-            # Extract keywords from historical post
-            post_title = post.get('topic', '')
-            post_words = set(post_title.lower().split()) - stop_words
-            post_nouns = self._extract_proper_nouns(post_title)
-
-            if len(post_words) < 2:
-                continue
-
-            # LEVEL 1: Check if 2+ significant proper nouns match (high confidence duplicate)
-            # This catches cases like "Cupertino" where the core entity is the same
-            # even if surrounding details differ
-            common_nouns = title_nouns & post_nouns
-            if len(common_nouns) >= 2 and len(title_nouns) >= 2:
-                # Multiple specific entities match = same story
-                print(f"   Entity match: {list(common_nouns)[:3]} in '{post_title[:60]}...'")
-                print(f"   Strong indicator of duplicate story")
-                # Still check for update keywords
-                if self._is_update_story(title):
-                    print(f"   ✓ But story contains update indicators - allowing as new development")
-                    return False
-                return True
-
-            # LEVEL 2: Calculate keyword overlap with improved matching
-            common_words = title_words & post_words
-
-            # Also check for word stems (deploy/deployment, etc.)
-            stem_matches = 0
-            for tw in title_words:
-                for pw in post_words:
-                    if tw not in common_words and pw not in common_words:
-                        # Check if words share significant prefix (stem matching)
-                        if len(tw) >= 4 and len(pw) >= 4:
-                            if tw[:4] == pw[:4] or tw[:5] == pw[:5]:
-                                stem_matches += 0.5  # Partial credit for stem match
-
-            effective_overlap = len(common_words) + stem_matches
-            overlap_ratio = effective_overlap / max(len(title_words), len(post_words))
-
-            # Use configurable threshold (default 40%)
-            if overlap_ratio >= threshold:
-                # Check if this is an update to a previous story
-                if self._is_update_story(title):
-                    print(f"   Topic similarity: {overlap_ratio:.1%} with '{post_title[:60]}...'")
-                    print(f"   ✓ But story contains update indicators - allowing as new development")
-                    return False  # Allow updates through
-                else:
-                    print(f"   Topic similarity: {overlap_ratio:.1%} with '{post_title[:60]}...'")
-                    return True
-
-        return False
-
     def _similar_content_posted(self, content: str, hours: int = 72) -> bool:
         """
         Check if similar content was posted within cooldown period
@@ -436,19 +333,12 @@ class PostTracker:
         if not content:
             return False
 
-        # Extract keywords from content (lowercase, remove common words and cat phrases)
-        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
-                      'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'been', 'be',
-                      'this', 'that', 'it', 'can', 'will', 'cat', 'mews', 'purr', 'paws',
-                      'fur', 'whisker', 'perch', 'meow'}
-
         # Clean content: remove hashtags, URLs, and source indicator
-        import re
         clean_content = re.sub(r'#\w+', '', content)  # Remove hashtags
         clean_content = re.sub(r'http\S+', '', clean_content)  # Remove URLs
         clean_content = re.sub(r'📰↓', '', clean_content)  # Remove source indicator
 
-        content_words = set(clean_content.lower().split()) - stop_words
+        content_words = set(clean_content.lower().split()) - _CONTENT_STOP_WORDS
 
         if len(content_words) < 3:
             return False  # Content too short to compare meaningfully
@@ -471,7 +361,7 @@ class PostTracker:
             clean_post_content = re.sub(r'http\S+', '', clean_post_content)
             clean_post_content = re.sub(r'📰↓', '', clean_post_content)
 
-            post_words = set(clean_post_content.lower().split()) - stop_words
+            post_words = set(clean_post_content.lower().split()) - _CONTENT_STOP_WORDS
 
             if len(post_words) < 3:
                 continue
@@ -559,7 +449,8 @@ class PostTracker:
         unique_stories = []
 
         for story in stories:
-            if not self.is_duplicate(story):
+            status = self.check_story_status(story)
+            if not status['is_duplicate']:
                 unique_stories.append(story)
             else:
                 print(f"   Skipping duplicate: {story.get('title', '')[:60]}...")

@@ -10,7 +10,6 @@ system is currently filtering out.
 """
 import json
 import os
-import sys
 import yaml
 from collections import Counter
 

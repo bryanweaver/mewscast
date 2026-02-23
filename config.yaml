@@ -317,19 +317,6 @@ special_posts:
     enabled: true
     max_length: 280
 
-scheduling:
-  # When to post (cron format for GitHub Actions)
-  # Free tier limit: 50 posts/24hrs - AGGRESSIVE GROWTH MODE
-  # Using 8 posts/day = 16% of limit (plenty of room for replies/engagement)
-  post_times:
-    - "0 2 * * *"   # 2 AM UTC = 10 PM EST / 7 PM PST (late night)
-    - "0 6 * * *"   # 6 AM UTC = 2 AM EST / 11 PM PST (overnight)
-    - "0 10 * * *"  # 10 AM UTC = 6 AM EST / 3 AM PST (early morning)
-    - "0 13 * * *"  # 1 PM UTC = 9 AM EST / 6 AM PST (morning prime)
-    - "0 16 * * *"  # 4 PM UTC = 12 PM EST / 9 AM PST (midday)
-    - "0 19 * * *"  # 7 PM UTC = 3 PM EST / 12 PM PST (afternoon)
-    - "0 22 * * *"  # 10 PM UTC = 6 PM EST / 3 PM PST (evening prime)
-
 engagement:
   # Reply automation (optional)
   # Free tier: 1 request/15min = 96/day (plenty of room!)
@@ -341,7 +328,6 @@ engagement:
 safety:
   # Content filtering
   avoid_topics:
-    - "politics"
     - "religion"
     - "crypto scams"
     - "medical advice"

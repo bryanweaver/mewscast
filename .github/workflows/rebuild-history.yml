@@ -11,19 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
 
       - name: Rebuild history from X timeline
         env:
@@ -33,21 +22,22 @@ jobs:
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: |
-          python rebuild_history.py
+          python scripts/rebuild_history.py
 
       - name: Commit updated history
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add posts_history.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Rebuild post history from X timeline [skip ci]" && git push)
+
+          if ! git diff --staged --quiet; then
+            git commit -m "Rebuild post history from X timeline [skip ci]"
+
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break || sleep $((i * 2))
+            done
+          fi
 
       - name: Report status
-        if: always()
-        run: |
-          if [ $? -eq 0 ]; then
-            echo "✅ History rebuilt successfully!"
-          else
-            echo "❌ Failed to rebuild history"
-            exit 1
-          fi
+        if: failure()
+        run: echo "❌ Workflow failed - check logs above"

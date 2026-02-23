@@ -602,29 +602,6 @@ class TestDeduplicationDisabled:
 # 9. Backward-compatible is_duplicate() wrapper
 # ===========================================================================
 
-class TestIsDuplicateWrapper:
-    """The deprecated is_duplicate() method should still work correctly."""
-
-    def test_returns_true_for_duplicate_url(self, tracker):
-        url = "https://example.com/dup"
-        tracker.posts.append(_make_post("Story", url))
-        assert tracker.is_duplicate(_make_story("Different", url=url)) is True
-
-    def test_returns_false_for_new_story(self, tracker):
-        assert tracker.is_duplicate(_make_story("Brand new story")) is False
-
-    def test_accepts_post_content_kwarg(self, tracker):
-        """is_duplicate forwards post_content to check_story_status."""
-        content = "The quick brown fox jumps over the lazy dog in Washington DC today."
-        tracker.posts.append(
-            _make_post("Fox story", "https://example.com/1", content=content)
-        )
-        assert tracker.is_duplicate(
-            _make_story("Fox", url="https://example.com/2"),
-            post_content=content
-        ) is True
-
-
 # ===========================================================================
 # 10. Recording posts and history management
 # ===========================================================================

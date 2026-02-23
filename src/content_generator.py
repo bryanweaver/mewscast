@@ -51,6 +51,13 @@ def _truncate_at_sentence(text: str, max_length: int) -> str:
     return truncated.rstrip()
 
 
+def _strip_quotes(text: str) -> str:
+    """Remove surrounding quote characters Claude sometimes adds."""
+    if len(text) >= 2 and text[0] in ('"', "'") and text[0] == text[-1]:
+        text = text[1:-1]
+    return text
+
+
 class ContentGenerator:
     """Generates news cat reporter tweet content using Claude AI"""
 
@@ -203,8 +210,7 @@ class ContentGenerator:
             print(f"   ⚠️  Could not save recent phrases: {e}")
 
     def generate_tweet(self, topic: Optional[str] = None, trending_topic: Optional[str] = None,
-                      story_metadata: Optional[Dict] = None, previous_posts: Optional[List[Dict]] = None,
-                      platform: Optional[str] = None) -> Dict:
+                      story_metadata: Optional[Dict] = None, previous_posts: Optional[List[Dict]] = None) -> Dict:
         """
         Generate a news cat reporter tweet
 
@@ -213,7 +219,6 @@ class ContentGenerator:
             trending_topic: Specific trending topic from X (takes priority)
             story_metadata: Dictionary with 'title', 'context', 'source' for real trending stories
             previous_posts: List of previous related posts (for updates/developing stories)
-            platform: 'x', 'bluesky', or None for default prompt style
 
         Returns:
             Dictionary with:
@@ -277,8 +282,7 @@ class ContentGenerator:
                     article_details += f"Summary: {story_metadata.get('context', '')}"
 
             prompt = self._build_news_cat_prompt(selected_topic, is_specific_story=is_specific_story,
-                                                 article_details=article_details, previous_posts=previous_posts,
-                                                 platform=platform)
+                                                 article_details=article_details, previous_posts=previous_posts)
 
         try:
             message = self.client.messages.create(
@@ -292,10 +296,7 @@ class ContentGenerator:
             tweet = message.content[0].text.strip()
 
             # Remove any quotes around the tweet if Claude added them
-            if tweet.startswith('"') and tweet.endswith('"'):
-                tweet = tweet[1:-1]
-            if tweet.startswith("'") and tweet.endswith("'"):
-                tweet = tweet[1:-1]
+            tweet = _strip_quotes(tweet)
 
             # Calculate target length (reserve space for source indicator if needed)
             source_indicator = " 📰↓"
@@ -380,10 +381,7 @@ class ContentGenerator:
             shortened = message.content[0].text.strip()
 
             # Remove quotes if Claude added them
-            if shortened.startswith('"') and shortened.endswith('"'):
-                shortened = shortened[1:-1]
-            if shortened.startswith("'") and shortened.endswith("'"):
-                shortened = shortened[1:-1]
+            shortened = _strip_quotes(shortened)
 
             print(f"   ✓ Shortened to {len(shortened)} chars")
             return shortened
@@ -539,13 +537,8 @@ class ContentGenerator:
         return {'valid': True, 'reason': None}
 
     def _build_news_cat_prompt(self, topic: str, is_specific_story: bool = False,
-                               article_details: str = None, previous_posts: Optional[List[Dict]] = None,
-                               platform: str = None) -> str:
-        """Build the news cat reporter prompt for Claude using prompt templates
-
-        Args:
-            platform: 'x', 'bluesky', or None for default prompt
-        """
+                               article_details: str = None, previous_posts: Optional[List[Dict]] = None) -> str:
+        """Build the news cat reporter prompt for Claude using prompt templates"""
         # Prepare config-based values
         avoid_str = ", ".join(self.avoid_topics)
         cat_vocab_str = self._select_vocab_for_story(topic, article_details)
@@ -607,9 +600,8 @@ class ContentGenerator:
         elif is_specific_story:
             story_guidance = self.prompts.load_story_guidance_generic()
 
-        # Load main prompt template and fill in values (platform-specific if specified)
+        # Load main prompt template and fill in values
         return self.prompts.load_tweet_prompt(
-            platform=platform,
             topic=topic,
             update_guidance=update_guidance,
             cat_vocab_str=cat_vocab_str,
@@ -755,8 +747,7 @@ class ContentGenerator:
             reply = message.content[0].text.strip()
 
             # Remove quotes if present
-            if reply.startswith('"') and reply.endswith('"'):
-                reply = reply[1:-1]
+            reply = _strip_quotes(reply)
 
             if len(reply) > self.max_length:
                 reply = _truncate_at_sentence(reply, self.max_length)
@@ -808,8 +799,7 @@ FULL ARTICLE CONTENT (extract visual details from this):
             image_prompt = message.content[0].text.strip()
 
             # Remove quotes if Claude added them
-            if image_prompt.startswith('"') and image_prompt.endswith('"'):
-                image_prompt = image_prompt[1:-1]
+            image_prompt = _strip_quotes(image_prompt)
 
             # Limit to 200 chars for Grok
             if len(image_prompt) > 200:

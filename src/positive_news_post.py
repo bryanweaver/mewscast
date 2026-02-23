@@ -17,7 +17,7 @@ from email.utils import parsedate_to_datetime
 from typing import Dict, List, Optional
 
 from news_fetcher import NewsFetcher
-from content_generator import ContentGenerator, _truncate_at_sentence
+from content_generator import ContentGenerator, _truncate_at_sentence, _strip_quotes
 from prompt_loader import get_prompt_loader
 
 
@@ -61,7 +61,10 @@ class PositiveNewsGenerator:
         positive_config = self.config.get('special_posts', {}).get('positive_news', {})
         self.max_length = positive_config.get('max_length', 280)
         self.news_fetcher = NewsFetcher()
-        self.content_generator = ContentGenerator()
+        try:
+            self.content_generator = ContentGenerator()
+        except ValueError:
+            self.content_generator = None
         self.prompts = get_prompt_loader()
 
     def find_positive_story(self, topic: str = None) -> Optional[Dict]:
@@ -198,10 +201,12 @@ class PositiveNewsGenerator:
         topic = story_data['topic']
 
         # Get topic-matched vocab
-        cat_vocab_str = self.content_generator._select_vocab_for_story(
-            article['title'],
-            article.get('article_content', '')[:300]
-        )
+        cat_vocab_str = ""
+        if self.content_generator:
+            cat_vocab_str = self.content_generator._select_vocab_for_story(
+                article['title'],
+                article.get('article_content', '')[:300]
+            )
 
         content = article.get('article_content', '')[:800]
 
@@ -231,10 +236,7 @@ class PositiveNewsGenerator:
             post_text = message.content[0].text.strip()
 
             # Clean up quotes if present
-            if post_text.startswith('"') and post_text.endswith('"'):
-                post_text = post_text[1:-1]
-            if post_text.startswith("'") and post_text.endswith("'"):
-                post_text = post_text[1:-1]
+            post_text = _strip_quotes(post_text)
 
             print(f"   Draft ({len(post_text)} chars): {post_text[:80]}...")
 
@@ -265,10 +267,7 @@ class PositiveNewsGenerator:
                 )
 
                 post_text = message.content[0].text.strip()
-                if post_text.startswith('"') and post_text.endswith('"'):
-                    post_text = post_text[1:-1]
-                if post_text.startswith("'") and post_text.endswith("'"):
-                    post_text = post_text[1:-1]
+                post_text = _strip_quotes(post_text)
 
                 print(f"   Corrected ({len(post_text)} chars): {post_text[:80]}...")
             else:
@@ -279,7 +278,8 @@ class PositiveNewsGenerator:
                 post_text = _truncate_at_sentence(post_text, self.max_length)
 
             # Track vocab usage
-            self.content_generator._record_used_phrase(post_text)
+            if self.content_generator:
+                self.content_generator._record_used_phrase(post_text)
 
             print(f"✅ Positive news post generated ({len(post_text)} chars)")
 

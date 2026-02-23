@@ -60,6 +60,11 @@ _mock_twitter_bot_mod = types.ModuleType("twitter_bot")
 _mock_twitter_bot_mod.TwitterBot = MagicMock
 sys.modules.setdefault("twitter_bot", _mock_twitter_bot_mod)
 
+# Mock 'bluesky_client' (imported by bluesky_engagement_bot.py)
+_mock_bluesky_client = types.ModuleType("bluesky_client")
+_mock_bluesky_client.create_bluesky_client = MagicMock()
+sys.modules.setdefault("bluesky_client", _mock_bluesky_client)
+
 # Now we can safely import the source modules
 from src.engagement_bot import EngagementBot
 from src.bluesky_engagement_bot import BlueskyEngagementBot
@@ -231,14 +236,14 @@ def bluesky_bot(empty_bluesky_history, tmp_path):
     """
     with patch.dict(os.environ, {
         "BLUESKY_USERNAME": "testcat.bsky.social",
-        "BLUESKY_PASSWORD": "secret",
+        "BLUESKY_APP_PASSWORD": "secret",
     }):
-        with patch("src.bluesky_engagement_bot.Client") as MockClient:
-            mock_client = MockClient.return_value
-            mock_client.login.return_value = None
+        with patch("src.bluesky_engagement_bot.create_bluesky_client") as mock_create:
+            mock_client = MagicMock()
             mock_me = Mock()
             mock_me.did = "did:plc:me123"
             mock_client.me = mock_me
+            mock_create.return_value = mock_client
 
             bot = BlueskyEngagementBot()
 
@@ -629,12 +634,12 @@ class TestBlueskyHistoryTracking:
         """Default history dict is returned when file does not exist."""
         with patch.dict(os.environ, {
             "BLUESKY_USERNAME": "test.bsky.social",
-            "BLUESKY_PASSWORD": "pw",
+            "BLUESKY_APP_PASSWORD": "pw",
         }):
-            with patch("src.bluesky_engagement_bot.Client") as MockClient:
-                mock_client = MockClient.return_value
-                mock_client.login.return_value = None
+            with patch("src.bluesky_engagement_bot.create_bluesky_client") as mock_create:
+                mock_client = MagicMock()
                 mock_client.me = Mock(did="did:plc:x")
+                mock_create.return_value = mock_client
 
                 bot = BlueskyEngagementBot()
                 bot.engagement_log_path = tmp_path / "nonexistent.json"
@@ -1479,8 +1484,8 @@ class TestBlueskyErrorHandling:
 
     def test_missing_credentials_raises_on_init(self):
         """BlueskyEngagementBot should raise ValueError with missing credentials."""
-        with patch.dict(os.environ, {"BLUESKY_USERNAME": "", "BLUESKY_PASSWORD": ""}, clear=False):
-            with patch("src.bluesky_engagement_bot.Client"):
+        with patch.dict(os.environ, {"BLUESKY_USERNAME": "", "BLUESKY_APP_PASSWORD": ""}, clear=False):
+            with patch("src.bluesky_engagement_bot.create_bluesky_client", side_effect=ValueError("Missing Bluesky credentials")):
                 with pytest.raises(ValueError, match="Missing Bluesky credentials"):
                     BlueskyEngagementBot()
 

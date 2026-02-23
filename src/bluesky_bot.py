@@ -3,12 +3,15 @@ Bluesky integration using atproto
 """
 import os
 import io
+from urllib.parse import urlparse
+import requests
+from bs4 import BeautifulSoup
 from atproto import Client
 from atproto import models
 from typing import Optional
-import re
 from PIL import Image
 from content_generator import _truncate_at_sentence
+from bluesky_client import create_bluesky_client
 
 # Bluesky hard limit: 1,000,000 bytes for image uploads
 BLUESKY_MAX_IMAGE_BYTES = 1_000_000
@@ -19,21 +22,8 @@ class BlueskyBot:
 
     def __init__(self):
         """Initialize Bluesky client with credentials from environment"""
+        self.client = create_bluesky_client()
         self.username = os.getenv("BLUESKY_USERNAME")
-        self.password = os.getenv("BLUESKY_PASSWORD")
-
-        # Validate credentials
-        if not all([self.username, self.password]):
-            raise ValueError("Missing Bluesky credentials. Check your .env file.")
-
-        # Initialize atproto client
-        self.client = Client()
-
-        try:
-            self.client.login(self.username, self.password)
-            print(f"✓ Logged into Bluesky as @{self.username}")
-        except Exception as e:
-            raise ValueError(f"Failed to authenticate with Bluesky: {e}")
 
     def post_skeet(self, text: str) -> Optional[dict]:
         """
@@ -206,9 +196,11 @@ class BlueskyBot:
             # Fetch URL metadata
             print(f"📎 Creating link card for: {url[:60]}...")
 
-            # Use atproto to create external embed with link metadata
-            import requests
-            from bs4 import BeautifulSoup
+            # Validate URL scheme before fetching
+            parsed = urlparse(url)
+            if parsed.scheme not in ('http', 'https'):
+                print(f"Refusing to fetch non-HTTP URL: {url}")
+                return None
 
             # Fetch page metadata
             try:
@@ -278,36 +270,23 @@ class BlueskyBot:
                 text = _truncate_at_sentence(text, 300)
 
             # Parse AT URI: at://did:plc:xxx/app.bsky.feed.post/rkey
-            # Extract repo (DID) and rkey
             parts = parent_uri.replace('at://', '').split('/')
             if len(parts) != 3:
                 raise ValueError(f"Invalid AT URI format: {parent_uri}")
-
-            repo_did = parts[0]  # did:plc:xxx
-            collection = parts[1]  # app.bsky.feed.post
-            rkey = parts[2]  # post ID
-
-            # Get the parent post using repo and rkey
-            from atproto import models
-
-            parent_ref = models.ComAtprotoRepoStrongRef.Main(
-                uri=parent_uri,
-                cid=''  # We'll let atproto fetch the CID
-            )
 
             # Get the actual post to get its CID
             post_thread = self.client.app.bsky.feed.get_post_thread({'uri': parent_uri})
             parent_cid = post_thread.thread.post.cid
 
             # Create proper references with CIDs
-            parent_ref_with_cid = models.ComAtprotoRepoStrongRef.Main(
+            parent_ref = models.ComAtprotoRepoStrongRef.Main(
                 uri=parent_uri,
                 cid=parent_cid
             )
 
             reply_ref = models.AppBskyFeedPost.ReplyRef(
-                parent=parent_ref_with_cid,
-                root=parent_ref_with_cid  # Same as parent since it's direct reply
+                parent=parent_ref,
+                root=parent_ref  # Same as parent since it's direct reply
             )
 
             # Post reply

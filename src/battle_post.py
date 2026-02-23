@@ -11,7 +11,7 @@ Usage:
 import os
 import random
 import time
-import re
+
 import yaml
 import feedparser
 from datetime import datetime, timedelta, timezone
@@ -19,7 +19,7 @@ from email.utils import parsedate_to_datetime
 from typing import Dict, List, Optional, Tuple
 
 from news_fetcher import NewsFetcher
-from content_generator import ContentGenerator
+from content_generator import ContentGenerator, _strip_quotes
 from prompt_loader import get_prompt_loader
 
 
@@ -36,7 +36,10 @@ class BattlePostGenerator:
         self.source_domains = battle_config.get('source_domains', {})
         self.max_length = battle_config.get('max_length', 280)
         self.news_fetcher = NewsFetcher()
-        self.content_generator = ContentGenerator()
+        try:
+            self.content_generator = ContentGenerator()
+        except ValueError:
+            self.content_generator = None
         self.prompts = get_prompt_loader()
 
     def find_matching_stories(self, topic: str = None) -> Optional[Dict]:
@@ -156,13 +159,14 @@ class BattlePostGenerator:
 
             for entry in feed.entries[:5]:
                 published_str = entry.get('published', '')
-                if published_str:
-                    try:
-                        published_date = parsedate_to_datetime(published_str)
-                        if published_date < cutoff_date:
-                            continue
-                    except Exception:
+                if not published_str:
+                    continue  # Skip articles without date metadata
+                try:
+                    published_date = parsedate_to_datetime(published_str)
+                    if published_date < cutoff_date:
                         continue
+                except Exception:
+                    continue
 
                 source = entry.get('source', {}).get('title', source_name)
 
@@ -202,7 +206,9 @@ class BattlePostGenerator:
         # Get topic-matched vocab
         combined_text = f"{article_a['title']} {article_b['title']}"
         combined_content = f"{article_a.get('article_content', '')[:300]} {article_b.get('article_content', '')[:300]}"
-        cat_vocab_str = self.content_generator._select_vocab_for_story(combined_text, combined_content)
+        cat_vocab_str = ""
+        if self.content_generator:
+            cat_vocab_str = self.content_generator._select_vocab_for_story(combined_text, combined_content)
 
         content_a = article_a.get('article_content', '')[:800]
         content_b = article_b.get('article_content', '')[:800]
@@ -236,10 +242,7 @@ class BattlePostGenerator:
             post_text = message.content[0].text.strip()
 
             # Clean up quotes if present
-            if post_text.startswith('"') and post_text.endswith('"'):
-                post_text = post_text[1:-1]
-            if post_text.startswith("'") and post_text.endswith("'"):
-                post_text = post_text[1:-1]
+            post_text = _strip_quotes(post_text)
 
             print(f"   Draft ({len(post_text)} chars): {post_text[:80]}...")
 
@@ -272,10 +275,7 @@ class BattlePostGenerator:
                 )
 
                 post_text = message.content[0].text.strip()
-                if post_text.startswith('"') and post_text.endswith('"'):
-                    post_text = post_text[1:-1]
-                if post_text.startswith("'") and post_text.endswith("'"):
-                    post_text = post_text[1:-1]
+                post_text = _strip_quotes(post_text)
 
                 print(f"   Corrected ({len(post_text)} chars): {post_text[:80]}...")
 
@@ -301,7 +301,8 @@ class BattlePostGenerator:
                 post_text = _truncate_at_sentence(post_text, self.max_length)
 
             # Track vocab usage
-            self.content_generator._record_used_phrase(post_text)
+            if self.content_generator:
+                self.content_generator._record_used_phrase(post_text)
 
             # Build source citation reply
             sources_text = (

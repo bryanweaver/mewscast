@@ -73,11 +73,10 @@ class PromptLoader:
             result = result.replace(placeholder, str(value))
         return result
 
-    def load_tweet_prompt(self, platform: str = None, **kwargs) -> str:
+    def load_tweet_prompt(self, **kwargs) -> str:
         """Load the tweet generation prompt
 
         Args:
-            platform: 'x', 'bluesky', or None (all use same prompt now)
             **kwargs: Values to substitute into the template
         """
         # Use unified Bluesky prompt for all platforms
