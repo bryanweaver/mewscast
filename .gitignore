@@ -44,6 +44,7 @@ logs/
 
 # Temporary files
 temp_image.png
+recent_vocab.json
 *.tmp
 
 # Claude Code settings (local IDE config)
