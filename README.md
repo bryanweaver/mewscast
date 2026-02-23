@@ -276,8 +276,7 @@ mewscast/
 │   └── positive_news_post.py   # Positive news posts - WIP
 ├── tests/                  # Test suite
 │   ├── __init__.py             # Test package initialization
-│   ├── test_media_literacy.py  # Media literacy analysis (13 tests)
-│   ├── test_deduplication.py   # Post deduplication logic (74 tests)
+│   ├── test_deduplication.py   # Post deduplication logic (71 tests)
 │   ├── test_engagement.py      # Engagement bot behavior (95 tests)
 │   ├── test_content_generator.py  # Content generation pipeline (114 tests)
 │   └── test_bots.py            # Bot posting pipeline (118 tests)
@@ -330,7 +329,7 @@ pip install pytest
 pytest tests/
 
 # Run specific test file
-pytest tests/test_media_literacy.py -v
+pytest tests/test_deduplication.py -v
 
 # Run with coverage report
 pytest tests/ --cov=src --cov-report=html
@@ -338,12 +337,11 @@ pytest tests/ --cov=src --cov-report=html
 
 ### Test Coverage
 
-The project includes a comprehensive test suite of 414 tests across 5 test files, covering all source modules:
+The project includes a comprehensive test suite of 398 tests across 4 test files, covering all source modules:
 
-- **Media Literacy Analysis** (`test_media_literacy.py`, 13 tests): Detection, severity thresholds, and error handling
-- **Deduplication Logic** (`test_deduplication.py`, 74 tests): Exact URL matching, topic similarity, content similarity, story clustering, update detection, and post history management
+- **Deduplication Logic** (`test_deduplication.py`, 71 tests): URL matching, topic/content similarity, story clustering, update detection, and post history management
 - **Engagement Bots** (`test_engagement.py`, 95 tests): Target filtering, history tracking, follow-ratio checks, repost logic, engagement cycle orchestration, and API error handling for both X/Twitter and Bluesky bots
-- **Content Generation Pipeline** (`test_content_generator.py`, 114 tests): ContentGenerator, PromptLoader, and NewsFetcher — including AI response validation, media literacy integration, character limit enforcement, and retry logic
+- **Content Generation Pipeline** (`test_content_generator.py`, 114 tests): ContentGenerator, PromptLoader, and NewsFetcher — AI response validation, character limit enforcement, and retry logic
 - **Bot Posting Pipeline** (`test_bots.py`, 118 tests): Bluesky bot, Twitter/X bot, image generator, configuration loading, and main pipeline orchestration
 
 ### Writing New Tests
@@ -372,8 +370,7 @@ def test_new_feature(generator):
 
 ### Test Files
 
-- `tests/test_media_literacy.py` - Media literacy detection and response generation (13 tests)
-- `tests/test_deduplication.py` - Post deduplication logic (74 tests)
+- `tests/test_deduplication.py` - Post deduplication logic (71 tests)
 - `tests/test_engagement.py` - Engagement bot behavior for X/Twitter and Bluesky (95 tests)
 - `tests/test_content_generator.py` - Content generation pipeline including PromptLoader and NewsFetcher (114 tests)
 - `tests/test_bots.py` - Bot posting pipeline including image generation and main orchestration (118 tests)
@@ -415,7 +412,7 @@ This repository has been thoroughly audited for security:
 - ✅ No PII or sensitive data in commit history
 - ✅ Proper .gitignore configuration
 
-See [docs/SECURITY_AUDIT.md](docs/SECURITY_AUDIT.md) for full security audit details.
+
 
 ## License
 
