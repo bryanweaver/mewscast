@@ -180,15 +180,8 @@ def post_scheduled_tweet():
         needs_source = result['needs_source_reply']
         story_meta = result['story_metadata']
 
-        # Generate X-specific content with different tone
-        print(f"📝 Generating X-specific version...")
-        x_result = generator.generate_tweet(
-            trending_topic=selected_story['title'],
-            story_metadata=selected_story,
-            previous_posts=previous_posts if story_status and story_status.get('is_update') else None
-        )
-        x_text = x_result['tweet'] if x_result else bluesky_text
-        print(f"   ✅ X version generated!")
+        # Use same content for both platforms (single generation)
+        x_text = bluesky_text
 
         # Try to generate image (with graceful fallback)
         image_path = None
