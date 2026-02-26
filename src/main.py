@@ -42,7 +42,12 @@ def post_scheduled_tweet():
         generator = ContentGenerator()
 
         print("📡 Connecting to X...")
-        twitter_bot = TwitterBot()
+        try:
+            twitter_bot = TwitterBot()
+        except Exception as e:
+            print(f"⚠️  X connection failed: {e}")
+            print(f"   Continuing with Bluesky only...")
+            twitter_bot = None
 
         print("🦋 Connecting to Bluesky...")
         try:
@@ -206,40 +211,43 @@ def post_scheduled_tweet():
             print(f"   Continuing without image...")
 
         # Post to X (with or without image) - uses X-specific tone
-        print(f"📤 Filing news report to X...")
-        print(f"   Content: \"{x_text}\"")
-
         tweet_id = None
         reply_tweet_id = None
         x_success = False
 
-        if image_path:
-            print(f"   Image: {image_path}\n")
-            x_result = twitter_bot.post_tweet_with_image(x_text, image_path)
+        if twitter_bot:
+            print(f"📤 Filing news report to X...")
+            print(f"   Content: \"{x_text}\"")
+
+            if image_path:
+                print(f"   Image: {image_path}\n")
+                x_result = twitter_bot.post_tweet_with_image(x_text, image_path)
+            else:
+                print(f"   (No image attached)\n")
+                x_result = twitter_bot.post_tweet(x_text)
+
+            if x_result:
+                tweet_id = x_result['id']
+                print(f"✅ X post successful! ID: {tweet_id}")
+                x_success = True
+
+                # Post source reply on X
+                if needs_source and story_meta:
+                    print(f"📎 Posting source citation reply on X...")
+                    time.sleep(2)  # Brief pause before reply
+
+                    source_reply = generator.generate_source_reply(x_text, story_meta)
+                    x_reply_result = twitter_bot.reply_to_tweet(tweet_id, source_reply)
+
+                    if x_reply_result:
+                        reply_tweet_id = x_reply_result['id']
+                        print(f"✅ X source reply posted! ID: {reply_tweet_id}")
+                    else:
+                        print(f"⚠️  X source reply failed")
+            else:
+                print(f"❌ X post failed")
         else:
-            print(f"   (No image attached)\n")
-            x_result = twitter_bot.post_tweet(x_text)
-
-        if x_result:
-            tweet_id = x_result['id']
-            print(f"✅ X post successful! ID: {tweet_id}")
-            x_success = True
-
-            # Post source reply on X
-            if needs_source and story_meta:
-                print(f"📎 Posting source citation reply on X...")
-                time.sleep(2)  # Brief pause before reply
-
-                source_reply = generator.generate_source_reply(x_text, story_meta)
-                x_reply_result = twitter_bot.reply_to_tweet(tweet_id, source_reply)
-
-                if x_reply_result:
-                    reply_tweet_id = x_reply_result['id']
-                    print(f"✅ X source reply posted! ID: {reply_tweet_id}")
-                else:
-                    print(f"⚠️  X source reply failed")
-        else:
-            print(f"❌ X post failed")
+            print(f"⏭️  Skipping X (not connected)")
 
         # Post to Bluesky (with or without image)
         bluesky_uri = None
@@ -425,7 +433,12 @@ def post_battle():
 
         # Initialize bots
         print("📡 Connecting to X...")
-        twitter_bot = TwitterBot()
+        try:
+            twitter_bot = TwitterBot()
+        except Exception as e:
+            print(f"⚠️  X connection failed: {e}")
+            print(f"   Continuing with Bluesky only...")
+            twitter_bot = None
 
         print("🦋 Connecting to Bluesky...")
         try:
@@ -447,24 +460,27 @@ def post_battle():
         # Post to X
         tweet_id = None
         x_success = False
-        print(f"\n📤 Posting battle to X...")
-        if image_path:
-            x_result = twitter_bot.post_tweet_with_image(post_text, image_path)
-        else:
-            x_result = twitter_bot.post_tweet(post_text)
+        if twitter_bot:
+            print(f"\n📤 Posting battle to X...")
+            if image_path:
+                x_result = twitter_bot.post_tweet_with_image(post_text, image_path)
+            else:
+                x_result = twitter_bot.post_tweet(post_text)
 
-        if x_result:
-            tweet_id = x_result['id']
-            print(f"✅ X post successful! ID: {tweet_id}")
-            x_success = True
+            if x_result:
+                tweet_id = x_result['id']
+                print(f"✅ X post successful! ID: {tweet_id}")
+                x_success = True
 
-            # Post sources as reply
-            time.sleep(2)
-            source_reply = twitter_bot.reply_to_tweet(tweet_id, sources_text)
-            if source_reply:
-                print(f"✅ X sources reply posted!")
+                # Post sources as reply
+                time.sleep(2)
+                source_reply = twitter_bot.reply_to_tweet(tweet_id, sources_text)
+                if source_reply:
+                    print(f"✅ X sources reply posted!")
+            else:
+                print(f"❌ X post failed")
         else:
-            print(f"❌ X post failed")
+            print(f"⏭️  Skipping X (not connected)")
 
         # Post to Bluesky
         bluesky_uri = None
@@ -586,7 +602,12 @@ def post_positive_news():
 
         # Initialize bots
         print("📡 Connecting to X...")
-        twitter_bot = TwitterBot()
+        try:
+            twitter_bot = TwitterBot()
+        except Exception as e:
+            print(f"⚠️  X connection failed: {e}")
+            print(f"   Continuing with Bluesky only...")
+            twitter_bot = None
 
         print("🦋 Connecting to Bluesky...")
         try:
@@ -618,25 +639,28 @@ def post_positive_news():
         # Post to X
         tweet_id = None
         x_success = False
-        print(f"\n📤 Posting positive news to X...")
-        if image_path:
-            x_result = twitter_bot.post_tweet_with_image(post_text_with_indicator, image_path)
-        else:
-            x_result = twitter_bot.post_tweet(post_text_with_indicator)
+        if twitter_bot:
+            print(f"\n📤 Posting positive news to X...")
+            if image_path:
+                x_result = twitter_bot.post_tweet_with_image(post_text_with_indicator, image_path)
+            else:
+                x_result = twitter_bot.post_tweet(post_text_with_indicator)
 
-        if x_result:
-            tweet_id = x_result['id']
-            print(f"✅ X post successful! ID: {tweet_id}")
-            x_success = True
+            if x_result:
+                tweet_id = x_result['id']
+                print(f"✅ X post successful! ID: {tweet_id}")
+                x_success = True
 
-            # Post source as reply
-            time.sleep(2)
-            source_reply = article['url']
-            reply_result = twitter_bot.reply_to_tweet(tweet_id, source_reply)
-            if reply_result:
-                print(f"✅ X source reply posted!")
+                # Post source as reply
+                time.sleep(2)
+                source_reply = article['url']
+                reply_result = twitter_bot.reply_to_tweet(tweet_id, source_reply)
+                if reply_result:
+                    print(f"✅ X source reply posted!")
+            else:
+                print(f"❌ X post failed")
         else:
-            print(f"❌ X post failed")
+            print(f"⏭️  Skipping X (not connected)")
 
         # Post to Bluesky
         bluesky_uri = None
