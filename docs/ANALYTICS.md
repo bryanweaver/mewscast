@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-03-01 23:02 UTC*
+*Last updated: 2026-03-02 23:03 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,18 +13,18 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 212 | - |
-| Likes | 380 | +3 |
+| Likes | 372 | +1 |
 | Reposts | 48 | +0 |
-| Replies | 223 | - |
+| Replies | 224 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 194 | - |
-| Likes | 12 | +0 |
+| Likes | 13 | +0 |
 | Retweets | 2 | - |
-| Replies | 196 | - |
+| Replies | 198 | - |
 
 ---
 
@@ -44,11 +44,9 @@ Nick...
 **[BLUESKY]** 7 likes, 3 reposts
 > Russian drone strike kills a Ukrainian father and his three toddlers—twin boys I...
 
-**[BLUESKY]** 8 likes, 1 reposts
-> "Agents were pursuing an immigrant when they killed Alex Pretti"
-
-Even this cat ...
+**[BLUESKY]** 5 likes, 1 reposts
+> FBI agents combing Tucson roadways where 84-year-old Nancy Guthrie went missing ...
 
 ---
 
-*Data snapshots: 3835 total across 406 posts*
+*Data snapshots: 3996 total across 406 posts*
