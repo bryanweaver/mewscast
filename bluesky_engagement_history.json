@@ -1609,6 +1609,11 @@
       "did": "did:plc:rvbscmrxofuqnlxict4kak2n",
       "handle": "karlckrumpholz.bsky.social",
       "timestamp": "2026-03-04T15:16:52.950884"
+    },
+    {
+      "did": "did:plc:j6qvbsz7pqqbze436n4zwh4x",
+      "handle": "east-is-up.bsky.social",
+      "timestamp": "2026-03-04T18:18:35.257936"
     }
   ],
   "liked_posts": [
@@ -15326,6 +15331,11 @@
       "uri": "at://did:plc:rvbscmrxofuqnlxict4kak2n/app.bsky.feed.post/3mgaksotge227",
       "author": "karlckrumpholz.bsky.social",
       "timestamp": "2026-03-04T15:16:52.769493"
+    },
+    {
+      "uri": "at://did:plc:j6qvbsz7pqqbze436n4zwh4x/app.bsky.feed.post/3mg7i52ssgs2n",
+      "author": "east-is-up.bsky.social",
+      "timestamp": "2026-03-04T18:18:35.056627"
     }
   ],
   "last_cleanup": "2026-02-27T03:49:51.694504",
