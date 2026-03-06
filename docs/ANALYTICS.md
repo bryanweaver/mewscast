@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-03-05 23:24 UTC*
+*Last updated: 2026-03-06 23:04 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,18 +13,18 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 213 | - |
-| Likes | 361 | +0 |
-| Reposts | 45 | +0 |
-| Replies | 225 | - |
+| Likes | 349 | +0 |
+| Reposts | 44 | +0 |
+| Replies | 227 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 195 | - |
-| Likes | 13 | +0 |
+| Posts tracked | 188 | - |
+| Likes | 12 | +0 |
 | Retweets | 2 | - |
-| Replies | 197 | - |
+| Replies | 191 | - |
 
 ---
 
@@ -38,15 +38,15 @@ Nick...
 **[BLUESKY]** 21 likes, 1 reposts
 > Scientists just caught footage of a sleeper shark cruising Antarctic waters at 3...
 
-**[BLUESKY]** 11 likes, 1 reposts
-> This reporter is looking into ‘Humiliated’ Andrew moves out of Royal Lodge - The...
-
 **[BLUESKY]** 7 likes, 3 reposts
 > Russian drone strike kills a Ukrainian father and his three toddlers—twin boys I...
 
 **[BLUESKY]** 5 likes, 1 reposts
 > FBI agents combing Tucson roadways where 84-year-old Nancy Guthrie went missing ...
 
+**[BLUESKY]** 6 likes, 1 reposts
+> Buddhist monks finished a 108-day, 2,300-mile walk for peace from Texas to DC. T...
+
 ---
 
-*Data snapshots: 4536 total across 408 posts*
+*Data snapshots: 4490 total across 401 posts*
