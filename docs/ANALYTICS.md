@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-03-07 23:02 UTC*
+*Last updated: 2026-03-08 23:02 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,27 +13,22 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 212 | - |
-| Likes | 352 | +2 |
-| Reposts | 42 | +0 |
-| Replies | 226 | - |
+| Likes | 333 | +1 |
+| Reposts | 38 | +0 |
+| Replies | 227 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 193 | - |
+| Posts tracked | 186 | - |
 | Likes | 13 | +0 |
 | Retweets | 2 | - |
-| Replies | 196 | - |
+| Replies | 189 | - |
 
 ---
 
 ## Top Performers
-
-**[BLUESKY]** 23 likes, 4 reposts
-> Minneapolis now has daily deportation flights under Operation Metro Surge.
-
-Nick...
 
 **[BLUESKY]** 21 likes, 1 reposts
 > Scientists just caught footage of a sleeper shark cruising Antarctic waters at 3...
@@ -47,6 +42,9 @@ Nick...
 **[BLUESKY]** 6 likes, 1 reposts
 > Buddhist monks finished a 108-day, 2,300-mile walk for peace from Texas to DC. T...
 
+**[BLUESKY]** 4 likes, 2 reposts
+> Commerce Secretary Lutnick admits taking his whole family to lunch on Epstein's ...
+
 ---
 
-*Data snapshots: 4636 total across 405 posts*
+*Data snapshots: 4582 total across 398 posts*
