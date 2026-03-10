@@ -1664,6 +1664,11 @@
       "did": "did:plc:5t5iwhhbfoggocteqyusnlg3",
       "handle": "kay2m.bsky.social",
       "timestamp": "2026-03-10T03:49:28.238125"
+    },
+    {
+      "did": "did:plc:d6yhqoiofudgblhpibym6fgs",
+      "handle": "deadboycafe.bsky.social",
+      "timestamp": "2026-03-10T06:20:25.317806"
     }
   ],
   "liked_posts": [
@@ -15601,6 +15606,11 @@
       "uri": "at://did:plc:5t5iwhhbfoggocteqyusnlg3/app.bsky.feed.post/3mgnwc7qu7c2q",
       "author": "kay2m.bsky.social",
       "timestamp": "2026-03-10T03:49:28.073457"
+    },
+    {
+      "uri": "at://did:plc:d6yhqoiofudgblhpibym6fgs/app.bsky.feed.post/3mgopgncnps2d",
+      "author": "deadboycafe.bsky.social",
+      "timestamp": "2026-03-10T06:20:25.213482"
     }
   ],
   "last_cleanup": "2026-03-06T06:20:24.524946",
