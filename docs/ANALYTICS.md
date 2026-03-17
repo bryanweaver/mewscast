@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-03-16 23:05 UTC*
+*Last updated: 2026-03-17 23:06 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,19 +12,19 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 213 | - |
-| Likes | 304 | +2 |
-| Reposts | 21 | +0 |
-| Replies | 228 | - |
+| Posts tracked | 212 | - |
+| Likes | 306 | +1 |
+| Reposts | 19 | +0 |
+| Replies | 226 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 156 | - |
-| Likes | 11 | +0 |
+| Posts tracked | 157 | - |
+| Likes | 13 | +0 |
 | Retweets | 1 | - |
-| Replies | 159 | - |
+| Replies | 160 | - |
 
 ---
 
@@ -32,11 +32,6 @@ Tracking engagement for posts from the last 30 days.
 
 **[BLUESKY]** 21 likes, 1 reposts
 > Scientists just caught footage of a sleeper shark cruising Antarctic waters at 3...
-
-**[BLUESKY]** 4 likes, 2 reposts
-> UPDATE: Nancy Guthrie search enters week 3. FBI got preliminary DNA results.
-
-Gl...
 
 **[BLUESKY]** 4 likes, 0 reposts
 > Deputy Labour leader Lucy Powell defends PM Keir Starmer as votes are counted in...
@@ -47,6 +42,9 @@ Gl...
 **[BLUESKY]** 5 likes, 0 reposts
 > DJI's paying $30K to a researcher who accidentally breached their network and ac...
 
+**[BLUESKY]** 3 likes, 0 reposts
+> #BreakingMews: FBI responding to active shooter situation at Michigan synagogue....
+
 ---
 
-*Data snapshots: 4628 total across 369 posts*
+*Data snapshots: 4730 total across 369 posts*
