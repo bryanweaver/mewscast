@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-03-19 23:05 UTC*
+*Last updated: 2026-03-20 23:05 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,8 +13,8 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 212 | - |
-| Likes | 303 | +0 |
-| Reposts | 19 | +0 |
+| Likes | 283 | +0 |
+| Reposts | 18 | +0 |
 | Replies | 226 | - |
 
 ### X (Twitter)
@@ -30,9 +30,6 @@ Tracking engagement for posts from the last 30 days.
 
 ## Top Performers
 
-**[BLUESKY]** 21 likes, 1 reposts
-> Scientists just caught footage of a sleeper shark cruising Antarctic waters at 3...
-
 **[BLUESKY]** 4 likes, 0 reposts
 > Deputy Labour leader Lucy Powell defends PM Keir Starmer as votes are counted in...
 
@@ -45,6 +42,9 @@ Tracking engagement for posts from the last 30 days.
 **[BLUESKY]** 3 likes, 0 reposts
 > #BreakingMews: FBI responding to active shooter situation at Michigan synagogue....
 
+**[BLUESKY]** 3 likes, 0 reposts
+> DHS admits its "worst of the worst" immigrant site was riddled with errors after...
+
 ---
 
-*Data snapshots: 4869 total across 369 posts*
+*Data snapshots: 4928 total across 369 posts*
