@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-03-21 23:03 UTC*
+*Last updated: 2026-03-22 23:04 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,19 +12,19 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 212 | - |
-| Likes | 276 | +0 |
-| Reposts | 17 | +0 |
-| Replies | 226 | - |
+| Posts tracked | 209 | - |
+| Likes | 267 | +0 |
+| Reposts | 16 | +0 |
+| Replies | 221 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 157 | - |
-| Likes | 11 | +0 |
+| Posts tracked | 154 | - |
+| Likes | 10 | -1 |
 | Retweets | 1 | - |
-| Replies | 159 | - |
+| Replies | 156 | - |
 
 ---
 
@@ -42,9 +42,9 @@ Tracking engagement for posts from the last 30 days.
 **[BLUESKY]** 3 likes, 0 reposts
 > #BreakingMews: FBI responding to active shooter situation at Michigan synagogue....
 
-**[BLUESKY]** 3 likes, 0 reposts
-> DHS admits its "worst of the worst" immigrant site was riddled with errors after...
+**[BLUESKY]** 4 likes, 0 reposts
+> Retired four-star Gen. Stanley McChrystal showed up to honor five trans service ...
 
 ---
 
-*Data snapshots: 4980 total across 369 posts*
+*Data snapshots: 4881 total across 363 posts*
