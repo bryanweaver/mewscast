@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-03-22 23:04 UTC*
+*Last updated: 2026-03-23 23:06 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,19 +12,19 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 209 | - |
-| Likes | 267 | +0 |
-| Reposts | 16 | +0 |
-| Replies | 221 | - |
+| Posts tracked | 208 | - |
+| Likes | 261 | +2 |
+| Reposts | 15 | +0 |
+| Replies | 220 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 154 | - |
-| Likes | 10 | -1 |
+| Posts tracked | 153 | - |
+| Likes | 12 | +1 |
 | Retweets | 1 | - |
-| Replies | 156 | - |
+| Replies | 155 | - |
 
 ---
 
@@ -42,9 +42,11 @@ Tracking engagement for posts from the last 30 days.
 **[BLUESKY]** 3 likes, 0 reposts
 > #BreakingMews: FBI responding to active shooter situation at Michigan synagogue....
 
-**[BLUESKY]** 4 likes, 0 reposts
-> Retired four-star Gen. Stanley McChrystal showed up to honor five trans service ...
+**[BLUESKY]** 4 likes, 1 reposts
+> SAVE Act likely dead in Senate, but GOP states aren't waiting.
+
+Florida, South D...
 
 ---
 
-*Data snapshots: 4881 total across 363 posts*
+*Data snapshots: 4864 total across 361 posts*
