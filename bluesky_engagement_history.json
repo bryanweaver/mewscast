@@ -1734,6 +1734,11 @@
       "did": "did:plc:zgqlhvh5lhc4duc6vm56nis5",
       "handle": "hellafitzgerald.bsky.social",
       "timestamp": "2026-03-25T12:21:59.191393"
+    },
+    {
+      "did": "did:plc:sjh77dnd7s7ye3mc77p7vam3",
+      "handle": "that-carrot.bsky.social",
+      "timestamp": "2026-03-25T15:30:51.565988"
     }
   ],
   "liked_posts": [
@@ -16271,6 +16276,11 @@
       "uri": "at://did:plc:zgqlhvh5lhc4duc6vm56nis5/app.bsky.feed.post/3mhuwdlplic2b",
       "author": "hellafitzgerald.bsky.social",
       "timestamp": "2026-03-25T12:21:59.006536"
+    },
+    {
+      "uri": "at://did:plc:sjh77dnd7s7ye3mc77p7vam3/app.bsky.feed.post/3mhtm7urzr22d",
+      "author": "that-carrot.bsky.social",
+      "timestamp": "2026-03-25T15:30:51.389188"
     }
   ],
   "last_cleanup": "2026-03-20T06:23:46.561966",
