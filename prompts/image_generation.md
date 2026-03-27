@@ -37,6 +37,8 @@ Your #1 job is to extract SPECIFIC visual details from the article that make THI
 - Walter can WEAR things (press badge, hat) but NOT hold things in his paws
 - NO object-limb fusion — a gavel is next to him, not in his paw
 - ALWAYS include: "realistic cat anatomy" somewhere in the prompt
+- If Walter wears a press badge, it MUST read "PRESS" and "Walter Croncat" — NEVER use any other name or publication name on the badge
+- NEVER put random text, other names, or news outlet names on Walter's badge — it is ALWAYS "PRESS / Walter Croncat"
 
 ## MAKE IT SCROLL-STOPPING
 - Use BOLD, SATURATED colors — not muted or washed out
