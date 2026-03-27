@@ -39,7 +39,7 @@ class ImageGenerator:
             print(f"   Prompt: {prompt[:80]}...")
 
             # Prepend anatomy anchor to every prompt to reduce deformities
-            anchored_prompt = f"Photorealistic brown tabby cat with correct four-paw anatomy, no human hands or fingers. {prompt}"
+            anchored_prompt = f"Photorealistic brown tabby cat with correct four-paw anatomy, no human hands or fingers. Any press badge must read exactly 'PRESS' and 'Walter Croncat' only. {prompt}"
 
             # grok-imagine-image supports aspect_ratio natively via extra_body
             # No need for prompt engineering for landscape orientation
