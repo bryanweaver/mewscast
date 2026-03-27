@@ -254,7 +254,7 @@ content:
 
   # Content generation
   ai_provider: "anthropic"  # or "openai"
-  model: "claude-sonnet-4-6-20250514"  # Claude Sonnet 4.6 (latest)
+  model: "claude-sonnet-4-6"  # Claude Sonnet 4.6 (latest)
 
 # Special edition post types (manually triggered)
 special_posts:
