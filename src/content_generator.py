@@ -122,7 +122,7 @@ class ContentGenerator:
         # Build searchable text from headline + article content
         search_text = topic.lower()
         if article_details:
-            search_text += " " + article_details[:500].lower()
+            search_text += " " + article_details[:1500].lower()
 
         # Score each category by keyword hits
         category_scores = {}
@@ -664,7 +664,7 @@ class ContentGenerator:
 
         title = story_metadata.get('title', '')
         source = story_metadata.get('source', '')
-        content = story_metadata.get('article_content', '')[:800]  # Truncate for prompt
+        content = story_metadata.get('article_content', '')[:3000]  # Truncate for prompt
         framing_angle = media_issues.get('angle', '')
 
         article_text = f"Title: {title}\n{content}"
@@ -775,7 +775,7 @@ class ContentGenerator:
             # Build article context section if available
             article_section = ""
             if article_content:
-                truncated_content = article_content[:1500] if len(article_content) > 1500 else article_content
+                truncated_content = article_content[:3000] if len(article_content) > 3000 else article_content
                 article_section = f"""
 FULL ARTICLE CONTENT (extract visual details from this):
 {truncated_content}
@@ -790,7 +790,7 @@ FULL ARTICLE CONTENT (extract visual details from this):
 
             message = self.client.messages.create(
                 model=self.model,
-                max_tokens=200,  # Increased for more detailed, contextual prompts
+                max_tokens=350,  # Increased for more detailed, contextual prompts
                 messages=[
                     {"role": "user", "content": prompt_request}
                 ]
@@ -801,9 +801,9 @@ FULL ARTICLE CONTENT (extract visual details from this):
             # Remove quotes if Claude added them
             image_prompt = _strip_quotes(image_prompt)
 
-            # Limit to 200 chars for Grok
-            if len(image_prompt) > 200:
-                image_prompt = image_prompt[:200]
+            # Limit to 450 chars for Grok
+            if len(image_prompt) > 450:
+                image_prompt = image_prompt[:450]
 
             print(f"✓ Generated image prompt: {image_prompt}")
             return image_prompt

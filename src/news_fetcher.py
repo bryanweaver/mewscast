@@ -291,7 +291,7 @@ class NewsFetcher:
                         return None
 
                 # Truncate at sentence boundary instead of arbitrary char limit
-                article_content = _truncate_at_sentence(article_content, 1500)
+                article_content = _truncate_at_sentence(article_content, 6000)
 
                 print(f"   ✓ Extracted {len(article_content)} chars of article content")
                 return article_content

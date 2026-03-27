@@ -38,11 +38,14 @@ class ImageGenerator:
             print(f"🎨 Generating image with Grok...")
             print(f"   Prompt: {prompt[:80]}...")
 
+            # Prepend anatomy anchor to every prompt to reduce deformities
+            anchored_prompt = f"Photorealistic brown tabby cat with correct four-paw anatomy, no human hands or fingers. {prompt}"
+
             # grok-imagine-image supports aspect_ratio natively via extra_body
             # No need for prompt engineering for landscape orientation
             response = self.client.images.generate(
                 model=self.model,
-                prompt=prompt,
+                prompt=anchored_prompt,
                 n=1,
                 extra_body={"aspect_ratio": "16:9"}
             )
