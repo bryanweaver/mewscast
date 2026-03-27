@@ -21,7 +21,7 @@ class ImageGenerator:
             api_key=api_key,
             base_url="https://api.x.ai/v1"
         )
-        self.model = "grok-imagine-image"
+        self.model = "grok-imagine-image-pro"
 
     def generate_image(self, prompt: str, save_path: str = "temp_image.png") -> Optional[str]:
         """
@@ -47,7 +47,7 @@ class ImageGenerator:
                 model=self.model,
                 prompt=anchored_prompt,
                 n=1,
-                extra_body={"aspect_ratio": "16:9"}
+                extra_body={"aspect_ratio": "16:9", "resolution": "2k"}
             )
 
             # Get image URL from response
