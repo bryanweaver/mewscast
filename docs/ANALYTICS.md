@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-03-28 23:05 UTC*
+*Last updated: 2026-03-29 23:06 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,18 +13,18 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 209 | - |
-| Likes | 260 | +3 |
-| Reposts | 16 | +1 |
-| Replies | 219 | - |
+| Likes | 261 | -1 |
+| Reposts | 16 | +0 |
+| Replies | 218 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 159 | - |
+| Posts tracked | 160 | - |
 | Likes | 12 | +0 |
 | Retweets | 0 | - |
-| Replies | 159 | - |
+| Replies | 160 | - |
 
 ---
 
@@ -36,9 +36,6 @@ Tracking engagement for posts from the last 30 days.
 Oil up 25% since ...
 
 **[BLUESKY]** 4 likes, 0 reposts
-> Deputy Labour leader Lucy Powell defends PM Keir Starmer as votes are counted in...
-
-**[BLUESKY]** 4 likes, 0 reposts
 > Target's holiday quarter: revenue down, traffic down, but new CEO says sales tur...
 
 **[BLUESKY]** 5 likes, 0 reposts
@@ -47,6 +44,11 @@ Oil up 25% since ...
 **[BLUESKY]** 3 likes, 0 reposts
 > #BreakingMews: FBI responding to active shooter situation at Michigan synagogue....
 
+**[BLUESKY]** 4 likes, 1 reposts
+> SAVE Act likely dead in Senate, but GOP states aren't waiting.
+
+Florida, South D...
+
 ---
 
-*Data snapshots: 5046 total across 368 posts*
+*Data snapshots: 5065 total across 369 posts*
