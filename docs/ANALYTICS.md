@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-03-31 23:06 UTC*
+*Last updated: 2026-04-01 23:09 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -13,9 +13,9 @@ Tracking engagement for posts from the last 30 days.
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
 | Posts tracked | 209 | - |
-| Likes | 248 | +0 |
-| Reposts | 17 | +0 |
-| Replies | 218 | - |
+| Likes | 254 | +2 |
+| Reposts | 21 | +2 |
+| Replies | 217 | - |
 
 ### X (Twitter)
 
@@ -24,7 +24,7 @@ Tracking engagement for posts from the last 30 days.
 | Posts tracked | 165 | - |
 | Likes | 15 | +0 |
 | Retweets | 1 | - |
-| Replies | 165 | - |
+| Replies | 163 | - |
 
 ---
 
@@ -35,6 +35,11 @@ Tracking engagement for posts from the last 30 days.
 
 Oil up 25% since ...
 
+**[BLUESKY]** 5 likes, 2 reposts
+> Gas hit $4/gal nationally for the first time since 2022.
+
+Rideshare drivers are ...
+
 **[BLUESKY]** 4 likes, 0 reposts
 > Target's holiday quarter: revenue down, traffic down, but new CEO says sales tur...
 
@@ -44,11 +49,6 @@ Oil up 25% since ...
 **[BLUESKY]** 3 likes, 0 reposts
 > #BreakingMews: FBI responding to active shooter situation at Michigan synagogue....
 
-**[BLUESKY]** 4 likes, 1 reposts
-> SAVE Act likely dead in Senate, but GOP states aren't waiting.
-
-Florida, South D...
-
 ---
 
-*Data snapshots: 5180 total across 374 posts*
+*Data snapshots: 5181 total across 374 posts*
