@@ -35,6 +35,7 @@ class _Candidate:
     source_signals: list = None
     engagement: int = 0
     story_id: str = "test-id"
+    source: str = "x"
 
     def __post_init__(self):
         if self.source_signals is None:
@@ -209,3 +210,116 @@ class TestTriageFullPipeline:
         )
         passing = triage.triage([c])
         assert passing == []
+
+
+# ---------------------------------------------------------------------------
+# Regression tests for QA loop #1 bugs (expanded EVENT_TOKENS,
+# news_fetcher source field, news_fetcher multi-outlet credit)
+# ---------------------------------------------------------------------------
+
+class TestExpandedEventTokens:
+    """Headlines that were hard-rejected in QA loop #1 because their event
+    verbs were missing from EVENT_TOKENS. These should now be recognized."""
+
+    def test_guilty_plea_is_event(self, triage):
+        c = _Candidate(
+            headline_seed="Rex Heuermann Pleads Guilty to Gilgo Beach Serial Killings",
+            source_signals=["Reuters", "AP"],
+        )
+        score, reasons = triage._heuristic_score(c)
+        assert "event-verb" in reasons, f"'pleads guilty' should be an event verb: {reasons}"
+        assert score >= 3
+
+    def test_declares_is_event(self, triage):
+        c = _Candidate(
+            headline_seed="Hegseth declares victory in Iran",
+            source_signals=["Reuters", "AP"],
+        )
+        _, reasons = triage._heuristic_score(c)
+        assert "event-verb" in reasons
+
+    def test_wins_is_event(self, triage):
+        c = _Candidate(
+            headline_seed="Chris Taylor wins Wisconsin Supreme Court race",
+            source_signals=["Reuters", "AP"],
+        )
+        _, reasons = triage._heuristic_score(c)
+        assert "event-verb" in reasons
+
+    def test_charged_is_event(self, triage):
+        c = _Candidate(
+            headline_seed="Former official charged with perjury in grand jury probe",
+            source_signals=["Reuters"],
+        )
+        _, reasons = triage._heuristic_score(c)
+        assert "event-verb" in reasons
+
+
+class TestNewsFetcherSource:
+    """Regression for Bug 2b — NewsFetcher-fallback candidates are single-
+    signal by construction (one URL per top-story) but Google News top-
+    stories is itself a curated aggregation. They should not trip the
+    single_signal hard-reject and should get multi-outlet credit in scoring."""
+
+    def test_news_fetcher_single_signal_no_event_is_not_hard_rejected(self, triage):
+        # Without the source=news_fetcher flag, this would be hard-rejected:
+        # single_signal + no event verb + no accountability.
+        c = _Candidate(
+            headline_seed="Nakasaki Arts Festival opens Thursday",
+            source_signals=["theguardian.com"],
+            source="news_fetcher",
+        )
+        assert triage._is_hard_reject(c) is False
+
+    def test_news_fetcher_gets_multi_outlet_credit(self, triage):
+        c = _Candidate(
+            headline_seed="Israeli attack kills Al Jazeera journalist Mohammed Wishah",
+            source_signals=["aljazeera.com"],
+            source="news_fetcher",
+        )
+        score, reasons = triage._heuristic_score(c)
+        # Should fire multi-outlet(google-news-curated)
+        assert any("multi-outlet" in r for r in reasons), f"expected multi-outlet credit: {reasons}"
+        # And the full score should now reach the threshold
+        assert score >= 3, f"news_fetcher candidate with event+impact+checkable should pass: {reasons}"
+
+    def test_x_single_signal_still_hard_rejected(self, triage):
+        # Same headline as above but as an X candidate — still gets hard rejected
+        # because we only relax the rule for news_fetcher candidates.
+        c = _Candidate(
+            headline_seed="Nakasaki Arts Festival opens Thursday",
+            source_signals=["RandomTwitterHandle"],
+            source="x",
+        )
+        assert triage._is_hard_reject(c) is True
+
+    def test_news_fetcher_gossip_still_rejected(self, triage):
+        # Gossip rejection is unconditional — news_fetcher tag does not
+        # whitelist celebrity coverage.
+        c = _Candidate(
+            headline_seed="Kim Kardashian seen wearing new outfit at premiere",
+            source_signals=["nypost.com"],
+            source="news_fetcher",
+        )
+        assert triage._is_hard_reject(c) is True
+
+    def test_rex_heuermann_end_to_end_passes(self, triage):
+        """The canonical QA loop #1 failure case — guilty plea from a
+        NewsFetcher-fallback candidate. Should pass triage end-to-end."""
+        c = _Candidate(
+            headline_seed="Rex Heuermann Pleads Guilty to Gilgo Beach Serial Killings",
+            source_signals=["nypost.com"],
+            source="news_fetcher",
+        )
+        passing = triage.triage([c])
+        assert len(passing) == 1, "Rex Heuermann guilty plea should pass triage"
+
+    def test_chris_taylor_end_to_end_passes(self, triage):
+        """Another QA loop #1 failure — election win from NewsFetcher fallback."""
+        c = _Candidate(
+            headline_seed="Chris Taylor wins Wisconsin Supreme Court race, expanding liberal majority",
+            source_signals=["wpr.org"],
+            source="news_fetcher",
+        )
+        passing = triage.triage([c])
+        assert len(passing) == 1, "Chris Taylor Supreme Court win should pass triage"
