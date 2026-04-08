@@ -233,10 +233,24 @@ class VerificationGate:
                     f"signoff_matches_type: {draft.post_type.value} posts must NOT end "
                     f"with any sign-off; found '{other}' at the end"
                 )
-        # Belt-and-suspenders: forbid the substring "And that's the mews"
-        # anywhere in the body of a BULLETIN/CORRECTION. Even mid-paragraph
-        # use would dilute the brand of the sign-off.
-        if "And that's the mews" in (draft.text or ""):
+        # Belt-and-suspenders: forbid ANY sign-off string (from any post type)
+        # anywhere in the body of a BULLETIN/CORRECTION, not just at the end.
+        # A sign-off phrase buried mid-paragraph is still brand dilution and
+        # still blurs the report/opinion line — Cronkite's withholding rule
+        # applies to the phrase itself, not just its placement.
+        body = draft.text or ""
+        all_sign_off_phrases = [v for v in SIGN_OFFS.values() if v is not None]
+        for so in all_sign_off_phrases:
+            if so in body:
+                return False, (
+                    f"signoff_matches_type: {draft.post_type.value} posts must NOT contain "
+                    f"any sign-off phrase anywhere in the body; found '{so}'"
+                )
+        # Extra paranoia: the REPORT/META phrase "And that's the mews" as a
+        # stem (without the trailing punctuation) is also forbidden, because
+        # a composer could write "And that's the mews for now" and escape
+        # the exact-match check above.
+        if "And that's the mews" in body:
             return False, (
                 f"signoff_matches_type: {draft.post_type.value} posts must NOT contain "
                 f"\"And that's the mews\" anywhere in the body"

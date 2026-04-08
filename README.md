@@ -61,8 +61,8 @@ AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky
 - **Source Attribution**: Always posts source links as replies for transparency
 
 ### In-Progress Features
-- **Battle Posts** (not yet working): Side-by-side comparison of how two news sources cover the same story, with AI-generated split-screen cat images
 - **Positive Mews** (needs minor fixes): Dedicated positive/uplifting news posts to balance out the regular news cycle
+- **Walter Croncat Journalism Workflow** (shipped behind a master switch — see below): a 7-stage Cronkite-modeled pipeline that reads X for trending stories, gathers coverage across multiple outlets plus primary sources, runs a meta-analysis, and files a journalism-grade post. Currently runnable in dry-run mode. The legacy `battle_post` feature has been removed and replaced by the `META` post type inside this pipeline.
 
 ### Automation & Cost
 - **GitHub Actions**: Free automated posting (7 posts/day)
@@ -80,6 +80,75 @@ AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky
 - **Bluesky**: FREE (no API costs)
 
 **Total: $20-50/month** (varies with posting frequency)
+
+## Walter Croncat Journalism Workflow
+
+A Cronkite-modeled journalism pipeline that turns Walter Croncat from a generic AI news bot into a real journalistic endeavor. Instead of reacting to a single article, Croncat reads X for what's trending, gathers how the same event is being reported across 5–10 outlets plus the primary source, performs a meta-analysis of the coverage, and files a post modeled on Cronkite's actual methods.
+
+The full design is in [`docs/Croncat_Journalism_Workflow.md`](docs/Croncat_Journalism_Workflow.md) and the underlying research on Cronkite's journalism is in [`docs/Walter_Cronkite_Report.md`](docs/Walter_Cronkite_Report.md).
+
+### The 7 stages
+
+1. **Trend detection** (`src/trend_detector.py`) — X `search_recent_tweets` over a curated outlet watchlist, with Google News fallback.
+2. **Story triage** (`src/story_triage.py`) — need-to-know heuristic filter.
+3. **Source gather** (`src/source_gatherer.py` + `src/primary_source_finder.py`) — slant-diverse multi-outlet fetch plus primary source pattern matching (congress.gov, SCOTUS, federalregister.gov, SEC filings, .gov PDFs).
+4. **Meta-analysis** (`src/meta_analyzer.py`) — Claude Opus call producing a structured `MetaAnalysisBrief` comparing how outlets are framing the same event.
+5. **Post composition** (`src/post_composer.py`) — dispatcher across 6 post types, each with its own prompt.
+6. **Verification gate** (`src/verification_gate.py`) — hard rules enforcing journalism discipline, including the keystone sign-off rule.
+7. **Publish / dry-run** (`src/main.post_journalism_cycle`) — publish to X and Bluesky, or write a draft to `drafts/` under `--dry-run`.
+
+### The 6 post types and their sign-offs
+
+| Post type | Sign-off | Purpose |
+|---|---|---|
+| `REPORT` | `And that's the mews.` | Straight news, the default |
+| `META` | `And that's the mews — coverage report.` | Coverage analysis comparing how outlets are reporting the same event (the flagship — replaces `battle_post`) |
+| `ANALYSIS` | `This cat's view — speculative, personal, subjective.` | Rare, explicitly labeled commentary |
+| `BULLETIN` | *(no sign-off)* | Single-source breaking news — deliberately unsigned per Cronkite's practice |
+| `CORRECTION` | *(no sign-off)* | Self-correction, pinned after publishing |
+| `PRIMARY` | `And that's the mews — straight from the source.` | Primary-document spotlight |
+
+### The keystone rule
+
+Walter Cronkite omitted "And that's the way it is" on nights he had closed his broadcast with commentary, because the sign-off was the seal of a straight report. Walter Croncat enforces the same discipline mechanically in `src/verification_gate.py::_check_signoff_matches_type` — a post's sign-off must match its post type exactly, and BULLETIN/CORRECTION posts must not contain any sign-off phrase anywhere in the body. This is the single most load-bearing rule in the whole pipeline.
+
+### Master switch
+
+The workflow is off by default. Flip it on in `config.yaml`:
+
+```yaml
+journalism:
+  enabled: false   # set to true only after a week of dry-run validation
+```
+
+`--dry-run` is always allowed regardless of the master switch.
+
+### CLI
+
+```bash
+# Run one journalism cycle (uses brief's suggested post type)
+python src/main.py journalism
+
+# Dry-run — writes a draft to drafts/<story_id>_<post_type>.md instead of publishing
+python src/main.py journalism --dry-run
+
+# Force a specific post type
+python src/main.py journalism brief [--dry-run]        # REPORT
+python src/main.py journalism meta [--dry-run]         # META (the flagship)
+python src/main.py journalism analysis [--dry-run]     # ANALYSIS (use sparingly)
+python src/main.py journalism bulletin [--dry-run]     # BULLETIN
+python src/main.py journalism correction [--dry-run]   # CORRECTION
+python src/main.py journalism primary [--dry-run]      # PRIMARY
+
+# Offline end-to-end smoke test (stubs out the X, Google News, and Claude calls)
+python scripts/journalism_dry_run.py --mock
+```
+
+Rejected drafts (verification gate failures after one retry) land in `drafts/rejected/`.
+
+### Story dossiers
+
+Every story run through the pipeline produces a `StoryDossier` and a `MetaAnalysisBrief` that are written to `dossiers/<story_id>.json`. The directory is gitignored for now; Phase 4 of the plan will publish these as a public audit trail (open-source journalism, not just open-source code).
 
 ## Quick Start
 
@@ -262,29 +331,60 @@ mewscast/
 │       ├── engage-cats.yml     # X engagement automation
 │       └── engage-cats-bluesky.yml  # Bluesky engagement
 ├── src/                    # Source code
-│   ├── main.py                 # Main entry point
+│   ├── main.py                 # Main entry point (legacy + journalism modes)
 │   ├── twitter_bot.py          # X/Twitter API integration
 │   ├── bluesky_bot.py          # Bluesky API integration
-│   ├── content_generator.py    # AI content generation (Claude) + media literacy
+│   ├── content_generator.py    # Legacy content generation (Claude)
 │   ├── image_generator.py      # AI image generation (Grok)
 │   ├── news_fetcher.py         # Google News RSS fetching
-│   ├── post_tracker.py         # Deduplication & history
+│   ├── post_tracker.py         # Deduplication & history (extended with dossier_id/post_type)
 │   ├── engagement_bot.py       # Engagement automation
-│   ├── battle_post.py          # Battle posts - WIP
-│   ├── battle_image.py         # Battle image generation - WIP
-│   ├── battle_dry_run.py       # Battle dry run testing - WIP
-│   └── positive_news_post.py   # Positive news posts - WIP
+│   ├── positive_news_post.py   # Positive news posts - WIP
+│   │
+│   ├── # Walter Croncat journalism workflow (Stages 1–7)
+│   ├── trend_detector.py       # Stage 1 — X search + watchlist
+│   ├── story_triage.py         # Stage 2 — need-to-know filter
+│   ├── source_gatherer.py      # Stage 3 — multi-outlet gather
+│   ├── primary_source_finder.py # Stage 3 — primary source pattern matcher
+│   ├── meta_analyzer.py        # Stage 4 — Claude Opus meta-analysis
+│   ├── post_composer.py        # Stage 5 — dispatcher across 6 post types
+│   ├── verification_gate.py    # Stage 6 — hard rules incl. keystone sign-off rule
+│   └── dossier_store.py        # Data classes, SIGN_OFFS, JSON persistence
+├── prompts/                # Claude prompt templates
+│   ├── tweet_generation.md     # Legacy tweet prompt
+│   ├── analyze_framing.md      # Legacy framing analysis
+│   ├── meta_analysis.md        # Stage 4 meta-analysis prompt
+│   ├── report_post.md          # REPORT post type
+│   ├── meta_post.md            # META post type (flagship)
+│   ├── analysis_post.md        # ANALYSIS post type
+│   ├── bulletin_post.md        # BULLETIN post type
+│   ├── correction_post.md      # CORRECTION post type
+│   └── primary_post.md         # PRIMARY post type
 ├── tests/                  # Test suite
 │   ├── __init__.py             # Test package initialization
 │   ├── test_deduplication.py   # Post deduplication logic (71 tests)
 │   ├── test_engagement.py      # Engagement bot behavior (95 tests)
 │   ├── test_content_generator.py  # Content generation pipeline (114 tests)
-│   └── test_bots.py            # Bot posting pipeline (118 tests)
+│   ├── test_bots.py            # Bot posting pipeline (118 tests)
+│   │
+│   ├── # Journalism workflow tests
+│   ├── test_dossier_store.py       # Data classes + persistence (28 tests)
+│   ├── test_verification_gate.py   # Hard rules incl. keystone matrix (40 tests)
+│   ├── test_trend_detector.py      # Stage 1 (18 tests)
+│   ├── test_story_triage.py        # Stage 2 (15 tests)
+│   ├── test_source_gatherer.py     # Stage 3 (9 tests)
+│   ├── test_primary_source_finder.py # Stage 3 helper (18 tests)
+│   ├── test_meta_analyzer.py       # Stage 4 (14 tests)
+│   └── test_post_composer.py       # Stage 5 (21 tests)
 ├── docs/                   # Documentation (see Documentation section)
 ├── scripts/                # Utility scripts
 │   ├── rebuild_history.py      # Rebuild post history from X
-│   └── filter_history.py       # Clean up post history
-├── config.yaml             # Bot configuration
+│   ├── filter_history.py       # Clean up post history
+│   └── journalism_dry_run.py   # End-to-end smoke test for the journalism pipeline
+├── dossiers/               # Story dossiers written by the pipeline (gitignored)
+├── drafts/                 # Dry-run drafts (gitignored)
+├── outlet_registry.yaml    # 30-outlet curated watchlist for the journalism workflow
+├── config.yaml             # Bot configuration (includes `journalism:` section)
 ├── posts_history.json      # Post deduplication history
 ├── bluesky_engagement_history.json  # Bluesky follows/likes
 ├── requirements.txt        # Python dependencies
@@ -337,12 +437,25 @@ pytest tests/ --cov=src --cov-report=html
 
 ### Test Coverage
 
-The project includes a comprehensive test suite of 398 tests across 4 test files, covering all source modules:
+The project includes **562+ tests across 12 test files** covering legacy modules plus the Walter Croncat journalism workflow:
 
+**Legacy modules (398 tests):**
 - **Deduplication Logic** (`test_deduplication.py`, 71 tests): URL matching, topic/content similarity, story clustering, update detection, and post history management
 - **Engagement Bots** (`test_engagement.py`, 95 tests): Target filtering, history tracking, follow-ratio checks, repost logic, engagement cycle orchestration, and API error handling for both X/Twitter and Bluesky bots
 - **Content Generation Pipeline** (`test_content_generator.py`, 114 tests): ContentGenerator, PromptLoader, and NewsFetcher — AI response validation, character limit enforcement, and retry logic
 - **Bot Posting Pipeline** (`test_bots.py`, 118 tests): Bluesky bot, Twitter/X bot, image generator, configuration loading, and main pipeline orchestration
+
+**Journalism workflow (164 tests):**
+- **Dossier Store** (`test_dossier_store.py`, 28 tests): Dataclass round-trip, SIGN_OFFS lookup, JSON persistence, schema correctness
+- **Verification Gate** (`test_verification_gate.py`, 40 tests): The keystone sign-off-matches-type matrix covering every post type + cross-contamination cases, plus source count, outlet-in-body, editorial word filter, hedge attribution, and char limit checks
+- **Trend Detector** (`test_trend_detector.py`, 18 tests): Watchlist query construction, tweet clustering, NewsFetcher fallback
+- **Story Triage** (`test_story_triage.py`, 15 tests): Heuristic scoring, hard-reject paths, pass-threshold behavior
+- **Source Gatherer** (`test_source_gatherer.py`, 9 tests): Slant diversity, wire-derivation, dossier well-formedness
+- **Primary Source Finder** (`test_primary_source_finder.py`, 18 tests): Pattern matching for congress.gov, SCOTUS, federalregister.gov, BLS, SEC, White House, generic .gov PDFs
+- **Meta-Analyzer** (`test_meta_analyzer.py`, 14 tests): Prompt construction, JSON parsing (clean/fenced/prose), retry logic, graceful failure
+- **Post Composer** (`test_post_composer.py`, 21 tests): Per-type prompt dispatch, sign-off metadata, correction_inputs threading, retry_reasons injection
+
+**Note:** Running `pytest tests/` currently reports a small number of failures due to a pre-existing test-isolation bug between `test_bots.py` and `test_content_generator.py` (the former installs a `sys.modules['bs4']` mock at import time that breaks the latter when run in the same process). All files pass cleanly when run individually. This predates the journalism workflow and is tracked as follow-up cleanup.
 
 ### Writing New Tests
 

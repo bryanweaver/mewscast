@@ -7,6 +7,7 @@ import requests
 from typing import List, Dict, Optional
 import time
 import re
+from urllib.parse import quote_plus
 from googlenewsdecoder import gnewsdecoder
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -392,8 +393,11 @@ class NewsFetcher:
             List of article dictionaries with 'title', 'description', 'url', 'source'
         """
         try:
-            # Build Google News RSS search URL
-            search_query = topic.replace(' ', '+')
+            # Build Google News RSS search URL. Use urllib.parse.quote_plus so
+            # trend-detector-derived headline seeds (which may contain
+            # punctuation, $, :, &, non-ASCII chars) encode cleanly rather
+            # than producing a malformed RSS URL.
+            search_query = quote_plus(topic)
             rss_url = f"https://news.google.com/rss/search?q={search_query}&hl=en-US&gl=US&ceid=US:en"
 
             print(f"🔍 Searching Google News RSS for: {topic}")
