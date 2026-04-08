@@ -661,7 +661,13 @@ def post_journalism_cycle(
         with this one (used by the `journalism brief|meta|bulletin|correction`
         CLI modes for deterministic per-type cycles).
 
-    Returns True on success (publish or draft write), False on failure.
+    Returns:
+      True: the cycle ran to completion. This may mean a post was published
+        or a draft written, OR that there were no newsworthy candidates this
+        cycle (a legitimate no-op — Cronkite himself would sometimes not have
+        enough for a story).
+      False: an actual error occurred — meta-analysis crashed, verification
+        gate could not evaluate, the publish path failed on all platforms, etc.
     """
     print(f"\n{'=' * 60}")
     print(f"Walter Croncat journalism cycle — {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
@@ -710,18 +716,27 @@ def post_journalism_cycle(
         journalism_cfg.get("outlet_registry", "outlet_registry.yaml"),
     )
 
-    # ---- Bot / fetcher init (bots only needed for real publish) -----------
+    # ---- Bot / fetcher init -----------------------------------------------
+    # TwitterBot is initialized in BOTH dry-run and publish mode because
+    # Stage 1 trend detection reads X regardless of whether we intend to
+    # publish. If TwitterBot init fails (e.g. missing credentials), we log
+    # and fall through — TrendDetector will gracefully fall back to
+    # NewsFetcher. Bluesky stays publish-only: it is never used for trend
+    # detection, only for posting.
     twitter_bot = None
     bluesky_bot = None
     generator = None
     tracker = None
+
+    print("[journalism] Initializing TwitterBot for trend detection...")
+    try:
+        twitter_bot = TwitterBot()
+    except Exception as e:
+        print(f"[journalism] X bot init failed: {e} — Stage 1 will fall back to NewsFetcher")
+        twitter_bot = None
+
     if not dry_run:
-        print("[journalism] Initializing bots + content generator for publish mode...")
-        try:
-            twitter_bot = TwitterBot()
-        except Exception as e:
-            print(f"[journalism] X bot init failed: {e}")
-            twitter_bot = None
+        print("[journalism] Initializing Bluesky + content generator for publish mode...")
         try:
             bluesky_bot = BlueskyBot()
         except Exception as e:
@@ -762,16 +777,16 @@ def post_journalism_cycle(
     candidates = trend_detector.detect_trends(max_candidates=max_candidates)
     print(f"[journalism] Stage 1 yielded {len(candidates)} candidates")
     if not candidates:
-        print("[journalism] no candidates from Stage 1; exiting cleanly")
-        return False
+        print("[journalism] no candidates from Stage 1 — clean exit, nothing to post this cycle")
+        return True
 
     # ---- Stage 2: triage --------------------------------------------------
     print("[journalism] Stage 2 — triaging candidates")
     passed = story_triage.triage(candidates)
     print(f"[journalism] Stage 2 passed {len(passed)} / {len(candidates)}")
     if not passed:
-        print("[journalism] no candidates passed triage; exiting cleanly")
-        return False
+        print("[journalism] no candidates passed triage — clean exit, nothing to post this cycle")
+        return True
 
     # One cycle = one post. Take the top candidate.
     candidate = passed[0]

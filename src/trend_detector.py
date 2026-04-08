@@ -44,6 +44,11 @@ class TrendCandidate:
     source_signals: list[str]      # Outlet handles that posted about this cluster
     engagement: int                # Sum of like + retweet + reply across cluster
     story_id: str                  # Stable hash for dossier_store filenames
+    source: str = "x"              # "x" = clustered from X tweets, "news_fetcher" = Google News fallback.
+    #                                Stage 2 triage uses this to relax the single-signal hard-reject
+    #                                for NewsFetcher-fallback candidates (each top-story is one URL
+    #                                from one outlet by construction, but Google News top-stories
+    #                                is itself a curated aggregation).
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -393,6 +398,7 @@ class TrendDetector:
                 source_signals=[source] if source else [],
                 engagement=0,  # NewsFetcher doesn't expose engagement metrics
                 story_id=_stable_story_id(title, detected_at),
+                source="news_fetcher",
             ))
         return out
 

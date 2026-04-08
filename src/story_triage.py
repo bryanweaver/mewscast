@@ -52,6 +52,13 @@ EVENT_TOKENS = {
     "outbreak", "recall", "recalls", "shutdown", "deadline", "approved",
     "denied", "blocked", "grants", "granted", "raid", "raided",
     "decision", "decided", "issued", "issues", "report", "reports",
+    # Added after QA loop #1 — these were obviously events but missed.
+    "pleads", "plea", "guilty", "declares", "declared",
+    "wins", "won", "identified", "dismisses", "dismissed",
+    "denies", "steps down", "stepped down",
+    "confirms", "confirmed", "admits", "admitted",
+    "testifies", "testified", "charged", "charges",
+    "sues", "sued",
 }
 
 # Tokens that suggest health/safety/rights/money impact on a population
@@ -175,13 +182,21 @@ class StoryTriage:
         readable strings explaining which checks fired.
         """
         text = (candidate.headline_seed or "").lower()
+        is_news_fetcher = getattr(candidate, "source", "x") == "news_fetcher"
         score = 0
         reasons: list[str] = []
 
         # 1. Multi-outlet reporting
+        # NewsFetcher-fallback candidates come from Google News top-stories,
+        # which is itself a curated aggregation across outlets — treat each
+        # one as multi-outlet by construction even though source_signals has
+        # only the one URL source on it.
         if len(candidate.source_signals) >= 2:
             score += 1
             reasons.append(f"multi-outlet({len(candidate.source_signals)})")
+        elif is_news_fetcher:
+            score += 1
+            reasons.append("multi-outlet(google-news-curated)")
 
         # 2. Genuine change in the world (event verb present)
         if self._has_token(text, EVENT_TOKENS):
@@ -210,17 +225,26 @@ class StoryTriage:
     def _is_hard_reject(self, candidate: "TrendCandidate") -> bool:
         text = (candidate.headline_seed or "").lower()
         single_signal = len(candidate.source_signals) <= 1
+        # Candidates from the NewsFetcher fallback are single-signal by
+        # construction (each top-story is one URL from one outlet), but
+        # Google News top-stories is itself a curated aggregation — the
+        # "single_signal means one random tweet" heuristic does not apply.
+        # We treat news_fetcher candidates as if they had multi-outlet
+        # corroboration for the purpose of the single-signal hard-rejects.
+        is_news_fetcher = getattr(candidate, "source", "x") == "news_fetcher"
 
         # Pure celebrity gossip
         if self._has_token(text, GOSSIP_TOKENS) and not self._has_token(text, EVENT_TOKENS):
             return True
 
         # Single anonymous source with no corroboration
-        if single_signal and self._has_token(text, ANONYMOUS_TOKENS):
+        # (skipped for news_fetcher: Google News curation ~= corroboration)
+        if single_signal and not is_news_fetcher and self._has_token(text, ANONYMOUS_TOKENS):
             return True
 
         # Single tweet from one politician with no underlying event
-        if single_signal and not self._has_token(text, EVENT_TOKENS):
+        # (skipped for news_fetcher: each top-story is curated, not a raw tweet)
+        if single_signal and not is_news_fetcher and not self._has_token(text, EVENT_TOKENS):
             # Allow if the headline at least mentions an institution
             if not self._has_token(text, ACCOUNTABILITY_TOKENS):
                 return True

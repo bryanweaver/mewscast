@@ -242,6 +242,8 @@ class TestDetectViaX:
         assert senate is not None
         assert len(senate.source_signals) >= 2
         assert senate.engagement > 0
+        # X-path candidates default to source="x"
+        assert senate.source == "x"
 
     def test_x_api_failure_returns_empty_without_crashing(self, tmp_path):
         registry = tmp_path / "outlets.yaml"
@@ -303,6 +305,12 @@ class TestDetectTrendsFallback:
         candidates = detector.detect_trends(max_candidates=5)
         assert len(candidates) == 2
         assert any("Senate" in c.headline_seed for c in candidates)
+        # All fallback candidates should be tagged with source="news_fetcher"
+        # so Stage 2 triage can relax its single-signal hard-reject.
+        assert all(c.source == "news_fetcher" for c in candidates), (
+            f"expected source=news_fetcher on fallback candidates: "
+            f"{[c.source for c in candidates]}"
+        )
 
     def test_fallback_to_news_fetcher_on_x_failure(self, tmp_path):
         registry = tmp_path / "outlets.yaml"
