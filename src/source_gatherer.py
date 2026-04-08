@@ -38,6 +38,62 @@ if TYPE_CHECKING:
 WIRE_OUTLETS = {"reuters", "associated press", "ap news", "afp", "agence france-presse", "bloomberg"}
 
 
+# ---------------------------------------------------------------------------
+# Keyword extraction for Stage 3 search queries
+# ---------------------------------------------------------------------------
+# Rationale (Bug 4): passing a full 286-char headline_seed to Google News RSS
+# returns zero hits on anything non-trivial. We compress the headline down to
+# a handful of proper nouns + event verbs before querying, while keeping the
+# original headline intact for the dossier and downstream Opus/Sonnet calls.
+
+_SUFFIX_STRIP_RE = re.compile(r"\s*[-—|]\s*[A-Z][\w\s&.']+$")
+
+_FLUFF_PREFIXES = (
+    "BREAKING:",
+    "BREAKING NEWS:",
+    "LIVE UPDATES:",
+    "LIVE:",
+    "WATCH LIVE:",
+    "WATCH:",
+    "EXCLUSIVE:",
+    "UPDATE:",
+    "UPDATED:",
+    "DEVELOPING:",
+    "JUST IN:",
+)
+
+_SENTENCE_STARTERS = {
+    "The", "A", "An", "After", "Before", "This", "That", "These",
+    "Those", "Hours", "Days", "Weeks", "Now", "Here", "There", "When",
+    "While", "As", "If", "But", "And", "Or", "So", "Then", "Today",
+    "Yesterday", "Tomorrow",
+}
+
+_EVENT_VERBS = {
+    "passes", "passed", "vote", "voted", "wins", "won", "kills", "killed",
+    "struck", "strikes", "attacks", "attacked", "ceasefire", "announces",
+    "announced", "fires", "fired", "signs", "signed", "arrests", "arrested",
+    "declares", "declared", "rules", "ruled", "pleads", "guilty", "files",
+    "filed", "denies", "denied", "dismisses", "dismissed", "testifies",
+    "testified", "indicts", "indicted", "confirms", "confirmed", "admits",
+    "admitted",
+}
+
+_STRONG_NOUNS = {
+    "court", "senate", "congress", "president", "minister", "fire", "flood",
+    "earthquake", "election", "strike", "ceasefire", "verdict", "ruling",
+    "deal", "law", "bill",
+}
+
+_STOPWORDS = {
+    "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "from",
+    "with", "by", "as", "of", "for", "that", "this", "these", "those", "is",
+    "was", "are", "were", "be", "been", "being", "not", "however",
+}
+
+_TOKEN_SPLIT_RE = re.compile(r"[\s,;:!?()\[\]{}\"<>/\\]+")
+
+
 def _default_registry_path() -> str:
     here = os.path.dirname(os.path.abspath(__file__))
     return os.path.join(os.path.dirname(here), "outlet_registry.yaml")
@@ -120,7 +176,15 @@ class SourceGatherer:
         the final publish/no-publish call.
         """
         topic = candidate.headline_seed
-        articles_raw = self._fetch_articles(topic, max_articles=max(target_count * 2, 10))
+        topic_query = self._build_search_query(topic)
+        if not topic_query:
+            # Nothing extractable — fall back to the first 10 words of the original
+            topic_query = " ".join(topic.split()[:10])
+        print(
+            f"[source_gatherer] search query: {topic_query!r}  "
+            f"(from headline: {topic[:80]}...)"
+        )
+        articles_raw = self._fetch_articles(topic_query, max_articles=max(target_count * 2, 10))
 
         # Map sources to canonical outlet + slant
         slant_to_articles: dict[str, list[dict]] = {s: [] for s in self.REQUIRED_SLANTS}
@@ -202,6 +266,69 @@ class SourceGatherer:
         return dossier
 
     # ---- helpers -----------------------------------------------------------
+
+    @staticmethod
+    def _build_search_query(headline_seed: str) -> str:
+        """Compress a headline_seed down to a short Google News search query.
+
+        Heuristic-only (no LLM). Returns a space-separated string of at most
+        6 keyword tokens drawn from proper nouns, event verbs, and strong
+        nouns in the original headline, with outlet suffixes and fluff
+        prefixes stripped. Returns "" if nothing extractable is left; the
+        caller is expected to fall back on a truncated headline in that case.
+
+        Example:
+          in:  "Vote passes 68-32 - Reuters"
+          out: "Vote passes Reuters"  (or similar — exact ordering depends on
+                                       tokenization; the point is ≤6 tokens)
+        """
+        if not headline_seed:
+            return ""
+
+        # 1. Strip an outlet suffix like " - CNBC", " — Al Jazeera", " | Reuters"
+        stripped = _SUFFIX_STRIP_RE.sub("", headline_seed.strip(), count=1).strip()
+
+        # 2. Strip common fluff prefixes
+        upper_prefix = stripped.upper()
+        for pref in _FLUFF_PREFIXES:
+            if upper_prefix.startswith(pref):
+                stripped = stripped[len(pref):].lstrip()
+                break
+
+        # 3. Split on whitespace and punctuation
+        raw_tokens = [t for t in _TOKEN_SPLIT_RE.split(stripped) if t]
+
+        # 4-6. Keep proper nouns + event verbs + strong nouns, drop stopwords,
+        # dedupe while preserving order.
+        kept: list[str] = []
+        seen_lower: set[str] = set()
+        for raw in raw_tokens:
+            # Strip leading/trailing punctuation that survived the split
+            tok = raw.strip(".'\"`’‘")
+            if not tok:
+                continue
+            lower = tok.lower()
+            if lower in _STOPWORDS:
+                continue
+            if lower in seen_lower:
+                continue
+
+            is_proper = (
+                len(tok) >= 3
+                and tok[0].isupper()
+                and tok not in _SENTENCE_STARTERS
+            )
+            is_event_verb = lower in _EVENT_VERBS
+            is_strong_noun = lower in _STRONG_NOUNS
+
+            if is_proper or is_event_verb or is_strong_noun:
+                kept.append(tok)
+                seen_lower.add(lower)
+
+            if len(kept) >= 6:
+                break
+
+        return " ".join(kept)
 
     def _fetch_articles(self, topic: str, max_articles: int) -> list[dict]:
         if not self.news_fetcher:

@@ -803,6 +803,18 @@ def post_journalism_cycle(
 
     dossier_store.save_dossier(dossier)
 
+    # Bug 5 short-circuit: a 0-article dossier has nothing for Stage 4 to
+    # analyze. Burning Opus + Sonnet calls only to have Stage 6 reject on
+    # source_count is a waste. Treat this as a clean no-op cycle (same
+    # semantics as "no candidates passed triage").
+    if len(dossier.articles) == 0:
+        print(
+            f"[journalism] Stage 3 returned 0 articles for "
+            f"'{candidate.headline_seed[:80]}...' — clean exit, "
+            f"nothing to report on this cycle"
+        )
+        return True
+
     # ---- Stage 4: meta-analysis -------------------------------------------
     print("[journalism] Stage 4 — meta-analysis")
     try:
