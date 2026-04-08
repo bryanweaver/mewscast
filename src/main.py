@@ -708,6 +708,7 @@ def post_journalism_cycle(
     meta_model = meta_cfg.get("model", "claude-opus-4-6")
     composer_model = composer_cfg.get("model", "claude-sonnet-4-6")
     max_length = int(composer_cfg.get("max_length", 280))
+    long_form_max_length = int(composer_cfg.get("long_form_max_length", 4000))
     drafts_dir = os.path.join(_project_root(), dry_run_cfg.get("drafts_dir", "drafts"))
     os.makedirs(drafts_dir, exist_ok=True)
 
@@ -769,8 +770,15 @@ def post_journalism_cycle(
     )
     primary_finder = PrimarySourceFinder()
     meta_analyzer = MetaAnalyzer(model=meta_model)
-    post_composer = PostComposer(model=composer_model)
-    verification_gate = VerificationGate(max_length=max_length)
+    post_composer = PostComposer(
+        model=composer_model,
+        max_length=max_length,
+        long_form_max_length=long_form_max_length,
+    )
+    verification_gate = VerificationGate(
+        max_length=max_length,
+        long_form_max_length=long_form_max_length,
+    )
 
     # ---- Stage 1: trend detection -----------------------------------------
     print(f"\n[journalism] Stage 1 — detecting trends (max_candidates={max_candidates})")
@@ -832,11 +840,14 @@ def post_journalism_cycle(
     chosen_type = forced_post_type or brief.suggested_post_type
     print(f"[journalism] Stage 5 — composing {chosen_type.value} post")
     try:
+        # Don't pass max_length — let the composer pick the right budget
+        # per post type (long_form_max_length for META, max_length for the
+        # rest). Passing max_length=280 here is how the char_limit bug
+        # slipped in before.
         draft = post_composer.compose(
             brief=brief,
             dossier=dossier,
             post_type=chosen_type,
-            max_length=max_length,
         )
     except Exception as e:
         print(f"[journalism] Stage 5 failed: {e}")
@@ -853,7 +864,6 @@ def post_journalism_cycle(
                 brief=brief,
                 dossier=dossier,
                 post_type=chosen_type,
-                max_length=max_length,
                 retry_reasons=result.failures,
             )
         except Exception as e:

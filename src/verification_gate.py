@@ -77,8 +77,35 @@ class VerificationGate:
         PostType.CORRECTION,
     }
 
-    def __init__(self, max_length: int = 280):
+    # Post types that may use the X Premium long-form character budget.
+    # META is the flagship coverage-report format and is explicitly called
+    # out in the workflow doc Stage 6 table (line 269): "Long-form posts
+    # allowed via Premium for META and longer REPORT types." ANALYSIS is
+    # deliberately NOT here — the workflow doc's ANALYSIS example is short,
+    # and section 3 of the doc describes ANALYSIS as "used sparingly" with
+    # "rarity is the entire point". We keep ANALYSIS on the 280-char budget
+    # until there is a concrete counter-example that needs more room.
+    LONG_FORM_TYPES = {
+        PostType.META,
+    }
+
+    def __init__(
+        self,
+        max_length: int = 280,
+        long_form_max_length: int = 4000,
+    ):
         self.max_length = max_length
+        self.long_form_max_length = long_form_max_length
+
+    def _effective_max_length(self, post_type: PostType) -> int:
+        """Return the character budget for this post type.
+
+        META posts get the long-form budget (X Premium). Everything else
+        uses the standard 280-char budget.
+        """
+        if post_type in self.LONG_FORM_TYPES:
+            return self.long_form_max_length
+        return self.max_length
 
     # ---- public ------------------------------------------------------------
 
@@ -98,8 +125,10 @@ class VerificationGate:
             if not ok and reason:
                 failures.append(reason)
 
-        # _check_char_limit takes a max_length argument
-        ok, reason = self._check_char_limit(draft, max_length=self.max_length)
+        # _check_char_limit picks the right budget per post type —
+        # META gets long_form_max_length, everything else uses max_length.
+        effective_max = self._effective_max_length(draft.post_type)
+        ok, reason = self._check_char_limit(draft, max_length=effective_max)
         if not ok and reason:
             failures.append(reason)
 

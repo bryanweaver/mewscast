@@ -288,8 +288,135 @@ class TestRetryReasons:
 
 
 # ---------------------------------------------------------------------------
+# Per-post-type max_length passed to prompt template
+# ---------------------------------------------------------------------------
+
+class TestPerPostTypeMaxLength:
+    """Regression tests for the bug from QA loop 24160006065 where META
+    posts were composed under a 280-char budget even though
+    config.yaml has long_form_max_length: 4000. The composer must hand
+    the right `{max_length}` placeholder to each prompt template."""
+
+    def test_meta_post_receives_long_form_max_length(self, brief, dossier):
+        loader = _StubPromptLoader()
+        client = _FakeClaude("COVERAGE REPORT\n\nReuters ...\n\nAnd that's the mews — coverage report.")
+        composer = PostComposer(
+            anthropic_client=client,
+            prompt_loader=loader,
+            max_length=280,
+            long_form_max_length=4000,
+        )
+        composer.compose(brief=brief, dossier=dossier, post_type=PostType.META)
+        assert len(loader.calls) == 1
+        assert loader.calls[0][0] == "meta_post.md"
+        kwargs = loader.calls[0][1]
+        assert kwargs["max_length"] == 4000, (
+            f"META prompt must get long_form_max_length, got {kwargs['max_length']}"
+        )
+
+    def test_report_post_receives_standard_max_length(self, brief, dossier):
+        loader = _StubPromptLoader()
+        client = _FakeClaude("Reuters reports 68-32.\n\nAnd that's the mews.")
+        composer = PostComposer(
+            anthropic_client=client,
+            prompt_loader=loader,
+            max_length=280,
+            long_form_max_length=4000,
+        )
+        composer.compose(brief=brief, dossier=dossier, post_type=PostType.REPORT)
+        assert loader.calls[0][0] == "report_post.md"
+        kwargs = loader.calls[0][1]
+        assert kwargs["max_length"] == 280
+
+    @pytest.mark.parametrize(
+        "post_type,expected_max",
+        [
+            (PostType.REPORT, 280),
+            (PostType.ANALYSIS, 280),
+            (PostType.BULLETIN, 280),
+            (PostType.PRIMARY, 280),
+            (PostType.META, 4000),  # long-form
+        ],
+    )
+    def test_max_length_per_post_type(self, post_type, expected_max, brief, dossier):
+        loader = _StubPromptLoader()
+        client = _FakeClaude("some text")
+        composer = PostComposer(
+            anthropic_client=client,
+            prompt_loader=loader,
+            max_length=280,
+            long_form_max_length=4000,
+        )
+        composer.compose(brief=brief, dossier=dossier, post_type=post_type)
+        kwargs = loader.calls[0][1]
+        assert kwargs["max_length"] == expected_max, (
+            f"{post_type.value}: expected max_length={expected_max}, "
+            f"got {kwargs['max_length']}"
+        )
+
+    def test_correction_post_receives_standard_max_length(self, brief, dossier):
+        """CORRECTION builds its prompt via a different code path
+        (correction_inputs), so it also needs coverage."""
+        loader = _StubPromptLoader()
+        client = _FakeClaude("CORRECTION: ...")
+        composer = PostComposer(
+            anthropic_client=client,
+            prompt_loader=loader,
+            max_length=280,
+            long_form_max_length=4000,
+        )
+        composer.compose(
+            brief=brief,
+            dossier=dossier,
+            post_type=PostType.CORRECTION,
+            correction_inputs={
+                "original_post_text": "x",
+                "original_post_url": "y",
+                "wrong_claim": "w",
+                "corrected_claim": "c",
+                "corrected_source_outlet": "o",
+                "corrected_source_url": "u",
+            },
+        )
+        kwargs = loader.calls[0][1]
+        assert kwargs["max_length"] == 280
+
+    def test_explicit_max_length_overrides_per_type_default(self, brief, dossier):
+        """Tests and callers can still pass max_length= explicitly to
+        override the per-post-type default. Needed so the existing
+        smoke tests keep working."""
+        loader = _StubPromptLoader()
+        client = _FakeClaude("some text")
+        composer = PostComposer(
+            anthropic_client=client,
+            prompt_loader=loader,
+            max_length=280,
+            long_form_max_length=4000,
+        )
+        # Force a META post to compose under 280 explicitly.
+        composer.compose(
+            brief=brief, dossier=dossier,
+            post_type=PostType.META, max_length=280,
+        )
+        kwargs = loader.calls[0][1]
+        assert kwargs["max_length"] == 280, (
+            "Explicit max_length from caller must win over the per-type default"
+        )
+
+    def test_effective_max_length_helper(self):
+        composer = PostComposer(max_length=280, long_form_max_length=4000)
+        assert composer._effective_max_length(PostType.META) == 4000
+        assert composer._effective_max_length(PostType.REPORT) == 280
+        assert composer._effective_max_length(PostType.ANALYSIS) == 280
+        assert composer._effective_max_length(PostType.BULLETIN) == 280
+        assert composer._effective_max_length(PostType.CORRECTION) == 280
+        assert composer._effective_max_length(PostType.PRIMARY) == 280
+
+
+# ---------------------------------------------------------------------------
 # Error handling + quote stripping
 # ---------------------------------------------------------------------------
+
 
 class TestErrorHandling:
     def test_claude_failure_raises_runtimeerror(self, brief, dossier):

@@ -9,8 +9,14 @@ Cronkite-fidelity principle, the model has to learn the rule. The verification
 gate (Stage 6) is what enforces it after the fact.
 
 Public API:
-    PostComposer(model="claude-sonnet-4-6", anthropic_client=None, prompt_loader=None)
-        .compose(brief, dossier, post_type=None, max_length=280) -> DraftPost
+    PostComposer(
+        model="claude-sonnet-4-6",
+        anthropic_client=None,
+        prompt_loader=None,
+        max_length=280,
+        long_form_max_length=4000,
+    )
+        .compose(brief, dossier, post_type=None, max_length=None) -> DraftPost
 """
 from __future__ import annotations
 
@@ -43,6 +49,14 @@ PROMPT_FILES: dict[PostType, str] = {
 }
 
 
+# Post types that may use the X Premium long-form character budget.
+# Kept in lockstep with VerificationGate.LONG_FORM_TYPES so the composer
+# never generates a draft longer than the gate will accept.
+LONG_FORM_TYPES: set[PostType] = {
+    PostType.META,
+}
+
+
 class PostComposer:
     """Stage 5 of the Croncat journalism pipeline."""
 
@@ -51,10 +65,22 @@ class PostComposer:
         model: str = "claude-sonnet-4-6",
         anthropic_client=None,
         prompt_loader=None,
+        max_length: int = 280,
+        long_form_max_length: int = 4000,
     ):
         self.model = model
         self._client = anthropic_client
         self._prompt_loader = prompt_loader
+        self.max_length = max_length
+        self.long_form_max_length = long_form_max_length
+
+    def _effective_max_length(self, post_type: PostType) -> int:
+        """Return the character budget the prompt template should see for
+        this post type. META gets the long-form budget; everything else
+        uses the standard 280-char budget."""
+        if post_type in LONG_FORM_TYPES:
+            return self.long_form_max_length
+        return self.max_length
 
     # ---- public ------------------------------------------------------------
 
@@ -63,7 +89,7 @@ class PostComposer:
         brief: MetaAnalysisBrief,
         dossier: StoryDossier,
         post_type: Optional[PostType] = None,
-        max_length: int = 280,
+        max_length: Optional[int] = None,
         correction_inputs: Optional[dict] = None,
         retry_reasons: Optional[list[str]] = None,
     ) -> DraftPost:
@@ -80,13 +106,23 @@ class PostComposer:
         so the model can see exactly which rules it broke and how to fix
         them on the second attempt. If None or empty, the main prompt is
         sent verbatim.
+
+        `max_length` is optional. If the caller passes an explicit value
+        it wins (used by tests that want a specific budget). Otherwise the
+        composer picks the right budget per post type: long_form_max_length
+        for META, max_length for everything else.
         """
         chosen_type = post_type or brief.suggested_post_type
         if not isinstance(chosen_type, PostType):
             chosen_type = PostType(chosen_type)
 
+        effective_max = (
+            max_length if max_length is not None
+            else self._effective_max_length(chosen_type)
+        )
+
         prompt = self._build_prompt(
-            chosen_type, brief, dossier, max_length, correction_inputs or {}
+            chosen_type, brief, dossier, effective_max, correction_inputs or {}
         )
 
         if retry_reasons:
