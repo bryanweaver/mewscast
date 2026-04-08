@@ -38,7 +38,7 @@ on:
   #   - cron: '0 13 * * *'
 
 permissions:
-  contents: read
+  contents: write  # needed to commit journalism_seen_stories.txt after each run
 
 jobs:
   dry-run:
@@ -101,3 +101,26 @@ jobs:
             dossiers/
           retention-days: 14
           if-no-files-found: warn
+
+      - name: Commit updated seen-stories file (if changed)
+        if: success()
+        run: |
+          # The journalism pipeline appends to journalism_seen_stories.txt
+          # after each successfully-composed draft so subsequent cron fires
+          # skip stories we've already covered. Commit only if the file
+          # actually changed — most runs that fall through on "already seen"
+          # or crash before mark-seen will not touch the file.
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if ! git diff --quiet journalism_seen_stories.txt; then
+            git add journalism_seen_stories.txt
+            git commit -m "Update journalism seen-stories [skip ci]"
+            for i in {1..3}; do
+              git pull --rebase origin main && git push && break || {
+                echo "Push failed (attempt $i/3), retrying..."
+                sleep $((i * 2))
+              }
+            done
+          else
+            echo "No changes to journalism_seen_stories.txt, skipping commit"
+          fi

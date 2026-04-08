@@ -1,0 +1,5 @@
+# Walter Croncat journalism pipeline — seen story_ids
+# Format: <story_id>\t<first_seen_utc_iso>
+# Used by src/main.post_journalism_cycle to avoid re-reporting the same
+# story across cycles. Committed by .github/workflows/journalism-dry-run.yml
+# after each successful dry-run so state persists across runs.

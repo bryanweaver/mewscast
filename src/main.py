@@ -9,7 +9,7 @@ import sys
 import random
 import time
 import yaml
-from datetime import datetime
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 
 from content_generator import ContentGenerator
@@ -796,8 +796,54 @@ def post_journalism_cycle(
         print("[journalism] no candidates passed triage — clean exit, nothing to post this cycle")
         return True
 
-    # One cycle = one post. Take the top candidate.
-    candidate = passed[0]
+    # ---- Stage 2b: story-level dedup -------------------------------------
+    # Walter Croncat runs multiple times per day. Without dedup the pipeline
+    # picks the same dominant X story every cycle and burns Claude calls on
+    # the same META. Iteration 7 added a persistent `journalism_seen_stories.txt`
+    # committed by the dry-run workflow: one story_id per line, plus its first-
+    # seen timestamp for future pruning. Before selecting a candidate, we walk
+    # the triage-passed list in rank order and pick the first story_id we have
+    # not seen today. If every candidate is already seen, we fall through and
+    # take the top one anyway (better to re-report than to post nothing) but
+    # we log it explicitly so QA sees the fallback firing.
+    seen_path = os.path.join(_project_root(), "journalism_seen_stories.txt")
+    seen_story_ids: set[str] = set()
+    try:
+        if os.path.exists(seen_path):
+            with open(seen_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if not line or line.startswith("#"):
+                        continue
+                    # Format: "<story_id>\t<iso_timestamp>" or just "<story_id>"
+                    story_id_part = line.split("\t", 1)[0].strip()
+                    if story_id_part:
+                        seen_story_ids.add(story_id_part)
+    except Exception as e:
+        print(f"[journalism] could not read seen-stories file ({e}); continuing without dedup")
+
+    candidate = None
+    skipped_count = 0
+    for c in passed:
+        if c.story_id in seen_story_ids:
+            skipped_count += 1
+            print(f"[journalism] skipping already-seen story_id={c.story_id} "
+                  f"({c.headline_seed[:60]}...)")
+            continue
+        candidate = c
+        break
+
+    if candidate is None:
+        # Every triage-passed candidate is already in the seen set. Fall
+        # through to the top candidate anyway — better to re-report than
+        # to sit out the cycle entirely — but flag it.
+        candidate = passed[0]
+        print(f"[journalism] all {len(passed)} triage-passed candidates are already "
+              f"in the seen set; falling through to top candidate anyway")
+    elif skipped_count > 0:
+        print(f"[journalism] dedup skipped {skipped_count} already-seen candidate(s); "
+              f"selected the next unseen story")
+
     print(f"[journalism] Selected candidate: {candidate.headline_seed[:80]}...")
 
     # ---- Stage 3: gather + primary source ---------------------------------
@@ -879,6 +925,22 @@ def post_journalism_cycle(
             return False
 
     # ---- Stage 7: publish or dry-run write --------------------------------
+
+    # Mark the story as seen BEFORE writing the draft so the seen-stories
+    # file reflects that this story has been successfully processed this
+    # cycle. If we crash between draft-write and mark-seen, the next run
+    # would pick it up again — acceptable, since "re-report after a crash"
+    # is better than "silently skip after a crash." Idempotent: if the
+    # story_id is already in the file, this is a no-op.
+    try:
+        already_seen = candidate.story_id in seen_story_ids
+        if not already_seen:
+            with open(seen_path, "a", encoding="utf-8") as f:
+                f.write(f"{candidate.story_id}\t{datetime.now(timezone.utc).isoformat()}\n")
+            print(f"[journalism] marked story_id={candidate.story_id} as seen")
+    except Exception as e:
+        print(f"[journalism] could not update seen-stories file ({e}); continuing")
+
     if dry_run:
         path = _write_draft_file(drafts_dir, draft, dossier)
         print(f"[journalism] DRY RUN draft written to {path}")
