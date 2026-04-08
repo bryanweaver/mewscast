@@ -818,17 +818,65 @@ def post_journalism_cycle(
     # we log it explicitly so QA sees the fallback firing.
     seen_path = os.path.join(_project_root(), "journalism_seen_stories.txt")
     seen_story_ids: set[str] = set()
+    # Iteration 10: prune entries older than SEEN_PRUNE_DAYS to bound the
+    # file. News stories typically fade as trending topics within a few days;
+    # if a story re-emerges after two weeks, re-reporting it is acceptable
+    # (and likely even useful — the news cycle has moved on, the frame has
+    # probably shifted). 14 days balances "don't re-report Rex Heuermann
+    # tomorrow" against "don't let the file grow unbounded over months."
+    SEEN_PRUNE_DAYS = 14
+    seen_header_lines: list[str] = []
+    seen_kept_lines: list[str] = []
+    pruned_count = 0
     try:
         if os.path.exists(seen_path):
+            now_utc = datetime.now(timezone.utc)
             with open(seen_path, "r", encoding="utf-8") as f:
                 for line in f:
-                    line = line.strip()
-                    if not line or line.startswith("#"):
+                    raw = line.rstrip("\n")
+                    stripped = raw.strip()
+                    if not stripped or stripped.startswith("#"):
+                        seen_header_lines.append(raw)
                         continue
                     # Format: "<story_id>\t<iso_timestamp>" or just "<story_id>"
-                    story_id_part = line.split("\t", 1)[0].strip()
-                    if story_id_part:
+                    parts = stripped.split("\t", 1)
+                    story_id_part = parts[0].strip()
+                    if not story_id_part:
+                        continue
+                    # Pruning decision: if we can parse a timestamp and it's
+                    # older than the threshold, drop the entry. If we can't
+                    # parse a timestamp (legacy / malformed lines), keep it —
+                    # we don't have enough information to prune safely.
+                    keep = True
+                    if len(parts) == 2:
+                        ts_str = parts[1].strip()
+                        try:
+                            ts = datetime.fromisoformat(ts_str)
+                            if ts.tzinfo is None:
+                                ts = ts.replace(tzinfo=timezone.utc)
+                            age_days = (now_utc - ts).total_seconds() / 86400.0
+                            if age_days > SEEN_PRUNE_DAYS:
+                                keep = False
+                                pruned_count += 1
+                        except Exception:
+                            pass  # unparseable timestamp — keep the entry
+                    if keep:
+                        seen_kept_lines.append(raw)
                         seen_story_ids.add(story_id_part)
+            # If any entries were pruned, rewrite the file. The workflow's
+            # commit step will pick up the change and commit it just like
+            # a mark-as-seen append.
+            if pruned_count > 0:
+                try:
+                    with open(seen_path, "w", encoding="utf-8") as f:
+                        for h in seen_header_lines:
+                            f.write(h + "\n")
+                        for k in seen_kept_lines:
+                            f.write(k + "\n")
+                    print(f"[journalism] pruned {pruned_count} seen-stories entries "
+                          f"older than {SEEN_PRUNE_DAYS} days")
+                except Exception as e:
+                    print(f"[journalism] could not rewrite pruned seen-stories file ({e})")
     except Exception as e:
         print(f"[journalism] could not read seen-stories file ({e}); continuing without dedup")
 
