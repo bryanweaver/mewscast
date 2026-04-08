@@ -313,7 +313,7 @@ journalism:
   composer:
     model: claude-sonnet-4-6
     max_length: 280
-    long_form_max_length: 4000    # for META posts when X Premium long-form is on
+    long_form_max_length: 5000    # for META posts when X Premium long-form is on; natural output of Opus+Sonnet META is ~4200-4700 chars for a 5-7 outlet comparison, so 5000 gives headroom without hitting X Premium's real 25k ceiling
   verification:
     enabled: true
     reject_editorial_words_in_report: true
