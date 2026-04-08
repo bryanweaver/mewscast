@@ -598,7 +598,17 @@ def _write_draft_file(
     filename = f"{story_slug}_{type_slug}.md"
     path = os.path.join(target_dir, filename)
 
-    outlets_list = ", ".join(a.outlet for a in dossier.articles) or "(none)"
+    # Dedup outlets while preserving first-seen order. When a dossier has
+    # two articles from the same outlet (e.g., two WaPo stories on the
+    # same event), the draft header was showing "Reuters, WaPo, WaPo, AP"
+    # which read as a cosmetic bug. Iteration 9 cleanup.
+    _seen_outlets: set[str] = set()
+    _unique_outlets: list[str] = []
+    for _a in dossier.articles:
+        if _a.outlet and _a.outlet not in _seen_outlets:
+            _seen_outlets.add(_a.outlet)
+            _unique_outlets.append(_a.outlet)
+    outlets_list = ", ".join(_unique_outlets) or "(none)"
     primary_urls = ", ".join(p.url for p in dossier.primary_sources) or "(none)"
 
     dossier_meta = {
