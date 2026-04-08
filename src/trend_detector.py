@@ -204,11 +204,14 @@ class TrendDetector:
           3. Empty list (logged) — pipeline must keep going.
         """
         # Attempt 1: X
+        print(f"[trend_detector] attempting X recent search path...")
         candidates = self._detect_via_x(max_candidates)
         if candidates:
+            print(f"[trend_detector] X path returned {len(candidates)} candidates")
             return candidates[:max_candidates]
 
         # Attempt 2: NewsFetcher fallback
+        print(f"[trend_detector] X path produced 0 candidates; falling back to NewsFetcher")
         candidates = self._detect_via_news_fetcher(max_candidates)
         if candidates:
             return candidates[:max_candidates]
@@ -219,19 +222,34 @@ class TrendDetector:
     # ---- X path ------------------------------------------------------------
 
     def _detect_via_x(self, max_candidates: int) -> list[TrendCandidate]:
-        if not self.twitter_bot or not self.outlets:
+        # Diagnostic preflight — surface every silent return so QA can see
+        # exactly why the X path is or isn't firing. Added in iteration 6
+        # after 14 runs of silent NewsFetcher fallback with no idea why.
+        if not self.twitter_bot:
+            print(f"[trend_detector] X path skipped: twitter_bot is None")
+            return []
+        if not self.outlets:
+            print(f"[trend_detector] X path skipped: outlet registry is empty (check {self.registry_path})")
             return []
 
         client = getattr(self.twitter_bot, "client", None)
         if client is None:
+            print(f"[trend_detector] X path skipped: twitter_bot.client is None")
             return []
 
+        print(f"[trend_detector] X path: {len(self.outlets)} handles in registry, "
+              f"chunking at {self._MAX_HANDLES_PER_QUERY} per query")
+
         all_tweets: list[dict] = []
+        chunk_count = 0
         try:
             for chunk in self._chunk_handles(self.outlets, self._MAX_HANDLES_PER_QUERY):
+                chunk_count += 1
                 query = self._build_query(chunk)
                 if not query:
+                    print(f"[trend_detector] chunk {chunk_count} produced empty query, skipping")
                     continue
+                print(f"[trend_detector] chunk {chunk_count}: querying {len(chunk)} handles")
                 try:
                     response = client.search_recent_tweets(
                         query=query,
@@ -244,10 +262,12 @@ class TrendDetector:
                         ],
                     )
                 except Exception as e:
-                    print(f"[trend_detector] X recent search failed: {e}")
+                    print(f"[trend_detector] chunk {chunk_count} X recent search failed: "
+                          f"{type(e).__name__}: {e}")
                     continue
 
                 tweets = getattr(response, "data", None) or []
+                print(f"[trend_detector] chunk {chunk_count} returned {len(tweets)} tweets")
                 includes_users = {}
                 if hasattr(response, "includes") and response.includes:
                     users = response.includes.get("users", []) if isinstance(response.includes, dict) else []
@@ -257,12 +277,16 @@ class TrendDetector:
                 for t in tweets:
                     all_tweets.append(self._tweet_to_dict(t, chunk, includes_users))
         except Exception as e:
-            print(f"[trend_detector] unexpected X path failure: {e}")
+            print(f"[trend_detector] unexpected X path failure: {type(e).__name__}: {e}")
             return []
 
         if not all_tweets:
+            print(f"[trend_detector] X path: 0 total tweets across {chunk_count} chunks — "
+                  f"likely rate-limited, auth-failing, or all handles returned empty")
             return []
 
+        print(f"[trend_detector] X path: {len(all_tweets)} tweets total across {chunk_count} chunks, "
+              f"clustering...")
         return self._cluster_tweets(all_tweets, max_candidates)
 
     @staticmethod
