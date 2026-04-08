@@ -1,0 +1,233 @@
+# Outlet registry for Walter Croncat journalism workflow
+# Used by trend_detector, source_gatherer, verification_gate
+#
+# slant values: wire | left-mainstream | right-mainstream | center | international | specialized
+# beat values:  general | politics | business | tech | science | health | foreign | courts | accountability
+#
+# priority 1 = first-pass gather target (wires + top mainstream)
+# priority 2 = standard gather target (fills out the slant matrix)
+# priority 3 = specialized / beat outlets pulled in when relevant
+#
+# Handles are X/Twitter handles (without the @). Where the handle could
+# not be confirmed in this pass, a `# TODO verify handle` comment marks
+# the entry so the trend_detector module does not silently watch the
+# wrong account.
+
+outlets:
+  # --- Wires (target: >=3) -----------------------------------------------
+  - name: Reuters
+    handle: Reuters
+    domain: reuters.com
+    slant: wire
+    beat: general
+    priority: 1
+
+  - name: Associated Press
+    handle: AP
+    domain: apnews.com
+    slant: wire
+    beat: general
+    priority: 1
+
+  - name: Agence France-Presse
+    handle: AFP
+    domain: afp.com
+    slant: wire
+    beat: foreign
+    priority: 1
+
+  - name: Bloomberg
+    handle: business  # TODO verify handle — @business is Bloomberg's main news account, not @Bloomberg
+    domain: bloomberg.com
+    slant: wire
+    beat: business
+    priority: 1
+
+  # --- Left-mainstream (target: >=4) -------------------------------------
+  - name: The New York Times
+    handle: nytimes
+    domain: nytimes.com
+    slant: left-mainstream
+    beat: general
+    priority: 1
+
+  - name: The Washington Post
+    handle: washingtonpost
+    domain: washingtonpost.com
+    slant: left-mainstream
+    beat: general
+    priority: 1
+
+  - name: NPR
+    handle: NPR
+    domain: npr.org
+    slant: left-mainstream
+    beat: general
+    priority: 2
+
+  - name: The Guardian
+    handle: guardian
+    domain: theguardian.com
+    slant: left-mainstream
+    beat: general
+    priority: 2
+
+  - name: CNN
+    handle: CNN
+    domain: cnn.com
+    slant: left-mainstream
+    beat: general
+    priority: 2
+
+  # --- Right-mainstream (target: >=4) ------------------------------------
+  - name: Wall Street Journal
+    handle: WSJ
+    domain: wsj.com
+    slant: right-mainstream
+    beat: business
+    priority: 1
+    # Treat WSJ news-side reporting only; opinion desk is editorial, not news.
+
+  - name: Fox News
+    handle: FoxNews
+    domain: foxnews.com
+    slant: right-mainstream
+    beat: general
+    priority: 2
+    # News-side reporting only; cable opinion programming is not "reporting".
+
+  - name: New York Post
+    handle: nypost
+    domain: nypost.com
+    slant: right-mainstream
+    beat: general
+    priority: 2
+
+  - name: Washington Examiner
+    handle: dcexaminer
+    domain: washingtonexaminer.com
+    slant: right-mainstream
+    beat: politics
+    priority: 3
+
+  - name: Daily Caller
+    handle: DailyCaller
+    domain: dailycaller.com
+    slant: right-mainstream
+    beat: politics
+    priority: 3
+
+  # --- International (target: >=3) ---------------------------------------
+  - name: BBC News
+    handle: BBCWorld
+    domain: bbc.com
+    slant: international
+    beat: foreign
+    priority: 1
+
+  - name: Financial Times
+    handle: FT
+    domain: ft.com
+    slant: international
+    beat: business
+    priority: 1
+
+  - name: Al Jazeera English
+    handle: AJEnglish
+    domain: aljazeera.com
+    slant: international
+    beat: foreign
+    priority: 2
+
+  - name: Deutsche Welle
+    handle: dwnews
+    domain: dw.com
+    slant: international
+    beat: foreign
+    priority: 2
+
+  - name: Reuters World
+    handle: ReutersWorld  # TODO verify handle
+    domain: reuters.com
+    slant: international
+    beat: foreign
+    priority: 2
+
+  # --- Center (target: >=2) ----------------------------------------------
+  - name: The Hill
+    handle: thehill
+    domain: thehill.com
+    slant: center
+    beat: politics
+    priority: 2
+
+  - name: Christian Science Monitor
+    handle: csmonitor
+    domain: csmonitor.com
+    slant: center
+    beat: general
+    priority: 3
+
+  - name: USA Today
+    handle: USATODAY
+    domain: usatoday.com
+    slant: center
+    beat: general
+    priority: 3
+
+  # --- Specialized / beat outlets (target: >=4) --------------------------
+  - name: Politico
+    handle: politico
+    domain: politico.com
+    slant: specialized
+    beat: politics
+    priority: 1
+
+  - name: Axios
+    handle: axios
+    domain: axios.com
+    slant: specialized
+    beat: politics
+    priority: 1
+
+  - name: ProPublica
+    handle: propublica
+    domain: propublica.org
+    slant: specialized
+    beat: accountability
+    priority: 1
+
+  - name: STAT News
+    handle: statnews
+    domain: statnews.com
+    slant: specialized
+    beat: health
+    priority: 2
+
+  - name: Defense One
+    handle: DefenseOne
+    domain: defenseone.com
+    slant: specialized
+    beat: foreign
+    priority: 2
+
+  - name: SCOTUSblog
+    handle: SCOTUSblog
+    domain: scotusblog.com
+    slant: specialized
+    beat: courts
+    priority: 2
+
+  - name: Nature News
+    handle: NatureNews  # TODO verify handle
+    domain: nature.com
+    slant: specialized
+    beat: science
+    priority: 3
+
+  - name: Courthouse News Service
+    handle: CourthouseNews
+    domain: courthousenews.com
+    slant: specialized
+    beat: courts
+    priority: 3

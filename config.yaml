@@ -258,58 +258,6 @@ content:
 
 # Special edition post types (manually triggered)
 special_posts:
-  battle:
-    # "Battle of the Political Sides" - compare two outlets' coverage of same story
-    # Triggered manually: python src/main.py special battle [optional-topic]
-    # We DON'T label outlets as "left" or "right" - we let the framing speak for itself.
-    # The pairs are chosen because they tend to frame the same events differently.
-    enabled: true
-
-    # Source pairs: outlets that tend to frame stories differently
-    # Left-leaning: CNN, BBC, WaPo, NYT, NPR
-    # Right-leaning: Fox News, NY Post, Newsmax
-    source_pairs:
-      - source_a: "CNN"
-        source_b: "Fox News"
-      - source_a: "CNN"
-        source_b: "New York Post"
-      - source_a: "The New York Times"
-        source_b: "Fox News"
-      - source_a: "The New York Times"
-        source_b: "New York Post"
-      - source_a: "The Washington Post"
-        source_b: "Fox News"
-      - source_a: "The Washington Post"
-        source_b: "New York Post"
-      - source_a: "NPR"
-        source_b: "Fox News"
-      - source_a: "NPR"
-        source_b: "Newsmax"
-      - source_a: "BBC"
-        source_b: "Fox News"
-      - source_a: "BBC"
-        source_b: "New York Post"
-      - source_a: "CNN"
-        source_b: "Newsmax"
-      - source_a: "The New York Times"
-        source_b: "Newsmax"
-
-    # Google News search domains for each outlet
-    source_domains:
-      "CNN": "cnn.com"
-      "Fox News": "foxnews.com"
-      "The New York Times": "nytimes.com"
-      "New York Post": "nypost.com"
-      "The Washington Post": "washingtonpost.com"
-      "BBC": "bbc.com"
-      "NPR": "npr.org"
-      "Newsmax": "newsmax.com"
-
-    # How many characters for battle posts (thread format)
-    # Post 1: The comparison/verdict
-    # Post 2 (reply): Sources cited
-    max_length: 280  # Slightly more room for the comparison format
-
   positive_news:
     # "Positive News Special Report" - find and share uplifting stories
     # Triggered manually: python src/main.py special positive [optional-topic]
@@ -341,6 +289,44 @@ post_angles:
   # "populist" = follow the money, who benefits, regular folks angle
   # "framing" = how media spins it, what's buried, narrative tactics
   framing_chance: 0.5  # 50% chance to focus on media framing vs populist angle
+
+journalism:
+  # Walter Croncat journalism workflow — master switch.
+  # Keep this OFF until the pipeline has been validated end-to-end with
+  # --dry-run. All seven stages (detect, triage, gather, primary-source,
+  # meta-analyze, compose, verify) are wired to the values below.
+  enabled: false                  # master switch — keep off until validated
+  outlet_registry: outlet_registry.yaml
+  trend_detection:
+    max_candidates: 15
+    use_x_api: true               # if false, falls back to NewsFetcher only
+    fallback_to_news_fetcher: true
+  triage:
+    pass_threshold: 3
+    use_llm: false                # cheap Haiku borderline classifier — off by default
+  source_gather:
+    target_count: 7
+    require_slant_diversity: true
+  meta_analysis:
+    model: claude-opus-4-6
+    max_tokens: 4000
+  composer:
+    model: claude-sonnet-4-6
+    max_length: 280
+    long_form_max_length: 4000    # for META posts when X Premium long-form is on
+  verification:
+    enabled: true
+    reject_editorial_words_in_report: true
+    require_outlet_in_body: true
+  post_mix:
+    REPORT: 0.70
+    META: 0.15
+    ANALYSIS: 0.10
+    BULLETIN: 0.03
+    CORRECTION: 0.01
+    PRIMARY: 0.01
+  dry_run:
+    drafts_dir: drafts
 
 deduplication:
   # Prevent posting duplicate or repetitive stories

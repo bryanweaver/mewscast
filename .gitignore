@@ -53,3 +53,16 @@ recent_vocab.json
 # Debug and temporary test files
 debug_*.py
 =*
+
+# Croncat journalism workflow dossiers
+# Per-story JSON records (dossier + brief + post record) produced by the
+# journalism pipeline. Kept local by default — Phase 4 turns this directory
+# into a public transparency archive, at which point this rule will be
+# removed selectively.
+dossiers/
+
+# Croncat journalism workflow drafts
+# Dry-run draft posts land here as <story_id>_<post_type>.md. Local-only;
+# the directory itself is tracked via a .gitkeep sentinel.
+drafts/*
+!drafts/.gitkeep

@@ -7,6 +7,7 @@ import requests
 from typing import List, Dict, Optional
 import time
 import re
+from urllib.parse import quote_plus
 from googlenewsdecoder import gnewsdecoder
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -367,23 +368,41 @@ class NewsFetcher:
             'source': 'Google News'
         }]
 
-    def get_articles_for_topic(self, topic: str, max_articles: int = 10) -> List[Dict]:
+    def get_articles_for_topic(
+        self,
+        topic: str,
+        max_articles: int = 10,
+        outlets: Optional[List[str]] = None,
+    ) -> List[Dict]:
         """
         Fetch multiple news articles from Google News RSS for a topic
 
         Args:
             topic: The trending topic to search for
             max_articles: Maximum number of articles to return (default 10)
+            outlets: Optional list of outlet names to bias/filter the results.
+                When provided, the method keeps only articles whose `source`
+                field contains any of the outlet names in the list (substring,
+                case-insensitive). This is used by the Walter Croncat
+                journalism workflow (`source_gatherer`) to target a specific
+                watchlist without changing the underlying Google News query.
+                Backwards-compatible: when `outlets` is None (the default),
+                behavior is unchanged from the pre-journalism-workflow path.
 
         Returns:
             List of article dictionaries with 'title', 'description', 'url', 'source'
         """
         try:
-            # Build Google News RSS search URL
-            search_query = topic.replace(' ', '+')
+            # Build Google News RSS search URL. Use urllib.parse.quote_plus so
+            # trend-detector-derived headline seeds (which may contain
+            # punctuation, $, :, &, non-ASCII chars) encode cleanly rather
+            # than producing a malformed RSS URL.
+            search_query = quote_plus(topic)
             rss_url = f"https://news.google.com/rss/search?q={search_query}&hl=en-US&gl=US&ceid=US:en"
 
             print(f"🔍 Searching Google News RSS for: {topic}")
+            if outlets:
+                print(f"   Outlet filter active: {outlets}")
 
             # Parse RSS feed
             feed = feedparser.parse(rss_url)
@@ -396,6 +415,9 @@ class NewsFetcher:
             # CRITICAL: Only get recent news (last 3 days max)
             cutoff_date = datetime.now(timezone.utc) - timedelta(days=3)
             articles = []
+
+            # Normalize the outlet filter once for cheap case-insensitive substring checks
+            outlet_filter_lower = [o.lower() for o in outlets] if outlets else None
 
             for entry in feed.entries[:30]:  # Check first 30 results for more depth
                 if len(articles) >= max_articles:
@@ -420,20 +442,31 @@ class NewsFetcher:
                 if any(bad in source for bad in self.blacklist_sources):
                     continue
 
-                # Check if from preferred source
-                if any(pref in source for pref in self.preferred_sources):
-                    # Resolve Google News proxy URL to actual article URL
-                    actual_url = self.resolve_google_news_url(entry.link)
+                # Watchlist filter (journalism workflow path) — when an
+                # explicit outlet list is provided, it overrides the
+                # preferred_sources filter because the caller is being
+                # precise about who it wants in the dossier.
+                if outlet_filter_lower is not None:
+                    src_lower = source.lower()
+                    if not any(name in src_lower for name in outlet_filter_lower):
+                        continue
+                else:
+                    # Default path: use preferred_sources allow-list
+                    if not any(pref in source for pref in self.preferred_sources):
+                        continue
 
-                    article = {
-                        'title': entry.title,
-                        'description': entry.get('summary', ''),
-                        'url': actual_url,
-                        'source': source,
-                        'published': published_str,
-                        'published_date': published_date.isoformat() if published_str else None
-                    }
-                    articles.append(article)
+                # Resolve Google News proxy URL to actual article URL
+                actual_url = self.resolve_google_news_url(entry.link)
+
+                article = {
+                    'title': entry.title,
+                    'description': entry.get('summary', ''),
+                    'url': actual_url,
+                    'source': source,
+                    'published': published_str,
+                    'published_date': published_date.isoformat() if published_str else None
+                }
+                articles.append(article)
 
             if articles:
                 print(f"✓ Found {len(articles)} articles from major sources")
