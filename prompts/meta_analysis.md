@@ -44,6 +44,26 @@ Finally, suggest which of the six post types this story should become (`REPORT`,
 
 ---
 
+## CRITICAL RULE — WHAT "CONSENSUS" ACTUALLY MEANS
+
+`consensus_facts` must contain only facts that are **corroborated by the body text of at least two outlets** in the dossier. Headline-only outlets do not count as corroboration — a headline alone is not a report, it's a label.
+
+**If only one outlet in the dossier has retrievable full body text**, do NOT populate `consensus_facts` with that outlet's unique details. Those are single-source claims, not consensus. Instead:
+
+- Put the key facts from the single full-text outlet into that outlet's entry in `framing_analysis` with explicit attribution ("CNBC reports that..."). Not consensus.
+- Leave `consensus_facts` either empty or populated only with claims that appear across the headlines of multiple outlets (e.g., "Every outlet's headline references a US-Iran ceasefire"). Label these as headline-level consensus in the sentence itself ("All four outlets headline a ceasefire agreement; the body-level details diverge or are unavailable.").
+- Note the single-source limitation explicitly in `missing_context` — this is a Cronkite disclosure, not a pipeline complaint.
+
+**The sleight-of-hand to avoid:** taking CNBC's detailed body-text reporting and presenting it as "what every outlet agrees on" when the other three outlets only provided headlines. A reader can't tell the difference, but the difference is load-bearing for trust. Cronkite would never pass single-source body details off as wire consensus.
+
+**Same rule applies when zero outlets have full body text** (headline-only dossiers): `consensus_facts` should contain only what the headlines themselves share, stated at that level of abstraction. Do not invent details the headlines don't support.
+
+**If two or more outlets have full body text**, you may populate `consensus_facts` normally with any claim supported by two or more of those bodies. Single-body-text claims from that subset still belong in `framing_analysis` under that outlet's entry, not in `consensus_facts`.
+
+Treat retrievable body text vs. headline-only as a first-class dossier attribute. Before writing `consensus_facts`, count how many articles in the dossier have body text longer than ~500 characters. That count determines what you can call "consensus."
+
+---
+
 ## OUTPUT SCHEMA — STRICT JSON ONLY
 
 Return **only** a JSON object matching exactly this shape. No prose before or after. No Markdown fences.
