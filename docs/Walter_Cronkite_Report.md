@@ -269,3 +269,11 @@ These principles are distilled from the preceding nine sections and are specific
 - **(Source 28)** [Space Shuttle Challenger disaster — Wikipedia](https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster)
 - **(Source 29)** [New Biography of CBS Newsman Walter Cronkite Dents His Halo — Newsweek](https://www.newsweek.com/new-biography-cbs-newsman-walter-cronkite-dents-his-halo-64849)
 - **(Source 30)** [Cronkite and the Roots of Media Bias — Commentary Magazine](https://www.commentary.org/jonathan-tobin/walter-cronkite-roots-of-liberal-media-bias-cbs-fox-news/)
+
+---
+
+## Companion Docs
+
+- [`Croncat_Journalism_Workflow.md`](./Croncat_Journalism_Workflow.md) — the 7-stage pipeline that operationalizes the principles in this report
+- [`Mewscast_X_API_Strategy.md`](./Mewscast_X_API_Strategy.md) — X API tier, pricing, and engagement strategy the workflow plugs into
+- [`../README.md`](../README.md) — project README and CLI reference

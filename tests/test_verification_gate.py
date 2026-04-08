@@ -296,6 +296,111 @@ class TestSignoffMatchesTypeKeystone:
         assert not result.passed
         assert any("primary_source_for_accountability" in f for f in result.failures)
 
+    def test_primary_with_report_signoff_fails(self, gate):
+        """PRIMARY posts stamped with the REPORT sign-off must be rejected."""
+        dossier = _make_dossier(
+            outlets=("Reuters", "Associated Press"),
+            primary_sources=[
+                PrimarySource(
+                    kind="congress_record",
+                    url="https://www.congress.gov/x",
+                    title="Roll call",
+                    excerpt=None,
+                )
+            ],
+        )
+        draft = _make_draft(
+            "Per the Senate roll call, Reuters reports 68-32.\n\nAnd that's the mews.",
+            PostType.PRIMARY,
+            primary_urls=["https://www.congress.gov/x"],
+        )
+        result = gate.verify(draft, dossier)
+        assert not result.passed
+        assert any("signoff_matches_type" in f for f in result.failures)
+
+    # ---- Extra keystone matrix — reviewer-identified gaps -----------------
+
+    def test_bulletin_with_analysis_signoff_mid_body_fails(self, gate):
+        """A BULLETIN whose body contains the ANALYSIS sign-off phrase
+        buried mid-paragraph (not at the end) must still be rejected.
+        This was the H2 finding from code review."""
+        dossier = _make_dossier(("Reuters",))
+        draft = _make_draft(
+            (
+                "Breaking: Reuters reports a missile strike. Not yet confirmed. "
+                "This cat's view — speculative, personal, subjective. "
+                "More details to follow."
+            ),
+            PostType.BULLETIN,
+            outlets_referenced=["Reuters"],
+        )
+        result = gate.verify(draft, dossier)
+        assert not result.passed
+        assert any("signoff_matches_type" in f for f in result.failures)
+
+    def test_bulletin_with_meta_signoff_at_end_fails(self, gate):
+        """A BULLETIN whose body ends with the META sign-off must be rejected."""
+        dossier = _make_dossier(("Reuters",))
+        draft = _make_draft(
+            (
+                "Breaking: Reuters reports a missile strike. Not yet confirmed.\n\n"
+                "And that's the mews — coverage report."
+            ),
+            PostType.BULLETIN,
+            outlets_referenced=["Reuters"],
+        )
+        result = gate.verify(draft, dossier)
+        assert not result.passed
+        assert any("signoff_matches_type" in f for f in result.failures)
+
+    def test_correction_with_meta_signoff_at_end_fails(self, gate, two_outlet_dossier):
+        """A CORRECTION ending with the META sign-off must be rejected."""
+        draft = _make_draft(
+            (
+                "CORRECTION: vote was 68-32, not 72-28.\n\n"
+                "And that's the mews — coverage report."
+            ),
+            PostType.CORRECTION,
+            outlets_referenced=[],
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("signoff_matches_type" in f for f in result.failures)
+
+    def test_analysis_with_meta_signoff_fails(self, gate, two_outlet_dossier):
+        """ANALYSIS stamped with the META sign-off is a report/opinion
+        confusion and must be rejected — the same class of failure as
+        ANALYSIS stamped with REPORT."""
+        draft = _make_draft(
+            (
+                "ANALYSIS\n\n"
+                "Reuters and AP both reported the 68-32 vote. The eight-state "
+                "bloc is becoming a pattern.\n\n"
+                "And that's the mews — coverage report."
+            ),
+            PostType.ANALYSIS,
+            outlets_referenced=["Reuters", "Associated Press"],
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("signoff_matches_type" in f for f in result.failures)
+
+    def test_correction_with_analysis_signoff_mid_body_fails(self, gate, two_outlet_dossier):
+        """CORRECTION body must not contain the ANALYSIS sign-off phrase
+        anywhere, not just at the end."""
+        draft = _make_draft(
+            (
+                "CORRECTION: vote was 68-32. This cat's view — speculative, "
+                "personal, subjective. was the prior sign-off but corrections "
+                "carry none."
+            ),
+            PostType.CORRECTION,
+            outlets_referenced=[],
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("signoff_matches_type" in f for f in result.failures)
+
 
 # ---------------------------------------------------------------------------
 # _check_source_count

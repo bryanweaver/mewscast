@@ -134,3 +134,11 @@ The single highest-leverage change is **adding X Premium**. Everything else is o
 - [How the Twitter Algorithm Works in 2026 (Sprout Social)](https://sproutsocial.com/insights/twitter-algorithm/)
 - [How the Twitter/X Algorithm Works in 2026 (OpenTweet)](https://opentweet.io/blog/how-twitter-x-algorithm-works-2026)
 - [X Algorithm Explained 2026 (AutoTweet)](https://www.autotweet.io/blog/x-algorithm-explained-2026)
+
+---
+
+## Companion Docs
+
+- [`Walter_Cronkite_Report.md`](./Walter_Cronkite_Report.md) — sourced research on Walter Cronkite that the persona is built on
+- [`Croncat_Journalism_Workflow.md`](./Croncat_Journalism_Workflow.md) — the 7-stage pipeline this strategy supports
+- [`../README.md`](../README.md) — project README and CLI reference

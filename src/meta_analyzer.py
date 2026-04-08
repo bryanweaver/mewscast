@@ -102,7 +102,19 @@ class MetaAnalyzer:
         )
 
     @staticmethod
-    def _format_articles(dossier: StoryDossier) -> str:
+    def _sanitize_untrusted(text: str) -> str:
+        """Neutralize XML-ish tags in untrusted article/primary-source content
+        so a hostile body cannot close the wrapping <article_body> tag and
+        smuggle instructions past the model. Cheap defense-in-depth."""
+        if not text:
+            return ""
+        return text.replace("<article_body>", "&lt;article_body&gt;") \
+                   .replace("</article_body>", "&lt;/article_body&gt;") \
+                   .replace("<primary_source>", "&lt;primary_source&gt;") \
+                   .replace("</primary_source>", "&lt;/primary_source&gt;")
+
+    @classmethod
+    def _format_articles(cls, dossier: StoryDossier) -> str:
         if not dossier.articles:
             return "_No articles in dossier._"
         sections = []
@@ -110,23 +122,31 @@ class MetaAnalyzer:
             slant = dossier.outlet_slants.get(art.outlet, "")
             slant_str = f" ({slant})" if slant else ""
             wire_flag = " [wire-derived]" if art.is_wire_derived else ""
+            safe_title = cls._sanitize_untrusted(art.title or "")
+            safe_body = cls._sanitize_untrusted(art.body or "")
             sections.append(
-                f"## Article {i}: {art.outlet}{slant_str} — {art.title}{wire_flag}\n"
+                f"## Article {i}: {art.outlet}{slant_str} — {safe_title}{wire_flag}\n"
                 f"URL: {art.url}\n\n"
-                f"{art.body}"
+                f"<article_body>\n{safe_body}\n</article_body>"
             )
         return "\n\n".join(sections)
 
-    @staticmethod
-    def _format_primary_sources(dossier: StoryDossier) -> str:
+    @classmethod
+    def _format_primary_sources(cls, dossier: StoryDossier) -> str:
         if not dossier.primary_sources:
             return "_No primary sources located for this story._"
         sections = []
         for i, ps in enumerate(dossier.primary_sources, start=1):
-            excerpt = f"\nExcerpt: {ps.excerpt}" if ps.excerpt else ""
+            safe_title = cls._sanitize_untrusted(ps.title or "")
+            safe_excerpt = cls._sanitize_untrusted(ps.excerpt or "")
+            excerpt_block = (
+                f"\n<primary_source>\n{safe_excerpt}\n</primary_source>"
+                if ps.excerpt
+                else ""
+            )
             sections.append(
-                f"## Primary {i}: {ps.kind} — {ps.title}\n"
-                f"URL: {ps.url}{excerpt}"
+                f"## Primary {i}: {ps.kind} — {safe_title}\n"
+                f"URL: {ps.url}{excerpt_block}"
             )
         return "\n\n".join(sections)
 
