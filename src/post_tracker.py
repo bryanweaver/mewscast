@@ -381,7 +381,8 @@ class PostTracker:
 
     def record_post(self, story_metadata: Dict, post_content: str = None, tweet_id: str = None,
                     reply_tweet_id: str = None, bluesky_uri: str = None, bluesky_reply_uri: str = None,
-                    image_prompt: str = None):
+                    image_prompt: str = None, dossier_id: Optional[str] = None,
+                    post_type: Optional[str] = None):
         """
         Record a successful post to history
 
@@ -393,6 +394,12 @@ class PostTracker:
             bluesky_uri: Posted skeet URI (Bluesky)
             bluesky_reply_uri: Optional reply skeet URI (Bluesky)
             image_prompt: The prompt used to generate the image
+            dossier_id: Optional dossier/story id from the Walter Croncat
+                journalism workflow (StoryDossier.story_id). Written into the
+                record so the post can be tied back to its dossier file.
+            post_type: Optional PostType string ("REPORT", "META", "ANALYSIS",
+                "BULLETIN", "CORRECTION", "PRIMARY") from the journalism
+                workflow. Legacy posts omit this and still load cleanly.
         """
         post_record = {
             'timestamp': datetime.now(timezone.utc).isoformat(),
@@ -404,7 +411,12 @@ class PostTracker:
             'x_tweet_id': tweet_id,  # X/Twitter
             'x_reply_tweet_id': reply_tweet_id,
             'bluesky_uri': bluesky_uri,  # Bluesky
-            'bluesky_reply_uri': bluesky_reply_uri
+            'bluesky_reply_uri': bluesky_reply_uri,
+            # Walter Croncat journalism workflow fields — optional, backwards
+            # compatible: older records without these keys still load via
+            # _load_history() without any migration step.
+            'dossier_id': dossier_id,
+            'post_type': post_type,
         }
 
         self.posts.append(post_record)

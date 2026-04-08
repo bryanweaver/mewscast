@@ -2,6 +2,7 @@
 Mewscast - AI-powered X news reporter cat bot
 Main entry point for scheduled posts and automation
 """
+import json
 import os
 import re
 import sys
@@ -17,6 +18,20 @@ from bluesky_bot import BlueskyBot
 from news_fetcher import NewsFetcher
 from image_generator import ImageGenerator
 from post_tracker import PostTracker
+
+# --- Walter Croncat journalism workflow imports --------------------------
+# These modules are pure-Python and import with zero side-effects at module
+# level; the whole pipeline is only instantiated inside post_journalism_cycle
+# so the existing modes (scheduled/reply/both/special) are unaffected when
+# the journalism workflow is disabled.
+from dossier_store import DossierStore, DraftPost, PostType, StoryDossier
+from trend_detector import TrendDetector
+from story_triage import StoryTriage
+from source_gatherer import SourceGatherer
+from primary_source_finder import PrimarySourceFinder
+from meta_analyzer import MetaAnalyzer
+from post_composer import PostComposer
+from verification_gate import VerificationGate, VerificationResult
 
 
 def _load_config():
@@ -369,172 +384,6 @@ def reply_to_mentions():
         return False
 
 
-def post_battle():
-    """Generate and post a 'Battle of the Political Sides' special edition"""
-    print(f"\n{'='*60}")
-    print(f"Mewscast - SPECIAL EDITION: Battle of the Political Sides")
-    print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
-    print(f"{'='*60}\n")
-
-    try:
-        from battle_post import BattlePostGenerator
-
-        # Get optional topic from CLI args
-        topic = None
-        if len(sys.argv) > 3:
-            topic = " ".join(sys.argv[3:])
-        elif len(sys.argv) > 2 and sys.argv[1] != "special":
-            topic = " ".join(sys.argv[2:])
-
-        if topic:
-            print(f"🥊 Topic: {topic}")
-        else:
-            print(f"🥊 Auto-selecting trending topic...")
-
-        # Initialize battle generator
-        battle_gen = BattlePostGenerator()
-
-        # Find matching stories from both sides
-        battle_data = battle_gen.find_matching_stories(topic)
-        if not battle_data:
-            print(f"\n❌ Could not find matching coverage from both outlets.")
-            print(f"   Try specifying a topic: python src/main.py special battle \"topic here\"")
-            return False
-
-        article_a = battle_data['article_a']
-        article_b = battle_data['article_b']
-        pair = battle_data['source_pair']
-
-        print(f"\n{'='*60}")
-        print(f"🥊 BATTLE FOUND!")
-        print(f"   {pair['source_a']}: {article_a['title'][:60]}...")
-        print(f"   {pair['source_b']}: {article_b['title'][:60]}...")
-        print(f"{'='*60}\n")
-
-        # Generate the comparison post
-        result = battle_gen.generate_battle_post(battle_data)
-        if not result:
-            print(f"❌ Could not generate battle post")
-            return False
-
-        post_text = result['post_text']
-        sources_text = result['sources_text']
-
-        print(f"\n📝 Battle Post:\n{post_text}\n")
-        print(f"📎 Sources:\n{sources_text}\n")
-
-        # Initialize bots
-        print("📡 Connecting to X...")
-        twitter_bot = TwitterBot()
-
-        print("🦋 Connecting to Bluesky...")
-        try:
-            bluesky_bot = BlueskyBot()
-        except Exception as e:
-            print(f"⚠️  Bluesky connection failed: {e}")
-            bluesky_bot = None
-
-        # Generate split-screen battle image
-        image_path = None
-        try:
-            print(f"🎨 Generating split-screen battle image...")
-            from battle_image import BattleImageGenerator
-            battle_img = BattleImageGenerator()
-            image_path = battle_img.generate(battle_data)
-        except Exception as e:
-            print(f"⚠️  Battle image generation failed: {e}")
-
-        # Post to X
-        tweet_id = None
-        x_success = False
-        print(f"\n📤 Posting battle to X...")
-        if image_path:
-            x_result = twitter_bot.post_tweet_with_image(post_text, image_path)
-        else:
-            x_result = twitter_bot.post_tweet(post_text)
-
-        if x_result:
-            tweet_id = x_result['id']
-            print(f"✅ X post successful! ID: {tweet_id}")
-            x_success = True
-
-            # Post sources as reply
-            time.sleep(2)
-            source_reply = twitter_bot.reply_to_tweet(tweet_id, sources_text)
-            if source_reply:
-                print(f"✅ X sources reply posted!")
-        else:
-            print(f"❌ X post failed")
-
-        # Post to Bluesky
-        bluesky_uri = None
-        bluesky_success = False
-        if bluesky_bot:
-            print(f"\n🦋 Posting battle to Bluesky...")
-            if image_path:
-                bs_result = bluesky_bot.post_skeet_with_image(post_text, image_path)
-            else:
-                bs_result = bluesky_bot.post_skeet(post_text)
-
-            if bs_result:
-                bluesky_uri = bs_result['uri']
-                print(f"✅ Bluesky post successful! URI: {bluesky_uri}")
-                bluesky_success = True
-
-                # Post sources as reply
-                time.sleep(2)
-                # Post source A URL first
-                reply_a = bluesky_bot.reply_to_skeet_with_link(
-                    bluesky_uri, article_a['url']
-                )
-                if reply_a:
-                    print(f"✅ Bluesky {pair['source_a']} source reply posted!")
-                    # Post source B as reply to source A reply
-                    time.sleep(1)
-                    reply_b = bluesky_bot.reply_to_skeet_with_link(
-                        reply_a['uri'], article_b['url']
-                    )
-                    if reply_b:
-                        print(f"✅ Bluesky {pair['source_b']} source reply posted!")
-            else:
-                print(f"❌ Bluesky post failed")
-
-        # Record to post history
-        if x_success or bluesky_success:
-            config = _load_config()
-            dedup_config = config.get('deduplication', {})
-            tracker = PostTracker(config=dedup_config)
-
-            # Record using article_a as the primary story reference
-            tracker.record_post(
-                article_a,
-                post_content=post_text,
-                tweet_id=tweet_id,
-                bluesky_uri=bluesky_uri
-            )
-
-            print(f"\n{'='*60}")
-            platforms = []
-            if x_success:
-                platforms.append("X")
-            if bluesky_success:
-                platforms.append("Bluesky")
-            print(f"✅ BATTLE POSTED to: {', '.join(platforms)}")
-            print(f"{'='*60}\n")
-            return True
-
-        print(f"\n❌ Failed to post battle to any platform")
-        return False
-
-    except Exception as e:
-        print(f"\n{'='*60}")
-        print(f"❌ ERROR: {e}")
-        import traceback
-        traceback.print_exc()
-        print(f"{'='*60}\n")
-        return False
-
-
 def post_positive_news():
     """Generate and post a 'Positive News' special report"""
     print(f"\n{'='*60}")
@@ -699,6 +548,420 @@ def post_positive_news():
         return False
 
 
+# ---------------------------------------------------------------------------
+# Walter Croncat journalism workflow — Stage 7 orchestrator
+# ---------------------------------------------------------------------------
+
+_JOURNALISM_POST_TYPE_ALIASES = {
+    "brief": PostType.REPORT,
+    "report": PostType.REPORT,
+    "meta": PostType.META,
+    "analysis": PostType.ANALYSIS,
+    "bulletin": PostType.BULLETIN,
+    "correction": PostType.CORRECTION,
+    "primary": PostType.PRIMARY,
+}
+
+
+def _project_root() -> str:
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _safe_filename_component(text: str) -> str:
+    """Make a story id / post type safe for use in a filename."""
+    if not text:
+        return "unknown"
+    out = []
+    for ch in text:
+        if ch.isalnum() or ch in ("-", "_", "."):
+            out.append(ch)
+        else:
+            out.append("-")
+    return "".join(out)
+
+
+def _write_draft_file(
+    drafts_dir: str,
+    draft: DraftPost,
+    dossier: StoryDossier,
+    subfolder: str = "",
+) -> str:
+    """Write a DraftPost + dossier metadata to a markdown file under drafts/.
+
+    Returns the absolute path that was written.
+    """
+    target_dir = os.path.join(drafts_dir, subfolder) if subfolder else drafts_dir
+    os.makedirs(target_dir, exist_ok=True)
+
+    story_slug = _safe_filename_component(draft.story_id)
+    type_slug = _safe_filename_component(draft.post_type.value)
+    filename = f"{story_slug}_{type_slug}.md"
+    path = os.path.join(target_dir, filename)
+
+    outlets_list = ", ".join(a.outlet for a in dossier.articles) or "(none)"
+    primary_urls = ", ".join(p.url for p in dossier.primary_sources) or "(none)"
+
+    dossier_meta = {
+        "story_id": dossier.story_id,
+        "headline_seed": dossier.headline_seed,
+        "detected_at": dossier.detected_at,
+        "article_count": len(dossier.articles),
+        "primary_source_count": len(dossier.primary_sources),
+        "outlet_slants": dossier.outlet_slants,
+    }
+
+    body = [
+        f"# Croncat DRAFT — {draft.post_type.value}",
+        "",
+        f"- **story_id**: `{draft.story_id}`",
+        f"- **post_type**: {draft.post_type.value}",
+        f"- **sign_off**: {draft.sign_off!r}",
+        f"- **outlets**: {outlets_list}",
+        f"- **primary_sources**: {primary_urls}",
+        "",
+        "## Draft post",
+        "",
+        "```",
+        draft.text,
+        "```",
+        "",
+        "## Dossier metadata",
+        "",
+        "```json",
+        json.dumps(dossier_meta, indent=2, default=str),
+        "```",
+        "",
+    ]
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(body))
+    return path
+
+
+def post_journalism_cycle(
+    dry_run: bool = False,
+    forced_post_type: PostType | None = None,
+) -> bool:
+    """
+    Run one cycle of the Walter Croncat journalism pipeline.
+
+    Stages 1-7:
+      1. Trend detection (TrendDetector)
+      2. Story triage (StoryTriage)
+      3. Source gather + primary source find (SourceGatherer, PrimarySourceFinder)
+      4. Meta-analysis (MetaAnalyzer -> MetaAnalysisBrief)
+      5. Post composition (PostComposer -> DraftPost)
+      6. Verification gate (VerificationGate)
+      7. Publish (TwitterBot / BlueskyBot) + record dossier
+
+    Args:
+      dry_run: if True, write the DraftPost to drafts/<story_id>_<post_type>.md
+        instead of publishing. Useful for validation runs.
+      forced_post_type: if provided, override the brief's suggested_post_type
+        with this one (used by the `journalism brief|meta|bulletin|correction`
+        CLI modes for deterministic per-type cycles).
+
+    Returns True on success (publish or draft write), False on failure.
+    """
+    print(f"\n{'=' * 60}")
+    print(f"Walter Croncat journalism cycle — {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    if dry_run:
+        print("Mode: DRY RUN (drafts only, no publish)")
+    if forced_post_type:
+        print(f"Forced post type: {forced_post_type.value}")
+    print(f"{'=' * 60}\n")
+
+    try:
+        config = _load_config()
+    except Exception as e:
+        print(f"[journalism] failed to load config.yaml: {e}")
+        return False
+
+    journalism_cfg = config.get("journalism", {}) or {}
+    # Config gate — if the master switch is off and this is NOT a dry run,
+    # refuse to publish. Dry runs are always allowed because they are the
+    # validation mechanism.
+    if not journalism_cfg.get("enabled", False) and not dry_run:
+        print(
+            "[journalism] config.journalism.enabled is false; refusing to "
+            "publish. Re-run with --dry-run to generate drafts only."
+        )
+        return False
+
+    trend_cfg = journalism_cfg.get("trend_detection", {}) or {}
+    triage_cfg = journalism_cfg.get("triage", {}) or {}
+    gather_cfg = journalism_cfg.get("source_gather", {}) or {}
+    meta_cfg = journalism_cfg.get("meta_analysis", {}) or {}
+    composer_cfg = journalism_cfg.get("composer", {}) or {}
+    verification_cfg = journalism_cfg.get("verification", {}) or {}
+    dry_run_cfg = journalism_cfg.get("dry_run", {}) or {}
+
+    max_candidates = int(trend_cfg.get("max_candidates", 15))
+    use_llm_triage = bool(triage_cfg.get("use_llm", False))
+    target_sources = int(gather_cfg.get("target_count", 7))
+    meta_model = meta_cfg.get("model", "claude-opus-4-6")
+    composer_model = composer_cfg.get("model", "claude-sonnet-4-6")
+    max_length = int(composer_cfg.get("max_length", 280))
+    drafts_dir = os.path.join(_project_root(), dry_run_cfg.get("drafts_dir", "drafts"))
+    os.makedirs(drafts_dir, exist_ok=True)
+
+    registry_path = os.path.join(
+        _project_root(),
+        journalism_cfg.get("outlet_registry", "outlet_registry.yaml"),
+    )
+
+    # ---- Bot / fetcher init (bots only needed for real publish) -----------
+    twitter_bot = None
+    bluesky_bot = None
+    generator = None
+    tracker = None
+    if not dry_run:
+        print("[journalism] Initializing bots + content generator for publish mode...")
+        try:
+            twitter_bot = TwitterBot()
+        except Exception as e:
+            print(f"[journalism] X bot init failed: {e}")
+            twitter_bot = None
+        try:
+            bluesky_bot = BlueskyBot()
+        except Exception as e:
+            print(f"[journalism] Bluesky bot init failed: {e}")
+            bluesky_bot = None
+        if twitter_bot is None and bluesky_bot is None:
+            print("[journalism] both X and Bluesky bots failed to init; aborting publish cycle")
+            return False
+        try:
+            generator = ContentGenerator()
+        except Exception as e:
+            print(f"[journalism] ContentGenerator init failed: {e}")
+            generator = None
+        dedup_config = config.get("deduplication", {}) or {}
+        tracker = PostTracker(config=dedup_config)
+
+    print("[journalism] Initializing NewsFetcher + pipeline stages...")
+    news_fetcher = NewsFetcher()
+    dossier_store = DossierStore()
+
+    trend_detector = TrendDetector(
+        registry_path=registry_path,
+        twitter_bot=twitter_bot,
+        news_fetcher=news_fetcher,
+    )
+    story_triage = StoryTriage(use_llm=use_llm_triage)
+    source_gatherer = SourceGatherer(
+        news_fetcher=news_fetcher,
+        registry_path=registry_path,
+    )
+    primary_finder = PrimarySourceFinder()
+    meta_analyzer = MetaAnalyzer(model=meta_model)
+    post_composer = PostComposer(model=composer_model)
+    verification_gate = VerificationGate(max_length=max_length)
+
+    # ---- Stage 1: trend detection -----------------------------------------
+    print(f"\n[journalism] Stage 1 — detecting trends (max_candidates={max_candidates})")
+    candidates = trend_detector.detect_trends(max_candidates=max_candidates)
+    print(f"[journalism] Stage 1 yielded {len(candidates)} candidates")
+    if not candidates:
+        print("[journalism] no candidates from Stage 1; exiting cleanly")
+        return False
+
+    # ---- Stage 2: triage --------------------------------------------------
+    print("[journalism] Stage 2 — triaging candidates")
+    passed = story_triage.triage(candidates)
+    print(f"[journalism] Stage 2 passed {len(passed)} / {len(candidates)}")
+    if not passed:
+        print("[journalism] no candidates passed triage; exiting cleanly")
+        return False
+
+    # One cycle = one post. Take the top candidate.
+    candidate = passed[0]
+    print(f"[journalism] Selected candidate: {candidate.headline_seed[:80]}...")
+
+    # ---- Stage 3: gather + primary source ---------------------------------
+    print("[journalism] Stage 3a — gathering sources")
+    dossier = source_gatherer.gather(candidate, target_count=target_sources)
+    print(f"[journalism] Stage 3a collected {len(dossier.articles)} articles")
+
+    print("[journalism] Stage 3b — finding primary sources")
+    added_primary = primary_finder.find(dossier)
+    print(f"[journalism] Stage 3b added {len(added_primary)} primary sources")
+
+    dossier_store.save_dossier(dossier)
+
+    # ---- Stage 4: meta-analysis -------------------------------------------
+    print("[journalism] Stage 4 — meta-analysis")
+    try:
+        brief = meta_analyzer.analyze(dossier)
+    except Exception as e:
+        print(f"[journalism] Stage 4 failed: {e}")
+        return False
+    dossier_store.save_brief(brief)
+    print(
+        f"[journalism] Stage 4 suggested_post_type="
+        f"{brief.suggested_post_type.value} confidence={brief.confidence}"
+    )
+
+    # ---- Stage 5: compose -------------------------------------------------
+    chosen_type = forced_post_type or brief.suggested_post_type
+    print(f"[journalism] Stage 5 — composing {chosen_type.value} post")
+    try:
+        draft = post_composer.compose(
+            brief=brief,
+            dossier=dossier,
+            post_type=chosen_type,
+            max_length=max_length,
+        )
+    except Exception as e:
+        print(f"[journalism] Stage 5 failed: {e}")
+        return False
+
+    # ---- Stage 6: verification gate (with single retry) -------------------
+    print("[journalism] Stage 6 — verifying draft")
+    result = verification_gate.verify(draft, dossier)
+    if not result.passed:
+        print(f"[journalism] Stage 6 failures: {result.failures}")
+        print("[journalism] Stage 6 — retry composing with gate feedback")
+        try:
+            draft = post_composer.compose(
+                brief=brief,
+                dossier=dossier,
+                post_type=chosen_type,
+                max_length=max_length,
+                retry_reasons=result.failures,
+            )
+        except Exception as e:
+            print(f"[journalism] Stage 5 retry failed: {e}")
+            return False
+        result = verification_gate.verify(draft, dossier)
+        if not result.passed:
+            print(f"[journalism] Stage 6 FINAL failures: {result.failures}")
+            rejected_path = _write_draft_file(
+                drafts_dir, draft, dossier, subfolder="rejected"
+            )
+            print(f"[journalism] rejected draft written to {rejected_path}")
+            return False
+
+    # ---- Stage 7: publish or dry-run write --------------------------------
+    if dry_run:
+        path = _write_draft_file(drafts_dir, draft, dossier)
+        print(f"[journalism] DRY RUN draft written to {path}")
+        return True
+
+    print("[journalism] Stage 7 — publishing")
+
+    # Best-effort image generation — reuse the existing content generator
+    # path used by post_scheduled_tweet. Failure is not fatal.
+    image_path = None
+    image_prompt = None
+    if generator is not None:
+        try:
+            image_prompt = generator.generate_image_prompt(
+                dossier.headline_seed,
+                draft.text,
+                article_content=dossier.articles[0].body if dossier.articles else None,
+            )
+            img_gen = ImageGenerator()
+            image_path = img_gen.generate_image(image_prompt)
+        except Exception as e:
+            print(f"[journalism] image generation failed (continuing): {e}")
+
+    # Primary publish: post to X and Bluesky. We reuse the same text for
+    # both platforms in this first rollout; a later phase can specialize.
+    post_text = draft.text
+
+    tweet_id = None
+    reply_tweet_id = None
+    x_success = False
+    if twitter_bot is not None:
+        try:
+            if image_path:
+                x_result = twitter_bot.post_tweet_with_image(post_text, image_path)
+            else:
+                x_result = twitter_bot.post_tweet(post_text)
+            if x_result:
+                tweet_id = x_result.get("id")
+                x_success = True
+                print(f"[journalism] X post ok: {tweet_id}")
+
+                # Source-link reply if we have a primary source url
+                primary_url = (
+                    dossier.primary_sources[0].url
+                    if dossier.primary_sources
+                    else (dossier.articles[0].url if dossier.articles else None)
+                )
+                if primary_url:
+                    time.sleep(2)
+                    reply_result = twitter_bot.reply_to_tweet(tweet_id, primary_url)
+                    if reply_result:
+                        reply_tweet_id = reply_result.get("id")
+        except Exception as e:
+            print(f"[journalism] X publish failed: {e}")
+
+    bluesky_uri = None
+    bluesky_reply_uri = None
+    bluesky_success = False
+    if bluesky_bot is not None:
+        try:
+            if image_path:
+                bs_result = bluesky_bot.post_skeet_with_image(post_text, image_path)
+            else:
+                bs_result = bluesky_bot.post_skeet(post_text)
+            if bs_result:
+                bluesky_uri = bs_result.get("uri")
+                bluesky_success = True
+                print(f"[journalism] Bluesky post ok: {bluesky_uri}")
+
+                primary_url = (
+                    dossier.primary_sources[0].url
+                    if dossier.primary_sources
+                    else (dossier.articles[0].url if dossier.articles else None)
+                )
+                if primary_url:
+                    time.sleep(2)
+                    reply_result = bluesky_bot.reply_to_skeet_with_link(
+                        bluesky_uri, primary_url
+                    )
+                    if reply_result:
+                        bluesky_reply_uri = reply_result.get("uri")
+        except Exception as e:
+            print(f"[journalism] Bluesky publish failed: {e}")
+
+    if not (x_success or bluesky_success):
+        print("[journalism] no platform accepted the post; failing cycle")
+        return False
+
+    # Record to post history + dossier store
+    if tracker is not None:
+        synthetic_story = {
+            "title": dossier.headline_seed,
+            "url": dossier.articles[0].url if dossier.articles else None,
+            "source": dossier.articles[0].outlet if dossier.articles else "Unknown",
+        }
+        tracker.record_post(
+            synthetic_story,
+            post_content=post_text,
+            tweet_id=tweet_id,
+            reply_tweet_id=reply_tweet_id,
+            bluesky_uri=bluesky_uri,
+            bluesky_reply_uri=bluesky_reply_uri,
+            image_prompt=image_prompt,
+            dossier_id=draft.story_id,
+            post_type=draft.post_type.value,
+        )
+
+    post_url = None
+    if tweet_id:
+        post_url = f"https://x.com/i/web/status/{tweet_id}"
+    elif bluesky_uri:
+        post_url = bluesky_uri
+    dossier_store.save_post_record(draft.story_id, draft, post_url=post_url)
+
+    print(f"\n{'=' * 60}")
+    print("[journalism] cycle complete")
+    print(f"{'=' * 60}\n")
+    return True
+
+
 def main():
     """Main entry point"""
     # Load environment variables
@@ -723,19 +986,43 @@ def main():
     elif mode == "special":
         # Special edition posts
         special_type = sys.argv[2] if len(sys.argv) > 2 else None
-        if special_type == "battle":
-            success = post_battle()
-        elif special_type == "positive":
+        if special_type == "positive":
             success = post_positive_news()
         else:
             print(f"❌ Unknown special post type: {special_type}")
             print("Available special types:")
-            print("  battle [topic]    - Battle of the Political Sides")
             print("  positive [topic]  - Positive News Special Report")
             sys.exit(1)
+    elif mode == "journalism":
+        # Walter Croncat journalism workflow — new pipeline.
+        #
+        # Subcommands:
+        #   python src/main.py journalism                  # one cycle, real publish
+        #   python src/main.py journalism --dry-run        # one cycle, drafts only
+        #   python src/main.py journalism brief            # force a REPORT cycle
+        #   python src/main.py journalism meta             # force a META cycle
+        #   python src/main.py journalism bulletin         # force a BULLETIN cycle
+        #   python src/main.py journalism correction       # force a CORRECTION cycle
+        #
+        # --dry-run can be combined with any post-type subcommand.
+        extra_args = [a for a in sys.argv[2:]]
+        dry_run = "--dry-run" in extra_args
+        extra_args = [a for a in extra_args if a != "--dry-run"]
+
+        forced_type: PostType | None = None
+        if extra_args:
+            subtype = extra_args[0].lower()
+            if subtype in _JOURNALISM_POST_TYPE_ALIASES:
+                forced_type = _JOURNALISM_POST_TYPE_ALIASES[subtype]
+            else:
+                print(f"❌ Unknown journalism post type: {subtype}")
+                print("Available: brief, meta, analysis, bulletin, correction, primary")
+                sys.exit(1)
+
+        success = post_journalism_cycle(dry_run=dry_run, forced_post_type=forced_type)
     else:
         print(f"❌ Unknown mode: {mode}")
-        print("Available modes: scheduled, reply, both, special")
+        print("Available modes: scheduled, reply, both, special, journalism")
         sys.exit(1)
 
     # Exit with appropriate code for CI/CD
