@@ -79,6 +79,20 @@ outlets:
     beat: general
     priority: 2
 
+  - name: MSNBC
+    handle: MSNBC
+    domain: msnbc.com
+    slant: left-mainstream
+    beat: general
+    priority: 3
+
+  - name: Los Angeles Times
+    handle: latimes
+    domain: latimes.com
+    slant: left-mainstream
+    beat: general
+    priority: 2
+
   # --- Right-mainstream (target: >=4) ------------------------------------
   - name: Wall Street Journal
     handle: WSJ
@@ -175,7 +189,35 @@ outlets:
     beat: general
     priority: 3
 
+  - name: CBS News
+    handle: CBSNews
+    domain: cbsnews.com
+    slant: center
+    beat: general
+    priority: 2
+
+  - name: NBC News
+    handle: NBCNews
+    domain: nbcnews.com
+    slant: center
+    beat: general
+    priority: 2
+
+  - name: ABC News
+    handle: ABC
+    domain: abcnews.go.com
+    slant: center
+    beat: general
+    priority: 2
+
   # --- Specialized / beat outlets (target: >=4) --------------------------
+  - name: CNBC
+    handle: CNBC
+    domain: cnbc.com
+    slant: specialized
+    beat: business
+    priority: 2
+
   - name: Politico
     handle: politico
     domain: politico.com

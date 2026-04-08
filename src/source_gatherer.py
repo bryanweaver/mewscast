@@ -128,18 +128,85 @@ def _load_outlet_registry(path: str) -> list[dict]:
     return cleaned
 
 
+_OUTLET_NAME_SUFFIXES = (
+    " english",
+    " news service",
+    " news network",
+    " news",
+    " service",
+    " media",
+    " network",
+    " post",
+    " journal",
+)
+
+
+def _normalize_outlet_name(name: str) -> str:
+    """Normalize an outlet name for loose comparison between NewsFetcher's
+    `source` field (e.g. `"BBC"`) and `outlet_registry.yaml`'s `name` field
+    (e.g. `"BBC News"`).
+
+    Strips "The " prefix, lowercases, then strips one trailing suffix like
+    " News" / " English" / " Service" if present. Does NOT strip more than
+    one suffix — "Christian Science Monitor" should not become "Christian"
+    if " Monitor" happens to be matched.
+    """
+    if not name:
+        return ""
+    norm = name.strip().lower()
+    if norm.startswith("the "):
+        norm = norm[4:]
+    for suffix in _OUTLET_NAME_SUFFIXES:
+        if norm.endswith(suffix):
+            norm = norm[: -len(suffix)]
+            break
+    return norm.strip()
+
+
 def _outlet_match(article_source: str, outlet_name: str, outlet_domain: str) -> bool:
-    """Match a NewsFetcher article source string against a registry outlet."""
+    """Match a NewsFetcher article source string against a registry outlet.
+
+    Matching is bidirectional and name-normalized. We strip "The " prefixes
+    and common trailing suffixes ("News", "English", "Service") from both
+    sides before comparing, so registry "BBC News" matches NewsFetcher
+    "BBC", and registry "Al Jazeera English" matches "Al Jazeera", and
+    registry "The New York Times" matches "New York Times".
+
+    Domain match is checked first when available — most reliable signal.
+    Falls back to normalized-name comparison. Historical special-cases
+    (Associated Press / AP / AP News) are still handled.
+    """
     if not article_source:
         return False
-    src = article_source.lower()
-    if outlet_name and outlet_name.lower() in src:
+    src_lower = article_source.lower()
+
+    # Domain match — most reliable when present
+    if outlet_domain and outlet_domain in src_lower:
         return True
-    if outlet_domain and outlet_domain in src:
+
+    src_norm = _normalize_outlet_name(article_source)
+    outlet_norm = _normalize_outlet_name(outlet_name)
+    if not src_norm or not outlet_norm:
+        return False
+
+    # Exact normalized match
+    if src_norm == outlet_norm:
         return True
-    # The Google News RSS source field sometimes uses "AP News" vs "Associated Press"
-    if outlet_name.lower() == "associated press" and ("ap news" in src or src.strip() == "ap"):
+
+    # Bidirectional substring — either name contained in the other,
+    # provided the shorter one is at least 3 chars (avoid tiny matches
+    # like "ap" landing inside "apple news"). We word-boundary the check
+    # to avoid matching "cbs" inside "ncbs" or similar.
+    shorter, longer = sorted([src_norm, outlet_norm], key=len)
+    if len(shorter) >= 3:
+        # Word-boundary substring check
+        if re.search(r"\b" + re.escape(shorter) + r"\b", longer):
+            return True
+
+    # Historical special cases
+    if outlet_norm == "associated press" and src_norm in ("ap", "ap news", "associated"):
         return True
+
     return False
 
 
