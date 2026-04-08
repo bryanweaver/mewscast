@@ -1,0 +1,103 @@
+name: Journalism Dry Run (Walter Croncat)
+
+# Walter Croncat journalism pipeline — DRY RUN ONLY.
+#
+# This workflow exercises the Stage 1–6 journalism pipeline and writes a
+# draft post to drafts/<story_id>_<post_type>.md. It does NOT publish
+# anything to X or Bluesky. Publishing is additionally protected by the
+# `journalism.enabled: false` master switch in config.yaml.
+#
+# Triggers:
+#   - Manual button in the Actions tab (workflow_dispatch) with optional
+#     post-type override
+#   - Scheduled run once a day at 13:00 UTC (commented out by default —
+#     uncomment when you want continuous draft production)
+#
+# Outputs the draft and dossier as a downloadable run artifact so you can
+# read what the pipeline would have posted without merging anything into
+# main.
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_type:
+        description: 'Force a post type (leave blank to use brief suggestion)'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - brief
+          - meta
+          - analysis
+          - bulletin
+          - primary
+
+  # Uncomment to run a daily dry-run at 13:00 UTC (9 AM ET / 6 AM PT)
+  # schedule:
+  #   - cron: '0 13 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
+
+      - name: Run Walter Croncat journalism dry-run
+        env:
+          # X API credentials — used by Stage 1 trend detection via
+          # TwitterBot.client.search_recent_tweets. Falls back to Google
+          # News if X is rate-limited or unavailable.
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+
+          # Bluesky credentials — NOT used in dry-run (no publish path),
+          # but exported anyway so any incidental import of BlueskyBot
+          # does not crash on missing env.
+          BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+
+          # Anthropic: Stage 4 meta-analysis (Opus) + Stage 5 composition (Sonnet)
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+          # Grok is not invoked in dry-run (no image generation path)
+          X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
+        run: |
+          POST_TYPE="${{ github.event.inputs.post_type }}"
+          if [ -n "$POST_TYPE" ]; then
+            echo "Running journalism dry-run with forced post type: $POST_TYPE"
+            python src/main.py journalism "$POST_TYPE" --dry-run
+          else
+            echo "Running journalism dry-run with brief-suggested post type"
+            python src/main.py journalism --dry-run
+          fi
+
+      - name: List drafts and dossiers produced
+        if: always()
+        run: |
+          echo "=== drafts/ ==="
+          ls -la drafts/ 2>/dev/null || echo "(no drafts dir)"
+          echo ""
+          echo "=== dossiers/ ==="
+          ls -la dossiers/ 2>/dev/null || echo "(no dossiers dir)"
+
+      - name: Upload drafts and dossiers as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journalism-dry-run-${{ github.run_id }}
+          path: |
+            drafts/
+            dossiers/
+          retention-days: 14
+          if-no-files-found: warn
