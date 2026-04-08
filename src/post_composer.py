@@ -82,6 +82,27 @@ class PostComposer:
             return self.long_form_max_length
         return self.max_length
 
+    def _max_tokens_for(self, post_type: PostType) -> int:
+        """Scale the Claude `max_tokens` ceiling to the character budget for
+        this post type.
+
+        Rule of thumb: ~3 characters per output token, plus a 300-token
+        safety margin so the model isn't forced to clip the sign-off.
+        A 600-token floor preserves historical behavior for short-form
+        posts (REPORT/BULLETIN/etc — 280 chars maps to ~393 tokens, well
+        below the floor). Long-form META at 4000 chars maps to ~1633
+        tokens, which leaves enough headroom for a full coverage report
+        plus the keystone sign-off.
+
+        Surfaced by QA loop iteration 2 run 24160420780, where META
+        drafts were being truncated mid-sentence by a hardcoded
+        max_tokens=600 ceiling and then rejected by the verification
+        gate for sign-off mismatch (a downstream symptom of the upstream
+        token-budget bug).
+        """
+        char_budget = self._effective_max_length(post_type)
+        return max(600, (char_budget // 3) + 300)
+
     # ---- public ------------------------------------------------------------
 
     def compose(
@@ -130,7 +151,7 @@ class PostComposer:
 
         client = self._get_client()
         try:
-            text = self._call_claude(client, prompt)
+            text = self._call_claude(client, prompt, chosen_type)
         except Exception as e:
             raise RuntimeError(f"post_composer: Claude call failed: {e}") from e
 
@@ -295,10 +316,10 @@ class PostComposer:
         self._prompt_loader = get_prompt_loader()
         return self._prompt_loader
 
-    def _call_claude(self, client, prompt: str) -> str:
+    def _call_claude(self, client, prompt: str, post_type: PostType) -> str:
         msg = client.messages.create(
             model=self.model,
-            max_tokens=600,
+            max_tokens=self._max_tokens_for(post_type),
             messages=[{"role": "user", "content": prompt}],
         )
         if hasattr(msg, "content") and msg.content:
