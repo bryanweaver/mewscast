@@ -619,3 +619,129 @@ class TestCharLimit:
         draft = _make_draft(long_text, PostType.REPORT)
         result = long_gate.verify(draft, two_outlet_dossier)
         assert result.passed
+
+
+# ---------------------------------------------------------------------------
+# Per-post-type char limits — META gets long_form_max_length, rest get max_length
+# ---------------------------------------------------------------------------
+
+class TestPerPostTypeCharLimit:
+    """Regression tests for the bug from QA loop 24160006065 where META
+    posts were rejected for exceeding a 280-char limit even though
+    config.yaml has long_form_max_length: 4000 exactly for META's
+    coverage-report format."""
+
+    def _long_form_gate(self) -> VerificationGate:
+        # Default production values from config.yaml
+        return VerificationGate(max_length=280, long_form_max_length=4000)
+
+    # ---- META uses the long-form budget -------------------------------
+
+    def test_meta_post_1000_chars_passes_under_long_form(self, two_outlet_dossier):
+        gate = self._long_form_gate()
+        body = "Reuters and Associated Press both cover the vote. " * 18
+        text = (
+            "COVERAGE REPORT — Senate vote\n\n"
+            + body
+            + "\n\nAnd that's the mews — coverage report."
+        )
+        assert len(text) > 280  # sanity: would fail on 280
+        assert len(text) < 4000
+        draft = _make_draft(text, PostType.META)
+        result = gate.verify(draft, two_outlet_dossier)
+        assert result.passed, f"1000-char META should pass long_form gate: {result.failures}"
+
+    def test_meta_post_5000_chars_fails_even_under_long_form(self, two_outlet_dossier):
+        gate = self._long_form_gate()
+        # Build a clearly-over-4000-char META body
+        body = ("Reuters and Associated Press cover the 68-32 vote. " * 100)
+        text = (
+            "COVERAGE REPORT — Senate vote\n\n"
+            + body
+            + "\n\nAnd that's the mews — coverage report."
+        )
+        assert len(text) > 4000
+        draft = _make_draft(text, PostType.META)
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("char_limit" in f for f in result.failures)
+
+    # ---- REPORT stays on the standard 280 budget ----------------------
+
+    def test_report_post_300_chars_fails_on_standard_limit(self, two_outlet_dossier):
+        gate = self._long_form_gate()
+        # A 300-char REPORT body (well over 280) must be rejected even
+        # though long_form_max_length=4000 is available for META.
+        filler = "A" * 250
+        text = f"Reuters reports {filler}\n\nAnd that's the mews."
+        assert len(text) > 280
+        draft = _make_draft(text, PostType.REPORT)
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("char_limit" in f for f in result.failures)
+
+    def test_report_post_250_chars_passes(self, two_outlet_dossier):
+        gate = self._long_form_gate()
+        # 250-char REPORT should fit comfortably under 280
+        filler = "A" * 180
+        text = f"Reuters {filler}\n\nAnd that's the mews."
+        assert len(text) < 280
+        draft = _make_draft(text, PostType.REPORT)
+        result = gate.verify(draft, two_outlet_dossier)
+        assert result.passed, f"250-char REPORT should pass: {result.failures}"
+
+    # ---- BULLETIN is NOT in LONG_FORM_TYPES — must use 280 ------------
+
+    def test_bulletin_post_300_chars_fails_even_with_long_form_available(
+        self, two_outlet_dossier
+    ):
+        gate = self._long_form_gate()
+        single_outlet_dossier = _make_dossier(("Reuters",))
+        # BULLETIN body over 280 must still fail — BULLETIN is not long-form.
+        filler = "A" * 250
+        text = (
+            f"Reuters reports {filler}. "
+            "Not yet confirmed elsewhere."
+        )
+        assert len(text) > 280
+        draft = DraftPost(
+            text=text,
+            post_type=PostType.BULLETIN,
+            sign_off=None,
+            story_id="20260408-vg-test",
+            outlets_referenced=["Reuters"],
+            primary_source_urls=[],
+        )
+        result = gate.verify(draft, single_outlet_dossier)
+        assert not result.passed
+        assert any("char_limit" in f for f in result.failures)
+
+    # ---- ANALYSIS stays on 280 (intentional) --------------------------
+
+    def test_analysis_post_300_chars_fails_on_standard_limit(self, two_outlet_dossier):
+        """ANALYSIS is deliberately NOT in LONG_FORM_TYPES. The workflow
+        doc's ANALYSIS example is short, and ANALYSIS is 'used sparingly'
+        — the rarity itself is the point. Keep it on the standard 280
+        budget until there's a concrete counter-example."""
+        gate = self._long_form_gate()
+        filler = "A" * 250
+        text = (
+            f"ANALYSIS\n\nReuters notes {filler}\n\n"
+            "This cat's view — speculative, personal, subjective."
+        )
+        assert len(text) > 280
+        draft = _make_draft(text, PostType.ANALYSIS)
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("char_limit" in f for f in result.failures)
+
+    # ---- The _effective_max_length helper -----------------------------
+
+    def test_effective_max_length_for_each_post_type(self):
+        gate = self._long_form_gate()
+        assert gate._effective_max_length(PostType.META) == 4000
+        assert gate._effective_max_length(PostType.REPORT) == 280
+        assert gate._effective_max_length(PostType.ANALYSIS) == 280
+        assert gate._effective_max_length(PostType.BULLETIN) == 280
+        assert gate._effective_max_length(PostType.CORRECTION) == 280
+        assert gate._effective_max_length(PostType.PRIMARY) == 280
