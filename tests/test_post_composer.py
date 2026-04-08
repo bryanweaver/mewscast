@@ -51,9 +51,10 @@ class _StubPromptLoader:
 
 
 class _FakeClaude:
-    def __init__(self, text, capture_prompt: list = None):
+    def __init__(self, text, capture_prompt: list = None, capture_kwargs: list = None):
         self._text = text
         self._capture = capture_prompt
+        self._capture_kwargs = capture_kwargs
         self.calls = 0
         outer = self
 
@@ -64,6 +65,8 @@ class _FakeClaude:
                     msgs = kwargs.get("messages", [])
                     if msgs:
                         outer._capture.append(msgs[0].get("content", ""))
+                if outer._capture_kwargs is not None:
+                    outer._capture_kwargs.append(dict(kwargs))
 
                 class _Block:
                     def __init__(self, t):
@@ -411,6 +414,101 @@ class TestPerPostTypeMaxLength:
         assert composer._effective_max_length(PostType.BULLETIN) == 280
         assert composer._effective_max_length(PostType.CORRECTION) == 280
         assert composer._effective_max_length(PostType.PRIMARY) == 280
+
+
+# ---------------------------------------------------------------------------
+# Per-post-type Claude max_tokens budget
+# ---------------------------------------------------------------------------
+
+
+class TestPerPostTypeMaxTokens:
+    """Regression tests for the bug from QA loop iteration 2 run
+    24160420780 where every PostComposer Claude call hardcoded
+    max_tokens=600. META posts compose under a 4000-char budget which
+    needs ~1500 output tokens, and the 600-token ceiling was truncating
+    drafts mid-sentence — they never reached the keystone sign-off, and
+    the verification gate then rejected them as a downstream symptom of
+    the upstream token-budget bug.
+
+    The fix scales max_tokens with the per-post-type character budget
+    using the formula `max(600, char_budget // 3 + 300)` so short-form
+    posts keep their historical 600 floor and META gets the headroom it
+    needs to land the sign-off.
+    """
+
+    @pytest.mark.parametrize(
+        "post_type,expected_max_tokens",
+        [
+            # Short-form post types — 280 chars // 3 + 300 = 393, floor to 600
+            (PostType.REPORT, 600),
+            (PostType.ANALYSIS, 600),
+            (PostType.BULLETIN, 600),
+            (PostType.CORRECTION, 600),
+            (PostType.PRIMARY, 600),
+            # Long-form META — 4000 chars // 3 + 300 = 1633
+            (PostType.META, 1633),
+        ],
+    )
+    def test_max_tokens_for_each_post_type(self, post_type, expected_max_tokens):
+        composer = PostComposer(max_length=280, long_form_max_length=4000)
+        assert composer._max_tokens_for(post_type) == expected_max_tokens, (
+            f"{post_type.value}: expected max_tokens={expected_max_tokens}, "
+            f"got {composer._max_tokens_for(post_type)}"
+        )
+
+    @pytest.mark.parametrize(
+        "post_type,expected_max_tokens",
+        [
+            (PostType.REPORT, 600),
+            (PostType.ANALYSIS, 600),
+            (PostType.BULLETIN, 600),
+            (PostType.CORRECTION, 600),
+            (PostType.PRIMARY, 600),
+            (PostType.META, 1633),
+        ],
+    )
+    def test_max_tokens_passed_to_messages_create(
+        self, post_type, expected_max_tokens, brief, dossier
+    ):
+        """The PostComposer.compose() call must pass the per-post-type
+        max_tokens value through to client.messages.create()."""
+        captured_kwargs: list[dict] = []
+        loader = _StubPromptLoader()
+        client = _FakeClaude(
+            "Reuters reports 68-32.\n\nAnd that's the mews.",
+            capture_kwargs=captured_kwargs,
+        )
+        composer = PostComposer(
+            anthropic_client=client,
+            prompt_loader=loader,
+            max_length=280,
+            long_form_max_length=4000,
+        )
+
+        correction_inputs = None
+        if post_type == PostType.CORRECTION:
+            correction_inputs = {
+                "original_post_text": "x",
+                "original_post_url": "y",
+                "wrong_claim": "w",
+                "corrected_claim": "c",
+                "corrected_source_outlet": "o",
+                "corrected_source_url": "u",
+            }
+
+        composer.compose(
+            brief=brief,
+            dossier=dossier,
+            post_type=post_type,
+            correction_inputs=correction_inputs,
+        )
+
+        assert len(captured_kwargs) == 1
+        passed_max_tokens = captured_kwargs[0].get("max_tokens")
+        assert passed_max_tokens == expected_max_tokens, (
+            f"{post_type.value}: PostComposer must call messages.create with "
+            f"max_tokens={expected_max_tokens}, got {passed_max_tokens}"
+        )
 
 
 # ---------------------------------------------------------------------------
