@@ -210,7 +210,19 @@ class NewsFetcher:
                 'Upgrade-Insecure-Requests': '1'
             }
 
-            response = requests.get(url, headers=headers, timeout=15, allow_redirects=True)
+            # Fetch with 30s timeout + one retry specifically for read timeouts.
+            # Rationale (from QA loop iteration 5 run 24161836841): slow outlets
+            # like washingtonpost.com intermittently exceed a 15s read timeout
+            # but return fine on a second attempt. A 30s ceiling + one retry
+            # captures those without changing behavior for authoritative
+            # failures like 403/404/connection-refused, which fail on the
+            # first attempt and are not retried.
+            response = None
+            try:
+                response = requests.get(url, headers=headers, timeout=30, allow_redirects=True)
+            except requests.exceptions.ReadTimeout:
+                print(f"   ⏳  Read timeout after 30s, retrying once...")
+                response = requests.get(url, headers=headers, timeout=30, allow_redirects=True)
             response.raise_for_status()
 
             soup = BeautifulSoup(response.content, 'html.parser')
