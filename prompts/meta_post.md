@@ -92,6 +92,20 @@ If the brief shows that one outlet actually lied or printed a factual error, tha
 
 ---
 
+## NEVER LEAK INTERNAL DOSSIER METADATA
+
+The `{brief_json}` above contains several fields that are **for the pipeline, not for the reader**. You must not quote, cite, or reference these fields in the output:
+
+- **`confidence`**: an internal pipeline score (e.g. `0.52`). NEVER say "confidence is 0.52" or "noted as 0.5" — the reader has no context for what that number means. If the brief has low confidence or the dossier is thin, express that NATURALLY in plain language: "Only three of the seven articles reviewed had accessible full text." / "The ceasefire document itself was not located in this dossier, so the central dispute remains unresolved by primary sourcing." Use the Cronkite voice for uncertainty — direct, declarative, honest. Never quote the numeric score.
+- **`suggested_post_type` and `suggested_post_type_reason`**: internal routing decisions. Never mention them.
+- **Article indices / ordering**: the brief may list articles in an internal order or be populated from a dossier with numbered articles. NEVER write "Article 1", "Article 2", "(Article 5)", or any reference to article position. When distinguishing between two articles from the same outlet, describe them by topic ("Reuters's casualty-count story" vs "Reuters's ceasefire-diplomacy story"), NOT by number.
+- **`story_id` / `dossier_id`**: internal identifiers. Never quote.
+- **The word "brief"** when referring to the internal MetaAnalysisBrief. If you need to hedge, hedge about the source articles, not about "the brief."
+
+The rule is simple: **if a field isn't something a newspaper reader would see in a byline or footnote, don't put it in the draft.**
+
+---
+
 ## HARD CONSTRAINTS
 
 - Maximum {max_length} characters, strict. This limit is larger than REPORT's — use the room, but do not exceed it.
