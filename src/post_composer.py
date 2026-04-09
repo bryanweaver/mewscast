@@ -142,8 +142,24 @@ class PostComposer:
             else self._effective_max_length(chosen_type)
         )
 
+        # Iteration 12 regression fix: Claude's prose output doesn't count
+        # characters precisely. When told "280 max" for REPORT posts, it
+        # consistently produces 290-300 chars (iteration 12 run 27 hit
+        # 298/294 on first and retry attempts). The verification gate
+        # correctly rejects, but the draft is lost.
+        # Fix: tell the prompt a tighter target than the gate enforces,
+        # creating a safety margin for the model's natural overshoot.
+        # Long-form META posts (6500 budget) don't need the margin —
+        # overshoot on a large budget is negligible. Short-form types get
+        # a 7% margin (280 -> 260 for REPORT) which empirically covers
+        # the observed overshoot with room to spare.
+        if chosen_type in LONG_FORM_TYPES:
+            prompt_target = effective_max
+        else:
+            prompt_target = max(200, int(effective_max * 0.93))
+
         prompt = self._build_prompt(
-            chosen_type, brief, dossier, effective_max, correction_inputs or {}
+            chosen_type, brief, dossier, prompt_target, correction_inputs or {}
         )
 
         if retry_reasons:
