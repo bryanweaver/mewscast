@@ -317,7 +317,12 @@ class TestPerPostTypeMaxLength:
             f"META prompt must get long_form_max_length, got {kwargs['max_length']}"
         )
 
-    def test_report_post_receives_standard_max_length(self, brief, dossier):
+    def test_report_post_receives_safety_margin_max_length(self, brief, dossier):
+        """Short-form post prompts get a 7% safety margin below the gate's
+        hard limit. Claude's prose output doesn't count chars precisely —
+        telling it 280 produces 290-300 (iteration 12 regression). Telling
+        it 260 produces ~273 which passes the gate's 280 enforcement.
+        So REPORT with config max_length=280 should see 260 at the prompt."""
         loader = _StubPromptLoader()
         client = _FakeClaude("Reuters reports 68-32.\n\nAnd that's the mews.")
         composer = PostComposer(
@@ -329,16 +334,19 @@ class TestPerPostTypeMaxLength:
         composer.compose(brief=brief, dossier=dossier, post_type=PostType.REPORT)
         assert loader.calls[0][0] == "report_post.md"
         kwargs = loader.calls[0][1]
-        assert kwargs["max_length"] == 280
+        assert kwargs["max_length"] == 260  # 280 * 0.93 = 260
 
     @pytest.mark.parametrize(
         "post_type,expected_max",
         [
-            (PostType.REPORT, 280),
-            (PostType.ANALYSIS, 280),
-            (PostType.BULLETIN, 280),
-            (PostType.PRIMARY, 280),
-            (PostType.META, 4000),  # long-form
+            # Short-form post types get the 7% safety margin: 280 -> 260
+            (PostType.REPORT, 260),
+            (PostType.ANALYSIS, 260),
+            (PostType.BULLETIN, 260),
+            (PostType.PRIMARY, 260),
+            # META uses long-form budget, no margin needed (overshoot is
+            # negligible relative to a 4000-char budget)
+            (PostType.META, 4000),
         ],
     )
     def test_max_length_per_post_type(self, post_type, expected_max, brief, dossier):
@@ -357,9 +365,10 @@ class TestPerPostTypeMaxLength:
             f"got {kwargs['max_length']}"
         )
 
-    def test_correction_post_receives_standard_max_length(self, brief, dossier):
+    def test_correction_post_receives_safety_margin_max_length(self, brief, dossier):
         """CORRECTION builds its prompt via a different code path
-        (correction_inputs), so it also needs coverage."""
+        (correction_inputs), so it also needs coverage for the iteration-12
+        safety margin."""
         loader = _StubPromptLoader()
         client = _FakeClaude("CORRECTION: ...")
         composer = PostComposer(
@@ -382,7 +391,7 @@ class TestPerPostTypeMaxLength:
             },
         )
         kwargs = loader.calls[0][1]
-        assert kwargs["max_length"] == 280
+        assert kwargs["max_length"] == 260  # 280 * 0.93 = 260 safety margin
 
     def test_explicit_max_length_overrides_per_type_default(self, brief, dossier):
         """Tests and callers can still pass max_length= explicitly to
