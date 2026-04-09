@@ -70,25 +70,77 @@ _SENTENCE_STARTERS = {
 }
 
 _EVENT_VERBS = {
+    # Legal / criminal
     "passes", "passed", "vote", "voted", "wins", "won", "kills", "killed",
-    "struck", "strikes", "attacks", "attacked", "ceasefire", "announces",
-    "announced", "fires", "fired", "signs", "signed", "arrests", "arrested",
+    "struck", "strikes", "attacks", "attacked", "announces", "announced",
+    "fires", "fired", "signs", "signed", "arrests", "arrested",
     "declares", "declared", "rules", "ruled", "pleads", "guilty", "files",
     "filed", "denies", "denied", "dismisses", "dismissed", "testifies",
     "testified", "indicts", "indicted", "confirms", "confirmed", "admits",
-    "admitted",
+    "admitted", "sentenced", "convicted", "acquitted", "charged", "jailed",
+    "imprisoned", "paroled", "extradited", "sued", "settled", "appealed",
+    # Disaster / incident
+    "crashed", "died", "collapsed", "exploded", "erupted", "flooded",
+    "burned", "drowned", "shot", "stabbed", "kidnapped", "rescued",
+    # Political / institutional
+    "vetoed", "impeached", "resigned", "appointed", "nominated", "elected",
+    "recalled", "sanctioned", "banned", "lifted", "repealed", "ratified",
+    "overturned", "upheld", "blocked", "approved", "rejected",
+    # General news
+    "discovered", "revealed", "leaked", "leaking", "launched", "deployed",
+    "invaded", "seized", "raided", "evacuated", "ceasefire", "surrendered",
+    "hacking", "stealing", "smuggling", "spying", "trafficking",
 }
 
 _STRONG_NOUNS = {
-    "court", "senate", "congress", "president", "minister", "fire", "flood",
-    "earthquake", "election", "strike", "ceasefire", "verdict", "ruling",
-    "deal", "law", "bill",
+    # Government / legal institutions
+    "court", "senate", "congress", "president", "minister", "judge", "jury",
+    "prosecutor", "attorney", "governor", "mayor", "sheriff", "officer",
+    "sergeant", "detective", "police", "military", "army", "navy",
+    # Events / outcomes
+    "election", "verdict", "ruling", "deal", "law", "bill", "treaty",
+    "ceasefire", "strike", "protest", "riot", "massacre", "bombing",
+    # Institutions / places
+    "prison", "jail", "hospital", "school", "university", "church",
+    "mosque", "embassy", "pentagon", "capitol", "clinic", "courthouse",
+    # People roles (common news subjects)
+    "doctor", "nurse", "teacher", "professor", "scientist", "journalist",
+    "employee", "worker", "soldier", "pilot", "driver", "suspect",
+    "victim", "witness", "defendant", "plaintiff",
+    # News-significant descriptors
+    "classified", "confidential", "secret", "whistleblower",
+    # Disasters
+    "fire", "flood", "earthquake", "hurricane", "tornado", "tsunami",
+    "explosion", "crash", "shooting", "stabbing",
+    # Economic
+    "recession", "inflation", "bankruptcy", "layoffs", "merger",
+    "acquisition", "tariff", "sanctions",
+}
+
+# Proper nouns that are valid but too generic to be the ONLY search tokens.
+# These get demoted to the end of the query so content-specific words fill
+# the 6-token limit first. "New York City police sergeant sentenced" should
+# query "sergeant sentenced police" before "New York City".
+_GENERIC_PROPER_NOUNS = {
+    "new", "york", "city", "united", "states", "north", "south", "east",
+    "west", "los", "angeles", "san", "francisco", "washington", "london",
+    "district", "county", "state", "national", "federal", "american",
+    "british", "european", "former", "current",
 }
 
 _STOPWORDS = {
     "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "from",
     "with", "by", "as", "of", "for", "that", "this", "these", "those", "is",
     "was", "are", "were", "be", "been", "being", "not", "however",
+    "who", "then", "than", "also", "its", "his", "her", "their", "our",
+    "your", "had", "has", "have", "did", "does", "do", "will", "would",
+    "could", "should", "may", "might", "can", "shall", "into", "about",
+    "after", "before", "during", "between", "through", "until", "since",
+    "over", "under", "more", "most", "very", "just", "only", "even",
+    "still", "yet", "already", "ago", "says", "said", "told", "according",
+    "report", "reports", "year", "years", "day", "days", "time", "week",
+    "month", "first", "last", "next", "other", "some", "many", "much",
+    "every", "each", "both", "all", "any", "few", "full", "three", "nine",
 }
 
 _TOKEN_SPLIT_RE = re.compile(r"[\s,;:!?()\[\]{}\"<>/\\]+")
@@ -339,63 +391,88 @@ class SourceGatherer:
         """Compress a headline_seed down to a short Google News search query.
 
         Heuristic-only (no LLM). Returns a space-separated string of at most
-        6 keyword tokens drawn from proper nouns, event verbs, and strong
-        nouns in the original headline, with outlet suffixes and fluff
-        prefixes stripped. Returns "" if nothing extractable is left; the
-        caller is expected to fall back on a truncated headline in that case.
+        6 keyword tokens that are most likely to retrieve articles about the
+        SAME specific news event.
 
-        Example:
-          in:  "Vote passes 68-32 - Reuters"
-          out: "Vote passes Reuters"  (or similar — exact ordering depends on
-                                       tokenization; the point is ≤6 tokens)
+        The key insight (learned the hard way — see the NYPD cooler incident
+        where "New York City" was the only query produced): event verbs and
+        distinctive content nouns are far more searchable than generic
+        location proper nouns. "sentenced sergeant cooler" finds the specific
+        story; "New York City" finds everything in NYC.
+
+        Three tiers of token priority:
+          Tier 1: event verbs + strong nouns (highest search precision)
+          Tier 2: distinctive content words ≥5 chars (story-specific nouns)
+          Tier 3: proper nouns NOT in the generic set (names, orgs)
+          Tier 4: generic proper nouns (locations, demoted to backfill)
+
+        Returns "" if nothing extractable is left.
         """
         if not headline_seed:
             return ""
 
-        # 1. Strip an outlet suffix like " - CNBC", " — Al Jazeera", " | Reuters"
+        # 1. Strip outlet suffix and fluff prefix
         stripped = _SUFFIX_STRIP_RE.sub("", headline_seed.strip(), count=1).strip()
-
-        # 2. Strip common fluff prefixes
         upper_prefix = stripped.upper()
         for pref in _FLUFF_PREFIXES:
             if upper_prefix.startswith(pref):
                 stripped = stripped[len(pref):].lstrip()
                 break
 
-        # 3. Split on whitespace and punctuation
+        # 2. Split into tokens
         raw_tokens = [t for t in _TOKEN_SPLIT_RE.split(stripped) if t]
 
-        # 4-6. Keep proper nouns + event verbs + strong nouns, drop stopwords,
-        # dedupe while preserving order.
-        kept: list[str] = []
+        # 3. Classify each token into priority tiers.
+        #
+        # Tier 1: event verbs + strong nouns from curated lists (case-insensitive).
+        #         These are the MOST searchable tokens — they narrow the story.
+        #         "sentenced sergeant prison" finds the NYPD cooler case;
+        #         "ceasefire strikes" finds the Iran/Israel event.
+        #
+        # Tier 2: specific proper nouns (names, organizations, non-generic places).
+        #         "Trump", "Hezbollah", "Heuermann" — specific to the story.
+        #
+        # Tier 3: generic proper nouns (common location/institutional words).
+        #         "New", "York", "City", "Washington" — useful as backfill but
+        #         not distinctive enough to be the only search terms.
+        #
+        # NOTE: we deliberately do NOT have a "distinctive lowercase word ≥5 chars"
+        # tier. Initial implementation had one but it caught common English words
+        # like "affairs", "analyst", "support" that displaced the actually-important
+        # proper nouns (Trump, Iran, Hezbollah). The expanded _STRONG_NOUNS set
+        # already covers the specific content nouns (police, sergeant, prison,
+        # hospital, school, etc.) that the generic tier was trying to catch.
+        tier1: list[str] = []  # event verbs + strong nouns (highest search precision)
+        tier2: list[str] = []  # specific proper nouns (names, orgs)
+        tier3: list[str] = []  # generic proper nouns (locations — backfill only)
+
         seen_lower: set[str] = set()
         for raw in raw_tokens:
-            # Strip leading/trailing punctuation that survived the split
-            tok = raw.strip(".'\"`’‘")
-            if not tok:
+            tok = raw.strip(".’\"`’’\u201c\u201d")
+            if not tok or len(tok) < 3:
                 continue
             lower = tok.lower()
-            if lower in _STOPWORDS:
+            if lower in _STOPWORDS or lower in seen_lower:
                 continue
-            if lower in seen_lower:
+            seen_lower.add(lower)
+
+            # Curated lists first (case-insensitive) — highest search precision
+            if lower in _EVENT_VERBS or lower in _STRONG_NOUNS:
+                tier1.append(tok)
                 continue
 
-            is_proper = (
-                len(tok) >= 3
-                and tok[0].isupper()
-                and tok not in _SENTENCE_STARTERS
-            )
-            is_event_verb = lower in _EVENT_VERBS
-            is_strong_noun = lower in _STRONG_NOUNS
+            # Proper noun classification (capitalized, not a sentence starter)
+            is_proper = tok[0].isupper() and tok not in _SENTENCE_STARTERS
+            if is_proper:
+                if lower in _GENERIC_PROPER_NOUNS:
+                    tier3.append(tok)
+                else:
+                    tier2.append(tok)
 
-            if is_proper or is_event_verb or is_strong_noun:
-                kept.append(tok)
-                seen_lower.add(lower)
-
-            if len(kept) >= 6:
-                break
-
-        return " ".join(kept)
+        # 4. Combine tiers in priority order, take first 7
+        # (raised from 6 to 7 to give room for both event verbs AND key proper nouns)
+        combined = tier1 + tier2 + tier3
+        return " ".join(combined[:7])
 
     def _fetch_articles(self, topic: str, max_articles: int) -> list[dict]:
         if not self.news_fetcher:
