@@ -189,17 +189,39 @@ class NewsFetcher:
 
     def fetch_article_content(self, url: str) -> Optional[str]:
         """
-        Fetch and parse full article content from URL
+        Fetch and parse full article content from URL.
+
+        Two-stage fetch: tries direct HTTP first (fast, free), then falls
+        back to Jina Reader (r.jina.ai) which handles soft paywalls,
+        JS-rendered pages, and returns clean markdown. Added in response
+        to the QA loop finding 2-4/7 body-fetch failures per cycle due
+        to paywalled outlets returning 401/403 from GitHub Actions IPs.
 
         Args:
             url: Article URL to fetch
 
         Returns:
-            Extracted article text (first ~1500 chars), or None if fetch fails
+            Extracted article text (up to ~6000 chars), or None if both
+            direct fetch and Jina fallback fail
         """
-        try:
-            print(f"   📄 Fetching article content from: {url[:60]}...")
+        print(f"   📄 Fetching article content from: {url[:60]}...")
 
+        # Stage 1: try direct fetch (fast, no external dependency)
+        content = self._try_direct_fetch(url)
+        if content:
+            return content
+
+        # Stage 2: Jina Reader fallback (handles soft paywalls + JS rendering)
+        content = self._try_jina_fetch(url)
+        if content:
+            return content
+
+        return None
+
+    def _try_direct_fetch(self, url: str) -> Optional[str]:
+        """Direct HTTP fetch with BeautifulSoup extraction — the original
+        fetch path. Fast and free but fails on paywalled/JS-heavy sites."""
+        try:
             headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -210,13 +232,6 @@ class NewsFetcher:
                 'Upgrade-Insecure-Requests': '1'
             }
 
-            # Fetch with 30s timeout + one retry specifically for read timeouts.
-            # Rationale (from QA loop iteration 5 run 24161836841): slow outlets
-            # like washingtonpost.com intermittently exceed a 15s read timeout
-            # but return fine on a second attempt. A 30s ceiling + one retry
-            # captures those without changing behavior for authoritative
-            # failures like 403/404/connection-refused, which fail on the
-            # first attempt and are not retried.
             response = None
             try:
                 response = requests.get(url, headers=headers, timeout=30, allow_redirects=True)
@@ -234,7 +249,6 @@ class NewsFetcher:
             # Try to find article content using common tags/classes
             article_content = None
 
-            # Try common article container selectors (expanded list)
             selectors = [
                 'article',
                 '[role="main"]',
@@ -271,49 +285,111 @@ class NewsFetcher:
                 article_content = article_content.get_text()
 
             if article_content:
-                # Clean up whitespace
                 article_content = ' '.join(article_content.split())
 
-                # Require minimum content length (at least 200 chars for meaningful content)
                 if len(article_content) < 200:
-                    print(f"   ⚠️  Article content too short ({len(article_content)} chars) - likely extraction failed")
+                    print(f"   ⚠️  Direct fetch: content too short ({len(article_content)} chars)")
                     return None
 
-                # Check for paywall/incomplete content indicators
+                # Check for paywall indicators
                 paywall_indicators = [
-                    'subscribe to continue',
-                    'subscription required',
-                    'sign in to read',
-                    'create a free account',
-                    'register to continue',
-                    'already a subscriber',
-                    'to continue reading',
-                    'unlock this article',
-                    'premium content',
-                    'members only',
-                    'log in to access',
-                    'start your free trial',
-                    'subscribe now',
-                    'for full access'
+                    'subscribe to continue', 'subscription required',
+                    'sign in to read', 'create a free account',
+                    'register to continue', 'already a subscriber',
+                    'to continue reading', 'unlock this article',
+                    'premium content', 'members only',
+                    'log in to access', 'start your free trial',
+                    'subscribe now', 'for full access'
                 ]
-
                 content_lower = article_content.lower()
                 for indicator in paywall_indicators:
                     if indicator in content_lower:
-                        print(f"   ⚠️  Paywall detected ('{indicator}') - skipping article")
+                        print(f"   ⚠️  Direct fetch: paywall detected ('{indicator}')")
                         return None
 
-                # Truncate at sentence boundary instead of arbitrary char limit
                 article_content = _truncate_at_sentence(article_content, 6000)
-
                 print(f"   ✓ Extracted {len(article_content)} chars of article content")
                 return article_content
 
-            print(f"   ⚠️  Could not extract article content from HTML")
+            print(f"   ⚠️  Direct fetch: could not extract article content from HTML")
             return None
 
         except Exception as e:
-            print(f"   ⚠️  Error fetching article: {e}")
+            print(f"   ⚠️  Direct fetch failed: {e}")
+            return None
+
+    def _try_jina_fetch(self, url: str) -> Optional[str]:
+        """Jina Reader fallback — prepends r.jina.ai to the URL and gets
+        clean markdown back. Handles soft paywalls, JS-rendered pages, and
+        sites that block direct requests from cloud IPs.
+
+        Jina Reader (https://r.jina.ai) renders the page server-side and
+        returns clean article text as markdown. Free tier is sufficient for
+        our volume (~35 articles/day at 5 journalism cycles × 7 articles).
+        """
+        try:
+            jina_url = f"https://r.jina.ai/{url}"
+            print(f"   🔄 Trying Jina Reader fallback...")
+
+            jina_headers = {
+                'Accept': 'text/markdown',
+                'X-No-Cache': 'true',
+            }
+
+            response = requests.get(jina_url, headers=jina_headers, timeout=30)
+            response.raise_for_status()
+
+            content = response.text or ""
+
+            # Jina returns markdown with optional metadata header lines
+            # (Title:, URL Source:, etc.). Strip them to get the article body.
+            lines = content.split('\n')
+            body_lines = []
+            past_header = False
+            for line in lines:
+                # Skip leading metadata lines (Title:, URL Source:, Published Time:, etc.)
+                if not past_header:
+                    stripped = line.strip()
+                    if stripped.startswith(('Title:', 'URL Source:', 'Published Time:',
+                                           'Markdown Content:', 'Description:')):
+                        continue
+                    if stripped == '' and not body_lines:
+                        continue  # skip leading blank lines
+                    past_header = True
+                body_lines.append(line)
+
+            article_content = '\n'.join(body_lines).strip()
+
+            # Convert markdown to plain text (strip markdown formatting)
+            # Simple approach: remove common markdown syntax
+            article_content = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', article_content)  # [text](url) -> text
+            article_content = re.sub(r'[#*_~`>]', '', article_content)  # strip formatting chars
+            article_content = re.sub(r'\n{3,}', '\n\n', article_content)  # collapse excessive newlines
+            article_content = ' '.join(article_content.split())  # normalize whitespace
+
+            if len(article_content) < 200:
+                print(f"   ⚠️  Jina Reader: content too short ({len(article_content)} chars)")
+                return None
+
+            # Same paywall check as direct fetch
+            content_lower = article_content.lower()
+            paywall_indicators = [
+                'subscribe to continue', 'subscription required',
+                'sign in to read', 'create a free account',
+                'register to continue', 'to continue reading',
+                'unlock this article', 'premium content',
+            ]
+            for indicator in paywall_indicators:
+                if indicator in content_lower:
+                    print(f"   ⚠️  Jina Reader: paywall still detected ('{indicator}') — hard paywall")
+                    return None
+
+            article_content = _truncate_at_sentence(article_content, 6000)
+            print(f"   ✓ Jina Reader extracted {len(article_content)} chars of article content")
+            return article_content
+
+        except Exception as e:
+            print(f"   ⚠️  Jina Reader failed: {e}")
             return None
 
     def get_trending_topics(self, count: int = 5, categories: List[str] = None) -> List[Dict]:
