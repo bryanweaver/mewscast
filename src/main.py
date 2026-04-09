@@ -27,7 +27,7 @@ from post_tracker import PostTracker
 from dossier_store import DossierStore, DraftPost, PostType, StoryDossier
 from trend_detector import TrendDetector, _extract_proper_nouns
 from story_triage import StoryTriage
-from source_gatherer import _SUFFIX_STRIP_RE, SourceGatherer
+from source_gatherer import _FLUFF_PREFIXES, _SUFFIX_STRIP_RE, SourceGatherer
 from primary_source_finder import PrimarySourceFinder
 from meta_analyzer import MetaAnalyzer
 from post_composer import PostComposer
@@ -828,6 +828,29 @@ def post_journalism_cycle(
     # File format (backward-compatible): <story_id>\t<iso_timestamp>\t<headline>
     # Legacy 1-column and 2-column lines still parse; they just can't
     # contribute to semantic overlap (only byte-identical story_id match).
+    def _clean_headline_for_matching(h: str) -> str:
+        """Normalize a headline for semantic dedup: strip outlet suffix and
+        fluff prefix. Both transforms are idempotent. Used at two sites:
+        the seen-file read path (to populate noun sets) and the
+        _semantic_match candidate path (to extract the candidate's nouns).
+        Both sites must use the same normalization for symmetric matching.
+
+        Iteration 16 added the outlet suffix strip (Bug 24: Adam Back vs
+        Rex Heuermann false-matched via {new, york, times} suffix tokens).
+        Iteration 17 added the fluff prefix strip (Bug 25: any two stories
+        starting with "Live Updates:" false-matched via {live, updates}).
+        """
+        if not h:
+            return ""
+        # Strip outlet suffix first (e.g. " - The New York Times")
+        cleaned = _SUFFIX_STRIP_RE.sub("", h).strip()
+        # Then strip fluff prefix (e.g. "Live Updates:", "BREAKING:")
+        for prefix in _FLUFF_PREFIXES:
+            if cleaned.upper().startswith(prefix):
+                cleaned = cleaned[len(prefix):].strip()
+                break
+        return cleaned
+
     SEEN_PRUNE_DAYS = 14
     # Semantic-dedup threshold. 2 shared proper nouns is intentionally loose
     # because news headlines are often written in different phrasings for the
@@ -887,15 +910,15 @@ def post_journalism_cycle(
                         # Legacy lines without a headline column still get
                         # story_id-exact matching; just no semantic signal.
                         headline_part = parts[2].strip() if len(parts) >= 3 else ""
-                        # Iteration 16: strip outlet suffix (e.g. " - The New
-                        # York Times") before extracting proper nouns. Without
-                        # this, any two stories from the same outlet would
-                        # false-positive-match each other via the outlet name
-                        # tokens (times, new, york, times, etc.). Run 35 hit
-                        # this when Adam Back/Satoshi Nakamoto crypto story
-                        # matched Rex Heuermann serial-killer story via
-                        # {new, york, times} — pure outlet-suffix overlap.
-                        headline_for_nouns = _SUFFIX_STRIP_RE.sub("", headline_part).strip() if headline_part else ""
+                        # Iteration 16 + 17: normalize headlines by stripping
+                        # outlet suffix AND fluff prefix before extracting
+                        # proper nouns. Two bugs in the same class:
+                        # - Bug 24 (iter 16): Adam Back vs Rex Heuermann
+                        #   false-matched via {new, york, times} suffix
+                        # - Bug 25 (iter 17): Live Updates prefix stories
+                        #   false-matched via {live, updates}
+                        # Both stripped via _clean_headline_for_matching().
+                        headline_for_nouns = _clean_headline_for_matching(headline_part)
                         nouns = _extract_proper_nouns(headline_for_nouns) if headline_for_nouns else set()
                         seen_entries.append((story_id_part, headline_part, nouns))
             # If any entries were pruned, rewrite the file. The workflow's
@@ -920,12 +943,14 @@ def post_journalism_cycle(
         headline shares >=SEMANTIC_DEDUP_OVERLAP proper nouns with any seen
         entry that has a stored headline. Otherwise (False, '', 0).
 
-        Iteration 16: strips the outlet suffix from the candidate headline
-        before extracting proper nouns, same way it's stripped from stored
-        entries. Otherwise two stories from the same outlet share {times,
-        new, york} via suffix alone and false-match.
+        Iteration 16 + 17: the candidate is normalized through
+        _clean_headline_for_matching (strips both outlet suffix and fluff
+        prefix) before extracting proper nouns. The seen entries are
+        normalized the same way at read time, so the comparison is
+        symmetric. Without this, outlet-suffix tokens and prefix-fluff
+        tokens would create spurious matches between unrelated stories.
         """
-        cand_for_nouns = _SUFFIX_STRIP_RE.sub("", cand_headline or "").strip()
+        cand_for_nouns = _clean_headline_for_matching(cand_headline)
         cand_nouns = _extract_proper_nouns(cand_for_nouns)
         if len(cand_nouns) < SEMANTIC_DEDUP_OVERLAP:
             return (False, "", 0)
