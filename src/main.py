@@ -27,7 +27,7 @@ from post_tracker import PostTracker
 from dossier_store import DossierStore, DraftPost, PostType, StoryDossier
 from trend_detector import TrendDetector, _extract_proper_nouns
 from story_triage import StoryTriage
-from source_gatherer import SourceGatherer
+from source_gatherer import _SUFFIX_STRIP_RE, SourceGatherer
 from primary_source_finder import PrimarySourceFinder
 from meta_analyzer import MetaAnalyzer
 from post_composer import PostComposer
@@ -887,7 +887,16 @@ def post_journalism_cycle(
                         # Legacy lines without a headline column still get
                         # story_id-exact matching; just no semantic signal.
                         headline_part = parts[2].strip() if len(parts) >= 3 else ""
-                        nouns = _extract_proper_nouns(headline_part) if headline_part else set()
+                        # Iteration 16: strip outlet suffix (e.g. " - The New
+                        # York Times") before extracting proper nouns. Without
+                        # this, any two stories from the same outlet would
+                        # false-positive-match each other via the outlet name
+                        # tokens (times, new, york, times, etc.). Run 35 hit
+                        # this when Adam Back/Satoshi Nakamoto crypto story
+                        # matched Rex Heuermann serial-killer story via
+                        # {new, york, times} — pure outlet-suffix overlap.
+                        headline_for_nouns = _SUFFIX_STRIP_RE.sub("", headline_part).strip() if headline_part else ""
+                        nouns = _extract_proper_nouns(headline_for_nouns) if headline_for_nouns else set()
                         seen_entries.append((story_id_part, headline_part, nouns))
             # If any entries were pruned, rewrite the file. The workflow's
             # commit step will pick up the change and commit it just like
@@ -909,8 +918,15 @@ def post_journalism_cycle(
     def _semantic_match(cand_headline: str) -> tuple[bool, str, int]:
         """Return (is_match, matched_story_id, overlap_count) if this candidate
         headline shares >=SEMANTIC_DEDUP_OVERLAP proper nouns with any seen
-        entry that has a stored headline. Otherwise (False, '', 0)."""
-        cand_nouns = _extract_proper_nouns(cand_headline or "")
+        entry that has a stored headline. Otherwise (False, '', 0).
+
+        Iteration 16: strips the outlet suffix from the candidate headline
+        before extracting proper nouns, same way it's stripped from stored
+        entries. Otherwise two stories from the same outlet share {times,
+        new, york} via suffix alone and false-match.
+        """
+        cand_for_nouns = _SUFFIX_STRIP_RE.sub("", cand_headline or "").strip()
+        cand_nouns = _extract_proper_nouns(cand_for_nouns)
         if len(cand_nouns) < SEMANTIC_DEDUP_OVERLAP:
             return (False, "", 0)
         for sid, shl, snouns in seen_entries:
