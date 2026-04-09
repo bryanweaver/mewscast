@@ -943,13 +943,21 @@ def post_journalism_cycle(
         break
 
     if candidate is None:
-        # Every triage-passed candidate is already in the seen set. Fall
-        # through to the top candidate anyway — better to re-report than
-        # to sit out the cycle entirely — but flag it.
-        candidate = passed[0]
-        print(f"[journalism] all {len(passed)} triage-passed candidates are already "
-              f"in the seen set (exact or semantic); falling through to top candidate anyway")
-    elif skipped_count > 0:
+        # Every triage-passed candidate is already in the seen set.
+        # Clean exit — same semantics as "no candidates passed triage":
+        # nothing new to report this cycle. Iteration 7 originally fell
+        # through to passed[0] ("better to re-report than sit out"), but
+        # iteration 13 run 30 proved that logic wrong: re-reporting a
+        # story Cronkite already filed is worse than skipping the cycle.
+        # Cronkite didn't do the same lead twice on the same broadcast.
+        print(
+            f"[journalism] all {len(passed)} triage-passed candidates are already "
+            f"in the seen set (exact or semantic); clean exit, nothing new to report "
+            f"this cycle"
+        )
+        return True
+
+    if skipped_count > 0:
         print(f"[journalism] dedup skipped {skipped_count} already-seen candidate(s); "
               f"selected the next unseen story")
 
