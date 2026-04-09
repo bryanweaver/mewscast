@@ -93,9 +93,10 @@ _EVENT_VERBS = {
 }
 
 _STRONG_NOUNS = {
-    # Government / legal institutions
-    "court", "senate", "congress", "president", "minister", "judge", "jury",
-    "prosecutor", "attorney", "governor", "mayor", "sheriff", "officer",
+    # Government / legal institutions (not generic person-role titles like
+    # president/governor/minister — those displace story-specific proper nouns)
+    "court", "senate", "congress", "judge", "jury",
+    "prosecutor", "attorney", "sheriff", "officer",
     "sergeant", "detective", "police", "military", "army", "navy",
     # Events / outcomes
     "election", "verdict", "ruling", "deal", "law", "bill", "treaty",
@@ -469,10 +470,17 @@ class SourceGatherer:
                 else:
                     tier2.append(tok)
 
-        # 4. Combine tiers in priority order, take first 7
-        # (raised from 6 to 7 to give room for both event verbs AND key proper nouns)
-        combined = tier1 + tier2 + tier3
-        return " ".join(combined[:7])
+        # 4. Dynamic allocation across tiers, capped at 5 tokens total.
+        # Google News RSS treats multi-word queries as AND — 5 tokens is the
+        # sweet spot. Dynamic allocation ensures both event verbs AND proper
+        # nouns make it into the query regardless of headline structure.
+        if len(tier2) >= 3:
+            # Rich in proper nouns — balance verbs and names
+            result = tier1[:2] + tier2[:3] + tier3
+        else:
+            # Few proper nouns — lean on event verbs, backfill with whatever
+            result = tier1 + tier2 + tier3
+        return " ".join(result[:5])
 
     def _fetch_articles(self, topic: str, max_articles: int) -> list[dict]:
         if not self.news_fetcher:
