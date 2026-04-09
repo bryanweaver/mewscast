@@ -275,7 +275,7 @@ class TestBuildSearchQuery:
         )
         out = SourceGatherer._build_search_query(headline)
         tokens = out.split()
-        assert len(tokens) <= 5, f"expected <=5 tokens, got {len(tokens)}: {out!r}"
+        assert len(tokens) <= 7, f"expected <=7 tokens, got {len(tokens)}: {out!r}"
         # At least a couple of the key proper nouns should survive extraction
         lowered = out.lower()
         matches = sum(1 for kw in ("trump", "iran", "israeli", "lebanon", "ceasefire") if kw in lowered)

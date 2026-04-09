@@ -93,12 +93,9 @@ _EVENT_VERBS = {
 }
 
 _STRONG_NOUNS = {
-    # Government / legal institutions (not person-role titles like president/
-    # governor/minister — those are generic and better captured as proper nouns
-    # when capitalized, not as tier-1 strong nouns that displace story-specific
-    # proper nouns like country names or person names)
-    "court", "senate", "congress", "judge", "jury",
-    "prosecutor", "attorney", "sheriff", "officer",
+    # Government / legal institutions
+    "court", "senate", "congress", "president", "minister", "judge", "jury",
+    "prosecutor", "attorney", "governor", "mayor", "sheriff", "officer",
     "sergeant", "detective", "police", "military", "army", "navy",
     # Events / outcomes
     "election", "verdict", "ruling", "deal", "law", "bill", "treaty",
@@ -472,27 +469,10 @@ class SourceGatherer:
                 else:
                     tier2.append(tok)
 
-        # 4. Dynamic allocation across tiers, capped at 5 tokens total.
-        # Google News RSS treats multi-word queries as AND — every token must
-        # match. 5 tokens is the sweet spot: specific enough to find the story,
-        # broad enough to actually return results.
-        #
-        # The allocation adapts to headline content:
-        # - If the headline has ≥3 specific proper nouns (names, orgs), cap
-        #   tier1 at 2 so the names get into the query. Without this, event
-        #   verbs like "announced" and "strikes" fill up all 5 slots and
-        #   push out story-specific proper nouns like "Iran" and "Trump."
-        # - If the headline has few proper nouns (e.g. the NYPD cooler case
-        #   with only generic location nouns), let tier1 fill up — the event
-        #   verbs ("sentenced", "prison", "police") ARE the distinctive
-        #   search terms.
-        if len(tier2) >= 3:
-            # Rich in proper nouns — balance verbs and names
-            result = tier1[:2] + tier2[:3] + tier3
-        else:
-            # Few proper nouns — lean on event verbs, backfill with whatever
-            result = tier1 + tier2 + tier3
-        return " ".join(result[:5])
+        # 4. Combine tiers in priority order, take first 7
+        # (raised from 6 to 7 to give room for both event verbs AND key proper nouns)
+        combined = tier1 + tier2 + tier3
+        return " ".join(combined[:7])
 
     def _fetch_articles(self, topic: str, max_articles: int) -> list[dict]:
         if not self.news_fetcher:
