@@ -25,7 +25,7 @@ from post_tracker import PostTracker
 # so the existing modes (scheduled/reply/both/special) are unaffected when
 # the journalism workflow is disabled.
 from dossier_store import DossierStore, DraftPost, PostType, StoryDossier
-from trend_detector import TrendDetector
+from trend_detector import TrendDetector, _extract_proper_nouns
 from story_triage import StoryTriage
 from source_gatherer import SourceGatherer
 from primary_source_finder import PrimarySourceFinder
@@ -818,15 +818,33 @@ def post_journalism_cycle(
     # we log it explicitly so QA sees the fallback firing.
     seen_path = os.path.join(_project_root(), "journalism_seen_stories.txt")
     seen_story_ids: set[str] = set()
-    # Iteration 10: prune entries older than SEEN_PRUNE_DAYS to bound the
-    # file. News stories typically fade as trending topics within a few days;
-    # if a story re-emerges after two weeks, re-reporting it is acceptable
-    # (and likely even useful — the news cycle has moved on, the frame has
-    # probably shifted). 14 days balances "don't re-report Rex Heuermann
-    # tomorrow" against "don't let the file grow unbounded over months."
+    # Iteration 11: semantic dedup via proper-noun overlap. Iteration 10
+    # surfaced the Bondi-subpoena-vs-Bondi-deposition case where the same
+    # underlying event got two different story_ids because the two outlets
+    # used different headline wording. story_id-exact dedup missed it.
+    # Fix: store each seen headline alongside the story_id and timestamp,
+    # then at dedup time extract proper nouns from the candidate and each
+    # seen headline, skip on >= SEMANTIC_DEDUP_OVERLAP shared proper nouns.
+    # File format (backward-compatible): <story_id>\t<iso_timestamp>\t<headline>
+    # Legacy 1-column and 2-column lines still parse; they just can't
+    # contribute to semantic overlap (only byte-identical story_id match).
     SEEN_PRUNE_DAYS = 14
+    # Semantic-dedup threshold. 2 shared proper nouns is intentionally loose
+    # because news headlines are often written in different phrasings for the
+    # same event (e.g., "Bondi won't testify" vs "Bondi Won't Appear on Capitol
+    # Hill for Scheduled Epstein Deposition" — they share exactly {bondi,
+    # epstein}, which is 2). Threshold 3 missed that case in iteration 10.
+    # Tradeoff: 2 will occasionally collapse two legitimately-distinct
+    # political stories that share two common named entities (e.g. "Trump +
+    # Iran deal" and "Trump fires Iran envoy") into one cycle's worth of
+    # coverage. In practice, re-reporting related Trump/Iran stories within
+    # a 14-day window is acceptable because the trend feed moves faster than
+    # our cycle cadence anyway.
+    SEMANTIC_DEDUP_OVERLAP = 2  # >= this many shared proper nouns = same story
     seen_header_lines: list[str] = []
     seen_kept_lines: list[str] = []
+    # list of (story_id, headline, proper_noun_set) for semantic matching
+    seen_entries: list[tuple[str, str, set[str]]] = []
     pruned_count = 0
     try:
         if os.path.exists(seen_path):
@@ -838,8 +856,10 @@ def post_journalism_cycle(
                     if not stripped or stripped.startswith("#"):
                         seen_header_lines.append(raw)
                         continue
-                    # Format: "<story_id>\t<iso_timestamp>" or just "<story_id>"
-                    parts = stripped.split("\t", 1)
+                    # Format: "<story_id>\t<iso_timestamp>\t<headline>" (new),
+                    # or "<story_id>\t<iso_timestamp>" (iteration 7), or just
+                    # "<story_id>" (legacy).
+                    parts = stripped.split("\t", 2)
                     story_id_part = parts[0].strip()
                     if not story_id_part:
                         continue
@@ -848,7 +868,7 @@ def post_journalism_cycle(
                     # parse a timestamp (legacy / malformed lines), keep it —
                     # we don't have enough information to prune safely.
                     keep = True
-                    if len(parts) == 2:
+                    if len(parts) >= 2:
                         ts_str = parts[1].strip()
                         try:
                             ts = datetime.fromisoformat(ts_str)
@@ -863,6 +883,12 @@ def post_journalism_cycle(
                     if keep:
                         seen_kept_lines.append(raw)
                         seen_story_ids.add(story_id_part)
+                        # Capture the headline for semantic dedup if present.
+                        # Legacy lines without a headline column still get
+                        # story_id-exact matching; just no semantic signal.
+                        headline_part = parts[2].strip() if len(parts) >= 3 else ""
+                        nouns = _extract_proper_nouns(headline_part) if headline_part else set()
+                        seen_entries.append((story_id_part, headline_part, nouns))
             # If any entries were pruned, rewrite the file. The workflow's
             # commit step will pick up the change and commit it just like
             # a mark-as-seen append.
@@ -880,13 +906,38 @@ def post_journalism_cycle(
     except Exception as e:
         print(f"[journalism] could not read seen-stories file ({e}); continuing without dedup")
 
+    def _semantic_match(cand_headline: str) -> tuple[bool, str, int]:
+        """Return (is_match, matched_story_id, overlap_count) if this candidate
+        headline shares >=SEMANTIC_DEDUP_OVERLAP proper nouns with any seen
+        entry that has a stored headline. Otherwise (False, '', 0)."""
+        cand_nouns = _extract_proper_nouns(cand_headline or "")
+        if len(cand_nouns) < SEMANTIC_DEDUP_OVERLAP:
+            return (False, "", 0)
+        for sid, shl, snouns in seen_entries:
+            if not snouns:
+                continue
+            overlap = len(cand_nouns & snouns)
+            if overlap >= SEMANTIC_DEDUP_OVERLAP:
+                return (True, sid, overlap)
+        return (False, "", 0)
+
     candidate = None
     skipped_count = 0
     for c in passed:
+        # (1) Exact story_id dedup — cheap, catches same-headline-same-day
         if c.story_id in seen_story_ids:
             skipped_count += 1
             print(f"[journalism] skipping already-seen story_id={c.story_id} "
                   f"({c.headline_seed[:60]}...)")
+            continue
+        # (2) Semantic dedup via proper-noun overlap — catches same-event-
+        #     different-headline (iteration 11 Bug 19 fix).
+        matched, matched_sid, overlap = _semantic_match(c.headline_seed)
+        if matched:
+            skipped_count += 1
+            print(f"[journalism] skipping semantically-duplicate candidate "
+                  f"({c.headline_seed[:60]}...) — {overlap} proper nouns match "
+                  f"already-seen story_id={matched_sid}")
             continue
         candidate = c
         break
@@ -897,7 +948,7 @@ def post_journalism_cycle(
         # to sit out the cycle entirely — but flag it.
         candidate = passed[0]
         print(f"[journalism] all {len(passed)} triage-passed candidates are already "
-              f"in the seen set; falling through to top candidate anyway")
+              f"in the seen set (exact or semantic); falling through to top candidate anyway")
     elif skipped_count > 0:
         print(f"[journalism] dedup skipped {skipped_count} already-seen candidate(s); "
               f"selected the next unseen story")
@@ -993,8 +1044,17 @@ def post_journalism_cycle(
     try:
         already_seen = candidate.story_id in seen_story_ids
         if not already_seen:
+            # Iteration 11: include the headline_seed as a 3rd TSV column
+            # so future runs can do semantic dedup against it. Sanitize
+            # any stray tabs or newlines in the headline to preserve the
+            # one-record-per-line TSV format.
+            safe_headline = (candidate.headline_seed or "").replace("\t", " ").replace("\n", " ").strip()
             with open(seen_path, "a", encoding="utf-8") as f:
-                f.write(f"{candidate.story_id}\t{datetime.now(timezone.utc).isoformat()}\n")
+                f.write(
+                    f"{candidate.story_id}\t"
+                    f"{datetime.now(timezone.utc).isoformat()}\t"
+                    f"{safe_headline}\n"
+                )
             print(f"[journalism] marked story_id={candidate.story_id} as seen")
     except Exception as e:
         print(f"[journalism] could not update seen-stories file ({e}); continuing")
