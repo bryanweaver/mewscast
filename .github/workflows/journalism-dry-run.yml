@@ -72,6 +72,9 @@ jobs:
 
           # Grok is not invoked in dry-run (no image generation path)
           X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
+
+          # Diffbot Article API — Stage 3 body-fetch fallback (free tier, 10K pages/mo)
+          DIFFBOT_TOKEN: ${{ secrets.DIFFBOT_TOKEN }}
         run: |
           POST_TYPE="${{ github.event.inputs.post_type }}"
           if [ -n "$POST_TYPE" ]; then
