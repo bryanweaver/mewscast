@@ -1,17 +1,27 @@
 # Walter Croncat journalism pipeline — seen story_ids
-# Format: <story_id>\t<first_seen_utc_iso>
+# Format: <story_id>\t<first_seen_utc_iso>\t<headline_seed>
 # Used by src/main.post_journalism_cycle to avoid re-reporting the same
 # story across cycles. Committed by .github/workflows/journalism-dry-run.yml
 # after each successful dry-run so state persists across runs.
-2026-04-08-live-updates-rex-heuermann-dd1c124fbb	2026-04-08T23:15:05.582588+00:00
-2026-04-08-democrats-romp-in-wisconsin-39259bd6f8	2026-04-08T23:21:08.301169+00:00
-2026-04-08-oil-industry-pleads-its-95deeb57f5	2026-04-08T23:25:23.173970+00:00
-2026-04-08-at-least-182-killed-a5b50ac4c0	2026-04-08T23:33:45.352626+00:00
-2026-04-08-pakistan-says-iran-confirms-0b29bd592f	2026-04-08T23:38:36.915759+00:00
-2026-04-08-bondi-won-t-testify-f17b130b14	2026-04-08T23:46:53.728199+00:00
-2026-04-08-we-lose-the-midterms-9962d0e9af	2026-04-08T23:52:52.140328+00:00
-2026-04-08-bondi-won-t-appear-e210a8218d	2026-04-08T23:58:59.003386+00:00
-2026-04-08-house-democratic-leadership-signals-e81fbac99b	2026-04-09T00:04:43.017101+00:00
+#
+# Iteration 13 one-off migration: backfilled headlines for 9 legacy
+# 2-column entries (runs 17-25) using the loop log as source of truth.
+# Before this migration, semantic dedup only worked for new entries
+# and missed same-event-different-headline matches against legacy
+# entries — surfaced by run 29 when the pipeline selected
+# "Gilgo Beach suspect pleads guilty..." even though run 17 had
+# already selected "Rex Heuermann Pleads Guilty to Gilgo Beach Serial
+# Killings" (same event, same person). With the backfilled headlines,
+# proper-noun overlap on {gilgo, beach} now correctly dedups them.
+2026-04-08-live-updates-rex-heuermann-dd1c124fbb	2026-04-08T23:15:05.582588+00:00	Live Updates: Rex Heuermann Pleads Guilty to Gilgo Beach Serial Killings - The New York Times
+2026-04-08-democrats-romp-in-wisconsin-39259bd6f8	2026-04-08T23:21:08.301169+00:00	Democrats romp in Wisconsin Supreme Court race, narrow margins in Georgia - CNBC
+2026-04-08-oil-industry-pleads-its-95deeb57f5	2026-04-08T23:25:23.173970+00:00	Oil industry pleads its Hormuz case with White House - Politico
+2026-04-08-at-least-182-killed-a5b50ac4c0	2026-04-08T23:33:45.352626+00:00	At least 182 killed across Lebanon in large wave of Israeli strikes - BBC
+2026-04-08-pakistan-says-iran-confirms-0b29bd592f	2026-04-08T23:38:36.915759+00:00	Pakistan Says Iran Confirms to Attend Talks With US in Islamabad - Bloomberg
+2026-04-08-bondi-won-t-testify-f17b130b14	2026-04-08T23:46:53.728199+00:00	Bondi won't testify next week in House Epstein probe; lawmakers push to reschedule - NBC News
+2026-04-08-we-lose-the-midterms-9962d0e9af	2026-04-08T23:52:52.140328+00:00	'We lose the midterms': Republicans worry Iran might have already cost them Congress - Politico
+2026-04-08-bondi-won-t-appear-e210a8218d	2026-04-08T23:58:59.003386+00:00	Bondi Won't Appear on Capitol Hill for Scheduled Epstein Deposition - The New York Times
+2026-04-08-house-democratic-leadership-signals-e81fbac99b	2026-04-09T00:04:43.017101+00:00	House Democratic leadership signals sudden openness to 25th Amendment push - Axios
 2026-04-08-tennessee-plant-is-fined-8a8f728ab2	2026-04-09T00:10:53.631797+00:00	Tennessee Plant Is Fined $3.1 Million After Explosion That Killed 16 - The New York Times
 2026-04-08-jeff-shell-steps-down-b80da89ef0	2026-04-09T00:23:35.804835+00:00	Jeff Shell steps down as Paramount president after legal battle with gambler - Los Angeles Times
 2026-04-08-gilgo-beach-suspect-pleads-9f3369d642	2026-04-09T00:30:32.893833+00:00	Gilgo Beach suspect pleads guilty, admits killing 8 women over 3 decades - The Washington Post
