@@ -206,13 +206,22 @@ class NewsFetcher:
         """
         print(f"   📄 Fetching article content from: {url[:60]}...")
 
-        # Stage 1: try direct fetch (fast, no external dependency)
+        # Three-stage fetch chain — each stage has different IP infrastructure
+        # and extraction methods, maximizing coverage across diverse outlets.
+        # Total cost: $0/month at our volume (~35 articles/day).
+
+        # Stage 1: direct HTTP + BeautifulSoup (free, fast, ~60% success)
         content = self._try_direct_fetch(url)
         if content:
             return content
 
-        # Stage 2: Jina Reader fallback (handles soft paywalls + JS rendering)
+        # Stage 2: Jina Reader (free tier, handles WaPo + Bloomberg soft paywalls)
         content = self._try_jina_fetch(url)
+        if content:
+            return content
+
+        # Stage 3: Diffbot Article API (free tier — 10K pages/month, we use ~1K)
+        content = self._try_diffbot_fetch(url)
         if content:
             return content
 
@@ -390,6 +399,78 @@ class NewsFetcher:
 
         except Exception as e:
             print(f"   ⚠️  Jina Reader failed: {e}")
+            return None
+
+    def _try_diffbot_fetch(self, url: str) -> Optional[str]:
+        """Diffbot Article API fallback — purpose-built news article extraction
+        since 2012. Returns structured JSON with clean text, title, author, date.
+
+        Free tier: 10,000 pages/month (we use ~1,050). No credit card required.
+        Rate limit: 5 calls/minute (fine for sequential processing).
+
+        Requires DIFFBOT_TOKEN env var. If not set, this stage is skipped
+        silently — the pipeline degrades gracefully to direct + Jina only.
+
+        Diffbot uses computer-vision-based extraction (not CSS selectors),
+        making it resilient to layout changes. It routes through its own
+        infrastructure, so it may succeed on domains where both direct fetch
+        and Jina fail (different IP reputation).
+        """
+        diffbot_token = os.getenv("DIFFBOT_TOKEN")
+        if not diffbot_token:
+            # No token configured — skip silently. This is expected when
+            # the secret hasn't been added to GitHub yet.
+            return None
+
+        try:
+            print(f"   🔄 Trying Diffbot Article API fallback...")
+
+            diffbot_url = (
+                f"https://api.diffbot.com/v3/article"
+                f"?token={diffbot_token}"
+                f"&url={requests.utils.quote(url, safe='')}"
+            )
+
+            response = requests.get(diffbot_url, timeout=30)
+            response.raise_for_status()
+
+            data = response.json()
+
+            # Diffbot returns {"objects": [{"text": "...", "title": "...", ...}]}
+            objects = data.get("objects") or []
+            if not objects:
+                print(f"   ⚠️  Diffbot: no article objects returned")
+                return None
+
+            article_obj = objects[0]
+            article_text = article_obj.get("text") or ""
+
+            # Clean up whitespace
+            article_text = ' '.join(article_text.split())
+
+            if len(article_text) < 200:
+                print(f"   ⚠️  Diffbot: content too short ({len(article_text)} chars)")
+                return None
+
+            # Same paywall check as other stages
+            content_lower = article_text.lower()
+            paywall_indicators = [
+                'subscribe to continue', 'subscription required',
+                'sign in to read', 'create a free account',
+                'register to continue', 'to continue reading',
+                'unlock this article', 'premium content',
+            ]
+            for indicator in paywall_indicators:
+                if indicator in content_lower:
+                    print(f"   ⚠️  Diffbot: paywall still detected ('{indicator}') — hard paywall")
+                    return None
+
+            article_text = _truncate_at_sentence(article_text, 6000)
+            print(f"   ✓ Diffbot extracted {len(article_text)} chars of article content")
+            return article_text
+
+        except Exception as e:
+            print(f"   ⚠️  Diffbot failed: {e}")
             return None
 
     def get_trending_topics(self, count: int = 5, categories: List[str] = None) -> List[Dict]:
