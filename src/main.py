@@ -828,6 +828,40 @@ def post_journalism_cycle(
     # File format (backward-compatible): <story_id>\t<iso_timestamp>\t<headline>
     # Legacy 1-column and 2-column lines still parse; they just can't
     # contribute to semantic overlap (only byte-identical story_id match).
+    # Iteration 18 Bug 26 stoplist: common headline verbs, prepositions,
+    # and institutional tokens that pollute the title-case proper-noun set.
+    # Without filtering these, any two stories with the same institution
+    # doing the same action (e.g., "Senate Passes Bill" vs "House Passes
+    # Bill", "Pentagon Announces X" vs "Pentagon Announces Y") would share
+    # 2+ tokens and false-match. The stoplist is applied AFTER the
+    # suffix/prefix strip but BEFORE the overlap comparison.
+    #
+    # Conservative list — includes only tokens that are structurally
+    # high-frequency in news headlines AND not distinctive as entities.
+    # Tokens like "Trump", "Biden", "Iran" stay IN the noun set because
+    # they're actual entity content.
+    _DEDUP_STOP_TOKENS = {
+        # Title-case common verbs (noise, not content entities)
+        "says", "said", "reports", "report", "claims", "claim",
+        "denies", "deny", "denied", "declares", "declare", "declared",
+        "announces", "announce", "announced",
+        "passes", "passed", "rules", "ruled", "ruling",
+        "charges", "charge", "charged", "considers", "considered",
+        "issues", "issued", "votes", "voted", "voting",
+        "vetoes", "vetoed", "approves", "approved", "rejects", "rejected",
+        "warns", "urges", "seeks", "admits", "reveals",
+        # Prepositions/conjunctions capitalized in title case
+        "against", "with", "from", "after", "before", "over", "under",
+        "into", "onto", "through", "about", "between", "during", "while",
+        # Institutional tokens — too common across unrelated stories to
+        # serve as distinctive entity match keys on their own
+        "house", "senate", "congress", "court", "committee",
+        "administration", "department", "pentagon", "doj", "white",
+        # Generic headline fillers
+        "bill", "case", "plan", "deal", "news", "update", "report",
+        "statement", "probe", "inquiry", "investigation",
+    }
+
     def _clean_headline_for_matching(h: str) -> str:
         """Normalize a headline for semantic dedup: strip outlet suffix and
         fluff prefix. Both transforms are idempotent. Used at two sites:
@@ -850,6 +884,18 @@ def post_journalism_cycle(
                 cleaned = cleaned[len(prefix):].strip()
                 break
         return cleaned
+
+    def _dedup_nouns(h: str) -> set[str]:
+        """Extract proper nouns for semantic dedup: clean the headline,
+        extract capitalized tokens, then filter out the Bug-26 stoplist
+        (common title-case verbs + institutional tokens + prepositions +
+        generic headline fillers) that would otherwise cause false
+        positives between unrelated stories sharing the same institutional
+        actor and action verb."""
+        cleaned = _clean_headline_for_matching(h)
+        if not cleaned:
+            return set()
+        return _extract_proper_nouns(cleaned) - _DEDUP_STOP_TOKENS
 
     SEEN_PRUNE_DAYS = 14
     # Semantic-dedup threshold. 2 shared proper nouns is intentionally loose
@@ -910,16 +956,13 @@ def post_journalism_cycle(
                         # Legacy lines without a headline column still get
                         # story_id-exact matching; just no semantic signal.
                         headline_part = parts[2].strip() if len(parts) >= 3 else ""
-                        # Iteration 16 + 17: normalize headlines by stripping
-                        # outlet suffix AND fluff prefix before extracting
-                        # proper nouns. Two bugs in the same class:
-                        # - Bug 24 (iter 16): Adam Back vs Rex Heuermann
-                        #   false-matched via {new, york, times} suffix
-                        # - Bug 25 (iter 17): Live Updates prefix stories
-                        #   false-matched via {live, updates}
-                        # Both stripped via _clean_headline_for_matching().
-                        headline_for_nouns = _clean_headline_for_matching(headline_part)
-                        nouns = _extract_proper_nouns(headline_for_nouns) if headline_for_nouns else set()
+                        # Iterations 16-18: three-stage normalization for
+                        # semantic dedup noun extraction:
+                        #   - Strip outlet suffix (Bug 24, iter 16)
+                        #   - Strip fluff prefix (Bug 25, iter 17)
+                        #   - Apply stoplist filter (Bug 26, iter 18)
+                        # All three are bundled in _dedup_nouns().
+                        nouns = _dedup_nouns(headline_part) if headline_part else set()
                         seen_entries.append((story_id_part, headline_part, nouns))
             # If any entries were pruned, rewrite the file. The workflow's
             # commit step will pick up the change and commit it just like
@@ -943,15 +986,13 @@ def post_journalism_cycle(
         headline shares >=SEMANTIC_DEDUP_OVERLAP proper nouns with any seen
         entry that has a stored headline. Otherwise (False, '', 0).
 
-        Iteration 16 + 17: the candidate is normalized through
-        _clean_headline_for_matching (strips both outlet suffix and fluff
-        prefix) before extracting proper nouns. The seen entries are
-        normalized the same way at read time, so the comparison is
-        symmetric. Without this, outlet-suffix tokens and prefix-fluff
-        tokens would create spurious matches between unrelated stories.
+        Iterations 16-18: the candidate is normalized through _dedup_nouns
+        which strips outlet suffix (iter 16), fluff prefix (iter 17), and
+        filters a stoplist of common title-case noise tokens (iter 18)
+        before computing the noun set. The seen entries are normalized
+        the same way at read time so the comparison is symmetric.
         """
-        cand_for_nouns = _clean_headline_for_matching(cand_headline)
-        cand_nouns = _extract_proper_nouns(cand_for_nouns)
+        cand_nouns = _dedup_nouns(cand_headline)
         if len(cand_nouns) < SEMANTIC_DEDUP_OVERLAP:
             return (False, "", 0)
         for sid, shl, snouns in seen_entries:
