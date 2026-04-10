@@ -379,3 +379,125 @@ class TestDetectTrendsFallback:
             news_fetcher=stub_news,
         )
         assert detector.detect_trends(max_candidates=5) == []
+
+
+# ---------------------------------------------------------------------------
+# Phase 1: original_urls passthrough tests
+# ---------------------------------------------------------------------------
+
+class TestOriginalUrls:
+    def test_news_fetcher_fallback_carries_url(self, tmp_path):
+        """URL from story dict flows to TrendCandidate.original_urls."""
+        registry = tmp_path / "outlets.yaml"
+        registry.write_text(
+            "outlets:\n  - name: Reuters\n    handle: Reuters\n    slant: wire\n",
+            encoding="utf-8",
+        )
+        stub_news = _StubNewsFetcher(stories=[
+            {
+                "title": "Senate passes bill",
+                "source": "Reuters",
+                "published_date": "2026-04-08T12:00:00+00:00",
+                "url": "https://reuters.com/senate-bill",
+            },
+        ])
+        detector = TrendDetector(
+            registry_path=str(registry),
+            twitter_bot=None,
+            news_fetcher=stub_news,
+        )
+        candidates = detector.detect_trends(max_candidates=5)
+        assert len(candidates) == 1
+        assert candidates[0].original_urls == ["https://reuters.com/senate-bill"]
+
+    def test_x_path_extracts_urls_from_entities(self, tmp_path):
+        """Tweet entities.urls flow through to the tweet dict's urls field."""
+        registry = tmp_path / "outlets.yaml"
+        registry.write_text(
+            "outlets:\n  - name: Reuters\n    handle: Reuters\n    slant: wire\n",
+            encoding="utf-8",
+        )
+        tweet = _FakeTweet(
+            "Senate passes bill https://t.co/short",
+            author_id=1, like=10, rt=5, reply=2,
+        )
+        tweet.entities = {
+            "urls": [
+                {
+                    "url": "https://t.co/short",
+                    "expanded_url": "https://reuters.com/full-article",
+                },
+            ],
+        }
+        chunk = [{"handle": "Reuters", "name": "Reuters"}]
+        users_map = {1: "Reuters"}
+        result = TrendDetector._tweet_to_dict(tweet, chunk, users_map)
+        assert "https://reuters.com/full-article" in result["urls"]
+        # t.co wrapper should NOT be in the list since expanded_url is preferred
+        assert "https://t.co/short" not in result["urls"]
+
+    def test_x_path_extracts_urls_from_text_fallback(self, tmp_path):
+        """When entities.urls is empty, regex fallback captures URLs from text."""
+        registry = tmp_path / "outlets.yaml"
+        registry.write_text(
+            "outlets:\n  - name: Reuters\n    handle: Reuters\n    slant: wire\n",
+            encoding="utf-8",
+        )
+        tweet = _FakeTweet(
+            "Senate passes bill https://reuters.com/direct-link",
+            author_id=1, like=10, rt=5, reply=2,
+        )
+        tweet.entities = {}  # no urls key
+        chunk = [{"handle": "Reuters", "name": "Reuters"}]
+        users_map = {1: "Reuters"}
+        result = TrendDetector._tweet_to_dict(tweet, chunk, users_map)
+        assert "https://reuters.com/direct-link" in result["urls"]
+
+    def test_cluster_merges_urls_from_multiple_tweets(self, tmp_path):
+        """Two tweets with different URLs produce merged list in TrendCandidate."""
+        registry = tmp_path / "outlets.yaml"
+        registry.write_text(
+            "outlets:\n"
+            "  - name: Reuters\n    handle: Reuters\n    slant: wire\n"
+            "  - name: AP\n    handle: AP\n    slant: wire\n",
+            encoding="utf-8",
+        )
+        tweet1 = _FakeTweet(
+            "Senate passes Appropriations Bill 68-32 https://reuters.com/a",
+            author_id=1, like=100, rt=50, reply=20,
+        )
+        tweet1.entities = {"urls": [{"expanded_url": "https://reuters.com/a"}]}
+        tweet2 = _FakeTweet(
+            "Senate Appropriations vote passes 68-32 chamber",
+            author_id=2, like=80, rt=30, reply=10,
+        )
+        tweet2.entities = {"urls": [{"expanded_url": "https://apnews.com/b"}]}
+        users = [
+            _FakeUser(1, "Reuters"),
+            _FakeUser(2, "AP"),
+        ]
+        client = _FakeTweepyClient([_FakeResponse([tweet1, tweet2], users=users)])
+        detector = TrendDetector(
+            registry_path=str(registry),
+            twitter_bot=_FakeTwitterBot(client),
+            news_fetcher=None,
+        )
+        candidates = detector._detect_via_x(max_candidates=10)
+        senate = next(
+            (c for c in candidates if "senate" in c.headline_seed.lower()),
+            None,
+        )
+        assert senate is not None
+        assert "https://reuters.com/a" in senate.original_urls
+        assert "https://apnews.com/b" in senate.original_urls
+
+    def test_original_urls_default_empty_list(self):
+        """Backward compat: constructing TrendCandidate without original_urls works."""
+        candidate = TrendCandidate(
+            headline_seed="Test headline",
+            detected_at="2026-04-08T19:30:00+00:00",
+            source_signals=["Reuters"],
+            engagement=100,
+            story_id="20260408-test",
+        )
+        assert candidate.original_urls == []

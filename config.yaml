@@ -307,6 +307,7 @@ journalism:
   source_gather:
     target_count: 7
     require_slant_diversity: true
+    max_fallback_candidates: 3
   meta_analysis:
     model: claude-opus-4-6
     max_tokens: 4000

@@ -79,6 +79,7 @@ class ArticleRecord:
     body: str
     fetched_at: str              # ISO-8601 timestamp
     is_wire_derived: bool = False
+    headline_only: bool = False  # True when body is empty or short (<500 chars)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -92,6 +93,7 @@ class ArticleRecord:
             body=d["body"],
             fetched_at=d["fetched_at"],
             is_wire_derived=bool(d.get("is_wire_derived", False)),
+            headline_only=bool(d.get("headline_only", False)),
         )
 
 

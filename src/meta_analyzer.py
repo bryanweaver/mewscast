@@ -122,10 +122,11 @@ class MetaAnalyzer:
             slant = dossier.outlet_slants.get(art.outlet, "")
             slant_str = f" ({slant})" if slant else ""
             wire_flag = " [wire-derived]" if art.is_wire_derived else ""
+            headline_flag = " [headline-only]" if art.headline_only or not art.body or len(art.body) < 500 else ""
             safe_title = cls._sanitize_untrusted(art.title or "")
             safe_body = cls._sanitize_untrusted(art.body or "")
             sections.append(
-                f"## Article {i}: {art.outlet}{slant_str} — {safe_title}{wire_flag}\n"
+                f"## Article {i}: {art.outlet}{slant_str} — {safe_title}{wire_flag}{headline_flag}\n"
                 f"URL: {art.url}\n\n"
                 f"<article_body>\n{safe_body}\n</article_body>"
             )

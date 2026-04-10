@@ -64,6 +64,7 @@ class VerificationGate:
     HEDGE_PHRASES_FOR_BULLETIN = [
         "not yet confirmed",
         "not yet verified",
+        "also covered by",
     ]
 
     # Post types where editorial word checking is enforced.
