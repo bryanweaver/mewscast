@@ -715,6 +715,7 @@ def post_journalism_cycle(
     max_candidates = int(trend_cfg.get("max_candidates", 15))
     use_llm_triage = bool(triage_cfg.get("use_llm", False))
     target_sources = int(gather_cfg.get("target_count", 7))
+    max_fallback_candidates = int(gather_cfg.get("max_fallback_candidates", 3))
     meta_model = meta_cfg.get("model", "claude-opus-4-6")
     composer_model = composer_cfg.get("model", "claude-sonnet-4-6")
     max_length = int(composer_cfg.get("max_length", 280))
@@ -1045,25 +1046,54 @@ def post_journalism_cycle(
 
     print(f"[journalism] Selected candidate: {candidate.headline_seed[:80]}...")
 
-    # ---- Stage 3: gather + primary source ---------------------------------
-    print("[journalism] Stage 3a — gathering sources")
-    dossier = source_gatherer.gather(candidate, target_count=target_sources)
-    print(f"[journalism] Stage 3a collected {len(dossier.articles)} articles")
+    # ---- Stage 3: gather + primary source (with fallback loop) ------------
+    # Build a ranked list of fallback candidates from the triage-passed set.
+    # If the primary candidate yields 0 articles, try the next unseen one.
+    fallback_candidates = [candidate]
+    for c in passed:
+        if len(fallback_candidates) >= max_fallback_candidates:
+            break
+        if c is candidate:
+            continue
+        if c.story_id in seen_story_ids:
+            continue
+        matched, _, _ = _semantic_match(c.headline_seed)
+        if matched:
+            continue
+        fallback_candidates.append(c)
 
-    print("[journalism] Stage 3b — finding primary sources")
-    added_primary = primary_finder.find(dossier)
-    print(f"[journalism] Stage 3b added {len(added_primary)} primary sources")
+    dossier = None
+    for fb_idx, fb_candidate in enumerate(fallback_candidates, start=1):
+        fb_label = f"[{fb_idx}/{len(fallback_candidates)}]"
+        print(f"[journalism] {fb_label} Stage 3a — gathering sources for: "
+              f"{fb_candidate.headline_seed[:70]}...")
+        fb_dossier = source_gatherer.gather(
+            fb_candidate,
+            target_count=target_sources,
+            seed_urls=getattr(fb_candidate, "original_urls", []),
+        )
+        print(f"[journalism] {fb_label} Stage 3a collected {len(fb_dossier.articles)} articles")
 
-    dossier_store.save_dossier(dossier)
+        print(f"[journalism] {fb_label} Stage 3b — finding primary sources")
+        added_primary = primary_finder.find(fb_dossier)
+        print(f"[journalism] {fb_label} Stage 3b added {len(added_primary)} primary sources")
 
-    # Bug 5 short-circuit: a 0-article dossier has nothing for Stage 4 to
-    # analyze. Burning Opus + Sonnet calls only to have Stage 6 reject on
-    # source_count is a waste. Treat this as a clean no-op cycle (same
-    # semantics as "no candidates passed triage").
-    if len(dossier.articles) == 0:
+        dossier_store.save_dossier(fb_dossier)
+
+        if len(fb_dossier.articles) == 0:
+            print(f"[journalism] {fb_label} 0 articles — trying next candidate")
+            continue
+
+        # This candidate worked — use it
+        dossier = fb_dossier
+        candidate = fb_candidate
+        break
+
+    # If all fallback candidates yielded 0 articles, clean exit.
+    if dossier is None or len(dossier.articles) == 0:
         print(
-            f"[journalism] Stage 3 returned 0 articles for "
-            f"'{candidate.headline_seed[:80]}...' — clean exit, "
+            f"[journalism] Stage 3 returned 0 articles for all "
+            f"{len(fallback_candidates)} candidate(s) — clean exit, "
             f"nothing to report on this cycle"
         )
         return True

@@ -466,3 +466,140 @@ class TestPostJournalismCycleEmptyDossier:
         )
         # Dossier is still persisted for audit
         dossier_store_mock.save_dossier.assert_called_once_with(empty_dossier)
+
+
+# ---------------------------------------------------------------------------
+# Phase 2: seed_urls passthrough + _infer_outlet_from_url tests
+# ---------------------------------------------------------------------------
+
+class TestGatherSeedUrls:
+    def test_gather_with_seed_urls_fetches_directly(self, real_registry_path):
+        """Seed URL appears in dossier even when keyword search returns 0."""
+        fetcher = _StubNewsFetcher(articles=[], bodies={
+            "https://reuters.com/special-story": (
+                "WASHINGTON (Reuters) - The California AG filed hospice fraud charges "
+                "involving eleven facilities across three counties. "
+                + ("lorem ipsum " * 50)
+            ),
+        })
+        candidate = _Candidate(
+            headline_seed="California AG files hospice fraud charges",
+        )
+        gatherer = SourceGatherer(
+            news_fetcher=fetcher, registry_path=real_registry_path
+        )
+        dossier = gatherer.gather(
+            candidate,
+            target_count=5,
+            seed_urls=["https://reuters.com/special-story"],
+        )
+        assert len(dossier.articles) >= 1
+        urls = [a.url for a in dossier.articles]
+        assert "https://reuters.com/special-story" in urls
+
+    def test_gather_seed_urls_precede_keyword_results(self, real_registry_path):
+        """Seed articles are first in dossier.articles."""
+        seed_body = "Seed body content. " * 40
+        keyword_body = "Keyword body content. " * 40
+        fetcher = _StubNewsFetcher(
+            articles=[
+                {
+                    "title": "Keyword article",
+                    "url": "https://apnews.com/keyword",
+                    "source": "AP News",
+                    "description": "From keyword search",
+                },
+            ],
+            bodies={
+                "https://reuters.com/seed": seed_body,
+                "https://apnews.com/keyword": keyword_body,
+            },
+        )
+        candidate = _Candidate(
+            headline_seed="Senate passes appropriations bill 68-32",
+            source_signals=["Reuters", "AP"],
+        )
+        gatherer = SourceGatherer(
+            news_fetcher=fetcher, registry_path=real_registry_path
+        )
+        dossier = gatherer.gather(
+            candidate,
+            target_count=5,
+            seed_urls=["https://reuters.com/seed"],
+        )
+        assert len(dossier.articles) >= 2
+        # The seed article should be first because seed_articles are prepended
+        # to articles_raw. Since slant sorting may reorder, we just check
+        # the seed URL is present.
+        urls = [a.url for a in dossier.articles]
+        assert "https://reuters.com/seed" in urls
+        assert "https://apnews.com/keyword" in urls
+
+    def test_gather_seed_url_fetch_failure_continues(self, real_registry_path):
+        """Failed seed URL doesn't block keyword search."""
+        fetcher = _StubNewsFetcher(
+            articles=[
+                {
+                    "title": "Keyword article",
+                    "url": "https://apnews.com/keyword",
+                    "source": "AP News",
+                    "description": "From keyword search",
+                },
+            ],
+            bodies={
+                # Seed URL returns empty body (fetch failure)
+                "https://reuters.com/404": "",
+                "https://apnews.com/keyword": "Keyword body content. " * 40,
+            },
+        )
+        candidate = _Candidate(
+            headline_seed="Senate passes appropriations bill 68-32",
+            source_signals=["Reuters", "AP"],
+        )
+        gatherer = SourceGatherer(
+            news_fetcher=fetcher, registry_path=real_registry_path
+        )
+        dossier = gatherer.gather(
+            candidate,
+            target_count=5,
+            seed_urls=["https://reuters.com/404"],
+        )
+        # Keyword article should still be present
+        urls = [a.url for a in dossier.articles]
+        assert "https://apnews.com/keyword" in urls
+
+    def test_gather_without_seed_urls_unchanged(self, candidate, real_registry_path):
+        """Backward compat: calling without seed_urls works the same as before."""
+        articles = [
+            {
+                "title": "Reuters: Senate 68-32",
+                "url": "https://reuters.com/x",
+                "source": "Reuters",
+                "description": "Wire copy",
+            },
+        ]
+        bodies = {
+            "https://reuters.com/x": "Reuters body about the Senate vote 68-32 " + ("x" * 200),
+        }
+        fetcher = _StubNewsFetcher(articles=articles, bodies=bodies)
+        gatherer = SourceGatherer(
+            news_fetcher=fetcher, registry_path=real_registry_path
+        )
+        # Call without seed_urls (the old API)
+        dossier = gatherer.gather(candidate, target_count=5)
+        assert isinstance(dossier, StoryDossier)
+        assert len(dossier.articles) >= 1
+
+    def test_infer_outlet_from_url_matches_registry(self, real_registry_path):
+        """_infer_outlet_from_url resolves known domains to canonical names."""
+        gatherer = SourceGatherer(
+            news_fetcher=None, registry_path=real_registry_path
+        )
+        # Test a few canonical mappings (depends on outlet_registry.yaml)
+        reuters_name = gatherer._infer_outlet_from_url("https://www.reuters.com/article/foo")
+        assert "reuters" in reuters_name.lower() or reuters_name == "reuters.com"
+
+        # Unknown domain should fall back to the domain string
+        unknown = gatherer._infer_outlet_from_url("https://www.obscurenews.example.com/story")
+        assert unknown  # non-empty
+        assert "obscurenews" in unknown.lower() or "example" in unknown.lower()

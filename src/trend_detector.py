@@ -49,6 +49,11 @@ class TrendCandidate:
     #                                for NewsFetcher-fallback candidates (each top-story is one URL
     #                                from one outlet by construction, but Google News top-stories
     #                                is itself a curated aggregation).
+    original_urls: list[str] = field(default_factory=list)
+    #                                URLs discovered during trend detection (from tweet entities or
+    #                                news_fetcher story dicts). Passed to Stage 3 as seed_urls so the
+    #                                source_gatherer can fetch the original article directly instead of
+    #                                relying solely on keyword re-search.
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -307,6 +312,28 @@ class TrendDetector:
     def _tweet_to_dict(tweet, chunk: list[dict], users_map: dict) -> dict:
         """Normalize a tweepy tweet (or a stub mock) into a plain dict."""
         text = getattr(tweet, "text", "") or ""
+
+        # --- Extract URLs BEFORE _normalize_headline strips them -----------
+        # Prefer expanded_url from tweet entities (avoids t.co wrappers).
+        # Fallback: regex on raw text.
+        urls: list[str] = []
+        entities = getattr(tweet, "entities", None) or {}
+        if isinstance(entities, dict):
+            for u in entities.get("urls", []) or []:
+                expanded = u.get("expanded_url") or u.get("url", "")
+                if expanded:
+                    urls.append(expanded)
+        if not urls:
+            urls = re.findall(r'https?://\S+', text)
+        # Deduplicate while preserving order
+        seen: set[str] = set()
+        deduped: list[str] = []
+        for u in urls:
+            if u not in seen:
+                seen.add(u)
+                deduped.append(u)
+        urls = deduped
+
         metrics = getattr(tweet, "public_metrics", None) or {}
         if not isinstance(metrics, dict):
             metrics = {}
@@ -336,6 +363,7 @@ class TrendDetector:
             "author_handle": author_handle or "unknown",
             "engagement": engagement,
             "created_at": created_iso,
+            "urls": urls,
         }
 
     # ---- clustering --------------------------------------------------------
@@ -353,6 +381,8 @@ class TrendDetector:
             if not nouns:
                 continue
 
+            tweet_urls = tweet.get("urls", [])
+
             placed = False
             for cluster in clusters:
                 if len(nouns & cluster["nouns"]) >= 2:
@@ -360,6 +390,12 @@ class TrendDetector:
                     cluster["nouns"] |= nouns
                     cluster["engagement"] += tweet["engagement"]
                     cluster["handles"].add(tweet["author_handle"])
+                    # Merge URLs from the joining tweet (dedup)
+                    existing = set(cluster["urls"])
+                    for u in tweet_urls:
+                        if u not in existing:
+                            cluster["urls"].append(u)
+                            existing.add(u)
                     placed = True
                     break
             if not placed:
@@ -368,6 +404,7 @@ class TrendDetector:
                     "tweets": [tweet],
                     "engagement": tweet["engagement"],
                     "handles": {tweet["author_handle"]},
+                    "urls": list(tweet_urls),
                 })
 
         candidates: list[TrendCandidate] = []
@@ -391,6 +428,7 @@ class TrendDetector:
                 source_signals=sorted(cluster["handles"]),
                 engagement=int(cluster["engagement"]),
                 story_id=_stable_story_id(headline_seed, detected_at),
+                original_urls=cluster.get("urls", []),
             ))
 
         # Rank: more signals first, then more engagement
@@ -416,6 +454,7 @@ class TrendDetector:
             if not title:
                 continue
             detected_at = story.get("published_date") or now_iso
+            url = story.get("url", "") if isinstance(story, dict) else ""
             out.append(TrendCandidate(
                 headline_seed=_normalize_headline(title),
                 detected_at=detected_at,
@@ -423,6 +462,7 @@ class TrendDetector:
                 engagement=0,  # NewsFetcher doesn't expose engagement metrics
                 story_id=_stable_story_id(title, detected_at),
                 source="news_fetcher",
+                original_urls=[url] if url else [],
             ))
         return out
 

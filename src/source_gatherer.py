@@ -28,6 +28,7 @@ import os
 import re
 from datetime import datetime, timezone
 from typing import TYPE_CHECKING, Optional
+from urllib.parse import urlparse
 
 from dossier_store import ArticleRecord, StoryDossier
 
@@ -287,13 +288,40 @@ class SourceGatherer:
 
     # ---- public ------------------------------------------------------------
 
-    def gather(self, candidate: "TrendCandidate", target_count: int = 7) -> StoryDossier:
+    def _infer_outlet_from_url(self, url: str) -> str:
+        """Infer the outlet name for a URL by matching its domain against
+        the loaded outlet registry. Falls back to the bare domain string
+        if no registry entry matches."""
+        try:
+            parsed = urlparse(url)
+            domain = (parsed.netloc or "").lower().lstrip("www.")
+        except Exception:
+            return "Unknown"
+        if not domain:
+            return "Unknown"
+        for entry in self.registry:
+            entry_domain = (entry.get("domain") or "").lower()
+            if entry_domain and entry_domain in domain:
+                return entry["name"]
+        return domain
+
+    def gather(
+        self,
+        candidate: "TrendCandidate",
+        target_count: int = 7,
+        seed_urls: list[str] | None = None,
+    ) -> StoryDossier:
         """Collect articles for a candidate and return a StoryDossier.
 
         target_count is a soft target — we keep gathering until we hit it OR
         we exhaust the slant matrix, whichever comes first. The dossier is
         returned even if incomplete; the verification gate at Stage 6 makes
         the final publish/no-publish call.
+
+        seed_urls: optional list of URLs discovered during trend detection
+        (Phase 1). These are fetched directly BEFORE the keyword search so
+        the dossier always has the original source article even when the
+        keyword re-search returns 0 results.
         """
         topic = candidate.headline_seed
         topic_query = self._build_search_query(topic)
@@ -304,7 +332,29 @@ class SourceGatherer:
             f"[source_gatherer] search query: {topic_query!r}  "
             f"(from headline: {topic[:80]}...)"
         )
-        articles_raw = self._fetch_articles(topic_query, max_articles=max(target_count * 2, 10))
+
+        # ---- Seed-article injection (Phase 2) --------------------------------
+        # Fetch the original article(s) from trend detection before the keyword
+        # search so the dossier has them even when keyword search returns 0.
+        seed_articles: list[dict] = []
+        if seed_urls:
+            for url in seed_urls:
+                body = self._fetch_body(url)
+                if not body:
+                    print(f"[source_gatherer] seed URL fetch failed: {url[:80]}")
+                    continue
+                outlet_name = self._infer_outlet_from_url(url)
+                seed_articles.append({
+                    "title": "",
+                    "url": url,
+                    "source": outlet_name,
+                    "description": "",
+                    "_prefetched_body": body,
+                })
+            if seed_articles:
+                print(f"[source_gatherer] fetched {len(seed_articles)}/{len(seed_urls)} seed articles")
+
+        articles_raw = seed_articles + self._fetch_articles(topic_query, max_articles=max(target_count * 2, 10))
 
         # Map sources to canonical outlet + slant
         slant_to_articles: dict[str, list[dict]] = {s: [] for s in self.REQUIRED_SLANTS}
@@ -358,10 +408,14 @@ class SourceGatherer:
         # Fetch the article bodies for the chosen articles
         article_records: list[ArticleRecord] = []
         for entry in chosen:
-            body = self._fetch_body(entry.get("url", ""))
+            body = entry.get("_prefetched_body") or self._fetch_body(entry.get("url", ""))
             if not body:
                 # Fall back to whatever the description was — better than nothing
                 body = entry.get("description", "") or ""
+            # Determine headline_only: body is empty or too short after
+            # whitespace normalization (e.g. RSS description only, <500 chars).
+            body_normalized = re.sub(r"\s+", " ", body).strip() if body else ""
+            is_headline_only = not body_normalized or len(body_normalized) < 500
             record = ArticleRecord(
                 outlet=entry.get("canonical_outlet") or entry.get("source") or "Unknown",
                 url=entry.get("url", ""),
@@ -369,6 +423,7 @@ class SourceGatherer:
                 body=body,
                 fetched_at=datetime.now(timezone.utc).isoformat(),
                 is_wire_derived=False,  # set after we see the full set below
+                headline_only=is_headline_only,
             )
             article_records.append(record)
 

@@ -114,6 +114,7 @@ def _apply_mock_mode() -> None:
                     source_signals=["Reuters", "AP", "FoxNews"],
                     engagement=200,
                     story_id="20260408-senate-approps-mock",
+                    original_urls=["https://reuters.com/x"],
                 )
             ]
 

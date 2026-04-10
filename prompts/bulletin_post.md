@@ -21,6 +21,10 @@ The defining feature of a BULLETIN brief is that the single source is named and 
 Outlets referenced in the brief: `{outlets_list}`
 Primary source URL (may be empty): `{primary_source_url}`
 
+Sourcing transparency counts:
+- Full-text articles in dossier: `{full_text_count}`
+- Headline-only articles (body not accessible): `{headline_only_count}`
+
 ---
 
 ## WHAT TO WRITE
@@ -29,9 +33,15 @@ A single X/Bluesky post of at most **{max_length} characters**, structured as:
 
 1. **Lead with the outlet name and the reported event** in active voice. "Reuters reports...", "The AP says...", "BBC is reporting...". The outlet name goes first; the hedge is built into the construction.
 
-2. **The literal hedge phrase** must appear in the post, verbatim:
+2. **The literal hedge phrase** must appear in the post — choose the tier that matches the sourcing situation:
+
+   **Tier A** — true single-source, no other outlets covering (when `{headline_only_count}` == 0 or total outlets == 1):
    `reported by {single_outlet}, not yet confirmed elsewhere`
-   (Substitute the actual outlet name. This is a strict regex match at the verification gate — if the phrase is not present, the post is rejected.)
+
+   **Tier B** — other outlets are covering but full article text was not accessible (when `{headline_only_count}` > 0):
+   `reported by {single_outlet}; also covered by {outlets_list}`
+
+   Use Tier A when you are truly the first to report. Use Tier B when the brief shows other outlets in the dossier (even headline-only ones). Both forms pass the verification gate.
 
 3. **One sentence of the core reported fact** — just the bones. Numbers, names, what happened, where. No color. No speculation on cause or motive.
 
@@ -76,7 +86,7 @@ A single X/Bluesky post of at most **{max_length} characters**, structured as:
 ## HARD CONSTRAINTS
 
 - Maximum {max_length} characters, strict
-- Must contain the exact hedge phrase `reported by {single_outlet}, not yet confirmed elsewhere` with the actual outlet name substituted
+- Must contain either `reported by {single_outlet}, not yet confirmed elsewhere` (Tier A) or `reported by {single_outlet}; also covered by {outlets_list}` (Tier B) with actual names substituted
 - Must name the single outlet at least once
 - Must NOT contain `And that's the mews.`, `coverage report.`, or `speculative, personal, subjective.`
 - Must NOT end with any sign-off line

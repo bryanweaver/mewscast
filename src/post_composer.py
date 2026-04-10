@@ -272,6 +272,12 @@ class PostComposer:
         outlets = sorted({a.outlet for a in dossier.articles}) if dossier.articles else []
         primary_url = dossier.primary_sources[0].url if dossier.primary_sources else ""
 
+        # Sourcing transparency counts (Phase 4)
+        full_text_count = sum(
+            1 for a in dossier.articles if a.body and len(a.body) >= 500
+        )
+        headline_only_count = len(dossier.articles) - full_text_count
+
         # Time/date context — same shape used by content_generator
         now = datetime.now()
         current_date = now.strftime("%B %d, %Y")
@@ -297,6 +303,8 @@ class PostComposer:
             "current_date": current_date,
             "day_of_week": day_of_week,
             "time_period": time_period,
+            "full_text_count": full_text_count,
+            "headline_only_count": headline_only_count,
         }
 
     @staticmethod
