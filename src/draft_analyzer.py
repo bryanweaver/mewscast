@@ -71,6 +71,19 @@ Compare the headline seed against the article bodies — the headline may be
 stale (written earlier in the story's timeline). Note if the bodies have
 materially advanced beyond what the headline says.
 
+## IGNORE THESE — THEY ARE NOT FABRICATIONS
+The draft is written by an AI news bot called "Walter Croncat" (a cat
+reporter persona). The following are INTENTIONAL post formatting elements,
+NOT fabricated content — do NOT flag them:
+- "#BreakingMews" — the bot's branded hashtag for breaking news
+- "And that's the mews." — the REPORT sign-off (a pun on "news")
+- "And that's the mews — coverage report." — the META sign-off
+- "This cat's view — speculative, personal, subjective." — the ANALYSIS sign-off
+- "And that's the mews — straight from the source." — the PRIMARY sign-off
+- Any cat puns, cat references, or the phrase "Walter Croncat"
+- The word "mews" used as a pun for "news"
+These are part of the bot's persona, not errors in sourcing.
+
 ## OUTPUT FORMAT
 Return ONLY a JSON object with this exact shape (no markdown fences, no prose):
 

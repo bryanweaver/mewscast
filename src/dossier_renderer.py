@@ -356,7 +356,7 @@ def render_dossier_page(dossier_data: dict) -> str:
     # Header
     header_html = f"""<div class="header">
   <div class="header-brand">
-    <a href="./index.html">Walter Croncat</a> &middot; Journalism Dossier
+    <a href="../">Walter Croncat</a> &middot; <a href="./index.html">Dossiers</a>
   </div>
   <h1>{_esc(headline)}</h1>
   <div class="header-meta">
@@ -459,7 +459,7 @@ def render_index_page(entries: list[dict]) -> str:
 <div class="page">
 
 <div class="header">
-  <div class="header-brand">Walter Croncat &middot; Journalism Dossier Archive</div>
+  <div class="header-brand"><a href="../">Walter Croncat</a> &middot; Dossier Archive</div>
   <h1>Dossier Archive</h1>
   <div class="header-meta">
     <span>Every story, fully sourced</span>
