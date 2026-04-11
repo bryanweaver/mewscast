@@ -367,12 +367,9 @@ def render_dossier_page(dossier_data: dict) -> str:
 
     # Footer
     footer_html = """<div class="footer">
-  <p>Powered by Walter Croncat &mdash; open-source AI journalism</p>
-  <div class="footer-links">
-    <a href="./index.html">Dossier Archive</a>
-    <a href="https://github.com/bryanweaver/mewscast" target="_blank" rel="noopener">Source Code</a>
-    <a href="https://x.com/WalterCroncat" target="_blank" rel="noopener">Follow on X</a>
-  </div>
+  And that's the mews. &middot;
+  <a href="./index.html">Dossier Archive</a> &middot;
+  Made by <a href="https://x.com/bryanofearth" target="_blank" rel="noopener">@bryanofearth</a>
 </div>"""
 
     page = f"""<!DOCTYPE html>
@@ -434,12 +431,12 @@ def render_index_page(entries: list[dict]) -> str:
         # Build filename the same way main.py does
         safe_id = _safe_filename(story_id) if story_id else "unknown"
 
-        card = f"""<div class="index-entry">
+        card = f"""<a class="index-entry" href="./{_esc(safe_id)}.html">
   <span class="index-date">{_esc(_parse_iso(published_at))}</span>
-  <a href="./{_esc(safe_id)}.html">{_esc(headline)}</a>
+  <span class="index-headline">{_esc(headline)}</span>
   <span class="badge badge-{_esc(badge_cls)}">{_esc(post_type)}</span>
   <span class="index-confidence">{_esc(str(pct))}% confidence</span>
-</div>"""
+</a>"""
         entry_cards.append(card)
 
     if not entry_cards:
@@ -472,11 +469,8 @@ def render_index_page(entries: list[dict]) -> str:
 {entries_html}
 
 <div class="footer">
-  <p>Powered by Walter Croncat &mdash; open-source AI journalism</p>
-  <div class="footer-links">
-    <a href="https://github.com/bryanweaver/mewscast" target="_blank" rel="noopener">Source Code</a>
-    <a href="https://x.com/WalterCroncat" target="_blank" rel="noopener">Follow on X</a>
-  </div>
+  And that's the mews. &middot;
+  Made by <a href="https://x.com/bryanofearth" target="_blank" rel="noopener">@bryanofearth</a>
 </div>
 
 </div>
