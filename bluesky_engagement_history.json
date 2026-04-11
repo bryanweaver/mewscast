@@ -1414,6 +1414,11 @@
       "did": "did:plc:rz7eaji4u64f4bu7hjvb5hhl",
       "handle": "lostglasgow.bsky.social",
       "timestamp": "2026-04-11T06:28:10.673579"
+    },
+    {
+      "did": "did:plc:uhaf5mkc54vwebgw4n46h3kh",
+      "handle": "ff10-fanzine.bsky.social",
+      "timestamp": "2026-04-11T09:18:10.843232"
     }
   ],
   "liked_posts": [
@@ -12741,6 +12746,11 @@
       "uri": "at://did:plc:rz7eaji4u64f4bu7hjvb5hhl/app.bsky.feed.post/3mj6seivf622w",
       "author": "lostglasgow.bsky.social",
       "timestamp": "2026-04-11T06:28:10.485480"
+    },
+    {
+      "uri": "at://did:plc:uhaf5mkc54vwebgw4n46h3kh/app.bsky.feed.post/3mj36qnmf2b2g",
+      "author": "ff10-fanzine.bsky.social",
+      "timestamp": "2026-04-11T09:18:10.735611"
     }
   ],
   "last_cleanup": "2026-04-10T09:32:41.509438",
