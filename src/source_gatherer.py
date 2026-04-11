@@ -279,7 +279,10 @@ def _slant_for(article_source: str, registry: list[dict]) -> tuple[Optional[str]
 class SourceGatherer:
     """Stage 3 of the Croncat journalism pipeline."""
 
-    REQUIRED_SLANTS = ["wire", "left-mainstream", "right-mainstream", "international", "specialized"]
+    # Slant-diversity targets for the dossier. Updated to match AllSides-
+    # aligned categories. The pipeline tries to include at least one outlet
+    # from each of these functional slant groups in every dossier.
+    REQUIRED_SLANTS = ["wire", "lean-left", "lean-right", "international", "specialized"]
 
     def __init__(self, news_fetcher=None, registry_path: Optional[str] = None):
         self.news_fetcher = news_fetcher

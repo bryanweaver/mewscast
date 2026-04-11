@@ -239,9 +239,9 @@ class TestGather:
             news_fetcher=fetcher, registry_path=real_registry_path
         )
         dossier = gatherer.gather(candidate, target_count=5)
-        # Reuters is wire, NYT is left-mainstream per outlet_registry.yaml
+        # Reuters is wire, NYT is lean-left per outlet_registry.yaml (AllSides-aligned)
         assert dossier.outlet_slants.get("Reuters") == "wire"
-        assert dossier.outlet_slants.get("The New York Times") == "left-mainstream"
+        assert dossier.outlet_slants.get("The New York Times") == "lean-left"
 
     def test_substring_overlap_short_body_returns_zero(self):
         # _substring_overlap should skip bodies shorter than the shingle window
