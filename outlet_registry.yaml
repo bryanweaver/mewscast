@@ -37,7 +37,7 @@ outlets:
     handle: AP
     domain: apnews.com
     slant: wire
-    allsides_rating: Lean Left  # AllSides moved AP from Center to Lean Left in 2023
+    allsides_rating: Left  # AllSides rates AP as Left (confirmed from allsides.com April 2026)
     beat: general
     priority: 1
 
@@ -87,8 +87,8 @@ outlets:
   - name: The Guardian
     handle: guardian
     domain: theguardian.com
-    slant: lean-left
-    allsides_rating: Lean Left
+    slant: left
+    allsides_rating: Left  # AllSides rates Guardian as Left, not Lean Left
     beat: general
     priority: 2
 
@@ -259,7 +259,7 @@ outlets:
     handle: CNBC
     domain: cnbc.com
     slant: specialized
-    allsides_rating: Center
+    allsides_rating: Lean Left  # AllSides rates CNBC as Lean Left, not Center
     beat: business
     priority: 2
 
