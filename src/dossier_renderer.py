@@ -66,13 +66,90 @@ def _badge_class_for_slant(slant: str) -> str:
     """Return the CSS class suffix for a slant badge."""
     mapping = {
         "wire": "wire",
-        "left-mainstream": "left-mainstream",
-        "right-mainstream": "right-mainstream",
+        "lean-left": "lean-left",
+        "lean-right": "lean-right",
+        "left": "left",
+        "right": "right",
         "center": "center",
         "international": "international",
         "specialized": "specialized",
+        # Legacy names (pre-AllSides alignment)
+        "left-mainstream": "lean-left",
+        "right-mainstream": "lean-right",
     }
     return mapping.get(slant, "wire") if slant else "wire"
+
+
+def _reader_friendly_slant(slant: str) -> str:
+    """Convert internal slant values to reader-friendly labels for display.
+    Returns empty string if the slant should be hidden."""
+    mapping = {
+        "wire": "Wire Service",
+        "lean-left": "Lean Left",
+        "lean-right": "Lean Right",
+        "left": "Left",
+        "right": "Right",
+        "center": "Center",
+        "international": "International",
+        "specialized": "Beat Reporter",
+        # Legacy
+        "left-mainstream": "Lean Left",
+        "right-mainstream": "Lean Right",
+    }
+    return mapping.get(slant, "") if slant else ""
+
+
+# Common URL shorteners used by news outlets
+_URL_SHORTENER_MAP = {
+    "wapo.st": "Washington Post",
+    "apo.st": "Washington Post",
+    "nyti.ms": "New York Times",
+    "bbc.in": "BBC News",
+    "reut.rs": "Reuters",
+    "abcnews.link": "ABC News",
+    "nbcnews.to": "NBC News",
+    "cbsn.ws": "CBS News",
+    "politi.co": "Politico",
+    "trib.al": "Various (via trib.al)",
+    "bit.ly": "",
+    "t.co": "",
+    "x.com": "",
+}
+
+
+def _title_from_url(url: str) -> str:
+    """Extract a readable title from a URL when the article title is missing.
+    Tries URL shortener lookup first, then extracts from the URL path."""
+    try:
+        from urllib.parse import urlparse
+        parsed = urlparse(url)
+        domain = (parsed.netloc or "").lower().lstrip("www.")
+
+        # Check shortener map
+        if domain in _URL_SHORTENER_MAP:
+            name = _URL_SHORTENER_MAP[domain]
+            if name:
+                return f"Article via {name}"
+            return ""
+
+        # Extract a readable slug from the URL path
+        path = parsed.path or ""
+        # Get the last meaningful path segment
+        segments = [s for s in path.strip("/").split("/") if s and s not in ("article", "news", "story", "live")]
+        if segments:
+            slug = segments[-1]
+            # Convert slug to readable: "trump-iran-ceasefire" -> "Trump iran ceasefire"
+            readable = slug.replace("-", " ").replace("_", " ")
+            # Strip file extensions
+            for ext in (".html", ".htm", ".php", ".asp"):
+                if readable.endswith(ext.replace(".", " ")):
+                    readable = readable[:-len(ext) + 1]
+            if len(readable) > 10:
+                return readable.capitalize()[:80]
+
+        return f"Article from {domain}"
+    except Exception:
+        return url[:60] if url else ""
 
 
 def _confidence_class(confidence: float) -> str:
@@ -163,31 +240,35 @@ def _render_section_2_sources(data: dict) -> str:
             # Determine fetch status
             is_headline_only = headline_only or char_count < 500
             slant = outlet_slants.get(outlet, "")
+            slant_label = _reader_friendly_slant(slant)
             slant_cls = _badge_class_for_slant(slant)
+
+            # Build a display title — fall back to a cleaned-up URL if title is empty
+            display_title = title.strip() if title else ""
+            if not display_title and url:
+                display_title = _title_from_url(url)
 
             lines.append('<div class="article-card">')
             lines.append('  <div class="article-card-header">')
             lines.append(f'    <span class="article-card-outlet">{_esc(outlet)}</span>')
-            if slant:
-                lines.append(f'    <span class="badge badge-{_esc(slant_cls)}">{_esc(slant)}</span>')
+            if slant_label:
+                lines.append(f'    <span class="badge badge-{_esc(slant_cls)}">{_esc(slant_label)}</span>')
             if is_headline_only:
                 lines.append('    <span class="fetch-status fetch-status-headline">Headline Only</span>')
             else:
                 lines.append('    <span class="fetch-status fetch-status-full">Full Text</span>')
             lines.append('  </div>')
 
-            if title:
+            if display_title:
                 if url:
-                    lines.append(f'  <div class="article-card-title"><a href="{_esc(url)}" target="_blank" rel="noopener">{_esc(title)}</a></div>')
+                    lines.append(f'  <div class="article-card-title"><a href="{_esc(url)}" target="_blank" rel="noopener">{_esc(display_title)}</a></div>')
                 else:
-                    lines.append(f'  <div class="article-card-title">{_esc(title)}</div>')
-            elif url:
-                lines.append(f'  <div class="article-card-title"><a href="{_esc(url)}" target="_blank" rel="noopener">{_esc(url)}</a></div>')
+                    lines.append(f'  <div class="article-card-title">{_esc(display_title)}</div>')
 
             lines.append('  <div class="article-card-meta">')
             lines.append(f'    <span>{_esc(str(char_count))} characters fetched</span>')
             if url:
-                lines.append(f'    <a href="{_esc(url)}" target="_blank" rel="noopener">Original article</a>')
+                lines.append(f'    <a href="{_esc(url)}" target="_blank" rel="noopener">View original</a>')
             lines.append('  </div>')
             lines.append('</div>')
 

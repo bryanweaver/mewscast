@@ -153,13 +153,18 @@ a:hover {
 .badge-correction { background: transparent;   color: var(--red); border: 1px solid var(--red); }
 .badge-primary    { background: var(--green);  color: #000; }
 
-/* Slant badges */
+/* Slant badges (AllSides-aligned) */
 .badge-wire          { background: var(--secondary); color: #000; }
-.badge-left-mainstream  { background: var(--blue);   color: #fff; }
-.badge-right-mainstream { background: var(--red);    color: #fff; }
+.badge-lean-left     { background: var(--blue);      color: #fff; }
+.badge-lean-right    { background: var(--red);       color: #fff; }
+.badge-left          { background: #1f6feb;          color: #fff; }
+.badge-right         { background: #da3633;          color: #fff; }
 .badge-center        { background: var(--purple);    color: #fff; }
 .badge-international { background: var(--teal);      color: #000; }
 .badge-specialized   { background: var(--orange);    color: #fff; }
+/* Legacy (pre-AllSides) — kept for existing pages */
+.badge-left-mainstream  { background: var(--blue);   color: #fff; }
+.badge-right-mainstream { background: var(--red);     color: #fff; }
 
 /* Fetch status badges */
 .fetch-status {
@@ -513,6 +518,9 @@ a:hover {
   font-size: 0.95rem;
   flex: 1;
   min-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .index-date {
