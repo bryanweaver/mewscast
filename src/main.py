@@ -33,6 +33,7 @@ from meta_analyzer import MetaAnalyzer
 from post_composer import PostComposer
 from verification_gate import VerificationGate, VerificationResult
 from draft_analyzer import analyze_draft, print_analysis
+from dossier_renderer import render_dossier_page, render_index_page
 
 
 def _load_config():
@@ -1199,6 +1200,19 @@ def post_journalism_cycle(
     if dry_run:
         path = _write_draft_file(drafts_dir, draft, dossier)
         print(f"[journalism] DRY RUN draft written to {path}")
+        # Also render dossier HTML for the viewer
+        try:
+            dossier_data = dossier_store.read_raw(draft.story_id)
+            if dossier_data:
+                dossier_html = render_dossier_page(dossier_data)
+                html_dir = os.path.join(_project_root(), "docs", "dossiers")
+                os.makedirs(html_dir, exist_ok=True)
+                html_path = os.path.join(html_dir, f"{_safe_filename_component(draft.story_id)}.html")
+                with open(html_path, "w", encoding="utf-8") as f:
+                    f.write(dossier_html)
+                print(f"[journalism] dossier HTML written to {html_path}")
+        except Exception as e:
+            print(f"[journalism] dossier HTML render failed (non-fatal): {e}")
         return True
 
     print("[journalism] Stage 7 — publishing")
@@ -1336,6 +1350,32 @@ def post_journalism_cycle(
     elif bluesky_uri:
         post_url = bluesky_uri
     dossier_store.save_post_record(draft.story_id, draft, post_url=post_url)
+
+    # Render dossier HTML for the public viewer + rebuild index
+    try:
+        dossier_data = dossier_store.read_raw(draft.story_id)
+        if dossier_data:
+            dossier_html = render_dossier_page(dossier_data)
+            html_dir = os.path.join(_project_root(), "docs", "dossiers")
+            os.makedirs(html_dir, exist_ok=True)
+            html_path = os.path.join(html_dir, f"{_safe_filename_component(draft.story_id)}.html")
+            with open(html_path, "w", encoding="utf-8") as f:
+                f.write(dossier_html)
+            print(f"[journalism] dossier HTML written to {html_path}")
+
+            # Rebuild the index page from all dossier JSON files
+            all_entries = []
+            for sid in dossier_store.list_dossiers():
+                entry = dossier_store.read_raw(sid)
+                if entry:
+                    all_entries.append(entry)
+            index_html = render_index_page(all_entries)
+            index_path = os.path.join(html_dir, "index.html")
+            with open(index_path, "w", encoding="utf-8") as f:
+                f.write(index_html)
+            print(f"[journalism] dossier index written to {index_path}")
+    except Exception as e:
+        print(f"[journalism] dossier HTML render failed (non-fatal): {e}")
 
     print(f"\n{'=' * 60}")
     print("[journalism] cycle complete")

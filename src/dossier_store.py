@@ -375,6 +375,17 @@ class DossierStore:
         data = self._read(story_id)
         return data.get("post")
 
+    # ---- raw access (for the dossier renderer) -------------------------
+
+    def read_raw(self, story_id: str) -> dict:
+        """Read the full dossier JSON dict for a story_id. Returns {} if not found."""
+        data = self._read(story_id)
+        # _read returns {"story_id": story_id} when the file doesn't exist,
+        # but that's not a real dossier — return {} if there's no dossier key.
+        if "dossier" not in data and "post" not in data and "brief" not in data:
+            return {}
+        return data
+
     # ---- listing ------------------------------------------------------
 
     def list_dossiers(self) -> list[str]:

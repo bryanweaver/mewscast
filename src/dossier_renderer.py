@@ -1,0 +1,560 @@
+"""
+Dossier renderer — generates static HTML pages for the Walter Croncat
+public dossier viewer at dossier.mewscast.us.
+
+Two public functions:
+  render_dossier_page(dossier_data) -> str   # full <!DOCTYPE html> for one story
+  render_index_page(entries)        -> str   # archive listing of all dossiers
+
+Design rules:
+  - Article body text NEVER appears in HTML output (copyright protection).
+    Only metadata: outlet, title, URL, character count.
+  - ALL string interpolation uses html.escape() (XSS prevention).
+  - Failure never blocks the publishing pipeline — callers wrap in try/except.
+
+This module is standalone: ``python src/dossier_renderer.py`` runs a smoke test
+against the mock dossier at dossiers/20260408-senate-approps-mock.json.
+"""
+from __future__ import annotations
+
+import html
+import json
+import os
+from datetime import datetime
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _esc(value) -> str:
+    """HTML-escape any value, coercing to str first."""
+    if value is None:
+        return ""
+    return html.escape(str(value))
+
+
+def _parse_iso(iso_str: str) -> str:
+    """Parse an ISO-8601 timestamp and return a human-readable string.
+
+    Returns the raw string on failure (never crashes).
+    """
+    if not iso_str:
+        return ""
+    try:
+        # Handle timezone-aware ISO strings
+        dt = datetime.fromisoformat(iso_str)
+        return dt.strftime("%B %d, %Y at %I:%M %p UTC")
+    except (ValueError, TypeError):
+        return str(iso_str)
+
+
+def _badge_class_for_post_type(post_type: str) -> str:
+    """Return the CSS class suffix for a post type badge."""
+    mapping = {
+        "REPORT": "report",
+        "META": "meta",
+        "ANALYSIS": "analysis",
+        "BULLETIN": "bulletin",
+        "CORRECTION": "correction",
+        "PRIMARY": "primary",
+    }
+    return mapping.get(post_type.upper(), "report") if post_type else "report"
+
+
+def _badge_class_for_slant(slant: str) -> str:
+    """Return the CSS class suffix for a slant badge."""
+    mapping = {
+        "wire": "wire",
+        "left-mainstream": "left-mainstream",
+        "right-mainstream": "right-mainstream",
+        "center": "center",
+        "international": "international",
+        "specialized": "specialized",
+    }
+    return mapping.get(slant, "wire") if slant else "wire"
+
+
+def _confidence_class(confidence: float) -> str:
+    """Return the CSS class for the confidence bar fill."""
+    if confidence >= 0.7:
+        return "confidence-high"
+    elif confidence >= 0.4:
+        return "confidence-medium"
+    else:
+        return "confidence-low"
+
+
+# ---------------------------------------------------------------------------
+# Section renderers
+# ---------------------------------------------------------------------------
+
+def _render_section_1_post(data: dict) -> str:
+    """Section 1 — The Post."""
+    post = data.get("post") or {}
+    draft = post.get("draft") or {}
+
+    text = draft.get("text", "")
+    post_type = draft.get("post_type", "")
+    sign_off = draft.get("sign_off", "")
+    published_at = post.get("published_at", "")
+    post_url = post.get("post_url")
+    outlets = draft.get("outlets_referenced") or []
+
+    badge_cls = _badge_class_for_post_type(post_type)
+
+    lines = []
+    lines.append('<h2 class="section-heading">The Post</h2>')
+    lines.append('<div class="card">')
+
+    # Post type badge + timestamp
+    lines.append('<div class="header-meta">')
+    lines.append(f'  <span class="badge badge-{_esc(badge_cls)}">{_esc(post_type)}</span>')
+    if published_at:
+        lines.append(f'  <span>{_esc(_parse_iso(published_at))}</span>')
+    lines.append('</div>')
+
+    # Post text block
+    lines.append(f'<div class="post-text">{_esc(text)}</div>')
+
+    # Sign-off
+    if sign_off:
+        lines.append(f'<span class="post-sign-off">{_esc(sign_off)}</span>')
+
+    # Links
+    links_parts = []
+    if post_url:
+        links_parts.append(f'<a href="{_esc(post_url)}" target="_blank" rel="noopener">View on X</a>')
+    if links_parts:
+        lines.append(f'<div class="post-links">{" ".join(links_parts)}</div>')
+
+    # Outlet tags
+    if outlets:
+        lines.append('<div class="outlet-tags">')
+        for outlet in outlets:
+            lines.append(f'  <span class="outlet-tag">{_esc(outlet)}</span>')
+        lines.append('</div>')
+
+    lines.append('</div>')
+    return "\n".join(lines)
+
+
+def _render_section_2_sources(data: dict) -> str:
+    """Section 2 — What Walter Read."""
+    dossier = data.get("dossier") or {}
+    articles = dossier.get("articles") or []
+    primary_sources = dossier.get("primary_sources") or []
+    outlet_slants = dossier.get("outlet_slants") or {}
+
+    lines = []
+    lines.append('<h2 class="section-heading">What Walter Read</h2>')
+
+    if not articles:
+        lines.append('<div class="card"><p>No articles were gathered for this story.</p></div>')
+    else:
+        for article in articles:
+            outlet = article.get("outlet", "Unknown")
+            url = article.get("url", "")
+            title = article.get("title", "")
+            body = article.get("body", "")
+            headline_only = article.get("headline_only", False)
+            char_count = len(body) if body else 0
+
+            # Determine fetch status
+            is_headline_only = headline_only or char_count < 500
+            slant = outlet_slants.get(outlet, "")
+            slant_cls = _badge_class_for_slant(slant)
+
+            lines.append('<div class="article-card">')
+            lines.append('  <div class="article-card-header">')
+            lines.append(f'    <span class="article-card-outlet">{_esc(outlet)}</span>')
+            if slant:
+                lines.append(f'    <span class="badge badge-{_esc(slant_cls)}">{_esc(slant)}</span>')
+            if is_headline_only:
+                lines.append('    <span class="fetch-status fetch-status-headline">Headline Only</span>')
+            else:
+                lines.append('    <span class="fetch-status fetch-status-full">Full Text</span>')
+            lines.append('  </div>')
+
+            if title:
+                if url:
+                    lines.append(f'  <div class="article-card-title"><a href="{_esc(url)}" target="_blank" rel="noopener">{_esc(title)}</a></div>')
+                else:
+                    lines.append(f'  <div class="article-card-title">{_esc(title)}</div>')
+            elif url:
+                lines.append(f'  <div class="article-card-title"><a href="{_esc(url)}" target="_blank" rel="noopener">{_esc(url)}</a></div>')
+
+            lines.append('  <div class="article-card-meta">')
+            lines.append(f'    <span>{_esc(str(char_count))} characters fetched</span>')
+            if url:
+                lines.append(f'    <a href="{_esc(url)}" target="_blank" rel="noopener">Original article</a>')
+            lines.append('  </div>')
+            lines.append('</div>')
+
+    # Primary sources
+    if primary_sources:
+        lines.append('<h3 style="margin-top: 1.25rem; margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--teal);">Primary Sources</h3>')
+        for source in primary_sources:
+            kind = source.get("kind", "")
+            s_url = source.get("url", "")
+            s_title = source.get("title", "")
+
+            lines.append('<div class="source-card">')
+            if kind:
+                lines.append(f'  <div class="source-card-kind">{_esc(kind)}</div>')
+            if s_title:
+                if s_url:
+                    lines.append(f'  <div class="source-card-title"><a href="{_esc(s_url)}" target="_blank" rel="noopener">{_esc(s_title)}</a></div>')
+                else:
+                    lines.append(f'  <div class="source-card-title">{_esc(s_title)}</div>')
+            elif s_url:
+                lines.append(f'  <div class="source-card-title"><a href="{_esc(s_url)}" target="_blank" rel="noopener">{_esc(s_url)}</a></div>')
+            lines.append('</div>')
+
+    return "\n".join(lines)
+
+
+def _render_section_3_brief(data: dict) -> str:
+    """Section 3 — The Meta-Analysis Brief."""
+    brief = data.get("brief") or {}
+
+    confidence = brief.get("confidence", 0.0)
+    suggested_type = brief.get("suggested_post_type", "")
+    suggested_reason = brief.get("suggested_post_type_reason", "")
+    consensus = brief.get("consensus_facts") or []
+    disagreements = brief.get("disagreements") or []
+    framing = brief.get("framing_analysis") or {}
+    alignment = brief.get("primary_source_alignment") or []
+    missing = brief.get("missing_context") or []
+
+    pct = int(confidence * 100)
+    conf_cls = _confidence_class(confidence)
+
+    lines = []
+    lines.append('<h2 class="section-heading">Meta-Analysis Brief</h2>')
+    lines.append('<div class="card">')
+
+    # Confidence bar
+    lines.append('<div class="confidence-bar-container">')
+    lines.append(f'  <div class="confidence-label">Confidence: <strong>{_esc(str(pct))}%</strong></div>')
+    lines.append('  <div class="confidence-bar">')
+    lines.append(f'    <div class="confidence-bar-fill {conf_cls}" style="width: {pct}%"></div>')
+    lines.append('  </div>')
+    lines.append('</div>')
+
+    # Suggested post type
+    if suggested_type:
+        badge_cls = _badge_class_for_post_type(suggested_type)
+        lines.append(f'<p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--secondary);">')
+        lines.append(f'  Suggested post type: <span class="badge badge-{_esc(badge_cls)}">{_esc(suggested_type)}</span>')
+        if suggested_reason:
+            lines.append(f'  &mdash; {_esc(suggested_reason)}')
+        lines.append('</p>')
+
+    # Consensus facts
+    if consensus:
+        lines.append('<h3 style="margin-top: 1.25rem; font-size: 0.9rem;">Consensus Facts</h3>')
+        lines.append('<ul class="fact-list">')
+        for fact in consensus:
+            lines.append(f'  <li>{_esc(fact)}</li>')
+        lines.append('</ul>')
+
+    # Disagreements
+    if disagreements:
+        lines.append('<h3 style="margin-top: 1.25rem; font-size: 0.9rem;">Disagreements</h3>')
+        for d in disagreements:
+            topic = d.get("topic", "")
+            positions = d.get("positions") or {}
+            lines.append('<div class="disagreement-row">')
+            lines.append(f'  <div class="disagreement-topic">{_esc(topic)}</div>')
+            for outlet, position in positions.items():
+                lines.append(f'  <div class="disagreement-position"><strong>{_esc(outlet)}:</strong> {_esc(position)}</div>')
+            lines.append('</div>')
+
+    # Framing analysis
+    if framing:
+        lines.append('<h3 style="margin-top: 1.25rem; font-size: 0.9rem;">Framing Analysis</h3>')
+        for outlet, description in framing.items():
+            lines.append('<div class="framing-entry">')
+            lines.append(f'  <span class="framing-outlet">{_esc(outlet)}</span>')
+            lines.append(f'  <span class="framing-description">{_esc(description)}</span>')
+            lines.append('</div>')
+
+    # Primary source alignment
+    if alignment:
+        lines.append('<h3 style="margin-top: 1.25rem; font-size: 0.9rem;">Primary Source Alignment</h3>')
+        lines.append('<ul class="alignment-list">')
+        for item in alignment:
+            lines.append(f'  <li>{_esc(item)}</li>')
+        lines.append('</ul>')
+
+    # Missing context
+    if missing:
+        lines.append('<div class="warning-box" style="margin-top: 1.25rem;">')
+        lines.append('  <div class="warning-box-title">Missing Context</div>')
+        lines.append('  <ul>')
+        for item in missing:
+            lines.append(f'    <li>{_esc(item)}</li>')
+        lines.append('  </ul>')
+        lines.append('</div>')
+
+    lines.append('</div>')
+    return "\n".join(lines)
+
+
+def _render_sections_4_6_coming_soon() -> str:
+    """Sections 4-6 — Coming Soon placeholders."""
+    placeholders = [
+        ("Verification Gate Results", "Every hard rule check run before publication."),
+        ("Draft Analysis", "AI fact-check comparing the draft against source material."),
+        ("Story Selection", "How this story was chosen from the trending candidates."),
+    ]
+    lines = []
+    for title, desc in placeholders:
+        lines.append('<div class="coming-soon">')
+        lines.append(f'  <h3>Coming Soon: {_esc(title)}</h3>')
+        lines.append(f'  <p>{_esc(desc)}</p>')
+        lines.append('</div>')
+    return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
+# Public API
+# ---------------------------------------------------------------------------
+
+def render_dossier_page(dossier_data: dict) -> str:
+    """Render a full dossier page as a complete HTML document.
+
+    Takes the full dossier JSON dict (same shape as dossiers/<story_id>.json)
+    and returns a ``<!DOCTYPE html>`` string.
+
+    Article body text NEVER appears in the output — only metadata.
+    All string interpolation uses html.escape().
+    """
+    dossier = dossier_data.get("dossier") or {}
+    headline = dossier.get("headline_seed", "Walter Croncat Dossier")
+    story_id = dossier_data.get("story_id", "")
+    post = dossier_data.get("post") or {}
+    draft = post.get("draft") or {}
+    published_at = post.get("published_at", "")
+
+    # OG description: first consensus fact, or the post text truncated
+    brief = dossier_data.get("brief") or {}
+    consensus = brief.get("consensus_facts") or []
+    post_text = draft.get("text", "")
+    og_description = consensus[0] if consensus else (post_text[:200] if post_text else "Walter Croncat journalism dossier")
+
+    sections = [
+        _render_section_1_post(dossier_data),
+        _render_section_2_sources(dossier_data),
+        _render_section_3_brief(dossier_data),
+        _render_sections_4_6_coming_soon(),
+    ]
+
+    body_html = "\n\n".join(sections)
+
+    # Header
+    header_html = f"""<div class="header">
+  <div class="header-brand">
+    <a href="./index.html">Walter Croncat</a> &middot; Journalism Dossier
+  </div>
+  <h1>{_esc(headline)}</h1>
+  <div class="header-meta">
+    <span>{_esc(story_id)}</span>
+    {f'<span>{_esc(_parse_iso(published_at))}</span>' if published_at else ''}
+  </div>
+</div>"""
+
+    # Footer
+    footer_html = """<div class="footer">
+  <p>Powered by Walter Croncat &mdash; open-source AI journalism</p>
+  <div class="footer-links">
+    <a href="./index.html">Dossier Archive</a>
+    <a href="https://github.com/bryanweaver/mewscast" target="_blank" rel="noopener">Source Code</a>
+    <a href="https://x.com/WalterCroncat" target="_blank" rel="noopener">Follow on X</a>
+  </div>
+</div>"""
+
+    page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{_esc(headline)} &mdash; Walter Croncat Dossier</title>
+  <meta property="og:title" content="{_esc(headline)}">
+  <meta property="og:description" content="{_esc(og_description)}">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="page">
+
+{header_html}
+
+{body_html}
+
+{footer_html}
+
+</div>
+</body>
+</html>"""
+
+    return page
+
+
+def render_index_page(entries: list[dict]) -> str:
+    """Render the dossier archive index page.
+
+    Takes a list of dossier data dicts (same shape as individual JSON files),
+    sorted chronologically (newest first). Each entry becomes a card showing
+    date, headline, post-type badge, confidence score, and link.
+    """
+    # Sort entries by published_at descending (newest first)
+    def _sort_key(entry: dict) -> str:
+        post = entry.get("post") or {}
+        return post.get("published_at") or entry.get("saved_at") or ""
+
+    sorted_entries = sorted(entries, key=_sort_key, reverse=True)
+
+    entry_cards = []
+    for entry in sorted_entries:
+        dossier = entry.get("dossier") or {}
+        headline = dossier.get("headline_seed", "Untitled")
+        story_id = entry.get("story_id", "")
+        post = entry.get("post") or {}
+        draft = post.get("draft") or {}
+        post_type = draft.get("post_type", "")
+        published_at = post.get("published_at") or entry.get("saved_at", "")
+        brief = entry.get("brief") or {}
+        confidence = brief.get("confidence", 0.0)
+        pct = int(confidence * 100)
+
+        badge_cls = _badge_class_for_post_type(post_type)
+
+        # Build filename the same way main.py does
+        safe_id = _safe_filename(story_id) if story_id else "unknown"
+
+        card = f"""<div class="index-entry">
+  <span class="index-date">{_esc(_parse_iso(published_at))}</span>
+  <a href="./{_esc(safe_id)}.html">{_esc(headline)}</a>
+  <span class="badge badge-{_esc(badge_cls)}">{_esc(post_type)}</span>
+  <span class="index-confidence">{_esc(str(pct))}% confidence</span>
+</div>"""
+        entry_cards.append(card)
+
+    if not entry_cards:
+        entries_html = '<div class="card"><p>No dossiers have been published yet. Check back after Walter Croncat publishes a story.</p></div>'
+    else:
+        entries_html = '<div class="index-grid">\n' + "\n".join(entry_cards) + "\n</div>"
+
+    page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dossier Archive &mdash; Walter Croncat</title>
+  <meta property="og:title" content="Dossier Archive - Walter Croncat">
+  <meta property="og:description" content="Every Walter Croncat journalism post, fully sourced and transparent.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="page">
+
+<div class="header">
+  <div class="header-brand">Walter Croncat &middot; Journalism Dossier Archive</div>
+  <h1>Dossier Archive</h1>
+  <div class="header-meta">
+    <span>Every story, fully sourced</span>
+  </div>
+</div>
+
+{entries_html}
+
+<div class="footer">
+  <p>Powered by Walter Croncat &mdash; open-source AI journalism</p>
+  <div class="footer-links">
+    <a href="https://github.com/bryanweaver/mewscast" target="_blank" rel="noopener">Source Code</a>
+    <a href="https://x.com/WalterCroncat" target="_blank" rel="noopener">Follow on X</a>
+  </div>
+</div>
+
+</div>
+</body>
+</html>"""
+
+    return page
+
+
+def _safe_filename(text: str) -> str:
+    """Make a story id safe for use as a filename (matches main.py logic)."""
+    if not text:
+        return "unknown"
+    out = []
+    for ch in text:
+        if ch.isalnum() or ch in ("-", "_", "."):
+            out.append(ch)
+        else:
+            out.append("-")
+    return "".join(out)
+
+
+# ---------------------------------------------------------------------------
+# Smoke test
+# ---------------------------------------------------------------------------
+
+def _smoke_test() -> None:
+    """Quick validation against the mock dossier."""
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    mock_path = os.path.join(project_root, "dossiers", "20260408-senate-approps-mock.json")
+
+    with open(mock_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # 1. Render the dossier page
+    output = render_dossier_page(data)
+
+    # Check it's valid HTML
+    assert "<!DOCTYPE html>" in output, "Missing DOCTYPE"
+    assert "<html" in output, "Missing <html> tag"
+    assert "</html>" in output, "Missing closing </html> tag"
+
+    # 2. Check all 6 sections are present (3 rendered, 3 coming-soon)
+    assert "The Post" in output, "Missing Section 1: The Post"
+    assert "What Walter Read" in output, "Missing Section 2: What Walter Read"
+    assert "Meta-Analysis Brief" in output, "Missing Section 3: Meta-Analysis Brief"
+    assert "Verification Gate Results" in output, "Missing coming-soon: Verification Gate"
+    assert "Draft Analysis" in output, "Missing coming-soon: Draft Analysis"
+    assert "Story Selection" in output, "Missing coming-soon: Story Selection"
+
+    # 3. XSS escaping test — inject a script tag
+    xss_data = json.loads(json.dumps(data))
+    xss_data["dossier"]["headline_seed"] = '<script>alert("xss")</script>'
+    xss_output = render_dossier_page(xss_data)
+    assert "<script>" not in xss_output, "XSS: unescaped <script> tag found in output"
+    assert "&lt;script&gt;" in xss_output, "XSS: escaped script tag not found"
+
+    # 4. No article body text in output
+    for article in data.get("dossier", {}).get("articles", []):
+        body = article.get("body", "")
+        if body and len(body) > 100:
+            # Check a substantial substring of the body does NOT appear
+            body_snippet = body[50:150]
+            assert body_snippet not in output, (
+                f"Article body text leaked into HTML output: ...{body_snippet[:40]}..."
+            )
+
+    # 5. Test the index page
+    index_output = render_index_page([data])
+    assert "<!DOCTYPE html>" in index_output, "Index: missing DOCTYPE"
+    assert "senate-approps" in index_output.lower() or "Senate" in index_output, "Index: missing entry"
+
+    # 6. Empty index
+    empty_index = render_index_page([])
+    assert "<!DOCTYPE html>" in empty_index, "Empty index: missing DOCTYPE"
+
+    print("dossier_renderer smoke test OK")
+
+
+if __name__ == "__main__":
+    _smoke_test()
