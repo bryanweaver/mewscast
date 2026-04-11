@@ -1203,21 +1203,48 @@ def post_journalism_cycle(
 
     print("[journalism] Stage 7 — publishing")
 
-    # Best-effort image generation — reuse the existing content generator
-    # path used by post_scheduled_tweet. Failure is not fatal.
+    # Best-effort POST-TYPE-AWARE image generation. The journalism pipeline
+    # uses a different image prompt than the legacy path — REPORT/BULLETIN
+    # get "reporter on location" images, META gets "anchor desk" images,
+    # ANALYSIS gets "commentary desk" images, etc. See prompts/journalism_image.md.
     image_path = None
     image_prompt = None
-    if generator is not None:
-        try:
-            image_prompt = generator.generate_image_prompt(
-                dossier.headline_seed,
-                draft.text,
-                article_content=dossier.articles[0].body if dossier.articles else None,
-            )
-            img_gen = ImageGenerator()
-            image_path = img_gen.generate_image(image_prompt)
-        except Exception as e:
-            print(f"[journalism] image generation failed (continuing): {e}")
+    try:
+        print(f"[journalism] generating {draft.post_type.value}-style image...")
+        article_body = dossier.articles[0].body if dossier.articles else ""
+        article_section = (
+            f"\nFULL ARTICLE CONTENT (extract visual details):\n{article_body[:3000]}\n"
+            if article_body else ""
+        )
+
+        # Load the journalism-specific image prompt template
+        img_prompt_path = os.path.join(
+            os.path.dirname(os.path.dirname(__file__)), "prompts", "journalism_image.md"
+        )
+        with open(img_prompt_path, "r", encoding="utf-8") as f:
+            img_template = f.read()
+
+        img_request = img_template.replace("{post_type}", draft.post_type.value)
+        img_request = img_request.replace("{topic}", dossier.headline_seed[:200])
+        img_request = img_request.replace("{draft_text}", draft.text[:500])
+        img_request = img_request.replace("{article_section}", article_section)
+
+        from anthropic import Anthropic as _Anthropic
+        _img_client = _Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+        _img_resp = _img_client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=350,
+            messages=[{"role": "user", "content": img_request}],
+        )
+        image_prompt = _img_resp.content[0].text.strip().strip('"').strip("'")
+        if len(image_prompt) > 450:
+            image_prompt = image_prompt[:450]
+        print(f"[journalism] image prompt ({draft.post_type.value}): {image_prompt[:100]}...")
+
+        img_gen = ImageGenerator()
+        image_path = img_gen.generate_image(image_prompt)
+    except Exception as e:
+        print(f"[journalism] image generation failed (continuing): {e}")
 
     # Primary publish: post to X and Bluesky. We reuse the same text for
     # both platforms in this first rollout; a later phase can specialize.
