@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 REPO_ROOT = os.path.dirname(os.path.dirname(__file__))
 HISTORY_FILE = os.path.join(REPO_ROOT, 'analytics_history.json')
 REPORT_FILE = os.path.join(REPO_ROOT, 'docs', 'ANALYTICS.md')
-DASHBOARD_FILE = os.path.join(REPO_ROOT, 'docs', 'index.html')
+DASHBOARD_FILE = os.path.join(REPO_ROOT, 'docs', 'analytics.html')
 TRAILING_DAYS = 30
 
 
