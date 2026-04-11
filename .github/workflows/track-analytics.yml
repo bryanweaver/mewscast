@@ -40,7 +40,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add analytics_history.json docs/ANALYTICS.md docs/index.html
+          git add analytics_history.json docs/ANALYTICS.md docs/analytics.html
 
           if ! git diff --staged --quiet; then
             git commit -m "Update analytics [skip ci]"
