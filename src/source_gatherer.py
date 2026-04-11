@@ -291,6 +291,19 @@ class SourceGatherer:
 
     # ---- public ------------------------------------------------------------
 
+    # Known URL shorteners used by news outlets
+    _URL_SHORTENER_MAP = {
+        "wapo.st": "washingtonpost.com",
+        "apo.st": "washingtonpost.com",
+        "nyti.ms": "nytimes.com",
+        "bbc.in": "bbc.com",
+        "reut.rs": "reuters.com",
+        "abcnews.link": "abcnews.go.com",
+        "nbcnews.to": "nbcnews.com",
+        "cbsn.ws": "cbsnews.com",
+        "politi.co": "politico.com",
+    }
+
     def _infer_outlet_from_url(self, url: str) -> str:
         """Infer the outlet name for a URL by matching its domain against
         the loaded outlet registry. Falls back to the bare domain string
@@ -302,6 +315,9 @@ class SourceGatherer:
             return "Unknown"
         if not domain:
             return "Unknown"
+        # Resolve URL shorteners to their real domain first
+        if domain in self._URL_SHORTENER_MAP:
+            domain = self._URL_SHORTENER_MAP[domain]
         for entry in self.registry:
             entry_domain = (entry.get("domain") or "").lower()
             if entry_domain and entry_domain in domain:
