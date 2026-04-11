@@ -1,281 +1,227 @@
 """
-Post-draft factual analysis — compares key terms between the headline
-seed, article bodies, and the generated draft text.
+Post-draft factual analysis — uses Claude Haiku to compare the draft
+against the article bodies and headline seed for factual accuracy.
 
-Catches cases where the draft uses a STRONGER term than what the article
-bodies support (e.g., draft says "convicted" but bodies only say "charged").
-Also catches the opposite — where the draft UNDERREPORTS something all
-bodies agree on.
+Instead of hardcoded term hierarchies (which miss edge cases), this
+sends a single cheap Haiku call that understands language, context,
+and the full spectrum of possible escalation patterns.
 
-This is an INFORMATIONAL analysis, not a hard gate. It runs after Stage 6
-passes and logs its findings. Over time, if we see escalation patterns, it
-can be tightened into a verification gate check.
+This is INFORMATIONAL, not a hard gate. It runs after Stage 6 passes
+and logs findings. If escalation patterns become frequent, it can be
+tightened into a verification gate check.
 
 Usage:
-    from draft_analyzer import analyze_draft
+    from draft_analyzer import analyze_draft, print_analysis
     findings = analyze_draft(draft_text, headline_seed, dossier)
-    # findings is a dict with "escalations", "confirmations", "summary"
+    print_analysis(findings)
 """
 from __future__ import annotations
 
-import re
+import json
+import os
 from typing import Optional
 
 from dossier_store import StoryDossier
 
 
 # ---------------------------------------------------------------------------
-# Term severity hierarchies — ordered from weakest to strongest
+# The Haiku analysis prompt
 # ---------------------------------------------------------------------------
 
-# Legal status: the lifecycle of a criminal case
-LEGAL_STATUS_HIERARCHY = [
-    # (term_pattern, severity_level, display_label)
-    (r"\bquestioned\b", 1, "questioned"),
-    (r"\bquestioning\b", 1, "questioned"),
-    (r"\bperson of interest\b", 1, "person of interest"),
-    (r"\bdetained\b", 2, "detained"),
-    (r"\bin custody\b", 2, "in custody"),
-    (r"\barrested\b", 3, "arrested"),
-    (r"\barrest\b", 3, "arrested"),
-    (r"\bcharged\b", 4, "charged"),
-    (r"\bcharges filed\b", 4, "charged"),
-    (r"\bindicted\b", 5, "indicted"),
-    (r"\bindictment\b", 5, "indicted"),
-    (r"\bpleads guilty\b", 6, "pleads guilty"),
-    (r"\bpled guilty\b", 6, "pleads guilty"),
-    (r"\bpleaded guilty\b", 6, "pleads guilty"),
-    (r"\bguilty plea\b", 6, "pleads guilty"),
-    (r"\bconvicted\b", 7, "convicted"),
-    (r"\bfound guilty\b", 7, "convicted"),
-    (r"\bacquitted\b", 7, "acquitted"),  # same severity level, different outcome
-    (r"\bsentenced\b", 8, "sentenced"),
-]
+_ANALYSIS_PROMPT = """\
+You are a fact-checking editor reviewing an AI-generated news post before publication.
 
-# Casualty / status reporting
-CASUALTY_HIERARCHY = [
-    (r"\bmissing\b", 1, "missing"),
-    (r"\breported missing\b", 1, "missing"),
-    (r"\bdisappeared\b", 1, "disappeared"),
-    (r"\binjured\b", 2, "injured"),
-    (r"\bwounded\b", 2, "wounded"),
-    (r"\bhospitalized\b", 2, "hospitalized"),
-    (r"\bcritical condition\b", 3, "critical condition"),
-    (r"\blife-threatening\b", 3, "life-threatening"),
-    (r"\bpresumed dead\b", 4, "presumed dead"),
-    (r"\bfeared dead\b", 4, "feared dead"),
-    (r"\bdied\b", 5, "died"),
-    (r"\bkilled\b", 5, "killed"),
-    (r"\bconfirmed dead\b", 5, "confirmed dead"),
-]
+## HEADLINE SEED (what originally triggered story detection — may be stale):
+{headline_seed}
 
-# Attribution certainty
-ATTRIBUTION_HIERARCHY = [
-    (r"\balleged\b", 1, "alleged"),
-    (r"\bsuspected\b", 1, "suspected"),
-    (r"\baccused\b", 2, "accused"),
-    (r"\breportedly\b", 2, "reportedly"),
-    (r"\bconfirmed\b", 3, "confirmed"),
-    (r"\bproven\b", 4, "proven"),
-    (r"\badmitted\b", 4, "admitted"),
-]
+## ARTICLE BODIES (the ground truth from news outlets):
+{article_bodies}
 
-ALL_HIERARCHIES = {
-    "legal_status": LEGAL_STATUS_HIERARCHY,
-    "casualty": CASUALTY_HIERARCHY,
-    "attribution": ATTRIBUTION_HIERARCHY,
-}
+## DRAFT POST (what the AI model produced):
+{draft_text}
 
+## YOUR TASK
 
-# ---------------------------------------------------------------------------
-# Term extraction
-# ---------------------------------------------------------------------------
+Compare the draft post against the article bodies on three dimensions.
+For each, assess whether the draft ESCALATES beyond what the bodies support,
+MATCHES the bodies, or is CONSERVATIVE (weaker than what bodies say).
 
-def _extract_terms(text: str, hierarchy: list[tuple]) -> list[tuple[int, str]]:
-    """Return all (severity_level, display_label) pairs found in text."""
-    if not text:
-        return []
-    text_lower = text.lower()
-    found: list[tuple[int, str]] = []
-    seen_labels: set[str] = set()
-    for pattern, level, label in hierarchy:
-        if label in seen_labels:
-            continue
-        if re.search(pattern, text_lower):
-            found.append((level, label))
-            seen_labels.add(label)
-    return found
+### 1. Legal / procedural status
+Does the draft use a stronger legal term than the bodies support?
+Examples of escalation: bodies say "questioned" but draft says "arrested";
+bodies say "charged" but draft says "convicted"; bodies say "investigation"
+but draft says "indictment."
+Examples of conservative: bodies say "charged" but draft says "arrested" (weaker).
 
+### 2. Casualty / harm severity
+Does the draft overstate harm? Bodies say "injured" but draft says "killed";
+bodies say "missing" but draft says "confirmed dead."
 
-def _max_severity(terms: list[tuple[int, str]]) -> Optional[tuple[int, str]]:
-    """Return the highest-severity (level, label) from a list, or None."""
-    if not terms:
-        return None
-    return max(terms, key=lambda t: t[0])
+### 3. Attribution certainty
+Does the draft state something as confirmed fact when bodies only say
+"allegedly" or "reportedly"? Does it drop hedges that sources included?
+
+### 4. Fabricated details
+Does the draft include any specific facts (names, numbers, dates, locations,
+quotes) that do NOT appear in any of the article bodies? This is the most
+serious category — inventing facts that aren't in the source material.
+
+## ALSO NOTE
+Compare the headline seed against the article bodies — the headline may be
+stale (written earlier in the story's timeline). Note if the bodies have
+materially advanced beyond what the headline says.
+
+## OUTPUT FORMAT
+Return ONLY a JSON object with this exact shape (no markdown fences, no prose):
+
+{{
+  "overall": "CLEAN" | "ESCALATION" | "FABRICATION",
+  "findings": [
+    {{
+      "category": "legal_status" | "casualty" | "attribution" | "fabrication" | "headline_drift",
+      "severity": "ok" | "minor" | "major",
+      "draft_claim": "what the draft says",
+      "source_support": "what the bodies actually say",
+      "assessment": "one sentence explanation"
+    }}
+  ]
+}}
+
+If the draft is factually accurate and properly sourced, return:
+{{"overall": "CLEAN", "findings": []}}
+
+Be rigorous but fair. A draft that uses a term supported by ANY article body
+is not escalating — even if the headline seed used a weaker term. The bodies
+are the ground truth, not the headline.
+"""
 
 
 # ---------------------------------------------------------------------------
-# Main analysis function
+# Analysis function
 # ---------------------------------------------------------------------------
 
 def analyze_draft(
     draft_text: str,
     headline_seed: str,
     dossier: StoryDossier,
+    model: str = "claude-haiku-4-5-20251001",
 ) -> dict:
-    """Compare factual terms between headline, bodies, and draft.
+    """Use Claude Haiku to compare draft against sources for factual accuracy.
 
-    Returns a dict:
-      {
-        "escalations": [
-          {"category": "legal_status", "draft_term": "arrested",
-           "body_max": "questioned", "severity_delta": +2,
-           "message": "Draft says 'arrested' but strongest body term is 'questioned'"}
-        ],
-        "confirmations": [
-          {"category": "legal_status", "draft_term": "arrested",
-           "body_max": "arrested", "message": "Draft matches body text"}
-        ],
-        "downgrades": [
-          {"category": ..., "draft_term": ..., "body_max": ..., "message": ...}
-        ],
-        "headline_vs_body": [
-          {"category": ..., "headline_term": ..., "body_max": ..., "message": ...}
-        ],
-        "summary": "OK" | "ESCALATION_DETECTED" | "CLEAN"
-      }
+    Returns a dict with "overall" (CLEAN/ESCALATION/FABRICATION) and
+    "findings" (list of specific observations). Returns a fallback dict
+    if the API call fails or no API key is set.
     """
-    # Combine all article bodies into one text for term extraction
-    all_bodies = " ".join(
-        art.body or "" for art in dossier.articles if art.body
+    # Build the article bodies block
+    body_sections = []
+    for i, art in enumerate(dossier.articles, 1):
+        body = art.body or art.title or "(no body text)"
+        outlet = art.outlet or "Unknown"
+        ho = " [headline-only]" if getattr(art, "headline_only", False) else ""
+        body_sections.append(f"### Article {i}: {outlet}{ho}\n{body[:3000]}")
+
+    article_bodies = "\n\n".join(body_sections) if body_sections else "(no articles in dossier)"
+
+    # Build the prompt
+    prompt = _ANALYSIS_PROMPT.format(
+        headline_seed=headline_seed or "(none)",
+        article_bodies=article_bodies,
+        draft_text=draft_text or "(empty draft)",
     )
 
-    result: dict = {
-        "escalations": [],
-        "confirmations": [],
-        "downgrades": [],
-        "headline_vs_body": [],
-        "summary": "CLEAN",
+    # Call Haiku
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+    if not api_key:
+        return _fallback_result("no ANTHROPIC_API_KEY set")
+
+    try:
+        from anthropic import Anthropic
+        client = Anthropic(api_key=api_key)
+        response = client.messages.create(
+            model=model,
+            max_tokens=500,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = response.content[0].text.strip()
+    except Exception as e:
+        return _fallback_result(f"Haiku call failed: {e}")
+
+    # Parse the JSON response
+    try:
+        # Strip markdown fences if the model wrapped it
+        if raw.startswith("```"):
+            raw = raw.split("\n", 1)[1] if "\n" in raw else raw[3:]
+            if raw.endswith("```"):
+                raw = raw[:-3]
+            raw = raw.strip()
+
+        result = json.loads(raw)
+        # Validate structure
+        if "overall" not in result:
+            result["overall"] = "UNKNOWN"
+        if "findings" not in result or not isinstance(result["findings"], list):
+            result["findings"] = []
+        return result
+    except json.JSONDecodeError:
+        return _fallback_result(f"could not parse Haiku response as JSON: {raw[:200]}")
+
+
+def _fallback_result(reason: str) -> dict:
+    """Return a safe fallback when analysis can't run."""
+    return {
+        "overall": "SKIPPED",
+        "findings": [],
+        "_skipped_reason": reason,
     }
-
-    for category, hierarchy in ALL_HIERARCHIES.items():
-        draft_terms = _extract_terms(draft_text, hierarchy)
-        body_terms = _extract_terms(all_bodies, hierarchy)
-        headline_terms = _extract_terms(headline_seed, hierarchy)
-
-        draft_max = _max_severity(draft_terms)
-        body_max = _max_severity(body_terms)
-        headline_max = _max_severity(headline_terms)
-
-        # Skip categories where the draft doesn't use any terms
-        if not draft_max:
-            continue
-
-        # Compare draft vs body
-        if body_max:
-            delta = draft_max[0] - body_max[0]
-            if delta > 0:
-                # Draft escalated beyond what bodies support
-                result["escalations"].append({
-                    "category": category,
-                    "draft_term": draft_max[1],
-                    "draft_severity": draft_max[0],
-                    "body_max_term": body_max[1],
-                    "body_max_severity": body_max[0],
-                    "severity_delta": delta,
-                    "message": (
-                        f"Draft says '{draft_max[1]}' (severity {draft_max[0]}) "
-                        f"but strongest body term is '{body_max[1]}' "
-                        f"(severity {body_max[0]}) — delta +{delta}"
-                    ),
-                })
-                result["summary"] = "ESCALATION_DETECTED"
-            elif delta < 0:
-                # Draft is more conservative than bodies — fine
-                result["downgrades"].append({
-                    "category": category,
-                    "draft_term": draft_max[1],
-                    "body_max_term": body_max[1],
-                    "severity_delta": delta,
-                    "message": (
-                        f"Draft says '{draft_max[1]}' — bodies support "
-                        f"'{body_max[1]}' (stronger). Conservative, OK."
-                    ),
-                })
-            else:
-                # Match
-                result["confirmations"].append({
-                    "category": category,
-                    "draft_term": draft_max[1],
-                    "body_max_term": body_max[1],
-                    "message": f"Draft '{draft_max[1]}' matches body text",
-                })
-        else:
-            # Draft uses a term but NO body has any term in this category
-            # This could be the draft inventing a status not in the sources
-            if draft_max[0] >= 3:  # only flag if it's a strong term
-                result["escalations"].append({
-                    "category": category,
-                    "draft_term": draft_max[1],
-                    "draft_severity": draft_max[0],
-                    "body_max_term": "(none found in bodies)",
-                    "body_max_severity": 0,
-                    "severity_delta": draft_max[0],
-                    "message": (
-                        f"Draft says '{draft_max[1]}' but no matching "
-                        f"term found in any article body"
-                    ),
-                })
-                result["summary"] = "ESCALATION_DETECTED"
-
-        # Also compare headline vs body (informational)
-        if headline_max and body_max:
-            h_delta = headline_max[0] - body_max[0]
-            if h_delta != 0:
-                result["headline_vs_body"].append({
-                    "category": category,
-                    "headline_term": headline_max[1],
-                    "body_max_term": body_max[1],
-                    "severity_delta": h_delta,
-                    "message": (
-                        f"Headline says '{headline_max[1]}', "
-                        f"bodies say '{body_max[1]}' — "
-                        f"{'headline is weaker' if h_delta < 0 else 'headline is stronger'}"
-                    ),
-                })
-
-    return result
-
-
-def print_analysis(findings: dict) -> None:
-    """Print the analysis findings to stdout in a QA-friendly format."""
-    if findings["summary"] == "CLEAN" and not findings["confirmations"]:
-        print("[draft_analyzer] no status/legal terms found in draft — nothing to compare")
-        return
-
-    print(f"[draft_analyzer] factual analysis: {findings['summary']}")
-
-    for conf in findings["confirmations"]:
-        print(f"[draft_analyzer]   OK  {conf['category']}: {conf['message']}")
-
-    for down in findings["downgrades"]:
-        print(f"[draft_analyzer]   OK  {down['category']}: {down['message']}")
-
-    for esc in findings["escalations"]:
-        print(f"[draft_analyzer]   ⚠️  {esc['category']}: {esc['message']}")
-
-    for hvb in findings["headline_vs_body"]:
-        print(f"[draft_analyzer]   ℹ️  {hvb['category']}: {hvb['message']}")
 
 
 # ---------------------------------------------------------------------------
-# Smoke test
+# Logging
+# ---------------------------------------------------------------------------
+
+def print_analysis(findings: dict) -> None:
+    """Print findings to stdout in a QA-friendly format."""
+    overall = findings.get("overall", "UNKNOWN")
+
+    if overall == "SKIPPED":
+        reason = findings.get("_skipped_reason", "unknown reason")
+        print(f"[draft_analyzer] skipped: {reason}")
+        return
+
+    items = findings.get("findings", [])
+
+    if overall == "CLEAN" and not items:
+        print("[draft_analyzer] factual analysis: CLEAN — no issues found")
+        return
+
+    print(f"[draft_analyzer] factual analysis: {overall}")
+    for f in items:
+        sev = f.get("severity", "?")
+        cat = f.get("category", "?")
+        assessment = f.get("assessment", "")
+        draft_claim = f.get("draft_claim", "")
+        source = f.get("source_support", "")
+
+        if sev == "ok":
+            icon = "OK"
+        elif sev == "minor":
+            icon = "MINOR"
+        else:
+            icon = "MAJOR"
+
+        print(f"[draft_analyzer]   [{icon}] {cat}: {assessment}")
+        if draft_claim and source:
+            print(f"[draft_analyzer]         draft: \"{draft_claim}\"")
+            print(f"[draft_analyzer]         source: \"{source}\"")
+
+
+# ---------------------------------------------------------------------------
+# Smoke test (no API call — just validates the prompt builds correctly)
 # ---------------------------------------------------------------------------
 
 def _smoke_test() -> None:
     from dossier_store import ArticleRecord
 
-    # Case 1: Draft matches bodies (both say "arrested")
     dossier = StoryDossier(
         story_id="test-1",
         headline_seed="Man questioned by police after wife disappears",
@@ -288,45 +234,32 @@ def _smoke_test() -> None:
                 body="Police arrested Brian Hooker, 58, on Friday. He denies wrongdoing.",
                 fetched_at="2026-04-10T00:00:00Z",
             ),
-            ArticleRecord(
-                outlet="NBC",
-                url="https://nbc.com/y",
-                title="Husband arrested",
-                body="Hooker was arrested and charged with obstruction. He is detained.",
-                fetched_at="2026-04-10T00:00:00Z",
-            ),
         ],
     )
 
-    draft = "Brian Hooker was arrested after his wife disappeared. NBC and BBC confirm."
-    findings = analyze_draft(draft, dossier.headline_seed, dossier)
-    assert findings["summary"] == "CLEAN", f"expected CLEAN, got {findings}"
-    # Bodies say "charged" (severity 4), draft says "arrested" (severity 3) — downgrade (conservative)
-    assert any(d["draft_term"] == "arrested" for d in findings["downgrades"]), (
-        f"expected 'arrested' as a downgrade vs body 'charged', got {findings['downgrades']}"
-    )
-    # Headline says "questioned" but bodies say "charged" — should be noted
-    assert any(h["headline_term"] == "questioned" for h in findings["headline_vs_body"])
+    draft = "Brian Hooker was arrested after his wife disappeared. BBC reports."
 
-    # Case 2: Draft escalates beyond bodies
-    dossier2 = StoryDossier(
-        story_id="test-2",
-        headline_seed="Suspect questioned in robbery",
-        detected_at="2026-04-10T00:00:00Z",
-        articles=[
-            ArticleRecord(
-                outlet="AP",
-                url="https://ap.com/x",
-                title="Suspect questioned",
-                body="Police are questioning a suspect in the robbery. No charges yet.",
-                fetched_at="2026-04-10T00:00:00Z",
-            ),
-        ],
+    # Test without API key — should return SKIPPED gracefully
+    original_key = os.environ.pop("ANTHROPIC_API_KEY", None)
+    try:
+        result = analyze_draft(draft, dossier.headline_seed, dossier)
+        assert result["overall"] == "SKIPPED", f"expected SKIPPED without API key, got {result}"
+    finally:
+        if original_key:
+            os.environ["ANTHROPIC_API_KEY"] = original_key
+
+    # Verify prompt construction doesn't crash
+    body_sections = []
+    for i, art in enumerate(dossier.articles, 1):
+        body_sections.append(f"### Article {i}: {art.outlet}\n{art.body[:3000]}")
+    prompt = _ANALYSIS_PROMPT.format(
+        headline_seed=dossier.headline_seed,
+        article_bodies="\n\n".join(body_sections),
+        draft_text=draft,
     )
-    draft2 = "The suspect was convicted of robbery, AP reports."
-    findings2 = analyze_draft(draft2, dossier2.headline_seed, dossier2)
-    assert findings2["summary"] == "ESCALATION_DETECTED"
-    assert any(e["draft_term"] == "convicted" for e in findings2["escalations"])
+    assert "Brian Hooker" in prompt
+    assert "questioned" in prompt  # from headline
+    assert "arrested" in prompt    # from body
 
     print("draft_analyzer smoke test OK")
 
