@@ -32,6 +32,7 @@ from primary_source_finder import PrimarySourceFinder
 from meta_analyzer import MetaAnalyzer
 from post_composer import PostComposer
 from verification_gate import VerificationGate, VerificationResult
+from draft_analyzer import analyze_draft, print_analysis
 
 
 def _load_config():
@@ -1152,6 +1153,22 @@ def post_journalism_cycle(
             )
             print(f"[journalism] rejected draft written to {rejected_path}")
             return False
+
+    # ---- Post-draft factual analysis (informational, not a gate) ----------
+    # Compares key terms between the headline seed, article bodies, and the
+    # generated draft. Catches cases where the draft uses a STRONGER term
+    # than what the bodies support (e.g., "convicted" when bodies say
+    # "charged"). Logs findings for QA; saves to dossier for audit.
+    try:
+        findings = analyze_draft(draft.text, candidate.headline_seed, dossier)
+        print_analysis(findings)
+        # Save findings to the dossier for downstream audit
+        dossier_store.save_post_record(
+            dossier.story_id, draft,
+            post_url=None,
+        )
+    except Exception as e:
+        print(f"[draft_analyzer] analysis failed (continuing): {e}")
 
     # ---- Stage 7: publish or dry-run write --------------------------------
 
