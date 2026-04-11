@@ -582,6 +582,73 @@ def _safe_filename_component(text: str) -> str:
     return "".join(out)
 
 
+def _render_dossier_html(dossier_store, draft: DraftPost, dossier: StoryDossier) -> None:
+    """Render dossier HTML page + write a metadata sidecar for the index +
+    rebuild the index page. Used by both dry-run and publish paths."""
+    try:
+        dossier_data = dossier_store.read_raw(draft.story_id)
+        if not dossier_data:
+            return
+
+        html_dir = os.path.join(_project_root(), "docs", "dossiers")
+        os.makedirs(html_dir, exist_ok=True)
+
+        safe_id = _safe_filename_component(draft.story_id)
+
+        # 1. Render the individual dossier page
+        dossier_html = render_dossier_page(dossier_data)
+        html_path = os.path.join(html_dir, f"{safe_id}.html")
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(dossier_html)
+        print(f"[journalism] dossier HTML written to {html_path}")
+
+        # 2. Write a metadata sidecar (no article bodies — just index fields).
+        # The full dossier JSON is gitignored (copyrighted bodies). This small
+        # sidecar file IS committed so the index can be rebuilt on any runner
+        # without needing the full JSON.
+        import json as _json
+        meta = {
+            "story_id": draft.story_id,
+            "headline_seed": dossier.headline_seed,
+            "post_type": draft.post_type.value if draft.post_type else "",
+            "confidence": dossier_data.get("brief", {}).get("confidence", 0),
+            "published_at": dossier_data.get("post", {}).get("published_at")
+                or dossier_data.get("saved_at", ""),
+        }
+        meta_path = os.path.join(html_dir, f"{safe_id}.meta.json")
+        with open(meta_path, "w", encoding="utf-8") as f:
+            _json.dump(meta, f, indent=2)
+
+        # 3. Rebuild the index from all .meta.json files in the directory
+        import glob as _glob
+        entries = []
+        for mp in sorted(_glob.glob(os.path.join(html_dir, "*.meta.json"))):
+            try:
+                with open(mp, "r", encoding="utf-8") as f:
+                    m = _json.load(f)
+                # Wrap in the structure render_index_page expects
+                entries.append({
+                    "story_id": m.get("story_id", ""),
+                    "dossier": {"headline_seed": m.get("headline_seed", "")},
+                    "post": {
+                        "draft": {"post_type": m.get("post_type", "")},
+                        "published_at": m.get("published_at", ""),
+                    },
+                    "brief": {"confidence": m.get("confidence", 0)},
+                })
+            except Exception:
+                continue
+
+        index_html = render_index_page(entries)
+        index_path = os.path.join(html_dir, "index.html")
+        with open(index_path, "w", encoding="utf-8") as f:
+            f.write(index_html)
+        print(f"[journalism] dossier index updated ({len(entries)} entries)")
+
+    except Exception as e:
+        print(f"[journalism] dossier HTML render failed (non-fatal): {e}")
+
+
 def _write_draft_file(
     drafts_dir: str,
     draft: DraftPost,
@@ -1200,19 +1267,8 @@ def post_journalism_cycle(
     if dry_run:
         path = _write_draft_file(drafts_dir, draft, dossier)
         print(f"[journalism] DRY RUN draft written to {path}")
-        # Also render dossier HTML for the viewer
-        try:
-            dossier_data = dossier_store.read_raw(draft.story_id)
-            if dossier_data:
-                dossier_html = render_dossier_page(dossier_data)
-                html_dir = os.path.join(_project_root(), "docs", "dossiers")
-                os.makedirs(html_dir, exist_ok=True)
-                html_path = os.path.join(html_dir, f"{_safe_filename_component(draft.story_id)}.html")
-                with open(html_path, "w", encoding="utf-8") as f:
-                    f.write(dossier_html)
-                print(f"[journalism] dossier HTML written to {html_path}")
-        except Exception as e:
-            print(f"[journalism] dossier HTML render failed (non-fatal): {e}")
+        # Render dossier HTML + rebuild index
+        _render_dossier_html(dossier_store, draft, dossier)
         return True
 
     print("[journalism] Stage 7 — publishing")
@@ -1352,30 +1408,7 @@ def post_journalism_cycle(
     dossier_store.save_post_record(draft.story_id, draft, post_url=post_url)
 
     # Render dossier HTML for the public viewer + rebuild index
-    try:
-        dossier_data = dossier_store.read_raw(draft.story_id)
-        if dossier_data:
-            dossier_html = render_dossier_page(dossier_data)
-            html_dir = os.path.join(_project_root(), "docs", "dossiers")
-            os.makedirs(html_dir, exist_ok=True)
-            html_path = os.path.join(html_dir, f"{_safe_filename_component(draft.story_id)}.html")
-            with open(html_path, "w", encoding="utf-8") as f:
-                f.write(dossier_html)
-            print(f"[journalism] dossier HTML written to {html_path}")
-
-            # Rebuild the index page from all dossier JSON files
-            all_entries = []
-            for sid in dossier_store.list_dossiers():
-                entry = dossier_store.read_raw(sid)
-                if entry:
-                    all_entries.append(entry)
-            index_html = render_index_page(all_entries)
-            index_path = os.path.join(html_dir, "index.html")
-            with open(index_path, "w", encoding="utf-8") as f:
-                f.write(index_html)
-            print(f"[journalism] dossier index written to {index_path}")
-    except Exception as e:
-        print(f"[journalism] dossier HTML render failed (non-fatal): {e}")
+    _render_dossier_html(dossier_store, draft, dossier)
 
     print(f"\n{'=' * 60}")
     print("[journalism] cycle complete")
