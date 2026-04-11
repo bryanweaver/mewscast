@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-04-10 23:08 UTC*
+*Last updated: 2026-04-11 23:07 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,19 +12,19 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 207 | - |
-| Likes | 198 | +1 |
-| Reposts | 30 | +0 |
-| Replies | 211 | - |
+| Posts tracked | 205 | - |
+| Likes | 195 | +0 |
+| Reposts | 32 | +0 |
+| Replies | 207 | - |
 
 ### X (Twitter)
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 179 | - |
-| Likes | 27 | -1 |
+| Posts tracked | 184 | - |
+| Likes | 28 | +0 |
 | Retweets | 2 | - |
-| Replies | 178 | - |
+| Replies | 183 | - |
 
 ---
 
@@ -43,14 +43,14 @@ Rideshare drivers are ...
 **[X]** 7 likes, 0 reposts
 > Elon Musk is requiring banks and law firms working on the SpaceX IPO to buy Grok...
 
-**[BLUESKY]** 3 likes, 0 reposts
-> #BreakingMews: FBI responding to active shooter situation at Michigan synagogue....
-
 **[BLUESKY]** 4 likes, 1 reposts
 > SAVE Act likely dead in Senate, but GOP states aren't waiting.
 
 Florida, South D...
 
+**[BLUESKY]** 3 likes, 2 reposts
+> Millions expected at Saturday's 'No Kings' rally — 3,100+ events in all 50 state...
+
 ---
 
-*Data snapshots: 5760 total across 386 posts*
+*Data snapshots: 5939 total across 389 posts*
