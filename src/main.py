@@ -614,6 +614,7 @@ def _render_dossier_html(dossier_store, draft: DraftPost, dossier: StoryDossier)
             "confidence": dossier_data.get("brief", {}).get("confidence", 0),
             "published_at": dossier_data.get("post", {}).get("published_at")
                 or dossier_data.get("saved_at", ""),
+            "draft_text": draft.text,
         }
         meta_path = os.path.join(html_dir, f"{safe_id}.meta.json")
         with open(meta_path, "w", encoding="utf-8") as f:
@@ -1628,16 +1629,32 @@ def main():
         success = post_journalism_cycle(dry_run=dry_run, forced_post_type=forced_type)
     elif mode == "republish":
         # Republish a specific draft without re-running the pipeline.
-        #   REPUBLISH_POST_TEXT="..." python src/main.py republish <story_id> <post_type>
-        # Post text comes from env var to preserve newlines and special chars.
-        if len(sys.argv) < 4:
-            print("Usage: REPUBLISH_POST_TEXT='...' python src/main.py republish <story_id> <post_type>")
+        #   python src/main.py republish <story_id>
+        # Reads the draft text from docs/dossiers/<story_id>.meta.json
+        # (saved during dry-run). No manual text entry needed.
+        if len(sys.argv) < 3:
+            print("Usage: python src/main.py republish <story_id>")
             sys.exit(1)
         story_id = sys.argv[2]
-        post_type_str = sys.argv[3].upper()
-        post_text = os.getenv("REPUBLISH_POST_TEXT", "")
-        if not post_text:
-            print("Error: REPUBLISH_POST_TEXT env var is empty or not set.")
+        # Load draft text and post type from the committed meta sidecar
+        meta_path = os.path.join(
+            _project_root(), "docs", "dossiers", f"{story_id}.meta.json"
+        )
+        try:
+            with open(meta_path, "r", encoding="utf-8") as f:
+                meta = json.load(f)
+            post_text = meta.get("draft_text", "")
+            post_type_str = meta.get("post_type", "REPORT")
+            if not post_text:
+                print(f"Error: no draft_text in {meta_path}")
+                print("This dossier may predate the draft_text sidecar. "
+                      "Re-run the dry-run to regenerate it.")
+                sys.exit(1)
+            print(f"[republish] loaded draft from {meta_path}")
+            print(f"[republish] post type: {post_type_str}")
+            print(f"[republish] text ({len(post_text)} chars): {post_text[:80]}...")
+        except FileNotFoundError:
+            print(f"Error: {meta_path} not found. Run a dry-run first.")
             sys.exit(1)
         success = republish_draft(story_id, post_text, post_type_str)
     else:
