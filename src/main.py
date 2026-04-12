@@ -1334,17 +1334,21 @@ def post_journalism_cycle(
                 x_success = True
                 print(f"[journalism] X post ok: {tweet_id}")
 
-                # Source-link reply if we have a primary source url
-                primary_url = (
-                    dossier.primary_sources[0].url
-                    if dossier.primary_sources
-                    else (dossier.articles[0].url if dossier.articles else None)
+                # Dossier link reply — point readers to the full transparency page
+                dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
+                reply_text = (
+                    f"Full dossier — every source Walter read, "
+                    f"how outlets framed it, what's missing:\n"
+                    f"{dossier_url}"
                 )
-                if primary_url:
-                    time.sleep(2)
-                    reply_result = twitter_bot.reply_to_tweet(tweet_id, primary_url)
+                time.sleep(2)
+                try:
+                    reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
                     if reply_result:
                         reply_tweet_id = reply_result.get("id")
+                        print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
+                except Exception as re:
+                    print(f"[journalism] X dossier reply failed: {re}")
         except Exception as e:
             print(f"[journalism] X publish failed: {e}")
 
@@ -1362,18 +1366,21 @@ def post_journalism_cycle(
                 bluesky_success = True
                 print(f"[journalism] Bluesky post ok: {bluesky_uri}")
 
-                primary_url = (
-                    dossier.primary_sources[0].url
-                    if dossier.primary_sources
-                    else (dossier.articles[0].url if dossier.articles else None)
+                dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
+                reply_text = (
+                    f"Full dossier — every source Walter read, "
+                    f"how outlets framed it, what's missing:\n"
+                    f"{dossier_url}"
                 )
-                if primary_url:
-                    time.sleep(2)
+                time.sleep(2)
+                try:
                     reply_result = bluesky_bot.reply_to_skeet_with_link(
-                        bluesky_uri, primary_url
+                        bluesky_uri, reply_text
                     )
                     if reply_result:
                         bluesky_reply_uri = reply_result.get("uri")
+                except Exception as re:
+                    print(f"[journalism] Bluesky dossier reply failed: {re}")
         except Exception as e:
             print(f"[journalism] Bluesky publish failed: {e}")
 

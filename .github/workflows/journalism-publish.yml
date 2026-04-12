@@ -1,0 +1,121 @@
+name: Journalism Publish (Walter Croncat)
+
+# Walter Croncat journalism pipeline — LIVE PUBLISH.
+#
+# Runs the full Stage 1–7 pipeline and publishes to X + Bluesky.
+# Generates a post-type-aware image via Grok, posts the text + image,
+# then replies with a link to the public dossier page.
+#
+# Triggers:
+#   - Manual button in the Actions tab (workflow_dispatch)
+#   - Scheduled runs (uncomment when ready for automated cadence)
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_type:
+        description: 'Force a post type (leave blank to use brief suggestion)'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - brief
+          - meta
+          - analysis
+          - bulletin
+          - primary
+
+  # Uncomment to schedule live journalism posts:
+  # Phase 2: 1x/day at 5:30 PM UTC (1:30 PM ET — afternoon peak)
+  # schedule:
+  #   - cron: '30 17 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
+
+      - name: Run Walter Croncat journalism pipeline (PUBLISH)
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
+          DIFFBOT_TOKEN: ${{ secrets.DIFFBOT_TOKEN }}
+        run: |
+          POST_TYPE="${{ github.event.inputs.post_type }}"
+          if [ -n "$POST_TYPE" ]; then
+            echo "Publishing journalism post with forced type: $POST_TYPE"
+            python src/main.py journalism "$POST_TYPE"
+          else
+            echo "Publishing journalism post with brief-suggested type"
+            python src/main.py journalism
+          fi
+
+      - name: Commit updated seen-stories file (if changed)
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if ! git diff --quiet journalism_seen_stories.txt; then
+            git add journalism_seen_stories.txt
+            git commit -m "Update journalism seen-stories [skip ci]"
+            for i in {1..3}; do
+              git pull --rebase origin main && git push && break || {
+                echo "Push failed (attempt $i/3), retrying..."
+                sleep $((i * 2))
+              }
+            done
+          else
+            echo "No changes to journalism_seen_stories.txt"
+          fi
+
+      - name: Commit dossier viewer pages (if generated)
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/dossiers/ docs/CNAME 2>/dev/null || true
+          if ! git diff --staged --quiet; then
+            git commit -m "Update dossier viewer pages [skip ci]"
+            for i in {1..3}; do
+              git pull --rebase origin main && git push && break || {
+                echo "Push failed (attempt $i/3), retrying..."
+                sleep $((i * 2))
+              }
+            done
+          else
+            echo "No dossier page changes to commit"
+          fi
+
+      - name: Commit post history (if changed)
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if ! git diff --quiet posts_history.json; then
+            git add posts_history.json
+            git commit -m "Update post history [skip ci]"
+            for i in {1..3}; do
+              git pull --rebase origin main && git push && break || {
+                echo "Push failed (attempt $i/3), retrying..."
+                sleep $((i * 2))
+              }
+            done
+          else
+            echo "No post history changes"
+          fi
