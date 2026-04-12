@@ -26,10 +26,11 @@ on:
           - bulletin
           - primary
 
-  # Uncomment to schedule live journalism posts:
-  # Phase 2: 1x/day at 5:30 PM UTC (1:30 PM ET — afternoon peak)
-  # schedule:
-  #   - cron: '30 17 * * *'
+  # A/B test — 3 journalism posts/day (legacy gets the other 3 slots)
+  schedule:
+    - cron: '0 11 * * *'  # 11 AM UTC = 7 AM ET (morning — catch overnight news)
+    - cron: '0 17 * * *'  # 5 PM UTC = 1 PM ET (midday peak engagement)
+    - cron: '0 23 * * *'  # 11 PM UTC = 7 PM ET (evening wrap-up)
 
 permissions:
   contents: write
