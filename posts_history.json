@@ -2531,6 +2531,20 @@
       "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mjauxa2fzn2v",
       "dossier_id": null,
       "post_type": null
+    },
+    {
+      "timestamp": "2026-04-12T00:18:02.437261+00:00",
+      "topic": "US appeals court declares 158-year-old home distilling ban unconstitutional",
+      "url": "https://www.reuters.com/legal/government/us-appeals-court-declares-158-year-old-home-distilling-ban-unconstitutional-2026-04-10/",
+      "source": "Reuters",
+      "content": "#BreakingMews: New York Post reports the 5th U.S. Circuit Court of Appeals struck down the federal ban on home distilling \u2014 a law dating to 1868 \u2014 as unconstitutional.\n\nReported by trib.al/New York Post; also covered by Reuters, x.com.",
+      "image_prompt": "Walter Croncat, brown tabby cat with realistic cat anatomy, at a breaking news location outdoors. In the foreground, Walter's alert face fills the frame, professional and urgent. Behind him, a historic 1868-era stone distillery building with amber emergency lighting casting dramatic shadows. Red news ticker graphics overlay the scene. Walter wears a tiny \"PRESS / Walter Croncat\" badge. High contrast, saturated colors, cinematic horizontal composi",
+      "x_tweet_id": "2043121401922547869",
+      "x_reply_tweet_id": "2043121412458623403",
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mjb3abfkca2y",
+      "bluesky_reply_uri": null,
+      "dossier_id": "2026-04-11-us-appeals-court-declares-5962788ccc",
+      "post_type": "BULLETIN"
     }
   ]
 }
