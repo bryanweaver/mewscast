@@ -1152,10 +1152,11 @@ def post_journalism_cycle(
 
         dossier_store.save_dossier(fb_dossier)
 
-        min_articles = journalism_cfg.get("min_articles", 3)
-        if len(fb_dossier.articles) < min_articles:
+        # Require at least 2 articles to proceed (type-specific minimums
+        # are enforced after Stage 4 decides the post type)
+        if len(fb_dossier.articles) < 2:
             print(f"[journalism] {fb_label} only {len(fb_dossier.articles)} articles "
-                  f"(need {min_articles}) — trying next candidate")
+                  f"— trying next candidate")
             continue
 
         # This candidate worked — use it
@@ -1164,7 +1165,7 @@ def post_journalism_cycle(
         break
 
     # If all fallback candidates yielded too few articles, clean exit.
-    if dossier is None or len(dossier.articles) < min_articles:
+    if dossier is None or len(dossier.articles) < 2:
         print(
             f"[journalism] Stage 3 returned 0 articles for all "
             f"{len(fallback_candidates)} candidate(s) — clean exit, "
@@ -1185,17 +1186,37 @@ def post_journalism_cycle(
         f"{brief.suggested_post_type.value} confidence={brief.confidence}"
     )
 
-    # ---- Quality gate: minimum confidence -----------------------------------
-    min_confidence = journalism_cfg.get("min_confidence", 0.45)
-    if brief.confidence < min_confidence:
-        print(
-            f"[journalism] confidence {brief.confidence:.2f} < {min_confidence} "
-            f"— story too thin to publish, clean exit"
-        )
-        return True  # clean exit, not an error
-
-    # ---- Stage 5: compose -------------------------------------------------
+    # ---- Quality gate: tiered by post type ----------------------------------
     chosen_type = forced_post_type or brief.suggested_post_type
+
+    # Thresholds per post type:
+    #   REPORT/META: 3 sources, 0.45 confidence (multi-source corroboration)
+    #   BULLETIN:    2 sources, 0.35 confidence (breaking, hedged language)
+    #   Others:      2 sources, 0.40 confidence
+    _QUALITY_GATES = {
+        PostType.REPORT:     {"min_articles": 3, "min_confidence": 0.45},
+        PostType.META:       {"min_articles": 3, "min_confidence": 0.45},
+        PostType.BULLETIN:   {"min_articles": 2, "min_confidence": 0.35},
+        PostType.ANALYSIS:   {"min_articles": 2, "min_confidence": 0.40},
+        PostType.PRIMARY:    {"min_articles": 2, "min_confidence": 0.40},
+        PostType.CORRECTION: {"min_articles": 2, "min_confidence": 0.40},
+    }
+    gate = _QUALITY_GATES.get(chosen_type, {"min_articles": 3, "min_confidence": 0.45})
+    n_articles = len(dossier.articles)
+
+    if n_articles < gate["min_articles"]:
+        print(
+            f"[journalism] {chosen_type.value} requires {gate['min_articles']} sources "
+            f"but only {n_articles} found — clean exit"
+        )
+        return True
+
+    if brief.confidence < gate["min_confidence"]:
+        print(
+            f"[journalism] confidence {brief.confidence:.2f} < "
+            f"{gate['min_confidence']} for {chosen_type.value} — clean exit"
+        )
+        return True
     print(f"[journalism] Stage 5 — composing {chosen_type.value} post")
     try:
         # Don't pass max_length — let the composer pick the right budget
