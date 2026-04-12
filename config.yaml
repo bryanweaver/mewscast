@@ -308,8 +308,6 @@ journalism:
     target_count: 7
     require_slant_diversity: true
     max_fallback_candidates: 3
-    min_articles: 3                 # minimum sources to publish (< 3 tries next candidate)
-  min_confidence: 0.45              # minimum meta-analysis confidence to publish
   meta_analysis:
     model: claude-opus-4-6
     max_tokens: 4000
