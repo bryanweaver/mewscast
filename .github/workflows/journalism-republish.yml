@@ -1,31 +1,16 @@
 name: Republish Draft (Walter Croncat)
 
 # Publish a specific draft that was validated in a dry-run.
-# Skips Stages 1-6 — just generates an image and publishes.
-# Use this when a dry-run produced a great draft but the story
-# rotated out of trending by the time you're ready to publish.
+# Reads the draft text directly from docs/dossiers/<story_id>.meta.json
+# (committed during the dry-run). No manual text entry needed.
+#
+# Just enter the story_id and hit go.
 
 on:
   workflow_dispatch:
     inputs:
       story_id:
         description: 'Story ID (e.g. 2026-04-11-pope-leo-xiv-issued-0276fdcfd2)'
-        required: true
-        type: string
-      post_type:
-        description: 'Post type'
-        required: true
-        default: 'REPORT'
-        type: choice
-        options:
-          - REPORT
-          - META
-          - ANALYSIS
-          - BULLETIN
-          - PRIMARY
-          - CORRECTION
-      post_text:
-        description: 'Exact post text to publish'
         required: true
         type: string
 
@@ -53,11 +38,8 @@ jobs:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
-          REPUBLISH_POST_TEXT: ${{ github.event.inputs.post_text }}
         run: |
-          python src/main.py republish \
-            "${{ github.event.inputs.story_id }}" \
-            "${{ github.event.inputs.post_type }}"
+          python src/main.py republish "${{ github.event.inputs.story_id }}"
 
       - name: Commit post history (if changed)
         if: success()
