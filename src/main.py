@@ -1274,6 +1274,22 @@ def post_journalism_cycle(
             dossier.story_id, draft,
             post_url=None,
         )
+
+        # Persist verification + analysis + selection data for dossier viewer
+        try:
+            raw = dossier_store.read_raw(dossier.story_id)
+            raw["verification"] = result.to_dict() if result else None
+            raw["analysis"] = findings if findings else None
+            raw["selection"] = {
+                "candidates_detected": len(candidates) if candidates else 0,
+                "candidates_passed_triage": len(passed) if passed else 0,
+                "story_id": candidate.story_id,
+                "headline_seed": candidate.headline_seed,
+                "source": getattr(candidate, "source", "unknown"),
+            }
+            dossier_store._write(dossier.story_id, raw)
+        except Exception as e:
+            print(f"[journalism] failed to persist extended dossier data: {e}")
     except Exception as e:
         print(f"[draft_analyzer] analysis failed (continuing): {e}")
 
