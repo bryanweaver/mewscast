@@ -304,10 +304,21 @@ class SourceGatherer:
         "politi.co": "politico.com",
     }
 
+    # Domains that are generic shorteners (not outlet-specific).
+    # When we see these, follow the redirect to find the real domain.
+    _GENERIC_SHORTENERS = {
+        "trib.al", "bit.ly", "dlvr.it", "ow.ly", "buff.ly",
+        "is.gd", "t.co", "spr.ly", "flip.it", "zpr.io",
+    }
+
     def _infer_outlet_from_url(self, url: str) -> str:
         """Infer the outlet name for a URL by matching its domain against
         the loaded outlet registry. Falls back to the bare domain string
-        if no registry entry matches."""
+        if no registry entry matches.
+
+        For unknown short-URL domains (trib.al, dlvr.it, etc.), performs a
+        HEAD request to follow redirects and resolve the real outlet domain.
+        """
         try:
             parsed = urlparse(url)
             domain = (parsed.netloc or "").lower().lstrip("www.")
@@ -315,14 +326,42 @@ class SourceGatherer:
             return "Unknown"
         if not domain:
             return "Unknown"
-        # Resolve URL shorteners to their real domain first
+
+        # 1. Check known outlet-specific shorteners
         if domain in self._URL_SHORTENER_MAP:
             domain = self._URL_SHORTENER_MAP[domain]
+
+        # 2. Try registry match on current domain
         for entry in self.registry:
             entry_domain = (entry.get("domain") or "").lower()
             if entry_domain and entry_domain in domain:
                 return entry["name"]
+
+        # 3. For generic shorteners, follow the redirect to find the real domain
+        if domain in self._GENERIC_SHORTENERS:
+            resolved_domain = self._resolve_redirect(url)
+            if resolved_domain and resolved_domain != domain:
+                for entry in self.registry:
+                    entry_domain = (entry.get("domain") or "").lower()
+                    if entry_domain and entry_domain in resolved_domain:
+                        return entry["name"]
+                return resolved_domain  # at least show the real domain
+
         return domain
+
+    @staticmethod
+    def _resolve_redirect(url: str, timeout: float = 5) -> Optional[str]:
+        """Follow redirects via HEAD request and return the final domain."""
+        try:
+            import requests
+            resp = requests.head(
+                url, allow_redirects=True, timeout=timeout,
+                headers={"User-Agent": "Mozilla/5.0"},
+            )
+            final = urlparse(resp.url)
+            return (final.netloc or "").lower().lstrip("www.")
+        except Exception:
+            return None
 
     def gather(
         self,
