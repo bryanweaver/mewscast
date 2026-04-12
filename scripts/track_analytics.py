@@ -172,9 +172,10 @@ def fetch_x_metrics(posts):
             # Request media attachments along with metrics
             response = bot.client.get_tweets(
                 batch,
-                tweet_fields=['public_metrics', 'created_at', 'attachments'],
+                tweet_fields=['public_metrics', 'non_public_metrics', 'organic_metrics', 'created_at', 'attachments'],
                 expansions=['attachments.media_keys'],
-                media_fields=['url', 'preview_image_url', 'type']
+                media_fields=['url', 'preview_image_url', 'type'],
+                user_auth=True
             )
 
             # Build media lookup from includes
@@ -202,11 +203,18 @@ def fetch_x_metrics(posts):
                                     image_url = media.preview_image_url
                                     break
 
+                    # non_public_metrics: link clicks, profile clicks, engagements
+                    # Only available for tweets you own, <30 days old
+                    npm = tweet.non_public_metrics or {}
+                    om = tweet.organic_metrics or {}
+
                     metrics[str(tweet.id)] = {
                         "likes": m.get('like_count', 0),
                         "retweets": m.get('retweet_count', 0),
                         "replies": m.get('reply_count', 0),
                         "impressions": m.get('impression_count', 0),
+                        "url_link_clicks": npm.get('url_link_clicks', 0),
+                        "user_profile_clicks": npm.get('user_profile_clicks', 0),
                         "image_url": image_url,
                     }
             print(f"Fetched batch {i//batch_size + 1}: {len(response.data) if response.data else 0} tweets")
