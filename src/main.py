@@ -1628,13 +1628,17 @@ def main():
         success = post_journalism_cycle(dry_run=dry_run, forced_post_type=forced_type)
     elif mode == "republish":
         # Republish a specific draft without re-running the pipeline.
-        #   python src/main.py republish <story_id> <post_type> <post_text>
-        if len(sys.argv) < 5:
-            print("Usage: python src/main.py republish <story_id> <post_type> <post_text>")
+        #   REPUBLISH_POST_TEXT="..." python src/main.py republish <story_id> <post_type>
+        # Post text comes from env var to preserve newlines and special chars.
+        if len(sys.argv) < 4:
+            print("Usage: REPUBLISH_POST_TEXT='...' python src/main.py republish <story_id> <post_type>")
             sys.exit(1)
         story_id = sys.argv[2]
         post_type_str = sys.argv[3].upper()
-        post_text = sys.argv[4]
+        post_text = os.getenv("REPUBLISH_POST_TEXT", "")
+        if not post_text:
+            print("Error: REPUBLISH_POST_TEXT env var is empty or not set.")
+            sys.exit(1)
         success = republish_draft(story_id, post_text, post_type_str)
     else:
         print(f"❌ Unknown mode: {mode}")

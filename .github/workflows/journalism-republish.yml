@@ -53,11 +53,11 @@ jobs:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
+          REPUBLISH_POST_TEXT: ${{ github.event.inputs.post_text }}
         run: |
           python src/main.py republish \
             "${{ github.event.inputs.story_id }}" \
-            "${{ github.event.inputs.post_type }}" \
-            "${{ github.event.inputs.post_text }}"
+            "${{ github.event.inputs.post_type }}"
 
       - name: Commit post history (if changed)
         if: success()
