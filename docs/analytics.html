@@ -898,10 +898,11 @@
             const sorted = Object.entries(sources)
                 .map(([name, data]) => ({
                     name,
-                    avgEngagement: data.count > 0 ? data.engagement / data.count : 0,
+                    totalEngagement: data.engagement,
                     count: data.count
                 }))
-                .sort((a, b) => b.avgEngagement - a.avgEngagement)
+                .filter(s => s.count >= 2)  // Require at least 2 posts to rank
+                .sort((a, b) => b.totalEngagement - a.totalEngagement)
                 .slice(0, 8);
 
             const barColors = ['#58a6ff', '#39d2c0', '#bc8cff', '#58a6ff', '#39d2c0', '#bc8cff', '#58a6ff', '#39d2c0'];
@@ -910,10 +911,10 @@
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: sorted.map(s => s.name),
+                    labels: sorted.map(s => `${s.name} (${s.count})`),
                     datasets: [{
-                        label: 'Avg Engagement',
-                        data: sorted.map(s => s.avgEngagement.toFixed(1)),
+                        label: 'Total Engagement',
+                        data: sorted.map(s => s.totalEngagement),
                         backgroundColor: barColors.slice(0, sorted.length),
                         borderRadius: 4
                     }]
@@ -1287,12 +1288,25 @@
 
             const blueskyChange = getChange(followerHistory.bluesky);
 
-            // Render stats cards (Bluesky only)
+            // Render stats cards
+            const firstSnapshot = followerHistory.bluesky && followerHistory.bluesky.length > 0
+                ? followerHistory.bluesky[0] : null;
+            const allTimeGrowth = latestBluesky && firstSnapshot
+                ? latestBluesky.followers - firstSnapshot.followers : null;
+            const trackingSince = firstSnapshot
+                ? new Date(firstSnapshot.timestamp).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
+
             container.innerHTML = `
                 <div class="follower-stat-card bluesky">
                     <div class="platform-name">Bluesky</div>
                     <div class="follower-count">${latestBluesky ? latestBluesky.followers.toLocaleString() : '\u2014'}</div>
                     ${blueskyChange !== null ? `<div class="follower-change ${blueskyChange >= 0 ? 'positive' : 'negative'}">${blueskyChange >= 0 ? '+' : ''}${blueskyChange} this week</div>` : ''}
+                    ${allTimeGrowth !== null ? `<div style="font-size:0.75rem;color:#8b949e;margin-top:0.25rem">+${allTimeGrowth} since ${trackingSince}</div>` : ''}
+                </div>
+                <div class="follower-stat-card" style="border-left-color: #58a6ff; opacity: 0.5;">
+                    <div class="platform-name" style="color: #58a6ff;">X / Twitter</div>
+                    <div class="follower-count" style="font-size: 1rem; color: #8b949e;">\u2014</div>
+                    <div style="font-size:0.75rem;color:#8b949e;">Follower tracking not available on X Basic API tier</div>
                 </div>
             `;
 

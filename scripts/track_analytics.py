@@ -20,7 +20,8 @@ REPO_ROOT = os.path.dirname(os.path.dirname(__file__))
 HISTORY_FILE = os.path.join(REPO_ROOT, 'analytics_history.json')
 REPORT_FILE = os.path.join(REPO_ROOT, 'docs', 'ANALYTICS.md')
 DASHBOARD_FILE = os.path.join(REPO_ROOT, 'docs', 'analytics.html')
-TRAILING_DAYS = 30
+TRAILING_DAYS = 30  # Only used for API fetch window (avoid rate limits on old posts)
+KEEP_ALL_HISTORY = True  # Never prune — analytics are all-time
 
 
 def load_analytics_history():
@@ -500,12 +501,7 @@ def main():
             "timestamp": datetime.now(timezone.utc).isoformat(),
             **bluesky_followers
         })
-        # Keep only last 90 days
-        cutoff = datetime.now(timezone.utc) - timedelta(days=90)
-        analytics_history["follower_history"]["bluesky"] = [
-            s for s in analytics_history["follower_history"]["bluesky"]
-            if datetime.fromisoformat(s["timestamp"].replace('Z', '+00:00')) > cutoff
-        ]
+        # No pruning — keep all follower history for all-time growth chart
 
     print("\nFetching X metrics...")
     x_metrics = fetch_x_metrics(recent_posts)
@@ -514,7 +510,8 @@ def main():
     # Update history
     print("\nUpdating history...")
     analytics_history = update_history(analytics_history, recent_posts, bluesky_metrics, x_metrics)
-    analytics_history = prune_old_posts(analytics_history, TRAILING_DAYS)
+    if not KEEP_ALL_HISTORY:
+        analytics_history = prune_old_posts(analytics_history, TRAILING_DAYS)
 
     # Save history
     save_analytics_history(analytics_history)
