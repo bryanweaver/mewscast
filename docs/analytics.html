@@ -395,6 +395,27 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+        .post-image img:hover { opacity: 0.8; }
+
+        .image-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .image-modal-overlay.active { display: flex; }
+        .image-modal-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
         }
 
         .post-image.no-image {
@@ -1103,7 +1124,7 @@
                                 <span class="post-date">${date}</span>
                             </div>
                             <div class="post-body">
-                                ${group.image_url ? `<div class="post-image"><img src="${group.image_url}" alt="Post image" loading="lazy" onerror="this.parentElement.innerHTML='&#128049;'"></div>` : '<div class="post-image no-image">&#128049;</div>'}
+                                ${group.image_url ? `<div class="post-image"><img src="${group.image_url}" alt="Post image" loading="lazy" onclick="openImageModal(this.src)" onerror="this.parentElement.innerHTML='&#128049;'"></div>` : '<div class="post-image no-image">&#128049;</div>'}
                                 <div class="post-text">
                                     <div class="post-content">${group.content || 'No content'}</div>
                                 </div>
@@ -1344,7 +1365,8 @@
                 });
             }
 
-            if (followerHistory.x && followerHistory.x.length > 0) {
+            const hasXData = followerHistory.x && followerHistory.x.length > 0;
+            if (hasXData) {
                 datasets.push({
                     label: 'X Followers',
                     data: followerHistory.x.map(s => ({
@@ -1354,8 +1376,11 @@
                     borderColor: '#58a6ff',
                     backgroundColor: 'rgba(88, 166, 255, 0.1)',
                     fill: true,
-                    tension: 0.3
+                    tension: 0.3,
+                    yAxisID: 'yX'
                 });
+                // Also tag bluesky dataset
+                if (datasets.length > 1) datasets[0].yAxisID = 'yBluesky';
             }
 
             if (datasets.length === 0) {
@@ -1392,16 +1417,37 @@
                             grid: { color: 'rgba(48, 54, 61, 0.5)' },
                             ticks: { color: '#8b949e' }
                         },
-                        y: {
-                            beginAtZero: false,
-                            grid: { color: 'rgba(48, 54, 61, 0.5)' },
-                            ticks: {
-                                color: '#8b949e',
-                                callback: function(value) {
-                                    return value.toLocaleString();
+                        ...(hasXData ? {
+                            yBluesky: {
+                                position: 'left',
+                                beginAtZero: false,
+                                grid: { color: 'rgba(48, 54, 61, 0.5)' },
+                                ticks: {
+                                    color: '#3fb950',
+                                    callback: function(value) { return value.toLocaleString(); }
+                                },
+                                title: { display: true, text: 'Bluesky', color: '#3fb950', font: { size: 11 } }
+                            },
+                            yX: {
+                                position: 'right',
+                                beginAtZero: false,
+                                grid: { drawOnChartArea: false },
+                                ticks: {
+                                    color: '#58a6ff',
+                                    callback: function(value) { return value.toLocaleString(); }
+                                },
+                                title: { display: true, text: 'X', color: '#58a6ff', font: { size: 11 } }
+                            }
+                        } : {
+                            y: {
+                                beginAtZero: false,
+                                grid: { color: 'rgba(48, 54, 61, 0.5)' },
+                                ticks: {
+                                    color: '#8b949e',
+                                    callback: function(value) { return value.toLocaleString(); }
                                 }
                             }
-                        }
+                        })
                     }
                 }
             });
@@ -1434,6 +1480,20 @@
         }
 
         init();
+
+        // Image modal
+        function openImageModal(src) {
+            const overlay = document.getElementById('imageModal');
+            overlay.querySelector('img').src = src;
+            overlay.classList.add('active');
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') document.getElementById('imageModal').classList.remove('active');
+        });
     </script>
+
+    <div class="image-modal-overlay" id="imageModal" onclick="this.classList.remove('active')">
+        <img src="" alt="Full size image">
+    </div>
 </body>
 </html>
