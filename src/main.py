@@ -1223,14 +1223,52 @@ def post_journalism_cycle(
             print(f"[journalism] rejected draft written to {rejected_path}")
             return False
 
-    # ---- Post-draft factual analysis (informational, not a gate) ----------
-    # Compares key terms between the headline seed, article bodies, and the
-    # generated draft. Catches cases where the draft uses a STRONGER term
-    # than what the bodies support (e.g., "convicted" when bodies say
-    # "charged"). Logs findings for QA; saves to dossier for audit.
+    # ---- Post-draft factual analysis (FABRICATION is a hard gate) ----------
+    # Compares the draft against article bodies for factual accuracy.
+    # CLEAN/ESCALATION/SKIPPED → log and continue (informational).
+    # FABRICATION → hard reject + retry Stage 5 once. If retry also
+    # FABRICATION → reject the story entirely. This prevents publishing
+    # drafts that cite outlets not in the source material.
     try:
         findings = analyze_draft(draft.text, candidate.headline_seed, dossier)
         print_analysis(findings)
+
+        if findings.get("overall") == "FABRICATION":
+            print("[journalism] FABRICATION detected — retrying Stage 5 with feedback")
+            fab_reasons = [
+                f"FABRICATION: {f.get('assessment', '')}"
+                for f in findings.get("findings", [])
+                if f.get("severity") == "major"
+            ]
+            try:
+                draft = post_composer.compose(
+                    brief=brief,
+                    dossier=dossier,
+                    post_type=chosen_type,
+                    retry_reasons=fab_reasons,
+                )
+            except Exception as e:
+                print(f"[journalism] Stage 5 fabrication-retry failed: {e}")
+                return False
+
+            # Re-verify + re-analyze the retry draft
+            result = verification_gate.verify(draft, dossier)
+            if not result.passed:
+                print(f"[journalism] retry draft failed verification: {result.failures}")
+                return False
+
+            retry_findings = analyze_draft(draft.text, candidate.headline_seed, dossier)
+            print_analysis(retry_findings)
+
+            if retry_findings.get("overall") == "FABRICATION":
+                print("[journalism] FABRICATION persists after retry — rejecting story")
+                rejected_path = _write_draft_file(
+                    drafts_dir, draft, dossier, subfolder="rejected"
+                )
+                print(f"[journalism] rejected draft written to {rejected_path}")
+                return False
+            findings = retry_findings
+
         # Save findings to the dossier for downstream audit
         dossier_store.save_post_record(
             dossier.story_id, draft,
