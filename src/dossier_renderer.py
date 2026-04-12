@@ -383,19 +383,133 @@ def _render_section_3_brief(data: dict) -> str:
     return "\n".join(lines)
 
 
-def _render_sections_4_6_coming_soon() -> str:
-    """Sections 4-6 — Coming Soon placeholders."""
-    placeholders = [
-        ("Verification Gate Results", "Every hard rule check run before publication."),
-        ("Draft Analysis", "AI fact-check comparing the draft against source material."),
-        ("Story Selection", "How this story was chosen from the trending candidates."),
-    ]
+def _render_section_4_verification(data: dict) -> str:
+    """Section 4 — Verification Gate Results."""
+    verification = data.get("verification")
+
     lines = []
-    for title, desc in placeholders:
+    lines.append('<h2 class="section-heading">Verification Gate Results</h2>')
+
+    if not verification:
         lines.append('<div class="coming-soon">')
-        lines.append(f'  <h3>Coming Soon: {_esc(title)}</h3>')
-        lines.append(f'  <p>{_esc(desc)}</p>')
+        lines.append('  <h3>Coming Soon: Verification Gate Results</h3>')
+        lines.append('  <p>Every hard rule check run before publication.</p>')
         lines.append('</div>')
+        return "\n".join(lines)
+
+    passed = verification.get("passed", False)
+    failures = verification.get("failures") or []
+
+    lines.append('<div class="card">')
+    if passed:
+        lines.append('  <span class="badge badge-primary">PASSED</span>')
+        if not failures:
+            lines.append('  <p style="margin-top: 0.75rem;">All verification checks passed.</p>')
+    else:
+        lines.append('  <span class="badge badge-bulletin">FAILED</span>')
+
+    if failures:
+        lines.append('  <div class="warning-box" style="margin-top: 0.75rem;">')
+        lines.append('    <div class="warning-box-title">Failures</div>')
+        lines.append('    <ul>')
+        for failure in failures:
+            lines.append(f'      <li>{_esc(failure)}</li>')
+        lines.append('    </ul>')
+        lines.append('  </div>')
+
+    lines.append('</div>')
+    return "\n".join(lines)
+
+
+def _render_section_5_analysis(data: dict) -> str:
+    """Section 5 — Draft Analysis."""
+    analysis = data.get("analysis")
+
+    lines = []
+    lines.append('<h2 class="section-heading">Draft Analysis</h2>')
+
+    if not analysis or analysis.get("overall") == "SKIPPED":
+        lines.append('<div class="coming-soon">')
+        lines.append('  <h3>Coming Soon: Draft Analysis</h3>')
+        lines.append('  <p>AI fact-check comparing the draft against source material.</p>')
+        lines.append('</div>')
+        return "\n".join(lines)
+
+    overall = analysis.get("overall", "UNKNOWN")
+    findings = analysis.get("findings") or []
+
+    lines.append('<div class="card">')
+
+    if overall == "CLEAN":
+        lines.append('  <span class="badge badge-primary">CLEAN</span>')
+        lines.append('  <p style="margin-top: 0.75rem;">No factual issues found.</p>')
+    elif overall == "ESCALATION":
+        lines.append('  <span class="badge badge-analysis">ESCALATION</span>')
+    elif overall == "FABRICATION":
+        lines.append('  <span class="badge badge-bulletin">FABRICATION</span>')
+    else:
+        lines.append(f'  <span class="badge badge-wire">{_esc(overall)}</span>')
+
+    if findings:
+        lines.append('  <ul class="fact-list" style="margin-top: 0.75rem;">')
+        for finding in findings:
+            category = finding.get("category", "")
+            severity = finding.get("severity", "")
+            assessment = finding.get("assessment", "")
+            draft_says = finding.get("draft_says", "")
+            sources_say = finding.get("sources_say", "")
+
+            parts = []
+            if category:
+                parts.append(f'<strong>{_esc(category)}</strong>')
+            if severity:
+                parts.append(f'({_esc(severity)})')
+            if assessment:
+                parts.append(f'&mdash; {_esc(assessment)}')
+            label = " ".join(parts)
+
+            lines.append(f'    <li>{label}')
+            if draft_says:
+                lines.append(f'      <br><span style="color: var(--secondary); font-size: 0.85rem;">Draft says: {_esc(draft_says)}</span>')
+            if sources_say:
+                lines.append(f'      <br><span style="color: var(--secondary); font-size: 0.85rem;">Sources say: {_esc(sources_say)}</span>')
+            lines.append('    </li>')
+        lines.append('  </ul>')
+
+    lines.append('</div>')
+    return "\n".join(lines)
+
+
+def _render_section_6_selection(data: dict) -> str:
+    """Section 6 — Story Selection."""
+    selection = data.get("selection")
+
+    lines = []
+    lines.append('<h2 class="section-heading">Story Selection</h2>')
+
+    if not selection:
+        lines.append('<div class="coming-soon">')
+        lines.append('  <h3>Coming Soon: Story Selection</h3>')
+        lines.append('  <p>How this story was chosen from the trending candidates.</p>')
+        lines.append('</div>')
+        return "\n".join(lines)
+
+    candidates_detected = selection.get("candidates_detected", 0)
+    candidates_passed = selection.get("candidates_passed_triage", 0)
+    headline = selection.get("headline_seed", "")
+    source = selection.get("source", "unknown")
+
+    lines.append('<div class="card">')
+    lines.append(f'  <p><strong>{_esc(str(candidates_detected))}</strong> candidates detected, '
+                 f'<strong>{_esc(str(candidates_passed))}</strong> passed triage</p>')
+
+    if headline:
+        lines.append(f'  <p style="margin-top: 0.5rem;">Selected: <strong>{_esc(headline)}</strong></p>')
+
+    lines.append(f'  <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--secondary);">'
+                 f'Source: {_esc(source)}</p>')
+
+    lines.append('</div>')
     return "\n".join(lines)
 
 
@@ -429,7 +543,9 @@ def render_dossier_page(dossier_data: dict) -> str:
         _render_section_1_post(dossier_data),
         _render_section_2_sources(dossier_data),
         _render_section_3_brief(dossier_data),
-        _render_sections_4_6_coming_soon(),
+        _render_section_4_verification(dossier_data),
+        _render_section_5_analysis(dossier_data),
+        _render_section_6_selection(dossier_data),
     ]
 
     body_html = "\n\n".join(sections)
@@ -594,13 +710,15 @@ def _smoke_test() -> None:
     assert "<html" in output, "Missing <html> tag"
     assert "</html>" in output, "Missing closing </html> tag"
 
-    # 2. Check all 6 sections are present (3 rendered, 3 coming-soon)
+    # 2. Check all 6 sections are present (3 rendered, 3 coming-soon for mock)
     assert "The Post" in output, "Missing Section 1: The Post"
     assert "What Walter Read" in output, "Missing Section 2: What Walter Read"
     assert "Meta-Analysis Brief" in output, "Missing Section 3: Meta-Analysis Brief"
-    assert "Verification Gate Results" in output, "Missing coming-soon: Verification Gate"
-    assert "Draft Analysis" in output, "Missing coming-soon: Draft Analysis"
-    assert "Story Selection" in output, "Missing coming-soon: Story Selection"
+    assert "Verification Gate Results" in output, "Missing Section 4: Verification Gate"
+    assert "Draft Analysis" in output, "Missing Section 5: Draft Analysis"
+    assert "Story Selection" in output, "Missing Section 6: Story Selection"
+    # Mock has no verification/analysis/selection keys — coming-soon fallback
+    assert "Coming Soon" in output, "Missing coming-soon placeholders for mock dossier"
 
     # 3. XSS escaping test — inject a script tag
     xss_data = json.loads(json.dumps(data))
@@ -627,6 +745,59 @@ def _smoke_test() -> None:
     # 6. Empty index
     empty_index = render_index_page([])
     assert "<!DOCTYPE html>" in empty_index, "Empty index: missing DOCTYPE"
+
+    # 7. Test sections 4-6 with populated data
+    rich_data = json.loads(json.dumps(data))
+    rich_data["verification"] = {"passed": True, "failures": []}
+    rich_data["analysis"] = {"overall": "CLEAN", "findings": []}
+    rich_data["selection"] = {
+        "candidates_detected": 12,
+        "candidates_passed_triage": 4,
+        "story_id": "test-story",
+        "headline_seed": "Test headline",
+        "source": "x",
+    }
+    rich_output = render_dossier_page(rich_data)
+    assert "PASSED" in rich_output, "Section 4: missing PASSED badge"
+    assert "CLEAN" in rich_output, "Section 5: missing CLEAN badge"
+    assert "12" in rich_output, "Section 6: missing candidates_detected"
+    assert "4" in rich_output, "Section 6: missing candidates_passed_triage"
+    assert "Test headline" in rich_output, "Section 6: missing headline_seed"
+    assert "Coming Soon" not in rich_output, "Sections 4-6 should not show Coming Soon with data"
+
+    # 8. Test section 5 with FABRICATION findings
+    fab_data = json.loads(json.dumps(rich_data))
+    fab_data["analysis"] = {
+        "overall": "FABRICATION",
+        "findings": [
+            {
+                "category": "attribution",
+                "severity": "major",
+                "assessment": "Outlet not in sources",
+                "draft_says": "CNN reports...",
+                "sources_say": "No CNN article in dossier",
+            }
+        ],
+    }
+    fab_output = render_dossier_page(fab_data)
+    assert "FABRICATION" in fab_output, "Section 5: missing FABRICATION badge"
+    assert "attribution" in fab_output, "Section 5: missing finding category"
+    assert "Draft says:" in fab_output, "Section 5: missing draft_says"
+    assert "Sources say:" in fab_output, "Section 5: missing sources_say"
+
+    # 9. Test section 4 with failures
+    fail_data = json.loads(json.dumps(rich_data))
+    fail_data["verification"] = {"passed": False, "failures": ["Char limit exceeded", "Missing sign-off"]}
+    fail_output = render_dossier_page(fail_data)
+    assert "FAILED" in fail_output, "Section 4: missing FAILED badge"
+    assert "Char limit exceeded" in fail_output, "Section 4: missing failure detail"
+    assert "Missing sign-off" in fail_output, "Section 4: missing second failure"
+
+    # 10. XSS in section 6 headline_seed
+    xss_sel_data = json.loads(json.dumps(rich_data))
+    xss_sel_data["selection"]["headline_seed"] = '<img src=x onerror=alert(1)>'
+    xss_sel_output = render_dossier_page(xss_sel_data)
+    assert "<img" not in xss_sel_output, "XSS: unescaped <img> tag in section 6"
 
     print("dossier_renderer smoke test OK")
 

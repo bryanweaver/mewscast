@@ -192,22 +192,24 @@ class NewsFetcher:
         """
         Fetch and parse full article content from URL.
 
-        Two-stage fetch: tries direct HTTP first (fast, free), then falls
-        back to Jina Reader (r.jina.ai) which handles soft paywalls,
-        JS-rendered pages, and returns clean markdown. Added in response
-        to the QA loop finding 2-4/7 body-fetch failures per cycle due
-        to paywalled outlets returning 401/403 from GitHub Actions IPs.
+        Four-stage fetch chain: direct HTTP -> Jina Reader -> Diffbot ->
+        Playwright browser. Each stage uses different infrastructure and
+        extraction methods, maximizing coverage across diverse outlets.
+        Added Jina/Diffbot in response to QA loop finding 2-4/7 body-fetch
+        failures per cycle due to paywalled outlets returning 401/403 from
+        GitHub Actions IPs. Playwright added as Stage 4 to handle
+        JS-rendered SPAs that all prior stages miss.
 
         Args:
             url: Article URL to fetch
 
         Returns:
-            Extracted article text (up to ~6000 chars), or None if both
-            direct fetch and Jina fallback fail
+            Extracted article text (up to ~6000 chars), or None if all
+            four stages fail
         """
         print(f"   📄 Fetching article content from: {url[:60]}...")
 
-        # Three-stage fetch chain — each stage has different IP infrastructure
+        # Four-stage fetch chain — each stage has different IP infrastructure
         # and extraction methods, maximizing coverage across diverse outlets.
         # Total cost: $0/month at our volume (~35 articles/day).
 
@@ -223,6 +225,11 @@ class NewsFetcher:
 
         # Stage 3: Diffbot Article API (free tier — 10K pages/month, we use ~1K)
         content = self._try_diffbot_fetch(url)
+        if content:
+            return content
+
+        # Stage 4: Playwright browser fallback (JS-rendered sites)
+        content = self._try_playwright_fetch(url)
         if content:
             return content
 
@@ -473,6 +480,160 @@ class NewsFetcher:
         except Exception as e:
             print(f"   ⚠️  Diffbot failed: {e}")
             return None
+
+    def _try_playwright_fetch(self, url: str) -> Optional[str]:
+        """Playwright headless browser fallback — launches Chromium to render
+        the page fully (including JS), then extracts article text from the DOM.
+
+        This is Stage 4, the last resort before giving up. It handles sites
+        that require full JS execution (SPAs, heavy client-side rendering)
+        and that none of the earlier stages (direct, Jina, Diffbot) could
+        parse.
+
+        Requires `playwright` Python package and Chromium browser binaries
+        (install via `playwright install chromium`). If either is missing,
+        this stage is skipped gracefully with a helpful message.
+
+        The browser is launched in lightweight mode — images and CSS are
+        disabled to speed up text extraction and reduce resource usage.
+        """
+        try:
+            from playwright.sync_api import sync_playwright
+        except ImportError:
+            print(f"   ⚠️  Playwright not installed — skipping browser fallback. "
+                  f"Install with: pip install playwright && playwright install chromium")
+            return None
+
+        print(f"   🎭 Trying Playwright browser fallback...")
+
+        browser = None
+        playwright_ctx = None
+        try:
+            playwright_ctx = sync_playwright().start()
+            browser = playwright_ctx.chromium.launch(
+                headless=True,
+                args=[
+                    '--disable-gpu',
+                    '--no-sandbox',
+                    '--disable-dev-shm-usage',
+                ],
+            )
+
+            # Block images, CSS, fonts, and media to speed up text-only extraction
+            context = browser.new_context(
+                user_agent=(
+                    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                    'AppleWebKit/537.36 (KHTML, like Gecko) '
+                    'Chrome/120.0.0.0 Safari/537.36'
+                ),
+                java_script_enabled=True,
+            )
+            page = context.new_page()
+
+            # Block unnecessary resource types for faster loading
+            def _block_resources(route):
+                if route.request.resource_type in ('image', 'stylesheet', 'font', 'media'):
+                    route.abort()
+                else:
+                    route.continue_()
+            page.route('**/*', _block_resources)
+
+            # Navigate with a 15-second timeout
+            page.goto(url, timeout=15000, wait_until='domcontentloaded')
+
+            # Give JS a moment to render dynamic content
+            page.wait_for_timeout(2000)
+
+            # Extract text: try <article>, then <main>, then largest text block
+            article_text = None
+
+            # Try <article> tag first
+            article_el = page.query_selector('article')
+            if article_el:
+                article_text = article_el.inner_text()
+
+            # Fallback to <main> tag
+            if not article_text or len(article_text.strip()) < 200:
+                main_el = page.query_selector('main')
+                if main_el:
+                    article_text = main_el.inner_text()
+
+            # Fallback: find the largest text block among common containers
+            if not article_text or len(article_text.strip()) < 200:
+                selectors = [
+                    '[role="main"]', '.article-body', '.article-content',
+                    '.story-body', '.post-content', '#article-body',
+                    '.entry-content', '.content-body',
+                    '[itemprop="articleBody"]',
+                ]
+                best_text = article_text or ''
+                for sel in selectors:
+                    el = page.query_selector(sel)
+                    if el:
+                        text = el.inner_text()
+                        if len(text.strip()) > len(best_text.strip()):
+                            best_text = text
+                if len(best_text.strip()) > len((article_text or '').strip()):
+                    article_text = best_text
+
+            # Last resort: concatenate all <p> tags
+            if not article_text or len(article_text.strip()) < 200:
+                paragraphs = page.query_selector_all('p')
+                if paragraphs:
+                    p_texts = [p.inner_text() for p in paragraphs[:30]]
+                    article_text = ' '.join(p_texts)
+
+            context.close()
+
+            if not article_text:
+                print(f"   ⚠️  Playwright fallback: could not extract any text from page")
+                return None
+
+            # Normalize whitespace
+            article_text = ' '.join(article_text.split())
+
+            if len(article_text) < 200:
+                print(f"   ⚠️  Playwright fallback: content too short ({len(article_text)} chars)")
+                return None
+
+            # Paywall detection — same indicators as other stages
+            content_lower = article_text.lower()
+            paywall_indicators = [
+                'subscribe to continue', 'subscription required',
+                'sign in to read', 'create a free account',
+                'register to continue', 'to continue reading',
+                'unlock this article', 'premium content',
+            ]
+            for indicator in paywall_indicators:
+                if indicator in content_lower:
+                    print(f"   ⚠️  Playwright fallback: paywall detected ('{indicator}') — hard paywall")
+                    return None
+
+            article_text = _truncate_at_sentence(article_text, 6000)
+            print(f"   ✓ Playwright extracted {len(article_text)} chars of article content")
+            return article_text
+
+        except Exception as e:
+            error_msg = str(e)
+            # Detect missing browser binaries specifically
+            if 'executable doesn' in error_msg or 'browserType.launch' in error_msg:
+                print(f"   ⚠️  Playwright browsers not installed. "
+                      f"Run: playwright install chromium")
+            else:
+                print(f"   ⚠️  Playwright fallback failed: {e}")
+            return None
+
+        finally:
+            if browser:
+                try:
+                    browser.close()
+                except Exception:
+                    pass
+            if playwright_ctx:
+                try:
+                    playwright_ctx.stop()
+                except Exception:
+                    pass
 
     def get_trending_topics(self, count: int = 5, categories: List[str] = None) -> List[Dict]:
         """
