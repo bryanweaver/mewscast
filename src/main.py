@@ -1338,17 +1338,13 @@ def post_journalism_cycle(
                 # Dossier link reply — point readers to the full transparency page
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
                 reply_text = (
-                    f"Full dossier — every source Walter read, "
+                    f"Full dossier \u2014 every source Walter read, "
                     f"how outlets framed it, what's missing:\n"
                     f"{dossier_url}"
                 )
-                profile_pic = os.path.join(_project_root(), "docs", "images", "walter-croncat-profile.jpg")
                 time.sleep(2)
                 try:
-                    if os.path.exists(profile_pic):
-                        reply_result = twitter_bot.reply_to_tweet_with_image(tweet_id, reply_text, profile_pic)
-                    else:
-                        reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
+                    reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
                     if reply_result:
                         reply_tweet_id = reply_result.get("id")
                         print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
@@ -1372,10 +1368,14 @@ def post_journalism_cycle(
                 print(f"[journalism] Bluesky post ok: {bluesky_uri}")
 
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
+                bs_reply_text = (
+                    f"Full dossier \u2014 every source Walter read, "
+                    f"how outlets framed it, what's missing:"
+                )
                 time.sleep(2)
                 try:
                     reply_result = bluesky_bot.reply_to_skeet_with_link(
-                        bluesky_uri, dossier_url
+                        bluesky_uri, dossier_url, text=bs_reply_text
                     )
                     if reply_result:
                         bluesky_reply_uri = reply_result.get("uri")
@@ -1494,20 +1494,16 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             x_success = True
             print(f"[republish] X post ok: {tweet_id}")
 
-            # Dossier link reply with profile pic
+            # Dossier link reply (text only, no image)
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
             reply_text = (
-                f"Full dossier — every source Walter read, "
+                f"Full dossier \u2014 every source Walter read, "
                 f"how outlets framed it, what's missing:\n"
                 f"{dossier_url}"
             )
-            profile_pic = os.path.join(_project_root(), "docs", "images", "walter-croncat-profile.jpg")
             time.sleep(2)
             try:
-                if os.path.exists(profile_pic):
-                    reply_result = twitter_bot.reply_to_tweet_with_image(tweet_id, reply_text, profile_pic)
-                else:
-                    reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
+                reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
                 if reply_result:
                     reply_tweet_id = reply_result.get("id")
                     print(f"[republish] X dossier reply ok: {reply_tweet_id}")
@@ -1530,10 +1526,14 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             print(f"[republish] Bluesky post ok: {bluesky_uri}")
 
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
+            bs_reply_text = (
+                f"Full dossier \u2014 every source Walter read, "
+                f"how outlets framed it, what's missing:"
+            )
             time.sleep(2)
             try:
                 reply_result = bluesky_bot.reply_to_skeet_with_link(
-                    bluesky_uri, dossier_url
+                    bluesky_uri, dossier_url, text=bs_reply_text
                 )
                 if reply_result:
                     print(f"[republish] Bluesky dossier reply ok")

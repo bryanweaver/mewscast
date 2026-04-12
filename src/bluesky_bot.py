@@ -148,21 +148,22 @@ class BlueskyBot:
             print(f"✗ Error posting skeet with image: {e}")
             return None
 
-    def reply_to_skeet_with_link(self, parent_uri: str, url: str) -> Optional[dict]:
+    def reply_to_skeet_with_link(self, parent_uri: str, url: str, text: str = "") -> Optional[dict]:
         """
         Reply to a skeet with a URL that shows a link preview card
 
         Args:
             parent_uri: URI of the post to reply to
-            url: URL to post as a link card
+            url: URL for the link card embed
+            text: Optional display text (falls back to url if empty)
 
         Returns:
             Post data if successful, None if failed
         """
         try:
+            post_text = text if text else url
             # Bluesky has a 300 character limit on post text
-            # If URL is too long, skip the reply (shouldn't happen with decoded URLs)
-            if len(url) > 300:
+            if len(post_text) > 300:
                 print(f"⚠️  URL too long for Bluesky ({len(url)} chars > 300)")
                 # Check if it's a Google News URL that failed to decode
                 if 'news.google.com' in url:
@@ -223,7 +224,7 @@ class BlueskyBot:
                 embed = models.AppBskyEmbedExternal.Main(external=external)
 
                 response = self.client.send_post(
-                    text=url,
+                    text=post_text,
                     reply_to=reply_ref,
                     embed=embed
                 )
@@ -238,7 +239,7 @@ class BlueskyBot:
                 print(f"⚠️  Link card creation failed: {embed_error}")
                 # Fall back to simple post without embed
                 response = self.client.send_post(
-                    text=url,
+                    text=post_text,
                     reply_to=reply_ref
                 )
 
