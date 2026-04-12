@@ -83,6 +83,24 @@ def fetch_bluesky_follower_count():
         return None
 
 
+def fetch_x_follower_count():
+    """Fetch current follower count from X using v2 API get_me()."""
+    try:
+        from twitter_bot import TwitterBot
+        bot = TwitterBot()
+        me = bot.client.get_me(user_fields=['public_metrics'])
+        if me and me.data:
+            metrics = me.data.public_metrics or {}
+            return {
+                "followers": metrics.get("followers_count", 0),
+                "following": metrics.get("following_count", 0),
+                "posts": metrics.get("tweet_count", 0),
+            }
+    except Exception as e:
+        print(f"Could not fetch X follower count: {e}")
+    return None
+
+
 def fetch_bluesky_metrics(posts):
     """Fetch current metrics from Bluesky including images"""
     try:
@@ -502,6 +520,18 @@ def main():
             **bluesky_followers
         })
         # No pruning — keep all follower history for all-time growth chart
+
+    # Fetch X follower count
+    print("\nFetching X follower count...")
+    x_followers = fetch_x_follower_count()
+    if x_followers:
+        print(f"X followers: {x_followers['followers']}")
+        if "x" not in analytics_history["follower_history"]:
+            analytics_history["follower_history"]["x"] = []
+        analytics_history["follower_history"]["x"].append({
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            **x_followers
+        })
 
     print("\nFetching X metrics...")
     x_metrics = fetch_x_metrics(recent_posts)
