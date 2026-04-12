@@ -620,7 +620,7 @@
                 </div>
             </div>
             <div class="section">
-                <h2>Engagement Over Time</h2>
+                <h2>Cumulative Engagement</h2>
                 <div class="chart-container">
                     <canvas id="timelineChart"></canvas>
                 </div>
@@ -713,10 +713,10 @@
                 .map(([word, data]) => ({
                     word,
                     count: data.count,
-                    avgEngagement: data.count > 0 ? data.totalEngagement / data.count : 0
+                    totalEngagement: data.totalEngagement
                 }))
-                .filter(k => k.count >= 2)
-                .sort((a, b) => b.avgEngagement - a.avgEngagement)
+                .filter(k => k.count >= 3)
+                .sort((a, b) => b.totalEngagement - a.totalEngagement)
                 .slice(0, 15);
         }
 
@@ -1050,7 +1050,7 @@
                 <div class="topic-tag">
                     <span>${k.word}</span>
                     <span class="topic-tag-count">${k.count} posts</span>
-                    <span class="topic-tag-engagement">${k.avgEngagement.toFixed(1)} avg</span>
+                    <span class="topic-tag-engagement">${k.totalEngagement} total</span>
                 </div>
             `).join('');
         }
@@ -1289,24 +1289,37 @@
             const blueskyChange = getChange(followerHistory.bluesky);
 
             // Render stats cards
-            const firstSnapshot = followerHistory.bluesky && followerHistory.bluesky.length > 0
+            const latestX = followerHistory.x && followerHistory.x.length > 0
+                ? followerHistory.x[followerHistory.x.length - 1] : null;
+            const xChange = getChange(followerHistory.x);
+
+            const bsFirst = followerHistory.bluesky && followerHistory.bluesky.length > 0
                 ? followerHistory.bluesky[0] : null;
-            const allTimeGrowth = latestBluesky && firstSnapshot
-                ? latestBluesky.followers - firstSnapshot.followers : null;
-            const trackingSince = firstSnapshot
-                ? new Date(firstSnapshot.timestamp).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
+            const bsGrowth = latestBluesky && bsFirst
+                ? latestBluesky.followers - bsFirst.followers : null;
+            const bsSince = bsFirst
+                ? new Date(bsFirst.timestamp).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
+
+            const xFirst = followerHistory.x && followerHistory.x.length > 0
+                ? followerHistory.x[0] : null;
+            const xGrowth = latestX && xFirst
+                ? latestX.followers - xFirst.followers : null;
+            const xSince = xFirst
+                ? new Date(xFirst.timestamp).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
 
             container.innerHTML = `
                 <div class="follower-stat-card bluesky">
                     <div class="platform-name">Bluesky</div>
                     <div class="follower-count">${latestBluesky ? latestBluesky.followers.toLocaleString() : '\u2014'}</div>
                     ${blueskyChange !== null ? `<div class="follower-change ${blueskyChange >= 0 ? 'positive' : 'negative'}">${blueskyChange >= 0 ? '+' : ''}${blueskyChange} this week</div>` : ''}
-                    ${allTimeGrowth !== null ? `<div style="font-size:0.75rem;color:#8b949e;margin-top:0.25rem">+${allTimeGrowth} since ${trackingSince}</div>` : ''}
+                    ${bsGrowth !== null ? `<div style="font-size:0.75rem;color:#8b949e;margin-top:0.25rem">+${bsGrowth} since ${bsSince}</div>` : ''}
                 </div>
-                <div class="follower-stat-card" style="border-left-color: #58a6ff; opacity: 0.5;">
-                    <div class="platform-name" style="color: #58a6ff;">X / Twitter</div>
-                    <div class="follower-count" style="font-size: 1rem; color: #8b949e;">\u2014</div>
-                    <div style="font-size:0.75rem;color:#8b949e;">Follower tracking not available on X Basic API tier</div>
+                <div class="follower-stat-card x-platform">
+                    <div class="platform-name">X / Twitter</div>
+                    <div class="follower-count">${latestX ? latestX.followers.toLocaleString() : '\u2014'}</div>
+                    ${xChange !== null ? `<div class="follower-change ${xChange >= 0 ? 'positive' : 'negative'}">${xChange >= 0 ? '+' : ''}${xChange} this week</div>` : ''}
+                    ${xGrowth !== null ? `<div style="font-size:0.75rem;color:#8b949e;margin-top:0.25rem">+${xGrowth} since ${xSince}</div>` : ''}
+                    ${!latestX ? '<div style="font-size:0.75rem;color:#8b949e;">Data starts next analytics run</div>' : ''}
                 </div>
             `;
 
@@ -1331,7 +1344,19 @@
                 });
             }
 
-            // X follower tracking removed - focusing on Bluesky only
+            if (followerHistory.x && followerHistory.x.length > 0) {
+                datasets.push({
+                    label: 'X Followers',
+                    data: followerHistory.x.map(s => ({
+                        x: s.timestamp.split('T')[0],
+                        y: s.followers
+                    })),
+                    borderColor: '#58a6ff',
+                    backgroundColor: 'rgba(88, 166, 255, 0.1)',
+                    fill: true,
+                    tension: 0.3
+                });
+            }
 
             if (datasets.length === 0) {
                 canvas.parentElement.innerHTML = '<div class="no-data">No follower data yet. Data will appear after the next analytics run.</div>';
