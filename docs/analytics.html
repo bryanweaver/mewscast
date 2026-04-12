@@ -1365,7 +1365,8 @@
                 });
             }
 
-            const hasXData = followerHistory.x && followerHistory.x.length > 0;
+            // Only show X on chart when we have enough daily snapshots for a meaningful line
+            const hasXData = followerHistory.x && followerHistory.x.length >= 7;
             if (hasXData) {
                 datasets.push({
                     label: 'X Followers',
@@ -1377,7 +1378,8 @@
                     backgroundColor: 'rgba(88, 166, 255, 0.1)',
                     fill: true,
                     tension: 0.3,
-                    yAxisID: 'yX'
+                    yAxisID: 'yX',
+                    spanGaps: false
                 });
                 // Also tag bluesky dataset
                 if (datasets.length > 1) datasets[0].yAxisID = 'yBluesky';
@@ -1434,7 +1436,8 @@
                                 grid: { drawOnChartArea: false },
                                 ticks: {
                                     color: '#58a6ff',
-                                    callback: function(value) { return value.toLocaleString(); }
+                                    stepSize: 1,
+                                    callback: function(value) { return Number.isInteger(value) ? value.toLocaleString() : ''; }
                                 },
                                 title: { display: true, text: 'X', color: '#58a6ff', font: { size: 11 } }
                             }
