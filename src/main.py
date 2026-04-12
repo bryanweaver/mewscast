@@ -1152,8 +1152,10 @@ def post_journalism_cycle(
 
         dossier_store.save_dossier(fb_dossier)
 
-        if len(fb_dossier.articles) == 0:
-            print(f"[journalism] {fb_label} 0 articles — trying next candidate")
+        min_articles = journalism_cfg.get("min_articles", 3)
+        if len(fb_dossier.articles) < min_articles:
+            print(f"[journalism] {fb_label} only {len(fb_dossier.articles)} articles "
+                  f"(need {min_articles}) — trying next candidate")
             continue
 
         # This candidate worked — use it
@@ -1161,8 +1163,8 @@ def post_journalism_cycle(
         candidate = fb_candidate
         break
 
-    # If all fallback candidates yielded 0 articles, clean exit.
-    if dossier is None or len(dossier.articles) == 0:
+    # If all fallback candidates yielded too few articles, clean exit.
+    if dossier is None or len(dossier.articles) < min_articles:
         print(
             f"[journalism] Stage 3 returned 0 articles for all "
             f"{len(fallback_candidates)} candidate(s) — clean exit, "
@@ -1182,6 +1184,15 @@ def post_journalism_cycle(
         f"[journalism] Stage 4 suggested_post_type="
         f"{brief.suggested_post_type.value} confidence={brief.confidence}"
     )
+
+    # ---- Quality gate: minimum confidence -----------------------------------
+    min_confidence = journalism_cfg.get("min_confidence", 0.45)
+    if brief.confidence < min_confidence:
+        print(
+            f"[journalism] confidence {brief.confidence:.2f} < {min_confidence} "
+            f"— story too thin to publish, clean exit"
+        )
+        return True  # clean exit, not an error
 
     # ---- Stage 5: compose -------------------------------------------------
     chosen_type = forced_post_type or brief.suggested_post_type
