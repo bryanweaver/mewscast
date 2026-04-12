@@ -815,7 +815,8 @@
 
             const xStats = {
                 count: xPosts.length,
-                likes: 0, retweets: 0, replies: 0, impressions: 0
+                likes: 0, retweets: 0, replies: 0, impressions: 0,
+                linkClicks: 0, profileClicks: 0
             };
 
             for (const post of blueskyPosts) {
@@ -834,6 +835,8 @@
                     xStats.retweets += m.retweets || 0;
                     xStats.replies += m.replies || 0;
                     xStats.impressions += m.impressions || 0;
+                    xStats.linkClicks += m.url_link_clicks || 0;
+                    xStats.profileClicks += m.user_profile_clicks || 0;
                 }
             }
 
@@ -887,6 +890,14 @@
                         <div class="platform-stat">
                             <div class="platform-stat-value">${formatNumber(xStats.retweets)}</div>
                             <div class="platform-stat-label">Retweets</div>
+                        </div>
+                        <div class="platform-stat">
+                            <div class="platform-stat-value">${formatNumber(xStats.linkClicks)}</div>
+                            <div class="platform-stat-label">Link Clicks</div>
+                        </div>
+                        <div class="platform-stat">
+                            <div class="platform-stat-value">${formatNumber(xStats.profileClicks)}</div>
+                            <div class="platform-stat-label">Profile Clicks</div>
                         </div>
                     </div>
                 </div>
@@ -1145,6 +1156,8 @@
                                         <span class="stat-item"><span class="stat-icon">&#10084;</span> ${xMetrics.likes || 0}</span>
                                         <span class="stat-item"><span class="stat-icon">&#128257;</span> ${xMetrics.retweets || 0}</span>
                                         <span class="stat-item"><span class="stat-icon">&#128172;</span> ${xMetrics.replies || 0}</span>
+                                        ${(xMetrics.url_link_clicks || 0) > 0 ? `<span class="stat-item"><span class="stat-icon">&#128279;</span> ${xMetrics.url_link_clicks} clicks</span>` : ''}
+                                        ${(xMetrics.user_profile_clicks || 0) > 0 ? `<span class="stat-item"><span class="stat-icon">&#128100;</span> ${xMetrics.user_profile_clicks} profile</span>` : ''}
                                     </div>
                                 ` : '<div class="post-platform-stats no-data">X: No data</div>'}
                             </div>
