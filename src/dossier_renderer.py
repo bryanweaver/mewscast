@@ -565,7 +565,7 @@ def render_dossier_page(dossier_data: dict) -> str:
     # Footer
     footer_html = """<div class="footer">
   And that's the mews. &middot;
-  <a href="./index.html">Dossier Archive</a> &middot;
+  <a href="./index.html">Dossiers</a> &middot;
   Made by <a href="https://x.com/bryanofearth" target="_blank" rel="noopener">@bryanofearth</a>
 </div>"""
 
@@ -646,8 +646,8 @@ def render_index_page(entries: list[dict]) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dossier Archive &mdash; Walter Croncat</title>
-  <meta property="og:title" content="Dossier Archive - Walter Croncat">
+  <title>Dossiers &mdash; Walter Croncat</title>
+  <meta property="og:title" content="Dossiers - Walter Croncat">
   <meta property="og:description" content="Every Walter Croncat journalism post, fully sourced and transparent.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="./style.css">
@@ -656,8 +656,8 @@ def render_index_page(entries: list[dict]) -> str:
 <div class="page">
 
 <div class="header">
-  <div class="header-brand"><a href="../">Walter Croncat</a> &middot; Dossier Archive</div>
-  <h1>Dossier Archive</h1>
+  <div class="header-brand"><a href="../">Walter Croncat</a> &middot; Dossiers</div>
+  <h1>Dossiers</h1>
   <div class="header-meta">
     <span>Every story, fully sourced</span>
   </div>
