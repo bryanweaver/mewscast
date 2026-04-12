@@ -1423,6 +1423,151 @@ def post_journalism_cycle(
     return True
 
 
+def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT") -> bool:
+    """Publish a specific draft directly — skips Stages 1-6.
+
+    Used when a dry-run produced a good draft and you want to publish
+    exactly that text with an image and dossier reply, without re-running
+    the full pipeline (which would pick a different trending story).
+
+    Args:
+        story_id: the dossier story_id (e.g. "2026-04-11-pope-leo-xiv-issued-0276fdcfd2")
+        post_text: the exact post text to publish
+        post_type_str: REPORT, META, BULLETIN, ANALYSIS, PRIMARY, CORRECTION
+
+    Returns True on success.
+    """
+    print(f"\n{'=' * 60}")
+    print(f"Walter Croncat republish — {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    print(f"Story: {story_id}")
+    print(f"Type:  {post_type_str}")
+    print(f"{'=' * 60}\n")
+
+    post_type = PostType(post_type_str)
+
+    # ---- Generate image ------------------------------------------------
+    image_path = None
+    image_prompt = None
+    try:
+        print(f"[republish] generating {post_type.value}-style image...")
+        img_prompt_path = os.path.join(
+            os.path.dirname(os.path.dirname(__file__)), "prompts", "journalism_image.md"
+        )
+        with open(img_prompt_path, "r", encoding="utf-8") as f:
+            img_template = f.read()
+
+        img_request = img_template.replace("{post_type}", post_type.value)
+        img_request = img_request.replace("{topic}", post_text[:200])
+        img_request = img_request.replace("{draft_text}", post_text[:500])
+        img_request = img_request.replace("{article_section}", "")
+
+        from anthropic import Anthropic as _Anthropic
+        _img_client = _Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+        _img_resp = _img_client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=350,
+            messages=[{"role": "user", "content": img_request}],
+        )
+        image_prompt = _img_resp.content[0].text.strip().strip('"').strip("'")
+        if len(image_prompt) > 450:
+            image_prompt = image_prompt[:450]
+        print(f"[republish] image prompt: {image_prompt[:100]}...")
+
+        img_gen = ImageGenerator()
+        image_path = img_gen.generate_image(image_prompt)
+    except Exception as e:
+        print(f"[republish] image generation failed (continuing): {e}")
+
+    # ---- Publish to X --------------------------------------------------
+    tweet_id = None
+    reply_tweet_id = None
+    x_success = False
+    try:
+        twitter_bot = TwitterBot()
+        if image_path:
+            x_result = twitter_bot.post_tweet_with_image(post_text, image_path)
+        else:
+            x_result = twitter_bot.post_tweet(post_text)
+        if x_result:
+            tweet_id = x_result.get("id")
+            x_success = True
+            print(f"[republish] X post ok: {tweet_id}")
+
+            # Dossier link reply
+            dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
+            reply_text = (
+                f"Full dossier — every source Walter read, "
+                f"how outlets framed it, what's missing:\n"
+                f"{dossier_url}"
+            )
+            time.sleep(2)
+            try:
+                reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
+                if reply_result:
+                    reply_tweet_id = reply_result.get("id")
+                    print(f"[republish] X dossier reply ok: {reply_tweet_id}")
+            except Exception as re:
+                print(f"[republish] X dossier reply failed: {re}")
+    except Exception as e:
+        print(f"[republish] X publish failed: {e}")
+
+    # ---- Publish to Bluesky --------------------------------------------
+    bluesky_success = False
+    try:
+        bluesky_bot = BlueskyBot()
+        if image_path:
+            bs_result = bluesky_bot.post_skeet_with_image(post_text, image_path)
+        else:
+            bs_result = bluesky_bot.post_skeet(post_text)
+        if bs_result:
+            bluesky_uri = bs_result.get("uri")
+            bluesky_success = True
+            print(f"[republish] Bluesky post ok: {bluesky_uri}")
+
+            dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
+            reply_text = (
+                f"Full dossier — every source Walter read, "
+                f"how outlets framed it, what's missing:\n"
+                f"{dossier_url}"
+            )
+            time.sleep(2)
+            try:
+                reply_result = bluesky_bot.reply_to_skeet_with_link(
+                    bluesky_uri, reply_text
+                )
+            except Exception as re:
+                print(f"[republish] Bluesky dossier reply failed: {re}")
+    except Exception as e:
+        print(f"[republish] Bluesky publish failed: {e}")
+
+    if not (x_success or bluesky_success):
+        print("[republish] no platform accepted the post")
+        return False
+
+    # Record to post history
+    try:
+        tracker = PostTracker()
+        tracker.record_post(
+            {"title": post_text[:100], "url": None, "source": "republish"},
+            post_content=post_text,
+            tweet_id=tweet_id,
+            reply_tweet_id=reply_tweet_id,
+            image_prompt=image_prompt,
+            dossier_id=story_id,
+            post_type=post_type.value,
+        )
+    except Exception as e:
+        print(f"[republish] post history record failed: {e}")
+
+    print(f"\n{'=' * 60}")
+    print("[republish] done")
+    if tweet_id:
+        print(f"  X: https://x.com/mewscast/status/{tweet_id}")
+    print(f"  Dossier: https://mewscast.us/dossiers/{story_id}.html")
+    print(f"{'=' * 60}\n")
+    return True
+
+
 def main():
     """Main entry point"""
     # Load environment variables
@@ -1481,9 +1626,19 @@ def main():
                 sys.exit(1)
 
         success = post_journalism_cycle(dry_run=dry_run, forced_post_type=forced_type)
+    elif mode == "republish":
+        # Republish a specific draft without re-running the pipeline.
+        #   python src/main.py republish <story_id> <post_type> <post_text>
+        if len(sys.argv) < 5:
+            print("Usage: python src/main.py republish <story_id> <post_type> <post_text>")
+            sys.exit(1)
+        story_id = sys.argv[2]
+        post_type_str = sys.argv[3].upper()
+        post_text = sys.argv[4]
+        success = republish_draft(story_id, post_text, post_type_str)
     else:
         print(f"❌ Unknown mode: {mode}")
-        print("Available modes: scheduled, reply, both, special, journalism")
+        print("Available modes: scheduled, reply, both, special, journalism, republish")
         sys.exit(1)
 
     # Exit with appropriate code for CI/CD

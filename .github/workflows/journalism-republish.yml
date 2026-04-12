@@ -1,0 +1,76 @@
+name: Republish Draft (Walter Croncat)
+
+# Publish a specific draft that was validated in a dry-run.
+# Skips Stages 1-6 — just generates an image and publishes.
+# Use this when a dry-run produced a great draft but the story
+# rotated out of trending by the time you're ready to publish.
+
+on:
+  workflow_dispatch:
+    inputs:
+      story_id:
+        description: 'Story ID (e.g. 2026-04-11-pope-leo-xiv-issued-0276fdcfd2)'
+        required: true
+        type: string
+      post_type:
+        description: 'Post type'
+        required: true
+        default: 'REPORT'
+        type: choice
+        options:
+          - REPORT
+          - META
+          - ANALYSIS
+          - BULLETIN
+          - PRIMARY
+          - CORRECTION
+      post_text:
+        description: 'Exact post text to publish'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  republish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
+
+      - name: Republish draft
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
+        run: |
+          python src/main.py republish \
+            "${{ github.event.inputs.story_id }}" \
+            "${{ github.event.inputs.post_type }}" \
+            "${{ github.event.inputs.post_text }}"
+
+      - name: Commit post history (if changed)
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if ! git diff --quiet posts_history.json; then
+            git add posts_history.json
+            git commit -m "Update post history [skip ci]"
+            for i in {1..3}; do
+              git pull --rebase origin main && git push && break || {
+                echo "Push failed (attempt $i/3), retrying..."
+                sleep $((i * 2))
+              }
+            done
+          fi
