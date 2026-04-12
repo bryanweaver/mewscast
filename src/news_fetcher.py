@@ -2,6 +2,7 @@
 Google News RSS integration for fetching real news articles
 """
 import feedparser
+import os
 import random
 import requests
 from typing import List, Dict, Optional

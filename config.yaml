@@ -295,7 +295,7 @@ journalism:
   # Keep this OFF until the pipeline has been validated end-to-end with
   # --dry-run. All seven stages (detect, triage, gather, primary-source,
   # meta-analyze, compose, verify) are wired to the values below.
-  enabled: false                  # master switch — keep off until validated
+  enabled: true                   # master switch — validated via dry-run QA
   outlet_registry: outlet_registry.yaml
   trend_detection:
     max_candidates: 15
