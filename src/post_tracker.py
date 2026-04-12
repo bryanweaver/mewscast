@@ -382,7 +382,7 @@ class PostTracker:
     def record_post(self, story_metadata: Dict, post_content: str = None, tweet_id: str = None,
                     reply_tweet_id: str = None, bluesky_uri: str = None, bluesky_reply_uri: str = None,
                     image_prompt: str = None, dossier_id: Optional[str] = None,
-                    post_type: Optional[str] = None):
+                    post_type: Optional[str] = None, post_pipeline: Optional[str] = None):
         """
         Record a successful post to history
 
@@ -417,14 +417,12 @@ class PostTracker:
             # _load_history() without any migration step.
             'dossier_id': dossier_id,
             'post_type': post_type,
+            'post_pipeline': post_pipeline,  # "legacy" or "journalism" for A/B analysis
         }
 
         self.posts.append(post_record)
 
-        # Cleanup old posts to keep file small
-        self.cleanup_old_posts()
-
-        # Save to disk
+        # Save to disk (no pruning — analytics needs all-time history)
         self._save_history()
 
         print(f"✓ Post recorded to history (total: {len(self.posts)} posts tracked)")

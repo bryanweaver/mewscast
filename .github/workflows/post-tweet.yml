@@ -1,16 +1,11 @@
 name: Post Scheduled Tweet
 
 on:
-  # Schedule: AGGRESSIVE GROWTH MODE - 7 posts/day
-  # Free tier: 50 posts/24hrs, using 7 = 14% of limit (safe with room for replies)
+  # Schedule: A/B test — 3 legacy posts/day (journalism gets the other 3 slots)
   schedule:
-    - cron: '0 2 * * *'   # 2 AM UTC = 10 PM EST / 7 PM PST (late night)
-    - cron: '0 6 * * *'   # 6 AM UTC = 2 AM EST / 11 PM PST (overnight)
-    - cron: '0 10 * * *'  # 10 AM UTC = 6 AM EST / 3 AM PST (early morning)
-    - cron: '0 13 * * *'  # 1 PM UTC = 9 AM EST / 6 AM PST (morning prime)
-    - cron: '0 16 * * *'  # 4 PM UTC = 12 PM EST / 9 AM PST (midday)
-    - cron: '0 19 * * *'  # 7 PM UTC = 3 PM EST / 12 PM PST (afternoon)
-    - cron: '0 22 * * *'  # 10 PM UTC = 6 PM EST / 3 PM PST (evening prime)
+    - cron: '0 14 * * *'  # 2 PM UTC = 10 AM ET (morning prime)
+    - cron: '0 20 * * *'  # 8 PM UTC = 4 PM ET (afternoon)
+    - cron: '0 2 * * *'   # 2 AM UTC = 10 PM ET (late night)
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:

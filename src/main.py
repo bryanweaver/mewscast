@@ -314,7 +314,8 @@ def post_scheduled_tweet():
                 reply_tweet_id=reply_tweet_id,
                 bluesky_uri=bluesky_uri,
                 bluesky_reply_uri=bluesky_reply_uri,
-                image_prompt=image_prompt
+                image_prompt=image_prompt,
+                post_pipeline="legacy",
             )
 
         # Determine overall success
@@ -525,7 +526,8 @@ def post_positive_news():
                 post_content=post_text_with_indicator,
                 tweet_id=tweet_id,
                 bluesky_uri=bluesky_uri,
-                image_prompt=image_prompt
+                image_prompt=image_prompt,
+                post_pipeline="legacy",
             )
 
             print(f"\n{'='*60}")
@@ -1460,6 +1462,7 @@ def post_journalism_cycle(
             image_prompt=image_prompt,
             dossier_id=draft.story_id,
             post_type=draft.post_type.value,
+            post_pipeline="journalism",
         )
 
     post_url = None
@@ -1611,6 +1614,7 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             image_prompt=image_prompt,
             dossier_id=story_id,
             post_type=post_type.value,
+            post_pipeline="journalism",
         )
     except Exception as e:
         print(f"[republish] post history record failed: {e}")
