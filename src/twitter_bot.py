@@ -152,6 +152,30 @@ class TwitterBot:
             print(f"✗ Error posting reply: {e}")
             return None
 
+    def reply_to_tweet_with_image(self, tweet_id: str, text: str, image_path: str) -> Optional[dict]:
+        """Reply to a tweet with an attached image."""
+        try:
+            if len(text) > 280:
+                text = _truncate_at_sentence(text, 280)
+
+            media = self.api_v1.media_upload(filename=image_path)
+            response = self.client.create_tweet(
+                text=text,
+                in_reply_to_tweet_id=tweet_id,
+                media_ids=[media.media_id],
+            )
+            print(f"✓ Reply with image posted! ID: {response.data['id']}")
+            return response.data
+        except tweepy.TooManyRequests as e:
+            print(f"✗ Rate limit exceeded: {e}")
+            raise
+        except tweepy.TweepyException as e:
+            print(f"✗ Error posting reply with image: {e}")
+            return None
+        except FileNotFoundError:
+            print(f"✗ Image not found: {image_path}")
+            return None
+
     def delete_tweet(self, tweet_id: str) -> bool:
         """
         Delete a tweet
