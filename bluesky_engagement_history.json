@@ -1459,6 +1459,11 @@
       "did": "did:plc:akyrywovq4ehveepv62unovt",
       "handle": "gilibug.bsky.social",
       "timestamp": "2026-04-12T09:21:00.283886"
+    },
+    {
+      "did": "did:plc:56qlaslyvglpxq72y3v3nhbu",
+      "handle": "vintagehistorian.bsky.social",
+      "timestamp": "2026-04-12T12:18:00.590503"
     }
   ],
   "liked_posts": [
@@ -12831,6 +12836,11 @@
       "uri": "at://did:plc:akyrywovq4ehveepv62unovt/app.bsky.feed.post/3mjbxapdcjk2u",
       "author": "gilibug.bsky.social",
       "timestamp": "2026-04-12T09:21:00.103364"
+    },
+    {
+      "uri": "at://did:plc:56qlaslyvglpxq72y3v3nhbu/app.bsky.feed.post/3mjcckybbjc2n",
+      "author": "vintagehistorian.bsky.social",
+      "timestamp": "2026-04-12T12:18:00.481684"
     }
   ],
   "last_cleanup": "2026-04-10T09:32:41.509438",
