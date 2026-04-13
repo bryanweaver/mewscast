@@ -1,0 +1,64 @@
+name: Engage with Cat Community (X/Twitter)
+
+on:
+  # Schedule: 3x daily during CDT daytime hours (7am–11pm CDT = 11:00–03:00 UTC)
+  # CDT = UTC-4 (daylight saving, Mar–Nov)
+  schedule:
+    - cron: '0 13 * * *'   # 9:00am CDT  (13:00 UTC)
+    - cron: '0 18 * * *'   # 2:00pm CDT  (18:00 UTC)
+    - cron: '0 23 * * *'   # 7:00pm CDT  (23:00 UTC)
+
+  # Allow manual triggering from GitHub Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write  # Allow workflow to commit engagement history
+
+jobs:
+  engage-x:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
+
+      - name: Engage with cat community on X
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          cd src
+          python x_engagement_bot.py
+
+      - name: Commit updated engagement history
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Only commit if the history file exists and has changes
+          if [ -f x_engagement_history.json ]; then
+            git add x_engagement_history.json
+
+            if ! git diff --staged --quiet; then
+              git commit -m "Update X engagement history [skip ci]"
+
+              # Retry push up to 3 times with pull --rebase to handle concurrent workflow conflicts
+              for i in {1..3}; do
+                git pull --rebase origin main && git push && break || {
+                  echo "Push failed (attempt $i/3), retrying..."
+                  sleep $((i * 2))
+                }
+              done
+            fi
+          else
+            echo "No X engagement history file created yet"
+          fi
+
+      - name: Report status
+        if: failure()
+        run: echo "❌ Workflow failed - check logs above"
