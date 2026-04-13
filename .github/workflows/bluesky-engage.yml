@@ -1,12 +1,12 @@
 name: Bluesky Engagement
 
 on:
-  # Run 4 times a day to catch mentions
+  # Run 4 times a day to catch mentions (all within 7am–11pm CDT)
   schedule:
-    - cron: '30 5 * * *'   # 5:30 AM UTC
-    - cron: '30 11 * * *'  # 11:30 AM UTC
-    - cron: '30 17 * * *'  # 5:30 PM UTC
-    - cron: '30 23 * * *'  # 11:30 PM UTC
+    - cron: '30 13 * * *'  # 1:30 PM UTC = 8:30 AM CDT
+    - cron: '30 16 * * *'  # 4:30 PM UTC = 11:30 AM CDT
+    - cron: '30 19 * * *'  # 7:30 PM UTC = 2:30 PM CDT
+    - cron: '30 0 * * *'   # 12:30 AM UTC = 7:30 PM CDT (prev day)
 
   # Allow manual triggering
   workflow_dispatch:
