@@ -586,6 +586,9 @@ def render_dossier_page(dossier_data: dict) -> str:
   <meta property="og:title" content="{_esc(headline)}">
   <meta property="og:description" content="{_esc(og_description)}">
   <meta property="og:type" content="article">
+  <meta property="og:image" content="https://mewscast.us/images/walter-croncat-dossier-og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mewscast.us/images/walter-croncat-dossier-og.png">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -658,6 +661,9 @@ def render_index_page(entries: list[dict]) -> str:
   <meta property="og:title" content="Dossiers - Walter Croncat">
   <meta property="og:description" content="Every Walter Croncat journalism post, fully sourced and transparent.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mewscast.us/images/walter-croncat-dossier-og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mewscast.us/images/walter-croncat-dossier-og.png">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
