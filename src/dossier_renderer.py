@@ -20,7 +20,8 @@ from __future__ import annotations
 import html
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 
 # ---------------------------------------------------------------------------
@@ -34,17 +35,24 @@ def _esc(value) -> str:
     return html.escape(str(value))
 
 
+_CENTRAL = ZoneInfo("America/Chicago")
+
+
 def _parse_iso(iso_str: str) -> str:
-    """Parse an ISO-8601 timestamp and return a human-readable string.
+    """Parse an ISO-8601 timestamp and return a human-readable string in Central Time.
 
     Returns the raw string on failure (never crashes).
     """
     if not iso_str:
         return ""
     try:
-        # Handle timezone-aware ISO strings
         dt = datetime.fromisoformat(iso_str)
-        return dt.strftime("%B %d, %Y at %I:%M %p UTC")
+        # If naive (no tzinfo), assume UTC
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        dt_central = dt.astimezone(_CENTRAL)
+        # %Z gives CDT or CST depending on DST
+        return dt_central.strftime("%B %d, %Y at %I:%M %p %Z")
     except (ValueError, TypeError):
         return str(iso_str)
 
