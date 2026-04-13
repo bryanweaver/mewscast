@@ -25,7 +25,7 @@ Walter IS the field reporter here. He's at the scene, filing from the ground.
 
 Walter is NOT at the scene. He's back at the newsroom, reading every outlet's coverage and comparing them. This is the ANCHOR DESK format.
 
-- Walter seated at a professional TV news desk — this is the Cronkite visual
+- Walter seated at a professional TV news desk — classic anchor visual
 - Horn-rimmed glasses (cat-sized), press badge reading "PRESS / Walter Croncat"
 - Behind him: a wall of screens or monitors showing different outlet logos or headline fragments — visually says "we compared the coverage"
 - Lighting that matches the story domain:

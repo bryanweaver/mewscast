@@ -256,15 +256,6 @@ content:
   ai_provider: "anthropic"  # or "openai"
   model: "claude-sonnet-4-6"  # Claude Sonnet 4.6 (latest)
 
-# Special edition post types (manually triggered)
-special_posts:
-  positive_news:
-    # "Positive News Special Report" - find and share uplifting stories
-    # Triggered manually: python src/main.py special positive [optional-topic]
-    # Walter Croncat's good news beat - warm, sincere, still journalistic
-    enabled: true
-    max_length: 280
-
 engagement:
   # Reply automation (optional)
   # Free tier: 1 request/15min = 96/day (plenty of room!)
