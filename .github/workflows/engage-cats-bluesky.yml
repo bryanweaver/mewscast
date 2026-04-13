@@ -1,9 +1,12 @@
 name: Engage with Cat Community (Bluesky)
 
 on:
-  # Schedule: Every 3 hours (sustainable within GitHub free tier minutes)
+  # Schedule: 4x/day within 7am–11pm CDT (GitHub free tier friendly)
   schedule:
-    - cron: '0 */3 * * *'  # Every 3 hours
+    - cron: '0 13 * * *'  # 1 PM UTC = 8 AM CDT
+    - cron: '0 16 * * *'  # 4 PM UTC = 11 AM CDT
+    - cron: '0 20 * * *'  # 8 PM UTC = 3 PM CDT
+    - cron: '0 1 * * *'   # 1 AM UTC = 8 PM CDT (prev day)
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:

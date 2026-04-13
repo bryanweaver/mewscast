@@ -28,9 +28,9 @@ on:
 
   # A/B test — 3 journalism posts/day (legacy gets the other 3 slots)
   schedule:
-    - cron: '0 11 * * *'  # 11 AM UTC = 7 AM ET (morning — catch overnight news)
-    - cron: '0 17 * * *'  # 5 PM UTC = 1 PM ET (midday peak engagement)
-    - cron: '0 23 * * *'  # 11 PM UTC = 7 PM ET (evening wrap-up)
+    - cron: '30 12 * * *'  # 12:30 PM UTC = 7:30 AM CDT (morning — catch overnight news)
+    - cron: '30 17 * * *'  # 5:30 PM UTC = 12:30 PM CDT (midday peak engagement)
+    - cron: '30 22 * * *'  # 10:30 PM UTC = 5:30 PM CDT (evening wrap-up)
 
 permissions:
   contents: write
