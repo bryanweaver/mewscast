@@ -1,11 +1,16 @@
 name: Post Scheduled Tweet
 
 on:
-  # Schedule: A/B test — 3 legacy posts/day (journalism gets the other 3 slots)
+  # Schedule: 6 legacy posts/day spread 7:30am–9pm CDT.
+  # Journalism pipeline is manual-only (workflow_dispatch) until it stops
+  # silently no-op'ing on its own cron; legacy owns the full posting cadence.
   schedule:
-    - cron: '0 14 * * *'  # 2 PM UTC = 10 AM ET (morning prime)
-    - cron: '0 20 * * *'  # 8 PM UTC = 4 PM ET (afternoon)
-    - cron: '0 2 * * *'   # 2 AM UTC = 10 PM ET (late night)
+    - cron: '30 12 * * *'  # 12:30 PM UTC = 7:30 AM CDT (morning)
+    - cron: '0 14 * * *'   # 2 PM UTC    = 9:00 AM CDT (morning prime)
+    - cron: '30 17 * * *'  # 5:30 PM UTC = 12:30 PM CDT (midday)
+    - cron: '0 20 * * *'   # 8 PM UTC    = 3:00 PM CDT (afternoon)
+    - cron: '30 22 * * *'  # 10:30 PM UTC = 5:30 PM CDT (evening)
+    - cron: '0 2 * * *'    # 2 AM UTC    = 9:00 PM CDT (late night, prev day)
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
