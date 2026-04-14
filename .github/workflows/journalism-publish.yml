@@ -26,11 +26,13 @@ on:
           - bulletin
           - primary
 
-  # A/B test — 3 journalism posts/day (legacy gets the other 3 slots)
-  schedule:
-    - cron: '30 12 * * *'  # 12:30 PM UTC = 7:30 AM CDT (morning — catch overnight news)
-    - cron: '30 17 * * *'  # 5:30 PM UTC = 12:30 PM CDT (midday peak engagement)
-    - cron: '30 22 * * *'  # 10:30 PM UTC = 5:30 PM CDT (evening wrap-up)
+  # Scheduled runs DISABLED — journalism pipeline is still being debugged
+  # (silent no-ops at Stages 1/2/2b/3/4 make it unreliable for production
+  # cadence). Re-enable this block once the silent-exit issues are fixed.
+  # schedule:
+  #   - cron: '30 12 * * *'  # 12:30 PM UTC = 7:30 AM CDT (morning — catch overnight news)
+  #   - cron: '30 17 * * *'  # 5:30 PM UTC = 12:30 PM CDT (midday peak engagement)
+  #   - cron: '30 22 * * *'  # 10:30 PM UTC = 5:30 PM CDT (evening wrap-up)
 
 permissions:
   contents: write
