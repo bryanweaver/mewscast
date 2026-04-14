@@ -894,6 +894,21 @@
       "dossier_id": null,
       "post_type": null,
       "post_pipeline": "legacy"
+    },
+    {
+      "timestamp": "2026-04-14T22:47:11.810560+00:00",
+      "topic": "What's happening during White House Correspondents' Dinner weekend 2026",
+      "url": "https://www.nbcnews.com/politics/white-house",
+      "source": "NBC News",
+      "content": "Axios reports President Trump is expected to attend the 2026 White House Correspondents' Dinner \u2014 described as his first attendance as a sitting president.\n\nreported by Axios, not yet confirmed elsewhere.",
+      "image_prompt": "Walter Croncat, a realistic brown tabby cat with alert eyes and realistic cat anatomy, stands in the foreground on the grounds of the White House, filing urgently. The iconic White House facade and columned portico are sharp behind him in evening light. His press badge reads \"PRESS / Walter Croncat\". Red and amber accent lighting suggests breaking news urgency. Wire photographer aesthetic, cinematic landscape format, high contrast, saturated colo",
+      "x_tweet_id": "2044185703001538761",
+      "x_reply_tweet_id": "2044185712921043064",
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mjihklhvdt2v",
+      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mjihko3h7p2e",
+      "dossier_id": "2026-04-14-what-s-happening-during-ae669b5642",
+      "post_type": "BULLETIN",
+      "post_pipeline": "journalism"
     }
   ]
 }
