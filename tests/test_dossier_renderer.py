@@ -12,7 +12,7 @@ import pytest
 # Ensure src/ is on the path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from dossier_renderer import render_dossier_page, render_index_page
+from dossier_renderer import bluesky_web_url, render_dossier_page, render_index_page
 
 
 # ---------------------------------------------------------------------------
@@ -143,6 +143,80 @@ class TestRenderDossierPage:
         output = render_dossier_page(mock_dossier)
         # The mock articles have body text, so character counts should appear
         assert "characters fetched" in output
+
+    def test_view_on_x_link_rendered(self, mock_dossier):
+        """An X post_url should produce a 'View on X' link."""
+        data = copy.deepcopy(mock_dossier)
+        data["post"]["post_url"] = "https://x.com/i/web/status/12345"
+        data["post"]["bluesky_url"] = None
+        output = render_dossier_page(data)
+        assert "View on X" in output
+        assert 'href="https://x.com/i/web/status/12345"' in output
+        assert "View on Bluesky" not in output
+
+    def test_view_on_bluesky_link_rendered(self, mock_dossier):
+        """A bluesky_url should produce a 'View on Bluesky' link alongside X."""
+        data = copy.deepcopy(mock_dossier)
+        data["post"]["post_url"] = "https://x.com/i/web/status/12345"
+        data["post"]["bluesky_url"] = (
+            "https://bsky.app/profile/did:plc:abc/post/rkey123"
+        )
+        output = render_dossier_page(data)
+        assert "View on X" in output
+        assert "View on Bluesky" in output
+        assert 'href="https://bsky.app/profile/did:plc:abc/post/rkey123"' in output
+
+    def test_bluesky_at_uri_is_converted_to_web_url(self, mock_dossier):
+        """A raw at:// URI in bluesky_url should be converted to bsky.app."""
+        data = copy.deepcopy(mock_dossier)
+        data["post"]["post_url"] = None
+        data["post"]["bluesky_url"] = (
+            "at://did:plc:abc/app.bsky.feed.post/rkey123"
+        )
+        output = render_dossier_page(data)
+        assert "View on Bluesky" in output
+        assert "at://" not in output.split("View on Bluesky")[0][-200:]
+        assert 'href="https://bsky.app/profile/did:plc:abc/post/rkey123"' in output
+
+    def test_legacy_post_url_with_at_uri_renders_bluesky_link(self, mock_dossier):
+        """Legacy records that stashed an at:// URI in post_url should still
+        render as a Bluesky link, not an X link."""
+        data = copy.deepcopy(mock_dossier)
+        data["post"]["post_url"] = "at://did:plc:abc/app.bsky.feed.post/rkey"
+        data["post"].pop("bluesky_url", None)
+        output = render_dossier_page(data)
+        assert "View on X" not in output
+        assert "View on Bluesky" in output
+        assert 'href="https://bsky.app/profile/did:plc:abc/post/rkey"' in output
+
+    def test_no_post_url_renders_no_links(self, mock_dossier):
+        """With neither post_url nor bluesky_url, no links should be rendered."""
+        data = copy.deepcopy(mock_dossier)
+        data["post"]["post_url"] = None
+        data["post"]["bluesky_url"] = None
+        output = render_dossier_page(data)
+        assert "View on X" not in output
+        assert "View on Bluesky" not in output
+
+
+class TestBlueskyWebUrl:
+
+    def test_converts_at_uri_to_web_url(self):
+        uri = "at://did:plc:abc/app.bsky.feed.post/xyz"
+        assert bluesky_web_url(uri) == "https://bsky.app/profile/did:plc:abc/post/xyz"
+
+    def test_passes_through_https_url(self):
+        url = "https://bsky.app/profile/handle.bsky.social/post/abc"
+        assert bluesky_web_url(url) == url
+
+    def test_returns_empty_on_empty_input(self):
+        assert bluesky_web_url("") == ""
+        assert bluesky_web_url(None) == ""
+
+    def test_returns_empty_on_malformed_uri(self):
+        assert bluesky_web_url("at://") == ""
+        assert bluesky_web_url("at://did:plc:abc") == ""
+        assert bluesky_web_url("garbage") == ""
 
 
 class TestRenderIndexPage:

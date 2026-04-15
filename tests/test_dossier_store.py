@@ -292,11 +292,13 @@ class TestDossierStore:
             sample_draft.story_id,
             sample_draft,
             post_url="https://x.com/WalterCroncat/status/1",
+            bluesky_url="https://bsky.app/profile/did:plc:abc/post/xyz",
         )
         record = store.load_post_record(sample_draft.story_id)
         assert record is not None
         assert record["draft"] == sample_draft.to_dict()
         assert record["post_url"] == "https://x.com/WalterCroncat/status/1"
+        assert record["bluesky_url"] == "https://bsky.app/profile/did:plc:abc/post/xyz"
         assert "published_at" in record
 
     def test_dossier_brief_post_share_same_file(
