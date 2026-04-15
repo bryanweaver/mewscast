@@ -939,6 +939,21 @@
       "dossier_id": "2026-04-15-the-u-s-treasury-96e5417aab",
       "post_type": "REPORT",
       "post_pipeline": "journalism"
+    },
+    {
+      "timestamp": "2026-04-15T14:47:10.522544+00:00",
+      "topic": "Tax season was supposed to bring big refunds. So far they're less than expected - NPR",
+      "url": "https://www.npr.org/2026/04/15/nx-s1-5785059/tax-refunds-less-than-expected",
+      "source": "NPR",
+      "content": "This reporter is looking into Tax season was supposed to bring big refunds. So far they're less than expected - NPR.\n\nFur-ther details coming soon from my perch.",
+      "image_prompt": "Close-up: Brown tabby reporter cat investigating Tax season was supposed to bring big refunds. So far they're, cinematic lighting, landscape format, press badge visible",
+      "x_tweet_id": "2044427308392468944",
+      "x_reply_tweet_id": null,
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mjk577x7wr2a",
+      "bluesky_reply_uri": null,
+      "dossier_id": null,
+      "post_type": null,
+      "post_pipeline": "legacy"
     }
   ]
 }
