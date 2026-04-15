@@ -1474,6 +1474,11 @@
       "did": "did:plc:r3bkjvw7cubzgdpltekzuule",
       "handle": "cloverteapot.bsky.social",
       "timestamp": "2026-04-14T20:28:23.495726"
+    },
+    {
+      "did": "did:plc:tee7fl5b3hydmcgapwkwt6ov",
+      "handle": "lordasshat.bsky.social",
+      "timestamp": "2026-04-15T01:38:51.799914"
     }
   ],
   "liked_posts": [
@@ -12921,6 +12926,11 @@
       "uri": "at://did:plc:r3bkjvw7cubzgdpltekzuule/app.bsky.feed.post/3mji4em3dd22e",
       "author": "cloverteapot.bsky.social",
       "timestamp": "2026-04-14T20:28:23.298251"
+    },
+    {
+      "uri": "at://did:plc:tee7fl5b3hydmcgapwkwt6ov/app.bsky.feed.post/3mjiiufqxwk2y",
+      "author": "lordasshat.bsky.social",
+      "timestamp": "2026-04-15T01:38:51.592353"
     }
   ],
   "last_cleanup": "2026-04-10T09:32:41.509438",
