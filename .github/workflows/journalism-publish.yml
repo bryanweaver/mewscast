@@ -25,6 +25,11 @@ on:
           - analysis
           - bulletin
           - primary
+      topic:
+        description: 'Optional topic override (leave blank to use trending)'
+        required: false
+        default: ''
+        type: string
 
   # A/B test — 3 journalism posts/day (legacy gets the other 3 slots)
   schedule:
@@ -59,13 +64,18 @@ jobs:
           DIFFBOT_TOKEN: ${{ secrets.DIFFBOT_TOKEN }}
         run: |
           POST_TYPE="${{ github.event.inputs.post_type }}"
+          TOPIC="${{ github.event.inputs.topic }}"
+          ARGS=""
           if [ -n "$POST_TYPE" ]; then
-            echo "Publishing journalism post with forced type: $POST_TYPE"
-            python src/main.py journalism "$POST_TYPE"
-          else
-            echo "Publishing journalism post with brief-suggested type"
-            python src/main.py journalism
+            ARGS="$POST_TYPE"
+            echo "Forced post type: $POST_TYPE"
           fi
+          if [ -n "$TOPIC" ]; then
+            ARGS="$ARGS --topic \"$TOPIC\""
+            echo "Manual topic: $TOPIC"
+          fi
+          echo "Running: python src/main.py journalism $ARGS"
+          eval python src/main.py journalism $ARGS
 
       - name: Commit updated seen-stories file (if changed)
         if: success()

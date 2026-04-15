@@ -32,6 +32,11 @@ on:
           - analysis
           - bulletin
           - primary
+      topic:
+        description: 'Optional topic to test (leave blank to use trending)'
+        required: false
+        default: ''
+        type: string
 
   # Uncomment to run a daily dry-run at 13:00 UTC (9 AM ET / 6 AM PT)
   # schedule:
@@ -70,20 +75,25 @@ jobs:
           # Anthropic: Stage 4 meta-analysis (Opus) + Stage 5 composition (Sonnet)
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-          # Grok is not invoked in dry-run (no image generation path)
+          # Grok: image generation (best-effort in dry-run)
           X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
 
           # Diffbot Article API — Stage 3 body-fetch fallback (free tier, 10K pages/mo)
           DIFFBOT_TOKEN: ${{ secrets.DIFFBOT_TOKEN }}
         run: |
           POST_TYPE="${{ github.event.inputs.post_type }}"
+          TOPIC="${{ github.event.inputs.topic }}"
+          ARGS="--dry-run"
           if [ -n "$POST_TYPE" ]; then
-            echo "Running journalism dry-run with forced post type: $POST_TYPE"
-            python src/main.py journalism "$POST_TYPE" --dry-run
-          else
-            echo "Running journalism dry-run with brief-suggested post type"
-            python src/main.py journalism --dry-run
+            ARGS="$POST_TYPE $ARGS"
+            echo "Forced post type: $POST_TYPE"
           fi
+          if [ -n "$TOPIC" ]; then
+            ARGS="$ARGS --topic \"$TOPIC\""
+            echo "Manual topic: $TOPIC"
+          fi
+          echo "Running: python src/main.py journalism $ARGS"
+          eval python src/main.py journalism $ARGS
 
       - name: List drafts and dossiers produced
         if: always()

@@ -25,7 +25,7 @@ from post_tracker import PostTracker
 # so the existing modes (scheduled/reply/both/special) are unaffected when
 # the journalism workflow is disabled.
 from dossier_store import DossierStore, DraftPost, PostType, StoryDossier
-from trend_detector import TrendDetector, _extract_proper_nouns
+from trend_detector import TrendDetector, TrendCandidate, _extract_proper_nouns, _stable_story_id
 from story_triage import StoryTriage
 from source_gatherer import _FLUFF_PREFIXES, _SUFFIX_STRIP_RE, SourceGatherer
 from primary_source_finder import PrimarySourceFinder
@@ -419,6 +419,85 @@ def _safe_filename_component(text: str) -> str:
     return "".join(out)
 
 
+def _generate_journalism_image(
+    draft: DraftPost, dossier: StoryDossier, save_path: str = "temp_image.png"
+) -> tuple:
+    """Generate a post-type-aware image for a journalism post.
+
+    Returns (image_file_path, image_prompt) on success, (None, None) on failure.
+    Best-effort: never raises.
+    """
+    try:
+        print(f"[journalism] generating {draft.post_type.value}-style image...")
+        article_body = dossier.articles[0].body if dossier.articles else ""
+        article_section = (
+            f"\nFULL ARTICLE CONTENT (extract visual details):\n{article_body[:3000]}\n"
+            if article_body else ""
+        )
+
+        img_prompt_path = os.path.join(
+            os.path.dirname(os.path.dirname(__file__)), "prompts", "journalism_image.md"
+        )
+        with open(img_prompt_path, "r", encoding="utf-8") as f:
+            img_template = f.read()
+
+        img_request = img_template.replace("{post_type}", draft.post_type.value)
+        img_request = img_request.replace("{topic}", dossier.headline_seed[:200])
+        img_request = img_request.replace("{draft_text}", draft.text[:500])
+        img_request = img_request.replace("{article_section}", article_section)
+
+        from anthropic import Anthropic as _Anthropic
+        _img_client = _Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+        _img_resp = _img_client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=350,
+            messages=[{"role": "user", "content": img_request}],
+        )
+        image_prompt = _img_resp.content[0].text.strip().strip('"').strip("'")
+        if len(image_prompt) > 450:
+            image_prompt = image_prompt[:450]
+        print(f"[journalism] image prompt ({draft.post_type.value}): {image_prompt[:100]}...")
+
+        img_gen = ImageGenerator()
+        image_path = img_gen.generate_image(image_prompt, save_path=save_path)
+        return image_path, image_prompt
+    except Exception as e:
+        print(f"[journalism] image generation failed (continuing): {e}")
+        return None, None
+
+
+def _persist_dossier_image(
+    draft: DraftPost, dossier_store, image_source_path: str
+) -> str | None:
+    """Copy/persist an image to docs/dossiers/images/ and write the relative
+    path into the dossier JSON. Returns the relative path or None."""
+    try:
+        html_dir = os.path.join(_project_root(), "docs", "dossiers")
+        images_dir = os.path.join(html_dir, "images")
+        os.makedirs(images_dir, exist_ok=True)
+        safe_id = _safe_filename_component(draft.story_id)
+        dest = os.path.join(images_dir, f"{safe_id}.png")
+
+        # If source != dest, copy; otherwise it was already saved there
+        if os.path.abspath(image_source_path) != os.path.abspath(dest):
+            import shutil
+            shutil.copy2(image_source_path, dest)
+
+        rel_path = f"images/{safe_id}.png"
+
+        # Write into dossier JSON so the renderer can find it
+        raw = dossier_store.read_raw(draft.story_id)
+        if raw:
+            raw["image_path"] = rel_path
+            dossier_store._write(draft.story_id, raw)
+
+        print(f"[journalism] dossier image persisted: {dest}")
+        return rel_path
+    except Exception as e:
+        print(f"[journalism] image persist failed (continuing): {e}")
+        return None
+
+
 def _render_dossier_html(dossier_store, draft: DraftPost, dossier: StoryDossier) -> None:
     """Render dossier HTML page + write a metadata sidecar for the index +
     rebuild the index page. Used by both dry-run and publish paths."""
@@ -558,6 +637,7 @@ def _write_draft_file(
 def post_journalism_cycle(
     dry_run: bool = False,
     forced_post_type: PostType | None = None,
+    topic: str | None = None,
 ) -> bool:
     """
     Run one cycle of the Walter Croncat journalism pipeline.
@@ -577,6 +657,9 @@ def post_journalism_cycle(
       forced_post_type: if provided, override the brief's suggested_post_type
         with this one (used by the `journalism brief|meta|bulletin|correction`
         CLI modes for deterministic per-type cycles).
+      topic: if provided, skip Stages 1-2 (trend detection + triage) and use
+        this as the headline_seed directly. Useful for testing the pipeline
+        against a specific story.
 
     Returns:
       True: the cycle ran to completion. This may mean a post was published
@@ -592,6 +675,8 @@ def post_journalism_cycle(
         print("Mode: DRY RUN (drafts only, no publish)")
     if forced_post_type:
         print(f"Forced post type: {forced_post_type.value}")
+    if topic:
+        print(f"Manual topic: {topic[:100]}")
     print(f"{'=' * 60}\n")
 
     try:
@@ -698,21 +783,37 @@ def post_journalism_cycle(
         long_form_max_length=long_form_max_length,
     )
 
-    # ---- Stage 1: trend detection -----------------------------------------
-    print(f"\n[journalism] Stage 1 — detecting trends (max_candidates={max_candidates})")
-    candidates = trend_detector.detect_trends(max_candidates=max_candidates)
-    print(f"[journalism] Stage 1 yielded {len(candidates)} candidates")
-    if not candidates:
-        print("[journalism] no candidates from Stage 1 — clean exit, nothing to post this cycle")
-        return True
+    # ---- Manual topic override: skip Stages 1-2 ----------------------------
+    if topic:
+        detected_at = datetime.now(timezone.utc).isoformat()
+        manual_candidate = TrendCandidate(
+            headline_seed=topic.strip(),
+            detected_at=detected_at,
+            source_signals=["manual"],
+            engagement=0,
+            story_id=_stable_story_id(topic.strip(), detected_at),
+            source="manual",
+        )
+        print(f"[journalism] Skipping Stages 1-2 (manual topic)")
+        print(f"[journalism] Synthetic candidate: {manual_candidate.headline_seed[:80]}...")
+        candidate = manual_candidate
+        passed = [manual_candidate]
+    else:
+        # ---- Stage 1: trend detection -----------------------------------------
+        print(f"\n[journalism] Stage 1 — detecting trends (max_candidates={max_candidates})")
+        candidates = trend_detector.detect_trends(max_candidates=max_candidates)
+        print(f"[journalism] Stage 1 yielded {len(candidates)} candidates")
+        if not candidates:
+            print("[journalism] no candidates from Stage 1 — clean exit, nothing to post this cycle")
+            return True
 
-    # ---- Stage 2: triage --------------------------------------------------
-    print("[journalism] Stage 2 — triaging candidates")
-    passed = story_triage.triage(candidates)
-    print(f"[journalism] Stage 2 passed {len(passed)} / {len(candidates)}")
-    if not passed:
-        print("[journalism] no candidates passed triage — clean exit, nothing to post this cycle")
-        return True
+        # ---- Stage 2: triage --------------------------------------------------
+        print("[journalism] Stage 2 — triaging candidates")
+        passed = story_triage.triage(candidates)
+        print(f"[journalism] Stage 2 passed {len(passed)} / {len(candidates)}")
+        if not passed:
+            print("[journalism] no candidates passed triage — clean exit, nothing to post this cycle")
+            return True
 
     # ---- Stage 2b: story-level dedup -------------------------------------
     # Walter Croncat runs multiple times per day. Without dedup the pipeline
@@ -911,9 +1012,13 @@ def post_journalism_cycle(
                 return (True, sid, overlap)
         return (False, "", 0)
 
-    candidate = None
+    # When a manual topic is provided, candidate is already set — preserve it
+    # through the dedup loop (the loop will break immediately).
+    candidate = candidate if topic else None
     skipped_count = 0
     for c in passed:
+        if candidate is not None:
+            break
         # (1) Exact story_id dedup — cheap, catches same-headline-same-day
         if c.story_id in seen_story_ids:
             skipped_count += 1
@@ -1191,54 +1296,28 @@ def post_journalism_cycle(
     if dry_run:
         path = _write_draft_file(drafts_dir, draft, dossier)
         print(f"[journalism] DRY RUN draft written to {path}")
+
+        # Best-effort image generation for dry-run dossier preview.
+        # Save directly to the dossier images directory (no temp file).
+        safe_id = _safe_filename_component(draft.story_id)
+        images_dir = os.path.join(_project_root(), "docs", "dossiers", "images")
+        os.makedirs(images_dir, exist_ok=True)
+        dest_path = os.path.join(images_dir, f"{safe_id}.png")
+
+        image_path, _prompt = _generate_journalism_image(draft, dossier, save_path=dest_path)
+        if image_path:
+            _persist_dossier_image(draft, dossier_store, image_path)
+
         # Render dossier HTML + rebuild index
         _render_dossier_html(dossier_store, draft, dossier)
         return True
 
     print("[journalism] Stage 7 — publishing")
 
-    # Best-effort POST-TYPE-AWARE image generation. The journalism pipeline
-    # uses a different image prompt than the legacy path — REPORT/BULLETIN
-    # get "reporter on location" images, META gets "anchor desk" images,
-    # ANALYSIS gets "commentary desk" images, etc. See prompts/journalism_image.md.
-    image_path = None
-    image_prompt = None
-    try:
-        print(f"[journalism] generating {draft.post_type.value}-style image...")
-        article_body = dossier.articles[0].body if dossier.articles else ""
-        article_section = (
-            f"\nFULL ARTICLE CONTENT (extract visual details):\n{article_body[:3000]}\n"
-            if article_body else ""
-        )
-
-        # Load the journalism-specific image prompt template
-        img_prompt_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)), "prompts", "journalism_image.md"
-        )
-        with open(img_prompt_path, "r", encoding="utf-8") as f:
-            img_template = f.read()
-
-        img_request = img_template.replace("{post_type}", draft.post_type.value)
-        img_request = img_request.replace("{topic}", dossier.headline_seed[:200])
-        img_request = img_request.replace("{draft_text}", draft.text[:500])
-        img_request = img_request.replace("{article_section}", article_section)
-
-        from anthropic import Anthropic as _Anthropic
-        _img_client = _Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-        _img_resp = _img_client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=350,
-            messages=[{"role": "user", "content": img_request}],
-        )
-        image_prompt = _img_resp.content[0].text.strip().strip('"').strip("'")
-        if len(image_prompt) > 450:
-            image_prompt = image_prompt[:450]
-        print(f"[journalism] image prompt ({draft.post_type.value}): {image_prompt[:100]}...")
-
-        img_gen = ImageGenerator()
-        image_path = img_gen.generate_image(image_prompt)
-    except Exception as e:
-        print(f"[journalism] image generation failed (continuing): {e}")
+    # Best-effort POST-TYPE-AWARE image generation (see prompts/journalism_image.md).
+    image_path, image_prompt = _generate_journalism_image(draft, dossier)
+    if image_path:
+        _persist_dossier_image(draft, dossier_store, image_path)
 
     # Primary publish: post to X and Bluesky. We reuse the same text for
     # both platforms in this first rollout; a later phase can specialize.
@@ -1526,11 +1605,25 @@ def main():
         #   python src/main.py journalism meta             # force a META cycle
         #   python src/main.py journalism bulletin         # force a BULLETIN cycle
         #   python src/main.py journalism correction       # force a CORRECTION cycle
+        #   python src/main.py journalism --topic "US tariffs on China" --dry-run
         #
-        # --dry-run can be combined with any post-type subcommand.
+        # --dry-run and --topic can be combined with any post-type subcommand.
         extra_args = [a for a in sys.argv[2:]]
         dry_run = "--dry-run" in extra_args
         extra_args = [a for a in extra_args if a != "--dry-run"]
+
+        # Parse --topic "some topic here"
+        topic_override: str | None = None
+        filtered_args = []
+        i = 0
+        while i < len(extra_args):
+            if extra_args[i] == "--topic" and i + 1 < len(extra_args):
+                topic_override = extra_args[i + 1]
+                i += 2
+            else:
+                filtered_args.append(extra_args[i])
+                i += 1
+        extra_args = filtered_args
 
         forced_type: PostType | None = None
         if extra_args:
@@ -1542,7 +1635,9 @@ def main():
                 print("Available: brief, meta, analysis, bulletin, correction, primary")
                 sys.exit(1)
 
-        success = post_journalism_cycle(dry_run=dry_run, forced_post_type=forced_type)
+        success = post_journalism_cycle(
+            dry_run=dry_run, forced_post_type=forced_type, topic=topic_override
+        )
     elif mode == "republish":
         # Republish a specific draft without re-running the pipeline.
         #   python src/main.py republish <story_id>

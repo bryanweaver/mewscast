@@ -360,6 +360,7 @@ class DossierStore:
         story_id: str,
         draft: DraftPost,
         post_url: Optional[str] = None,
+        image_path: Optional[str] = None,
     ) -> str:
         """Write (or merge) the published-post record for a story."""
         data = self._read(story_id)
@@ -368,6 +369,8 @@ class DossierStore:
             "post_url": post_url,
             "published_at": _now_iso(),
         }
+        if image_path:
+            data["image_path"] = image_path
         return self._write(story_id, data)
 
     def load_post_record(self, story_id: str) -> Optional[dict]:

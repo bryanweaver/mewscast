@@ -521,6 +521,19 @@ def _render_section_6_selection(data: dict) -> str:
     return "\n".join(lines)
 
 
+def _render_post_image(data: dict) -> str:
+    """Render the generated post image, if one exists in the dossier data."""
+    image_path = data.get("image_path")
+    if not image_path:
+        return ""
+    return (
+        '<div class="post-image-container">\n'
+        f'  <img class="post-image" src="./{_esc(image_path)}"'
+        f' alt="AI-generated illustration for this story">\n'
+        '</div>'
+    )
+
+
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
@@ -547,8 +560,11 @@ def render_dossier_page(dossier_data: dict) -> str:
     post_text = draft.get("text", "")
     og_description = consensus[0] if consensus else (post_text[:200] if post_text else "Walter Croncat journalism dossier")
 
+    image_path = dossier_data.get("image_path")
+
     sections = [
         _render_section_1_post(dossier_data),
+        _render_post_image(dossier_data),
         _render_section_2_sources(dossier_data),
         _render_section_3_brief(dossier_data),
         _render_section_4_verification(dossier_data),
@@ -586,9 +602,9 @@ def render_dossier_page(dossier_data: dict) -> str:
   <meta property="og:title" content="{_esc(headline)}">
   <meta property="og:description" content="{_esc(og_description)}">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://mewscast.us/images/walter-croncat-dossier-og.png">
+  <meta property="og:image" content="{f'https://mewscast.us/dossiers/{_esc(image_path)}' if image_path else 'https://mewscast.us/images/walter-croncat-dossier-og.png'}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://mewscast.us/images/walter-croncat-dossier-og.png">
+  <meta name="twitter:image" content="{f'https://mewscast.us/dossiers/{_esc(image_path)}' if image_path else 'https://mewscast.us/images/walter-croncat-dossier-og.png'}">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
