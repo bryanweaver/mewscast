@@ -407,6 +407,17 @@ a:hover {
   margin-bottom: 0.25rem;
 }
 
+/* ---- Post image ------------------------------------------------------- */
+.post-image-container {
+  margin: 1rem 0 1.5rem;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
 /* ---- Coming soon placeholder ------------------------------------------ */
 .coming-soon {
   background: var(--surface);
