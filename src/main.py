@@ -33,7 +33,7 @@ from meta_analyzer import MetaAnalyzer
 from post_composer import PostComposer
 from verification_gate import VerificationGate, VerificationResult
 from draft_analyzer import analyze_draft, print_analysis
-from dossier_renderer import render_dossier_page, render_index_page
+from dossier_renderer import bluesky_web_url, render_dossier_page, render_index_page
 
 
 def _load_config():
@@ -1414,9 +1414,14 @@ def post_journalism_cycle(
     post_url = None
     if tweet_id:
         post_url = f"https://x.com/i/web/status/{tweet_id}"
-    elif bluesky_uri:
-        post_url = bluesky_uri
-    dossier_store.save_post_record(draft.story_id, draft, post_url=post_url)
+    bluesky_url = bluesky_web_url(bluesky_uri) if bluesky_uri else None
+    # Back-compat: if X didn't publish, keep post_url pointing at the Bluesky
+    # skeet so older consumers still have a canonical link.
+    if post_url is None and bluesky_url is not None:
+        post_url = bluesky_url
+    dossier_store.save_post_record(
+        draft.story_id, draft, post_url=post_url, bluesky_url=bluesky_url
+    )
 
     # Render dossier HTML for the public viewer + rebuild index
     _render_dossier_html(dossier_store, draft, dossier)

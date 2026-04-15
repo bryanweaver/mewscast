@@ -270,7 +270,8 @@ class DossierStore:
       "saved_at": "...",
       "dossier":   {...}  # StoryDossier.to_dict(), or missing
       "brief":     {...}  # MetaAnalysisBrief.to_dict(), or missing
-      "post":      {...}  # {"draft": DraftPost.to_dict(), "post_url": ..., "published_at": ...}
+      "post":      {...}  # {"draft": DraftPost.to_dict(), "post_url": ...,
+                          #  "bluesky_url": ..., "published_at": ...}
     }
     ```
     """
@@ -360,13 +361,20 @@ class DossierStore:
         story_id: str,
         draft: DraftPost,
         post_url: Optional[str] = None,
+        bluesky_url: Optional[str] = None,
         image_path: Optional[str] = None,
     ) -> str:
-        """Write (or merge) the published-post record for a story."""
+        """Write (or merge) the published-post record for a story.
+
+        ``post_url`` is the canonical link for the post — historically the X
+        URL. ``bluesky_url`` is the web URL of the Bluesky skeet (bsky.app),
+        stored separately so the dossier viewer can link to both platforms.
+        """
         data = self._read(story_id)
         data["post"] = {
             "draft": draft.to_dict(),
             "post_url": post_url,
+            "bluesky_url": bluesky_url,
             "published_at": _now_iso(),
         }
         if image_path:
@@ -374,7 +382,8 @@ class DossierStore:
         return self._write(story_id, data)
 
     def load_post_record(self, story_id: str) -> Optional[dict]:
-        """Return the raw post record dict (draft + post_url + published_at), or None."""
+        """Return the raw post record dict (draft + post_url + bluesky_url +
+        published_at), or None."""
         data = self._read(story_id)
         return data.get("post")
 

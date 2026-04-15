@@ -170,6 +170,33 @@ def _confidence_class(confidence: float) -> str:
         return "confidence-low"
 
 
+def bluesky_web_url(uri: str) -> str:
+    """Convert a Bluesky at:// URI to a bsky.app web URL.
+
+    Example:
+      ``at://did:plc:abc/app.bsky.feed.post/xyz``
+        -> ``https://bsky.app/profile/did:plc:abc/post/xyz``
+
+    If ``uri`` is already an http(s) URL, it is returned unchanged. Returns
+    an empty string for empty/unparseable input so callers can treat it as
+    "no link".
+    """
+    if not uri:
+        return ""
+    if uri.startswith("http://") or uri.startswith("https://"):
+        return uri
+    if not uri.startswith("at://"):
+        return ""
+    parts = uri[len("at://"):].split("/")
+    # Expect [did, collection, rkey] — anything else is malformed.
+    if len(parts) < 3:
+        return ""
+    did, _collection, rkey = parts[0], parts[1], parts[2]
+    if not did or not rkey:
+        return ""
+    return f"https://bsky.app/profile/{did}/post/{rkey}"
+
+
 # ---------------------------------------------------------------------------
 # Section renderers
 # ---------------------------------------------------------------------------
@@ -184,6 +211,7 @@ def _render_section_1_post(data: dict) -> str:
     sign_off = draft.get("sign_off", "")
     published_at = post.get("published_at", "")
     post_url = post.get("post_url")
+    bluesky_url = post.get("bluesky_url")
     outlets = draft.get("outlets_referenced") or []
 
     badge_cls = _badge_class_for_post_type(post_type)
@@ -206,10 +234,30 @@ def _render_section_1_post(data: dict) -> str:
     if sign_off:
         lines.append(f'<span class="post-sign-off">{_esc(sign_off)}</span>')
 
-    # Links
-    links_parts = []
+    # Links — render "View on X" and/or "View on Bluesky" depending on
+    # which platforms accepted the post. Older records only stored a single
+    # post_url; if that URL is an at:// URI it belongs to Bluesky, so we
+    # convert and route it accordingly.
+    x_link = None
+    bsky_link = bluesky_web_url(bluesky_url) if bluesky_url else ""
+
     if post_url:
-        links_parts.append(f'<a href="{_esc(post_url)}" target="_blank" rel="noopener">View on X</a>')
+        if post_url.startswith("at://"):
+            # Legacy record: post_url actually points at a Bluesky skeet.
+            if not bsky_link:
+                bsky_link = bluesky_web_url(post_url)
+        else:
+            x_link = post_url
+
+    links_parts = []
+    if x_link:
+        links_parts.append(
+            f'<a href="{_esc(x_link)}" target="_blank" rel="noopener">View on X</a>'
+        )
+    if bsky_link:
+        links_parts.append(
+            f'<a href="{_esc(bsky_link)}" target="_blank" rel="noopener">View on Bluesky</a>'
+        )
     if links_parts:
         lines.append(f'<div class="post-links">{" ".join(links_parts)}</div>')
 
