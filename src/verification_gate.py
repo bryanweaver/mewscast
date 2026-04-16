@@ -67,6 +67,17 @@ class VerificationGate:
         "also covered by",
     ]
 
+    # Leaked template placeholders that must never ship. The legacy
+    # single-article generator had a fallback that produced posts like
+    # "This reporter is looking into {headline}. Fur-ther details coming
+    # soon from my perch." which were shipping unfilled — every observed
+    # instance drew zero engagement. Guarded at the gate so no pipeline
+    # (legacy, journalism, or future) can ever ship them again.
+    PLACEHOLDER_TEMPLATES = [
+        "fur-ther details coming soon",
+        "this reporter is looking into",
+    ]
+
     # Post types where editorial word checking is enforced.
     # ANALYSIS is excluded because labeled commentary is allowed there;
     # the workflow doc explicitly says ANALYSIS is the home for judgment.
@@ -121,6 +132,7 @@ class VerificationGate:
             self._check_no_editorial_words,
             self._check_hedge_attribution,
             self._check_primary_source_for_accountability,
+            self._check_no_placeholder_template,
         ):
             ok, reason = check(draft, dossier)
             if not ok and reason:
@@ -355,6 +367,25 @@ class VerificationGate:
                     "primary source in the dossier"
                 )
         # Otherwise: this check is purely advisory and always passes.
+        return True, None
+
+    def _check_no_placeholder_template(
+        self, draft: DraftPost, dossier: StoryDossier
+    ) -> tuple[bool, Optional[str]]:
+        """Block leaked template placeholders from any pipeline.
+
+        The legacy content-generator had a fallback template that produced
+        zero-engagement posts when generation failed silently. Post-mortem
+        showed posts like 'This reporter is looking into {headline}. Fur-ther
+        details coming soon from my perch.' reaching both Bluesky and X.
+        Runs for all post types — this is a correctness floor, not a style rule.
+        """
+        text_lower = (draft.text or "").lower()
+        hits = [p for p in self.PLACEHOLDER_TEMPLATES if p in text_lower]
+        if hits:
+            return False, (
+                f"placeholder_template: draft contains leaked template phrase(s) {hits}"
+            )
         return True, None
 
     def _check_char_limit(
@@ -611,6 +642,23 @@ def _smoke_test() -> None:
     res = gate.verify(draft_primary_ok, dossier)  # dossier has no primary sources
     assert not res.passed
     assert any("primary_source_for_accountability" in f for f in res.failures), res.failures
+
+    # ---- placeholder_template -----------------------------------------
+    draft_placeholder_unfilled = DraftPost(
+        text=(
+            "This reporter is looking into the Senate appropriations vote. "
+            "Fur-ther details coming soon from my perch.\n\n"
+            "And that's the mews."
+        ),
+        post_type=PostType.REPORT,
+        sign_off=SIGN_OFFS[PostType.REPORT],
+        story_id="20260408-vg-test",
+        outlets_referenced=["Reuters", "AP News"],
+        primary_source_urls=[],
+    )
+    res = gate.verify(draft_placeholder_unfilled, dossier)
+    assert not res.passed
+    assert any("placeholder_template" in f for f in res.failures), res.failures
 
     # ---- char_limit ----------------------------------------------------
     short_gate = VerificationGate(max_length=50)
