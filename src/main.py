@@ -1593,7 +1593,35 @@ def main():
     print(f"\n🚀 Starting Mewscast in '{mode}' mode...\n")
 
     if mode == "scheduled" or mode == "post":
-        success = post_scheduled_tweet()
+        # Pipeline dispatch: honor pipelines.legacy.enabled /
+        # pipelines.journalism.enabled in config.yaml. If legacy is paused
+        # (the current default), route scheduled posts through the
+        # journalism pipeline so every post ships with a dossier. If both
+        # are enabled, legacy wins to preserve historical behavior. If
+        # both are disabled, error out so it's obvious nothing ran.
+        try:
+            _cfg = _load_config()
+        except Exception as _e:
+            print(f"⚠️  Could not load config.yaml ({_e}); defaulting to legacy pipeline")
+            _cfg = {}
+        _pipelines_cfg = (_cfg.get("pipelines") or {})
+        _legacy_enabled = bool((_pipelines_cfg.get("legacy") or {}).get("enabled", True))
+        _journalism_enabled = bool((_pipelines_cfg.get("journalism") or {}).get("enabled", False))
+
+        if _legacy_enabled:
+            success = post_scheduled_tweet()
+        elif _journalism_enabled:
+            print(
+                "📰 Legacy pipeline paused via config; routing scheduled post "
+                "through the Walter Croncat journalism pipeline"
+            )
+            success = post_journalism_cycle()
+        else:
+            print(
+                "❌ Both pipelines.legacy.enabled and pipelines.journalism.enabled "
+                "are false in config.yaml — nothing to run. Flip one to true."
+            )
+            success = False
     elif mode == "reply":
         success = reply_to_mentions()
     elif mode == "both":
