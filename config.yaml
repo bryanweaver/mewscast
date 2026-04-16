@@ -5,6 +5,17 @@ bot:
   name: "mewscast"
   version: "0.2.0"
 
+# Pipeline toggle. Both pipelines remain importable regardless of these flags
+# — the code is never deleted, only paused. `scheduled` CLI mode dispatches
+# based on these: if legacy is enabled it runs the legacy single-article
+# path; otherwise it runs the journalism cycle. This lets a flag flip
+# revert the behavior without a code change.
+pipelines:
+  legacy:
+    enabled: false   # paused — Walter Croncat journalism pipeline is now primary
+  journalism:
+    enabled: true    # default output path; every scheduled post ships with a dossier
+
 content:
   # Persona
   persona: "professional news reporter cat"
@@ -256,6 +267,28 @@ content:
   ai_provider: "anthropic"  # or "openai"
   model: "claude-sonnet-4-6"  # Claude Sonnet 4.6 (latest)
 
+# Image generation settings. Consumed by src/image_generator.py.
+# Per-post-type style anchors live in src/image_generator.py directly —
+# they're code, not config, because they're tied to the POST_TYPE enum.
+image:
+  # Model. "grok-imagine-image" is the default. A Flux or DALL-E swap
+  # would be a follow-up change (vendor decision): wire the alternate
+  # client into ImageGenerator.__init__ and flip the value here.
+  model: grok-imagine-image
+  # Aspect ratio. 3:2 reads well on both Bluesky and X; 16:9 is X-card
+  # optimal but crops poorly on Bluesky; 4:5 is Bluesky-inline optimal
+  # but wastes space on X. 3:2 is the best single-output compromise.
+  aspect_ratio: "3:2"
+  # Grok resolution. "2k" is the default.
+  resolution: "2k"
+  # Optional Claude Haiku vision QC loop. When enabled, each generated
+  # image is checked for anatomy correctness and the gen retries on a
+  # "No". Costs ~$0.001 per check on Haiku. Off by default; flip to
+  # true once you've eyeballed enough generations to trust the QC.
+  qc:
+    enabled: true
+    max_retries: 2
+
 engagement:
   # Reply automation (optional)
   # Free tier: 1 request/15min = 96/day (plenty of room!)
@@ -310,13 +343,19 @@ journalism:
     enabled: true
     reject_editorial_words_in_report: true
     require_outlet_in_body: true
+  # Target post-type distribution. Engagement data shows META posts
+  # (coverage analysis comparing 7 outlets + primary source) land in the
+  # top engagement tier; they were previously undersupplied at 15%.
+  # PRIMARY also bumped modestly — spotlighting the primary document is
+  # the brand's differentiator. BULLETIN gets a small bump to build the
+  # breaking-news habit.
   post_mix:
-    REPORT: 0.70
-    META: 0.15
+    REPORT: 0.55
+    META: 0.25
     ANALYSIS: 0.10
-    BULLETIN: 0.03
+    BULLETIN: 0.05
+    PRIMARY: 0.04
     CORRECTION: 0.01
-    PRIMARY: 0.01
   dry_run:
     drafts_dir: drafts
 
