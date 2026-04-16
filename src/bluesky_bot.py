@@ -148,6 +148,72 @@ class BlueskyBot:
             print(f"✗ Error posting skeet with image: {e}")
             return None
 
+    def reply_to_skeet_with_image(self, parent_uri: str, text: str, image_path: str) -> Optional[dict]:
+        """
+        Reply to a skeet with an attached image (no link card).
+
+        Used for dossier-link replies where the link-card thumbnail doesn't
+        render reliably in reply context — attaching the image directly
+        guarantees a visual for the reply. The URL goes in the text and is
+        auto-faceted as a clickable link by the atproto SDK.
+
+        Args:
+            parent_uri: URI of the post to reply to
+            text: The reply text (max 300 characters). Include the dossier URL
+                inline — the SDK will make it clickable via auto-faceting.
+            image_path: Path to the local image file to attach
+
+        Returns:
+            Post data if successful, None if failed
+        """
+        try:
+            if len(text) > 300:
+                print(f"Warning: Reply too long ({len(text)} chars). Truncating...")
+                text = _truncate_at_sentence(text, 300)
+
+            # Parse AT URI and fetch the parent CID so we can build a reply ref
+            parts = parent_uri.replace('at://', '').split('/')
+            if len(parts) != 3:
+                raise ValueError(f"Invalid AT URI format: {parent_uri}")
+
+            post_thread = self.client.app.bsky.feed.get_post_thread({'uri': parent_uri})
+            parent_cid = post_thread.thread.post.cid
+            parent_ref = models.ComAtprotoRepoStrongRef.Main(
+                uri=parent_uri,
+                cid=parent_cid
+            )
+            reply_ref = models.AppBskyFeedPost.ReplyRef(
+                parent=parent_ref,
+                root=parent_ref
+            )
+
+            print(f"📤 Optimizing image for Bluesky reply: {image_path}")
+            image_data, width, height = self._optimize_image_for_bluesky(image_path)
+            aspect_ratio = models.AppBskyEmbedDefs.AspectRatio(
+                width=width, height=height
+            )
+
+            response = self.client.send_image(
+                text=text,
+                image=image_data,
+                image_alt="Walter Croncat at his desk — dossier link",
+                image_aspect_ratio=aspect_ratio,
+                reply_to=reply_ref,
+            )
+
+            print(f"✓ Reply with image posted! URI: {response.uri}")
+            return {
+                'uri': response.uri,
+                'cid': response.cid
+            }
+
+        except FileNotFoundError:
+            print(f"✗ Error: Image file not found: {image_path}")
+            return None
+        except Exception as e:
+            print(f"✗ Error posting reply with image: {e}")
+            return None
+
     def reply_to_skeet_with_link(self, parent_uri: str, url: str, text: str = "") -> Optional[dict]:
         """
         Reply to a skeet with a URL that shows a link preview card
