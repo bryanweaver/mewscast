@@ -225,14 +225,22 @@ class BlueskyBot:
             print(f"✗ Error posting reply with image: {type(e).__name__}: {e!r}")
             return None
 
-    def reply_to_skeet_with_link(self, parent_uri: str, url: str, text: str = "") -> Optional[dict]:
+    def reply_to_skeet_with_link(
+        self, parent_uri: str, url: str, text: str = "",
+        thumb_image_path: str = None,
+    ) -> Optional[dict]:
         """
-        Reply to a skeet with a URL that shows a link preview card
+        Reply to a skeet with a URL that shows a link preview card.
 
         Args:
             parent_uri: URI of the post to reply to
             url: URL for the link card embed
             text: Optional display text (falls back to url if empty)
+            thumb_image_path: Optional local image path to upload as the
+                card's thumbnail. When provided the card renders with the
+                image on the left and title/description on the right — the
+                classic "link card with thumbnail" layout. If omitted the
+                card has no thumbnail (prior default behavior).
 
         Returns:
             Post data if successful, None if failed
@@ -291,11 +299,24 @@ class BlueskyBot:
                 description = soup.find('meta', property='og:description')
                 image = soup.find('meta', property='og:image')
 
+                # Upload thumbnail blob if a local image was provided.
+                # This gives the link card the "image left, text right"
+                # layout that renders reliably even on reply cards.
+                thumb_blob = None
+                if thumb_image_path:
+                    try:
+                        thumb_data, _, _ = self._optimize_image_for_bluesky(thumb_image_path)
+                        upload_resp = self.client.upload_blob(thumb_data)
+                        thumb_blob = upload_resp.blob
+                        print(f"   ✓ Thumbnail uploaded ({len(thumb_data):,} bytes)")
+                    except Exception as thumb_err:
+                        print(f"   ⚠️  Thumbnail upload failed ({thumb_err}), continuing without")
+
                 external = models.AppBskyEmbedExternal.External(
                     uri=url,
                     title=(title['content'] if title else url)[:300],
                     description=(description['content'] if description else '')[:300],
-                    thumb=None  # Could upload image here if needed
+                    thumb=thumb_blob,
                 )
 
                 embed = models.AppBskyEmbedExternal.Main(external=external)

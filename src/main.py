@@ -1423,26 +1423,20 @@ def post_journalism_cycle(
                 bluesky_success = True
                 print(f"[journalism] Bluesky post ok: {bluesky_uri}")
 
-                # Link-card thumbnails don't render reliably on Bluesky
-                # replies, so attach the Walter-at-desk illustration directly.
-                # URL goes in the text — atproto auto-facets it as clickable.
+                # Link card with uploaded thumbnail — renders as
+                # [image left | title + description right], the whole
+                # card clickable to the dossier URL.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
                 bs_reply_text = (
                     f"Full dossier \u2014 outlets compared, framing analyzed, "
-                    f"primary sources named:\n"
-                    f"{dossier_url}"
+                    f"primary sources named:"
                 )
                 time.sleep(2)
                 try:
-                    reply_image = _dossier_reply_image_path()
-                    if reply_image:
-                        reply_result = bluesky_bot.reply_to_skeet_with_image(
-                            bluesky_uri, bs_reply_text, reply_image
-                        )
-                    else:
-                        reply_result = bluesky_bot.reply_to_skeet_with_link(
-                            bluesky_uri, dossier_url, text=bs_reply_text
-                        )
+                    reply_result = bluesky_bot.reply_to_skeet_with_link(
+                        bluesky_uri, dossier_url, text=bs_reply_text,
+                        thumb_image_path=_dossier_reply_image_path(),
+                    )
                     if reply_result:
                         bluesky_reply_uri = reply_result.get("uri")
                         print(f"[journalism] Bluesky dossier reply ok: {bluesky_reply_uri}")
@@ -1605,24 +1599,18 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             bluesky_success = True
             print(f"[republish] Bluesky post ok: {bluesky_uri}")
 
-            # Attach Walter-at-desk image directly; URL inline in text.
+            # Link card with Walter thumbnail for dossier reply.
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
             bs_reply_text = (
                 f"Full dossier \u2014 outlets compared, framing analyzed, "
-                f"primary sources named:\n"
-                f"{dossier_url}"
+                f"primary sources named:"
             )
             time.sleep(2)
             try:
-                reply_image = _dossier_reply_image_path()
-                if reply_image:
-                    reply_result = bluesky_bot.reply_to_skeet_with_image(
-                        bluesky_uri, bs_reply_text, reply_image
-                    )
-                else:
-                    reply_result = bluesky_bot.reply_to_skeet_with_link(
-                        bluesky_uri, dossier_url, text=bs_reply_text
-                    )
+                reply_result = bluesky_bot.reply_to_skeet_with_link(
+                    bluesky_uri, dossier_url, text=bs_reply_text,
+                    thumb_image_path=_dossier_reply_image_path(),
+                )
                 if reply_result:
                     print(f"[republish] Bluesky dossier reply ok")
             except Exception as re:
