@@ -193,12 +193,22 @@ class BlueskyBot:
                 width=width, height=height
             )
 
-            response = self.client.send_image(
+            # Build the image embed manually: upload_blob + embed + send_post.
+            # This is the same pattern reply_to_skeet_with_link uses and has
+            # been proven in production. send_image(reply_to=...) failed
+            # silently on the first live run — we sidestep the magic helper.
+            upload_response = self.client.upload_blob(image_data)
+            image_record = models.AppBskyEmbedImages.Image(
+                alt="Walter Croncat at his desk — dossier link",
+                image=upload_response.blob,
+                aspect_ratio=aspect_ratio,
+            )
+            embed = models.AppBskyEmbedImages.Main(images=[image_record])
+
+            response = self.client.send_post(
                 text=text,
-                image=image_data,
-                image_alt="Walter Croncat at his desk — dossier link",
-                image_aspect_ratio=aspect_ratio,
                 reply_to=reply_ref,
+                embed=embed,
             )
 
             print(f"✓ Reply with image posted! URI: {response.uri}")
@@ -211,7 +221,8 @@ class BlueskyBot:
             print(f"✗ Error: Image file not found: {image_path}")
             return None
         except Exception as e:
-            print(f"✗ Error posting reply with image: {e}")
+            # Include type + repr so empty-string exceptions don't vanish silently
+            print(f"✗ Error posting reply with image: {type(e).__name__}: {e!r}")
             return None
 
     def reply_to_skeet_with_link(self, parent_uri: str, url: str, text: str = "") -> Optional[dict]:

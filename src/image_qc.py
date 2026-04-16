@@ -16,6 +16,7 @@ Kept in its own module so:
 from __future__ import annotations
 
 import base64
+import io
 import os
 from pathlib import Path
 from typing import Tuple
@@ -35,23 +36,68 @@ _QC_PROMPT = (
 _HAIKU_MODEL = "claude-haiku-4-5-20251001"
 
 
+# Anthropic vision API caps images at 5 MB base64-encoded. Base64 expands
+# roughly 4/3, so raw bytes must stay under ~3.75 MB to be safe. Grok
+# 2k PNGs regularly exceed that (observed: 6.6 MB raw / 8.8 MB base64).
+# Target a bit lower than the limit to leave headroom.
+_ANTHROPIC_MAX_RAW_BYTES = 3_500_000
+_QC_DOWNSCALE_WIDTH = 1280  # px wide — preserves enough detail for anatomy QC
+
+
 def _encode_image(path: str) -> Tuple[str, str]:
     """Read an image file and return (base64_data, media_type).
 
-    media_type is inferred from the file extension; defaults to png.
+    If the raw file exceeds ~3.5 MB (Anthropic vision API has a 5 MB
+    base64-encoded limit), downscale via PIL to a 1280px-wide JPEG before
+    encoding. The Grok 2k PNGs routinely blow past the limit; the downscale
+    is lossy-but-lossless-enough for anatomy QC.
+
+    media_type is inferred from the file extension; defaults to png. Falls
+    back to image/jpeg when the downscale path runs.
     """
-    p = Path(path)
-    ext = p.suffix.lower().lstrip(".")
-    media_type = {
-        "png": "image/png",
-        "jpg": "image/jpeg",
-        "jpeg": "image/jpeg",
-        "webp": "image/webp",
-        "gif": "image/gif",
-    }.get(ext, "image/png")
     with open(path, "rb") as f:
-        data = base64.standard_b64encode(f.read()).decode("utf-8")
-    return data, media_type
+        raw = f.read()
+
+    if len(raw) <= _ANTHROPIC_MAX_RAW_BYTES:
+        p = Path(path)
+        ext = p.suffix.lower().lstrip(".")
+        media_type = {
+            "png": "image/png",
+            "jpg": "image/jpeg",
+            "jpeg": "image/jpeg",
+            "webp": "image/webp",
+            "gif": "image/gif",
+        }.get(ext, "image/png")
+        return base64.standard_b64encode(raw).decode("utf-8"), media_type
+
+    # Too big — downscale via PIL. JPEG at quality 85 hits a reasonable
+    # quality/size tradeoff for a yes/no anatomy check.
+    try:
+        from PIL import Image
+
+        img = Image.open(io.BytesIO(raw))
+        if img.mode in ("RGBA", "P"):
+            img = img.convert("RGB")
+        if img.width > _QC_DOWNSCALE_WIDTH:
+            ratio = _QC_DOWNSCALE_WIDTH / img.width
+            new_size = (_QC_DOWNSCALE_WIDTH, int(img.height * ratio))
+            img = img.resize(new_size, Image.LANCZOS)
+        buf = io.BytesIO()
+        img.save(buf, format="JPEG", quality=85, optimize=True)
+        data = buf.getvalue()
+        # Ratchet down quality if still over the limit
+        q = 85
+        while len(data) > _ANTHROPIC_MAX_RAW_BYTES and q > 40:
+            q -= 10
+            buf = io.BytesIO()
+            img.save(buf, format="JPEG", quality=q, optimize=True)
+            data = buf.getvalue()
+        return base64.standard_b64encode(data).decode("utf-8"), "image/jpeg"
+    except Exception:
+        # If PIL fails for some reason, fall back to the raw bytes and
+        # let Anthropic return the 400. The outer check_image() catches
+        # it and returns qc-skipped-due-to-error so posting still proceeds.
+        return base64.standard_b64encode(raw).decode("utf-8"), "image/png"
 
 
 def check_image(image_path: str) -> Tuple[bool, str]:
