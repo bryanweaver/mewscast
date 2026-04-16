@@ -1388,8 +1388,8 @@ def post_journalism_cycle(
                 # reply visually engaging and click-worthy.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
                 reply_text = (
-                    f"Full dossier \u2014 every source Walter read, "
-                    f"how outlets framed it, what's missing:\n"
+                    f"Full dossier \u2014 outlets compared, framing analyzed, "
+                    f"primary sources named:\n"
                     f"{dossier_url}"
                 )
                 time.sleep(2)
@@ -1428,8 +1428,8 @@ def post_journalism_cycle(
                 # URL goes in the text — atproto auto-facets it as clickable.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
                 bs_reply_text = (
-                    f"Full dossier \u2014 every source Walter read, "
-                    f"how outlets framed it, what's missing:\n"
+                    f"Full dossier \u2014 outlets compared, framing analyzed, "
+                    f"primary sources named:\n"
                     f"{dossier_url}"
                 )
                 time.sleep(2)
@@ -1571,8 +1571,8 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             # visual engagement (link-card OG images don't render on replies).
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
             reply_text = (
-                f"Full dossier \u2014 every source Walter read, "
-                f"how outlets framed it, what's missing:\n"
+                f"Full dossier \u2014 outlets compared, framing analyzed, "
+                f"primary sources named:\n"
                 f"{dossier_url}"
             )
             time.sleep(2)
@@ -1608,8 +1608,8 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             # Attach Walter-at-desk image directly; URL inline in text.
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
             bs_reply_text = (
-                f"Full dossier \u2014 every source Walter read, "
-                f"how outlets framed it, what's missing:\n"
+                f"Full dossier \u2014 outlets compared, framing analyzed, "
+                f"primary sources named:\n"
                 f"{dossier_url}"
             )
             time.sleep(2)
