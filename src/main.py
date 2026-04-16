@@ -1382,25 +1382,18 @@ def post_journalism_cycle(
                 x_success = True
                 print(f"[journalism] X post ok: {tweet_id}")
 
-                # Dossier link reply — point readers to the full transparency
-                # page. Link-card OG images don't render on X reply cards, so
-                # attach the Walter-at-desk illustration directly to make the
-                # reply visually engaging and click-worthy.
+                # Dossier link reply — text-only with URL. X may auto-unfurl
+                # the OG card sometimes; either way, the copy should drive
+                # the click on its own merit.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
                 reply_text = (
-                    f"Full dossier \u2014 outlets compared, framing analyzed, "
-                    f"primary sources named:\n"
+                    f"What each outlet told you \u2014 and what they didn't.\n"
+                    f"The full dossier, every source, one page:\n"
                     f"{dossier_url}"
                 )
                 time.sleep(2)
                 try:
-                    reply_image = _dossier_reply_image_path()
-                    if reply_image:
-                        reply_result = twitter_bot.reply_to_tweet_with_image(
-                            tweet_id, reply_text, reply_image
-                        )
-                    else:
-                        reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
+                    reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
                     if reply_result:
                         reply_tweet_id = reply_result.get("id")
                         print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
@@ -1428,8 +1421,8 @@ def post_journalism_cycle(
                 # card clickable to the dossier URL.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
                 bs_reply_text = (
-                    f"Full dossier \u2014 outlets compared, framing analyzed, "
-                    f"primary sources named:"
+                    f"What each outlet told you \u2014 and what they didn't. "
+                    f"The full dossier, every source, one page:"
                 )
                 time.sleep(2)
                 try:
@@ -1561,23 +1554,16 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             x_success = True
             print(f"[republish] X post ok: {tweet_id}")
 
-            # Dossier link reply with Walter-at-desk image attached for
-            # visual engagement (link-card OG images don't render on replies).
+            # Dossier link reply — text-only, let X auto-unfurl if it will.
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
             reply_text = (
-                f"Full dossier \u2014 outlets compared, framing analyzed, "
-                f"primary sources named:\n"
+                f"What each outlet told you \u2014 and what they didn't.\n"
+                f"The full dossier, every source, one page:\n"
                 f"{dossier_url}"
             )
             time.sleep(2)
             try:
-                reply_image = _dossier_reply_image_path()
-                if reply_image:
-                    reply_result = twitter_bot.reply_to_tweet_with_image(
-                        tweet_id, reply_text, reply_image
-                    )
-                else:
-                    reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
+                reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
                 if reply_result:
                     reply_tweet_id = reply_result.get("id")
                     print(f"[republish] X dossier reply ok: {reply_tweet_id}")
@@ -1602,8 +1588,8 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             # Link card with Walter thumbnail for dossier reply.
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
             bs_reply_text = (
-                f"Full dossier \u2014 outlets compared, framing analyzed, "
-                f"primary sources named:"
+                f"What each outlet told you \u2014 and what they didn't. "
+                f"The full dossier, every source, one page:"
             )
             time.sleep(2)
             try:
