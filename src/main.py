@@ -202,21 +202,23 @@ def post_scheduled_tweet():
 
         # Try to generate image (with graceful fallback)
         image_path = None
-        image_prompt = None
+        image_prompt = None  # full anchored prompt sent to Grok — for audit
         try:
             print(f"🎨 Attempting to generate image with Grok...")
             img_generator = ImageGenerator()
 
             # Generate image prompt using Claude (with full article for story-specific imagery)
             # Use bluesky text since it's more straightforward
-            image_prompt = generator.generate_image_prompt(
+            dynamic_prompt = generator.generate_image_prompt(
                 selected_story['title'] if selected_story else "news",
                 bluesky_text,
                 article_content=selected_story.get('article_content') if selected_story else None
             )
 
-            # Generate image using Grok
-            image_path = img_generator.generate_image(image_prompt)
+            # Generate image using Grok. Capture the full anchored prompt
+            # (subject + eye-catch + style + dynamic) so audit history has the
+            # exact bytes that were sent to the model, not just the Claude part.
+            image_path, image_prompt = img_generator.generate_image(dynamic_prompt)
 
         except Exception as e:
             print(f"⚠️  Image generation failed: {e}")
@@ -424,8 +426,10 @@ def _generate_journalism_image(
 ) -> tuple:
     """Generate a post-type-aware image for a journalism post.
 
-    Returns (image_file_path, image_prompt) on success, (None, None) on failure.
-    Best-effort: never raises.
+    Returns (image_file_path, anchored_prompt) on success, (None, None) on
+    failure. The `anchored_prompt` is the FULL prompt sent to the image
+    model — subject + eye-catch + style-anchor + dynamic prompt — captured
+    for audit. Best-effort: never raises.
     """
     try:
         print(f"[journalism] generating {draft.post_type.value}-style image...")
@@ -454,23 +458,42 @@ def _generate_journalism_image(
             messages=[{"role": "user", "content": img_request}],
         )
         image_prompt = _img_resp.content[0].text.strip().strip('"').strip("'")
-        if len(image_prompt) > 450:
-            image_prompt = image_prompt[:450]
+        # Budget raised to 800 as part of A5 overhaul — matches the legacy
+        # content_generator.generate_image_prompt path.
+        if len(image_prompt) > 800:
+            image_prompt = image_prompt[:800]
         print(f"[journalism] image prompt ({draft.post_type.value}): {image_prompt[:100]}...")
 
         img_gen = ImageGenerator()
-        image_path = img_gen.generate_image(image_prompt, save_path=save_path)
-        return image_path, image_prompt
+        # Pass post_type so the generator can pick the matching style anchor.
+        # Capture the FULL anchored prompt (subject + eye-catch + style +
+        # dynamic) and propagate it up — audit history saves what was actually
+        # sent to the model, not the pre-anchor Claude suggestion.
+        image_path, anchored_prompt = img_gen.generate_image(
+            image_prompt,
+            save_path=save_path,
+            post_type=draft.post_type.value,
+        )
+        return image_path, anchored_prompt
     except Exception as e:
         print(f"[journalism] image generation failed (continuing): {e}")
         return None, None
 
 
 def _persist_dossier_image(
-    draft: DraftPost, dossier_store, image_source_path: str
+    draft: DraftPost,
+    dossier_store,
+    image_source_path: str,
+    image_prompt: str | None = None,
 ) -> str | None:
     """Copy/persist an image to docs/dossiers/images/ and write the relative
-    path into the dossier JSON. Returns the relative path or None."""
+    path — plus the full anchored prompt, if provided — into the dossier
+    JSON. Returns the relative image path or None.
+
+    The `image_prompt` argument should be the anchored prompt actually sent
+    to the image model (not just the Claude-generated dynamic piece). It is
+    written to `raw["image_prompt"]` for audit alongside `raw["image_path"]`.
+    """
     try:
         html_dir = os.path.join(_project_root(), "docs", "dossiers")
         images_dir = os.path.join(html_dir, "images")
@@ -485,10 +508,13 @@ def _persist_dossier_image(
 
         rel_path = f"images/{safe_id}.png"
 
-        # Write into dossier JSON so the renderer can find it
+        # Write into dossier JSON so the renderer can find the image AND so
+        # the audit trail captures the exact prompt that was sent to Grok.
         raw = dossier_store.read_raw(draft.story_id)
         if raw:
             raw["image_path"] = rel_path
+            if image_prompt is not None:
+                raw["image_prompt"] = image_prompt
             dossier_store._write(draft.story_id, raw)
 
         print(f"[journalism] dossier image persisted: {dest}")
@@ -1304,9 +1330,9 @@ def post_journalism_cycle(
         os.makedirs(images_dir, exist_ok=True)
         dest_path = os.path.join(images_dir, f"{safe_id}.png")
 
-        image_path, _prompt = _generate_journalism_image(draft, dossier, save_path=dest_path)
+        image_path, anchored_prompt = _generate_journalism_image(draft, dossier, save_path=dest_path)
         if image_path:
-            _persist_dossier_image(draft, dossier_store, image_path)
+            _persist_dossier_image(draft, dossier_store, image_path, image_prompt=anchored_prompt)
 
         # Render dossier HTML + rebuild index
         _render_dossier_html(dossier_store, draft, dossier)
@@ -1315,9 +1341,11 @@ def post_journalism_cycle(
     print("[journalism] Stage 7 — publishing")
 
     # Best-effort POST-TYPE-AWARE image generation (see prompts/journalism_image.md).
+    # `image_prompt` here is the FULL anchored prompt sent to Grok — flows
+    # into both the dossier JSON and posts_history.json for full audit.
     image_path, image_prompt = _generate_journalism_image(draft, dossier)
     if image_path:
-        _persist_dossier_image(draft, dossier_store, image_path)
+        _persist_dossier_image(draft, dossier_store, image_path, image_prompt=image_prompt)
 
     # Primary publish: post to X and Bluesky. We reuse the same text for
     # both platforms in this first rollout; a later phase can specialize.
@@ -1478,12 +1506,13 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             messages=[{"role": "user", "content": img_request}],
         )
         image_prompt = _img_resp.content[0].text.strip().strip('"').strip("'")
-        if len(image_prompt) > 450:
-            image_prompt = image_prompt[:450]
+        if len(image_prompt) > 800:
+            image_prompt = image_prompt[:800]
         print(f"[republish] image prompt: {image_prompt[:100]}...")
 
         img_gen = ImageGenerator()
-        image_path = img_gen.generate_image(image_prompt)
+        # Capture the full anchored prompt for audit (posts_history.json).
+        image_path, image_prompt = img_gen.generate_image(image_prompt, post_type=post_type.value)
     except Exception as e:
         print(f"[republish] image generation failed (continuing): {e}")
 
