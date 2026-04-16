@@ -405,16 +405,18 @@ _JOURNALISM_POST_TYPE_ALIASES = {
 
 
 def _dossier_reply_image_path() -> str | None:
-    """Local path to the Walter-at-the-desk image that gets attached to
-    every dossier-link reply. Link-card OG images don't render reliably
-    on replies (either platform), so the image goes on as a direct
-    attachment to make the reply visually engaging and click-worthy.
+    """Local path to the Walter-at-the-desk image for dossier-link replies.
 
-    Returns None if the asset isn't found so callers can fall back to a
+    Uses the 400x400 reply-specific version (~50 KB) so it renders as a
+    small visual accent rather than a full-width dominating photo. The
+    full 1024x1024 OG image stays at docs/images/walter-croncat-dossier-og.png
+    for the dossier site's meta tags.
+
+    Returns None if the asset isn't found so callers fall back to a
     text-only reply.
     """
     p = os.path.join(
-        _project_root(), "docs", "images", "walter-croncat-dossier-og.png"
+        _project_root(), "docs", "images", "walter-croncat-dossier-reply.jpg"
     )
     return p if os.path.exists(p) else None
 
