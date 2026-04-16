@@ -553,6 +553,79 @@ class TestNoEditorialWords:
 
 
 # ---------------------------------------------------------------------------
+# _check_no_placeholder_template
+# ---------------------------------------------------------------------------
+
+
+class TestNoPlaceholderTemplate:
+    """Leaked placeholder-template posts (from the legacy generator's
+    failure fallback) must be rejected before they reach the platforms.
+    Every observed instance of these phrases in posts_history.json drew
+    zero engagement."""
+
+    def test_fur_ther_details_placeholder_rejected(self, gate, two_outlet_dossier):
+        draft = _make_draft(
+            (
+                "This reporter is looking into the Senate vote. "
+                "Fur-ther details coming soon from my perch.\n\n"
+                "And that's the mews."
+            ),
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("placeholder_template" in f for f in result.failures)
+
+    def test_reporter_looking_into_placeholder_rejected(self, gate, two_outlet_dossier):
+        draft = _make_draft(
+            (
+                "Reuters. This reporter is looking into the appropriations "
+                "bill.\n\nAnd that's the mews."
+            ),
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("placeholder_template" in f for f in result.failures)
+
+    def test_placeholder_rejection_is_case_insensitive(self, gate, two_outlet_dossier):
+        draft = _make_draft(
+            (
+                "Reuters. THIS REPORTER IS LOOKING INTO the vote.\n\n"
+                "And that's the mews."
+            ),
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("placeholder_template" in f for f in result.failures)
+
+    def test_placeholder_rejected_on_all_post_types(self, gate, two_outlet_dossier):
+        """The guard is a correctness floor — it applies to every post
+        type, not just REPORT. A leaked placeholder is a bug regardless
+        of the pipeline that produced it."""
+        # ANALYSIS — normally allowed looser rules, but still blocked
+        draft = _make_draft(
+            (
+                "ANALYSIS\n\nReuters. Fur-ther details coming soon from my perch.\n\n"
+                "This cat's view — speculative, personal, subjective."
+            ),
+            PostType.ANALYSIS,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed
+        assert any("placeholder_template" in f for f in result.failures)
+
+    def test_clean_draft_passes_placeholder_check(self, gate, two_outlet_dossier):
+        draft = _make_draft(
+            "Reuters reports the Senate voted 68-32.\n\nAnd that's the mews.",
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert result.passed, f"clean draft should pass: {result.failures}"
+
+
+# ---------------------------------------------------------------------------
 # _check_hedge_attribution
 # ---------------------------------------------------------------------------
 

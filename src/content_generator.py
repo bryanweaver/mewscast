@@ -801,9 +801,12 @@ FULL ARTICLE CONTENT (extract visual details from this):
             # Remove quotes if Claude added them
             image_prompt = _strip_quotes(image_prompt)
 
-            # Limit to 450 chars for Grok
-            if len(image_prompt) > 450:
-                image_prompt = image_prompt[:450]
+            # Budget raised 450 → 800 as part of A5 image overhaul. Richer
+            # prompts (lens, lighting, composition, film stock) translate
+            # into materially better generations on Grok and especially on
+            # Flux/Imagen if the model is swapped via the config flag.
+            if len(image_prompt) > 800:
+                image_prompt = image_prompt[:800]
 
             print(f"✓ Generated image prompt: {image_prompt}")
             return image_prompt
