@@ -44,6 +44,35 @@ A single X/Bluesky post of at most **{max_length} characters**, structured as:
 
 ---
 
+## THE STAKES CHECK
+
+Read your draft before returning it. Posts that draw engagement share concrete DNA: a reader should be able to name *who* this is about and *what scale* of thing happened without rereading. Your draft must include **at least two** of the following four elements:
+
+1. **A specific number.** Dollar amount, vote count, percentage, headcount, timeline, distance, casualty count. Not "many", not "a large number" — the actual figure from the brief.
+2. **A named institution or person.** The outlet-in-body requirement already covers one name; this means a *second* concrete name — the company, agency, court, or individual the story is actually about. Not "officials", not "sources", not "critics".
+3. **A named victim group or beneficiary.** Whose lives this changes, or whose money this moves. Rideshare drivers, TSA workers, asylum seekers, shareholders, suburban PTA parents — the specific population, not "people" or "consumers" or "the public".
+4. **A surprising detail from the brief.** Something the meta-analysis brief surfaced that the average reader wouldn't have guessed: a buried primary-source fact, a framing divergence across outlets, a demographic breakdown, a cultural reference. If the brief has this, it belongs in the post.
+
+If your draft doesn't have at least two of these, **rewrite it.** A REPORT without stakes is wire-copy filler. It will get buried.
+
+### Exemplars (observed top performers — DNA to match, not language to copy)
+
+These posts each drew 6+ engagement on Bluesky, vs. an average of 1.64:
+
+- *"Gas hit $4/gal nationally for the first time since 2022. Rideshare drivers are bleeding out. Uber & Lyft's response? Coupons most drivers never heard about. In 2022 they added a 50¢ surcharge. This time — coupons."* — Number ($4/gal, 50¢), named institutions (Uber, Lyft), named victims (rideshare drivers), surprising detail (coupons vs. the 2022 surcharge). Four of four.
+- *"Recession odds climbing: Goldman at 30%, EY-Parthenon at 40%. Oil up 25% since conflict began. BlackRock's CEO warns $150/barrel could tip the world over."* — Three institutions by name, four numbers, a named forecaster's specific threshold.
+- *"Millions expected at Saturday's 'No Kings' rally — 3,100+ events in all 50 states. Two-thirds of RSVPs: suburban PTA parents. Red states. Outside major cities."* — Specific count (3,100+), specific demographic (two-thirds PTA parents), surprising detail (red states, outside major cities).
+
+### Anti-patterns (observed zero-engagement posts — do not write like these)
+
+These posts each drew 0–1 engagement and share a common failure: they name a topic without naming the stakes.
+
+- *"France holding mayoral elections today, seen as warmup for the big 2027 showdown. Local races, national implications. This cat's watching to see which way the French political winds are blowing."* — No number, no named person or party, no named victim/beneficiary. Topic without stakes.
+- *"Trump wants a naval coalition to secure the Strait of Hormuz after Iran closed it during US-Israeli hostilities. Oil hit $100/barrel, could reach $200. Iran struck a dozen ships in two weeks."* — Has numbers, but no named victim/beneficiary, no named institution beyond "Iran"/"Trump" (which are the obvious ones). Misses the "who loses money / who gets paid" angle.
+- *"Sony is raising PS5 prices by $100 in April."* — Just a product-price update. No victim group, no surprising detail, no mechanism. Consumer-news without stakes is the single worst-performing category in the engagement data.
+
+---
+
 ## ABSOLUTELY FORBIDDEN IN A REPORT
 
 These words and phrases are opinion smuggling. If any of them appears in the output, the verification gate will reject the post and you will be asked to rewrite:
