@@ -5,6 +5,17 @@ bot:
   name: "mewscast"
   version: "0.2.0"
 
+# Pipeline toggle. Both pipelines remain importable regardless of these flags
+# — the code is never deleted, only paused. `scheduled` CLI mode dispatches
+# based on these: if legacy is enabled it runs the legacy single-article
+# path; otherwise it runs the journalism cycle. This lets a flag flip
+# revert the behavior without a code change.
+pipelines:
+  legacy:
+    enabled: false   # paused — Walter Croncat journalism pipeline is now primary
+  journalism:
+    enabled: true    # default output path; every scheduled post ships with a dossier
+
 content:
   # Persona
   persona: "professional news reporter cat"
@@ -310,13 +321,19 @@ journalism:
     enabled: true
     reject_editorial_words_in_report: true
     require_outlet_in_body: true
+  # Target post-type distribution. Engagement data shows META posts
+  # (coverage analysis comparing 7 outlets + primary source) land in the
+  # top engagement tier; they were previously undersupplied at 15%.
+  # PRIMARY also bumped modestly — spotlighting the primary document is
+  # the brand's differentiator. BULLETIN gets a small bump to build the
+  # breaking-news habit.
   post_mix:
-    REPORT: 0.70
-    META: 0.15
+    REPORT: 0.55
+    META: 0.25
     ANALYSIS: 0.10
-    BULLETIN: 0.03
+    BULLETIN: 0.05
+    PRIMARY: 0.04
     CORRECTION: 0.01
-    PRIMARY: 0.01
   dry_run:
     drafts_dir: drafts
 
