@@ -113,6 +113,7 @@ def fresh_history():
     return {
         "followed_users": [],
         "liked_tweets": [],
+        "reposted_tweets": [],
         "last_cleanup": datetime.now().isoformat(),
     }
 
@@ -156,6 +157,7 @@ class TestLoadHistory:
 
         assert history["followed_users"] == []
         assert history["liked_tweets"] == []
+        assert history["reposted_tweets"] == []
         assert "last_cleanup" in history
 
     def test_loads_existing_history(self, tmp_path):
@@ -207,12 +209,18 @@ class TestCleanupHistory:
         bot.engagement_history["liked_tweets"] = [
             {"tweet_id": "told", "author": "x", "timestamp": cutoff.isoformat()},
         ]
+        bot.engagement_history["reposted_tweets"] = [
+            {"tweet_id": "rt_old", "author": "y", "text": "old rescue", "timestamp": cutoff.isoformat()},
+            {"tweet_id": "rt_new", "author": "z", "text": "new rescue", "timestamp": recent.isoformat()},
+        ]
 
         bot._cleanup_old_history()
 
         assert len(bot.engagement_history["followed_users"]) == 1
         assert bot.engagement_history["followed_users"][0]["user_id"] == "new"
         assert len(bot.engagement_history["liked_tweets"]) == 0
+        assert len(bot.engagement_history["reposted_tweets"]) == 1
+        assert bot.engagement_history["reposted_tweets"][0]["tweet_id"] == "rt_new"
 
 
 # ---------------------------------------------------------------------------
@@ -584,46 +592,245 @@ class TestFindAndLikeCatPost:
 
 
 # ---------------------------------------------------------------------------
+# find_and_repost_cat_adoption
+# ---------------------------------------------------------------------------
+
+def _make_rescue_tweet(
+    tweet_id="rt1",
+    author_id="au1",
+    text="My cats desperately need homes — please RT and help us find foster families!",
+    like_count=20,
+    retweet_count=5,
+    created_at=None,
+):
+    """Build a tweet whose text satisfies all three rescue gates (cat + rescue + boost)."""
+    return _make_tweet(
+        tweet_id=tweet_id,
+        author_id=author_id,
+        text=text,
+        like_count=like_count,
+        retweet_count=retweet_count,
+        created_at=created_at,
+    )
+
+
+class TestFindAndRepostCatAdoption:
+    """Mirror of bluesky_engagement_bot tests for find_and_repost_cat_rescue.
+    Every filter gate (cat keyword, rescue keyword, boost keyword, recency,
+    dedup) gets its own test."""
+
+    def test_reposts_qualifying_tweet(self, bot):
+        user = _make_user(username="fosterparent")
+        tweet = _make_rescue_tweet(author_id=user.id)
+        bot.bot.client.search_recent_tweets.return_value = _make_search_response(
+            tweets=[tweet], users=[user]
+        )
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is True
+        bot.bot.client.retweet.assert_called_once_with(tweet_id=tweet.id)
+        assert any(
+            e["tweet_id"] == tweet.id
+            for e in bot.engagement_history["reposted_tweets"]
+        )
+
+    def test_skips_already_reposted_tweet(self, bot):
+        user = _make_user()
+        tweet = _make_rescue_tweet(author_id=user.id)
+        bot.engagement_history["reposted_tweets"] = [
+            {
+                "tweet_id": tweet.id,
+                "author": user.username,
+                "text": tweet.text[:100],
+                "timestamp": datetime.now().isoformat(),
+            }
+        ]
+        bot.bot.client.search_recent_tweets.return_value = _make_search_response(
+            tweets=[tweet], users=[user]
+        )
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is False
+        bot.bot.client.retweet.assert_not_called()
+
+    def test_skips_tweet_without_boost_keyword(self, bot):
+        """Must be asking for a boost / share / RT."""
+        user = _make_user()
+        tweet = _make_rescue_tweet(
+            author_id=user.id,
+            text="My cat Whiskers needs a new home — she's been in rescue for weeks.",
+        )
+        bot.bot.client.search_recent_tweets.return_value = _make_search_response(
+            tweets=[tweet], users=[user]
+        )
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is False
+        bot.bot.client.retweet.assert_not_called()
+
+    def test_skips_tweet_without_rescue_keyword(self, bot):
+        """Must be rescue-framed (needs home, foster, adopt, etc.)."""
+        user = _make_user()
+        tweet = _make_rescue_tweet(
+            author_id=user.id,
+            text="Please RT my cute cat photo — she wants to be famous!",
+        )
+        bot.bot.client.search_recent_tweets.return_value = _make_search_response(
+            tweets=[tweet], users=[user]
+        )
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is False
+        bot.bot.client.retweet.assert_not_called()
+
+    def test_skips_tweet_without_cat_keyword(self, bot):
+        """Even rescue-framed boost requests without cat mentions should be skipped
+        (could be a dog, bunny, etc.)."""
+        user = _make_user()
+        tweet = _make_rescue_tweet(
+            author_id=user.id,
+            text="Please RT — my foster animal needs a forever home urgently!",
+        )
+        bot.bot.client.search_recent_tweets.return_value = _make_search_response(
+            tweets=[tweet], users=[user]
+        )
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is False
+
+    def test_skips_tweet_older_than_72h(self, bot):
+        user = _make_user()
+        old_time = datetime.now(timezone.utc) - timedelta(hours=80)
+        tweet = _make_rescue_tweet(author_id=user.id, created_at=old_time)
+        bot.bot.client.search_recent_tweets.return_value = _make_search_response(
+            tweets=[tweet], users=[user]
+        )
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is False
+        bot.bot.client.retweet.assert_not_called()
+
+    def test_accepts_tweet_within_72h(self, bot):
+        user = _make_user()
+        recent_time = datetime.now(timezone.utc) - timedelta(hours=60)
+        tweet = _make_rescue_tweet(author_id=user.id, created_at=recent_time)
+        bot.bot.client.search_recent_tweets.return_value = _make_search_response(
+            tweets=[tweet], users=[user]
+        )
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is True
+
+    def test_picks_highest_engagement_candidate(self, bot):
+        """When multiple qualifying tweets exist, pick the one with the most likes+retweets."""
+        user1 = _make_user(user_id="low", username="lowuser")
+        user2 = _make_user(user_id="high", username="highuser")
+        tweet_low = _make_rescue_tweet(
+            tweet_id="low_rt", author_id=user1.id, like_count=5, retweet_count=1
+        )
+        tweet_high = _make_rescue_tweet(
+            tweet_id="high_rt", author_id=user2.id, like_count=100, retweet_count=30
+        )
+        bot.bot.client.search_recent_tweets.return_value = _make_search_response(
+            tweets=[tweet_low, tweet_high], users=[user1, user2]
+        )
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is True
+        bot.bot.client.retweet.assert_called_once_with(tweet_id="high_rt")
+
+    def test_returns_false_when_no_search_results(self, bot):
+        bot.bot.client.search_recent_tweets.return_value = _make_search_response(tweets=None)
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is False
+        bot.bot.client.retweet.assert_not_called()
+
+    def test_api_exception_returns_false(self, bot):
+        bot.bot.client.search_recent_tweets.side_effect = Exception("API down")
+
+        result = bot.find_and_repost_cat_adoption()
+
+        assert result is False
+
+
+# ---------------------------------------------------------------------------
 # run_engagement_cycle
 # ---------------------------------------------------------------------------
 
 class TestRunEngagementCycle:
-    def test_calls_both_follow_and_like(self, bot):
+    def test_calls_follow_like_and_repost(self, bot):
         with patch.object(bot, 'find_and_follow_cat_account', return_value=True) as mock_follow, \
-             patch.object(bot, 'find_and_like_cat_post', return_value=True) as mock_like:
+             patch.object(bot, 'find_and_like_cat_post', return_value=True) as mock_like, \
+             patch.object(bot, 'find_and_repost_cat_adoption', return_value=True) as mock_repost:
             result = bot.run_engagement_cycle()
 
         assert result is True
         mock_follow.assert_called_once()
         mock_like.assert_called_once_with(already_followed_account=True)
+        mock_repost.assert_called_once()
 
     def test_passes_follow_status_to_like(self, bot):
         """Follow result is forwarded to like so auto-follow logic gets correct context."""
         with patch.object(bot, 'find_and_follow_cat_account', return_value=False), \
-             patch.object(bot, 'find_and_like_cat_post', return_value=True) as mock_like:
+             patch.object(bot, 'find_and_like_cat_post', return_value=True) as mock_like, \
+             patch.object(bot, 'find_and_repost_cat_adoption', return_value=False):
             bot.run_engagement_cycle()
 
         mock_like.assert_called_once_with(already_followed_account=False)
 
-    def test_returns_false_when_both_fail(self, bot):
+    def test_returns_false_when_all_fail(self, bot):
         with patch.object(bot, 'find_and_follow_cat_account', return_value=False), \
-             patch.object(bot, 'find_and_like_cat_post', return_value=False):
+             patch.object(bot, 'find_and_like_cat_post', return_value=False), \
+             patch.object(bot, 'find_and_repost_cat_adoption', return_value=False):
             result = bot.run_engagement_cycle()
 
         assert result is False
 
+    def test_returns_true_when_only_repost_succeeds(self, bot):
+        """Repost alone is a successful cycle even if follow+like both fail."""
+        with patch.object(bot, 'find_and_follow_cat_account', return_value=False), \
+             patch.object(bot, 'find_and_like_cat_post', return_value=False), \
+             patch.object(bot, 'find_and_repost_cat_adoption', return_value=True):
+            result = bot.run_engagement_cycle()
+
+        assert result is True
+
     def test_continues_after_follow_exception(self, bot):
-        """A crash in follow should not prevent the like attempt."""
+        """A crash in follow should not prevent the like or repost attempts."""
         with patch.object(bot, 'find_and_follow_cat_account', side_effect=Exception("crash")), \
-             patch.object(bot, 'find_and_like_cat_post', return_value=True) as mock_like:
+             patch.object(bot, 'find_and_like_cat_post', return_value=True) as mock_like, \
+             patch.object(bot, 'find_and_repost_cat_adoption', return_value=False) as mock_repost:
             result = bot.run_engagement_cycle()
 
         assert result is True
         mock_like.assert_called_once_with(already_followed_account=False)
+        mock_repost.assert_called_once()
 
     def test_continues_after_like_exception(self, bot):
+        """A crash in like should not prevent the repost attempt."""
         with patch.object(bot, 'find_and_follow_cat_account', return_value=True), \
-             patch.object(bot, 'find_and_like_cat_post', side_effect=Exception("crash")):
+             patch.object(bot, 'find_and_like_cat_post', side_effect=Exception("crash")), \
+             patch.object(bot, 'find_and_repost_cat_adoption', return_value=False) as mock_repost:
             result = bot.run_engagement_cycle()
 
         assert result is True  # follow_success=True is still returned
+        mock_repost.assert_called_once()
+
+    def test_continues_after_repost_exception(self, bot):
+        """A crash in repost should not mask upstream success."""
+        with patch.object(bot, 'find_and_follow_cat_account', return_value=True), \
+             patch.object(bot, 'find_and_like_cat_post', return_value=True), \
+             patch.object(bot, 'find_and_repost_cat_adoption', side_effect=Exception("crash")):
+            result = bot.run_engagement_cycle()
+
+        assert result is True
