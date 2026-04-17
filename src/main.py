@@ -1423,20 +1423,19 @@ def post_journalism_cycle(
                 bluesky_success = True
                 print(f"[journalism] Bluesky post ok: {bluesky_uri}")
 
-                # Dossier reply — same banner + URL as X. Identical
-                # experience on both platforms.
+                # Dossier reply — link card with the banner as thumbnail.
+                # Bluesky can only have one embed per post (image OR link
+                # card), so image-attachment leaves the URL as dead text.
+                # Link card makes the whole thing clickable + shows the
+                # banner as the card thumbnail.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
                 time.sleep(2)
                 try:
-                    reply_image = _dossier_reply_image_path()
-                    if reply_image:
-                        reply_result = bluesky_bot.reply_to_skeet_with_image(
-                            bluesky_uri, dossier_url, reply_image
-                        )
-                    else:
-                        reply_result = bluesky_bot.reply_to_skeet(
-                            bluesky_uri, dossier_url
-                        )
+                    reply_result = bluesky_bot.reply_to_skeet_with_link(
+                        bluesky_uri, dossier_url,
+                        text="What each outlet told you \u2014 and what they didn't.",
+                        thumb_image_path=_dossier_reply_image_path(),
+                    )
                     if reply_result:
                         bluesky_reply_uri = reply_result.get("uri")
                         print(f"[journalism] Bluesky dossier reply ok: {bluesky_reply_uri}")
@@ -1593,19 +1592,15 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             bluesky_success = True
             print(f"[republish] Bluesky post ok: {bluesky_uri}")
 
-            # Dossier reply — banner image + URL, identical to X.
+            # Dossier reply — link card with banner thumbnail (clickable).
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
             time.sleep(2)
             try:
-                reply_image = _dossier_reply_image_path()
-                if reply_image:
-                    reply_result = bluesky_bot.reply_to_skeet_with_image(
-                        bluesky_uri, dossier_url, reply_image
-                    )
-                else:
-                    reply_result = bluesky_bot.reply_to_skeet(
-                        bluesky_uri, dossier_url
-                    )
+                reply_result = bluesky_bot.reply_to_skeet_with_link(
+                    bluesky_uri, dossier_url,
+                    text="What each outlet told you \u2014 and what they didn't.",
+                    thumb_image_path=_dossier_reply_image_path(),
+                )
                 if reply_result:
                     print(f"[republish] Bluesky dossier reply ok")
             except Exception as re:
