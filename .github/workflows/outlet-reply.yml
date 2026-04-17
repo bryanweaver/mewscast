@@ -1,0 +1,75 @@
+name: Outlet Reply (Walter Croncat)
+
+on:
+  # Schedule: 2x daily, offset 3.5h from journalism-publish windows
+  # journalism-publish runs at 12:30, 17:30, 22:30 UTC
+  # This gives a natural 1-4 hour delay before replying
+  schedule:
+    - cron: '0 16 * * *'   # 4:00 PM UTC = 11:00 AM CDT (catches 12:30 UTC publish)
+    - cron: '0 2 * * *'    # 2:00 AM UTC =  9:00 PM CDT (catches 22:30 UTC publish)
+
+  # Allow manual triggering (with optional dry-run)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run in dry-run mode (find matches but do not post)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  outlet-reply:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
+
+      - name: Run outlet reply bot
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          cd src
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python outlet_reply_bot.py --dry-run
+          else
+            python outlet_reply_bot.py
+          fi
+
+      - name: Commit updated reply history
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          if [ -f outlet_reply_history.json ]; then
+            git add outlet_reply_history.json
+
+            if ! git diff --staged --quiet; then
+              git commit -m "Update outlet reply history [skip ci]"
+
+              for i in {1..3}; do
+                git pull --rebase origin main && git push && break || {
+                  echo "Push failed (attempt $i/3), retrying..."
+                  sleep $((i * 2))
+                }
+              done
+            fi
+          else
+            echo "No outlet reply history file created yet"
+          fi
+
+      - name: Report status
+        if: failure()
+        run: echo "❌ Workflow failed - check logs above"

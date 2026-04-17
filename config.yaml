@@ -359,6 +359,25 @@ journalism:
   dry_run:
     drafts_dir: drafts
 
+  # Outlet reply bot — replies to outlet tweets with Walter's dossier link
+  # when the cross-outlet analysis adds genuine value to the conversation.
+  outlet_reply:
+    enabled: false                 # Start disabled — dry-run first
+    max_replies_per_day: 2         # Hard cap on total outlet replies per day
+    per_outlet_cooldown_hours: 72  # Max 1 reply per outlet per 72 hours
+    min_meta_score: 3              # Minimum dossier quality score to trigger
+    eligible_window_hours: 8       # How far back to scan for recent posts
+    priority_outlets:              # Only reply to these outlet X handles
+      - Reuters
+      - AP
+      - nytimes
+      - washingtonpost
+      - WSJ
+      - BBCWorld
+      - FoxNews
+      - CNN
+      - politico
+
 deduplication:
   # Prevent posting duplicate or repetitive stories
   enabled: true
