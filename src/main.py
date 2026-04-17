@@ -1388,13 +1388,14 @@ def post_journalism_cycle(
                 x_success = True
                 print(f"[journalism] X post ok: {tweet_id}")
 
-                # Dossier link reply — text-only with URL. X may auto-unfurl
-                # the OG card sometimes; either way, the copy should drive
-                # the click on its own merit.
+                # Dossier link reply — text-only. URL alone at the bottom
+                # maximizes X's auto-unfurl rate (preview card with OG
+                # image). The blank line separates the hook from the URL
+                # so readers are drawn to the card, not the raw link.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
                 reply_text = (
                     f"What each outlet told you \u2014 and what they didn't.\n"
-                    f"The full dossier, every source, one page:\n"
+                    f"\n"
                     f"{dossier_url}"
                 )
                 time.sleep(2)
@@ -1427,8 +1428,7 @@ def post_journalism_cycle(
                 # card clickable to the dossier URL.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
                 bs_reply_text = (
-                    f"What each outlet told you \u2014 and what they didn't. "
-                    f"The full dossier, every source, one page:"
+                    f"What each outlet told you \u2014 and what they didn't."
                 )
                 time.sleep(2)
                 try:
@@ -1560,11 +1560,11 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             x_success = True
             print(f"[republish] X post ok: {tweet_id}")
 
-            # Dossier link reply — text-only, let X auto-unfurl if it will.
+            # Dossier link reply — URL alone at bottom for max unfurl rate.
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
             reply_text = (
                 f"What each outlet told you \u2014 and what they didn't.\n"
-                f"The full dossier, every source, one page:\n"
+                f"\n"
                 f"{dossier_url}"
             )
             time.sleep(2)
