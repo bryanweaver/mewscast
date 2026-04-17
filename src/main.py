@@ -65,7 +65,7 @@ def post_scheduled_tweet():
         try:
             bluesky_bot = BlueskyBot()
         except Exception as e:
-            print(f"⚠️  Bluesky connection failed: {e}")
+            print(f"⚠️  Bluesky connection failed: {type(e).__name__}: {e!r}")
             print(f"   Continuing with X only...")
             bluesky_bot = None
 
@@ -784,11 +784,17 @@ def post_journalism_cycle(
 
     if not dry_run:
         print("[journalism] Initializing Bluesky + content generator for publish mode...")
-        try:
-            bluesky_bot = BlueskyBot()
-        except Exception as e:
-            print(f"[journalism] Bluesky bot init failed: {e}")
-            bluesky_bot = None
+        bluesky_bot = None
+        for _attempt in range(1, 4):
+            try:
+                bluesky_bot = BlueskyBot()
+                break
+            except Exception as e:
+                print(f"[journalism] Bluesky init attempt {_attempt}/3 failed: {type(e).__name__}: {e!r}")
+                if _attempt < 3:
+                    time.sleep(5 * _attempt)
+        if bluesky_bot is None:
+            print("[journalism] Bluesky init failed after 3 attempts; continuing X-only")
         if twitter_bot is None and bluesky_bot is None:
             print("[journalism] both X and Bluesky bots failed to init; aborting publish cycle")
             return False
