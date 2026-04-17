@@ -54,6 +54,11 @@ recent_vocab.json
 debug_*.py
 =*
 
+# Orphaned root-level report files (now generated to docs/reports/)
+analytics_temp_copy.json
+nightly_report.md
+nightly_issues.json
+
 # Croncat journalism workflow dossiers (root-level JSON files only)
 # Per-story JSON records (dossier + brief + post record) produced by the
 # journalism pipeline. Contains copyrighted full article bodies — kept

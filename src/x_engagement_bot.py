@@ -1,23 +1,24 @@
 """
 Cat community engagement automation for X/Twitter.
-Finds and follows cat accounts, likes cat posts, and reposts cat-adoption
-rescue posts that ask for signal boosts.
+Finds and follows cat accounts, likes cat posts, quote-reposts cat-rescue
+posts, and replies to cute kitten posts.
 
-Full parity with the Bluesky engagement bot:
-  - find_and_follow_cat_account — search + quality filters + ratio gate
-  - find_and_like_cat_post       — search + auto-follow author
-  - find_and_repost_cat_adoption — search + has:images + rescue keyword filter
+Per-cycle actions (each runs once per cycle, 3 cycles/day):
+  - find_and_follow_cat_account      — search + quality filters + ratio gate
+  - find_and_like_cat_post           — search + auto-follow author
+  - find_and_quote_repost_rescue     — quote-retweet rescue/adoption posts
+  - find_and_reply_cute_kitten       — reply with short emoji message
 
 Safety invariants preserved across platforms:
   - Follow ratio safety check before any follow (target <2.5:1)
   - Auto-follow post authors when no cat account was found via search
   - 90-day history cleanup (weekly cadence)
-  - Per-run safety limits to stay well within daily API quotas
+  - One action per type per cycle (structurally enforced)
 
 API usage: Pay-per-use (default as of Feb 2026). All endpoints used
-(search_recent_tweets, like, follow_user, retweet) are billable per call.
-Rough envelope: ~$0.045/cycle × 3 cycles/day ≈ $4/month. Set a hard
-spending cap in the X developer portal before running live.
+(search_recent_tweets, like, follow_user, create_tweet) are billable per
+call. Rough envelope: ~$0.06/cycle × 3 cycles/day ≈ $5.50/month. Set a
+hard spending cap in the X developer portal before running live.
 """
 import random
 import json
@@ -26,10 +27,6 @@ from pathlib import Path
 from twitter_bot import TwitterBot
 
 CAT_KEYWORDS = ['cat', 'kitten', 'feline', 'meow', 'kitty', 'tabby', 'cats', 'kittens']
-
-# Safety limits per run — stays well within daily API quotas
-MAX_FOLLOWS_PER_RUN = 3
-MAX_LIKES_PER_RUN = 5
 
 # Follow ratio safety threshold: don't let following:followers exceed this
 FOLLOW_RATIO_LIMIT = 2.5
@@ -54,6 +51,7 @@ class XEngagementBot:
             'followed_users': [],
             'liked_tweets': [],
             'reposted_tweets': [],
+            'replied_tweets': [],
             'last_cleanup': datetime.now().isoformat()
         }
 
@@ -76,7 +74,7 @@ class XEngagementBot:
         print("🧹 Cleaning up old X engagement history...")
         cutoff_date = datetime.now() - timedelta(days=90)
 
-        for key in ('followed_users', 'liked_tweets', 'reposted_tweets'):
+        for key in ('followed_users', 'liked_tweets', 'reposted_tweets', 'replied_tweets'):
             if self.engagement_history.get(key):
                 original_count = len(self.engagement_history[key])
                 self.engagement_history[key] = [
@@ -291,7 +289,7 @@ class XEngagementBot:
         try:
             response = self.bot.client.search_recent_tweets(
                 query=search_query,
-                max_results=10,
+                max_results=25,
                 tweet_fields=['author_id', 'public_metrics', 'created_at'],
                 user_fields=['username', 'public_metrics', 'description'],
                 expansions=['author_id']
@@ -313,13 +311,13 @@ class XEngagementBot:
 
                 likes = tweet.public_metrics['like_count']
 
-                # Some engagement but not mega-viral (already saturated)
-                if likes < 5 or likes > 10000:
+                # At least 1 like (real post) but not mega-viral (already saturated)
+                if likes < 1 or likes > 10000:
                     continue
 
-                # Must be recent (within last 24 hours)
+                # Must be recent (within last 48 hours — X API skews older)
                 created_at = tweet.created_at
-                if datetime.now(created_at.tzinfo) - created_at > timedelta(hours=24):
+                if datetime.now(created_at.tzinfo) - created_at > timedelta(hours=48):
                     continue
 
                 author = users.get(tweet.author_id)
@@ -397,43 +395,34 @@ class XEngagementBot:
             print(f"✗ Error finding/liking cat post on X: {e}")
             return False
 
-    def find_and_repost_cat_adoption(self) -> bool:
+    def find_and_quote_repost_rescue(self) -> bool:
         """
-        Find and repost a tweet about cats needing homes/rescue that is
-        asking for reposts/signal boosts. Mirrors the Bluesky engagement
-        bot's `find_and_repost_cat_rescue` (bluesky_engagement_bot.py:483).
+        Find a cat rescue/adoption post and quote-retweet it with a short
+        message urging people to adopt, share, or help.
 
         Strategy:
-          - X search with `has:images` + `-is:retweet` pre-filters results
-            so we only see original posts with photos.
-          - Post text must mention (cat keyword) AND (rescue keyword)
-            AND (share/boost/RT request keyword) — same three-way gate
-            used on Bluesky.
-          - Must be within 72 hours (rescue posts stay relevant longer
-            than the 24h window used for regular cat-post likes).
-          - Prefer higher-engagement candidates (more likely legitimate).
+          - Search for "cat rescue please share" style queries
+          - Post must mention cat keywords AND rescue keywords
+          - Quote-retweet with a short, warm call to action
+          - Must be within 72 hours (rescue posts stay relevant longer)
+          - Prefer higher-engagement candidates (more likely legitimate)
 
         Returns:
-            True if successfully reposted, False otherwise.
+            True if successfully quote-reposted, False otherwise.
         """
-        print("\n🐱 Searching for cat adoption posts to repost on X...")
+        print("\n🐱 Searching for cat rescue posts to quote-repost on X...")
 
-        # Queries mirror the Bluesky search terms. X vernacular favours
-        # "RT" and "retweet" alongside "repost"/"boost"/"share" so both
-        # are included. `has:images` is a first-class X search operator;
-        # `-is:retweet` excludes other people's retweets so we don't
-        # repost-of-a-repost. `-bot lang:en` matches the rest of the bot.
         search_terms = [
-            "cats need homes please RT has:images -is:retweet -bot lang:en",
-            "cat needs a home please RT has:images -is:retweet -bot lang:en",
-            "foster cats please share has:images -is:retweet -bot lang:en",
-            "adopt cats please boost has:images -is:retweet -bot lang:en",
-            "cat rescue RT has:images -is:retweet -bot lang:en",
-            "rehome cats please share has:images -is:retweet -bot lang:en",
-            "cats looking for homes has:images -is:retweet -bot lang:en",
-            "kittens need homes RT has:images -is:retweet -bot lang:en",
-            "cat adoption please RT has:images -is:retweet -bot lang:en",
-            "urgent cat rescue has:images -is:retweet -bot lang:en",
+            "cat rescue please share -is:retweet lang:en",
+            "cats need homes please share -is:retweet lang:en",
+            "cat adoption help -is:retweet lang:en",
+            "kitten rescue please share -is:retweet lang:en",
+            "foster cats help -is:retweet lang:en",
+            "adopt cat please -is:retweet lang:en",
+            "cat shelter help share -is:retweet lang:en",
+            "stray cats need home -is:retweet lang:en",
+            "rescue kittens please -is:retweet lang:en",
+            "cat needs forever home -is:retweet lang:en",
         ]
 
         search_query = random.choice(search_terms)
@@ -457,14 +446,6 @@ class XEngagementBot:
                 for entry in self.engagement_history.get('reposted_tweets', [])
             }
 
-            # Same three keyword gates as Bluesky's find_and_repost_cat_rescue.
-            # `has:images` already filters images server-side, so no media
-            # inspection is needed here.
-            repost_keywords = [
-                'repost', 'boost', 'signal boost', 'please share', 'pls share',
-                'please rt', 'pls rt', 'share this', 'spread the word',
-                'retweet', 'rt this',
-            ]
             rescue_keywords = [
                 'need home', 'needs home', 'needs a home', 'need a home',
                 'looking for home', 'looking for a home', 'needs foster',
@@ -477,7 +458,6 @@ class XEngagementBot:
 
             candidate_posts = []
             for tweet in response.data:
-                # Skip if already reposted (local cache check)
                 if tweet.id in reposted_ids:
                     continue
 
@@ -485,24 +465,13 @@ class XEngagementBot:
                 if not author:
                     continue
 
-                # Skip our own tweets
-                me_username = getattr(self.bot, 'username', None) or ''
-                if me_username and author.username.lower() == me_username.lower():
-                    continue
-
                 tweet_text = (tweet.text or '').lower()
 
-                # Must be asking for a boost/share/RT
-                if not any(kw in tweet_text for kw in repost_keywords):
-                    continue
-                # Must be cat-rescue content (both terms present)
                 if not any(kw in tweet_text for kw in rescue_keywords):
                     continue
                 if not any(kw in tweet_text for kw in cat_keywords):
                     continue
 
-                # Recency gate — rescue posts stay relevant longer than
-                # regular like candidates (72h vs 24h).
                 created_at = tweet.created_at
                 if datetime.now(created_at.tzinfo) - created_at > timedelta(hours=72):
                     continue
@@ -520,47 +489,171 @@ class XEngagementBot:
                 })
 
             if not candidate_posts:
-                print("   No qualifying cat adoption posts found")
+                print("   No qualifying cat rescue posts found")
                 return False
 
-            # Prefer candidates with more engagement (more likely legitimate).
+            # Prefer candidates with more engagement (more likely legitimate)
             candidate_posts.sort(key=lambda p: p['likes'] + p['retweets'], reverse=True)
             post = candidate_posts[0]
 
-            print(f"\n🔁 Reposting cat adoption post from @{post['author']}")
+            print(f"\n🔁 Quote-reposting rescue post from @{post['author']}")
             print(f"   Text: {post['text']}...")
             print(f"   Engagement: {post['likes']} likes, {post['retweets']} retweets")
 
-            # Repost it
-            self.bot.client.retweet(tweet_id=post['tweet_id'])
+            # Pick a short, warm quote message
+            quote_messages = [
+                "Every cat deserves a loving home 🐾 Please share and help if you can!",
+                "Please consider adopting or sharing 🐱 These cats need our help!",
+                "If you can't adopt, please share! Every repost helps 🐾",
+                "Let's help these cats find their forever homes 🐱 Share, adopt, donate — every bit helps!",
+                "Sharing because every cat deserves a chance 🐾 Please help spread the word!",
+                "Adopt, foster, or share — any help makes a difference 🐱",
+                "These babies need homes 🐾 Please share and help if you're able!",
+                "Signal boosting for these cats in need 🐱 Adopt or share to help!",
+            ]
+            quote_text = random.choice(quote_messages)
+
+            result = self.bot.quote_tweet(tweet_id=post['tweet_id'], text=quote_text)
+
+            if not result:
+                print("✗ Quote-repost failed")
+                return False
 
             # Log the repost
             self.engagement_history.setdefault('reposted_tweets', []).append({
                 'tweet_id': post['tweet_id'],
                 'author': post['author'],
                 'text': post['text'][:100],
+                'quote_text': quote_text,
                 'timestamp': datetime.now().isoformat(),
             })
             self._save_engagement_history()
 
-            print(f"✓ Reposted cat adoption post from @{post['author']}")
+            print(f"✓ Quote-reposted rescue post from @{post['author']}")
             return True
 
         except Exception as e:
-            print(f"✗ Error finding/reposting cat adoption post on X: {e}")
+            print(f"✗ Error finding/quote-reposting rescue post on X: {e}")
+            return False
+
+    def find_and_reply_cute_kitten(self) -> bool:
+        """
+        Find a cute kitten post and reply with a short, sweet message
+        with cat/paw emoji for engagement.
+
+        Returns:
+            True if successfully replied, False otherwise.
+        """
+        print("\n🐱 Searching for cute kitten posts to reply to on X...")
+
+        search_terms = [
+            "cute kitten -is:retweet lang:en",
+            "adorable kitten -is:retweet lang:en",
+            "cute kittens -is:retweet lang:en",
+            "little kitten -is:retweet lang:en",
+            "baby kitten -is:retweet lang:en",
+        ]
+
+        search_query = random.choice(search_terms)
+
+        try:
+            response = self.bot.client.search_recent_tweets(
+                query=search_query,
+                max_results=25,
+                tweet_fields=['author_id', 'public_metrics', 'created_at'],
+                user_fields=['username'],
+                expansions=['author_id'],
+            )
+
+            if not response.data:
+                print(f"   No results for '{search_query}'")
+                return False
+
+            users = {user.id: user for user in response.includes.get('users', [])}
+            replied_ids = {
+                entry['tweet_id']
+                for entry in self.engagement_history.get('replied_tweets', [])
+            }
+
+            candidate_posts = []
+            for tweet in response.data:
+                if tweet.id in replied_ids:
+                    continue
+
+                author = users.get(tweet.author_id)
+                if not author:
+                    continue
+
+                created_at = tweet.created_at
+                if datetime.now(created_at.tzinfo) - created_at > timedelta(hours=48):
+                    continue
+
+                likes = tweet.public_metrics['like_count']
+
+                # At least 1 like (real post) but not mega-viral
+                if likes < 1 or likes > 50000:
+                    continue
+
+                candidate_posts.append({
+                    'tweet_id': tweet.id,
+                    'author_id': tweet.author_id,
+                    'author': author.username,
+                    'text': tweet.text[:100] if tweet.text else '',
+                    'likes': likes,
+                })
+
+            if not candidate_posts:
+                print("   No cute kitten posts found to reply to")
+                return False
+
+            post = random.choice(candidate_posts)
+
+            print(f"\n💬 Replying to cute kitten post from @{post['author']}")
+            print(f"   Text: {post['text']}...")
+
+            reply_messages = [
+                "Absolutely adorable! 🐱🐾",
+                "So precious! 🐾😻",
+                "What a little cutie! 🐱🐾",
+                "Too cute! 😻🐾",
+                "That face! 🐱🐾",
+                "Pawsitively adorable! 🐾😻",
+                "Heart officially melted 🐱🐾",
+                "Those little paws! 😻🐾",
+                "Cuteness overload! 🐱🐾",
+                "What a sweet little baby! 😻🐾",
+            ]
+            reply_text = random.choice(reply_messages)
+
+            result = self.bot.reply_to_tweet(tweet_id=post['tweet_id'], text=reply_text)
+
+            if not result:
+                print("✗ Reply failed")
+                return False
+
+            # Log the reply
+            self.engagement_history.setdefault('replied_tweets', []).append({
+                'tweet_id': post['tweet_id'],
+                'author': post['author'],
+                'reply_text': reply_text,
+                'timestamp': datetime.now().isoformat(),
+            })
+            self._save_engagement_history()
+
+            print(f"✓ Replied to @{post['author']}: {reply_text}")
+            return True
+
+        except Exception as e:
+            print(f"✗ Error finding/replying to cute kitten post on X: {e}")
             return False
 
     def run_engagement_cycle(self):
         """
         Run one engagement cycle:
         1. Try to find and follow a cat account (with ratio safety check)
-        2. Try to find and like a cat post
-        3. Auto-follow rules:
-           - If we didn't follow a cat account: ALWAYS follow the post author
-           - If we did follow a cat account: follow post author only if they qualify
-        4. Try to find and repost a cat adoption post
-
-        This mirrors the Bluesky engagement bot's cycle structure.
+        2. Try to find and like a cat post (auto-follow logic included)
+        3. Try to quote-repost a cat rescue/adoption post
+        4. Try to reply to a cute kitten post
         """
         print("\n" + "=" * 80)
         print("🐦 X/TWITTER CAT COMMUNITY ENGAGEMENT CYCLE")
@@ -572,7 +665,8 @@ class XEngagementBot:
 
         follow_success = False
         like_success = False
-        repost_success = False
+        quote_repost_success = False
+        reply_success = False
 
         # Try to follow a cat account
         try:
@@ -586,11 +680,17 @@ class XEngagementBot:
         except Exception as e:
             print(f"✗ Like attempt failed: {e}")
 
-        # Try to find and repost a cat adoption post
+        # Try to quote-repost a cat rescue/adoption post
         try:
-            repost_success = self.find_and_repost_cat_adoption()
+            quote_repost_success = self.find_and_quote_repost_rescue()
         except Exception as e:
-            print(f"✗ Repost attempt failed: {e}")
+            print(f"✗ Quote-repost attempt failed: {e}")
+
+        # Try to reply to a cute kitten post
+        try:
+            reply_success = self.find_and_reply_cute_kitten()
+        except Exception as e:
+            print(f"✗ Reply attempt failed: {e}")
 
         # Summary
         print("\n" + "=" * 80)
@@ -598,13 +698,15 @@ class XEngagementBot:
         print("=" * 80)
         print(f"✓ Followed: {1 if follow_success else 0} account")
         print(f"✓ Liked: {1 if like_success else 0} tweet")
-        print(f"✓ Reposted: {1 if repost_success else 0} cat adoption post")
+        print(f"✓ Quote-reposted: {1 if quote_repost_success else 0} rescue post")
+        print(f"✓ Replied: {1 if reply_success else 0} cute kitten post")
         print(f"Total followed: {len(self.engagement_history.get('followed_users', []))} accounts")
         print(f"Total liked: {len(self.engagement_history.get('liked_tweets', []))} tweets")
-        print(f"Total reposted: {len(self.engagement_history.get('reposted_tweets', []))} adoption posts")
+        print(f"Total quote-reposted: {len(self.engagement_history.get('reposted_tweets', []))} rescue posts")
+        print(f"Total replied: {len(self.engagement_history.get('replied_tweets', []))} posts")
         print("=" * 80)
 
-        return follow_success or like_success or repost_success
+        return follow_success or like_success or quote_repost_success or reply_success
 
 
 if __name__ == "__main__":

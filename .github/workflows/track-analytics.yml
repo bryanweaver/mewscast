@@ -35,15 +35,21 @@ jobs:
         run: |
           python scripts/track_analytics.py
 
-      - name: Commit analytics data
-        if: success()
+      - name: Generate nightly report
+        if: always()
+        run: |
+          python scripts/nightly_report.py
+
+      - name: Commit analytics data and nightly report
+        if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add analytics_history.json docs/ANALYTICS.md docs/analytics.html
+          git add docs/reports/
 
           if ! git diff --staged --quiet; then
-            git commit -m "Update analytics [skip ci]"
+            git commit -m "Update analytics and nightly report [skip ci]"
 
             for i in {1..3}; do
               git pull --rebase origin main && git push && break || {

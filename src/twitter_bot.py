@@ -176,6 +176,35 @@ class TwitterBot:
             print(f"✗ Image not found: {image_path}")
             return None
 
+    def quote_tweet(self, tweet_id: str, text: str) -> Optional[dict]:
+        """
+        Quote-retweet a specific tweet with commentary.
+
+        Args:
+            tweet_id: ID of the tweet to quote
+            text: Commentary text (max 280 characters)
+
+        Returns:
+            Tweet data if successful, None if failed
+        """
+        try:
+            if len(text) > 280:
+                text = _truncate_at_sentence(text, 280)
+
+            response = self.client.create_tweet(
+                text=text,
+                quote_tweet_id=tweet_id
+            )
+            print(f"✓ Quote tweet posted successfully! ID: {response.data['id']}")
+            return response.data
+        except tweepy.TooManyRequests as e:
+            print(f"✗ Rate limit exceeded! Free tier: 50 posts/24hrs")
+            print(f"   Error: {e}")
+            raise
+        except tweepy.TweepyException as e:
+            print(f"✗ Error posting quote tweet: {e}")
+            return None
+
     def delete_tweet(self, tweet_id: str) -> bool:
         """
         Delete a tweet
