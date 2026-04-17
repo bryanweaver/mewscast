@@ -405,18 +405,18 @@ _JOURNALISM_POST_TYPE_ALIASES = {
 
 
 def _dossier_reply_image_path() -> str | None:
-    """Local path to the Walter-at-the-desk image for dossier-link replies.
+    """Local path to the dossier-reply banner image.
 
-    Uses the 400x400 reply-specific version (~50 KB) so it renders as a
-    small visual accent rather than a full-width dominating photo. The
-    full 1024x1024 OG image stays at docs/images/walter-croncat-dossier-og.png
-    for the dossier site's meta tags.
+    A wide banner (~2:1) with Walter at his desk, evidence wall behind
+    him, and bold text: "WHAT THEY TOLD YOU AND WHAT THEY DIDN'T / THE
+    FULL DOSSIER • EVERY SOURCE • ONE PAGE". The image carries the
+    message so reply text can be just the URL.
 
     Returns None if the asset isn't found so callers fall back to a
     text-only reply.
     """
     p = os.path.join(
-        _project_root(), "docs", "images", "walter-croncat-dossier-reply.jpg"
+        _project_root(), "docs", "images", "walter-croncat-dossier-reply.png"
     )
     return p if os.path.exists(p) else None
 
@@ -1388,19 +1388,19 @@ def post_journalism_cycle(
                 x_success = True
                 print(f"[journalism] X post ok: {tweet_id}")
 
-                # Dossier link reply — text-only. URL alone at the bottom
-                # maximizes X's auto-unfurl rate (preview card with OG
-                # image). The blank line separates the hook from the URL
-                # so readers are drawn to the card, not the raw link.
+                # Dossier reply — banner image carries the message ("What
+                # they told you and what they didn't"), text is just the URL.
+                # Identical treatment on both X and Bluesky.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
-                reply_text = (
-                    f"What each outlet told you \u2014 and what they didn't.\n"
-                    f"\n"
-                    f"{dossier_url}"
-                )
                 time.sleep(2)
                 try:
-                    reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
+                    reply_image = _dossier_reply_image_path()
+                    if reply_image:
+                        reply_result = twitter_bot.reply_to_tweet_with_image(
+                            tweet_id, dossier_url, reply_image
+                        )
+                    else:
+                        reply_result = twitter_bot.reply_to_tweet(tweet_id, dossier_url)
                     if reply_result:
                         reply_tweet_id = reply_result.get("id")
                         print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
@@ -1423,19 +1423,20 @@ def post_journalism_cycle(
                 bluesky_success = True
                 print(f"[journalism] Bluesky post ok: {bluesky_uri}")
 
-                # Link card with uploaded thumbnail — renders as
-                # [image left | title + description right], the whole
-                # card clickable to the dossier URL.
+                # Dossier reply — same banner + URL as X. Identical
+                # experience on both platforms.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
-                bs_reply_text = (
-                    f"What each outlet told you \u2014 and what they didn't."
-                )
                 time.sleep(2)
                 try:
-                    reply_result = bluesky_bot.reply_to_skeet_with_link(
-                        bluesky_uri, dossier_url, text=bs_reply_text,
-                        thumb_image_path=_dossier_reply_image_path(),
-                    )
+                    reply_image = _dossier_reply_image_path()
+                    if reply_image:
+                        reply_result = bluesky_bot.reply_to_skeet_with_image(
+                            bluesky_uri, dossier_url, reply_image
+                        )
+                    else:
+                        reply_result = bluesky_bot.reply_to_skeet(
+                            bluesky_uri, dossier_url
+                        )
                     if reply_result:
                         bluesky_reply_uri = reply_result.get("uri")
                         print(f"[journalism] Bluesky dossier reply ok: {bluesky_reply_uri}")
@@ -1560,16 +1561,17 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             x_success = True
             print(f"[republish] X post ok: {tweet_id}")
 
-            # Dossier link reply — URL alone at bottom for max unfurl rate.
+            # Dossier reply — banner image + URL, identical to journalism path.
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
-            reply_text = (
-                f"What each outlet told you \u2014 and what they didn't.\n"
-                f"\n"
-                f"{dossier_url}"
-            )
             time.sleep(2)
             try:
-                reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_text)
+                reply_image = _dossier_reply_image_path()
+                if reply_image:
+                    reply_result = twitter_bot.reply_to_tweet_with_image(
+                        tweet_id, dossier_url, reply_image
+                    )
+                else:
+                    reply_result = twitter_bot.reply_to_tweet(tweet_id, dossier_url)
                 if reply_result:
                     reply_tweet_id = reply_result.get("id")
                     print(f"[republish] X dossier reply ok: {reply_tweet_id}")
@@ -1591,18 +1593,19 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             bluesky_success = True
             print(f"[republish] Bluesky post ok: {bluesky_uri}")
 
-            # Link card with Walter thumbnail for dossier reply.
+            # Dossier reply — banner image + URL, identical to X.
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
-            bs_reply_text = (
-                f"What each outlet told you \u2014 and what they didn't. "
-                f"The full dossier, every source, one page:"
-            )
             time.sleep(2)
             try:
-                reply_result = bluesky_bot.reply_to_skeet_with_link(
-                    bluesky_uri, dossier_url, text=bs_reply_text,
-                    thumb_image_path=_dossier_reply_image_path(),
-                )
+                reply_image = _dossier_reply_image_path()
+                if reply_image:
+                    reply_result = bluesky_bot.reply_to_skeet_with_image(
+                        bluesky_uri, dossier_url, reply_image
+                    )
+                else:
+                    reply_result = bluesky_bot.reply_to_skeet(
+                        bluesky_uri, dossier_url
+                    )
                 if reply_result:
                     print(f"[republish] Bluesky dossier reply ok")
             except Exception as re:
