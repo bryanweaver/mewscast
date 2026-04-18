@@ -617,6 +617,18 @@ class OutletReplyBot:
                     print("=" * 80)
                     return True
 
+                # Experiment: follow the outlet before replying. X's
+                # direct "People you follow" reply-rule is author-side
+                # (the outlet would have to follow Walter), so this is
+                # NOT expected to instantly unlock 403'd replies — but
+                # sustained engagement may soften X's anti-automation
+                # heuristics for verified-account replies over time.
+                # Idempotent; any failure is non-fatal.
+                try:
+                    self.bot.follow_user_by_handle(handle)
+                except Exception as _follow_err:
+                    print(f"   Follow attempt errored (non-fatal): {_follow_err}")
+
                 # Post the reply — let rate limit errors propagate to
                 # fail the GHA workflow hard (same pattern as twitter_bot.py)
                 try:
