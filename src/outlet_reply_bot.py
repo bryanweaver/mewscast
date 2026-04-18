@@ -280,7 +280,10 @@ class OutletReplyBot:
             response = self.bot.client.search_recent_tweets(
                 query=query,
                 max_results=10,
-                tweet_fields=['author_id', 'public_metrics', 'created_at', 'entities'],
+                tweet_fields=[
+                    'author_id', 'public_metrics', 'created_at',
+                    'entities', 'reply_settings',
+                ],
             )
 
             if not response.data:
@@ -289,10 +292,23 @@ class OutletReplyBot:
 
             # Score each tweet against ALL headline proper nouns (not just
             # the 2 used in the query) so near-miss candidates still score.
+            # Pre-filter reply-restricted tweets (reply_settings ≠ 'everyone')
+            # — outlets commonly lock breaking-news threads to
+            # following/mentioned/subscribers, and the reply POST would 403
+            # at runtime. Skipping here saves the doomed API call and lets
+            # us fall through to a lower-scored but postable candidate.
             best_tweet = None
             best_score = 0.0
 
             for tweet in response.data:
+                rs = getattr(tweet, 'reply_settings', None)
+                if isinstance(rs, str) and rs != 'everyone':
+                    print(
+                        f"   Skipping tweet {tweet.id}: "
+                        f"reply_settings={rs} (not repliable)"
+                    )
+                    continue
+
                 score = self._score_tweet_match(
                     tweet.text or '', headline_seed, article_urls
                 )
@@ -306,9 +322,15 @@ class OutletReplyBot:
                 print(f"   Best match score too low: {best_score:.2f}")
                 return None
 
-            print(f"   Found match (score {best_score:.2f}): {best_tweet.text[:80]}...")
+            tweet_url = f"https://x.com/{outlet_handle}/status/{best_tweet.id}"
+            rs_log = getattr(best_tweet, 'reply_settings', None)
+            print(f"   Found match (score {best_score:.2f}): {tweet_url}")
+            print(f"   Text: {best_tweet.text[:120]}...")
+            if isinstance(rs_log, str):
+                print(f"   reply_settings: {rs_log}")
             return {
                 'tweet_id': best_tweet.id,
+                'tweet_url': tweet_url,
                 'text': best_tweet.text[:150] if best_tweet.text else '',
                 'score': best_score,
             }
@@ -577,9 +599,13 @@ class OutletReplyBot:
                 print(f"\n   💬 Reply to @{handle}:")
                 print(f"      {reply_text[:100]}...")
 
+                tweet_url = match.get('tweet_url') or (
+                    f"https://x.com/{handle}/status/{match['tweet_id']}"
+                )
+
                 if dry_run:
                     print("\n   🔍 DRY RUN — would have posted this reply:")
-                    print(f"   ┌─ Replying to @{handle}'s tweet (ID: {match['tweet_id']})")
+                    print(f"   ┌─ Replying to @{handle}'s tweet: {tweet_url}")
                     print(f"   │  Tweet: {match['text']}")
                     print(f"   │")
                     print(f"   │  Reply text:")
@@ -603,11 +629,11 @@ class OutletReplyBot:
                     # will propagate up — only catch other errors here
                     if 'TooManyRequests' in type(e).__name__:
                         raise
-                    print(f"   ✗ Error posting reply: {e}")
+                    print(f"   ✗ Error posting reply to {tweet_url}: {e}")
                     continue
 
                 if not result:
-                    print("   ✗ Reply failed")
+                    print(f"   ✗ Reply failed (target: {tweet_url})")
                     continue
 
                 # Record in history
@@ -616,6 +642,7 @@ class OutletReplyBot:
                     'outlet_handle': handle,
                     'outlet_name': outlet['name'],
                     'outlet_tweet_id': match['tweet_id'],
+                    'outlet_tweet_url': tweet_url,
                     'reply_tweet_id': result.get('id'),
                     'reply_text': reply_text,
                     'dossier_url': dossier_url,
@@ -623,7 +650,7 @@ class OutletReplyBot:
                 })
                 self._save_reply_history()
 
-                print(f"   ✓ Replied to @{handle}'s tweet!")
+                print(f"   ✓ Replied to {tweet_url}")
                 print("=" * 80)
                 return True
 

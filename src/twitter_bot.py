@@ -150,6 +150,13 @@ class TwitterBot:
             raise  # Re-raise to make GitHub Actions fail
         except tweepy.TweepyException as e:
             print(f"✗ Error posting reply: {e}")
+            # Log the full X API response so the caller can see the real
+            # underlying reason (tier/scope/reply-controls/anti-spam) —
+            # the short exception message often collapses distinct causes
+            # into the same "reply not allowed" wording.
+            if hasattr(e, 'response') and e.response is not None:
+                print(f"   Response status: {e.response.status_code}")
+                print(f"   Response body: {e.response.text}")
             return None
 
     def reply_to_tweet_with_image(self, tweet_id: str, text: str, image_path: str) -> Optional[dict]:
