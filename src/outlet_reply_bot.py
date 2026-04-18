@@ -377,8 +377,8 @@ class OutletReplyBot:
         if dry_run:
             print("🔍 DRY RUN — will not post replies")
 
-        # Check enabled
-        if not self.config.get('enabled', False):
+        # Check enabled (dry-run bypasses this gate so you can preview output)
+        if not dry_run and not self.config.get('enabled', False):
             print("⚠️  Outlet reply is disabled in config")
             print("=" * 80)
             return False
@@ -498,7 +498,16 @@ class OutletReplyBot:
                 print(f"      {reply_text[:100]}...")
 
                 if dry_run:
-                    print("   🔍 DRY RUN — skipping post")
+                    print("\n   🔍 DRY RUN — would have posted this reply:")
+                    print(f"   ┌─ Replying to @{handle}'s tweet (ID: {match['tweet_id']})")
+                    print(f"   │  Tweet: {match['text']}")
+                    print(f"   │")
+                    print(f"   │  Reply text:")
+                    print(f"   │  {reply_text}")
+                    print(f"   │")
+                    print(f"   │  Dossier: {dossier_id}")
+                    print(f"   │  Outlets in dossier: {outlet_count}")
+                    print(f"   └─ (not posted — dry run)")
                     print("=" * 80)
                     return True
 

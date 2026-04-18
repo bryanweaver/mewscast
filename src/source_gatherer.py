@@ -485,6 +485,12 @@ class SourceGatherer:
             )
             article_records.append(record)
 
+        # ---- Relevance filter -----------------------------------------------
+        # Two-pass: (1) cheap proper-noun heuristic on title+body, (2) Haiku
+        # classifier for borderline cases. Removes off-topic articles before
+        # they pollute the meta-analysis.
+        article_records = self._filter_relevant_articles(article_records, topic)
+
         # Mark wire-derived duplicates
         self._mark_wire_derived(article_records)
 
@@ -613,6 +619,150 @@ class SourceGatherer:
         except Exception as e:
             print(f"[source_gatherer] body fetch failed for {url[:60]}: {e}")
             return ""
+
+    # ---- relevance filter --------------------------------------------------
+
+    @staticmethod
+    def _extract_headline_nouns(headline: str) -> set[str]:
+        """Extract proper nouns from headline for relevance checking.
+
+        Returns lowercase set of proper nouns (capitalized words that aren't
+        common sentence starters), excluding very short words.
+        """
+        nouns: set[str] = set()
+        for word in headline.split():
+            clean = re.sub(r'[^\w]', '', word)
+            if len(clean) <= 2:
+                continue
+            if clean in _SENTENCE_STARTERS:
+                continue
+            if clean[0].isupper():
+                nouns.add(clean.lower())
+        return nouns
+
+    @staticmethod
+    def _heuristic_relevance(article: ArticleRecord, headline_nouns: set[str]) -> str:
+        """Cheap heuristic check: does the article text contain proper nouns
+        from the headline?
+
+        The threshold adapts to how many nouns were extracted:
+          - 3+ nouns available: need 2+ matches for "relevant", 1 = "borderline"
+          - 1-2 nouns available: need 1+ match for "relevant", 0 = "irrelevant"
+
+        Returns:
+            "relevant"   — enough headline nouns found in title+body
+            "borderline" — one noun match when more were expected
+            "irrelevant" — 0 headline nouns found
+        """
+        if not headline_nouns:
+            return "relevant"  # can't filter without nouns
+
+        text = (article.title + " " + article.body).lower()
+        matches = sum(1 for noun in headline_nouns if noun in text)
+
+        # Adaptive threshold: need 2 matches when we have 3+ nouns,
+        # but 1 match is enough when the headline only has 1-2 nouns
+        required = min(2, len(headline_nouns))
+
+        if matches >= required:
+            return "relevant"
+        elif matches >= 1:
+            return "borderline"
+        else:
+            return "irrelevant"
+
+    @staticmethod
+    def _haiku_relevance_check(headline: str, article: ArticleRecord,
+                               model: str = "claude-haiku-4-5-20251001") -> bool:
+        """Use Claude Haiku to classify whether an article is about the same
+        story as the headline. Costs ~$0.001 per call.
+
+        Returns True if the article is relevant, False if off-topic.
+        Falls back to True (include) on any error.
+        """
+        api_key = os.getenv("ANTHROPIC_API_KEY")
+        if not api_key:
+            return True  # can't classify without API key — include by default
+
+        # Use title + first 1000 chars of body to keep prompt small
+        article_text = article.title or ""
+        if article.body:
+            article_text += "\n" + article.body[:1000]
+
+        prompt = (
+            f"Is this article about the same news story as the headline below?\n\n"
+            f"HEADLINE: {headline}\n\n"
+            f"ARTICLE:\n{article_text}\n\n"
+            f"Answer ONLY 'Yes' or 'No'."
+        )
+
+        try:
+            from anthropic import Anthropic
+            client = Anthropic(api_key=api_key)
+            response = client.messages.create(
+                model=model,
+                max_tokens=10,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            answer = response.content[0].text.strip().lower()
+            return answer.startswith("yes")
+        except Exception as e:
+            print(f"[source_gatherer] Haiku relevance check failed: {e}")
+            return True  # include on error
+
+    def _filter_relevant_articles(self, records: list[ArticleRecord],
+                                  headline: str) -> list[ArticleRecord]:
+        """Two-pass relevance filter.
+
+        Pass 1 (heuristic): check proper-noun overlap between headline and
+        article title+body. Articles with 2+ matches are kept, 0 matches
+        are dropped, 1 match is borderline.
+
+        Pass 2 (Haiku): borderline articles are sent to Claude Haiku for a
+        yes/no classification. ~$0.001 per call.
+
+        Returns filtered list of relevant articles.
+        """
+        if not records:
+            return records
+
+        headline_nouns = self._extract_headline_nouns(headline)
+        if not headline_nouns:
+            print("[source_gatherer] no headline nouns extracted — skipping relevance filter")
+            return records
+
+        relevant: list[ArticleRecord] = []
+        borderline: list[ArticleRecord] = []
+        dropped: list[str] = []
+
+        for article in records:
+            verdict = self._heuristic_relevance(article, headline_nouns)
+            if verdict == "relevant":
+                relevant.append(article)
+            elif verdict == "borderline":
+                borderline.append(article)
+            else:
+                dropped.append(f"{article.outlet} ({article.title[:50]})")
+
+        if dropped:
+            print(f"[source_gatherer] relevance filter dropped {len(dropped)} "
+                  f"off-topic articles: {', '.join(dropped)}")
+
+        # Pass 2: Haiku for borderline cases
+        for article in borderline:
+            print(f"[source_gatherer] borderline article from {article.outlet} "
+                  f"— checking with Haiku...")
+            if self._haiku_relevance_check(headline, article):
+                print(f"   ✓ Haiku says relevant")
+                relevant.append(article)
+            else:
+                print(f"   ✗ Haiku says off-topic — dropping {article.outlet}")
+
+        if len(relevant) < len(records):
+            print(f"[source_gatherer] relevance filter: {len(relevant)}/{len(records)} "
+                  f"articles kept (headline nouns: {headline_nouns})")
+
+        return relevant
 
     def _mark_wire_derived(self, records: list[ArticleRecord]) -> None:
         """Heuristic dedup: any article whose body has substantial substring
