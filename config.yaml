@@ -362,7 +362,7 @@ journalism:
   # Outlet reply bot — replies to outlet tweets with Walter's dossier link
   # when the cross-outlet analysis adds genuine value to the conversation.
   outlet_reply:
-    enabled: false                 # Start disabled — dry-run first
+    enabled: true                  # Start disabled — dry-run first
     max_replies_per_day: 9         # Hard cap (3 stories × 3 replies each)
     max_replies_per_story: 3       # Max replies to different outlets per story
     per_outlet_cooldown_hours: 72  # Max 1 reply per outlet per 72 hours
