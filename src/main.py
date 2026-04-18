@@ -579,6 +579,28 @@ def _render_dossier_html(dossier_store, draft: DraftPost, dossier: StoryDossier)
         with open(meta_path, "w", encoding="utf-8") as f:
             _json.dump(meta, f, indent=2)
 
+        # 2b. Write a brief sidecar for the outlet reply bot.
+        # Contains the MetaAnalysisBrief + article outlet/URL list (no bodies).
+        # The full dossier JSON is gitignored, but this lightweight sidecar IS
+        # committed so the outlet reply bot can score meta-angle quality and
+        # match outlet tweets from any CI runner.
+        brief_data = dossier_data.get("brief", {})
+        if brief_data:
+            brief_sidecar = {
+                "story_id": draft.story_id,
+                "headline_seed": dossier.headline_seed,
+                "brief": brief_data,
+                "articles": [
+                    {"outlet": a.get("outlet", ""), "url": a.get("url", ""),
+                     "title": a.get("title", "")}
+                    for a in dossier_data.get("dossier", {}).get("articles", [])
+                ],
+            }
+            brief_path = os.path.join(html_dir, f"{safe_id}.brief.json")
+            with open(brief_path, "w", encoding="utf-8") as f:
+                _json.dump(brief_sidecar, f, indent=2)
+            print(f"[journalism] brief sidecar written to {brief_path}")
+
         # 3. Rebuild the index from all .meta.json files in the directory
         import glob as _glob
         entries = []

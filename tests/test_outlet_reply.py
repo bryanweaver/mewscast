@@ -438,15 +438,36 @@ class TestPerOutletCooldown:
         assert bot._check_per_outlet_cooldown("Reuters") is True
 
 
-class TestAlreadyReplied:
-    def test_not_replied_returns_false(self, bot):
-        assert bot._is_already_replied("new-dossier-id") is False
+class TestStoryReplyTracking:
+    def test_story_reply_count_zero(self, bot):
+        assert bot._story_reply_count("new-dossier-id") == 0
 
-    def test_already_replied_returns_true(self, bot):
+    def test_story_reply_count_tracks(self, bot):
         bot.reply_history['replies'] = [
-            {"dossier_id": "existing-dossier-id", "timestamp": datetime.now(timezone.utc).isoformat()},
+            {"dossier_id": "story1", "outlet_handle": "Reuters", "timestamp": datetime.now(timezone.utc).isoformat()},
+            {"dossier_id": "story1", "outlet_handle": "nytimes", "timestamp": datetime.now(timezone.utc).isoformat()},
+            {"dossier_id": "story2", "outlet_handle": "Reuters", "timestamp": datetime.now(timezone.utc).isoformat()},
         ]
-        assert bot._is_already_replied("existing-dossier-id") is True
+        assert bot._story_reply_count("story1") == 2
+        assert bot._story_reply_count("story2") == 1
+
+    def test_is_story_completed(self, bot):
+        bot.reply_history['replies'] = [
+            {"dossier_id": "done", "outlet_handle": f"outlet{i}", "timestamp": datetime.now(timezone.utc).isoformat()}
+            for i in range(3)
+        ]
+        assert bot._is_story_completed("done") is True
+        assert bot._is_story_completed("new") is False
+
+    def test_outlets_already_replied(self, bot):
+        bot.reply_history['replies'] = [
+            {"dossier_id": "story1", "outlet_handle": "Reuters", "timestamp": datetime.now(timezone.utc).isoformat()},
+            {"dossier_id": "story1", "outlet_handle": "nytimes", "timestamp": datetime.now(timezone.utc).isoformat()},
+        ]
+        replied = bot._outlets_already_replied("story1")
+        assert "Reuters" in replied
+        assert "nytimes" in replied
+        assert "AP" not in replied
 
 
 # ---------------------------------------------------------------------------
@@ -557,10 +578,11 @@ class TestRunReplyCycle:
         with patch.object(bot, '_get_recent_journalism_posts', return_value=[]):
             assert bot.run_reply_cycle() is False
 
-    def test_skips_already_replied_dossier(self, bot):
+    def test_skips_completed_story(self, bot):
         post = _make_post(dossier_id="already-done")
         bot.reply_history['replies'] = [
-            {"dossier_id": "already-done", "timestamp": datetime.now(timezone.utc).isoformat()},
+            {"dossier_id": "already-done", "outlet_handle": f"outlet{i}", "timestamp": datetime.now(timezone.utc).isoformat()}
+            for i in range(3)  # 3 replies = completed
         ]
         with patch.object(bot, '_get_recent_journalism_posts', return_value=[post]):
             assert bot.run_reply_cycle() is False
