@@ -243,17 +243,35 @@ class OutletReplyBot:
                            article_urls: list) -> Optional[dict]:
         """Search X for the outlet's tweet about this story.
 
-        Builds a query like: from:{handle} {noun1} {noun2} -is:retweet
+        Builds a query like: from:{handle} ({noun1} OR {noun2}) -is:retweet
         Returns the best matching tweet dict, or None.
+
+        Recall vs precision:
+          - Headlines typically have 4-6 proper nouns, but an outlet's
+            wire-style tweet usually uses only a subset (e.g. the full
+            headline mentions "UNIFIL + Hezbollah + Lebanon" while BBC's
+            tweet may only say "Lebanon" and "Hezbollah"). AND-ing three
+            required terms misses these matches entirely.
+          - Fix: OR the top 2 longest proper nouns so the search is
+            permissive on recall; the scorer below filters for precision.
+          - Score threshold 1.0 requires either 2 shared proper nouns
+            (2 * 0.5) or 1 shared noun + URL-domain match (0.5 + 1.0).
+            A single-noun match alone is rejected as too weak.
         """
         nouns = _extract_proper_nouns(headline_seed)
         if not nouns:
             print(f"   No proper nouns extracted from headline")
             return None
 
-        # Use 2-3 most distinctive nouns (longer words first — more specific)
-        sorted_nouns = sorted(nouns, key=len, reverse=True)[:3]
-        noun_query = " ".join(sorted_nouns)
+        # Pick the 2 most distinctive proper nouns (longest = usually most
+        # specific — "Hezbollah" beats "UN"). OR them so a headline full of
+        # proper nouns doesn't force every outlet tweet to include all of
+        # them. See docstring for precision backstop via _score_tweet_match.
+        sorted_nouns = sorted(nouns, key=len, reverse=True)[:2]
+        if len(sorted_nouns) >= 2:
+            noun_query = f"({sorted_nouns[0]} OR {sorted_nouns[1]})"
+        else:
+            noun_query = sorted_nouns[0]
 
         query = f"from:{outlet_handle} {noun_query} -is:retweet"
         print(f"   Searching: {query}")
@@ -269,7 +287,8 @@ class OutletReplyBot:
                 print(f"   No results for query")
                 return None
 
-            # Score each tweet
+            # Score each tweet against ALL headline proper nouns (not just
+            # the 2 used in the query) so near-miss candidates still score.
             best_tweet = None
             best_score = 0.0
 
@@ -281,7 +300,9 @@ class OutletReplyBot:
                     best_score = score
                     best_tweet = tweet
 
-            if best_score < 0.5:
+            # 1.0 floor = either 2 shared nouns or 1 noun + URL match.
+            # Single-noun matches (0.5) are too weak under the OR query.
+            if best_score < 1.0:
                 print(f"   Best match score too low: {best_score:.2f}")
                 return None
 
