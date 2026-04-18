@@ -155,7 +155,14 @@ class PostComposer:
         # long-form) guard against compounded retries shrinking below a
         # usable length if a new LONG_FORM_TYPES member with a small
         # budget is ever added.
-        target_floor = 500 if chosen_type in LONG_FORM_TYPES else 200
+        # The floor is clamped to effective_max — if the configured budget
+        # is smaller than the floor (e.g. max_length=150), the hard gate
+        # limit wins. Otherwise prompt_target would exceed effective_max
+        # and every draft would fail char_limit on the first attempt.
+        target_floor = min(
+            500 if chosen_type in LONG_FORM_TYPES else 200,
+            effective_max,
+        )
         if max_length is not None:
             prompt_target = effective_max
         elif chosen_type in LONG_FORM_TYPES:
