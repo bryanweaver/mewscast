@@ -225,14 +225,14 @@ class TestGather:
 
     def test_outlet_slants_populated_for_registered_outlets(self, candidate, real_registry_path):
         articles = [
-            {"title": "Reuters", "url": "https://reuters.com/x",
+            {"title": "Reuters: Senate passes bill", "url": "https://reuters.com/x",
              "source": "Reuters", "description": ""},
-            {"title": "NYT", "url": "https://nytimes.com/y",
+            {"title": "NYT: Senate passes bill", "url": "https://nytimes.com/y",
              "source": "The New York Times", "description": ""},
         ]
         bodies = {
-            "https://reuters.com/x": "body " + ("x" * 300),
-            "https://nytimes.com/y": "body " + ("y" * 300),
+            "https://reuters.com/x": "The Senate voted to pass the appropriations bill. " + ("x" * 300),
+            "https://nytimes.com/y": "Senate clears the spending measure. " + ("y" * 300),
         }
         fetcher = _StubNewsFetcher(articles=articles, bodies=bodies)
         gatherer = SourceGatherer(
@@ -499,12 +499,12 @@ class TestGatherSeedUrls:
 
     def test_gather_seed_urls_precede_keyword_results(self, real_registry_path):
         """Seed articles are first in dossier.articles."""
-        seed_body = "Seed body content. " * 40
-        keyword_body = "Keyword body content. " * 40
+        seed_body = "The Senate voted 68-32 to pass the appropriations bill. " * 20
+        keyword_body = "AP: Senate passes spending bill. The appropriations measure cleared 68-32. " * 20
         fetcher = _StubNewsFetcher(
             articles=[
                 {
-                    "title": "Keyword article",
+                    "title": "AP: Senate passes spending bill 68-32",
                     "url": "https://apnews.com/keyword",
                     "source": "AP News",
                     "description": "From keyword search",
@@ -540,7 +540,7 @@ class TestGatherSeedUrls:
         fetcher = _StubNewsFetcher(
             articles=[
                 {
-                    "title": "Keyword article",
+                    "title": "AP: Senate passes spending bill 68-32",
                     "url": "https://apnews.com/keyword",
                     "source": "AP News",
                     "description": "From keyword search",
@@ -549,7 +549,7 @@ class TestGatherSeedUrls:
             bodies={
                 # Seed URL returns empty body (fetch failure)
                 "https://reuters.com/404": "",
-                "https://apnews.com/keyword": "Keyword body content. " * 40,
+                "https://apnews.com/keyword": "The Senate passed the appropriations bill 68-32. " * 20,
             },
         )
         candidate = _Candidate(
@@ -590,6 +590,31 @@ class TestGatherSeedUrls:
         assert isinstance(dossier, StoryDossier)
         assert len(dossier.articles) >= 1
 
+    # Relevance filter should not break seed URL inclusion
+    def test_seed_url_survives_relevance_filter(self, real_registry_path):
+        """Seed URLs with relevant bodies should survive the relevance filter."""
+        seed_body = (
+            "Singer D4vd, real name David Anthony Burke, was arrested Thursday "
+            "in connection with the death of Celeste Rivas Hernandez. "
+            + ("details " * 50)
+        )
+        fetcher = _StubNewsFetcher(articles=[], bodies={
+            "https://latimes.com/d4vd-arrest": seed_body,
+        })
+        candidate = _Candidate(
+            headline_seed="Singer D4vd arrested on suspicion of murder of Celeste Rivas Hernandez",
+            story_id="2026-04-17-d4vd-test",
+        )
+        gatherer = SourceGatherer(
+            news_fetcher=fetcher, registry_path=real_registry_path
+        )
+        dossier = gatherer.gather(
+            candidate, target_count=5,
+            seed_urls=["https://latimes.com/d4vd-arrest"],
+        )
+        urls = [a.url for a in dossier.articles]
+        assert "https://latimes.com/d4vd-arrest" in urls
+
     def test_infer_outlet_from_url_matches_registry(self, real_registry_path):
         """_infer_outlet_from_url resolves known domains to canonical names."""
         gatherer = SourceGatherer(
@@ -603,3 +628,160 @@ class TestGatherSeedUrls:
         unknown = gatherer._infer_outlet_from_url("https://www.obscurenews.example.com/story")
         assert unknown  # non-empty
         assert "obscurenews" in unknown.lower() or "example" in unknown.lower()
+
+
+# ---------------------------------------------------------------------------
+# Relevance filter — proper-noun heuristic + Haiku fallback
+# ---------------------------------------------------------------------------
+
+class TestExtractHeadlineNouns:
+    def test_extracts_proper_nouns(self):
+        nouns = SourceGatherer._extract_headline_nouns(
+            "Singer D4vd arrested for murder of Celeste Rivas Hernandez"
+        )
+        assert "singer" in nouns
+        assert "d4vd" in nouns
+        assert "celeste" in nouns
+        assert "rivas" in nouns
+        assert "hernandez" in nouns
+
+    def test_skips_sentence_starters(self):
+        nouns = SourceGatherer._extract_headline_nouns("The president signed a bill")
+        assert "the" not in nouns
+
+    def test_skips_short_words(self):
+        nouns = SourceGatherer._extract_headline_nouns("US AG files suit")
+        assert "us" not in nouns
+        assert "ag" not in nouns
+
+    def test_empty_headline(self):
+        assert SourceGatherer._extract_headline_nouns("") == set()
+
+
+class TestHeuristicRelevance:
+    def _make_article(self, title="", body=""):
+        from dossier_store import ArticleRecord
+        return ArticleRecord(
+            outlet="Test", url="https://test.com", title=title,
+            body=body, fetched_at="2026-01-01T00:00:00Z"
+        )
+
+    def test_relevant_with_2_nouns(self):
+        headline_nouns = {"d4vd", "celeste", "hernandez", "rivas"}
+        article = self._make_article(
+            title="D4vd arrested in murder case",
+            body="The body of Celeste was found in a Tesla"
+        )
+        assert SourceGatherer._heuristic_relevance(article, headline_nouns) == "relevant"
+
+    def test_irrelevant_with_0_nouns(self):
+        headline_nouns = {"d4vd", "celeste", "hernandez", "rivas"}
+        article = self._make_article(
+            title="Trump approval rating drops",
+            body="Fox News host Jessica Tarlov discussed poll numbers"
+        )
+        assert SourceGatherer._heuristic_relevance(article, headline_nouns) == "irrelevant"
+
+    def test_borderline_with_1_noun(self):
+        headline_nouns = {"d4vd", "celeste", "hernandez", "rivas"}
+        article = self._make_article(
+            title="Singer arrested in LA",
+            body="A singer was taken into custody. D4vd fans react."
+        )
+        assert SourceGatherer._heuristic_relevance(article, headline_nouns) == "borderline"
+
+    def test_empty_headline_nouns_returns_relevant(self):
+        article = self._make_article(title="Anything", body="Anything")
+        assert SourceGatherer._heuristic_relevance(article, set()) == "relevant"
+
+
+class TestFilterRelevantArticles:
+    def _make_article(self, outlet="Test", title="", body=""):
+        from dossier_store import ArticleRecord
+        return ArticleRecord(
+            outlet=outlet, url=f"https://{outlet.lower()}.com",
+            title=title, body=body, fetched_at="2026-01-01T00:00:00Z"
+        )
+
+    def test_keeps_relevant_drops_irrelevant(self):
+        """The D4vd scenario: LA Times and NBC are relevant, USA Today is not."""
+        gatherer = SourceGatherer(news_fetcher=None)
+        headline = "Singer D4vd arrested for murder of Celeste Rivas Hernandez"
+
+        articles = [
+            self._make_article("LA Times",
+                title="D4vd arrested in slaying of girl",
+                body="Singer D4vd was arrested. Celeste Rivas Hernandez remains found in Tesla."),
+            self._make_article("NBC News",
+                title="Singer D4vd arrested in murder of teen Celeste Rivas",
+                body="D4vd arrested after Hernandez body found in trunk."),
+            self._make_article("USA Today",
+                title="Trump Fox News Jessica Tarlov approval rating",
+                body="Fox News host discusses Trump's declining poll numbers."),
+            self._make_article("Politico",
+                title="Johnson tries again on spy powers vote",
+                body="House Speaker pushes for surveillance renewal legislation."),
+        ]
+
+        result = gatherer._filter_relevant_articles(articles, headline)
+
+        outlets = {a.outlet for a in result}
+        assert "LA Times" in outlets
+        assert "NBC News" in outlets
+        assert "USA Today" not in outlets
+        assert "Politico" not in outlets
+
+    def test_keeps_all_when_all_relevant(self):
+        gatherer = SourceGatherer(news_fetcher=None)
+        headline = "Senate passes appropriations bill 68-32"
+
+        articles = [
+            self._make_article("Reuters",
+                title="Senate passes $1.2T bill",
+                body="The Senate voted 68-32 to pass the appropriations bill."),
+            self._make_article("AP",
+                title="Senate approves spending bill",
+                body="The Senate cleared the appropriations measure 68-32."),
+        ]
+
+        result = gatherer._filter_relevant_articles(articles, headline)
+        assert len(result) == 2
+
+    def test_empty_list_returns_empty(self):
+        gatherer = SourceGatherer(news_fetcher=None)
+        result = gatherer._filter_relevant_articles([], "Some headline")
+        assert result == []
+
+    def test_borderline_calls_haiku(self):
+        """Borderline articles (1 noun match) should trigger Haiku check."""
+        from unittest.mock import patch
+        gatherer = SourceGatherer(news_fetcher=None)
+        headline = "Singer D4vd arrested for murder of Celeste Rivas Hernandez"
+
+        # Article with only 1 noun match (borderline)
+        articles = [
+            self._make_article("DW",
+                title="Music industry news",
+                body="D4vd has been trending worldwide after recent events."),
+        ]
+
+        with patch.object(SourceGatherer, '_haiku_relevance_check', return_value=True) as mock_haiku:
+            result = gatherer._filter_relevant_articles(articles, headline)
+            mock_haiku.assert_called_once()
+            assert len(result) == 1
+
+    def test_borderline_dropped_when_haiku_says_no(self):
+        from unittest.mock import patch
+        gatherer = SourceGatherer(news_fetcher=None)
+        headline = "Singer D4vd arrested for murder of Celeste Rivas Hernandez"
+
+        articles = [
+            self._make_article("DW",
+                title="Music industry news",
+                body="D4vd has been trending worldwide after recent events."),
+        ]
+
+        with patch.object(SourceGatherer, '_haiku_relevance_check', return_value=False) as mock_haiku:
+            result = gatherer._filter_relevant_articles(articles, headline)
+            mock_haiku.assert_called_once()
+            assert len(result) == 0
