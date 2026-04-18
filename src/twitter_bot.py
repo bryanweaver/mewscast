@@ -183,6 +183,45 @@ class TwitterBot:
             print(f"✗ Image not found: {image_path}")
             return None
 
+    def follow_user_by_handle(self, handle: str) -> bool:
+        """Follow an X user by their @handle.
+
+        Experimental: Walter following the outlet does NOT directly
+        satisfy X's "People you follow" reply-restriction rule (that
+        rule is from the AUTHOR's perspective — the outlet would have
+        to follow Walter). But following may incrementally soften X's
+        anti-automation heuristics over time, so we try it best-effort
+        before reply attempts on verified accounts.
+
+        Idempotent — X returns a success-shaped response when already
+        following. Never raises for the caller to handle; always returns
+        True on ok/already-following and False on failure.
+        """
+        try:
+            user_resp = self.client.get_user(username=handle)
+            if not user_resp or not getattr(user_resp, 'data', None):
+                print(f"   Could not resolve @{handle} for follow")
+                return False
+            user_id = user_resp.data.id
+            response = self.client.follow_user(target_user_id=user_id)
+            data = getattr(response, 'data', None) or {}
+            following = data.get('following') if isinstance(data, dict) else getattr(data, 'following', None)
+            if following:
+                print(f"   ✓ Now following @{handle}")
+                return True
+            print(f"   Follow @{handle} returned unexpected payload: {data}")
+            return False
+        except tweepy.TooManyRequests as e:
+            # Don't fail the whole reply cycle on a follow rate-limit —
+            # the reply attempt itself is what matters.
+            print(f"   Follow @{handle} rate-limited: {e}")
+            return False
+        except tweepy.TweepyException as e:
+            print(f"   Follow @{handle} failed: {e}")
+            if hasattr(e, 'response') and e.response is not None:
+                print(f"     Response: {e.response.status_code} {e.response.text[:200]}")
+            return False
+
     def quote_tweet(self, tweet_id: str, text: str) -> Optional[dict]:
         """
         Quote-retweet a specific tweet with commentary.
