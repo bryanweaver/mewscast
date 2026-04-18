@@ -363,7 +363,8 @@ journalism:
   # when the cross-outlet analysis adds genuine value to the conversation.
   outlet_reply:
     enabled: false                 # Start disabled — dry-run first
-    max_replies_per_day: 2         # Hard cap on total outlet replies per day
+    max_replies_per_day: 9         # Hard cap (3 stories × 3 replies each)
+    max_replies_per_story: 3       # Max replies to different outlets per story
     per_outlet_cooldown_hours: 72  # Max 1 reply per outlet per 72 hours
     min_meta_score: 3              # Minimum dossier quality score to trigger
     eligible_window_hours: 8       # How far back to scan for recent posts
