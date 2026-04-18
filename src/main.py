@@ -31,7 +31,11 @@ from source_gatherer import _FLUFF_PREFIXES, _SUFFIX_STRIP_RE, SourceGatherer
 from primary_source_finder import PrimarySourceFinder
 from meta_analyzer import MetaAnalyzer
 from post_composer import PostComposer
-from verification_gate import VerificationGate, VerificationResult
+from verification_gate import (
+    CHAR_LIMIT_REASON_PREFIX,
+    VerificationGate,
+    VerificationResult,
+)
 from draft_analyzer import analyze_draft, print_analysis
 from dossier_renderer import bluesky_web_url, render_dossier_page, render_index_page
 
@@ -1285,6 +1289,15 @@ def post_journalism_cycle(
                 for f in findings.get("findings", [])
                 if f.get("severity") == "major"
             ]
+            # Carry the char budget explicitly — rewriting to remove
+            # invented claims tends to add hedging words and blow the
+            # budget (run 24595360166: fab-retry landed at 323 > 280).
+            # The composer's retry path also tightens prompt_target when
+            # it sees a char_limit reason, giving the rewrite real headroom.
+            fab_reasons.append(
+                f"{CHAR_LIMIT_REASON_PREFIX} draft MUST be <= "
+                f"{post_composer._effective_max_length(chosen_type)} chars"
+            )
             try:
                 draft = post_composer.compose(
                     brief=brief,
