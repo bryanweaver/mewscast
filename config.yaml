@@ -368,6 +368,14 @@ journalism:
     per_outlet_cooldown_hours: 72  # Max 1 reply per outlet per 72 hours
     min_meta_score: 3              # Minimum dossier quality score to trigger
     eligible_window_hours: 8       # How far back to scan for recent posts
+    follow_before_reply: true      # Experiment: follow the outlet before
+                                   # posting a reply. Hypothesis: sustained
+                                   # engagement may soften X's anti-automation
+                                   # heuristics for verified-account replies
+                                   # over time. Set to false to disable without
+                                   # a code change when the experiment ends.
+                                   # Audit trail: successful follows logged
+                                   # to outlet_reply_history.json.follows[].
     priority_outlets:              # Only reply to these outlet X handles
       - Reuters
       - AP
