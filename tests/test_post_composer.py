@@ -451,6 +451,27 @@ class TestPerPostTypeMaxLength:
             f"char_limit retry must tighten prompt_target; got {kwargs['max_length']}"
         )
 
+    def test_target_floor_clamped_to_effective_max(self, brief, dossier):
+        """Regression: the 200/500 floors that guard against compounded
+        retry shrinkage must never exceed the gate's hard budget. If a
+        config pins max_length below the floor (e.g. 150), prompt_target
+        would otherwise be 200 while the gate rejects anything over 150."""
+        loader = _StubPromptLoader()
+        client = _FakeClaude("short")
+        composer = PostComposer(
+            anthropic_client=client,
+            prompt_loader=loader,
+            max_length=150,
+            long_form_max_length=4000,
+        )
+        composer.compose(brief=brief, dossier=dossier, post_type=PostType.REPORT)
+        kwargs = loader.calls[0][1]
+        # 150 * 0.93 = 139, which is below the 200 floor; the clamp
+        # brings the floor down to 150, so prompt_target ends at 150.
+        assert kwargs["max_length"] == 150, (
+            f"floor must not exceed effective_max; got {kwargs['max_length']}"
+        )
+
     def test_non_char_limit_retry_does_not_tighten(self, brief, dossier):
         """A retry for a non-char_limit failure (e.g. missing sign-off)
         should use the normal prompt_target — not tighten it. Only the
