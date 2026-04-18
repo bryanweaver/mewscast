@@ -408,21 +408,36 @@ _JOURNALISM_POST_TYPE_ALIASES = {
 }
 
 
-def _dossier_reply_image_path() -> str | None:
-    """Local path to the dossier-reply banner image.
+def _compose_dossier_reply_text(
+    brief_data: dict | None,
+    outlet_count: int,
+) -> str:
+    """Short self-reply line that introduces the dossier link.
 
-    A wide banner (~2:1) with Walter at his desk, evidence wall behind
-    him, and bold text: "WHAT THEY TOLD YOU AND WHAT THEY DIDN'T / THE
-    FULL DOSSIER • EVERY SOURCE • ONE PAGE". The image carries the
-    message so reply text can be just the URL.
+    Picks a template based on what the brief flagged — disagreements,
+    missing context, or multi-outlet framing differences. Falls back
+    to a generic line when the brief is empty or none of the hooks
+    apply. Pure function; no I/O.
 
-    Returns None if the asset isn't found so callers fall back to a
-    text-only reply.
+    Callers append a newline + dossier URL after this string to form
+    the full reply body. Budget: ~240 chars, leaving room for the URL.
     """
-    p = os.path.join(
-        _project_root(), "docs", "images", "walter-croncat-dossier-reply.png"
-    )
-    return p if os.path.exists(p) else None
+    brief_data = brief_data or {}
+    disagreements = brief_data.get("disagreements") or []
+    missing_context = brief_data.get("missing_context") or []
+    framing = brief_data.get("framing_analysis") or {}
+
+    # Avoid ungrammatical "1 outlets". Below 2, use a plural-neutral phrase.
+    count_phrase = f"{outlet_count} outlets" if outlet_count >= 2 else "these outlets"
+
+    if disagreements:
+        return f"Where {count_phrase}' accounts diverge — full dossier:"
+    if missing_context:
+        return f"What {count_phrase} reported — and what they left out:"
+    if len(framing) >= 3:
+        n = outlet_count if outlet_count >= 2 else len(framing)
+        return f"{n} outlets, {n} framings — cross-outlet breakdown:"
+    return "Full cross-outlet dossier on this story:"
 
 
 def _project_root() -> str:
@@ -1423,19 +1438,18 @@ def post_journalism_cycle(
                 x_success = True
                 print(f"[journalism] X post ok: {tweet_id}")
 
-                # Dossier reply — banner image carries the message ("What
-                # they told you and what they didn't"), text is just the URL.
-                # Identical treatment on both X and Bluesky.
+                # Dossier reply — plain-text reply with a short brief-aware
+                # hook line + URL. The banner image was dropped (too
+                # redundant in the profile feed; the main post already
+                # carries imagery).
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
+                brief_dict = brief.to_dict() if brief else {}
+                outlet_count = len(dossier.articles) if dossier.articles else 0
+                reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
+                reply_body = f"{reply_hook}\n{dossier_url}"
                 time.sleep(2)
                 try:
-                    reply_image = _dossier_reply_image_path()
-                    if reply_image:
-                        reply_result = twitter_bot.reply_to_tweet_with_image(
-                            tweet_id, dossier_url, reply_image
-                        )
-                    else:
-                        reply_result = twitter_bot.reply_to_tweet(tweet_id, dossier_url)
+                    reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
                     if reply_result:
                         reply_tweet_id = reply_result.get("id")
                         print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
@@ -1458,18 +1472,19 @@ def post_journalism_cycle(
                 bluesky_success = True
                 print(f"[journalism] Bluesky post ok: {bluesky_uri}")
 
-                # Dossier reply — link card with the banner as thumbnail.
-                # Bluesky can only have one embed per post (image OR link
-                # card), so image-attachment leaves the URL as dead text.
-                # Link card makes the whole thing clickable + shows the
-                # banner as the card thumbnail.
+                # Dossier reply — clickable link card (no banner thumbnail).
+                # Bluesky allows one embed per post; using a link card keeps
+                # the URL clickable, while omitting thumb_image_path drops
+                # the banner image. Hook text picked from brief signals.
                 dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
+                brief_dict = brief.to_dict() if brief else {}
+                outlet_count = len(dossier.articles) if dossier.articles else 0
+                reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
                 time.sleep(2)
                 try:
                     reply_result = bluesky_bot.reply_to_skeet_with_link(
                         bluesky_uri, dossier_url,
-                        text="What each outlet told you \u2014 and what they didn't.",
-                        thumb_image_path=_dossier_reply_image_path(),
+                        text=reply_hook,
                     )
                     if reply_result:
                         bluesky_reply_uri = reply_result.get("uri")
@@ -1580,6 +1595,27 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
     except Exception as e:
         print(f"[republish] image generation failed (continuing): {e}")
 
+    # ---- Load brief sidecar for dossier-reply personalization ----------
+    # The full dossier JSON is gitignored; the brief sidecar is committed
+    # alongside the dossier HTML and carries the disagreements/framing/
+    # missing-context signals we need. Absence is fine — the compose
+    # function falls back to a generic line.
+    reply_brief: dict = {}
+    reply_outlet_count: int = 0
+    try:
+        safe_id = _safe_filename_component(story_id)
+        brief_sidecar_path = os.path.join(
+            _project_root(), "docs", "dossiers", f"{safe_id}.brief.json"
+        )
+        if os.path.exists(brief_sidecar_path):
+            import json as _json
+            with open(brief_sidecar_path, "r", encoding="utf-8") as f:
+                _sidecar = _json.load(f)
+            reply_brief = _sidecar.get("brief", {}) or {}
+            reply_outlet_count = len(_sidecar.get("articles", []) or [])
+    except Exception as _sidecar_err:
+        print(f"[republish] brief sidecar load failed (using generic reply): {_sidecar_err}")
+
     # ---- Publish to X --------------------------------------------------
     tweet_id = None
     reply_tweet_id = None
@@ -1595,17 +1631,14 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             x_success = True
             print(f"[republish] X post ok: {tweet_id}")
 
-            # Dossier reply — banner image + URL, identical to journalism path.
+            # Dossier reply — plain text, no banner (redundant with the
+            # main post's image). Brief-aware hook line.
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
+            reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
+            reply_body = f"{reply_hook}\n{dossier_url}"
             time.sleep(2)
             try:
-                reply_image = _dossier_reply_image_path()
-                if reply_image:
-                    reply_result = twitter_bot.reply_to_tweet_with_image(
-                        tweet_id, dossier_url, reply_image
-                    )
-                else:
-                    reply_result = twitter_bot.reply_to_tweet(tweet_id, dossier_url)
+                reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
                 if reply_result:
                     reply_tweet_id = reply_result.get("id")
                     print(f"[republish] X dossier reply ok: {reply_tweet_id}")
@@ -1627,14 +1660,14 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             bluesky_success = True
             print(f"[republish] Bluesky post ok: {bluesky_uri}")
 
-            # Dossier reply — link card with banner thumbnail (clickable).
+            # Dossier reply — clickable link card, no banner thumbnail.
             dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
+            reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
             time.sleep(2)
             try:
                 reply_result = bluesky_bot.reply_to_skeet_with_link(
                     bluesky_uri, dossier_url,
-                    text="What each outlet told you \u2014 and what they didn't.",
-                    thumb_image_path=_dossier_reply_image_path(),
+                    text=reply_hook,
                 )
                 if reply_result:
                     print(f"[republish] Bluesky dossier reply ok")
