@@ -335,6 +335,102 @@ class TestFindOutletTweet:
 
         assert result is None
 
+    def test_query_uses_or_of_top_2_nouns(self, bot):
+        """Regression for the French-peacekeeper miss: the AND-of-3-nouns
+        query required outlet tweets to contain every one of the headline's
+        longest proper nouns, which most wire-style tweets don't. Now the
+        top-2 longest nouns are OR-ed so partial-subset tweets still hit."""
+        resp = Mock()
+        resp.data = None
+        bot.bot.client.search_recent_tweets.return_value = resp
+
+        bot._find_outlet_tweet(
+            "BBCWorld",
+            "A French soldier serving with the UN peacekeeping mission in "
+            "Lebanon was killed in an attack that UNIFIL and French "
+            "officials said was carried out by Hezbollah",
+            [],
+        )
+
+        actual_query = bot.bot.client.search_recent_tweets.call_args.kwargs["query"]
+        # Top 2 longest proper nouns from that headline: hezbollah (9),
+        # lebanon (7). Both must appear inside an OR group.
+        assert "from:BBCWorld" in actual_query
+        assert "(hezbollah OR lebanon)" in actual_query or \
+               "(lebanon OR hezbollah)" in actual_query
+        assert "-is:retweet" in actual_query
+
+    def test_matches_partial_overlap_tweet(self, bot):
+        """Under the new OR query + 1.0 score floor, a tweet that shares
+        2 of the headline's 5 proper nouns should still match (2 * 0.5 =
+        1.0 meets the threshold). Previously the AND query would have
+        made this unreachable."""
+        tweet = Mock()
+        tweet.id = "tw-bbc-1"
+        # Outlet tweet has only 2 of the 5 headline proper nouns:
+        # lebanon, hezbollah. No UNIFIL, no French, no UN.
+        tweet.text = "UN peacekeeper killed in Lebanon — France blames Hezbollah"
+        resp = Mock()
+        resp.data = [tweet]
+        bot.bot.client.search_recent_tweets.return_value = resp
+
+        result = bot._find_outlet_tweet(
+            "BBCWorld",
+            "A French soldier serving with the UN peacekeeping mission in "
+            "Lebanon was killed in an attack that UNIFIL and French "
+            "officials said was carried out by Hezbollah",
+            [],
+        )
+
+        assert result is not None, \
+            "partial-overlap outlet tweet should now match (shared: france, un, lebanon, hezbollah)"
+        assert result["tweet_id"] == "tw-bbc-1"
+
+    def test_single_shared_noun_rejected(self, bot):
+        """Score threshold 1.0 means a single shared proper noun (0.5) with
+        no URL-domain match is below threshold. Without this guard, the
+        broader OR query would accept false positives like unrelated
+        same-region tweets."""
+        tweet = Mock()
+        tweet.id = "tw-loose"
+        tweet.text = "Hezbollah leader gives speech about economy"  # only "hezbollah"
+        resp = Mock()
+        resp.data = [tweet]
+        bot.bot.client.search_recent_tweets.return_value = resp
+
+        result = bot._find_outlet_tweet(
+            "BBCWorld",
+            "A French soldier serving with the UN peacekeeping mission in "
+            "Lebanon was killed in an attack that UNIFIL and French "
+            "officials said was carried out by Hezbollah",
+            [],
+        )
+
+        assert result is None, "single-noun match without URL should be rejected"
+
+    def test_single_noun_plus_url_match_accepted(self, bot):
+        """One shared proper noun (0.5) + URL-domain match (1.0) = 1.5 ≥ 1.0
+        → accepted. This path preserves the 'the outlet linked to an
+        article we already have in the dossier' signal."""
+        tweet = Mock()
+        tweet.id = "tw-urlhit"
+        # Shares only 'hezbollah' but links to a dossier article:
+        tweet.text = "Hezbollah statement today: https://reuters.com/article/xyz"
+        resp = Mock()
+        resp.data = [tweet]
+        bot.bot.client.search_recent_tweets.return_value = resp
+
+        result = bot._find_outlet_tweet(
+            "BBCWorld",
+            "A French soldier serving with the UN peacekeeping mission in "
+            "Lebanon was killed in an attack that UNIFIL and French "
+            "officials said was carried out by Hezbollah",
+            ["https://reuters.com/article/xyz"],
+        )
+
+        assert result is not None
+        assert result["tweet_id"] == "tw-urlhit"
+
 
 # ---------------------------------------------------------------------------
 # Reply composition
