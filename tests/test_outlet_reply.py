@@ -431,6 +431,81 @@ class TestFindOutletTweet:
         assert result is not None
         assert result["tweet_id"] == "tw-urlhit"
 
+    def test_return_dict_includes_tweet_url(self, bot):
+        """Result dict must include a clickable tweet URL for log/history
+        traceability. Previously only tweet_id was returned, which forced
+        anyone debugging a miss to manually construct the URL."""
+        tweet = Mock()
+        tweet.id = "123456789"
+        tweet.text = "Hungary's Magyar faces protests"
+        tweet.reply_settings = "everyone"
+        resp = Mock()
+        resp.data = [tweet]
+        bot.bot.client.search_recent_tweets.return_value = resp
+
+        result = bot._find_outlet_tweet(
+            "Reuters",
+            "Hungary's PM-elect Peter Magyar sworn in amid protests",
+            [],
+        )
+
+        assert result is not None
+        assert result["tweet_url"] == "https://x.com/Reuters/status/123456789"
+
+    def test_skips_reply_restricted_tweets(self, bot):
+        """Tweets with reply_settings != 'everyone' ('following',
+        'mentionedUsers', 'subscribers') are skipped before scoring so
+        we don't burn a doomed API POST. If all candidates are restricted,
+        we return None."""
+        # One restricted, one unrestricted — should pick the unrestricted
+        # even though the restricted one has a slightly higher text match.
+        restricted = Mock()
+        restricted.id = "tw-restricted"
+        restricted.text = "Hungary's Magyar Peter protests inauguration"
+        restricted.reply_settings = "following"
+
+        unrestricted = Mock()
+        unrestricted.id = "tw-open"
+        unrestricted.text = "Hungary's Magyar protests"
+        unrestricted.reply_settings = "everyone"
+
+        resp = Mock()
+        resp.data = [restricted, unrestricted]
+        bot.bot.client.search_recent_tweets.return_value = resp
+
+        result = bot._find_outlet_tweet(
+            "Reuters",
+            "Hungary's PM-elect Peter Magyar sworn in amid protests",
+            [],
+        )
+
+        assert result is not None
+        assert result["tweet_id"] == "tw-open", \
+            "should skip the reply-restricted tweet and return the open one"
+
+    def test_all_restricted_returns_none(self, bot):
+        """If every candidate is reply-restricted, return None so the
+        caller can try the next outlet."""
+        t1 = Mock()
+        t1.id = "r1"
+        t1.text = "Hungary's Magyar Peter protests"
+        t1.reply_settings = "following"
+        t2 = Mock()
+        t2.id = "r2"
+        t2.text = "Magyar sworn in Hungary"
+        t2.reply_settings = "mentionedUsers"
+
+        resp = Mock()
+        resp.data = [t1, t2]
+        bot.bot.client.search_recent_tweets.return_value = resp
+
+        result = bot._find_outlet_tweet(
+            "Reuters",
+            "Hungary's PM-elect Peter Magyar sworn in amid protests",
+            [],
+        )
+        assert result is None
+
 
 # ---------------------------------------------------------------------------
 # Reply composition
