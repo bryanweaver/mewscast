@@ -88,13 +88,15 @@ def bot(tmp_path):
             "last_cleanup": datetime.now(timezone.utc).isoformat()
         }
 
-        # Default config (enabled)
+        # Default config (enabled; follow experiment ON by default to
+        # exercise the documented path in tests)
         b.config = {
             "enabled": True,
             "max_replies_per_day": 2,
             "per_outlet_cooldown_hours": 72,
             "min_meta_score": 3,
             "eligible_window_hours": 8,
+            "follow_before_reply": True,
             "priority_outlets": ["Reuters", "AP", "nytimes", "washingtonpost"],
         }
 
@@ -797,6 +799,102 @@ class TestRunReplyCycle:
         bot.bot.reply_to_tweet.assert_called_once()
         assert len(bot.reply_history['replies']) == 1
         assert bot.reply_history['replies'][0]['outlet_tweet_id'] == "outlet_tw1"
+
+    def test_follows_outlet_before_replying(self, bot):
+        """Experiment: we attempt to follow the outlet just before posting
+        the reply. Follow is best-effort; it shouldn't block the reply."""
+        post = _make_post()
+        dossier_data = _make_dossier_data()
+        bot.dossier_store.read_raw.return_value = dossier_data
+
+        tweet_match = {"tweet_id": "tw1", "text": "x", "score": 1.5}
+
+        with patch.object(bot, '_get_recent_journalism_posts', return_value=[post]), \
+             patch.object(bot, '_find_outlet_tweet', return_value=tweet_match):
+            bot.run_reply_cycle()
+
+        bot.bot.follow_user_by_handle.assert_called_once()
+        # And the reply still went out
+        bot.bot.reply_to_tweet.assert_called_once()
+
+    def test_reply_still_attempted_when_follow_raises(self, bot):
+        """If follow_user_by_handle raises, the reply attempt should still
+        proceed — follow is non-fatal, reply is the goal."""
+        post = _make_post()
+        dossier_data = _make_dossier_data()
+        bot.dossier_store.read_raw.return_value = dossier_data
+
+        tweet_match = {"tweet_id": "tw1", "text": "x", "score": 1.5}
+        bot.bot.follow_user_by_handle.side_effect = Exception("follow boom")
+
+        with patch.object(bot, '_get_recent_journalism_posts', return_value=[post]), \
+             patch.object(bot, '_find_outlet_tweet', return_value=tweet_match):
+            result = bot.run_reply_cycle()
+
+        assert result is True
+        bot.bot.reply_to_tweet.assert_called_once()
+
+    def test_follow_skipped_when_flag_off(self, bot):
+        """Config gate: follow_before_reply=false must short-circuit the
+        follow call entirely so operators can disable the experiment
+        without a code change."""
+        bot.config['follow_before_reply'] = False
+        post = _make_post()
+        dossier_data = _make_dossier_data()
+        bot.dossier_store.read_raw.return_value = dossier_data
+
+        tweet_match = {"tweet_id": "tw1", "text": "x", "score": 1.5}
+
+        with patch.object(bot, '_get_recent_journalism_posts', return_value=[post]), \
+             patch.object(bot, '_find_outlet_tweet', return_value=tweet_match):
+            bot.run_reply_cycle()
+
+        bot.bot.follow_user_by_handle.assert_not_called()
+        # Reply should still go out
+        bot.bot.reply_to_tweet.assert_called_once()
+        # And no follow audit entry should be written
+        assert 'follows' not in bot.reply_history or not bot.reply_history['follows']
+
+    def test_successful_follow_logged_to_history(self, bot):
+        """Successful follows are persisted under history['follows'] so the
+        set of accounts Walter followed during the experiment can be
+        audited (and, if rolled back, unfollowed) later."""
+        post = _make_post()
+        dossier_data = _make_dossier_data()
+        bot.dossier_store.read_raw.return_value = dossier_data
+
+        tweet_match = {"tweet_id": "tw1", "text": "x", "score": 1.5}
+        bot.bot.follow_user_by_handle = Mock(return_value=True)
+
+        with patch.object(bot, '_get_recent_journalism_posts', return_value=[post]), \
+             patch.object(bot, '_find_outlet_tweet', return_value=tweet_match):
+            bot.run_reply_cycle()
+
+        follows = bot.reply_history.get('follows', [])
+        assert len(follows) == 1, "expected one audit entry for the successful follow"
+        entry = follows[0]
+        assert 'outlet_handle' in entry
+        assert 'outlet_name' in entry
+        assert 'dossier_id' in entry
+        assert 'timestamp' in entry
+
+    def test_failed_follow_not_logged_to_history(self, bot):
+        """Failures (return False) must NOT write an audit entry —
+        audit log is a record of real account-state changes, not
+        attempts."""
+        post = _make_post()
+        dossier_data = _make_dossier_data()
+        bot.dossier_store.read_raw.return_value = dossier_data
+
+        tweet_match = {"tweet_id": "tw1", "text": "x", "score": 1.5}
+        bot.bot.follow_user_by_handle = Mock(return_value=False)
+
+        with patch.object(bot, '_get_recent_journalism_posts', return_value=[post]), \
+             patch.object(bot, '_find_outlet_tweet', return_value=tweet_match):
+            bot.run_reply_cycle()
+
+        assert not bot.reply_history.get('follows'), \
+            "failed follow should not appear in audit log"
 
     def test_dry_run_does_not_post(self, bot):
         post = _make_post()

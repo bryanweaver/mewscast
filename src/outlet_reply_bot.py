@@ -617,6 +617,41 @@ class OutletReplyBot:
                     print("=" * 80)
                     return True
 
+                # Experiment: follow the outlet before replying. X's
+                # direct "People you follow" reply-rule is author-side
+                # (the outlet would have to follow Walter), so this is
+                # NOT expected to instantly unlock 403'd replies — but
+                # sustained engagement may soften X's anti-automation
+                # heuristics for verified-account replies over time.
+                # Idempotent; any failure is non-fatal.
+                #
+                # Gated behind config.journalism.outlet_reply.follow_before_reply
+                # so it can be toggled off without a code change when the
+                # experiment concludes. Successful follows are logged to
+                # reply_history under a 'follows' list so the set of
+                # accounts Walter followed during the experiment can be
+                # audited (and, if rolled back, unfollowed) later.
+                if self.config.get('follow_before_reply', False):
+                    try:
+                        followed = self.bot.follow_user_by_handle(handle)
+                    except Exception as _follow_err:
+                        # follow_user_by_handle is documented to never raise,
+                        # but belt-and-suspenders so the reply path is never
+                        # blocked by a follow-layer regression.
+                        print(f"   Follow attempt errored (non-fatal): {_follow_err}")
+                        followed = False
+                    if followed:
+                        self.reply_history.setdefault('follows', []).append({
+                            'outlet_handle': handle,
+                            'outlet_name': outlet['name'],
+                            'dossier_id': dossier_id,
+                            'timestamp': datetime.now(timezone.utc).isoformat(),
+                        })
+                        # Persist audit entry immediately — if the subsequent
+                        # reply crashes, we still have a record of who Walter
+                        # followed.
+                        self._save_reply_history()
+
                 # Post the reply — let rate limit errors propagate to
                 # fail the GHA workflow hard (same pattern as twitter_bot.py)
                 try:
