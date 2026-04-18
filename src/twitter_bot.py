@@ -195,7 +195,10 @@ class TwitterBot:
 
         Idempotent — X returns a success-shaped response when already
         following. Never raises for the caller to handle; always returns
-        True on ok/already-following and False on failure.
+        True on ok/already-following and False on failure — including
+        non-tweepy errors like TypeError from param validation (raised
+        by tweepy v4.8+ when access tokens are missing) or
+        AttributeError from malformed response objects.
         """
         try:
             user_resp = self.client.get_user(username=handle)
@@ -220,6 +223,14 @@ class TwitterBot:
             print(f"   Follow @{handle} failed: {e}")
             if hasattr(e, 'response') and e.response is not None:
                 print(f"     Response: {e.response.status_code} {e.response.text[:200]}")
+            return False
+        except Exception as e:
+            # Tweepy v4.8+ raises TypeError for param validation (e.g.
+            # access token not set), and malformed responses can raise
+            # AttributeError. The docstring promises "never raises";
+            # honor it with a final broad catch so no non-tweepy
+            # exception propagates out of the experiment.
+            print(f"   Follow @{handle} errored: {type(e).__name__}: {e}")
             return False
 
     def quote_tweet(self, tweet_id: str, text: str) -> Optional[dict]:
