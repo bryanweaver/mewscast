@@ -100,7 +100,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/dossiers/ docs/CNAME 2>/dev/null || true
+          git add docs/dossiers/ docs/CNAME docs/sitemap.xml docs/robots.txt 2>/dev/null || true
           if ! git diff --staged --quiet; then
             git commit -m "Update dossier viewer pages [skip ci]"
             for i in {1..3}; do
