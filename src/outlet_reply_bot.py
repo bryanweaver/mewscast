@@ -184,12 +184,58 @@ class OutletReplyBot:
         min_score = self.config.get('min_meta_score', 3)
         return score >= min_score
 
-    def _is_already_replied(self, dossier_id: str) -> bool:
-        """Check if we've already replied for this dossier."""
-        return any(
-            r.get('dossier_id') == dossier_id
-            for r in self.reply_history.get('replies', [])
+    def _load_dossier_data(self, dossier_id: str) -> dict:
+        """Load dossier data, falling back to the brief sidecar.
+
+        The full dossier JSON (dossiers/{story_id}.json) is gitignored and
+        only exists locally. In CI, falls back to the committed brief sidecar
+        at docs/dossiers/{story_id}.brief.json which contains the brief +
+        article outlet/URL list (no bodies).
+        """
+        # Try full dossier first (local dev)
+        data = self.dossier_store.read_raw(dossier_id)
+        if data:
+            return data
+
+        # Fall back to brief sidecar (CI)
+        brief_path = Path(__file__).parent.parent / "docs" / "dossiers" / f"{dossier_id}.brief.json"
+        try:
+            with open(brief_path, 'r', encoding='utf-8') as f:
+                sidecar = json.load(f)
+            # Reshape to match the full dossier structure
+            return {
+                'brief': sidecar.get('brief', {}),
+                'dossier': {
+                    'headline_seed': sidecar.get('headline_seed', ''),
+                    'articles': sidecar.get('articles', []),
+                },
+            }
+        except FileNotFoundError:
+            return {}
+        except Exception as e:
+            print(f"✗ Could not load brief sidecar: {e}")
+            return {}
+
+    def _story_reply_count(self, dossier_id: str) -> int:
+        """Count how many successful replies we've made for this dossier."""
+        return sum(
+            1 for r in self.reply_history.get('replies', [])
+            if r.get('dossier_id') == dossier_id
         )
+
+    def _is_story_completed(self, dossier_id: str) -> bool:
+        """Check if we've hit the max replies for this story."""
+        max_per_story = self.config.get('max_replies_per_story', 3)
+        count = self._story_reply_count(dossier_id)
+        return count >= max_per_story
+
+    def _outlets_already_replied(self, dossier_id: str) -> set:
+        """Return set of outlet handles we've already replied to for this dossier."""
+        return {
+            r.get('outlet_handle')
+            for r in self.reply_history.get('replies', [])
+            if r.get('dossier_id') == dossier_id
+        }
 
     # ---- outlet tweet matching -------------------------------------------
 
@@ -408,17 +454,19 @@ class OutletReplyBot:
             if not dossier_id:
                 continue
 
-            # Skip if already replied to this dossier
-            if self._is_already_replied(dossier_id):
-                print(f"\n⏭  Already replied for dossier: {dossier_id[:40]}...")
+            # Skip if we've hit the max replies for this story
+            story_count = self._story_reply_count(dossier_id)
+            max_per_story = self.config.get('max_replies_per_story', 3)
+            if story_count >= max_per_story:
+                print(f"\n⏭  Story completed ({story_count}/{max_per_story} replies): {dossier_id[:40]}...")
                 continue
 
             print(f"\n🔎 Checking dossier: {dossier_id[:50]}...")
 
-            # Load dossier data
-            dossier_data = self.dossier_store.read_raw(dossier_id)
+            # Load dossier data (full JSON locally, brief sidecar in CI)
+            dossier_data = self._load_dossier_data(dossier_id)
             if not dossier_data:
-                print("   Dossier not found, skipping")
+                print("   Dossier not found (no full JSON or brief sidecar), skipping")
                 continue
 
             brief = dossier_data.get('brief', {})
@@ -465,9 +513,20 @@ class OutletReplyBot:
             # Sort by priority (lower = better)
             outlet_candidates.sort(key=lambda o: o['priority'])
 
+            # Remove outlets we've already replied to for this story
+            already_replied_handles = self._outlets_already_replied(dossier_id)
+            outlet_candidates = [
+                o for o in outlet_candidates
+                if o['handle'] not in already_replied_handles
+            ]
+
             if not outlet_candidates:
-                print("   No priority outlets in dossier")
+                print("   No priority outlets remaining in dossier")
                 continue
+
+            if story_count > 0:
+                print(f"   Story has {story_count}/{max_per_story} replies, "
+                      f"{len(outlet_candidates)} outlets remaining")
 
             headline = dossier.get('headline_seed', post.get('topic', ''))
 
