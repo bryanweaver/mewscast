@@ -755,6 +755,62 @@ def render_index_page(entries: list[dict]) -> str:
     return page
 
 
+def render_sitemap(
+    entries: list[dict],
+    base_url: str = "https://mewscast.us",
+    static_pages: tuple[str, ...] = (
+        "/",
+        "/analytics.html",
+        "/dossiers/",
+        "/reports/",
+    ),
+) -> str:
+    """Render a sitemap.xml listing the site's canonical URLs.
+
+    `entries` is the same list of dossier metadata dicts consumed by
+    render_index_page, one per published dossier. `static_pages` is the
+    fixed set of hand-authored pages under docs/. The caller writes the
+    result to docs/sitemap.xml; robots.txt references it at the site root.
+    """
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    url_entries: list[str] = []
+
+    for path in static_pages:
+        loc = html.escape(f"{base_url.rstrip('/')}{path}")
+        url_entries.append(
+            f"  <url>\n"
+            f"    <loc>{loc}</loc>\n"
+            f"    <lastmod>{today}</lastmod>\n"
+            f"  </url>"
+        )
+
+    for entry in entries:
+        story_id = entry.get("story_id", "")
+        if not story_id:
+            continue
+        safe_id = _safe_filename(story_id)
+        post = entry.get("post") or {}
+        published_at = post.get("published_at") or entry.get("saved_at") or ""
+        # published_at is ISO8601; sitemap lastmod accepts full ISO or YYYY-MM-DD
+        lastmod = (published_at or today)[:10] if published_at else today
+        loc = html.escape(f"{base_url.rstrip('/')}/dossiers/{safe_id}.html")
+        url_entries.append(
+            f"  <url>\n"
+            f"    <loc>{loc}</loc>\n"
+            f"    <lastmod>{lastmod}</lastmod>\n"
+            f"  </url>"
+        )
+
+    body = "\n".join(url_entries)
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{body}\n"
+        "</urlset>\n"
+    )
+
+
 def _safe_filename(text: str) -> str:
     """Make a story id safe for use as a filename (matches main.py logic)."""
     if not text:
