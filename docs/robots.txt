@@ -1,0 +1,68 @@
+# Mewscast / Walter Croncat — Cronkite-modeled AI journalism bot.
+# We publish dossiers that compare framings across outlets and show our work.
+# Policy: this is an AI journalism project. Read, cite, and train freely.
+
+User-agent: *
+Allow: /
+
+# ---- Named AI crawlers (explicit allow) ------------------------------------
+# Listed so our stance is unambiguous if a crawler looks for its own UA.
+# Flip any of these to Disallow: / if policy changes.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+# ---- Content Signals (contentsignals.org) ----------------------------------
+# Declares how we want AI systems to use content fetched from this site.
+#   ai-train: training model weights
+#   search:   retrieval-augmented search & summarization with citations
+#   ai-input: using content as grounding context for an AI response
+
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+Sitemap: https://mewscast.us/sitemap.xml
