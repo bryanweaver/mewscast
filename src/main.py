@@ -37,7 +37,12 @@ from verification_gate import (
     VerificationResult,
 )
 from draft_analyzer import analyze_draft, print_analysis
-from dossier_renderer import bluesky_web_url, render_dossier_page, render_index_page
+from dossier_renderer import (
+    bluesky_web_url,
+    render_dossier_page,
+    render_index_page,
+    render_sitemap,
+)
 
 
 def _load_config():
@@ -630,6 +635,21 @@ def _render_dossier_html(dossier_store, draft: DraftPost, dossier: StoryDossier)
         with open(index_path, "w", encoding="utf-8") as f:
             f.write(index_html)
         print(f"[journalism] dossier index updated ({len(entries)} entries)")
+
+        # 4. Regenerate sitemap.xml at docs/ root so new dossier pages
+        # are discoverable by crawlers and agents. robots.txt at the same
+        # level references it. Cheap to rebuild on every publish.
+        try:
+            sitemap_xml = render_sitemap(entries)
+            sitemap_path = os.path.join(_project_root(), "docs", "sitemap.xml")
+            with open(sitemap_path, "w", encoding="utf-8") as f:
+                f.write(sitemap_xml)
+            print(
+                f"[journalism] sitemap.xml updated "
+                f"({len(entries)} dossiers + static pages)"
+            )
+        except Exception as e:
+            print(f"[journalism] sitemap generation failed (non-fatal): {e}")
 
     except Exception as e:
         print(f"[journalism] dossier HTML render failed (non-fatal): {e}")
