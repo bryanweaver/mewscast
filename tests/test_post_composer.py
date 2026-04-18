@@ -313,8 +313,10 @@ class TestPerPostTypeMaxLength:
         assert len(loader.calls) == 1
         assert loader.calls[0][0] == "meta_post.md"
         kwargs = loader.calls[0][1]
-        assert kwargs["max_length"] == 4000, (
-            f"META prompt must get long_form_max_length, got {kwargs['max_length']}"
+        # META uses long_form_max_length with a 5% safety margin (4000 -> 3800).
+        # Margin added after run 24605009292 overshot 6500 by 569 chars.
+        assert kwargs["max_length"] == 3800, (
+            f"META prompt must get long_form_max_length * 0.95, got {kwargs['max_length']}"
         )
 
     def test_report_post_receives_safety_margin_max_length(self, brief, dossier):
@@ -344,9 +346,10 @@ class TestPerPostTypeMaxLength:
             (PostType.ANALYSIS, 260),
             (PostType.BULLETIN, 260),
             (PostType.PRIMARY, 260),
-            # META uses long-form budget, no margin needed (overshoot is
-            # negligible relative to a 4000-char budget)
-            (PostType.META, 4000),
+            # META uses long-form budget with a 5% margin: 4000 -> 3800
+            # (margin added after run 24605009292 overshot 6500 by 569
+            # chars — the earlier "no margin needed" assumption was wrong)
+            (PostType.META, 3800),
         ],
     )
     def test_max_length_per_post_type(self, post_type, expected_max, brief, dossier):
@@ -423,6 +426,51 @@ class TestPerPostTypeMaxLength:
         assert composer._effective_max_length(PostType.BULLETIN) == 280
         assert composer._effective_max_length(PostType.CORRECTION) == 280
         assert composer._effective_max_length(PostType.PRIMARY) == 280
+
+    def test_char_limit_retry_tightens_prompt_target(self, brief, dossier):
+        """Regression: runs 24605009292 and 24595360166 overshot the char
+        budget on the first draft AND retry. The composer must tighten
+        prompt_target further when retry_reasons includes a char_limit
+        failure, giving the rewrite real headroom to trim."""
+        loader = _StubPromptLoader()
+        client = _FakeClaude("Reuters reports 68-32.\n\nAnd that's the mews.")
+        composer = PostComposer(
+            anthropic_client=client,
+            prompt_loader=loader,
+            max_length=280,
+            long_form_max_length=4000,
+        )
+        composer.compose(
+            brief=brief, dossier=dossier, post_type=PostType.REPORT,
+            retry_reasons=["char_limit: post is 298 chars (max 280)"],
+        )
+        kwargs = loader.calls[0][1]
+        # First-attempt target for REPORT would be 260 (280 * 0.93).
+        # On char_limit retry, tighten further by another 7%: 260 * 0.93 = 241.
+        assert kwargs["max_length"] == 241, (
+            f"char_limit retry must tighten prompt_target; got {kwargs['max_length']}"
+        )
+
+    def test_non_char_limit_retry_does_not_tighten(self, brief, dossier):
+        """A retry for a non-char_limit failure (e.g. missing sign-off)
+        should use the normal prompt_target — not tighten it. Only the
+        char-budget overshoot case needs the extra headroom."""
+        loader = _StubPromptLoader()
+        client = _FakeClaude("Reuters reports 68-32.\n\nAnd that's the mews.")
+        composer = PostComposer(
+            anthropic_client=client,
+            prompt_loader=loader,
+            max_length=280,
+            long_form_max_length=4000,
+        )
+        composer.compose(
+            brief=brief, dossier=dossier, post_type=PostType.REPORT,
+            retry_reasons=["signoff_matches_type: missing sign-off"],
+        )
+        kwargs = loader.calls[0][1]
+        assert kwargs["max_length"] == 260, (
+            f"non-char_limit retry should keep standard target; got {kwargs['max_length']}"
+        )
 
 
 # ---------------------------------------------------------------------------

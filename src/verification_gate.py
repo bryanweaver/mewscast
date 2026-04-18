@@ -21,6 +21,14 @@ from typing import Optional
 from dossier_store import DraftPost, PostType, SIGN_OFFS, StoryDossier
 
 
+# Reason-string prefix used when _check_char_limit rejects a draft.
+# Exported so downstream components (post_composer retry-tightening,
+# main.py fabrication-retry) can detect char-budget failures without
+# duplicating the string literal. If the gate ever renames this prefix,
+# consumers update by reference rather than silently drifting out of sync.
+CHAR_LIMIT_REASON_PREFIX = "char_limit:"
+
+
 # ---------------------------------------------------------------------------
 # VerificationResult
 # ---------------------------------------------------------------------------
@@ -395,7 +403,10 @@ class VerificationGate:
         max_length when the gate is constructed."""
         text = draft.text or ""
         if len(text) > max_length:
-            return False, f"char_limit: post is {len(text)} chars (max {max_length})"
+            return False, (
+                f"{CHAR_LIMIT_REASON_PREFIX} post is {len(text)} chars "
+                f"(max {max_length})"
+            )
         return True, None
 
 

@@ -32,6 +32,7 @@ from dossier_store import (
     SIGN_OFFS,
     StoryDossier,
 )
+from verification_gate import CHAR_LIMIT_REASON_PREFIX
 
 
 # ---------------------------------------------------------------------------
@@ -142,21 +143,36 @@ class PostComposer:
             else self._effective_max_length(chosen_type)
         )
 
-        # Iteration 12 regression fix: Claude's prose output doesn't count
-        # characters precisely. When told "280 max" for REPORT posts, it
-        # consistently produces 290-300 chars (iteration 12 run 27 hit
-        # 298/294 on first and retry attempts). The verification gate
-        # correctly rejects, but the draft is lost.
-        # Fix: tell the prompt a tighter target than the gate enforces,
-        # creating a safety margin for the model's natural overshoot.
-        # Long-form META posts (6500 budget) don't need the margin —
-        # overshoot on a large budget is negligible. Short-form types get
-        # a 7% margin (280 -> 260 for REPORT) which empirically covers
-        # the observed overshoot with room to spare.
-        if chosen_type in LONG_FORM_TYPES:
+        # Claude's prose output doesn't count chars precisely. The prompt
+        # gets a target tighter than the gate enforces, creating a safety
+        # margin for the model's natural overshoot:
+        #   - Short-form (280): 7% margin -> 260 (iteration 12 regression)
+        #   - Long-form META (6500): 5% margin -> 6175 (run 24605009292
+        #     overshot by 569 chars on first draft and 141 on retry,
+        #     disproving the earlier "no margin needed" assumption)
+        # Explicit max_length from the caller wins verbatim — tests rely
+        # on this to pin exact budgets. Floors (200 short-form, 500
+        # long-form) guard against compounded retries shrinking below a
+        # usable length if a new LONG_FORM_TYPES member with a small
+        # budget is ever added.
+        target_floor = 500 if chosen_type in LONG_FORM_TYPES else 200
+        if max_length is not None:
             prompt_target = effective_max
+        elif chosen_type in LONG_FORM_TYPES:
+            prompt_target = max(target_floor, int(effective_max * 0.95))
         else:
-            prompt_target = max(200, int(effective_max * 0.93))
+            prompt_target = max(target_floor, int(effective_max * 0.93))
+
+        # If a prior attempt already overshot the char budget, tighten the
+        # target further so the rewrite has real headroom to trim. Without
+        # this, retries tend to shrink by only a few percent and still miss
+        # (run 24605009292: 7069 -> 6641, both over 6500). The floor
+        # prevents unbounded shrinkage across many retries.
+        if retry_reasons and any(
+            isinstance(r, str) and r.startswith(CHAR_LIMIT_REASON_PREFIX)
+            for r in retry_reasons
+        ):
+            prompt_target = max(target_floor, int(prompt_target * 0.93))
 
         prompt = self._build_prompt(
             chosen_type, brief, dossier, prompt_target, correction_inputs or {}
