@@ -24,7 +24,7 @@ from post_tracker import PostTracker
 # level; the whole pipeline is only instantiated inside post_journalism_cycle
 # so the existing modes (scheduled/reply/both/special) are unaffected when
 # the journalism workflow is disabled.
-from dossier_store import DossierStore, DraftPost, PostType, StoryDossier
+from dossier_store import DossierStore, DraftPost, PostType, SIGN_OFFS, StoryDossier
 from trend_detector import TrendDetector, TrendCandidate, _extract_proper_nouns, _stable_story_id
 from story_triage import StoryTriage
 from source_gatherer import _FLUFF_PREFIXES, _SUFFIX_STRIP_RE, SourceGatherer
@@ -411,6 +411,36 @@ _JOURNALISM_POST_TYPE_ALIASES = {
     "correction": PostType.CORRECTION,
     "primary": PostType.PRIMARY,
 }
+
+
+def _inline_dossier_url_into_meta(
+    text: str,
+    dossier_url: str,
+    sign_off: str | None,
+) -> str:
+    """Return META post text with the dossier URL inlined before the sign-off.
+
+    META posts are long-form (6500-char budget) and the self-reply pattern
+    added a second tweet that looked redundant in the profile feed — the
+    first line of a META post is often visible in the feed view while the
+    rest is collapsed behind "Show more". Inlining the URL makes the
+    dossier link part of the same post, so no self-reply is needed.
+
+    Shape:
+        {body text}
+
+        Full dossier: {url}
+
+        {sign_off}
+
+    If the draft doesn't end with the expected sign-off (shouldn't happen
+    — the verification gate enforces it — but defend anyway), the URL is
+    appended to the end.
+    """
+    if sign_off and text.rstrip().endswith(sign_off):
+        body = text.rstrip()[: -len(sign_off)].rstrip()
+        return f"{body}\n\nFull dossier: {dossier_url}\n\n{sign_off}"
+    return f"{text.rstrip()}\n\nFull dossier: {dossier_url}"
 
 
 def _compose_dossier_reply_text(
@@ -1440,9 +1470,22 @@ def post_journalism_cycle(
     if image_path:
         _persist_dossier_image(draft, dossier_store, image_path, image_prompt=image_prompt)
 
-    # Primary publish: post to X and Bluesky. We reuse the same text for
-    # both platforms in this first rollout; a later phase can specialize.
-    post_text = draft.text
+    # Primary publish: post to X and Bluesky.
+    # META posts on X inline the dossier URL in the post itself (one
+    # tweet instead of two) — the self-reply was redundant with the
+    # long-form coverage body and cluttered the profile feed. On
+    # Bluesky, META is already truncated to 300 chars so inlining the
+    # URL would just get chopped off; keep the link-card self-reply
+    # there as the discoverable path.
+    # All other post types keep the existing self-reply pattern on both.
+    dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
+    is_meta = chosen_type == PostType.META
+    if is_meta:
+        sign_off = SIGN_OFFS.get(chosen_type)
+        x_post_text = _inline_dossier_url_into_meta(draft.text, dossier_url, sign_off)
+    else:
+        x_post_text = draft.text
+    bluesky_post_text = draft.text
 
     tweet_id = None
     reply_tweet_id = None
@@ -1450,31 +1493,33 @@ def post_journalism_cycle(
     if twitter_bot is not None:
         try:
             if image_path:
-                x_result = twitter_bot.post_tweet_with_image(post_text, image_path)
+                x_result = twitter_bot.post_tweet_with_image(x_post_text, image_path)
             else:
-                x_result = twitter_bot.post_tweet(post_text)
+                x_result = twitter_bot.post_tweet(x_post_text)
             if x_result:
                 tweet_id = x_result.get("id")
                 x_success = True
                 print(f"[journalism] X post ok: {tweet_id}")
 
-                # Dossier reply — plain-text reply with a short brief-aware
-                # hook line + URL. The banner image was dropped (too
-                # redundant in the profile feed; the main post already
-                # carries imagery).
-                dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
-                brief_dict = brief.to_dict() if brief else {}
-                outlet_count = len(dossier.articles) if dossier.articles else 0
-                reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
-                reply_body = f"{reply_hook}\n{dossier_url}"
-                time.sleep(2)
-                try:
-                    reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
-                    if reply_result:
-                        reply_tweet_id = reply_result.get("id")
-                        print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
-                except Exception as re:
-                    print(f"[journalism] X dossier reply failed: {re}")
+                if not is_meta:
+                    # Dossier reply — plain-text reply with a short
+                    # brief-aware hook line + URL. The banner image was
+                    # dropped (too redundant in the profile feed; the
+                    # main post already carries imagery).
+                    brief_dict = brief.to_dict() if brief else {}
+                    outlet_count = len(dossier.articles) if dossier.articles else 0
+                    reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
+                    reply_body = f"{reply_hook}\n{dossier_url}"
+                    time.sleep(2)
+                    try:
+                        reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
+                        if reply_result:
+                            reply_tweet_id = reply_result.get("id")
+                            print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
+                    except Exception as re:
+                        print(f"[journalism] X dossier reply failed: {re}")
+                else:
+                    print("[journalism] META — dossier URL inlined, no self-reply")
         except Exception as e:
             print(f"[journalism] X publish failed: {e}")
 
@@ -1484,9 +1529,9 @@ def post_journalism_cycle(
     if bluesky_bot is not None:
         try:
             if image_path:
-                bs_result = bluesky_bot.post_skeet_with_image(post_text, image_path)
+                bs_result = bluesky_bot.post_skeet_with_image(bluesky_post_text, image_path)
             else:
-                bs_result = bluesky_bot.post_skeet(post_text)
+                bs_result = bluesky_bot.post_skeet(bluesky_post_text)
             if bs_result:
                 bluesky_uri = bs_result.get("uri")
                 bluesky_success = True
@@ -1496,7 +1541,9 @@ def post_journalism_cycle(
                 # Bluesky allows one embed per post; using a link card keeps
                 # the URL clickable, while omitting thumb_image_path drops
                 # the banner image. Hook text picked from brief signals.
-                dossier_url = f"https://mewscast.us/dossiers/{candidate.story_id}.html"
+                # This runs for ALL post types on Bluesky (including META)
+                # because the 300-char cap truncates long posts and the
+                # link card is how readers reach the dossier.
                 brief_dict = brief.to_dict() if brief else {}
                 outlet_count = len(dossier.articles) if dossier.articles else 0
                 reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
@@ -1637,51 +1684,67 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
         print(f"[republish] brief sidecar load failed (using generic reply): {_sidecar_err}")
 
     # ---- Publish to X --------------------------------------------------
+    # META posts inline the dossier URL in the X post itself and skip
+    # the self-reply (mirrors post_journalism_cycle). Other types keep
+    # the self-reply pattern.
+    dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
+    is_meta = post_type == PostType.META
+    if is_meta:
+        sign_off = SIGN_OFFS.get(post_type)
+        x_post_text = _inline_dossier_url_into_meta(post_text, dossier_url, sign_off)
+    else:
+        x_post_text = post_text
+    bluesky_post_text = post_text
+
     tweet_id = None
     reply_tweet_id = None
     x_success = False
     try:
         twitter_bot = TwitterBot()
         if image_path:
-            x_result = twitter_bot.post_tweet_with_image(post_text, image_path)
+            x_result = twitter_bot.post_tweet_with_image(x_post_text, image_path)
         else:
-            x_result = twitter_bot.post_tweet(post_text)
+            x_result = twitter_bot.post_tweet(x_post_text)
         if x_result:
             tweet_id = x_result.get("id")
             x_success = True
             print(f"[republish] X post ok: {tweet_id}")
 
-            # Dossier reply — plain text, no banner (redundant with the
-            # main post's image). Brief-aware hook line.
-            dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
-            reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
-            reply_body = f"{reply_hook}\n{dossier_url}"
-            time.sleep(2)
-            try:
-                reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
-                if reply_result:
-                    reply_tweet_id = reply_result.get("id")
-                    print(f"[republish] X dossier reply ok: {reply_tweet_id}")
-            except Exception as re:
-                print(f"[republish] X dossier reply failed: {re}")
+            if is_meta:
+                print("[republish] META — dossier URL inlined, no X self-reply")
+            else:
+                # Dossier reply — plain text, no banner (redundant with the
+                # main post's image). Brief-aware hook line.
+                reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
+                reply_body = f"{reply_hook}\n{dossier_url}"
+                time.sleep(2)
+                try:
+                    reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
+                    if reply_result:
+                        reply_tweet_id = reply_result.get("id")
+                        print(f"[republish] X dossier reply ok: {reply_tweet_id}")
+                except Exception as re:
+                    print(f"[republish] X dossier reply failed: {re}")
     except Exception as e:
         print(f"[republish] X publish failed: {e}")
 
     # ---- Publish to Bluesky --------------------------------------------
+    # Bluesky keeps the link-card self-reply even for META, because the
+    # 300-char cap truncates long META bodies and the card is how users
+    # reach the dossier.
     bluesky_success = False
     try:
         bluesky_bot = BlueskyBot()
         if image_path:
-            bs_result = bluesky_bot.post_skeet_with_image(post_text, image_path)
+            bs_result = bluesky_bot.post_skeet_with_image(bluesky_post_text, image_path)
         else:
-            bs_result = bluesky_bot.post_skeet(post_text)
+            bs_result = bluesky_bot.post_skeet(bluesky_post_text)
         if bs_result:
             bluesky_uri = bs_result.get("uri")
             bluesky_success = True
             print(f"[republish] Bluesky post ok: {bluesky_uri}")
 
             # Dossier reply — clickable link card, no banner thumbnail.
-            dossier_url = f"https://mewscast.us/dossiers/{story_id}.html"
             reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
             time.sleep(2)
             try:
