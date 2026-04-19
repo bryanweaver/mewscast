@@ -329,12 +329,17 @@ class BlueskyOutletReplyBot:
             noun_clause = f"({sorted_nouns[0]} OR {sorted_nouns[1]})"
         else:
             noun_clause = sorted_nouns[0]
-        query = f"from:{handle} {noun_clause}"
-        print(f"   Searching Bluesky: {query}")
+        print(f"   Searching Bluesky: author={handle} q={noun_clause}")
 
+        # Bluesky's search_posts takes author as a dedicated parameter
+        # rather than a `from:` prefix in q. Using the parameter avoids
+        # query-parser ambiguity that silently returned 0 results in run
+        # 24635980136 for verified outlets that had clearly posted about
+        # the story.
         try:
             response = self.bot.client.app.bsky.feed.search_posts({
-                'q': query,
+                'q': noun_clause,
+                'author': handle,
                 'limit': 10,
             })
         except Exception as e:
