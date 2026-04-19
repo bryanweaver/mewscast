@@ -1,0 +1,139 @@
+{
+  "story_id": "2026-04-19-8-children-killed-in-ec438f6885",
+  "headline_seed": "8 children killed in Louisiana mass shooting - NBC News",
+  "brief": {
+    "story_id": "2026-04-19-8-children-killed-in-ec438f6885",
+    "consensus_facts": [
+      "Eight children were killed in a mass shooting in Shreveport, Louisiana, on Sunday morning, April 19, 2026.",
+      "The victims ranged in age from 1 to approximately 14 years old.",
+      "A total of 10 people were shot across the incident.",
+      "Police responded to reports of shots fired just after 6 a.m. CT in the area of West 79th Street in Shreveport.",
+      "The crime scene spanned three locations, including homes on West 79th Street and nearby Harrison Street.",
+      "Authorities described the incident as a domestic disturbance.",
+      "The suspected gunman carjacked a vehicle after leaving the scene and was pursued by Shreveport police into Bossier Parish.",
+      "The suspect was shot and killed by Shreveport police officers during or after the chase.",
+      "Police believe the suspect was the sole shooter at the scene.",
+      "Some of the children killed were related to the suspect \u2014 described as his descendants.",
+      "Louisiana State Police were asked by Shreveport police to investigate the officer-involved shooting.",
+      "Shreveport Mayor Tom Arceneaux called it 'maybe the worst tragic situation we've ever had in Shreveport.'",
+      "House Speaker Mike Johnson issued a statement calling the killings a 'heartbreaking tragedy.'",
+      "Police had not publicly identified the suspect or the victims as of the time of reporting.",
+      "No officers were injured in the incident."
+    ],
+    "disagreements": [
+      {
+        "topic": "Title of police official providing main briefing",
+        "positions": {
+          "NBC News": "Refers to Christopher Bordelon as 'police spokesperson'.",
+          "CNN": "Refers to Chris Bordelon as 'Cpl. Chris Bordelon'.",
+          "USA Today": "Refers to Christopher Bordelon as 'spokesperson'.",
+          "The New York Times (The Times)": "Refers to Christopher Bordelon as 'a police spokesman'."
+        }
+      },
+      {
+        "topic": "Who is cited as the primary authority announcing the deaths",
+        "positions": {
+          "ABC News": "Attributes key facts (victim ages, total shot, suspect death) to Shreveport Police Chief Wayne Smith.",
+          "The Washington Post": "Attributes key facts to Shreveport Police Chief Wayne Smith.",
+          "CNN": "Attributes key facts to both Chief Wayne Smith and Cpl. Chris Bordelon.",
+          "NBC News": "Attributes key facts primarily to spokesperson Christopher Bordelon, with Mayor Arceneaux also quoted.",
+          "USA Today": "Attributes key facts to spokesperson Christopher Bordelon."
+        }
+      },
+      {
+        "topic": "Exact location where suspect was killed",
+        "positions": {
+          "NBC News": "Suspect was shot and killed during the chase in Bossier Parish.",
+          "CNN": "Suspect was chased into Bossier Parish and shot by Shreveport officers; Louisiana State Police are investigating the officer-involved shooting.",
+          "ABC News": "Suspect died after a chase with officers who fired at the suspect; does not specify exact location beyond the chase.",
+          "USA Today": "Suspect was chased into an area in Bossier Parish where officers fatally shot the suspect."
+        }
+      },
+      {
+        "topic": "Whether the neighborhood is named",
+        "positions": {
+          "CNN": "Identifies the neighborhood as the Cedar Grove community of Shreveport.",
+          "NBC News": "Does not name the neighborhood but provides block-level address (300 block of West 79th Street).",
+          "ABC News": "Does not name the neighborhood.",
+          "USA Today": "Does not name the neighborhood.",
+          "The Washington Post": "Does not name the neighborhood.",
+          "The New York Times (The Times)": "Does not name the neighborhood."
+        }
+      },
+      {
+        "topic": "Suspect's relationship to victims \u2014 precise language",
+        "positions": {
+          "NBC News": "'Some of the children' in the homes 'were his descendants.'",
+          "ABC News": "Some of the children shot were 'related to the suspect.'",
+          "CNN": "Investigators believe the person 'is related to at least some of the victims.'",
+          "The Washington Post": "'The shooter, who was related to some of the children, is dead.'",
+          "USA Today": "Police know some of the children who were killed 'were the suspect's descendants.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News (Article 1)": "The most detailed report in the dossier. Leads with the child death count and age range. Provides extensive direct quotes from spokesperson Bordelon and Mayor Arceneaux. Unique details include a neighbor interview (Mack London, 71) who provides a local-resident perspective and says violence like this is unheard of on the street. Also includes Mike Johnson's full statement. Does not mention the Gun Violence Archive or broader gun-violence statistics. Does not name the neighborhood as Cedar Grove.",
+      "The Washington Post": "Extremely brief report \u2014 essentially a stub behind a paywall. Leads with victim count and age range. Attributes facts to Chief Wayne Smith. Provides almost no scene detail or direct quotes beyond the basic facts. Notable for its brevity relative to the gravity of the story.",
+      "ABC News": "Wire-style report (AP wire sourced). Concise and fact-forward. Attributes to Chief Wayne Smith. Includes the detail that Louisiana State Police are asking the public for pictures, video, or information. Does not include any political reaction (no Johnson statement). Does not include neighborhood or neighbor interviews.",
+      "USA Today": "Structured as 'live updates' format. Concise, fact-forward. Attributes to spokesperson Bordelon. Mentions the carjacking and chase. Does not include broader gun-violence statistics, political reaction, or community color.",
+      "The New York Times (The Times \u2014 UK edition)": "Brief breaking-news report from The Times of London, not the U.S. New York Times. Leads with the child death count. Includes Bordelon quote on the carjacking and chase and Arceneaux quote. No additional unique reporting. Does not include gun-violence statistics or political reaction.",
+      "NBC News (Article 6 \u2014 video)": "A 44-second video segment. The body text is essentially the video player interface and website boilerplate. No substantive additional text beyond the headline. Does not contribute meaningfully to the factual record beyond confirming the headline.",
+      "CNN": "The most contextually framed report. Leads with the child death count and domestic disturbance framing. Unique among the outlets in citing the Gun Violence Archive statistic that there have been 'at least 114 mass shootings in the United States so far this year.' Also uniquely identifies the neighborhood as the Cedar Grove community. Includes quotes from Bordelon, Arceneaux, and Chief Smith, plus Johnson's statement. Notes Louisiana State Police are investigating the officer-involved shooting and that no officers were injured."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (police reports, press releases, court filings) were located for this story. All reporting relies on live press briefings by Shreveport Police spokesperson Bordelon and Chief Smith, as well as a Louisiana State Police statement. Without access to these underlying documents, primary source alignment cannot be assessed."
+    ],
+    "missing_context": [
+      "No outlet has identified the suspect by name, age, or any demographic detail beyond the fact that some victims were his descendants.",
+      "No outlet has identified any of the eight child victims by name.",
+      "No outlet reports the condition or identities of the two surviving shooting victims.",
+      "No outlet specifies the type of firearm(s) used or how the suspect obtained them.",
+      "No outlet provides detail on what triggered the domestic disturbance or any prior history of domestic violence, restraining orders, or police calls to the address.",
+      "No outlet reports whether any adults other than the suspect were present in the homes at the time of the shooting, or whether the two surviving victims are children or adults.",
+      "Only CNN cites broader gun-violence statistics (114 mass shootings in the U.S. in 2026 per the Gun Violence Archive). No other outlet contextualizes this event within national gun-violence trends.",
+      "No outlet mentions any existing Louisiana gun laws, recent legislative activity on firearms, or how this event compares to prior mass shootings involving children.",
+      "The Washington Post report is a paywall stub, and the second NBC News article is a video player with no substantive body text, limiting the effective number of fully reported articles in the dossier.",
+      "No primary source document was available for independent verification."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with substantive body text all confirm the same core facts with only minor discrepancies in attribution and phrasing. The framing differences (CNN's gun-violence statistics, NBC's neighbor interview) are additive color rather than materially divergent editorial angles. This is a straightforward, tragic breaking-news event best served by a clear REPORT post that relays the consensus facts.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/louisiana-shreveport-mass-shooting-rcna340868",
+      "title": ""
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/nation/2026/04/19/louisiana-shooting/",
+      "title": "8 children killed in Louisiana shooting, police say - The Washington Post"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/wireStory/8-children-ages-1-14-dead-after-mass-132186417",
+      "title": "8 children between the ages of 1 and 14 are dead after a mass shooting in Louisiana, police say - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/nation/2026/04/19/shreveport-louisiana-mass-shooting/89690138007/",
+      "title": "8 children in Shreveport, Louisiana killed in mass shooting, police say - USA Today"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.thetimes.com/us/news-today/article/louisiana-shooting-children-xfv7pqxcc",
+      "title": "Eight children killed in Louisiana mass shooting - The Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/video/shorts/8-children-have-been-killed-in-a-louisiana-mass-shooting-261669445719",
+      "title": "8 children have been killed in a Louisiana mass shooting - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/04/19/us/shreveport-louisiana-shooting",
+      "title": "8 children shot and killed, 2 wounded in Louisiana \u2018domestic disturbance\u2019 - CNN"
+    }
+  ]
+}
