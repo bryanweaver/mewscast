@@ -368,12 +368,23 @@ journalism:
     per_outlet_cooldown_hours: 72  # Max 1 reply per outlet per 72 hours
     min_meta_score: 3              # Minimum dossier quality score to trigger
     eligible_window_hours: 8       # How far back to scan for recent posts
-    follow_before_reply: true      # Experiment: follow the outlet before
-                                   # posting a reply. Hypothesis: sustained
-                                   # engagement may soften X's anti-automation
-                                   # heuristics for verified-account replies
-                                   # over time. Set to false to disable without
-                                   # a code change when the experiment ends.
+    follow_before_reply: false     # Experiment concluded 2026-04-19 with a
+                                   # negative result. Following the outlet
+                                   # does not unlock programmatic replies: X
+                                   # shipped an API-v2 policy on 2026-02-23
+                                   # that rejects POST /2/tweets replies
+                                   # unless the TARGET AUTHOR has
+                                   # @mentioned or quote-posted us. Likes,
+                                   # follows (either direction), and prior
+                                   # replies explicitly do not qualify as
+                                   # engagement. Following the outlet was
+                                   # just accumulating noise follows for
+                                   # zero reply unlocks — hence disabled.
+                                   # Refs: piunikaweb.com/2026/02/24/x-api-
+                                   # blocks-automated-spam-replies/ and
+                                   # tekedia.com/x-restricts-programmatic-
+                                   # bot-replies-to-boost-genuine-users-
+                                   # interaction/
                                    # Audit trail: successful follows logged
                                    # to outlet_reply_history.json.follows[].
     priority_outlets:              # Only reply to these outlet X handles
