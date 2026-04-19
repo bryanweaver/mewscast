@@ -1636,7 +1636,7 @@ def post_journalism_cycle(
         }
         tracker.record_post(
             synthetic_story,
-            post_content=post_text,
+            post_content=draft.text,
             tweet_id=tweet_id,
             reply_tweet_id=reply_tweet_id,
             bluesky_uri=bluesky_uri,
