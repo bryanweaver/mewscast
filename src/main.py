@@ -1291,12 +1291,33 @@ def post_journalism_cycle(
     n_articles = len(dossier.articles)
 
     if n_articles < gate["min_articles"]:
-        print(
-            f"[journalism] {chosen_type.value} requires {gate['min_articles']} sources "
-            f"but only {n_articles} found — clean exit"
-        )
-        print(f"[journalism] CYCLE END: published=0 reason=too_few_articles_for_{chosen_type.value}")
-        return True
+        # Auto-downgrade: if REPORT/META/ANALYSIS can't meet its 3-source
+        # floor but we have ≥2 articles, re-route the story as a BULLETIN
+        # (which needs only 2). BULLETIN is the safety-net post type —
+        # hedged language, shorter budget — exactly what a thin-sourced
+        # story should be published as. Run 24630187199 proved this was a
+        # silent killer: 2 articles gathered, gate suggested REPORT, clean
+        # exit. Better a smaller post than none.
+        bulletin_gate = _QUALITY_GATES[PostType.BULLETIN]
+        if (
+            not forced_post_type
+            and chosen_type in (PostType.REPORT, PostType.META, PostType.ANALYSIS)
+            and n_articles >= bulletin_gate["min_articles"]
+            and brief.confidence >= bulletin_gate["min_confidence"]
+        ):
+            print(
+                f"[journalism] {chosen_type.value} requires {gate['min_articles']} sources "
+                f"but only {n_articles} found — downgrading to BULLETIN"
+            )
+            chosen_type = PostType.BULLETIN
+            gate = bulletin_gate
+        else:
+            print(
+                f"[journalism] {chosen_type.value} requires {gate['min_articles']} sources "
+                f"but only {n_articles} found — clean exit"
+            )
+            print(f"[journalism] CYCLE END: published=0 reason=too_few_articles_for_{chosen_type.value}")
+            return True
 
     if brief.confidence < gate["min_confidence"]:
         print(
