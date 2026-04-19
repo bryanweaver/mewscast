@@ -27,6 +27,8 @@ from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from typing import Optional
 
+from x_retry import call_with_retry
+
 
 # ---------------------------------------------------------------------------
 # Candidate dataclass
@@ -256,18 +258,24 @@ class TrendDetector:
                     continue
                 print(f"[trend_detector] chunk {chunk_count}: querying {len(chunk)} handles")
                 try:
-                    response = client.search_recent_tweets(
-                        query=query,
-                        max_results=100,
-                        tweet_fields=[
-                            'public_metrics',
-                            'created_at',
-                            'entities',
-                            'author_id',
-                        ],
+                    # Retry on transient Cloudflare 403s — without this a
+                    # single bad chunk silently halves the tweet pool the
+                    # rest of the pipeline works from. See x_retry.py.
+                    response = call_with_retry(
+                        lambda: client.search_recent_tweets(
+                            query=query,
+                            max_results=100,
+                            tweet_fields=[
+                                'public_metrics',
+                                'created_at',
+                                'entities',
+                                'author_id',
+                            ],
+                        ),
+                        label=f"trend_detector.chunk{chunk_count}",
                     )
                 except Exception as e:
-                    print(f"[trend_detector] chunk {chunk_count} X recent search failed: "
+                    print(f"[trend_detector] chunk {chunk_count} X recent search failed after retries: "
                           f"{type(e).__name__}: {e}")
                     continue
 
