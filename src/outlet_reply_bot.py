@@ -37,6 +37,7 @@ if _src_dir not in sys.path:
 from twitter_bot import TwitterBot
 from dossier_store import DossierStore
 from trend_detector import _extract_proper_nouns
+from x_retry import call_with_retry
 
 
 class OutletReplyBot:
@@ -277,13 +278,19 @@ class OutletReplyBot:
         print(f"   Searching: {query}")
 
         try:
-            response = self.bot.client.search_recent_tweets(
-                query=query,
-                max_results=10,
-                tweet_fields=[
-                    'author_id', 'public_metrics', 'created_at',
-                    'entities', 'reply_settings',
-                ],
+            # X API search hits Cloudflare managed challenges at random.
+            # Wrap in call_with_retry so a single 403 doesn't starve the
+            # whole cycle. See x_retry.py for the rationale.
+            response = call_with_retry(
+                lambda: self.bot.client.search_recent_tweets(
+                    query=query,
+                    max_results=10,
+                    tweet_fields=[
+                        'author_id', 'public_metrics', 'created_at',
+                        'entities', 'reply_settings',
+                    ],
+                ),
+                label="outlet_reply.search",
             )
 
             if not response.data:
