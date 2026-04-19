@@ -489,7 +489,13 @@ class SourceGatherer:
         # Two-pass: (1) cheap proper-noun heuristic on title+body, (2) Haiku
         # classifier for borderline cases. Removes off-topic articles before
         # they pollute the meta-analysis.
-        article_records = self._filter_relevant_articles(article_records, topic)
+        # Seed articles came from the trending tweet itself — definitionally
+        # relevant, exempt from filtering (their bodies are often shell URLs
+        # with no proper-noun overlap, e.g. x.com photo/video links).
+        seed_url_set = {sa.get("url", "") for sa in seed_articles if sa.get("url")}
+        article_records = self._filter_relevant_articles(
+            article_records, topic, seed_urls=seed_url_set
+        )
 
         # Mark wire-derived duplicates
         self._mark_wire_derived(article_records)
@@ -661,8 +667,12 @@ class SourceGatherer:
         matches = sum(1 for noun in headline_nouns if noun in text)
 
         # Adaptive threshold: need 2 matches when we have 3+ nouns,
-        # but 1 match is enough when the headline only has 1-2 nouns
+        # but 1 match is enough when the headline only has 1-2 nouns.
+        # For headline-only articles (no usable body), 1 match is enough —
+        # we can't expect body corroboration when there is no body.
         required = min(2, len(headline_nouns))
+        if article.headline_only:
+            required = 1
 
         if matches >= required:
             return "relevant"
@@ -711,7 +721,8 @@ class SourceGatherer:
             return True  # include on error
 
     def _filter_relevant_articles(self, records: list[ArticleRecord],
-                                  headline: str) -> list[ArticleRecord]:
+                                  headline: str,
+                                  seed_urls: set[str] | None = None) -> list[ArticleRecord]:
         """Two-pass relevance filter.
 
         Pass 1 (heuristic): check proper-noun overlap between headline and
@@ -721,10 +732,16 @@ class SourceGatherer:
         Pass 2 (Haiku): borderline articles are sent to Claude Haiku for a
         yes/no classification. ~$0.001 per call.
 
+        Seed articles (URLs in ``seed_urls``) are exempt: they came from the
+        trending tweet itself and are definitionally on-topic, even when the
+        body is a shell URL with no extractable proper nouns.
+
         Returns filtered list of relevant articles.
         """
         if not records:
             return records
+
+        seed_urls = seed_urls or set()
 
         headline_nouns = self._extract_headline_nouns(headline)
         if not headline_nouns:
@@ -736,6 +753,10 @@ class SourceGatherer:
         dropped: list[str] = []
 
         for article in records:
+            # Seed articles bypass the filter — they are the story.
+            if article.url in seed_urls:
+                relevant.append(article)
+                continue
             verdict = self._heuristic_relevance(article, headline_nouns)
             if verdict == "relevant":
                 relevant.append(article)
