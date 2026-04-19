@@ -110,35 +110,35 @@ class TestHardRejects:
             headline_seed="Kim Kardashian seen wearing new outfit at premiere",
             source_signals=["nypost"],
         )
-        assert triage._is_hard_reject(c) is True
+        assert triage._is_hard_reject(c) is not None
 
     def test_anonymous_single_source_is_hard_rejected(self, triage):
         c = _Candidate(
             headline_seed="Anonymous official may resign next week",
             source_signals=["FoxNews"],
         )
-        assert triage._is_hard_reject(c) is True
+        assert triage._is_hard_reject(c) is not None
 
     def test_single_politician_tweet_no_event_is_hard_rejected(self, triage):
         c = _Candidate(
             headline_seed="Senator slammed by colleague in heated exchange",
             source_signals=["FoxNews"],
         )
-        assert triage._is_hard_reject(c) is True
+        assert triage._is_hard_reject(c) is not None
 
     def test_recycled_outrage_without_event_is_hard_rejected(self, triage):
         c = _Candidate(
             headline_seed="Politician slammed, blasted, and eviscerated on the floor",
             source_signals=["FoxNews", "Newsmax"],
         )
-        assert triage._is_hard_reject(c) is True
+        assert triage._is_hard_reject(c) is not None
 
     def test_multi_source_event_is_not_hard_rejected(self, triage):
         c = _Candidate(
             headline_seed="Senate passes Appropriations Bill 68-32",
             source_signals=["Reuters", "AP", "FoxNews"],
         )
-        assert triage._is_hard_reject(c) is False
+        assert triage._is_hard_reject(c) is None
 
 
 # ---------------------------------------------------------------------------
@@ -269,7 +269,7 @@ class TestNewsFetcherSource:
             source_signals=["theguardian.com"],
             source="news_fetcher",
         )
-        assert triage._is_hard_reject(c) is False
+        assert triage._is_hard_reject(c) is None
 
     def test_news_fetcher_gets_multi_outlet_credit(self, triage):
         c = _Candidate(
@@ -291,7 +291,7 @@ class TestNewsFetcherSource:
             source_signals=["RandomTwitterHandle"],
             source="x",
         )
-        assert triage._is_hard_reject(c) is True
+        assert triage._is_hard_reject(c) is not None
 
     def test_news_fetcher_gossip_still_rejected(self, triage):
         # Gossip rejection is unconditional — news_fetcher tag does not
@@ -301,7 +301,7 @@ class TestNewsFetcherSource:
             source_signals=["nypost.com"],
             source="news_fetcher",
         )
-        assert triage._is_hard_reject(c) is True
+        assert triage._is_hard_reject(c) is not None
 
     def test_rex_heuermann_end_to_end_passes(self, triage):
         """The canonical QA loop #1 failure case — guilty plea from a

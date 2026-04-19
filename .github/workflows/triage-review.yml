@@ -1,0 +1,57 @@
+name: Triage Review (Walter Croncat)
+
+# Weekly review of triage decisions captured by journalism-publish.
+# Summarises borderline drops, hard-reject rule frequencies, and the
+# Haiku rescue rate so the verb whitelist and rules can be tuned with
+# real data rather than guesswork.
+
+on:
+  schedule:
+    # Sunday 13:00 UTC — runs before the Monday morning journalism
+    # schedule so any tuning commit lands ahead of the week's cycles.
+    - cron: '0 13 * * 0'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Days of history to include'
+        required: false
+        default: '7'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run triage review
+        run: |
+          DAYS="${{ github.event.inputs.days || '7' }}"
+          python scripts/triage_review.py --days "$DAYS"
+
+      - name: Commit review report
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/reports/triage-review-*.md
+          if ! git diff --staged --quiet; then
+            git commit -m "Triage review report [skip ci]"
+            for i in {1..3}; do
+              git pull --rebase origin main && git push && break || {
+                echo "Push failed (attempt $i/3), retrying..."
+                sleep $((i * 2))
+              }
+            done
+          else
+            echo "No new triage review report to commit"
+          fi

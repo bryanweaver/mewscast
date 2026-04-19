@@ -130,3 +130,24 @@ jobs:
           else
             echo "No post history changes"
           fi
+
+      - name: Commit triage decisions feedback log (if changed)
+        # Always attempt so we capture verdicts even when the pipeline
+        # short-circuits on a no_triage_passes / low_confidence / gate-fail
+        # exit — those are exactly the runs we want to diagnose weekly.
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if [ -f docs/reports/triage_decisions.jsonl ] && ! git diff --quiet docs/reports/triage_decisions.jsonl; then
+            git add docs/reports/triage_decisions.jsonl
+            git commit -m "Update triage decisions feedback log [skip ci]"
+            for i in {1..3}; do
+              git pull --rebase origin main && git push && break || {
+                echo "Push failed (attempt $i/3), retrying..."
+                sleep $((i * 2))
+              }
+            done
+          else
+            echo "No triage decisions changes"
+          fi

@@ -170,28 +170,55 @@ class StoryTriage:
 
     PASS_THRESHOLD = 3
 
+    # Canonical names for the 5 scoring dimensions — used by the feedback
+    # logger to compute `missing` (which signals didn't fire) so a later
+    # review can see at a glance which verbs/tokens would have unblocked
+    # a borderline drop.
+    _ALL_SIGNALS = (
+        "multi-outlet", "event-verb", "impact", "checkable", "accountability",
+    )
+
     def __init__(self, use_llm: bool = False, anthropic_client=None, model: str = "claude-haiku-4-6"):
         self.use_llm = use_llm
         self._anthropic_client = anthropic_client
         self._model = model
+        # Populated by triage() each call — one record per candidate. The
+        # orchestrator (main.py) reads this after triage() returns and
+        # appends it to docs/reports/triage_decisions.jsonl for later
+        # review (which verbs to add, which rules are too aggressive).
+        self.last_decisions: list[dict] = []
 
     # ---- public ------------------------------------------------------------
 
     def triage(self, candidates: list["TrendCandidate"]) -> list["TrendCandidate"]:
-        """Return only candidates that pass triage, in original order."""
+        """Return only candidates that pass triage, in original order.
+
+        Side effect: populates self.last_decisions with one dict per
+        candidate recording its verdict, score, reasons, missing signals,
+        and (if applicable) the hard-reject rule that fired. The caller
+        is expected to persist this for offline review — see main.py.
+        """
         passing: list["TrendCandidate"] = []
+        self.last_decisions = []
         for c in candidates:
             score, reasons = self._heuristic_score(c)
 
             # Hard rejects
-            if self._is_hard_reject(c):
-                print(f"[story_triage] REJECT '{c.headline_seed[:60]}...' — hard reject")
+            hard_rule = self._is_hard_reject(c)
+            if hard_rule is not None:
+                print(f"[story_triage] REJECT '{c.headline_seed[:60]}...' — hard reject ({hard_rule})")
+                self.last_decisions.append(
+                    self._decision_record(c, "REJECT", score, reasons, hard_rule=hard_rule)
+                )
                 continue
 
             # Optional LLM second opinion (only if heuristic is borderline)
+            llm_used = False
+            llm_verdict: bool | None = None
             if self.use_llm and score == self.PASS_THRESHOLD - 1:
-                llm_pass = self._llm_classify(c)
-                if llm_pass:
+                llm_used = True
+                llm_verdict = self._llm_classify(c)
+                if llm_verdict:
                     score += 1
                     reasons.append("llm:pass")
 
@@ -201,12 +228,58 @@ class StoryTriage:
                     f"score={score} reasons={reasons}"
                 )
                 passing.append(c)
+                self.last_decisions.append(
+                    self._decision_record(c, "PASS", score, reasons,
+                                          llm_used=llm_used, llm_verdict=llm_verdict)
+                )
             else:
                 print(
                     f"[story_triage] DROP  '{c.headline_seed[:60]}...' "
                     f"score={score} reasons={reasons}"
                 )
+                self.last_decisions.append(
+                    self._decision_record(c, "DROP", score, reasons,
+                                          llm_used=llm_used, llm_verdict=llm_verdict)
+                )
         return passing
+
+    # ---- decision record ---------------------------------------------------
+
+    @classmethod
+    def _decision_record(
+        cls,
+        candidate: "TrendCandidate",
+        verdict: str,
+        score: int,
+        reasons: list[str],
+        hard_rule: str | None = None,
+        llm_used: bool = False,
+        llm_verdict: bool | None = None,
+    ) -> dict:
+        """Build a JSON-friendly decision record for the feedback logger.
+
+        `missing` lists the canonical signals that did NOT fire — this is
+        what a reviewer scans to find "score=2 drops that only needed one
+        more event-verb" and decide which verbs to add to the whitelist.
+        """
+        fired = {r.split("(")[0] for r in reasons if r != "llm:pass"}
+        missing = [s for s in cls._ALL_SIGNALS if s not in fired]
+        record = {
+            "headline": (candidate.headline_seed or "")[:280],
+            "verdict": verdict,
+            "score": score,
+            "reasons": list(reasons),
+            "missing": missing,
+            "source_signals": len(candidate.source_signals or []),
+            "source": getattr(candidate, "source", "x"),
+            "story_id": getattr(candidate, "story_id", ""),
+        }
+        if hard_rule is not None:
+            record["hard_rule"] = hard_rule
+        if llm_used:
+            record["llm_used"] = True
+            record["llm_verdict"] = bool(llm_verdict)
+        return record
 
     # ---- heuristic core ----------------------------------------------------
 
@@ -257,7 +330,13 @@ class StoryTriage:
 
         return score, reasons
 
-    def _is_hard_reject(self, candidate: "TrendCandidate") -> bool:
+    def _is_hard_reject(self, candidate: "TrendCandidate") -> str | None:
+        """Return the name of the hard-reject rule that fired, or None.
+
+        Returning a string (vs bool) lets the feedback logger record WHY
+        a story was rejected so a later review can tell whether a rule
+        is too aggressive.
+        """
         text = (candidate.headline_seed or "").lower()
         single_signal = len(candidate.source_signals) <= 1
         # Candidates from the NewsFetcher fallback are single-signal by
@@ -270,12 +349,12 @@ class StoryTriage:
 
         # Pure celebrity gossip
         if self._has_token(text, GOSSIP_TOKENS) and not self._has_token(text, EVENT_TOKENS):
-            return True
+            return "gossip_no_event"
 
         # Single anonymous source with no corroboration
         # (skipped for news_fetcher: Google News curation ~= corroboration)
         if single_signal and not is_news_fetcher and self._has_token(text, ANONYMOUS_TOKENS):
-            return True
+            return "single_anonymous_source"
 
         # Single tweet from one politician with no underlying event
         # (skipped for news_fetcher: each top-story is curated, not a raw tweet)
@@ -289,14 +368,14 @@ class StoryTriage:
                 not self._has_token(text, ACCOUNTABILITY_TOKENS)
                 and not self._has_token(text, IMPACT_TOKENS)
             ):
-                return True
+                return "single_signal_no_event_no_accountability_no_impact"
 
         # Recycled outrage with no new facts
         outrage_hits = sum(1 for t in OUTRAGE_TOKENS if t in text)
         if outrage_hits >= 2 and not self._has_token(text, EVENT_TOKENS):
-            return True
+            return "recycled_outrage"
 
-        return False
+        return None
 
     # ---- helpers -----------------------------------------------------------
 
