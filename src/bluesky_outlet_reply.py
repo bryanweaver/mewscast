@@ -312,71 +312,84 @@ class BlueskyOutletReplyBot:
 
     def _find_outlet_skeet(self, handle: str, headline_seed: str,
                            article_urls: list) -> Optional[dict]:
-        """Search Bluesky for the outlet's skeet about this story.
+        """Find the outlet's skeet about this story via the author feed.
 
-        Uses the same OR-of-top-2-nouns query shape as the X bot and the
-        same scoring floor (1.0 = either 2 shared nouns or 1 noun + URL
-        domain match). Bluesky's search_posts doesn't accept a -is:retweet
-        operator but the from: filter combined with the scorer is enough.
+        Fetches the outlet's recent posts via
+        ``app.bsky.feed.get_author_feed`` and scores them locally against
+        the headline nouns + article URLs. Same scoring floor as the X
+        bot (1.0 = either 2 shared nouns or 1 noun + URL domain match).
+
+        Why author-feed instead of search_posts:
+          Dry-runs 24635818861 / 24635980136 / 24636015781 showed the
+          search endpoint returning zero results for domain-verified
+          outlets that had clearly posted about the story (nytimes.com,
+          cnn.com, washingtonpost.com, politico.com). The author feed
+          is deterministic — the outlet's own timeline — so we avoid
+          search-index lag or quirky query parsing entirely.
         """
         nouns = _extract_proper_nouns(headline_seed)
         if not nouns:
             print(f"   No proper nouns extracted from headline")
             return None
 
-        sorted_nouns = sorted(nouns, key=len, reverse=True)[:2]
-        if len(sorted_nouns) >= 2:
-            noun_clause = f"({sorted_nouns[0]} OR {sorted_nouns[1]})"
-        else:
-            noun_clause = sorted_nouns[0]
-        print(f"   Searching Bluesky: author={handle} q={noun_clause}")
+        print(f"   Fetching recent posts from @{handle}...")
 
-        # Bluesky's search_posts takes author as a dedicated parameter
-        # rather than a `from:` prefix in q. Using the parameter avoids
-        # query-parser ambiguity that silently returned 0 results in run
-        # 24635980136 for verified outlets that had clearly posted about
-        # the story.
         try:
-            response = self.bot.client.app.bsky.feed.search_posts({
-                'q': noun_clause,
-                'author': handle,
-                'limit': 10,
+            response = self.bot.client.app.bsky.feed.get_author_feed({
+                'actor': handle,
+                'limit': 40,  # wide enough to cover ~12h of a busy outlet
             })
         except Exception as e:
-            print(f"   ✗ Bluesky search error: {e}")
+            # Most common failure: handle doesn't resolve (outlet not on
+            # Bluesky or handle typo). Log + skip — don't raise.
+            print(f"   ✗ Bluesky author feed fetch failed for @{handle}: {e}")
             return None
 
-        posts = getattr(response, 'posts', None) or []
-        if not posts:
-            print(f"   No Bluesky results for @{handle}")
+        feed = getattr(response, 'feed', None) or []
+        if not feed:
+            print(f"   @{handle} has no recent posts")
             return None
 
-        best = None
+        best_post = None
         best_score = 0.0
-        for post in posts:
-            text = ''
+        for item in feed:
+            post = getattr(item, 'post', None)
+            if post is None:
+                continue
+            # Skip reposts (item.reason.py_type == 'app.bsky.feed.defs#reasonRepost').
+            # Reposts are other users' content that this outlet amplified —
+            # replying to them would actually target the original author,
+            # not the outlet, which violates the whole premise.
+            reason = getattr(item, 'reason', None)
+            if reason is not None:
+                continue
             rec = getattr(post, 'record', None)
-            if rec is not None:
-                text = getattr(rec, 'text', '') or ''
+            if rec is None:
+                continue
+            # Skip posts that are themselves replies — we want the
+            # outlet's top-level story skeet, not a reply in a thread.
+            if getattr(rec, 'reply', None) is not None:
+                continue
+            text = getattr(rec, 'text', '') or ''
             score = _score_skeet_match(text, headline_seed, article_urls)
             if score > best_score:
                 best_score = score
-                best = post
+                best_post = post
 
-        if best is None or best_score < 1.0:
-            print(f"   Best Bluesky match score too low: {best_score:.2f}")
+        if best_post is None or best_score < 1.0:
+            print(f"   Best author-feed match score too low: {best_score:.2f}")
             return None
 
         best_text = ''
-        rec = getattr(best, 'record', None)
+        rec = getattr(best_post, 'record', None)
         if rec is not None:
             best_text = getattr(rec, 'text', '') or ''
 
-        print(f"   Found Bluesky match (score {best_score:.2f}): {best.uri}")
+        print(f"   Found Bluesky match (score {best_score:.2f}): {best_post.uri}")
         print(f"   Text: {best_text[:120]}...")
         return {
-            'uri': best.uri,
-            'cid': best.cid,
+            'uri': best_post.uri,
+            'cid': best_post.cid,
             'text': best_text[:200],
             'score': best_score,
         }
