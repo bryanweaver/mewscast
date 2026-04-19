@@ -279,14 +279,30 @@ class BlueskyOutletReplyBot:
 
     # ---- handle resolution ----------------------------------------------
 
-    @staticmethod
-    def _outlet_bluesky_handle(outlet: dict) -> str | None:
-        """Prefer explicit bluesky_handle, fall back to domain. Domains are
-        the common verification path on Bluesky (reuters.com, nytimes.com,
-        bbc.co.uk, theguardian.com all own their domain handles)."""
+    # Sentinel value for outlets explicitly confirmed NOT to be on
+    # Bluesky. Stored in outlet_registry.yaml as:
+    #   bluesky_handle: not_on_bluesky
+    # When we see this sentinel we must NOT fall back to the outlet's
+    # domain — that would produce ghost queries like `from:foxnews.com`
+    # which on Bluesky today either 404 or match a third-party
+    # ActivityPub-bridge bot that isn't really the outlet.
+    NOT_ON_BLUESKY = 'not_on_bluesky'
+
+    @classmethod
+    def _outlet_bluesky_handle(cls, outlet: dict) -> str | None:
+        """Prefer explicit bluesky_handle, fall back to domain. Returns
+        None if the registry says the outlet is not on Bluesky.
+
+        Domains are the common verification path on Bluesky
+        (reuters.com, nytimes.com, theguardian.com all own their domain
+        handles), so falling back to ``domain`` gives opportunistic
+        coverage for outlets we haven't explicitly mapped yet.
+        """
         h = outlet.get('bluesky_handle')
-        if h:
-            return str(h).lstrip('@')
+        if isinstance(h, str) and h:
+            if h == cls.NOT_ON_BLUESKY:
+                return None
+            return h.lstrip('@')
         domain = outlet.get('domain')
         if domain:
             return str(domain).lstrip('@')

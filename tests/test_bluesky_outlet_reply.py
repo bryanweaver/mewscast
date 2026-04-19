@@ -129,6 +129,15 @@ class TestOutletBlueskyHandle:
     def test_no_domain_no_bluesky_returns_none(self):
         assert BlueskyOutletReplyBot._outlet_bluesky_handle({}) is None
 
+    def test_not_on_bluesky_sentinel_returns_none_not_domain(self):
+        # When the outlet is explicitly flagged as not_on_bluesky, we must
+        # NOT silently fall back to its domain — that would build ghost
+        # queries against third-party ActivityPub bridges.
+        h = BlueskyOutletReplyBot._outlet_bluesky_handle(
+            {"bluesky_handle": "not_on_bluesky", "domain": "foxnews.com"}
+        )
+        assert h is None
+
 
 class TestScoreSkeetMatch:
     def test_two_shared_nouns_hits_threshold(self):
