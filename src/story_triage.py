@@ -59,6 +59,41 @@ EVENT_TOKENS = {
     "confirms", "confirmed", "admits", "admitted",
     "testifies", "testified", "charged", "charges",
     "sues", "sued",
+    # Added 2026-04-19 after run 24630670415 hard-rejected big stories
+    # (Strait of Hormuz shuttered, Russian oil waiver extended, Trump
+    # envoys head to Pakistan, Kentucky rehab allegations) because their
+    # verbs weren't on the whitelist. Broadened across the common
+    # action categories so routine breaking news can pass triage.
+    # Action / movement
+    "shuttered", "shut", "closes", "closed", "reopens", "reopened",
+    "heads", "head", "headed", "travels", "traveled", "arrives", "arrived",
+    "departs", "departed", "flees", "fled", "evacuates", "evacuated",
+    "rescued", "rescues", "seized", "seizes", "withdrew", "withdraws",
+    "withdrew", "deploys", "deployed", "recalls", "recalled",
+    # Policy / legal action
+    "extends", "extended", "imposes", "imposed", "lifts", "lifted",
+    "bans", "banned", "enacted", "enacts", "repeals", "repealed",
+    "ratifies", "ratified", "upholds", "upheld", "overturns", "overturned",
+    "pardons", "pardoned", "commuted", "commutes",
+    # Institutional / political
+    "endorses", "endorsed", "nominates", "nominated", "confirms",
+    "impeached", "recalls", "recalled", "appoints", "appointed",
+    "elects", "elected", "sanctioned", "sanctions",
+    # Conflict / crisis
+    "warns", "warned", "threatens", "threatened", "demands", "demanded",
+    "weighs", "weighed", "negotiating", "negotiate", "negotiated",
+    "talks", "meets", "met", "meeting", "summit", "walks out",
+    "ceasefire", "agreement", "deal",
+    # Market / finance
+    "surges", "surged", "tumbles", "tumbled", "plunges", "plunged",
+    "soared", "soars", "crashed", "crashes", "cut", "cuts",
+    "raises", "raised", "lowers", "lowered", "hikes", "hiked",
+    "merges", "merged", "acquires", "acquired",
+    # Reporting forms with no explicit verb
+    "alleges", "alleged", "allegations", "allegation", "claim", "claims",
+    "findings", "investigation", "probe", "audit",
+    "brings", "brought", "expands", "expanded", "launches",
+    "grows", "grew", "fell", "falls",
 }
 
 # Tokens that suggest health/safety/rights/money impact on a population
@@ -245,8 +280,15 @@ class StoryTriage:
         # Single tweet from one politician with no underlying event
         # (skipped for news_fetcher: each top-story is curated, not a raw tweet)
         if single_signal and not is_news_fetcher and not self._has_token(text, EVENT_TOKENS):
-            # Allow if the headline at least mentions an institution
-            if not self._has_token(text, ACCOUNTABILITY_TOKENS):
+            # Escape hatches: accountability OR impact saves the candidate.
+            # Impact added 2026-04-19 — stories about sanctions / oil /
+            # immigration / tariffs are newsworthy regardless of headline
+            # verb. Without this, run 24630670415 hard-rejected the US
+            # Russian-oil-waiver extension and other real news.
+            if (
+                not self._has_token(text, ACCOUNTABILITY_TOKENS)
+                and not self._has_token(text, IMPACT_TOKENS)
+            ):
                 return True
 
         # Recycled outrage with no new facts

@@ -327,7 +327,7 @@ journalism:
     fallback_to_news_fetcher: true
   triage:
     pass_threshold: 3
-    use_llm: false                # cheap Haiku borderline classifier — off by default
+    use_llm: true                 # cheap Haiku borderline classifier; enabled 2026-04-19 after run 24630670415 showed the heuristic dropping real news (Strait of Hormuz closure, Russian oil waiver, Pakistan-Iran talks). Rescues score=2 borderlines; no effect on hard-rejects.
   source_gather:
     target_count: 7
     require_slant_diversity: true
