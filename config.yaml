@@ -362,10 +362,11 @@ journalism:
   # Outlet reply bot — replies to outlet tweets with Walter's dossier link
   # when the cross-outlet analysis adds genuine value to the conversation.
   outlet_reply:
-    enabled: true                  # Start disabled — dry-run first
-    max_replies_per_day: 9         # Hard cap (3 stories × 3 replies each)
-    max_replies_per_story: 3       # Max replies to different outlets per story
-    per_outlet_cooldown_hours: 72  # Max 1 reply per outlet per 72 hours
+    enabled: true                  # X path toggle (currently effectively dead — see follow_before_reply comment below)
+    bluesky_enabled: true          # Bluesky path toggle — AT Protocol has no programmatic-reply restriction, so this is the primary outlet-reply platform as of 2026-04-19
+    max_replies_per_day: 9         # Hard cap per platform (3 stories × 3 replies each)
+    max_replies_per_story: 3       # Max replies to different outlets per story (per platform)
+    per_outlet_cooldown_hours: 72  # Max 1 reply per outlet per 72 hours (per platform)
     min_meta_score: 3              # Minimum dossier quality score to trigger
     eligible_window_hours: 8       # How far back to scan for recent posts
     follow_before_reply: false     # Experiment concluded 2026-04-19 with a

@@ -1,0 +1,89 @@
+name: Bluesky Outlet Reply (Walter Croncat)
+
+# Replies to news outlet skeets with Walter's cross-outlet dossier
+# analysis — the Bluesky counterpart to outlet-reply.yml.
+#
+# Why this exists as a separate workflow:
+#   The X outlet-reply path is effectively dead as of 2026-02-23 (see
+#   commit b4c899aa / config.yaml:follow_before_reply comment for the
+#   policy reference). Bluesky's AT Protocol has no equivalent reply
+#   restriction — every public post is openly repliable — so outlet-reply
+#   can actually land here.
+#
+# Triggers:
+#   - workflow_run after journalism-publish completes, so the reply
+#     lands while the story is still fresh
+#   - Scheduled catch-up runs 4x/day for stories the trigger missed
+#     (journalism-publish may have been disabled, or the reply search
+#     may have returned no Bluesky match on the first try)
+#   - Manual dispatch for ad-hoc testing, with optional dry-run
+
+on:
+  workflow_run:
+    workflows: ["Journalism Publish (Walter Croncat)"]
+    types: [completed]
+
+  schedule:
+    - cron: '0 14 * * *'   # 2:00 PM UTC =  9:00 AM CDT
+    - cron: '0 16 * * *'   # 4:00 PM UTC = 11:00 AM CDT
+    - cron: '0 20 * * *'   # 8:00 PM UTC =  3:00 PM CDT
+    - cron: '0 0 * * *'    # 12:00 AM UTC = 7:00 PM CDT
+
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run in dry-run mode (find matches but do not post)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  bluesky-outlet-reply:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
+
+      - name: Run Bluesky outlet reply bot
+        env:
+          BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+        run: |
+          cd src
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python bluesky_outlet_reply.py --dry-run
+          else
+            python bluesky_outlet_reply.py
+          fi
+
+      - name: Commit updated reply history
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if [ -f bluesky_outlet_reply_history.json ]; then
+            git add bluesky_outlet_reply_history.json
+            if ! git diff --staged --quiet; then
+              git commit -m "Update Bluesky outlet reply history [skip ci]"
+              for i in {1..3}; do
+                git pull --rebase origin main && git push && break || {
+                  echo "Push failed (attempt $i/3), retrying..."
+                  sleep $((i * 2))
+                }
+              done
+            fi
+          else
+            echo "No Bluesky outlet reply history yet"
+          fi
+
+      - name: Report status
+        if: failure()
+        run: echo "❌ Workflow failed - check logs above"

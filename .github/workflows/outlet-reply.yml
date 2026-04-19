@@ -1,19 +1,23 @@
 name: Outlet Reply (Walter Croncat)
 
 on:
-  # Trigger automatically after journalism-publish completes (any outcome)
-  # so we can try to reply while the story is fresh
-  workflow_run:
-    workflows: ["Journalism Publish (Walter Croncat)"]
-    types: [completed]
-
-  # Schedule: every 2 hours during CDT daytime (catches stories within 4h)
-  # journalism-publish runs at 12:30, 17:30, 22:30 UTC
-  schedule:
-    - cron: '0 14 * * *'   # 2:00 PM UTC =  9:00 AM CDT
-    - cron: '0 16 * * *'   # 4:00 PM UTC = 11:00 AM CDT
-    - cron: '0 20 * * *'   # 8:00 PM UTC =  3:00 PM CDT
-    - cron: '0 0 * * *'    # 12:00 AM UTC = 7:00 PM CDT
+  # Automatic triggers paused 2026-04-19: X API v2 policy (effective
+  # 2026-02-23) rejects POST /2/tweets replies unless the target author
+  # has @mentioned or quote-posted us. Large outlets won't, so scheduled
+  # runs just burn API budget and accumulate zero replies. Re-enable
+  # once we have an Enterprise tier, an engaged outlet relationship, or
+  # a different unlock. Manual dispatch stays on for ad-hoc testing.
+  # See commit that added this comment for the referenced research.
+  #
+  # workflow_run:
+  #   workflows: ["Journalism Publish (Walter Croncat)"]
+  #   types: [completed]
+  #
+  # schedule:
+  #   - cron: '0 14 * * *'   # 2:00 PM UTC =  9:00 AM CDT
+  #   - cron: '0 16 * * *'   # 4:00 PM UTC = 11:00 AM CDT
+  #   - cron: '0 20 * * *'   # 8:00 PM UTC =  3:00 PM CDT
+  #   - cron: '0 0 * * *'    # 12:00 AM UTC = 7:00 PM CDT
 
   # Allow manual triggering (with optional dry-run)
   workflow_dispatch:
