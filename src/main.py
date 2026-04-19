@@ -700,6 +700,37 @@ def _render_dossier_html(dossier_store, draft: DraftPost, dossier: StoryDossier)
         print(f"[journalism] dossier HTML render failed (non-fatal): {e}")
 
 
+_TRIAGE_DECISIONS_PATH = os.path.join(
+    _project_root(), "docs", "reports", "triage_decisions.jsonl"
+)
+
+
+def _append_triage_decisions(decisions: list[dict]) -> None:
+    """Append each triage decision as a single JSON line.
+
+    Read back weekly by scripts/triage_review.py which summarises
+    borderline drops, hard-rejects by rule, and which signals are
+    most-often missing. The file is committed alongside the seen-stories
+    list so the record survives across GHA runs.
+
+    Failure is non-fatal: if we can't write the feedback log, the
+    journalism pipeline still publishes.
+    """
+    if not decisions:
+        return
+    try:
+        os.makedirs(os.path.dirname(_TRIAGE_DECISIONS_PATH), exist_ok=True)
+        ts = datetime.now(timezone.utc).isoformat()
+        with open(_TRIAGE_DECISIONS_PATH, "a", encoding="utf-8") as f:
+            for d in decisions:
+                # Embed the timestamp on every row so later offline
+                # analysis can group by day/week without needing any
+                # auxiliary context.
+                f.write(json.dumps({"ts": ts, **d}, ensure_ascii=False) + "\n")
+    except Exception as e:
+        print(f"[journalism] could not append triage decisions: {e}")
+
+
 def _write_draft_file(
     drafts_dir: str,
     draft: DraftPost,
@@ -952,6 +983,10 @@ def post_journalism_cycle(
         print("[journalism] Stage 2 — triaging candidates")
         passed = story_triage.triage(candidates)
         print(f"[journalism] Stage 2 passed {len(passed)} / {len(candidates)}")
+        # Persist the per-candidate verdicts to a feedback log so we can
+        # later review which verbs / rules are causing real news to be
+        # dropped. See scripts/triage_review.py (reviewed weekly).
+        _append_triage_decisions(story_triage.last_decisions)
         if not passed:
             print("[journalism] no candidates passed triage — clean exit, nothing to post this cycle")
             print("[journalism] CYCLE END: published=0 reason=no_triage_passes")
