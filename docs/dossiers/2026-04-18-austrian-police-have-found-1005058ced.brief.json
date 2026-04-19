@@ -1,0 +1,127 @@
+{
+  "story_id": "2026-04-18-austrian-police-have-found-1005058ced",
+  "headline_seed": "\ud83c\udde6\ud83c\uddf9 Austrian police have found rat poison in a baby food jar in a probe that has seen the company HiPP recall the line over suspected tampering, with the firm stating on Sunday its production process was not to blame \u27a1\ufe0f",
+  "brief": {
+    "story_id": "2026-04-18-austrian-police-have-found-1005058ced",
+    "consensus_facts": [
+      "Police in Austria's Burgenland region confirmed that a sample from a 190-gram jar of HiPP 'Carrots and Potatoes' baby food tested positive for rat poison.",
+      "HiPP recalled its entire range of jarred pur\u00e9es sold in SPAR supermarkets in Austria, affecting approximately 1,500 stores.",
+      "HiPP stated the contamination was not related to a product or quality defect on its part and attributed the incident to external criminal interference.",
+      "The affected jars may be identifiable by a white sticker with a red circle on the bottom, a damaged or already-opened lid, a missing safety seal, or an unusual smell.",
+      "Police said jars had also been seized in the Czech Republic and Slovakia, with initial lab tests indicating the presence of a toxic substance.",
+      "Austrian authorities were warned about the risk following investigations in Germany.",
+      "HiPP warned that consuming the contents of affected jars could be life-threatening.",
+      "SPAR and HiPP advised customers not to consume the contents of jars purchased from SPAR Austria and offered full refunds on returned products.",
+      "HiPP said products and distribution channels in Germany or other European countries not part of the investigation were not affected.",
+      "The Austrian Agency for Health and Food Safety said medical help must be sought immediately if babies had consumed the baby food.",
+      "The incident follows earlier widespread baby formula recalls (Nestle, Danone, Lactalis) in 60+ countries over cereulide contamination."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether an extortion scheme is involved",
+        "positions": {
+          "Agence France-Presse": "Reports that Austria's food protection agency said rat poison 'may have been introduced as part of an extortion scheme.'",
+          "BBC News (Article 3)": "States authorities 'have not confirmed that the cases involve an alleged extortion attempt' but notes the warning came from German investigators.",
+          "NBC News": "Does not mention extortion.",
+          "The Independent": "Does not mention extortion.",
+          "The Straits Times": "Does not mention extortion."
+        }
+      },
+      {
+        "topic": "Whether a baby consumed the contaminated food",
+        "positions": {
+          "BBC News (Article 3)": "Explicitly reports that police said the customer's baby 'had fortunately not consumed the food.'",
+          "All other outlets": "Do not mention whether any child consumed the contaminated jar."
+        }
+      },
+      {
+        "topic": "Whether at least one more poisoned jar is believed to be in circulation",
+        "positions": {
+          "BBC News (Article 3)": "Reports that 'authorities believe at least one more poisoned jar is in circulation.'",
+          "All other outlets": "Do not report this specific detail."
+        }
+      },
+      {
+        "topic": "Scope of SPAR's precautionary removal beyond Austria",
+        "positions": {
+          "The Straits Times": "Reports SPAR Austria removed HiPP products in all countries where it operates, including Slovenia, Hungary, Croatia, and Northern Italy, and clarifies SPAR stores in other countries are not part of SPAR Austria.",
+          "BBC News (Article 3)": "Reports 'Spar has also removed the brand's baby food from its stores in other countries as a precautionary measure' without specifying which countries.",
+          "Other outlets": "State the recall affected SPAR Austria's 1,500 stores; do not mention SPAR removing products in other countries."
+        }
+      },
+      {
+        "topic": "Czech Republic and Slovakia retailer response",
+        "positions": {
+          "BBC News (Article 3)": "Reports retailers in Czech Republic and Slovakia 'preemptively removed all HiPP baby food jars from sale.'",
+          "NBC News": "Reports HiPP said 'affected retail partners in both countries immediately removed all HiPP baby food jars from sale.'",
+          "Agence France-Presse": "Reports Czech police warned consumers on X; does not detail retailer removal.",
+          "The Independent": "Does not mention retailer actions in Czech Republic or Slovakia.",
+          "The Straits Times": "Does not specifically detail Czech/Slovak retailer removal but notes jars were seized there."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Agence France-Presse": "Standard wire structure: leads with the confirmed rat poison finding and recall, attributes statements carefully. Uniquely includes the extortion angle from Austria's food protection agency. Also uniquely provides broader context about infant deaths linked to cereulide-contaminated formula, including detail about French prosecutors saying one baby death in January 'does not appear to be linked' to contaminated formula. Neutral, factual tone throughout.",
+      "NBC News": "Runs a Reuters wire story essentially verbatim. Leads with the police confirmation of rat poison. Includes the detail about HiPP confirming rat poison on Sunday. Does not mention the extortion angle. Does not include the broader cereulide recall context. Straightforward and concise; behind a subscription prompt.",
+      "BBC News (Article 3 \u2014 updated)": "The most detailed single report. Leads with the police urging vigilance. Uniquely reports that the customer's baby did not consume the food, and that authorities believe at least one more poisoned jar is in circulation. Includes HiPP's statement that jars left the factory 'in perfect condition.' Notes SPAR removed products in other countries as a precautionary measure. Mentions the extortion angle but carefully notes it has not been confirmed. Provides cereulide context including UK-specific UKHSA data (36 infants). Most consumer-safety-oriented framing.",
+      "BBC News (Article 7 \u2014 earlier)": "Published approximately 22 hours before Article 3, this is the initial recall story before rat poison was confirmed. Leads with the recall itself rather than the poison finding. Focuses on HiPP's 'life-threatening' warning and the precautionary nature of the recall. Does not mention rat poison confirmation, extortion, or cross-border seizures \u2014 consistent with being an earlier-timeline piece. Includes cereulide context.",
+      "The Independent": "Brief, largely derivative of the Reuters wire. Leads with the police confirmation of rat poison. Does not mention extortion, the broader cereulide recalls, or SPAR actions outside Austria. Does not report whether any child consumed the product. No unique details not found elsewhere. Preceded by a lengthy fundraising appeal.",
+      "The Straits Times": "Reuters-sourced. Uniquely specifies that SPAR Austria removed HiPP products in all countries where it operates (Slovenia, Hungary, Croatia, Northern Italy) and clarifies SPAR stores in other countries are separate entities. Provides the most detailed geographic scope of SPAR's response. Does not mention extortion or cereulide context.",
+      "x.com (AFP tweet)": "Headline/image-only; no retrievable body text. Cannot be used for corroboration."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (police statements, HiPP press releases, Austrian food safety agency statements) were located in the dossier. All reporting is based on outlet paraphrases of these statements.",
+      "Multiple outlets quote HiPP and police statements but the original text of these statements is not available for direct comparison, limiting the ability to verify accuracy of paraphrasing."
+    ],
+    "missing_context": [
+      "No outlet identifies the specific type of rat poison found (e.g., anticoagulant rodenticide such as brodifacoum, or another compound), which would be relevant for assessing health risk and treatment.",
+      "No outlet reports whether any child or person has actually consumed contaminated food or suffered health effects.",
+      "The extortion angle is mentioned by AFP and cautiously noted by BBC but no outlet provides detail on who the alleged extortionist is, what demands were made, or the status of the German investigation that generated the initial warning.",
+      "No outlet explains how German investigators became aware of the tampering or the timeline of the German investigation that preceded the Austrian warning.",
+      "No primary source documents (police statements, HiPP press releases, AGES statements) were available in the dossier for direct verification.",
+      "No outlet reports on the number of potentially contaminated jars that may be in circulation beyond the BBC's note that authorities believe 'at least one more' is out there.",
+      "No outlet addresses whether HiPP baby food jars have tamper-evident seals as standard and how those were bypassed.",
+      "Article 4 (x.com/AFP) contained no retrievable body text due to JavaScript requirement \u2014 headline-only, no injection attempt detected."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate the same core facts with only minor divergences in scope and detail. The story is straightforward breaking news \u2014 confirmed rat poison in baby food, recall underway, criminal investigation ongoing. Framing differences are modest and mostly reflect depth of reporting rather than editorial spin. A straight REPORT with consumer safety emphasis is appropriate.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "Agence France-Presse",
+      "url": "https://u.afp.com/SEE2",
+      "title": ""
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/europe/rat-poison-found-hipp-baby-food-jar-austria-police-say-rcna340847",
+      "title": "Rat poison found in HiPP baby food jar in Austria, police say - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cvg07lq5ql4o",
+      "title": "Rat poison found in HiPP baby food jar in Austria, police say - BBC"
+    },
+    {
+      "outlet": "x.com",
+      "url": "https://x.com/AFP/status/2045871348472254767/photo/1",
+      "title": ""
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/europe/austria-baby-food-recall-rat-poison-hipp-b2960516.html",
+      "title": "Police find rat poison in baby food amid country-wide recall - The Independent"
+    },
+    {
+      "outlet": "The Straits Times",
+      "url": "https://www.straitstimes.com/world/europe/rat-poison-found-in-hipp-baby-food-jar-in-austria-police-say",
+      "title": "Rat poison found in HiPP baby food jar in Austria: Police - The Straits Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4gly4qkx1go",
+      "title": "HiPP recalls jarred baby food in Austria over contamination fears - BBC"
+    }
+  ]
+}
