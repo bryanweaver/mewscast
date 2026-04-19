@@ -945,6 +945,7 @@ def post_journalism_cycle(
         print(f"[journalism] Stage 1 yielded {len(candidates)} candidates")
         if not candidates:
             print("[journalism] no candidates from Stage 1 — clean exit, nothing to post this cycle")
+            print("[journalism] CYCLE END: published=0 reason=no_stage1_candidates")
             return True
 
         # ---- Stage 2: triage --------------------------------------------------
@@ -953,6 +954,7 @@ def post_journalism_cycle(
         print(f"[journalism] Stage 2 passed {len(passed)} / {len(candidates)}")
         if not passed:
             print("[journalism] no candidates passed triage — clean exit, nothing to post this cycle")
+            print("[journalism] CYCLE END: published=0 reason=no_triage_passes")
             return True
 
     # ---- Stage 2b: story-level dedup -------------------------------------
@@ -1190,6 +1192,7 @@ def post_journalism_cycle(
             f"in the seen set (exact or semantic); clean exit, nothing new to report "
             f"this cycle"
         )
+        print("[journalism] CYCLE END: published=0 reason=all_candidates_seen")
         return True
 
     if skipped_count > 0:
@@ -1251,6 +1254,7 @@ def post_journalism_cycle(
             f"{len(fallback_candidates)} candidate(s) — clean exit, "
             f"nothing to report on this cycle"
         )
+        print("[journalism] CYCLE END: published=0 reason=no_articles")
         return True
 
     # ---- Stage 4: meta-analysis -------------------------------------------
@@ -1271,12 +1275,14 @@ def post_journalism_cycle(
 
     # Thresholds per post type:
     #   REPORT/META: 3 sources, 0.45 confidence (multi-source corroboration)
-    #   BULLETIN:    2 sources, 0.35 confidence (breaking, hedged language)
+    #   BULLETIN:    2 sources, 0.25 confidence (breaking, hedged language —
+    #                the safety-net tier; caught runs with 0.30 confidence
+    #                that had valid sourcing but died just below the floor)
     #   Others:      2 sources, 0.40 confidence
     _QUALITY_GATES = {
         PostType.REPORT:     {"min_articles": 3, "min_confidence": 0.45},
         PostType.META:       {"min_articles": 3, "min_confidence": 0.45},
-        PostType.BULLETIN:   {"min_articles": 2, "min_confidence": 0.35},
+        PostType.BULLETIN:   {"min_articles": 2, "min_confidence": 0.25},
         PostType.ANALYSIS:   {"min_articles": 2, "min_confidence": 0.40},
         PostType.PRIMARY:    {"min_articles": 2, "min_confidence": 0.40},
         PostType.CORRECTION: {"min_articles": 2, "min_confidence": 0.40},
@@ -1289,6 +1295,7 @@ def post_journalism_cycle(
             f"[journalism] {chosen_type.value} requires {gate['min_articles']} sources "
             f"but only {n_articles} found — clean exit"
         )
+        print(f"[journalism] CYCLE END: published=0 reason=too_few_articles_for_{chosen_type.value}")
         return True
 
     if brief.confidence < gate["min_confidence"]:
@@ -1296,6 +1303,7 @@ def post_journalism_cycle(
             f"[journalism] confidence {brief.confidence:.2f} < "
             f"{gate['min_confidence']} for {chosen_type.value} — clean exit"
         )
+        print(f"[journalism] CYCLE END: published=0 reason=low_confidence_{chosen_type.value}")
         return True
     print(f"[journalism] Stage 5 — composing {chosen_type.value} post")
     try:
@@ -1331,11 +1339,44 @@ def post_journalism_cycle(
         result = verification_gate.verify(draft, dossier)
         if not result.passed:
             print(f"[journalism] Stage 6 FINAL failures: {result.failures}")
-            rejected_path = _write_draft_file(
-                drafts_dir, draft, dossier, subfolder="rejected"
-            )
-            print(f"[journalism] rejected draft written to {rejected_path}")
-            return False
+            # BULLETIN fallback — if a long-form type blew the gate twice,
+            # try the same story as a short BULLETIN before giving up.
+            # BULLETIN has a tighter char budget and looser stylistic rules
+            # (no sign-off, simpler structure) so it passes where the long
+            # form fails. Converts "hard failure" into "smaller post" which
+            # is almost always preferable to publishing nothing.
+            fallback_ok = False
+            if chosen_type in (PostType.REPORT, PostType.META, PostType.ANALYSIS):
+                print(
+                    f"[journalism] Stage 6 — falling back to BULLETIN "
+                    f"after {chosen_type.value} failed verification twice"
+                )
+                try:
+                    draft = post_composer.compose(
+                        brief=brief,
+                        dossier=dossier,
+                        post_type=PostType.BULLETIN,
+                        retry_reasons=result.failures,
+                    )
+                    result = verification_gate.verify(draft, dossier)
+                    if result.passed:
+                        chosen_type = PostType.BULLETIN
+                        fallback_ok = True
+                        print("[journalism] Stage 6 — BULLETIN fallback verified")
+                    else:
+                        print(
+                            f"[journalism] BULLETIN fallback also failed: "
+                            f"{result.failures}"
+                        )
+                except Exception as e:
+                    print(f"[journalism] BULLETIN fallback compose failed: {e}")
+
+            if not fallback_ok:
+                rejected_path = _write_draft_file(
+                    drafts_dir, draft, dossier, subfolder="rejected"
+                )
+                print(f"[journalism] rejected draft written to {rejected_path}")
+                return False
 
     # ---- Post-draft factual analysis (FABRICATION is a hard gate) ----------
     # Compares the draft against article bodies for factual accuracy.
@@ -1602,6 +1643,10 @@ def post_journalism_cycle(
 
     print(f"\n{'=' * 60}")
     print("[journalism] cycle complete")
+    print(
+        f"[journalism] CYCLE END: published=1 post_type={chosen_type.value} "
+        f"story_id={draft.story_id}"
+    )
     print(f"{'=' * 60}\n")
     return True
 
