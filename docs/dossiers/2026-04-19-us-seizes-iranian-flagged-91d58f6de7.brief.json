@@ -1,0 +1,135 @@
+{
+  "story_id": "2026-04-19-us-seizes-iranian-flagged-91d58f6de7",
+  "headline_seed": "US seizes Iranian-flagged cargo ship near Strait of Hormuz as new talks are in question - AP News",
+  "brief": {
+    "story_id": "2026-04-19-us-seizes-iranian-flagged-91d58f6de7",
+    "consensus_facts": [
+      "The U.S. forcibly seized an Iranian-flagged cargo ship that attempted to bypass a U.S. naval blockade near the Strait of Hormuz on Sunday, April 19, 2026.",
+      "President Trump announced the seizure on Truth Social, identifying the vessel as the TOUSKA and saying it was intercepted by the USS Spruance in the Gulf of Oman.",
+      "Trump said the U.S. Navy fired on the ship's engine room after the crew refused warnings to stop, and that U.S. Marines took custody of the vessel.",
+      "This was the first such ship boarding since the U.S. naval blockade of Iranian ports began the previous week.",
+      "The U.S. has turned back approximately 20-25 commercial vessels as part of the blockade.",
+      "Iran re-closed the Strait of Hormuz after briefly reopening it, citing the continued U.S. blockade of Iranian ports as a ceasefire violation.",
+      "Iran's chief negotiator and parliamentary speaker Mohammed Bagher Qalibaf/Ghalibaf said on state TV that the strait would remain closed as long as the U.S. naval blockade continues.",
+      "A two-week ceasefire between the U.S. and Iran is set to expire on Wednesday, April 23, 2026.",
+      "Vice President JD Vance, special envoy Steve Witkoff, and Jared Kushner were expected to travel to Islamabad, Pakistan, for a second round of U.S.-Iran talks.",
+      "Iran's state news agency IRNA said Iran declined to join the new round of talks, citing excessive U.S. demands, shifting positions, and the ongoing naval blockade.",
+      "Trump threatened to destroy every power plant and bridge in Iran if no deal is reached.",
+      "Trump accused Iran of violating the ceasefire by firing on ships in the Strait of Hormuz; Iran accused the U.S. of violating the ceasefire by maintaining the naval blockade.",
+      "Indian-flagged vessels were fired upon in the Strait of Hormuz, prompting India to summon Iran's ambassador."
+    ],
+    "disagreements": [
+      {
+        "topic": "Exact number of ships turned back by U.S. blockade",
+        "positions": {
+          "NPR": "Reports 23 ships turned around in one reference and 25 in another (citing CENTCOM at different points).",
+          "NBC News": "Reports 'more than 20 ships turned back since Monday.'",
+          "Associated Press": "Does not specify a precise number in the available body text."
+        }
+      },
+      {
+        "topic": "Duration of warnings before U.S. fired on the TOUSKA",
+        "positions": {
+          "NPR": "Reports CENTCOM said the Iranian ship refused to comply over the course of six hours before being fired upon.",
+          "NBC News": "Does not specify a timeframe for the warnings.",
+          "Associated Press": "Does not specify a timeframe in the available body text."
+        }
+      },
+      {
+        "topic": "Status of negotiations \u2014 whether talks are happening or dead",
+        "positions": {
+          "NPR": "Reports Iran declined to join talks, citing IRNA statement about 'no clear prospect.'",
+          "NBC News": "Reports IRNA denied reports of a second round, saying there is 'no clear prospect' for talks, but also notes Iranian officials said new U.S. proposals were 'under review' and Ghalibaf said some issues had been 'concluded.'",
+          "Associated Press": "Reports Iran's Deputy FM said Iran 'isn't for a new round of face-to-face talks' because the Americans 'have not abandoned their maximalist position.'"
+        }
+      },
+      {
+        "topic": "Iran's public response to the seizure of the TOUSKA",
+        "positions": {
+          "NBC News": "States 'Iran has not publicly commented on the reported seizure.'",
+          "Associated Press": "Does not address Iran's response to the specific seizure.",
+          "NPR": "Does not address Iran's direct response to the seizure."
+        }
+      },
+      {
+        "topic": "Which other nations' ships were fired upon or targeted",
+        "positions": {
+          "NPR": "Reports Indian ships were fired upon; also reports UK Maritime Trade Operations Centre received a report of Iranian Revolutionary Guard gun boats firing on a tanker.",
+          "NBC News": "Reports Trump said Iran targeted French and UK vessels; also reports French shipping company CMA CGM confirmed one of its vessels received warning shots; reports Botswana- and Angola-flagged tankers were also forced to turn back.",
+          "Associated Press": "Does not detail specific third-country ship incidents in the available body text."
+        }
+      },
+      {
+        "topic": "Trump's characterization of financial impact on Iran",
+        "positions": {
+          "NPR": "Quotes Trump saying the blockade costs Iran '$500 Million Dollars a day' while the U.S. 'loses nothing.'",
+          "NBC News": "Does not include this specific claim.",
+          "Associated Press": "Does not include this specific claim."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press (Article 1)": "The body text is fragmentary \u2014 appears to be a mix of photo captions, video descriptions, and partial article text rather than a coherent narrative. Leads with the seizure fact and mentions diplomatic context (Qalibaf's interview, Khatibzadeh's statement declining talks). Includes Trump's 'nuclear dust' quote about enriched uranium. Does not provide structured detail on the CENTCOM statement or the broader ceasefire dynamics. The fragmentary nature suggests this may be a partially scraped wire piece or a multimedia landing page.",
+      "Associated Press (Article 3)": "This appears to be a video landing page with only a one-sentence lede about the seizure, followed by entirely unrelated AP stories (West Virginia electricity, ICE employees, U.S. Steel, Border Patrol, Venezuela). Provides no substantive additional detail on the Iran story beyond the single-sentence confirmation of the seizure.",
+      "NPR": "The most comprehensive single-article treatment in the dossier. Leads with the seizure and Trump's Truth Social post, then provides granular detail: the CENTCOM statement (six-hour warning period), the TOUSKA's sanctions history, the exact mechanism of the blockade. Provides substantial context on the Strait of Hormuz closure, Ghalibaf's 'impossible for others to pass' quote, the Indian ship incidents, and the Lebanon ceasefire situation (French peacekeeper and Israeli soldiers killed). Frames the seizure as 'an escalation of the U.S. blockade.' Includes the detail that 20,000+ seafarers are stuck on hundreds of ships. Buries Trump's threat to destroy power plants and bridges \u2014 it appears only in his quoted post, not in the narrative framing.",
+      "NBC News": "Leads with the seizure but quickly pivots to the diplomatic dimension \u2014 the stalled talks and competing claims about ceasefire violations. Provides the most detailed treatment of the negotiation dynamics, including Ghalibaf's statement that some issues have been 'concluded' and his warning that Iran will 'start the war' if the ceasefire is not implemented. Uniquely includes quotes from UN Ambassador Mike Waltz ('Everything's on the table') and Iranian President Pezeshkian ('If a human being does not defend himself, he is dead'). Notes Trump convened a Cabinet meeting in the situation room Saturday morning. Reports that French, UK, Botswana, and Angola-flagged ships were also targeted. Frames the story as a fragile ceasefire under severe strain from both sides.",
+      "The New York Times": "Headline-only article; no body text available for analysis. Headline focuses on ships being attacked in the strait and Iran declaring 'strict control' of the shipping route \u2014 framing that emphasizes Iran's assertive posture rather than the U.S. seizure. Datelined April 18, suggesting it may cover the day before the seizure rather than the seizure itself.",
+      "The Washington Post": "Body text is almost entirely paywalled boilerplate \u2014 navigation menus, subscription prompts, and unrelated article links. The available lede confirms the seizure and notes it was the first boarding since the blockade began April 13. Uniquely frames the blockade as 'part of Trump's effort to exert pressure on Tehran.' Includes an AI-generated summary of reader comments describing 'strong criticism of President Donald Trump' \u2014 an unusual editorial feature that signals the outlet's audience reaction. No substantive reporting detail is accessible beyond the first two paragraphs."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (CENTCOM press release, IRNA official statement, UN statements, ceasefire agreement text) were located in the dossier.",
+      "Multiple outlets reference a CENTCOM statement but it was not provided as a primary source. NPR quotes it most extensively (six-hour warning, 'deliberate, professional, and proportional manner'). Without the full CENTCOM statement, it is impossible to verify whether outlets accurately characterized the military's account.",
+      "The ceasefire agreement text is not available, making it impossible to independently assess either side's claims about violations.",
+      "Trump's Truth Social posts are quoted across multiple outlets and appear largely consistent in their rendering, though no verbatim transcript was provided as a primary source."
+    ],
+    "missing_context": [
+      "No outlet provides the text or key terms of the ceasefire agreement, making it impossible to evaluate competing claims about who is violating it.",
+      "The CENTCOM press release about the TOUSKA seizure was not included as a primary source, despite multiple outlets citing it.",
+      "No outlet explains the legal basis under international law for the U.S. naval blockade of Iranian ports or for seizing an Iranian-flagged vessel in the Gulf of Oman (which is outside the Strait of Hormuz proper).",
+      "No outlet discusses the global economic impact of the Strait of Hormuz disruptions \u2014 oil price movements, insurance costs for tankers, or the effect on energy markets \u2014 despite NPR noting 20% of world crude oil passes through the strait.",
+      "No outlet details the specific U.S. demands in the negotiations that Iran characterizes as 'maximalist' or 'excessive.'",
+      "No outlet reports what cargo the TOUSKA was carrying or where it was headed.",
+      "The Washington Post body text was almost entirely inaccessible behind a paywall, limiting the dossier's depth from that outlet.",
+      "The New York Times was headline-only, further reducing the dossier's analytical range.",
+      "One of the two Associated Press articles (Article 3) was a video landing page with unrelated content, providing no meaningful reporting on this story.",
+      "No outlet provides the status of the approximately 20,000 stranded seafarers beyond NPR's single mention.",
+      "No outlet discusses the fate of the TOUSKA's crew \u2014 whether they were detained, released, or their current status.",
+      "The NPR article references the U.S. and Israel launching 'a war on the country at the end of February' and Israel's invasion of southern Lebanon, but no outlet provides a concise timeline of the broader conflict that led to this moment, which would help readers understand the current situation."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text (NPR, NBC News, AP Article 1) confirm the core facts of the ship seizure, the blockade, and the diplomatic standoff. While there are framing differences, the factual core is well-established across sources, making this a strong REPORT rather than a META. The framing divergences (emphasis on military vs. diplomatic dimensions) are notable but secondary to the confirmed event.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/us-iran-war-israel-hormuz-19-april-2026-0a637f98d588930f195f61cffe07d4f3",
+      "title": ""
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/04/19/nx-s1-5790378/iran-us-hormuz-closed-impossible",
+      "title": "U.S. seizes Iranian cargo ship in Strait of Hormuz, Trump says - NPR"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/video/us-seizes-iranian-flagged-ship-near-strait-of-hormuz-that-tried-to-pass-blockade-f3704aff1a364a7aa5f94f6ed26749f8",
+      "title": "US seizes Iranian-flagged ship near Strait of Hormuz that tried to pass blockade - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/04/18/world/middleeast/iran-tanker-strait-of-hormuz.html",
+      "title": "Ships Attacked in Strait of Hormuz as Iran Declares Strict Control of Vital Shipping Route - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/iran/iran-distance-peace-deal-hormuz-closure-halts-shipping-rcna340846",
+      "title": "Trump says U.S. seized Iranian ship as tensions rise amid ceasefire - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/04/19/trump-iran-war-hormuz-strait-negotiations/",
+      "title": "Trump says U.S. seized Iranian ship trying to bypass blockade of Strait of Hormuz - The Washington Post"
+    }
+  ]
+}
