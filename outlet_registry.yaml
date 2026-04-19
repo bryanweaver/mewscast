@@ -28,6 +28,7 @@ outlets:
   - name: Reuters
     handle: Reuters
     domain: reuters.com
+    bluesky_handle: reuters.com     # domain-verified on Bluesky, 2026-04-19
     slant: wire
     allsides_rating: Center
     beat: general
@@ -36,6 +37,7 @@ outlets:
   - name: Associated Press
     handle: AP
     domain: apnews.com
+    bluesky_handle: apnews.com      # domain-verified on Bluesky, 2026-04-19
     slant: wire
     allsides_rating: Left  # AllSides rates AP as Left (confirmed from allsides.com April 2026)
     beat: general
@@ -44,6 +46,7 @@ outlets:
   - name: Agence France-Presse
     handle: AFP
     domain: afp.com
+    bluesky_handle: afp.com         # domain-verified on Bluesky, 2026-04-19
     slant: wire
     allsides_rating: Not Rated  # AllSides does not rate AFP (non-US wire)
     beat: foreign
@@ -52,6 +55,7 @@ outlets:
   - name: Bloomberg
     handle: business  # TODO verify handle
     domain: bloomberg.com
+    bluesky_handle: bloomberg.com   # domain-verified on Bluesky, 2026-04-19
     slant: wire
     allsides_rating: Lean Left
     beat: business
@@ -63,6 +67,7 @@ outlets:
   - name: The New York Times
     handle: nytimes
     domain: nytimes.com
+    bluesky_handle: nytimes.com     # domain-verified on Bluesky, 2026-04-19
     slant: lean-left
     allsides_rating: Lean Left
     beat: general
@@ -71,6 +76,7 @@ outlets:
   - name: The Washington Post
     handle: washingtonpost
     domain: washingtonpost.com
+    bluesky_handle: washingtonpost.com  # domain-verified on Bluesky, 2026-04-19
     slant: lean-left
     allsides_rating: Lean Left
     beat: general
@@ -79,6 +85,7 @@ outlets:
   - name: NPR
     handle: NPR
     domain: npr.org
+    bluesky_handle: npr.org         # domain-verified on Bluesky, 2026-04-19
     slant: lean-left
     allsides_rating: Lean Left
     beat: general
@@ -87,6 +94,7 @@ outlets:
   - name: The Guardian
     handle: guardian
     domain: theguardian.com
+    bluesky_handle: theguardian.com # domain-verified on Bluesky, 2026-04-19
     slant: left
     allsides_rating: Left  # AllSides rates Guardian as Left, not Lean Left
     beat: general
@@ -95,6 +103,7 @@ outlets:
   - name: CNN
     handle: CNN
     domain: cnn.com
+    bluesky_handle: cnn.com         # domain-verified on Bluesky, 2026-04-19
     slant: lean-left
     allsides_rating: Lean Left
     beat: general
@@ -103,6 +112,7 @@ outlets:
   - name: Los Angeles Times
     handle: latimes
     domain: latimes.com
+    bluesky_handle: latimes.com     # domain-verified on Bluesky, 2026-04-19
     slant: lean-left
     allsides_rating: Lean Left
     beat: general
@@ -111,6 +121,7 @@ outlets:
   - name: CBS News
     handle: CBSNews
     domain: cbsnews.com
+    bluesky_handle: cbsnews.com     # domain-verified on Bluesky, 2026-04-19
     slant: lean-left
     allsides_rating: Lean Left
     beat: general
@@ -119,6 +130,7 @@ outlets:
   - name: NBC News
     handle: NBCNews
     domain: nbcnews.com
+    bluesky_handle: nbcnews.com     # domain-verified on Bluesky, 2026-04-19
     slant: lean-left
     allsides_rating: Lean Left
     beat: general
@@ -127,6 +139,7 @@ outlets:
   - name: ABC News
     handle: ABC
     domain: abcnews.go.com
+    bluesky_handle: not_on_bluesky  # no official ABC News Bluesky account as of 2026-04-19
     slant: lean-left
     allsides_rating: Lean Left
     beat: general
@@ -153,6 +166,7 @@ outlets:
   - name: Wall Street Journal
     handle: WSJ
     domain: wsj.com
+    bluesky_handle: wsj.com         # domain-verified on Bluesky, 2026-04-19
     slant: center
     allsides_rating: Center  # AllSides rates WSJ news-side as Center (Feb 2025 survey)
     beat: business
@@ -161,6 +175,7 @@ outlets:
   - name: The Hill
     handle: thehill
     domain: thehill.com
+    bluesky_handle: thehill.com     # active but not-domain-verified, 2026-04-19
     slant: center
     allsides_rating: Center
     beat: politics
@@ -178,6 +193,7 @@ outlets:
   - name: New York Post
     handle: nypost
     domain: nypost.com
+    bluesky_handle: nypost.com      # active, automated-looking feed (112k posts, 3.5k followers), 2026-04-19
     slant: lean-right
     allsides_rating: Lean Right
     beat: general
@@ -195,6 +211,7 @@ outlets:
   - name: Fox News
     handle: FoxNews
     domain: foxnews.com
+    bluesky_handle: not_on_bluesky  # no official Fox News account on Bluesky as of 2026-04-19 (the foxnews.com.web.brid.gy bridge bot is a third-party ActivityPub mirror, not the outlet itself)
     slant: right
     allsides_rating: Right
     beat: general
@@ -215,6 +232,7 @@ outlets:
   - name: BBC News
     handle: BBCWorld
     domain: bbc.com
+    bluesky_handle: not_on_bluesky  # BBC News does not have an official Bluesky account as of 2026-04-19; only BBC Newsnight (the show) is there
     slant: international
     allsides_rating: Center  # AllSides rates BBC as Center
     beat: foreign
@@ -223,6 +241,7 @@ outlets:
   - name: Financial Times
     handle: FT
     domain: ft.com
+    bluesky_handle: financialtimes.com  # domain-verified on Bluesky (note: not ft.com), 2026-04-19
     slant: international
     allsides_rating: Not Rated  # AllSides does not rate FT
     beat: business
@@ -231,6 +250,7 @@ outlets:
   - name: Al Jazeera English
     handle: AJEnglish
     domain: aljazeera.com
+    bluesky_handle: aljazeera.com   # domain-verified on Bluesky, 2026-04-19
     slant: international
     allsides_rating: Not Rated  # AllSides does not rate Al Jazeera
     beat: foreign
@@ -239,6 +259,7 @@ outlets:
   - name: Deutsche Welle
     handle: dwnews
     domain: dw.com
+    bluesky_handle: not_on_bluesky  # reserved-only account (news.dw.com exists w/ correct bio but 0 posts), 2026-04-19
     slant: international
     allsides_rating: Not Rated  # German public broadcaster
     beat: foreign
@@ -258,6 +279,7 @@ outlets:
   - name: CNBC
     handle: CNBC
     domain: cnbc.com
+    bluesky_handle: cnbc.com        # domain-verified on Bluesky, 2026-04-19
     slant: specialized
     allsides_rating: Lean Left  # AllSides rates CNBC as Lean Left, not Center
     beat: business
@@ -266,6 +288,7 @@ outlets:
   - name: Politico
     handle: politico
     domain: politico.com
+    bluesky_handle: politico.com    # domain-verified on Bluesky, 2026-04-19
     slant: specialized
     allsides_rating: Lean Left
     beat: politics
@@ -274,6 +297,7 @@ outlets:
   - name: Axios
     handle: axios
     domain: axios.com
+    bluesky_handle: axios.com       # domain-verified on Bluesky, 2026-04-19
     slant: specialized
     allsides_rating: Lean Left
     beat: politics
@@ -282,6 +306,7 @@ outlets:
   - name: ProPublica
     handle: propublica
     domain: propublica.org
+    bluesky_handle: propublica.org  # domain-verified on Bluesky, 2026-04-19
     slant: specialized
     allsides_rating: Lean Left
     beat: accountability
@@ -290,6 +315,7 @@ outlets:
   - name: STAT News
     handle: statnews
     domain: statnews.com
+    bluesky_handle: statnews.com    # domain-verified on Bluesky, 2026-04-19
     slant: specialized
     allsides_rating: Not Rated  # Health beat, not covered by AllSides
     beat: health
@@ -298,6 +324,7 @@ outlets:
   - name: Defense One
     handle: DefenseOne
     domain: defenseone.com
+    bluesky_handle: defenseone.bsky.social  # active Bluesky presence (no domain verification), 2026-04-19
     slant: specialized
     allsides_rating: Not Rated  # Defense beat, not covered by AllSides
     beat: foreign
@@ -306,6 +333,7 @@ outlets:
   - name: SCOTUSblog
     handle: SCOTUSblog
     domain: scotusblog.com
+    bluesky_handle: scotusblog.com  # active but not-domain-verified, 2026-04-19
     slant: specialized
     allsides_rating: Not Rated  # Legal beat, not covered by AllSides
     beat: courts
