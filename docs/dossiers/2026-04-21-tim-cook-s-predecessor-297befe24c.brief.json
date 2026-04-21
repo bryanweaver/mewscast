@@ -1,0 +1,95 @@
+{
+  "story_id": "2026-04-21-tim-cook-s-predecessor-297befe24c",
+  "headline_seed": "Tim Cook\u2019s predecessor, Steve Jobs, is considered one of the great product innovators in modern American history. But the role has been a very different one since Jobs stepped down in 2011, shortly before he died from cancer, and tapped Cook to take over. With his run as CEO",
+  "brief": {
+    "story_id": "2026-04-21-tim-cook-s-predecessor-297befe24c",
+    "consensus_facts": [
+      "Tim Cook is stepping down as Apple CEO effective September 2026, with John Ternus named as his successor.",
+      "Cook will transition to the role of executive chairman.",
+      "John Ternus is Apple's senior vice president of hardware engineering and has worked at Apple for 25 years.",
+      "Under Cook's tenure, Apple's market capitalization grew from approximately $350 billion to $4 trillion.",
+      "Ternus will become Apple's eighth CEO.",
+      "Apple's AI strategy is widely viewed as lagging behind megacap peers and represents a key challenge for the incoming CEO.",
+      "Cook's legacy is characterized as operational and financial excellence rather than product innovation, in contrast to predecessor Steve Jobs.",
+      "Industry observers had long speculated Ternus would be Cook's successor."
+    ],
+    "disagreements": [
+      {
+        "topic": "Ternus's age",
+        "positions": {
+          "CNBC (Article 2)": "States Ternus is 50 years old, noting a correction was issued from a previous version that misstated his age.",
+          "CNBC (Articles 3/4)": "Does not mention Ternus's age in the Cook legacy-focused piece."
+        }
+      },
+      {
+        "topic": "Timing expectations for the transition",
+        "positions": {
+          "CNBC (Articles 3/4)": "Gene Munster of Deepwater Asset Management said the move is happening 'about two years earlier than what I was expecting.'",
+          "CNBC (Article 2)": "Does not frame the timing as surprising, instead presenting the succession as a natural, long-anticipated move."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg (Article 1)": "Body text not retrievable (403 error). Headline from URL slug suggests focus on Cook saying he is healthy and will be chairman 'for a long time.' This is the only outlet in the dossier to foreground Cook's health and his future duration as chairman \u2014 a forward-looking, reassurance-oriented frame unavailable for body-level analysis.",
+      "CNBC (Article 2)": "Forward-looking, successor-focused framing. Leads with Ternus's appointment and Apple's tradition of internal promotion. Provides extensive biographical detail on Ternus \u2014 his education, swimming career, first Apple project (Cinema Display), career progression. Emphasizes the AI challenge as 'a significant obstacle' and quotes Morgan Stanley analysts on product centrality. Frames the transition as an opportunity for optimism. Buries Cook's legacy details entirely \u2014 this is a Ternus profile piece.",
+      "CNBC (Articles 3/4 \u2014 duplicate)": "Backward-looking, Cook-legacy-focused framing. Leads with the Jobs-to-Cook comparison and Gene Munster's 'president of a country' quote. Emphasizes Cook's financial and operational achievement (stock up ~20x, revenue quadrupled, market cap growth). Devotes significant space to Cook's relationship with Trump and tariff navigation. Includes a critical section on wearables revenue decline and Vision Pro's failure to become a consumer hit. Mentions Jony Ive now competing against Apple via OpenAI. Does not deeply profile Ternus \u2014 this is a Cook retrospective.",
+      "bloom.bg (Article 5)": "Body text not retrievable (403 error). URL is a Bloomberg short link; likely same or related Bloomberg article as Article 1. No additional framing can be assessed.",
+      "x.com (Articles 6/7)": "Both are social media posts (Bloomberg Business and CNBC accounts) with no retrievable body text. Cannot assess framing beyond the fact that both outlets promoted the story on X."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., Apple's press release, SEC filing, or Cook's statement) was located in the dossier.",
+      "CNBC Article 2 quotes from an Apple press release in which Cook describes Ternus as having 'the mind of an engineer, the soul of an innovator, and the heart to lead with integrity and with honor.' CNBC Article 2 also quotes Ternus's statement about being 'lucky' to have worked under Jobs and having Cook as his mentor. These appear to be drawn from an official Apple announcement, but the primary document itself was not retrieved for independent verification."
+    ],
+    "missing_context": [
+      "Apple's official press release or SEC 8-K filing announcing the CEO transition was not retrieved as a primary source, preventing independent verification of quoted statements and transition details.",
+      "Bloomberg articles (Articles 1 and 5) were blocked by 403 errors, eliminating a key wire-service perspective. Bloomberg's URL slug suggests a potentially distinct angle (Cook's health, long-term chairman role) not covered in CNBC's reporting.",
+      "No outlet in the retrievable dossier discusses the Apple board's role in the succession decision or whether any external candidates were considered.",
+      "No coverage addresses Cook's compensation or contractual arrangements in his new chairman role, or Ternus's forthcoming compensation package.",
+      "The dossier lacks any perspective from outlets with political slant (left or right-leaning); all retrievable body text comes from a single specialized business outlet (CNBC), limiting framing diversity.",
+      "No outlet discusses potential regulatory or antitrust implications of the leadership change, despite Apple facing ongoing DOJ and EU proceedings.",
+      "CNBC mentions Cook's relationship with Trump and tariff navigation, but no outlet explores whether the timing of the transition has any connection to trade policy uncertainty or geopolitical considerations.",
+      "Reactions from other major figures (Trump, Altman, Buffett) are referenced in a linked CNBC article but not substantively covered in the retrieved body text.",
+      "Articles 3 and 4 are exact duplicates of the same CNBC article, reducing the effective source count in the dossier."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The core facts of the CEO transition are confirmed across multiple CNBC articles with substantial body text, and Bloomberg's URL slug corroborates the basic event. While the dossier is outlet-limited (effectively one outlet with full body text in two distinct articles), the story is a major, straightforward corporate leadership announcement with enough confirmed detail to support a factual report. The framing divergence between CNBC's two pieces (Ternus-forward vs. Cook-legacy) is complementary rather than contradictory, making META less appropriate than REPORT.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-21/apple-s-cook-says-he-s-healthy-will-be-chairman-for-long-time?taid=69e7b71cb2f7b80001e24590&utm_campaign=trueanthem&utm_content=business&utm_medium=social&utm_source=twitter",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/21/john-ternus-apple-ceo.html?taid=69e7a1fe5535e300015cf21a&utm_campaign=trueanthem&utm_content=main&utm_medium=social&utm_source=twitter",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/21/tim-cook-apple-steve-jobs-legacy.html?taid=69e796587728b40001f59ce8&utm_campaign=trueanthem&utm_content=main&utm_medium=social&utm_source=twitter",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/21/tim-cook-apple-steve-jobs-legacy.html",
+      "title": "Tim Cook turned Apple into a $4 trillion juggernaut by not trying to be Steve Jobs - CNBC"
+    },
+    {
+      "outlet": "bloom.bg",
+      "url": "http://bloom.bg/4cHekIc",
+      "title": ""
+    },
+    {
+      "outlet": "x.com",
+      "url": "https://x.com/business/status/2046646245549101153/video/1",
+      "title": ""
+    },
+    {
+      "outlet": "x.com",
+      "url": "https://x.com/CNBC/status/2046645338061033782/photo/1",
+      "title": ""
+    }
+  ]
+}
