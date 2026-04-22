@@ -1376,12 +1376,19 @@ def post_journalism_cycle(
         print(f"[journalism] Stage 5 failed: {e}")
         return False
 
-    # ---- Stage 6: verification gate (with single retry) -------------------
+    # ---- Stage 6: verification gate (editor-mode: up to N retries) --------
+    # "Editor, not rejector": when the gate flags a fixable issue, hand the
+    # composer specific corrective feedback and let it try again. Only fall
+    # back to BULLETIN after MAX_GATE_RETRIES failed swings, and only reject
+    # after that fallback also fails.
+    MAX_GATE_RETRIES = 2
     print("[journalism] Stage 6 — verifying draft")
     result = verification_gate.verify(draft, dossier, brief=brief)
-    if not result.passed:
-        print(f"[journalism] Stage 6 failures: {result.failures}")
-        print("[journalism] Stage 6 — retry composing with gate feedback")
+    for attempt in range(1, MAX_GATE_RETRIES + 1):
+        if result.passed:
+            break
+        print(f"[journalism] Stage 6 attempt {attempt}/{MAX_GATE_RETRIES} failures: {result.failures}")
+        print(f"[journalism] Stage 6 — retry {attempt} with editor feedback")
         try:
             draft = post_composer.compose(
                 brief=brief,
@@ -1390,62 +1397,68 @@ def post_journalism_cycle(
                 retry_reasons=result.failures,
             )
         except Exception as e:
-            print(f"[journalism] Stage 5 retry failed: {e}")
+            print(f"[journalism] Stage 5 retry {attempt} failed: {e}")
             return False
         result = verification_gate.verify(draft, dossier, brief=brief)
-        if not result.passed:
-            print(f"[journalism] Stage 6 FINAL failures: {result.failures}")
-            # BULLETIN fallback — if a long-form type blew the gate twice,
-            # try the same story as a short BULLETIN before giving up.
-            # BULLETIN has a tighter char budget and looser stylistic rules
-            # (no sign-off, simpler structure) so it passes where the long
-            # form fails. Converts "hard failure" into "smaller post" which
-            # is almost always preferable to publishing nothing.
-            fallback_ok = False
-            if chosen_type in (PostType.REPORT, PostType.META, PostType.ANALYSIS):
-                print(
-                    f"[journalism] Stage 6 — falling back to BULLETIN "
-                    f"after {chosen_type.value} failed verification twice"
+
+    if not result.passed:
+        print(f"[journalism] Stage 6 FINAL failures after {MAX_GATE_RETRIES} retries: {result.failures}")
+        # BULLETIN fallback — if a long-form type blew the gate on every
+        # swing, try the same story as a short BULLETIN before giving up.
+        # BULLETIN has a tighter char budget and looser stylistic rules
+        # (no sign-off, simpler structure) so it passes where the long
+        # form fails. Converts "hard failure" into "smaller post" which
+        # is almost always preferable to publishing nothing.
+        fallback_ok = False
+        if chosen_type in (PostType.REPORT, PostType.META, PostType.ANALYSIS):
+            print(
+                f"[journalism] Stage 6 — falling back to BULLETIN after "
+                f"{chosen_type.value} failed all {MAX_GATE_RETRIES + 1} gate attempts"
+            )
+            try:
+                draft = post_composer.compose(
+                    brief=brief,
+                    dossier=dossier,
+                    post_type=PostType.BULLETIN,
+                    retry_reasons=result.failures,
                 )
-                try:
-                    draft = post_composer.compose(
-                        brief=brief,
-                        dossier=dossier,
-                        post_type=PostType.BULLETIN,
-                        retry_reasons=result.failures,
+                result = verification_gate.verify(draft, dossier, brief=brief)
+                if result.passed:
+                    chosen_type = PostType.BULLETIN
+                    fallback_ok = True
+                    print("[journalism] Stage 6 — BULLETIN fallback verified")
+                else:
+                    print(
+                        f"[journalism] BULLETIN fallback also failed: "
+                        f"{result.failures}"
                     )
-                    result = verification_gate.verify(draft, dossier, brief=brief)
-                    if result.passed:
-                        chosen_type = PostType.BULLETIN
-                        fallback_ok = True
-                        print("[journalism] Stage 6 — BULLETIN fallback verified")
-                    else:
-                        print(
-                            f"[journalism] BULLETIN fallback also failed: "
-                            f"{result.failures}"
-                        )
-                except Exception as e:
-                    print(f"[journalism] BULLETIN fallback compose failed: {e}")
+            except Exception as e:
+                print(f"[journalism] BULLETIN fallback compose failed: {e}")
 
-            if not fallback_ok:
-                rejected_path = _write_draft_file(
-                    drafts_dir, draft, dossier, subfolder="rejected"
-                )
-                print(f"[journalism] rejected draft written to {rejected_path}")
-                return False
+        if not fallback_ok:
+            rejected_path = _write_draft_file(
+                drafts_dir, draft, dossier, subfolder="rejected"
+            )
+            print(f"[journalism] rejected draft written to {rejected_path}")
+            return False
 
-    # ---- Post-draft factual analysis (FABRICATION is a hard gate) ----------
+    # ---- Post-draft factual analysis (editor-mode: up to N retries) -------
     # Compares the draft against article bodies for factual accuracy.
     # CLEAN/ESCALATION/SKIPPED → log and continue (informational).
-    # FABRICATION → hard reject + retry Stage 5 once. If retry also
-    # FABRICATION → reject the story entirely. This prevents publishing
-    # drafts that cite outlets not in the source material.
+    # FABRICATION → editor-style retry with specific corrective feedback,
+    # up to MAX_FAB_RETRIES. Only reject if every retry still FABRICATES —
+    # inventing claims that aren't in the sources is the one thing an
+    # editor won't negotiate on.
+    MAX_FAB_RETRIES = 2
     try:
         findings = analyze_draft(draft.text, candidate.headline_seed, dossier)
         print_analysis(findings)
 
-        if findings.get("overall") == "FABRICATION":
-            print("[journalism] FABRICATION detected — retrying Stage 5 with feedback")
+        for attempt in range(1, MAX_FAB_RETRIES + 1):
+            if findings.get("overall") != "FABRICATION":
+                break
+
+            print(f"[journalism] FABRICATION attempt {attempt}/{MAX_FAB_RETRIES} — retry with feedback")
             fab_reasons = [
                 f"FABRICATION: {f.get('assessment', '')}"
                 for f in findings.get("findings", [])
@@ -1468,26 +1481,28 @@ def post_journalism_cycle(
                     retry_reasons=fab_reasons,
                 )
             except Exception as e:
-                print(f"[journalism] Stage 5 fabrication-retry failed: {e}")
+                print(f"[journalism] Stage 5 fabrication-retry {attempt} failed: {e}")
                 return False
 
             # Re-verify + re-analyze the retry draft
             result = verification_gate.verify(draft, dossier, brief=brief)
             if not result.passed:
-                print(f"[journalism] retry draft failed verification: {result.failures}")
+                print(f"[journalism] fab-retry {attempt} draft failed verification: {result.failures}")
                 return False
 
-            retry_findings = analyze_draft(draft.text, candidate.headline_seed, dossier)
-            print_analysis(retry_findings)
+            findings = analyze_draft(draft.text, candidate.headline_seed, dossier)
+            print_analysis(findings)
 
-            if retry_findings.get("overall") == "FABRICATION":
-                print("[journalism] FABRICATION persists after retry — rejecting story")
-                rejected_path = _write_draft_file(
-                    drafts_dir, draft, dossier, subfolder="rejected"
-                )
-                print(f"[journalism] rejected draft written to {rejected_path}")
-                return False
-            findings = retry_findings
+        if findings.get("overall") == "FABRICATION":
+            print(
+                f"[journalism] FABRICATION persists after {MAX_FAB_RETRIES} "
+                f"retries — rejecting story"
+            )
+            rejected_path = _write_draft_file(
+                drafts_dir, draft, dossier, subfolder="rejected"
+            )
+            print(f"[journalism] rejected draft written to {rejected_path}")
+            return False
 
         # Save findings to the dossier for downstream audit
         dossier_store.save_post_record(
