@@ -178,7 +178,7 @@ class StoryTriage:
         "multi-outlet", "event-verb", "impact", "checkable", "accountability",
     )
 
-    def __init__(self, use_llm: bool = False, anthropic_client=None, model: str = "claude-haiku-4-6"):
+    def __init__(self, use_llm: bool = False, anthropic_client=None, model: str = "claude-haiku-4-5-20251001"):
         self.use_llm = use_llm
         self._anthropic_client = anthropic_client
         self._model = model

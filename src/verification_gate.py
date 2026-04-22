@@ -14,11 +14,18 @@ If we get nothing else right, we get this right.
 """
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass, field
 from typing import Optional
 
-from dossier_store import DraftPost, PostType, SIGN_OFFS, StoryDossier
+from dossier_store import DraftPost, MetaAnalysisBrief, PostType, SIGN_OFFS, StoryDossier
+
+# Matches any 4-digit year in the 1900–2099 range. Used by
+# `_check_dates_match_brief` to reject drafts where the composer
+# substituted a year from its training prior instead of copying the
+# brief's year verbatim.
+_YEAR_RE = re.compile(r"\b(?:19|20)\d{2}\b")
 
 
 # Reason-string prefix used when _check_char_limit rejects a draft.
@@ -129,8 +136,18 @@ class VerificationGate:
 
     # ---- public ------------------------------------------------------------
 
-    def verify(self, draft: DraftPost, dossier: StoryDossier) -> VerificationResult:
-        """Run every check and aggregate the failures."""
+    def verify(
+        self,
+        draft: DraftPost,
+        dossier: StoryDossier,
+        brief: Optional[MetaAnalysisBrief] = None,
+    ) -> VerificationResult:
+        """Run every check and aggregate the failures.
+
+        When `brief` is supplied, the date-match check runs against the
+        Stage 4 consensus facts. Callers that don't have a brief (legacy
+        tests, ad-hoc verification) pass None and the check is skipped.
+        """
         failures: list[str] = []
 
         for check in (
@@ -145,6 +162,10 @@ class VerificationGate:
             ok, reason = check(draft, dossier)
             if not ok and reason:
                 failures.append(reason)
+
+        ok, reason = self._check_dates_match_brief(draft, brief)
+        if not ok and reason:
+            failures.append(reason)
 
         # _check_char_limit picks the right budget per post type —
         # META gets long_form_max_length, everything else uses max_length.
@@ -393,6 +414,43 @@ class VerificationGate:
         if hits:
             return False, (
                 f"placeholder_template: draft contains leaked template phrase(s) {hits}"
+            )
+        return True, None
+
+    def _check_dates_match_brief(
+        self, draft: DraftPost, brief: Optional[MetaAnalysisBrief]
+    ) -> tuple[bool, Optional[str]]:
+        """Reject drafts that contain a 4-digit year not present in the brief.
+
+        LLMs regress years toward their training prior — a composer reading
+        "effective September 2026" in the brief will still sometimes write
+        "September 2025" in the draft. Real incident: Tim Cook dossier
+        2026-04-21 (docs/dossiers/2026-04-21-tim-cook-s-predecessor-*).
+
+        The check is conservative: if *any* year in the draft doesn't also
+        appear somewhere in the serialized brief, reject. Composer can
+        still reference years the brief mentions in any field, not just
+        consensus_facts.
+
+        Skipped when no brief is supplied.
+        """
+        if brief is None:
+            return True, None
+
+        text = draft.text or ""
+        draft_years = set(_YEAR_RE.findall(text))
+        if not draft_years:
+            return True, None
+
+        brief_blob = json.dumps(brief.to_dict())
+        allowed_years = set(_YEAR_RE.findall(brief_blob))
+
+        missing = sorted(draft_years - allowed_years)
+        if missing:
+            return False, (
+                f"dates_match_brief: draft contains year(s) {missing} that "
+                f"don't appear anywhere in the Stage 4 brief — likely an "
+                f"LLM year-regression; copy years from the brief verbatim"
             )
         return True, None
 

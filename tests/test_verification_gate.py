@@ -23,12 +23,28 @@ sys.path.insert(0, _SRC_DIR)
 from dossier_store import (  # noqa: E402
     ArticleRecord,
     DraftPost,
+    MetaAnalysisBrief,
     PostType,
     PrimarySource,
     SIGN_OFFS,
     StoryDossier,
 )
 from verification_gate import VerificationGate  # noqa: E402
+
+
+def _make_brief(consensus_facts: list[str]) -> MetaAnalysisBrief:
+    """Minimal brief for the dates_match_brief check."""
+    return MetaAnalysisBrief(
+        story_id="20260408-vg-test",
+        consensus_facts=list(consensus_facts),
+        disagreements=[],
+        framing_analysis={},
+        primary_source_alignment=[],
+        missing_context=[],
+        suggested_post_type=PostType.REPORT,
+        suggested_post_type_reason="",
+        confidence=0.8,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -818,3 +834,69 @@ class TestPerPostTypeCharLimit:
         assert gate._effective_max_length(PostType.BULLETIN) == 280
         assert gate._effective_max_length(PostType.CORRECTION) == 280
         assert gate._effective_max_length(PostType.PRIMARY) == 280
+
+
+# ---------------------------------------------------------------------------
+# _check_dates_match_brief — catches LLM year-regression
+# ---------------------------------------------------------------------------
+
+class TestDatesMatchBrief:
+    """Real-world motivating case: Tim Cook dossier 2026-04-21. The brief's
+    consensus_facts said 'effective September 2026'; the composer wrote
+    'September 2025' (dragged back toward its training prior). This check
+    rejects that whole class of failure."""
+
+    def test_year_matching_brief_passes(self, gate, two_outlet_dossier):
+        brief = _make_brief([
+            "Tim Cook is stepping down as Apple CEO effective September 2026."
+        ])
+        draft = _make_draft(
+            "Reuters: Tim Cook steps down September 2026.\n\nAnd that's the mews.",
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier, brief=brief)
+        assert result.passed, f"year in brief should pass: {result.failures}"
+
+    def test_year_not_in_brief_fails(self, gate, two_outlet_dossier):
+        """The exact Tim Cook failure: draft substitutes 2025 for 2026."""
+        brief = _make_brief([
+            "Tim Cook is stepping down as Apple CEO effective September 2026."
+        ])
+        draft = _make_draft(
+            "Reuters: Tim Cook steps down September 2025.\n\nAnd that's the mews.",
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier, brief=brief)
+        assert not result.passed
+        assert any("dates_match_brief" in f for f in result.failures)
+        assert any("2025" in f for f in result.failures)
+
+    def test_no_years_in_draft_passes(self, gate, two_outlet_dossier):
+        brief = _make_brief(["Senate voted 68-32 on the appropriations bill."])
+        draft = _make_draft(
+            "Reuters reports the Senate voted 68-32.\n\nAnd that's the mews.",
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier, brief=brief)
+        assert result.passed, f"no-year draft should pass: {result.failures}"
+
+    def test_brief_none_skips_check(self, gate, two_outlet_dossier):
+        """Legacy callers that don't pass a brief must still work."""
+        draft = _make_draft(
+            "Reuters: rollback begins in 2029.\n\nAnd that's the mews.",
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert result.passed, f"None brief should skip check: {result.failures}"
+
+    def test_year_in_non_consensus_brief_field_passes(self, gate, two_outlet_dossier):
+        """Years in any brief field (framing_analysis, missing_context, etc.)
+        are allowed, not just consensus_facts."""
+        brief = _make_brief(["Senate passed the bill."])
+        brief.framing_analysis["Reuters"] = "Context spans 2022 through 2024."
+        draft = _make_draft(
+            "Reuters: bill echoes the 2022 framework.\n\nAnd that's the mews.",
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier, brief=brief)
+        assert result.passed, f"year in framing_analysis should pass: {result.failures}"

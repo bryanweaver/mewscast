@@ -76,6 +76,7 @@ A single X/Bluesky post of at most **{max_length} characters**, structured as:
 - Today's date: {current_date} ({day_of_week})
 - Time of day: {time_period}
 
+- **COPY dates and years from the brief VERBATIM.** If the brief says "2026", write "2026" — never substitute another year from your training prior. Every year in your draft is programmatically checked against the brief; mismatches are rejected.
 - NEVER editorialize about dates or timelines
 - Your training data is outdated. If the brief says the outlet reported something, it did.
 

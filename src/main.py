@@ -1378,7 +1378,7 @@ def post_journalism_cycle(
 
     # ---- Stage 6: verification gate (with single retry) -------------------
     print("[journalism] Stage 6 — verifying draft")
-    result = verification_gate.verify(draft, dossier)
+    result = verification_gate.verify(draft, dossier, brief=brief)
     if not result.passed:
         print(f"[journalism] Stage 6 failures: {result.failures}")
         print("[journalism] Stage 6 — retry composing with gate feedback")
@@ -1392,7 +1392,7 @@ def post_journalism_cycle(
         except Exception as e:
             print(f"[journalism] Stage 5 retry failed: {e}")
             return False
-        result = verification_gate.verify(draft, dossier)
+        result = verification_gate.verify(draft, dossier, brief=brief)
         if not result.passed:
             print(f"[journalism] Stage 6 FINAL failures: {result.failures}")
             # BULLETIN fallback — if a long-form type blew the gate twice,
@@ -1414,7 +1414,7 @@ def post_journalism_cycle(
                         post_type=PostType.BULLETIN,
                         retry_reasons=result.failures,
                     )
-                    result = verification_gate.verify(draft, dossier)
+                    result = verification_gate.verify(draft, dossier, brief=brief)
                     if result.passed:
                         chosen_type = PostType.BULLETIN
                         fallback_ok = True
@@ -1472,7 +1472,7 @@ def post_journalism_cycle(
                 return False
 
             # Re-verify + re-analyze the retry draft
-            result = verification_gate.verify(draft, dossier)
+            result = verification_gate.verify(draft, dossier, brief=brief)
             if not result.passed:
                 print(f"[journalism] retry draft failed verification: {result.failures}")
                 return False

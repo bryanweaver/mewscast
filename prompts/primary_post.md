@@ -72,6 +72,7 @@ A single X/Bluesky post of at most **{max_length} characters**, structured as:
 - Today's date: {current_date} ({day_of_week})
 - Time of day: {time_period}
 
+- **COPY dates and years from the primary source VERBATIM.** Never substitute a different year from your training prior. Every year in your draft is programmatically checked against the brief; mismatches are rejected.
 - NEVER editorialize about the document's dates
 - Your training data is outdated. Trust the primary source.
 
