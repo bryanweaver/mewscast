@@ -200,8 +200,8 @@ class VerificationGate:
                 return False, "source_count: BULLETIN posts require >=1 outlet in the dossier"
             if not has_hedge:
                 return False, (
-                    "source_count: BULLETIN post body must contain a hedge phrase "
-                    "(e.g. 'not yet confirmed' / 'not yet verified')"
+                    "source_count: Your BULLETIN has no hedge phrase — add 'not yet "
+                    "confirmed' or 'not yet verified' somewhere in the body."
                 )
             return True, None
 
@@ -231,8 +231,8 @@ class VerificationGate:
             if outlet.lower() in text_lower:
                 return True, None
         return False, (
-            f"outlet_in_body: post body does not name any of the outlets in the "
-            f"dossier ({outlet_names})"
+            f"outlet_in_body: Your draft names no outlet — add one of these to "
+            f"the body: {', '.join(outlet_names)}."
         )
 
     def _check_signoff_matches_type(
@@ -290,8 +290,9 @@ class VerificationGate:
                 for other in other_sign_offs:
                     if stripped.endswith(other):
                         return False, (
-                            f"signoff_matches_type: {draft.post_type.value} post also ends with "
-                            f"another type's sign-off '{other}' before the expected one"
+                            f"signoff_matches_type: Your {draft.post_type.value} draft ends with "
+                            f"TWO sign-offs ('{other}' then '{expected}'). Remove the "
+                            f"'{other}' line; keep only '{expected}'."
                         )
                 return True, None
 
@@ -301,8 +302,9 @@ class VerificationGate:
             for other in other_sign_offs:
                 if text.endswith(other):
                     return False, (
-                        f"signoff_matches_type: {draft.post_type.value} post ends with "
-                        f"another type's sign-off '{other}' — opinion/reporting confusion"
+                        f"signoff_matches_type: Your {draft.post_type.value} draft ends with "
+                        f"'{other}' — that's the sign-off for a different post type. "
+                        f"Either end with '{expected}' or remove the sign-off entirely."
                     )
             return True, None
 
@@ -313,8 +315,9 @@ class VerificationGate:
         for other in other_sign_offs:
             if text.endswith(other):
                 return False, (
-                    f"signoff_matches_type: {draft.post_type.value} posts must NOT end "
-                    f"with any sign-off; found '{other}' at the end"
+                    f"signoff_matches_type: Your {draft.post_type.value} draft ends "
+                    f"with '{other}' — but {draft.post_type.value} posts carry NO "
+                    f"sign-off. Remove that closing line."
                 )
         # Belt-and-suspenders: forbid ANY sign-off string (from any post type)
         # anywhere in the body of a BULLETIN/CORRECTION, not just at the end.
@@ -326,8 +329,9 @@ class VerificationGate:
         for so in all_sign_off_phrases:
             if so in body:
                 return False, (
-                    f"signoff_matches_type: {draft.post_type.value} posts must NOT contain "
-                    f"any sign-off phrase anywhere in the body; found '{so}'"
+                    f"signoff_matches_type: Your {draft.post_type.value} draft contains "
+                    f"the phrase '{so}' somewhere in the body — remove it. "
+                    f"{draft.post_type.value} posts carry NO sign-off."
                 )
         # Extra paranoia: the REPORT/META phrase "And that's the mews" as a
         # stem (without the trailing punctuation) is also forbidden, because
@@ -335,8 +339,9 @@ class VerificationGate:
         # the exact-match check above.
         if "And that's the mews" in body:
             return False, (
-                f"signoff_matches_type: {draft.post_type.value} posts must NOT contain "
-                f"\"And that's the mews\" anywhere in the body"
+                f"signoff_matches_type: Your {draft.post_type.value} draft contains "
+                f"\"And that's the mews\" somewhere in the body — remove that phrase. "
+                f"{draft.post_type.value} posts carry NO sign-off."
             )
         return True, None
 
@@ -360,7 +365,11 @@ class VerificationGate:
                     hits.append(word)
 
         if hits:
-            return False, f"no_editorial_words: post contains banned word(s) {hits}"
+            return False, (
+                f"no_editorial_words: Your draft contains editorializing word(s) "
+                f"{hits}. Replace each with a neutral verb or remove the phrase "
+                f"entirely. These words smuggle opinion into straight reporting."
+            )
         return True, None
 
     def _check_hedge_attribution(
@@ -383,8 +392,9 @@ class VerificationGate:
                 window = text[window_start:window_end].lower()
                 if not any(o.lower() in window for o in outlet_names):
                     return False, (
-                        f"hedge_attribution: '{trigger}' used without an outlet name "
-                        f"within 80 characters"
+                        f"hedge_attribution: You wrote '{trigger}' without naming an "
+                        f"outlet near it. Change to '{trigger} <outlet>' using one of: "
+                        f"{', '.join(outlet_names)}."
                     )
         return True, None
 
@@ -425,7 +435,9 @@ class VerificationGate:
         hits = [p for p in self.PLACEHOLDER_TEMPLATES if p in text_lower]
         if hits:
             return False, (
-                f"placeholder_template: draft contains leaked template phrase(s) {hits}"
+                f"placeholder_template: Your draft leaked template placeholder(s) "
+                f"{hits}. This means upstream generation failed — rewrite the whole "
+                f"draft from the brief, do not use fallback boilerplate."
             )
         return True, None
 
@@ -459,10 +471,12 @@ class VerificationGate:
 
         missing = sorted(draft_years - allowed_years)
         if missing:
+            allowed_sorted = sorted(allowed_years)
             return False, (
-                f"dates_match_brief: draft contains year(s) {missing} that "
-                f"don't appear anywhere in the Stage 4 brief — likely an "
-                f"LLM year-regression; copy years from the brief verbatim"
+                f"dates_match_brief: You wrote year(s) {missing} but the brief "
+                f"only uses {allowed_sorted}. Replace {missing} with the correct "
+                f"year from {allowed_sorted}. This is likely an LLM year-regression "
+                f"— copy years from the brief verbatim."
             )
         return True, None
 
@@ -473,9 +487,11 @@ class VerificationGate:
         max_length when the gate is constructed."""
         text = draft.text or ""
         if len(text) > max_length:
+            overshoot = len(text) - max_length
             return False, (
-                f"{CHAR_LIMIT_REASON_PREFIX} post is {len(text)} chars "
-                f"(max {max_length})"
+                f"{CHAR_LIMIT_REASON_PREFIX} Your draft is {len(text)} chars but "
+                f"the max is {max_length} — cut at least {overshoot} chars. Keep "
+                f"the lead, attribution, and sign-off; trim supporting details."
             )
         return True, None
 
