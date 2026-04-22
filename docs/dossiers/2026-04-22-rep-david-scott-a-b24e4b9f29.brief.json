@@ -1,0 +1,114 @@
+{
+  "story_id": "2026-04-22-rep-david-scott-a-b24e4b9f29",
+  "headline_seed": "Rep. David Scott, a longtime Georgia Democrat, died on April 22, a day after he'd cast a vote on the floor of the House of Representatives. He was 80 years old.",
+  "brief": {
+    "story_id": "2026-04-22-rep-david-scott-a-b24e4b9f29",
+    "consensus_facts": [
+      "Rep. David Scott, a Georgia Democrat, died on April 22, 2026, at the age of 80.",
+      "Scott served in the U.S. House of Representatives for more than two decades, first taking office in 2003.",
+      "Scott was the first African American to chair the House Agriculture Committee.",
+      "Scott cast a vote on the House floor the day before his death (Tuesday).",
+      "Scott was running for reelection and facing primary challengers at the time of his death.",
+      "Scott's health had been a growing concern among colleagues in recent years.",
+      "Scott was replaced as the top Democrat on the House Agriculture Committee after the 2024 election by Rep. Angie Craig.",
+      "House Minority Leader Hakeem Jeffries confirmed Scott's death.",
+      "Sen. Jon Ossoff (D-Ga.) issued a statement praising Scott's service to Georgia.",
+      "Scott's cause of death was not immediately disclosed by his office.",
+      "Scott's death further reduces the Democratic minority in the House; multiple outlets note the current breakdown as 217 Republicans, 212 Democrats, and one independent.",
+      "Scott is one of several members of Congress to die during this congressional session, following Reps. Sylvester Turner, Ra\u00fal Grijalva, Gerry Connolly, and Doug LaMalfa."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scott's term count and years of service",
+        "positions": {
+          "Associated Press": "Describes Scott as 'seeking his 13th term.'",
+          "NBC News": "Says he was 'running for re-election for a 13th term.'",
+          "ABC News": "Says Scott 'served in the House for more than 23 years.'",
+          "Axios": "Says Scott 'served in Congress for more than 20 years.'"
+        }
+      },
+      {
+        "topic": "Scott's Agriculture Committee leadership timeline",
+        "positions": {
+          "Axios": "Says he was 'the top Democrat on the House Agriculture Committee from 2021 to 2025' and was 'ousted from his committee leadership role after the 2024 election.'",
+          "CBS News": "Says he 'served as chair of the House Agriculture Committee for the first two years of former President Joe Biden's term' and then 'became the ranking member after Republicans won control of the legislative body in 2023.'",
+          "NBC News": "Says he 'was replaced as the committee's top Democrat by Rep. Angie Craig, D-Minn., in 2024 as the party looked to bring in younger committee leadership.'"
+        }
+      },
+      {
+        "topic": "Speaker Johnson's statement \u2014 district number error",
+        "positions": {
+          "CBS News": "Quotes Speaker Johnson referring to 'Georgia's 3rd Congressional District,' though Scott represented the 13th District. No other outlet includes this quote or this error."
+        }
+      },
+      {
+        "topic": "Number of vacant House seats",
+        "positions": {
+          "CBS News": "States 'Five seats remain vacant.'",
+          "NBC News": "Does not specify number of vacancies but gives the 217-212-1 breakdown."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Wire-style lead focusing on biographical significance (first Black chairman of House Agriculture Committee). Emphasizes that Scott faced criticism over declining health and primary challenges. Notes his membership in the Blue Dog caucus, framing him as a moderate. Shortest full-text article; does not include House math or special election details.",
+      "USA Today": "Leads with the dramatic detail that Scott voted the day before he died. Focuses on the impact on House Democrats' numbers and the razor-thin GOP majority. Includes condolences from Rep. Meeks and Sen. Ossoff. Relatively brief; does not discuss health concerns, committee leadership changes, or the wheelchair incident.",
+      "Axios": "Uses a 'Driving the news / By the numbers / What they're saying' structure. Uniquely emphasizes that Scott was the fifth member to die in office this session (fourth Democrat) and contextualizes his death within a broader trend of younger Democrats working to oust aging leadership. Notes he was 'ousted' from his committee role \u2014 stronger language than other outlets.",
+      "Bloomberg": "Body text unavailable \u2014 returned a 403 error. Cannot analyze framing.",
+      "ABC News": "Headline-only with minimal body text. Notes 23 years of service and that he cast his final vote on Tuesday. Labeled as a developing story. No contextual framing beyond the basics.",
+      "NBC News": "Most detailed report in the dossier. Leads with Jeffries' confirmation and tribute. Uniquely includes the 2022 Politico report about health decline, the 2024 wheelchair-photo confrontation incident (quoting Scott's profanity), fundraising data showing Scott was outraised by four primary opponents, and the note that this Congress is the third-oldest in U.S. history. Also uniquely reports Georgia special election law requirements (governor must declare within 10 days, election at least 30 days after). Provides the most granular House math (217-212-1).",
+      "CBS News": "Provides the most detailed biographical timeline, starting with Scott's 1974 Georgia House race. Uniquely notes Scott was 'not heavily campaigning' but 'dismissive of any pressure to retire.' Includes a quote from Speaker Johnson that contains an apparent error (referring to the '3rd Congressional District' instead of the 13th). Also uniquely quotes Atlanta Mayor Andre Dickens at length. Notes five vacant seats."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Alignment cannot be assessed."
+    ],
+    "missing_context": [
+      "No outlet reports a cause of death, and Scott's office has not disclosed one. A fair-minded reader would want to know whether this is expected to be released.",
+      "No outlet explains what happens to Scott's reelection campaign or the May 19 primary ballot \u2014 only NBC News mentions Georgia special election law, and only in general terms. Whether his name remains on the primary ballot is unaddressed.",
+      "No outlet explores the policy implications of Scott's death for any pending legislation, particularly on agriculture or financial services issues he was involved in.",
+      "No outlet discusses who might succeed Scott or who his primary challengers were beyond Axios's single mention of Everton Blair.",
+      "Speaker Johnson's statement as quoted by CBS News refers to 'Georgia's 3rd Congressional District,' which is incorrect \u2014 Scott represented the 13th. No outlet flags this error.",
+      "Bloomberg's article was inaccessible (403 error), reducing the breadth of the dossier by one wire-level source.",
+      "No primary source (e.g., official death announcement from Scott's office, House clerk records of his final vote) was available for cross-referencing."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets confirm the core facts of Scott's death, biographical details, and political context with only minor divergences. There is no significant framing conflict that would warrant a META post, and no primary source to elevate. This is a straightforward obituary-news REPORT.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/congressman-david-scott-dies-168e05e3188ce7750a4a831a27e38beb?utm_campaign=trueAnthem%3A+New+Content+%28Feed%29&utm_medium=trueAnthem&utm_source=twitter",
+      "title": ""
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/04/22/david-scott-death-georgia-congressman/89734479007/?taid=69e9062ab2f7b80001e252b9&utm_campaign=trueanthem&utm_medium=social&utm_source=twitter",
+      "title": ""
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://trib.al/MOWGqA7",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-22/georgia-democratic-representative-david-scott-dies-at-80?taid=69e9003585041c000182e4ae&utm_campaign=trueanthem&utm_content=business&utm_medium=social&utm_source=twitter",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.link/eSH5WSB",
+      "title": ""
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/georgia-rep-david-scott-dies-80-rcna341463?cid=sm_npd_nn_tw_ma&taid=69e9006bb2f7b80001e25271&utm_campaign=trueanthem&utm_medium=social&utm_source=twitter",
+      "title": ""
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://cbsn.ws/4vLvY6i",
+      "title": ""
+    }
+  ]
+}
