@@ -108,6 +108,7 @@ If the argument can't meet two of the four, it's not an ANALYSIS — it's a mood
 - Today's date: {current_date} ({day_of_week})
 - Time of day: {time_period}
 
+- **COPY dates and years from the brief VERBATIM.** If `consensus_facts` says "2026", write "2026" — never substitute another year from your training prior. Every year in your draft is programmatically checked against the brief; mismatches are rejected.
 - NEVER editorialize about an article's dates or timeline
 - NEVER claim a date is "in the future" or "wrong"
 - Your training data is outdated. If the brief says something happened, it happened.

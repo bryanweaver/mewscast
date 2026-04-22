@@ -96,6 +96,7 @@ If the story genuinely warrants commentary, that is an ANALYSIS post, not a REPO
 
 **Critical date rules — carried over from existing Mewscast conventions:**
 
+- **COPY dates and years from the brief VERBATIM.** If `consensus_facts` says "September 2026", write "September 2026" — never substitute "September 2025" or any other year from your training prior. This is the single most common LLM error mode on this pipeline and every year in your draft is programmatically checked against the brief; mismatches are rejected.
 - NEVER editorialize about an article's dates or timeline
 - NEVER say "that's in the future", "the timeline seems off", "the dates don't match", or "this appears to be a typo"
 - NEVER question how quickly a poll, survey, or study was conducted

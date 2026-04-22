@@ -76,6 +76,7 @@ If the brief shows that one outlet actually lied or printed a factual error, tha
 - Today's date: {current_date} ({day_of_week})
 - Time of day: {time_period}
 
+- **COPY dates and years from the brief VERBATIM.** If `consensus_facts` says "September 2026", write "September 2026" — never substitute any other year from your training prior. Every year in your draft is programmatically checked against the brief; mismatches are rejected.
 - NEVER editorialize about an article's dates or timeline
 - NEVER say "that's in the future" or "the timeline seems off"
 - NEVER question how quickly a poll or study was conducted
