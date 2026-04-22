@@ -118,14 +118,18 @@ class TestSignoffMatchesTypeKeystone:
         result = gate.verify(draft, two_outlet_dossier)
         assert result.passed, f"keystone REPORT happy path should pass: {result.failures}"
 
-    def test_report_with_no_signoff_fails(self, gate, two_outlet_dossier):
+    def test_report_with_no_signoff_passes(self, gate, two_outlet_dossier):
+        """A REPORT missing its sign-off is allowed — per user preference,
+        rejecting a whole story because the composer forgot the closing
+        line costs more than it buys. The keystone integrity rule is that
+        no *wrong* sign-off sneaks in (tested separately below), not that
+        every REPORT must carry one."""
         draft = _make_draft(
             "Reuters reports the Senate voted 68-32.",
             PostType.REPORT,
         )
         result = gate.verify(draft, two_outlet_dossier)
-        assert not result.passed
-        assert any("signoff_matches_type" in f for f in result.failures)
+        assert result.passed, f"missing sign-off should be allowed: {result.failures}"
 
     def test_report_with_meta_signoff_fails(self, gate, two_outlet_dossier):
         draft = _make_draft(

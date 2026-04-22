@@ -273,24 +273,36 @@ class VerificationGate:
             if v is not None and k != draft.post_type
         ]
 
-        # Branch 1: this post type has a required sign-off (REPORT, META,
+        # Branch 1: this post type has a customary sign-off (REPORT, META,
         # ANALYSIS, PRIMARY).
+        #
+        # Missing sign-off is NOT a rejection. Per user preference, an
+        # occasional missing sign-off is acceptable — rejecting a whole
+        # story because the composer forgot to type a closing line costs
+        # more than it buys. The keystone rule below still applies:
+        # the draft must not end with a DIFFERENT post type's sign-off.
+        # That's the opinion/reporting confusion we actually care about.
         if expected is not None:
-            # Must end with the literal expected sign-off
-            if not text.endswith(expected):
-                return False, (
-                    f"signoff_matches_type: {draft.post_type.value} post must end with "
-                    f"the literal sign-off '{expected}'"
-                )
-            # Must NOT also be ending with a *different* type's sign-off.
-            # This is paranoia about edge cases like "And that's the mews —
-            # coverage report. And that's the mews." but it costs nothing.
-            stripped = text[: -len(expected)].rstrip()
+            if text.endswith(expected):
+                # Paranoia: a draft like "And that's the mews — coverage
+                # report. And that's the mews." would double-stamp types.
+                stripped = text[: -len(expected)].rstrip()
+                for other in other_sign_offs:
+                    if stripped.endswith(other):
+                        return False, (
+                            f"signoff_matches_type: {draft.post_type.value} post also ends with "
+                            f"another type's sign-off '{other}' before the expected one"
+                        )
+                return True, None
+
+            # No expected sign-off at the end — allowed, but make sure a
+            # DIFFERENT type's sign-off didn't sneak in instead. That
+            # would be opinion-smuggling and is the actual trust breach.
             for other in other_sign_offs:
-                if stripped.endswith(other):
+                if text.endswith(other):
                     return False, (
-                        f"signoff_matches_type: {draft.post_type.value} post also ends with "
-                        f"another type's sign-off '{other}' before the expected one"
+                        f"signoff_matches_type: {draft.post_type.value} post ends with "
+                        f"another type's sign-off '{other}' — opinion/reporting confusion"
                     )
             return True, None
 
