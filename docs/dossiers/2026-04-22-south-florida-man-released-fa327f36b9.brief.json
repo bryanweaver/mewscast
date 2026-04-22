@@ -1,0 +1,63 @@
+{
+  "story_id": "2026-04-22-south-florida-man-released-fa327f36b9",
+  "headline_seed": "South Florida man released from ICE custody describes conditions inside \"Alligator Alcatraz.\"",
+  "brief": {
+    "story_id": "2026-04-22-south-florida-man-released-fa327f36b9",
+    "consensus_facts": [
+      "A South Florida detention facility has become widely known as 'Alligator Alcatraz' and is located in or near the Everglades.",
+      "The facility is used for federal immigration detention and is associated with U.S. Immigration and Customs Enforcement (ICE).",
+      "The facility has been the subject of legal challenges \u2014 both on behalf of individual detainees and on environmental grounds.",
+      "The facility was constructed by Florida state officials, not directly by the federal government, though it serves a federal immigration enforcement function.",
+      "Conditions at the facility and its legal status remain actively contested."
+    ],
+    "disagreements": [
+      {
+        "topic": "Primary story focus and angle",
+        "positions": {
+          "CBS News": "Centers the story on one released detainee's firsthand account of inhumane conditions inside the facility, including overcrowding, lack of privacy, spoiled food, limited legal access, and significant weight loss.",
+          "Courthouse News Service": "Centers on the 11th Circuit's 2-1 ruling refusing to shut down the facility, focusing on the legal question of whether it is a federal or state facility for purposes of environmental review requirements."
+        }
+      },
+      {
+        "topic": "Federal vs. state control of the facility",
+        "positions": {
+          "Courthouse News Service (majority opinion)": "The facility was built and is controlled by Florida state officials using state funds; federal involvement is indirect at most. The $608 million DHS authorization for reimbursement is irrelevant because funds have not been released.",
+          "Courthouse News Service (dissent by Judge Abudu)": "The facility is a clear delegation of federal authority \u2014 it could not have been built or used as an immigration detention center without federal defendants' request. State officials exercise federal power under a federal statute."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Leads with the human-interest angle: a named detainee, Maikel Rojas, 45, speaking publicly for the first time about conditions after his release. Emphasizes inhumane conditions (overcrowding, cameras over toilets, spoiled food, 45 pounds of weight loss, no family visits, limited legal access). Includes his wife Roxana Torres's emotional account and her role in securing his release via habeas corpus petition. Buries significant biographical detail \u2014 Rojas was convicted as an accessory to murder and served 13 years in prison \u2014 placing it deep in the story rather than in the lede. Does not address the broader legal fight over the facility's existence or the 11th Circuit ruling. Notes ICE was contacted but has not yet responded.",
+      "Courthouse News Service": "Leads with the appellate court ruling, framing the story as a legal/institutional battle over whether the facility can remain open. Provides detailed analysis of the 2-1 11th Circuit decision, including judicial philosophies and appointee backgrounds (Bush, Trump, Biden). Includes the dissent prominently and quotes from environmental groups. Does not include any firsthand detainee accounts or descriptions of conditions inside the facility, though Judge Abudu's dissent references 'documented instances of abuse in immigration facilities' in general terms. Provides important context about the facility's financing ($608 million DHS reimbursement authorization), the 287(g) agreement, and the environmental lawsuit brought by Friends of the Everglades, Center for Biological Diversity, and the Miccosukee Tribe."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (court filings, ICE statements, habeas corpus petition) were located for this story. All claims about court rulings, detention conditions, and legal proceedings come solely from the two outlet reports and cannot be independently verified against underlying documents."
+    ],
+    "missing_context": [
+      "No primary source documents were available \u2014 neither the 11th Circuit ruling referenced by Courthouse News Service nor the habeas corpus petition referenced by CBS News. This limits the ability to verify either outlet's characterizations.",
+      "Neither outlet addresses the total number of detainees currently held at the facility.",
+      "CBS News does not mention the 11th Circuit ruling allowing the facility to remain open, which is directly relevant to the broader story of Rojas's detention. Courthouse News Service does not mention any individual detainee experiences.",
+      "No outlet provides an official ICE or DHS statement on conditions at the facility. CBS News notes ICE was contacted but needed more time to respond.",
+      "The specific location of the facility within the Everglades, its capacity, and when it was constructed are not clearly established across the coverage.",
+      "Neither outlet addresses how many detainees have been released via habeas corpus petitions or the success rate of such filings from this facility.",
+      "Rojas's current immigration status and the legal basis for his original detention at the routine check-in are not fully explained \u2014 CBS News notes his criminal history but does not clarify whether he has a removal order or what his immigration status is beyond having arrived from Cuba in 2004.",
+      "The timeline relationship between the two stories is unclear \u2014 the CBS News piece describes Rojas's March release, while the Courthouse News Service piece describes a ruling dated to the current period. Whether these are contemporaneous or weeks apart is not established.",
+      "No coverage from right-leaning outlets was available in this dossier, limiting the ability to assess the full spectrum of framing on this story."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "The two outlets cover materially different facets of the same facility \u2014 one focuses on a detainee's firsthand account of conditions, the other on the appellate court ruling keeping the facility open. Neither outlet addresses the other's primary angle, creating a coverage gap that a meta-analysis post can bridge for readers. The absence of primary sources and the complementary-but-non-overlapping nature of the reporting make this a story about how the story is being told.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://cbsn.ws/48i0MS2",
+      "title": ""
+    },
+    {
+      "outlet": "Courthouse News Service",
+      "url": "https://www.courthousenews.com/11th-circuit-says-alligator-alcatraz-to-remain-open/",
+      "title": ""
+    }
+  ]
+}
