@@ -1361,6 +1361,24 @@ def post_journalism_cycle(
     # ---- Quality gate: tiered by post type ----------------------------------
     chosen_type = forced_post_type or brief.suggested_post_type
 
+    # Bryan rejected the META "COVERAGE REPORT" published post format on
+    # 2026-04-23: it reports on *how outlets covered* the story (framing
+    # comparison) rather than on the story itself — no hard facts, no
+    # takeaway, no source links in the body. Example rejected draft:
+    # docs/dossiers/2026-04-23-f-around-and-find-*.meta.json.
+    #
+    # The Stage 4 meta-analysis brief itself is still valuable — it
+    # feeds REPORT and other composers with multi-outlet consensus
+    # facts and framing context. We just never publish the COVERAGE
+    # REPORT format itself. Route to REPORT so the post becomes a
+    # straight news item with a dossier-URL self-reply for "go deeper."
+    #
+    # Respect forced_post_type (CLI / workflow dispatch) to keep an
+    # escape hatch if someone explicitly asks for META.
+    if chosen_type == PostType.META and forced_post_type is None:
+        print("[journalism] Routing META → REPORT (COVERAGE REPORT format disabled per user preference)")
+        chosen_type = PostType.REPORT
+
     # Thresholds per post type:
     #   REPORT/META: 3 sources, 0.45 confidence (multi-source corroboration)
     #   BULLETIN:    2 sources, 0.25 confidence (breaking, hedged language —
