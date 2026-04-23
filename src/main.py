@@ -10,6 +10,7 @@ import random
 import time
 import yaml
 from datetime import datetime, timezone
+from typing import Optional
 from dotenv import load_dotenv
 
 from content_generator import ContentGenerator
@@ -731,6 +732,58 @@ def _append_triage_decisions(decisions: list[dict]) -> None:
         print(f"[journalism] could not append triage decisions: {e}")
 
 
+def _maybe_repair_bulletin_hedge(
+    draft: DraftPost,
+    dossier: StoryDossier,
+    max_length: int,
+) -> Optional[DraftPost]:
+    """Last-resort mechanical repair for a BULLETIN missing its hedge phrase.
+
+    Called ONLY after the LLM retry budget has been exhausted and the
+    composer still hasn't included a hedge. The hedge is a literal-string
+    requirement ("not yet confirmed" / "not yet verified" / "also covered
+    by") and we can safely append the standard form without changing any
+    factual content.
+
+    Returns a new DraftPost with the hedge appended, or None if the draft
+    already has a hedge OR appending would blow the char limit OR the
+    post is not a BULLETIN.
+
+    The goal: publish a hedged BULLETIN beats rejecting the story entirely.
+    Same philosophy as the missing-signoff softening.
+    """
+    from verification_gate import VerificationGate as _VG  # local to avoid cycles
+
+    if draft.post_type != PostType.BULLETIN:
+        return None
+
+    text_lower = (draft.text or "").lower()
+    if any(h in text_lower for h in _VG.HEDGE_PHRASES_FOR_BULLETIN):
+        return None  # already hedged
+
+    outlets = list(dossier.outlet_slants.keys())
+    if not outlets:
+        outlets = [a.outlet for a in dossier.articles if a.outlet]
+    outlet = next((o for o in outlets if o), None)
+    if not outlet:
+        return None
+
+    hedge_line = f"\n\nreported by {outlet}, not yet confirmed elsewhere."
+    new_text = (draft.text or "").rstrip() + hedge_line
+    if len(new_text) > max_length:
+        return None  # can't fit within budget
+
+    return DraftPost(
+        text=new_text,
+        post_type=draft.post_type,
+        sign_off=draft.sign_off,
+        story_id=draft.story_id,
+        outlets_referenced=list(draft.outlets_referenced),
+        primary_source_urls=list(draft.primary_source_urls),
+        hedges_used=draft.hedges_used + ["not yet confirmed"],
+    )
+
+
 def _write_draft_file(
     drafts_dir: str,
     draft: DraftPost,
@@ -1376,157 +1429,152 @@ def post_journalism_cycle(
         print(f"[journalism] Stage 5 failed: {e}")
         return False
 
-    # ---- Stage 6: verification gate (editor-mode: up to N retries) --------
-    # "Editor, not rejector": when the gate flags a fixable issue, hand the
-    # composer specific corrective feedback and let it try again. Only fall
-    # back to BULLETIN after MAX_GATE_RETRIES failed swings, and only reject
-    # after that fallback also fails.
-    MAX_GATE_RETRIES = 2
+    # ---- Stage 6 + 6.5: unified editor-mode retry loop --------------------
+    # Gate (structure) and fabrication (factuality) checks share ONE retry
+    # budget and ONE merged feedback set per attempt. Two bugs in the
+    # earlier split design caused the 2026-04-22 20:21 UTC failure:
+    #   (a) a successful fab-retry that re-introduced a gate violation
+    #       (lost the BULLETIN hedge) died instantly instead of retrying
+    #       with the combined feedback;
+    #   (b) feedback loops didn't cross-pollinate — gate feedback never
+    #       reached the fab-retry composer and vice versa.
+    # Unified loop: compose → gate-check → (if passes) fab-check → collect
+    # all failures → retry with the merged set. Fab analyzer only runs when
+    # the gate passes, so broken-structure drafts don't burn fab LLM calls.
+    MAX_RETRIES = 2
+
+    def _run_verification(d: DraftPost):
+        """Run gate + (conditionally) fab analysis. Returns
+        (gate_result, fab_findings_or_None, merged_retry_reasons)."""
+        g = verification_gate.verify(d, dossier, brief=brief)
+        f_findings = None
+        merged: list[str] = []
+        if not g.passed:
+            merged.extend(g.failures)
+        else:
+            try:
+                f_findings = analyze_draft(d.text, candidate.headline_seed, dossier)
+                print_analysis(f_findings)
+                if f_findings.get("overall") == "FABRICATION":
+                    merged.extend(
+                        f"FABRICATION: {entry.get('assessment', '')}"
+                        for entry in f_findings.get("findings", [])
+                        if entry.get("severity") == "major"
+                    )
+            except Exception as analyze_err:
+                print(f"[draft_analyzer] analysis failed (continuing): {analyze_err}")
+        return g, f_findings, merged
+
     print("[journalism] Stage 6 — verifying draft")
-    result = verification_gate.verify(draft, dossier, brief=brief)
-    for attempt in range(1, MAX_GATE_RETRIES + 1):
-        if result.passed:
+    result, findings, reasons = _run_verification(draft)
+    for attempt in range(1, MAX_RETRIES + 1):
+        if not reasons:
             break
-        print(f"[journalism] Stage 6 attempt {attempt}/{MAX_GATE_RETRIES} failures: {result.failures}")
-        print(f"[journalism] Stage 6 — retry {attempt} with editor feedback")
+        print(f"[journalism] Stage 6 attempt {attempt}/{MAX_RETRIES} failures: {reasons}")
+        print(f"[journalism] Stage 6 — retry {attempt} with merged editor feedback")
+        retry_feedback = list(reasons) + [
+            f"{CHAR_LIMIT_REASON_PREFIX} draft MUST be <= "
+            f"{post_composer._effective_max_length(chosen_type)} chars"
+        ]
         try:
             draft = post_composer.compose(
                 brief=brief,
                 dossier=dossier,
                 post_type=chosen_type,
-                retry_reasons=result.failures,
+                retry_reasons=retry_feedback,
             )
         except Exception as e:
             print(f"[journalism] Stage 5 retry {attempt} failed: {e}")
             return False
-        result = verification_gate.verify(draft, dossier, brief=brief)
+        result, findings, reasons = _run_verification(draft)
 
-    if not result.passed:
-        print(f"[journalism] Stage 6 FINAL failures after {MAX_GATE_RETRIES} retries: {result.failures}")
-        # BULLETIN fallback — if a long-form type blew the gate on every
-        # swing, try the same story as a short BULLETIN before giving up.
-        # BULLETIN has a tighter char budget and looser stylistic rules
-        # (no sign-off, simpler structure) so it passes where the long
-        # form fails. Converts "hard failure" into "smaller post" which
-        # is almost always preferable to publishing nothing.
-        fallback_ok = False
-        if chosen_type in (PostType.REPORT, PostType.META, PostType.ANALYSIS):
-            print(
-                f"[journalism] Stage 6 — falling back to BULLETIN after "
-                f"{chosen_type.value} failed all {MAX_GATE_RETRIES + 1} gate attempts"
-            )
-            try:
-                draft = post_composer.compose(
-                    brief=brief,
-                    dossier=dossier,
-                    post_type=PostType.BULLETIN,
-                    retry_reasons=result.failures,
-                )
-                result = verification_gate.verify(draft, dossier, brief=brief)
-                if result.passed:
-                    chosen_type = PostType.BULLETIN
-                    fallback_ok = True
-                    print("[journalism] Stage 6 — BULLETIN fallback verified")
-                else:
-                    print(
-                        f"[journalism] BULLETIN fallback also failed: "
-                        f"{result.failures}"
-                    )
-            except Exception as e:
-                print(f"[journalism] BULLETIN fallback compose failed: {e}")
-
-        if not fallback_ok:
-            rejected_path = _write_draft_file(
-                drafts_dir, draft, dossier, subfolder="rejected"
-            )
-            print(f"[journalism] rejected draft written to {rejected_path}")
-            return False
-
-    # ---- Post-draft factual analysis (editor-mode: up to N retries) -------
-    # Compares the draft against article bodies for factual accuracy.
-    # CLEAN/ESCALATION/SKIPPED → log and continue (informational).
-    # FABRICATION → editor-style retry with specific corrective feedback,
-    # up to MAX_FAB_RETRIES. Only reject if every retry still FABRICATES —
-    # inventing claims that aren't in the sources is the one thing an
-    # editor won't negotiate on.
-    MAX_FAB_RETRIES = 2
-    try:
-        findings = analyze_draft(draft.text, candidate.headline_seed, dossier)
-        print_analysis(findings)
-
-        for attempt in range(1, MAX_FAB_RETRIES + 1):
-            if findings.get("overall") != "FABRICATION":
-                break
-
-            print(f"[journalism] FABRICATION attempt {attempt}/{MAX_FAB_RETRIES} — retry with feedback")
-            fab_reasons = [
-                f"FABRICATION: {f.get('assessment', '')}"
-                for f in findings.get("findings", [])
-                if f.get("severity") == "major"
-            ]
-            # Carry the char budget explicitly — rewriting to remove
-            # invented claims tends to add hedging words and blow the
-            # budget (run 24595360166: fab-retry landed at 323 > 280).
-            # The composer's retry path also tightens prompt_target when
-            # it sees a char_limit reason, giving the rewrite real headroom.
-            fab_reasons.append(
-                f"{CHAR_LIMIT_REASON_PREFIX} draft MUST be <= "
-                f"{post_composer._effective_max_length(chosen_type)} chars"
-            )
-            try:
-                draft = post_composer.compose(
-                    brief=brief,
-                    dossier=dossier,
-                    post_type=chosen_type,
-                    retry_reasons=fab_reasons,
-                )
-            except Exception as e:
-                print(f"[journalism] Stage 5 fabrication-retry {attempt} failed: {e}")
-                return False
-
-            # Re-verify + re-analyze the retry draft
-            result = verification_gate.verify(draft, dossier, brief=brief)
-            if not result.passed:
-                print(f"[journalism] fab-retry {attempt} draft failed verification: {result.failures}")
-                return False
-
-            findings = analyze_draft(draft.text, candidate.headline_seed, dossier)
-            print_analysis(findings)
-
-        if findings.get("overall") == "FABRICATION":
-            print(
-                f"[journalism] FABRICATION persists after {MAX_FAB_RETRIES} "
-                f"retries — rejecting story"
-            )
-            rejected_path = _write_draft_file(
-                drafts_dir, draft, dossier, subfolder="rejected"
-            )
-            print(f"[journalism] rejected draft written to {rejected_path}")
-            return False
-
-        # Save findings to the dossier for downstream audit
-        dossier_store.save_post_record(
-            dossier.story_id, draft,
-            post_url=None,
+    # Last-resort mechanical repair BEFORE BULLETIN fallback or reject:
+    # if the only outstanding failure is a BULLETIN missing its hedge,
+    # append the hedge. The composer already had 3 swings at it; at this
+    # point "publish hedged BULLETIN" > "reject whole story".
+    if reasons and draft.post_type == PostType.BULLETIN:
+        repaired = _maybe_repair_bulletin_hedge(
+            draft,
+            dossier,
+            post_composer._effective_max_length(PostType.BULLETIN),
         )
+        if repaired is not None:
+            print("[journalism] Stage 6 — mechanical hedge repair applied")
+            draft = repaired
+            result, findings, reasons = _run_verification(draft)
 
-        # Persist verification + analysis + selection data for dossier viewer
+    # BULLETIN fallback — pivot a failed long-form type to a short
+    # BULLETIN before giving up. Preserves the previous "publish something
+    # beats publishing nothing" philosophy, now at the tail of a richer
+    # retry loop.
+    if reasons and chosen_type in (PostType.REPORT, PostType.META, PostType.ANALYSIS):
+        print(
+            f"[journalism] Stage 6 — falling back to BULLETIN after "
+            f"{chosen_type.value} exhausted {MAX_RETRIES + 1} retry attempts"
+        )
         try:
-            raw = dossier_store.read_raw(dossier.story_id)
-            raw["verification"] = result.to_dict() if result else None
-            raw["analysis"] = findings if findings else None
-            raw["selection"] = {
-                "candidates_detected": len(candidates) if candidates else 0,
-                "candidates_passed_triage": len(passed) if passed else 0,
-                "story_id": candidate.story_id,
-                "headline_seed": candidate.headline_seed,
-                "source": getattr(candidate, "source", "unknown"),
-            }
-            dossier_store._write(dossier.story_id, raw)
+            draft = post_composer.compose(
+                brief=brief,
+                dossier=dossier,
+                post_type=PostType.BULLETIN,
+                retry_reasons=reasons,
+            )
+            result, findings, reasons = _run_verification(draft)
+            # Same mechanical repair chance for the fallback
+            if reasons:
+                repaired = _maybe_repair_bulletin_hedge(
+                    draft,
+                    dossier,
+                    post_composer._effective_max_length(PostType.BULLETIN),
+                )
+                if repaired is not None:
+                    print("[journalism] Stage 6 — hedge repair applied to BULLETIN fallback")
+                    draft = repaired
+                    result, findings, reasons = _run_verification(draft)
+            if not reasons:
+                chosen_type = PostType.BULLETIN
+                print("[journalism] Stage 6 — BULLETIN fallback verified")
+            else:
+                print(f"[journalism] BULLETIN fallback also failed: {reasons}")
         except Exception as e:
-            print(f"[journalism] failed to persist extended dossier data: {e}")
+            print(f"[journalism] BULLETIN fallback compose failed: {e}")
+
+    if reasons:
+        print(f"[journalism] Stage 6 FINAL failures: {reasons}")
+        rejected_path = _write_draft_file(
+            drafts_dir, draft, dossier, subfolder="rejected"
+        )
+        print(f"[journalism] rejected draft written to {rejected_path}")
+        return False
+
+    # Fill in a SKIPPED-style findings record for drafts that never
+    # tripped the fab analyzer (e.g. the initial gate check already
+    # failed and we never reached the fab stage on any attempt). Keeps
+    # the dossier audit record shape stable.
+    if findings is None:
+        findings = {"overall": "SKIPPED", "findings": []}
+
+    # Save findings to the dossier for downstream audit
+    dossier_store.save_post_record(
+        dossier.story_id, draft,
+        post_url=None,
+    )
+
+    # Persist verification + analysis + selection data for dossier viewer
+    try:
+        raw = dossier_store.read_raw(dossier.story_id)
+        raw["verification"] = result.to_dict() if result else None
+        raw["analysis"] = findings if findings else None
+        raw["selection"] = {
+            "candidates_detected": len(candidates) if candidates else 0,
+            "candidates_passed_triage": len(passed) if passed else 0,
+            "story_id": candidate.story_id,
+            "headline_seed": candidate.headline_seed,
+            "source": getattr(candidate, "source", "unknown"),
+        }
+        dossier_store._write(dossier.story_id, raw)
     except Exception as e:
-        print(f"[draft_analyzer] analysis failed (continuing): {e}")
+        print(f"[journalism] failed to persist extended dossier data: {e}")
 
     # ---- Stage 7: publish or dry-run write --------------------------------
 
