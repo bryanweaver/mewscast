@@ -1,0 +1,121 @@
+{
+  "story_id": "2026-04-23-a-us-soldier-involved-aa7db22ea5",
+  "headline_seed": "A US soldier involved in Nicol\u00e1s Maduro's capture was arrested for allegedly placing a bet on the operation that made him $400,000 in profits, a source says.",
+  "brief": {
+    "story_id": "2026-04-23-a-us-soldier-involved-aa7db22ea5",
+    "consensus_facts": [
+      "A U.S. Army Special Forces soldier named Master Sergeant Gannon Ken Van Dyke was arrested and charged on April 23, 2026, for allegedly using classified information about the military operation to capture Venezuelan President Nicol\u00e1s Maduro to place bets on prediction market platform Polymarket.",
+      "Van Dyke was directly involved in the planning and execution of the U.S. military operation to capture Maduro, known as Operation Absolute Resolve, which took place on January 3, 2026.",
+      "Van Dyke allegedly wagered approximately $33,000 on Polymarket in bets related to Maduro and U.S. military action in Venezuela.",
+      "Van Dyke allegedly profited more than $400,000 from the bets.",
+      "Van Dyke allegedly placed approximately 13 bets starting from late December 2025 through early January 2026.",
+      "Van Dyke allegedly moved his proceeds to a foreign cryptocurrency vault before depositing them into an online brokerage account.",
+      "The charges were brought by the U.S. Attorney's Office for the Southern District of New York; U.S. Attorney Jay Clayton issued a statement characterizing the conduct as insider trading.",
+      "Van Dyke faces charges including commodities fraud, wire fraud, and unlawful monetary transaction among others.",
+      "Polymarket stated it identified the suspicious trading, referred the matter to the DOJ, and cooperated with the investigation."
+    ],
+    "disagreements": [
+      {
+        "topic": "Exact wager amount",
+        "positions": {
+          "The New York Times": "Reports 'more than $33,000'",
+          "NBC News": "Reports '$33,034' as exact figure",
+          "CNN": "Reports 'about $32,000'"
+        }
+      },
+      {
+        "topic": "Exact profit amount",
+        "positions": {
+          "The New York Times": "Reports 'some $409,000'",
+          "NBC News": "Reports 'more than $409,000'",
+          "CNN": "Reports '$400,000' and 'more than $400,000'"
+        }
+      },
+      {
+        "topic": "Date range of bets",
+        "positions": {
+          "NBC News": "December 27, 2025, through the evening of January 2 (citing DOJ, though text says 'Jan. 26' which appears to be a typo for Jan. 2)",
+          "CNN": "December 27 to January 2, hours before the overnight capture",
+          "The New York Times": "States 'a week before the raid' without specifying end date"
+        }
+      },
+      {
+        "topic": "Number of criminal charges",
+        "positions": {
+          "The New York Times": "Five counts: three counts of violating the Commodity Exchange Act, one count of wire fraud, one count of unlawful monetary transaction",
+          "NBC News": "Lists charges as unlawful use of confidential government information, theft of nonpublic government information, commodities fraud, wire fraud, and unlawful monetary transaction",
+          "CNN": "Five criminal charges (no detailed breakdown)"
+        }
+      },
+      {
+        "topic": "Location of first court appearance",
+        "positions": {
+          "CNN": "Reports Van Dyke will make his first court appearance in North Carolina, noting he is stationed at Fort Bragg",
+          "The New York Times": "Does not mention court appearance location",
+          "NBC News": "Does not mention court appearance location"
+        }
+      },
+      {
+        "topic": "Attempt to delete Polymarket account",
+        "positions": {
+          "NBC News": "Reports Van Dyke asked Polymarket on Jan. 6 to delete his account, falsely claiming he lost access to his email",
+          "The New York Times": "Does not mention account deletion attempt",
+          "CNN": "Does not mention account deletion attempt"
+        }
+      },
+      {
+        "topic": "Trump's reaction",
+        "positions": {
+          "NBC News": "Includes detailed Trump quotes comparing it to Pete Rose, saying 'the whole world has become somewhat of a casino' and 'I'm not happy with any of that stuff'",
+          "The New York Times": "Does not include Trump reaction",
+          "CNN": "Does not include Trump reaction"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "This article is actually sourced from the New York Post (note Post-specific language like 'The Post cover for Jan. 4, 2026,' trending NYPost.com items, and Page Six references). The piece leads with the arrest and charges, emphasizes the maximum 60-year prison sentence, and quotes U.S. Attorney Jay Clayton at length calling it 'clear insider trading.' Framing is straightforward and crime-focused. Marked as a developing story. Does not include Trump reaction, Polymarket's cooperative statement, or details about the account deletion attempt.",
+      "Axios": "Headline-only; article body was blocked by a security/CAPTCHA wall and could not be retrieved. No substantive analysis possible.",
+      "NBC News": "The most detailed and comprehensive of the available reports. Leads with the arrest but gives significant space to Polymarket's statement claiming credit for identifying and referring the suspicious activity. Uniquely includes extended Trump quotes reacting to the arrest, including the Pete Rose comparison and broader commentary on betting markets. Also uniquely reports the Jan. 6 account deletion attempt with false pretenses. Lists the broadest range of charges. Includes quotes from acting AG Todd Blanche and FBI Director Kash Patel, giving the piece a more institutional/law-enforcement frame.",
+      "CNN": "Leads with the arrest but uniquely notes that the 'outsized trade' caught law enforcement attention 'almost immediately,' and references its own prior reporting last month about prosecutors investigating the trade. Uniquely reports Van Dyke's first court appearance will be in North Carolina and that he is stationed at Fort Bragg. Describes the bet as 'a long-shot.' Provides brief context about the Maduro capture operation involving 'heavy fire' and Maduro's subsequent not-guilty plea. More concise than NBC News, with less institutional reaction."
+    },
+    "primary_source_alignment": [
+      "No primary source (indictment or DOJ press release) was located in the dossier. All factual claims are drawn from outlet reporting of the unsealed indictment and DOJ statements. Verification against the actual indictment text is not possible from this dossier."
+    ],
+    "missing_context": [
+      "The actual indictment text was not available as a primary source, preventing verification of outlet claims against the original document.",
+      "No outlet explains how Polymarket identified the suspicious trading or what its monitoring capabilities are, despite Polymarket's claim that 'the system works.'",
+      "No outlet addresses the broader legal or regulatory status of prediction markets like Polymarket, or whether this case could set precedent for how classified information misuse applies to crypto-based betting platforms.",
+      "No outlet discusses whether other suspicious bets were placed on the Maduro operation by other individuals, or whether this is an isolated case.",
+      "No outlet provides detail on Van Dyke's military record, length of service, or role specifics beyond 'Special Forces' and involvement in planning/execution.",
+      "No outlet explores how Van Dyke obtained a Polymarket account or whether military personnel are subject to any existing policies on prediction market participation.",
+      "The Article 1 body text is actually from the New York Post, not the New York Times \u2014 the dossier metadata labels this as NYT but internal content markers (Post cover references, NYPost.com trending, Page Six) indicate it is a New York Post article. This is a dossier pipeline attribution issue.",
+      "Axios article (Article 2) was inaccessible due to a 403/CAPTCHA block, reducing dossier breadth.",
+      "NBC News text contains what appears to be a typo ('Jan. 26' likely should be 'Jan. 2') in quoting the DOJ on the date range of bets; CNN's parallel reporting of 'January 2' supports this being a transcription error."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text confirm the core facts of the arrest, charges, and alleged scheme with only minor numerical discrepancies. Framing differences exist but are not materially divergent \u2014 all treat this as a crime/national security story. This is a straightforward multi-source confirmed breaking news event best served by a REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://trib.al/ZCWtxgt",
+      "title": ""
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://trib.al/251Z0z9",
+      "title": ""
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/business/business-news/soldier-charged-over-maduro-raid-bet-rcna341710?cid=sm_npd_nn_tw_ma&taid=69ea980d34a71c00018a7cad&utm_campaign=trueanthem&utm_medium=social&utm_source=twitter",
+      "title": ""
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://cnn.it/3QrY1HH",
+      "title": ""
+    }
+  ]
+}
