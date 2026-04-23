@@ -1,0 +1,103 @@
+{
+  "story_id": "2026-04-23-f-around-and-find-c00726e2dc",
+  "headline_seed": "\u201cF around and find out!\u201d House Minority Leader Hakeem Jeffries fires off a warning shot to Florida Republicans over their redistricting efforts \u2014 but Gov. Ron DeSantis is completely unfazed by the threat. \u201cPlease, be my guest! I will pay for you to come down to Florida and",
+  "brief": {
+    "story_id": "2026-04-23-f-around-and-find-c00726e2dc",
+    "consensus_facts": [
+      "Virginia voters on Tuesday approved a redistricting referendum that could significantly shift the state's congressional map in Democrats' favor, potentially reducing GOP-held seats from five to as few as one.",
+      "Florida is the next major battleground in the GOP's mid-cycle redistricting effort, with state lawmakers scheduled to hold a special session next week to consider drawing a new congressional map.",
+      "Gov. Ron DeSantis is being looked to by national Republicans to deliver a new Florida map that could net the party three to five additional seats.",
+      "Republicans launched the mid-cycle redistricting push starting in Texas at President Trump's urging, which triggered counter-moves by Democrats in California and Virginia.",
+      "Some House Republicans have publicly expressed concern or regret that the redistricting strategy may backfire, with Virginia's outcome raising fears the effort could end in a wash or benefit Democrats.",
+      "Florida has a constitutional prohibition against redrawing congressional districts for partisan gain, creating legal obstacles to any new map.",
+      "House Minority Leader Hakeem Jeffries has framed Democrats as responding to a Republican-initiated gerrymandering war.",
+      "DeSantis previously pushed through his own congressional map in 2022 that helped Republicans secure a 20-8 edge in the state's delegation.",
+      "Democratic Rep. Sheila Cherfilus-McCormick resigned from her Florida congressional seat this week, and DeSantis has pointed to her district as one that should be redrawn.",
+      "Any Florida redistricting effort is expected to face a flurry of lawsuits."
+    ],
+    "disagreements": [
+      {
+        "topic": "How many seats Florida redistricting could net Republicans",
+        "positions": {
+          "Axios": "Reports a range of 'up to five seats,' with Rep. Kat Cammack expressing confidence in two or three but concerns about five.",
+          "Politico": "Reports a range of 'three to five seats' and frames it as the GOP's 'last best chance' to claw back an edge."
+        }
+      },
+      {
+        "topic": "Virginia redistricting outcome \u2014 new Democratic seat advantage",
+        "positions": {
+          "Axios": "States Democrats could 'pick up as many as four new seats,' leaving GOP with 'just one seat, down from five.'",
+          "Politico": "States voters approved a 'gerrymander' allowing Democrats to 'pick up as many as four new seats.'",
+          "Washington Examiner": "States the map could shift Virginia from a '6-5 Democratic edge to a possible 10-1 advantage.'"
+        }
+      },
+      {
+        "topic": "DeSantis's enthusiasm and readiness for redistricting",
+        "positions": {
+          "Axios": "Mentions Florida as what's next but does not deeply characterize DeSantis's posture; quotes Speaker Johnson as supportive.",
+          "Politico": "Reports DeSantis 'would still like to get something done' but 'realizes the atmospherics for the 2026 election are already in place and it will be tough for Republicans to retain the House regardless.' Notes DeSantis has delayed the special session by a week and has not publicly released a map."
+        }
+      },
+      {
+        "topic": "Virginia referendum margin and legal status",
+        "positions": {
+          "Axios": "Reports a lower court judge threw out Tuesday's results on Wednesday, but was previously overruled by the state Supreme Court; Virginia AG appealed to the high court.",
+          "Washington Examiner": "Reports the margin was 51.5% to 48.6% but does not mention the lower court ruling throwing out results."
+        }
+      },
+      {
+        "topic": "Attribution of responsibility for starting the redistricting war",
+        "positions": {
+          "Axios": "Attributes the trigger to Trump's request and Texas Republicans acting first, with Democratic states responding.",
+          "Politico": "Frames it as 'Trump's redistricting war' resting on Florida and DeSantis.",
+          "Washington Examiner": "Quotes Spanberger attributing the start to 'President Trump said he was entitled to more congressional seats,' and quotes Ted Cruz accusing Spanberger of hypocrisy."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Axios": "Leads with Republican 'buyer's remorse' over the redistricting strategy \u2014 the dominant frame is intra-party recrimination. Features multiple named GOP members (Don Bacon, Brian Fitzpatrick, Kevin Kiley, Kat Cammack, Maria Elvira Salazar) expressing regret or concern on the record. Buries Jeffries's combative quote near the very end. Includes the Virginia lower court ruling and appeal as a 'reality check' section. Does not profile DeSantis's political motivations or history in depth. Omits Spanberger's role entirely.",
+      "Politico": "Frames the story primarily through the lens of DeSantis's political career and the Trump-DeSantis relationship. Leads with Florida as the decisive battleground and the personal political stakes for DeSantis ('could give rebirth to his political career'). More cautious on whether redistricting will succeed, quoting an anonymous Florida GOP operative saying the atmospherics are already bad for Republicans. Highlights legal obstacles under Florida's anti-gerrymandering constitutional provision. Mentions DeSantis delayed the special session and hasn't released a map \u2014 details absent from other outlets. Does not feature intra-party GOP dissent from named members outside Florida.",
+      "x.com (Fox News)": "Headline-only; no retrievable body text. The URL references a Fox News video post. No substantive analysis possible. Based on the story context headline seed mentioning Jeffries's 'F around and find out' warning and DeSantis being 'unfazed,' this appears to be a clip emphasizing the confrontational exchange, but this cannot be confirmed from the dossier.",
+      "Washington Examiner": "Frames the story almost entirely through Virginia Gov. Abigail Spanberger's political trajectory \u2014 her redistricting win versus her declining approval ratings. Leads with Spanberger's victory, then pivots to her eroding poll numbers (47% approval, 46% disapproval). Gives significant space to Republican attacks on Spanberger as a hypocrite on gerrymandering, including a Ted Cruz quote. Includes Democratic strategists acknowledging her political risks. Does not cover Florida redistricting at all. Does not mention intra-GOP regret. Treats the Virginia story as a character study of Spanberger rather than a national redistricting narrative."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All claims in the brief are sourced exclusively from outlet reporting. This limits the ability to independently verify legal filings, proposed maps, vote tallies, or legislative session schedules."
+    ],
+    "missing_context": [
+      "No outlet provides the text or details of the Virginia constitutional amendment that voters approved, making it impossible to assess the specific legal authority it grants the General Assembly.",
+      "No outlet provides details on the California redistricting counter-move beyond passing references \u2014 how many seats shifted, what the legal basis was, or what the timeline is.",
+      "The Fox News/x.com article (Article 3) contained no retrievable body text due to JavaScript requirements, leaving a gap in coverage from a right-leaning outlet perspective.",
+      "No outlet quantifies the overall national seat math \u2014 the total net effect of redistricting across all seven states mentioned by Axios \u2014 which is essential context for understanding whether this is a wash.",
+      "No outlet mentions the specific Louisiana Supreme Court case referenced by Politico as potentially forcing Florida map changes \u2014 the case name, docket number, or expected ruling timeline are absent.",
+      "No outlet provides detail on the Texas redistricting map that started the chain reaction \u2014 how many seats it netted Republicans, its current legal status, or whether it is being challenged.",
+      "Spanberger's 2025 interview in which she allegedly said she had no plans to pursue redistricting \u2014 cited by Washington Examiner \u2014 is not quoted directly or sourced with a link by any outlet.",
+      "No primary source (court filings, proposed maps, legislative text, referendum language) was available for independent verification.",
+      "The Jeffries 'F around and find out' quote from the headline seed does not appear verbatim in any of the retrieved article bodies, though Axios quotes Jeffries in a more measured form and the Fox News video likely contains the fuller exchange."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Three outlets with full body text covered the same multi-state redistricting story but with materially different framings: Axios leads with GOP regret, Politico centers DeSantis's political stakes and Florida legal hurdles, and Washington Examiner focuses on Spanberger's declining approval amid her Virginia win. The divergent emphases and the absence of primary sources make this a coverage-analysis story rather than a straight report.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/04/23/republicans-redistricting-remorse-virginia-midterms",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "http://dlvr.it/TSB5jV",
+      "title": ""
+    },
+    {
+      "outlet": "x.com",
+      "url": "https://x.com/FoxNews/status/2047301000780763242/video/1",
+      "title": ""
+    },
+    {
+      "outlet": "ashingtonexaminer.com",
+      "url": "https://trib.al/L3K7fWz",
+      "title": ""
+    }
+  ]
+}
