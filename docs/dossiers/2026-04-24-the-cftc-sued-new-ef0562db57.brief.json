@@ -1,0 +1,90 @@
+{
+  "story_id": "2026-04-24-the-cftc-sued-new-ef0562db57",
+  "headline_seed": "The CFTC sued New York Friday over the state\u2019s efforts to regulate online prediction markets, where people can make trades on the future outcomes of real world events like sports and elections. @jruss_jruss",
+  "brief": {
+    "story_id": "2026-04-24-the-cftc-sued-new-ef0562db57",
+    "consensus_facts": [
+      "The CFTC filed a civil lawsuit against the State of New York on Friday, April 24, 2026, over New York's efforts to regulate online prediction markets.",
+      "The lawsuit was filed in the Southern District of New York.",
+      "The CFTC claims it has exclusive federal jurisdiction over prediction markets under the Commodity Exchange Act, and that New York's enforcement actions are preempted by federal law.",
+      "New York Attorney General Letitia James is a named defendant in the lawsuit.",
+      "New York Governor Kathy Hochul is also a named defendant.",
+      "Prediction market platforms at issue include Kalshi and Coinbase."
+    ],
+    "disagreements": [
+      {
+        "topic": "Depth of coverage and contextual detail",
+        "positions": {
+          "Courthouse News Service": "Provides extensive detail including the full list of defendants (Gaming Commission, its executive director Robert Williams, and six gaming commissioners), quotes from the CFTC complaint, Hochul/James joint statement, James' parallel enforcement actions against Coinbase and Gemini, the 37-attorney-general amicus brief supporting Massachusetts' lawsuit against Kalshi, the related criminal case of a U.S. Army master sergeant charged with using classified information to wager on prediction markets, and background on Polymarket's rise after Trump's 2024 reelection.",
+          "Bloomberg Law": "Provides only a headline and partial article identifying Hochul as a defendant and describing the case as the CFTC asserting exclusive authority; full body text was not retrievable beyond the lede.",
+          "Reuters": "Headline only \u2014 no body text available to assess details or framing."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only article. The headline frames the story as the CFTC suing New York 'to block oversight,' which subtly positions New York as the party exercising oversight and the CFTC as the aggressor seeking to stop it. No body text available to assess further framing.",
+      "CBS News": "This article is entirely off-topic \u2014 it covers Johnson & Johnson marketing drugs on the TrumpRx website. It has no relevance to the CFTC prediction market lawsuit. Likely a mis-scraped or mis-linked article.",
+      "Courthouse News Service": "The most detailed and substantive article in the dossier. Leads with the CFTC filing and its core federal preemption argument. Provides extensive quotes from both the CFTC complaint and the Hochul/James joint statement, giving voice to both sides. Also contextualizes the lawsuit within James' broader enforcement campaign against Coinbase, Gemini, and Kalshi, and includes the 37-state AG amicus brief in Massachusetts. Notably includes two additional contextual threads: the rise of prediction markets after Trump's 2024 reelection and the criminal prosecution of a U.S. Army master sergeant for insider trading on prediction markets using classified information. Framing is procedural and legal-focused, consistent with a legal trade publication.",
+      "Bloomberg Law": "Body text is mostly boilerplate site navigation and metadata. The substantive content is limited to a brief lede identifying Hochul as a defendant and framing the case as the CFTC asserting 'exclusive authority' over prediction markets. Headline uses 'Assert Prediction Market Jurisdiction,' framing this as a jurisdictional turf war rather than consumer protection vs. deregulation.",
+      "Politico (Article 6)": "Entirely off-topic \u2014 covers King Charles meeting New York Mayor Zohran Mamdani at the 9/11 memorial. No relevance to the CFTC prediction markets story.",
+      "Politico (Article 7)": "Duplicate of Article 6 \u2014 same off-topic King Charles/Mamdani story.",
+      "Courthouse News Service (Article 5)": "Entirely off-topic \u2014 covers the Second Circuit ruling in Jennifer Eckhart's harassment case against Fox News. No relevance to the CFTC prediction markets story."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the actual CFTC complaint filing) was located for this story.",
+      "Courthouse News Service quotes extensively from what it identifies as the CFTC's complaint, but without the primary document these quotes cannot be independently verified against the filing itself.",
+      "Bloomberg Law's brief lede is consistent with Courthouse News Service's account but provides insufficient detail for meaningful cross-checking."
+    ],
+    "missing_context": [
+      "Three of seven articles in the dossier (CBS News, both Politico articles, and Courthouse News Service Article 5) are entirely off-topic and provide no coverage of the CFTC lawsuit \u2014 this significantly weakens the dossier.",
+      "Only one outlet (Courthouse News Service, Article 3) provides a full substantive body text on the story. Reuters is headline-only; Bloomberg Law has only a partial lede. This is effectively a single-source dossier for body-level detail.",
+      "The actual CFTC complaint was not included as a primary source, so the legal arguments, specific statutory provisions cited, and the relief sought cannot be independently verified.",
+      "No outlet in the dossier reports on the CFTC's internal dynamics \u2014 whether this was a unanimous commission decision or a partisan split among commissioners, which is significant for understanding whether this reflects bipartisan regulatory consensus or a Trump-era deregulatory push.",
+      "No outlet explores the broader political context of why the CFTC under the current administration is suing a Democratic-led state, or whether this action aligns with industry lobbying by platforms like Kalshi.",
+      "No outlet discusses the history of the CFTC's own contentious internal debates over whether to allow event contracts \u2014 particularly the 2023-2024 legal battles over Kalshi's election contracts and the prior CFTC commissioners who opposed them.",
+      "The potential consumer harm dimension \u2014 whether prediction markets expose retail investors to gambling-like risks \u2014 is presented only through AG James' quotes; no independent consumer protection analysis is offered.",
+      "No outlet discusses the financial scale of the prediction market industry or the specific volume of trading activity in New York that triggered the state's enforcement actions.",
+      "Courthouse News Service mentions a related criminal case of a U.S. Army master sergeant charged with using classified information to trade on prediction markets; no other outlet covers this, and the connection to the CFTC's civil lawsuit is circumstantial but editorially interesting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "While the dossier is thin (effectively one full-text source plus a headline and partial lede from two others), the core facts \u2014 CFTC sued New York, filed in SDNY, federal preemption argument, named defendants \u2014 are confirmed across at least the Courthouse News Service body and the Reuters and Bloomberg Law headlines. There is insufficient multi-outlet framing divergence to justify a META post; this is a straightforward legal action report, with the caveat that the single-source limitation should be disclosed.",
+    "confidence": 0.45
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/cftc-sues-new-york-block-oversight-prediction-markets-2026-04-24/",
+      "title": "CFTC sues New York to block oversight of prediction markets - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://cbsn.ws/4cKsGrf",
+      "title": ""
+    },
+    {
+      "outlet": "Courthouse News Service",
+      "url": "https://www.courthousenews.com/cftc-sues-new-york-gaming-regulators-over-prediction-markets-crackdown/",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bloomberglaw.com/securities-law/cftc-sues-new-york-to-assert-prediction-market-jurisdiction",
+      "title": "CFTC Sues New York to Assert Prediction Market Jurisdiction - Bloomberg Law News"
+    },
+    {
+      "outlet": "Courthouse News Service",
+      "url": "https://www.courthousenews.com/second-circuit-sides-with-fox-news-in-ex-producer-jennifer-eckharts-sex-harassment-case/",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/04/24/king-charles-zohran-mamdani-new-york-00890471",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "http://dlvr.it/TSCSGC",
+      "title": ""
+    }
+  ]
+}
