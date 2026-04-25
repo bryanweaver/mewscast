@@ -1,0 +1,117 @@
+{
+  "story_id": "2026-04-25-live-updates-witkoff-kushner-6e350ddb62",
+  "headline_seed": "Live Updates: Witkoff, Kushner set to head to Pakistan for Iran peace talks today - CBS News",
+  "brief": {
+    "story_id": "2026-04-25-live-updates-witkoff-kushner-6e350ddb62",
+    "consensus_facts": [
+      "U.S. special envoy Steve Witkoff and Jared Kushner are heading to Islamabad, Pakistan on Saturday for talks related to the Iran war.",
+      "Iran's Foreign Minister Abbas Araghchi arrived in Islamabad on Friday ahead of the U.S. envoys' arrival.",
+      "White House press secretary Karoline Leavitt confirmed the trip, saying 'the Iranians want to talk.'",
+      "Vice President JD Vance, who led the first round of talks in Islamabad, is not confirmed to attend this round but is described as 'on standby.'",
+      "Pakistan is acting as a mediator between the United States and Iran.",
+      "Iran's side has stated that no direct meeting with U.S. representatives is planned and that Iran's positions would be conveyed through Pakistani mediators.",
+      "The U.S. naval blockade of the Strait of Hormuz remains in place, with Defense Secretary Pete Hegseth warning it will continue 'as long as it takes.'",
+      "The first round of U.S.-Iran peace talks in Islamabad, led by Vance, ended without a deal.",
+      "Trump earlier this week extended the ceasefire with Iran, which had been set to expire on Wednesday.",
+      "Commercial flights resumed from Tehran's Imam Khomeini International Airport for the first time since the conflict began.",
+      "The U.S. and Israel began attacking Iran on February 28, and Iran subsequently restricted shipping through the Strait of Hormuz."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether direct talks between U.S. and Iran will occur",
+        "positions": {
+          "CNBC": "White House press secretary described these as 'direct talks' with Iranian counterparts; Leavitt said talks would be 'intermediated by the Pakistanis.'",
+          "CBS News": "Reports it is 'unclear if direct talks with Iran will take place'; notes Araghchi said he had 'no plans to meet with the Americans.'",
+          "BBC News": "Iran's foreign ministry spokesman said 'No meeting is planned to take place between Iran and the US. Iran's observations would be conveyed to Pakistan.'",
+          "Associated Press": "Does not clarify the direct-vs-indirect distinction in available body text."
+        }
+      },
+      {
+        "topic": "Who initiated the talks",
+        "positions": {
+          "CNBC": "Leavitt said on Fox News that 'The Iranians reached out' and asked for an in-person conversation.",
+          "BBC News": "Leavitt said Trump decided to send envoys 'to hear the Iranians out,' framing it as Trump giving 'diplomacy a chance.'",
+          "CBS News": "Iran's defense ministry said 'the enemy is looking for a face-saving way to escape the war quagmire it has become trapped in,' implying U.S. sought talks."
+        }
+      },
+      {
+        "topic": "U.S. core demand from Iran",
+        "positions": {
+          "BBC News": "Hegseth said 'all they have to do is abandon a nuclear weapon and in meaningful and verifiable ways.'",
+          "CNBC": "Notes the administration 'originally put forward shifting narratives about the war's objectives, including regime change and concern about the safety of Iranian protestors,' suggesting the nuclear demand was not always the sole objective."
+        }
+      },
+      {
+        "topic": "Characterization of the war's progress and timeline",
+        "positions": {
+          "CNBC": "Explicitly notes the Trump administration 'has reframed its timeline' after passing its original four-to-six-week war prediction; cites 'shifting narratives about the war's objectives.'",
+          "BBC News": "Notes the 'divide between the administration's public pronouncements and behind-the-scenes push by the White House to find a way to wind down the war.'",
+          "CBS News": "Does not editorialize on the timeline discrepancy; presents Hegseth's blockade warning straightforwardly."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text is fragmentary and reads as a collection of live-update captions and photo descriptions rather than a cohesive narrative. Leads with the fact of Araghchi in Islamabad and the historical parallel of U.S. naval escorts of Kuwaiti tankers in the 1980s Iran-Iraq war. Includes Trump's 'shoot and kill' order regarding Iranian boats deploying mines. Does not editorialize or assess diplomatic prospects.",
+      "CBS News": "Structured as a comprehensive live-update feed with multiple timestamped entries. Leads with a summary of three key developments: envoys heading to Islamabad, Tehran airport flights resuming, and Hegseth's blockade warning. Notably includes the Iran electricity conservation story and the detained Kuwaiti-American journalist, giving the broadest humanitarian picture. Reports the ambiguity over direct talks prominently. Cites Iran's defense ministry framing the U.S. as 'looking for a face-saving way to escape the war quagmire.' Also uniquely includes Chevron CEO's comments about needing naval escorts for commercial ships, adding an economic/industry angle.",
+      "BBC News": "Most structured analytical narrative among the full-text articles. Leads with the envoy trip and immediately introduces the contradictory signals: White House says Iranians want to talk, Iran says no direct meeting planned. Uniquely includes BBC correspondent analysis noting the 'divide between the administration's public pronouncements and behind-the-scenes push by the White House to find a way to wind down the war.' Notes Vance's absence may signal no expectation of a 'major breakthrough.' Includes Iran parliamentary speaker Ghalibaf's statement about the strait. Adds context about new U.S. Treasury sanctions on a Chinese refinery and 40 other targets, and Israel-Hezbollah ceasefire developments.",
+      "CNBC": "Most explicitly critical of the administration's messaging. Leads with the envoy dispatch but frames it within the context of a 'potential diplomatic breakthrough' after talks 'appeared to stall out earlier this week.' Uniquely reports Trump telling Reuters that Iran will be 'making an offer.' Most detailed on the administration's shifting war objectives and timeline, noting the original four-to-six-week prediction has passed and objectives shifted from regime change to nuclear disarmament. Includes Hegseth's comparison of this operation to Korea, Vietnam, Iraq, and Afghanistan. Also uniquely includes Trump's comment that the war has had 'less of an effect on both stocks and oil prices than he had expected,' revealing an economic framing lens consistent with CNBC's audience.",
+      "Reuters (Article 5)": "Headline-only. Confirms the core fact of Witkoff and Kushner traveling to Pakistan for Iran talks. No body text available for framing analysis.",
+      "Reuters (Article 6)": "Headline-only. Same core fact. No body text available for framing analysis.",
+      "The New York Times": "Headline-only. Labels the story 'Iran War Live Updates' and confirms the envoy travel. No body text available for framing analysis."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (transcripts, official statements, press releases) were located in the dossier. All claims are based on outlet reporting of statements by officials (Leavitt, Hegseth, Araghchi, Baqaei). The absence of a primary source means divergences between what officials actually said and what outlets reported cannot be independently verified."
+    ],
+    "missing_context": [
+      "No outlet provides specifics on what Iran's negotiating position or potential 'offer' actually contains. Trump told Reuters Iran will be 'making an offer' (per CNBC) but no details are provided by any source.",
+      "No outlet explains the legal or international-law basis for the U.S. naval blockade of Iranian ports, or whether it constitutes an act of war under international law distinct from the existing conflict.",
+      "No outlet provides casualty figures, civilian or military, from the conflict that began February 28.",
+      "No outlet reports on the humanitarian situation in Iran beyond the electricity conservation appeal and airport reopening, despite what appears to be significant infrastructure damage.",
+      "The specific terms of the ceasefire that Trump extended, and what constitutes a 'violation' by either side, are not detailed by any outlet.",
+      "Jared Kushner's official role or title in the administration is not clarified by any outlet \u2014 he is described as 'the president's son-in-law' (BBC, CNBC) but his formal capacity for conducting diplomatic negotiations is unexplained.",
+      "No outlet explains what Pakistan's strategic interests are in mediating these talks, or what leverage Pakistan has with either side.",
+      "The impact of the Strait of Hormuz closure on global oil prices is referenced generally but no outlet provides current price figures or economic impact data in the body text.",
+      "Three outlets (Reuters x2, NYT) provided headline-only content, limiting the depth of cross-outlet verification available for this brief."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Four outlets with full body text reported the same event but with materially different framings \u2014 particularly around whether talks are 'direct,' who initiated them, and whether the administration's war timeline has slipped. The contradictory signals from the White House ('the Iranians want to talk' / 'direct talks') versus Iran ('no meeting is planned') represent a genuine framing divergence that a META post can surface for readers.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/us-iran-war-hormuz-israel-pakistan-ceasefire-april-24-2026-313e19ff213738620abe31c96eb38368",
+      "title": "Trump dispatches Witkoff and Kushner to Pakistan for new talks with Iran\u2019s foreign minister - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/us-iran-war-trump-strait-of-hormuz-hezbollah-lebanon-israel-ceasefire/",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cy8103xklreo",
+      "title": "Trump's envoys Witkoff and Kushner to fly to Pakistan for Iran talks - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/24/iran-war-pakistan-trump-hegseth.html",
+      "title": "Kushner, Witkoff \u2014 not Vance \u2014 heading to Pakistan for 'direct talks' with Iran, White House says - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/trump-send-witkoff-kushner-pakistan-iran-talks-cnn-reports-2026-04-24/",
+      "title": "Witkoff and Kushner to travel to Pakistan soon for Iran talks, US official says - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/witkoff-kushner-headed-pakistan-iran-talks-white-house-says-2026-04-24/",
+      "title": "Witkoff and Kushner headed to Pakistan for Iran talks, White House says - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/04/25/world/iran-war-us-talks-pakistan",
+      "title": "Iran War Live Updates: Witkoff and Kushner to Travel to Pakistan for Talks on Iran - The New York Times"
+    }
+  ]
+}
