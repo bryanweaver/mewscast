@@ -1,0 +1,133 @@
+{
+  "story_id": "2026-04-26-trump-unhurt-and-suspect-13378841e8",
+  "headline_seed": "Trump unhurt and suspect in custody after shots fired at White House correspondents' dinner - BBC",
+  "brief": {
+    "story_id": "2026-04-26-trump-unhurt-and-suspect-13378841e8",
+    "consensus_facts": [
+      "President Trump and First Lady Melania Trump were uninjured after a shooting incident at the White House Correspondents' Dinner at the Washington Hilton on Saturday, April 25, 2026.",
+      "A suspect was taken into custody at the scene; multiple outlets identify him as Cole Allen, a 31-year-old from Torrance, California.",
+      "The suspect was armed with a shotgun, a handgun, and multiple knives and attempted to charge a security checkpoint.",
+      "A Secret Service agent was struck by gunfire but was protected by a bulletproof vest and is expected to recover.",
+      "Vice President JD Vance and Cabinet members were also present and were safely evacuated.",
+      "The suspect was not struck by gunfire and was taken to a hospital for evaluation.",
+      "Law enforcement described the suspect as a lone actor.",
+      "The suspect will face charges including using a firearm during a crime of violence and assault on a federal officer using a dangerous weapon, with arraignment expected Monday.",
+      "Jeanine Pirro, U.S. Attorney for the District of Columbia, announced the charges and indicated more are likely.",
+      "Trump posted a photo of the detained suspect to Truth Social and praised Secret Service and law enforcement.",
+      "Acting Attorney General Todd Blanche said preliminary findings suggest the suspect was targeting administration officials, likely including the president."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of shots fired",
+        "positions": {
+          "CBS News": "Reports 'at least five to eight gunshots' citing two law enforcement sources.",
+          "NPR": "Does not specify a shot count.",
+          "CNN": "Does not specify a shot count.",
+          "Al Jazeera": "Does not specify a shot count.",
+          "BBC News": "Does not specify a shot count."
+        }
+      },
+      {
+        "topic": "Where exactly the shooting occurred",
+        "positions": {
+          "NPR": "Says the incident took place at 'a security screening area inside the venue near the entrance to the main ballroom.'",
+          "CBS News": "Says the suspect 'attempted to charge a security checkpoint outside the dinner.'",
+          "CNN": "Says shots were fired generally at the dinner; Wolf Blitzer describes being 'a few feet away' from the gunman.",
+          "Al Jazeera": "Says 'gunfire broke out outside the ballroom.'",
+          "BBC News": "Acting AG Blanche says suspect 'barely broke the perimeter.'"
+        }
+      },
+      {
+        "topic": "Suspect's stated motive",
+        "positions": {
+          "CBS News": "Two sources say the suspect told law enforcement he 'wanted to shoot Trump administration officials.'",
+          "BBC News": "Acting AG Blanche says preliminary findings suggest suspect was targeting administration officials, 'likely' including the president.",
+          "NPR": "Does not report a specific stated motive from the suspect.",
+          "CNN": "Does not report a specific stated motive from the suspect.",
+          "Al Jazeera": "Does not report a specific stated motive from the suspect."
+        }
+      },
+      {
+        "topic": "How the suspect traveled to Washington",
+        "positions": {
+          "BBC News": "Acting AG Blanche says the suspect 'likely travelled by train from LA to Chicago, and then to Washington DC.'",
+          "CBS News": "Does not mention travel method.",
+          "NPR": "Does not mention travel method.",
+          "CNN": "Does not mention travel method.",
+          "Al Jazeera": "Does not mention travel method."
+        }
+      },
+      {
+        "topic": "Suspect's possible weapon assembly at the hotel",
+        "positions": {
+          "BBC News": "Blanche says investigators are 'looking at reports the alleged gunman assembled the weapon in the hotel.'",
+          "CBS News": "Does not mention weapon assembly.",
+          "NPR": "Does not mention weapon assembly.",
+          "CNN": "Does not mention weapon assembly.",
+          "Al Jazeera": "Does not mention weapon assembly."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only article; no body text available for framing analysis. Headline emphasizes Trump as the 'likely target' citing a US official \u2014 the most assertive framing of the targeting claim among all headlines.",
+      "NPR": "Leads with the suspect being in custody and Trump being rushed from the event. Provides the most contextual background of any outlet, including a section titled 'Attacks on Trump and the press' that links the incident to the 2024 Trump assassination attempts and January 6 attacks on journalists. Quotes WHCA president Weijia Jiang at length about press freedom and journalism as public service. This is the only outlet to frame the story as relevant to both presidential security and press safety. Buries the suspect's identity (does not name him) and specific motive claims.",
+      "BBC News": "Short, focused excerpt centered entirely on Acting AG Blanche's interview on NBC's Meet the Press. Provides exclusive-in-dossier details about the suspect's travel route and possible weapon assembly. No broader context or scene-setting. Framing is procedural and law-enforcement-sourced.",
+      "The New York Times": "Headline-only article; no body text available for framing analysis. Headline uses 'What We Know' framing, a standard NYT explainer format.",
+      "CBS News": "The most detailed factual report in the dossier. Leads with suspect identification (Cole Allen, 31, Torrance, California) and background details including his employer (C2 Education), his Caltech graduation (2017), and a 'Teacher of the Month' award. Includes detail about FBI agents searching a home in Torrance. CBS is the only outlet to report the suspect's full name (Cole Tomas Allen appears only in CNN photo caption), educational background, and employment history. Also the only outlet to report the specific claim that the suspect told law enforcement he wanted to shoot Trump administration officials. Relatively dry, procedural framing focused on criminal justice angle.",
+      "CNN": "Leads with the dramatic scene \u2014 Trump being rushed off stage, chaos at the event. Includes a large photo gallery (25 photos) and CNN anchor Wolf Blitzer's first-person account of being 'a few feet away' from the gunman. This is the most visually and experientially driven report. Identifies suspect as Cole Tomas Allen in a photo caption. Tags the story under 'Gun violence' as a topic. Does not provide suspect background details. Framing emphasizes the spectacle and eyewitness drama over investigative detail.",
+      "Al Jazeera": "The shortest report with body text. Provides only the most basic facts: Trump evacuated, shots fired outside ballroom, suspect charged security checkpoint, no injuries to president or Cabinet. No suspect identification, no motive, no background. Neutral, minimal wire-style framing."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, charging documents, Secret Service statements, or official transcripts) were located for this story. All reported details are attributed to law enforcement press conferences, unnamed sources, or Trump's social media posts. The absence of a charging document is notable given that charges have been announced but arraignment is not until Monday."
+    ],
+    "missing_context": [
+      "No outlet in the dossier reports on how the suspect passed or bypassed security screening to enter the hotel with a shotgun, handgun, and multiple knives \u2014 a critical question given the Secret Service security apparatus at a presidential event.",
+      "No outlet provides detail on the suspect's ideological or political background, social media presence, or any prior law enforcement contacts.",
+      "No outlet explains how a hotel guest was able to bring or assemble a shotgun inside the Washington Hilton, despite the BBC noting investigators are looking into weapon assembly on-site.",
+      "No outlet reports on the specific timeline of events \u2014 when the suspect checked into the hotel, when he moved toward the checkpoint, and how long the shooting lasted.",
+      "No charging document or official Secret Service statement was available as a primary source, limiting the ability to verify outlet claims against the official record.",
+      "No outlet reports on the status or response of the White House Correspondents' Association regarding future security protocols or whether the dinner will be rescheduled.",
+      "The Reuters and New York Times articles were headline-only, limiting the breadth of cross-outlet corroboration available for this analysis."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate the core facts of this breaking story \u2014 shooting at the WHCD, Trump uninjured, suspect in custody, agent protected by vest. While there are framing differences (NPR contextualizes press safety, CNN emphasizes spectacle, CBS leads on suspect details), the factual core is strong and consistent. This warrants a straight REPORT with attribution of single-source details like suspect background and motive claims.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/trump-removed-white-house-correspondents-dinner-attendees-take-cover-2026-04-26/",
+      "title": "Trump was likely target of shooting at White House Correspondents' dinner, says US official - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/04/25/nx-s1-5799544/trump-white-house-correspondents-dinner",
+      "title": "A suspect is in custody after Trump is rushed from correspondents' dinner - NPR"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/live/c1je28p42ret",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/04/26/us/politics/what-we-know-white-house-correspondents-dinner-shooting.html",
+      "title": "What We Know About the Shooting at the White House Correspondents\u2019 Dinner Trump Was Attending - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/white-house-correspondents-dinner-shooting-suspect-cole-allen/",
+      "title": "Suspect in shooting at White House Correspondents' Dinner identified as 31-year-old California man - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/04/25/politics/trump-rushed-white-house-correspondents-dinner",
+      "title": "Trump rushed off stage after shots fired at White House Correspondents\u2019 Dinner - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/4/26/trump-evacuated-from-the-white-house-correspondents-dinner",
+      "title": "Trump unhurt after shots fired at White House correspondents\u2019 dinner - Al Jazeera"
+    }
+  ]
+}
