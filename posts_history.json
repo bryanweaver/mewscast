@@ -1449,6 +1449,21 @@
       "dossier_id": "2026-04-27-white-house-press-dinner-f49c162488",
       "post_type": "REPORT",
       "post_pipeline": "journalism"
+    },
+    {
+      "timestamp": "2026-04-27T17:55:42.617528+00:00",
+      "topic": "Supreme Court Reviews Police Use of Cell Location Data to Find Criminals - The New York Times",
+      "url": "https://www.nytimes.com/2026/04/27/us/politics/supreme-court-cell-data-geofence.html",
+      "source": "The New York Times",
+      "content": "#BreakingMews: CNN reports the Supreme Court heard oral argument today on geofence warrants, with justices divided over police use of cell location data and Fourth Amendment limits.\n\nCase involves a 2019 Virginia bank robbery.\n\nreported by CNN; also covered by The New York Times.",
+      "image_prompt": "Photorealistic brown tabby cat with an intense, intelligent gaze and the bearing of a seasoned news anchor \u2014 dignified, authoritative, fully present. Correct four-paw anatomy, no human hands or fingers. Scroll-stopping editorial image. Dramatic cinematic lighting with strong highlights and deep shadows. Sharp eye contact with the viewer. Cinematic composition like a film still, not stock photography. Rich color grading, strong focal point, a single arresting detail the viewer can't look away from. Breaking-news urgency. Hand-held camera energy, motion blur at the edges, red emergency glow from off-frame. The cat caught mid-action \u2014 paw raised, ears forward, something just happened. Grainy photojournalism with kinetic tension. Walter Croncat, a realistic brown tabby cat with authentic cat anatomy, stands as a field reporter in the foreground at the steps of the U.S. Supreme Court building, urgent breaking news energy, red and amber accent lighting, professional press badge reading \"PRESS Walter Croncat\" visible, marble columns and courthouse architecture sharp in background, dramatic high-contrast cinematic lighting, horizontal landscape composition, bold saturated colors, wire photographer aesthetic capturing the moment.",
+      "x_tweet_id": null,
+      "x_reply_tweet_id": null,
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mkindd6dfz2t",
+      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mkindg3wjm2p",
+      "dossier_id": "2026-04-27-supreme-court-reviews-police-36c4e7692f",
+      "post_type": "BULLETIN",
+      "post_pipeline": "journalism"
     }
   ]
 }
