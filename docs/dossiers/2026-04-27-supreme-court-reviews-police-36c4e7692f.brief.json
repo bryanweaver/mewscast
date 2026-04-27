@@ -1,0 +1,42 @@
+{
+  "story_id": "2026-04-27-supreme-court-reviews-police-36c4e7692f",
+  "headline_seed": "Supreme Court Reviews Police Use of Cell Location Data to Find Criminals - The New York Times",
+  "brief": {
+    "story_id": "2026-04-27-supreme-court-reviews-police-36c4e7692f",
+    "consensus_facts": [
+      "Both outlets' headlines reference the Supreme Court reviewing or debating police use of cell location data; body-level corroboration is unavailable since only CNN provided full article text."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "The New York Times": "Headline-only article. The headline frames the story around police 'use of cell location data to find criminals,' foregrounding the law-enforcement utility angle. No body text was retrievable, so no further framing analysis is possible.",
+      "CNN": "CNN provides extensive body text and frames the story as a constitutional tension between law enforcement effectiveness and Fourth Amendment privacy rights. Leads with the specific Virginia bank robbery case (Okello Chatrie) and the mechanics of geofence warrants. Emphasizes that justices appeared divided and were 'looking for a narrow outcome.' Gives significant space to Chief Justice Roberts' concerns about surveillance of churches and political organizations. Highlights Justice Alito's skepticism that the case is even worth hearing given Google's changed data practices. Notes unpredictable ideological alliances on Fourth Amendment cases and connects this to the 2018 Carpenter v. US precedent. Includes expert commentary from William McGeveran of the University of Minnesota Law School calling the implications 'huge.' CNN reports key case details: Chatrie's 2019 bank robbery, 300-meter geofence radius, location accuracy within 3 meters every two minutes, the 4th Circuit ruling that the warrant did not constitute a 'search,' Solicitor General D. John Sauer defending the warrants, and Chatrie's lawyer Adam Unikowsky invoking the Founders' opposition to general warrants. The article text appears to be truncated mid-sentence."
+    },
+    "primary_source_alignment": [
+      "No primary sources (oral argument transcript, briefs, or lower court opinions) were located for this story. All factual claims rest on outlet reporting alone."
+    ],
+    "missing_context": [
+      "Only one outlet (CNN) provided retrievable body text; The New York Times was headline-only. This is a single-source dossier for body-level detail, significantly limiting the ability to identify consensus facts or cross-check claims.",
+      "No primary source \u2014 such as the oral argument transcript, the 4th Circuit opinion in United States v. Chatrie, or the cert petition \u2014 was available for verification.",
+      "CNN's article appears truncated mid-sentence during discussion of Justice Harlan's 1967 concurrence (Katz v. United States), so the full scope of CNN's own reporting is unclear.",
+      "No outlet from the center, lean-right, or right slant categories was included in the dossier, limiting the ability to assess ideological framing divergence.",
+      "Neither outlet addresses how many geofence warrants are issued annually, how many jurisdictions use them, or what proportion of requests Google or other companies complied with before changing their data storage practices.",
+      "The timeline for a Supreme Court decision is not mentioned \u2014 readers would want to know when a ruling is expected.",
+      "No coverage of amicus briefs from tech companies, civil liberties organizations, or law enforcement groups that may have been filed in the case."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet has substantive body text and no primary source is available. The story is time-sensitive (Supreme Court oral argument occurred the same day), but the dossier is too thin for a full REPORT. A hedged BULLETIN flagging the oral argument and noting limited sourcing is appropriate until more coverage or the transcript becomes available.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/04/27/us/politics/supreme-court-cell-data-geofence.html",
+      "title": "Supreme Court Reviews Police Use of Cell Location Data to Find Criminals - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/04/27/politics/geofencing-supreme-geofencing-cellphone-data",
+      "title": "Supreme Court debates whether police may seek sweeping cellphone location data in investigations - CNN"
+    }
+  ]
+}
