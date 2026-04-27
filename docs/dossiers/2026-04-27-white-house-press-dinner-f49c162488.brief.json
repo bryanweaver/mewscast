@@ -1,0 +1,132 @@
+{
+  "story_id": "2026-04-27-white-house-press-dinner-f49c162488",
+  "headline_seed": "White House press dinner shooting raises questions over security at event - The Guardian",
+  "brief": {
+    "story_id": "2026-04-27-white-house-press-dinner-f49c162488",
+    "consensus_facts": [
+      "A man armed with firearms and knives charged a security checkpoint and opened fire at the White House Correspondents' Dinner at the Washington Hilton on Saturday, April 25, 2026.",
+      "The suspect has been identified as Cole Tomas Allen, 31, of Torrance, California.",
+      "President Donald Trump was present at the dinner and was unharmed; he and other top officials were evacuated from the event.",
+      "The suspect was taken into custody at the scene.",
+      "Allen sent writings to family members shortly before the attack; his brother alerted police after receiving them.",
+      "The writings indicated Allen intended to target Trump administration officials; he did not refer to Trump by name in the communications.",
+      "Allen was armed with a shotgun, a handgun (or handguns), and knives.",
+      "Allen is expected to be arraigned in federal court on Monday.",
+      "The White House Correspondents' Association dinner was attended by approximately 2,500 people.",
+      "A Secret Service officer was shot but survived; the officer was wearing a bulletproof vest and was released from the hospital Sunday.",
+      "Allen was described as a teacher and engineer; a LinkedIn page listed degrees from Caltech and California State University Dominguez Hills.",
+      "Trump called for the dinner to be rescheduled within 30 days with enhanced security.",
+      "Allen's sister told investigators he had a tendency to make radical statements and referenced plans to do 'something' to fix societal problems.",
+      "Secret Service agents fired at the suspect but did not hit him before he was subdued near a staircase leading to the ballroom."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of shots fired by the suspect",
+        "positions": {
+          "CNN": "Authorities believe the suspect fired one or two times, per a law enforcement source.",
+          "Associated Press": "Does not specify the number of shots fired.",
+          "CBS News": "Does not specify the number of shots fired; describes the suspect as having 'charged a security checkpoint and opened fire.'"
+        }
+      },
+      {
+        "topic": "Number and type of firearms",
+        "positions": {
+          "Associated Press": "References 'guns and knives' without specifying types or quantities.",
+          "CBS News": "Cites acting AG Todd Blanche saying Allen was armed with 'a shotgun, a handgun and knives.'",
+          "NPR": "Allen's sister said he purchased 'two handguns and a shotgun' stored at his parents' home."
+        }
+      },
+      {
+        "topic": "Characterization of suspect's writings",
+        "positions": {
+          "Associated Press": "Describes them as 'writings' sent to family referencing grievances including U.S. strikes on boats in the eastern Pacific.",
+          "CBS News": "Calls them a 'manifesto' and provides extensive direct quotes, including Allen's self-description as a 'friendly federal assassin' (per Washington Post headline reference) and his stated plan to target officials 'prioritized from highest-ranking to lowest.'",
+          "NPR": "Reports the White House is calling the writings 'a manifesto'; NPR says it has not seen the writings independently.",
+          "CNN": "Reports the suspect 'clearly stated' he wanted to target administration officials, per the White House."
+        }
+      },
+      {
+        "topic": "Specific grievances cited in writings",
+        "positions": {
+          "Associated Press": "Mentions grievances over U.S. strikes on boats accused of smuggling drugs in the eastern Pacific Ocean.",
+          "CBS News": "Quotes Allen saying he didn't want the 'crimes' of the administration to 'coat his hands'; includes rebuttals to hypothetical objections about his race and religion; mentions he criticized hotel security.",
+          "CNN": "Quotes from the writings: 'I am no longer willing to permit a pedophile, rapist and traitor to coat my hands with his crimes.'",
+          "NPR": "Does not independently report content of the writings."
+        }
+      },
+      {
+        "topic": "Whether Allen specifically excluded FBI Director Patel",
+        "positions": {
+          "CBS News": "Reports Allen wrote he planned to target officials 'prioritized from highest-ranking to lowest' but 'not including Mr. Patel,' referencing the FBI director.",
+          "Other outlets": "No other outlet in the dossier reports this detail."
+        }
+      },
+      {
+        "topic": "Allen's political affiliations and activism",
+        "positions": {
+          "NPR": "Reports Allen's sister said he attended a No Kings protest and was part of a group called 'The Wide Awakes'; also reports a $25 donation to ActBlue earmarked for Kamala Harris in October 2024.",
+          "Other outlets": "No other outlet in the dossier reports these specific details."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Straightforward wire-style reporting. Leads on the writings and grievances, including the specific reference to U.S. drug-boat strikes in the Pacific \u2014 a detail no other outlet mentions. Provides factual identifiers (name, age, location) but avoids interpretive framing. Relatively thin body text suggests this may be a composite of multiple AP dispatches rather than a single narrative piece.",
+      "CNN": "Extensive live-blog format covering the event from multiple angles. Leads on the suspect's stated intent to target administration officials, then devotes substantial space to Trump's CBS '60 Minutes' interview, including his combative exchange with Norah O'Donnell, his jabs at the press, and his call to reschedule the dinner. Also covers King Charles's upcoming state visit proceeding as planned. The framing gives significant real estate to Trump's own words and his media criticisms, making the political aftermath as prominent as the attack itself.",
+      "BBC News": "Short, focused dispatch framing the story through the lens of institutional response: Trump 'stands by' the Secret Service, Chief of Staff Susie Wiles will convene a protocol review meeting. Does not detail the suspect's writings or background. Uniquely mentions the 'America 250th' celebrations as context for upcoming security concerns. Raises the question of whether the perimeter was secure enough \u2014 a framing that emphasizes the security-failure angle.",
+      "The Washington Post": "The body text retrieved is largely structural metadata (bylines, navigation, related story links) rather than narrative content. However, the headlines and related-article links reveal the Post's editorial emphasis: a major investigative piece on the dinner lacking 'the highest security level despite presence of top officials,' and a profile calling the suspect a 'friendly federal assassin.' The Post appears to be leading with the security-failure angle and the suspect's own language. Also notable: a related story on King Charles stepping into UK-Trump tensions alongside new security concerns.",
+      "CBS News": "Provides the most granular reporting on the suspect's writings, including extensive direct quotes from the email Allen sent to family. CBS frames the story primarily through the manifesto, letting Allen's own words drive the narrative \u2014 his matter-of-fact tone, his stated targeting hierarchy, his exclusion of FBI Director Patel, his criticism of Secret Service security, and his 'rebuttals' to hypothetical objections. This is the only outlet to report the Patel exclusion and the specific detail about Allen choosing buckshot over slugs 'to minimize casualties.' CBS also notes it obtained a copy of the manifesto directly.",
+      "NPR": "Frames the story as a suspect profile \u2014 who is Cole Allen? Leads with biographical details: Caltech graduate, computer science master's, part-time tutor, independent game developer. Includes a quote from a 17-year-old former student calling Allen a 'smart guy' and 'quirky.' Uniquely reports Allen's $25 donation to ActBlue/Kamala Harris, his involvement with 'The Wide Awakes' activist group, and his attendance at a 'No Kings' protest. Also reports that Allen's parents were unaware firearms were stored at their home. NPR is careful to note it has not independently seen the writings."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, official transcripts, or the manifesto text itself) were located for this story in the dossier.",
+      "CBS News claims to have obtained a copy of the manifesto and quotes from it extensively; other outlets rely on White House characterizations or law enforcement summaries. Without the primary document in the dossier, it is impossible to verify whether CBS's direct quotes are accurate or whether other outlets' paraphrases are faithful.",
+      "The divergence between outlets on the manifesto's content \u2014 AP mentions Pacific drug-boat strikes, CNN quotes 'pedophile, rapist and traitor,' CBS reports the Patel exclusion and buckshot detail \u2014 suggests each outlet may have access to different portions or versions of the writings, or is selectively quoting for emphasis. The primary document would resolve this."
+    ],
+    "missing_context": [
+      "The actual manifesto/email text has not been made available as a primary source in this dossier. CBS claims to have a copy, but no outlet publishes it in full. A fair-minded reader would benefit from seeing the unedited document.",
+      "No outlet in this dossier provides detail on the specific charges beyond the two mentioned by NPR (using a firearm during a crime of violence; assault of a federal officer using a dangerous weapon). U.S. Attorney Jeanine Pirro said additional charges are expected, but none are specified.",
+      "No outlet addresses how Allen obtained credentials or a hotel room at the Washington Hilton on the night of the dinner \u2014 CBS notes the hotel remained a 'functioning hotel' with public spaces, but the logistics of his 10th-floor room and his approach to the security checkpoint are not explained.",
+      "The security-failure angle is raised by BBC, Washington Post (via headline), and CBS (via Allen's own writings criticizing Secret Service), but no outlet in this dossier provides a detailed account of the security perimeter layout, the classification level of the event, or what specific protocols were or were not in place. The Washington Post appears to have a full investigative piece on this, but its body text was not successfully retrieved.",
+      "No outlet explains the legal distinction between federal and DC charges or the jurisdictional framework for prosecuting this case.",
+      "Allen's mental health history is not addressed by any outlet. His sister's characterization of 'radical' rhetoric and his manifesto's structured, analytical tone raise questions about psychological evaluation that no outlet explores.",
+      "No outlet provides context on prior security incidents at White House Correspondents' Dinners or at the Washington Hilton specifically (e.g., the 1981 Reagan assassination attempt at the same hotel).",
+      "The AP uniquely mentions grievances about U.S. strikes on drug-smuggling boats in the eastern Pacific. No other outlet corroborates or expands on this specific policy grievance, and no outlet provides context on that military operation.",
+      "NPR's reporting on Allen's affiliation with 'The Wide Awakes' and a $25 Harris donation is single-source. No other outlet corroborates these details, which could become politically significant."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Six outlets covered the same event with materially different emphases: CBS leads with the manifesto's content, NPR builds a suspect profile including political affiliations, CNN foregrounds Trump's media combativeness in the aftermath, BBC focuses on institutional security response, and the AP surfaces a unique policy grievance. The absence of the primary source document (the manifesto) makes the divergence in how outlets quote and characterize it especially significant. This is a coverage-comparison story where the framing differences are as important as the underlying facts.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/white-house-correspondents-dinner-trump-gunman-3cd1911ecc8a4f7d208ba5eb071fc715",
+      "title": "DC gala shooting suspect aired grievances against Trump in writings to family - AP News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/04/25/politics/live-news/trump-white-house-correspondents-dinner",
+      "title": "White House says suspect in Correspondents\u2019 Dinner shooting wanted to target Trump officials | CNN Politics - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/live/c1je28p42ret",
+      "title": "White House says Trump 'stands by' Secret Service as shooting suspect due in court - BBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/04/26/trump-correspondents-dinner-shooting-live-updates/",
+      "title": "White House correspondents\u2019 dinner shooting suspect to appear in court, had denounced Trump - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/white-house-correspondents-dinner-suspect-manifesto-details/",
+      "title": "The White House Correspondents' Dinner suspect sent a \"manifesto\" to his family. CBS News reviewed what's in it. - CBS News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/04/26/g-s1-118826/cole-allen-suspected-white-house-correspondents-dinner-shooter-profile",
+      "title": "What we know about Cole Allen, suspected White House Correspondents' dinner shooter - NPR"
+    }
+  ]
+}
