@@ -1,0 +1,132 @@
+{
+  "story_id": "2026-04-29-supreme-court-limits-key-53d4dbf8d0",
+  "headline_seed": "Supreme Court limits key provision of the landmark Voting Rights Act - The Washington Post",
+  "brief": {
+    "story_id": "2026-04-29-supreme-court-limits-key-53d4dbf8d0",
+    "consensus_facts": [
+      "The Supreme Court ruled 6-3 along ideological lines to strike down Louisiana's second majority-Black congressional district.",
+      "Justice Samuel Alito wrote the majority opinion.",
+      "Justice Elena Kagan wrote a dissent arguing the ruling gutted or severely weakened the Voting Rights Act.",
+      "The ruling limits the use of Section 2 of the Voting Rights Act to create majority-minority congressional districts.",
+      "The conservative majority held that Louisiana's redrawn district relied too heavily on race, violating the equal protection clause of the Constitution.",
+      "The ruling did not strike down Section 2 of the Voting Rights Act entirely but significantly narrowed how it can be applied.",
+      "The White House celebrated the ruling, with a spokeswoman calling it a 'complete and total victory for American voters.'",
+      "Civil rights groups and Democrats condemned the decision as a blow to voting rights protections.",
+      "Florida moved quickly to redraw its voting maps in the wake of the ruling.",
+      "The decision is expected to benefit Republicans in future elections, particularly across the South."
+    ],
+    "disagreements": [
+      {
+        "topic": "Magnitude of the ruling's impact on Section 2",
+        "positions": {
+          "Associated Press": "Reports the ruling 'could open the door' for states to eliminate Black and Latino electoral districts \u2014 conditional framing.",
+          "Axios": "Describes the ruling as effectively 'neutering' Section 2, saying it 'can only take effect as long as protected seats don't infringe on the right of state lawmakers to draw partisan gerrymanders.' States it could boost the Republican House majority by 19 seats compared to 2024 maps.",
+          "The New York Times": "Reports the conservative majority 'asserted that the opinion was a limited ruling that preserved a central tenet of the Voting Rights Act' while the liberal wing argued 'the justices had taken the final step to dismantle the landmark civil rights law.'",
+          "BBC News": "Frames it as making it 'significantly more difficult' to challenge maps for diluting minority voting power, requiring proof of intentional discrimination.",
+          "Bloomberg": "Uses 'limited the use' language; frames it primarily through the lens of Republican House control."
+        }
+      },
+      {
+        "topic": "New legal standard for proving a Section 2 violation",
+        "positions": {
+          "BBC News": "Reports litigants will now have to prove legislators 'intentionally drew the maps to provide less opportunity to racial minority voters' \u2014 an intent standard.",
+          "Axios": "Reports the test was rewritten so Section 2 'can only take effect as long as protected seats don't infringe on the right of state lawmakers to draw partisan gerrymanders' \u2014 framing the new standard around partisan gerrymandering as a shield.",
+          "The New York Times": "Says Alito wrote the court was 'updating the 40-year-old framework' for evaluating race in congressional districts but does not specify the exact new test in the available text.",
+          "Associated Press": "Does not detail the new legal test in the available text."
+        }
+      },
+      {
+        "topic": "Whether Louisiana will redraw maps before November midterms",
+        "positions": {
+          "The New York Times": "Reports Louisiana AG Liz Murrill said it was possible for the legislature to act before November; Gov. Landry's statement did not address the timeline.",
+          "Associated Press": "Does not address this question in the available text.",
+          "Axios": "Does not address Louisiana's specific timeline.",
+          "BBC News": "Does not address Louisiana's specific timeline."
+        }
+      },
+      {
+        "topic": "Scope of states likely to redraw maps",
+        "positions": {
+          "The New York Times": "Notes Sen. Marsha Blackburn vowed to use the ruling 'to keep Tennessee a red state.'",
+          "BBC News": "Names Florida, Tennessee, and Mississippi as states that could redraw maps.",
+          "Axios": "Mentions Florida Gov. DeSantis had been betting on the ruling; notes Florida's separate ban on partisan gerrymandering as a complication."
+        }
+      },
+      {
+        "topic": "Characterization of the ruling in headlines/framing",
+        "positions": {
+          "Reuters": "Uses 'guts' in headline \u2014 strongest verb.",
+          "Associated Press": "Uses 'weakens' in headline.",
+          "The Washington Post": "Uses 'limits' in headline.",
+          "BBC News": "Uses 'limits' in headline.",
+          "Bloomberg": "Uses 'curbs' in headline.",
+          "Axios": "Uses 'narrows' in headline."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Leads with the strike-down of Louisiana's district and the potential downstream consequences for Republican-led states. Includes a vivid quote from Rev. Al Sharpton ('bullet in the heart of the voting rights movement') and Chief Justice Roberts' description of the district as a 'snake.' Body text is relatively thin \u2014 does not detail the new legal standard or address which other states may act. Straight wire framing with emphasis on civil rights reaction.",
+      "The New York Times": "The most granular and detailed coverage in the dossier, presented as a live-update blog with timestamped entries from multiple reporters. Leads on the broad impact \u2014 'dealt a blow to a landmark civil rights law' \u2014 then provides extensive reaction from both sides: White House, Sen. Blackburn, Martin Luther King III, NAACP Legal Defense Fund, Louisiana's AG and governor, and a named plaintiff (Press Robinson). Uniquely surfaces that Florida's legislature approved a new map hours after the ruling. Frames the ruling as having immediate and long-term electoral consequences. Does not bury the majority's claim that the ruling is 'limited' but juxtaposes it directly with the dissent's argument that it dismantles the law.",
+      "BBC News": "Written for an international audience; provides more background context on Section 2 and the Voting Rights Act's historical role. Uniquely specifies the new evidentiary standard \u2014 that litigants must now prove intentional discrimination. Includes the White House quote. Names Florida, Tennessee, and Mississippi as affected states. Neutral but clear framing that the ruling will make it 'significantly more difficult' to challenge discriminatory maps. Does not include civil rights group reactions beyond Kagan's dissent.",
+      "Axios": "The most analytically structured piece. Leads with the political consequence: 'could boost the Republican majority in the House by an additional 19 seats' \u2014 a specific number no other outlet provides. Uniquely frames the ruling as establishing that partisan gerrymandering can now serve as a shield against VRA challenges. Provides historical context on the Louisiana litigation dating to 2020. Includes a quote from Black Voters Matter calling the VRA 'the guardrail' and noting the absence of state-level protections. Notes the complication of Florida's separate Fair Districts Amendment. Uses the 'effectively neuters' language \u2014 the second-strongest characterization after Reuters' 'guts.'",
+      "Reuters": "Headline-only in the dossier. Uses the strongest verb \u2014 'guts' \u2014 suggesting an editorial judgment that the ruling is devastating to the Voting Rights Act. No body text available for deeper analysis.",
+      "Bloomberg": "Body text is mostly navigational boilerplate with only a brief substantive lede. Frames the ruling through the lens of Republican House control in 2026 midterms and beyond. Uses 'limited' and 'curbs' \u2014 moderate verbs. No detailed legal analysis or reaction quotes in the available text.",
+      "The Washington Post": "Headline-only in the dossier. Uses 'limits key provision' \u2014 moderate framing consistent with BBC and Bloomberg. No body text available for deeper analysis."
+    },
+    "primary_source_alignment": [
+      "No primary source (the court opinion itself) was located in the dossier, so alignment cannot be assessed.",
+      "Multiple outlets quote directly from Alito's majority opinion and Kagan's dissent, but without the full opinion text, it is impossible to verify whether those quotes are in context or whether significant portions of the ruling are going unreported.",
+      "The new legal test is described differently by different outlets \u2014 BBC emphasizes an intent requirement, Axios emphasizes the partisan-gerrymandering shield \u2014 and without the primary source it is unclear which framing is more accurate or whether both capture different aspects of the opinion."
+    ],
+    "missing_context": [
+      "The full text of the court opinion (Louisiana v. Callais) was not available in the dossier, making it impossible to verify outlet characterizations of the new legal standard or to identify provisions outlets may have omitted.",
+      "No outlet in the dossier provides the full text or detailed summary of Kagan's dissent, Thomas's likely concurrence, or any other separate opinions \u2014 the internal dynamics of the majority coalition are not explored.",
+      "Axios cites a figure of 19 additional Republican House seats; no other outlet corroborates this number or provides its source. A fair-minded reader would want to know where that estimate comes from.",
+      "No outlet discusses the potential for congressional legislation to restore or strengthen Section 2 protections \u2014 whether such legislation is being contemplated or would face constitutional obstacles under this ruling.",
+      "No outlet discusses the ruling's implications for state and local redistricting (school boards, city councils, state legislatures) in detail, though The New York Times includes a brief quote from a plaintiff alluding to it.",
+      "No outlet addresses whether the ruling has any bearing on Section 5 of the Voting Rights Act (preclearance), which was previously gutted in Shelby County v. Holder (2013).",
+      "The Washington Post and Reuters are headline-only, significantly reducing the breadth of sourcing available for this analysis.",
+      "No outlet discusses the racial demographics of the plaintiff group (described by BBC as 'mainly white voters') in depth or explores who funded the litigation."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Multiple outlets with full body text covered the same ruling with materially different framing \u2014 from Reuters' 'guts' to The Washington Post's 'limits,' and from Axios' specific 19-seat estimate to the NYT's granular political reactions. The absence of the primary source (the opinion itself) and divergent descriptions of the new legal standard make a coverage-comparison META post the most editorially honest approach, surfacing what is agreed upon while flagging what readers should watch for.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/live/voting-rights-act-supreme-court-updates-04-29-2026",
+      "title": "Live updates: Supreme Court ruling weakens a key tool of the Voting Rights Act - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/04/29/us/supreme-court-voting-rights",
+      "title": "Live Updates: Supreme Court Strikes Down Louisiana Map in Voting Rights Case - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/clyw3p7xv4wo",
+      "title": "Supreme Court limits use of race in drawing electoral maps - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/04/29/supreme-court-redistricting-race-gerrymander",
+      "title": "Supreme Court narrows voting law, lifting GOP odds of keeping House - Axios"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us-supreme-court-blocks-louisiana-voting-map-with-second-black-majority-district-2026-04-29/",
+      "title": "US Supreme Court guts key provision of Voting Rights Act - Reuters"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bloomberglaw.com/us-law-week/supreme-court-curbs-use-of-race-in-drawing-voting-districts",
+      "title": "Supreme Court Curbs Use of Race in Drawing Voting Districts (2) - Bloomberg Law News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/04/29/supreme-court-voting-rights-act-louisiana-voting-maps/",
+      "title": "Supreme Court limits key provision of the landmark Voting Rights Act - The Washington Post"
+    }
+  ]
+}
