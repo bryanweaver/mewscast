@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-04-29-comey-appears-in-court-ca7f97bd0d",
+  "headline_seed": "Comey appears in court on charges of threatening Trump - The Washington Post",
+  "brief": {
+    "story_id": "2026-04-29-comey-appears-in-court-ca7f97bd0d",
+    "consensus_facts": [
+      "Former FBI Director James Comey appeared in federal court in Alexandria, Virginia, on Wednesday, April 29, 2026, a day after being indicted.",
+      "Comey faces two criminal counts related to allegedly threatening President Donald Trump, stemming from an Instagram post showing seashells arranged to form the numbers '86 47' on a North Carolina beach.",
+      "Comey did not enter a plea at the court appearance.",
+      "Federal Magistrate Judge William E. Fitzpatrick ordered Comey released without conditions, referencing that conditions were not necessary in his prior case either.",
+      "Comey's attorney Patrick Fitzgerald announced plans to file a motion to dismiss the case on grounds of vindictive prosecution.",
+      "Comey was previously indicted in September 2025 on separate charges; that case was dismissed on grounds that the U.S. attorney who brought it was illegally appointed.",
+      "Comey said after the indictment: 'I'm still innocent, I'm still not afraid, and I still believe in the independent federal judiciary. So, let's go.'",
+      "Comey removed the Instagram post shortly after backlash erupted, saying he did not realize the numbers were associated with violence and that he opposed violence of any kind.",
+      "Members of Comey's family, including his wife Patrice Failor, were present at the courthouse."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the prosecution's political nature",
+        "positions": {
+          "Al Jazeera English": "Explicitly states the indictment 'marks a renewed push by Trump's Justice Department to target perceived political enemies of the president with criminal prosecution' and notes Trump called for charges against Comey by name on social media.",
+          "CBS News": "Reports the vindictive prosecution defense and includes legal analyst commentary about the high bar for prosecution and the robust First Amendment defense, but does not editorially characterize the prosecution as politically motivated.",
+          "CNBC": "Reports Trump's own comments calling Comey 'a dirty cop' and claiming he 'cheated on elections,' and notes the indictment is 'notably sparse on details,' but frames these as factual observations rather than editorial characterization.",
+          "Associated Press": "Provides minimal context in the available text, not characterizing the prosecution's motivations."
+        }
+      },
+      {
+        "topic": "Where the case will be tried",
+        "positions": {
+          "Al Jazeera English": "States Comey's next court appearance is expected in North Carolina, where the grand jury returned the indictment.",
+          "CNBC": "States the case will be prosecuted in the U.S. District Court for the Eastern District of North Carolina.",
+          "CBS News": "Does not specify the trial venue."
+        }
+      },
+      {
+        "topic": "Trump's direct involvement in ordering the prosecution",
+        "positions": {
+          "CBS News": "Reports that Acting Attorney General Todd Blanche denied Trump directed the prosecution, quoting him saying 'Absolutely, positively not.'",
+          "Al Jazeera English": "Notes Trump 'last year referred to Comey by name in a social media post calling for criminal charges against his adversaries,' implying a connection.",
+          "CNBC": "Reports Trump's hostile comments about Comey but does not directly address whether Trump ordered the prosecution."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text available is essentially a photo caption and brief summary, lacking the depth of other outlets. Leads on the fact of the indictment and the seashell photo. No legal analysis, no defense arguments, no political context included in the available text.",
+      "CBS News": "Provides the most thorough procedural and legal analysis among outlets with full text. Leads with the court appearance, includes detailed courtroom observations (Comey's attire, demeanor, nodding as rights were read), and prominently features legal contributor Jessica Levinson's analysis about the First Amendment defense and the high bar for prosecution. Includes Blanche's denial that Trump directed the prosecution. Also uniquely references the Supreme Court's 2023 standard for 'true threats.' Buries the political context below the legal analysis.",
+      "Al Jazeera English": "Most explicitly political framing. The final paragraph \u2014 'The indictment marks a renewed push by Trump's Justice Department to target perceived political enemies' \u2014 is presented as editorial fact rather than attributed opinion. Notes Trump publicly called for charges against Comey by name. Shortest of the full-text articles; omits legal analysis of First Amendment issues entirely. Does not include Comey's post-indictment statement.",
+      "CNBC": "Leads with key bullet points for financial/business audience. Uniquely includes Trump's own Wednesday comments comparing '86' to mob terminology and his claim that his life was 'probably' in danger from Comey's photo. Also uniquely reports FBI Director Kash Patel's statement that the FBI investigated the case for 'nine, 10, 11 months' and notes the three-page indictment is 'notably sparse on details.' Reports Fitzgerald's request for preservation of inflammatory statements about Comey by Trump and DOJ. Most detailed on the factual record.",
+      "Reuters": "Headline-only; no body text available for analysis. Headline confirms Comey was released after indictment.",
+      "The New York Times": "Headline-only; article is about a related but distinct story \u2014 Judge Says Maurene Comey Can Sue the Trump Administration for Firing Her \u2014 not directly about James Comey's court appearance. This is a tangential article about his daughter's lawsuit against the Trump administration.",
+      "The Washington Post": "Headline-only; headline confirms the vindictive prosecution challenge angle, matching the framing in CBS News, CNBC, and Al Jazeera English."
+    },
+    "primary_source_alignment": [
+      "No primary source (indictment text, court filings, or transcript) was located in the dossier.",
+      "CNBC describes the indictment as a three-page document that is 'notably sparse on details' beyond the photo and the assertion that Comey intended to convey a threat. This characterization cannot be verified against the actual document.",
+      "CBS News quotes the indictment's language about a 'reasonable recipient who is familiar with the circumstances' interpreting the shells as 'a serious expression of an intent to do harm to President Trump.' Without the primary source, this quote cannot be independently verified."
+    ],
+    "missing_context": [
+      "The actual text of the indictment was not available as a primary source, which would allow verification of specific charges, legal standards cited, and evidentiary claims.",
+      "No outlet with full body text provides the legal text of the statutes Comey is charged under or the specific penalties he faces if convicted.",
+      "No outlet explores what legal precedent exists for prosecuting symbolic social media expression as a presidential threat, beyond CBS News's brief reference to the 2023 Supreme Court standard (likely Counterman v. Colorado).",
+      "No outlet discusses how many similar '86 47' references were made by others on social media and whether any of those individuals were investigated or charged.",
+      "The New York Times article in the dossier is about Maurene Comey's separate lawsuit against the Trump administration for firing her, not about James Comey's court appearance \u2014 it provides tangential family context but not coverage of the core story.",
+      "No outlet reports on public opinion or legal community reaction beyond CBS News's single legal analyst.",
+      "No outlet addresses how the venue selection of North Carolina (where the Instagram post photo was taken) might affect the case, including jury pool considerations.",
+      "Acting AG Todd Blanche's denial that Trump directed the prosecution (reported by CBS News) is a significant claim that only one full-text outlet covers; the others do not address it.",
+      "CNBC uniquely reports Kash Patel's claim about an FBI investigation lasting 'nine, 10, 11 months' \u2014 no other outlet corroborates this detail."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text confirm the core facts of Comey's court appearance, the charges, the judge's release decision, and the vindictive prosecution defense strategy. While there is some framing divergence \u2014 particularly Al Jazeera's explicitly political characterization \u2014 the underlying facts are consistent across outlets, making this a straightforward REPORT with appropriate notation of the legal and political context.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/comey-justice-department-trump-threat-86-47-0286ff6e5e731dec09bba2dea6ff41e0",
+      "title": "Comey appears in court in Trump threat case that's likely to pose a challenge for Justice Department - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/comey-appears-court-after-his-indictment-for-allegedly-threatening-trump/",
+      "title": "Comey appears in court after his indictment for allegedly threatening Trump - CBS News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/4/29/ex-fbi-chief-comey-appears-in-court-over-alleged-trump-threat",
+      "title": "Ex-FBI chief Comey appears in court over alleged Trump threat - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/29/james-comey-trump-threat-indictment-seashells.html",
+      "title": "Comey will challenge Trump seashells threat indictment as vindictive prosecution, lawyer says - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/ex-fbi-chief-comey-expected-surrender-us-authorities-following-indictment-source-2026-04-29/",
+      "title": "Ex-FBI chief Comey released after indictment over alleged threat against Trump - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/04/28/nyregion/maurene-comey-lawsuit-trump.html",
+      "title": "Judge Says Maurene Comey Can Sue the Trump Administration for Firing Her - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/04/29/comey-threat-indictment-trump-court/",
+      "title": "Comey\u2019s lawyers say they will challenge threat charges as vindictive - The Washington Post"
+    }
+  ]
+}
