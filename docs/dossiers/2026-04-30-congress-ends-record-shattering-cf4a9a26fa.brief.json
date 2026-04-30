@@ -1,0 +1,140 @@
+{
+  "story_id": "2026-04-30-congress-ends-record-shattering-cf4a9a26fa",
+  "headline_seed": "Congress ends record-shattering DHS shutdown - Politico",
+  "brief": {
+    "story_id": "2026-04-30-congress-ends-record-shattering-cf4a9a26fa",
+    "consensus_facts": [
+      "The House passed a Senate-originated bill on Thursday, April 30, 2026, to fund most of the Department of Homeland Security, ending the longest agency shutdown in U.S. history.",
+      "The bill passed by voice vote, meaning individual members' votes were not recorded.",
+      "The shutdown lasted approximately 75\u201376 days, beginning on February 14, 2026, when DHS funding lapsed.",
+      "The bill funds DHS agencies including TSA, the Coast Guard, FEMA, the Secret Service, and CISA but does not include funding for Immigration and Customs Enforcement (ICE) or Customs and Border Protection (CBP).",
+      "The Senate had unanimously passed the legislation approximately one month earlier, in late March 2026.",
+      "House Speaker Mike Johnson initially rejected the Senate bill, calling it 'a joke,' and delayed bringing it to a vote for weeks.",
+      "Johnson allowed the vote to proceed after the Senate adopted a budget resolution this week that begins the reconciliation process to fund ICE and Border Patrol separately on a party-line basis.",
+      "The reconciliation framework instructs committees to draft legislation authorizing approximately $70 billion for ICE and Border Patrol for roughly the remainder of Trump's term.",
+      "DHS Secretary Markwayne Mullin warned that emergency funds to pay DHS employees were nearly exhausted and would run out around the beginning of May.",
+      "Democrats had refused to fund ICE and Border Patrol without reforms to immigration enforcement tactics, citing the fatal shooting of two U.S. citizens in Minnesota by federal immigration agents.",
+      "President Trump was expected to sign the bill into law.",
+      "More than 1,100 TSA agents quit during the shutdown period.",
+      "ICE and Border Patrol operations continued largely unimpeded during the shutdown due to funding from the prior year's One Big Beautiful Bill Act."
+    ],
+    "disagreements": [
+      {
+        "topic": "Exact length of the shutdown",
+        "positions": {
+          "CNN": "75 days",
+          "Politico": "76 days",
+          "NBC News": "75 days",
+          "NPR": "76th day (implying 76 days)",
+          "CBS News": "76-day shutdown",
+          "USA Today": "more than two months (does not specify exact day count)"
+        }
+      },
+      {
+        "topic": "Characterization of the vote outcome",
+        "positions": {
+          "CBS News": "Describes the voice vote as 'unanimously approved'",
+          "CNN": "Describes it as 'passed by voice vote,' noting Republicans chose not to take a recorded vote due to internal divisions",
+          "Politico": "Passed by voice vote, no characterization as unanimous",
+          "NBC News": "Passed 'by voice' with members shouting approval",
+          "NPR": "Passed by voice vote"
+        }
+      },
+      {
+        "topic": "Attribution of blame for the shutdown",
+        "positions": {
+          "CNN": "Frames it as GOP infighting prolonging the crisis; notes Democrats won by blocking ICE funds",
+          "Politico": "Distributes blame more evenly, quoting both Republican frustration with the Senate process and Democratic Rep. DeLauro saying she proposed this solution 79 days ago",
+          "NBC News": "States 'Democrats had forced a DHS shutdown Feb. 14' by rejecting Republican funding bills",
+          "NPR": "Frames Democrats as refusing to fund immigration functions and Johnson as repeatedly delaying the vote",
+          "CBS News": "States 'Democrats have objected to funding' ICE and Border Patrol",
+          "USA Today": "Neutral framing, describes it as 'a political showdown'"
+        }
+      },
+      {
+        "topic": "Trump's role in directing emergency pay",
+        "positions": {
+          "CBS News": "Trump ordered DHS to redirect money to pay employees in March",
+          "NPR": "Trump signed a memo authorizing DHS to use money from the One Big Beautiful Bill, noting this potentially infringed on Congress's constitutional spending powers",
+          "Politico": "Trump directed DHS to temporarily cover paychecks last month",
+          "CNN": "The Trump administration tapped emergency funds to pay staffers"
+        }
+      },
+      {
+        "topic": "Whether the bill contains any immigration enforcement reforms",
+        "positions": {
+          "Politico": "Explicitly states the legislation 'includes some new guardrails on immigration enforcement tactics negotiated early this year' but not the additional rules Democrats sought",
+          "CNN": "Does not mention any guardrails in the bill",
+          "NBC News": "Does not mention any guardrails",
+          "CBS News": "Does not mention any guardrails",
+          "NPR": "Does not mention any guardrails"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only article with no retrievable body text. Headline focuses on House Republican indecision on DHS funding for Secret Service and TSA, framing the story as ongoing uncertainty rather than resolution. Cannot assess body-level framing.",
+      "CNN": "Leads with the GOP concession framing \u2014 'House GOP concedes' is the headline verb. Emphasizes the 'major retreat by Speaker Mike Johnson' and describes the outcome as 'a major win for Democrats.' Gives substantial space to intra-party Republican tensions, quoting Chip Roy, Mario Diaz-Balart, Zach Nunn, and Jodey Arrington. Frames Johnson and House GOP as having 'effectively lost their ability to govern.' Also ties the DHS vote to the separate FISA reauthorization challenge. The no-recorded-vote detail is framed as Republicans hiding from accountability.",
+      "Politico": "Most detailed and process-oriented account. Leads on the day count (76th day) and the fact that the bill resolves nothing substantively \u2014 'without solving any of the policy disagreements.' Unique in noting the bill contains 'some new guardrails on immigration enforcement tactics negotiated early this year.' Provides the most granular list of funded agencies. Quotes both Chip Roy and Rosa DeLauro, giving voice to both parties' frustrations. Notes 1,100+ TSA agent departures and halted World Cup security preparations. Frames House GOP leaders as having been rolled by the Senate process.",
+      "NBC News": "Notably states that 'Democrats had forced a DHS shutdown' \u2014 the most Republican-sympathetic framing of the shutdown's origin among the lean-left outlets. Focuses on the procedural mechanics: reconciliation, the $70 billion framework, Johnson's stated rationale. Gives Johnson direct quotes framing the budget resolution as the key unlock. Shorter and more straightforward than CNN or Politico, with less emphasis on GOP dysfunction.",
+      "NPR": "Concise and focused. Unique in flagging a constitutional concern: Trump's memo authorizing DHS to use One Big Beautiful Bill funds 'potentially infringing on the powers granted to Congress by the Constitution to direct how taxpayer money is spent.' This is a significant editorial choice not made by other outlets. Also notes Johnson's April 1 reversal and the 29-day gap before he followed through. Frames Democrats' demands (body cameras, face covering restrictions) clearly.",
+      "USA Today": "Shortest full article in the dossier. Leads on the resolution and its impact \u2014 workers without pay, upended air travel, jeopardized safety. Does not include any direct quotes from Democrats. Quotes Rep. Mike Flood and references Mullin's warnings. Frames the story primarily around the deadline pressure rather than partisan dynamics.",
+      "CBS News": "Leads with the voice vote and 'little fanfare,' framing the resolution as anticlimactic after prolonged drama. Unique in characterizing the vote as 'unanimously approved,' which is editorially debatable for a voice vote where dissent may not be individually counted. Quotes Coast Guard Commandant Adm. Kevin Lunday calling his workforce 'furious,' providing a unique human-impact angle. Also uniquely links to opinion/analysis pieces at the bottom ('Why Shutdowns Never Work,' 'How Trump Botched Immigration')."
+    },
+    "primary_source_alignment": [
+      "No primary source (bill text, vote record, or official statement) was located in the dossier. All claims are sourced to outlet reporting only.",
+      "Without the bill text, Politico's unique claim that the legislation includes 'some new guardrails on immigration enforcement tactics negotiated early this year' cannot be independently verified against the other outlets, which do not mention this provision."
+    ],
+    "missing_context": [
+      "No outlet provides the bill number or links to the actual legislative text, making independent verification of its contents impossible.",
+      "The voice vote means no roll-call record exists, but no outlet discusses the procedural implications of this for accountability or whether any member requested a recorded vote.",
+      "Only Politico mentions that World Cup security preparations were halted; the national security implications of delayed preparation for a major international event hosted on U.S. soil are underexplored.",
+      "Only NPR raises the constitutional question of Trump redirecting One Big Beautiful Bill funds to cover DHS payroll \u2014 a potentially significant separation-of-powers issue that other outlets ignore entirely.",
+      "No outlet explains what happens to back pay owed to DHS workers who went unpaid during parts of the shutdown, or the timeline for restoring normal pay.",
+      "No outlet details what specific 'guardrails on immigration enforcement tactics' Politico says are included in the bill, or how they differ from what Democrats demanded.",
+      "The reconciliation timeline is vague across all outlets \u2014 Trump's June 1 deadline is mentioned by Politico but the feasibility and procedural steps remaining are not explored.",
+      "No outlet discusses whether the two U.S. citizens killed in Minnesota have been identified, whether investigations are ongoing, or what accountability measures exist \u2014 despite this event being the triggering cause of the entire shutdown.",
+      "Coverage of the 1,100 TSA agent departures (mentioned by Politico) is not picked up by other outlets; the operational impact on airport security staffing levels is unexplored.",
+      "Reuters provided only a headline with no body text, limiting the dossier's wire-service perspective."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Six outlets with full body text covered the same event with materially different framings \u2014 particularly on blame attribution (NBC News says Democrats 'forced' the shutdown; CNN says GOP 'concedes'), whether the bill contains enforcement guardrails (only Politico reports this), and constitutional concerns about executive spending (only NPR raises this). The absence of a primary source makes the divergences in outlet framing the most newsworthy finding for Croncat's audience.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/house-republicans-undecided-dhs-funding-secret-service-tsa-pressure-action-2026-04-30/",
+      "title": "House Republicans undecided on DHS funding for Secret Service, TSA as pressure for action mounts - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/04/30/politics/dhs-shutdown-funding-bill-house-vote",
+      "title": "House GOP concedes in DHS funding fight, reopening TSA but blocking ICE funds - CNN"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/04/30/congress-ends-record-shattering-dhs-shutdown-00900777",
+      "title": ""
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/congress-expected-end-record-75-day-partial-government-shutdown-rcna342903",
+      "title": "Congress votes to end record shutdown, sending DHS funding bill to Trump's desk - NBC News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/04/30/nx-s1-5806054/congress-dhs-shutdown",
+      "title": "Congress ends record shutdown at the Department of Homeland Security - NPR"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/04/30/department-of-homeland-security-shutdown-ending-when/89872578007/",
+      "title": "Congress finally ends record-breaking Homeland Security shutdown - USA Today"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/dhs-shutdown-house-vote/",
+      "title": "House approves Senate bill to fund DHS and end record-setting 76-day shutdown - CBS News"
+    }
+  ]
+}
