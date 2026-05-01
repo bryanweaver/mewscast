@@ -1,0 +1,126 @@
+{
+  "story_id": "2026-05-01-a-deadline-for-the-f293c3afaf",
+  "headline_seed": "A deadline for the Iran war is here. What does the War Powers Act say? - The Washington Post",
+  "brief": {
+    "story_id": "2026-05-01-a-deadline-for-the-f293c3afaf",
+    "consensus_facts": [
+      "The 60-day War Powers Resolution deadline for the U.S. military conflict with Iran falls on Friday, May 1, 2026, based on President Trump's March 2 notification letter to Congress.",
+      "Defense Secretary Pete Hegseth told the Senate Armed Services Committee on Thursday that the administration believes the 60-day clock 'pauses or stops' during the ceasefire with Iran.",
+      "Sen. Tim Kaine (D-VA) disputed Hegseth's interpretation, saying the statute does not support pausing the clock during a ceasefire.",
+      "House Speaker Mike Johnson said the U.S. is 'not at war' and that Congress does not need to act, citing the absence of active kinetic military operations.",
+      "The Senate rejected a Democratic war powers resolution brought by Sen. Adam Schiff (D-CA) on Thursday, with a procedural vote failing 47-50.",
+      "Republican Sens. Rand Paul (R-KY) and Susan Collins (R-ME) voted in favor of the Democratic war powers resolution; Democratic Sen. John Fetterman (D-PA) voted against it.",
+      "The U.S. and Iran have been observing a ceasefire since approximately April 8, pausing active fighting.",
+      "Democrats in both the House and Senate have introduced multiple war powers resolutions in recent weeks and plan to continue forcing votes.",
+      "A senior administration official stated that 'for War Powers Resolution purposes, the hostilities that began on Saturday, February 28 have terminated.'",
+      "White House spokeswoman Anna Kelly said the administration provided over 30 bipartisan briefings to Congress since before Operation Epic Fury began.",
+      "The War Powers Resolution allows the president a 30-day extension beyond the 60-day deadline to safely withdraw forces, but not to continue offensive operations.",
+      "Some Republican senators \u2014 including Josh Hawley (R-MO), John Curtis (R-UT), and Lisa Murkowski (R-AK) \u2014 have signaled they may want congressional authorization or an exit strategy if the conflict continues past the deadline."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the 60-day War Powers clock can be paused by a ceasefire",
+        "positions": {
+          "Trump administration (Hegseth, senior officials)": "The ceasefire pauses or stops the 60-day clock; hostilities have 'terminated' for WPR purposes.",
+          "Democratic lawmakers (Kaine) and legal experts cited by CBS News and Al Jazeera": "The statute contains no provision for pausing the clock; a temporary ceasefire does not alter the legal obligation.",
+          "CBS News (second article)": "Attorney Katherine Yon Ebright of the Brennan Center says the WPR does not accommodate a ceasefire pause 'by its text or by its design' but notes a history of executive branch lawyers misinterpreting the law."
+        }
+      },
+      {
+        "topic": "Whether the U.S. is 'at war' with Iran",
+        "positions": {
+          "House Speaker Mike Johnson (via NBC News)": "The U.S. is 'not at war' \u2014 there is no active kinetic military activity.",
+          "NBC News": "Trump himself has repeatedly called the conflict a 'war,' though he later acknowledged he perhaps shouldn't use that term because 'you are supposed to get approval' from Congress. He has also called it a 'little excursion' and 'military operation.'"
+        }
+      },
+      {
+        "topic": "Whether the 30-day extension allows continued offensive operations",
+        "positions": {
+          "CBS News (second article)": "Explicitly states the 30-day extension is for withdrawal only, 'not a 30-day blank check' (quoting David Janovsky of POGO).",
+          "NBC News": "Notes the 30-day extension exists but says it's 'unclear whether President Donald Trump plans to' invoke it; does not specify it is withdrawal-only."
+        }
+      },
+      {
+        "topic": "Cost of the war",
+        "positions": {
+          "NBC News": "Acting Pentagon Comptroller Jules Hurst III testified the war has cost $25 billion so far.",
+          "CBS News (first article, sidebar links)": "References reporting that the 'true cost' is closer to $50 billion, not $25 billion."
+        }
+      },
+      {
+        "topic": "Characterization of whether hostilities have ended or merely paused",
+        "positions": {
+          "Reuters (headline only)": "Senior U.S. official says the truce 'terminated' hostilities for war powers purposes.",
+          "Al Jazeera": "Describes the ceasefire as 'ongoing yet fragile' and frames the administration's position as contested by Democrats and legal experts.",
+          "CBS News (second article)": "Notes Trump 'abruptly called off' plans for a second round of peace talks and that the fate of Iran's nuclear program and the Strait of Hormuz remain unresolved."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only article. The headline leads with the administration's position that the truce 'terminated' hostilities for war powers purposes, framing it as an official statement rather than a contested legal claim. No body text available for deeper analysis.",
+      "CBS News (Article 2 \u2014 Senate vote story)": "Leads on the Senate's rejection of Democrats' sixth war powers resolution, emphasizing the vote count (47-50) and the pattern of Republican resistance. Highlights the bipartisan crossovers (Paul, Collins voting yes; Fetterman voting no). Gives significant space to Hegseth's ceasefire-pauses-the-clock argument and Kaine's rebuttal. Includes Johnson's 'not at war' framing. Sidebar links reference the war's cost and broader geopolitical consequences. Frames the story as a legislative and constitutional confrontation.",
+      "Al Jazeera": "Leads by framing this as a clash between the Trump administration's legal interpretation and opposition from Democrats and legal experts. Uses the phrase 'US-Israel war on Iran,' which is unique among all outlets in the dossier and signals a different geopolitical framing. Describes the ceasefire as 'fragile.' Article body is truncated but focuses on whether the ceasefire resets the War Powers clock, presenting the administration's claim as contested rather than established.",
+      "Axios": "Article body was inaccessible (403 error). Headline \u2014 'Pentagon calls timeout on War Powers' \u2014 uses colloquial, punchy language ('calls timeout') that frames the Pentagon's legal claim as a strategic maneuver rather than a straightforward legal position. No body text available.",
+      "The Washington Post": "Headline-only article. Headline is framed as an explainer ('What does the War Powers Act say?'), suggesting the piece is aimed at reader education rather than breaking news. No body text available for deeper analysis.",
+      "NBC News": "Leads on Speaker Johnson's 'not at war' claim and the approaching 60-day deadline. Uniquely and extensively catalogs Trump's own contradictory statements about whether the conflict is a 'war,' a 'little excursion,' or a 'military operation' \u2014 building a narrative of inconsistency. Reports that military leaders gave no indication the operation would be winding down and that the administration plans to request supplemental war funding. Also uniquely reports that a senior administration official said hostilities have 'terminated' for WPR purposes. This is the most detailed article in the dossier.",
+      "CBS News (Article 7 \u2014 deadline explainer)": "Most comprehensive standalone explainer in the dossier. Leads on the deadline itself and walks through the WPR's mechanics in detail. Uniquely quotes David Janovsky (POGO) on the 30-day extension being limited to withdrawal. Quotes Katherine Yon Ebright (Brennan Center) on the legal weakness of the ceasefire-pauses-clock argument and draws a historical parallel to the Obama administration's 2011 Libya interpretation. Notes Trump 'abruptly called off' peace talks. Frames the story as a constitutional confrontation with historical precedent."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (e.g., the text of Trump's March 2 notification letter, the War Powers Resolution statute, the Schiff resolution, or Hegseth's full testimony transcript) were located in the dossier.",
+      "Multiple outlets reference specific statutory provisions of the War Powers Resolution (60-day clock, 30-day extension, 48-hour notification requirement), but without the primary text, it is not possible to independently verify whether their characterizations are fully accurate.",
+      "CBS News (Article 7) provides the most detailed legal analysis and is the only outlet to cite named legal experts (Janovsky, Ebright) interpreting the statute's text directly."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides the full text or substantive excerpts of the War Powers Resolution itself, which would allow readers to independently evaluate the competing legal interpretations about whether a ceasefire pauses the clock.",
+      "No outlet provides the text of Trump's March 2 notification letter to Congress, which is the triggering document for the 60-day clock.",
+      "No outlet discusses what enforcement mechanism, if any, exists if the president simply ignores the 60-day deadline \u2014 a historically significant gap given that no president has ever been forced to comply with the WPR withdrawal requirement.",
+      "No outlet discusses whether any lawsuit or judicial challenge has been filed or is being contemplated regarding the war's legality under the WPR.",
+      "Only CBS News (Article 7) draws the historical parallel to the Obama administration's 2011 Libya precedent; other outlets omit this relevant precedent entirely.",
+      "No outlet provides detail on the status of Sen. Lisa Murkowski's draft Authorization for Use of Military Force \u2014 whether it has co-sponsors, what its scope would be, or a timeline for introduction.",
+      "Al Jazeera uniquely describes the conflict as the 'US-Israel war on Iran,' implying Israeli involvement, but no other outlet addresses Israel's role in the conflict, leaving this characterization unexamined.",
+      "No outlet addresses what happens to the ongoing military posture in the Strait of Hormuz if the WPR deadline triggers a withdrawal obligation.",
+      "The Reuters and Washington Post articles were headline-only, and the Axios article returned a 403 error, significantly limiting the breadth of the dossier. Three of seven articles had no usable body text.",
+      "No outlet explores whether the administration's claim that hostilities have 'terminated' could paradoxically weaken its legal position if it later resumes strikes \u2014 i.e., whether a new notification and new 60-day clock would be required."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Multiple outlets covered the same legal deadline and Senate vote but diverged materially in framing: NBC News built a narrative around Trump's contradictory rhetoric, Al Jazeera introduced an 'US-Israel war' frame absent from all other coverage, CBS News provided the most detailed legal analysis with named experts, and Speaker Johnson's 'not at war' claim sits in direct tension with the administration's own prior language. The core story is not just the deadline but how the legal and political framing of the conflict is being contested \u2014 making this a coverage-divergence story best served by a META post.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/war-powers-resolution-purposes-us-hostilities-with-iran-that-began-february-have-2026-05-01/",
+      "title": "US official says Iran war truce 'terminated' hostilities for war powers deadline - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/senate-iran-war-powers-democrats/",
+      "title": "Senate rejects Democrats' 6th Iran war powers resolution ahead of 60-day deadline - CBS News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/5/1/has-the-us-iran-ceasefire-reset-the-clock-on-war-powers-act-deadline",
+      "title": "Has the US-Iran ceasefire reset the clock on War Powers Act deadline? - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/05/01/iran-pentagon-hegseth-war-powers-senate-hearing-republicans",
+      "title": "Pentagon calls timeout on War Powers - Axios"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/05/01/iran-us-war-powers-trump/",
+      "title": "A deadline for the Iran war is here. What does the War Powers Act say? - The Washington Post"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/house-speaker-mike-johnson-says-us-not-war-iran-white-house-approaches-rcna342868",
+      "title": "House Speaker Mike Johnson says the U.S. is 'not at war' with Iran as White House approaches 60-day deadline - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/iran-war-powers-resolution-60-day-deadline-congress-trump/",
+      "title": "As Iran war hits key 60-day deadline, Congress and Trump face choices on next steps - CBS News"
+    }
+  ]
+}
