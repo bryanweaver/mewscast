@@ -1668,6 +1668,62 @@ def post_journalism_cycle(
     tweet_id = None
     reply_tweet_id = None
     x_success = False
+    bluesky_uri = None
+    bluesky_reply_uri = None
+    bluesky_success = False
+
+    synthetic_story = {
+        "title": dossier.headline_seed,
+        "url": dossier.articles[0].url if dossier.articles else None,
+        "source": dossier.articles[0].outlet if dossier.articles else "Unknown",
+    }
+
+    def _persist_post_artifacts() -> None:
+        """Write source-of-truth (posts_history, dossier_store, dossier HTML)
+        as soon as any platform success is known. Idempotent — safe to call
+        multiple times in the same cycle. Never raises: each substep is
+        wrapped so a single failure can't abort the publish loop.
+
+        Why this lives inline and runs after every platform success: prior
+        end-of-cycle persistence let runner crashes (post-publish but
+        pre-record) leave Bluesky with a live post and the repo with no
+        record, which then re-published the same story on the next cron.
+        """
+        try:
+            if tracker is not None:
+                tracker.upsert_post(
+                    synthetic_story,
+                    post_content=draft.text,
+                    tweet_id=tweet_id,
+                    reply_tweet_id=reply_tweet_id,
+                    bluesky_uri=bluesky_uri,
+                    bluesky_reply_uri=bluesky_reply_uri,
+                    image_prompt=image_prompt,
+                    dossier_id=draft.story_id,
+                    post_type=draft.post_type.value,
+                    post_pipeline="journalism",
+                )
+        except Exception as e:
+            print(f"[journalism] posts_history upsert failed (non-fatal): {e}")
+
+        try:
+            post_url = None
+            if tweet_id:
+                post_url = f"https://x.com/i/web/status/{tweet_id}"
+            bluesky_url = bluesky_web_url(bluesky_uri) if bluesky_uri else None
+            if post_url is None and bluesky_url is not None:
+                post_url = bluesky_url
+            dossier_store.save_post_record(
+                draft.story_id, draft, post_url=post_url, bluesky_url=bluesky_url
+            )
+        except Exception as e:
+            print(f"[journalism] dossier_store.save_post_record failed (non-fatal): {e}")
+
+        try:
+            _render_dossier_html(dossier_store, draft, dossier)
+        except Exception as e:
+            print(f"[journalism] dossier HTML render failed (non-fatal): {e}")
+
     if twitter_bot is not None:
         try:
             if image_path:
@@ -1678,6 +1734,7 @@ def post_journalism_cycle(
                 tweet_id = x_result.get("id")
                 x_success = True
                 print(f"[journalism] X post ok: {tweet_id}")
+                _persist_post_artifacts()
 
                 if not is_meta:
                     # Dossier reply — plain-text reply with a short
@@ -1694,6 +1751,7 @@ def post_journalism_cycle(
                         if reply_result:
                             reply_tweet_id = reply_result.get("id")
                             print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
+                            _persist_post_artifacts()
                     except Exception as re:
                         print(f"[journalism] X dossier reply failed: {re}")
                 else:
@@ -1701,9 +1759,6 @@ def post_journalism_cycle(
         except Exception as e:
             print(f"[journalism] X publish failed: {e}")
 
-    bluesky_uri = None
-    bluesky_reply_uri = None
-    bluesky_success = False
     if bluesky_bot is not None:
         try:
             if image_path:
@@ -1714,6 +1769,7 @@ def post_journalism_cycle(
                 bluesky_uri = bs_result.get("uri")
                 bluesky_success = True
                 print(f"[journalism] Bluesky post ok: {bluesky_uri}")
+                _persist_post_artifacts()
 
                 # Dossier reply — clickable link card (no banner thumbnail).
                 # Bluesky allows one embed per post; using a link card keeps
@@ -1734,6 +1790,7 @@ def post_journalism_cycle(
                     if reply_result:
                         bluesky_reply_uri = reply_result.get("uri")
                         print(f"[journalism] Bluesky dossier reply ok: {bluesky_reply_uri}")
+                        _persist_post_artifacts()
                 except Exception as re:
                     print(f"[journalism] Bluesky dossier reply failed: {re}")
         except Exception as e:
@@ -1742,41 +1799,6 @@ def post_journalism_cycle(
     if not (x_success or bluesky_success):
         print("[journalism] no platform accepted the post; failing cycle")
         return False
-
-    # Record to post history + dossier store
-    if tracker is not None:
-        synthetic_story = {
-            "title": dossier.headline_seed,
-            "url": dossier.articles[0].url if dossier.articles else None,
-            "source": dossier.articles[0].outlet if dossier.articles else "Unknown",
-        }
-        tracker.record_post(
-            synthetic_story,
-            post_content=draft.text,
-            tweet_id=tweet_id,
-            reply_tweet_id=reply_tweet_id,
-            bluesky_uri=bluesky_uri,
-            bluesky_reply_uri=bluesky_reply_uri,
-            image_prompt=image_prompt,
-            dossier_id=draft.story_id,
-            post_type=draft.post_type.value,
-            post_pipeline="journalism",
-        )
-
-    post_url = None
-    if tweet_id:
-        post_url = f"https://x.com/i/web/status/{tweet_id}"
-    bluesky_url = bluesky_web_url(bluesky_uri) if bluesky_uri else None
-    # Back-compat: if X didn't publish, keep post_url pointing at the Bluesky
-    # skeet so older consumers still have a canonical link.
-    if post_url is None and bluesky_url is not None:
-        post_url = bluesky_url
-    dossier_store.save_post_record(
-        draft.story_id, draft, post_url=post_url, bluesky_url=bluesky_url
-    )
-
-    # Render dossier HTML for the public viewer + rebuild index
-    _render_dossier_html(dossier_store, draft, dossier)
 
     print(f"\n{'=' * 60}")
     print("[journalism] cycle complete")
@@ -1881,6 +1903,34 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
     tweet_id = None
     reply_tweet_id = None
     x_success = False
+    bluesky_uri = None
+    bluesky_reply_uri = None
+    bluesky_success = False
+
+    tracker = PostTracker()
+    synthetic_story = {"title": post_text[:100], "url": None, "source": "republish"}
+
+    def _persist_post_artifacts() -> None:
+        """Idempotent: write to posts_history as soon as any platform success
+        is known. Keyed on (dossier_id, post_pipeline) so successive calls
+        merge IDs into one record. See post_journalism_cycle for the full
+        rationale (runner crash mid-cycle previously left posts untracked)."""
+        try:
+            tracker.upsert_post(
+                synthetic_story,
+                post_content=post_text,
+                tweet_id=tweet_id,
+                reply_tweet_id=reply_tweet_id,
+                bluesky_uri=bluesky_uri,
+                bluesky_reply_uri=bluesky_reply_uri,
+                image_prompt=image_prompt,
+                dossier_id=story_id,
+                post_type=post_type.value,
+                post_pipeline="journalism",
+            )
+        except Exception as e:
+            print(f"[republish] posts_history upsert failed (non-fatal): {e}")
+
     try:
         twitter_bot = TwitterBot()
         if image_path:
@@ -1891,6 +1941,7 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             tweet_id = x_result.get("id")
             x_success = True
             print(f"[republish] X post ok: {tweet_id}")
+            _persist_post_artifacts()
 
             if is_meta:
                 print("[republish] META — dossier URL inlined, no X self-reply")
@@ -1905,6 +1956,7 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
                     if reply_result:
                         reply_tweet_id = reply_result.get("id")
                         print(f"[republish] X dossier reply ok: {reply_tweet_id}")
+                        _persist_post_artifacts()
                 except Exception as re:
                     print(f"[republish] X dossier reply failed: {re}")
     except Exception as e:
@@ -1914,7 +1966,6 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
     # Bluesky keeps the link-card self-reply even for META, because the
     # 300-char cap truncates long META bodies and the card is how users
     # reach the dossier.
-    bluesky_success = False
     try:
         bluesky_bot = BlueskyBot()
         if image_path:
@@ -1925,6 +1976,7 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             bluesky_uri = bs_result.get("uri")
             bluesky_success = True
             print(f"[republish] Bluesky post ok: {bluesky_uri}")
+            _persist_post_artifacts()
 
             # Dossier reply — clickable link card, no banner thumbnail.
             reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
@@ -1935,7 +1987,9 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
                     text=reply_hook,
                 )
                 if reply_result:
+                    bluesky_reply_uri = reply_result.get("uri")
                     print(f"[republish] Bluesky dossier reply ok")
+                    _persist_post_artifacts()
             except Exception as re:
                 print(f"[republish] Bluesky dossier reply failed: {re}")
     except Exception as e:
@@ -1944,22 +1998,6 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
     if not (x_success or bluesky_success):
         print("[republish] no platform accepted the post")
         return False
-
-    # Record to post history
-    try:
-        tracker = PostTracker()
-        tracker.record_post(
-            {"title": post_text[:100], "url": None, "source": "republish"},
-            post_content=post_text,
-            tweet_id=tweet_id,
-            reply_tweet_id=reply_tweet_id,
-            image_prompt=image_prompt,
-            dossier_id=story_id,
-            post_type=post_type.value,
-            post_pipeline="journalism",
-        )
-    except Exception as e:
-        print(f"[republish] post history record failed: {e}")
 
     print(f"\n{'=' * 60}")
     print("[republish] done")

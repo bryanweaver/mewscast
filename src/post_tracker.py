@@ -427,6 +427,59 @@ class PostTracker:
 
         print(f"✓ Post recorded to history (total: {len(self.posts)} posts tracked)")
 
+    def upsert_post(self, story_metadata: Dict, post_content: str = None, tweet_id: str = None,
+                    reply_tweet_id: str = None, bluesky_uri: str = None, bluesky_reply_uri: str = None,
+                    image_prompt: str = None, dossier_id: Optional[str] = None,
+                    post_type: Optional[str] = None, post_pipeline: Optional[str] = None):
+        """Idempotent record-or-update keyed on (dossier_id, post_pipeline).
+
+        Why: a single dossier may publish to multiple platforms in sequence
+        (X main, X reply, Bluesky main, Bluesky reply). Calling this after
+        each successful platform action persists the source of truth as soon
+        as any post lands, so a runner crash mid-cycle never leaves a live
+        post untracked. Existing fields are only overwritten when the new
+        value is non-None — so a later call adding bluesky_uri won't wipe
+        an earlier x_tweet_id.
+        """
+        if not dossier_id:
+            self.record_post(
+                story_metadata, post_content=post_content, tweet_id=tweet_id,
+                reply_tweet_id=reply_tweet_id, bluesky_uri=bluesky_uri,
+                bluesky_reply_uri=bluesky_reply_uri, image_prompt=image_prompt,
+                dossier_id=dossier_id, post_type=post_type, post_pipeline=post_pipeline,
+            )
+            return
+
+        existing = None
+        for p in self.posts:
+            if p.get('dossier_id') == dossier_id and p.get('post_pipeline') == post_pipeline:
+                existing = p
+                break
+
+        if existing is None:
+            self.record_post(
+                story_metadata, post_content=post_content, tweet_id=tweet_id,
+                reply_tweet_id=reply_tweet_id, bluesky_uri=bluesky_uri,
+                bluesky_reply_uri=bluesky_reply_uri, image_prompt=image_prompt,
+                dossier_id=dossier_id, post_type=post_type, post_pipeline=post_pipeline,
+            )
+            return
+
+        updates = {
+            'x_tweet_id': tweet_id,
+            'x_reply_tweet_id': reply_tweet_id,
+            'bluesky_uri': bluesky_uri,
+            'bluesky_reply_uri': bluesky_reply_uri,
+        }
+        changed = False
+        for k, v in updates.items():
+            if v is not None and existing.get(k) != v:
+                existing[k] = v
+                changed = True
+        if changed:
+            self._save_history()
+            print(f"✓ Post record updated for dossier {dossier_id}")
+
     def cleanup_old_posts(self):
         """Remove posts older than max_history_days"""
         max_days = self.config.get('max_history_days', 7)
