@@ -1,0 +1,111 @@
+{
+  "story_id": "2026-05-03-how-redistricting-and-the-bc2e02b048",
+  "headline_seed": "How redistricting and the Supreme Court have cut voters out of US House races - Reuters",
+  "brief": {
+    "story_id": "2026-05-03-how-redistricting-and-the-bc2e02b048",
+    "consensus_facts": [
+      "The U.S. Supreme Court ruled in Louisiana v. Callais that Louisiana's congressional map with two majority-Black House districts was an unconstitutional racial gerrymander, in a 6-3 decision with Justice Samuel Alito writing the majority opinion.",
+      "Louisiana suspended its House primary elections (originally scheduled for May 16) to give state lawmakers time to redraw congressional maps following the ruling.",
+      "Louisiana Gov. Jeff Landry (R) ordered the suspension of House primaries while other races, including the Senate primary, will proceed as scheduled.",
+      "Tennessee Gov. Bill Lee (R) convened a special legislative session to redraw the state's congressional map, with the session set to start Tuesday.",
+      "Alabama Gov. Kay Ivey (R) called a special legislative session starting Monday to potentially redraw House maps and schedule special primary elections.",
+      "The Supreme Court ruling narrowed the Voting Rights Act's provisions that had been used to require creation of majority-minority congressional districts.",
+      "Republicans in multiple southern states moved to redraw congressional maps in ways expected to reduce Democratic-held seats, particularly those held by Black Democrats.",
+      "President Trump publicly encouraged the redistricting efforts, including thanking Louisiana's governor and urging Tennessee's governor to act."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of Louisiana Democratic seats at risk",
+        "positions": {
+          "The Washington Post": "Reports the new map 'could help the GOP gain one or two seats' in Louisiana.",
+          "NBC News": "Reports Republicans are set to eliminate 'at least one' of Louisiana's two Democratic-held districts, specifically Rep. Cleo Fields' district.",
+          "CBS News": "References Louisiana officials moving to 'draw a new map' without specifying exact seat count at risk."
+        }
+      },
+      {
+        "topic": "Alabama's specific legal situation and path forward",
+        "positions": {
+          "CBS News": "Details that Alabama AG Steve Marshall asked the Supreme Court to vacate the lower court ruling and that a court injunction requires the existing map to remain until after the 2030 Census; notes Ivey aims to return to the legislature's 2023 map.",
+          "NBC News": "Does not discuss Alabama's situation in detail."
+        }
+      },
+      {
+        "topic": "Scope of broader redistricting wave beyond the ruling",
+        "positions": {
+          "CBS News": "Provides extensive list of states that have already redistricted (Texas, California, Missouri, North Carolina, Virginia, Florida) as context for a broader national trend.",
+          "NBC News": "Focuses primarily on Louisiana and briefly mentions Tennessee, framing the ruling as colliding with 'Trump-backed efforts to redraw maps in numerous states' but not enumerating them.",
+          "The Washington Post": "Body text was largely paywalled; headline focuses on Louisiana and 'red states face pressure to redistrict.'"
+        }
+      },
+      {
+        "topic": "Whether legal challenges to the primary suspension are likely",
+        "positions": {
+          "NBC News": "Notes the move to halt voting 'could face legal scrutiny' but that Republicans are confident because the court labeled the map unconstitutional; quotes Speaker Johnson saying Landry 'has no choice.'",
+          "CBS News": "Does not address potential legal challenges to the primary suspension itself."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters (Articles 1, 4, 5)": "Three headline-only entries. The lead headline ('How redistricting and the Supreme Court have cut voters out of US House races') frames the story from the voter-impact angle, emphasizing disenfranchisement. The other two headlines are more neutral and procedural ('Republican governors pursue new congressional maps'; 'Louisiana delays US House primary'). No body text available for deeper analysis.",
+      "The Washington Post": "Headline frames around 'red states face pressure to redistrict,' implying external or top-down pressure rather than voluntary action. Subhead explicitly notes the GOP could 'gain one or two seats.' Leads with Landry's suspension order. Body text was largely behind a paywall; the visible portions include reader comment summary noting 'strong sentiment of dissatisfaction' about voting rights and gerrymandering, which editorially centers the story around democratic concern. Also surfaces sidebar stories about Black political power and voting rights.",
+      "Axios": "Headline-only (page returned 403 error). Headline frames as 'Louisiana halts House elections,' using the stronger verb 'halts' rather than 'delays' or 'suspends,' implying a more dramatic interruption to the electoral process.",
+      "CBS News": "Provides the most comprehensive and detailed body text in the dossier. Leads with Tennessee and Alabama actions rather than Louisiana, broadening the story beyond a single state. Provides extensive legal and political context, including Alabama's years of litigation, the 2023 Voting Rights Act ruling, and the court injunction. Enumerates redistricting actions across multiple states (Texas, California, Missouri, North Carolina, Virginia, Florida). Uses relatively neutral language throughout. Notes the full political impact 'likely won't be felt until 2028.' Includes Trump's direct quotes urging action. Buries the Mississippi and Florida details lower in the piece.",
+      "NBC News": "Leads on Louisiana's primary delay and its immediate political mechanics. Centers the story on the congressional power struggle and control of Congress. Provides granular detail about the primary process (absentee voting already underway, votes in House races 'won't count'). Quotes Speaker Johnson defending the suspension. Includes Trump's Truth Social posts and frames the ruling as colliding with 'Trump-backed efforts.' Focuses on the Voting Rights Act narrowing as the broader consequence. Attributes the story partly to Capitol Hill sourcing (Melanie Zanona is identified as a Capitol Hill correspondent)."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the full Supreme Court opinion in Louisiana v. Callais, executive orders, or legislative texts) was located in the dossier.",
+      "Both CBS News and NBC News quote Justice Alito's majority opinion language, but with slightly different excerpts: CBS News quotes 'strong inference that intentional discrimination occurred' as the new standard, while NBC News quotes 'allowing race to play any part in government decision-making represents a departure from the constitutional rule.' These are different passages from the same opinion and are not contradictory but emphasize different aspects of the ruling.",
+      "Without the primary source, it is impossible to verify whether any outlet's characterization of the ruling's legal standard is complete or accurate."
+    ],
+    "missing_context": [
+      "The full text of the Supreme Court's opinion in Louisiana v. Callais is not included in the dossier. This is the most consequential primary source and its absence limits verification of how accurately outlets characterized the ruling's legal standard and scope.",
+      "No outlet in the dossier with retrievable body text discusses the dissenting opinion in detail \u2014 who dissented, what their arguments were, or whether any concurrences were filed.",
+      "No outlet discusses the potential impact on Latino, Native American, or Asian American representation \u2014 the coverage focuses exclusively on Black voters and districts, but the Voting Rights Act provisions at issue apply to all minority groups.",
+      "No outlet discusses what happens to voters who already cast absentee ballots in Louisiana's House primaries \u2014 only NBC News notes that absentee voting was already underway and those votes 'won't count.'",
+      "No outlet addresses whether Democratic-controlled states could use the same ruling to redraw maps in ways that reduce minority-majority districts that happen to favor Republicans, or whether the ruling is asymmetric in its practical impact.",
+      "Reuters articles (3 of 7 in the dossier) were headline-only, and the Axios article returned a 403 error. This means only 3 of 7 outlets provided usable body text, limiting the depth of cross-outlet comparison.",
+      "No outlet discusses the timeline for when new maps must be finalized in each state relative to their election schedules, candidate filing deadlines, or the practical logistics of redrawn districts.",
+      "The Washington Post body text was largely paywalled, further reducing the dossier's analytical depth."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Three outlets with full body text report the same multi-state redistricting wave but with materially different emphasis \u2014 CBS News broadens to a national scope, NBC News centers on Louisiana's mechanics and Trump's role, and The Washington Post frames around pressure on red states. The absence of the primary source (the Supreme Court opinion) and the different Alito quotes used by outlets make this a coverage-comparison story where the framing divergences are themselves newsworthy.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/how-redistricting-supreme-court-have-cut-voters-out-us-house-races-2026-05-03/",
+      "title": "How redistricting and the Supreme Court have cut voters out of US House races - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/04/29/louisiana-house-primaries-suspend-jeff-landry/",
+      "title": "Louisiana suspends House primaries as red states face pressure to redistrict - The Washington Post"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/local/new-orleans/2026/04/30/louisiana-halts-house-elections-supreme-court-map-ruling",
+      "title": "Louisiana halts House elections after Supreme Court map ruling - Axios"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/republican-governors-pursue-new-congressional-maps-after-us-supreme-court-ruling-2026-05-01/",
+      "title": "Republican governors pursue new congressional maps after US Supreme Court ruling - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/louisiana-delays-us-house-primary-draw-new-map-after-supreme-court-ruling-2026-04-30/",
+      "title": "Louisiana delays US House primary to draw new map after Supreme Court ruling - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/tennessee-alabama-take-steps-to-redraw-house-maps-supreme-court-ruling-redistricting/",
+      "title": "Tennessee and Alabama take steps to redraw House maps in wake of Supreme Court ruling - CBS News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-election/louisiana-delay-house-primaries-supreme-court-redistricting-ruling-rcna342858",
+      "title": "Louisiana will delay House primaries after Supreme Court redistricting ruling - NBC News"
+    }
+  ]
+}
