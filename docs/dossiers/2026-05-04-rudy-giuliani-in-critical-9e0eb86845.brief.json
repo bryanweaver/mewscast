@@ -1,0 +1,128 @@
+{
+  "story_id": "2026-05-04-rudy-giuliani-in-critical-9e0eb86845",
+  "headline_seed": "Rudy Giuliani in critical condition in hospital - BBC",
+  "brief": {
+    "story_id": "2026-05-04-rudy-giuliani-in-critical-9e0eb86845",
+    "consensus_facts": [
+      "Former New York City Mayor Rudy Giuliani, 81, is hospitalized in critical but stable condition, according to his spokesman Ted Goodman.",
+      "Goodman's statement did not specify the reason for hospitalization or which hospital admitted Giuliani.",
+      "Goodman called Giuliani 'a fighter' and asked for prayers for 'America's Mayor.'",
+      "Giuliani hosted his online show 'America's Mayor Live' on Friday night from Palm Beach, Florida, during which he coughed and said his voice was 'a little under the weather.'",
+      "President Donald Trump posted on Truth Social praising Giuliani as 'a True Warrior, and the Best Mayor in the History of New York City, BY FAR' and repeated false claims about the 2020 election being stolen.",
+      "Giuliani previously served as Trump's personal lawyer and promoted false claims that Trump won the 2020 election over Joe Biden.",
+      "Giuliani was disbarred in New York in July 2024 over his role in challenging the 2020 election results.",
+      "Giuliani was ordered to pay approximately $148 million to two Georgia election workers, Ruby Freeman and Shaye Moss, after being found liable for defamation.",
+      "Giuliani was hospitalized in 2025 after a car accident in New Hampshire in which he suffered injuries including a spinal/thoracic vertebrae fracture.",
+      "Giuliani led New York City's response to the September 11, 2001, attacks, earning him the nickname 'America's Mayor.'"
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether Giuliani was pardoned by Trump",
+        "positions": {
+          "NBC News": "Reports Trump pardoned Giuliani and dozens of others in November, calling the pardon 'largely symbolic' as none were convicted of federal crimes.",
+          "Other outlets": "AP, BBC, CNBC, CNN do not mention a pardon in their body text."
+        }
+      },
+      {
+        "topic": "Status of Georgia criminal case",
+        "positions": {
+          "CNBC": "Reports the Fulton County case was 'dropped in November by a prosecutor appointed to replace' Fani Willis.",
+          "CNN": "Reports 'prosecutors dropped a similar case against Giuliani and others in Georgia last year.'",
+          "BBC": "Does not mention the Georgia case being dropped."
+        }
+      },
+      {
+        "topic": "Arizona criminal case status",
+        "positions": {
+          "CNBC": "Reports the Arizona AG is appealing a ruling requiring the case to be returned to a grand jury.",
+          "CNN": "Reports Giuliani 'has pleaded not guilty to state criminal charges' in Arizona without mentioning the appeal.",
+          "NBC News": "Does not specify current Arizona case status beyond noting state charges existed."
+        }
+      },
+      {
+        "topic": "DHS advisory council appointment",
+        "positions": {
+          "CNN": "Reports Trump appointed Giuliani to an advisory council inside DHS last June.",
+          "Other outlets": "No other outlet mentions this appointment."
+        }
+      },
+      {
+        "topic": "Trump's statement about Presidential Medal of Freedom",
+        "positions": {
+          "NBC News": "Reports Trump said 'days after' the 2025 car accident that he would award Giuliani the Presidential Medal of Freedom.",
+          "BBC": "Headlines a related story about Giuliani receiving the medal but does not detail timing.",
+          "Other outlets": "AP, CNBC, CNN, USA Today do not mention the Medal of Freedom."
+        }
+      },
+      {
+        "topic": "Former Mayor Eric Adams' statement",
+        "positions": {
+          "CNN": "Reports former NYC Mayor Eric Adams wished Giuliani 'strength, good health, and a full recovery' via spokesman Todd Shapiro, calling the moment one that 'rises above politics.'",
+          "Other outlets": "No other outlet mentions Adams' statement."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Extremely spare wire dispatch. Leads with the critical-but-stable condition and Goodman's statement. Notes the Friday show where Giuliani sounded hoarse. Provides no legal or political backstory in the available text \u2014 pure breaking-news wire format.",
+      "The New York Times": "Headline-only; no body text available for analysis. Headline places 'Critical Condition' in quotes and specifies Florida hospital, consistent with other outlets.",
+      "BBC News": "Leads with the hospitalization but quickly contextualizes with Trump's Truth Social post, including his false 2020 election claims \u2014 BBC explicitly labels them 'false claims' twice. Provides substantial biographical background (honorary KBE, 9/11 leadership, 2008 presidential run). Notes the 2025 car accident with specific injury details. Does not mention Georgia case dismissal or Arizona proceedings.",
+      "CNBC": "Most legally detailed account. Leads with bullet-point key facts including Andrew Giuliani's FIFA World Cup task force role \u2014 a detail unique to CNBC. Provides extensive legal history: disbarment in both New York and D.C., Georgia case dismissal, Arizona appeal status, and the defamation judgment. Quotes Giuliani's Friday show comments. Frames Giuliani's career arc from 'top federal prosecutor' through legal troubles.",
+      "USA Today": "Effectively a video stub with minimal original text. The body is overwhelmed by ad content and unrelated video links. The brief editorial content confirms 'critical but stable condition' and notes details are 'still unclear.' Provides no legal or biographical context.",
+      "CNN": "Leads with hospitalization, then provides unique detail about Giuliani's show schedule \u2014 noting he missed several April episodes but worked daily as recently as March. Uniquely includes Eric Adams' statement and the DHS advisory council appointment. Labels Trump's 2020 claims as part of a 'election subversion scheme.' Notes 2020 coronavirus hospitalization \u2014 a detail no other outlet includes.",
+      "NBC News": "Leads with hospitalization and Goodman's quote. Uniquely reports Trump's November pardon of Giuliani and others, calling it 'largely symbolic.' Mentions Trump's promise of Presidential Medal of Freedom after the car accident. Labels Giuliani as 'unindicted co-conspirator' in Jack Smith's federal case \u2014 a detail only NBC includes."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. All outlets rely on Ted Goodman's statement posted on X and Trump's Truth Social post. No hospital records, medical statements, or official documents are available to cross-check."
+    ],
+    "missing_context": [
+      "No outlet specifies which hospital Giuliani is in or in which Florida city (Palm Beach is mentioned only as the location of his Friday show).",
+      "No outlet reports the specific medical condition or diagnosis leading to hospitalization \u2014 the cause remains entirely unknown publicly.",
+      "No outlet provides any statement from Giuliani's family members, including his son Andrew Giuliani, who holds a White House position.",
+      "No outlet discusses whether Giuliani's current condition could be related to his 2025 car accident injuries (spinal fracture) or any pre-existing health conditions.",
+      "No outlet mentions Giuliani's 2020 coronavirus hospitalization except CNN, which notes it in passing \u2014 his broader health history is largely absent.",
+      "The sole source for Giuliani's condition is his spokesman Ted Goodman; no independent medical or hospital confirmation is cited by any outlet.",
+      "No outlet addresses the current status of the $148 million defamation judgment \u2014 whether it has been paid, appealed, or is being enforced.",
+      "USA Today's article body was mostly ad content and unrelated video links, providing negligible substantive coverage."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (6 with substantive body text) confirm the same core facts from the same single spokesman source. Framing differences exist but are largely a matter of how much legal/biographical context each outlet includes, not materially different interpretations of the event itself. This is a straightforward breaking news story with a thin factual base (single spokesperson, no medical details) best served by a clear REPORT that notes the information vacuum.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/rudy-giuliani-hospitalized-c8a595d6be154208c10c5dde5f1351fc",
+      "title": "Rudy Giuliani hospitalized in critical condition, his spokesman says - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/03/nyregion/rudy-giuliani-hospital-critical-condition.html",
+      "title": "Rudy Giuliani Is in \u2018Critical Condition\u2019 in Florida Hospital - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c7941rgy4lyo",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/04/rudy-giuliani-hospital-critical-condition-trump.html",
+      "title": "Rudy Giuliani, former New York mayor and Trump lawyer, hospitalized in critical condition - CNBC"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/videos/news/politics/2026/05/04/rudy-giuliani-in-critical-but-stable-condition-at-hospital/89926018007/",
+      "title": "Rudy Giuliani in 'critical but stable condition' at hospital - USA Today"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/03/politics/rudy-giuliani-hospitalized",
+      "title": "Former New York Mayor Rudy Giuliani in hospital in critical condition, spokesperson says - CNN"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/politics-news/rudy-giuliani-critical-condition-hospital-rcna343376",
+      "title": "Rudy Giuliani in 'critical' condition in hospital, spokesman says - NBC News"
+    }
+  ]
+}
