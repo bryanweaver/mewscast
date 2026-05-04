@@ -1,11 +1,21 @@
 name: Post Scheduled Tweet
 
 on:
-  # Schedule: A/B test — 3 legacy posts/day (journalism gets the other 3 slots)
-  schedule:
-    - cron: '0 14 * * *'  # 2 PM UTC = 10 AM ET (morning prime)
-    - cron: '0 20 * * *'  # 8 PM UTC = 4 PM ET (afternoon)
-    - cron: '0 2 * * *'   # 2 AM UTC = 10 PM ET (late night)
+  # Schedule disabled 2026-05-04. This workflow originally drove the LEGACY
+  # pipeline (the A/B-test counterpart to journalism-publish). With
+  # pipelines.legacy.enabled=false in config.yaml, `python main.py` now
+  # falls through to post_journalism_cycle() — meaning every cron firing
+  # here published a SECOND journalism post on top of journalism-publish's
+  # 12:30/17:30/22:30 UTC slots. Result: ~6 journalism posts/day, with the
+  # same trending story landing twice when the second cycle fired ~1.5h
+  # after the first (e.g. 2026-05-04 abortion-pill ruling posted at 18:03
+  # then again at 20:46). To re-enable, flip pipelines.legacy.enabled=true
+  # AND uncomment the cron block below.
+  #
+  # schedule:
+  #   - cron: '0 14 * * *'  # 2 PM UTC = 10 AM ET (morning prime)
+  #   - cron: '0 20 * * *'  # 8 PM UTC = 4 PM ET (afternoon)
+  #   - cron: '0 2 * * *'   # 2 AM UTC = 10 PM ET (late night)
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
