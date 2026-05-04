@@ -1,0 +1,105 @@
+{
+  "story_id": "2026-05-04-supreme-court-gives-abortion-00a10c941f",
+  "headline_seed": "Supreme Court gives abortion pill mifepristone a 1-week reprieve from a major change - NPR",
+  "brief": {
+    "story_id": "2026-05-04-supreme-court-gives-abortion-00a10c941f",
+    "consensus_facts": [
+      "The Supreme Court on Monday temporarily blocked a 5th U.S. Circuit Court of Appeals ruling that had reinstated a requirement that mifepristone be obtained only through in-person visits, effectively restoring telehealth and mail access to the drug for now.",
+      "Justice Samuel Alito issued the administrative stay, which holds through at least May 11, 2026.",
+      "Alito requested briefs from all parties by Thursday, May 7.",
+      "The appeals court ruling, issued Friday, had imposed a nationwide requirement that mifepristone could no longer be prescribed via telehealth or sent through the mail.",
+      "The stay was issued in response to emergency appeals filed by the manufacturers of mifepristone \u2014 Danco Laboratories (brand-name) and GenBioPro (generic).",
+      "The underlying lawsuit was brought by the state of Louisiana, challenging Biden-era FDA regulations that expanded access to the drug.",
+      "The Supreme Court previously addressed mifepristone access in 2024, unanimously rejecting a challenge on standing grounds, leaving open the door to future litigation.",
+      "Medication abortions have become more common since the overturning of Roe v. Wade; mifepristone is one of two drugs in the medication abortion regimen."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the stay's significance",
+        "positions": {
+          "NPR": "Describes it as a 'one-week reprieve from a major change,' framing it as temporary and limited.",
+          "CNN": "Emphasizes the stay is 'far from a final decision' and merely 'maintains the status quo for a few days,' downplaying its significance while detailing the emergency context.",
+          "NBC News": "Frames it as the Supreme Court having 'temporarily restored full access,' a more affirmative characterization."
+        }
+      },
+      {
+        "topic": "Inclusion of Louisiana AG response",
+        "positions": {
+          "CNN": "Quotes Louisiana Attorney General Liz Murrill calling it 'big abortion pharma' trying to 'kill more babies quickly and efficiently by mail without medical oversight,' and expressing confidence 'life and the law will win in the end.'",
+          "NPR": "Does not include any response from Louisiana or abortion opponents.",
+          "NBC News": "Does not include any response from Louisiana or abortion opponents in the mifepristone segment."
+        }
+      },
+      {
+        "topic": "Statistical context on medication abortion prevalence",
+        "positions": {
+          "CNN": "Reports medication abortions accounted for more than 60% of abortions in the US in 2023, citing the Guttmacher Institute, and adds a CNN analysis that mifepristone has 'fewer reported side effects than Viagra or penicillin.'",
+          "NPR": "Does not include prevalence statistics or safety comparisons.",
+          "NBC News": "Does not include prevalence statistics or safety comparisons."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text is essentially just photo and video captions with no substantive reporting retrieved. The AP headline references mifepristone access being restored through telehealth, mail, and pharmacies \u2014 notably the only outlet to mention pharmacies in its framing. Provides no usable body-text detail for analysis.",
+      "NPR": "Leads with the one-week timeframe and frames the story around the procedural reprieve. Includes a useful link to how medication abortion works with misoprostol alone, suggesting editorial awareness that readers may need to understand alternatives. Keeps the piece short and factual with no quotes from either side of the legal dispute. Does not include any opponent or state reaction.",
+      "Politico": "The article retrieved is entirely about post-VRA redistricting, not about mifepristone. This article does not belong in this dossier \u2014 it appears to be a scraping mismatch. No relevant content for this story.",
+      "Reuters": "Headline-only. The headline frames it as the court letting 'abortion pill mail delivery restart for now,' emphasizing the mail-delivery dimension specifically. No body text available for deeper analysis.",
+      "The New York Times": "Headline-only. Frames it as 'Temporarily Restores Access to Abortion Pill by Mail,' centering the temporary nature and mail access. No body text available for deeper analysis.",
+      "CNN": "The most detailed body text in the dossier. Leads with the emergency context and 'potential chaos for patients.' Includes quotes from both the drug manufacturers and Louisiana AG Murrill, providing the only adversarial voice in the dossier. Adds statistical context from Guttmacher and a safety comparison. Notes that Alito is 'one of the court's conservatives,' a detail no other outlet highlights. Also includes background on the 2024 standing ruling.",
+      "NBC News": "Embeds the mifepristone story within a live-blog format alongside unrelated stories (Giuliani hospitalization, Iran, D.C. golf course, Florida redistricting). The mifepristone items are relatively brief. Uses the strongest affirmative framing \u2014 'temporarily restored full access' \u2014 in its summary. Notes Alito's role as the justice handling 5th Circuit emergency matters."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court orders, filings, or briefs) were located for this story. All claims about the content of Alito's order, the manufacturers' appeals, and Louisiana's lawsuit are based solely on outlet reporting and cannot be independently verified against the underlying documents in this dossier."
+    ],
+    "missing_context": [
+      "No primary source \u2014 the actual text of Alito's administrative stay order and the emergency appeals filed by Danco and GenBioPro \u2014 was retrieved. This is a significant gap for verifying the precise scope and conditions of the stay.",
+      "No outlet in the dossier explains what happens after May 11 if the full court does not act \u2014 whether the 5th Circuit ruling would automatically go back into effect or whether further extensions are procedurally likely.",
+      "No outlet addresses whether the Trump administration's DOJ or FDA has taken a position in this case, which is a critical omission given the executive branch's role in defending or declining to defend FDA regulations.",
+      "No outlet discusses the specific legal standard for granting an administrative stay versus a full stay, or what Alito's issuance of this order signals (or doesn't signal) about the full court's likely action.",
+      "CNN alone mentions the safety profile of mifepristone; no other outlet provides medical or safety context that would help readers assess the claims underlying the litigation.",
+      "The Politico article retrieved is about redistricting, not mifepristone \u2014 this is a scraping/matching error in the dossier pipeline.",
+      "No outlet discusses whether misoprostol-only medication abortion (referenced by NPR's sidebar link) could serve as a practical alternative if mifepristone access is ultimately restricted, and what the medical implications of that shift would be.",
+      "No conservative-slant outlet was included in this dossier with usable body text, limiting the ability to assess how right-leaning media framed this development."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text (NPR, CNN, NBC News) corroborate the core facts of the administrative stay. While framing varies, the substantive disagreements are minor. The absence of a primary source and conservative-media perspective limits the brief, but the consensus is strong enough for a straightforward REPORT rather than a META post. A META angle could be revisited once more outlets and the primary source are available.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/abortion-pills-mifepristone-supreme-court-louisiana-0533e83d67148fdfec53b1d0d30c1e8a",
+      "title": "Supreme Court restores access to abortion pill mifepristone through telehealth, mail and pharmacies - AP News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/04/nx-s1-5810510/supreme-court-mifepristone-appeals-telehealth",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/04/breaking-down-the-redistricting-arms-race-00904113",
+      "title": "Breaking down the redistricting arms race following the Supreme Court's VRA ruling - Politico"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us-supreme-court-lets-abortion-pill-mail-delivery-restart-now-2026-05-04/",
+      "title": "US Supreme Court lets abortion pill mail delivery restart for now - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/04/us/politics/supreme-court-abortion-pill.html",
+      "title": "Supreme Court Temporarily Restores Access to Abortion Pill by Mail - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/04/politics/supreme-court-abortion-mifepristone",
+      "title": "Supreme Court temporarily restores ability to receive abortion drug mifepristone by mail - CNN"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/trump-administration/live-blog/trump-iran-hormuz-giuliani-congress-doj-immigration-live-updates-rcna343388",
+      "title": "Live updates: Supreme Court puts lower court decision to restrict abortion pill access on hold - NBC News"
+    }
+  ]
+}
