@@ -1299,6 +1299,11 @@
       "did": "did:plc:nis7pvuvdama6lh5pgslrxc5",
       "handle": "blindcatrescue.bsky.social",
       "timestamp": "2026-05-03T20:20:58.168575"
+    },
+    {
+      "did": "did:plc:hvx2gr5dtg2dm6dnsp2ybm4d",
+      "handle": "mehoward.bsky.social",
+      "timestamp": "2026-05-04T01:40:46.655404"
     }
   ],
   "liked_posts": [
@@ -8476,6 +8481,11 @@
       "uri": "at://did:plc:nis7pvuvdama6lh5pgslrxc5/app.bsky.feed.post/3mkxxwrvtm52p",
       "author": "blindcatrescue.bsky.social",
       "timestamp": "2026-05-03T20:20:58.022440"
+    },
+    {
+      "uri": "at://did:plc:hvx2gr5dtg2dm6dnsp2ybm4d/app.bsky.feed.post/3mkyiqpbad22i",
+      "author": "mehoward.bsky.social",
+      "timestamp": "2026-05-04T01:40:46.438082"
     }
   ],
   "last_cleanup": "2026-05-01T16:19:05.983035",
