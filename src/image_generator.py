@@ -32,9 +32,10 @@ _SUBJECT_ANCHOR = (
 # surprise. These are stacked on top of the per-post-type style anchor.
 _EYECATCH_ANCHOR = (
     "Scroll-stopping editorial image. Dramatic cinematic lighting with strong "
-    "highlights and deep shadows. Sharp eye contact with the viewer. Cinematic "
-    "composition like a film still, not stock photography. Rich color grading, "
-    "strong focal point, a single arresting detail the viewer can't look away from. "
+    "highlights and deep shadows. Cinematic composition like a film still, not "
+    "stock photography. Rich color grading, strong focal point, a single "
+    "arresting detail the viewer can't look away from. When Walter's face is "
+    "in frame, sharp eye contact with the viewer. "
 )
 
 # Per-post-type style anchor prefixes. Stacked AFTER _SUBJECT_ANCHOR +
@@ -42,41 +43,51 @@ _EYECATCH_ANCHOR = (
 # the dossier_store enum. Each anchor evokes a specific, recognizable
 # editorial aesthetic — not just "journalism style" but a publication
 # someone would actually pick up off a newsstand.
+# Per-post-type style anchors. Define AESTHETIC (lens choice, lighting,
+# color grade, set/mood/era) but NOT composition or framing. Composition
+# (where Walter sits in the frame, the camera angle, what's in foreground
+# vs background) is owned by the shot-type rotation in main.py — these
+# anchors must not contradict it. Older revisions of these anchors said
+# things like "the cat at the center, fully in control of the frame" or
+# "the cat is the only thing in focus" — that locked every image to a
+# centered medium portrait regardless of shot type. Composition language
+# was stripped 2026-05-05 so WIDE_ESTABLISHING / LOW_ANGLE_HERO / DETAIL
+# / THROUGH_THE_LENS shot types could actually express themselves.
 POST_TYPE_STYLE_ANCHORS = {
     "REPORT": (
-        "Vanity Fair editorial portrait. 85mm lens, shallow depth of field, "
-        "three-point studio lighting. Subtle newsroom depth in the background. "
-        "The cat at the center, fully in control of the frame. "
+        "Vanity Fair editorial portrait aesthetic. 85mm lens look, shallow "
+        "depth of field, three-point lighting. Newsroom or field-reportage "
+        "context. Authoritative, present-tense mood. "
     ),
     "META": (
-        "Cinematic wide shot of a wire-service desk at midnight. Multiple TV "
-        "monitors glowing behind the cat, each showing a different outlet's "
-        "framing of the same story. Warm tungsten mixed with cool blue monitor "
-        "glow. Film-noir contrast. The cat is the only thing in focus. "
+        "Wire-service-at-midnight aesthetic. Multiple TV monitors glowing "
+        "with different outlet logos / framing of the same story. Warm "
+        "tungsten mixed with cool blue monitor glow. Film-noir contrast. "
+        "The newsroom is part of the subject. "
     ),
     "ANALYSIS": (
-        "New Yorker cover illustration style — slightly painterly, strong visual "
-        "metaphor carrying the argument. Moody chiaroscuro lighting. A single "
-        "unexpected detail (a chess piece, a tipped scale, a half-burned match) "
-        "that makes the viewer lean in to decode it. "
+        "New Yorker cover illustration style — slightly painterly, strong "
+        "visual metaphor carrying the argument. Moody chiaroscuro lighting. "
+        "A single unexpected symbolic detail (a chess piece, a tipped scale, "
+        "a half-burned match) that rewards a second look. "
     ),
     "BULLETIN": (
-        "Breaking-news urgency. Hand-held camera energy, motion blur at the edges, "
-        "red emergency glow from off-frame. The cat caught mid-action — paw raised, "
-        "ears forward, something just happened. Grainy photojournalism with kinetic "
-        "tension. "
+        "Breaking-news urgency aesthetic. Hand-held energy, motion blur at "
+        "frame edges, red emergency glow from off-frame. Grainy "
+        "photojournalism with kinetic tension. Walter caught mid-action — "
+        "paw raised or ears forward — something just happened. "
     ),
     "PRIMARY": (
-        "Presidential-archive photograph. Cat seated at a dark mahogany desk "
-        "strewn with labeled folders and documents, a single spotlit page in the "
-        "foreground. Kodak Portra 400 on 35mm. Warm amber tones, deep shadows, the "
-        "gravity of an official record. "
+        "Presidential-archive photograph aesthetic. Dark mahogany surfaces, "
+        "labeled folders and documents, official seals, a single spotlit "
+        "page. Kodak Portra 400 on 35mm. Warm amber tones, deep shadows, "
+        "the gravity of an official record. "
     ),
     "CORRECTION": (
-        "Minimalist black-and-white editorial. The cat in profile against a stark "
-        "white background, looking thoughtful and a little humbled. One crisp "
-        "graphic element — a red correction stamp, a crossed-out line, a pen — "
-        "as the only color accent. Quiet dignity, no drama. "
+        "Minimalist black-and-white editorial aesthetic. Stark white space "
+        "and quiet dignity. One crisp graphic element as the only color "
+        "accent (a red correction stamp, a crossed-out line, a pen). "
+        "Thoughtful, slightly humbled mood — no drama. "
     ),
 }
 
