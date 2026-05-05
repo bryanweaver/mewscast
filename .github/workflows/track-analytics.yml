@@ -22,12 +22,13 @@ jobs:
 
       - name: Track analytics
         env:
-          # X API credentials (may fail due to rate limits - that's OK)
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          # X creds intentionally NOT passed — analytics pulled X follower
+          # counts and per-tweet metrics via get_me() / get_tweets(), both
+          # billable READS that contribute to the enrolled-account spend
+          # cap. Disabled 2026-05-02. With no env vars present, TwitterBot()
+          # init raises ValueError and the X analytics functions catch it
+          # and return None, leaving Bluesky analytics intact. To re-enable,
+          # restore the X_* env vars below.
 
           # Bluesky credentials
           BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}

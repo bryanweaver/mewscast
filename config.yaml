@@ -323,7 +323,7 @@ journalism:
   outlet_registry: outlet_registry.yaml
   trend_detection:
     max_candidates: 15
-    use_x_api: true               # if false, falls back to NewsFetcher only
+    use_x_api: false              # disabled 2026-05-02 — X API reads are too expensive (chunked search_recent_tweets burned through enrolled-account spend cap by day 9 of cycle). NewsFetcher is the only source now.
     fallback_to_news_fetcher: true
   triage:
     pass_threshold: 3
