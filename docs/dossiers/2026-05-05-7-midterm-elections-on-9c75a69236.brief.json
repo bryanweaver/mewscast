@@ -1,0 +1,97 @@
+{
+  "story_id": "2026-05-05-7-midterm-elections-on-9c75a69236",
+  "headline_seed": "7 Midterm Elections on Tuesday Will Test Trump\u2019s Power in Indiana - The New York Times",
+  "brief": {
+    "story_id": "2026-05-05-7-midterm-elections-on-9c75a69236",
+    "consensus_facts": [
+      "Voters in Ohio and Indiana are casting primary ballots on Tuesday, May 5, 2026, with results bearing on the November midterm elections.",
+      "Former Democratic Sen. Sherrod Brown is running to return to the U.S. Senate in Ohio's special election against Republican incumbent Jon Husted, who was appointed to fill JD Vance's seat after Vance became vice president.",
+      "Brown lost his 2024 reelection bid to Republican Bernie Moreno but by a relatively narrow margin in a state Trump won by double digits.",
+      "Democrats see the Ohio Senate special election as a potential pickup opportunity in the November midterms.",
+      "Vivek Ramaswamy is the Republican frontrunner for Ohio governor, endorsed by Trump and the Ohio Republican Party; term-limited Gov. Mike DeWine cannot run again.",
+      "Democrat Amy Acton, former state health department director, is the leading Democratic candidate for Ohio governor and faces no serious primary opposition.",
+      "Casey Putsch remains as a minor Republican challenger to Ramaswamy in the governor's primary.",
+      "Rep. Marcy Kaptur, the longest-serving woman in congressional history, represents Ohio's 9th District and is considered one of the most vulnerable Democrats; her district was redrawn to be more Republican-leaning.",
+      "Derek Merrin, who narrowly lost to Kaptur in 2024, is running again in the Republican primary for Ohio's 9th District, alongside other candidates including state Rep. Josh Williams and former ICE official Madison Sheahan.",
+      "In Indiana, Trump has endorsed primary challengers against Republican state senators who voted against a Trump-backed congressional redistricting plan, making these state-level races unusually nationalized.",
+      "Indiana currently has a 7-2 Republican-to-Democrat congressional district split; the redistricting effort sought to make all nine districts favor Republicans.",
+      "Twenty-one Indiana Republican state senators voted against the redistricting measure despite White House pressure; Trump and Indiana Gov. Mike Braun have endorsed challengers against seven of those senators.",
+      "Trump also wants to see Indiana State Senate President Rodric Bray defeated, though Bray is not up for reelection until 2028 and his leadership position could be threatened if enough challengers win."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of Indiana state Senate races directly testing Trump's influence",
+        "positions": {
+          "The New York Times (headline-only) / The Seattle Times (headline-only)": "Headlines reference '7 elections' testing Trump's power in Indiana.",
+          "CBS News": "Reports Trump and Braun endorsed challengers in seven races, plus an endorsement in one open seat where the retiring senator voted against redistricting \u2014 totaling eight races with Trump involvement."
+        }
+      },
+      {
+        "topic": "Whether state senators faced threats during the redistricting fight",
+        "positions": {
+          "CBS News": "Explicitly reports that state senators 'faced doxxing and threats of violence' during the redistricting pressure campaign.",
+          "NBC News": "Does not mention Indiana state races at all.",
+          "The Guardian": "Does not mention Indiana state races."
+        }
+      },
+      {
+        "topic": "Brown's 2024 loss margin framing",
+        "positions": {
+          "CBS News": "Reports Brown 'lost by less than four percentage points' in a state Trump won by 'more than 10.'",
+          "The Guardian": "Reports Trump won Ohio 'by 12 percentage points' in 2024, contextualizing Brown's loss."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Provides a broad national primary calendar overview rather than focusing on Ohio or Indiana specifically. Ohio Senate and governor's races are mentioned among many other states. Indiana state races are not covered at all. Framing is informational/utilitarian \u2014 a reference guide, not a narrative story.",
+      "The New York Times": "Headline-only; no body text available for analysis. Headline frames the story explicitly around Trump's influence being 'tested' at 'Midwestern Ballot Boxes,' centering presidential power as the narrative lens.",
+      "CBS News": "The most detailed and substantive article in the dossier. Leads with Ohio and Indiana together, but devotes extensive space to the Indiana state Senate races \u2014 including the backstory of the redistricting fight, doxxing and threats against state senators, Trump's social media statements on election day, and expert commentary from two university professors. Frames the Indiana races as an unprecedented case of presidential involvement in state legislative politics. Also provides thorough coverage of Ohio Senate, governor, and OH-9 races. Quotes Trump's social media post attacking the incumbent senators.",
+      "The Guardian": "Focuses exclusively on Ohio; does not mention Indiana at all. Frames the story primarily through the lens of whether Republicans will maintain congressional control. Provides the most historical context about Ohio's political evolution from swing state to Republican-leaning. Emphasizes Trump's underwater approval ratings as context for Democratic optimism. Uses the Brown-Husted race as the marquee contest. Describes Putsch as challenging Ramaswamy 'from his right.'",
+      "The Seattle Times": "Headline-only; no body text available. Headline mirrors the NYT headline exactly ('7 Midterm Elections on Tuesday Will Test Trump's Power in Indiana'), suggesting it is running the NYT story via syndication."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Alignment between reporting and underlying documents (e.g., the actual redistricting vote roll call, Trump endorsement statements, campaign finance filings) cannot be verified."
+    ],
+    "missing_context": [
+      "No primary source documents \u2014 such as the Indiana redistricting vote roll call, Trump's endorsement statements, or campaign finance data \u2014 were available in the dossier for verification.",
+      "The New York Times and The Seattle Times provided headline-only content; the NYT article body contained only a redirect link, and The Seattle Times appears to be running syndicated NYT content. This limits the dossier to three outlets with substantive body text (NBC News, CBS News, The Guardian), and NBC News covers Indiana/Ohio only tangentially within a national calendar.",
+      "No outlet in the dossier provides specific polling data for the Indiana state Senate races or the Ohio Senate special election.",
+      "CBS News is the only outlet covering the Indiana state Senate races in detail; those claims are single-source within this dossier despite being the central hook of the headline seed story.",
+      "No outlet discusses what the proposed Indiana redistricting map would have looked like or which specific Democratic-held districts were targeted.",
+      "No outlet mentions how much money Trump-allied groups or the Indiana Senate Republican Caucus have spent on these races beyond CBS News's general statement that spending exceeded all of 2022.",
+      "None of the outlets discuss voter turnout expectations for these primaries, which could be significant given that state Senate primaries typically draw low participation.",
+      "The Guardian mentions Trump's 'underwater' approval ratings but no outlet provides specific approval numbers or polling for the midterm environment.",
+      "No outlet discusses whether the Indiana redistricting could be revisited in a future legislative session regardless of these primary outcomes."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text confirm the core facts about Tuesday's Ohio and Indiana primaries, and the consensus on key races and Trump's involvement is solid enough for a straight REPORT. While the Indiana state Senate angle is primarily sourced from CBS News within this dossier, the NYT and Seattle Times headlines corroborate its significance. A META post could be warranted if more outlets with full body text were available to compare framing divergences.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-primary-elections/calendar",
+      "title": "2026 Primary Election Calendar: What Races Are Today? - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/05/us/indiana-legistature-election-trump.html",
+      "title": "Trump\u2019s Influence Faces Test at Midwestern Ballot Boxes - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/2026-midterm-elections-primaries-indiana-state-senate-ohio-senate-governor-congress/",
+      "title": "What to know about Tuesday's primaries in Ohio and Indiana - CBS News"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/may/05/ohio-primary-elections",
+      "title": "Ohio voters head to polls to select candidates for midterm elections - The Guardian"
+    },
+    {
+      "outlet": "The Seattle Times",
+      "url": "https://www.seattletimes.com/nation-world/7-elections-on-tuesday-will-test-trumps-power/",
+      "title": "7 Midterm Elections on Tuesday Will Test Trump\u2019s Power in Indiana - The Seattle Times"
+    }
+  ]
+}
