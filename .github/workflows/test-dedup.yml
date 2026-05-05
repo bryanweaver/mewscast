@@ -1,0 +1,22 @@
+name: Test Dedup (L4 LLM gate)
+
+# One-shot test that exercises the L4 LLM dedup gate against known-duplicate
+# and known-novel headlines, grounded in the live journalism_seen_stories.txt.
+# Use this to verify the dedup gate after prompt or model changes.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
+
+      - name: Run dedup self-test
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/test_dedup.py
