@@ -939,18 +939,18 @@ def post_journalism_cycle(
     )
 
     # ---- Bot / fetcher init -----------------------------------------------
-    # TwitterBot is initialized in BOTH dry-run and publish mode because
-    # Stage 1 trend detection reads X regardless of whether we intend to
-    # publish. If TwitterBot init fails (e.g. missing credentials), we log
-    # and fall through — TrendDetector will gracefully fall back to
-    # NewsFetcher. Bluesky stays publish-only: it is never used for trend
-    # detection, only for posting.
+    # TwitterBot is initialized in publish mode for the POST /tweets call.
+    # As of 2026-05-02, trend_detection.use_x_api is false — Stage 1 reads
+    # are routed through NewsFetcher only (X reads were burning the
+    # enrolled-account spend cap). The bot still gets constructed because
+    # the publish-side post_tweet call needs it; if init fails (missing
+    # creds), we fall through and the Bluesky path keeps publishing alone.
     twitter_bot = None
     bluesky_bot = None
     generator = None
     tracker = None
 
-    print("[journalism] Initializing TwitterBot for trend detection...")
+    print("[journalism] Initializing TwitterBot for publish path...")
     try:
         twitter_bot = TwitterBot()
     except Exception as e:
@@ -985,11 +985,18 @@ def post_journalism_cycle(
     news_fetcher = NewsFetcher()
     dossier_store = DossierStore()
 
+    # Honor trend_detection.use_x_api: when false, withhold the twitter_bot
+    # so TrendDetector skips the billable X recent-search path and falls
+    # straight through to NewsFetcher. The bot itself stays initialized for
+    # the publish-side post_tweet calls.
+    trend_use_x = bool(trend_cfg.get("use_x_api", True))
     trend_detector = TrendDetector(
         registry_path=registry_path,
-        twitter_bot=twitter_bot,
+        twitter_bot=twitter_bot if trend_use_x else None,
         news_fetcher=news_fetcher,
     )
+    if not trend_use_x:
+        print("[journalism] trend_detection.use_x_api=false — TrendDetector will use NewsFetcher only")
     story_triage = StoryTriage(use_llm=use_llm_triage)
     source_gatherer = SourceGatherer(
         news_fetcher=news_fetcher,
@@ -1101,6 +1108,109 @@ def post_journalism_cycle(
         "statement", "probe", "inquiry", "investigation",
     }
 
+    def _normalize_url_for_dedup(u: str) -> str:
+        """Canonicalize a URL for cross-cycle overlap comparison: lowercase
+        scheme/host, strip tracking params (utm_*/fbclid/gclid/ref/src),
+        drop trailing slash, drop fragment. Empty / unparseable input
+        returns ''. Stable across outlets that sprinkle utm tags onto the
+        same article."""
+        if not u:
+            return ""
+        try:
+            from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse
+            p = urlparse(u.strip())
+            keep_qs = [
+                (k, v) for k, v in parse_qsl(p.query)
+                if not k.lower().startswith("utm_")
+                and k.lower() not in {"fbclid", "gclid", "ref", "src", "mc_cid", "mc_eid"}
+            ]
+            path = p.path.rstrip("/") or "/"
+            return urlunparse((
+                p.scheme.lower(), p.netloc.lower(), path,
+                p.params, urlencode(keep_qs), "",
+            ))
+        except Exception:
+            return u.strip().lower()
+
+    def _llm_same_event_check(cand_headline: str,
+                              recent_seen: list[tuple[str, str]]) -> tuple[bool, str]:
+        """Layer 3 dedup: ask Haiku whether the candidate is the same news
+        event as any seen headline in the prune window, regardless of
+        phrasing/outlet/angle. Returns (is_duplicate, matched_story_id).
+
+        Why this exists: the proper-noun semantic layer is blind to
+        topic-driven stories where the subject is lowercase ('mifepristone',
+        'tariffs'). Bug reproduced 2026-05-05: NPR 'Supreme Court gives
+        abortion pill mifepristone a 1-week reprieve' and Axios 'Abortion
+        pill rulings cause whiplash and confusion' shared zero proper nouns
+        after the stoplist and slipped past the mechanical layer.
+
+        Failure mode: returns (False, '') on API error or missing API key
+        — the caller falls through to the next candidate, never silently
+        publishes. The mechanical URL-overlap and proper-noun layers
+        remain as belt-and-suspenders. Same-cycle latency is one Haiku
+        call per candidate evaluated (~500ms), short-circuited as soon
+        as a non-duplicate is found."""
+        if not recent_seen:
+            return (False, "")
+        api_key = os.getenv("ANTHROPIC_API_KEY")
+        if not api_key:
+            print("[journalism] LLM dedup: ANTHROPIC_API_KEY missing — skipping LLM check")
+            return (False, "")
+        try:
+            from anthropic import Anthropic as _Anthropic
+            client = _Anthropic(api_key=api_key)
+            seen_block = "\n".join(f"[{sid}] {hl}" for sid, hl in recent_seen)
+            prompt = (
+                "You are an editor judging whether a CANDIDATE news story is the "
+                "SAME NEWS EVENT as any story already covered, regardless of "
+                "headline phrasing, outlet, or framing angle.\n\n"
+                "ALREADY-COVERED (last 14 days):\n"
+                f"{seen_block}\n\n"
+                f"CANDIDATE: {cand_headline}\n\n"
+                "SAME news event examples:\n"
+                "- 'Supreme Court gives abortion pill mifepristone a 1-week reprieve'\n"
+                "  vs 'Abortion pill rulings cause whiplash and confusion'\n"
+                "  → SAME (same SCOTUS mifepristone stay)\n"
+                "- 'Pentagon to pull 5,000 troops from Germany'\n"
+                "  vs 'Germany urges defense after US withdrawal announcement'\n"
+                "  → SAME (same Pentagon decision)\n"
+                "- 'Iran says US has responded to peace proposal'\n"
+                "  vs 'Iran reviewing Washington reply on 14-point plan'\n"
+                "  → SAME (same diplomatic exchange)\n\n"
+                "DIFFERENT events:\n"
+                "- 'SCOTUS Voting Rights ruling' vs 'SCOTUS abortion ruling'\n"
+                "  → DIFFERENT (different cases)\n"
+                "- 'Trump fires Iran envoy' vs 'Trump-Iran deal talks resume'\n"
+                "  → DIFFERENT (different actions, even if same actors)\n\n"
+                "Respond with STRICT JSON only, no other text:\n"
+                '{"duplicate_of": "<story_id from list above>", "reasoning": "<one sentence>"}\n'
+                "or if novel:\n"
+                '{"duplicate_of": null, "reasoning": "<one sentence>"}'
+            )
+            resp = client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=250,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            text = resp.content[0].text.strip() if resp.content else ""
+            import re as _re
+            m = _re.search(r"\{.*\}", text, _re.DOTALL)
+            if not m:
+                print(f"[journalism] LLM dedup: unparseable response: {text[:160]!r}")
+                return (False, "")
+            data = json.loads(m.group(0))
+            dup_id = data.get("duplicate_of")
+            reasoning = data.get("reasoning", "")
+            if dup_id and isinstance(dup_id, str):
+                print(f"[journalism] LLM dedup: candidate matches seen story_id={dup_id} "
+                      f"— reasoning: {reasoning[:160]}")
+                return (True, dup_id)
+            return (False, "")
+        except Exception as e:
+            print(f"[journalism] LLM dedup call failed ({e}); falling through to next layer")
+            return (False, "")
+
     def _clean_headline_for_matching(h: str) -> str:
         """Normalize a headline for semantic dedup: strip outlet suffix and
         fluff prefix. Both transforms are idempotent. Used at two sites:
@@ -1153,6 +1263,12 @@ def post_journalism_cycle(
     seen_kept_lines: list[str] = []
     # list of (story_id, headline, proper_noun_set) for semantic matching
     seen_entries: list[tuple[str, str, set[str]]] = []
+    # normalized-url -> story_id index for Layer-2 (URL overlap) dedup. Built
+    # from the optional 4th TSV column written at mark-as-seen time.
+    seen_url_index: dict[str, str] = {}
+    # (story_id, headline) for the LLM dedup layer (only entries with non-
+    # empty headline; pruned entries already excluded).
+    seen_for_llm: list[tuple[str, str]] = []
     pruned_count = 0
     try:
         if os.path.exists(seen_path):
@@ -1164,10 +1280,13 @@ def post_journalism_cycle(
                     if not stripped or stripped.startswith("#"):
                         seen_header_lines.append(raw)
                         continue
-                    # Format: "<story_id>\t<iso_timestamp>\t<headline>" (new),
-                    # or "<story_id>\t<iso_timestamp>" (iteration 7), or just
-                    # "<story_id>" (legacy).
-                    parts = stripped.split("\t", 2)
+                    # Format (current): "<story_id>\t<iso_timestamp>\t<headline>\t<url1>|<url2>|..."
+                    # 3-column variant (iteration 11): no URL column.
+                    # 2-column variant (iteration 7): no headline column.
+                    # 1-column variant (legacy): just <story_id>.
+                    # All four variants parse — older variants just contribute
+                    # less signal to the dedup layers.
+                    parts = stripped.split("\t", 3)
                     story_id_part = parts[0].strip()
                     if not story_id_part:
                         continue
@@ -1203,6 +1322,17 @@ def post_journalism_cycle(
                         # All three are bundled in _dedup_nouns().
                         nouns = _dedup_nouns(headline_part) if headline_part else set()
                         seen_entries.append((story_id_part, headline_part, nouns))
+                        # 4th column (optional): pipe-separated normalized URLs.
+                        # Populates seen_url_index for Layer-2 URL overlap dedup.
+                        if len(parts) >= 4:
+                            url_blob = parts[3].strip()
+                            if url_blob:
+                                for raw_u in url_blob.split("|"):
+                                    nu = _normalize_url_for_dedup(raw_u)
+                                    if nu and nu not in seen_url_index:
+                                        seen_url_index[nu] = story_id_part
+                        if headline_part:
+                            seen_for_llm.append((story_id_part, headline_part))
             # If any entries were pruned, rewrite the file. The workflow's
             # commit step will pick up the change and commit it just like
             # a mark-as-seen append.
@@ -1219,6 +1349,18 @@ def post_journalism_cycle(
                     print(f"[journalism] could not rewrite pruned seen-stories file ({e})")
     except Exception as e:
         print(f"[journalism] could not read seen-stories file ({e}); continuing without dedup")
+
+    def _url_overlap_match(cand_urls: list[str]) -> tuple[bool, str, str]:
+        """Layer 2 dedup: deterministic URL overlap. Returns
+        (is_match, matched_story_id, matched_url) when ANY of the candidate's
+        original_urls (after normalization) matches a URL stored on a seen
+        entry. Catches the case where two cycles cluster on the same article
+        but pick different headline phrasings."""
+        for u in cand_urls or []:
+            nu = _normalize_url_for_dedup(u)
+            if nu and nu in seen_url_index:
+                return (True, seen_url_index[nu], nu)
+        return (False, "", "")
 
     def _semantic_match(cand_headline: str) -> tuple[bool, str, int]:
         """Return (is_match, matched_story_id, overlap_count) if this candidate
@@ -1246,23 +1388,49 @@ def post_journalism_cycle(
     # through the dedup loop (the loop will break immediately).
     candidate = candidate if topic else None
     skipped_count = 0
+    # Four-layer dedup gauntlet — every candidate must pass ALL FOUR before
+    # being selected. Hard requirement (2026-05-05 Bryan): same news event
+    # must NEVER appear twice on the feed.
+    #   L1 story_id exact      — cheap, byte-identical headline+URL match
+    #   L2 URL overlap         — deterministic; same article URL across cycles
+    #   L3 proper-noun overlap — semantic, same named entities
+    #   L4 LLM same-event check — Haiku judges "same news event?" semantically;
+    #                             catches the L3-blind case where the topic is
+    #                             lowercase ('mifepristone', 'tariffs') and no
+    #                             distinctive proper nouns survive the stoplist.
+    # On L4 LLM error: fall through (treat as not-duplicate). Reaches into the
+    # next candidate via the loop, never publishes silently.
     for c in passed:
         if candidate is not None:
             break
-        # (1) Exact story_id dedup — cheap, catches same-headline-same-day
+        # L1: Exact story_id
         if c.story_id in seen_story_ids:
             skipped_count += 1
-            print(f"[journalism] skipping already-seen story_id={c.story_id} "
+            print(f"[journalism] [L1] skipping already-seen story_id={c.story_id} "
                   f"({c.headline_seed[:60]}...)")
             continue
-        # (2) Semantic dedup via proper-noun overlap — catches same-event-
-        #     different-headline (iteration 11 Bug 19 fix).
+        # L2: URL overlap (deterministic)
+        u_matched, u_sid, u_url = _url_overlap_match(getattr(c, "original_urls", []) or [])
+        if u_matched:
+            skipped_count += 1
+            print(f"[journalism] [L2] skipping URL-overlap candidate "
+                  f"({c.headline_seed[:60]}...) — url={u_url[:80]} "
+                  f"matches already-seen story_id={u_sid}")
+            continue
+        # L3: Proper-noun semantic
         matched, matched_sid, overlap = _semantic_match(c.headline_seed)
         if matched:
             skipped_count += 1
-            print(f"[journalism] skipping semantically-duplicate candidate "
+            print(f"[journalism] [L3] skipping semantically-duplicate candidate "
                   f"({c.headline_seed[:60]}...) — {overlap} proper nouns match "
                   f"already-seen story_id={matched_sid}")
+            continue
+        # L4: LLM-judged same-event check (catches lowercase-topic cases)
+        llm_dup, llm_sid = _llm_same_event_check(c.headline_seed, seen_for_llm)
+        if llm_dup:
+            skipped_count += 1
+            print(f"[journalism] [L4] skipping LLM-flagged same-event candidate "
+                  f"({c.headline_seed[:60]}...) — same event as story_id={llm_sid}")
             continue
         candidate = c
         break
@@ -1277,8 +1445,8 @@ def post_journalism_cycle(
         # Cronkite didn't do the same lead twice on the same broadcast.
         print(
             f"[journalism] all {len(passed)} triage-passed candidates are already "
-            f"in the seen set (exact or semantic); clean exit, nothing new to report "
-            f"this cycle"
+            f"covered (rejected by L1 story_id / L2 URL-overlap / L3 proper-noun / "
+            f"L4 LLM-judged); clean exit, nothing new to report this cycle"
         )
         print("[journalism] CYCLE END: published=0 reason=all_candidates_seen")
         return True
@@ -1298,10 +1466,19 @@ def post_journalism_cycle(
             break
         if c is candidate:
             continue
+        # Apply the same four-layer gauntlet as primary selection so a
+        # fallback can never re-introduce a duplicate that L1-L4 already
+        # rejected upstream.
         if c.story_id in seen_story_ids:
+            continue
+        u_m, _, _ = _url_overlap_match(getattr(c, "original_urls", []) or [])
+        if u_m:
             continue
         matched, _, _ = _semantic_match(c.headline_seed)
         if matched:
+            continue
+        llm_m, _ = _llm_same_event_check(c.headline_seed, seen_for_llm)
+        if llm_m:
             continue
         fallback_candidates.append(c)
 
@@ -1605,18 +1782,35 @@ def post_journalism_cycle(
     try:
         already_seen = candidate.story_id in seen_story_ids
         if not already_seen:
-            # Iteration 11: include the headline_seed as a 3rd TSV column
-            # so future runs can do semantic dedup against it. Sanitize
-            # any stray tabs or newlines in the headline to preserve the
-            # one-record-per-line TSV format.
+            # 4-column TSV (current): story_id\ttimestamp\theadline\turls
+            # The 4th URL column powers the L2 URL-overlap dedup layer on
+            # subsequent cycles. Sources for the URL set: the candidate's
+            # original_urls plus every dossier article URL gathered in
+            # Stage 3a. URLs are normalized (strip utm_*, lowercase host,
+            # drop trailing slash) and de-duplicated before pipe-joining.
             safe_headline = (candidate.headline_seed or "").replace("\t", " ").replace("\n", " ").strip()
+            url_seen: set[str] = set()
+            urls_to_persist: list[str] = []
+            for u in (getattr(candidate, "original_urls", []) or []):
+                nu = _normalize_url_for_dedup(u)
+                if nu and nu not in url_seen:
+                    url_seen.add(nu)
+                    urls_to_persist.append(nu)
+            for art in (dossier.articles or []):
+                nu = _normalize_url_for_dedup(getattr(art, "url", "") or "")
+                if nu and nu not in url_seen:
+                    url_seen.add(nu)
+                    urls_to_persist.append(nu)
+            url_blob = "|".join(urls_to_persist).replace("\t", "").replace("\n", "")
             with open(seen_path, "a", encoding="utf-8") as f:
                 f.write(
                     f"{candidate.story_id}\t"
                     f"{datetime.now(timezone.utc).isoformat()}\t"
-                    f"{safe_headline}\n"
+                    f"{safe_headline}\t"
+                    f"{url_blob}\n"
                 )
-            print(f"[journalism] marked story_id={candidate.story_id} as seen")
+            print(f"[journalism] marked story_id={candidate.story_id} as seen "
+                  f"with {len(urls_to_persist)} URLs")
     except Exception as e:
         print(f"[journalism] could not update seen-stories file ({e}); continuing")
 
