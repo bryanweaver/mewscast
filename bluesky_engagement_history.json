@@ -1334,6 +1334,11 @@
       "did": "did:plc:7ssingpiouvbnyjlvtd4ivcn",
       "handle": "localswampgay.bsky.social",
       "timestamp": "2026-05-05T16:32:27.113262"
+    },
+    {
+      "did": "did:plc:ywrwzfxvfoirfbaf3fwgppd4",
+      "handle": "madlymyself.bsky.social",
+      "timestamp": "2026-05-05T20:34:45.973298"
     }
   ],
   "liked_posts": [
@@ -8546,6 +8551,11 @@
       "uri": "at://did:plc:7ssingpiouvbnyjlvtd4ivcn/app.bsky.feed.post/3ml4m6ynet22w",
       "author": "localswampgay.bsky.social",
       "timestamp": "2026-05-05T16:32:26.893801"
+    },
+    {
+      "uri": "at://did:plc:ywrwzfxvfoirfbaf3fwgppd4/app.bsky.feed.post/3ml42fh6pok2t",
+      "author": "madlymyself.bsky.social",
+      "timestamp": "2026-05-05T20:34:45.792535"
     }
   ],
   "last_cleanup": "2026-05-01T16:19:05.983035",
