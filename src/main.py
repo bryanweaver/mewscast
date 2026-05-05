@@ -493,6 +493,67 @@ def _safe_filename_component(text: str) -> str:
     return "".join(out)
 
 
+# Shot-type rotation table. Keeps the brand consistent (Walter, press badge,
+# news-broadcast vibe) while breaking up the visual sameness of always-centered
+# eye-level medium portraits. Weighted so CLASSIC_PORTRAIT remains the most
+# common baseline (~30%) and the four genuine variations split the rest.
+# Tuning rule: if a shot type starts feeling repetitive, reweight here without
+# touching prompt logic. To kill a shot type entirely set its weight to 0.
+_SHOT_TYPES: list[tuple[str, int, str]] = [
+    (
+        "CLASSIC_PORTRAIT", 30,
+        "Medium-shot portrait, Walter centered and prominent in frame, "
+        "press badge clearly visible, eye-level lens, looking toward camera. "
+        "The current default — use it for most cycles."
+    ),
+    (
+        "WIDE_ESTABLISHING", 18,
+        "Wide establishing shot — Walter SMALL in the frame, the LOCATION "
+        "dominates. Think editorial photojournalism: Walter is a recognizable "
+        "speck in the corner or lower third, while the architecture / scene / "
+        "weather fills two-thirds of the canvas. Press badge readable but tiny. "
+        "Use this when the location IS the story."
+    ),
+    (
+        "LOW_ANGLE_HERO", 18,
+        "Low-angle hero shot — camera at paw level looking UP at Walter, "
+        "with a tall structure (column, building, podium) rising behind him. "
+        "Slight wide-angle distortion, dramatic sky. Walter looks authoritative, "
+        "almost statuesque. Press badge prominent because the camera is below it."
+    ),
+    (
+        "DETAIL_NO_FULL_CAT", 17,
+        "Detail / object-focused shot — Walter is NOT fully in frame. Show only "
+        "his paws on a press notebook, his press badge in extreme close-up with "
+        "a story element reflected in the metal, his glasses + microphone on a "
+        "desk, or a partial profile (one eye + ear + badge edge). The OBJECTS "
+        "of journalism are the subject; Walter is implied. Cinematic depth of "
+        "field, very tight crop. Excellent for META and PRIMARY post types."
+    ),
+    (
+        "THROUGH_THE_LENS", 17,
+        "Frame-within-a-frame — the viewer sees Walter THROUGH something: a "
+        "TV monitor bezel with broadcast overlay, a video viewfinder reticle, "
+        "a window with raindrops, a doorway, the space between two columns. "
+        "Adds 'live from / on assignment' energy. Walter can be medium or wide "
+        "inside the inner frame; the OUTER frame is the visual signature."
+    ),
+]
+
+
+def _pick_shot_type() -> tuple[str, str]:
+    """Roll a shot type from _SHOT_TYPES using the configured weights.
+    Returns (label, description). Independent random call per cycle so
+    different cycles get different shots; not seeded by story_id (we want
+    variety even within a single news event covered across days)."""
+    import random as _random
+    labels = [t[0] for t in _SHOT_TYPES]
+    weights = [t[1] for t in _SHOT_TYPES]
+    descriptions = {t[0]: t[2] for t in _SHOT_TYPES}
+    chosen = _random.choices(labels, weights=weights, k=1)[0]
+    return chosen, descriptions[chosen]
+
+
 def _generate_journalism_image(
     draft: DraftPost, dossier: StoryDossier, save_path: str = "temp_image.png"
 ) -> tuple:
@@ -511,6 +572,11 @@ def _generate_journalism_image(
             if article_body else ""
         )
 
+        # Roll a shot type. Keeps post-type vibes (REPORT-on-location vs META-
+        # at-the-desk) intact while varying the camera angle / framing / crop.
+        shot_label, shot_desc = _pick_shot_type()
+        print(f"[journalism] image shot type: {shot_label}")
+
         img_prompt_path = os.path.join(
             os.path.dirname(os.path.dirname(__file__)), "prompts", "journalism_image.md"
         )
@@ -521,6 +587,8 @@ def _generate_journalism_image(
         img_request = img_request.replace("{topic}", dossier.headline_seed[:200])
         img_request = img_request.replace("{draft_text}", draft.text[:500])
         img_request = img_request.replace("{article_section}", article_section)
+        img_request = img_request.replace("{shot_type}", shot_label)
+        img_request = img_request.replace("{shot_type_description}", shot_desc)
 
         from anthropic import Anthropic as _Anthropic
         _img_client = _Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))

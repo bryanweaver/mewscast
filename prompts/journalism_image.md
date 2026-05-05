@@ -3,9 +3,22 @@
 You are creating an image prompt for Walter Croncat, an AI news reporter cat. The image must match the POST TYPE — different types get different visual treatments, like a real news broadcast where the field reporter looks different from the anchor desk.
 
 **Post type:** `{post_type}`
+**Shot type:** `{shot_type}`
 **Story topic:** {topic}
 **The post says:** {draft_text}
 {article_section}
+
+---
+
+## SHOT TYPE — applies to all post types
+
+The shot type controls **camera angle, framing, and what's actually in frame**. It is independent of post type. Where the post type sets the *vibe* (field reporter vs anchor desk vs commentary), the shot type sets the *composition*. Both must be honored — don't let one override the other.
+
+**This cycle's shot type instruction:**
+
+{shot_type_description}
+
+If the shot type and post type seem to conflict (e.g. a META anchor-desk post drawing a WIDE_ESTABLISHING shot type), reconcile by keeping the post-type vibe but applying the shot-type composition — for the example, a wide establishing shot of the *newsroom itself*, with Walter small at his anchor desk in the corner of the frame, monitors filling the wall behind. The location/setting still matches the post type; only the camera angle and crop change.
 
 ---
 
