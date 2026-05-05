@@ -1,12 +1,16 @@
 name: Engage with Cat Community (X/Twitter)
 
 on:
-  # Schedule: 3x daily during CDT daytime hours (7am–11pm CDT = 11:00–03:00 UTC)
-  # CDT = UTC-4 (daylight saving, Mar–Nov)
-  schedule:
-    - cron: '0 13 * * *'   # 9:00am CDT  (13:00 UTC)
-    - cron: '0 18 * * *'   # 2:00pm CDT  (18:00 UTC)
-    - cron: '0 23 * * *'   # 7:00pm CDT  (23:00 UTC)
+  # Automatic schedule paused 2026-05-02 — X API reads are too expensive.
+  # `x_engagement_bot.py` makes ~4 search_recent_tweets calls per cycle and
+  # was the dominant cost driver that hit the enrolled-account spend cap on
+  # day 9 of the billing cycle. We're keeping POST-only on X (publish path)
+  # and routing all engagement to Bluesky.
+  #
+  # schedule:
+  #   - cron: '0 13 * * *'   # 9:00am CDT  (13:00 UTC)
+  #   - cron: '0 18 * * *'   # 2:00pm CDT  (18:00 UTC)
+  #   - cron: '0 23 * * *'   # 7:00pm CDT  (23:00 UTC)
 
   # Allow manual triggering from GitHub Actions tab
   workflow_dispatch:
