@@ -1,0 +1,101 @@
+{
+  "story_id": "2026-05-05-abortion-pill-rulings-cause-ce54a688f2",
+  "headline_seed": "Abortion pill rulings cause whiplash and confusion - Axios",
+  "brief": {
+    "story_id": "2026-05-05-abortion-pill-rulings-cause-ce54a688f2",
+    "consensus_facts": [
+      "The Supreme Court on Monday temporarily blocked a 5th Circuit Court of Appeals ruling that had restricted mail-order and telehealth access to the abortion pill mifepristone, restoring broad access for now.",
+      "The 5th Circuit ruling was issued on Friday and would have required mifepristone to be prescribed and dispensed in person, reversing FDA rules that had expanded access.",
+      "The temporary stay preserves telehealth and mail-order access to mifepristone for one week, until Monday, May 11.",
+      "The case originated from a lawsuit brought by the state of Louisiana against the FDA.",
+      "Mifepristone was first approved by the FDA in 2000 and is used in the majority of medication abortions in the U.S.",
+      "Justice Samuel Alito issued the stay order and asked parties to file briefs by Thursday, May 7.",
+      "Some providers paused or altered mifepristone prescribing in the wake of the Friday ruling, causing confusion for patients and clinicians."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the Friday ruling's significance",
+        "positions": {
+          "Axios": "Quotes Brittany Fonteno (National Abortion Federation) calling it 'the biggest disruption to abortion access since the Dobbs decision.'",
+          "NPR": "Describes it as a 'major change' but does not use the Dobbs-comparison framing; instead contextualizes with data showing abortions have increased nationally since Roe was overturned."
+        }
+      },
+      {
+        "topic": "Trump administration's role and culpability",
+        "positions": {
+          "Axios": "Frames the administration as caught in a 'political bind,' notes it has been 'conspicuously silent,' and quotes SBA Pro-Life America criticizing the administration's 'inaction.' Also cites Georgetown's Katie Keith saying the administration's failure to defend FDA rules factored into the circuit court's decision.",
+          "NPR": "Does not discuss the Trump administration's silence or political positioning; focuses on the legal mechanics and public health data."
+        }
+      },
+      {
+        "topic": "Use of misoprostol as a workaround",
+        "positions": {
+          "Axios": "Reports that Planned Parenthood of Greater New York temporarily switched to misoprostol for telehealth abortions, and notes it is safe when used alone.",
+          "NPR": "Mentions misoprostol only in the context of the standard two-drug regimen and its other medical uses; does not report provider switching."
+        }
+      },
+      {
+        "topic": "Abortion statistics cited",
+        "positions": {
+          "NPR": "Provides specific data: ~620,000 abortions reported in 2020, ~1.1 million in 2025; medication abortions accounted for nearly two-thirds by 2022; 1 in 4 via telehealth by end of 2024; 7 million patients have used mifepristone since approval.",
+          "Axios": "Does not include these statistics; focuses on the political and operational fallout."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Axios": "Leads with the 'whiplash and confusion' framing for providers and patients, emphasizing the operational chaos in pharmacies and telehealth companies. Heavily sources abortion-rights advocates (Planned Parenthood, National Abortion Federation) and a Georgetown health-law expert, while also quoting SBA Pro-Life America criticizing the Trump administration. Uniquely frames the story as a political bind for the Trump administration and highlights the administration's conspicuous silence. Buries the legal mechanics of the stay in favor of the 'what does this mean right now' angle. Omits abortion volume statistics entirely.",
+      "Reuters": "Headline-only. Frames the Supreme Court action as letting 'abortion pill mail delivery restart for now,' emphasizing the resumption of access. No body text available for deeper analysis.",
+      "The Washington Post": "Headline-only. Frames the Supreme Court action as restoring 'access to abortion pill by mail for now,' similar neutral restoration framing. No body text available for deeper analysis.",
+      "The New York Times": "Headline-only. Uses 'Temporarily Restores Access to Abortion Pill by Mail,' emphasizing the provisional nature with 'temporarily.' No body text available for deeper analysis.",
+      "Associated Press": "Body text consists of video captions and photo descriptions rather than a full article text. References Danco as a mifepristone maker and describes the appeals court ruling as 'the biggest jolt to abortion policy since the overturning of Roe v. Wade' in a video description. Provides minimal substantive reporting in the scraped text.",
+      "NPR": "Leads with the one-week reprieve framing, centering the temporary nature of the stay. Provides the most detailed legal and public-health context: names the 5th Circuit judge (Stuart Kyle Duncan), quotes from his order about Louisiana's claimed injuries, and provides extensive data on abortion trends since the Dobbs decision (Guttmacher and KFF statistics). Uniquely includes the detail that overall abortion numbers have risen nationally despite state bans, attributing this partly to telemedicine. Does not discuss the Trump administration's political positioning or silence. Does not quote abortion-rights advocacy organizations by name beyond Guttmacher. Takes a more explanatory, public-health-oriented approach compared to Axios's political-chaos framing."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court orders, briefs, or FDA documents) were located in the dossier, so no alignment check between reporting and underlying documents is possible."
+    ],
+    "missing_context": [
+      "No primary source documents were available \u2014 the actual Supreme Court stay order text, the 5th Circuit's 19-page order, and Danco's emergency brief to the Supreme Court are referenced but not included. These would be critical for verifying outlet characterizations.",
+      "Only two outlets (Axios and NPR) provided full body text. Reuters, The Washington Post, The New York Times, and the Associated Press provided headline-only or fragmentary content. This limits the robustness of consensus findings.",
+      "No outlet in the dossier provides the legal standard the Supreme Court is applying for the emergency stay (likelihood of success on the merits, irreparable harm, etc.), which would help readers assess the probable outcome.",
+      "No outlet discusses what happens in states that already ban abortion if the telehealth/mail-order access is ultimately restored or maintained \u2014 i.e., the enforceability question at the state level.",
+      "No outlet addresses the FDA's ongoing safety review of mifepristone that the Trump administration has cited as a reason for courts to pause \u2014 its timeline, scope, or likely conclusions.",
+      "No outlet discusses the legal standing question \u2014 whether Louisiana has standing to challenge FDA regulations that apply nationwide \u2014 which is a threshold issue in the underlying case.",
+      "No conservative-leaning outlet is represented with full body text in this dossier, which limits the ability to assess how this story is being framed across the political spectrum."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with full body text (Axios and NPR) corroborate the core facts of the Supreme Court stay, the 5th Circuit ruling, and the provider confusion. While framing differs, the underlying event is straightforward and confirmed. A REPORT is appropriate, though it should note the limited dossier depth and flag the political framing divergence between Axios and NPR as context.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/05/05/abortion-pill-rulings-whiplash-confusion",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us-supreme-court-lets-abortion-pill-mail-delivery-restart-now-2026-05-04/",
+      "title": "US Supreme Court lets abortion pill mail delivery restart for now - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/05/04/supreme-court-abortion-pill-mail-access/",
+      "title": "Supreme Court restores access to abortion pill by mail for now - The Washington Post"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/04/us/politics/supreme-court-abortion-pill.html",
+      "title": "Supreme Court Temporarily Restores Access to Abortion Pill by Mail - The New York Times"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/abortion-pills-mifepristone-supreme-court-louisiana-0533e83d67148fdfec53b1d0d30c1e8a",
+      "title": "Supreme Court restores access to abortion pill mifepristone through telehealth, mail and pharmacies - AP News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/04/nx-s1-5810510/supreme-court-mifepristone-appeals-telehealth",
+      "title": "Supreme Court gives abortion pill mifepristone a 1-week reprieve from a major change - NPR"
+    }
+  ]
+}
