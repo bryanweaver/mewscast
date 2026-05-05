@@ -1319,6 +1319,11 @@
       "did": "did:plc:5qewlc6ufkrqjiqd5dv5kxzu",
       "handle": "mallweasel.bsky.social",
       "timestamp": "2026-05-04T20:38:27.497932"
+    },
+    {
+      "did": "did:plc:rdwoizey4rgr5p67zfdiqhx2",
+      "handle": "nonviolence.bsky.social",
+      "timestamp": "2026-05-05T01:39:52.848376"
     }
   ],
   "liked_posts": [
@@ -8516,6 +8521,11 @@
       "uri": "at://did:plc:5qewlc6ufkrqjiqd5dv5kxzu/app.bsky.feed.post/3ml2jcb677c2e",
       "author": "mallweasel.bsky.social",
       "timestamp": "2026-05-04T20:38:27.137884"
+    },
+    {
+      "uri": "at://did:plc:rdwoizey4rgr5p67zfdiqhx2/app.bsky.feed.post/3mkzguhzlrk2k",
+      "author": "nonviolence.bsky.social",
+      "timestamp": "2026-05-05T01:39:52.701406"
     }
   ],
   "last_cleanup": "2026-05-01T16:19:05.983035",
