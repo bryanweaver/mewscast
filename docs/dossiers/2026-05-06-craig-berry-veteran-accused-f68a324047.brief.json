@@ -1,0 +1,144 @@
+{
+  "story_id": "2026-05-06-craig-berry-veteran-accused-f68a324047",
+  "headline_seed": "Craig Berry: Veteran accused of trying to kill his wife is found dead after dayslong manhunt in Tennessee - CNN",
+  "brief": {
+    "story_id": "2026-05-06-craig-berry-veteran-accused-f68a324047",
+    "consensus_facts": [
+      "Craig Berry, 53, an Army Special Forces veteran, was found dead on Wednesday, May 6, 2026, with initial indications showing he died from a self-inflicted gunshot wound.",
+      "Berry was wanted for attempted second-degree murder after allegedly shooting his wife during a domestic altercation at their home in Dover, Tennessee, on or around May 1, 2026.",
+      "Berry fled into the woods near his home before deputies arrived and sparked a dayslong, multi-agency manhunt involving the Stewart County Sheriff's Office, U.S. Marshals Service, Tennessee Highway Patrol, and Tennessee Bureau of Investigation.",
+      "Berry was described by authorities as having 'extensive training in survival tactics,' being an 'excellent swimmer and diver,' and being in 'good physical shape.'",
+      "Berry was last captured on a trail camera wearing camouflage clothing near the wooded area behind his home.",
+      "Berry's wife survived the shooting, was transported to a medical facility, and has since been released from the hospital.",
+      "Berry was believed to be armed with at least one handgun and extra ammunition.",
+      "The U.S. Marshals Service confirmed Berry is dead 'and no longer a threat to the public.'",
+      "Additional charges against Berry included aggravated assault, domestic assault, and leaving the scene of an accident.",
+      "Berry served in the Army from 1992 to 2016, leaving as a sergeant first class.",
+      "Deputies responded to the initial call at approximately 1:30 a.m. on May 1.",
+      "Berry was not believed to have a phone or means of communication; authorities believed he destroyed his cellphone.",
+      "Stewart County Sheriff Frankie Gray warned the capture could be a 'lengthy process' given Berry's training and the difficult terrain."
+    ],
+    "disagreements": [
+      {
+        "topic": "Time of the initial incident",
+        "positions": {
+          "CNN (Article 3)": "Reports the incident took place 'around 11:30 p.m. Thursday' (April 30), with Berry attacking his wife 'shortly before midnight' per the arrest warrant affidavit.",
+          "ABC News / NBC News / USA Today": "Report deputies responded 'around 1:30 a.m. on May 1,' without specifying whether the assault began earlier.",
+          "Fox News": "States Berry 'allegedly shot his wife during a domestic incident at the couple's house in Dover, Tennessee early Friday morning.'"
+        }
+      },
+      {
+        "topic": "Wife's condition details",
+        "positions": {
+          "CNN (Article 1)": "Reports the wife 'suffered a neck wound' \u2014 specifically 'one gunshot wound to the neck' per the arrest warrant affidavit \u2014 and has been released from the hospital.",
+          "NBC News": "Sheriff described her injuries as 'life-threatening' but said she overcame them.",
+          "ABC News (Article 2)": "Did not provide details on her condition.",
+          "USA Today": "Said her condition 'was not made public.'"
+        }
+      },
+      {
+        "topic": "Weapons Berry was armed with",
+        "positions": {
+          "NBC News": "States authorities believe Berry was 'armed with an automatic weapon' and also 'at least one handgun and extra ammunition.'",
+          "CNN (Article 3)": "Says Berry was 'armed with a rifle and believed to have taken extra ammunition.'",
+          "CNN (Article 1)": "Reports Berry's body was 'found with a single weapon along with a supply of ammunition.'",
+          "ABC News / USA Today": "Report he was armed with 'at least one handgun' and extra ammunition."
+        }
+      },
+      {
+        "topic": "Berry's phone contact after the incident",
+        "positions": {
+          "CNN (Article 1)": "Says Berry 'called his parents, who cooperated with investigators.'",
+          "NBC News": "Says Berry spoke to 'one person, a family member, by phone shortly after the incident.'",
+          "Fox News": "Says 'one family member spoke with Berry on the phone just after the incident.'"
+        }
+      },
+      {
+        "topic": "Iraq deployments",
+        "positions": {
+          "CNN (Article 3)": "Reports Berry 'was deployed to Iraq four times.'",
+          "Fox News": "Reports Berry 'deployed to Iraq four times between 2003 and 2014.'",
+          "Other outlets": "Do not mention specific deployment history."
+        }
+      },
+      {
+        "topic": "Whether Berry was on the TBI Most Wanted list before being found",
+        "positions": {
+          "ABC News (Article 2)": "Reports TBI 'had added him to the state's Most Wanted list earlier Wednesday' (the same day he was found).",
+          "Fox News": "Confirms Berry 'had been added to the Tennessee Bureau of Investigation's Most Wanted list.'",
+          "CNN": "Does not mention the TBI Most Wanted list."
+        }
+      },
+      {
+        "topic": "U.S. Marshals reward",
+        "positions": {
+          "Fox News": "Reports the U.S. Marshals were offering a reward of up to $5,000 for information.",
+          "Other outlets": "Do not mention a reward."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN (Article 1)": "Leads with the resolution \u2014 Berry found dead, self-inflicted gunshot wound \u2014 and provides the sheriff's account of the discovery location (several miles from home, near where trail cameras captured him). Includes detail that Berry 'likely died not long after he fled early on May 1,' which reframes the entire manhunt as a search for someone who was already dead. Mentions the terrain and Land Between the Lakes context. Gives law enforcement a 'mission accomplished' tone via U.S. Marshals quote.",
+      "CNN (Article 3)": "A feature-length explainer on why the manhunt was so difficult, focusing on terrain and Berry's military training. Leads with the challenges rather than the resolution (editor's note at top links to resolution story). Includes expert commentary from a University of New Haven professor comparing the situation to a football game. This is the most detailed account of the shooting itself, citing the arrest warrant affidavit directly. Buries the resolution behind a procedural explainer.",
+      "ABC News (Article 2)": "Concise, wire-style report of the resolution. Leads with Berry found dead. Mentions TBI Most Wanted addition earlier the same day \u2014 notable timing detail. Least amount of background detail among the full-text outlets. Does not provide details on the wife's condition.",
+      "ABC News (Article 6)": "Pre-resolution manhunt story focused on the ongoing search and Berry's survival capabilities. Quotes the sheriff's office spokesperson Paulette Redman by name (unique to this article). Does not include the outcome.",
+      "NBC News": "The most granular pre-resolution reporting, filed from Dover. Only outlet to quote a neighbor (Carol Givens) carrying a pistol for safety \u2014 a human-interest color detail. Only outlet to use the term 'automatic weapon.' Reports sheriff's speculation about a 'financial situation' motive. Includes the sheriff acknowledging Berry could be dead or have fled the area. Filed before resolution.",
+      "USA Today": "Shortest and most straightforward pre-resolution account. Strictly factual, no expert commentary or neighbor interviews. Mentions Berry had no phone or means of communication. Does not include resolution.",
+      "Fox News": "Most comprehensive single article combining pre-resolution manhunt details with the resolution. Only outlet to include a suicide crisis line notice. Only outlet to mention the school district's statement identifying Berry's wife as a schoolteacher. Includes exclusive video reference (bloodhound tracking). Links to multiple other Fox true crime stories in a cross-promotional pattern. Uses the most dramatic language ('massive Tennessee manhunt'). Provides the most specific deployment dates (2003-2014). Mentions the $5,000 reward."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, arrest warrants, official press releases) were located in the dossier. CNN (Article 3) references an arrest warrant affidavit describing the wife's account of being beaten, strangled, and shot in the neck. This document is cited but not included directly. Without the primary source, alignment cannot be assessed."
+    ],
+    "missing_context": [
+      "No primary source documents (arrest warrants, affidavits, official press releases) were provided for independent verification of details attributed to them.",
+      "Berry's wife is not named in any outlet's coverage, and only Fox News (via a school district statement) identifies her as a schoolteacher. No outlet explores her perspective beyond the arrest warrant summary.",
+      "No outlet discusses Berry's mental health history, PTSD, or whether he had prior contact with VA services or law enforcement \u2014 context a fair-minded reader would want given the domestic violence and self-inflicted death.",
+      "No outlet reports whether Berry had any prior criminal record or history of domestic violence complaints.",
+      "Only NBC News mentions a possible 'financial situation' as motive; no other outlet explores or corroborates this.",
+      "The timeline of when Berry actually died remains uncertain \u2014 CNN reports he 'likely died not long after he fled early on May 1,' meaning the multi-day manhunt may have been for a person already deceased. Only CNN surfaces this detail; other outlets do not address it.",
+      "No outlet discusses how Berry's body was specifically located on Wednesday or what led SWAT and TBI agents to the spot.",
+      "No outlet provides information about the medical examiner's expected timeline for official cause of death determination.",
+      "The discrepancy between NBC News reporting an 'automatic weapon' and other outlets reporting a handgun/rifle is never reconciled; no outlet clarifies what type of weapon was found with Berry's body beyond CNN's 'single weapon.'"
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (5+ with full body text) confirm the core resolution \u2014 Berry found dead from apparent self-inflicted gunshot wound \u2014 with strong consensus on key facts. While there are framing differences and some factual discrepancies (weapon type, timeline), the story is fundamentally a straightforward resolved manhunt. A REPORT captures the conclusion cleanly, with minor notes on areas of disagreement.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/06/us/dover-tn-craig-berry-manhunt-found-dead",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/veteran-accused-kill-wife-added-tennessees-wanted-list/story?id=132714087",
+      "title": "Army veteran accused of shooting wife found dead during manhunt: Authorities - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/06/us/craig-berry-suspect-manhunt-complications",
+      "title": "How difficult terrain and military training could complicate the manhunt for a Tennessee suspect - CNN"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/officials-tennessee-continue-search-craig-berry-veteran-accused-shooti-rcna343609",
+      "title": "Manhunt underway in Tennessee for veteran accused of shooting wife - NBC News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/nation/2026/05/05/manhunt-veteran-shooting-wife-craig-berry-tennesee/89941599007/",
+      "title": "Authorities search for special forces vet accused of shooting wife - USA Today"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/manhunt-underway-tennessee-veteran-extensive-survival-training-accused/story?id=132645176",
+      "title": "Manhunt underway in Tennessee for veteran with extensive survival training accused of trying to kill wife - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/us/special-forces-vet-accused-trying-kill-wife-found-dead-ending-massive-tennessee-manhunt",
+      "title": "Special Forces vet accused of trying to kill wife found dead, ending massive Tennessee manhunt - Fox News"
+    }
+  ]
+}
