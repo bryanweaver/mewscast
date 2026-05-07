@@ -1349,6 +1349,11 @@
       "did": "did:plc:6assmjwnz6wlhuqouwvqziz4",
       "handle": "shimaira.com",
       "timestamp": "2026-05-06T13:38:52.624414"
+    },
+    {
+      "did": "did:plc:5xtv7qtqx2whkwkdr3xy6poo",
+      "handle": "seakelpie.bsky.social",
+      "timestamp": "2026-05-07T20:35:39.710095"
     }
   ],
   "liked_posts": [
@@ -8601,6 +8606,11 @@
       "uri": "at://did:plc:evzmobrnzmf6d6bn7m25obr4/app.bsky.feed.post/3ml5evtbpws2l",
       "author": "crankycyborg.bsky.social",
       "timestamp": "2026-05-07T16:33:28.613651"
+    },
+    {
+      "uri": "at://did:plc:5xtv7qtqx2whkwkdr3xy6poo/app.bsky.feed.post/3mla2t5j2xs2d",
+      "author": "seakelpie.bsky.social",
+      "timestamp": "2026-05-07T20:35:39.524832"
     }
   ],
   "last_cleanup": "2026-05-01T16:19:05.983035",
