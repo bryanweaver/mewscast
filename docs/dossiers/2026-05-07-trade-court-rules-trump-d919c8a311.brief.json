@@ -1,0 +1,112 @@
+{
+  "story_id": "2026-05-07-trade-court-rules-trump-d919c8a311",
+  "headline_seed": "Trade Court Rules Trump\u2019s 10% Global Tariff Is Illegal - The New York Times",
+  "brief": {
+    "story_id": "2026-05-07-trade-court-rules-trump-d919c8a311",
+    "consensus_facts": [
+      "A divided three-judge panel (2-1) on the U.S. Court of International Trade ruled on Thursday, May 7, 2026, that President Trump's 10% global tariffs are unlawful.",
+      "The tariffs were imposed under Section 122 of the Trade Act of 1974 after the Supreme Court earlier in 2026 struck down Trump's broader 'Liberation Day' tariffs imposed under IEEPA.",
+      "The majority found the tariffs 'invalid' and 'unauthorized by law.'",
+      "The lawsuit was brought by 24 Democratic-led states and small businesses, including spice importer Burlap and Barrel and toy company Basic Fun.",
+      "The two majority judges \u2014 Mark Barnett and Claire Kelly \u2014 are Obama appointees; the dissenting judge, Timothy Stanceu, is a George W. Bush appointee.",
+      "The Trump administration is expected to appeal the decision."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope of relief granted by the court",
+        "positions": {
+          "Politico": "Reports the court did NOT issue nationwide relief; the injunction is limited to Washington state and the two plaintiff companies. Only those plaintiffs had standing; the 24 states and other parties were found to lack standing.",
+          "CBS News": "Does not clarify the limited scope of standing or relief, giving the impression the ruling broadly invalidates the tariffs for all importers. Also reports the court ordered refunds plus interest to businesses and required implementation within five days.",
+          "Associated Press": "Describes the ruling as against 'new global tariffs' broadly but does not detail the scope of injunctive relief or standing limitations."
+        }
+      },
+      {
+        "topic": "Refunds and remedy details",
+        "positions": {
+          "CBS News": "Reports the panel ordered refunds plus interest for all tariffs paid by businesses, and that the administration must implement the order within five days. Also notes the administration is expected to begin issuing refunds this month for the earlier IEEPA tariffs.",
+          "Politico": "Reports only that the two majority judges barred collection of duties from the specific plaintiffs (Washington state and two companies). Does not mention refunds or a five-day implementation deadline.",
+          "Associated Press": "Does not mention refunds or implementation timeline."
+        }
+      },
+      {
+        "topic": "Expiration date of the Section 122 tariffs",
+        "positions": {
+          "Associated Press": "Reports the tariffs were set to expire July 24.",
+          "Politico": "States the statute allows tariffs for no more than 150 days but does not specify the expiration date.",
+          "CBS News": "Notes the 150-day statutory limit but does not state a specific expiration date."
+        }
+      },
+      {
+        "topic": "Trump administration's next steps on trade policy",
+        "positions": {
+          "Politico": "Reports USTR launched Section 301 investigations in March into dozens of countries, widely expected to lead to sweeping tariffs this summer.",
+          "CBS News": "Does not mention Section 301 investigations or alternative tariff authorities.",
+          "Associated Press": "Does not mention Section 301 investigations."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only. No body text available for analysis. Headline is neutral wire phrasing: 'US trade court rules against Trump's 10% global tariffs.'",
+      "The New York Times": "Headline-only (page returned 403 Forbidden). Cannot assess framing beyond the headline seed, which frames the tariff as 'illegal' \u2014 a stronger word choice than 'unlawful' or 'rules against.'",
+      "Al Jazeera English": "Headline-only; the scraped body text is unrelated content about Canada's PM Carney. No substantive analysis possible.",
+      "Politico": "Most detailed legal and procedural reporting among the outlets with retrievable text. Leads with the ruling and immediately contextualizes it as a 'Plan B' that also failed. Emphasizes the limited scope of relief (no nationwide injunction) and the standing issue. Uniquely reports on the Liberty Justice Center's role and quotes senior counsel Jeffrey Schwab. Also uniquely flags the Section 301 investigations as the administration's next avenue for tariffs. Frames this as one chapter in an ongoing legal and policy battle rather than a decisive conclusion.",
+      "Associated Press": "Concise wire-style report. Leads with the ruling and quickly establishes the legal timeline: Supreme Court struck down IEEPA tariffs, Trump pivoted to Section 122, now that too is struck down. Notes the expected appeal path (Federal Circuit, then potentially Supreme Court). Uniquely reports the July 24 expiration date. Notably brief \u2014 does not detail standing, scope of relief, or alternative tariff authorities.",
+      "The Washington Post": "Headline-only. No body text available for analysis. Headline is neutral: 'Trade court rules against Trump's global tariff.'",
+      "CBS News": "Most consumer-facing framing. Leads with the ruling's invalidity finding and provides context about the Supreme Court's earlier IEEPA decision. Uniquely reports the five-day implementation deadline and refund-plus-interest order. Also uniquely notes that IEEPA tariff refunds are expected this month. Does not mention the limited standing or the narrow scope of injunctive relief, which could leave readers with the impression the tariffs are immediately invalidated for all importers nationwide. Includes outreach to the White House for comment."
+    },
+    "primary_source_alignment": [
+      "No primary source (the 88-page court opinion) was located or provided in the dossier. All analysis is based solely on outlet reporting.",
+      "CBS News references an 88-page ruling and quotes specific language about 'economic harm' and the administration's failure to justify continued collection. These quotes cannot be verified against the primary source.",
+      "Politico quotes the majority opinion stating Trump's proclamation 'is invalid, and the tariffs imposed on Plaintiffs are unauthorized by law.' This also cannot be independently verified but is consistent with AP's paraphrase."
+    ],
+    "missing_context": [
+      "The actual 88-page court opinion was not available in the dossier. This is the most important missing document for verifying outlet claims, especially around the scope of relief, the refund order, and the five-day implementation timeline reported by CBS News.",
+      "No outlet with retrievable body text explains in detail the dissenting judge's reasoning \u2014 only that Judge Stanceu found the law allows the president 'more leeway.' The substance of the dissent is absent.",
+      "No outlet explains what happens to the tariffs currently being collected from non-plaintiff importers during the expected appeal. The practical effect of this ruling on ongoing trade is unclear.",
+      "No outlet addresses whether the administration might seek an emergency stay of the ruling pending appeal.",
+      "No outlet provides economic data on how much revenue has been collected under the Section 122 tariffs or how many importers are affected.",
+      "Four of seven articles in the dossier (Reuters, NYT, Al Jazeera, Washington Post) were headline-only or returned unusable content, significantly limiting cross-outlet corroboration.",
+      "The timeline of the earlier Supreme Court IEEPA ruling (described as February 2026 by CBS News) is not confirmed by a second outlet's body text with a specific date, though all outlets reference the Supreme Court loss."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (Politico, AP, CBS News) corroborate the core event \u2014 a 2-1 CIT ruling striking down Section 122 tariffs. The disagreements are primarily about scope and detail rather than materially different framings. A straight REPORT is appropriate, with a note flagging the CBS/Politico divergence on scope of relief as an important detail for readers.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us-trade-court-rules-against-trumps-10-global-tariff-2026-05-07/",
+      "title": "US trade court rules against Trump's 10% global tariffs - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/07/business/economy/trump-global-tariff-ruled-illegal.html",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/amp/economy/2026/5/7/us-trade-court-rules-against-trumps-10-percent-global-tariffs",
+      "title": "US trade court rules against Trump\u2019s 10 percent global tariffs - Al Jazeera"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/07/trade-court-rules-trumps-replacement-tariffs-illegal-00910828",
+      "title": "Trade court rules Trump\u2019s replacement tariffs illegal - Politico"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-global-tariffs-trade-court-df01218b89ca925015fe41c700d6beb9",
+      "title": "Federal court rules against new global tariffs Trump imposed after loss at the Supreme Court - AP News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/business/2026/05/07/tariffs-trade-court-ruling-trump/",
+      "title": "Trade court rules against Trump\u2019s global tariff - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/u-s-trade-court-rules-against-trump-10-percent-tariffs/",
+      "title": "U.S. trade court rules against Trump's 10% tariffs - CBS News"
+    }
+  ]
+}
