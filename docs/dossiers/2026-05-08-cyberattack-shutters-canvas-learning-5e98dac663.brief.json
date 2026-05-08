@@ -1,0 +1,144 @@
+{
+  "story_id": "2026-05-08-cyberattack-shutters-canvas-learning-5e98dac663",
+  "headline_seed": "Cyberattack shutters Canvas learning platform for schools across the U.S. - CBS News",
+  "brief": {
+    "story_id": "2026-05-08-cyberattack-shutters-canvas-learning-5e98dac663",
+    "consensus_facts": [
+      "A cyberattack on Thursday, May 7, 2026, took down Canvas, the learning management system owned by Instructure, disrupting thousands of schools and universities across the U.S.",
+      "The hacking group ShinyHunters claimed responsibility for the breach.",
+      "By late Thursday night, Instructure posted that Canvas was 'available for most users.'",
+      "The attack caused major disruptions during finals season, forcing schools to cancel or reschedule exams and extend deadlines.",
+      "Penn State told students 'no one has access' to Canvas and that a resolution was not expected 'within the next 24 hours,' and canceled some exams.",
+      "Universities affected included Penn State, UCLA, Columbia University, the University of Chicago, Northwestern University, Harvard, and others spanning from California to New York.",
+      "Public school districts were also affected, with Spokane, Washington, officials telling parents they were not 'aware of any sensitive data contained in this breach.'",
+      "Luke Connolly, a threat analyst at cybersecurity firm Emisoft, was a key source, describing ShinyHunters as a loose affiliation of teenagers and young adults based in the U.S. and U.K.",
+      "Screenshots showed the group began threatening to leak data on Sunday, with deadlines of Thursday and May 12, suggesting extortion discussions may be ongoing.",
+      "ShinyHunters claimed nearly 9,000 schools worldwide were affected and billions of private messages and records were accessed.",
+      "ShinyHunters has been linked to previous attacks, including one targeting Ticketmaster/Live Nation.",
+      "The Canvas attack was described as strikingly similar to a prior breach at PowerSchool, in which a Massachusetts college student was charged.",
+      "Instructure had not posted about the attack on its social media."
+    ],
+    "disagreements": [
+      {
+        "topic": "Prior breach timeline and details",
+        "positions": {
+          "CNN": "Reports a prior Instructure cybersecurity incident on May 1 that was 'contained' by May 2, with usernames, email addresses, student ID numbers, and communications exposed. CNN describes Thursday's attack as a second breach, citing ShinyHunters' ransom note saying they had hacked Instructure 'again' and faulting the company for ignoring them and applying 'security patches.' CNN also references a May 3 ransom note claiming 275 million individuals' data breached with a May 6 deadline.",
+          "CBS News": "Does not mention a prior May 1 breach or a second-attack narrative.",
+          "BBC News": "Does not mention a prior May 1 breach.",
+          "NBC News": "Does not mention a prior May 1 breach."
+        }
+      },
+      {
+        "topic": "Scope of affected schools listed",
+        "positions": {
+          "CNN": "Provides the broadest list, naming Columbia, Princeton, Harvard, Georgetown, Rutgers, Kent State, University of Washington, University of Pennsylvania, UC Riverside, and school districts in California, Florida, Georgia, Oklahoma, Oregon, Nevada, North Carolina, Tennessee, Utah, Virginia, and Wisconsin.",
+          "CBS News": "Names Penn State, UW-Madison, Columbia, Union College NJ, UCLA, Northwestern, UChicago, U of Illinois Chicago, U of Illinois.",
+          "BBC News": "Names Penn State and UCLA specifically; references attacks 'from California to New York.'",
+          "NBC News": "Names University of Iowa and Virginia Tech, in addition to Harvard and Spokane schools \u2014 names not mentioned in other outlets' body text."
+        }
+      },
+      {
+        "topic": "Ransom note visibility",
+        "positions": {
+          "CNN": "Reports that ransom notes signed by ShinyHunters appeared on the homepage of schools' Canvas sites and that a University of Washington student saw the message upon login.",
+          "BBC News": "Reports the University of Chicago's student newspaper posted a screenshot of a ShinyHunters message that appeared to seek a ransom, encouraging the university to 'negotiate a settlement.'",
+          "CBS News": "Does not describe ransom notes appearing on Canvas homepages directly.",
+          "NBC News": "Does not describe ransom notes appearing on Canvas homepages directly."
+        }
+      },
+      {
+        "topic": "Whether Instructure took Canvas down proactively or hackers knocked it offline",
+        "positions": {
+          "NBC News": "Explicitly notes Instructure 'didn't immediately respond to a request for comment or questions about whether the system was taken down as a precaution or because the hackers knocked it offline.'",
+          "CNN": "Reports Instructure said it put the platform in 'maintenance mode' as it investigated the issue.",
+          "CBS News": "Does not clarify the mechanism of the outage.",
+          "BBC News": "Does not clarify the mechanism of the outage."
+        }
+      },
+      {
+        "topic": "Canvas user base size",
+        "positions": {
+          "CNN": "States Canvas has 'more than 30 million active users globally, with more than 8,000 institutions as customers,' citing Instructure's website.",
+          "CBS News": "Says 'thousands of schools and universities' without specific user count.",
+          "BBC News": "Says 'thousands of schools and universities' without specific user count.",
+          "NBC News": "Says 'thousands of schools and universities' without specific user count."
+        }
+      },
+      {
+        "topic": "Political context",
+        "positions": {
+          "BBC News": "Uniquely ties the attack to the same day Senator Chuck Schumer sent a letter to the Trump administration urging more defense against cyber risks in the age of AI, quoting Schumer that DHS 'must immediately help states and localities.'",
+          "CBS News": "No political context mentioned.",
+          "CNN": "No political context mentioned.",
+          "NBC News": "No political context mentioned."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Leads with the chaos and educational disruption, emphasizing students studying for finals. Provides a solid rundown of affected schools and quotes from Connolly. Includes broader context about schools as targets for hackers (Minneapolis, LAUSD) and the PowerSchool comparison. Does not mention any prior May 1 breach. Does not include any student voices or personal impact stories. Instructure's silence on social media is noted. Wire-service tone throughout (this appears to be AP-sourced content).",
+      "BBC News": "Shorter piece that leads on disruption and chaos. Uniquely introduces a political angle by connecting the attack to Senator Schumer's same-day letter urging the Trump administration to bolster cyber defenses, framing the incident within a broader government-responsibility narrative. Mentions the University of Chicago's student newspaper publishing a screenshot of the ransom message. Does not include the PowerSchool comparison, the Ticketmaster link, or ShinyHunters' demographic profile. Includes a reader engagement call-to-action ('Have you been affected?').",
+      "The New York Times": "Headline-only; no body text available for analysis. Headline reads 'Canvas Online Learning Platform Shut Down for Hours After Cyberattack,' which frames the outage duration as notable ('for Hours') \u2014 a relatively measured framing compared to others that emphasize ongoing chaos.",
+      "CNN": "The most detailed and longest report. Uniquely reports a prior May 1 breach and frames Thursday's attack as a second, escalated incident, citing ShinyHunters' own ransom note language about hacking Instructure 'again.' Provides specific user-base figures (30 million users, 8,000+ institutions). Includes the broadest geographic scope of affected schools and districts. Features multiple named student voices (Melanie Topchyan, Anish Garimidi, Minhal Nazeer) providing personal impact and emotional texture. References Mandiant/Google research on ShinyHunters' voice phishing tactics. Mentions the 2024 DOJ sentencing of a ShinyHunters member. Frames the story around 'What we know' \u2014 an explainer structure. CNN's reporting adds the most unique claims not corroborated by other outlets.",
+      "NBC News": "Runs AP copy nearly identical to the CBS News article, with minor differences. Uniquely includes quotes from the University of Iowa's IT director and Virginia Tech's notice to students, adding Midwest and Southeast institutional voices. Notes the unresolved question of whether Instructure took Canvas down proactively or the hackers caused the outage. Does not include student personal stories or the prior breach narrative.",
+      "CBS News (NY video)": "Headline-only; no body text available for analysis. Local CBS affiliate framing for New York audience.",
+      "CBS News (TX video)": "Headline-only; no body text available for analysis. Local CBS affiliate framing for Texas audience."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, official press releases from Instructure, ransom notes, or Schumer's letter) were located in the dossier. All reporting is based on outlet accounts and attributed quotes from sources like Connolly at Emisoft.",
+      "Multiple outlets reference Instructure's status page update that Canvas was 'available for most users' by late Thursday, but no direct text of that status update was provided as a primary source.",
+      "CNN references a May 1 Instructure statement about a prior cybersecurity incident and a May 3 ransom note shared by Ransomware.live, but neither document is included in the dossier for independent verification."
+    ],
+    "missing_context": [
+      "No official statement from Instructure is included as a primary source. The company's account of what happened, what data was compromised, and what remediation steps are underway is absent from the dossier.",
+      "The actual text of ShinyHunters' ransom notes \u2014 referenced by multiple outlets \u2014 is not available as a primary source for verification.",
+      "No outlet addresses what specific data types (grades, Social Security numbers, financial aid records, etc.) may have been exposed beyond CNN's mention of 'usernames, email addresses, student ID numbers and communications' from the prior May 1 breach.",
+      "CNN's reporting on a prior May 1 breach is not corroborated by any other outlet in the dossier. This is a significant single-source claim that changes the narrative from a one-off attack to an escalating campaign.",
+      "No outlet discusses Instructure's contractual or legal obligations to schools regarding data breach notification, nor whether any regulatory body (e.g., the FTC or state attorneys general) has opened an investigation.",
+      "Senator Schumer's letter (mentioned only by BBC) is not available as a primary source, and no other outlet references it \u2014 leaving unclear whether it was specifically prompted by this attack or coincidental timing.",
+      "No outlet provides detail on what 'available for most users' actually means \u2014 whether all data was restored, whether some institutions remain locked out, or whether the platform is operating in a degraded state.",
+      "The dossier skews heavily lean-left (CBS, CNN, NBC, NYT) with one international outlet (BBC). No center, lean-right, or right-leaning outlets are represented, limiting the range of framing analysis.",
+      "No outlet addresses whether students' academic records or grades could be permanently lost or altered as a result of the breach.",
+      "The financial dimension \u2014 what Instructure's contractual obligations are, whether insurance covers this, or what the ransom demand amount was \u2014 is entirely absent from coverage."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text confirm the core facts of the Canvas cyberattack, the responsible group, the scope of disruption, and the timeline. While there are framing differences, the fundamental story is consistent across outlets. The main divergence \u2014 CNN's prior-breach narrative \u2014 is a significant single-source addition that should be flagged but does not rise to the level of materially contradictory framing that would warrant a META post. A straight REPORT with appropriate caveats about unconfirmed CNN-specific claims is the right call.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/cyberattack-shutters-canvas-learning-platform-for-schools-across-us/",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/ce3pq0136eqo",
+      "title": "Cyber attack disrupts swath of US universities and schools nationwide - BBC"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/07/education/canvas-hacked-down-data-breach.html",
+      "title": "Canvas Online Learning Platform Shut Down for Hours After Cyberattack - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/07/us/canvas-hack-strands-college-students-finals-week",
+      "title": "What we know about the Canvas hack impacting thousands of schools - CNN"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/tech/tech-news/cyberattack-hits-canvas-learning-management-system-rcna344160",
+      "title": "Cyberattack hits Canvas learning management system - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/newyork/video/cyberattack-shuts-down-canvas-learning-platform-for-schools-across-u-s/",
+      "title": "Cyberattack shuts down Canvas learning platform for schools across U.S. - CBS News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/texas/video/canvas-online-learning-platform-hit-with-cyberattack-impacting-schools-across-u-s/",
+      "title": "Canvas online learning platform hit with cyberattack, impacting schools across U.S. - CBS News"
+    }
+  ]
+}
