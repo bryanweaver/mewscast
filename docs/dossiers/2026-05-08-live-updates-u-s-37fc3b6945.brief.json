@@ -1,0 +1,104 @@
+{
+  "story_id": "2026-05-08-live-updates-u-s-37fc3b6945",
+  "headline_seed": "Live Updates: U.S. fires on 2 Iran-flagged tankers as Rubio says U.S. expects response on peace deal today - CBS News",
+  "brief": {
+    "story_id": "2026-05-08-live-updates-u-s-37fc3b6945",
+    "consensus_facts": [
+      "U.S. forces fired on and disabled two Iran-flagged oil tankers on Friday that were attempting to breach the American blockade of Iran's ports.",
+      "Secretary of State Marco Rubio said the U.S. was expecting a response from Iran on a peace/ceasefire proposal on Friday, expressing hope it would be 'a serious offer.'",
+      "President Trump said the U.S.-Iran ceasefire is 'still in effect' but threatened escalation if Iran does not accept a deal.",
+      "The U.S. military said it thwarted Iranian attacks on three Navy ships in the Strait of Hormuz overnight Thursday and struck Iranian military facilities in response; no American ships were hit.",
+      "Iran's Foreign Minister Abbas Araghchi accused the U.S. of breaching the ceasefire, posting on X: 'Every time a diplomatic solution is on the table, the U.S. opts for a reckless military adventure.'",
+      "An Iranian cargo vessel was struck overnight, with reports of at least one sailor killed and 10 injured; it was not clear if it was one of the two tankers the U.S. acknowledged striking.",
+      "The UAE reported another Iranian missile and drone attack on Friday, with its defense ministry saying three people were wounded after air defenses engaged two ballistic missiles and three drones.",
+      "Satellite images reviewed by the AP show an oil slick of approximately 27 square miles emanating from Kharg Island, Iran's main crude export terminal, with an estimated 80,000 barrels spilled since first detected Tuesday; the cause is unknown.",
+      "The Pentagon declined to comment on whether the U.S. military was tracking the oil spill or whether there had been recent strikes on Kharg Island.",
+      "Pakistan has been mediating between the U.S. and Iran, passing a U.S. memorandum to Iran as a basis for a more solid ceasefire.",
+      "The war and closure of the Strait of Hormuz have caused global fuel price spikes and economic turmoil."
+    ],
+    "disagreements": [
+      {
+        "topic": "Casualties on the struck Iranian cargo vessel",
+        "positions": {
+          "NPR": "Reports 'at least one sailor' killed and 10 others injured, citing a news agency affiliated with Iran's judiciary.",
+          "The Guardian": "Reports 10 sailors wounded and five others missing, citing an Iranian official; does not mention a confirmed death."
+        }
+      },
+      {
+        "topic": "Timeline for oil spill reaching neighboring shores",
+        "positions": {
+          "CBS News": "Says the spill could 'within the next two weeks' potentially reach shores of UAE, Qatar, or Saudi Arabia.",
+          "NPR": "Says the spill could 'by next week' potentially reach the shores of those countries."
+        }
+      },
+      {
+        "topic": "Characterization of the war and its parties",
+        "positions": {
+          "The Guardian": "Repeatedly uses the framing 'US-Israel war on Iran,' explicitly naming Israel as a co-belligerent in the headline structure and body.",
+          "CBS News": "Refers to 'the Iran war' without foregrounding Israel's role.",
+          "NPR": "Refers to 'the U.S. and Israel launched the war on Feb. 28' in the body but does not use 'US-Israel war' as a framing label."
+        }
+      },
+      {
+        "topic": "Greenpeace expert assessment of oil spill trajectory",
+        "positions": {
+          "CBS News": "Quotes Nina Noelle saying it 'appears unlikely that it will impact land' but could affect marine habitats.",
+          "NPR": "Quotes the same expert with essentially the same assessment; no divergence here."
+        }
+      },
+      {
+        "topic": "Trump's characterization of recent strikes",
+        "positions": {
+          "The Guardian": "Reports Trump called the strikes 'just a love tap.'",
+          "CBS News": "Does not include this quote.",
+          "NPR": "Does not include this quote."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Structured as a live-updates blog, leading with the tanker firing and Rubio's expectation of an Iranian response. Includes granular military details (57 vessels redirected, 4 disabled, specific ship names) that other outlets do not carry. Also covers the Lebanon-Israel talks scheduled for May 14-15 and the ASEAN crisis plan \u2014 two subsidiary stories not prominently covered by others. Does not frame Israel as a co-belligerent in the headline or body framing. Buries the environmental angle (oil slick) below the military and diplomatic updates.",
+      "NPR": "Leads with the tanker firing and overnight Hormuz standoff. Provides the most direct attribution of the war's start ('the U.S. and Israel launched the war on Feb. 28'). Includes sidebar links to related stories on Gaza body recovery, NATO implications, and Lebanon ceasefire fraying, signaling a broader conflict-ecosystem framing. Uniquely includes Rubio's quote that it's 'unacceptable' for an Iranian agency to control the strait. Oil spill section is substantial but placed below military developments.",
+      "The Washington Post": "Headline-only article; no body text available for analysis. The headline \u2014 'Trump says ceasefire still intact after burst of violence with Iran' \u2014 foregrounds Trump's claim against the evident contradiction of ongoing violence, implying tension between rhetoric and reality.",
+      "The Guardian": "The most diplomatically detailed of the four, with significant attention to the negotiation dynamics, Pakistan's mediation role, and the strategic calculus on both sides. Uniquely frames the conflict as the 'US-Israel war on Iran' in its headline structure and subhead, explicitly naming Israel as a co-party. Includes details not found elsewhere: Trump shelving 'Project Freedom' after Saudi Arabia refused use of bases and airspace; Araghchi boasting that Iran's missile stocks had been 'expanded' during the ceasefire; the U.S. proposal offering a formal 60-day ceasefire leading to talks on the nuclear program; and the stock market rally on partial-deal hopes. Most explicit about the gap between ceasefire rhetoric and on-the-ground violence ('the ceasefire has largely been in name only' framing is implicit throughout). Also the only outlet to report that Iran has 'frequently hitting civilian infrastructure, including oil facilities and luxury hotels' in the UAE."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. All claims rest on outlet reporting, wire content (AP), and official statements relayed through those outlets."
+    ],
+    "missing_context": [
+      "No outlet provides a legal analysis of the U.S. blockade \u2014 whether it constitutes an act of war under international law, or under what authority it was established (AUMF, presidential directive, UN resolution, or none).",
+      "The war's start date is given as February 28 by NPR, but no outlet provides a concise summary of what triggered the conflict or the sequence of escalation for readers encountering this story fresh.",
+      "None of the outlets quantify the total civilian casualties of the war to date on either side, despite the conflict now being over two months old.",
+      "The Guardian uniquely reports Trump shelved 'Project Freedom' after Saudi Arabia refused use of bases and airspace \u2014 a significant geopolitical detail absent from the other three outlets.",
+      "The Guardian uniquely reports Araghchi's claim that Iran expanded its missile stocks during the ceasefire \u2014 a claim that, if true, materially affects the strategic picture but is not corroborated or challenged by other outlets.",
+      "No outlet explains the specific contents of the U.S. peace proposal beyond broad strokes (60-day ceasefire, nuclear rollback, strait reopening). The actual terms Iran is being asked to accept remain opaque.",
+      "The environmental implications of the 80,000-barrel oil spill receive limited treatment; no outlet reports on potential wildlife or fisheries impact in detail, nor on whether any international environmental body has been engaged.",
+      "The Washington Post article was headline-only, limiting the dossier's breadth. Its full reporting may contain details absent from this analysis.",
+      "Israel's specific military role in ongoing operations is largely absent from coverage despite NPR and The Guardian identifying Israel as a co-belligerent in the war's launch."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text corroborate the core facts of the tanker firing, diplomatic expectations, and ceasefire tensions. While framing differences exist (particularly The Guardian's 'US-Israel war' framing vs. others), the factual core is solid and the story is fast-moving enough to warrant a straight REPORT rather than a META post focused on coverage divergence.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-attacks-qeshm-island-ceasefire/",
+      "title": ""
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/08/g-s1-121061/iran-war-updates",
+      "title": "The U.S. fires on Iranian tankers trying to evade its blockade amid a Hormuz standoff - NPR"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/05/07/us-strikes-iran-ceasefire/",
+      "title": "Trump says ceasefire still intact after burst of violence with Iran - The Washington Post"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/may/08/us-iran-war-strait-of-hormuz-negotiations-marco-rubio",
+      "title": "US awaiting response from Iran over proposals for ceasefire deal, says Rubio - The Guardian"
+    }
+  ]
+}
