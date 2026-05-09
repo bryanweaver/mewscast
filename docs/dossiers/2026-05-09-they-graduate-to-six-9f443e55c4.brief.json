@@ -1,0 +1,57 @@
+{
+  "story_id": "2026-05-09-they-graduate-to-six-9f443e55c4",
+  "headline_seed": "They graduate to six figure salaries, and grueling work - NPR",
+  "brief": {
+    "story_id": "2026-05-09-they-graduate-to-six-9f443e55c4",
+    "consensus_facts": [],
+    "disagreements": [],
+    "framing_analysis": {
+      "NPR": "NPR is the only outlet in this dossier with full body text covering the headline-seed story about merchant marine graduates and maritime workforce shortages. The piece leads with the SUNY Maritime College training ship and student experience, then pivots to the national security angle: roughly 8,000 open positions across the U.S. maritime sector, more than 5,000 with Military Sealift Command. NPR reports that starting salaries for entry-level officers exceed $100,000, with Military Sealift Command offering signing bonuses up to $54,000 and starting salaries that can exceed $170,000. The piece foregrounds the grueling nature of the work (12 hours on, 12 hours off, 7 days a week) and the danger of operating near conflict zones, specifically citing the Iran war and missiles over the Persian Gulf. NPR also references the Trump administration's Maritime Action Plan unveiled in February. The story is structured as a human-interest feature built around SUNY Maritime cadets and alumni, with national defense urgency as the throughline. It quotes SUNY Maritime President John Okon (retired Navy Admiral, class of 1991), Chief of Staff Tom Murphy (class of 1993), graduating senior Finn Mahan, and recent graduate Maxwell Cappella.",
+      "The New York Times (retirement article)": "Headline-only. The article about retirees and home equity as a financial safety net is entirely unrelated to the merchant marine/maritime workforce story. No body text was retrievable. This article appears to have been included in the dossier erroneously or as a result of a broad scrape; it offers no corroboration or contrast on the seed story.",
+      "NBC News": "Full body text is available but covers an entirely different story: Republican redistricting advantages versus Democratic midterm headwinds in the 2026 elections. The piece discusses Virginia Supreme Court redistricting ruling, Trump's approval ratings below 40%, and the Cook Political Report's assessment that Democrats remain favored to win back the House. This article has no relevance to the merchant marine/maritime workforce story. The only tangential connection is a passing mention of the Iran conflict's effect on political dynamics.",
+      "The New York Times (AI note-takers article)": "Headline-only. The article about AI note-takers making lawyers nervous is entirely unrelated to the merchant marine/maritime workforce story. No body text was retrievable.",
+      "The Guardian": "Full body text is available but covers tensions in the Netanyahu-Trump alliance over the Iran war. The piece includes extensive analysis of how Netanyahu convinced Trump to attack Iran, the failed assumptions about regime change, and Israel being sidelined from peace talks. While the Iran war is mentioned in the NPR piece as context for the danger merchant mariners face near the Strait of Hormuz, The Guardian's article does not address maritime workforce issues, merchant marines, or naval logistics at all."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. NPR references the Trump administration's Maritime Action Plan (unveiled February 2026) and Military Sealift Command staffing figures, but neither document was included in the dossier for verification."
+    ],
+    "missing_context": [
+      "Only one outlet (NPR) actually covers the headline-seed story about merchant marine graduates and maritime workforce shortages. The other four articles in the dossier are either headline-only or cover entirely unrelated topics (redistricting, retirement finances, AI legal risks, Netanyahu-Trump tensions). No consensus can be established from this dossier on the core story.",
+      "No primary source was located. The Trump administration's Maritime Action Plan (February 2026) and Military Sealift Command staffing data are referenced by NPR but not independently verifiable from this dossier.",
+      "NPR's claim of roughly 8,000 open maritime positions and 5,000+ Military Sealift Command vacancies is attributed to unnamed 'industry groups' \u2014 no specific source or methodology is cited.",
+      "NPR's claim that Navy vessels near the Strait of Hormuz could exhaust provisions in as few as five days without merchant marine supply ships is not attributed to a named source or study.",
+      "No outlet in this dossier provides a comparison of maritime academy enrollment trends over time, retention rates for merchant mariners, or details of what the Maritime Action Plan actually proposes.",
+      "No coverage from center or right-leaning outlets on this story was included in the dossier, so there is no way to assess whether framing differs across the political spectrum."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (NPR) covers this story with full body text, and no other outlet in the dossier corroborates or even addresses the same topic. This is a single-source feature that merits a cautious same-day hedge post flagging the story's national security and workforce angles while clearly attributing all claims to NPR alone.",
+    "confidence": 0.25
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/09/nx-s1-5789051/merchant-marine-sealift-jobs",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/09/business/retirement-home-equity-selling-your-house.html",
+      "title": "Retirees Expect Their Home to Be a Financial Safety Net. They Shouldn\u2019t. - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-election/republicans-redistricting-headwinds-democrats-midterm-house-majority-rcna344248",
+      "title": "Republicans gain upper hand in redistricting fight, but they still face midterm headwinds - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/09/business/dealbook/ai-notetakers-legal-risk.html",
+      "title": "All Those A.I. Note Takers? They\u2019re Making Lawyers Very Nervous. - The New York Times"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/may/09/tensions-emerge-bejamin-netanyahu-donald-trump-alliance",
+      "title": "\u2018They have screwed each other pretty badly\u2019: tensions emerge in Netanyahu-Trump alliance - The Guardian"
+    }
+  ]
+}
