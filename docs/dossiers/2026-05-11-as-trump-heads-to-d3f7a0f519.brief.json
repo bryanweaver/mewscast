@@ -1,0 +1,100 @@
+{
+  "story_id": "2026-05-11-as-trump-heads-to-d3f7a0f519",
+  "headline_seed": "As Trump Heads to Beijing, China Is \u2018Locked and Loaded\u2019 for a Fight - The New York Times",
+  "brief": {
+    "story_id": "2026-05-11-as-trump-heads-to-d3f7a0f519",
+    "consensus_facts": [
+      "President Trump is scheduled to visit Beijing this week for a summit with Chinese President Xi Jinping, confirmed across all outlets with retrievable body text (The Washington Post, The Guardian, The Economic Times).",
+      "This will be the first visit by a US president to China since Trump's last visit in 2017 during his first term, reported by The Washington Post, The Guardian, and The Economic Times.",
+      "The summit is expected to focus on preserving the trade truce reached in South Korea (Busan) last October, as reported by The Guardian and The Economic Times.",
+      "The visit has been affected by the ongoing US-Iran conflict in the Middle East, referenced by The Guardian, The Washington Post, and The Economic Times.",
+      "Trade, Taiwan, and broader strategic competition are expected to be key agenda items, confirmed by The Guardian, The Economic Times, and The Washington Post.",
+      "Boeing is in talks with China over a potential deal involving 737 Max jets, reported by The Guardian; broader corporate delegation including Nvidia, Apple, Exxon, Boeing CEO Kelly Ortberg, and Citigroup's Jane Fraser confirmed by The Guardian.",
+      "China enters the summit from a position of relative economic strength, with The Guardian and The Economic Times both noting China's resilient trade performance and ability to push back against US tariffs."
+    ],
+    "disagreements": [
+      {
+        "topic": "Duration and timing of the visit",
+        "positions": {
+          "The Guardian": "Reports the trip was delayed by the Iran attack and cut to just two days; Trump arrives Wednesday (May 14).",
+          "The Economic Times": "States Trump will travel to Beijing on May 14-15, consistent with a two-day visit but does not mention it being shortened or delayed."
+        }
+      },
+      {
+        "topic": "Characterization of China's posture",
+        "positions": {
+          "The New York Times": "Headline frames China as 'locked and loaded' for a fight \u2014 aggressive, combative framing.",
+          "The Washington Post": "Frames Xi as 'confident in China's power' and ready to host an 'unpredictable Trump' \u2014 emphasis on Xi's composure and strategic positioning.",
+          "The Guardian": "Frames Trump as entering from a 'vulnerable position' due to Iran debacle, with Xi poised to exploit weaknesses.",
+          "The Economic Times": "Frames China as entering from a 'position of relative economic strength' \u2014 neutral, data-driven characterization."
+        }
+      },
+      {
+        "topic": "Expectations for summit outcomes",
+        "positions": {
+          "The Washington Post": "Reports China is 'holding no illusions about making lasting deals' \u2014 skeptical framing about prospects for durable agreements.",
+          "The Economic Times": "Investors are 'hopeful that stable U.S.-China relations could support global trade sentiment' \u2014 cautiously optimistic framing focused on market impact.",
+          "The Guardian": "Trump is 'eager for tangible wins before the November midterm elections' \u2014 frames outcomes through lens of domestic US politics."
+        }
+      },
+      {
+        "topic": "Peak tariff levels during the trade war",
+        "positions": {
+          "The Guardian": "Reports tariffs on China reached 'as high as 145% at one point.'",
+          "The Economic Times": "Does not specify a peak tariff figure."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only. The phrase 'Locked and Loaded' frames China as preparing for confrontation \u2014 military/combative metaphor suggesting adversarial dynamics. No body text available to assess further. The framing positions this as an economic warfare story, per the URL slug 'trump-xi-economic-warfare.'",
+      "Politico": "Headline-only (article blocked by 403/CAPTCHA). Headline 'What Beijing has learned about the U.S. from the Iran war' frames the summit through the lens of the Iran conflict as a strategic intelligence lesson for China. This is a unique analytical angle not replicated by other outlets. Published May 8, predating the others.",
+      "The Washington Post": "Leads with Xi's confidence and Trump's unpredictability \u2014 the power asymmetry favoring Xi is the organizing frame. Emphasizes this is Xi's chance to project Beijing as a stable alternative to US volatility. Notes the 2017 visit's lavish pageantry as contrast. Reader comments section summary (AI-generated) explicitly states commenters believe Trump is 'outmatched' by Xi. The body text was heavily truncated by scraping \u2014 much of the retrieved content is ads, navigation, and promoted stories rather than article substance.",
+      "The Guardian": "Most comprehensive body text. Leads with the multiple hazards facing Trump (Tehran, Taiwan, trade) and frames him as entering from a 'vulnerable position.' Extensive sourcing from think-tank analysts (Brookings Institution's Suzanne Maloney, Quincy Institute's Jake Werner, Fudan University's Zhao Minghao). Uniquely provides the detail that Trump's trip was delayed by the Iran attack and cut to two days. Highlights Trump's desire for midterm election wins. Notes corporate delegation specifics (Nvidia, Apple, Exxon, Boeing, Citigroup). Discusses China's rare-earth export restrictions as effective counter-leverage. Emphasizes the 'most catastrophic strategic debacle' framing from a named analyst regarding Iran.",
+      "The Economic Times": "Frames the summit purely through a global markets/investor lens. Leads with the full week's financial calendar (CPI data, Saudi Aramco earnings, BOJ minutes, UK growth data) and positions the Trump-Xi visit as one of several market-moving events. Uniquely covers the broader macro picture: oil price disruptions, Federal Reserve policy implications, Japan economic data, UK economic outlook, and Treasury Secretary Bessent's Asia visit. Notably neutral and data-oriented; avoids characterizing either leader's personal dynamics. Only outlet to mention Bessent visiting Japan before China."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All analysis is based solely on outlet reporting."
+    ],
+    "missing_context": [
+      "No primary sources (e.g., White House or Chinese government statements, official summit agenda, trade truce text from Busan) were available in the dossier, limiting the ability to verify outlet claims against original documents.",
+      "The New York Times and Politico articles were headline-only (NYT provided no body text; Politico returned a 403 error), significantly reducing the breadth of sourcing.",
+      "The Washington Post body text was largely truncated by scraping artifacts (ads, navigation, sidebar content), leaving only the lede and reader-comment summary as usable editorial material.",
+      "No outlet in the dossier provides specifics on the current status of the Busan trade truce terms \u2014 what tariff levels are currently in effect, what the truce's expiration date is, or what conditions were set.",
+      "No outlet details what concessions, if any, the US is prepared to offer China, or what specific demands the US will bring to the table beyond general trade and Taiwan topics.",
+      "No coverage addresses Congressional or bipartisan perspective on the summit, despite the visit occurring in the context of midterm election politics mentioned by The Guardian.",
+      "No outlet addresses Taiwan's own reaction or posture ahead of the summit despite Taiwan being identified as a key agenda item by multiple outlets.",
+      "The Iran conflict's specific impact on the summit agenda is referenced by multiple outlets but none provide concrete details on what Iran-related asks either side will make of the other.",
+      "No right-leaning or conservative-leaning outlet is represented in this dossier, creating a significant gap in the slant spectrum for meta-analysis purposes."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Three outlets with substantive body text (The Guardian, The Economic Times, The Washington Post) cover the same upcoming summit but with materially different framings \u2014 adversarial/vulnerable (Guardian), market-driven/neutral (Economic Times), Xi-confident/Trump-unpredictable (Washington Post) \u2014 while the headline-only outlets add further divergent framing ('locked and loaded' from NYT, 'lessons from Iran' from Politico). The framing divergence across outlets is the story here, making META the appropriate post type.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/11/business/trump-xi-economic-warfare.html",
+      "title": "As Trump Heads to Beijing, China Is \u2018Locked and Loaded\u2019 for a Fight - The New York Times"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/08/china-lessons-iran-trump-xi-00912539",
+      "title": "What Beijing has learned about the U.S. from the Iran war - Politico"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/05/11/trump-xi-china-beijing-visit/",
+      "title": "Confident in China\u2019s power, Xi is ready to host an unpredictable Trump - The Washington Post"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/news/ng-interactive/2026/may/10/tehran-taiwan-trade-donald-trump-xi-jinping-us-china-summit",
+      "title": "Tehran, Taiwan, trade \u2026 what are the hazards facing Trump on Xi summit tightrope? - The Guardian"
+    },
+    {
+      "outlet": "The Economic Times",
+      "url": "https://m.economictimes.com/markets/us-stocks/news/global-markets-this-week-diplomacy-oil-shock-growth-fears/trump-heads-to-beijing/slideshow/131005148.cms",
+      "title": "Trump Heads to Beijing - Global Markets this week: Diplomacy, Oil Shock & Growth Fears - The Economic Times"
+    }
+  ]
+}
