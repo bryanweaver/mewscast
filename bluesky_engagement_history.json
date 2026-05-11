@@ -1254,6 +1254,11 @@
       "did": "did:plc:tgkr3q2c5smfv3spg7wkkirg",
       "handle": "wynautwarrior.bsky.social",
       "timestamp": "2026-05-10T16:17:23.232172"
+    },
+    {
+      "did": "did:plc:ttb3nxboqkdgnzxwjboa33f4",
+      "handle": "mofubot.moe",
+      "timestamp": "2026-05-11T01:41:45.717385"
     }
   ],
   "liked_posts": [
@@ -7106,6 +7111,11 @@
       "uri": "at://did:plc:6kkncnf2ns4qpjz4g5yjg5xc/app.bsky.feed.post/3mljfane5ek2e",
       "author": "jamkataclysms.bsky.social",
       "timestamp": "2026-05-10T20:23:37.700099"
+    },
+    {
+      "uri": "at://did:plc:ttb3nxboqkdgnzxwjboa33f4/app.bsky.feed.post/3mlk4ycdtmk2l",
+      "author": "mofubot.moe",
+      "timestamp": "2026-05-11T01:41:45.500396"
     }
   ],
   "last_cleanup": "2026-05-08T16:28:24.561188",
