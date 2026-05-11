@@ -1,0 +1,125 @@
+{
+  "story_id": "2026-05-11-virginia-democrats-ask-supreme-b355d28298",
+  "headline_seed": "Virginia Democrats ask Supreme Court to allow use of new congressional map - NBC News",
+  "brief": {
+    "story_id": "2026-05-11-virginia-democrats-ask-supreme-b355d28298",
+    "consensus_facts": [
+      "Virginia Democrats filed an emergency appeal to the U.S. Supreme Court on Monday, May 11, 2026, seeking to reinstate a voter-approved congressional redistricting map.",
+      "The Virginia Supreme Court ruled last week that the process used to place the redistricting referendum on the ballot violated the state constitution.",
+      "The voter-approved map would have given Democrats an advantage in significantly more of Virginia's congressional districts.",
+      "The appeal was filed by Virginia Attorney General Jay Jones and Democratic state lawmakers.",
+      "Democrats argued in their filing that the Virginia Supreme Court's decision was 'deeply mistaken' and overrode the will of voters.",
+      "The case was routed to Chief Justice John Roberts, who oversees emergency appeals from the 4th Circuit, and he requested a response by Thursday, May 14.",
+      "Virginia's redistricting effort was part of a nationwide wave of mid-decade redistricting that began when President Trump urged Texas to redraw its congressional map.",
+      "The appeal faces long odds because the U.S. Supreme Court generally does not review state supreme courts' interpretations of their own constitutions.",
+      "The U.S. Supreme Court's April 29 decision weakening the Voting Rights Act has further scrambled redistricting nationwide."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of additional seats Democrats stood to gain",
+        "positions": {
+          "CNN": "Democrats could have won 'as many as four more seats'",
+          "CBS News": "Map would give Democrats advantage in 10 of 11 districts, up from current 6-5 split (implying 4 additional)",
+          "Axios": "Map 'could have favored Democrats in 10 of the state's 11 districts'"
+        }
+      },
+      {
+        "topic": "Legal basis of the state court ruling \u2014 specifics of the procedural flaw",
+        "positions": {
+          "CNN": "Republicans argued the first vote in late October 2025 did not count because early voting for the general election was already underway; state constitution requires a general election to intervene between two legislative votes on a constitutional amendment",
+          "CBS News": "The legislative process used by Virginia Democrats to place the constitutional amendment on the ballot violated the state constitution (less specific)",
+          "NBC News": "State court focused on 'a technical interpretation of what process was required under state law'",
+          "USA Today": "Lawmakers failed to follow proper procedures in proposing an amendment to the state constitution"
+        }
+      },
+      {
+        "topic": "Federal law argument used in the appeal",
+        "positions": {
+          "CNN": "Democrats said the state court misread the federal definition of 'election' to include early voting, relying on a theory the justices are considering in another case about mail ballots arriving after Election Day",
+          "NBC News": "Jones said the Virginia Supreme Court's decision 'also violated federal law' (no further detail)",
+          "USA Today": "Virginia argues the state Supreme Court misread federal election law and rejected plain text of the state constitution's definition of an election"
+        }
+      },
+      {
+        "topic": "Democratic proposals to circumvent the ruling",
+        "positions": {
+          "Axios": "Reports that Democrats discussed forcing Virginia Supreme Court retirements by lowering judge retirement age from 73 to 54, and separately discussed invalidating the 2020 constitutional amendment creating the redistricting commission; Virginia House Majority Leader Surovell said these 'drastic measures' aren't going anywhere",
+          "Other outlets": "No other outlet in the dossier reports on these proposals"
+        }
+      },
+      {
+        "topic": "Alabama redistricting comparison",
+        "positions": {
+          "CNN": "Supreme Court 'approved a request from Alabama to change its map' to one with only one majority-Black district",
+          "CBS News": "Alabama has 'a pending request' before the court (characterizes it as not yet resolved)",
+          "USA Today": "Alabama has 'a pending request' seeking to use a map eliminating a majority-Black district"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Shortest substantive piece. Leads with the 'last-ditch request' framing, emphasizing it as a long-shot move. Notes the map was 'intended to maximize Democratic-leaning congressional districts' \u2014 unusually direct language about partisan intent. Buries the federal-law argument in a single sentence with no detail. Does not mention the Voting Rights Act decision or other states' redistricting.",
+      "Axios": "Uniquely focused not on the Supreme Court appeal itself but on the behind-the-scenes Democratic reaction to the state court ruling. Leads with the most inflammatory angle \u2014 that Democrats discussed forcing Virginia Supreme Court justices into retirement by lowering the retirement age to 54. Sources this to The Downballot (progressive outlet) and the New York Times. Includes a reality check from Virginia House Majority Leader Surovell dismissing the proposals as going nowhere. Also uniquely mentions the elections commissioner's May 12 deadline warning for ballot chaos. This is the only outlet reporting on these internal Democratic discussions.",
+      "The New York Times": "Headline-only in this dossier. Headline frames the story as 'Virginia Officials' asking the court to 'Restore Voting Map Drawn by Democrats' \u2014 notably uses 'Drawn by Democrats' rather than 'voter-approved,' foregrounding the partisan authorship rather than the democratic mandate.",
+      "CNN": "Most detailed legal analysis of any outlet. Leads with the emergency appeal and its partisan stakes. Uniquely provides specifics on the early-voting argument and the parallel mail-ballot case. Includes significant section on 'Partisan politics at the court?' exploring the Jackson-Alito exchange and Roberts' public comments about the court not being political actors. This broader judicial-legitimacy framing is absent from other outlets. Uses the word 'seates' (apparent typo for 'seats'). Only outlet to directly quote Roberts' recent public remarks.",
+      "CBS News": "Straightforward wire-style report. Leads with the emergency appeal, provides the 10-of-11-districts framing. Notably includes the most comprehensive comparison to other states' redistricting (Texas, California, North Carolina, Missouri, Florida). Includes specific seat-count projections for Texas (+5 R) and California (+5 D). Acknowledges that the appeal is 'unlikely' to succeed because the U.S. Supreme Court typically does not review state court interpretations of state constitutions \u2014 a candid assessment buried mid-story.",
+      "USA Today": "Frames Virginia as 'the latest state' in a pattern, emphasizing the national redistricting war. Uniquely quotes Georgetown professor Steve Vladeck predicting the appeal is unlikely to persuade the court. Otherwise standard factual reporting. Notably more concise than CNN or CBS News.",
+      "The Washington Post": "Paywalled; very limited body text available. The visible subhead is the most pessimistic framing in the dossier: 'Some top Virginia Democrats express little hope that the appeal will affect this November's congressional elections and instead will focus on running in existing districts.' This pragmatic-resignation angle is unique among all outlets. Also notable for having 310 reader comments, suggesting high local engagement. AI-generated comment summary visible in the body references reader skepticism about the appeal."
+    },
+    "primary_source_alignment": [
+      "No primary source (the actual emergency appeal filing) was located for this dossier. All reporting is based on outlets' characterizations of the filing.",
+      "Multiple outlets quote the same passage from the filing ('By forcing the Commonwealth to conduct its congressional elections using districts different from those adopted by the General Assembly...'), suggesting they are working from the same document, but the document itself is not available for independent verification.",
+      "CNN uniquely references the specific federal-law theory about the definition of 'election' including early voting and its connection to a separate pending mail-ballot case \u2014 this detail cannot be verified against the primary source."
+    ],
+    "missing_context": [
+      "No outlet provides the actual text of the emergency appeal filing, making it impossible to verify quoted passages or check for additional arguments not reported.",
+      "No outlet explains in detail what the 2020 Virginia constitutional amendment creating the redistricting commission entailed, or how this referendum process related to it.",
+      "No outlet reports on what map Virginia would use for the 2026 elections if the appeal fails \u2014 the current 2022-cycle map presumably remains in effect, but this is not explicitly confirmed.",
+      "No outlet provides the vote breakdown of the April 21 referendum (how many voters approved the redistricting measure), which would be relevant to the 'will of the people' framing used by both Democrats and journalists.",
+      "Only Axios mentions the May 12 election administration deadline flagged by Virginia Elections Commissioner Koski \u2014 this logistical constraint is critically important context that other outlets ignore.",
+      "No outlet discusses what Republican respondents are likely to argue in their response due by May 14.",
+      "The Washington Post's full reporting is paywalled and unavailable in this dossier, limiting cross-outlet verification despite being the outlet likely closest to this Virginia-specific story.",
+      "No outlet explains whether the Virginia Supreme Court's decision was unanimous or split, or provides any detail about the composition of that court and how justices were appointed \u2014 relevant given the Axios report on proposals to force retirements.",
+      "Steve Vladeck's prediction (cited only by USA Today) that the appeal is unlikely to succeed is not attributed to a specific analysis \u2014 no outlet links to or quotes his Substack post."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Six outlets with substantive body text all covered the same core event but with materially different emphasis: CNN focused on judicial-legitimacy tensions, Axios uniquely reported internal Democratic discussions about court-packing, CBS News provided the most comprehensive multi-state comparison, and The Washington Post's visible text suggests Democrats themselves are pessimistic. The framing divergences \u2014 particularly on partisan intent, likelihood of success, and the broader redistricting-war context \u2014 are themselves newsworthy and best served by a META post that maps the coverage landscape.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/supreme-court/virginia-democrats-ask-justices-allow-use-new-congressional-map-rcna344622",
+      "title": ""
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/local/richmond/2026/05/11/virginia-supreme-court-redistricting-fallout",
+      "title": "Virginia Democrats discussed forcing Supreme Court retirements - Axios"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/11/us/politics/supreme-court-virginia-redistricting.html",
+      "title": "Virginia Officials Ask Supreme Court to Restore Voting Map Drawn by Democrats - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/11/politics/virginia-redistricting-us-supreme-court",
+      "title": "Virginia Democrats ask US Supreme Court to let them use new congressional map - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/virginia-supreme-court-congressional-map/",
+      "title": "Virginia Democrats ask Supreme Court to reinstate congressional map struck down by state high court - CBS News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/05/11/virginia-democrats-supreme-court-house-map-redistricting/90030198007/",
+      "title": "Virginia Democrats ask Supreme Court to revive House map for midterms - USA Today"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/05/11/virginia-redistricting-referendum-supreme-court-appeal/",
+      "title": "Virginia Democrats appeal to U.S. Supreme Court to save new House maps - The Washington Post"
+    }
+  ]
+}
