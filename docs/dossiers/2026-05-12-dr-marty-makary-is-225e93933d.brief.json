@@ -1,0 +1,121 @@
+{
+  "story_id": "2026-05-12-dr-marty-makary-is-225e93933d",
+  "headline_seed": "Dr. Marty Makary is out as FDA commissioner - NBC News",
+  "brief": {
+    "story_id": "2026-05-12-dr-marty-makary-is-225e93933d",
+    "consensus_facts": [
+      "FDA Commissioner Marty Makary is leaving his position as of May 12, 2026, confirmed across NBC News, Politico, CNN, and referenced by Reuters, NYT, and AP headlines.",
+      "Makary's departure follows pressure related to his handling of flavored e-cigarettes/vapes, with the FDA having recently authorized fruit-flavored vapes for adults after months of resistance from Makary.",
+      "Makary faced criticism from anti-abortion groups over his failure to restrict telehealth prescription and mail distribution of the abortion pill mifepristone.",
+      "Makary faced criticism from pharmaceutical companies over inconsistencies in FDA drug review processes under his leadership.",
+      "Makary was a surgeon affiliated with Johns Hopkins before becoming FDA commissioner.",
+      "Politico first reported the resignation.",
+      "Kyle Diamantas has been named acting FDA commissioner, according to Politico.",
+      "Makary's tenure was marked by mass layoffs and turnover among senior FDA leaders, per NBC News, Politico, and CNN."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether Makary resigned or was fired",
+        "positions": {
+          "Politico": "Describes Makary as 'resigning from his role,' with the White House signing off and HHS Secretary Kennedy making the call.",
+          "CNN": "Frames it as Trump signing off on 'a plan to fire him last week,' with Makary caught by surprise when reports surfaced Friday.",
+          "NBC News": "Uses the phrase 'is out' and references Trump 'considering canning Makary,' framing it as a firing.",
+          "The New York Times": "Headline says 'Resigns After Weeks of Pressure' but URL slug says 'trump-fires-fda-commissioner-makary,' suggesting editorial ambiguity."
+        }
+      },
+      {
+        "topic": "Who made the decision to remove Makary",
+        "positions": {
+          "Politico": "A senior administration official says HHS Secretary Robert F. Kennedy Jr. made the call, with the White House signing off.",
+          "CNN": "Frames the push as driven by 'a faction of White House and HHS officials,' with Trump signing off on the plan."
+        }
+      },
+      {
+        "topic": "Duration of tenure",
+        "positions": {
+          "Politico": "States 13 months leading the agency (confirmed March 2025 per CNN).",
+          "CNN": "States he was confirmed in March 2025, consistent with roughly 14 months."
+        }
+      },
+      {
+        "topic": "Whether Makary delayed the mifepristone review for political reasons",
+        "positions": {
+          "NBC News": "Reports Bloomberg News found that Makary asked officials to delay the mifepristone safety review release until after midterm elections.",
+          "CNN": "Does not mention the alleged delay but reports anti-abortion leader Dannenfelser demanded Makary's firing and met with White House officials on Friday.",
+          "Politico": "Does not mention the alleged delay."
+        }
+      },
+      {
+        "topic": "Whether this is the fourth high-profile departure",
+        "positions": {
+          "NBC News": "Explicitly calls this the fourth high-profile firing this year, listing Kristi Noem, Pam Bondi, and Lori Chavez DeRemer.",
+          "CNN": "Does not enumerate prior departures but notes the administration already lacks permanent leaders at CDC and surgeon general.",
+          "Politico": "Does not address broader administration departures."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text is essentially photo captions only \u2014 no substantive reporting was retrieved. The headline frames the story around the breadth of constituencies Makary angered (pharma CEOs, vaping lobbyists, anti-abortion groups), which is the most coalition-damage-oriented framing among all outlets.",
+      "NBC News": "Leads with the departure as a political event \u2014 the fourth high-profile Trump administration firing this year. Provides the most explicit list of prior firings (Noem, Bondi, Chavez DeRemer). Uniquely reports that Bloomberg found Makary sought to delay the mifepristone review until after midterms. Frames the departure as part of a pattern of Trump-era instability rather than FDA-specific dysfunction.",
+      "Politico": "The most insider-sourced and process-oriented account. Leads with the successor (Diamantas) and attributes the decision to Kennedy, not Trump. Emphasizes that Makary was a survivor ('nine lives') and that staff were working as if nothing was wrong as recently as Tuesday morning. Buries the policy substance (vapes, abortion, pharma) at the bottom. Frames this as a bureaucratic inevitability.",
+      "Bloomberg": "No body text retrieved \u2014 returned a 403 error/CAPTCHA wall. Headline indicates Makary was 'expected to resign,' framing it as forward-looking speculation rather than confirmed news.",
+      "Reuters": "Headline-only. Uses 'is resigning, sources say' \u2014 the most cautious attribution framing, consistent with wire style.",
+      "The New York Times": "Headline-only. Headline says 'Resigns After Weeks of Pressure' but the URL slug contains 'trump-fires-fda-commissioner-makary,' creating a notable tension between the editorial headline (resignation) and the metadata (firing). This suggests internal editorial debate about how to characterize the departure.",
+      "CNN": "The most detailed account of internal White House dynamics. Leads with Trump signing off on a plan to fire Makary. Uniquely reports: Makary was caught by surprise Friday; some Trump aides argued against the firing on political grounds (angering MAHA base, creating another Senate confirmation fight before midterms); anti-abortion leader Dannenfelser met with White House officials on Friday; and that Makary's departure came one day before scheduled Senate budget testimony. Also uniquely notes vaccine critics' dissatisfaction that Makary did not pull Covid-19 vaccines. Frames the story as a factional power struggle within the administration."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official statements, resignation letters, White House announcements) were located for this story. All reporting is based on unnamed sources and officials granted anonymity.",
+      "The absence of an official statement means the resign-vs-fired question cannot be independently resolved from the dossier."
+    ],
+    "missing_context": [
+      "No official White House or FDA statement on the departure was available in the dossier, leaving the resign-vs-fired characterization entirely to unnamed sources.",
+      "No outlet in the dossier provides detail on Kyle Diamantas's background, qualifications, or policy positions beyond Politico's note that he was 'the top food official at the agency.'",
+      "CNN uniquely mentions Makary was scheduled to testify on the FDA budget before the Senate Appropriations Committee the day after his departure \u2014 no other outlet covers the timing implications of this.",
+      "NBC News's claim about Makary delaying the mifepristone review until after midterms is attributed to Bloomberg reporting and is not corroborated by any other outlet in the dossier.",
+      "No outlet discusses what happens to pending FDA regulatory actions (e.g., food dye bans, ultraprocessed food policies) under new acting leadership.",
+      "No outlet provides the text or substance of any formal resignation letter or White House personnel announcement.",
+      "The AP article body contained only photo captions, not substantive reporting \u2014 the headline framing (angering pharma, vaping lobbyists, anti-abortion groups) is not supported by body text in this dossier.",
+      "Bloomberg article returned a 403 error; its body text was not retrievable."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Multiple outlets with full body text reported the same core event but with materially different framings on key questions \u2014 whether Makary resigned or was fired, who drove the decision (Kennedy vs. Trump vs. White House faction), and which policy failure was most consequential. The resign-vs-fired split is particularly notable and warrants a coverage-comparison treatment rather than a straight report.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/fda-trump-makary-kennedy-vaccines-drugs-ef151784342c48cca3b91a829d615b5e",
+      "title": "Trump FDA chief is leaving after angering pharma CEOs, vaping lobbyists and anti-abortion groups - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/health/health-news/dr-marty-makary-fda-commissioner-rcna344765",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/12/makary-fda-resign-white-house-00916014",
+      "title": "Makary\u2019s time atop FDA over, Diamantas named acting commissioner - Politico"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-12/trump-s-fda-commissioner-marty-makary-expected-to-resign",
+      "title": "Trump\u2019s FDA Commissioner Marty Makary Expected to Resign - Bloomberg.com"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/fda-commissioner-makary-is-resigning-politico-reports-2026-05-12/",
+      "title": "FDA commissioner Makary is resigning, sources say - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/12/us/politics/trump-fires-fda-commissioner-makary.html",
+      "title": "F.D.A. Commissioner Marty Makary Resigns After Weeks of Pressure - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/12/politics/makary-fda-trump-leave",
+      "title": "FDA chief to depart after Trump signed off on ousting him - CNN"
+    }
+  ]
+}
