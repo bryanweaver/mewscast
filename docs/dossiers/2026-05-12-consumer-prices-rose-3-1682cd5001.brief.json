@@ -1,0 +1,156 @@
+{
+  "story_id": "2026-05-12-consumer-prices-rose-3-1682cd5001",
+  "headline_seed": "Consumer prices rose 3.8% annually in April, the highest since May 2023 - CNBC",
+  "brief": {
+    "story_id": "2026-05-12-consumer-prices-rose-3-1682cd5001",
+    "consensus_facts": [
+      "The Consumer Price Index rose 0.6% month-over-month in April and 3.8% year-over-year, the highest annual rate since May 2023, according to the Bureau of Labor Statistics.",
+      "Core CPI (excluding food and energy) rose 0.4% month-over-month and 2.8% year-over-year in April.",
+      "Energy prices, particularly gasoline, were the primary driver of the inflation increase, with gasoline prices up 28.4% over the year.",
+      "The national average price of a gallon of regular unleaded gas was approximately $4.50 as of May 12, according to AAA.",
+      "The Iran war is identified as the key factor driving surging energy costs and broader inflation pressures.",
+      "Food prices rose in April, with grocery costs increasing notably over the month.",
+      "Shelter costs rose 0.6% in April.",
+      "Airline fares climbed 2.8% in April.",
+      "The Federal Reserve has held its benchmark interest rate steady all year and is not expected to cut rates at its next meeting.",
+      "Kevin Warsh, President Trump's pick to lead the Federal Reserve, is expected to be confirmed by the Senate this week as Jerome Powell's term as chair expires.",
+      "Consumer sentiment has hit record or all-time lows, though consumer spending has remained relatively resilient, driven primarily by higher-income earners.",
+      "President Trump said he would support suspending the federal gas tax.",
+      "Real average hourly wages declined, with inflation surpassing wage growth for the first time since 2023."
+    ],
+    "disagreements": [
+      {
+        "topic": "Monthly food price increase",
+        "positions": {
+          "CNBC": "Food prices climbed 0.5% for the month.",
+          "USA Today": "Food at home index increased 0.7% for the month.",
+          "Axios": "Grocery prices rose 0.5%; dining out costs gained 0.7%."
+        }
+      },
+      {
+        "topic": "Monthly energy price increase",
+        "positions": {
+          "CNBC": "Energy prices jumped 3.8% for the month.",
+          "Axios": "Energy costs surged roughly 4% for the month."
+        }
+      },
+      {
+        "topic": "Monthly gasoline price increase",
+        "positions": {
+          "USA Today": "Gas prices rose 5.4% over the month.",
+          "CNBC": "Does not specify a separate monthly gasoline figure distinct from the energy index."
+        }
+      },
+      {
+        "topic": "March monthly CPI increase",
+        "positions": {
+          "Axios": "CPI gained 0.9% in March.",
+          "USA Today": "Inflation saw a 0.9% jump from February to March.",
+          "NBC News": "April reading follows a 0.9% jump from February to March."
+        }
+      },
+      {
+        "topic": "Shelter price increase explanation",
+        "positions": {
+          "Axios": "April's shelter increase was inflated by a methodological artifact: the October 2025 government shutdown meant no CPI report that month, forcing a year's worth of rent changes into a six-month survey window.",
+          "CNBC": "Shelter costs rose 0.6% after easing in prior months, indicating inflation is a problem beyond Iran war impacts. No mention of the government shutdown survey distortion.",
+          "USA Today": "Shelter costs listed as increasing over the month without further context."
+        }
+      },
+      {
+        "topic": "Fed rate hike probability",
+        "positions": {
+          "CNBC": "Traders raised odds for a Fed rate hike by year-end to about 30%, per CME Group data.",
+          "USA Today": "Forecasters have begun pricing in a rate hike as a possibility."
+        }
+      },
+      {
+        "topic": "Fed dissents at April meeting",
+        "positions": {
+          "CNBC": "The Fed saw four dissents at its late April meeting, the highest since 1992. Governor Stephen Miran voted for a cut; three regional presidents objected to dovish language.",
+          "USA Today": "No mention of Fed dissents.",
+          "Axios": "No mention of Fed dissents."
+        }
+      },
+      {
+        "topic": "Whether the energy shock has fully passed through to core prices",
+        "positions": {
+          "NBC News": "Analysts believe soaring gas prices haven't fully hit consumers yet; a Citigroup economist said it will take 'at least a few more months' for rising energy costs to be reflected in core goods prices.",
+          "Axios": "Some economists anticipate the energy shock will begin to bleed into other categories as industries pass along costs.",
+          "CNBC": "Inflation pressures also came from a variety of other areas beyond energy, including shelter, apparel, airline fares, and household furnishings \u2014 suggesting pass-through may already be occurring."
+        }
+      },
+      {
+        "topic": "Annual food price figure",
+        "positions": {
+          "CNBC": "Food was up 3.2% over the year.",
+          "USA Today": "Food at home up 2.9% over the year; food away from home up 3.6% over the year."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Both Reuters articles are headline-only stubs with no retrievable body text. One headline frames the report as a preview ('expected to have increased'), the other as a result ('increase further'). Both reference the Iran war. No body text available for deeper analysis.",
+      "USA Today": "Leads with affordability and the Iran war's impact on gas prices. Gives extensive granular detail on food subcategories (beef up 2.7%, fruits and vegetables up 1.8%) and consumer behavior changes (93% of car owners say gas prices rose, apparel spending declining). Includes Trump's gas tax suspension proposal and Sen. Hawley's legislation, plus a prior Democratic bill. Quotes LinkedIn's Kory Kantenga on the risk to consumer spending. Emphasizes K-shaped economy dynamics \u2014 high-income resilience vs. low-income pullback. Does not mention the government shutdown's effect on shelter data, Fed dissents, or real wage declines.",
+      "CNBC": "Leads with the headline CPI numbers and the 'faster-than-expected' framing. Uniquely reports real average hourly wages fell 0.5% for the month and 0.3% annually \u2014 the strongest worker-impact data point in the dossier. Details the four Fed dissents at the April meeting, the highest since 1992, naming Governor Miran. Notes tariff-sensitive categories (apparel, household furnishings) as inflation contributors beyond energy. Quotes Heather Long (Navy Federal Credit Union) calling inflation 'the key drag' and Chris Zaccarelli (Northlight Asset Management) on potential rate hikes. Mentions stock market reaction (futures negative, Treasury yields higher). Does not mention the government shutdown shelter data distortion.",
+      "NBC News": "Frames the inflation report as one item in a morning news roundup, giving it roughly equal weight alongside Iran ceasefire developments, Nebraska primaries, DACA delays, and abortion pill litigation. Unique in citing a Citigroup economist on the delayed pass-through of energy costs. Previews the report rather than reacting to it (published at 7:15 AM EDT, before the BLS release). Notes the state visit to China as a backdrop. Less detailed on CPI subcategories than other outlets.",
+      "Axios": "Distinctive for its 'Why it matters' and structural framing around the Fed's dilemma and the Kevin Warsh confirmation. Uniquely explains the October 2025 government shutdown's methodological impact on shelter data \u2014 that BLS couldn't survey rental units that month, forcing a year's worth of rent changes into a compressed window. This is the only outlet to provide this crucial technical context. Notes energy accounted for more than 40% of CPI's monthly rise. Uses tighter, more analytical prose with less consumer-level detail than USA Today or CNBC.",
+      "CNBC (video)": "The CNBC video page is essentially a content shell with video thumbnails and titles. It references Rick Santelli breaking down the CPI data and a segment on middle- and lower-income consumers getting squeezed (Liz Everett Krisberg), but no substantive body text is available for analysis."
+    },
+    "primary_source_alignment": [
+      "No primary source (the BLS CPI release itself) was located in the dossier. All claims about the CPI data are mediated through outlet reporting and cannot be independently verified against the underlying government release.",
+      "The absence of the primary source is notable because outlets report slightly different figures for food subcategories (CNBC says food up 0.5% monthly; USA Today says food at home up 0.7%) and the primary source would clarify whether these reflect different BLS indices (food overall vs. food at home vs. food away from home)."
+    ],
+    "missing_context": [
+      "The BLS Consumer Price Index release itself was not included as a primary source, preventing verification of specific figures where outlets diverge.",
+      "Only Axios explains the October 2025 government shutdown's impact on shelter data methodology \u2014 this is a significant technical factor that could inflate the shelter component and is absent from all other coverage.",
+      "No outlet provides historical context for how rapidly inflation has accelerated: what was the CPI trajectory in the months before the Iran war began?",
+      "No outlet specifies when exactly the Iran war started, making it difficult for readers to establish a clear timeline of pre- and post-conflict inflation.",
+      "The real wage decline (reported only by CNBC as -0.5% monthly and -0.3% annually) is arguably the most consumer-relevant data point but is absent from USA Today, Axios, and NBC News body text.",
+      "No outlet discusses the PCE (Personal Consumption Expenditures) price index, which is the Fed's preferred inflation gauge and may tell a different story than CPI.",
+      "No outlet quantifies the tariff impact separately from the Iran war energy shock, though CNBC and Axios both note tariff-sensitive categories rising.",
+      "Kevin Warsh's policy positions and how they might differ from Powell's approach are mentioned only in passing; no outlet provides substantive detail on what his confirmation means for monetary policy.",
+      "No outlet mentions the Strait of Hormuz situation in detail except Axios (which references its 'effective closure'), though this is the mechanism through which the Iran war affects energy prices globally.",
+      "The four Fed dissents reported by CNBC \u2014 the most since 1992 \u2014 represent a significant institutional development but are not mentioned by any other outlet in the dossier."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Four outlets with substantive body text reported the same CPI data release but with materially different emphasis: CNBC uniquely highlights real wage declines and Fed dissents, Axios uniquely explains the government shutdown's distortion of shelter data, USA Today emphasizes consumer behavioral changes and gas tax legislation, and NBC News frames it as one story among several. These framing divergences \u2014 especially the shelter data methodology and real wage figures that most outlets omit \u2014 make this a coverage-analysis story where showing readers what's being emphasized and what's being buried adds significant value beyond a straight report.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/us-consumer-prices-increase-further-april-2026-05-12/",
+      "title": "US consumer prices increase further in April - Reuters"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/money/economy/2026/05/12/inflation-april-gas-prices-iran-war/89928091007/",
+      "title": "Consumer prices rose again in April as Iran war keeps gas prices high - USA Today"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/12/cpi-inflation-april-2026-.html",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/us-consumer-inflation-expected-have-increased-further-april-amid-iran-war-2026-05-12/",
+      "title": "US consumer inflation expected to have increased further in April amid Iran war - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/april-inflation-report-iready-backlash-morning-rundown-rcna344661",
+      "title": "April inflation report and i-Ready backlash: Morning Rundown - NBC News"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/05/12/cpi-april-inflation-iran-trump",
+      "title": "Inflation hits three-year high in April as Iran war impacts consumer prices - Axios"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/video/2026/05/12/consumer-prices-rose-3-point-8-percent-annually-in-april-the-highest-since-may-2023.html",
+      "title": "Consumer prices rose 3.8% annually in April, the highest since May 2023 - CNBC"
+    }
+  ]
+}
