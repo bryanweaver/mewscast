@@ -1,0 +1,126 @@
+{
+  "story_id": "2026-05-12-u-k-prime-minister-8f31d04fd3",
+  "headline_seed": "U.K. Prime Minister Keir Starmer rejects mounting calls to resign, even from his own party - CBS News",
+  "brief": {
+    "story_id": "2026-05-12-u-k-prime-minister-8f31d04fd3",
+    "consensus_facts": [
+      "UK Prime Minister Keir Starmer publicly rejected calls to resign on Tuesday, May 12, 2026, telling his cabinet he will 'get on with governing.'",
+      "Approximately 80 or more Labour MPs have publicly called for Starmer to step down following disastrous local election results.",
+      "Four junior ministers resigned on Tuesday: Jess Phillips, Alex Davies-Jones, Zubir Ahmed, and Miatta Fahnbulleh.",
+      "Six lower-ranking ministerial aides quit on Monday, May 11, 2026.",
+      "Labour suffered heavy losses in local elections held on May 7, 2026, losing over 1,000 council seats in England.",
+      "Reform UK, led by Nigel Farage, was the primary beneficiary of Labour's losses, gaining roughly 1,300-1,452 local seats in England.",
+      "Labour also lost ground in Wales and Scotland in elections for their devolved parliaments.",
+      "Starmer confirmed Tuesday that the formal Labour Party process for challenging a leader had not been triggered.",
+      "To trigger a formal leadership contest, 81 Labour MPs (20% of the 403-seat parliamentary party) must coalesce around a single alternative candidate.",
+      "More than 100 Labour MPs signed a letter backing Starmer to remain in his position.",
+      "Starmer delivered a speech on Monday vowing to rebuild Britain's relationship with Europe and nationalize the UK steel industry.",
+      "Wes Streeting, Andy Burnham, and Angela Rayner are the most frequently cited potential alternative leaders.",
+      "The Peter Mandelson-Jeffrey Epstein ambassador scandal contributed to the erosion of Starmer's standing before the local elections."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of Labour MPs calling for Starmer to resign",
+        "positions": {
+          "CBS News": "At least 80 MPs, per the BBC.",
+          "Al Jazeera English": "About 80 Labour MPs.",
+          "CNN": "At least 86 Labour MPs, per PA news agency.",
+          "CNBC": "Over 40 Labour MPs as of its publication (article dated May 11, earlier in the news cycle)."
+        }
+      },
+      {
+        "topic": "Number of local council seats lost by Labour in England",
+        "positions": {
+          "CBS News": "Hemorrhaged 1,000 council seats.",
+          "CNN": "Lost 1,498 local council seats.",
+          "CNBC": "Does not give a specific seat-loss number."
+        }
+      },
+      {
+        "topic": "Cabinet members reportedly urging Starmer to step down",
+        "positions": {
+          "Al Jazeera English": "Names six cabinet members telling Starmer to step down, citing The Telegraph: Yvette Cooper, Shabana Mahmood, John Healey, Ed Miliband, Lisa Nandy, and Wes Streeting.",
+          "CBS News": "Reports that senior cabinet members urged him to set out a plan for resignation per The Guardian, but does not name them individually.",
+          "CNN": "Does not report specific cabinet-level calls to resign; focuses on David Lammy expressing 'full support.'"
+        }
+      },
+      {
+        "topic": "Deputy PM identity and role in crisis",
+        "positions": {
+          "CNN": "Also notes Rayner resigned as deputy following a property tax scandal.",
+          "CNBC": "Identifies Angela Rayner as Starmer's 'former deputy,' noting she resigned as deputy last year."
+        }
+      },
+      {
+        "topic": "Whether more resignations are expected",
+        "positions": {
+          "CBS News": "Reports, citing BBC, that more ministerial resignations are expected 'in the coming days.'",
+          "Al Jazeera English": "Does not make this claim explicitly.",
+          "CNN": "Does not make this forward-looking claim."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text is primarily photo captions and a single-sentence lede referencing Starmer's defiance and the Monday pledge. No substantive reporting in the retrieved body \u2014 effectively a photo wire package rather than a full article. Mentions Starmer 'referencing members of his own party and among the electorate as a whole wrong' in garbled syntax, suggesting a truncated or corrupted scrape.",
+      "CBS News": "The most comprehensive single article in the dossier. Leads with Starmer's defiance, then immediately quantifies the scale of dissent (a fifth of Labour MPs, four cabinet resignations). Provides extensive context on the leadership challenge mechanics, the Epstein/Mandelson scandal, and includes color quotes from anonymous MPs criticizing Starmer's speech ('Meh,' 'delivering a planning application'). Uniquely notes that some Labour politicians believe the party's problems are 'deeper than the prime minister.' Gives a balanced closing noting 100+ MPs signed a letter backing Starmer.",
+      "Al Jazeera English": "Leads with Starmer's defiance at cabinet, then pivots quickly to the divided cabinet, making the intra-cabinet split the central narrative. Uniquely names six senior cabinet members reportedly telling Starmer to step down, sourcing The Telegraph. Highlights Zubir Ahmed's resignation letter language about 'lack of values-driven leadership' and the public having 'irretrievably' lost confidence. Frames Wes Streeting as a potential challenger via Ahmed's ally relationship. Shorter and more focused on the internal power struggle than the broader political context.",
+      "CNBC": "Distinctively frames the crisis through a financial markets lens. Leads with Starmer's Monday speech (article dated May 11, one day before other articles), then dedicates significant attention to gilt yields, borrowing costs, and market reaction. Reports the MP resignation count at 'over 40' \u2014 substantially lower than other outlets, reflecting its earlier publication date. Uniquely provides detail on Angela Rayner's prior resignation as deputy over a property tax scandal. Includes analyst quotes from Peel Hunt's Kallum Pickering on political risk premiums in bond yields. Notes the Iran war's impact on energy prices and borrowing costs \u2014 a detail largely absent elsewhere.",
+      "Reuters": "Headline-only; two separate URLs. First headline ('defies calls to quit, says he's getting on with governing') mirrors the consensus framing. Second headline ('vows to carry on governing ahead of grand parliamentary ceremony') introduces a detail about a 'grand parliamentary ceremony' not mentioned in any other outlet. No body text available for analysis.",
+      "CNN": "Uses a live-blog format, providing rolling updates. Leads with the 80+ MP figure and Starmer's defiance, then provides detailed profiles of three potential challengers (Streeting, Burnham, Rayner). Uniquely reports the highest MP resignation count (86, per PA). Provides the most granular local election numbers: 1,498 Labour seats lost, 1,452 Reform seats gained, 441 Green gains, 155 Liberal Democrat gains. Frames the crisis in historical terms \u2014 Starmer's successor would be Britain's sixth PM in seven years. Includes video of Deputy PM David Lammy backing Starmer."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All claims are based on outlet reporting, which variously cites BBC, The Telegraph, The Guardian, and PA news agency as secondary sources. No resignation letters, official Labour Party statements, or Starmer's full speech transcript were available for verification."
+    ],
+    "missing_context": [
+      "No outlet provides the full text or even substantial excerpts of Starmer's Monday speech \u2014 all paraphrase selectively. The actual policy content (Europe relationship, steel nationalization) is mentioned only briefly.",
+      "No outlet explains the specific Labour Party leadership challenge rules in full procedural detail \u2014 e.g., what happens after 81 MPs coalesce, the timeline for a contest, or whether Starmer could be on the ballot.",
+      "The 'grand parliamentary ceremony' referenced in the second Reuters headline is not explained or mentioned by any other outlet.",
+      "No outlet provides polling data on public approval of specific potential replacements vs. Starmer, despite CNN and CNBC mentioning Burnham's popularity.",
+      "No outlet explains what triggered Angela Rayner's departure as deputy PM in detail or its timeline, beyond CNBC's brief mention of a property tax scandal and CNN noting it.",
+      "The role of the Iran war in the UK's economic difficulties is mentioned only by CNBC; other outlets omit this geopolitical context entirely despite referencing economic headwinds.",
+      "No outlet provides specifics on Reform UK's policy platform or why its gains should be contextualized as a threat to Labour specifically vs. Conservatives.",
+      "CBS News reports that Labour lost its 'firm grip on the Welsh legislature, which it had controlled for 27 years' but no other outlet provides this historical context for the Welsh losses.",
+      "No primary source documents (resignation letters in full, Labour Party rule book, Starmer's speech transcript) were available in the dossier for independent verification."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Four outlets with full body text reported the same unfolding political crisis but with materially different framings: CNBC emphasizes financial markets, Al Jazeera foregrounds the cabinet split with named sources, CBS News provides the broadest political narrative with anonymous MP color, and CNN uses a live-update format with the most granular election data. The disagreement on MP resignation counts (40 vs. 80 vs. 86) and the absence of primary source documents make this an ideal META post examining what we know, what we don't, and how coverage diverges.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/starmer-resign-fahnbulleh-politics-britain-1454415a831ae3af31b10dff29d04d13",
+      "title": "UK\u2019s Starmer defiant as calls for his resignation grow and several ministers quit - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/uk-keir-starmer-rejects-calls-resign-prime-minister/",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/5/12/starmer-to-face-split-cabinet-as-demands-for-his-resignation-mount",
+      "title": "Starmer defiant at cabinet meeting amid growing pressure to resign - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/11/uk-pm-starmer-fights-for-his-political-future-in-pivotal-speech.html",
+      "title": "UK PM Starmer battles for political survival amid leadership challenge as gilt yields rise - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/uk/uks-starmer-facing-crunch-meeting-calls-grow-him-quit-2026-05-12/",
+      "title": "UK's Starmer defies calls to quit, says he's getting on with governing - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/uk/starmer-vows-carry-governing-ahead-grand-parliamentary-ceremony-2026-05-12/",
+      "title": "Starmer vows to carry on governing ahead of grand parliamentary ceremony - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/12/world/live-news/uk-keir-starmer-labour",
+      "title": "Live updates: UK Prime Minister Keir Starmer faces growing calls to quit - CNN"
+    }
+  ]
+}
