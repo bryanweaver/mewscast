@@ -1,0 +1,126 @@
+{
+  "story_id": "2026-05-13-from-tourist-tax-to-0cca552b30",
+  "headline_seed": "From tourist tax to digital ID: BBC correspondents on the key bills in the King's Speech - BBC",
+  "brief": {
+    "story_id": "2026-05-13-from-tourist-tax-to-0cca552b30",
+    "consensus_facts": [
+      "King Charles III delivered the King's Speech at the State Opening of Parliament on 13 May 2026, outlining the government's legislative agenda for the coming parliamentary session.",
+      "The speech outlined more than 35 bills and draft bills the government plans to pass.",
+      "Key bills include emergency legislation to nationalise British Steel, immigration and asylum reform, NHS modernisation, police reform, energy independence measures, and a digital ID scheme.",
+      "The Northern Powerhouse Rail Bill promises investment in rail services between key cities in northern England, adapted from a previous HS2-related bill.",
+      "A European Partnership Bill was included to strengthen ties with the EU, including provisions related to trade.",
+      "The King's Speech took place amid a Labour leadership crisis, with Sir Keir Starmer facing pressure from dozens of Labour MPs to resign following heavy losses in recent elections.",
+      "Health Secretary Wes Streeting met privately with the prime minister at No 10 on the morning of the speech; the meeting lasted under 20 minutes.",
+      "Wes Streeting's allies indicated he may challenge the prime minister's leadership.",
+      "Four ministers resigned on Tuesday, including health minister Zubir Ahmed, who called on the PM to quit.",
+      "Over 80 Labour MPs urged Keir Starmer to quit immediately or draw up a timetable to leave.",
+      "The government did not include a second attempt to reform welfare in the King's Speech.",
+      "The Conservative Party released an 'Alternative King's Speech' with its own proposed legislation.",
+      "The Northern Ireland Troubles Bill was listed among the government's legislative plans."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of bills in the King's Speech",
+        "positions": {
+          "BBC News Article 3 (Paul Seddon)": "37 bills, including eight previously introduced to Parliament",
+          "BBC News Article 7 (Richard Wheeler)": "more than 35 bills and draft bills",
+          "BBC News Article 1 (correspondents analysis)": "does not specify a total number"
+        }
+      },
+      {
+        "topic": "Northern Powerhouse Rail investment figure",
+        "positions": {
+          "BBC News Article 1 (Theo Leggett)": "\u00a345bn investment promised",
+          "Other BBC articles": "do not cite a specific investment figure"
+        }
+      },
+      {
+        "topic": "Northern Powerhouse Rail route destination",
+        "positions": {
+          "BBC News Article 1": "new high-speed route between Liverpool and Manchester via Warrington and Manchester Airport",
+          "BBC News Article 3": "new proposed rail route from Manchester to Millington, via Manchester Airport"
+        }
+      },
+      {
+        "topic": "Timing of Streeting's potential leadership challenge",
+        "positions": {
+          "BBC News Article 2 (Henry Zeffman)": "Streeting allies expect him to challenge as soon as tomorrow (i.e., Thursday)",
+          "BBC News Article 5 (Chris Mason)": "Some believe Streeting will go for it perhaps on Thursday, but notes he does not yet have the 81 MPs needed",
+          "BBC News Article 5 (PM supporter quote)": "'Wes has bottled it, and caused massive damage and instability in the process'"
+        }
+      },
+      {
+        "topic": "Cost of government supervision of British Steel",
+        "positions": {
+          "BBC News Article 1 (Simon Jack)": "Current government supervision has cost nearly \u00a3400m; previous Insolvency Service period cost \u00a3600m",
+          "Other BBC articles": "do not cite specific cost figures"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News Article 1 (Correspondents analysis)": "Leads with policy substance: correspondent-by-correspondent analysis of individual bills (rail, digital ID, British Steel, energy). Treats the leadership crisis as context rather than the main story. Provides expert assessment and historical background for each policy area. Buries the leadership drama entirely \u2014 it is barely mentioned.",
+      "BBC News Article 2 (Video summary)": "Leads with the leadership crisis and political uncertainty overshadowing the King's Speech. Treats the legislative agenda as secondary to the drama around Streeting, Mandelson's vetting, and Starmer's political survival. Aggregates multiple ongoing political stories without deep policy analysis.",
+      "BBC News Article 3 (Paul Seddon key measures)": "The most comprehensive legislative summary: organises all 37 bills by policy area (economy, housing, transport, crime, immigration, health, energy, security, digital, governance). Notes the leadership speculation overshadowed the event but does not dwell on it. Functions as a reference document rather than a narrative piece.",
+      "BBC News Article 4 (Video - Pomp and ceremony)": "Structured as a live blog summary. Despite the headline about ceremony, the body text is dominated by the leadership crisis: Streeting challenge, 80+ MPs urging Starmer to quit, minister resignations, Mandelson vetting. Minimal policy content.",
+      "BBC News Article 5 (Chris Mason editorial)": "Leads entirely with the political drama \u2014 the Streeting-Starmer coffee meeting \u2014 treating it as more newsworthy than the King's Speech itself. Uses the metaphor of 'two blokes having a cup of coffee' generating more headlines than the King's visit. Provides granular analysis of Labour internal politics, factional dynamics, and union positioning. Legislative agenda is mentioned only in passing.",
+      "BBC News Article 6 (Northern Ireland reaction)": "Frames the King's Speech through a Northern Ireland lens, emphasising that NI received no specific mention. Leads with NI MPs calling the day 'surreal' amid PM turmoil. Focuses on the European Partnership Bill's implications for NI trade (SPS deal), the Troubles legacy bill, and quotes from DUP, UUP, and TUV leaders. Provides the most detail on the Northern Ireland Troubles Bill provisions.",
+      "BBC News Article 7 (Starmer leadership crisis)": "Leads with the leadership crisis framing the entire King's Speech as a political survival exercise. Provides the most detail on ministerial resignations, cabinet splits, and the political calculus of including/excluding welfare reform. Includes the Conservative 'Alternative King's Speech' as counterpoint. The legislative agenda is presented as a list of proposals whose delivery is uncertain."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the full text of the King's Speech or the government's background briefing documents) was located in the dossier.",
+      "Without the primary source, it is impossible to verify whether any outlet omitted bills, mischaracterised provisions, or added editorial gloss to the government's actual legislative text.",
+      "The discrepancy between Article 1 (Liverpool-Manchester route) and Article 3 (Manchester to 'Millington' route) for the Northern Powerhouse Rail Bill cannot be resolved without the primary source; 'Millington' may be a transcription or reporting error."
+    ],
+    "missing_context": [
+      "The full text of the King's Speech itself was not available as a primary source, making it impossible to verify the completeness or accuracy of any outlet's bill summaries.",
+      "No outlet provides detail on the Immigration and Asylum Bill beyond a single sentence, despite immigration being flagged as a key theme.",
+      "The headline seed references a 'tourist tax' but no article in the dossier discusses a tourist tax bill or provision \u2014 this appears to be from a portion of Article 1 that was not fully captured in the scrape.",
+      "No outlet explains the mechanism by which 81 Labour MPs could force a leadership contest \u2014 the number is cited but the rules are not detailed.",
+      "The Conservative 'Alternative King's Speech' is mentioned in Article 7 but no other article analyses or even mentions it, leaving readers without context on the opposition's counter-proposals.",
+      "No outlet discusses estimated costs, timelines, or funding mechanisms for the majority of the 37 bills announced.",
+      "The EU Partnership Bill's broader implications \u2014 beyond NI trade \u2014 are not explored in any article, despite being described as containing 'controversial new powers to fast-track legislation.'",
+      "Andy Burnham is mentioned as a potential leadership challenger but no article explains his policy platform or why he lacks a parliamentary seat.",
+      "All seven articles are from BBC News (international), providing no cross-outlet diversity in sourcing, editorial stance, or framing. The dossier lacks any non-BBC perspective."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple BBC articles corroborate the core facts about the King's Speech contents and the leadership crisis context. However, since all articles come from a single outlet (BBC), a META post comparing cross-outlet framing differences is not appropriate. The story is best served as a straight REPORT summarising what was announced, with a clear note that coverage is single-outlet and that the leadership crisis is absorbing significant editorial oxygen at the expense of policy detail.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c1j2nr8kgk3o",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/videos/crepv72x5xqo",
+      "title": "Watch: What next after the King's Speech? - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/clypj215wgpo",
+      "title": "The key measures in the King's Speech - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/videos/cn7p2rd12pgo",
+      "title": "Watch: Pomp and ceremony as King delivers speech in Parliament - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cn7p2yl8j73o",
+      "title": "Chris Mason: Why a coffee is overshadowing the King's Speech - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c5yxpdlly5jo",
+      "title": "King's Speech: 'Surreal' amid PM turmoil, say NI MPs - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4gvd81681qo",
+      "title": "Starmer prepares for King's Speech as he faces leadership crisis - BBC"
+    }
+  ]
+}
