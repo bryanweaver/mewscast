@@ -2064,6 +2064,21 @@
       "dossier_id": "2026-05-12-u-k-prime-minister-8f31d04fd3",
       "post_type": "REPORT",
       "post_pipeline": "journalism"
+    },
+    {
+      "timestamp": "2026-05-13T13:21:07.399650+00:00",
+      "topic": "How the Trump administration has undermined the fight against public corruption - NPR",
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/how-trumps-hand-has-weakened-ahead-xi-summit-8-charts-2026-05-13/",
+      "source": "Reuters",
+      "content": "NPR reports the Trump administration has issued at least 15 pardons to elected officials and co-conspirators convicted of corruption, and has dismantled the DOJ's Public Integrity Section.\n\nreported by NPR, not yet confirmed elsewhere.",
+      "image_prompt": null,
+      "x_tweet_id": "2054552520559591644",
+      "x_reply_tweet_id": "2054552529791295968",
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mlqfh7uj372b",
+      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3mlqfhbzlne2p",
+      "dossier_id": "2026-05-13-how-the-trump-administration-9c1203ea06",
+      "post_type": "BULLETIN",
+      "post_pipeline": "journalism"
     }
   ]
 }
