@@ -1,0 +1,128 @@
+{
+  "story_id": "2026-05-13-court-overturns-alex-murdaugh-9a289ae5a9",
+  "headline_seed": "Court overturns Alex Murdaugh\u2019s murder convictions in deaths of wife, son - The Washington Post",
+  "brief": {
+    "story_id": "2026-05-13-court-overturns-alex-murdaugh-9a289ae5a9",
+    "consensus_facts": [
+      "The South Carolina Supreme Court on Wednesday, May 13, 2026, overturned Alex Murdaugh's murder convictions and ordered a new trial in the killings of his wife Maggie and son Paul.",
+      "The ruling was unanimous (5-0).",
+      "The court found that Colleton County Clerk of Court Rebecca 'Becky' Hill improperly influenced the jury, denying Murdaugh a fair trial.",
+      "The justices wrote that Hill 'placed her fingers on the scales of justice' and her conduct constituted improper external influences on the jury.",
+      "Hill was accused of telling jurors not to be fooled by the defense, to watch Murdaugh closely, and suggesting deliberations should not take long.",
+      "Hill later wrote a book about the trial titled 'Behind the Doors of Justice: The Murdaugh Murders,' which was pulled from publication due to plagiarism.",
+      "Hill pleaded guilty to obstruction of justice and perjury related to her conduct.",
+      "Murdaugh was originally convicted in March 2023 after a six-week trial and sentenced to two consecutive life sentences for the June 2021 killings.",
+      "Maggie and Paul Murdaugh were shot and killed at the family's hunting estate (Moselle) in Islandton, South Carolina, on June 7, 2021.",
+      "Murdaugh is also serving additional prison sentences for state and federal financial crimes and will remain incarcerated regardless of the overturned murder convictions.",
+      "South Carolina Attorney General Alan Wilson stated his office will aggressively seek to retry Murdaugh for the murders.",
+      "Murdaugh's defense attorneys Dick Harpootlian and Jim Griffin welcomed the ruling.",
+      "During the original trial, Murdaugh admitted he lied to police about his alibi on the night of the killings."
+    ],
+    "disagreements": [
+      {
+        "topic": "Murdaugh's age",
+        "positions": {
+          "BBC News": "Reports Murdaugh is 56 years old.",
+          "NPR": "Reports Murdaugh is 57 years old.",
+          "CBS News": "Reports Murdaugh is 57 years old."
+        }
+      },
+      {
+        "topic": "Hill's criminal charges and sentencing details",
+        "positions": {
+          "BBC News": "States Hill pleaded guilty in December to misconduct in office, obstruction of justice, and perjury, covering both trial-related conduct and misuse of public funds.",
+          "CBS News": "States Hill was arrested in May 2025, pleaded guilty to obstruction of justice and perjury specifically for lying about showing a reporter sealed photos, and was sentenced to probation.",
+          "NPR": "Does not detail Hill's specific guilty plea charges but notes Hill denied attempting to influence the jury."
+        }
+      },
+      {
+        "topic": "Financial crimes sentence length",
+        "positions": {
+          "BBC News": "Reports 27-year state sentence and 40-year federal sentence.",
+          "NPR": "Reports 27-year state prison term and 40-year federal term for wire and bank fraud and money laundering.",
+          "CBS News": "Reports only the 40-year federal sentence and does not specify the state sentence length."
+        }
+      },
+      {
+        "topic": "Whether the court also addressed the scope of financial crimes evidence in the murder trial",
+        "positions": {
+          "NPR": "Reports Murdaugh's attorneys said the ruling found financial crimes evidence 'went far beyond what was necessary and gave rise to unfair prejudice' and that on retrial 'that will not be permitted.'",
+          "BBC News": "Reports the supreme court said too much evidence from the financial crimes case was allowed in the murder trial, giving 'rise to considerable danger of unfair prejudice.'",
+          "CBS News": "Does not mention this aspect of the ruling."
+        }
+      },
+      {
+        "topic": "Hill's motive for influencing the jury",
+        "positions": {
+          "NPR": "Cites testimony from a colleague of Hill's who said the clerk repeatedly told her she wanted to write a book about the trial to pay for a lake house \u2014 and that a guilty verdict would help.",
+          "BBC News": "Does not mention the lake house motive.",
+          "CBS News": "Does not mention the lake house motive."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text is largely captions and video descriptions with minimal substantive reporting in the scraped content. Functions as a headline-and-media confirmation rather than a full article. Leads with the overturning and life sentence reversal.",
+      "The Washington Post": "Body text is almost entirely behind a paywall, with only a brief summary visible: the court ordered a new trial due to the clerk's improper comments to jurors. Includes an AI-generated summary of reader comments noting sentiment that the justice system favors wealthy, white individuals \u2014 an editorial framing choice absent from all other outlets. Buries the actual reporting behind subscription gates.",
+      "BBC News": "Provides the most comprehensive and internationally accessible narrative. Leads with the overturning, gives strong context on the 5-0 ruling, and includes substantial direct quotes from the court opinion. Covers Hill's guilty plea in detail, her book, and the financial crimes evidence issue. Includes background on the case timeline including the televised trial and global media interest. Frames Murdaugh as a 'disgraced lawyer' and a figure who 'captivated a global audience.'",
+      "NBC News (Article 4)": "This is a 1-minute video short with virtually no text content in the scraped body. Headline-only confirmation of the story.",
+      "NPR": "The most detailed U.S.-based text report. Leads with the new trial order and provides the fullest timeline of the Murdaugh saga, including the 2018 housekeeper death and 2019 boating accident. Uniquely reports Hill's alleged motive \u2014 wanting a guilty verdict to help sell a book and pay for a lake house. Also uniquely surfaces the defense team's argument that financial crimes evidence will be more restricted in any retrial. Names all five justices. Frames the story with significant legal and procedural detail.",
+      "NBC News (Article 6)": "A 3-minute video with minimal text in the scraped body. Serves as broadcast confirmation but contributes no unique textual detail beyond the headline.",
+      "CBS News": "Provides a solid text report with strong direct quotes from the court opinion, the AG's statement, and the defense team. Uniquely includes detail about Hill's arrest date (May 2025) and her probation sentence. Includes substantive trial testimony details \u2014 Murdaugh's cellphone alibi lie, the kennel video, and his statements about drug addiction. Quotes a juror who said she 'had questions about Mr. Murdaugh's guilt but voted guilty because I felt pressured by the other jurors.' This juror pressure detail is not prominently featured in other outlets."
+    },
+    "primary_source_alignment": [
+      "No primary source (court opinion) was located in the dossier. All reporting is based on outlets' characterizations of the 27-page South Carolina Supreme Court opinion.",
+      "Multiple outlets quote the same key phrases from the opinion \u2014 'placed her fingers on the scales of justice,' 'breathtaking,' 'disgraceful,' and 'unprecedented in South Carolina' \u2014 suggesting consistent access to the ruling, but without the primary document, independent verification of context and completeness is not possible.",
+      "NPR and BBC News both report the court found excessive financial crimes evidence was admitted at the murder trial; without the primary source, it is unclear how extensively the opinion addresses this versus the jury tampering issue."
+    ],
+    "missing_context": [
+      "The full text of the South Carolina Supreme Court opinion was not available in the dossier, making it impossible to verify whether outlets accurately characterized the scope and nuance of the ruling.",
+      "No outlet in the dossier provides detail on the likely timeline or venue for a retrial.",
+      "No outlet reports on the views of the victims' families (the Murdaugh family members beyond Alex, or Maggie Murdaugh's relatives) regarding the overturned convictions.",
+      "No outlet addresses whether the prosecution's underlying evidence \u2014 particularly the kennel video placing Murdaugh at the scene \u2014 remains intact for a retrial, or whether evidentiary rulings in the new opinion would meaningfully weaken the state's case.",
+      "No outlet discusses what specific financial crimes evidence may be excluded in a retrial and how that changes the prosecution's strategy.",
+      "The Washington Post's inclusion of an AI-generated reader-comment summary raising race and class issues is a notable editorial framing choice, but no outlet's actual reporting explores systemic questions about whether a non-wealthy defendant would have received the same appellate outcome.",
+      "No outlet reports on where Murdaugh is currently incarcerated or the practical logistics of holding him pending retrial given his existing sentences.",
+      "NPR's claim about Hill's colleague testifying she wanted a guilty verdict to sell a book and buy a lake house is a significant motive allegation that appears in only one outlet and could not be verified against the primary source."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with substantive body text (BBC News, NPR, CBS News) confirm the core facts with minimal material disagreement. The framing differences are relatively minor \u2014 mostly about depth and what supplementary detail each outlet includes. This is a straightforward high-profile legal development best served by a clear factual REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/murdaugh-killings-appeal-overturned-65a2ea0610bdb80763b39838ab4fcdb6",
+      "title": "Prosecutors to retry Alex Murdaugh in deaths of wife and son after high court overturned convictions - AP News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/nation/2026/05/13/court-overturns-alex-murdaughs-murder-convictions-deaths-wife-son/",
+      "title": "Court overturns Alex Murdaugh\u2019s murder convictions in deaths of wife, son - The Washington Post"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cedpvnq7wn1o",
+      "title": "Court overturns Alex Murdaugh's murder convictions and orders new trial - BBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/video/shorts/court-overturns-alex-murdaugh-s-murder-conviction-263241797782",
+      "title": "Court overturns Alex Murdaugh's murder conviction - NBC News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/13/nx-s1-5719271/alex-murdaugh-murder-timeline-trial",
+      "title": "Alex Murdaugh will get a new murder trial. Here's a timeline of his case - NPR"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/now/video/court-overturns-alex-murdaugh-s-murder-convictions-and-orders-new-trial-263240773797",
+      "title": "Court overturns Alex Murdaugh's murder convictions and orders new trial - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/alex-murdaugh-murder-convictions-overturned-south-carolina-new-trial/",
+      "title": "Alex Murdaugh murder convictions overturned by South Carolina Supreme Court, new trial ordered - CBS News"
+    }
+  ]
+}
