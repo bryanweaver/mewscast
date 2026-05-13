@@ -1,0 +1,85 @@
+{
+  "story_id": "2026-05-13-how-the-trump-administration-9c1203ea06",
+  "headline_seed": "How the Trump administration has undermined the fight against public corruption - NPR",
+  "brief": {
+    "story_id": "2026-05-13-how-the-trump-administration-9c1203ea06",
+    "consensus_facts": [
+      "Only one outlet in the dossier (NPR) provided full body text directly relevant to the headline seed story about the Trump administration undermining the fight against public corruption. No other outlet's body text covers this topic, so no multi-source consensus facts can be established at the body-text level.",
+      "Multiple outlets' headlines reference Trump and China/Xi Jinping (Reuters, Politico, NYT, NBC News), but these are about a different story \u2014 the upcoming Trump-Xi summit \u2014 not the public corruption story that is the subject of this dossier."
+    ],
+    "disagreements": [
+      {
+        "topic": "Story coverage itself",
+        "positions": {
+          "NPR": "Published a detailed, sourced investigative piece on Trump pardons undermining public corruption enforcement, citing at least 15 pardons of former elected officials and co-conspirators, the dismantling of DOJ's Public Integrity Section, and expert analysis.",
+          "Reuters": "Headline-only; covers Trump-Xi summit dynamics, not public corruption.",
+          "Politico": "Full body text available but covers Taiwan/Trump-Xi summit, not public corruption.",
+          "The New York Times (multiple articles)": "Headline-only articles covering Reflecting Pool renovation, China trade war, and Trump's China rhetoric \u2014 none address public corruption.",
+          "NBC News": "Body text available but covers Trump's Iran talks financial considerations, not public corruption."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "NPR is the only outlet covering the headline seed story. Leads with the concrete case of Michele Fiore \u2014 a former Las Vegas councilwoman convicted of pocketing $70,000 in donations for a police memorial \u2014 to ground the story in a specific, sympathetic-victim example. Structures the piece around three pillars: (1) at least 15 pardons of officials convicted of corruption, (2) the dismantling of DOJ's Public Integrity Section, and (3) the chilling effect on career prosecutors. Sources include libertarian Cato Institute's Dan Greenberg, Columbia Law's Richard Briffault, and former DOJ public corruption prosecutor John Keller \u2014 a deliberately cross-ideological sourcing approach. Includes White House rebuttal statement from spokeswoman Abigail Jackson, which deflects to Biden-era pardons. Notes that more than half of the 15 pardons went to Republicans or Trump supporters, but also names Democratic recipients (Blagojevich, Cuellar). Quotes Ed Martin's 'No MAGA left behind' social media post. Uses Greenberg's 'hailstorm' metaphor to distinguish volume of questionable pardons from occasional one-offs by prior presidents. The piece is framed as a systemic erosion story, not a partisan attack \u2014 the inclusion of libertarian and bipartisan criticism is deliberate editorial positioning.",
+      "Reuters": "Headline-only. Covers how Trump's negotiating position has weakened ahead of the Xi summit, using chart-based analysis. Entirely unrelated to the public corruption story.",
+      "Politico": "Full body text available but covers a completely different story \u2014 the risk that Trump could inadvertently undermine Taiwan policy during Xi summit. Extensively sourced with five unnamed diplomats from Asian and European countries plus named experts. Not relevant to the public corruption headline seed.",
+      "The New York Times (Reflecting Pool)": "Headline-only. Covers Trump's renovation of the Lincoln Memorial Reflecting Pool. Unrelated to public corruption.",
+      "The New York Times (Trade War)": "Headline-only. Covers Trump-China trade stalemate. Unrelated to public corruption.",
+      "The New York Times (China Rhetoric Video)": "Minimal body text \u2014 a video page about Trump's shifting rhetoric on China by David Sanger. Unrelated to public corruption.",
+      "NBC News": "Body text is effectively a video embed page with boilerplate navigation. The substantive content is a 26-second video clip about Trump weighing Americans' financial situations in Iran talks. Unrelated to public corruption."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. NPR's reporting cites no single document (such as a pardon text, DOJ memo, or court filing) that could serve as a verifiable anchor. The claims about the number of pardons (at least 15), the dismantling of the Public Integrity Section, and the chilling effect on prosecutors all rely on NPR's own reporting and expert interviews without a corresponding public document in the dossier."
+    ],
+    "missing_context": [
+      "This dossier is fundamentally a single-source dossier for the headline seed story: only NPR covers the public corruption topic. The remaining six articles cover unrelated stories (Trump-Xi summit, Taiwan, Iran, trade, Reflecting Pool renovation). The article-gathering pipeline appears to have matched on 'Trump administration' rather than 'public corruption.'",
+      "No conservative or right-leaning outlet's coverage of this specific story is present in the dossier, making it impossible to assess how the story is being framed across the political spectrum.",
+      "NPR reports 'at least 15' pardons of elected officials and co-conspirators but does not provide a complete list. A full enumeration with case details would be essential for verification.",
+      "NPR mentions the 'dismantling of the Justice Department's Public Integrity Section' but does not detail when this occurred, what specific actions were taken, or whether any functions were transferred elsewhere.",
+      "No outlet reports on whether Congress has responded to or commented on the pardons or the Public Integrity Section changes.",
+      "NPR quotes former DOJ prosecutor John Keller on the chilling effect but does not cite any specific case that was dropped or declined due to the political climate. This is an important evidentiary gap.",
+      "The White House rebuttal statement is included by NPR but no independent fact-check of its claims about Biden-era pardons of 'violent criminals including child killers and mass murderers' is provided.",
+      "No primary source documents (pardon texts, DOJ reorganization memos, case records) were located or included in the dossier."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (NPR) covers the actual headline seed story with full body text; no corroborating coverage from other outlets exists in the dossier. This is a single-source, time-sensitive story that deserves a same-day hedge post acknowledging the reporting while clearly noting its single-source status and the absence of cross-outlet verification.",
+    "confidence": 0.25
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/how-trumps-hand-has-weakened-ahead-xi-summit-8-charts-2026-05-13/",
+      "title": "How Trump's hand has weakened ahead of Xi summit, in eight charts - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/13/g-s1-121485/trump-pardons-public-corruption-justice",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/11/trump-xi-taiwan-crisis-00911593",
+      "title": "Here\u2019s how Trump\u2019s meeting with Xi could spark a crisis over Taiwan - Politico"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/12/us/politics/trump-reflecting-pool-renovation.html",
+      "title": "See How Trump Is Renovating the Lincoln Memorial Reflecting Pool - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/video/shorts/how-trump-weighs-americans-financial-situations-in-iran-talks-263188037621",
+      "title": "How Trump weighs Americans' financial situations in Iran talks - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/13/business/trump-tariffs-china.html",
+      "title": "Trump\u2019s Trade War With China: How We Got to a Stalemate In 3 Numbers - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/video/us/100000010890442/how-trump-changed-the-way-he-talks-about-china.html",
+      "title": "Video: How Trump Changed the Way He Talks About China - The New York Times"
+    }
+  ]
+}
