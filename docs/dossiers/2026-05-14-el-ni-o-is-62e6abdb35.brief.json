@@ -1,0 +1,100 @@
+{
+  "story_id": "2026-05-14-el-ni-o-is-62e6abdb35",
+  "headline_seed": "El Ni\u00f1o is coming faster than expected and chances are rising that it will be historically strong - CNN",
+  "brief": {
+    "story_id": "2026-05-14-el-ni-o-is-62e6abdb35",
+    "consensus_facts": [
+      "NOAA's Climate Prediction Center has issued an updated forecast indicating El Ni\u00f1o is expected to develop within the next month, sooner than previously anticipated.",
+      "There is approximately a 2-in-3 (two-thirds) chance that the El Ni\u00f1o will reach strong or very strong intensity by winter 2026-2027.",
+      "The odds of a 'Super' El Ni\u00f1o (very strong event) have increased compared to last month's forecast.",
+      "A large pool of warm subsurface water has built up in the central and eastern equatorial Pacific, fueling confidence in El Ni\u00f1o's development and strengthening.",
+      "If realized, this would be the first Super El Ni\u00f1o since the 2015-2016 event, with prior notable events in 1997-1998 and 1982-1983.",
+      "El Ni\u00f1o typically suppresses Atlantic hurricane activity through increased wind shear, while boosting hurricane activity in the central and eastern Pacific.",
+      "A strong El Ni\u00f1o is expected to boost global average temperatures, increasing the likelihood that 2026 or 2027 could become the warmest year on record.",
+      "El Ni\u00f1o increases risks of drought in parts of Southeast Asia, Australia, the Caribbean, and parts of Africa, while increasing flooding risks in regions such as Peru, Ecuador, and the southern United States.",
+      "There remains substantial uncertainty in the peak strength of this El Ni\u00f1o event, particularly given the spring forecast period."
+    ],
+    "disagreements": [
+      {
+        "topic": "Super El Ni\u00f1o probability",
+        "positions": {
+          "CNN": "Reports odds of Super El Ni\u00f1o between November and January increased from 1-in-4 last month to about 1-in-3 now.",
+          "BBC News": "Reports ECMWF models show more than half of forecast models suggest temperature increase over 2.5\u00b0C by autumn, with some data suggesting exceeding 3\u00b0C \u2014 potentially surpassing the 1877 record of 2.7\u00b0C.",
+          "The Asheville Citizen Times": "Notes the possibility of rivaling or surpassing 1997-98 and 2015-16 events but does not quantify Super El Ni\u00f1o probability."
+        }
+      },
+      {
+        "topic": "Historical record comparison",
+        "positions": {
+          "CNN": "Lists strongest on record as 2015-2016 in NOAA records dating to 1950, with prior events in 1997-98, 1982-83, and 1972-73.",
+          "BBC News": "References an 1877 El Ni\u00f1o with a reported peak of 2.7\u00b0C as the known historical peak, while noting limited observations from that era and significant uncertainty. Lists the 2015-16 event at 2.4\u00b0C Ni\u00f1o3.4 anomaly."
+        }
+      },
+      {
+        "topic": "Super El Ni\u00f1o threshold definition",
+        "positions": {
+          "CNN": "Defines very strong/Super El Ni\u00f1o as water temperatures more than 2\u00b0C above average.",
+          "BBC News": "Defines strong/super El Ni\u00f1o as Ni\u00f1o3.4 sea surface temperature anomaly above 1.5\u00b0C."
+        }
+      },
+      {
+        "topic": "Which year will be warmest on record",
+        "positions": {
+          "CNN": "States El Ni\u00f1o is 'loading the dice toward 2026 or 2027 becoming Earth's warmest on record.'",
+          "BBC News": "Quotes Prof. Liz Stephens saying 'we're probably looking at record global temperatures next year' (2027), especially if very strong El Ni\u00f1o."
+        }
+      },
+      {
+        "topic": "Transition speed from La Ni\u00f1a to El Ni\u00f1o",
+        "positions": {
+          "BBC News": "Quotes NOAA meteorologist Nathanial Johnson describing the pace as a 'rare occurrence' \u2014 going from La Ni\u00f1a in winter to a potentially strong El Ni\u00f1o within a year.",
+          "CNN": "Notes last month's update favored neutral conditions through June and describes this month's shift as 'a notable change,' but does not explicitly characterize the La Ni\u00f1a to El Ni\u00f1o transition speed as rare."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN": "Leads with the speed of El Ni\u00f1o's emergence and increasing Super El Ni\u00f1o odds. Provides a comprehensive explainer structure covering definition, probability changes from last month, global impacts by region, hurricane season effects, and global temperature implications. Buries uncertainty language deep in the piece. Includes a quote from CPC scientist Michelle L'Heureux. Notes NOAA said 2026 is already 'very likely' to be a top-five warmest year. Mentions the 2015-16 Super El Ni\u00f1o's mixed performance (delivered Caribbean drought but failed to produce expected wet Southern California winter). Offers an embedded newsletter signup and a secondary linked article. Does not mention any geopolitical or humanitarian framing beyond weather impacts.",
+      "Bloomberg": "Headline references rising El Ni\u00f1o odds alongside 'storm and crop threats,' indicating an economic and commodity framing. However, the full article body was inaccessible (403 error/CAPTCHA wall), so no body-text analysis is possible. Bloomberg's headline-only framing suggests an emphasis on agricultural and market implications not present in other outlets.",
+      "BBC News": "Leads with record global temperature warnings and humanitarian impacts. Uniquely references the 1877 El Ni\u00f1o event (2.7\u00b0C peak) and its catastrophic humanitarian consequences \u2014 famine across Asia, Brazil, and Africa that killed millions. Quotes multiple institutional sources (NOAA, BoM, ECMWF) and an academic (Prof. Liz Stephens, University of Reading). Uniquely mentions the Strait of Hormuz closure disrupting fertilizer distribution and price increases \u2014 a geopolitical/economic angle no other outlet raises. Uses Australian Bureau of Meteorology's stricter 0.8\u00b0C threshold alongside NOAA's 0.5\u00b0C. Frames the story with a stronger humanitarian and climate-risk lens. Notes spring El Ni\u00f1o forecasts have historically been 'quite poor' but that forecasters are more confident than normal this year.",
+      "The Asheville Citizen Times": "Frames the story entirely through local Carolina impacts \u2014 floods, coastal erosion, hurricane risk, and seasonal weather expectations. Leads with the tension between fewer hurricanes and more flooding. Published two days before the NOAA update (May 12), so references 'early outlook' and increasing model signals rather than the specific May 14 CPC update. Includes historical hurricane data: three major hurricanes hit the US during warmest El Ni\u00f1o years since 1950 (Audrey 1957, Betsy 1965, Idalia 2023). Quotes Phil Klotzbach on ENSO-hurricane relationships. Emphasizes that even reduced hurricane counts don't eliminate risk \u2014 'it only takes one storm.' Provides the most granular local impact discussion (saturated soils, coastal plain drainage, beach erosion from persistent onshore flow)."
+    },
+    "primary_source_alignment": [
+      "No primary source document (e.g., the actual NOAA CPC update or ECMWF forecast data) was located in the dossier. All claims about the CPC forecast are filtered through outlet reporting and cannot be independently verified against the source document."
+    ],
+    "missing_context": [
+      "The actual NOAA Climate Prediction Center update document was not available as a primary source, so outlet interpretations of its probability statements cannot be independently verified.",
+      "Bloomberg's full article was inaccessible (403 error), removing what would likely have been the primary source of economic and commodity-market impact analysis (crop threats, food prices, agricultural disruption).",
+      "No outlet provides detail on what specific computer models are showing the potential for a record-breaking Super El Ni\u00f1o \u2014 CNN references 'some typically reliable computer models' without naming them.",
+      "BBC News mentions the Strait of Hormuz closure disrupting fertilizer distribution and prices, but this claim appears without context or sourcing \u2014 no other outlet references it, and it is unclear whether this is related to El Ni\u00f1o or to separate geopolitical events.",
+      "No outlet discusses the economic cost estimates of prior Super El Ni\u00f1o events, which would help readers gauge potential financial impacts.",
+      "No outlet addresses how current global sea surface temperature anomalies (which have been historically elevated since 2023) might interact with or amplify El Ni\u00f1o's effects beyond the standard temperature boost.",
+      "CNN and BBC News use different thresholds for defining 'Super' or 'very strong' El Ni\u00f1o (2\u00b0C vs. 1.5\u00b0C) without explaining why the discrepancy exists \u2014 this could confuse readers comparing the two reports.",
+      "No outlet discusses what policy, infrastructure, or preparedness actions governments are taking in response to the forecast."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (CNN, BBC News, Asheville Citizen Times) corroborate the core facts \u2014 NOAA's updated El Ni\u00f1o forecast, increased Super El Ni\u00f1o odds, and expected global weather impacts. While framing differences exist (global climate risk vs. local weather impacts vs. humanitarian consequences), the factual core is consistent across outlets, making this a solid multi-source REPORT rather than a META requiring framing-divergence commentary.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/14/weather/super-el-nino-climate",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-14/el-nino-odds-rise-as-storm-and-crop-threats-intensify-globally",
+      "title": "El Ni\u00f1o Odds Rise as Storm and Crop Threats Intensify Globally - Bloomberg.com"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/weather/articles/cvgzn11v421o",
+      "title": "Warning of record global temperatures as chance of very strong El Ni\u00f1o grows - BBC"
+    },
+    {
+      "outlet": "The Asheville Citizen Times",
+      "url": "https://www.citizen-times.com/story/weather/2026/05/12/super-el-nio-ahead-for-the-carolinas-how-it-could-shape-weather/90040742007/",
+      "title": "More floods or fewer hurricanes? What El Ni\u00f1o could mean for Carolinas - The Asheville Citizen Times"
+    }
+  ]
+}
