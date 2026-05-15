@@ -1,0 +1,121 @@
+{
+  "story_id": "2026-05-15-south-carolina-governor-orders-136915f1cd",
+  "headline_seed": "South Carolina governor orders special redistricting session after state senators defied Trump \u2013 US politics live - The Guardian",
+  "brief": {
+    "story_id": "2026-05-15-south-carolina-governor-orders-136915f1cd",
+    "consensus_facts": [
+      "The Republican-led South Carolina state Senate rejected a measure to take up redistricting of the state's congressional map on Tuesday, May 12, 2026.",
+      "The vote fell short of the two-thirds supermajority needed, with five Republican senators voting against the resolution alongside all Democrats.",
+      "President Donald Trump had publicly urged South Carolina senators to approve the redistricting effort, posting on social media the night before the vote.",
+      "The resolution would have extended the legislative session, which was set to end that week, to allow time to draw new congressional maps.",
+      "The state House had previously approved the resolution and proposed a new map that could have eliminated the state's only Democratic-held seat, represented by longtime Rep. James Clyburn.",
+      "Republican Senate Majority Leader Shane Massey opposed the redistricting push and delivered a floor speech invoking his Southern heritage and resistance to outside pressure, saying 'I got too much Southern in my blood.'",
+      "The vote was 29-17 in favor, falling just two votes short of the required two-thirds threshold.",
+      "A major U.S. Supreme Court ruling had recently limited the use of race in redistricting, paving the way for GOP-controlled states to consider redrawing maps with majority-minority districts.",
+      "Tennessee had passed a Trump-backed redistricting map the previous week.",
+      "Republican Gov. Henry McMaster posted on X after the vote referencing the Legislature's remaining session days but did not immediately announce a special session."
+    ],
+    "disagreements": [
+      {
+        "topic": "Massey's floor speech framing and emphasis",
+        "positions": {
+          "NBC News": "Reports Massey made an extensive speech arguing redistricting would be short-sighted, said 'Republicans are stronger when the Democrat Party is vibrant and viable,' and compared his defiance to South Carolina's Civil War heritage.",
+          "CNN": "Reports Massey acknowledged pressure from Trump but said he doesn't like being asked to bend to someone's will, focusing on the resistance framing ('too much Southern in my blood') without the bipartisan vibrancy argument."
+        }
+      },
+      {
+        "topic": "Strategic concerns among Republican senators",
+        "positions": {
+          "CNN": "Reports that some GOP senators feared the proposed map wouldn't guarantee unseating Clyburn and could backfire, resulting in a 5-2 or even 4-3 Republican split instead of 6-1.",
+          "NBC News": "Does not report specific strategic backfire concerns among Republican senators."
+        }
+      },
+      {
+        "topic": "Governor McMaster's next steps and special session",
+        "positions": {
+          "NBC News": "Reports McMaster posted on X referencing remaining legislative days and 'the important question of redistricting' but did not mention a special session. Notes SC Attorney General Alan Wilson called for McMaster to convene one.",
+          "The Guardian (headline seed)": "The story's headline seed references McMaster ordering a special redistricting session, suggesting events progressed beyond what the May 12 articles captured.",
+          "Bloomberg Government": "Body text cuts off after stating senators rejected the redistricting bid; does not address McMaster's response."
+        }
+      },
+      {
+        "topic": "Broader national redistricting context",
+        "positions": {
+          "NBC News": "Provides extensive national context: mentions Missouri Supreme Court ruling on the same day, Alabama and Louisiana also taking redistricting steps, notes Republicans could gain as many as 14 seats from eight new maps enacted over the past year, and references five Indiana state senators who lost primaries after opposing a Trump-backed redistricting plan.",
+          "CNN": "Mentions only the broader Republican push nationally without specific numbers or other state actions.",
+          "Associated Press": "Headline pairs South Carolina with Missouri developments; photo captions reference Missouri protests but body text was not fully retrievable."
+        }
+      },
+      {
+        "topic": "Republican reactions to the vote",
+        "positions": {
+          "NBC News": "Reports specific reactions from Rep. Ralph Norman (said senators shouldn't be in public office), Rep. Nancy Mace (said she'd 'whip every single NO vote into shape' as governor), and AG Alan Wilson (called it a 'missed opportunity').",
+          "CNN": "Does not report post-vote Republican reactions.",
+          "Bloomberg Government": "Does not report post-vote Republican reactions in the available text."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only. Frames the story as a 'break with Trump' by Republicans, emphasizing the intra-party defiance angle. No body text available for deeper analysis.",
+      "The Washington Post": "Headline-only, and it is an opinion piece, not a news report. Frames the story as Trump's 'redistricting war' forcing a 'surrender' in South Carolina \u2014 aggressive language suggesting capitulation to Trump's broader agenda even after the Senate vote failed. The word 'surrender' is notable given the headline seed suggests McMaster later ordered a special session.",
+      "Associated Press": "Body text consists mostly of photo captions with minimal substantive reporting retrievable. Pairs the South Carolina story with Missouri in its headline, framing the two as a split outcome for Trump's redistricting push (fizzles in SC, wins in MO). This dual framing provides balance the other outlets don't attempt.",
+      "Bloomberg Government": "Body text is mostly site boilerplate with only a brief lede paragraph recoverable. Frames as a straightforward political news item: 'Senate Republicans rejected President Donald Trump's call.' Notes Tennessee's redistricting as related context. Neutral, wire-style framing in the available text.",
+      "The New York Times": "Headline-only. Personalizes the story around Shane Massey as 'The South Carolina Republican Who Defied Trump,' making it a character-driven profile rather than a legislative process story. This is a distinctive editorial choice compared to other outlets that led on the institutional outcome.",
+      "NBC News": "The most comprehensive body text in the dossier. Leads with the Senate rejection and Trump pressure, provides the most national context (Missouri, Indiana, Alabama, Louisiana), includes the most direct quotes from Massey's floor speech, and uniquely reports post-vote Republican backlash from Norman, Mace, and Wilson. Buries the Indiana primary retaliation detail deep in the story but includes it \u2014 a significant detail suggesting consequences for defiant senators. Also uniquely notes SC state senators aren't up for re-election until 2028, contextualizing their political insulation.",
+      "CNN": "Leads with the Clyburn angle in both headline and body, framing the story as an attempt to 'eliminate James Clyburn's seat.' Uniquely reports the strategic backfire concern among GOP senators (5-2 or 4-3 split risk). More concise than NBC News, omitting national context and post-vote reactions. Attributes the story to AP, suggesting it may be running a wire version rather than original reporting."
+    },
+    "primary_source_alignment": [
+      "No primary sources (such as the resolution text, the roll-call vote record, McMaster's X post, or Trump's Truth Social post) were located in this dossier. Alignment cannot be assessed."
+    ],
+    "missing_context": [
+      "The headline seed references Gov. McMaster ordering a special redistricting session, but the dossier articles are dated May 12 and do not confirm this development. The story appears to have advanced beyond what this dossier covers. The May 15 detection date of the headline seed suggests a three-day gap in which McMaster apparently acted.",
+      "No outlet in the dossier with retrievable body text provides the names of the five Republican senators who voted against the resolution.",
+      "No primary source was located \u2014 the actual resolution text, the roll-call vote record, Trump's Truth Social post, and McMaster's X post would all be valuable for verification.",
+      "CNN attributes its report to AP, raising the question of how much of the CNN body text is original reporting versus wire copy. This matters for the two-source corroboration standard.",
+      "No outlet with full body text discusses the specific proposed map or how districts would have been redrawn, only that the lone majority-Black/Democratic district would be affected.",
+      "NBC News mentions the Supreme Court ruling that 'limited using race in redistricting' but no outlet names the case or explains its specific holding, which is foundational context for the entire redistricting wave.",
+      "The Washington Post entry is an opinion column, not a news report, limiting its value as a corroborating source even if body text were available.",
+      "No outlet addresses the legal vulnerability of a mid-decade redistricting or whether court challenges were anticipated."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with substantive body text (NBC News, CNN, Bloomberg Government) confirm the core facts of the South Carolina Senate vote. While framing differences exist, the factual core is solid and consistent. The story is not primarily about coverage divergence (which would warrant META) but about a significant political event. The headline seed suggests a newer development (McMaster ordering a special session) that the dossier doesn't fully cover \u2014 the REPORT should note this gap and flag that a follow-up may be needed.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/break-with-trump-republicans-south-carolina-senate-reject-redistricting-bid-2026-05-12/",
+      "title": "Republicans in South Carolina Senate reject redistricting bid that Trump backed - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/opinions/2026/05/15/trump-redistricting-war-forces-south-carolina-surrender/",
+      "title": "Opinion | Trump\u2019s redistricting war forces a surrender in South Carolina - The Washington Post"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/redistricting-congress-voting-rights-trump-1ed6f8c68884b372efca79fbb50e343a",
+      "title": "Trump\u2019s redistricting push fizzles in South Carolina Senate but wins in Missouri\u2019s top court - AP News"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bgov.com/bloomberg-government-news/south-carolina-senate-blocks-trump-backed-redistricting-effort",
+      "title": "South Carolina Senate Blocks Trump-Backed Redistricting Effort - Bloomberg Government News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/12/us/south-carolina-shane-massey-redistricting.html",
+      "title": "The South Carolina Republican Who Defied Trump on Redistricting - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-election/south-carolina-state-senate-rejects-effort-tackle-redistricting-pressu-rcna344815",
+      "title": "South Carolina Senate rejects effort to tackle redistricting despite pressure from Trump - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/12/politics/south-carolina-redistricting-jim-clyburn",
+      "title": "South Carolina lawmakers reject for now Trump\u2019s push to eliminate James Clyburn\u2019s seat - CNN"
+    }
+  ]
+}
