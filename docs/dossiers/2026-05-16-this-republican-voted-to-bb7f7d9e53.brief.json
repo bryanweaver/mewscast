@@ -1,0 +1,130 @@
+{
+  "story_id": "2026-05-16-this-republican-voted-to-bb7f7d9e53",
+  "headline_seed": "This Republican voted to convict Trump. Now he's up for reelection. Can he survive? - NPR",
+  "brief": {
+    "story_id": "2026-05-16-this-republican-voted-to-bb7f7d9e53",
+    "consensus_facts": [
+      "Sen. Bill Cassidy of Louisiana, a Republican, is facing a primary election on Saturday, May 17, 2026, for his Senate seat.",
+      "Cassidy was one of seven Senate Republicans who voted to convict President Trump in his second impeachment trial after the Jan. 6, 2021, Capitol attack.",
+      "President Trump endorsed Rep. Julia Letlow to challenge Cassidy for the seat.",
+      "State Treasurer John Fleming is a third Republican candidate in the primary.",
+      "If no candidate receives more than 50% of the vote, the top two finishers will go to a runoff on June 27.",
+      "Letlow won a special election in 2021 for a House seat previously held by her late husband Luke Letlow, who died from COVID-19 complications in 2020 before being sworn in.",
+      "Cassidy has clashed with HHS Secretary Robert F. Kennedy Jr. over vaccine policy, despite providing a key vote to help Kennedy get confirmed.",
+      "Senate Majority Leader John Thune expressed support for Cassidy, saying he has been 'a terrific senator for Louisiana.'",
+      "Louisiana's Republican Gov. Jeff Landry delayed the state's House primaries due to a recent U.S. Supreme Court decision striking down the state's congressional map, while the Senate primary proceeded as scheduled.",
+      "Cassidy is a physician and chairs the Senate Health, Education, Labor and Pensions Committee.",
+      "Louisiana is a solidly Republican state where Trump won approximately 60% of the vote in 2024.",
+      "Cassidy's campaign has attacked Letlow over her past support for diversity, equity and inclusion initiatives in academia.",
+      "The winner of the GOP primary is heavily favored to win the November general election."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether Cassidy can win",
+        "positions": {
+          "NPR": "Frames the race as a genuine test of whether Cassidy can survive, with local voices split; includes a local GOP chair backing Cassidy and saying his conviction vote was right.",
+          "ABC News": "Quotes a Louisiana political consultant saying it was once 'impossible' for Cassidy to win but is now 'statistically unlikely, but no longer impossible.'",
+          "NBC News": "Reports Cassidy himself has characterized the race as 'Letlow's to lose' but expressed confidence he will ultimately win re-election.",
+          "CBS News": "Cites an Emerson College poll from April suggesting a runoff outcome is likely, implying no candidate will reach 50%."
+        }
+      },
+      {
+        "topic": "Primary system change and its impact",
+        "positions": {
+          "NBC News": "Reports in detail that Gov. Landry signed legislation changing Louisiana from 'jungle' all-party primaries to traditional party primaries ahead of Cassidy's race; Cassidy says this creates an uphill battle and that unaffiliated voters are being blocked from voting for him.",
+          "NPR": "Does not mention the primary system change.",
+          "ABC News": "Notes the delayed House primaries may cause voter confusion but does not detail the primary system change.",
+          "CBS News": "Mentions the delayed House primaries but does not discuss the shift from jungle to closed primaries."
+        }
+      },
+      {
+        "topic": "Role of MAHA PAC and RFK Jr. movement",
+        "positions": {
+          "NBC News": "Reports that a group called MAHA PAC has spent hundreds of thousands of dollars aimed at replacing Cassidy with Letlow, and that Letlow leaned heavily into the MAHA message in the closing weeks.",
+          "NPR": "Does not mention MAHA PAC by name.",
+          "CBS News": "Mentions Cassidy's clashes with RFK Jr. but does not reference MAHA PAC spending.",
+          "ABC News": "Notes Cassidy's clashes with Kennedy but does not mention MAHA PAC."
+        }
+      },
+      {
+        "topic": "Total campaign spending",
+        "positions": {
+          "NBC News": "Reports overall spending has topped $30 million, with $21.8 million in pro-Cassidy ads, $9.8 million in pro-Letlow ads, and $1.5 million in pro-Fleming ads, citing AdImpact.",
+          "NPR": "States Cassidy campaign has spent 'millions' on ads but does not provide total figures.",
+          "CBS News": "Does not report spending figures.",
+          "ABC News": "Does not report spending figures."
+        }
+      },
+      {
+        "topic": "Trump's tone toward Cassidy in the final days",
+        "positions": {
+          "NBC News": "Reports Trump posted on Truth Social the day before the primary in support of Letlow but 'steered clear of attacking Cassidy in the way he did a few weeks ago.'",
+          "ABC News": "Characterizes Trump's endorsement of Letlow as 'the latest attempt by the president to purge the party of politicians he views as disloyal.'",
+          "NPR": "Does not report on Trump's final-days messaging."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "Leads with the personal and cultural angle \u2014 crawfish festivals, Cajun music, individual voter voices. Gives extensive space to both pro-Cassidy and pro-Trump voter perspectives from the ground. Includes significant biographical detail on Letlow, including her grief narrative and her stump speech. Frames the race as a test of 'Trump's grip on the party' and what voters want from their representatives. Does not mention the closed-primary system change, MAHA PAC spending, or total ad spending. Buries the structural advantages working against Cassidy.",
+      "BBC News": "Does not cover the Cassidy-Letlow Senate primary directly. Instead covers the broader redistricting fight reshaping 2026 midterm dynamics, with Louisiana mentioned only as one state where the Senate approved a new map. Frames the story around Republicans gaining advantage through gerrymandering after Supreme Court rulings, and Democratic concerns. This article is contextual background to the Louisiana political environment but not a direct report on the Senate primary.",
+      "NBC News": "Most granular and process-oriented of the outlets. Leads with Cassidy's political career being 'at stake.' Uniquely reports on the closed-primary system change, Cassidy's complaints about voter confusion, the MAHA PAC spending, and detailed ad-spending figures from AdImpact. Includes Cassidy campaign manager's statement accusing Gov. Landry of meddling. Also uniquely notes the Casey Means surgeon general nomination conflict. Most comprehensive on the structural and financial dimensions of the race.",
+      "The Washington Post": "Headline only \u2014 'GOP senator who defied Trump on impeachment faces voters, five years later.' No body text available for analysis. Framing from headline alone emphasizes the temporal distance ('five years later') and the defiance narrative.",
+      "CBS News": "Balanced rundown-style report. Leads with the primary as a fight by Cassidy to hold his seat. Uniquely cites an Emerson College poll from April suggesting a runoff is likely. Notes the Indiana precedent where Trump successfully pushed out defiant state senators. Includes Democratic primary candidates by name (Albares, Crockett, Davis), which no other outlet does. Frames the contest as a 'test of the president's influence.'",
+      "ABC News": "Wire-style brevity. Leads with Cassidy 'fighting for his political life' and frames Trump's endorsement as part of a broader effort to 'purge the party of politicians he views as disloyal.' Uniquely includes a named voter (Paul Begue) who was turned off by Trump's loyalty language about Letlow. Quotes the Louisiana consultant (Mary-Patricia Wray) on Cassidy's odds. Mentions voter confusion from the delayed House primaries.",
+      "The New York Times": "Headline only \u2014 about a House war powers vote to halt the Iran conflict, not about the Louisiana Senate primary. This article is not relevant to the core story."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All claims in the brief are sourced entirely from outlet reporting and cannot be cross-checked against official documents, vote tallies, or campaign filings."
+    ],
+    "missing_context": [
+      "No outlet with full body text provides specific polling numbers showing the current standings of Cassidy, Letlow, and Fleming; CBS News references an Emerson poll from April but does not give candidate-level percentages.",
+      "None of the outlets explain how Fleming has polled relative to Cassidy and Letlow, despite NPR noting he has 'remained competitive.' No specific numbers are provided.",
+      "The BBC article provides important context about the Supreme Court's Voting Rights Act ruling and its redistricting consequences in Louisiana, but no other outlet with full body text connects this ruling to the broader political dynamics of the Senate race beyond the delayed House primaries.",
+      "No outlet discusses how Cassidy voted on the 'big, beautiful bill' or other recent legislative priorities, which could be relevant to his standing with Republican voters.",
+      "No outlet reports on turnout expectations or early voting figures, which would be relevant given Cassidy's complaints about the closed-primary system blocking unaffiliated voters.",
+      "The Washington Post and The New York Times articles were headline-only, limiting the breadth of multi-outlet corroboration. The New York Times article was not relevant to this story at all (it covers a House war powers vote on Iran).",
+      "No outlet explores whether Cassidy's incumbency advantage in fundraising (he has a roughly 2-to-1 ad spending edge per NBC News) is translating into voter support.",
+      "No outlet provides detail on the Democratic primary candidates or their viability, beyond CBS News listing their names."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text corroborate the core facts of the Louisiana Senate primary: participants, stakes, Trump endorsement, and structural dynamics. While framing differs in emphasis (NPR's ground-level storytelling vs. NBC News's process granularity vs. ABC News's wire brevity), the factual core is consistent. There is no primary source to surface, and framing divergences are differences of emphasis rather than material contradictions, making this a straightforward REPORT rather than a META.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/16/nx-s1-5808979/louisiana-senate-cassidy-trump",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/ckgpjqvjyz8o",
+      "title": "Republicans feared losing midterms - but fight over voting maps changed all that - BBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-election/sen-bill-cassidy-faces-louisiana-republican-primary-first-time-trump-i-rcna344476",
+      "title": "Sen. Bill Cassidy faces a primary for the first time since his Trump impeachment vote - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/05/16/gop-senator-who-defied-trump-impeachment-faces-voters-five-years-later/",
+      "title": "GOP senator who defied Trump on impeachment faces voters, five years later - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/gop-sen-cassidy-louisiana-primary-trump-challenger-letlow/",
+      "title": "GOP Sen. Bill Cassidy fights to hold onto seat in Louisiana primary against Trump-backed challenger - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/wireStory/sen-cassidy-battles-trump-backed-challenger-louisiana-republican-133025226",
+      "title": "Sen. Cassidy battles Trump-backed challenger in Louisiana Republican primary - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/14/us/politics/war-powers-vote-house-trump-iran.html",
+      "title": "House Again Blocks War Powers Vote to Halt Iran Conflict - The New York Times"
+    }
+  ]
+}
