@@ -909,6 +909,11 @@
       "did": "did:plc:3wp4ie7xhoamxhtvxwoujl5y",
       "handle": "cls180.bsky.social",
       "timestamp": "2026-05-16T01:40:39.270510"
+    },
+    {
+      "did": "did:plc:24bkqdxcl6qw6au5lvnb26vv",
+      "handle": "dernowak-schreibt.bsky.social",
+      "timestamp": "2026-05-16T13:34:09.809364"
     }
   ],
   "liked_posts": [
@@ -5401,6 +5406,11 @@
       "uri": "at://did:plc:3wp4ie7xhoamxhtvxwoujl5y/app.bsky.feed.post/3mltlxeinjs2a",
       "author": "cls180.bsky.social",
       "timestamp": "2026-05-16T01:40:39.054076"
+    },
+    {
+      "uri": "at://did:plc:24bkqdxcl6qw6au5lvnb26vv/app.bsky.feed.post/3mlxohgeik22k",
+      "author": "dernowak-schreibt.bsky.social",
+      "timestamp": "2026-05-16T13:34:09.601035"
     }
   ],
   "last_cleanup": "2026-05-15T16:33:36.227026",
