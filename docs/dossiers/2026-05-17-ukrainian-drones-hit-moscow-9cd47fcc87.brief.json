@@ -1,0 +1,137 @@
+{
+  "story_id": "2026-05-17-ukrainian-drones-hit-moscow-9cd47fcc87",
+  "headline_seed": "Ukrainian drones hit Moscow and surrounding area, killing 3 - The Washington Post",
+  "brief": {
+    "story_id": "2026-05-17-ukrainian-drones-hit-moscow-9cd47fcc87",
+    "consensus_facts": [
+      "Ukraine launched one of its largest drone attacks on the Moscow region overnight Saturday into Sunday, May 17, 2026, killing at least three people in the Moscow region.",
+      "A woman was killed when a drone hit a private house in Khimki, north/northwest of Moscow, according to Moscow region Governor Andrei Vorobyov.",
+      "Two men were killed in the village of Pogorelki in the Mytishchi district of the Moscow region.",
+      "A fourth person was killed in the Belgorod region bordering Ukraine.",
+      "Russia's Defense Ministry said it intercepted 556 drones overnight across 14 Russian regions, annexed Crimea, and over the Black and Azov seas.",
+      "Moscow Mayor Sergei Sobyanin said air defenses destroyed 81 drones headed for Moscow overnight, and at least 12 people were wounded, mostly near the entrance to Moscow's oil refinery.",
+      "Sobyanin said the refinery's 'technology' (production) was not damaged.",
+      "Drone debris fell on the grounds of Sheremetyevo airport, Moscow's largest, without causing damage.",
+      "The Indian embassy in Russia confirmed one Indian worker was killed and three others were injured in the drone attacks in the Moscow region.",
+      "Ukrainian President Volodymyr Zelenskyy confirmed the attacks and called them 'entirely justified,' saying Ukrainian drones flew more than 500 kilometers from the border and overcame concentrated Russian air defenses around Moscow.",
+      "Russia's Defense Ministry reported that over 1,000 Ukrainian drones had been shot down or jammed in the preceding 24 hours by midday Sunday.",
+      "Several residential buildings and infrastructure facilities were damaged in the Moscow region.",
+      "Russia's Foreign Ministry spokeswoman Maria Zakharova accused Kyiv of carrying out a 'mass terrorist attack.'",
+      "The attacks followed a heavy Russian drone and missile bombardment of Kyiv earlier in the week, after the expiration of a brief ceasefire around Victory Day on May 9.",
+      "Russia attacked Ukraine with 287 drones overnight into Sunday; Ukraine's air force said it intercepted 279 of them.",
+      "Both sides deny deliberately targeting civilians."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total death toll",
+        "positions": {
+          "The Washington Post": "Reports 3 killed (Moscow region only in its truncated body text).",
+          "NPR": "Reports 4 killed: 3 near Moscow plus 1 in Belgorod.",
+          "NBC News": "Reports 4 killed: 3 in Moscow region plus 1 in Belgorod.",
+          "Al Jazeera English": "Reports at least 5 killed: 3 in Moscow region, 1 in Belgorod, plus an Indian worker \u2014 though the Indian worker may overlap with the Moscow region count.",
+          "Time Magazine": "Reports 3 killed near Moscow plus 1 in Belgorod (4 total).",
+          "The Moscow Times": "Reports 3 killed in Moscow region; notes the Belgorod death separately."
+        }
+      },
+      {
+        "topic": "Number of drones intercepted near Moscow specifically",
+        "positions": {
+          "NPR": "81 drones headed for Moscow, citing Tass/Sobyanin.",
+          "NBC News": "81 drones headed for Moscow, citing Sobyanin.",
+          "The Moscow Times": "More than 80 drones intercepted overnight within Moscow proper.",
+          "Time Magazine": "More than 120 drones intercepted near Moscow, citing Sobyanin."
+        }
+      },
+      {
+        "topic": "Characterization of the attack's historical significance",
+        "positions": {
+          "The Washington Post": "Calls it the 'largest and deadliest attack on the Russian capital region since' the February 2022 invasion.",
+          "NBC News": "Calls it the 'biggest overnight drone attack on the Russian capital in more than a year.'",
+          "The Moscow Times": "Describes it as 'one of the largest Ukrainian barrages of the ongoing conflict so far' without specifying a 'since' period.",
+          "Al Jazeera English": "'One of the largest drone barrages of the war.'"
+        }
+      },
+      {
+        "topic": "Whether the Indian death is counted separately or within the Moscow region tally",
+        "positions": {
+          "Al Jazeera English": "Lists the Indian worker's death as a distinct item, potentially raising the total to 5.",
+          "The Moscow Times": "Notes the Indian citizen was one of the three Moscow region victims, keeping total at 4.",
+          "NBC News": "Mentions the Indian worker's death separately, keeping the total at 4, implying overlap."
+        }
+      },
+      {
+        "topic": "Specific targets struck",
+        "positions": {
+          "Al Jazeera English": "Cites SBU saying Ukraine struck an oil refinery and two oil-pumping stations in the Moscow region.",
+          "The Moscow Times": "Cites Ukraine's Defense Ministry saying strikes hit the Moscow Oil Refinery, the Solnechnogorsk oil depot, and 'several microelectronics manufacturing facilities for the first time.'",
+          "NPR": "Does not specify named targets beyond mentioning the oil refinery area where workers were wounded.",
+          "Time Magazine": "References strikes on oil infrastructure generally without naming specific facilities beyond the refinery."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The Washington Post": "Leads with the historic scale of the attack \u2014 'largest and most deadly' since 2022 \u2014 and Kyiv's 'increasing ability to carry out long-range strikes.' Body text is heavily truncated (likely paywalled), limiting detail. Includes an AI-generated summary of reader comments showing pro-Ukraine sentiment, which is unusual editorial packaging. Headline frames Ukraine as the active agent. Does not mention the Indian worker death or specific targets struck.",
+      "Al Jazeera English": "Leads neutrally on the death toll ('at least five') and immediately foregrounds the Indian embassy's confirmation that an Indian citizen was among the dead, reflecting Al Jazeera's global audience. Includes the SBU's claim of targeting oil infrastructure and quotes the SBU's statement that 'even the heavily protected Moscow region is not safe.' Closes with a brief mention of Trump and Putin suggesting the war could be nearing an end, adding a diplomatic frame absent from most other outlets. Does not include expert analysis or Zelenskyy's 'entirely justified' framing in the body.",
+      "NPR": "Most detailed and contextualized report. Leads on the scale and death toll, then immediately quotes Zelenskyy calling the strikes 'entirely justified.' Includes extensive expert commentary from Nigel Gould Davies (IISS) framing the attack as retaliation for post-ceasefire Russian strikes on Kyiv and connecting it to broader Russian anxieties \u2014 battlefield setbacks, economic deterioration, internet crackdowns. Unique among outlets in discussing the environmental impact of oil facility strikes ('toxic rain to tourist destinations on the Black Sea') and the economic offset from the Iran war and eased U.S. sanctions. Also reports Russian drone strikes on Ukraine (8 wounded) to provide symmetry.",
+      "NBC News": "Wire-style Reuters report. Leads on the death toll and the attack being the 'biggest overnight drone attack on the Russian capital in more than a year.' Gives prominent placement to both Zelenskyy's justification and Russia's Foreign Ministry response (Zakharova's 'mass terrorist attack' quote). Includes the Indian worker death. Does not include expert analysis. Mentions both sides deny targeting civilians. Relatively balanced in giving both Kyiv's and Moscow's framing.",
+      "Time Magazine": "Leads on the death toll and 'growing ability to strike deep inside Russian territory despite the capital's comprehensive air defenses.' Structures the piece around escalation dynamics, with a section on long-range attacks from both sides. Uniquely reports the 120-drone figure for Moscow specifically (vs. 81 in other outlets). Includes granular detail on Russian attacks on Ukraine in Kherson and Zaporizhzhia (2 killed, 23 injured on Saturday) that other outlets do not cover. Frames the broader significance around Zelenskyy's statement that long-range capabilities are 'significantly changing the situation \u2014 and, more broadly, the world's perception of Russia's war.' Cross-references its own prior reporting on drone interceptor demand from the Iran war.",
+      "The Moscow Times": "Leads with the AFP wire framing of '500 Ukrainian drones.' Includes the most specific Ukrainian Defense Ministry claim about targets struck, including 'microelectronics manufacturing facilities for the first time' \u2014 a detail absent from all other outlets. Provides on-the-ground color with a quote from Konstantin, a Moscow suburb resident. Notes the stalling of diplomatic efforts, uniquely attributing the stall in part to Washington's attention shifting to the 'U.S.-Israeli war on Iran in late February.' Also uniquely references both sides accusing each other of violating the Victory Day ceasefire. The Moscow Times' own institutional context \u2014 designated 'undesirable' by Russia's Prosecutor General \u2014 adds a credibility dimension worth noting.",
+      "Financial Times": "Body text is entirely paywalled; only the headline is available. Headline frames the story around Zelenskyy's 'entirely justified' quote, centering the Ukrainian leader's response rather than the attack itself. Cannot be used for consensus or substantive analysis."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (official statements, military communiqu\u00e9s, or SBU/Defense Ministry releases in original form) were located in the dossier. All reporting relies on secondhand citations of Telegram posts from Sobyanin, Vorobyov, Zelenskyy, and the Russian Defense Ministry, as well as Tass citations. The absence of primary sources means outlet claims about intercepted drone counts, targets struck, and casualty figures cannot be independently verified against original documentation."
+    ],
+    "missing_context": [
+      "No outlet provides detail on the types of drones used by Ukraine \u2014 manufacturer, model, payload, or whether these are domestically produced or supplied by allies.",
+      "The 120-drone figure reported by Time Magazine for interceptions near Moscow is 50% higher than the 81 figure reported by NPR, NBC News, and The Moscow Times. No outlet explains the discrepancy; it may reflect different time windows (overnight vs. full day) but this is not clarified.",
+      "No outlet examines what the 556 (or 1,000+) interception claim by Russia's Defense Ministry means for Ukraine's actual strike success rate or for the credibility of Russian air defense claims.",
+      "Only The Moscow Times mentions Ukraine's claim of hitting 'microelectronics manufacturing facilities for the first time,' a potentially significant escalation in target selection that other outlets do not corroborate.",
+      "Only NPR mentions the environmental impact of strikes on oil facilities and the economic offset from the Iran war and eased U.S. sanctions \u2014 both are significant contextual factors for understanding the strategic logic of the drone campaign.",
+      "No outlet provides casualty data for cumulative Ukrainian drone attacks on Russian territory for comparison with this incident.",
+      "Only Al Jazeera briefly references Trump and Putin's recent statements about a potential deal; the diplomatic dimension \u2014 including whether these strikes complicate or reflect the collapse of negotiations \u2014 is underexplored across all outlets.",
+      "The Financial Times article was entirely paywalled and could not be analyzed beyond its headline.",
+      "No outlet discusses potential Western reaction or whether these strikes affect arms supply or diplomatic support for Ukraine.",
+      "Only The Moscow Times attributes the diplomatic stall partly to the U.S.-Israeli war on Iran drawing Washington's attention \u2014 a geopolitical context other outlets ignore."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate the core facts of a major drone attack on Moscow with casualties and infrastructure damage. While there are meaningful framing differences and some numeric disagreements, the underlying event is well-established across outlets with no fundamental disputes about what happened. The disagreements (death toll, interception numbers) are numeric variances typical of a developing story, not competing narratives. A straight REPORT with noted discrepancies is appropriate.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/05/17/ukrainian-drones-hit-moscow-russias-capital-region-killing-three/",
+      "title": "Ukrainian drones hit Moscow and surrounding area, killing 3 - The Washington Post"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/5/17/at-least-four-killed-in-ukrainian-drone-attacks-on-russia",
+      "title": "Ukrainian drone attacks on Russia kill at least five - Al Jazeera"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/17/nx-s1-5824987/ukrainian-drone-strikes-on-russia-kill-4-moscow",
+      "title": "Ukraine conducts large-scale drone strikes on Russia, killing 4 and wounding 12 others - NPR"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/ukraine/ukraine-drones-kill-four-russia-moscow-faces-biggest-attack-year-rcna345529",
+      "title": "Ukraine drones kill four in Russia; Moscow faces biggest attack in over a year - NBC News"
+    },
+    {
+      "outlet": "Time Magazine",
+      "url": "https://time.com/article/2026/05/17/ukraine-drone-moscow-zelenksy/",
+      "title": "Zelensky Hails Ukraine's Growing Drone Capability After Massive Moscow Strike - Time Magazine"
+    },
+    {
+      "outlet": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/05/17/mass-ukraine-drone-barrage-kills-3-in-moscow-region-a92772",
+      "title": "Mass Ukraine Drone Barrage Kills 3 in Moscow Region - The Moscow Times"
+    },
+    {
+      "outlet": "Financial Times",
+      "url": "https://www.ft.com/content/c7e98e0b-90c4-4602-86d7-5a99b1b0b7ab?syn-25a6b1a6=1",
+      "title": "Deadly drone strikes on Moscow \u2018entirely justified\u2019, says Volodymyr Zelenskyy - Financial Times"
+    }
+  ]
+}
