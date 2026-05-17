@@ -1,0 +1,80 @@
+{
+  "story_id": "2026-05-17-senate-parliamentarian-nixes-trump-94d73a8c17",
+  "headline_seed": "Senate parliamentarian nixes Trump\u2019s ballroom fund in budget bill - NBC News",
+  "brief": {
+    "story_id": "2026-05-17-senate-parliamentarian-nixes-trump-94d73a8c17",
+    "consensus_facts": [
+      "The Senate parliamentarian ruled that a provision funding approximately $1 billion for White House security related to Trump's planned ballroom cannot be included in the Republican budget reconciliation bill as currently written.",
+      "The ruling means the provision would require a 60-vote threshold rather than a simple majority, jeopardizing its passage.",
+      "The parliamentarian cited jurisdictional issues \u2014 the provision funds activities outside the jurisdiction of the Senate Judiciary Committee.",
+      "Senate Republicans were already working to redraft the provision's language before and after the ruling."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope of what was ruled out of order",
+        "positions": {
+          "NBC News": "Reports the parliamentarian said the bill needs to be 'rewritten to account for jurisdictional issues,' with the provision funding activities outside the Judiciary Committee's jurisdiction. Quotes MacDonough directly.",
+          "The Washington Post": "Headline frames the ruling as 'hundreds of millions of dollars for Trump's ballroom ruled out of order,' suggesting a partial exclusion. Full body text was paywalled and largely inaccessible, so the precise framing is unclear beyond the headline and lede."
+        }
+      },
+      {
+        "topic": "Whether the setback is routine or significant",
+        "positions": {
+          "NBC News": "Includes Thune spokesman's characterization of the process as normal ('Redraft. Refine. Resubmit. None of this is abnormal during a Byrd process') alongside Democratic criticism calling it a 'boondoggle,' presenting both sides.",
+          "The Washington Post": "Headline emphasis on 'ruled out of order' frames the development as a more decisive rebuke."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Provides the most detailed reporting with direct quotes from the parliamentarian, multiple named Republican senators expressing hesitation (Marshall, Paul, Collins), and Democratic opposition (Merkley). Leads on the jeopardy to the bill but also includes the GOP framing that this is a routine part of the Byrd process. Notes the tension between Trump's prior promise that the ballroom would cost 'no government funds' and the current $1 billion taxpayer request. Includes specific funding breakdown ($220M hardening, $180M screening facility, $175M training, $175M protectee security). Notes Comcast/NBCUniversal as a corporate donor \u2014 a transparency disclosure.",
+      "The Washington Post": "Headline emphasizes 'hundreds of millions' rather than the full $1 billion figure, focusing on the ballroom specifically. The body text was largely inaccessible behind a paywall. The visible lede confirms the parliamentarian ruling and notes the bill includes $1 billion for security measures related to the 'East Wing Modernization Project.' Links to extensive prior reporting on the ballroom project dating back to late 2025, suggesting deep institutional coverage of this story. Includes an AI-generated summary of reader comments critical of the project.",
+      "The New York Times": "Headline-only ('Senate Ruling Threatens Ballroom Funding in G.O.P. Budget Bill'). No body text available. Headline frames this as a threat to funding rather than a definitive ruling, using softer language than the Washington Post.",
+      "Politico": "Article was inaccessible (403 error). The headline captured is about Bill Cassidy losing his Senate primary, not the ballroom story. This article appears to be a mismatched result from the dossier gathering process and is not relevant to the ballroom story.",
+      "NPR": "Full article is about Bill Cassidy losing the Louisiana Republican primary to Julia Letlow. This is an entirely different story from the ballroom parliamentarian ruling and provides no relevant information for this analysis."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the parliamentarian's actual written ruling or the budget resolution text) was located for this story.",
+      "NBC News directly quotes the parliamentarian Elizabeth MacDonough, but the full ruling document is not in the dossier. The quoted language about jurisdiction spanning 'many Senate committees' cannot be independently verified against the original document.",
+      "NBC News references a GOP memo outlining the $1 billion funding breakdown; this memo is not in the dossier either."
+    ],
+    "missing_context": [
+      "The parliamentarian's full written ruling is not available in the dossier, making it impossible to verify the scope and precise language of the decision beyond NBC News's quotes.",
+      "Two of the five articles in the dossier (Politico and NPR) are about the Louisiana Senate primary, not the ballroom story \u2014 reducing effective coverage to three outlets, only one of which (NBC News) has substantive body text.",
+      "No outlet in the dossier explains what the ballroom project actually entails architecturally or why it requires $1 billion in security funding specifically, beyond brief references to the 'East Wing Modernization Project' and a 90,000-square-foot ballroom.",
+      "No conservative or right-leaning outlet is represented in the dossier with relevant coverage of this story, leaving the framing analysis without a counterpoint perspective from outlets sympathetic to the administration.",
+      "No outlet addresses the legal status of the ongoing court challenges to the ballroom project referenced in the Washington Post's related-article links, which could affect whether the funding question is moot.",
+      "The relationship between the $1 billion in taxpayer-funded security and the reportedly $400 million in private construction funding is not clearly explained \u2014 how does the total project cost break down, and what portion of security costs were originally supposed to be covered privately?",
+      "No outlet reports whether the parliamentarian's ruling affects any other provisions in the broader immigration/border enforcement bill beyond the ballroom funding."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The core facts are confirmed by both NBC News and the Washington Post (the two outlets with relevant body text): the parliamentarian ruled the ballroom funding provision out of order, citing jurisdictional issues, and Republicans are redrafting. The framing differences are modest rather than materially divergent. A straight REPORT with attribution caveats about the thin dossier is appropriate.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/trump-administration/senate-parliamentarian-nixes-trumps-ballroom-fund-budget-bill-rcna345518",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/16/cassidy-loses-louisiana-senate-primary-00925399",
+      "title": "Bill Cassidy loses Senate primary in another major win for Trump - Politico"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/05/17/hundreds-millions-trumps-ballroom-ruled-out-order-senate/",
+      "title": "Hundreds of millions of dollars for Trump\u2019s ballroom ruled out of order in Senate - The Washington Post"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/16/us/politics/white-house-ballroom-senate.html",
+      "title": "Senate Ruling Threatens Ballroom Funding in G.O.P. Budget Bill - The New York Times"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/16/nx-s1-5824533/bill-cassidy-lost-louisiana-primary-letlow-trump",
+      "title": "Louisiana senator who voted to convict Trump loses Republican primary - NPR"
+    }
+  ]
+}
