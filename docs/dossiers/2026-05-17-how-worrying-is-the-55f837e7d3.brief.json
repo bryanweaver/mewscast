@@ -1,0 +1,90 @@
+{
+  "story_id": "2026-05-17-how-worrying-is-the-55f837e7d3",
+  "headline_seed": "How worrying is the Ebola outbreak in DR Congo? - BBC",
+  "brief": {
+    "story_id": "2026-05-17-how-worrying-is-the-55f837e7d3",
+    "consensus_facts": [
+      "The WHO has declared the Ebola outbreak in DR Congo's Ituri province a public health emergency of international concern (PHEIC); this is reflected across all outlet headlines and the two outlets with retrievable body text.",
+      "Uganda has reported at least one Ebola case imported from neighboring Congo, confirmed by both AP body text and multiple outlet headlines.",
+      "There have been roughly 246\u2013250 suspected cases and at least 65\u201387 deaths reported in the outbreak, per AP and BBC body text."
+    ],
+    "disagreements": [
+      {
+        "topic": "Death toll",
+        "positions": {
+          "Associated Press (Article 1)": "Reports 65 deaths so far.",
+          "Associated Press (Article 5)": "Headline references deaths reaching 87.",
+          "BBC News": "Reports 'almost 250 suspected cases and 80 deaths' in the body text."
+        }
+      },
+      {
+        "topic": "Uganda case count",
+        "positions": {
+          "Associated Press": "Reports one death from an imported case in Uganda.",
+          "BBC News": "Does not specify Uganda case details in the body text; focuses on DR Congo."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press (Article 1)": "Straight wire treatment. Leads with Africa's top public health body confirming the outbreak. Provides basic numbers (246 suspected cases, 65 deaths) and notes the Uganda imported case. Body text is minimal \u2014 mostly photo captions \u2014 suggesting this is a breaking-news stub rather than a full analysis. No scientific or geopolitical context provided.",
+      "The New York Times": "Headline-only. Leads with the WHO PHEIC declaration. No body text available for analysis; framing cannot be assessed beyond headline word choice, which emphasizes the institutional declaration ('W.H.O. Declares') over ground-level conditions.",
+      "BBC News": "The most substantive article in the dossier. Leads with a question-framing headline ('How worrying is...') signaling an explainer rather than a breaking-news report. Provides extensive scientific context: identifies the Bundibugyo species of Ebola, explains why it is particularly challenging (no approved vaccines or treatments, diagnostic tests underperforming), and contextualizes the outbreak against the 2014\u201316 West Africa epidemic. Emphasizes the three-week delay in detection. Quotes four named experts from Oxford, Imperial College London, and the London School of Hygiene & Tropical Medicine. Notes the conflict-displaced population and mobile mining communities as complicating factors. Explicitly states the global risk remains 'tiny' even in a worst case. Balances concern with noting DR Congo's improved outbreak response capacity.",
+      "Reuters (Article 4)": "Headline-only. Frames the story as a Q&A ('What do we know about...') suggesting an explainer format, but no body text is available for analysis.",
+      "Associated Press (Article 5)": "Body text is again primarily photo captions. Headline emphasizes 'constant burials' and a death toll of 87, providing a more visceral, ground-level framing than the other AP article. Includes reporting from both Bunia (Congo) and Kampala (Uganda), showing cross-border concern.",
+      "Bloomberg": "Body text was blocked (403 error). Headline frames the story as a global health emergency declaration, consistent with other outlets. No substantive analysis possible.",
+      "Reuters (Article 7)": "Headline-only. Frames the outbreak as spanning both Congo and Uganda, and emphasizes the PHEIC declaration. No body text available."
+    },
+    "primary_source_alignment": [
+      "No primary source document (e.g., the WHO PHEIC declaration itself, WHO situation reports, or meeting minutes from the Emergency Committee) was located in the dossier. All claims about the WHO declaration are sourced only through outlet reporting."
+    ],
+    "missing_context": [
+      "The actual WHO PHEIC declaration document and Emergency Committee recommendations are absent from the dossier \u2014 these would clarify what specific measures the WHO is urging member states to take, including any trade or travel restrictions.",
+      "No outlet in the dossier provides information on what experimental vaccines or treatments are being considered for the Bundibugyo species, though BBC mentions they exist. Clinical trial status, manufacturer involvement, and supply timelines are all unaddressed.",
+      "No outlet discusses the current US or international funding posture toward Ebola response, particularly in the context of any recent changes to global health aid budgets.",
+      "The death toll varies between 65 (AP Article 1), 80 (BBC), and 87 (AP Article 5 headline), likely reflecting rapidly evolving numbers, but no outlet explains the discrepancy or provides a clear timestamp for its figures.",
+      "Only BBC mentions the diagnostic testing challenges with Bundibugyo; the AP articles do not address this, meaning readers of wire reports alone would miss a critical operational detail.",
+      "No outlet discusses whether neighboring countries beyond Uganda (e.g., South Sudan, Rwanda, Central African Republic) are implementing screening or preparedness measures.",
+      "The dossier is limited: only two outlets (AP and BBC) have substantive body text, and even the AP articles are primarily photo captions. Three outlets are headline-only, and one (Bloomberg) was blocked. This significantly constrains the consensus analysis."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets confirm the same core event \u2014 a WHO PHEIC declaration for the Ebola outbreak in DR Congo/Uganda \u2014 and the two outlets with body text broadly agree on the key facts. The framing differences (BBC's depth vs. AP's brevity) reflect format differences rather than materially divergent editorial angles. A straight REPORT with appropriate caveats about the evolving death toll and the Bundibugyo-specific challenges is the right call.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/ebola-congo-ituri-africa-virus-d59a194e6032e1783b6085b56d84b0f0",
+      "title": "What to know about the Ebola outbreak that the WHO has declared a global health emergency - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/17/world/africa/ebola-congo-uganda-who-public-health-emergency.html",
+      "title": "W.H.O. Declares Ebola Outbreak a Global Health Emergency - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c9q311nj5r3o",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/what-do-we-know-about-ebola-outbreak-congo-uganda-2026-05-17/",
+      "title": "What do we know about the Ebola outbreak in Congo and Uganda? - Reuters"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/congo-ebola-outbreak-ituri-bunia-rwampara-e9f54adc7de7959ad85b99b02f9a3a33",
+      "title": "Congolese report constant burials as deaths in new Ebola outbreak reach 87 - AP News"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-17/who-declares-congo-uganda-ebola-outbreak-global-health-emergency",
+      "title": "WHO Declares Congo-Uganda Ebola Outbreak Global Health Emergency - Bloomberg.com"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/who-declares-ebola-outbreak-congo-uganda-global-health-emergency-2026-05-17/",
+      "title": "WHO declares Ebola outbreak in Congo, Uganda an emergency of international concern - Reuters"
+    }
+  ]
+}
