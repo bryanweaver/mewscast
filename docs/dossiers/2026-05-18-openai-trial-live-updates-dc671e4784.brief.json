@@ -1,0 +1,133 @@
+{
+  "story_id": "2026-05-18-openai-trial-live-updates-dc671e4784",
+  "headline_seed": "OpenAI Trial Live Updates: Jury Rejects Elon Musk's Claim in Unanimous Verdict - The New York Times",
+  "brief": {
+    "story_id": "2026-05-18-openai-trial-live-updates-dc671e4784",
+    "consensus_facts": [
+      "A federal jury in Oakland, California, on Monday unanimously found Sam Altman, Greg Brockman, and OpenAI not liable on all claims in Elon Musk's lawsuit.",
+      "The jury reached its verdict in less than two hours of deliberation.",
+      "The jury found that Musk's claims were barred by the statute of limitations \u2014 he waited too long to sue.",
+      "The jury also rejected Musk's claim that Microsoft aided and abetted Altman and Brockman in breach of charitable trust, on the same statute of limitations grounds.",
+      "The case was overseen by U.S. District Judge Yvonne Gonzalez Rogers, who accepted the jury's advisory verdict and indicated she agreed with its findings.",
+      "Musk's lead counsel Steven Molo reserved Musk's right to appeal.",
+      "The trial lasted approximately three weeks in a federal courtroom in Oakland.",
+      "Musk co-founded OpenAI with Altman in 2015 and first filed his lawsuit in 2024.",
+      "Musk's core allegation was that Altman and Brockman betrayed OpenAI's nonprofit origins by creating a for-profit arm and enriching themselves.",
+      "Musk contributed approximately $38 million to OpenAI in its early days.",
+      "OpenAI's defense argued Musk was motivated by competitive rivalry through his own AI startup, xAI, and that he was always aware of for-profit plans.",
+      "Six tech billionaires testified during the trial, including Musk, Altman, Brockman, and Microsoft CEO Satya Nadella.",
+      "Lawyers for OpenAI and Microsoft celebrated with hugs and back-slaps after the verdict was read.",
+      "None of the principal tech billionaires was in the courtroom when the verdict was read (reported by NBC News; corroborated by no outlet stating any were present).",
+      "The jury was an advisory jury; Judge Gonzalez Rogers held ultimate legal authority over the outcome."
+    ],
+    "disagreements": [
+      {
+        "topic": "Musk's damages demand figure",
+        "positions": {
+          "CNBC": "Reports Musk's team wanted the court to force OpenAI and Microsoft to give up 'as much as $134 billion in ill-gotten gains.'",
+          "The Guardian": "Reports Musk's lawsuit sought '$134bn to be redistributed from OpenAI's for-profit arm to its non-profit.'",
+          "NBC News": "Does not cite a specific dollar figure for Musk's damages demand.",
+          "The Verge": "Does not cite a specific dollar figure.",
+          "Business Insider": "Does not cite a specific dollar figure."
+        }
+      },
+      {
+        "topic": "Musk's stated plans to appeal",
+        "positions": {
+          "NBC News": "Reports Musk's lawyer said the legal team was 'preserving Musk's right to appeal but had not yet decided how to proceed.'",
+          "CNBC": "Reports Musk lead counsel 'reserved his client's right to appeal.'",
+          "Business Insider": "Reports Musk's attorney Marc Toberoff 'told journalists they planned to appeal the case' \u2014 a firmer statement than other outlets.",
+          "The Guardian": "Does not mention appeal plans.",
+          "The Verge": "Does not mention appeal plans."
+        }
+      },
+      {
+        "topic": "xAI's current corporate status",
+        "positions": {
+          "Business Insider": "Reports xAI was 'now renamed SpaceXAI and part of his rocketship company,' merged into SpaceX.",
+          "CNBC": "Reports xAI 'is now part of SpaceX,' citing a February merger.",
+          "NBC News": "Refers to xAI as 'Musk's own AI startup, xAI, founded in March 2023' with no mention of a merger or renaming.",
+          "The Guardian": "Refers only to 'xAI' without mentioning a merger.",
+          "The Verge": "Does not mention xAI's corporate status."
+        }
+      },
+      {
+        "topic": "Musk's specific relief demands beyond money",
+        "positions": {
+          "CNBC": "Reports Musk sought removal of Altman and Brockman from leadership and to unwind OpenAI's 2025 restructuring.",
+          "The Guardian": "Also reports Musk demanded removal of Altman and Brockman and undoing of the for-profit restructuring.",
+          "NBC News": "Does not detail non-monetary relief demands.",
+          "Business Insider": "Mentions only that Gonzalez Rogers 'would have weighed Musk's request to unwind OpenAI's for-profit arm.'",
+          "The Verge": "Does not detail relief demands."
+        }
+      },
+      {
+        "topic": "Judge's precise language on accepting the verdict",
+        "positions": {
+          "CNBC": "Quotes the judge as saying she was 'prepared to dismiss Musk's claims on the spot' and that there was 'a substantial amount of evidence to support the jury's finding.'",
+          "Business Insider": "Reports the judge 'said she accepted the jury's findings and would not overrule them.'",
+          "The Guardian": "Reports Gonzalez Rogers 'immediately said that she would agree with the jury's decision.'",
+          "NBC News": "Does not quote the judge's post-verdict statements.",
+          "The Verge": "States the judge 'accepted the decision' without direct quotation."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News (Article 1 \u2014 verdict report)": "Leads on the statute of limitations as the decisive legal issue and gives substantial space to both sides' arguments on timeliness, including Musk's 'car theft' analogy from the stand. Notes the three-year and two-year limitations periods precisely. Mentions Musk's rival xAI high in the story via OpenAI lawyer's quote. Does not cite the $134 billion damages figure or detail Musk's non-monetary relief demands. Reports that none of the billionaires was present for the verdict.",
+      "NBC News (Article 3 \u2014 color/analysis piece)": "Pre-verdict scene-setter focused heavily on the spectacle of concentrated wealth in the courtroom \u2014 names each billionaire witness and their Forbes-listed net worth. Frames the trial as a window into how courts treat the ultra-rich. Gives significant space to anti-billionaire protesters outside the courthouse and quotes a tech equity advocate. This piece is more about the sociology of the trial than the legal outcome.",
+      "CNBC": "Leads with the speed of the verdict (less than two hours) and immediately contextualizes it against Musk's and Altman's upcoming capital-markets activity: SpaceX's expected IPO prospectus and OpenAI's $122 billion fundraise at an $850 billion valuation. Provides the most specific financial context of any outlet, including the $134 billion damages demand and the $1.25 trillion SpaceX valuation. Frames the verdict as closing a chapter in a 'bitter rivalry between two tech billionaires, who were once close friends.' Notes the xAI-SpaceX merger and the SpaceXAI renaming. Quotes the judge more extensively than other outlets.",
+      "The Verge": "Shortest and most legally precise of the articles. Leads on the unanimous verdict and the statute of limitations finding. Notably explains that the jury was an advisory jury whose verdict is 'technically not legally binding' \u2014 a legal nuance most other outlets mention only in passing. Adds editorial color that 'both sides have come out looking somehow even less trustworthy than when the court process began.' Does not detail damages amounts, appeal plans, or market context.",
+      "The Guardian": "Frames the verdict as a 'stark rebuke of Elon Musk' and headlines it as a 'victory' for Altman \u2014 the most outcome-judgmental framing among the outlets. Provides a clean summary of core allegations and defenses. Notes the $134 billion figure and the demand to remove Altman and Brockman. Mentions OpenAI's defense that Musk was 'motivated by jealousy' after a failed takeover attempt in 2018. Less granular on the legal mechanics (statute of limitations periods) than NBC News or The Verge.",
+      "Business Insider": "Leads on the not-liable finding and the statute of limitations rationale. Unique among outlets in attributing appeal plans to attorney Marc Toberoff specifically and reporting the statement as definitive ('they planned to appeal') rather than conditional. Provides the most detail on the interrupted damages hearing \u2014 notes the judge was hearing expert testimony on damages when the jury returned its verdict. Also unique in reporting the xAI renaming to 'SpaceXAI.' Mentions 'The Blip' (the brief Altman firing) as a topic of trial testimony, a detail no other outlet surfaces in their verdict coverage."
+    },
+    "primary_source_alignment": [
+      "No primary source (court filing, verdict form, or transcript) was located for this story. All facts are drawn solely from outlet reporting. This limits the ability to verify precise legal language, the exact claims on the verdict form, or whether any claims survived the verdict."
+    ],
+    "missing_context": [
+      "No outlet provides the text of the verdict form or specifies the exact legal standard the jury applied to the statute of limitations question (e.g., discovery rule vs. injury rule).",
+      "No outlet explains whether the statute of limitations defense was raised before trial or why it was decided by a jury rather than on summary judgment \u2014 a procedural question that would help readers understand why this trial happened at all if timeliness was dispositive.",
+      "No outlet addresses what, if any, claims Musk may still have available on appeal \u2014 whether the appeal would challenge the statute of limitations finding, the advisory-jury procedure, or both.",
+      "No outlet explains the legal significance of the advisory jury mechanism in detail \u2014 specifically under what circumstances Judge Gonzalez Rogers could have departed from the jury's recommendation.",
+      "No outlet reports on OpenAI's ongoing for-profit restructuring and whether this verdict has practical implications for that process or for any pending regulatory review of the restructuring.",
+      "No outlet discusses the implications for OpenAI's nonprofit governance going forward \u2014 whether any oversight mechanisms remain or were at issue.",
+      "Only CNBC contextualizes the verdict against imminent capital-markets events (SpaceX IPO, OpenAI fundraise); other outlets do not address whether the trial outcome has market or valuation implications.",
+      "No outlet mentions any reaction from Musk himself (as opposed to his lawyers), Altman, Brockman, or Microsoft beyond the lawyers' courtroom celebrations.",
+      "The February xAI-SpaceX merger and 'SpaceXAI' renaming is mentioned only by CNBC and Business Insider; other outlets still refer to 'xAI' as a standalone entity, creating a factual inconsistency across coverage that is unresolved without a primary source."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "All six articles (across five outlets) confirm the same core outcome with strong factual alignment: unanimous jury verdict, statute of limitations basis, judge's acceptance, and appeal reservation. Framing differences are modest and mostly a matter of emphasis (financial context, legal nuance, spectacle) rather than materially divergent narratives. This is a straightforward multi-source confirmed event suitable for a REPORT.",
+    "confidence": 0.9
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/tech/tech-news/openai-elon-musk-case-verdict-rcna345655",
+      "title": "Jury tosses Elon Musk\u2019s lawsuit against OpenAI and Sam Altman - NBC News"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/18/musk-altman-openai-trial-verdict.html",
+      "title": "Elon Musk loses court battle against Sam Altman and OpenAI after 3-week trial - CNBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/tech/elon-musk/elon-musk-openai-trial-court-ai-rcna345038",
+      "title": "Six tech billionaires walked into a federal courthouse. Here\u2019s what happened next. - NBC News"
+    },
+    {
+      "outlet": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/932383/jury-verdict-musk-v-altman-openai-trial",
+      "title": "Elon Musk lost his case against Sam Altman - The Verge"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/may/18/sam-altman-trial-victory-elon-musk-openai",
+      "title": "Jury hands victory to Sam Altman in battle with Elon Musk over OpenAI\u2019s mission - The Guardian"
+    },
+    {
+      "outlet": "Business Insider",
+      "url": "https://www.businessinsider.com/openai-sam-altman-elon-musk-jury-trial-verdict-2026-5",
+      "title": "Jury finds Sam Altman and OpenAI not liable in Elon Musk's lawsuit accusing them of stealing charity - Business Insider"
+    }
+  ]
+}
