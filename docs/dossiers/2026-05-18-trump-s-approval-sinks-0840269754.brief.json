@@ -1,0 +1,59 @@
+{
+  "story_id": "2026-05-18-trump-s-approval-sinks-0840269754",
+  "headline_seed": "Trump\u2019s Approval Sinks Amid Unpopular War, Darkening G.O.P. Prospects - The New York Times",
+  "brief": {
+    "story_id": "2026-05-18-trump-s-approval-sinks-0840269754",
+    "consensus_facts": [
+      "Both outlets' headlines reference Trump's approval rating sinking; however, only USA Today provided full body text, so body-level details cannot be treated as consensus.",
+      "Both outlets' headlines frame the story around declining Trump approval, suggesting broad agreement that this is a significant political development in mid-2026."
+    ],
+    "disagreements": [
+      {
+        "topic": "Primary driver of sinking approval",
+        "positions": {
+          "The New York Times": "Headline emphasizes the 'unpopular war' and 'darkening G.O.P. prospects' for midterms as the framing for declining approval.",
+          "USA Today": "Body text emphasizes rising costs, economy, and healthcare disapproval as the primary drivers, with the Iran conflict mentioned as context for Trump's domestic policy neglect."
+        }
+      },
+      {
+        "topic": "Midterm election framing",
+        "positions": {
+          "The New York Times": "Headline explicitly links approval decline to 'darkening G.O.P. prospects,' centering the midterm political implications.",
+          "USA Today": "Mentions midterms only in passing ('less than six months until the midterm elections') and does not make Republican electoral prospects a central theme."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only article. The headline leads with 'Approval Sinks,' pairs it with 'Unpopular War,' and concludes with 'Darkening G.O.P. Prospects,' framing the story as a political-strategic crisis for Republicans driven by the Iran conflict. No body text available to assess what details the article leads with, buries, or omits.",
+      "USA Today": "Full body text available. Leads on economic disapproval and rising costs, grounding the story in kitchen-table concerns. Cites a CNN/SSRS poll (April 30\u2013May 4, n=1,499, \u00b12.8pt margin of error) showing 77% say Trump's policies increased cost of living and only 35% overall approval. Includes a striking direct Trump quote ('I don't think about Americans' financial situation. I don't think about anybody. I think about one thing.') that frames him as dismissive of domestic concerns. Provides cross-referencing of three polling averages (NYT, Silver Bulletin, RealClearPolitics) all showing net-negative approval. Notes record healthcare disapproval at 65%, higher than Obama or Bush peaks. Iran is mentioned not as a war story but as context for Trump's rhetorical pivot away from the economy. Does not deeply explore the war itself or its political implications for the GOP."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. USA Today cites a CNN/SSRS poll conducted April 30\u2013May 4 with 1,499 respondents, but the underlying poll data/crosstabs were not included in the dossier. The New York Times headline references a poll but no body text is available to identify which poll it relies on or whether it is the same CNN/SSRS survey.",
+      "Without the primary polling data, it is impossible to verify whether the outlets' characterizations of the poll findings are accurate or whether they are selectively highlighting certain results."
+    ],
+    "missing_context": [
+      "Only one outlet (USA Today) provided full body text; The New York Times article was headline-only. This severely limits the ability to establish consensus or identify framing divergence at the body-text level.",
+      "No primary polling data (crosstabs, full questionnaire, or methodology document) was available in the dossier. A fair-minded reader would want to see the actual poll questions and breakdowns.",
+      "The New York Times headline references an 'unpopular war' but no body text is available to determine what specific conflict is meant, what polling data supports the 'unpopular' characterization, or how the war is connected to approval decline. USA Today references Iran only through a Trump quote about preventing Iran from obtaining a nuclear weapon.",
+      "Neither outlet (based on available text) provides detail on the nature or scope of U.S. military engagement with Iran \u2014 whether there is active combat, airstrikes, troop deployments, or something else. A reader encountering the word 'war' in the NYT headline would want this context.",
+      "USA Today includes a Trump quote from May 12 but does not provide full context for where or when the quote was delivered (press conference, interview, etc.).",
+      "No right-leaning or conservative outlet is represented in this dossier, making it impossible to assess how the other side of the media spectrum is covering these polling numbers.",
+      "No historical comparison is provided for how other presidents' approval ratings at a similar point before midterms translated into actual electoral outcomes."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "The dossier is thin: only one outlet has full body text, no primary source is available, and no right-leaning coverage is represented. The story is time-sensitive (midterm polling, recent Trump quote from May 12) but cannot be treated as consensus-confirmed. A BULLETIN with appropriate hedging is warranted until a richer dossier can be assembled.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/18/us/politics/poll-trump-republicans-midterms-iran.html",
+      "title": "Trump\u2019s Approval Sinks Amid Unpopular War, Darkening G.O.P. Prospects - The New York Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/05/15/trump-disapproval-cnn-poll-economy-costs/90103992007/",
+      "title": "Trump approval sinks as costs rise, poll finds - USA Today"
+    }
+  ]
+}
