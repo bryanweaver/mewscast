@@ -208,6 +208,38 @@ class TestExtractTopFacts:
         result = extract_top_facts(brief, n=5)
         assert len(result) == 5
 
+    def test_n_zero_returns_empty(self):
+        # Caller asked for nothing — return nothing, regardless of how
+        # many facts the brief carries. Matches the contract for empty /
+        # missing inputs.
+        brief = {
+            "consensus_facts": [
+                "Fact one here is long enough.",
+                "Fact two here is long enough.",
+                "Fact three here is long enough.",
+            ]
+        }
+        assert extract_top_facts(brief, n=0) == []
+
+    def test_n_negative_returns_empty(self):
+        # Negative n is nonsense — treat it like n=0 rather than letting
+        # the internal loop quietly return whatever it had accumulated.
+        brief = {
+            "consensus_facts": [
+                "Fact one here is long enough.",
+                "Fact two here is long enough.",
+                "Fact three here is long enough.",
+            ]
+        }
+        assert extract_top_facts(brief, n=-1) == []
+        assert extract_top_facts(brief, n=-100) == []
+
+    def test_non_positive_n_consistent_with_empty_brief(self):
+        # Non-positive n should behave the same as None / empty inputs.
+        assert extract_top_facts(None, n=0) == []
+        assert extract_top_facts({}, n=-1) == []
+        assert extract_top_facts({"consensus_facts": []}, n=0) == []
+
 
 # ---------------------------------------------------------------------------
 # ImageGenerator._build_field_notes_prompt

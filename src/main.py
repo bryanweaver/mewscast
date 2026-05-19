@@ -657,7 +657,11 @@ def _post_bluesky_field_notes_reply(
     fall back to the link-card reply when this returns None.
     """
     field_notes_cfg = (journalism_cfg or {}).get("field_notes_reply") or {}
-    if not field_notes_cfg.get("enabled", False):
+    # Default ON — the feature is the intended rollout target and the
+    # committed config.yaml already sets enabled: true. A deployment that
+    # omits the field_notes_reply block entirely should still get the
+    # current behavior. Set enabled: false explicitly to disable.
+    if not field_notes_cfg.get("enabled", True):
         return None
 
     try:

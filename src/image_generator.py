@@ -324,11 +324,14 @@ class ImageGenerator:
                 f'"{safe_dateline}".'
             )
 
-        # Numbered entries, each on its own line in the prompt for clarity.
+        # Numbered + dash-prefixed entries, each on its own line in the
+        # prompt for clarity. The dash is part of the locked style spec
+        # ("Each numbered entry begins with a dash") and matches the
+        # reference FIELD NOTES pad in the brand kit.
         entries = []
         for idx, fact in enumerate(facts, start=1):
             safe_fact = self._sanitize_for_prompt(fact)
-            entries.append(f'    {idx}. "{safe_fact}"')
+            entries.append(f'    - {idx}. "{safe_fact}"')
         entries_block = "\n".join(entries)
 
         story_line = ""
