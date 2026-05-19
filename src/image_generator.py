@@ -97,6 +97,39 @@ _DEFAULT_STYLE_ANCHOR = (
 )
 
 
+# Locked style spec for Walter's "Field Notes" reply image — meant to be
+# instantly recognizable as a Walter Croncat brand asset on every render.
+# Reproducibility comes from over-specifying every visual element so Grok
+# has minimal room to drift. The reference flatlay in the brand kit is the
+# style anchor; this prompt describes the same notepad in isolation.
+#
+# Fact text is embedded VERBATIM in the prompt with explicit "render exactly
+# as written" instructions — Grok handles text well but still occasionally
+# paraphrases, so faithfulness is enforced via prompt language. A future
+# vision-QC pass can verify post-render.
+_FIELD_NOTES_STYLE_SPEC = (
+    "Overhead flatlay photograph of a single page in a reporter's "
+    "spiral-bound notepad, photographed from directly above. Top spiral "
+    "binding visible at the top of the frame. Cream / lightly aged paper "
+    "with subtle texture, faint horizontal rule lines, soft natural lighting "
+    "from the upper left casting a gentle shadow. The notepad rests on a "
+    "dark weathered leather surface; only a sliver of the leather is visible "
+    "around the edges. Warm brown / cream / black palette, slightly "
+    "desaturated, cinematic mood lighting. No camera, no microphone, no other "
+    "objects in frame — only the notepad. "
+    "The handwriting is consistent ALL-CAPS BLOCK PRINT in black marker, "
+    "slightly rough and rapid, the way a working reporter scribbles in the "
+    "field. Header underlined with a single hand-drawn line. Each numbered "
+    "entry begins with a dash. Small black inked paw-print stamps in two "
+    "corners as a subtle decorative motif (4 toe pads + 1 main pad each, "
+    "slightly imperfect ink). At the bottom-right of the page: a larger "
+    "single black inked cat's paw-print stamp next to a flowing cursive "
+    "signature reading '— Walter'. "
+    "No additional doodles, no coffee stains, no margin notes, no other "
+    "decorations. Sparse, deliberate, journalistic. "
+)
+
+
 def _load_image_config() -> dict:
     """Read `image:` block from config.yaml if present. Returns a dict with
     safe defaults so callers can .get() without KeyErrors."""
@@ -236,4 +269,109 @@ class ImageGenerator:
 
         except Exception as e:
             print(f"✗ Image generation failed: {e}")
+            return None, None
+
+    def _build_field_notes_prompt(
+        self, facts: list[str], headline: str, dateline: Optional[str] = None
+    ) -> str:
+        """Compose the full Grok prompt for Walter's Field Notes image.
+
+        Bypasses the cat-subject anchor and eye-catch anchor — this image is
+        a notepad photo, not a Walter portrait. Facts are quoted and the
+        model is instructed to render them exactly as written.
+        """
+        # Build the dateline line that appears under the FIELD NOTES header.
+        # Kept short — the page is text-dense already.
+        dateline_line = ""
+        if dateline:
+            dateline_line = f' Beneath the header, a smaller dateline reads exactly: "{dateline}".'
+
+        # Numbered entries, each on its own line in the prompt for clarity.
+        entries = []
+        for idx, fact in enumerate(facts, start=1):
+            entries.append(f'    {idx}. "{fact}"')
+        entries_block = "\n".join(entries)
+
+        story_line = f' below a smaller subtitle that reads exactly: "{headline}"' if headline else ""
+
+        return (
+            f"{_FIELD_NOTES_STYLE_SPEC}"
+            f"\n\nText content on the page, rendered EXACTLY as written below "
+            f"(do not paraphrase, do not abbreviate, do not add or drop words, "
+            f"do not change punctuation, do not correct spelling). All page "
+            f"text appears in ALL-CAPS BLOCK PRINT.\n\n"
+            f'Top of page, larger and underlined: "FIELD NOTES".'
+            f"{dateline_line}"
+            f"{story_line}"
+            f"\n\nThree numbered entries follow, each prefixed with a dash, "
+            f"in the order shown, written exactly:\n\n"
+            f"{entries_block}\n\n"
+            f"Bottom-right corner of the page: a black inked cat's paw-print "
+            f"stamp next to a flowing cursive signature reading exactly: "
+            f'"— Walter".'
+        )
+
+    def generate_field_notes(
+        self,
+        facts: list[str],
+        headline: str = "",
+        dateline: Optional[str] = None,
+        save_path: str = "temp_field_notes.png",
+        aspect_ratio: str = "4:5",
+    ) -> tuple[Optional[str], Optional[str]]:
+        """Generate a "Walter's Field Notes" reply image.
+
+        A locked-style overhead flatlay of a spiral-bound reporter's pad with
+        the supplied facts rendered as numbered entries and a paw-print
+        signature. Designed to be Walter Croncat's iconic visual signature
+        on consensus-facts dossier replies.
+
+        Args:
+            facts: 1-3 consensus-fact strings to render verbatim on the page.
+                Each fact should already be trimmed of attribution tails
+                like "— reported by CNBC and NPR" before being passed here.
+            headline: Optional short story name shown beneath the FIELD NOTES
+                header (e.g. "San Diego Mosque Shooting"). Pass an empty
+                string to omit.
+            dateline: Optional date string (e.g. "May 19, 2026") shown beneath
+                the header. Pass None to omit.
+            save_path: Where to write the downloaded image.
+            aspect_ratio: Image aspect ratio. Defaults to 4:5 (portrait, matches
+                a real notepad page and renders well inline on Bluesky).
+                Falls back to 3:2 if an unsupported ratio is passed.
+
+        Returns:
+            (image_path, anchored_prompt). Both None on failure.
+        """
+        if not facts:
+            print("✗ Field notes generation skipped: no facts provided.")
+            return None, None
+        if aspect_ratio not in self.SUPPORTED_ASPECT_RATIOS:
+            print(
+                f"⚠️  field_notes aspect_ratio={aspect_ratio!r} not supported; "
+                f"falling back to 3:2"
+            )
+            aspect_ratio = "3:2"
+
+        prompt = self._build_field_notes_prompt(facts, headline, dateline=dateline)
+        try:
+            print(f"🎨 Generating field-notes image ({aspect_ratio}, {len(facts)} facts)...")
+            response = self.client.images.generate(
+                model=self.model,
+                prompt=prompt,
+                n=1,
+                extra_body={
+                    "aspect_ratio": aspect_ratio,
+                    "resolution": self.resolution,
+                },
+            )
+            image_url = response.data[0].url if response.data else None
+            if not image_url:
+                print("✗ Field notes generation returned no URL")
+                return None, None
+            self._download(image_url, save_path)
+            print(f"✓ Field notes image saved: {save_path}")
+            return save_path, prompt
+        except Exception as e:
+            print(f"✗ Field notes generation failed: {e}")
             return None, None
