@@ -1,0 +1,145 @@
+{
+  "story_id": "2026-05-19-3-killed-in-shooting-09664b2a09",
+  "headline_seed": "3 killed in shooting at Islamic Center of San Diego, police say; 2 suspects also dead - CBS News",
+  "brief": {
+    "story_id": "2026-05-19-3-killed-in-shooting-09664b2a09",
+    "consensus_facts": [
+      "Two teenage gunmen opened fire at the Islamic Center of San Diego on Monday, May 18, 2026, killing three men before dying of self-inflicted gunshot wounds.",
+      "San Diego Police Chief Scott Wahl confirmed the shooting is being investigated as a hate crime and that 'hate rhetoric' was involved.",
+      "The suspects were aged 17 and 18 and were found dead in a vehicle blocks away from the mosque.",
+      "Police responded to a reported active shooter at approximately 11:43 a.m. local time.",
+      "One of the three victims was a security guard whose actions were described by Chief Wahl as 'heroic' and credited with saving lives.",
+      "The mother of one of the suspects had called police before the shooting to report her son missing along with multiple weapons and her vehicle.",
+      "The mother reported her son may be suicidal and was with another person; both were described as dressed in camouflage.",
+      "One of the suspects left a note at home; police declined to disclose its contents.",
+      "The Islamic Center of San Diego is described as the largest mosque in San Diego County.",
+      "Dozens of children were present at the mosque's school during the shooting.",
+      "The attack occurred on the first day of Dhul Hijjah, a sacred month in the Islamic calendar.",
+      "Imam Taha Hassane called the attack unprecedented and spoke about religious intolerance in the nation.",
+      "San Diego Mayor Todd Gloria called the shooting a 'violent act of hate' and pledged increased police presence at places of worship."
+    ],
+    "disagreements": [
+      {
+        "topic": "Suspect identification and names",
+        "positions": {
+          "NBC News": "Identifies suspects as Cain Clark (17) and Caleb Vazquez (18), citing two senior law enforcement officials and a federal law enforcement official.",
+          "The Times (London)": "Identifies suspects as Cain Clark (17) and Caleb Velasquez (18), citing NBC News and the New York Post. Note spelling discrepancy: 'Velasquez' vs. NBC's 'Vazquez'.",
+          "Associated Press": "Does not name the suspects.",
+          "CBS News": "Does not name the suspects.",
+          "BBC News": "States suspects are 'yet-to-be-identified.'"
+        }
+      },
+      {
+        "topic": "Suspect school affiliation",
+        "positions": {
+          "CBS News": "Reports one suspect 'was associated with nearby Madison High School.'",
+          "The Times (London)": "Reports Cain Clark attended Madison High School and was a standout wrestler, with a quote from his grandfather.",
+          "NBC News": "Reports Clark 'attended high school virtually and was set to graduate later this month,' citing a school district official. Also says police connected one suspect to Madison High School during the response."
+        }
+      },
+      {
+        "topic": "Security guard victim identification",
+        "positions": {
+          "BBC News": "Names the security guard as Amin Abdullah, a father of eight, citing CAIR-SD spokeswoman Tazheen Nizam. Also names the other two victims as Mansour Kaziha and Nader Awad.",
+          "CBS News": "Describes security guard as a father of eight but does not name him, citing a person who knew him via CBS Los Angeles.",
+          "Associated Press": "Does not name any victims.",
+          "NBC News": "Does not name any victims, stating they 'were not identified Monday.'"
+        }
+      },
+      {
+        "topic": "Evidence of neo-Nazi/white supremacist symbolism",
+        "positions": {
+          "The Times (London)": "Reports and shows a photo of 'a petrol can with an SS sticker' found by a car at the scene.",
+          "Associated Press": "No mention of SS imagery.",
+          "CBS News": "No mention of SS imagery.",
+          "NBC News": "Mentions 'possible anti-Islamic writings found in the teens' car' but does not mention SS symbolism.",
+          "BBC News": "No mention of SS imagery."
+        }
+      },
+      {
+        "topic": "Anti-Islamic writings in the vehicle",
+        "positions": {
+          "NBC News": "Reports investigators are examining 'possible anti-Islamic writings found in the teens' car,' citing two senior law enforcement officials.",
+          "Other outlets": "No other outlet with full body text mentions writings found in the car specifically."
+        }
+      },
+      {
+        "topic": "Landscaper shot at nearby",
+        "positions": {
+          "NBC News": "Reports a landscaper working in the area was shot at but not struck.",
+          "Other outlets": "No other outlet with full body text mentions the landscaper incident."
+        }
+      },
+      {
+        "topic": "Whether there were prior threats to the Islamic Center",
+        "positions": {
+          "CBS News": "Chief Wahl said 'there were no specific threats toward the Islamic Center.'",
+          "Axios": "Headline references mosque having 'faced threats before shooting,' but body text was inaccessible (403 error)."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Straightforward wire framing. Leads with the basic facts \u2014 three killed, two suspects dead, hate crime investigation. Includes eyewitness color (neighbor Daniel McDonald hearing shots) and describes AP photo captions showing emotional aftermath. Does not name suspects or victims. Minimal political context or reaction beyond the police press conference.",
+      "CBS News": "Comprehensive live-update format with timestamped entries. Leads with the key facts then builds out with the security guard hero narrative, the imam's call for a 'culture of love,' the detailed timeline of the mother's call, and Gov. Newsom's statement. Emphasizes the heroism of the security guard and the imam's framing of religious intolerance. Includes the detail that 'there were no specific threats' toward the Islamic Center, a notable qualifier. Does not name suspects or victims by name.",
+      "BBC News": "Leads entirely with the hero narrative of the security guard, naming him as Amin Abdullah and providing the most detailed victim profiles of any outlet. Names all three victims via CAIR-SD. Frames the story around community loss and individual heroism rather than the suspects or political context. Notably more restrained on political reaction \u2014 no quotes from politicians beyond the police chief.",
+      "The Times (London)": "Most detail on the suspects: names both, identifies Clark as a Madison High School wrestler, includes a grandfather quote, and uniquely reports and photographs a gas can with an SS sticker at the scene \u2014 the only outlet to introduce explicit white-supremacist iconography. Also notes the attack fell on the first day of Dhul Hijjah. Leads with the shooting facts but integrates suspect identity and possible extremist motivation more prominently than other outlets.",
+      "NBC News": "Most comprehensive single report in the dossier. Leads with the shooting and systematically covers victims, suspects, possible motive, and community reaction in labeled sections. Uniquely reports: the landscaper who was shot at, possible anti-Islamic writings in the suspects' car, and Clark's virtual schooling. Gives the most space to political reaction, including CAIR-California CEO Hussam Ayloush's statement linking the attack to mainstream political rhetoric about Muslims. NBC's framing most explicitly connects the shooting to a broader political climate of anti-Muslim hate speech by named politicians.",
+      "Axios": "Body text inaccessible (403 error). Headline suggests reporting on prior threats to the mosque \u2014 a framing angle not present in other outlets. Cannot assess further.",
+      "The New York Times": "Body text inaccessible (headline-only). Headline frames the story as a 'What to Know' explainer about suspects and events. Cannot assess further."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (police statements, official reports, court filings) were available in the dossier. All reporting is based on press conferences by Chief Scott Wahl and statements from community figures. Alignment cannot be assessed."
+    ],
+    "missing_context": [
+      "No outlet with full body text provides the full content or characterization of the note left by one of the suspects, beyond that it exists and police declined to share details.",
+      "The Axios headline suggests the Islamic Center had faced prior threats, but the article body was inaccessible (403 error). No other outlet addresses a history of threats against this specific mosque, though CBS quotes Chief Wahl saying there were 'no specific threats' \u2014 an ambiguous phrasing that could mean no threats related to this specific attack or no threats at all.",
+      "No outlet provides detail on the weapons used (type, how many, legally owned or not), despite the mother reporting 'multiple weapons' missing.",
+      "No outlet explores how the suspects knew each other or their relationship beyond NBC's mention they were together and CBS's note that one was 'with another person.'",
+      "No outlet addresses whether the school at the Islamic Center had its own security protocols or lockdown procedures, despite dozens of children being present.",
+      "No outlet reports on whether authorities had any prior contact with either suspect (e.g., behavioral red flags, prior incidents, or online activity).",
+      "The SS sticker on the gas can is reported only by The Times (London) \u2014 no other outlet corroborates this detail. Its significance (evidence of white-supremacist ideology) is potentially major to motive but remains single-source in this dossier.",
+      "The political context invoked by CAIR and NBC \u2014 that mainstream politicians have called for mosques to be shut down and Muslims expelled \u2014 is not sourced to specific statements or individuals in any article. A fair-minded reader would want to know which politicians and which statements are being referenced.",
+      "No primary source (police report, suspect's note, official investigation summary) was available for independent verification of any outlet's claims."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with substantial body text (AP, CBS, BBC, NBC) and one with partial text (The Times) corroborate the core facts of the shooting, and there is strong consensus on the essential details. While framing varies \u2014 hero narrative vs. suspect focus vs. political reaction \u2014 the factual divergences are relatively minor (spelling of a suspect's name, single-source details like the SS sticker). This is a straightforward multi-source confirmed event best served by a REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/san-diego-islamic-center-shooting-af934ee29b397fba1495baf2529c49f8",
+      "title": "Teenage gunmen open fire on San Diego mosque, killing 3 men and then themselves - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/islamic-center-san-diego-police-active-shooter-report/",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/clyp3gkrwg9o",
+      "title": "Father-of-8 security guard hailed as hero in San Diego mosque shooting - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/local/san-diego/2026/05/18/san-diego-islamic-center-shooting-mosque-threats",
+      "title": "San Diego Islamic Center member says mosque faced threats before shooting - Axios"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.thetimes.com/us/news-today/article/active-shooter-california-mosque-san-diego-jt8prsfml",
+      "title": "San Diego mosque shooting: teenage gunmen kill three, police say - The Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/san-diego-mosque-shooting-victims-islam-center-suspects-what-know-rcna345805",
+      "title": "What we know about the San Diego shooting victims, suspects, possible motive and more - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/19/us/san-diego-mosque-shooting.html",
+      "title": "San Diego Mosque Shooting: What to Know About the Suspects and What Happened - The New York Times"
+    }
+  ]
+}
