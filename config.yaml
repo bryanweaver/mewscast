@@ -359,6 +359,17 @@ journalism:
   dry_run:
     drafts_dir: drafts
 
+  # Walter's Field Notes reply — Bluesky-only iconic visual asset.
+  # When enabled, the post-publish Bluesky reply is a generated "Field Notes"
+  # image showing the first 3 consensus facts on a spiral-bound reporter's
+  # pad signed with a paw print, with the dossier URL in the reply text
+  # (auto-faceted clickable by atproto). Falls back to the existing
+  # link-card reply on any failure or when gates aren't met.
+  field_notes_reply:
+    enabled: true                # flip to false to disable feature
+    min_confidence: 0.5          # skip dossiers below this brief.confidence
+    min_facts: 3                 # require N usable consensus facts after cleanup
+
   # Outlet reply bot — replies to outlet tweets with Walter's dossier link
   # when the cross-outlet analysis adds genuine value to the conversation.
   outlet_reply:
