@@ -1,0 +1,120 @@
+{
+  "story_id": "2026-05-19-senate-advances-resolution-to-8db0f0ccdd",
+  "headline_seed": "Senate advances resolution to limit Trump's Iran war powers for first time, after 4 Republicans defect - CBS News",
+  "brief": {
+    "story_id": "2026-05-19-senate-advances-resolution-to-8db0f0ccdd",
+    "consensus_facts": [
+      "The Senate voted 50-47 on Tuesday, May 19, 2026, to advance a war powers resolution aimed at limiting President Trump's authority to continue hostilities in Iran.",
+      "Four Republicans \u2014 Sens. Susan Collins (ME), Lisa Murkowski (AK), Rand Paul (KY), and Bill Cassidy (LA) \u2014 voted with Democrats to advance the measure.",
+      "Sen. Bill Cassidy voted to advance the resolution for the first time, after previously voting against it in earlier attempts.",
+      "Cassidy's vote came days after he lost his Louisiana GOP Senate primary, in which Trump endorsed one of his opponents.",
+      "Sen. John Fetterman (D-PA) was the sole Democrat to vote against advancing the resolution.",
+      "Three Republican senators \u2014 John Cornyn (TX), Tommy Tuberville (AL), and Thom Tillis (NC) \u2014 were absent and did not vote.",
+      "The resolution was introduced by Sen. Tim Kaine (D-VA) and would direct the president to remove U.S. armed forces from hostilities in Iran unless Congress explicitly authorizes the war.",
+      "This was the first time the resolution successfully cleared a procedural hurdle after seven previous failed attempts by Democrats.",
+      "Senate Minority Leader Chuck Schumer said in a statement that 'Republicans are starting to crack' and that momentum is building to check the president.",
+      "Even if both chambers passed the resolution, the president would be expected to veto it."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the procedural vote",
+        "positions": {
+          "CBS News": "Describes the vote as a 'motion to discharge the resolution from committee.'",
+          "Washington Post": "Describes the vote as advancing a resolution 'to block further strikes on Iran.'",
+          "NBC News": "Describes it as a vote to 'move forward with a resolution to force President Donald Trump to end the war in Iran.'"
+        }
+      },
+      {
+        "topic": "Cassidy's stated rationale",
+        "positions": {
+          "NBC News": "Quotes Cassidy's full statement citing that 'the White House and Pentagon have left Congress in the dark on Operation Epic Fury' and citing concerns from Trump supporters in Louisiana.",
+          "Bloomberg": "Frames Cassidy's flip as a result of Trump's 'campaign of retribution' freeing him to openly oppose the president, without quoting Cassidy's own policy rationale.",
+          "CBS News": "Notes the flip came after Cassidy failed to advance in the primary but does not include a direct statement from Cassidy."
+        }
+      },
+      {
+        "topic": "Whether final passage is likely",
+        "positions": {
+          "NBC News": "Explicitly notes the three absent Republicans could make the final vote 50-50, causing it to fail, and that passage is 'not yet guaranteed.'",
+          "CBS News": "Notes a final vote would face a presidential veto but does not specifically analyze the math of the three absent senators.",
+          "Washington Post": "States the measure 'faces considerable hurdles' without specifying the absent-senator math."
+        }
+      },
+      {
+        "topic": "Context around Trump's announcement on pausing strikes",
+        "positions": {
+          "CBS News": "Reports Trump announced Monday the U.S. wouldn't follow through with 'scheduled' attacks on Iran on Tuesday, and that he was 'an hour away' from ordering new strikes. Kaine cited this as making it 'the perfect time' for congressional action.",
+          "Bloomberg": "Does not mention this context in its truncated body text.",
+          "NBC News": "Does not mention Trump's Monday announcement about pausing strikes.",
+          "Washington Post": "Does not mention this context in its truncated body text."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Leads with the political dynamics \u2014 emphasizing 'mounting opposition' and the financial toll of the war on Americans. Unique among outlets in explicitly framing Cassidy's flip as a product of Trump's 'campaign of retribution' freeing him to oppose the president. Body text is truncated (likely paywalled), so the full scope of its reporting is unclear.",
+      "CBS News": "Provides the most detailed and balanced procedural account. Leads with the breakthrough framing ('marking a breakthrough for Democrats after seven failed attempts'). Gives substantial space to Kaine's comments on economic impacts, gas prices, and the Memorial Day framing. Includes Trump's Monday announcement about pausing strikes \u2014 a piece of context no other outlet with retrievable text includes. Quotes Schumer at length.",
+      "Politico": "Headline-only (403 error). Headline characterizes the vote as a 'surprise blow to Trump, Republicans,' the most aggressive framing of any outlet's headline. No body text available for analysis.",
+      "The New York Times": "Headline-only (403 error). Headline frames it as a vote 'to Take Up Measure to Force Trump to End Iran War.' No body text available for analysis.",
+      "NBC News": "Leads with Cassidy's flip as the central news hook. Unique in providing Cassidy's full statement with his policy rationale about Congress being 'left in the dark on Operation Epic Fury.' Most detailed on the math of final passage, explicitly noting the three absent senators could sink the resolution. Includes the Schumer quote. Notes the House hurdle and expected veto.",
+      "Washington Post": "Truncated body text (paywalled). What is visible frames the vote as advancing a resolution 'to block further strikes on Iran' \u2014 the most specific framing of the resolution's practical effect. Lead paragraph calls it 'defying the White House nearly three months into an unpopular war.' Notably, the sidebar content includes a related story about an Iranian attack on a cargo ship in the Strait of Hormuz and an admiral's clash with a lawmaker at an Iran war hearing, providing broader war context other outlets do not.",
+      "CNN": "The CNN article is entirely about Trump's endorsement of Ken Paxton over John Cornyn in the Texas Senate race, not the Iran war powers vote. However, it provides important adjacent context: it mentions Cassidy losing his Louisiana primary, Murkowski expressing dismay at Trump's Paxton endorsement, Cornyn's absence (he is consumed by his own primary fight), and the broader pattern of Trump exerting dominance within the GOP. This helps explain why Cornyn was absent from the Iran vote and why Cassidy felt free to flip."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the resolution text, roll-call vote record, or Kaine's floor remarks) was located in the dossier.",
+      "Without the roll-call record, the exact vote tally of 50-47 and the identities of the four Republican crossovers rely on outlet reporting. CBS News, NBC News, and Bloomberg all independently report the same 50-47 figure and name the same four Republicans, providing strong cross-outlet corroboration.",
+      "The name of the military operation \u2014 'Operation Epic Fury' \u2014 appears only in NBC News's Cassidy quote and cannot be verified against a primary source."
+    ],
+    "missing_context": [
+      "No outlet with retrievable body text explains the specific legal basis the administration has cited for the Iran war (e.g., which AUMF or Article II authority), which is central to the dispute.",
+      "No outlet details what specific hostilities or military operations are ongoing \u2014 the scope and nature of 'the war in Iran' is assumed rather than described.",
+      "No outlet mentions how many U.S. troops are deployed, casualties to date, or the estimated cost of the conflict, despite multiple outlets noting economic impacts.",
+      "No outlet explains the procedural next steps in detail \u2014 what happens after a discharge motion passes, the timeline for a final vote, or whether amendments are possible.",
+      "The name 'Operation Epic Fury' appears only in Cassidy's statement via NBC News and is not independently confirmed or described by any other outlet.",
+      "No outlet explores whether the three absent Republican senators (Cornyn, Tuberville, Tillis) were strategically absent or had other reasons. CNN's separate article provides context that Cornyn is consumed by his own primary fight, but none of the Iran-focused articles connect these dots.",
+      "No primary source (roll-call vote record, resolution text) was available in the dossier to independently verify claims.",
+      "Politico and The New York Times body texts were inaccessible (403 errors), limiting the breadth of the dossier to four outlets with substantive body text plus one tangentially related CNN article.",
+      "No outlet discusses whether the House has a companion resolution or any indication of House Republican willingness to advance a similar measure.",
+      "No outlet mentions how long the war has been ongoing with precision \u2014 CBS News says the vote came 'nearly three months' into the war, and Washington Post says the same, but exact start date is not given."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (CBS News, NBC News, Bloomberg) plus the Washington Post's truncated text all corroborate the core facts of the 50-47 vote, the four GOP defectors, and Cassidy's flip. While framing varies, the factual core is solid and consistent. This is a straight news event with strong consensus \u2014 a REPORT rather than a META, because the framing differences are matters of emphasis rather than materially different narratives. The CNN article provides useful adjacent context that can enrich the report.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-19/us-senate-signals-intensifying-opposition-to-trump-s-war-in-iran",
+      "title": "US Senate Signals Intensifying Opposition to Trump\u2019s War in Iran - Bloomberg.com"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/senate-iran-war-powers-eighth-vote-trump/",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/19/senate-anti-iran-war-measure-00928868",
+      "title": "Senate advances anti-Iran war measure in surprise blow to Trump, Republicans - Politico"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/19/us/politics/senate-iran-war-authorization.html",
+      "title": "Senate Votes to Take Up Measure to Force Trump to End Iran War - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/senate-advances-resolution-end-iran-war-trump-bill-cassidy-rcna346001",
+      "title": "Senate advances resolution to end Iran war as GOP Sen. Bill Cassidy flips to support it - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/05/19/senate-votes-advance-resolution-block-further-strikes-iran/",
+      "title": "Senate votes to advance resolution to block further strikes on Iran - The Washington Post"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/19/politics/cornyn-paxton-trump-texas-endorse",
+      "title": "Trump endorses Paxton, upending Senate GOP plans in Texas race - CNN"
+    }
+  ]
+}
