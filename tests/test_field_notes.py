@@ -271,3 +271,64 @@ class TestBuildFieldNotesPrompt:
         prompt = gen._build_field_notes_prompt(facts, headline="")
         # No subtitle line when headline is empty.
         assert "subtitle that reads" not in prompt
+
+    def test_double_quotes_sanitized(self, gen):
+        # A fact with internal double-quotes must not break the prompt's
+        # "..." literal wrappers. We swap to single quotes; the wrapping
+        # is recognizable but the quoted-speech intent survives.
+        fact_with_dq = 'Wahl called the actions "heroic" in his briefing.'
+        facts = [fact_with_dq, "Second fact here is long.", "Third fact here is long."]
+        prompt = gen._build_field_notes_prompt(facts, headline="X")
+        # Double quotes inside the fact should be swapped for single quotes.
+        assert '"heroic"' not in prompt
+        assert "'heroic'" in prompt
+        # The outer wrappers around the fact remain intact — every embedded
+        # fact line begins with `N. "` and ends with `"`.
+        assert '1. "' in prompt
+
+    def test_newlines_in_facts_collapsed(self, gen):
+        # A fact containing a stray newline (e.g. from a paste) must
+        # become a one-liner so the entry block stays well-formed.
+        fact_with_newline = "First line\nsecond line of the same fact."
+        facts = [fact_with_newline, "Second long enough fact.", "Third long enough fact."]
+        prompt = gen._build_field_notes_prompt(facts, headline="X")
+        # The newline inside the fact text should not appear; only the
+        # structural newlines added by the prompt template should.
+        # Check the fact survived as a single line by looking for the
+        # collapsed form.
+        assert "First line second line" in prompt
+        # And the original two-line form should not appear in the entry.
+        assert "First line\nsecond line" not in prompt
+
+    def test_headline_newlines_collapsed(self, gen):
+        facts = ["A long enough fact for testing.", "B long enough fact.", "C long enough fact."]
+        prompt = gen._build_field_notes_prompt(
+            facts, headline="Story\nName with newline"
+        )
+        assert "Story Name with newline" in prompt
+
+    def test_entry_count_matches_facts_length_three(self, gen):
+        facts = ["First fact here.", "Second fact here.", "Third fact here."]
+        prompt = gen._build_field_notes_prompt(facts, headline="X")
+        # The prompt should state the entry count explicitly. With 3 facts,
+        # the count line reads "3 numbered entries follow".
+        assert "3 numbered entries follow" in prompt
+        assert "2 numbered entries follow" not in prompt
+        assert "4 numbered entries follow" not in prompt
+
+    def test_entry_count_matches_facts_length_two(self, gen):
+        facts = ["First fact here.", "Second fact here."]
+        prompt = gen._build_field_notes_prompt(facts, headline="X")
+        assert "2 numbered entries follow" in prompt
+        assert "3 numbered entries follow" not in prompt
+
+    def test_entry_count_matches_facts_length_five(self, gen):
+        facts = [
+            "First fact here.",
+            "Second fact here.",
+            "Third fact here.",
+            "Fourth fact here.",
+            "Fifth fact here.",
+        ]
+        prompt = gen._build_field_notes_prompt(facts, headline="X")
+        assert "5 numbered entries follow" in prompt

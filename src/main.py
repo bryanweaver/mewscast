@@ -666,16 +666,41 @@ def _post_bluesky_field_notes_reply(
         from src.field_notes import extract_top_facts  # pragma: no cover
 
     brief_dict = brief_dict or {}
-    min_conf = float(field_notes_cfg.get("min_confidence", 0.5))
-    if brief_dict.get("confidence", 0) < min_conf:
+
+    # Parse gates defensively — a bad config value (typo'd string, etc.)
+    # must not abort the whole reply chain. On parse failure, fall back to
+    # safe defaults so we still try to publish a field-notes reply rather
+    # than blowing up to the outer except and skipping the link-card too.
+    try:
+        min_conf = float(field_notes_cfg.get("min_confidence", 0.5))
+    except (ValueError, TypeError):
+        print("[journalism] field-notes: bad min_confidence in config; defaulting to 0.0")
+        min_conf = 0.0
+    try:
+        min_facts = int(field_notes_cfg.get("min_facts", 3))
+    except (ValueError, TypeError):
+        print("[journalism] field-notes: bad min_facts in config; defaulting to 3")
+        min_facts = 3
+    try:
+        brief_conf = float(brief_dict.get("confidence", 0) or 0)
+    except (ValueError, TypeError):
+        brief_conf = 0.0
+
+    if brief_conf < min_conf:
         print(f"[journalism] field-notes skip: confidence < {min_conf}")
         return None
 
-    min_facts = int(field_notes_cfg.get("min_facts", 3))
-    facts = extract_top_facts(brief_dict, n=min_facts)
-    if not facts:
+    # Gating and render count are intentionally independent: the gate asks
+    # "do we have at least min_facts strong consensus points to justify the
+    # whole reply?" and the image always renders the first 3 (per product
+    # decision: people like things in threes, and three fits the notepad
+    # comfortably). To allow min_facts > 3 as a stricter quality bar without
+    # blowing up the visual, we pull min_facts from the pool and slice.
+    facts_pool = extract_top_facts(brief_dict, n=max(min_facts, 3))
+    if len(facts_pool) < min_facts:
         print("[journalism] field-notes skip: insufficient consensus facts after cleanup")
         return None
+    facts = facts_pool[:3]
 
     try:
         gen = ImageGenerator()
@@ -2391,7 +2416,7 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
                     )
                     if reply_result:
                         bluesky_reply_uri = reply_result.get("uri")
-                        print(f"[republish] Bluesky dossier reply ok")
+                        print("[republish] Bluesky dossier reply ok")
                         _persist_post_artifacts()
                 except Exception as re:
                     print(f"[republish] Bluesky dossier reply failed: {re}")

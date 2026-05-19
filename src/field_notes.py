@@ -86,8 +86,11 @@ def extract_top_facts(
             single-word "facts" that occasionally slip through the brief).
 
     Returns an empty list when there aren't ``n`` usable facts — caller
-    decides whether to skip the field-notes reply entirely.
+    decides whether to skip the field-notes reply entirely. Returns an
+    empty list for non-positive ``n`` (caller asked for nothing).
     """
+    if n <= 0:
+        return []
     if not brief:
         return []
     raw_facts = brief.get("consensus_facts") or []
