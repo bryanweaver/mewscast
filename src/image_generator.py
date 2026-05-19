@@ -271,6 +271,36 @@ class ImageGenerator:
             print(f"✗ Image generation failed: {e}")
             return None, None
 
+    @staticmethod
+    def _sanitize_for_prompt(text: str) -> str:
+        """Normalize dynamic text for safe embedding inside double-quoted
+        prompt literals. Replaces double quotes with single quotes so the
+        surrounding "..." structure remains parseable as a single string,
+        and collapses internal newlines/tabs to single spaces so each
+        embedded value remains a one-liner. Strips leading/trailing
+        whitespace as a final cleanup.
+
+        This preserves the human-readable meaning of the text (a fact with
+        an internal "quote" still reads as quoted speech) while keeping the
+        prompt's literal structure intact.
+        """
+        if not text:
+            return ""
+        # Collapse CR/LF/TAB to a single space so each entry stays on one line.
+        normalized = (
+            text.replace("\r\n", " ")
+            .replace("\r", " ")
+            .replace("\n", " ")
+            .replace("\t", " ")
+        )
+        # Replace double-quote with single-quote so the outer "..." wrappers
+        # used in the prompt aren't terminated mid-value.
+        normalized = normalized.replace('"', "'")
+        # Collapse runs of whitespace introduced by the swaps.
+        while "  " in normalized:
+            normalized = normalized.replace("  ", " ")
+        return normalized.strip()
+
     def _build_field_notes_prompt(
         self, facts: list[str], headline: str, dateline: Optional[str] = None
     ) -> str:
@@ -279,20 +309,35 @@ class ImageGenerator:
         Bypasses the cat-subject anchor and eye-catch anchor — this image is
         a notepad photo, not a Walter portrait. Facts are quoted and the
         model is instructed to render them exactly as written.
+
+        Dynamic text (facts, headline, dateline) is sanitized to swap
+        embedded double-quotes for single-quotes and collapse newlines so
+        the prompt's "..." literal wrappers remain structurally intact.
         """
         # Build the dateline line that appears under the FIELD NOTES header.
         # Kept short — the page is text-dense already.
         dateline_line = ""
         if dateline:
-            dateline_line = f' Beneath the header, a smaller dateline reads exactly: "{dateline}".'
+            safe_dateline = self._sanitize_for_prompt(dateline)
+            dateline_line = (
+                f' Beneath the header, a smaller dateline reads exactly: '
+                f'"{safe_dateline}".'
+            )
 
         # Numbered entries, each on its own line in the prompt for clarity.
         entries = []
         for idx, fact in enumerate(facts, start=1):
-            entries.append(f'    {idx}. "{fact}"')
+            safe_fact = self._sanitize_for_prompt(fact)
+            entries.append(f'    {idx}. "{safe_fact}"')
         entries_block = "\n".join(entries)
 
-        story_line = f' below a smaller subtitle that reads exactly: "{headline}"' if headline else ""
+        story_line = ""
+        if headline:
+            safe_headline = self._sanitize_for_prompt(headline)
+            story_line = (
+                f' below a smaller subtitle that reads exactly: '
+                f'"{safe_headline}"'
+            )
 
         return (
             f"{_FIELD_NOTES_STYLE_SPEC}"
@@ -303,7 +348,7 @@ class ImageGenerator:
             f'Top of page, larger and underlined: "FIELD NOTES".'
             f"{dateline_line}"
             f"{story_line}"
-            f"\n\nThree numbered entries follow, each prefixed with a dash, "
+            f"\n\n{len(facts)} numbered entries follow, each prefixed with a dash, "
             f"in the order shown, written exactly:\n\n"
             f"{entries_block}\n\n"
             f"Bottom-right corner of the page: a black inked cat's paw-print "
