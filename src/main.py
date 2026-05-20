@@ -620,6 +620,147 @@ def _generate_journalism_image(
         return None, None
 
 
+def _post_bluesky_field_notes_reply(
+    bluesky_bot,
+    bluesky_uri: str,
+    brief_dict: dict,
+    headline: str,
+    story_id: str,
+    dossier_url: str,
+    journalism_cfg: dict,
+    dossier_store=None,
+) -> str | None:
+    """Post Walter's Field Notes image as the Bluesky dossier-link reply.
+
+    Generates a spiral-bound reporter's pad image showing the first three
+    consensus facts (with attribution tails stripped) and a paw signature,
+    then replies to the main Bluesky post with the image + the dossier URL
+    in the reply text (auto-faceted clickable by atproto).
+
+    Args:
+        bluesky_bot: a connected BlueskyBot instance.
+        bluesky_uri: AT URI of the parent post to reply to.
+        brief_dict: the dossier brief as a dict (with consensus_facts,
+            confidence keys). Pass {} when no brief is available.
+        headline: short story name shown beneath the FIELD NOTES header.
+        story_id: dossier story_id, used for filename + audit persistence.
+        dossier_url: full https URL of the dossier page; inlined in the
+            reply text and auto-faceted clickable by atproto.
+        journalism_cfg: the `journalism:` block of config.yaml (used to
+            read feature toggles and gates).
+        dossier_store: optional DossierStore — when provided, the image
+            path, prompt, and selected facts are written into the dossier
+            JSON for the audit trail. Republish path passes None.
+
+    Returns the reply URI on success, or None if the feature is disabled,
+    the gates fail, generation fails, or the reply fails. Callers should
+    fall back to the link-card reply when this returns None.
+    """
+    field_notes_cfg = (journalism_cfg or {}).get("field_notes_reply") or {}
+    # Default ON — the feature is the intended rollout target and the
+    # committed config.yaml already sets enabled: true. A deployment that
+    # omits the field_notes_reply block entirely should still get the
+    # current behavior. Set enabled: false explicitly to disable.
+    if not field_notes_cfg.get("enabled", True):
+        return None
+
+    try:
+        from field_notes import extract_top_facts
+    except ImportError:
+        from src.field_notes import extract_top_facts  # pragma: no cover
+
+    brief_dict = brief_dict or {}
+
+    # Parse gates defensively — a bad config value (typo'd string, etc.)
+    # must not abort the whole reply chain. On parse failure, fall back to
+    # safe defaults so we still try to publish a field-notes reply rather
+    # than blowing up to the outer except and skipping the link-card too.
+    try:
+        min_conf = float(field_notes_cfg.get("min_confidence", 0.5))
+    except (ValueError, TypeError):
+        print("[journalism] field-notes: bad min_confidence in config; defaulting to 0.0")
+        min_conf = 0.0
+    try:
+        min_facts = int(field_notes_cfg.get("min_facts", 3))
+    except (ValueError, TypeError):
+        print("[journalism] field-notes: bad min_facts in config; defaulting to 3")
+        min_facts = 3
+    try:
+        brief_conf = float(brief_dict.get("confidence", 0) or 0)
+    except (ValueError, TypeError):
+        brief_conf = 0.0
+
+    if brief_conf < min_conf:
+        print(f"[journalism] field-notes skip: confidence < {min_conf}")
+        return None
+
+    # Gating and render count are intentionally independent: the gate asks
+    # "do we have at least min_facts strong consensus points to justify the
+    # whole reply?" and the image always renders the first 3 (per product
+    # decision: people like things in threes, and three fits the notepad
+    # comfortably). To allow min_facts > 3 as a stricter quality bar without
+    # blowing up the visual, we pull min_facts from the pool and slice.
+    facts_pool = extract_top_facts(brief_dict, n=max(min_facts, 3))
+    if len(facts_pool) < min_facts:
+        print("[journalism] field-notes skip: insufficient consensus facts after cleanup")
+        return None
+    facts = facts_pool[:3]
+
+    try:
+        gen = ImageGenerator()
+    except Exception as e:
+        print(f"[journalism] field-notes ImageGenerator init failed: {e}")
+        return None
+
+    safe_id = _safe_filename_component(story_id)
+    temp_path = f"temp_field_notes_{safe_id}.png"
+    dateline = datetime.now().strftime("%B %d, %Y")
+    headline = (headline or "")[:60]
+
+    fn_path, fn_prompt = gen.generate_field_notes(
+        facts=facts,
+        headline=headline,
+        dateline=dateline,
+        save_path=temp_path,
+    )
+    if not fn_path:
+        return None
+
+    # Persist the field-notes image + prompt + facts alongside the dossier
+    # so the audit trail is complete and the dossier viewer could surface
+    # the image in a future revision. Skipped when no dossier_store passed.
+    if dossier_store is not None:
+        try:
+            html_dir = os.path.join(_project_root(), "docs", "dossiers")
+            images_dir = os.path.join(html_dir, "images")
+            os.makedirs(images_dir, exist_ok=True)
+            dest = os.path.join(images_dir, f"{safe_id}.field-notes.png")
+            if os.path.abspath(fn_path) != os.path.abspath(dest):
+                import shutil
+                shutil.copy2(fn_path, dest)
+            raw = dossier_store.read_raw(story_id)
+            if raw:
+                raw["field_notes_image_path"] = f"images/{safe_id}.field-notes.png"
+                raw["field_notes_prompt"] = fn_prompt
+                raw["field_notes_facts"] = facts
+                dossier_store._write(story_id, raw)
+        except Exception as e:
+            print(f"[journalism] field-notes persist failed (continuing): {e}")
+
+    reply_text = f"Walter's field notes from this story:\n{dossier_url}"
+    try:
+        result = bluesky_bot.reply_to_skeet_with_image(
+            bluesky_uri, reply_text, fn_path
+        )
+        if result:
+            uri = result.get("uri")
+            print(f"[journalism] field-notes Bluesky reply ok: {uri}")
+            return uri
+    except Exception as e:
+        print(f"[journalism] field-notes Bluesky reply failed: {e}")
+    return None
+
+
 def _persist_dossier_image(
     draft: DraftPost,
     dossier_store,
@@ -2033,28 +2174,40 @@ def post_journalism_cycle(
                 print(f"[journalism] Bluesky post ok: {bluesky_uri}")
                 _persist_post_artifacts()
 
-                # Dossier reply — clickable link card (no banner thumbnail).
-                # Bluesky allows one embed per post; using a link card keeps
-                # the URL clickable, while omitting thumb_image_path drops
-                # the banner image. Hook text picked from brief signals.
-                # This runs for ALL post types on Bluesky (including META)
-                # because the 300-char cap truncates long posts and the
-                # link card is how readers reach the dossier.
-                brief_dict = brief.to_dict() if brief else {}
-                outlet_count = len(dossier.articles) if dossier.articles else 0
-                reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
+                # Dossier reply — try Walter's Field Notes image first
+                # (iconic visual asset with the first 3 consensus facts on a
+                # spiral-bound pad, paw-signed). On any failure, fall back to
+                # the prior link-card reply so the dossier link still ships.
                 time.sleep(2)
-                try:
-                    reply_result = bluesky_bot.reply_to_skeet_with_link(
-                        bluesky_uri, dossier_url,
-                        text=reply_hook,
-                    )
-                    if reply_result:
-                        bluesky_reply_uri = reply_result.get("uri")
-                        print(f"[journalism] Bluesky dossier reply ok: {bluesky_reply_uri}")
-                        _persist_post_artifacts()
-                except Exception as re:
-                    print(f"[journalism] Bluesky dossier reply failed: {re}")
+                field_notes_uri = _post_bluesky_field_notes_reply(
+                    bluesky_bot,
+                    bluesky_uri,
+                    brief_dict=brief.to_dict() if brief else {},
+                    headline=dossier.headline_seed or "",
+                    story_id=draft.story_id,
+                    dossier_url=dossier_url,
+                    journalism_cfg=journalism_cfg,
+                    dossier_store=dossier_store,
+                )
+                if field_notes_uri:
+                    bluesky_reply_uri = field_notes_uri
+                    _persist_post_artifacts()
+                else:
+                    # Fallback: clickable link card (no banner thumbnail).
+                    brief_dict = brief.to_dict() if brief else {}
+                    outlet_count = len(dossier.articles) if dossier.articles else 0
+                    reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
+                    try:
+                        reply_result = bluesky_bot.reply_to_skeet_with_link(
+                            bluesky_uri, dossier_url,
+                            text=reply_hook,
+                        )
+                        if reply_result:
+                            bluesky_reply_uri = reply_result.get("uri")
+                            print(f"[journalism] Bluesky dossier reply ok: {bluesky_reply_uri}")
+                            _persist_post_artifacts()
+                    except Exception as re:
+                        print(f"[journalism] Bluesky dossier reply failed: {re}")
         except Exception as e:
             print(f"[journalism] Bluesky publish failed: {e}")
 
@@ -2240,20 +2393,37 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             print(f"[republish] Bluesky post ok: {bluesky_uri}")
             _persist_post_artifacts()
 
-            # Dossier reply — clickable link card, no banner thumbnail.
-            reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
+            # Dossier reply — try Walter's Field Notes image first, fall back
+            # to link card on failure. Mirrors post_journalism_cycle.
             time.sleep(2)
-            try:
-                reply_result = bluesky_bot.reply_to_skeet_with_link(
-                    bluesky_uri, dossier_url,
-                    text=reply_hook,
-                )
-                if reply_result:
-                    bluesky_reply_uri = reply_result.get("uri")
-                    print(f"[republish] Bluesky dossier reply ok")
-                    _persist_post_artifacts()
-            except Exception as re:
-                print(f"[republish] Bluesky dossier reply failed: {re}")
+            _republish_journalism_cfg = (_load_config() or {}).get("journalism") or {}
+            field_notes_uri = _post_bluesky_field_notes_reply(
+                bluesky_bot,
+                bluesky_uri,
+                brief_dict=reply_brief or {},
+                headline=post_text[:60] if post_text else "",
+                story_id=story_id,
+                dossier_url=dossier_url,
+                journalism_cfg=_republish_journalism_cfg,
+                dossier_store=None,
+            )
+            if field_notes_uri:
+                bluesky_reply_uri = field_notes_uri
+                _persist_post_artifacts()
+            else:
+                # Fallback: clickable link card, no banner thumbnail.
+                reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
+                try:
+                    reply_result = bluesky_bot.reply_to_skeet_with_link(
+                        bluesky_uri, dossier_url,
+                        text=reply_hook,
+                    )
+                    if reply_result:
+                        bluesky_reply_uri = reply_result.get("uri")
+                        print("[republish] Bluesky dossier reply ok")
+                        _persist_post_artifacts()
+                except Exception as re:
+                    print(f"[republish] Bluesky dossier reply failed: {re}")
     except Exception as e:
         print(f"[republish] Bluesky publish failed: {e}")
 
