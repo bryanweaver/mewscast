@@ -1,0 +1,105 @@
+{
+  "story_id": "2026-05-20-doj-charges-ex-prosecutor-4a8feb1bd5",
+  "headline_seed": "DOJ charges ex-prosecutor with stealing Trump documents case report prepared by Jack Smith - CNBC",
+  "brief": {
+    "story_id": "2026-05-20-doj-charges-ex-prosecutor-4a8feb1bd5",
+    "consensus_facts": [
+      "A federal grand jury indicted Carmen Mercedes Lineberger, a managing Assistant U.S. Attorney in Fort Pierce, Florida, on four felony counts related to allegedly stealing a sealed report prepared by then-special counsel Jack Smith on the Trump classified documents case.",
+      "Lineberger allegedly saved the sealed portion of Smith's report on her government-issued computer under the file name 'Bundt_Cake_Recipe.pdf' and emailed it from her DOJ email account to her personal Gmail account.",
+      "The indictment was unsealed on Wednesday, and Lineberger appeared in federal court in Florida the same day.",
+      "The sealed report \u2014 Volume II of the Smith report \u2014 concerns the criminal case against President Donald Trump over his retention of classified documents after leaving office.",
+      "U.S. District Judge Aileen Cannon had issued an order prohibiting the DOJ from releasing, sharing, or transmitting Volume II of Smith's report.",
+      "Judge Cannon dismissed the underlying criminal case against Trump in July 2024, ruling that Smith's appointment violated the Appointments Clause of the U.S. Constitution.",
+      "The charges against Lineberger include theft of government property and counts related to the removal and altering of public records."
+    ],
+    "disagreements": [
+      {
+        "topic": "Date Lineberger allegedly emailed the report to herself",
+        "positions": {
+          "ABC News": "Reports the email was sent 'in January of 2025.'",
+          "CNBC": "Reports the email was sent on 'Dec. 1, 2025.'"
+        }
+      },
+      {
+        "topic": "Date of Judge Cannon's sealing order",
+        "positions": {
+          "ABC News": "Does not specify an exact date for Cannon's sealing order, says the report 'has remained secret since January 2025.'",
+          "CNBC": "Specifies Judge Cannon issued the order on 'Jan. 21, 2025.'"
+        }
+      },
+      {
+        "topic": "Location of Lineberger's court appearance",
+        "positions": {
+          "ABC News": "Reports Lineberger appeared in federal court in West Palm Beach.",
+          "CNBC": "Reports Lineberger appeared in court in Fort Pierce."
+        }
+      },
+      {
+        "topic": "Release conditions after court appearance",
+        "positions": {
+          "ABC News": "Does not mention release conditions.",
+          "CNBC": "Reports Lineberger was released without having to post bond."
+        }
+      },
+      {
+        "topic": "Plea entered",
+        "positions": {
+          "ABC News": "Reports Lineberger entered a not guilty plea at her initial appearance.",
+          "CNBC": "Does not mention a plea being entered."
+        }
+      },
+      {
+        "topic": "Why the appeal of Cannon's dismissal was dropped",
+        "positions": {
+          "ABC News": "Does not explain why Smith's appeal was dropped.",
+          "CNBC": "Explains the DOJ dropped the appeal after Trump's November 2024 election victory due to DOJ policy barring federal prosecution of sitting presidents."
+        }
+      },
+      {
+        "topic": "Whether Lineberger intended to leak the report",
+        "positions": {
+          "ABC News": "Notes it is 'not immediately clear based on court papers unsealed Wednesday if prosecutors will argue that Lineberger intended to leak the contents of the report.'",
+          "CNBC": "Does not address the question of leak intent."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "ABC News": "Leads with the secrecy of the report ('The report has remained secret since it was sealed by a judge last year'), framing the story partly around public access to information. Includes context about Trump's not guilty plea and the 40-count indictment against him, keeping the underlying allegations against Trump in the reader's view. Notably raises the question of whether Lineberger intended to leak the report \u2014 a question no other outlet poses. Also mentions two legal groups appealing Cannon's orders to argue for public disclosure, adding a transparency dimension absent from CNBC's coverage. Buries the detail about Lineberger's release conditions (does not mention them at all). Reports the email date as 'January 2025,' which may be imprecise or may reflect a different understanding of the timeline than CNBC's 'Dec. 1, 2025' date.",
+      "CNBC": "Leads with a structured 'Key Points' format typical of its business-news style. Frames the story more narrowly around the criminal charges against Lineberger and the procedural history of the case. Provides the most precise date for the alleged email (Dec. 1, 2025), Lineberger's age (62), and specifies the sealing order date (Jan. 21, 2025). Includes the explanation that Smith's appeal was dropped due to DOJ policy against prosecuting sitting presidents \u2014 context ABC News omits. Does not raise the question of leak intent and does not mention ongoing appeals by legal groups seeking disclosure. CNBC's framing is more clinical and defendant-focused, whereas ABC News keeps the broader political context of the Trump documents case more visible.",
+      "Politico": "Only a headline was retrievable ('Former federal prosecutor indicted for stealing copies of unreleased Jack Smith report'). The body text returned a 403 error. The headline aligns with the core narrative reported by the other two outlets but contributes no body-level detail. Cannot assess framing, emphasis, or omissions."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the actual indictment) was located in the dossier. All factual claims derive from outlet reporting of the unsealed indictment. Without the indictment text, it is impossible to verify which outlet's date for the alleged email (ABC News's 'January 2025' vs. CNBC's 'Dec. 1, 2025') is correct, or to confirm the exact charges and their statutory bases."
+    ],
+    "missing_context": [
+      "The indictment itself was not available as a primary source. The date discrepancy between ABC News ('January 2025') and CNBC ('Dec. 1, 2025') for when the email was allegedly sent is significant and unresolvable without the source document.",
+      "No outlet explains how the alleged theft was discovered or who reported it, a basic question any reader would have.",
+      "No outlet clarifies whether the report was ever actually shared beyond Lineberger's personal email \u2014 i.e., whether there was an actual leak or only an attempted theft/retention.",
+      "No outlet provides detail on the specific statutes under which Lineberger is charged, beyond general descriptions of 'theft of government property' and 'removal and altering of public records.'",
+      "No outlet addresses what Volume II of the Smith report actually contains beyond a general description. ABC News says it 'summarize[d] Trump's alleged crimes'; CNBC says it concerned the 'defunct criminal case' \u2014 but neither describes its substance.",
+      "ABC News mentions two legal groups appealing Cannon's orders to seek disclosure of the report, but does not name them. CNBC does not mention these appeals at all.",
+      "Politico's body text was inaccessible (403 error), limiting the dossier to two full-text sources.",
+      "There is a factual conflict about where Lineberger appeared in court (West Palm Beach per ABC News vs. Fort Pierce per CNBC) that cannot be resolved without the primary source."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with full body text corroborate the core facts of the indictment \u2014 the defendant, the charges, the alleged conduct, and the broader case context. While there are notable discrepancies on dates and court location, the fundamental story is well-confirmed across sources. The framing differences are modest (not the kind of dramatic divergence that warrants a META post), and the absence of a primary source limits what a PRIMARY post could add. A straightforward REPORT with noted caveats about unresolved details is appropriate.",
+    "confidence": 0.68
+  },
+  "articles": [
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/doj-charges-prosecutor-attempting-steal-report-trumps-classified/story?id=133153407",
+      "title": "DOJ charges prosecutor with attempting to steal report on Trump's classified docs case - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/20/trump-documents-doj-charges-prosecutor-theft-jack-smith-report.html",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/20/indictment-unreleased-jack-smith-report-00930191",
+      "title": "Former federal prosecutor indicted for stealing copies of unreleased Jack Smith report - Politico"
+    }
+  ]
+}
