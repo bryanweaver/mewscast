@@ -1,0 +1,70 @@
+{
+  "story_id": "2026-05-20-4-takeaways-from-tuesday-cb6a228533",
+  "headline_seed": "4 takeaways from Tuesday\u2019s primary night in half a dozen states - NPR",
+  "brief": {
+    "story_id": "2026-05-20-4-takeaways-from-tuesday-cb6a228533",
+    "consensus_facts": [
+      "Rep. Thomas Massie lost his Kentucky GOP House primary to Trump-backed former Navy SEAL Ed Gallrein.",
+      "The Massie-Gallrein race was the most expensive House primary in U.S. history, with approximately $33 million spent on ads, according to ad-tracking firm AdImpact.",
+      "Trump and his allies poured major resources into defeating Massie, who had clashed with Trump on multiple issues.",
+      "Sen. Bill Cassidy of Louisiana lost his Republican primary on Saturday, adding to Trump's streak of ousting GOP critics.",
+      "Georgia Secretary of State Brad Raffensperger, who refused Trump's pressure to overturn 2020 election results, did not advance in the Georgia gubernatorial primary.",
+      "Trump endorsed Lt. Gov. Burt Jones in the Georgia gubernatorial primary to replace term-limited Gov. Brian Kemp.",
+      "The Georgia GOP Senate primary will determine who faces Democratic Sen. Jon Ossoff, considered one of the most critical midterm races.",
+      "The Georgia GOP Senate primary featured Reps. Mike Collins and Buddy Carter positioning themselves as Trump allies.",
+      "The crowded Georgia gubernatorial and Senate primaries were expected to lead to June 16 runoffs.",
+      "Primary elections were held across six states on Tuesday: Alabama, Georgia, Idaho, Kentucky, Oregon, and Pennsylvania.",
+      "Trump endorsed Rep. Andy Barr in the Kentucky Senate race to replace retiring Sen. Mitch McConnell.",
+      "Rep. Barry Moore was Trump's backed candidate in the Alabama race to succeed Sen. Tommy Tuberville.",
+      "Pennsylvania featured competitive congressional races seen as key battlegrounds for House control."
+    ],
+    "disagreements": [
+      {
+        "topic": "Margin of Massie's defeat",
+        "positions": {
+          "NPR": "Explicitly reports a 10-point margin of defeat for Massie.",
+          "NBC News": "Does not report the specific margin of Massie's loss; the article was a pre-election preview rather than a results piece."
+        }
+      },
+      {
+        "topic": "Article timing and framing (preview vs. results)",
+        "positions": {
+          "NPR": "Written as a post-election takeaways/analysis piece with results reported.",
+          "NBC News": "Written as a pre-election 'what to watch' preview dated May 19, before polls closed."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "Leads with Trump's dominance in GOP primaries but immediately pivots to the general election vulnerability this creates \u2014 calling Trump a 'double-edged sword' who is 'toxic with independents.' Devotes substantial space to Pennsylvania swing-district economic messaging and the challenges facing front-line Republicans. Highlights Trump's low economic approval ratings (in the 30s) and rising voter blame for higher prices. Emphasizes the tension between primary-winning strategy and general-election viability. Buries specific details about other races (Alabama, Georgia Senate) in favor of big-picture analysis. Includes Democratic messaging and candidates (Bob Brooks in PA-7) as a counterpoint. The piece reads as a caution against over-reading Trump's primary strength.",
+      "NBC News": "Frames the elections primarily through the lens of Trump's 'campaign to suppress dissent in his own party,' using the word 'loyalty test' in the headline. Provides broader and more granular race-by-race coverage across all six states, including details on the Alabama Senate field, Georgia gubernatorial candidates (including Democratic primary with Keisha Lance Bottoms), Kentucky Senate dynamics (Nate Morris dropping out for an ambassadorship), and Trump's endorsement of nearly every GOP incumbent except Brian Fitzpatrick. Lists specific policy clashes between Massie and Trump \u2014 Iran war, Epstein files, tax and spending package. More neutrally descriptive in tone, functioning as a voter guide rather than an analytical takeaway piece. Does not editorialize about Trump's general-election toxicity the way NPR does."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Alignment cannot be assessed."
+    ],
+    "missing_context": [
+      "No outlet provides detailed vote totals or turnout figures for any of the races discussed.",
+      "Neither outlet reports on the Idaho or Oregon primaries in any detail, despite both being part of the six-state Tuesday slate.",
+      "No reporting on how much of the $33 million in Massie's race came from pro-Israel groups specifically, though NBC News mentions their involvement.",
+      "Neither outlet details what policy positions Gallrein holds beyond his Navy SEAL background and Trump endorsement.",
+      "No outlet provides historical context on how often members of Congress who lose primaries to presidential-backed challengers are replaced by candidates who then lose the general election.",
+      "NPR's article body text appears to cut off mid-sentence ('as will Democratic Gov.'), so the full analysis of Pennsylvania swing districts may be incomplete in the dossier.",
+      "NBC News article was published May 19 (pre-election preview), so it lacks actual results; the dossier is effectively working with one post-results outlet for outcome details.",
+      "No primary sources (e.g., official election results, FEC filings, AdImpact data) were available for independent verification."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets corroborate the core facts \u2014 Trump-backed candidates won, Massie lost, record ad spending, Raffensperger eliminated \u2014 and while framing differs (post-election analysis vs. pre-election preview), there is no material factual disagreement. The story is a straightforward multi-state primary results report with enough consensus to support a REPORT rather than a META.",
+    "confidence": 0.68
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/20/nx-s1-5826937/takeaways-primaries-trump-massey-gallrein",
+      "title": ""
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-election/trump-loyalty-test-thomas-massie-primary-kentucky-georgia-pennsylvania-rcna345556",
+      "title": "Trump loyalty tests, major battlegrounds and more: What to watch in Tuesday\u2019s elections - NBC News"
+    }
+  ]
+}
