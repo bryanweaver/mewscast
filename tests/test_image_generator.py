@@ -177,7 +177,11 @@ class TestAspectRatioConfig:
     def test_supported_aspect_ratios_accepted(self, monkeypatch):
         import image_generator as module
 
-        for ratio in ("3:2", "16:9", "4:5", "1:1"):
+        # 4:5 was removed from the supported set on 2026-05-20 after the
+        # field-notes path crashed on it at runtime — Grok's actual
+        # supported list does not include it. 3:4 covers the same portrait
+        # need and is accepted.
+        for ratio in ("3:2", "16:9", "3:4", "1:1"):
             monkeypatch.setattr(
                 module, "_load_image_config",
                 lambda r=ratio: {"aspect_ratio": r},
