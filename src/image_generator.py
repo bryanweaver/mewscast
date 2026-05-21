@@ -145,10 +145,16 @@ def _load_image_config() -> dict:
 class ImageGenerator:
     """Generates images using xAI Grok (default) or configured alternate."""
 
-    # Valid aspect ratios Grok accepts. 3:2 reads well on both Bluesky
-    # (4:5-favoring inline) and X (16:9-favoring cards). Default chosen
-    # because it's the best compromise without a per-platform split.
-    SUPPORTED_ASPECT_RATIOS = {"3:2", "16:9", "4:5", "1:1"}
+    # Valid aspect ratios Grok actually accepts. Verified against API error
+    # response on 2026-05-20: the field-notes path picked "4:5" (a
+    # Bluesky-favored portrait ratio) and Grok rejected it at runtime,
+    # listing the supported set below. "4:5" was previously in this set
+    # but never exercised because the default config used 3:2 — removed
+    # to prevent the bug from resurfacing.
+    SUPPORTED_ASPECT_RATIOS = {
+        "1:1", "3:4", "4:3", "9:16", "16:9", "2:3", "3:2",
+        "9:19.5", "19.5:9", "9:20", "20:9", "1:2", "2:1", "auto",
+    }
 
     def __init__(self):
         """Initialize image-gen client."""
@@ -365,7 +371,7 @@ class ImageGenerator:
         headline: str = "",
         dateline: Optional[str] = None,
         save_path: str = "temp_field_notes.png",
-        aspect_ratio: str = "4:5",
+        aspect_ratio: str = "3:4",
     ) -> tuple[Optional[str], Optional[str]]:
         """Generate a "Walter's Field Notes" reply image.
 
@@ -384,9 +390,10 @@ class ImageGenerator:
             dateline: Optional date string (e.g. "May 19, 2026") shown beneath
                 the header. Pass None to omit.
             save_path: Where to write the downloaded image.
-            aspect_ratio: Image aspect ratio. Defaults to 4:5 (portrait, matches
-                a real notepad page and renders well inline on Bluesky).
-                Falls back to 3:2 if an unsupported ratio is passed.
+            aspect_ratio: Image aspect ratio. Defaults to 3:4 (portrait, matches
+                a real notepad page and is in Grok's supported set). Falls
+                back to 3:2 if an unsupported ratio is passed. Note: 4:5 is
+                NOT supported by Grok — verified via API error on 2026-05-20.
 
         Returns:
             (image_path, anchored_prompt). Both None on failure.
