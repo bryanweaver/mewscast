@@ -28,6 +28,7 @@ sys.path.insert(0, _PROJECT_ROOT)
 sys.path.insert(0, _SRC_DIR)
 
 from field_notes import (  # noqa: E402
+    condense_facts_for_notebook,
     extract_top_facts,
     strip_attribution_tail,
 )
@@ -305,18 +306,19 @@ class TestBuildFieldNotesPrompt:
         assert "subtitle that reads" not in prompt
 
     def test_double_quotes_sanitized(self, gen):
-        # A fact with internal double-quotes must not break the prompt's
-        # "..." literal wrappers. We swap to single quotes; the wrapping
-        # is recognizable but the quoted-speech intent survives.
+        # A fact with internal double-quotes must not break the prompt
+        # structure. We swap to single quotes; the quoted-speech intent
+        # survives, and Grok no longer transcribes literal double quotes
+        # into the image (which had been producing unterminated marks).
         fact_with_dq = 'Wahl called the actions "heroic" in his briefing.'
         facts = [fact_with_dq, "Second fact here is long.", "Third fact here is long."]
         prompt = gen._build_field_notes_prompt(facts, headline="X")
         # Double quotes inside the fact should be swapped for single quotes.
         assert '"heroic"' not in prompt
         assert "'heroic'" in prompt
-        # The outer wrappers around the fact remain intact — every embedded
-        # fact line begins with `N. "` and ends with `"`.
-        assert '1. "' in prompt
+        # Entries are dash-prefixed and numbered, with no surrounding
+        # quotation marks around the fact text itself.
+        assert "- 1. " in prompt
 
     def test_newlines_in_facts_collapsed(self, gen):
         # A fact containing a stray newline (e.g. from a paste) must
@@ -364,3 +366,195 @@ class TestBuildFieldNotesPrompt:
         ]
         prompt = gen._build_field_notes_prompt(facts, headline="X")
         assert "5 numbered entries follow" in prompt
+
+    def test_no_quote_wrappers_around_facts(self, gen):
+        # Regression: earlier prompts wrapped each fact in literal double
+        # quotes (1. "fact text") which Grok transcribed into the image,
+        # producing mismatched / unterminated quotation marks. Facts must
+        # now appear bare in the prompt — no surrounding " " around the
+        # text or its numbering.
+        facts = [
+            "First long fact for testing.",
+            "Second long fact for testing.",
+            "Third long fact for testing.",
+        ]
+        prompt = gen._build_field_notes_prompt(facts, headline="X")
+        for fact in facts:
+            quoted = '"' + fact + '"'
+            assert quoted not in prompt, (
+                f"Fact should not be wrapped in double quotes: {quoted!r}"
+            )
+
+    def test_no_quote_wrappers_around_headline_or_dateline(self, gen):
+        facts = ["A long enough fact.", "B long enough fact.", "C long enough fact."]
+        prompt = gen._build_field_notes_prompt(
+            facts, headline="My Story Title", dateline="May 21, 2026",
+        )
+        assert '"My Story Title"' not in prompt
+        assert '"May 21, 2026"' not in prompt
+        # The values themselves are still present in the prompt as text.
+        assert "My Story Title" in prompt
+        assert "May 21, 2026" in prompt
+
+    def test_default_aspect_ratio_is_3_2(self):
+        # Switched from 3:4 to 3:2 on 2026-05-21 because the portrait image
+        # wasn't rendering on X. Should remain 3:2 so the reply image fits
+        # the same media slot as the main post image.
+        from inspect import signature
+        from image_generator import ImageGenerator
+        sig = signature(ImageGenerator.generate_field_notes)
+        assert sig.parameters["aspect_ratio"].default == "3:2"
+
+
+# ---------------------------------------------------------------------------
+# condense_facts_for_notebook
+# ---------------------------------------------------------------------------
+
+
+class TestCondenseFactsForNotebook:
+    def test_empty_input_returns_empty(self):
+        assert condense_facts_for_notebook([]) == []
+
+    def test_no_api_key_returns_originals(self, monkeypatch):
+        # When ANTHROPIC_API_KEY is missing the condenser must not raise;
+        # it should fall through and return the input list unchanged so
+        # the field-notes pipeline keeps working.
+        monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+        facts = [
+            "First original fact, fully formed and intact.",
+            "Second original fact, fully formed and intact.",
+        ]
+        result = condense_facts_for_notebook(facts)
+        assert result == facts
+
+    def test_llm_failure_returns_originals(self, monkeypatch):
+        # When the anthropic client raises (network, rate limit, auth) the
+        # condenser must catch and return the originals — not propagate.
+        monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
+
+        class _Boom:
+            def __init__(self, *_, **__):
+                pass
+
+            class messages:
+                @staticmethod
+                def create(**kwargs):
+                    raise RuntimeError("simulated network failure")
+
+        import field_notes as fn_module
+        import anthropic as _anthropic_module
+        monkeypatch.setattr(_anthropic_module, "Anthropic", _Boom)
+        # field_notes does `from anthropic import Anthropic` lazily inside
+        # the function, so the swap above is enough.
+        facts = ["Fact one stays intact.", "Fact two stays intact."]
+        assert condense_facts_for_notebook(facts) == facts
+
+    def test_returns_originals_on_wrong_shape(self, monkeypatch):
+        monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
+
+        class _StubResp:
+            class _Block:
+                text = '["just one entry"]'  # wrong length vs 3 input facts
+            content = [_Block()]
+
+        class _StubClient:
+            def __init__(self, *_, **__):
+                pass
+
+            class messages:
+                @staticmethod
+                def create(**_):
+                    return _StubResp()
+
+        import anthropic as _anthropic_module
+        monkeypatch.setattr(_anthropic_module, "Anthropic", _StubClient)
+
+        facts = ["A.", "B.", "C."]
+        assert condense_facts_for_notebook(facts) == facts
+
+    def test_returns_originals_on_invalid_json(self, monkeypatch):
+        monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
+
+        class _StubResp:
+            class _Block:
+                text = "this is not json"
+            content = [_Block()]
+
+        class _StubClient:
+            def __init__(self, *_, **__):
+                pass
+
+            class messages:
+                @staticmethod
+                def create(**_):
+                    return _StubResp()
+
+        import anthropic as _anthropic_module
+        monkeypatch.setattr(_anthropic_module, "Anthropic", _StubClient)
+
+        facts = ["A long enough fact.", "B long enough fact.", "C long enough fact."]
+        assert condense_facts_for_notebook(facts) == facts
+
+    def test_uses_condensed_when_short_enough(self, monkeypatch):
+        monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
+
+        class _StubResp:
+            class _Block:
+                text = '["Short A", "Short B", "Short C"]'
+            content = [_Block()]
+
+        class _StubClient:
+            def __init__(self, *_, **__):
+                pass
+
+            class messages:
+                @staticmethod
+                def create(**_):
+                    return _StubResp()
+
+        import anthropic as _anthropic_module
+        monkeypatch.setattr(_anthropic_module, "Anthropic", _StubClient)
+
+        facts = [
+            "First original fact that's much longer than the condensed.",
+            "Second original fact that's also much longer than the condensed.",
+            "Third original fact that's also much longer than the condensed.",
+        ]
+        result = condense_facts_for_notebook(facts)
+        assert result == ["Short A", "Short B", "Short C"]
+
+    def test_falls_back_per_fact_if_over_budget(self, monkeypatch):
+        monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
+
+        long_blob = "x" * 200
+        stub_text = '["OK short bullet", "' + long_blob + '", "OK third bullet"]'
+
+        class _StubResp:
+            class _Block:
+                text = stub_text
+            content = [_Block()]
+
+        class _StubClient:
+            def __init__(self, *_, **__):
+                pass
+
+            class messages:
+                @staticmethod
+                def create(**_):
+                    return _StubResp()
+
+        import anthropic as _anthropic_module
+        monkeypatch.setattr(_anthropic_module, "Anthropic", _StubClient)
+
+        facts = [
+            "First original fact, long.",
+            "Second original fact, intentionally kept intact for fallback.",
+            "Third original fact, also long.",
+        ]
+        result = condense_facts_for_notebook(facts, max_chars=90)
+        # First was within budget — use the condensed version.
+        assert result[0] == "OK short bullet"
+        # Second exceeded budget — original is preserved.
+        assert result[1] == facts[1]
+        # Third was within budget — use the condensed version.
+        assert result[2] == "OK third bullet"
