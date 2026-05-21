@@ -979,6 +979,11 @@
       "did": "did:plc:f5xsjnzgx7qadmxx6wxy7oje",
       "handle": "dianne-r-thomas.bsky.social",
       "timestamp": "2026-05-20T17:03:50.423636"
+    },
+    {
+      "did": "did:plc:7wgm3kp46nzalxyxfxo5cm5x",
+      "handle": "birdko.art",
+      "timestamp": "2026-05-21T01:46:18.092631"
     }
   ],
   "liked_posts": [
@@ -5551,6 +5556,11 @@
       "uri": "at://did:plc:cyt4bxfmtrmawwbhwajwacau/app.bsky.feed.post/3mmcpbjknlq2q",
       "author": "s0ap.bsky.social",
       "timestamp": "2026-05-20T20:52:30.091142"
+    },
+    {
+      "uri": "at://did:plc:7wgm3kp46nzalxyxfxo5cm5x/app.bsky.feed.post/3mmcfjf4vhc2g",
+      "author": "birdko.art",
+      "timestamp": "2026-05-21T01:46:17.876356"
     }
   ],
   "last_cleanup": "2026-05-15T16:33:36.227026",
