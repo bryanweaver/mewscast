@@ -1,0 +1,105 @@
+{
+  "story_id": "2026-05-21-officers-who-defended-capitol-a55f363544",
+  "headline_seed": "Officers who defended Capitol from rioters sue to block payouts from fund - NPR",
+  "brief": {
+    "story_id": "2026-05-21-officers-who-defended-capitol-a55f363544",
+    "consensus_facts": [
+      "Two police officers \u2014 former U.S. Capitol Police officer Harry Dunn and Metropolitan Police Department officer Daniel Hodges \u2014 filed a federal lawsuit to block payouts from the Trump administration's Anti-Weaponization Fund.",
+      "The fund is approximately $1.776\u2013$1.8 billion and stems from a settlement of Trump's lawsuit against the IRS over the leak of his tax returns.",
+      "The fund is designed to compensate individuals who claim they were targets of politically motivated prosecutions under prior administrations.",
+      "The lawsuit describes the fund as 'the most brazen act of presidential corruption this century' and calls for dissolving it.",
+      "The lawsuit alleges no statute authorizes the fund's creation and that its design violates the Constitution and federal law.",
+      "Acting Attorney General Todd Blanche defended the fund's creation during a congressional hearing and did not rule out the possibility that Jan. 6 rioters who assaulted police could be eligible for payouts.",
+      "Dunn and Hodges both testified before Congress about their experiences defending the Capitol on Jan. 6, 2021.",
+      "A five-member commission appointed by the attorney general will decide on payouts; members have not yet been announced."
+    ],
+    "disagreements": [
+      {
+        "topic": "Exact dollar amount of the fund",
+        "positions": {
+          "NPR": "Reports $1.776 billion",
+          "ABC News": "Reports $1.7 billion",
+          "The Washington Post": "Reports 'nearly $1.8 billion'",
+          "Reuters": "Reports $1.8 billion in headline"
+        }
+      },
+      {
+        "topic": "Constitutional basis of legal challenge",
+        "positions": {
+          "ABC News": "Specifies the lawsuit invokes the Administrative Procedures Act (arbitrary and capricious) and the Fourteenth Amendment's prohibition on funding insurrections",
+          "NPR": "Does not specify constitutional or statutory bases beyond general illegality claims"
+        }
+      },
+      {
+        "topic": "Whether the lawsuit is the first legal challenge",
+        "positions": {
+          "The Washington Post": "Explicitly identifies this as the 'first known legal challenge' to the fund",
+          "NPR": "Does not characterize the lawsuit's novelty",
+          "ABC News": "Does not characterize the lawsuit's novelty"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only. Leads with 'Police officers who guarded Capitol' and characterizes the fund as 'Trump's $1.8 billion slush fund' \u2014 adopting the plaintiffs' language in the headline, which is notable for a wire service.",
+      "NPR": "Full body text available. Leads with the officers' lawsuit and provides substantial detail on acting AG Blanche's defense of the fund, including his CNN interview where he said 'people that hurt police get money all the time' and dismissed criticism as 'fake outrage.' Includes context on the more than 100 officers injured and nearly 1,600 people charged. Notes one of the plaintiffs' attorneys is a former DOJ prosecutor who handled Jan. 6 cases. Frames the fund as tied to Trump's $10 billion IRS lawsuit. Notably balanced in presenting both the officers' claims and Blanche's defense.",
+      "Politico": "Headline-only; body text was blocked by a 403 error. Headline frames it as 'Jan. 6 police officers sue to block Trump's anti-weaponization fund' \u2014 using the administration's own name for the fund.",
+      "Associated Press": "Body text is effectively a caption/stub \u2014 only a brief summary line about Blanche defending the fund plus photo descriptions. No substantive body text for analysis. The headline mirrors NPR's framing, emphasizing the officers, the dollar amount, and the 'anti-weaponization' label.",
+      "The Washington Post": "Body text is behind a paywall; only the headline, byline, and metadata are available. Headline emphasizes the lawsuit as 'first known legal challenge' to the fund. Related articles sidebar reveals extensive prior WaPo coverage of Jan. 6 consequences and DOJ settlements, suggesting the paper is framing this as part of a broader pattern of Trump administration actions to undo Jan. 6 accountability.",
+      "ABC News": "Full body text available. Uniquely reports that former Trump HHS spokesperson Michael Caputo announced plans to seek $2.7 million from the fund, claiming he was targeted by the FBI's Russia investigation and a Biden-era investigation related to a documentary. Includes Caputo's letter posted on X. Also uniquely specifies the Fourteenth Amendment insurrection-funding argument and the Administrative Procedures Act claim. Frames the story with both the lawsuit and an early example of someone seeking fund payouts.",
+      "The New York Times": "Headline-only. Headline is straightforward: 'Jan. 6 Police Officers Sue to Block Trump's Payout Fund.' No body text available for analysis."
+    },
+    "primary_source_alignment": [
+      "No primary source (the lawsuit filing itself) was located in the dossier. Multiple outlets quote identical language from the suit ('most brazen act of presidential corruption this century,' 'no statute authorizes its creation'), suggesting they had access to the filing. Without the primary source, it is impossible to verify whether outlets are selectively quoting or omitting key legal arguments."
+    ],
+    "missing_context": [
+      "The actual lawsuit filing is not available in the dossier; the legal arguments, named defendants, specific constitutional claims, and requested relief cannot be independently verified against the primary source.",
+      "No outlet in the dossier explains the legal mechanism by which Trump's $10 billion IRS lawsuit was settled for $1.776 billion and redirected into a compensation fund \u2014 the structure of this settlement and whether it followed normal DOJ settlement procedures is unclear.",
+      "No outlet explains who specifically would be eligible for payouts beyond the vague category of people who believe they were 'politically targeted.' The criteria, application process, and timeline remain unexplained.",
+      "No outlet addresses whether Congress had any role in authorizing or appropriating the $1.776 billion, or whether this is entirely an executive branch action \u2014 a critical question for the legal challenge.",
+      "Only ABC News mentions a specific prospective claimant (Michael Caputo seeking $2.7 million); no other outlet reports on who else may seek payouts, making it difficult to assess the fund's practical scope.",
+      "No outlet reports on whether other Jan. 6 officers or police unions have joined or endorsed the lawsuit.",
+      "The Washington Post's related articles suggest a broader pattern of DOJ settlements benefiting Trump allies, but no outlet in the dossier connects this fund to those other settlements in body text.",
+      "Three outlets (Reuters, Politico, NYT) are headline-only, and two others (AP, WaPo) have only stub or paywalled body text, limiting the depth of cross-outlet verification."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets (NPR and ABC News) provide substantive full body text corroborating the core facts, with enough consensus for a straight report. While there are some framing differences \u2014 particularly ABC News's unique Caputo detail \u2014 the core story of the lawsuit, its plaintiffs, and the fund's origin are well-established across sources. The framing divergences are not material enough for a META post.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/police-officers-who-guarded-capitol-sue-block-trumps-18-billion-slush-fund-2026-05-20/",
+      "title": "Police officers who guarded Capitol sue to block Trump's $1.8 billion 'slush fund' - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/21/g-s1-123293/officers-who-defended-capitol-sue",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/20/trump-weaponization-fund-lawsuit-jan-6-00929342",
+      "title": "Jan. 6 police officers sue to block Trump\u2019s \u2018anti-weaponization fund\u2019 - Politico"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/irs-trump-settlement-tax-returns-police-capitol-riot-fc73eb5f35481bb6d8892ac1e14e98bd",
+      "title": "Officers who defended Capitol from rioters sue to block payouts from $1.8B \u2018anti-weaponization\u2019 fund - AP News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/05/20/lawsuit-is-first-known-legal-challenge-new-18-billion-fund/",
+      "title": "Police officers at Capitol on Jan. 6 sue to block DOJ payout fund - The Washington Post"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/2-officers-defended-capitol-jan-6-sue-stop/story?id=133151726",
+      "title": "2 officers who defended Capitol on Jan. 6 sue to stop Trump's Anti-Weaponization Fund - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/20/us/politics/jan-6-officers-lawsuit-trump-fund.html",
+      "title": "Jan. 6 Police Officers Sue to Block Trump\u2019s Payout Fund - The New York Times"
+    }
+  ]
+}
