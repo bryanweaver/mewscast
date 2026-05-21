@@ -3,6 +3,7 @@ Bluesky integration using atproto
 """
 import os
 import io
+import re
 from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
@@ -12,6 +13,47 @@ from typing import Optional
 from PIL import Image
 from content_generator import _truncate_at_sentence
 from bluesky_client import create_bluesky_client
+
+# URLs in plain reply text are NOT auto-clickable in Bluesky — the
+# atproto wire format requires explicit rich-text facets that point at
+# each URL's byte range. _build_url_facets does this scan-and-build so
+# replies containing a dossier link actually render as a hyperlink.
+_URL_FACET_RE = re.compile(rb"https?://[^\s)\]<>\"'`]+")
+
+
+def _build_url_facets(text: str) -> list:
+    """Find http(s) URLs in ``text`` and return AppBskyRichtextFacet
+    entries that make each one a clickable hyperlink. Byte offsets are
+    UTF-8 (the atproto wire format requirement).
+    """
+    if not text:
+        return []
+    facets: list = []
+    encoded = text.encode("utf-8")
+    for match in _URL_FACET_RE.finditer(encoded):
+        url_bytes = match.group(0)
+        # Trim trailing punctuation that almost never belongs to a URL.
+        # We adjust both the URL itself and the byte_end so the facet
+        # range matches the trimmed value exactly.
+        while url_bytes and url_bytes[-1:] in (b".", b",", b";", b":", b"!", b"?"):
+            url_bytes = url_bytes[:-1]
+        if not url_bytes:
+            continue
+        try:
+            url = url_bytes.decode("utf-8")
+        except UnicodeDecodeError:
+            continue
+        byte_start = match.start()
+        byte_end = byte_start + len(url_bytes)
+        facets.append(
+            models.AppBskyRichtextFacet.Main(
+                index=models.AppBskyRichtextFacet.ByteSlice(
+                    byte_start=byte_start, byte_end=byte_end,
+                ),
+                features=[models.AppBskyRichtextFacet.Link(uri=url)],
+            )
+        )
+    return facets
 
 # Bluesky hard limit: 1,000,000 bytes for image uploads
 BLUESKY_MAX_IMAGE_BYTES = 1_000_000
@@ -205,10 +247,12 @@ class BlueskyBot:
             )
             embed = models.AppBskyEmbedImages.Main(images=[image_record])
 
+            facets = _build_url_facets(text)
             response = self.client.send_post(
                 text=text,
                 reply_to=reply_ref,
                 embed=embed,
+                facets=facets if facets else None,
             )
 
             print(f"✓ Reply with image posted! URI: {response.uri}")
