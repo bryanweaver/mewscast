@@ -1,0 +1,115 @@
+{
+  "story_id": "2026-05-21-iran-says-the-us-2f288fe3c0",
+  "headline_seed": "Iran Says the US\u2019s Latest Proposal Has \u2018Narrowed the Gaps\u2019 - Bloomberg.com",
+  "brief": {
+    "story_id": "2026-05-21-iran-says-the-us-2f288fe3c0",
+    "consensus_facts": [
+      "Iran said on Thursday, May 21, 2026, that it is reviewing the latest U.S. proposal aimed at ending the war, with Tehran indicating the proposal has narrowed gaps between the two sides to some extent.",
+      "President Trump said he is willing to wait a short period \u2014 described as 'a couple of days' or 'a few days' \u2014 for Iran's response to the latest American offer.",
+      "Trump warned of renewed military strikes against Iran if a deal is not reached, saying the U.S. is 'all ready to go.'",
+      "Pakistan's Army Chief Asim Munir is expected in Tehran on Thursday as part of ongoing mediation efforts between the U.S. and Iran.",
+      "Pakistan has been serving as an intermediary in indirect U.S.-Iran peace negotiations.",
+      "Oil prices traded higher on Thursday, with Brent crude rising; both CBS News and CNBC report prices remain significantly elevated since the war began in late February 2025.",
+      "Iran's Revolutionary Guard warned against further U.S.-Israeli attacks, threatening to extend the conflict 'beyond the region.'",
+      "The Strait of Hormuz remains effectively closed to shipping traffic since U.S. and Israeli strikes against Iran began on approximately Feb. 28, 2025."
+    ],
+    "disagreements": [
+      {
+        "topic": "Exact oil price figures",
+        "positions": {
+          "CBS News": "Brent crude rose 3% to about $108 per barrel.",
+          "CNBC": "Brent crude traded 1.9% higher at $106.92 per barrel; WTI up 2.4% at $100.59 per barrel."
+        }
+      },
+      {
+        "topic": "Characterization of Iran's tone and posture",
+        "positions": {
+          "Bloomberg": "Frames Iran's response as cautiously positive \u2014 'narrowed the gaps' \u2014 while noting Iran demands 'an end to the temptation for war on Washington's part.'",
+          "CBS News": "Includes Iran's positive diplomatic signals but also reports Iranian President Pezeshkian vowed to strengthen the military, and that the new Supreme Leader has barred removal of enriched uranium \u2014 a flat rejection of a core U.S. demand.",
+          "CNBC": "Focuses on the diplomatic review process and Pakistan's mediator role, but also highlights Iran's Revolutionary Guard threat to extend the conflict 'beyond the region.'"
+        }
+      },
+      {
+        "topic": "Trump's exact timeline language",
+        "positions": {
+          "CBS News": "Trump said he'd wait 'a couple of days.'",
+          "CNBC": "Trump said he'd wait 'a few days' but that 'it could go very quickly.'"
+        }
+      },
+      {
+        "topic": "How close Trump came to ordering a new strike",
+        "positions": {
+          "CNBC": "Reports Trump said he'd been 'an hour away' from deciding to attack Iran on Tuesday before being persuaded to postpone.",
+          "CBS News": "Does not mention this specific claim in the retrieved text.",
+          "Bloomberg": "Does not mention this specific claim."
+        }
+      },
+      {
+        "topic": "Supreme Leader Khamenei's decree on enriched uranium",
+        "positions": {
+          "CBS News": "Reports, citing Reuters via two senior Iranian sources, that new Supreme Leader Mojtaba Khamenei has formally decreed that Iran's highly enriched uranium stockpile must remain in the country \u2014 amounting to a rejection of a key U.S. demand.",
+          "Bloomberg": "Does not mention this.",
+          "CNBC": "Does not mention this."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Extremely terse body text \u2014 essentially a wire flash with a single key quote ('narrowed the gaps to some extent') and Iran's demand for an end to U.S. 'temptation for war.' No oil-price detail, no military context, no mention of Pakistan mediation or the enriched uranium issue. Frames the story purely as a diplomatic signal from Tehran. The truncated text suggests a paywalled article.",
+      "CBS News": "The most comprehensive outlet in the dossier, running a live-blog format with multiple discrete updates. Leads with the diplomatic review but quickly layers in several complicating factors: the new Supreme Leader's reported decree barring removal of enriched uranium (sourced to Reuters), Pezeshkian's vow to strengthen the military, market impacts, and the human cost of the war on Iranian civil society (filmmakers at Cannes). Buries none of the tensions \u2014 this is the only outlet to surface the uranium decree, which if accurate represents a fundamental obstacle to any deal. Also uniquely reports Trump said Netanyahu would 'do whatever I want him to do' on Iran. Lean-left framing is visible in the attention to Iranian civilian suffering and cultural impacts alongside strategic coverage.",
+      "CNBC": "Leads with the diplomatic exchange and Trump's willingness to wait, then quickly pivots to market-relevant detail: oil prices, the Strait of Hormuz disruption, and a UAE pipeline bypass project. Uniquely reports Trump said he was 'an hour away' from ordering a strike on Tuesday. Includes the Revolutionary Guard's threat to extend the conflict 'beyond the region.' Framing is financial-audience-oriented; human-impact and nuclear-enrichment details are absent. Provides the most granular oil-price data (both Brent and WTI, with percentage moves and absolute prices).",
+      "Reuters": "Two headline-only entries. First headline ('Trump says US may strike Iran again but that Tehran wants deal') frames the story from the U.S. threat-and-carrot angle. Second headline ('Mediator Pakistan pushes to get US-Iran peace talks on track') foregrounds Pakistan's mediator role. No body text available for analysis; URLs suggest fuller stories exist behind the links. CBS News cites Reuters as the source for the uranium decree story, suggesting Reuters had substantive reporting that is not directly available in this dossier.",
+      "The New York Times": "Headline-only ('Iran Threatens to Strike Beyond the Middle East if the U.S. Resumes Attacks') \u2014 body text returned a 403 error. The headline foregrounds Iran's escalatory threat, framing Iran as the aggressor in this news cycle, in contrast to Bloomberg's and CBS News's leads on the diplomatic review. No body text available for further analysis."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (e.g., the actual U.S. proposal text, Iran's 14-point framework, or official government statements in full) were located for this story.",
+      "Multiple outlets reference semi-official or state-run Iranian news agencies (ISNA, Nour News) as the source for Tehran's diplomatic posture, but none of these original texts are in the dossier.",
+      "The Reuters report on Supreme Leader Khamenei's uranium decree, cited by CBS News, is itself based on unnamed senior Iranian sources \u2014 it is not a primary document and CBS News notes it could not independently confirm the report."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides the actual text or detailed terms of the latest U.S. proposal, making it impossible to assess what 'narrowing the gaps' concretely means.",
+      "Iran's original 14-point framework, referenced by CNBC, is not described in detail by any outlet.",
+      "No outlet reports what specific terms the U.S. is demanding beyond the enriched uranium issue and an implicit end to the Hormuz blockade.",
+      "Casualty figures and humanitarian conditions inside Iran from the nearly three-month war are absent from all outlets except a brief cultural-impact note in CBS News.",
+      "The status of the ceasefire itself \u2014 when it began, its terms, and whether violations have occurred \u2014 is referenced but never explained in any retrieved body text.",
+      "No outlet discusses the legal or international-law framework for the U.S.-Israeli strikes or Iran's Hormuz blockade.",
+      "The role of Israel in these negotiations is only tangentially mentioned (CBS News quotes Trump on Netanyahu); no outlet details Israel's official position or participation.",
+      "The New York Times body text was inaccessible (403 error), and both Reuters articles are headline-only, significantly limiting the depth of cross-outlet comparison.",
+      "No outlet provides context on how close Iran may be to weaponizing its enriched uranium stockpile, despite the centrality of this issue to the negotiations."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Three outlets with retrievable body text report the same diplomatic development but with materially different emphases: Bloomberg focuses narrowly on the diplomatic signal, CNBC frames it for financial audiences with oil-price detail and Trump's near-strike revelation, and CBS News surfaces the potentially deal-breaking uranium decree and layers in military and cultural dimensions. The divergent framing of Iran's posture \u2014 cooperative vs. defiant \u2014 across outlets makes this a strong META candidate rather than a straight REPORT.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-21/iran-reviewing-trump-s-latest-offer-as-clock-ticks-on-ceasefire",
+      "title": ""
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-latest-peace-proposal/",
+      "title": "Live Updates: Iran says it's mulling latest U.S. peace proposal, Trump says he'll wait \"a couple of days\" - CBS News"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/21/iran-war-us-peace-talks-trump-hormuz.html",
+      "title": "Iran reviews U.S. peace proposal as Trump says he\u2019s willing to wait 'a few days' - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/iran-says-peace-proposal-includes-reparations-war-damage-us-troop-withdrawal-2026-05-19/",
+      "title": "Trump says US may strike Iran again but that Tehran wants deal - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/tehran-reviewing-latest-us-response-trump-suggests-he-can-wait-2026-05-21/",
+      "title": "Mediator Pakistan pushes to get US-Iran peace talks on track - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/20/world/middleeast/iran-threat-us-attacks-trump.html",
+      "title": "Iran Threatens to Strike Beyond the Middle East if the U.S. Resumes Attacks - The New York Times"
+    }
+  ]
+}
