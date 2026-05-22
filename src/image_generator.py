@@ -130,11 +130,16 @@ _FIELD_NOTES_STYLE_SPEC = (
     "quick, slightly crooked hand-drawn slash. Each numbered entry begins "
     "with a dash that varies slightly in length. Overall the page looks "
     "rushed and authentic — the OPPOSITE of careful penmanship. "
-    "Small black inked paw-print stamps in two corners as a subtle "
+    "Small black inked paw-print stamps in the TWO TOP corners as a subtle "
     "decorative motif (4 toe pads + 1 main pad each, slightly imperfect "
-    "ink, not perfectly aligned). At the bottom-right of the page: a "
-    "larger single black inked cat's paw-print stamp next to a slightly "
-    "scrawled cursive signature reading '— Walter'. "
+    "ink, not perfectly aligned). "
+    "The image frame is 3:2 landscape and the notepad is taller than that — "
+    "the bottom edge of the notepad may extend below the frame and that is "
+    "fine. However the signature MUST land inside the frame: at the "
+    "bottom-right of the visible area, a larger single black inked cat's "
+    "paw-print stamp next to a slightly scrawled cursive signature with an "
+    "em-dash followed by the word Walter. The signature must be fully "
+    "visible — do not crop it off. "
     "No additional doodles beyond what's specified, no coffee stains, no "
     "margin notes, no other decorations. Sparse, hurried, journalistic. "
 )
@@ -289,16 +294,13 @@ class ImageGenerator:
 
     @staticmethod
     def _sanitize_for_prompt(text: str) -> str:
-        """Normalize dynamic text for safe embedding inside double-quoted
-        prompt literals. Replaces double quotes with single quotes so the
-        surrounding "..." structure remains parseable as a single string,
-        and collapses internal newlines/tabs to single spaces so each
-        embedded value remains a one-liner. Strips leading/trailing
-        whitespace as a final cleanup.
+        """Normalize dynamic text for inline prompt embedding. Collapses
+        internal newlines/tabs to single spaces so each embedded value
+        remains a one-liner, then strips surrounding whitespace.
 
-        This preserves the human-readable meaning of the text (a fact with
-        an internal "quote" still reads as quoted speech) while keeping the
-        prompt's literal structure intact.
+        Double quotes are preserved: the prompt no longer wraps values in
+        "..." structural literals, and the page-text rules explicitly allow
+        source quotes to render exactly as written.
         """
         if not text:
             return ""
@@ -309,10 +311,7 @@ class ImageGenerator:
             .replace("\n", " ")
             .replace("\t", " ")
         )
-        # Replace double-quote with single-quote so the outer "..." wrappers
-        # used in the prompt aren't terminated mid-value.
-        normalized = normalized.replace('"', "'")
-        # Collapse runs of whitespace introduced by the swaps.
+        # Collapse runs of whitespace.
         while "  " in normalized:
             normalized = normalized.replace("  ", " ")
         return normalized.strip()
@@ -323,56 +322,72 @@ class ImageGenerator:
         """Compose the full Grok prompt for Walter's Field Notes image.
 
         Bypasses the cat-subject anchor and eye-catch anchor — this image is
-        a notepad photo, not a Walter portrait. Facts are quoted and the
-        model is instructed to render them exactly as written.
+        a notepad photo, not a Walter portrait. The model is instructed to
+        render the embedded text exactly as written.
 
-        Dynamic text (facts, headline, dateline) is sanitized to swap
-        embedded double-quotes for single-quotes and collapse newlines so
-        the prompt's "..." literal wrappers remain structurally intact.
+        Dynamic payloads (facts, headline, dateline) are sanitized to
+        collapse newlines into spaces and are inserted between explicit
+        newline delimiters so the surrounding instructions can't be read
+        as part of the literal text to render.
         """
         # Build the dateline line that appears under the FIELD NOTES header.
-        # Kept short — the page is text-dense already.
+        # NOTE: dynamic text below is passed WITHOUT surrounding double-
+        # quotes — earlier renders wrapped each value in "..." and Grok
+        # transcribed the literal quote marks into the image, producing
+        # mismatched / unterminated quotation marks. We tell Grok to render
+        # "the following text and nothing else" so the structural quotes
+        # don't leak into the visual output.
         dateline_line = ""
         if dateline:
             safe_dateline = self._sanitize_for_prompt(dateline)
+            # Newlines around {safe_dateline} delimit the literal payload
+            # from the following instruction so the next sentence isn't
+            # read as part of the rendered dateline text.
             dateline_line = (
-                f' Beneath the header, a smaller dateline reads exactly: '
-                f'"{safe_dateline}".'
+                f"\nBeneath the header, a smaller dateline reads exactly the "
+                f"following text and nothing else, on one line:\n"
+                f"{safe_dateline}\n"
             )
 
         # Numbered + dash-prefixed entries, each on its own line in the
         # prompt for clarity. The dash is part of the locked style spec
         # ("Each numbered entry begins with a dash") and matches the
-        # reference FIELD NOTES pad in the brand kit.
+        # reference FIELD NOTES pad in the brand kit. Entries are NOT
+        # wrapped in quotation marks here — see note on dateline_line.
         entries = []
         for idx, fact in enumerate(facts, start=1):
             safe_fact = self._sanitize_for_prompt(fact)
-            entries.append(f'    - {idx}. "{safe_fact}"')
+            entries.append(f"    - {idx}. {safe_fact}")
         entries_block = "\n".join(entries)
 
         story_line = ""
         if headline:
             safe_headline = self._sanitize_for_prompt(headline)
+            # Newlines around {safe_headline} delimit the literal payload.
             story_line = (
-                f' below a smaller subtitle that reads exactly: '
-                f'"{safe_headline}"'
+                f"\nBelow that, a smaller subtitle that reads exactly the "
+                f"following text and nothing else, on one line:\n"
+                f"{safe_headline}\n"
             )
 
         return (
             f"{_FIELD_NOTES_STYLE_SPEC}"
             f"\n\nText content on the page, rendered EXACTLY as written below "
             f"(do not paraphrase, do not abbreviate, do not add or drop words, "
-            f"do not change punctuation, do not correct spelling). All page "
-            f"text appears in ALL-CAPS BLOCK PRINT.\n\n"
-            f'Top of page, larger and underlined: "FIELD NOTES".'
+            f"do not change punctuation, do not correct spelling, and DO NOT "
+            f"add any extra quotation marks of any kind around the text — "
+            f"only use quotation marks if they appear in the source text "
+            f"itself as part of a quoted phrase). All page text appears in "
+            f"ALL-CAPS BLOCK PRINT.\n\n"
+            f"Top of page, larger and underlined: FIELD NOTES."
             f"{dateline_line}"
             f"{story_line}"
             f"\n\n{len(facts)} numbered entries follow, each prefixed with a dash, "
-            f"in the order shown, written exactly:\n\n"
+            f"in the order shown, written exactly (no surrounding quotation marks):\n\n"
             f"{entries_block}\n\n"
             f"Bottom-right corner of the page: a black inked cat's paw-print "
-            f"stamp next to a flowing cursive signature reading exactly: "
-            f'"— Walter".'
+            f"stamp next to a slightly scrawled cursive signature consisting "
+            f"of an em-dash followed by the word Walter."
         )
 
     def generate_field_notes(
@@ -381,7 +396,7 @@ class ImageGenerator:
         headline: str = "",
         dateline: Optional[str] = None,
         save_path: str = "temp_field_notes.png",
-        aspect_ratio: str = "3:4",
+        aspect_ratio: str = "3:2",
     ) -> tuple[Optional[str], Optional[str]]:
         """Generate a "Walter's Field Notes" reply image.
 
@@ -400,8 +415,12 @@ class ImageGenerator:
             dateline: Optional date string (e.g. "May 19, 2026") shown beneath
                 the header. Pass None to omit.
             save_path: Where to write the downloaded image.
-            aspect_ratio: Image aspect ratio. Defaults to 3:4 (portrait, matches
-                a real notepad page and is in Grok's supported set). Falls
+            aspect_ratio: Image aspect ratio. Defaults to 3:2 (landscape,
+                matches the main post image so the field-notes reply renders
+                inline consistently on both Bluesky and X — portrait images
+                were not rendering on X in the first live runs). The notepad
+                page is taller than 3:2; the style spec accepts a bottom-edge
+                crop and requires the signature to remain in-frame. Falls
                 back to 3:2 if an unsupported ratio is passed. Note: 4:5 is
                 NOT supported by Grok — verified via API error on 2026-05-20.
 
