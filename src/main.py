@@ -670,6 +670,12 @@ def _generate_field_notes_image_if_eligible(
     except (ValueError, TypeError):
         print("[journalism] field-notes: bad min_facts in config; defaulting to 3")
         min_facts = 3
+    # Clamp to a positive floor. A configured 0 or negative would slip past
+    # the gate (extract_top_facts returns [] for n<=0, and len([]) < n is
+    # False for n<=0), propagating an empty fact list through the condense
+    # LLM call before generate_field_notes finally bails.
+    if min_facts < 1:
+        min_facts = 1
     try:
         brief_conf = float(brief_dict.get("confidence", 0) or 0)
     except (ValueError, TypeError):
