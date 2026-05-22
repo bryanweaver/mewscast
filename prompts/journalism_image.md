@@ -34,6 +34,20 @@ Walter IS the field reporter here. He's at the scene, filing from the ground.
 - For BULLETIN specifically: add a sense of urgency — breaking news energy, red/amber accents, movement
 - Think: the reporter IS the story's witness
 
+**Backdrop selection — push past the obvious.** Reach for the SPECIFIC SCENE inside the story, not the generic landmark associated with the institution. Wire photographers go INSIDE the event, not outside the building.
+
+- BAD (lazy generic): a Congress story → Walter in front of the Capitol dome. A Pentagon story → Walter in front of the Pentagon. A SCOTUS story → Walter in front of the Supreme Court steps. A White House story → Walter in front of the West Wing.
+- GOOD (story-specific): a Congress vote story → press gallery overlooking the House floor with the vote tally board visible. A Pentagon UFO-video release → a darkened briefing room with a declassified infrared video frozen on the screen, or a cockpit-view monitor showing the UAP footage. A SCOTUS decision → the marble courtroom interior with bench and seal, OR a stack of bound opinions on a clerk's desk. A White House diplomatic story → the press briefing room lectern with the relevant flag, or the Oval Office viewed past Walter's shoulder.
+
+The test: would a reader who already knows the story (Pentagon UFO release, congressional vote, court ruling) learn anything from the backdrop, or could it be ANY story about that institution? If the latter, you picked the lazy backdrop. Reach for the INTERIOR, the EVENT, the OBJECT — not the EXTERIOR of the headquarters.
+
+Other backdrop angles to consider when the institutional exterior is the default temptation:
+- The room where the news actually happened (briefing room, hearing room, situation room, press pool)
+- The artifact at the center of the story (document with seal, video frame, evidence display, the weapon system or vehicle that's the subject)
+- The audience or counterpart (witnesses being sworn in, press corps raising hands, a foreign counterpart at a podium)
+- The aftermath or evidence (impact site, evidence locker, crowd, crime-scene tape — IF appropriate to the story's gravity)
+- An over-the-shoulder or oblique frame that catches the building only as context, not centerpiece
+
 ### If post_type is META — "The News Desk"
 
 Walter is NOT at the scene. He's back at the newsroom, reading every outlet's coverage and comparing them. This is the ANCHOR DESK format.
