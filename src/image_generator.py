@@ -294,16 +294,13 @@ class ImageGenerator:
 
     @staticmethod
     def _sanitize_for_prompt(text: str) -> str:
-        """Normalize dynamic text for safe embedding inside double-quoted
-        prompt literals. Replaces double quotes with single quotes so the
-        surrounding "..." structure remains parseable as a single string,
-        and collapses internal newlines/tabs to single spaces so each
-        embedded value remains a one-liner. Strips leading/trailing
-        whitespace as a final cleanup.
+        """Normalize dynamic text for inline prompt embedding. Collapses
+        internal newlines/tabs to single spaces so each embedded value
+        remains a one-liner, then strips surrounding whitespace.
 
-        This preserves the human-readable meaning of the text (a fact with
-        an internal "quote" still reads as quoted speech) while keeping the
-        prompt's literal structure intact.
+        Double quotes are preserved: the prompt no longer wraps values in
+        "..." structural literals, and the page-text rules explicitly allow
+        source quotes to render exactly as written.
         """
         if not text:
             return ""
@@ -314,10 +311,7 @@ class ImageGenerator:
             .replace("\n", " ")
             .replace("\t", " ")
         )
-        # Replace double-quote with single-quote so the outer "..." wrappers
-        # used in the prompt aren't terminated mid-value.
-        normalized = normalized.replace('"', "'")
-        # Collapse runs of whitespace introduced by the swaps.
+        # Collapse runs of whitespace.
         while "  " in normalized:
             normalized = normalized.replace("  ", " ")
         return normalized.strip()
@@ -328,12 +322,13 @@ class ImageGenerator:
         """Compose the full Grok prompt for Walter's Field Notes image.
 
         Bypasses the cat-subject anchor and eye-catch anchor — this image is
-        a notepad photo, not a Walter portrait. Facts are quoted and the
-        model is instructed to render them exactly as written.
+        a notepad photo, not a Walter portrait. The model is instructed to
+        render the embedded text exactly as written.
 
-        Dynamic text (facts, headline, dateline) is sanitized to swap
-        embedded double-quotes for single-quotes and collapse newlines so
-        the prompt's "..." literal wrappers remain structurally intact.
+        Dynamic payloads (facts, headline, dateline) are sanitized to
+        collapse newlines into spaces and are inserted between explicit
+        newline delimiters so the surrounding instructions can't be read
+        as part of the literal text to render.
         """
         # Build the dateline line that appears under the FIELD NOTES header.
         # NOTE: dynamic text below is passed WITHOUT surrounding double-
@@ -345,9 +340,13 @@ class ImageGenerator:
         dateline_line = ""
         if dateline:
             safe_dateline = self._sanitize_for_prompt(dateline)
+            # Newlines around {safe_dateline} delimit the literal payload
+            # from the following instruction so the next sentence isn't
+            # read as part of the rendered dateline text.
             dateline_line = (
-                f" Beneath the header, a smaller dateline reads exactly the "
-                f"following text and nothing else: {safe_dateline}"
+                f"\nBeneath the header, a smaller dateline reads exactly the "
+                f"following text and nothing else, on one line:\n"
+                f"{safe_dateline}\n"
             )
 
         # Numbered + dash-prefixed entries, each on its own line in the
@@ -364,9 +363,11 @@ class ImageGenerator:
         story_line = ""
         if headline:
             safe_headline = self._sanitize_for_prompt(headline)
+            # Newlines around {safe_headline} delimit the literal payload.
             story_line = (
-                f" below a smaller subtitle that reads exactly the following "
-                f"text and nothing else: {safe_headline}"
+                f"\nBelow that, a smaller subtitle that reads exactly the "
+                f"following text and nothing else, on one line:\n"
+                f"{safe_headline}\n"
             )
 
         return (

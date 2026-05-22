@@ -305,19 +305,18 @@ class TestBuildFieldNotesPrompt:
         # No subtitle line when headline is empty.
         assert "subtitle that reads" not in prompt
 
-    def test_double_quotes_sanitized(self, gen):
-        # A fact with internal double-quotes must not break the prompt
-        # structure. We swap to single quotes; the quoted-speech intent
-        # survives, and Grok no longer transcribes literal double quotes
-        # into the image (which had been producing unterminated marks).
+    def test_source_double_quotes_preserved(self, gen):
+        # Source double-quotes inside a fact must survive into the prompt
+        # unchanged — the page-text rules explicitly allow quotation marks
+        # when they appear in the source as a quoted phrase, and the prompt
+        # no longer wraps values in structural "..." literals that would
+        # require swapping internal quotes.
         fact_with_dq = 'Wahl called the actions "heroic" in his briefing.'
         facts = [fact_with_dq, "Second fact here is long.", "Third fact here is long."]
         prompt = gen._build_field_notes_prompt(facts, headline="X")
-        # Double quotes inside the fact should be swapped for single quotes.
-        assert '"heroic"' not in prompt
-        assert "'heroic'" in prompt
+        assert '"heroic"' in prompt
         # Entries are dash-prefixed and numbered, with no surrounding
-        # quotation marks around the fact text itself.
+        # quotation marks added around the fact text itself.
         assert "- 1. " in prompt
 
     def test_newlines_in_facts_collapsed(self, gen):
