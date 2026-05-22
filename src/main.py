@@ -680,14 +680,16 @@ def _generate_field_notes_image_if_eligible(
         return None
 
     # Gate (have at least min_facts strong points) is decoupled from render
-    # count (always top 3 — per product decision: three on a notepad reads
-    # right and fits the visual). Stricter min_facts can be set in config
-    # without changing the rendered count.
-    facts_pool = extract_top_facts(brief_dict, n=max(min_facts, 3))
-    if len(facts_pool) < min_facts:
+    # count (target 3 — three on a notepad reads right and fits the visual,
+    # but render fewer if that's all the brief has). extract_top_facts is
+    # all-or-nothing for n, so the gate and render counts are queried
+    # separately; a min_facts of 1 or 2 must not silently require 3.
+    gate_facts = extract_top_facts(brief_dict, n=min_facts)
+    if len(gate_facts) < min_facts:
         print("[journalism] field-notes skip: insufficient consensus facts after cleanup")
         return None
-    facts = facts_pool[:3]
+    render_facts = extract_top_facts(brief_dict, n=3) or gate_facts
+    facts = render_facts[:3]
 
     # Condense full consensus-facts into ~60-char notebook bullets so they
     # render legibly on the notepad page. The Haiku condenser preserves
