@@ -71,7 +71,7 @@ jobs:
               git commit -m "Update outlet reply history [skip ci]"
 
               for i in {1..3}; do
-                git pull --rebase origin main && git push && break || {
+                git pull --rebase --autostash origin main && git push && break || {
                   echo "Push failed (attempt $i/3), retrying..."
                   sleep $((i * 2))
                 }
