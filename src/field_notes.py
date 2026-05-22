@@ -6,11 +6,18 @@ Pulls the first N consensus facts from a dossier brief, strips the
 returns a clean list ready to be rendered into the Field Notes image
 reply by ImageGenerator.generate_field_notes.
 
-Pure-Python, no I/O, no LLM calls. Skipping behavior is the caller's
-decision — this module reports what it has and lets main.py gate on it.
+Includes an optional Haiku-backed condenser that turns long facts into
+~60-char notebook bullets so they fit comfortably on the visual page
+without sacrificing fact fidelity. Falls back to the input facts on any
+LLM failure so the pipeline keeps working.
+
+Skipping behavior is the caller's decision — this module reports what it
+has and lets main.py gate on it.
 """
 from __future__ import annotations
 
+import json
+import os
 import re
 
 # Words that indicate the start of a meta-analyzer attribution tail.
@@ -107,3 +114,118 @@ def extract_top_facts(
     if len(cleaned) < n:
         return []
     return cleaned
+
+
+_CONDENSE_SYSTEM_PROMPT = (
+    "You are a copy editor for Walter Croncat, a real-journalism Bluesky/X "
+    "account. You are condensing consensus facts into short notebook bullets "
+    "for an image of a reporter's field-notes pad.\n\n"
+    "Rules — follow EXACTLY:\n"
+    "1. Preserve every named entity (people, places, organizations, "
+    "agencies, countries) and every number, date, and dollar amount.\n"
+    "2. Drop hedge words, throat-clearing, redundant descriptors, attributive "
+    "framing, source citations, and parenthetical asides.\n"
+    "3. Target 50–70 characters per bullet, max 90.\n"
+    "4. Use plain declarative sentences. No quotation marks unless the "
+    "original fact contains a direct quote (a phrase someone said).\n"
+    "5. Do NOT invent details. Do NOT add color or speculation. If you can't "
+    "condense a fact without changing its meaning, output the original.\n"
+    "6. Output ONLY a JSON array of strings, one bullet per input fact, in "
+    "the same order. No commentary, no markdown, no code fences."
+)
+
+
+def condense_facts_for_notebook(
+    facts: list[str],
+    headline: str = "",
+    max_chars: int = 90,
+    model: str = "claude-haiku-4-5-20251001",
+) -> list[str]:
+    """Condense consensus facts into ~60-char notebook bullets via Haiku.
+
+    Returns a list the same length as ``facts``. If the LLM call fails,
+    returns the input unchanged — the field-notes pipeline keeps working
+    with full-length facts rather than silently dropping the reply.
+
+    The condenser is constrained by ``_CONDENSE_SYSTEM_PROMPT`` to preserve
+    entities/numbers/dates and refuse to invent details. Output is parsed
+    as a JSON array; on any parse failure the input is returned as-is.
+
+    Args:
+        facts: original consensus-fact strings (post-attribution-stripping).
+        headline: optional story headline passed to the model for context —
+            helps it judge what's central vs. redundant.
+        max_chars: post-LLM safety cap. Bullets longer than this are
+            backfilled with the original fact (which the caller may also
+            choose to truncate or not).
+        model: Anthropic model id. Defaults to current Haiku.
+    """
+    if not facts:
+        return []
+
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+    if not api_key:
+        # No key in the runner environment — skip condensation cleanly.
+        return list(facts)
+
+    try:
+        from anthropic import Anthropic  # local import keeps the module
+        # importable when anthropic isn't installed in dev environments
+    except ImportError:
+        return list(facts)
+
+    user_payload = {
+        "headline": headline or "",
+        "facts": list(facts),
+    }
+    try:
+        client = Anthropic(api_key=api_key)
+        resp = client.messages.create(
+            model=model,
+            max_tokens=600,
+            system=_CONDENSE_SYSTEM_PROMPT,
+            messages=[{
+                "role": "user",
+                "content": json.dumps(user_payload, ensure_ascii=False),
+            }],
+        )
+        raw = "".join(
+            block.text for block in resp.content if getattr(block, "text", None)
+        ).strip()
+    except Exception as exc:  # network, auth, rate limit, etc.
+        print(f"[field_notes] condense Haiku call failed (using originals): {exc}")
+        return list(facts)
+
+    # Strip code fences if the model added them despite the instruction.
+    if raw.startswith("```"):
+        raw = raw.strip("`")
+        if raw.lower().startswith("json"):
+            raw = raw[4:].lstrip()
+
+    try:
+        parsed = json.loads(raw)
+    except json.JSONDecodeError:
+        print(f"[field_notes] condense unparseable response (using originals): {raw[:120]!r}")
+        return list(facts)
+
+    if not isinstance(parsed, list) or len(parsed) != len(facts):
+        print(f"[field_notes] condense returned wrong shape (using originals): {parsed!r}")
+        return list(facts)
+
+    condensed: list[str] = []
+    for original, candidate in zip(facts, parsed):
+        if not isinstance(candidate, str):
+            condensed.append(original)
+            continue
+        cleaned = candidate.strip()
+        if not cleaned:
+            condensed.append(original)
+            continue
+        if len(cleaned) > max_chars:
+            # Model didn't honor the budget — keep the original rather than
+            # truncating mid-sentence (which can chop entities). Caller may
+            # decide differently in the future.
+            condensed.append(original)
+            continue
+        condensed.append(cleaned)
+    return condensed
