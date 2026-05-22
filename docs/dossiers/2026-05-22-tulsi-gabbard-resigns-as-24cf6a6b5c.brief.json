@@ -1,0 +1,125 @@
+{
+  "story_id": "2026-05-22-tulsi-gabbard-resigns-as-24cf6a6b5c",
+  "headline_seed": "Tulsi Gabbard resigns as director of national intelligence - Axios",
+  "brief": {
+    "story_id": "2026-05-22-tulsi-gabbard-resigns-as-24cf6a6b5c",
+    "consensus_facts": [
+      "Director of National Intelligence Tulsi Gabbard announced her resignation on Friday, May 22, 2026, citing her husband Abraham Williams' diagnosis with an extremely rare form of bone cancer.",
+      "Gabbard's resignation is effective June 30, 2026.",
+      "President Trump praised Gabbard on Truth Social, saying she had done 'an incredible job' and expressing confidence her husband would recover.",
+      "Aaron Lukas, the principal deputy director of national intelligence, will serve as acting director.",
+      "Gabbard posted her resignation letter on X and sent it to Trump, stating she could not 'in good conscience' ask her husband to face the fight alone.",
+      "Gabbard is a former Democratic congresswoman who endorsed Trump in 2024 and joined the Republican Party before the election.",
+      "Gabbard was confirmed as DNI in a narrow party-line vote, 52-48.",
+      "Gabbard's tenure was marked by tensions with the administration over the US war with Iran, including Trump publicly contradicting her testimony that Iran had not revived a nuclear weapons program."
+    ],
+    "disagreements": [
+      {
+        "topic": "Who first reported the resignation",
+        "positions": {
+          "Reuters": "Credits Fox News Digital as first to report.",
+          "Axios": "Credits Laura Loomer as first to report.",
+          "NBC News": "Credits Fox News as first to report."
+        }
+      },
+      {
+        "topic": "Whether Gabbard was effectively forced out or left voluntarily",
+        "positions": {
+          "CNN": "Frames the departure as voluntary, driven by husband's cancer; notes White House heard rumors she was planning to leave but she denied it as recently as two weeks ago.",
+          "Axios": "Reports that last month Gabbard 'narrowly survived getting fired by Trump' and was saved by Roger Stone's intervention; frames the cancer rationale within a context of political vulnerability. URL slug reads 'tulsi-gabbard-removed-trump-administration'.",
+          "NBC News": "Reports Gabbard 'never made it into the president's inner circle,' was often not in the room during pivotal national security moments, and that there had been ongoing speculation she might lose her job; but notes she 'wasn't ousted' like Bondi or Noem.",
+          "BBC News": "Presents resignation at face value as cancer-related, with minimal subtext about tensions."
+        }
+      },
+      {
+        "topic": "Number and identity of Cabinet departures",
+        "positions": {
+          "CNN": "Says Gabbard follows ousters of Kristi Noem and Pam Bondi, calling them 'ousters.'",
+          "NBC News": "Says Gabbard is the fourth Cabinet-member departure \u2014 all women \u2014 including Bondi, Noem, and former Labor Secretary Lori Chavez De Remer, who resigned amid a misconduct investigation."
+        }
+      },
+      {
+        "topic": "CIA-ODNI feud details",
+        "positions": {
+          "Axios": "Reports a behind-the-scenes feud between Gabbard's ODNI and the CIA that became public during a Senate Homeland Security Committee hearing, involving JFK files, COVID origins, and Havana Syndrome; notes a CIA spokesperson disputed the testimony.",
+          "NBC News": "Reports Gabbard 'blindsided CIA officials' by disclosing an undercover CIA officer's name and also declassified a document related to Russian election interference, raising alarms at CIA headquarters; reports tensions with CIA Director Ratcliffe.",
+          "CNN": "Does not mention CIA-ODNI feuds.",
+          "BBC News": "Does not mention CIA-ODNI feuds."
+        }
+      },
+      {
+        "topic": "Joe Kent's resignation and its significance",
+        "positions": {
+          "Axios": "Reports that ex-NCTC Director Joe Kent left roughly two months ago with a fiery resignation letter arguing Trump launched the Iran war under pressure from Israel despite 'no imminent threat'; includes Gabbard's response avoiding Kent's name.",
+          "NBC News": "References Kent's resignation and his objections to the Iran war, noting Gabbard looked uncomfortable fielding questions afterward and that both were military veterans with anti-interventionist views.",
+          "CNN": "Does not mention Kent.",
+          "BBC News": "Does not mention Kent."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only article available. Credits Fox News Digital as the original reporting source. No body text to analyze framing.",
+      "CNN": "Leads with the personal and emotional elements \u2014 the husband's cancer, quotes from the resignation letter about their marriage, and Gabbard's military service background. Mentions tensions with the White House over Iran as 'contradictory and confusing messaging' but does not detail the CIA feud or the Joe Kent departure. Notes she follows Noem and Bondi departures, characterizing those as 'ousters.' Includes biographical detail about Gabbard being the first American Samoan and Hindu in Congress.",
+      "BBC News": "The most restrained and neutral framing. Presents the resignation at face value with the cancer explanation. Briefly notes she was 'largely out of public view' during key military actions against Iran, Cuba, and Venezuela, which is a subtle way of flagging her marginalization without editorializing. Does not explore CIA feuds, Kent, or the near-firing. Shortest substantive piece in the dossier.",
+      "Axios": "The most politically contextual framing. The URL slug ('tulsi-gabbard-removed-trump-administration') suggests an editorial framing of removal rather than resignation. Leads with the resignation announcement but quickly pivots to 'Between the lines' context: her near-firing, Laura Loomer's criticism, the CIA-ODNI feud, the Kent resignation, and Trump publicly contradicting her Iran testimony. Frames the cancer explanation within a broader narrative of political unsustainability. Uniquely reports Roger Stone's role in preventing her earlier firing.",
+      "NBC News (full article)": "The most detailed and investigative treatment. Reports Gabbard 'never made it into the president's inner circle' and was 'often not in the room' during pivotal national security moments. Uniquely reports the CIA undercover officer name disclosure and the Russian election interference declassification. Notes she is the fourth Cabinet departure and that all four were women. Frames her resignation as genuine but within a context of sustained marginalization. Includes the most extensive biographical and confirmation history.",
+      "NBC News (live blog)": "Packages the Gabbard story as one of several major developments alongside the Kevin Warsh Fed swearing-in, war powers vote delay, and ICE funding punt. The aggregation framing dilutes the Gabbard story's prominence, treating it as one news item in a busy day rather than the lead.",
+      "The New York Times": "Headline-only article available. Headline frames it as 'Trump Live Updates' with Gabbard resigning 'Citing Husband's Cancer Diagnosis' \u2014 takes the stated reason at face value in the headline."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the full resignation letter or Trump's Truth Social post) was included in the dossier. Multiple outlets quote identical passages from Gabbard's letter, suggesting they are working from the same document she posted on X, but the full text was not provided for independent verification.",
+      "The quoted portions of the resignation letter appear consistent across CNN, Axios, NBC News, and BBC News, with no apparent contradictions in the excerpted text."
+    ],
+    "missing_context": [
+      "The full text of Gabbard's resignation letter was not included as a primary source, though multiple outlets reference it and quote overlapping passages. A Stage 5 composer should note that the letter was posted publicly on X.",
+      "No outlet provides details on Abraham Williams' specific cancer diagnosis beyond 'extremely rare form of bone cancer' \u2014 prognosis, treatment timeline, or when the diagnosis was made are absent.",
+      "No outlet explores who Aaron Lukas is, his background, or his policy orientation, despite his elevation to acting DNI being a significant national security development.",
+      "No outlet addresses whether the White House is planning a permanent replacement or intends to keep Lukas as acting director long-term.",
+      "Only Axios mentions Roger Stone's role in preventing Gabbard's earlier firing and Laura Loomer's role as a critic \u2014 these are single-source claims not corroborated by other outlets in the dossier.",
+      "Only NBC News reports that all four Cabinet departures have been women \u2014 no other outlet notes or contextualizes this pattern.",
+      "No outlet discusses what happens to ongoing ODNI initiatives, including the JFK files review, COVID origins investigation, or Havana Syndrome inquiries that Axios and NBC News reference.",
+      "The broader status of the US-Iran conflict and how a DNI transition might affect intelligence operations during wartime is not addressed in any article.",
+      "Axios's URL slug reads 'tulsi-gabbard-removed-trump-administration,' framing this as a removal despite the article's body presenting it as a resignation. This editorial choice is worth noting as a framing discrepancy within a single outlet."
+    ],
+    "suggested_post_type": "META",
+    "suggested_post_type_reason": "Five outlets with full body text covered this story with materially different framings \u2014 ranging from BBC's straightforward personal-reason narrative to Axios's near-firing political context to NBC's investigative marginalization angle. The gap between the stated reason (husband's cancer) and the extensive political backstory most outlets include makes this a textbook case for a META post that maps what each outlet emphasized and buried.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/gabbard-resigns-trumps-national-intelligence-director-fox-news-digital-reports-2026-05-22/",
+      "title": "Gabbard resigns as Trump's top U.S. intelligence official, Fox News Digital reports - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/22/politics/tulsi-gabbard-resigns",
+      "title": "Tulsi Gabbard is resigning as Director of National Intelligence - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cvgj2gkv1x1o",
+      "title": "Tulsi Gabbard resigns as US director of national intelligence - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/05/22/tulsi-gabbard-removed-trump-administration",
+      "title": ""
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/trump-administration/live-blog/trump-fed-chair-warsh-mike-lawler-ice-budget-iran-live-updates-rcna346431",
+      "title": "Trump administration live updates: Intel chief Tulsi Gabbard to resign; Kevin Warsh replaces Jerome Powell as Fed chairman - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/05/22/us/trump-news",
+      "title": "Trump Live Updates: Tulsi Gabbard Resigns as Intelligence Chief, Citing Husband's Cancer Diagnosis - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/white-house/tulsi-gabbard-resign-director-national-intelligence-sources-say-rcna264273",
+      "title": "Tulsi Gabbard to resign as director of national intelligence, sources say - NBC News"
+    }
+  ]
+}
