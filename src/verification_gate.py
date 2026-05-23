@@ -19,7 +19,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Optional
 
-from dossier_store import DraftPost, MetaAnalysisBrief, PostType, SIGN_OFFS, StoryDossier
+from dossier_store import DraftPost, LONG_FORM_TYPES, MetaAnalysisBrief, PostType, SIGN_OFFS, StoryDossier
 
 # Matches any 4-digit year in the 1900–2099 range. Used by
 # `_check_dates_match_brief` to reject drafts where the composer
@@ -104,18 +104,6 @@ class VerificationGate:
         PostType.CORRECTION,
     }
 
-    # Post types that may use the X Premium long-form character budget.
-    # META is the flagship coverage-report format and is explicitly called
-    # out in the workflow doc Stage 6 table (line 269): "Long-form posts
-    # allowed via Premium for META and longer REPORT types." ANALYSIS is
-    # deliberately NOT here — the workflow doc's ANALYSIS example is short,
-    # and section 3 of the doc describes ANALYSIS as "used sparingly" with
-    # "rarity is the entire point". We keep ANALYSIS on the 280-char budget
-    # until there is a concrete counter-example that needs more room.
-    LONG_FORM_TYPES = {
-        PostType.META,
-    }
-
     def __init__(
         self,
         max_length: int = 280,
@@ -130,7 +118,7 @@ class VerificationGate:
         META posts get the long-form budget (X Premium). Everything else
         uses the standard 280-char budget.
         """
-        if post_type in self.LONG_FORM_TYPES:
+        if post_type in LONG_FORM_TYPES:
             return self.long_form_max_length
         return self.max_length
 

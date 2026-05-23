@@ -8,6 +8,8 @@ import re
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional
 
+from trend_detector import _extract_proper_nouns
+
 _BASE_STOP_WORDS = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
                     'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'been', 'be'}
 _CONTENT_STOP_WORDS = _BASE_STOP_WORDS | {'this', 'that', 'it', 'can', 'will',
@@ -288,36 +290,8 @@ class PostTracker:
         }
 
     def _extract_proper_nouns(self, text: str) -> set:
-        """
-        Extract likely proper nouns (capitalized words) from text
-        These are weighted more heavily as they identify specific stories
-
-        Args:
-            text: Text to extract from
-
-        Returns:
-            Set of lowercase proper nouns
-        """
-        # Find words that start with capital letters (but not sentence starts)
-        words = text.split()
-        proper_nouns = set()
-
-        for i, word in enumerate(words):
-            # Clean punctuation
-            clean_word = re.sub(r'[^\w]', '', word)
-
-            # Skip if empty, single char, or common stop words
-            if len(clean_word) <= 1 or clean_word.lower() in {'the', 'a', 'an'}:
-                continue
-
-            # If word starts with capital
-            if clean_word[0].isupper():
-                # Skip common sentence starters
-                if clean_word in {'The', 'A', 'An', 'This', 'That', 'These', 'Those', 'It', 'He', 'She'}:
-                    continue
-                proper_nouns.add(clean_word.lower())
-
-        return proper_nouns
+        """Delegate to the canonical implementation in trend_detector."""
+        return _extract_proper_nouns(text)
 
     def _similar_content_posted(self, content: str, hours: int = 72) -> bool:
         """

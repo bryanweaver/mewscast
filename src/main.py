@@ -1784,6 +1784,9 @@ def post_journalism_cycle(
     except Exception as e:
         print(f"[journalism] Stage 4 failed: {e}")
         return False
+    if brief.suggested_post_type == PostType.META:
+        print("[journalism] INFO: META suggestion normalized to REPORT per policy")
+        brief.suggested_post_type = PostType.REPORT
     dossier_store.save_brief(brief)
     print(
         f"[journalism] Stage 4 suggested_post_type="
@@ -1792,24 +1795,6 @@ def post_journalism_cycle(
 
     # ---- Quality gate: tiered by post type ----------------------------------
     chosen_type = forced_post_type or brief.suggested_post_type
-
-    # Bryan rejected the META "COVERAGE REPORT" published post format on
-    # 2026-04-23: it reports on *how outlets covered* the story (framing
-    # comparison) rather than on the story itself — no hard facts, no
-    # takeaway, no source links in the body. Example rejected draft:
-    # docs/dossiers/2026-04-23-f-around-and-find-*.meta.json.
-    #
-    # The Stage 4 meta-analysis brief itself is still valuable — it
-    # feeds REPORT and other composers with multi-outlet consensus
-    # facts and framing context. We just never publish the COVERAGE
-    # REPORT format itself. Route to REPORT so the post becomes a
-    # straight news item with a dossier-URL self-reply for "go deeper."
-    #
-    # Respect forced_post_type (CLI / workflow dispatch) to keep an
-    # escape hatch if someone explicitly asks for META.
-    if chosen_type == PostType.META and forced_post_type is None:
-        print("[journalism] Routing META → REPORT (COVERAGE REPORT format disabled per user preference)")
-        chosen_type = PostType.REPORT
 
     # Thresholds per post type:
     #   REPORT/META: 3 sources, 0.45 confidence (multi-source corroboration)
@@ -2551,9 +2536,17 @@ def main():
         try:
             _cfg = _load_config()
         except Exception as _e:
-            print(f"⚠️  Could not load config.yaml ({_e}); defaulting to legacy pipeline")
-            _cfg = {}
-        _pipelines_cfg = (_cfg.get("pipelines") or {})
+            _config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
+            raise RuntimeError(
+                f"Failed to load config at {os.path.abspath(_config_path)}: {_e}"
+            ) from _e
+        _pipelines_cfg = _cfg.get("pipelines")
+        if _pipelines_cfg is None:
+            _config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
+            raise RuntimeError(
+                f"config.yaml at {os.path.abspath(_config_path)} is missing the 'pipelines' block"
+            )
+        _pipelines_cfg = (_pipelines_cfg or {})
         _legacy_enabled = bool((_pipelines_cfg.get("legacy") or {}).get("enabled", True))
         _journalism_enabled = bool((_pipelines_cfg.get("journalism") or {}).get("enabled", False))
 
