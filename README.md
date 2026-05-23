@@ -62,7 +62,7 @@ AI-powered news reporter bot (as a cat 🐱) that posts to X/Twitter and Bluesky
 
 ### In-Progress Features
 - **Positive Mews** (needs minor fixes): Dedicated positive/uplifting news posts to balance out the regular news cycle
-- **Walter Croncat Journalism Workflow** (shipped behind a master switch — see below): a 7-stage Cronkite-modeled pipeline that reads X for trending stories, gathers coverage across multiple outlets plus primary sources, runs a meta-analysis, and files a journalism-grade post. Currently runnable in dry-run mode. The legacy `battle_post` feature has been removed and replaced by the `META` post type inside this pipeline.
+- **Walter Croncat Journalism Workflow** (shipped behind a master switch — see below): a 7-stage Cronkite-modeled pipeline that reads X for trending stories, gathers coverage across multiple outlets plus primary sources, runs a meta-analysis, and files a journalism-grade post. Currently runnable in dry-run mode. The legacy `battle_post` feature has been removed; coverage analysis is now handled by the `REPORT` post type (the pipeline normalizes any `META` suggestion from the meta-analyzer to `REPORT` before publishing).
 
 ### Automation & Cost
 - **GitHub Actions**: Free automated posting (7 posts/day)
@@ -102,7 +102,7 @@ The full design is in [`docs/Croncat_Journalism_Workflow.md`](docs/Croncat_Journ
 | Post type | Sign-off | Purpose |
 |---|---|---|
 | `REPORT` | `And that's the mews.` | Straight news, the default |
-| `META` | `And that's the mews — coverage report.` | Coverage analysis comparing how outlets are reporting the same event (the flagship — replaces `battle_post`) |
+| `META` | `And that's the mews — coverage report.` | Coverage analysis comparing how outlets are reporting the same event; forceable via CLI but normalized to `REPORT` when the meta-analyzer suggests it automatically |
 | `ANALYSIS` | `This cat's view — speculative, personal, subjective.` | Rare, explicitly labeled commentary |
 | `BULLETIN` | *(no sign-off)* | Single-source breaking news — deliberately unsigned per Cronkite's practice |
 | `CORRECTION` | *(no sign-off)* | Self-correction, pinned after publishing |
@@ -134,7 +134,7 @@ python src/main.py journalism --dry-run
 
 # Force a specific post type
 python src/main.py journalism brief [--dry-run]        # REPORT
-python src/main.py journalism meta [--dry-run]         # META (the flagship)
+python src/main.py journalism meta [--dry-run]         # META (force coverage-analysis sign-off)
 python src/main.py journalism analysis [--dry-run]     # ANALYSIS (use sparingly)
 python src/main.py journalism bulletin [--dry-run]     # BULLETIN
 python src/main.py journalism correction [--dry-run]   # CORRECTION
@@ -437,25 +437,27 @@ pytest tests/ --cov=src --cov-report=html
 
 ### Test Coverage
 
-The project includes **562+ tests across 12 test files** covering legacy modules plus the Walter Croncat journalism workflow:
+The project includes **907 tests across 20 test files**, all green in a single `pytest tests/` run.
 
-**Legacy modules (398 tests):**
-- **Deduplication Logic** (`test_deduplication.py`, 71 tests): URL matching, topic/content similarity, story clustering, update detection, and post history management
+**Legacy modules:**
+- **Deduplication Logic** (`test_deduplication.py`, 70 tests): URL matching, topic/content similarity, story clustering, update detection, and post history management
 - **Engagement Bots** (`test_engagement.py`, 95 tests): Target filtering, history tracking, follow-ratio checks, repost logic, engagement cycle orchestration, and API error handling for both X/Twitter and Bluesky bots
 - **Content Generation Pipeline** (`test_content_generator.py`, 114 tests): ContentGenerator, PromptLoader, and NewsFetcher — AI response validation, character limit enforcement, and retry logic
 - **Bot Posting Pipeline** (`test_bots.py`, 118 tests): Bluesky bot, Twitter/X bot, image generator, configuration loading, and main pipeline orchestration
+- **Outlet Reply Bots** (`test_outlet_reply.py`, 62 tests; `test_bluesky_outlet_reply.py`, 20 tests; `test_x_engagement.py`, 61 tests): reply targeting, rate-limit handling, engagement cycles
 
-**Journalism workflow (164 tests):**
+**Journalism workflow:**
 - **Dossier Store** (`test_dossier_store.py`, 28 tests): Dataclass round-trip, SIGN_OFFS lookup, JSON persistence, schema correctness
-- **Verification Gate** (`test_verification_gate.py`, 40 tests): The keystone sign-off-matches-type matrix covering every post type + cross-contamination cases, plus source count, outlet-in-body, editorial word filter, hedge attribution, and char limit checks
-- **Trend Detector** (`test_trend_detector.py`, 18 tests): Watchlist query construction, tweet clustering, NewsFetcher fallback
-- **Story Triage** (`test_story_triage.py`, 15 tests): Heuristic scoring, hard-reject paths, pass-threshold behavior
-- **Source Gatherer** (`test_source_gatherer.py`, 9 tests): Slant diversity, wire-derivation, dossier well-formedness
+- **Verification Gate** (`test_verification_gate.py`, 58 tests): The keystone sign-off-matches-type matrix covering every post type + cross-contamination cases, plus source count, outlet-in-body, editorial word filter, hedge attribution, and char limit checks
+- **Trend Detector** (`test_trend_detector.py`, 23 tests): Watchlist query construction, tweet clustering, NewsFetcher fallback
+- **Story Triage** (`test_story_triage.py`, 25 tests): Heuristic scoring, hard-reject paths, pass-threshold behavior
+- **Source Gatherer** (`test_source_gatherer.py`, 41 tests): Slant diversity, wire-derivation, dossier well-formedness
 - **Primary Source Finder** (`test_primary_source_finder.py`, 18 tests): Pattern matching for congress.gov, SCOTUS, federalregister.gov, BLS, SEC, White House, generic .gov PDFs
 - **Meta-Analyzer** (`test_meta_analyzer.py`, 14 tests): Prompt construction, JSON parsing (clean/fenced/prose), retry logic, graceful failure
-- **Post Composer** (`test_post_composer.py`, 21 tests): Per-type prompt dispatch, sign-off metadata, correction_inputs threading, retry_reasons injection
+- **Post Composer** (`test_post_composer.py`, 46 tests): Per-type prompt dispatch, sign-off metadata, correction_inputs threading, retry_reasons injection
+- **Field Notes / Dossier Renderer / Dossier Reply** (`test_field_notes.py`, 49; `test_dossier_renderer.py`, 22; `test_dossier_reply_compose.py`, 12 tests)
 
-**Note:** Running `pytest tests/` currently reports a small number of failures due to a pre-existing test-isolation bug between `test_bots.py` and `test_content_generator.py` (the former installs a `sys.modules['bs4']` mock at import time that breaks the latter when run in the same process). All files pass cleanly when run individually. This predates the journalism workflow and is tracked as follow-up cleanup.
+**Test isolation note:** `conftest.py` eagerly pre-imports the real `bs4`, `bluesky_client`, `content_generator`, and `twitter_bot` modules before any test file is collected. This neutralises `sys.modules.setdefault(...)` stubs that individual test files install at import time — those stubs are now no-ops. If you add a new test file that relies on a module-level stub for any of those four names, the stub will be silently skipped; mock at the call site instead (e.g. `instance.attr = Mock()`).
 
 ### Writing New Tests
 
@@ -480,13 +482,6 @@ def test_new_feature(generator):
     assert result['success'] == True
     assert 'expected_field' in result
 ```
-
-### Test Files
-
-- `tests/test_deduplication.py` - Post deduplication logic (71 tests)
-- `tests/test_engagement.py` - Engagement bot behavior for X/Twitter and Bluesky (95 tests)
-- `tests/test_content_generator.py` - Content generation pipeline including PromptLoader and NewsFetcher (114 tests)
-- `tests/test_bots.py` - Bot posting pipeline including image generation and main orchestration (118 tests)
 
 ## Troubleshooting
 

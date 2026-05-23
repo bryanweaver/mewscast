@@ -27,6 +27,7 @@ from typing import Optional
 
 from dossier_store import (
     DraftPost,
+    LONG_FORM_TYPES,
     MetaAnalysisBrief,
     PostType,
     SIGN_OFFS,
@@ -49,13 +50,6 @@ PROMPT_FILES: dict[PostType, str] = {
     PostType.PRIMARY:    "primary_post.md",
 }
 
-
-# Post types that may use the X Premium long-form character budget.
-# Kept in lockstep with VerificationGate.LONG_FORM_TYPES so the composer
-# never generates a draft longer than the gate will accept.
-LONG_FORM_TYPES: set[PostType] = {
-    PostType.META,
-}
 
 
 class PostComposer:

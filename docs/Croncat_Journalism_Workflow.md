@@ -494,6 +494,24 @@ That's the way it is.
 
 ---
 
+---
+
+## 13. Implementation Notes (refactor/journalism-pipeline, 2026-05-23)
+
+These notes document structural code changes that align the implementation with the design above. They supersede any contrary assumptions in earlier sections.
+
+**`main.py` config dispatch is fail-loud.** If `config.yaml` fails to load or is missing the `pipelines:` block, `main()` raises `RuntimeError` with the absolute config path. The previous silent fallback to the legacy pipeline (default `legacy.enabled=True`) caused dual-posting incidents and has been removed.
+
+**`_extract_proper_nouns` is now unified in `src/trend_detector.py`.** `post_tracker.py` previously maintained a divergent 3-word stop list; it now delegates to `trend_detector._extract_proper_nouns`, which carries the canonical 20-word stop list. All deduplication logic operates against that single list.
+
+**`PAYWALL_INDICATORS` is a single module-level `frozenset` in `src/news_fetcher.py`.** Previously inlined separately in each of the four fetch stages (`_try_direct_fetch`, `_try_jina_fetch`, `_try_diffbot_fetch`, `_try_playwright_fetch`) with inconsistent item counts. The 14-item superset is now shared — a string that triggers paywall detection in one stage triggers it in all stages.
+
+**`LONG_FORM_TYPES` has a single source of truth in `src/dossier_store.py`.** It is imported by `src/post_composer.py` and `src/verification_gate.py`. The previous per-module copies "kept in lockstep by comment" have been removed.
+
+**`PostType.META` → `PostType.REPORT` normalization is now applied immediately after `MetaAnalyzer.analyze()` returns**, before `save_brief`. Persisted briefs now reflect the actual post type that will be published. The `forced_post_type` override (`chosen_type = forced_post_type or brief.suggested_post_type`) is preserved downstream for escape-hatch use.
+
+---
+
 ## Companion Docs
 
 - [`Walter_Cronkite_Report.md`](./Walter_Cronkite_Report.md) — the sourced research underpinning every principle in this document
