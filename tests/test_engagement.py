@@ -267,7 +267,12 @@ class TestTwitterHistoryTracking:
 
     def test_load_empty_history_when_file_missing(self, tmp_path):
         """When the history file does not exist, a default dict is returned."""
-        bot = EngagementBot()
+        with patch.dict(os.environ, {
+            "X_API_KEY": "k", "X_API_SECRET": "s",
+            "X_ACCESS_TOKEN": "t", "X_ACCESS_TOKEN_SECRET": "ts",
+            "X_BEARER_TOKEN": "b",
+        }):
+            bot = EngagementBot()
         bot.engagement_log_path = tmp_path / "nonexistent.json"
         history = bot._load_engagement_history()
 
@@ -285,7 +290,12 @@ class TestTwitterHistoryTracking:
         path = tmp_path / "history.json"
         path.write_text(json.dumps(data))
 
-        bot = EngagementBot()
+        with patch.dict(os.environ, {
+            "X_API_KEY": "k", "X_API_SECRET": "s",
+            "X_ACCESS_TOKEN": "t", "X_ACCESS_TOKEN_SECRET": "ts",
+            "X_BEARER_TOKEN": "b",
+        }):
+            bot = EngagementBot()
         bot.engagement_log_path = path
         history = bot._load_engagement_history()
 

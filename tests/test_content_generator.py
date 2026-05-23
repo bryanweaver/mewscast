@@ -622,13 +622,16 @@ class TestGenerateImagePrompt:
         assert "Brown tabby" in prompt
         assert len(prompt) <= 200
 
-    def test_image_prompt_truncated_to_200_chars(self, generator):
+    def test_image_prompt_truncated_to_budget(self, generator):
+        """The image-prompt budget was raised 200 → 800 during the A5
+        image overhaul — richer prompts produce materially better
+        generations on Grok/Flux/Imagen."""
         mock_resp = Mock()
-        mock_resp.content = [Mock(text="x" * 250)]
+        mock_resp.content = [Mock(text="x" * 1200)]
         generator.client.messages.create.return_value = mock_resp
 
         prompt = generator.generate_image_prompt("topic", "tweet")
-        assert len(prompt) <= 200
+        assert len(prompt) <= 800
 
     def test_image_prompt_strips_quotes(self, generator):
         mock_resp = Mock()
@@ -853,15 +856,17 @@ class TestBuildFramingPrompt:
         assert "headline exaggerates" in prompt
 
     def test_framing_prompt_truncates_long_content(self, generator):
+        # _build_framing_prompt truncates article_content to 3000 chars.
+        # Feed it 4000 to ensure truncation actually happens.
         story = {
             "title": "Test",
             "source": "Src",
-            "article_content": "x" * 2000,  # Longer than 800 limit
+            "article_content": "x" * 4000,
         }
         media_issues = {"has_issues": True, "angle": "angle"}
         prompt = generator._build_framing_prompt(story, media_issues)
-        # The prompt should not contain the full 2000 chars of content
-        assert "x" * 801 not in prompt
+        # The 3001st 'x' should never appear in the prompt.
+        assert "x" * 3001 not in prompt
 
 
 # ===================================================================
@@ -983,7 +988,10 @@ class TestNewsFetcher:
         assert result is None
 
     @patch("src.news_fetcher.requests.get")
-    def test_fetch_article_content_truncates_long_articles(self, mock_get, news_fetcher):
+    def test_fetch_article_content_returns_long_articles_intact(self, mock_get, news_fetcher):
+        """fetch_article_content does NOT truncate the extracted body —
+        downstream callers (meta_analyzer, content_generator) own their own
+        per-prompt budgets. Verify a long article passes through whole."""
         long_paragraph = "This is a complete sentence. " * 200  # ~5800 chars
         html = f"<html><body><article><p>{long_paragraph}</p></article></body></html>"
         mock_response = Mock()
@@ -993,7 +1001,7 @@ class TestNewsFetcher:
 
         result = news_fetcher.fetch_article_content("https://example.com/long")
         assert result is not None
-        assert len(result) <= 1500
+        assert len(result) > 5000
 
     @patch("src.news_fetcher.feedparser.parse")
     def test_get_articles_for_topic_filters_blacklisted(self, mock_parse, news_fetcher):

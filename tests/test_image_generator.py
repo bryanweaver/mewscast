@@ -66,7 +66,9 @@ class TestAnchorPrompt:
     def test_meta_style_anchor_applied(self):
         gen = self._make_generator()
         result = gen._anchor_prompt("outlets disagree", post_type="META").lower()
-        assert "wire-service desk" in result
+        # META anchor was renamed from "wire-service desk" to
+        # "wire-service-at-midnight" during the A5 image overhaul.
+        assert "wire-service-at-midnight" in result
         assert "monitors glowing" in result
 
     def test_analysis_style_anchor_applied(self):
