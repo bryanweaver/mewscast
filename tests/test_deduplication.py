@@ -649,26 +649,11 @@ class TestRecordPost:
         assert post["url"] is None
         assert post["source"] == "Unknown"
 
-    def test_record_post_triggers_cleanup(self, tracker, tmp_history, default_config):
-        """Old posts are pruned when a new post is recorded."""
-        old_ts = (datetime.now(timezone.utc) - timedelta(days=35)).isoformat()
-        tracker.posts.append({
-            "timestamp": old_ts,
-            "topic": "Old story",
-            "url": "https://example.com/old",
-            "source": "Old",
-            "content": None,
-            "image_prompt": None,
-            "x_tweet_id": None,
-            "x_reply_tweet_id": None,
-            "bluesky_uri": None,
-            "bluesky_reply_uri": None,
-        })
-        assert len(tracker.posts) == 1
-        tracker.record_post(_make_story("New"), post_content="New content")
-        # Old post (35 days) should be cleaned up; max_history_days=30
-        assert len(tracker.posts) == 1
-        assert tracker.posts[0]["topic"] == "New"
+    # NOTE: `record_post` deliberately does NOT auto-prune any more —
+    # analytics needs the full all-time history (see comment at
+    # src/post_tracker.py near the "no pruning — analytics needs all-time
+    # history" line). Time-based pruning is still validated directly via
+    # the `TestCleanupOldPosts` class below.
 
 
 class TestCleanupOldPosts:
