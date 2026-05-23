@@ -47,6 +47,11 @@ SIGN_OFFS: dict[PostType, Optional[str]] = {
     PostType.PRIMARY:    "And that's the mews — straight from the source.",
 }
 
+# Post types that may use the X Premium long-form character budget.
+LONG_FORM_TYPES: set[PostType] = {
+    PostType.META,
+}
+
 
 # ---------------------------------------------------------------------------
 # Helpers

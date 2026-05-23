@@ -36,13 +36,29 @@ def _ensure_module(name: str) -> types.ModuleType:
 
 
 # ---- tweepy ---------------------------------------------------------------
+# Use a proper exception hierarchy. Earlier this aliased both names to bare
+# `Exception`, which made `except TooManyRequests` catch every other
+# TweepyException (and FileNotFoundError, etc.), breaking the error-path
+# branches in TwitterBot.post_tweet / post_tweet_with_image.
+class _StubTweepyException(Exception):
+    pass
+
+
+class _StubTooManyRequests(_StubTweepyException):
+    pass
+
+
 _tweepy = _ensure_module("tweepy")
+# Constructors must be MagicMock *instances* (callable mocks), not the
+# MagicMock *class*. Calling the class with a MagicMock positional arg
+# (e.g. tweepy.API(oauth_handler_mock)) triggers an InvalidSpecError
+# because MagicMock treats the first positional as `spec`.
 for _attr, _val in (
-    ("Client", MagicMock),
-    ("API", MagicMock),
-    ("OAuth1UserHandler", MagicMock),
-    ("TweepyException", Exception),
-    ("TooManyRequests", Exception),
+    ("Client", MagicMock()),
+    ("API", MagicMock()),
+    ("OAuth1UserHandler", MagicMock()),
+    ("TweepyException", _StubTweepyException),
+    ("TooManyRequests", _StubTooManyRequests),
 ):
     if not hasattr(_tweepy, _attr):
         setattr(_tweepy, _attr, _val)
@@ -62,13 +78,21 @@ if not hasattr(_anthropic, "Anthropic"):
     _anthropic.Anthropic = MagicMock()
 
 
-# ---- content_generator ----------------------------------------------------
-# outlet_reply_bot.py historically stubbed this as a bare ModuleType with
-# only _truncate_at_sentence. main.py also imports ContentGenerator from
-# it. Ensure both names exist regardless of which test file was collected
-# first or whether the real module is on sys.path.
-_cg = _ensure_module("content_generator")
-if not hasattr(_cg, "_truncate_at_sentence"):
-    _cg._truncate_at_sentence = lambda text, max_len=280: text[:max_len]
-if not hasattr(_cg, "ContentGenerator"):
-    _cg.ContentGenerator = MagicMock()
+# ---- Pre-import REAL first-party + dependency modules with proper stubs in
+# place. Several test files install bare stub modules for `bs4`,
+# `bluesky_client`, `twitter_bot`, and `content_generator` via
+# `sys.modules.setdefault(...)` at module-import time. `setdefault` is a
+# no-op when the key already exists, so eagerly loading the REAL modules
+# here neutralises those stubs. Tests that previously relied on the stubs
+# (e.g. OutletReplyBot / XEngagementBot tests) keep working because they
+# mock at the *call site* (`b.bot = Mock()`), not at the module level.
+#
+# bs4 is the most consequential preload: news_fetcher.py uses real
+# BeautifulSoup parsing in its tests, and a MagicMock-shaped stub causes
+# `'str' object has no attribute 'decompose'` style runtime errors.
+for _mod in ("bs4", "bluesky_client", "content_generator", "twitter_bot"):
+    if _mod not in sys.modules:
+        try:
+            __import__(_mod)
+        except Exception:
+            sys.modules[_mod] = types.ModuleType(_mod)

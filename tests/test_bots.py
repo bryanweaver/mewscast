@@ -917,25 +917,26 @@ class TestImageGenerator:
         gen = ImageGenerator()
 
         save_path = str(tmp_path / "output.png")
-        result = gen.generate_image("A cat reporting news", save_path=save_path)
+        result_path, anchored_prompt = gen.generate_image("A cat reporting news", save_path=save_path)
 
-        assert result == save_path
+        assert result_path == save_path
+        assert "A cat reporting news" in anchored_prompt
         # Verify the file was written
         assert os.path.exists(save_path)
         with open(save_path, "rb") as f:
             assert f.read() == b"\x89PNG\r\n\x1a\nFAKEIMAGEDATA"
 
-        # Verify API was called with correct parameters
-        mock_client.images.generate.assert_called_once_with(
-            model="grok-imagine-image",
-            prompt="A cat reporting news",
-            n=1,
-            extra_body={"aspect_ratio": "16:9"},
-        )
+        # Verify the API was called with the anchored prompt and configured aspect ratio.
+        mock_client.images.generate.assert_called_once()
+        call_kwargs = mock_client.images.generate.call_args.kwargs
+        assert call_kwargs["model"] == "grok-imagine-image"
+        assert call_kwargs["n"] == 1
+        assert "A cat reporting news" in call_kwargs["prompt"]
+        assert call_kwargs["extra_body"]["aspect_ratio"] == gen.aspect_ratio
 
     @patch("image_generator.OpenAI")
     def test_generate_image_api_error_returns_none(self, mock_openai_cls, image_gen_env):
-        """generate_image returns None when the API call fails."""
+        """generate_image returns (None, anchored_prompt) when the API call fails."""
         mock_client = MagicMock()
         mock_openai_cls.return_value = mock_client
         mock_client.images.generate.side_effect = Exception("API timeout")
@@ -943,15 +944,15 @@ class TestImageGenerator:
         from image_generator import ImageGenerator
         gen = ImageGenerator()
 
-        result = gen.generate_image("prompt text")
-        assert result is None
+        result_path, _anchored = gen.generate_image("prompt text")
+        assert result_path is None
 
     @patch("image_generator.requests.get")
     @patch("image_generator.OpenAI")
     def test_generate_image_download_error_returns_none(
         self, mock_openai_cls, mock_requests_get, image_gen_env
     ):
-        """generate_image returns None when image download fails."""
+        """generate_image returns (None, anchored_prompt) when image download fails."""
         mock_client = MagicMock()
         mock_openai_cls.return_value = mock_client
 
@@ -964,8 +965,8 @@ class TestImageGenerator:
         from image_generator import ImageGenerator
         gen = ImageGenerator()
 
-        result = gen.generate_image("prompt")
-        assert result is None
+        result_path, _anchored = gen.generate_image("prompt")
+        assert result_path is None
 
     @patch("image_generator.requests.get")
     @patch("image_generator.OpenAI")
@@ -989,9 +990,9 @@ class TestImageGenerator:
 
         # Use a patched open so we don't write to real filesystem
         with patch("builtins.open", mock_open()):
-            result = gen.generate_image("A cat with a microphone")
+            result_path, _anchored = gen.generate_image("A cat with a microphone")
 
-        assert result == "temp_image.png"
+        assert result_path == "temp_image.png"
 
 
 # =========================================================================
@@ -1144,14 +1145,16 @@ class TestContentGenerator:
         prompt = generator.generate_image_prompt("politics", "A tweet about politics")
         assert "Cat reporter" in prompt
 
-    def test_generate_image_prompt_truncated_to_200_chars(self, generator):
-        """generate_image_prompt truncates output to 200 chars for Grok."""
+    def test_generate_image_prompt_truncated_to_budget(self, generator):
+        """generate_image_prompt caps output at the 800-char budget (raised
+        from 200 during the A5 image overhaul — richer prompts produce
+        materially better generations on Grok/Flux/Imagen)."""
         mock_response = Mock()
-        mock_response.content = [Mock(text="X" * 300)]
+        mock_response.content = [Mock(text="X" * 1200)]
         generator.client.messages.create.return_value = mock_response
 
         prompt = generator.generate_image_prompt("topic", "tweet text")
-        assert len(prompt) <= 200
+        assert len(prompt) <= 800
 
     def test_generate_image_prompt_api_error_returns_fallback(self, generator):
         """generate_image_prompt returns fallback on API error."""
@@ -1427,8 +1430,11 @@ class TestMainPipeline:
     """Tests for the main.py orchestration pipeline."""
 
     def test_main_entry_point_scheduled_mode(self, all_env):
-        """main() in 'scheduled' mode calls post_scheduled_tweet."""
+        """main() in 'scheduled' mode dispatches to post_scheduled_tweet
+        when pipelines.legacy.enabled is True in config."""
+        legacy_cfg = {"pipelines": {"legacy": {"enabled": True}}}
         with patch("src.main.post_scheduled_tweet", return_value=True) as mock_post, \
+             patch("src.main._load_config", return_value=legacy_cfg), \
              patch("src.main.load_dotenv"), \
              patch("sys.argv", ["main.py", "scheduled"]), \
              pytest.raises(SystemExit) as exc_info:
@@ -1481,9 +1487,12 @@ class TestMainPipeline:
         assert exc_info.value.code == 1
 
     def test_main_defaults_to_scheduled_via_env(self, all_env):
-        """main() defaults to 'scheduled' mode from BOT_MODE env var."""
+        """main() defaults to 'scheduled' mode from BOT_MODE env var
+        and routes to post_scheduled_tweet when legacy pipeline is enabled."""
+        legacy_cfg = {"pipelines": {"legacy": {"enabled": True}}}
         with patch.dict(os.environ, {"BOT_MODE": "scheduled"}), \
              patch("src.main.post_scheduled_tweet", return_value=True) as mock_post, \
+             patch("src.main._load_config", return_value=legacy_cfg), \
              patch("src.main.load_dotenv"), \
              patch("sys.argv", ["main.py"]), \
              pytest.raises(SystemExit) as exc_info:
@@ -1570,8 +1579,11 @@ class TestPostScheduledTweet:
         deps["generator"].generate_image_prompt.return_value = "cat reporter prompt"
         deps["generator"].generate_source_reply.return_value = "https://example.com/big"
 
-        # Image generator returns path
-        deps["image_gen"].generate_image.return_value = "/tmp/image.png"
+        # Image generator returns (path, anchored_prompt) tuple
+        deps["image_gen"].generate_image.return_value = (
+            "/tmp/image.png",
+            "anchored prompt",
+        )
 
         # Twitter post succeeds
         deps["twitter"].post_tweet_with_image.return_value = {"id": "x_123"}
@@ -1963,7 +1975,7 @@ class TestErrorHandling:
         assert result is None
 
     def test_image_generator_handles_http_error(self, image_gen_env):
-        """ImageGenerator returns None when HTTP download returns error status."""
+        """ImageGenerator returns (None, anchored_prompt) when HTTP download fails."""
         with patch("image_generator.OpenAI") as mock_openai, \
              patch("image_generator.requests.get") as mock_get:
             mock_client = MagicMock()
@@ -1978,8 +1990,8 @@ class TestErrorHandling:
 
             from image_generator import ImageGenerator
             gen = ImageGenerator()
-            result = gen.generate_image("prompt")
-            assert result is None
+            result_path, _anchored = gen.generate_image("prompt")
+            assert result_path is None
 
 
 if __name__ == "__main__":
