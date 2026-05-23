@@ -16,6 +16,17 @@ from bs4 import BeautifulSoup
 from content_generator import _truncate_at_sentence
 
 
+PAYWALL_INDICATORS: frozenset[str] = frozenset({
+    'subscribe to continue', 'subscription required',
+    'sign in to read', 'create a free account',
+    'register to continue', 'already a subscriber',
+    'to continue reading', 'unlock this article',
+    'premium content', 'members only',
+    'log in to access', 'start your free trial',
+    'subscribe now', 'for full access',
+})
+
+
 class NewsFetcher:
     """Fetches real news articles from Google News RSS"""
 
@@ -309,17 +320,8 @@ class NewsFetcher:
                     return None
 
                 # Check for paywall indicators
-                paywall_indicators = [
-                    'subscribe to continue', 'subscription required',
-                    'sign in to read', 'create a free account',
-                    'register to continue', 'already a subscriber',
-                    'to continue reading', 'unlock this article',
-                    'premium content', 'members only',
-                    'log in to access', 'start your free trial',
-                    'subscribe now', 'for full access'
-                ]
                 content_lower = article_content.lower()
-                for indicator in paywall_indicators:
+                for indicator in PAYWALL_INDICATORS:
                     if indicator in content_lower:
                         print(f"   ⚠️  Direct fetch: paywall detected ('{indicator}')")
                         return None
@@ -390,13 +392,7 @@ class NewsFetcher:
 
             # Same paywall check as direct fetch
             content_lower = article_content.lower()
-            paywall_indicators = [
-                'subscribe to continue', 'subscription required',
-                'sign in to read', 'create a free account',
-                'register to continue', 'to continue reading',
-                'unlock this article', 'premium content',
-            ]
-            for indicator in paywall_indicators:
+            for indicator in PAYWALL_INDICATORS:
                 if indicator in content_lower:
                     print(f"   ⚠️  Jina Reader: paywall still detected ('{indicator}') — hard paywall")
                     return None
@@ -462,13 +458,7 @@ class NewsFetcher:
 
             # Same paywall check as other stages
             content_lower = article_text.lower()
-            paywall_indicators = [
-                'subscribe to continue', 'subscription required',
-                'sign in to read', 'create a free account',
-                'register to continue', 'to continue reading',
-                'unlock this article', 'premium content',
-            ]
-            for indicator in paywall_indicators:
+            for indicator in PAYWALL_INDICATORS:
                 if indicator in content_lower:
                     print(f"   ⚠️  Diffbot: paywall still detected ('{indicator}') — hard paywall")
                     return None
@@ -598,13 +588,7 @@ class NewsFetcher:
 
             # Paywall detection — same indicators as other stages
             content_lower = article_text.lower()
-            paywall_indicators = [
-                'subscribe to continue', 'subscription required',
-                'sign in to read', 'create a free account',
-                'register to continue', 'to continue reading',
-                'unlock this article', 'premium content',
-            ]
-            for indicator in paywall_indicators:
+            for indicator in PAYWALL_INDICATORS:
                 if indicator in content_lower:
                     print(f"   ⚠️  Playwright fallback: paywall detected ('{indicator}') — hard paywall")
                     return None
