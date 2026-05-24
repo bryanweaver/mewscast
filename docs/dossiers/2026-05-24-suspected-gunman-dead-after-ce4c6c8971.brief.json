@@ -1,0 +1,145 @@
+{
+  "story_id": "2026-05-24-suspected-gunman-dead-after-ce4c6c8971",
+  "headline_seed": "Suspected gunman dead after exchanging fire with Secret Service near White House - The Washington Post",
+  "brief": {
+    "story_id": "2026-05-24-suspected-gunman-dead-after-ce4c6c8971",
+    "consensus_facts": [
+      "A man opened fire near a White House security checkpoint at approximately 6 p.m. ET on Saturday, May 23, 2026, at the intersection of 17th Street NW and Pennsylvania Avenue NW, near the Eisenhower Executive Office Building.",
+      "U.S. Secret Service officers returned fire, striking the suspect, who was taken to a hospital where he was pronounced dead.",
+      "The suspect was identified as 21-year-old Nasire Best.",
+      "A bystander was also struck by gunfire; it was unclear whether the bystander was hit by the suspect's bullets or by officers' return fire.",
+      "No Secret Service officers were injured in the incident.",
+      "President Donald Trump was at the White House at the time but was not impacted.",
+      "The suspect pulled a weapon from his bag before opening fire.",
+      "Best had a prior encounter with Secret Service in July 2025 in which he attempted to gain entry to the White House and was arrested.",
+      "Best had a documented history of mental health issues and had been sent to a psychiatric facility.",
+      "Best had been living in Washington, D.C., for approximately 18 months.",
+      "The weapon used was a revolver, according to law enforcement sources.",
+      "This was the third incidence of gunfire near the president in the past month, following the White House Correspondents' Association Dinner shooting on April 25 and a shooting near the Washington Monument on May 4.",
+      "Trump posted on Truth Social thanking Secret Service for their 'swift and professional action' and said the suspect had a 'violent history and possible obsession with our Country's most cherished structure.'",
+      "Journalists on the White House North Lawn heard gunshots and were rushed into the press briefing room by Secret Service.",
+      "ABC News correspondent Selina Wang captured dramatic video of the moment gunshots were heard, which was widely viewed on social media.",
+      "Senate Majority Leader John Thune and House Speaker Mike Johnson both praised the Secret Service's response.",
+      "FBI Director Kash Patel said FBI personnel were on scene supporting the Secret Service.",
+      "The shooting scene is near where a gunman ambushed two West Virginia National Guard members in November 2025, killing U.S. Army Specialist Sarah Beckstrom and critically wounding Staff Sgt. Andrew Wolfe."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of gunshots fired",
+        "positions": {
+          "CBS News": "Reports 'somewhere between approximately 15 to 30 gunshots' were fired, citing law enforcement sources.",
+          "ABC News / multiple outlets": "Selina Wang described hearing what 'sounded like dozens of gunshots'; CNN reporters also described 'dozens' \u2014 these are characterizations, not official counts.",
+          "Other outlets": "Do not provide a specific shot count."
+        }
+      },
+      {
+        "topic": "Best's prior arrest details and mental health history specificity",
+        "positions": {
+          "NPR": "Cites D.C. court records directly: Best 'claimed he was Jesus Christ' and said he wanted to be arrested at a different White House checkpoint in July 2025. Notes a Pretrial Stay Away Order was issued and a bench warrant followed after noncompliance.",
+          "USA Today": "Provides the most detailed court record account: Best was from Dundalk, Maryland; charged in DC Superior Court for attempting to enter 1699 State Place NW on July 10, 2025; was involuntarily committed on June 26, 2025, for obstructing vehicle entry at 15th Street and E Street. Cites a police affidavit about Best 'walking around the White House complex inquiring how to gain access at various entry posts.'",
+          "CBS News": "Reports Best 'tried to gain entry to the White House and was arrested and sent to a psychiatric ward for mental health issues' without citing court records directly.",
+          "BBC News": "Reports Best 'had a documented history of mental health conditions' and 'attempted to gain entry to the White House in July 2025,' citing CBS as its U.S. media partner.",
+          "Washington Post": "Notes the suspect 'had previously tried to enter the White House complex, according to court records' but provides minimal detail in the retrieved body text."
+        }
+      },
+      {
+        "topic": "Whether Best was involuntarily committed before or after the July 2025 arrest",
+        "positions": {
+          "USA Today": "Reports an involuntary commitment on June 26, 2025, by Secret Service \u2014 before the July 10, 2025, arrest \u2014 suggesting two separate incidents.",
+          "CBS News": "Implies the psychiatric commitment followed the July 2025 arrest attempt, suggesting a single incident trajectory.",
+          "Other outlets": "Do not address this distinction."
+        }
+      },
+      {
+        "topic": "Trump's framing of the incident in relation to the White House ballroom project",
+        "positions": {
+          "USA Today": "Explicitly reports Trump used the incident to advocate for the White House ballroom, and notes that 'some Republican senators have raised concerns about a $1 billion funding request' and that 'lawmakers appear ready to strip the money from a budget bill.'",
+          "BBC News": "Notes Trump referenced his 'planned White House ballroom' as context for his statement about security.",
+          "CBS News": "Quotes Trump's social media post referencing the need for 'the most safe and secure space' but does not mention the ballroom by name or congressional opposition.",
+          "Other outlets": "Quote Trump's social media post without contextualizing the ballroom funding debate."
+        }
+      },
+      {
+        "topic": "Andrew Wolfe's military branch and rank",
+        "positions": {
+          "NPR": "Identifies him as 'Staff Sgt. Andrew Wolfe' without specifying branch beyond 'West Virginia National Guard.'",
+          "Los Angeles Times": "Identifies him as 'Air Force Staff Sgt. Andrew Wolfe.'",
+          "CNBC": "Identifies him as 'Andrew Wolfe, then 24' without rank or branch."
+        }
+      },
+      {
+        "topic": "Characterization of the incident \u2014 assassination attempt or not",
+        "positions": {
+          "No outlet": "Explicitly calls this particular incident an assassination attempt on Trump.",
+          "CNBC": "Frames it as 'the third incidence of gunfire in the vicinity of President Donald Trump in the past month' alongside the WHCA dinner event, which it does call 'an attempted assassination.'",
+          "Washington Post": "The retrieved body text includes an AI-generated reader comment summary noting skepticism and suggestions the event was 'staged' \u2014 though this is reader commentary, not editorial content."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The Washington Post": "The retrieved body text is severely truncated, providing only the article's lead paragraphs and metadata. What is visible identifies Best by name, notes the prior White House entry attempt via court records, and mentions the wounded bystander. Uniquely, the article includes an AI-generated summary of reader comments noting 'skepticism and disbelief regarding an alleged assassination attempt' and suggestions the event was 'staged or a distraction.' This is notable editorial infrastructure \u2014 surfacing reader sentiment about possible false-flag narratives \u2014 though it is clearly labeled as AI-generated reader commentary, not reporting.",
+      "BBC News": "Leads with the suspect being killed and provides a comprehensive narrative. Emphasizes the one-month timeline since the WHCA dinner shooting. Notably sources its suspect identification through 'the BBC's US media partner CBS,' transparently attributing rather than independently sourcing. Provides the most detailed account of the reporter experience during the shooting through quotes from CBS's Aaron Navarro. Includes Trump's Truth Social statement and mentions his planned ballroom. Does not reference the November National Guard ambush or court record details beyond what CBS provided.",
+      "CNBC": "Frames the story around it being the 'third incidence of gunfire in the vicinity of President Donald Trump in the past month' \u2014 leading with the pattern rather than the individual incident. Provides detailed physical evidence description (crime scene tape, orange markers, surgical gloves). Gives significant space to Selina Wang's viral video. Includes the November National Guard ambush context. Does not cite court records about Best's prior history. Uses business-wire AP-sourced prose throughout.",
+      "NPR": "Runs an AP-sourced report. Distinguishes itself by directly citing 'District of Columbia court records' for Best's July 2025 arrest, including the detail that he 'claimed he was Jesus Christ.' Reports the Pretrial Stay Away Order and subsequent bench warrant for noncompliance \u2014 granular legal details not found in most other outlets. Notes Trump had changed his weekend plans from his New Jersey golf club to the White House on Friday. Does not mention the ballroom or funding debate.",
+      "CBS News": "As the apparent primary reporting outlet for this story (BBC cites CBS as its source), provides a live-updates format with timestamped entries. Uniquely reports the weapon was a revolver. Reports Best was taken to George Washington University Hospital. Provides the earliest identification sourcing. Does not include the court record detail about 'Jesus Christ' claims. Notes Trump was 'working in the White House Saturday on the Iran peace process' without elaborating on the ballroom debate.",
+      "Los Angeles Times": "Runs a straightforward AP wire story (bylined Superville and Durkin Richer). Nearly identical in structure and language to the NPR piece, confirming shared AP sourcing. Identifies Wolfe as 'Air Force Staff Sgt.' \u2014 a detail not in the NPR version of the AP story. Includes a 'More to Read' section linking to the May 4 National Mall shooting and the WHCA dinner shooting, plus an April 5 Lafayette Park gunfire report \u2014 establishing an even longer pattern of incidents. Provides no unique reporting beyond the AP wire.",
+      "USA Today": "Provides the most detailed account of Best's prior interactions with law enforcement, citing court records and a police affidavit. Uniquely reports Best was from Dundalk, Maryland. Reports two separate pre-incident encounters: an involuntary commitment on June 26, 2025, and an arrest on July 10, 2025 \u2014 suggesting a more extensive history than other outlets describe. Most explicitly frames Trump's post-incident statement as advocacy for the White House ballroom and uniquely reports congressional pushback on the $1 billion funding request. Includes Sen. Rick Scott's quote not found in other outlets. Uses original bylines alongside AP contributions."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court records, Secret Service statements, or Trump's Truth Social post) were located in the dossier for direct comparison.",
+      "NPR and USA Today both cite D.C. court records but provide different levels of detail \u2014 USA Today includes a specific address (1699 State Place NW) and an earlier June 26, 2025 involuntary commitment that NPR does not mention. Without the actual court records in hand, it is impossible to verify which account is more complete or whether both are accurate.",
+      "Multiple outlets quote the Secret Service's preliminary statement from X, and their descriptions of its contents are consistent across all articles."
+    ],
+    "missing_context": [
+      "No outlet has yet characterized whether the shooting is being investigated as a targeted attack on the president, an attack on Secret Service officers specifically, or a mental health crisis that escalated to violence. The distinction matters for legal charges and public understanding.",
+      "No outlet reports what happened to the bystander \u2014 their condition, whether they were hospitalized, or any identifying details. This person's fate is unresolved across all coverage.",
+      "No outlet explores why Best, who had a Pretrial Stay Away Order and a bench warrant, was apparently not in custody and was able to return to the White House vicinity with a revolver.",
+      "No outlet addresses how Best acquired the revolver or whether he was legally permitted to possess a firearm given his involuntary psychiatric commitment, which under federal law (18 U.S.C. \u00a7 922(g)(4)) typically prohibits firearm possession.",
+      "The Washington Post article includes an AI-generated summary of reader comments suggesting the event was 'staged' \u2014 no outlet's editorial content addresses or debunks this narrative, though none endorses it either.",
+      "The actual court records for Best's prior arrests and the police affidavit cited by USA Today were not available as primary sources in this dossier, preventing independent verification of the most detailed claims.",
+      "No outlet reports on the security posture or any changes to White House perimeter security that may have occurred after the two prior shooting incidents in April and May, which would contextualize how this third incident was possible.",
+      "Trump's linkage of the shooting to his White House ballroom project and the $1 billion funding request is only fully contextualized by USA Today; other outlets either omit or underreport the political dimension of this framing.",
+      "Multiple outlets (CNBC, NPR, LA Times) appear to share AP wire sourcing but are presented as independent outlets in the dossier. The actual number of independent reporting chains may be smaller than the seven-outlet count suggests."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "All seven outlets confirm the same core event with strong factual convergence \u2014 suspect identified, shot dead by Secret Service, bystander wounded, Trump at White House but unharmed. While there are notable framing differences (particularly around Trump's ballroom advocacy and the depth of Best's prior history), the factual core is solid and the story is straightforward enough for a REPORT. The framing differences are worth noting within the post but do not rise to the level of a META treatment, as they reflect different editorial priorities rather than materially conflicting narratives.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/05/23/gunshots-fired-near-white-house-fbi-director-says/",
+      "title": "Suspected gunman dead after exchanging fire with Secret Service near White House - The Washington Post"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cjwp82ye4y3o",
+      "title": "Suspect killed after opening fire on Secret Service near White House - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/23/reports-of-shots-fired-near-white-house.html",
+      "title": "Suspect dead after opening fire near White House security checkpoint, Secret Service says - CNBC"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/23/g-s1-124148/secret-service-shooting-white-house",
+      "title": "Suspect dead after opening fire near White House security checkpoint, Secret Service says - NPR"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/white-house-gun-shots-north-lawn/",
+      "title": "Gunman killed after opening fire on Secret Service checkpoint outside White House, officials say - CBS News"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://www.latimes.com/world-nation/story/2026-05-23/shots-reportedly-fired-near-white-house",
+      "title": "Suspect shot dead after opening fire near White House checkpoint, Secret Service says - Los Angeles Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/nation/2026/05/23/gunshots-heard-near-white-house-grounds-reported/90237567007/",
+      "title": "Secret Service kill armed suspect, strike bystander in shooting near White House - USA Today"
+    }
+  ]
+}
