@@ -1,0 +1,131 @@
+{
+  "story_id": "2026-05-24-russia-hits-kyiv-with-38c1bfee17",
+  "headline_seed": "Russia hits Kyiv with hypersonic ballistic missile in \u2018deranged\u2019 attack - The Guardian",
+  "brief": {
+    "story_id": "2026-05-24-russia-hits-kyiv-with-38c1bfee17",
+    "consensus_facts": [
+      "Russia launched a massive combined missile and drone attack on Kyiv overnight Saturday into Sunday, May 24, 2026, one of the largest aerial assaults on the Ukrainian capital during the war.",
+      "Russia confirmed it used the Oreshnik hypersonic ballistic missile in the attack, marking the third time the nuclear-capable weapon has been used in the war.",
+      "Ukraine's air force reported the attack included approximately 600 drones and 90 missiles.",
+      "Ukrainian air defenses intercepted or jammed 549 drones and 55 missiles, with approximately 19 additional missiles failing to reach their targets.",
+      "Multiple people were killed and dozens wounded in Kyiv and the surrounding region; damage was recorded across multiple districts of the capital, including residential buildings.",
+      "The Oreshnik missile struck the city of Bila Tserkva, approximately 50 miles south of Kyiv, according to President Zelenskyy.",
+      "Russia said the strikes were retaliation for Ukrainian attacks on Russian-controlled territory, specifically referencing a drone strike on a college dormitory in Starobilsk in occupied eastern Ukraine on May 22.",
+      "The death toll from the Starobilsk college dormitory strike rose to at least 18-21 people, with 42 injured.",
+      "Ukraine denied targeting civilians in the Starobilsk strike, saying it targeted Russian military assets in the area.",
+      "Both President Zelenskyy and the U.S. Embassy in Kyiv had issued advance warnings of an imminent major Russian attack, citing intelligence.",
+      "Kyiv military administration head Tymur Tkachenko described the attack as a 'mass ballistic missile attack' with damage recorded in approximately 40 locations across several districts.",
+      "Russia's Defense Ministry said it also used Iskander, Kinzhal, and Tsirkon missiles in addition to the Oreshnik and drones."
+    ],
+    "disagreements": [
+      {
+        "topic": "Casualty count in Kyiv",
+        "positions": {
+          "NPR": "At least 2 killed and at least 77 injured, per Mayor Klitschko.",
+          "Al Jazeera English": "4 killed (2 in Kyiv city, 2 in surrounding Kyiv region) and more than 60 wounded.",
+          "NBC News": "At least 2 people killed in Kyiv, with over 20 injured mentioned in earlier reports.",
+          "CBS News": "At least 5 people wounded initially reported; updated figures of 2 dead and dozens wounded referenced later.",
+          "CNN": "At least 1 killed and over 20 injured (from video summary text)."
+        }
+      },
+      {
+        "topic": "Starobilsk dormitory death toll",
+        "positions": {
+          "NPR": "At least 21 killed and 42 injured.",
+          "NBC News": "Death toll risen to 21.",
+          "CBS News": "At least 18 killed (two more bodies pulled from rubble, taking toll to 18).",
+          "Al Jazeera English": "Does not specify a number for Starobilsk."
+        }
+      },
+      {
+        "topic": "Klitschko's casualty figures for Kyiv city specifically",
+        "positions": {
+          "NPR": "2 killed, 77 injured in Kyiv.",
+          "Al Jazeera English": "2 killed, 81 wounded in the capital.",
+          "CBS News": "Initially reported 5 wounded, 1 hospitalized; later updated."
+        }
+      },
+      {
+        "topic": "Context of U.S.-led peace negotiations",
+        "positions": {
+          "NPR": "Negotiations stalled because the U.S. is 'distracted by its own war, waged with Israel, on Iran'; also notes Trump administration loosened sanctions on Russian oil to offset energy shortfalls from the Iran war.",
+          "CBS News": "U.S.-led efforts to negotiate have 'slowed in recent months with Washington's attention diverted towards its conflict in the Middle East.'",
+          "NBC News": "Does not discuss the status of peace negotiations.",
+          "Al Jazeera English": "Does not discuss peace negotiations."
+        }
+      },
+      {
+        "topic": "Characterization of the Starobilsk strike",
+        "positions": {
+          "NBC News": "At a UN Security Council emergency meeting, Ukraine's ambassador called Russia's accusations 'a pure propaganda show' and said the operations 'exclusively targeted the Russian war machine.'",
+          "CBS News": "Ukraine denied targeting civilians, saying it hit a Russian drone unit stationed in the Starobilsk area.",
+          "NPR": "Ukraine denies targeting the college (brief mention).",
+          "Al Jazeera English": "Moscow 'threatened retaliation for strikes in Russian-occupied eastern Ukraine' (does not detail Ukraine's denial)."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only entries (Articles 1 and 4). One headline leads with the Oreshnik missile and frames this as 'one of war's biggest attacks on Kyiv.' The other focuses on Russia's own confirmation of using hypersonic and ballistic missiles. No body text available for deeper analysis.",
+      "NPR": "Leads with the scale of the attack ('pummeled,' 'massive wave') and provides the broadest geopolitical context of any outlet. Uniquely includes reporting on Ukraine's long-range drone campaign against Russian oil infrastructure and features an on-the-ground interview with a Ukrainian drone operator. Also uniquely frames U.S. disengagement from peace talks as linked to the U.S.-Israel war on Iran, and notes that the Trump administration loosened Russian oil sanctions. Mentions the destruction of the Chernobyl museum and one of Kyiv's oldest markets \u2014 cultural damage not highlighted by other outlets. Frames Zelenskyy's 'They really are unhinged' quote prominently.",
+      "Al Jazeera English": "Most concise full-text report. Leads with the factual casualty toll and the retaliatory framing. Gives prominent space to Russia's full statement listing all weapon types used. Does not editorialize or provide broader geopolitical context. Notably provides a slightly higher Kyiv city wounded count (81) than NPR (77). Does not discuss peace negotiations or the broader U.S. role.",
+      "NBC News": "Longest and most detailed report, sourced from the Associated Press. Leads with Zelenskyy confirming the Oreshnik use. Uniquely includes human-interest quotes from Kyiv residents (Svitlana Onofryichuk, Yevhen Zosin) and mentions people sheltering in a school building. Also uniquely reports on the UN Security Council emergency meeting called at Russia's request, including Ukraine's ambassador's rebuttal. Includes Putin's prior quotes about the Oreshnik traveling 'like a meteorite' at Mach 10. Notes a Ukrainian drone killed a civilian in Russia's Belgorod region \u2014 a detail no other outlet includes.",
+      "CBS News": "Leads with the attack and early casualty figures, which appear to be from an earlier filing before numbers were updated. Uniquely provides demographic detail on Starobilsk victims (young women born 2003-2008) and quotes the Moscow-backed Luhansk governor. Includes the UN statement on condemning attacks on civilians. Provides the most detailed description of the Starobilsk aftermath (rescuers, five-story building). CBS's initial casualty numbers for Kyiv (5 wounded) are notably lower than other outlets' updated figures, suggesting an earlier filing time.",
+      "CNN": "Effectively headline-and-video-summary only; the body text is a 1:02 video description and a list of unrelated videos. Reports at least 1 killed and over 20 injured \u2014 the lowest figures of any outlet, consistent with very early reporting. No substantive body text for analysis.",
+      "The Guardian": "Referenced in the story headline seed ('deranged' attack framing) but no article from The Guardian appears in the dossier. The word 'deranged' likely comes from Zelenskyy's characterization, rendered in NPR as 'unhinged.'"
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All reporting relies on official Telegram posts from Ukrainian and Russian authorities, social media statements from leaders, and wire service reporting. Without access to the original Telegram posts from Tkachenko, Klitschko, Zelenskyy, or Russia's Defense Ministry, it is impossible to verify whether outlets accurately quoted or paraphrased these statements."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides damage assessment details for the Oreshnik strike on Bila Tserkva specifically \u2014 what it hit, whether there were casualties there, or whether it carried conventional or other warheads.",
+      "No outlet explains what the Oreshnik's specific military purpose or target was in this attack, despite Russia's Defense Ministry claiming it struck 'military command and control facilities.'",
+      "The Guardian article referenced in the headline seed is not present in the dossier; the 'deranged' framing cannot be analyzed.",
+      "No outlet discusses what air defense systems Ukraine currently has, recent deliveries, or whether they are capable of intercepting the Oreshnik \u2014 despite Putin's claim that it is immune to missile defense.",
+      "NPR uniquely reports that the Trump administration loosened sanctions on Russian oil exports due to the Iran war \u2014 a significant geopolitical claim that no other outlet corroborates in this dossier. This warrants verification.",
+      "No outlet provides detail on the European Commission's statement beyond von der Leyen's quote (mentioned only by NPR). What specific air defense support is being sent is not described.",
+      "The Starobilsk death toll discrepancy (18 vs. 21) is unresolved across outlets and likely reflects different filing times, but no outlet flags this discrepancy.",
+      "CNN's body text is effectively unusable \u2014 it consists of video listing metadata rather than article text. This limits the dossier's breadth.",
+      "Reuters provided two headline-only entries with no retrievable body text, limiting the wire-level corroboration available."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text (NPR, Al Jazeera, NBC News, CBS News) corroborate the core facts of a major Russian attack on Kyiv using the Oreshnik missile, with broad agreement on the scale, weapons used, and retaliatory context. While casualty figures vary due to filing times and there are notable framing differences (especially NPR's geopolitical context on U.S.-Iran and oil sanctions), the factual core is solid enough for a straight REPORT rather than a META post. The framing divergences are timing-driven rather than ideological.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/europe/ukraines-capital-kyiv-hit-by-massive-missile-drone-attack-2026-05-23/",
+      "title": "Russia hits Ukraine with Oreshnik missile in one of war's biggest attacks on Kyiv - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/24/nx-s1-5833050/russia-uses-hypersonic-oreshnik-missile-in-mass-attack-on-kyiv",
+      "title": "Russia pounds Kyiv in powerful drone and missile attack - NPR"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/5/24/russian-attacks-on-ukraines-kyiv-kill-at-least-four-people",
+      "title": "Russian attacks on Ukraine\u2019s Kyiv kill at least four people - Al Jazeera"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/aerospace-defense/russia-says-it-hit-ukraine-with-hypersonic-ballistic-missiles-state-news-2026-05-24/",
+      "title": "Russia says it hit Ukraine with hypersonic and ballistic missiles, state news agencies report - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/ukraine/ukraine-capital-kyiv-hit-massive-missile-drone-attack-rcna346673",
+      "title": "Russia uses hypersonic Oreshnik missile in mass attack on Kyiv - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/russia-launches-heavy-kyiv-missile-strikes-ukraine-drone-attack/",
+      "title": "Russia launches heavy missile strikes on Kyiv after Ukraine drone attack - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/24/world/video/kyiv-explosions-russia-strikes-digvid-hnk",
+      "title": "\u2018Massive\u2019 Russian missile barrage hits Kyiv in retaliation for deadly Ukrainian attack - CNN"
+    }
+  ]
+}
