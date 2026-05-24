@@ -1,0 +1,119 @@
+{
+  "story_id": "2026-05-24-turkish-police-storm-offices-bb19e9eceb",
+  "headline_seed": "Turkish police storm offices of main opposition party, firing tear gas and rubber bullets - NBC News",
+  "brief": {
+    "story_id": "2026-05-24-turkish-police-storm-offices-bb19e9eceb",
+    "consensus_facts": [
+      "Turkish riot police stormed the headquarters of the main opposition Republican People's Party (CHP) in Ankara on Sunday, May 24, 2026.",
+      "Police used tear gas and rubber bullets against CHP party supporters and officials gathered at or inside the building.",
+      "The raid followed a standoff that began after an appeals court on Thursday nullified the election of \u00d6zg\u00fcr \u00d6zel as CHP party chairperson, ruling he should be replaced by his predecessor Kemal K\u0131l\u0131\u00e7daro\u011flu.",
+      "\u00d6zel and most of the CHP leadership had been inside the headquarters since Thursday's court ruling, refusing to vacate.",
+      "K\u0131l\u0131\u00e7daro\u011flu's representatives requested police assistance to enforce the court ruling and take control of the building.",
+      "The Ankara Governor's office approved the request and instructed police to implement the court decision.",
+      "Footage showed large clouds of tear gas, riot police storming the premises, and clashes at the building.",
+      "The opposition says the court decision was politically motivated to weaken the CHP ahead of future elections.",
+      "Istanbul Mayor Ekrem \u0130mamo\u011flu, a CHP member seen as President Erdo\u011fan's main political rival, has been imprisoned since March 2025 on corruption charges.",
+      "Erdo\u011fan has ruled Turkey since 2003, first as prime minister and then as president."
+    ],
+    "disagreements": [
+      {
+        "topic": "Duration of the standoff before the police raid",
+        "positions": {
+          "NBC News (AP)": "Describes the standoff as lasting 'several hours' on Sunday, with the broader occupation since Thursday",
+          "Associated Press (video)": "States party supporters 'had been holed up inside for three days'",
+          "BBC News": "States party members 'blocked the entrances with a makeshift barricade' on Sunday, with occupation since Thursday's ruling"
+        }
+      },
+      {
+        "topic": "Whether there were clashes between rival CHP factions inside the building",
+        "positions": {
+          "BBC News": "Reports 'clashes were also reported between his supporters and those of K\u0131l\u0131\u00e7daro\u011flu' inside the building",
+          "NBC News (AP)": "Reports a crowd showed up outside that \u00d6zel claimed 'were not CHP members but were sent to intimidate' \u2014 does not describe internal faction clashes"
+        }
+      },
+      {
+        "topic": "\u00d6zel's actions after the raid",
+        "positions": {
+          "BBC News": "Reports \u00d6zel emerged, addressed crowds saying the party would 'from now be on the streets or in the squares, marching towards power,' then led hundreds of supporters marching through Ankara toward parliament, shown atop a police vehicle",
+          "NBC News (AP)": "Does not mention \u00d6zel's post-raid march or statements after leaving the building"
+        }
+      },
+      {
+        "topic": "Characterization of the broader political context",
+        "positions": {
+          "BBC News": "Frames as 'further cementing President Erdo\u011fan's grip on power,' cites Human Rights Watch warning about 'abusive tactics,' and notes Erdo\u011fan can only run again if he calls early elections or changes the constitution",
+          "NBC News (AP)": "Notes government insists courts are 'impartial and act independently of political pressure,' and that 'many observers' say legal cases aim to neutralize CHP"
+        }
+      },
+      {
+        "topic": "The court ruling's scope",
+        "positions": {
+          "BBC News": "States the ruling 'also means the party's entire executive is replaced, and it is thought its decisions are no longer recognised'",
+          "NBC News (AP)": "States the ruling suspended \u00d6zel 'and members of the party's executive board' but does not discuss invalidation of party decisions"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters (Article 1)": "Headline-only. Frames the event as police 'forcing ousted opposition out of headquarters' and contextualizes it as a 'crisis' that is 'deepening.' The word 'ousted' in the headline accepts the court ruling's effect as fait accompli.",
+      "NBC News": "Carries the full AP wire report. Leads with the police action \u2014 tear gas and rubber bullets \u2014 giving prominence to the violence. Provides substantial background on the court ruling, CHP's 2024 municipal election success, and \u0130mamo\u011flu's imprisonment. Includes the government's defense that courts are impartial. Buries \u00d6zel's post-raid response and does not mention Human Rights Watch or Erdo\u011fan's term-limit constraints.",
+      "Reuters (Article 3 \u2014 Reuters Connect)": "Photo licensing page, not editorial content. Caption neutrally describes 'riot police enter the headquarters... to evict its ousted leadership, after authorities ordered enforcement of a court ruling.' Framing treats the eviction as procedural enforcement of a court order.",
+      "Bloomberg": "Headline-only, paywalled. Uses softer language \u2014 'Tensions Rise... After Standoff' \u2014 notably avoiding words like 'storm,' 'tear gas,' or 'rubber bullets,' which underplays the severity of the police action compared to all other outlets.",
+      "Reuters (Article 5)": "Headline-only. Uses 'enter' rather than 'storm' \u2014 more neutral than AP/BBC phrasing. Frames the action as evicting 'ousted leaders,' again accepting the court's legal effect.",
+      "Associated Press (Article 6)": "Video page with brief text summary. Leads with 'stormed' and 'firing tear gas and rubber bullets.' Describes it as a 'violent end to a standoff.' Frames the event as 'escalating tensions between the opposition and the government.' Body text is truncated and mixed with unrelated AP stories.",
+      "BBC News": "Most detailed original reporting among the outlets. Leads with the police raid but quickly pivots to the political significance \u2014 'further cementing Erdo\u011fan's grip on power.' Uniquely includes: \u00d6zel's post-raid march toward parliament atop a police vehicle, Human Rights Watch's warning about 'abusive tactics,' Justice Minister G\u00fcrlek's defense of the ruling, Erdo\u011fan's term-limit constraints, and the detail that G\u00fcrlek previously spearheaded investigations against the opposition as Istanbul's chief prosecutor. Frames the story most explicitly as an assault on democracy."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (court ruling text, governor's statement, police orders) were located for this story. All reporting is based on outlets' own characterizations of the appeals court ruling and the governor's statement. The actual text of the court decision nullifying \u00d6zel's election is not available for independent verification."
+    ],
+    "missing_context": [
+      "The full text of the appeals court ruling nullifying \u00d6zel's election is not available \u2014 no outlet quotes the specific legal reasoning or statutory basis for the decision.",
+      "No outlet reports on casualties or injuries from the police raid, despite the use of tear gas and rubber bullets against a crowd. Whether anyone was hospitalized or arrested is unreported.",
+      "No outlet provides detail on the specific corruption or vote-buying allegations that formed the basis of the original legal challenge to \u00d6zel's party election.",
+      "The legal mechanism by which a court can appoint a replacement party leader in Turkey is not explained by any outlet \u2014 a reader unfamiliar with Turkish law would not understand whether this is routine or extraordinary.",
+      "No outlet reports international government reactions beyond Human Rights Watch (cited only by BBC). EU, NATO ally, or U.S. government responses are absent.",
+      "K\u0131l\u0131\u00e7daro\u011flu's own public statements or position on the police raid are not reported by any outlet \u2014 he is a central figure but appears only through his lawyer's procedural request.",
+      "No outlet addresses whether the CHP has legal avenues to appeal or challenge the appeals court ruling further.",
+      "Reuters, Bloomberg, and one Reuters Connect entry are headline-only or paywalled, limiting the dossier's cross-source verification depth. Full body text was available from only three outlets (NBC/AP, AP video, BBC)."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text corroborate the core facts of the police raid, the court ruling, and the political context. While BBC frames the story more aggressively as democratic erosion and NBC/AP includes the government's defense, the factual divergences are modest and the framing differences are not yet dramatic enough to warrant a META post. The story is significant and well-sourced enough for a straight REPORT with appropriate attribution of contested claims.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/turkey-orders-police-evict-ousted-opposition-leadership-headquarters-2026-05-24/",
+      "title": "Turkish police force ousted opposition out of headquarters as crisis deepens - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/asia/turkish-police-storm-offices-main-opposition-chp-party-firing-tear-gas-rcna346689",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reutersconnect.com/item/turkish-riot-police-enter-opposition-headquarters-to-evict-ousted-chp-leadership-in-ankara/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMk9GTEFWTDVIUg",
+      "title": "Licensable picture: Turkish riot police enter opposition headquarters to evict ousted CHP leadership in Ankara - Reuters Connect"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-24/tensions-rise-at-turkey-s-main-opposition-offices-after-standoff",
+      "title": "Tensions Rise at Turkey\u2019s Main Opposition Offices After Standoff - Bloomberg.com"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/turkish-riot-police-enter-opposition-headquarters-evict-ousted-leaders-2026-05-24/",
+      "title": "Turkish riot police enter opposition headquarters to evict ousted leaders - Reuters"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/video/turkish-police-storm-offices-of-main-opposition-chp-party-firing-tear-gas-and-rubber-bullets-0f0b2456f5214b898d2cc6f08cb574be",
+      "title": "Turkish police storm offices of main opposition CHP party, firing tear gas and rubber bullets - AP News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c87qwrqre83o",
+      "title": "Turkish riot police storm opposition offices after leaders ousted - BBC"
+    }
+  ]
+}
