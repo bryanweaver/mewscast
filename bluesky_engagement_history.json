@@ -899,6 +899,11 @@
       "did": "did:plc:v2hwso5qpqpdftob6yy6raqp",
       "handle": "felineandfloss.bsky.social",
       "timestamp": "2026-05-25T14:04:52.312945"
+    },
+    {
+      "did": "did:plc:ua4y7ly7p2scvftkutgpusyx",
+      "handle": "majima.club",
+      "timestamp": "2026-05-25T16:42:14.979534"
     }
   ],
   "liked_posts": [
@@ -4056,6 +4061,11 @@
       "uri": "at://did:plc:v2hwso5qpqpdftob6yy6raqp/app.bsky.feed.post/3mmojr33j4c22",
       "author": "felineandfloss.bsky.social",
       "timestamp": "2026-05-25T14:04:52.220305"
+    },
+    {
+      "uri": "at://did:plc:ua4y7ly7p2scvftkutgpusyx/app.bsky.feed.post/3mmovthywts2g",
+      "author": "majima.club",
+      "timestamp": "2026-05-25T16:42:14.784233"
     }
   ],
   "last_cleanup": "2026-05-22T16:43:53.770041",
