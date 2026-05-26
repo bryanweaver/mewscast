@@ -1,0 +1,132 @@
+{
+  "story_id": "2026-05-26-u-s-strikes-targets-f134dc7552",
+  "headline_seed": "U.S. strikes targets in Iran, citing threats posed to American troops - The Washington Post",
+  "brief": {
+    "story_id": "2026-05-26-u-s-strikes-targets-f134dc7552",
+    "consensus_facts": [
+      "U.S. Central Command said it conducted 'self-defense strikes' in southern Iran on Monday, May 25, 2026, targeting missile launch sites and Iranian boats attempting to place mines.",
+      "CENTCOM spokesman Capt. Tim Hawkins said the strikes were intended 'to protect our troops from threats posed by Iranian forces' and that the U.S. continues to 'defend our forces while using restraint during the ongoing ceasefire.'",
+      "The strikes targeted an area near Bandar Abbas, a southern Iranian port city on the Strait of Hormuz.",
+      "Iran's Islamic Revolutionary Guard Corps (IRGC) claimed it downed a U.S. MQ-9 drone and fired at an RQ-4 drone and an F-35 fighter jet entering Iranian airspace.",
+      "Iran condemned the strikes as a 'clear violation of the ceasefire' and warned it would respond to any aggression.",
+      "Secretary of State Marco Rubio, speaking during a visit to India, said a deal was still possible within days and that the Strait of Hormuz must reopen 'one way or the other.'",
+      "Iranian negotiators, including Parliament Speaker Mohammad Bagher Ghalibaf and Foreign Minister Abbas Araghchi, were in Qatar for talks mediated by Qatar at the time of the strikes.",
+      "Iran's foreign ministry spokesman Esmaeil Baghaei said agreement had been reached on many issues but that the signing of a deal was not imminent.",
+      "A ceasefire between U.S. and Iranian forces has been in place since April 8, 2026, and remained nominally in effect despite the strikes.",
+      "The memorandum of understanding being discussed reportedly involves a 60-day ceasefire extension, reopening of the Strait of Hormuz, and further negotiations over Iran's nuclear program.",
+      "President Trump said Iran's enriched uranium would either be turned over to the U.S. or destroyed in place with international witnesses.",
+      "Iran's Supreme Leader Mojtaba Khamenei, who has not appeared in public since succeeding his late father, issued a statement saying the region would 'no longer serve as shields for American bases.'",
+      "U.S. intelligence indicates Khamenei is in an undisclosed location with limited outside communication, reportedly injured in Israeli strikes that killed his father at the start of the war on February 28.",
+      "The U.S.-Iran war began with U.S. and Israeli strikes on Iran on February 28, 2026; Iran responded by attacking Israel and Gulf states and effectively closing the Strait of Hormuz."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the strikes relative to the ceasefire",
+        "positions": {
+          "NBC News": "Iran called the strikes 'a clear violation of the ceasefire' and accused the U.S. of 'bad faith and unreliability' while negotiations were ongoing.",
+          "BBC News": "Reported CENTCOM framing of strikes as consistent with the ceasefire, noting the IRGC claimed the 'legitimate and definite right to retaliate against any US ceasefire violations.'",
+          "CBS News": "Framed the strikes as casting 'doubt on an accord to end the Mideast war,' but also reported CENTCOM insisted the ceasefire was still in place.",
+          "The New York Times": "Characterized the strikes neutrally as 'self-defense strikes' and noted the ceasefire remained nominally in effect, without leading with Iran's violation claim."
+        }
+      },
+      {
+        "topic": "Proximity to a deal",
+        "positions": {
+          "NBC News": "Rubio said negotiators were down to 'disagreements over a word, a sentence,' suggesting a deal was very close.",
+          "BBC News": "Reported Iran poured cold water on imminent deal expectations, and noted Trump said negotiators should 'not rush into' a deal.",
+          "CBS News": "Emphasized Iran's argument that 'frequent changes' and contradictions by the U.S. side present 'problems and obstacles.'",
+          "The New York Times": "Reported both Trump saying a deal was close and Iran saying no one could claim it was imminent, presenting a balanced picture of uncertainty."
+        }
+      },
+      {
+        "topic": "Iran's nuclear program in the deal",
+        "positions": {
+          "NBC News": "Reported a senior U.S. official said Iranians had 'in principle, committed to giving up stockpiles of enriched uranium,' and that a senior White House official said Trump's demand was not new.",
+          "The New York Times": "Reported Iranian foreign ministry spokesman said Iran 'was not discussing details of its nuclear program,' directly contradicting the U.S. claim of an in-principle commitment.",
+          "CBS News": "Reported Iran stressed the proposal under discussion 'does not include immediate concessions on the nuclear issue.'"
+        }
+      },
+      {
+        "topic": "Trump's Abraham Accords linkage",
+        "positions": {
+          "NBC News": "Reported a senior Arab official rejected the idea of a package deal, saying the priority should be stopping the war and reopening Hormuz first.",
+          "The New York Times": "Noted that countries Trump called on to join the Abraham Accords were 'highly unlikely to agree,' and suggested the move was aimed at placating Iran hawks in the Republican Party."
+        }
+      },
+      {
+        "topic": "IRGC claims of downing U.S. drone and firing on F-35",
+        "positions": {
+          "BBC News": "Reported the IRGC claim but noted it 'did not specify when this happened.'",
+          "NBC News": "Reported the claim and noted 'there was no immediate response from the Pentagon.'",
+          "CBS News": "Reported the claim without Pentagon response, sourcing it to the Guard's Sepah News website."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only; no body text retrievable (paywall/bot-check). Headline frames the story around deal uncertainty amid strikes, a financial-markets angle consistent with Bloomberg's audience.",
+      "The Washington Post": "Headline-only; no body text retrievable. Headline leads with the strikes and the justification of threats to American troops, framing the U.S. as the actor and troop protection as the rationale.",
+      "BBC News": "Leads with the factual event \u2014 'US launches new strikes on Iran' \u2014 and provides the most comprehensive single-article overview. Gives significant space to Iran's retaliatory claims (drone downing) and Khamenei's statement. Provides substantial background context including the IAEA enriched uranium stockpile figure (440kg at 60% purity), explanation of weapons-grade threshold, and the history of the Strait of Hormuz closure. Notably neutral tone throughout, attributing claims to both sides without editorializing.",
+      "Politico": "Headline-only; no body text retrievable (403 error). Headline frames the strikes as 'self-defense strikes' in scare quotes while noting 'peace negotiations drag on,' implying tension between military action and diplomacy.",
+      "NBC News": "Leads with Iran's accusation of ceasefire violation, foregrounding Tehran's perspective before the U.S. justification. Provides the most detailed reporting on the diplomatic track: Rubio's 'disagreements over a word, a sentence' quote, the senior U.S. official's claim that Iran committed in principle to giving up enriched uranium, and the senior Arab official rejecting Trump's Abraham Accords linkage. Also unique in reporting Ghalibaf's departure from Qatar on Tuesday. Uses a subscription wall partway through but substantial content is available.",
+      "The New York Times": "Frames the story as a diplomatic paradox \u2014 strikes launched hours after Iranian negotiators arrived in Qatar. Uses a live-blog format, leading with a comprehensive summary pinned post and then adding updates. Uniquely emphasizes the intertwining of the Lebanon/Hezbollah conflict with the Iran talks, noting Israel signaled intensification against Hezbollah. Also unique in reporting oil price movements (Brent crude below $94, down 6.5%, still ~30% above pre-war levels) and Israeli domestic political reaction. Reports Pakistan's role as broker and its leaders visiting China, adding a geopolitical layer absent from other outlets.",
+      "CBS News": "Uses a live-updates format, leading with a summary of what to know. Emphasizes Iran's tempering of deal expectations and the regime's complaint about 'frequent changes' from the U.S. side. Uniquely includes a Lebanese airstrike update (12 killed in Bekaa Valley) in its live blog, connecting the broader regional conflict. Also provides the intelligence detail about Khamenei being 'holed up in an undisclosed location' with communication via couriers as a factor delaying talks."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (e.g., CENTCOM official statement text, Iranian foreign ministry statement, draft memorandum of understanding) were located in the dossier.",
+      "All outlets cite the same CENTCOM spokesman quote from Capt. Tim Hawkins, but the actual full statement is not available for comparison.",
+      "Iran's foreign ministry statement and IRGC statement are referenced across multiple outlets but not provided in full, making it impossible to verify whether outlets selectively quoted or omitted portions."
+    ],
+    "missing_context": [
+      "No outlet provides specifics on what the 'threats posed by Iranian forces' were that triggered the strikes \u2014 no timeline of provocative acts, no description of mine-laying activity beyond the CENTCOM characterization.",
+      "No outlet reports on casualties from the U.S. strikes, either military or civilian, on the Iranian side.",
+      "No outlet provides detail on the legal basis for 'self-defense strikes' inside another country's territory during what both sides nominally call a ceasefire.",
+      "The IRGC claim of downing a U.S. MQ-9 drone and firing on an F-35 is reported by multiple outlets but none include Pentagon confirmation or denial \u2014 this remains unverified.",
+      "No outlet describes what specific provisions of the ceasefire agreement permit or prohibit defensive strikes, mine-laying, or drone overflights, making it impossible for readers to assess either side's violation claims.",
+      "Bloomberg and Politico body texts were inaccessible (paywall and 403 error respectively); The Washington Post returned only a redirect link. This limits the breadth of the dossier to four substantive outlets (BBC, NBC, NYT, CBS), all of which lean left or are international, with no right-leaning outlet body text available.",
+      "No outlet reports on Congressional reaction to the strikes, whether from hawks or doves.",
+      "The 13 U.S. service members killed in the war, mentioned by Trump at Arlington, receive no further detail in any outlet \u2014 when and how they were killed is not explained.",
+      "No outlet quantifies the economic impact of the Strait of Hormuz closure beyond the NYT's oil price data point, despite the blockade affecting global food and energy supplies for nearly three months.",
+      "The status of the reported U.S. naval blockade of Iranian ports \u2014 its legal basis, enforcement details, and humanitarian implications \u2014 receives minimal attention across all outlets."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text report the same core event but with materially different framing: NBC leads with Iran's violation accusation, NYT emphasizes the diplomatic paradox and regional linkages, BBC provides the broadest factual overview, and CBS foregrounds deal uncertainty. The contradiction between U.S. 'self-defense during ceasefire' framing and Iran's 'clear violation' framing is itself the story worth surfacing, alongside the significant gap between U.S. and Iranian accounts of nuclear program concessions. A META post would serve readers by mapping these divergences transparently.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-05-26/us-iran-deal-remains-uncertain-amid-fresh-strikes",
+      "title": "US-Iran Deal Remains Uncertain Amid Fresh Strikes - Bloomberg.com"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/05/26/us-renews-strikes-iran-citing-threats-posed-american-troops/",
+      "title": "U.S. strikes targets in Iran, citing threats posed to American troops - The Washington Post"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cvgzzn4y1n8o",
+      "title": "US launches new strikes on Iran, targeting missile sites and boats - BBC"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/05/25/us-iran-bombing-ceasefire-00935617",
+      "title": "US says it launched \u2018self-defense strikes\u2019 in Iran as peace negotiations drag on - Politico"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/iran/us-military-says-conducted-self-defense-strikes-targets-iran-rcna346839",
+      "title": "U.S. launches new strikes in Iran, targeting boats and missile launchers - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/05/25/world/iran-war-trump",
+      "title": "As Delegations Gather in Qatar For Talks, U.S. Strikes Iran\u2019s Gulf Coast - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/iran-us-war-trump-deal-obstacles-remain/",
+      "title": "U.S. conducts \"self-defense\" strikes, CENTCOM says, insists ceasefire still in place amid negotiations - CBS News"
+    }
+  ]
+}
