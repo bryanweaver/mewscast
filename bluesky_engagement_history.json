@@ -914,6 +914,11 @@
       "did": "did:plc:7y4e3jpezo4n4zh53ianc3wn",
       "handle": "jetblackraider.itch.io",
       "timestamp": "2026-05-26T01:44:26.701909"
+    },
+    {
+      "did": "did:plc:z4lb75pduziqigl3napyjzka",
+      "handle": "alyossan.art",
+      "timestamp": "2026-05-26T14:05:48.692186"
     }
   ],
   "liked_posts": [
@@ -4086,6 +4091,11 @@
       "uri": "at://did:plc:7y4e3jpezo4n4zh53ianc3wn/app.bsky.feed.post/3mmpss6ckqs2h",
       "author": "jetblackraider.itch.io",
       "timestamp": "2026-05-26T01:44:26.616843"
+    },
+    {
+      "uri": "at://did:plc:z4lb75pduziqigl3napyjzka/app.bsky.feed.post/3mmopuzpias2s",
+      "author": "alyossan.art",
+      "timestamp": "2026-05-26T14:05:48.534853"
     }
   ],
   "last_cleanup": "2026-05-22T16:43:53.770041",
