@@ -1,0 +1,39 @@
+{
+  "story_id": "2026-05-28-trump-wants-a-gas-4c2f502770",
+  "headline_seed": "Trump wants a gas tax holiday. There\u2019s a much bigger problem looming - NPR",
+  "brief": {
+    "story_id": "2026-05-28-trump-wants-a-gas-4c2f502770",
+    "consensus_facts": [],
+    "disagreements": [],
+    "framing_analysis": {
+      "NPR": "NPR provides a detailed, policy-oriented explainer on Trump's call for a federal gas tax holiday. It leads with the proposal itself (waiving 18.4 cents/gallon), then systematically walks through how much consumers would actually save (less than the full 18.4 cents, per Penn Wharton and Tax Foundation estimates), the demand-side risk of suspending taxes, and \u2014 most prominently \u2014 the downstream consequences for road infrastructure funding. NPR frames the gas tax holiday as a trade-off story: marginal pump savings versus real losses to the Highway Trust Fund and state road budgets. It contextualizes the proposal within the war with Iran and resulting oil price disruptions (national average at $4.46/gallon, up from ~$3 prewar). It includes Georgia's $361 million cost from its two-month freeze, state-by-state gas tax figures, AAA's $26.5 billion pothole-damage estimate, and a LendingTree report on U.S. road conditions. The piece buries the political prospects (unclear whether Congress will vote) and gives more space to infrastructure consequences than to the political dynamics. A human-interest anecdote about a New Orleans music teacher's pothole damage reinforces the infrastructure framing.",
+      "The New York Times": "Only a headline is available: 'Opinion | Yuval Noah Harari on Donald Trump's Core Delusion.' This is an opinion/podcast piece about Trump broadly, not a news report on the gas tax holiday. It shares no substantive overlap with the NPR story beyond the name 'Trump.' It cannot be used for corroboration or framing comparison on the gas tax holiday topic."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No alignment or divergence assessment is possible."
+    ],
+    "missing_context": [
+      "Only one outlet (NPR) provided retrievable body text on the gas tax holiday story. The New York Times article is headline-only, is an opinion piece, and is on a different topic entirely. All substantive details in this dossier are single-source claims from NPR and cannot be treated as consensus.",
+      "No primary source was located \u2014 e.g., the text of any congressional bill, a White House statement, or the Penn Wharton Budget Model report itself. The NPR piece cites Penn Wharton and Tax Foundation estimates but the underlying analyses are not in the dossier.",
+      "No conservative or right-leaning outlet is represented in this dossier. A fair-minded reader would want to see how outlets sympathetic to the administration frame the proposal \u2014 whether they emphasize consumer relief over infrastructure costs, or whether they contest the demand-side critique.",
+      "NPR references 'the war with Iran' and 'the oil trade disruption triggered by the war with Iran' as the cause of four-year-high gas prices, but the dossier contains no separate reporting on this conflict or its specific impact on oil supply, leaving an important causal claim uncorroborated.",
+      "No outlet in the dossier addresses the political feasibility in detail \u2014 which lawmakers support or oppose the proposal, where it stands in committee, or whether leadership has scheduled any action.",
+      "NPR mentions 'several bills introduced before Trump called for a temporary pause' but does not name them or their sponsors. A reader would benefit from knowing the specific legislative vehicles."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet provides substantive body text on this story, and no primary source is available. The dossier is too thin for a REPORT (which requires 2+ outlets confirming core facts). A BULLETIN appropriately signals that the story is timely and worth flagging \u2014 Trump's gas tax holiday proposal amid Iran-war-driven price spikes \u2014 while hedging on the single-source limitation until more coverage is gathered.",
+    "confidence": 0.3
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/28/nx-s1-5835634/gasoline-tax-holiday-trump-potholes",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/26/opinion/ezra-klein-podcast-yuval-noah-harari.html",
+      "title": "Opinion | Yuval Noah Harari on Donald Trump\u2019s Core Delusion - The New York Times"
+    }
+  ]
+}
