@@ -1,0 +1,151 @@
+{
+  "story_id": "2026-05-29-russian-drone-launched-against-e833849404",
+  "headline_seed": "Russian drone launched against Ukraine crashes in Romania, injuring 2 - NPR",
+  "brief": {
+    "story_id": "2026-05-29-russian-drone-launched-against-e833849404",
+    "consensus_facts": [
+      "A Russian drone, part of an overnight attack on Ukraine, crashed into an apartment building in Galati, eastern Romania, on Friday May 29, 2026.",
+      "Two people suffered minor injuries in the incident; several others were evacuated.",
+      "The drone impact caused a fire on the roof of the residential building.",
+      "The drone was tracked by radar in Romanian airspace before it crashed.",
+      "Romania is a NATO and EU member state; Galati is located on the Danube River near the borders of Ukraine and Moldova.",
+      "Romania scrambled two F-16 fighter jets and a helicopter that were authorized to engage targets.",
+      "Romania's Foreign Ministry called the drone's flight a serious violation of international law and requested faster transfer of anti-drone capabilities from NATO.",
+      "Russia attacked Ukraine overnight with 232 drones and one ballistic missile; Ukraine's air force said it shot down 217 drones.",
+      "NATO Secretary-General Mark Rutte condemned Russia's actions and affirmed NATO stands ready to defend every inch of Allied territory.",
+      "European Commission President Ursula von der Leyen said Russia's war of aggression had 'crossed yet another line' and referenced upcoming 21st sanctions package.",
+      "While drone fragments have been found on Romanian territory multiple times since Russia's 2022 invasion of Ukraine, this was the first time Romanian citizens were injured.",
+      "Romanian President Nicusor Dan convened an emergency meeting of the Supreme Defence Council, calling it the worst incident on Romanian territory since the start of Russia's war.",
+      "Ukrainian President Volodymyr Zelenskyy urged more Patriot air defense missiles from the United States, warning that deliveries are falling short as the Iran war diverts U.S. stocks.",
+      "Finnish President Alexander Stubb condemned the strike, saying Russia is 'crossing another line.'"
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of people evacuated",
+        "positions": {
+          "Associated Press": "Reports 'several others were evacuated' without a specific number.",
+          "BBC News": "Reports 'about 70 people were evacuated as the fire was put out.'"
+        }
+      },
+      {
+        "topic": "Number of prior drone fragment incidents on Romanian territory",
+        "positions": {
+          "BBC News": "States drone fragments have been found on Romanian territory on 47 separate occasions, 12 of them in 2026 alone.",
+          "Other outlets": "AP, NPR, ABC News, and others reference 'multiple occasions' without providing a specific count."
+        }
+      },
+      {
+        "topic": "Whether Romania has summoned the Russian ambassador and/or expelled the Russian consul",
+        "positions": {
+          "BBC News": "Reports Romania summoned the Russian ambassador AND that President Dan announced expulsion of the Russian consul in Constanta and closure of the consulate, with Russia's Zakharova saying Moscow 'won't take long' to respond.",
+          "NBC News": "Reports Romania summoned the Russian ambassador but does not mention consulate expulsion.",
+          "NPR": "Does not mention summoning the ambassador or consulate expulsion."
+        }
+      },
+      {
+        "topic": "Drone type identification",
+        "positions": {
+          "BBC News": "Identifies the drone as a 'Geran 2' (also known as Shahed 136) and states its 'entire load' exploded on impact.",
+          "Other outlets": "No other outlet in the dossier identifies the specific drone type."
+        }
+      },
+      {
+        "topic": "Whether this was intentional or accidental",
+        "positions": {
+          "NPR": "Quotes Romanian Gen. Maxim saying the incident 'is not an attack from Russia against Romania' but that Russia is a threat to regional security.",
+          "NBC News": "Quotes former Estonian President Ilves suggesting it could be either an off-course drone or an example of 'Russia's deniable grey warfare,' saying it's 'basically impossible to tell.'",
+          "BBC News": "Reports Romanian military sought to reassure the public it was not an attack on Romania but 'a conflict at our border, with consequences for the local population.'"
+        }
+      },
+      {
+        "topic": "Response time of Romanian military",
+        "positions": {
+          "BBC News": "Reports the army had only four minutes from drone detection to impact.",
+          "Other outlets": "No other outlet provides this specific timeline detail."
+        }
+      },
+      {
+        "topic": "Whether Article 4 or Article 5 of NATO treaty was invoked or discussed",
+        "positions": {
+          "NPR": "Notes Romania can request formal NATO consultations if it feels its territory or security is under threat, but says no official NATO meeting was due Friday.",
+          "BBC News": "References Poland's prior invocation of Article 4 as historical context but does not report Romania invoking it.",
+          "NBC News": "Discusses Article 5 mutual defense principle in general terms but does not report any formal invocation."
+        }
+      },
+      {
+        "topic": "Russia's official response",
+        "positions": {
+          "BBC News": "Reports Russia has 'yet to comment' on the incident itself but quotes Peskov confirming Putin was informed, and Zakharova warning Moscow 'won't take long' to respond to the consul expulsion.",
+          "NBC News": "Quotes Peskov's sarcastic remark about Putin being aware: 'What do you think? We kept it a secret?'",
+          "NPR": "Does not include any Russian government response.",
+          "Associated Press": "Does not include any Russian government response."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Provides the core wire report with minimal editorializing. Leads with the factual event \u2014 drone tracked, crashed, fire, two injured. Includes photo captions and brief references to broader context (Zaporizhzhia strike, Ukrainian drone operations, Zelenskyy in Sweden) but does not include international diplomatic reaction or analysis. Serves as the base wire that several other outlets appear to have built upon.",
+      "NPR": "Runs the AP wire story but adds substantially more international diplomatic reaction: NATO, EU, Finnish, Estonian, and UN responses. Uniquely includes Zelenskyy's appeal for more Patriot missiles and his warning about the Iran war diverting U.S. stocks. Also uniquely includes UN Secretary-General Guterres's call for ceasefire and his warning about civilian casualties. Frames the story as both a local incident and a broader escalation moment. Subheads organize the story into 'Romania calls it the worst,' 'Allies rally to condemn,' and 'Zelenskyy appeals for more Patriots.'",
+      "BBC News": "The most detailed and independently reported piece. Leads with NATO condemnation in its headline. Uniquely identifies the drone as a Geran 2/Shahed 136, provides the 4-minute response window, reports 70 people evacuated, names 47 prior drone fragment incidents, reports the consulate expulsion and Zakharova's response, and explains the operational constraints (Romania cannot fire into Ukrainian airspace). Includes UK PM Starmer's condemnation and mentions France, US Ambassador to NATO, and German Chancellor Merz. Also provides historical context about Polish drone incidents. Most comprehensive coverage of any outlet in the dossier.",
+      "NBC News": "Frames the story around the 'spillover' fear that Europeans have long held about the war. Opens with the phrase 'exactly the type of spillover from the war in Ukraine that many in Europe have long feared.' Uniquely includes former Estonian President Ilves's 'grey warfare' analysis and the ambiguity of intent. Also uniquely raises Trump's history of casting doubt on NATO Article 5 commitments, adding a layer of skepticism about alliance reliability. Subscription paywall limits full access but enough is available to see a more analytical, contextual approach.",
+      "ABC News": "Runs a condensed version of the AP wire. Includes the core facts but is notably shorter than other outlets. Does not include Romanian president's remarks, no Russian response, minimal diplomatic reaction (only Finnish president's statement). Omits the UN and broader escalation framing.",
+      "The Times of India": "Article body contains only a headline-level RSS link stub with no substantive body text. Cannot be used for consensus or framing analysis beyond the headline, which frames the story around NATO and EU 'outrage.'",
+      "Penarth Times": "Runs the AP/PA wire story with added social media embeds from von der Leyen, NATO spokesperson, and Zelenskyy. Includes Zelenskyy's Patriot missile appeal and Guterres's ceasefire call, mirroring NPR's framing. Explicitly disclaims the article as sourced from USA Today and notes it 'does not necessarily reflect the view of The Herald.'"
+    },
+    "primary_source_alignment": [
+      "No primary source documents (e.g., Romanian Defense Ministry official statements, NATO communiqu\u00e9s, or Romanian Foreign Ministry statements) were located in the dossier. All reporting relies on journalist accounts of press conferences, social media posts, and official statements.",
+      "Multiple outlets reference the Romanian Defense Ministry's statement and the Foreign Ministry's statement, but these documents were not provided directly. Divergences between outlets on specific details (e.g., evacuation numbers, drone type) cannot be verified against the primary documents."
+    ],
+    "missing_context": [
+      "No outlet explains why the F-16s and helicopter, which were authorized to engage, did not shoot down the drone before impact. BBC mentions the 4-minute window and airspace constraints but does not address whether an engagement was attempted.",
+      "No outlet provides detail on the specific anti-drone capabilities Romania is requesting from NATO or what NATO currently provides.",
+      "No outlet explores why Romania's existing legislation allowing the army to shoot down drones as a last resort (mentioned by NPR) was not successfully employed in this case.",
+      "The Iran war's diversion of U.S. Patriot missile stocks, mentioned by NPR and Penarth Times via Zelenskyy, is a significant claim that no outlet independently examines or verifies. The scale and nature of this diversion is unexplored.",
+      "No outlet reports whether other NATO allies bordering Ukraine (e.g., Poland, Hungary, Slovakia) experienced drone incursions in the same overnight attack.",
+      "No outlet reports the specific location within Galati or the number of residents in the affected building beyond the BBC's 70 evacuated.",
+      "Russia's official response is sparse and inconsistent across outlets. No outlet provides a substantive Russian explanation for why the drone entered Romanian airspace.",
+      "The Times of India article body is an RSS stub with no retrievable content, limiting the dossier's geographic diversity of perspective.",
+      "No primary source documents were available for independent verification of the claims reported by outlets.",
+      "No outlet addresses what NATO's concrete next steps would be beyond rhetoric \u2014 whether Romania will invoke Article 4, whether the alliance will deploy additional air defense assets, or what timeline such deployments might follow."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate the core facts of the incident with high agreement. While there are framing differences (BBC's depth, NBC's grey-warfare analysis, NPR's diplomatic breadth), the factual core is solid and consistent enough for a straight REPORT. The framing differences are notable but not so divergent as to warrant a META post \u2014 the disagreements are primarily about depth and emphasis rather than materially different accounts of the event.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/russia-ukraine-war-romania-drone-aa90986c237b8fa1d9116685c8c32f95",
+      "title": "Russian drone targeting Ukraine goes astray, crashes into apartment building in NATO member Romania - AP News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/29/g-s1-124773/russian-drone-romania",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c93x4nxlkjeo",
+      "title": "Nato condemns Russian 'recklessness' after drone hits Romanian apartment block - BBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/ukraine/russian-drone-hits-romania-apartment-block-nato-ukraine-rcna347495",
+      "title": "Drone hits Romania apartment block during Russian attack on neighboring Ukraine - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/russian-drone-launched-ukraine-crashes-romania-injuring-2-133408857",
+      "title": "Russian drone launched against Ukraine crashes in Romania, injuring 2 - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Times of India",
+      "url": "https://timesofindia.indiatimes.com/world/europe/russia-launches-drone-at-ukraine-it-crashes-in-romania-nato-eu-express-outrage/articleshow/131387486.cms",
+      "title": "Russia launches drone at Ukraine, it crashes in Romania; Nato, EU express outrage - The Times of India"
+    },
+    {
+      "outlet": "Penarth Times",
+      "url": "https://www.penarthtimes.co.uk/news/national/26148415.two-hurt-russian-drone-launched-ukraine-crashes-romania/",
+      "title": "Two hurt as Russian drone launched against Ukraine crashes in Romania - Penarth Times"
+    }
+  ]
+}
