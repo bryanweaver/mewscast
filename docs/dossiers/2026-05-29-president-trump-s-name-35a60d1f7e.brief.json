@@ -1,0 +1,140 @@
+{
+  "story_id": "2026-05-29-president-trump-s-name-35a60d1f7e",
+  "headline_seed": "President Trump's name must come off of the Kennedy Center, judge rules - NPR",
+  "brief": {
+    "story_id": "2026-05-29-president-trump-s-name-35a60d1f7e",
+    "consensus_facts": [
+      "U.S. District Judge Christopher Cooper ruled on May 29, 2026, that Trump's name must be removed from the Kennedy Center for the Performing Arts, finding the board lacked authority to rename the institution without congressional approval.",
+      "Cooper's ruling requires all signage and online materials bearing Trump's name to be removed within 14 days.",
+      "Cooper also temporarily blocked the planned two-year closure of the Kennedy Center for renovations that was set to begin in July 2026.",
+      "Cooper wrote in his 94-page opinion: 'Congress gave the Kennedy Center its name, and only Congress can change it.'",
+      "The lawsuit was brought by Rep. Joyce Beatty (D-Ohio), an ex officio member of the Kennedy Center's board of trustees.",
+      "The Kennedy Center's board had voted in December 2025 to rename the center the 'Trump Kennedy Center,' and new signage reading 'The Donald J. Trump and John F. Kennedy Memorial Center for the Performing Arts' was installed.",
+      "Trump had removed several trustees from the board and appointed himself as a trustee and board chairman in 2025.",
+      "Kennedy Center spokesperson Roma Daravi said the center plans to appeal the ruling.",
+      "Trump posted on Truth Social blasting Judge Cooper and stating he would work with Congress to transfer the institution back to them.",
+      "Trump wrote he has 'no interest in continuing what could only be a hopeless journey into NEVER NEVER LAND' unless he is 'free to do what I do better than anyone else.'",
+      "Beatty stated: 'The Kennedy Center is an institution that belongs to the American people, not to Donald Trump.'",
+      "Cooper is an Obama-era appointee.",
+      "$257 million in federal funds had been secured for the planned renovations.",
+      "Cooper's ruling does not categorically prohibit future closure if the board follows proper procedures and independently balances its obligations.",
+      "The judge found the board's closure decision was based on insufficient information and that trustees learned of the plan at the same time as the general public via Trump's social media post."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the renovation ruling",
+        "positions": {
+          "NPR": "Reports the judge 'temporarily blocked' the closure, framing it as a judicial check on the administration.",
+          "CNBC": "Includes a DOJ spokesperson statement claiming the department was 'pleased that the court rejected challenges to the Trump-Kennedy Center renovations,' spinning the ruling as partially favorable to the administration despite the closure injunction.",
+          "NBC News": "Frames the closure block as the board having made an 'ill-informed and seemingly preordained decision.'",
+          "USA Today": "Frames it as the judge 'overturned' the closure plans, using stronger language than other outlets."
+        }
+      },
+      {
+        "topic": "Trump's reaction framing",
+        "positions": {
+          "CNBC": "Describes Trump as having 'seemed resigned to his name being pulled off the Kennedy Center.'",
+          "NPR": "Presents Trump's reaction as 'blasting' the judge without characterizing resignation.",
+          "NBC News": "Quotes Trump extensively, including his instructions to the Commerce Department, without characterizing his emotional state.",
+          "USA Today": "Notes Trump 'blasted the judge's decision' and 'vowed to respond' by working with Congress."
+        }
+      },
+      {
+        "topic": "Roma Daravi's title",
+        "positions": {
+          "NPR": "Identifies Daravi as 'vice president of public relations.'",
+          "USA Today": "Identifies Daravi as 'vice president of operations.'",
+          "BBC News": "Identifies Daravi only as 'spokesperson.'"
+        }
+      },
+      {
+        "topic": "Whether the ruling was issued on JFK's birthday",
+        "positions": {
+          "NBC News": "Notes the ruling was 'issued on Kennedy's birthday.'",
+          "USA Today": "Notes Democrats and Kennedy family members observed the ruling fell on JFK's birthday (May 29, 1917); quotes Maria Shriver calling it 'An appropriate birthday present.'",
+          "NPR": "Does not mention the JFK birthday connection.",
+          "BBC News": "Does not mention the JFK birthday connection.",
+          "CNBC": "Does not mention the JFK birthday connection."
+        }
+      },
+      {
+        "topic": "Restoration of Beatty's voting rights",
+        "positions": {
+          "CNBC": "Explicitly reports that Cooper ordered Beatty's voting rights restored as an ex officio trustee, with extended legal reasoning.",
+          "NPR": "Mentions Beatty's voting rights were 'stripped' but does not explicitly report the judge restored them.",
+          "NBC News": "Does not specifically address the voting rights restoration.",
+          "USA Today": "Does not specifically address the voting rights restoration.",
+          "BBC News": "Mentions ex-trustees were 'stripped of their right to vote' but does not detail the restoration order."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only; no body text available for analysis. Headline uses neutral wire framing: 'US judge orders removal of Trump's name from Kennedy Center.'",
+      "NPR": "Leads with the ruling on the name removal and the temporary block on closure. Gives significant space to the Kennedy Center's appeal statement and Trump's Truth Social response. Includes context about the center winding down programming and dismissing staff. Notes the judge found Trump's claims about a 'one year review' were not credible. Provides the judge's language about the board needing 'sufficient information' before any future closure. Cultural and arts framing evident in section tags ('Performing Arts').",
+      "BBC News": "International audience framing. Leads with the name removal order and includes an embedded video of Trump's name being added to the facade. Provides clear chronological background on how Trump took control of the board. Notes ticket sales declines and artist cancellations following the renaming \u2014 a detail not prominently featured in most U.S. outlet coverage. Identifies Cooper as an 'Obama-era appointee,' providing political context for the judge. Does not cover Beatty's voting rights restoration or the legal reasoning in depth.",
+      "CNBC": "Most legally detailed of the full-text articles. Leads with key points in bullet format. Uniquely covers the restoration of Beatty's voting rights at length, including Cooper's reasoning about common-law trust principles. Includes statements from Beatty's lawyers (Norm Eisen and Nathaniel Zelinsky) calling the ruling 'a powerful blow against the Trump administration's corruption' \u2014 a quote not found in other outlets. Also uniquely includes a DOJ spokesperson statement framing the ruling as partially favorable. Characterizes Trump as 'seemed resigned.' Cross-promotes other CNBC political coverage.",
+      "The New York Times": "Headline-only; no body text available for analysis. Headline frames this as part of a broader live-updates format: 'Live Updates: Trump's Name Must Be Removed From Kennedy Center, Judge Rules.'",
+      "NBC News": "Provides extensive quotation from Cooper's opinion, particularly his rejection of the administration's argument that calling it the 'Trump Kennedy Center' was merely a 'secondary name' rather than a renaming. Uniquely includes Cooper's analogy about the Consumer Financial Protection Bureau name rearrangement. Notes the ruling was issued on JFK's birthday. Reports Trump's instructions to the Commerce Department to transfer institutional control. Includes a paywalled subscriber notice, suggesting the full article may contain additional details behind the paywall.",
+      "USA Today": "Leads with the strongest language, calling the rebranding 'illegal' in the opening sentence \u2014 a characterization other outlets avoid (they say the judge ruled against it or blocked it). Notes Trump's complaints about 'woke' programming at the Kennedy Center \u2014 context not found in other outlets. Uniquely includes the Maria Shriver quote about the JFK birthday connection. Reports the DOJ 'signaled plans to appeal,' attributing this to a DOJ spokesperson. Frames the ruling as a 'major blow to Trump's efforts to overhaul the institution to his liking.'"
+    },
+    "primary_source_alignment": [
+      "No primary source document (the 94-page ruling itself) was located in the dossier, so alignment cannot be directly assessed.",
+      "Multiple outlets quote identical passages from the ruling (e.g., 'Congress gave the Kennedy Center its name, and only Congress can change it'), suggesting consistent and accurate quotation of the opinion.",
+      "NBC News provides the most extensive direct quotation from the ruling, including Cooper's rejection of the 'secondary name' defense and the CFPB analogy.",
+      "CNBC uniquely quotes the ruling's discussion of common-law trust principles regarding ex officio trustee voting rights \u2014 a substantive legal dimension largely absent from other coverage.",
+      "USA Today quotes the ruling's language about trustees learning of the closure plan 'at the same time as the general public, by social media post' \u2014 a vivid detail from the opinion that supports the 'ill-informed' characterization."
+    ],
+    "missing_context": [
+      "The full 94-page ruling was not available as a primary source document, limiting the ability to verify whether outlets accurately characterized the opinion's reasoning or omitted significant findings.",
+      "No outlet provides detail on what legal standard Cooper applied (preliminary injunction standard for closure vs. summary judgment on naming), though CNBC notes 'partial summary judgment' on the naming issue.",
+      "No outlet examines the appellate prospects in detail \u2014 what court the appeal would go to, what standard of review applies, or the timeline.",
+      "No outlet reports on the practical status of artists, performers, or events currently scheduled at the Kennedy Center and how they are affected by the injunction against closure.",
+      "BBC News mentions falling ticket sales and artist cancellations but no outlet provides specific figures on the financial impact of the renaming controversy.",
+      "No outlet explores what happens to the $257 million in renovation funding if the two-year closure is blocked \u2014 whether phased renovations are feasible and at what cost premium.",
+      "No outlet explains whether Trump can unilaterally transfer the Kennedy Center to Congress, as he claimed he would, or what legal mechanism that would require.",
+      "No right-leaning outlet with full body text is represented in this dossier, leaving conservative editorial framing of the ruling unassessed.",
+      "No outlet reports on the views of the other board members Trump appointed \u2014 whether any have publicly commented on the ruling.",
+      "The timeline for appeal and whether the 14-day removal deadline would be stayed pending appeal is not addressed by any outlet."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate the core facts of the ruling with high consistency. While there are framing differences, the factual divergences are minor (a title discrepancy, emotional characterization of Trump's reaction). This is a straightforward judicial ruling with strong consensus \u2014 a clean REPORT rather than a META, as the framing variations are not materially misleading.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us-judge-orders-removal-trumps-name-kennedy-center-2026-05-29/",
+      "title": "US judge orders removal of Trump's name from Kennedy Center - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/05/29/nx-s1-5839349/president-trump-kennedy-center-name-judge-order",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/czr2je8lkvro",
+      "title": "US judge orders Trump's name be removed from Kennedy Center - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/29/trump-kennedy-center-judge-beatty.html",
+      "title": "Trump can't rename Kennedy Center or close it for renovation for now, judge says - CNBC"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/05/29/us/trump-news",
+      "title": "Live Updates: Trump's Name Must Be Removed From Kennedy Center, Judge Rules - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/trump-administration/judge-temporarily-halts-kennedy-center-closure-trump-name-removed-rcna347598",
+      "title": "Judge temporarily halts Kennedy Center closure and orders removal of Trump\u2019s name from building - NBC News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/05/29/trump-kennedy-center-rebranding-name-judge-illegal/90318608007/",
+      "title": "Trump's name must be removed from Kennedy Center, judge orders - USA Today"
+    }
+  ]
+}
