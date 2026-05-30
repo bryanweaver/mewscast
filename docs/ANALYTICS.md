@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-05-29 23:27 UTC*
+*Last updated: 2026-05-30 23:20 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,10 +12,10 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 341 | - |
-| Likes | 320 | +0 |
-| Reposts | 49 | +0 |
-| Replies | 342 | - |
+| Posts tracked | 344 | - |
+| Likes | 328 | +6 |
+| Reposts | 54 | +3 |
+| Replies | 345 | - |
 
 ### X (Twitter)
 
@@ -53,4 +53,4 @@ Florida, South D...
 
 ---
 
-*Data snapshots: 11246 total across 567 posts*
+*Data snapshots: 11323 total across 570 posts*
