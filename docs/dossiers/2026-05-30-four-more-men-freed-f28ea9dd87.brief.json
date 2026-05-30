@@ -1,0 +1,115 @@
+{
+  "story_id": "2026-05-30-four-more-men-freed-f28ea9dd87",
+  "headline_seed": "Four more men freed from flooded Laos cave - BBC",
+  "brief": {
+    "story_id": "2026-05-30-four-more-men-freed-f28ea9dd87",
+    "consensus_facts": [
+      "Four men were rescued from a flooded cave in Laos' Xaisomboun province on Saturday, May 30, 2026, after being trapped for approximately 10 days.",
+      "A fifth man had been rescued the day before (Friday, May 29), bringing the total number of people rescued to five.",
+      "Seven men originally entered the cave, and two remain missing.",
+      "The group entered the cave to search for gold and became trapped when heavy rain and flash flooding blocked the exit around May 19-20.",
+      "Water levels inside the cave receded following pumping efforts, enabling the four men to exit on Saturday.",
+      "The rescue effort involved Thai volunteer divers and international specialists, including some who participated in the 2018 Thai cave rescue.",
+      "The rescued men were seen receiving medical attention, wrapped in foil blankets and placed on stretchers.",
+      "The cave system is extremely narrow and difficult to navigate, with cramped, muddy, water-filled passages."
+    ],
+    "disagreements": [
+      {
+        "topic": "How the four men exited the cave on Saturday",
+        "positions": {
+          "NBC News": "The four men 'were able to climb out by themselves' as water levels dropped, emerging before rescuers entered.",
+          "CNN": "They 'walked and crawled out on their own' as rescuers were preparing to enter.",
+          "CBS News": "The water level receded enough for the four miners 'to leave with divers,' and divers bringing food realized water was low enough to get them out.",
+          "BBC News": "It 'has not yet been disclosed exactly how the men were brought to safety.'"
+        }
+      },
+      {
+        "topic": "Date the group entered the cave",
+        "positions": {
+          "NBC News": "May 19",
+          "BBC News": "Cut off after flash floods on May 20",
+          "CBS News": "Ten days ago (implying May 20)"
+        }
+      },
+      {
+        "topic": "Status of search for the two missing men",
+        "positions": {
+          "CBS News": "Lead rescuer Mikko Paasi said rescuers were 'no longer looking for them' because they are believed to be dead or in inaccessible spaces. The Lao rescue group said it would continue to search.",
+          "NBC News": "Reports it is unclear where the two missing men are and that flooding has complicated search efforts.",
+          "Associated Press": "States simply that two men remain missing.",
+          "BBC News": "States two men are still missing without elaborating on search status."
+        }
+      },
+      {
+        "topic": "What caused the initial pumping efforts to fail",
+        "positions": {
+          "CBS News": "Pumping efforts 'had not been initially successful' without further detail.",
+          "BBC News": "The plan to pump out flood waters 'initially failed' and a last resort of teaching the men to scuba dive was discussed.",
+          "NBC News": "Reports that specialists blocked the water source, created new drainage, and utilized pumps \u2014 framing the effort as ultimately successful rather than initially failed."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Extremely sparse body text \u2014 essentially a photo-caption wire hit. Leads with the core rescue fact (four evacuated Saturday, one Friday, two missing). No color, no quotes, no operational detail. Functions as a barebones factual anchor.",
+      "NBC News": "Most detailed narrative account. Leads with the total rescued (five) and provides extensive color: the Friday rescue footage, the emotional reunions, the quote from a trapped man to his mother, the expert explanation of how water was diverted. Emphasizes the role of Thai rescuers and the 2018 Thai cave rescue connection. Includes a named source (Kengkard Bongkawong) explaining the drainage strategy. Frames the story as a dramatic human-interest rescue narrative.",
+      "BBC News": "Structured, measured reporting. Leads with the four freed and provides the specific rescue time (15:10 local). Unique in noting the cave's extreme narrowness (50cm/20in). Includes the detail that teaching the men to scuba dive was discussed as a 'last resort.' Mentions international divers arriving from Thailand, Indonesia, France, and Australia. Treats the story as an international rescue story with technical detail.",
+      "Reuters": "Headline only. No body text available for analysis. Headline aligns with consensus: 'Rescuers pull four people trapped in flooded cave in Laos.'",
+      "CNN": "Video-centric presentation with minimal text. Key unique detail: attributes information to Bounkham Luanglath of the Lao People's Volunteer Association by name. States men 'walked and crawled out on their own.' Body is mostly video descriptions and unrelated story links. Thin on contextual detail.",
+      "CBS News": "Leads with the rescue but provides the most operationally candid detail. Unique in quoting lead rescuer Mikko Paasi (spelled 'Pasai' in text) describing the Friday extraction as a 'trust-me dive' and calling the cave 'not a nice place to dive.' Only outlet to report that rescuers may have stopped actively searching for the two missing men. Frames the rescue with practical, ground-level realism rather than pure triumph.",
+      "The New York Times": "Headline only. No body text available. Headline says 'Five Miners Are Rescued After Week Trapped in Flooded Laos Cave,' emphasizing the total five rescued rather than leading with Saturday's four."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. All reporting is based on social media posts by rescue organizations (Rescue Volunteer for People/Association of Volunteers for Lao People, Thailand Rescue Diver, individual Thai rescuers) and direct quotes from named rescuers. The absence of official Lao government statements or press releases is notable."
+    ],
+    "missing_context": [
+      "No official Lao government statement or press release is cited by any outlet \u2014 all operational details come from Thai rescuer social media accounts and volunteer rescue organizations.",
+      "The identities and ages of the seven men are not reported by any outlet with full body text.",
+      "No outlet reports on the legal status of the gold-mining activity \u2014 whether it was authorized, informal, or illegal.",
+      "The medical condition of the five rescued men beyond 'receiving medical attention' is not detailed by any outlet.",
+      "No outlet addresses how the men survived for 10 days inside the cave \u2014 food, water, air supply \u2014 beyond NBC's note that divers had been bringing food.",
+      "The geographic remoteness and accessibility challenges of the cave site are alluded to but not explained in detail by any outlet.",
+      "No outlet discusses why the two missing men were separated from the five who were found together, or when that separation may have occurred.",
+      "Reuters and The New York Times are headline-only in this dossier, limiting corroboration breadth."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text corroborate the core facts of the rescue. While there are minor discrepancies (how exactly the men exited, whether the search continues for the missing two), the framing differences are not materially divergent enough to warrant a META post \u2014 all outlets treat this as a positive rescue story. A straightforward REPORT with appropriate attribution of contested details is the right format.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/laos-cave-flood-xaisomboun-rescue-7e6012ce69b01d78e0af447f95ed739e",
+      "title": "Rescuers free 4 men who had been trapped in a flooded Laos cave, search for 2 still missing - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/asia/four-men-rescued-week-trapped-flooded-cave-laos-rcna347660",
+      "title": "Four more men rescued after more than a week trapped in a flooded cave in Laos - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cn4pn4ex0ymo",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/rescuers-pull-four-people-trapped-flooded-cave-laos-thai-rescuers-say-2026-05-30/",
+      "title": "Rescuers pull four people trapped in flooded cave in Laos, Thai rescuers say - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://edition.cnn.com/2026/05/30/world/video/four-villagers-rescued-flooded-laos-cave-hnk-vrtc-digvid",
+      "title": "Four more villagers rescued from flooded Laos cave - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/laos-gold-miners-cave-rescue-trapped/",
+      "title": "Four more Laos gold miners rescued from cave where they spent 10 days trapped - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/05/30/world/asia/laos-cave-rescue-four.html",
+      "title": "Five Miners Are Rescued After Week Trapped in Flooded Laos Cave - The New York Times"
+    }
+  ]
+}
