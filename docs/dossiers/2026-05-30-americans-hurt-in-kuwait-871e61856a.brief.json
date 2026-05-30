@@ -1,0 +1,79 @@
+{
+  "story_id": "2026-05-30-americans-hurt-in-kuwait-871e61856a",
+  "headline_seed": "Americans Hurt in Kuwait as Trump Sends Mixed Signals on War - Bloomberg.com",
+  "brief": {
+    "story_id": "2026-05-30-americans-hurt-in-kuwait-871e61856a",
+    "consensus_facts": [
+      "An Iranian missile strike on a Kuwaiti air base injured several Americans, as reported in the body text of both The Straits Times and Times Kuwait and corroborated by the headlines of Bloomberg and The Times of India.",
+      "A White House Situation Room meeting to discuss extending a ceasefire with Iran ended without a public conclusion or announcement, as reported by both The Straits Times and Times Kuwait.",
+      "President Donald Trump had signaled an agreement was near prior to the inconclusive Situation Room meeting, as reported by both The Straits Times and Times Kuwait.",
+      "The conflict between the US and Iran has been ongoing, with a fragile ceasefire in place, as reported by both The Straits Times and Times Kuwait."
+    ],
+    "disagreements": [
+      {
+        "topic": "Specificity of attack details",
+        "positions": {
+          "The Straits Times": "Provides granular detail: the missile was a Fateh-110, intercepted by Kuwaiti air defences but debris struck Ali Al Salem airbase; about five people (contractors and active duty) suffered minor injuries; one MQ-9 Reaper destroyed, at least one other seriously damaged; each drone costs ~US$30 million. Attributed to an anonymous person with direct knowledge.",
+          "Times Kuwait": "States only that 'several Americans were hurt in a missile attack on a Kuwaiti air base' with no detail on missile type, base name, drone damage, or injury severity. Attributes broader narrative to Bloomberg."
+        }
+      },
+      {
+        "topic": "Ceasefire discussion framing",
+        "positions": {
+          "The Straits Times": "Reports Trump said on May 29 he was ready to make a 'final determination' on a preliminary agreement; notes a roughly two-hour Situation Room meeting concluded without announcement, citing a White House official.",
+          "Times Kuwait": "Characterizes the lack of public comment as 'the latest conflicting signal from Washington' and frames the war as 'dragging into its fourth month.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg (Article 1)": "Headline-only. Headline emphasizes 'Americans Hurt in Kuwait' and 'Trump Sends Mixed Signals on War,' pairing the kinetic event with presidential indecision. No body text available (paywall/bot check).",
+      "Bloomberg (Article 2)": "Headline-only. Headline is narrower and more factual: 'Americans Injured in Iranian Missile Strike on Kuwaiti Air Base.' Strips out the political framing present in Article 1's headline. No body text available.",
+      "The Times of India": "Headline-only in practice; body text is a generic editorial desk boilerplate, not article content. Headline leads with the hardware damage angle: 'damages US drones, injures Americans,' giving the materiel loss equal billing with human casualties. Appends 'Report' to signal sourcing dependency.",
+      "The Straits Times": "The most detailed account in the dossier. Leads with the missile strike and injuries, then pivots to the ceasefire diplomacy context. Includes significant unique details: missile type (Fateh-110), base name (Ali Al Salem), number of injured (~5), drone losses (two MQ-9 Reapers), cost (~$30M each), cumulative US casualty figures for Operation Epic Fury (14 dead, 409 injured), and Iran's total ballistic missile launches since Feb 28 (1,850+). Attributes attack details to a single anonymous source. Credits Bloomberg as the originating wire. Buries the broader munitions depletion issue (JASSM-ER, Tomahawk, THAAD, Patriot, SM-3 stocks) deep in the piece.",
+      "Times Kuwait": "Shortest substantive report. Frames the story primarily through the diplomatic lens \u2014 the inconclusive Situation Room meeting and 'conflicting signals from Washington.' The missile strike is mentioned first but given minimal detail. Explicitly attributes its reporting to Bloomberg, functioning essentially as a wire relay with local relevance given Kuwait's direct involvement."
+    },
+    "primary_source_alignment": [
+      "No primary sources (e.g., US Central Command statements, Kuwaiti government statements, or White House readouts) were located for this story. The Straits Times notes that US Central Command 'did not immediately respond to a request for comment.' All reporting relies on anonymous sourcing and Bloomberg as the originating wire."
+    ],
+    "missing_context": [
+      "No official statement from the US government, US Central Command, or the Kuwaiti government is available in the dossier. The entire factual basis rests on anonymous sourcing via Bloomberg.",
+      "No Iranian government reaction or statement regarding the strike is included in any article.",
+      "Kuwait's own position on the strike \u2014 whether it considers this an act of war against its sovereignty, whether it has protested to Iran, and what the status of the US basing agreement is \u2014 is entirely absent.",
+      "The Straits Times references cumulative casualty figures (14 dead, 409 injured in Operation Epic Fury) and total Iranian missile launches (1,850+), but no other outlet corroborates or contextualizes these numbers.",
+      "The Straits Times uniquely reports that the war has 'burned through' US stocks of JASSM-ER, Tomahawk, and air defence missiles \u2014 a significant strategic detail that no other outlet addresses.",
+      "The ceasefire terms, what a potential extension would look like, and what each side's demands are remain entirely unexplained across all outlets.",
+      "Three of the five articles in the dossier (Bloomberg x2, Times of India) returned no usable body text due to paywalls or boilerplate, severely limiting the analytical base. Consensus is effectively built from only two outlets (The Straits Times and Times Kuwait), both of which credit Bloomberg as their source \u2014 meaning the entire dossier may trace to a single Bloomberg report.",
+      "No outlet addresses the legal or diplomatic framework under which US forces are stationed in Kuwait or what obligations either country has in the event of such an attack."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with usable body text confirm the core facts (missile strike, American injuries, inconclusive White House meeting), and the story is a breaking hard-news event. However, the thin sourcing \u2014 essentially one Bloomberg wire relayed by others \u2014 should be disclosed prominently. There is insufficient framing divergence for a META post; the outlets differ in detail level but not in narrative direction.",
+    "confidence": 0.45
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-30/americans-hurt-in-kuwait-as-trump-sends-mixed-signals-on-war",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-30/americans-injured-in-iranian-missile-strike-on-kuwaiti-air-base",
+      "title": "Americans Injured in Iranian Missile Strike on Kuwaiti Air Base - Bloomberg.com"
+    },
+    {
+      "outlet": "The Times of India",
+      "url": "https://timesofindia.indiatimes.com/world/middle-east/iran-missile-strike-at-kuwait-base-damages-us-drones-injures-americans-report/articleshow/131407551.cms",
+      "title": "Iran missile strike at Kuwait base damages US drones, injures Americans: Report - The Times of India"
+    },
+    {
+      "outlet": "The Straits Times",
+      "url": "https://www.straitstimes.com/world/middle-east/americans-injured-in-iranian-missile-strike-on-kuwaiti-air-base",
+      "title": "Americans injured in Iranian missile strike on Kuwaiti airbase - The Straits Times"
+    },
+    {
+      "outlet": "Times Kuwait",
+      "url": "https://timeskuwait.com/americans-hurt-in-recent-missile-attack-on-kuwait-air-base/",
+      "title": "Americans hurt in recent missile attack on Kuwait air base - Times Kuwait"
+    }
+  ]
+}
