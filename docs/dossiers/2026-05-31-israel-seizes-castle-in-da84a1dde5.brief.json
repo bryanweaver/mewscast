@@ -1,0 +1,125 @@
+{
+  "story_id": "2026-05-31-israel-seizes-castle-in-da84a1dde5",
+  "headline_seed": "Israel seizes castle in Lebanon as it expands ground offensive - BBC",
+  "brief": {
+    "story_id": "2026-05-31-israel-seizes-castle-in-da84a1dde5",
+    "consensus_facts": [
+      "Israeli forces captured Beaufort Castle (Beaufort Ridge), a strategic Crusader-era fortress in southern Lebanon, marking Israel's deepest incursion into Lebanon in approximately 26 years.",
+      "The capture involved crossing the Litani River, which had served as a de facto boundary line in southern Lebanon.",
+      "Israeli Prime Minister Benjamin Netanyahu described the capture as a 'dramatic stage and dramatic change' in Israeli policy.",
+      "Defense Minister Israel Katz said the Israeli flag was flying over Beaufort and that soldiers would remain as part of a security zone in Lebanon.",
+      "The Golani Brigade was identified as the unit that captured the castle, reprising its role from Israel's 1982 invasion of Lebanon.",
+      "Israel previously held Beaufort Castle from 1982 until its withdrawal from Lebanon in 2000.",
+      "Hezbollah fired hundreds of projectiles at Israeli forces in Lebanon and northern Israel over the weekend.",
+      "More than 3,300 people have been killed in Lebanon by Israeli strikes since the conflict escalated in early March 2026; Israel reports 25 soldiers and two civilians killed.",
+      "Lebanese Prime Minister Nawaf Salam accused Israel of 'scorched-earth policy and collective punishment' in southern Lebanon.",
+      "A ceasefire agreement exists but has been repeatedly breached, with Israel and Hezbollah accusing each other of violations.",
+      "A fourth round of negotiations between Israeli and Lebanese delegations was expected in Washington.",
+      "The IDF issued expanded evacuation warnings for residents south of the Zahrani River.",
+      "France requested a UN Security Council meeting to discuss Israeli military operations in Lebanon."
+    ],
+    "disagreements": [
+      {
+        "topic": "Casualty figures from recent strikes",
+        "positions": {
+          "NBC News": "Reports a wave of strikes on Tyre that killed 'at least 14 people'.",
+          "BBC News": "Reports 13 hospital staff injured in an airstrike near Hiram hospital in Tyre but does not cite the same 14-dead figure from Tyre strikes."
+        }
+      },
+      {
+        "topic": "Trigger event for current escalation",
+        "positions": {
+          "NBC News": "States the conflict escalated on March 2 when 'Hezbollah fired at Israel in support of ally Tehran.'",
+          "BBC News": "States Hezbollah 'fired rockets into Israel in response to the killing of Iran's Supreme Leader Ayatollah Ali Khamenei.'",
+          "Bloomberg": "States the ceasefire shattered after 'the Tehran-backed group attacked Israel in response to its war on Iran, which it launched with the US on Feb. 28.'"
+        }
+      },
+      {
+        "topic": "Number of Hezbollah projectiles over the weekend",
+        "positions": {
+          "BBC News": "Reports Hezbollah fired 'some 25 projectiles' toward northern Israel on Saturday specifically.",
+          "Bloomberg": "Reports Hezbollah fired 'more than 300 projectiles' at Israeli soldiers in Lebanon and at northern Israel 'over the weekend.'"
+        }
+      },
+      {
+        "topic": "Framing of Israeli civilian casualties",
+        "positions": {
+          "NBC News": "States '25 of its soldiers [and] two civilians have been killed in or near southern Lebanon' and adds 'Two civilians have also been killed in northern Israel' \u2014 totaling four civilian deaths.",
+          "BBC News": "States '25 Israeli military deaths' with no mention of civilian casualties."
+        }
+      },
+      {
+        "topic": "UNESCO involvement",
+        "positions": {
+          "NBC News": "Reports UNESCO said Friday it was 'deeply alarmed' by Israeli strikes near Beaufort Castle, noting its provisional protected status.",
+          "BBC News": "Does not mention UNESCO.",
+          "Associated Press": "Does not mention UNESCO.",
+          "CNN": "Does not mention UNESCO."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Provides only a truncated body text with the core factual lede \u2014 Israeli troops captured the strategic castle, deepest incursion in 26 years. No political framing, no casualty figures, no diplomatic context. Includes photo captions showing damage from both sides (Lebanese castle damage, Israeli rocket damage in Kiryat Shmona). Classic wire neutrality but the dossier captured an incomplete text.",
+      "NBC News": "Leads with Netanyahu's vow to 'expand Israel's grip,' centering the story on Israeli political intent and escalation. Gives significant space to far-right Israeli politicians (Smotrich calling it 'correcting old national sins,' Ben Gvir urging flattening of Beirut). Includes expert analysis (Fawaz Gerges) warning of a 'forever war.' Reports UNESCO concerns about cultural heritage. Frames the capture against failed U.S.-brokered peace efforts. Provides the most detailed casualty breakdown and diplomatic context. Emphasizes Lebanese civilian suffering alongside Israeli political hawkishness.",
+      "BBC News": "Leads with the expanding evacuation zone rather than the castle capture itself, framing the story as one of territorial expansion and displacement. Gives the castle capture significant coverage but contextualizes it within daily escalation ('Every day is bringing a new expansion'). Includes France's request for a UNSC meeting, which no other outlet in the dossier mentions in body text. Notes the hospital strike in Tyre. Frames Lebanese government and army as 'bystanders' in the Israel-Hezbollah confrontation. Balanced between Israeli military claims and Lebanese government condemnation.",
+      "Reuters": "Headline-only entries in the dossier. Two articles referenced: one on crossing the Litani River (May 29) and one on Israel emptying southern Lebanon. Both suggest Reuters was ahead on the territorial expansion angle before the castle capture. No body text available for analysis.",
+      "Bloomberg": "Paywalled; only the lede and takeaways are visible. Frames the story in geopolitical and military terms \u2014 'broadest incursion' in 25 years. Uniquely cites the 300-projectile figure for Hezbollah attacks over the weekend. Notes the ceasefire has 'shattered.' Minimal civilian or humanitarian framing visible in the available text.",
+      "CNN": "Provides only a video description, not a written article. Focuses on the visual and symbolic \u2014 'troops can be seen on the castle's ruins, with the flags of Israel and the Golani Brigade flying above.' Notes the castle was 'once occupied for 18 years.' Shortest and most image-driven coverage with no diplomatic or humanitarian context.",
+      "Fox News": "Not present in the dossier. No right-leaning U.S. outlet was included."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. All reporting relies on official statements from Israeli military, Netanyahu, Katz, Lebanese PM Salam, and Hezbollah \u2014 none of which were provided as raw transcripts or documents in the dossier."
+    ],
+    "missing_context": [
+      "No right-leaning U.S. outlet (e.g., Fox News) is represented in the dossier, leaving a gap in understanding how this story is framed for conservative American audiences.",
+      "Reuters provided only headlines; Bloomberg was paywalled; CNN was video-only; AP body text was truncated. Only NBC News and BBC News provided substantive body text, narrowing the effective analytical base to two full-text outlets plus fragments.",
+      "No outlet explains the legal basis or lack thereof for Israel's expanded operations under the existing ceasefire agreement or UN Resolution 1701, which originally set terms for southern Lebanon after the 2006 war.",
+      "The role and current status of UNIFIL (UN peacekeeping forces) in southern Lebanon is not mentioned by any outlet, despite being directly relevant to the expanded incursion zone.",
+      "No outlet provides detail on what specific ceasefire terms were agreed to or who brokered them, making it impossible for readers to assess which side is breaching what.",
+      "No outlet explains why Iran's Supreme Leader Khamenei's death (referenced by BBC as a trigger) occurred or provides context for the U.S.-Iran war that Bloomberg references as launching on Feb. 28.",
+      "NBC News uniquely reports UNESCO's concerns about Beaufort Castle's protected cultural heritage status \u2014 no other outlet corroborates this in body text, though it is a verifiable institutional statement.",
+      "No outlet provides information on Hezbollah's current military capabilities or leadership structure following what appears to be months of Israeli operations.",
+      "The humanitarian situation for displaced Lebanese civilians \u2014 numbers currently displaced, where they are going, aid access \u2014 receives minimal attention across all outlets."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with full body text (NBC News and BBC News) corroborate the core facts of the castle capture, expanded incursion, and diplomatic context. While framing differences exist (NBC emphasizing Israeli political hawkishness, BBC emphasizing territorial expansion), the factual core is solid enough for a straight REPORT with appropriate attribution. The framing divergences are notable but not dramatic enough to warrant a META post.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/lebanon-israel-capture-castle-beaufort-206c3d6c4dc9a139007f043556a0019b",
+      "title": "Israeli army captures strategic castle in Lebanon in deepest incursion into the country in 26 years - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/lebanon/israel-captures-key-lebanon-site-crossing-litani-river-rcna347732",
+      "title": "Netanyahu vows to expand Israel\u2019s grip on Lebanon after deepest incursion in 26 years - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cdep04kzz5wo",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/israeli-forces-cross-key-lebanon-river-expanded-ground-offensive-2026-05-29/",
+      "title": "Israeli forces cross key Lebanon river in expanded ground offensive - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/how-israel-has-emptied-southern-lebanon-far-beyond-front-lines-2026-05-28/",
+      "title": "How Israel has emptied southern Lebanon far beyond the front lines - Reuters"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-31/israel-expands-ground-operations-in-lebanon-deepening-incursion",
+      "title": "Israel Expands Ground Operations in Lebanon, Deepening Incursion - Bloomberg.com"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/31/world/video/israel-captures-strategic-crusader-built-castle-in-southern-lebanon",
+      "title": "Israel captures strategic Crusader-built castle in southern Lebanon - CNN"
+    }
+  ]
+}
