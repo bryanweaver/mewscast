@@ -1,0 +1,107 @@
+{
+  "story_id": "2026-06-01-trump-administration-plan-would-2b1be35400",
+  "headline_seed": "Trump administration plan would allow for quick asylum rejections without interviews, internal documents show - CBS News",
+  "brief": {
+    "story_id": "2026-06-01-trump-administration-plan-would-2b1be35400",
+    "consensus_facts": [
+      "The U.S. and Iran exchanged military strikes over the weekend, with the U.S. citing 'self-defense' against Iranian actions including the shootdown of a U.S. drone, as reported by both CNN and CBS News.",
+      "Iran's Tasnim news agency announced the suspension of indirect peace talks with the U.S., citing Israeli operations in Lebanon as ceasefire violations, as reported by both CNN and CBS News.",
+      "President Trump continued to voice optimism about a deal with Iran, posting on Truth Social that 'Iran really wants to make a deal,' as reported by both CNN and CBS News.",
+      "Kuwait reported being targeted by Iranian missiles and drones, with U.S. Central Command saying it intercepted two Iranian ballistic missiles targeting American forces in Kuwait, as reported by both CNN and CBS News.",
+      "Israel escalated military operations against Hezbollah in Lebanon, including seizing the medieval castle of Beaufort, as reported by both CNN and CBS News.",
+      "The Trump administration is developing a regulation that would allow USCIS officers to reject asylum applications without interviewing applicants who filed more than one year after arrival in the U.S., according to internal documents obtained by CBS News."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope and status of U.S.-Iran deal negotiations",
+        "positions": {
+          "CNN": "Reports Trump sent back the deal text with changes seeking tougher language on nuclear commitments and Strait of Hormuz reopening; a foreign official said the changes 'aren't substantive.' Reports discrepancies between U.S. and Iranian positions on nuclear stockpile destruction and financial relief.",
+          "CBS News": "Reports Iran suspended talks entirely in response to Israeli operations in Lebanon and perceived ceasefire violations on 'all fronts,' and that an IRGC-linked outlet announced activation of 'other fronts' including the Bab el-Mandeb strait \u2014 a significant escalation not mentioned by CNN."
+        }
+      },
+      {
+        "topic": "Iran's threat to expand the conflict to the Bab el-Mandeb strait via Houthi proxies",
+        "positions": {
+          "CBS News": "Reports Tasnim announced Iran had placed on its agenda the 'complete blockade of the Strait of Hormuz and the activation of other fronts, including the Bab el-Mandeb Strait,' giving Houthis marching orders.",
+          "CNN": "Does not mention Bab el-Mandeb or Houthi involvement at all."
+        }
+      },
+      {
+        "topic": "Whether the Iran deal is close to completion",
+        "positions": {
+          "CNN": "Frames the deal as still in active back-and-forth with Trump having declared it 'largely finalized' a week prior; quotes a U.S. official saying more strikes are 'unlikely with a deal close.'",
+          "CBS News": "Frames the situation as having deteriorated sharply, with Iran halting talks and threatening new fronts."
+        }
+      },
+      {
+        "topic": "Lebanon casualty figures",
+        "positions": {
+          "CBS News": "Reports Lebanon's health ministry says 3,355 people have been killed in Lebanon by the Israeli offensive since the war began on March 2.",
+          "CNN": "Does not provide Lebanon casualty figures."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "The AP live updates page leads on market and economic indicators \u2014 oil prices, S&P 500, Treasury yields \u2014 rather than any single policy story. The asylum regulation story is not mentioned. The Iran conflict is referenced obliquely through oil price movement ('fighting to threaten the U.S.-Iran ceasefire'). Classic wire framing: markets as proxy for geopolitical instability. Body text is thin, functioning more as a dashboard than a report.",
+      "CBS News (Article 2 \u2014 Asylum)": "The only outlet in the dossier to report in depth on the asylum regulation story, which is the headline seed. Leads with the internal documents and the mechanism of the regulation. Gives significant space to both the USCIS spokesperson's defense (backlog, 'deficient' applications) and an immigration lawyer's critique ('wrongfully' placing applicants in proceedings). Provides extensive legal and statistical context: 1.5 million pending USCIS asylum applications, 3.3 million pending immigration court claims. Also contextualizes with related Trump asylum actions including safe third country agreements and the asylum case freeze. Thorough, policy-focused framing.",
+      "CBS News (Article 6 \u2014 Iran)": "Leads with the alarming development of Iran halting talks and threatening new fronts via the Bab el-Mandeb strait. Frames the situation as escalating, not stabilizing. Juxtaposes Trump's optimistic Truth Social post against the Iranian regime's hostile announcements, creating a tension between diplomatic optimism and on-the-ground deterioration. Highlights Hezbollah-Israel escalation in Lebanon as a complicating factor. Includes the IDF evacuation warning for southern Beirut, underscoring civilian risk.",
+      "CNBC": "Entirely focused on outgoing Fed Chair Jerome Powell's speech accepting the JFK Profile in Courage Award. No mention of the asylum story or Iran situation. Frames Powell's remarks as a direct warning against Trump administration political pressure on the Fed, highlighting the DOJ investigation, the push for his resignation, and the attempt to fire Governor Lisa Cook. Treats this as a press-freedom/institutional-independence story. Off-topic from the headline seed but relevant to the broader Trump administration news cycle.",
+      "The New York Times": "Headline-only: 'They Voted for Trump. Here's How They Feel About High Gas Prices.' No retrievable body text. The headline suggests a voter-sentiment framing linking Trump supporters to the economic consequences of the Iran conflict via gas prices. Cannot assess framing beyond the headline.",
+      "CNN": "Leads with the weekend U.S.-Iran strikes and Trump's request for changes to the proposed ceasefire deal. Provides the most detailed account of the deal negotiations, including specific sticking points (nuclear commitments, Strait of Hormuz, financial relief). Includes Iranian Parliament Speaker Ghalibaf's statement about 'no trust' in the U.S. Reports the Kuwait missile interception incident in detail. Frames the story as a diplomatic negotiation under strain but not yet collapsed \u2014 notably more optimistic than CBS News's Iran coverage. Does not mention the asylum regulation at all.",
+      "USA Today": "Entirely off-topic from the headline seed. Covers John Oliver's comedy segment about the Freedom 250/Great American State Fair concert cancellations. Entertainment framing with no policy substance relevant to the asylum or Iran stories."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. CBS News (Article 2) references 'internal federal government documents' as its basis for the asylum regulation story, but these documents are not included in the dossier.",
+      "Without the underlying DHS regulation documents, it is impossible to verify whether CBS News's characterization of the regulation's scope, exceptions, or implementation mechanism is accurate or complete."
+    ],
+    "missing_context": [
+      "The asylum regulation story (headline seed) is sourced from a single outlet (CBS News Article 2). No other outlet in the dossier covers it, so the core claim about the regulation rests entirely on CBS News's reporting and cannot be cross-verified within this dossier.",
+      "The internal DHS documents referenced by CBS News are not available as primary sources, making it impossible to verify how accurately the regulation was characterized.",
+      "No outlet addresses whether the proposed asylum regulation would face legal challenges or how it interacts with existing court orders on asylum procedures.",
+      "No outlet provides historical data on how many asylum cases would be affected by the 1-year filing deadline provision \u2014 i.e., what percentage of pending cases were filed after 1 year.",
+      "The dossier is fragmented: it contains at least three largely unrelated stories (asylum regulation, Iran/Middle East conflict, Fed independence) rather than multi-outlet coverage of a single event. This limits the ability to establish consensus on any one topic.",
+      "The New York Times article provided headline only with no retrievable body text, reducing the dossier's analytical value.",
+      "No conservative or right-leaning outlet is represented with substantive body text in this dossier, creating a slant gap in the coverage analysis."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "The headline seed story \u2014 the Trump administration's plan to allow quick asylum rejections without interviews \u2014 is reported by only one outlet (CBS News) with full body text and no corroboration from other outlets in the dossier. No primary source document is available. This warrants a same-day hedge post that attributes the claim clearly to CBS News's reporting while flagging it as single-source, rather than presenting it as confirmed consensus.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/live/trump-administration-updates-06-01-2026",
+      "title": "Live updates: Trump faces new inflation warning from bond market, adding to midterm challenges - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/trump-administration-plan-would-allow-for-quick-asylum-rejections-without-interviews/",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/06/01/federal-reserve-trump-political-pressure-powell-stress-test.html",
+      "title": "Fed's Powell warns Trump's political 'stress test' will wreck public trust in central bank - CNBC"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/01/us/politics/trump-gas-prices-iran-war.html",
+      "title": "They Voted for Trump. Here\u2019s How They Feel About High Gas Prices. - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/05/31/politics/trump-iran-deal-changes",
+      "title": "US and Iran exchange renewed fire as Trump asks for changes to proposed deal to end hostilities - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strikes-ceasefire-lebanon-israel/",
+      "title": "Live Updates: Iran state media says talks with U.S. halted, attacks on another key waterway coming - CBS News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/entertainment/tv/2026/06/01/freedom-250-concert-cancellations-trump-john-oliver/90350557007/",
+      "title": "John Oliver roasts Trump over Freedom 250 concert cancellations - USA Today"
+    }
+  ]
+}
