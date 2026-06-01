@@ -1,0 +1,100 @@
+{
+  "story_id": "2026-06-01-trump-says-no-israeli-3a20a45d95",
+  "headline_seed": "Trump says no Israeli troops will go to Beirut after call with Netanyahu - Reuters",
+  "brief": {
+    "story_id": "2026-06-01-trump-says-no-israeli-3a20a45d95",
+    "consensus_facts": [
+      "President Trump said he spoke with Israeli Prime Minister Netanyahu and that Israel would not send troops into Beirut, with any troops en route already turned back \u2014 reported with body-text detail by both The Washington Post (via AP) and the Los Angeles Times, and confirmed at headline level by Reuters.",
+      "Trump announced that Israel and Hezbollah agreed to dial back fighting, with Hezbollah agreeing to stop shooting and Israel agreeing not to attack them \u2014 reported by The Washington Post (via AP) and the Los Angeles Times.",
+      "Israel ordered military strikes on Dahiyeh, Beirut's southern suburbs, triggering a mass civilian exodus with gridlocked roads \u2014 reported with body-text detail by the Associated Press, The Washington Post, and the Los Angeles Times.",
+      "Netanyahu had declared a policy of deepening and expanding Israel's hold on areas previously under Hezbollah control, including the symbolic recapture of Beaufort castle \u2014 reported by the Los Angeles Times and referenced by AP photo captions showing the broader offensive.",
+      "Widespread Israeli strikes continued across southern Lebanon, with Israeli ground forces pushing deeper into Lebanese territory \u2014 reported by the Associated Press and the Los Angeles Times.",
+      "Iran warned that the ceasefire is very likely to end if Israeli attacks on Lebanon persist \u2014 referenced by Reuters headline and contextualized in the Los Angeles Times body text."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope and characterization of the agreement",
+        "positions": {
+          "Reuters": "Headline frames it narrowly: 'no Israeli troops will go to Beirut.'",
+          "The Washington Post": "Frames it more broadly as Israel and Hezbollah agreeing 'to dial back fighting.'",
+          "Los Angeles Times": "Reports Trump's claim of a mutual ceasefire arrangement but contextualizes it against ongoing Israeli strikes and civilian casualties, suggesting the 'dial back' framing may overstate what was achieved.",
+          "Axios": "Frames the story as Trump 'reining in Netanyahu' specifically because Iran threatened to quit nuclear/ceasefire talks \u2014 a causal framing not explicitly present in other outlets."
+        }
+      },
+      {
+        "topic": "What triggered Trump's intervention",
+        "positions": {
+          "Axios": "Headline says Trump acted because 'Iran threatens to quit talks,' making the Iran angle the primary driver.",
+          "Los Angeles Times": "Reports that Israel's intensifying Lebanon campaign 'threatened the already shaky ceasefire between Washington and Tehran' but does not frame Iran's threat as the sole or primary cause of Trump's call.",
+          "Reuters (Article 5)": "Headline references Iranian TV warning that ceasefire is 'very likely to end' if Israeli attacks persist, but this appears in a separate article focused on U.S.-Iran strikes, not directly linked to the Trump-Netanyahu call."
+        }
+      },
+      {
+        "topic": "Casualty figures and scale of destruction",
+        "positions": {
+          "Los Angeles Times": "Provides detailed casualty figures: 3,412 killed in Israeli attacks since March 2 (including 133 paramedics), 800 killed since the April ceasefire, ~220 square miles of Lebanese territory occupied, 2 killed in Israel plus 21 soldiers and 1 civilian contractor in southern Lebanon.",
+          "The Washington Post": "Body text was largely inaccessible beyond the lede; no casualty figures available from retrieved content.",
+          "Associated Press": "Body text consisted mainly of photo/video captions; no aggregate casualty figures in retrieved content."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters (Article 1)": "Headline-only. Leads with Trump's statement that 'no Israeli troops will go to Beirut,' framing the story around the specific troop commitment rather than a broader de-escalation. Neutral wire phrasing. No body text available for deeper analysis.",
+      "The Washington Post": "Leads with the broader framing that 'Israel and Hezbollah have agreed to dial back fighting,' attributing the claim to Trump via AP wire copy. The retrieved body text is minimal \u2014 mostly site navigation and boilerplate \u2014 so the depth of WaPo's own editorial framing cannot be assessed. Byline credits AP reporters (Mroue, Chehayeb, Melzer), confirming this is an AP wire story hosted by WaPo.",
+      "Axios": "Headline-only (page returned a 403/CAPTCHA block). The headline 'Trump reins in Netanyahu over Lebanon after Iran threatens to quit talks' is the most interpretive framing in the dossier: it characterizes Trump as actively restraining Netanyahu (implying Netanyahu was the aggressor) and assigns causation to Iran's threat to abandon talks. No body text to assess whether the article supported this framing with sourcing.",
+      "Associated Press (Article 4)": "Body text consists primarily of photo and video captions describing the civilian exodus from Dahiyeh and Israeli strikes in southern Lebanon. The visual journalism emphasis conveys the humanitarian toll \u2014 traffic jams, fleeing families \u2014 without the diplomatic framing that dominates the headline. The actual AP wire story text appears to have been carried by WaPo (Article 2) rather than retrieved directly here.",
+      "Reuters (Article 5)": "Headline-only, from a separate but related article. Frames the Iran angle: 'Ceasefire very likely to end if Israeli attacks on Lebanon persist, Iranian TV says.' This links the Lebanon escalation to the broader U.S.-Iran conflict. The URL slug references U.S. strikes on Iranian military sites and Iran responding with an attack on a U.S. air base, suggesting a much wider story than the Lebanon-specific focus of the other articles.",
+      "Los Angeles Times": "The most detailed and contextually rich article in the dossier. Leads with the symbolic Beaufort castle seizure as a historical framing device, connecting the current offensive to the 1982 invasion and 18-year occupation. Provides extensive casualty data, territorial measurements (~220 sq mi occupied, roughly two-thirds of San Diego), and a timeline of escalation from March 2 forward. Reports Trump's Truth Social post and Netanyahu's statements but embeds them within a narrative of ongoing devastation. Uniquely mentions Israel's AI targeting system, European rebukes, and the November 2024 truce that preceded the current fighting. Buries Trump's claimed agreement lower in the story than other outlets, treating it as one development among many rather than the headline event. The casualty asymmetry (3,412+ Lebanese dead vs. 24 Israeli military/civilian deaths) is presented factually without editorial commentary but its placement is prominent."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., Trump's Truth Social post, official Israeli or Hezbollah statements, or ceasefire text) was located in the dossier. All outlets are reporting claims attributed to Trump, Netanyahu, or unnamed mediators without a verifiable underlying document.",
+      "The Los Angeles Times quotes Trump's Truth Social post directly ('there will be no Troops going to Beirut, and any Troops that are on their way, have already been turned back'), but the actual post was not retrieved as a primary source.",
+      "Without the primary source, it is impossible to verify whether Trump's characterization of the agreement matches what Hezbollah or its mediators actually communicated. This is a significant gap."
+    ],
+    "missing_context": [
+      "Trump's actual Truth Social post was not retrieved as a primary source. The exact language matters for assessing whether outlets accurately characterized the scope of the claimed agreement.",
+      "No outlet in the dossier includes a statement from Hezbollah confirming or denying that it agreed to stop fighting. Trump's claim that Hezbollah 'agreed that all shooting will stop' is presented without direct Hezbollah sourcing.",
+      "The Lebanese government's position on the Israeli offensive and the claimed de-escalation is absent from all retrieved coverage.",
+      "The Axios article (which appears to provide the Iran-talks-threat angle as a causal explanation for Trump's intervention) was blocked by a CAPTCHA, leaving a potentially important analytical framing unexamined.",
+      "No outlet explains what enforcement mechanism, if any, exists for the claimed mutual agreement to stop fighting.",
+      "The relationship between this claimed de-escalation and the separate U.S.-Iran military exchanges referenced in Reuters Article 5 is not clearly explained in most coverage. The Los Angeles Times touches on it but the connection deserves more detail.",
+      "The November 2024 ceasefire terms and how they compare to the current claimed agreement are mentioned only by the Los Angeles Times. Other outlets do not provide this crucial context for assessing whether the new arrangement is substantively different.",
+      "Single-source limitation: The Los Angeles Times is the only outlet with a full, detailed body text. The Washington Post carried an AP wire story with minimal retrievable text, and the AP article itself yielded only captions. Multiple outlets were headline-only or blocked. This significantly limits the ability to establish true multi-source consensus on details beyond the broadest claims."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The outlets that are readable frame the same event in materially different ways \u2014 from a narrow troop-commitment story (Reuters) to a broader de-escalation claim (WaPo/AP) to a geopolitically motivated restraint narrative (Axios) to a deeply contextualized account of ongoing devastation with the Trump announcement as just one element (LA Times). The absence of a primary source (Trump's actual post or any Hezbollah confirmation) and the sharp asymmetry in available body text make this a story where how it's being covered is as important as what happened. A META post allows Croncat to flag the framing divergences and the unverified nature of Trump's claimed agreement.",
+    "confidence": 0.48
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/trump-says-no-israeli-troops-will-go-beirut-after-call-with-netanyahu-2026-06-01/",
+      "title": "Trump says no Israeli troops will go to Beirut after call with Netanyahu - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/06/01/lebanon-israel-hezbollah-netanyahu-dahiyeh-rubio-ceasefire-airstrikes/78a49cb2-5d98-11f1-9c46-d6211372eede_story.html",
+      "title": "Trump says Israel and Hezbollah have agreed to dial back fighting - The Washington Post"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/06/01/trump-netanyahu-lebanon-israel-bomb-beirut",
+      "title": "Trump reins in Netanyahu over Lebanon after Iran threatens to quit talks - Axios"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/lebanon-israel-hezbollah-netanyahu-dahiyeh-rubio-ceasefire-airstrikes-a4708d5ed8d75f74463ba88c1cabca33",
+      "title": "Trump says Israel and Hezbollah have agreed to dial back fighting - AP News"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/aerospace-defense/us-says-it-struck-iranian-military-sites-tehran-responds-with-air-base-attack-2026-06-01/",
+      "title": "Ceasefire very likely to end if Israeli attacks on Lebanon persist, Iranian TV says - Reuters"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://www.latimes.com/world-nation/story/2026-06-01/israel-bombs-beirut-recaptures-crusader-castle-but-trump-says-israel-will-dial-back-war-in-lebanon",
+      "title": "Israel bombs Beirut, recaptures crusader castle, but Trump says Israel will dial back war in Lebanon - Los Angeles Times"
+    }
+  ]
+}
