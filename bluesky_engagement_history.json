@@ -969,6 +969,11 @@
       "did": "did:plc:souzhfukmewn3wyvhi2jzyle",
       "handle": "danielgamboa820.bsky.social",
       "timestamp": "2026-06-02T14:30:02.728508"
+    },
+    {
+      "did": "did:plc:p3ygl3hwnruvbwazcztcd24h",
+      "handle": "nistolisk.bsky.social",
+      "timestamp": "2026-06-02T17:31:38.007179"
     }
   ],
   "liked_posts": [
@@ -3651,6 +3656,11 @@
       "uri": "at://did:plc:souzhfukmewn3wyvhi2jzyle/app.bsky.feed.post/3mnbzht4btk2p",
       "author": "danielgamboa820.bsky.social",
       "timestamp": "2026-06-02T14:30:02.646561"
+    },
+    {
+      "uri": "at://did:plc:p3ygl3hwnruvbwazcztcd24h/app.bsky.feed.post/3mnb43jbsgs22",
+      "author": "nistolisk.bsky.social",
+      "timestamp": "2026-06-02T17:31:37.814321"
     }
   ],
   "last_cleanup": "2026-05-29T17:07:50.493291",
