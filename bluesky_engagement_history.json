@@ -959,6 +959,11 @@
       "did": "did:plc:i4tpq65vnarzwpb4whelkf3w",
       "handle": "itsjustbeej.bsky.social",
       "timestamp": "2026-06-01T21:17:51.309176"
+    },
+    {
+      "did": "did:plc:q4kbxc3w3xnjljrv2gmws45o",
+      "handle": "maymyav.bsky.social",
+      "timestamp": "2026-06-02T01:56:35.386064"
     }
   ],
   "liked_posts": [
@@ -3631,6 +3636,11 @@
       "uri": "at://did:plc:i4tpq65vnarzwpb4whelkf3w/app.bsky.feed.post/3mnayi3ukrk26",
       "author": "itsjustbeej.bsky.social",
       "timestamp": "2026-06-01T21:17:51.119760"
+    },
+    {
+      "uri": "at://did:plc:q4kbxc3w3xnjljrv2gmws45o/app.bsky.feed.post/3mnbbxns4fc2d",
+      "author": "maymyav.bsky.social",
+      "timestamp": "2026-06-02T01:56:35.255483"
     }
   ],
   "last_cleanup": "2026-05-29T17:07:50.493291",
