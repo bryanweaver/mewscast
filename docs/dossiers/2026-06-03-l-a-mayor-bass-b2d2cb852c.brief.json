@@ -1,0 +1,140 @@
+{
+  "story_id": "2026-06-03-l-a-mayor-bass-b2d2cb852c",
+  "headline_seed": "L.A. Mayor Bass will face either Spencer Pratt or Nithya Raman in Nov. 3 runoff - Los Angeles Times",
+  "brief": {
+    "story_id": "2026-06-03-l-a-mayor-bass-b2d2cb852c",
+    "consensus_facts": [
+      "Los Angeles Mayor Karen Bass has secured a spot in the Nov. 3 runoff election after Tuesday's June 2, 2026 primary.",
+      "No candidate reached the 50% threshold needed to win outright, meaning the top two candidates will advance to the general election.",
+      "Spencer Pratt and Nithya Raman are competing for the second runoff slot; as of early Wednesday with roughly 63% of votes counted, Pratt led Raman.",
+      "With 63% of votes counted, Bass had approximately 35%, Pratt approximately 30%, and Raman approximately 22-23%.",
+      "Votes are still being counted; mail-in ballots postmarked by Election Day will be accepted for up to a week.",
+      "Spencer Pratt is a registered Republican, former reality TV star from MTV's 'The Hills,' and a first-time political candidate whose Pacific Palisades home was destroyed in the January 2025 Palisades fire.",
+      "Nithya Raman is a Los Angeles City Council member and member of the Democratic Socialists of America who entered the race as a surprise challenger.",
+      "The January 2025 Palisades fire, which destroyed thousands of homes and killed 12 people, has been a defining issue of Bass's first term and a major vulnerability in the campaign.",
+      "Bass celebrated on election night at the Line LA Hotel in Koreatown, pointing to progress on homelessness and affordable housing.",
+      "Pratt has campaigned on criticism of Bass's handling of the fire, homelessness, crime, and quality of life in the city.",
+      "Raman has campaigned on expanding affordable housing and has criticized Bass for expensive police raises.",
+      "The Los Angeles mayoral race is officially nonpartisan.",
+      "Roughly three in five primary voters voted against Bass, indicating significant voter dissatisfaction with the incumbent."
+    ],
+    "disagreements": [
+      {
+        "topic": "Who called the race for Bass",
+        "positions": {
+          "Los Angeles Times": "Credits the Associated Press with calling Bass's advancement.",
+          "BBC News": "Credits CBS News with projecting Bass's advancement.",
+          "Associated Press": "Reports Bass advanced without specifying who made the call (implicitly self-reported).",
+          "CNN": "States Bass 'secured a spot' without attributing a specific calling authority.",
+          "The New York Times": "Shows 'AP race called' in its results data."
+        }
+      },
+      {
+        "topic": "Pratt's viability in a general election against Bass",
+        "positions": {
+          "CNN": "Explicitly calls Pratt 'the clear underdog' in November, noting Democrats outnumber Republicans four-to-one in Los Angeles.",
+          "BBC News": "Notes the race outcome is unclear and presents Pratt more neutrally as a contender.",
+          "Los Angeles Times": "Focuses on the uncertainty of who will make the runoff rather than handicapping the general."
+        }
+      },
+      {
+        "topic": "Characterization of Pratt's campaign tactics and substance",
+        "positions": {
+          "CNN": "Describes Pratt's campaign as a 'guerilla campaign' fueled by AI-generated videos, viral moments, and big-name supporters, and notes 'details on how he would solve the intractable problems... have been scant.'",
+          "Los Angeles Times": "Notes Pratt's 'assured debate performance,' social media skills, and supporters' AI videos; also notes critics describe his plans as 'unworkable.'",
+          "BBC News": "Presents Pratt more straightforwardly as a 'vocal critic' with a message of 'fixing a broken Los Angeles' and advocating mandatory drug treatment."
+        }
+      },
+      {
+        "topic": "Pratt's election night event details",
+        "positions": {
+          "CNN": "Reports Pratt held a private gathering at a Mexican restaurant with reporters not allowed in and black curtains obstructing views; notes Billy Bush was in attendance.",
+          "Los Angeles Times": "Simply quotes Pratt speaking to reporters on election night.",
+          "Associated Press": "Photo captions reference Pratt fielding interviews at an election night event."
+        }
+      },
+      {
+        "topic": "Whether Bass was in Ghana during the Palisades fire",
+        "positions": {
+          "CNN": "Explicitly states the fire 'broke out while Bass was in Ghana as part of a US delegation for the inauguration of the country's president.'",
+          "Los Angeles Times": "Does not mention Bass's Ghana trip.",
+          "BBC News": "Does not mention Bass's Ghana trip.",
+          "Associated Press": "Does not mention Bass's Ghana trip (body text is photo captions only)."
+        }
+      },
+      {
+        "topic": "Pratt's Airstream/hotel living controversy",
+        "positions": {
+          "CNN": "Reports 'disputes in recent weeks over whether Pratt was living in a 33-foot Airstream he had parked on his Pacific Palisades lot, or spending most of his nights in a luxury hotel.'",
+          "Los Angeles Times": "Does not mention the Airstream/hotel controversy.",
+          "BBC News": "Does not mention the Airstream/hotel controversy."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text consists almost entirely of photo captions with minimal narrative; serves as a wire alert confirming Bass advanced. Leads with the twin challenges of wildfire and homelessness framing Bass's first term. No substantive analysis or candidate quotes beyond visual documentation.",
+      "Los Angeles Times": "The most comprehensive local coverage. Leads with Bass's advancement and the uncertainty of who her opponent will be. Provides extensive historical context (2022 race, Raman's surprise entry, Pratt's debate performance). Gives roughly balanced space to all three major candidates. Buries the broader voter dissatisfaction narrative. Includes the most detail on Raman's policy positions (police raises, housing in single-family neighborhoods). Notes that Pratt's plans have been called 'unworkable' by critics. The only outlet to mention candidates Rae Huang and Adam Miller.",
+      "BBC News": "Frames the story for an international audience, providing significantly more background on each candidate's biography and political history. Uniquely compares Raman to New York City Mayor Zohran Mamdani. Devotes substantial space to the California governor's race (Steve Hilton, Xavier Becerra, Tom Steyer), treating the mayoral race as part of a broader California election package. Leads with Bass's advancement but gives Pratt extensive biographical treatment including his political science degree. Notes the 2028 Olympics as a governing challenge \u2014 unique among outlets.",
+      "NBC News": "Minimal body text; essentially a results page with brief framing paragraph. Describes Pratt as 'coming at Bass from the right' and Raman 'challenging Bass from the left.' Focuses on explaining the election mechanics (majority threshold, top-two primary). No quotes, no analysis, no narrative beyond structural description.",
+      "CNN": "The most narrative and personality-driven coverage. Leads on the Pratt angle ('Spencer Pratt has spent months waging a guerilla campaign') rather than on Bass's advancement. Uniquely reports the Airstream/hotel controversy, Billy Bush's attendance at Pratt's party, and the black curtains blocking reporters' view. Gives extensive space to Republican endorsements of Pratt (Jeb Bush, Ted Cruz) and frames this as a 'Catch-22' for Pratt in a Democratic city. Includes former Mayor Garcetti's commentary on voter frustration. Only outlet to mention Bass's Ghana trip during the fire. Most explicit about Pratt's lack of policy specifics.",
+      "The New York Times": "Primarily a live results page with vote tallies and reporter updates. Body text is dominated by running analyst commentary on vote-counting timelines across California, not narrative on the mayoral race itself. The substantive mayoral content is limited to a single analyst note confirming Bass advanced and that the second spot is 'too early to call.' Most of the body covers other California races (Montana House primary, San Francisco turnout, Fresno County). Embeds a Trump quote celebrating Steve Hilton in the governor's race.",
+      "The Washington Post": "Headline-only article with no retrievable body text. Headline frames the story as an 'Analysis' about voters 'sending a message' to Bass, suggesting an emphasis on voter dissatisfaction rather than the horse-race mechanics. Cannot assess body framing."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All reporting is based on election night results, candidate statements, and AP projections. Without official certified results or county registrar documents, all vote totals cited are preliminary and subject to change as mail-in ballots are counted over the coming days."
+    ],
+    "missing_context": [
+      "No outlet provides detailed vote totals by geography or neighborhood within Los Angeles, which would illuminate whether Pratt's support is concentrated in fire-affected areas or broader.",
+      "No outlet reports on how many total ballots remain to be counted in the city of Los Angeles specifically, despite the NYT reporting outstanding ballot counts for other counties (San Francisco, Fresno).",
+      "No outlet provides historical context on how much late-counted mail ballots have shifted second-place finishes in prior LA mayoral primaries, beyond the LAT's brief mention of Bass overtaking Caruso in 2022.",
+      "No outlet discusses what powers the LA mayor actually has versus the City Council, which would help readers assess whether Pratt's or Raman's campaign promises are achievable.",
+      "No outlet discusses campaign finance totals or spending by any candidate, despite this being a major contested race.",
+      "No outlet explores polling data showing Pratt's or Raman's head-to-head prospects against Bass in a November runoff.",
+      "Only CNN mentions the Airstream/hotel living controversy; no other outlet confirms or denies it, making it effectively a single-source claim for the dossier.",
+      "Only CNN reports Bass was in Ghana when the Palisades fire broke out; while this is well-documented public knowledge, the fact that most outlets in this dossier omit it is notable.",
+      "The Washington Post article was headline-only, preventing any body-text analysis of its framing.",
+      "No outlet discusses endorsements Raman has or has not received beyond the LAT noting she has no city council colleague endorsements.",
+      "No outlet reports on voter turnout figures for the LA mayoral race specifically, or how they compare to prior cycles."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text confirm the core facts \u2014 Bass advances, Pratt leads Raman for the second slot, votes still being counted. While there are some framing differences (CNN's Pratt-forward narrative vs. LAT's balanced approach), the factual core is well-established and consistent. The framing differences are notable but not dramatic enough to warrant a META post; they largely reflect different editorial priorities (local vs. national, personality vs. policy) rather than materially different stories.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/los-angeles-mayor-election-bass-pratt-ca624a57c9e717ecdf0f86756b0d370b",
+      "title": "Los Angeles Mayor Karen Bass advances to November runoff as she seeks second term - AP News"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://www.latimes.com/california/story/2026-06-02/primary-election-2026-mayor",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c74dp1yk51vo",
+      "title": "Los Angeles Mayor Karen Bass advances to run-off in race to run California's biggest city - BBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-primary-elections/los-angeles-mayor-results",
+      "title": "Los Angeles Mayor Primary 2026 Live Results - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/03/politics/spencer-pratt-karen-bass-los-angeles-mayor",
+      "title": "Los Angeles Mayor Karen Bass punched her ticket for November\u2019s election. Spencer Pratt is still hoping for his - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/interactive/2026/us/elections/results-california-mayor-los-angeles.html",
+      "title": "Los Angeles Mayor Election Results: Karen Bass Advances to General Election - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/06/03/democrat-karen-bass-cant-avoid-runoff-amid-an-angry-spasm-la/",
+      "title": "Analysis | Voters are sending a message to L.A.\u2019s Democratic mayor - The Washington Post"
+    }
+  ]
+}
