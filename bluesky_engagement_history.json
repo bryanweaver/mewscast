@@ -984,6 +984,11 @@
       "did": "did:plc:yb4wqv3gqhpd4xksj6knxzct",
       "handle": "november.at.app.wafrn.net",
       "timestamp": "2026-06-03T02:00:03.018710"
+    },
+    {
+      "did": "did:plc:b5wlmgx76yumlb3mfz3p2pwe",
+      "handle": "cptspinch.bsky.social",
+      "timestamp": "2026-06-03T14:36:25.891374"
     }
   ],
   "liked_posts": [
@@ -3681,6 +3686,11 @@
       "uri": "at://did:plc:yb4wqv3gqhpd4xksj6knxzct/app.bsky.feed.post/3mndyprdk2c2d",
       "author": "november.at.app.wafrn.net",
       "timestamp": "2026-06-03T02:00:02.829259"
+    },
+    {
+      "uri": "at://did:plc:b5wlmgx76yumlb3mfz3p2pwe/app.bsky.feed.post/3mnfbzolubs2m",
+      "author": "cptspinch.bsky.social",
+      "timestamp": "2026-06-03T14:36:25.812919"
     }
   ],
   "last_cleanup": "2026-05-29T17:07:50.493291",
