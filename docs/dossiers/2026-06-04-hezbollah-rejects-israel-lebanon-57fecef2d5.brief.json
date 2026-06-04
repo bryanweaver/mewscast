@@ -1,0 +1,125 @@
+{
+  "story_id": "2026-06-04-hezbollah-rejects-israel-lebanon-57fecef2d5",
+  "headline_seed": "Hezbollah rejects Israel-Lebanon ceasefire terms - Axios",
+  "brief": {
+    "story_id": "2026-06-04-hezbollah-rejects-israel-lebanon-57fecef2d5",
+    "consensus_facts": [
+      "Hezbollah rejected a renewed US-brokered ceasefire agreement between Israel and Lebanon \u2014 confirmed in body text by AP, CBS News, and BBC News, and referenced in headlines by all seven outlets.",
+      "The ceasefire agreement was announced after a fourth round of US-mediated talks at the State Department, with a joint statement released by the US, Israel, and Lebanon \u2014 confirmed by AP, CBS News, and BBC News.",
+      "The ceasefire is contingent on a complete cessation of Hezbollah fire and the evacuation of all Hezbollah operatives from areas south of the Litani River, roughly 30km north of the Israel-Lebanon border \u2014 confirmed by AP, CBS News, and BBC News.",
+      "The agreement calls for the creation of 'pilot' security zones inside Lebanon where the Lebanese Armed Forces would take exclusive control, banning all non-state actors including Hezbollah \u2014 confirmed by AP, CBS News, and BBC News.",
+      "Hezbollah was not a party to the ceasefire talks \u2014 confirmed by BBC News; implied by AP and CBS News descriptions of the group rejecting terms set without its participation.",
+      "Israeli strikes continued in southern Lebanon on Thursday despite the ceasefire announcement \u2014 confirmed by AP (headline reference to strikes killing 4), CBS News, and BBC News.",
+      "A UN peacekeeper (UNIFIL) was killed after shelling hit a UN position in southern Lebanon \u2014 confirmed by CBS News and BBC News.",
+      "Lebanese Prime Minister Nawaf Salam said the Lebanese army would begin deploying in pilot zones in the south \u2014 confirmed by CBS News and BBC News.",
+      "The next round of talks is scheduled for June 22 \u2014 confirmed by BBC News; CBS News references ongoing process."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of Hezbollah's rejection",
+        "positions": {
+          "The Washington Post": "Headline uses 'denounces' and calls the deal a 'farce' \u2014 strongest quoted language from Hezbollah.",
+          "BBC News": "Reports Hezbollah leader Naim Qassem called negotiations 'futile' and 'humiliating' and said the ceasefire amounted to 'surrender' fulfilling Israel's objectives.",
+          "Associated Press": "Reports Hezbollah 'rejected' the agreement and demanded a complete Israeli withdrawal \u2014 more straightforward framing.",
+          "CBS News": "Reports Hezbollah 'rejected the truce' with minimal elaboration on the rhetoric."
+        }
+      },
+      {
+        "topic": "Casualty details from Thursday strikes",
+        "positions": {
+          "Associated Press": "Headline references Israeli strikes killing 4 in Lebanon; body text does not itemize.",
+          "BBC News": "Reports five killed in air strikes on Sohmor in the Bekaa Valley and one killed in Maaroub near Tyre \u2014 total of at least six.",
+          "CBS News": "Does not provide specific strike casualty figures in the retrieved body text."
+        }
+      },
+      {
+        "topic": "Attribution of shelling that killed UNIFIL peacekeeper",
+        "positions": {
+          "BBC News": "Reports the Israeli military accused Hezbollah of firing the mortars; notes Hezbollah has not commented.",
+          "CBS News": "Reports the peacekeeper death but does not attribute the shelling to any party in the retrieved text."
+        }
+      },
+      {
+        "topic": "Broader war context framing",
+        "positions": {
+          "CBS News": "Embeds the ceasefire rejection within the wider US-Iran war context, including Iran nuclear watchdog concerns, US naval blockade of Iran, Kuwait airport attack by Iran, and Iran's warning about attacks on Beirut.",
+          "Reuters": "Headline frames Hezbollah rejection as clouding 'prospects for ending Iran war' but body text was not retrievable.",
+          "BBC News": "Focuses tightly on the Lebanon-Israel dimension and Hezbollah's domestic political positioning; mentions Iran primarily as Hezbollah's backer.",
+          "Associated Press": "Mentions Israeli forces' deepest incursion into Lebanon in over a quarter century and the broader Iran war, but centers the ceasefire terms."
+        }
+      },
+      {
+        "topic": "Whether the agreement includes a path to Hezbollah's disbanding",
+        "positions": {
+          "Associated Press": "Explicitly notes the agreement includes 'a stipulation about the group's eventual disbanding.'",
+          "BBC News": "Does not mention a disbanding stipulation.",
+          "CBS News": "Does not mention a disbanding stipulation."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Axios": "Headline-only; no body text retrieved (403 error). Headline frames the story as Hezbollah rejecting Israel-Lebanon ceasefire terms, with a US angle. No further analysis possible.",
+      "Reuters": "Headline-only; body text not retrieved. Headline uniquely frames the rejection as 'clouding' both the Lebanon ceasefire and broader 'prospects for ending Iran war' \u2014 the widest geopolitical lens of any outlet in this dossier.",
+      "The New York Times": "Headline-only; body text not retrieved. Headline frames the story from the agreement side \u2014 'Israel and Lebanon Renew Cease-Fire' \u2014 and emphasizes the call for evacuation of Hezbollah operatives rather than leading with the rejection. This is the most agreement-positive framing among the outlets.",
+      "The Washington Post": "Headline-only; body text not retrieved. Headline leads with Hezbollah's denunciation and uniquely quotes the group calling the deal a 'farce.' Also notes the deal was struck 'without Hezbollah,' emphasizing the group's exclusion.",
+      "Associated Press": "Full body text retrieved. Leads with the ceasefire terms from the joint statement before reporting Hezbollah's rejection. Uniquely mentions 'a stipulation about the group's eventual disbanding' and notes Israeli forces made their 'deepest incursion into Lebanon in more than a quarter century.' Includes photo captions showing Israeli military presence. Wire-neutral tone but structurally front-loads the deal before the rejection.",
+      "CBS News": "Full body text retrieved (live updates format). Embeds the ceasefire rejection within a much broader Iran-war live blog, including Iran-US nuclear talks, the US naval blockade, the Kuwait airport drone/missile attack by Iran, and Rubio's diplomatic meetings. This is the only outlet to report Iranian FM Araghchi's warning that Israeli strikes on Beirut would trigger 'full-scale resumption' of the US-Iran conflict. Reports Lebanese PM Salam's statement on army deployment. The ceasefire rejection is one of many developments rather than the central story.",
+      "BBC News": "Full body text retrieved. Most detailed standalone report. Uniquely names Hezbollah leader Naim Qassem and quotes his language ('futile,' 'humiliating,' 'surrender'). Includes on-the-ground voices from Dahieh (Beirut's southern suburbs). Notes the agreement 'did not include any maps' for pilot zones or explanation of how they would work. Provides political analysis of why Hezbollah sees 'political advantage in portraying itself as the only force capable of resisting Israel.' Reports specific casualty details from Thursday strikes (five killed in Sohmor, one in Maaroub). Identifies the killed UNIFIL peacekeeper as Serbian Senior Sergeant Milovan Jovanovic. Notes Israel accused Hezbollah of the UNIFIL shelling. Most comprehensive single-outlet report in the dossier."
+    },
+    "primary_source_alignment": [
+      "No primary source document (e.g., the joint US-Israel-Lebanon statement text) was located in the dossier. AP, CBS News, and BBC News all quote from or paraphrase a 'joint statement released after a fourth round of US-mediated talks at the State Department,' but the full text of that statement is not available for verification.",
+      "Without the primary source, it is impossible to confirm whether any outlet accurately or fully represents the ceasefire terms, particularly the 'pilot zones' framework, the disbanding stipulation (mentioned only by AP), or other provisions."
+    ],
+    "missing_context": [
+      "The full text of the joint US-Israel-Lebanon ceasefire statement was not available as a primary source. This is the foundational document and its absence limits verification of all outlet claims about the deal's terms.",
+      "No outlet with retrievable body text explains what the 'pilot zones' would look like in practice, and BBC News explicitly notes the agreement 'did not include any maps' or operational explanation.",
+      "Only AP mentions a stipulation about Hezbollah's 'eventual disbanding' \u2014 a potentially explosive provision that no other outlet corroborates or discusses. This is a significant single-source claim.",
+      "No outlet explains the legal or enforcement mechanism for requiring Hezbollah to withdraw south of the Litani, given that Hezbollah is more heavily armed than the Lebanese army tasked with taking control.",
+      "The relationship between this ceasefire and the original November 2024 ceasefire that collapsed is not explained in any retrieved body text \u2014 readers lack historical context for why this is a 'renewal.'",
+      "Four of seven outlets (Axios, Reuters, NYT, Washington Post) had no retrievable body text, significantly limiting the breadth of this meta-analysis. Consensus is built primarily on AP, CBS News, and BBC News.",
+      "No outlet reports the position of the Lebanese government's non-Hezbollah political factions on the deal, beyond PM Salam's statement about army deployment.",
+      "Iran's direct role or reaction to Hezbollah's rejection is not reported in any outlet with full body text, despite the broader Iran-war context. CBS News reports Iran's FM warning about Beirut strikes but not a specific reaction to the ceasefire rejection.",
+      "No outlet with body text explains what happens to the ceasefire now that Hezbollah has rejected it \u2014 whether it is effectively dead or whether Israel and Lebanon proceed regardless."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (AP, CBS News, BBC News) corroborate the core facts: Hezbollah rejected the US-brokered ceasefire, the deal includes pilot security zones and Hezbollah evacuation requirements, and fighting continued. While there are framing differences, the factual core is solid enough for a straight REPORT. A META angle could be justified by the divergent framing (NYT headline-positive vs. WaPo quoting 'farce'), but the headline-only status of those outlets weakens that case.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/06/03/israel-lebanon-ceasefire-hezbollah-us",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/lebanon-ceasefire-raises-hopes-progess-iran-deal-2026-06-04/",
+      "title": "Hezbollah rejection clouds Lebanon ceasefire and prospects for ending Iran war - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/03/world/middleeast/israel-lebanon-ceasefire-hezbollah.html",
+      "title": "Israel and Lebanon Renew Cease-Fire, Calling for Evacuation of Hezbollah Operatives - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/06/04/israel-lebanon-renew-ceasefire-deal-without-hezbollah/",
+      "title": "Hezbollah denounces Israel-Lebanon ceasefire deal as a \u2018farce\u2019 - The Washington Post"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/iran-us-war-israel-lebanon-hezbollah-ceasefire-06ea585ce43fd28e26c4d21d46a4df83",
+      "title": "Hezbollah rejects latest ceasefire agreement as Israeli strikes kill 4 in Lebanon - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/iran-us-war-talks-no-progress-israel-lebanon-hezbollah/",
+      "title": "Live Updates: Iran says \"no tangible progress\" made in talks as Hezbollah rejects Israel-Lebanon ceasefire agreement - CBS News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c052343r812o",
+      "title": "Hezbollah rejects renewed ceasefire agreed by Israel and Lebanon - BBC"
+    }
+  ]
+}
