@@ -974,6 +974,11 @@
       "did": "did:plc:fo4yh72cibvdmqzze7xpms6g",
       "handle": "ephemeralenigmas.bsky.social",
       "timestamp": "2026-06-06T16:23:14.895799"
+    },
+    {
+      "did": "did:plc:6kttanh5b7sciw52rbwxmpsm",
+      "handle": "sonicmega.bsky.social",
+      "timestamp": "2026-06-06T20:34:13.416870"
     }
   ],
   "liked_posts": [
@@ -3456,6 +3461,11 @@
       "uri": "at://did:plc:fo4yh72cibvdmqzze7xpms6g/app.bsky.feed.post/3mnmuaypjbs2x",
       "author": "ephemeralenigmas.bsky.social",
       "timestamp": "2026-06-06T16:23:14.708754"
+    },
+    {
+      "uri": "at://did:plc:6kttanh5b7sciw52rbwxmpsm/app.bsky.feed.post/3mnnaltgihc25",
+      "author": "sonicmega.bsky.social",
+      "timestamp": "2026-06-06T20:34:13.236390"
     }
   ],
   "last_cleanup": "2026-06-05T20:44:19.866198",
