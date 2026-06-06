@@ -1,0 +1,114 @@
+{
+  "story_id": "2026-06-06-us-intercepts-iranian-drones-24847071e8",
+  "headline_seed": "US intercepts Iranian drones fired at Bahrain, Kuwait, retaliates by striking radar sites - Fox News",
+  "brief": {
+    "story_id": "2026-06-06-us-intercepts-iranian-drones-24847071e8",
+    "consensus_facts": [
+      "The U.S. military shot down four Iranian drones launched toward the Strait of Hormuz, saying they posed an immediate threat to regional maritime traffic.",
+      "The U.S. struck Iranian coastal surveillance radar sites, including on Qeshm Island, in response to the drone launches.",
+      "Iran fired seven ballistic missiles toward Kuwait and Bahrain; six were intercepted by U.S. forces and one failed to reach its target.",
+      "Iran's IRGC said it targeted U.S. bases in Kuwait (Ali Al Salem air base) and Bahrain (U.S. Navy 5th Fleet facilities) in retaliation for the U.S. strikes.",
+      "Bahrain and Kuwait both condemned the Iranian attacks, calling them violations of their sovereignty.",
+      "Iran's foreign ministry called the U.S. strikes on radar sites a 'flagrant' violation of the ceasefire agreement in place since April.",
+      "No U.S. personnel were reported harmed in the exchanges.",
+      "The exchanges came amid stalled ceasefire negotiations, with reports that President Trump requested changes to a tentative 60-day ceasefire extension deal.",
+      "The U.S. military is enforcing a blockade on Iranian ports linked to Iran's closure of the Strait of Hormuz."
+    ],
+    "disagreements": [
+      {
+        "topic": "Who initiated the escalation cycle",
+        "positions": {
+          "BBC News": "Presents the sequence as U.S. shooting down Iranian drones first, then striking radar sites, with Iran retaliating by firing missiles at Kuwait and Bahrain.",
+          "Al Jazeera English": "Reports Iran's IRGC claimed the clash started when the U.S. military attempted to 'illegally' escort oil tankers through the Strait of Hormuz, framing U.S. action as the provocation.",
+          "NBC News": "Follows the U.S. Central Command sequence: drones first, then U.S. radar strikes, then Iranian ballistic missiles in retaliation."
+        }
+      },
+      {
+        "topic": "Specific radar sites struck",
+        "positions": {
+          "Al Jazeera English": "Names sites in Goruk and on Qeshm Island.",
+          "Associated Press": "Does not specify radar site locations in the available body text.",
+          "BBC News": "Names Sirik and Qeshm Island."
+        }
+      },
+      {
+        "topic": "Trump's characterization of the situation",
+        "positions": {
+          "NBC News": "Quotes Trump saying 'the situation with Iran seems to be going quite well' and warning of resolution 'whether it's a piece of paper or the very tough way.'",
+          "Fox News": "Features commentary from Marc Thiessen praising Trump's military operations and warning against giving Iran financial relief in any deal, with no direct Trump quotes about the current exchange.",
+          "BBC News": "Does not quote Trump directly but notes U.S. media reported Trump requested changes to the ceasefire terms."
+        }
+      },
+      {
+        "topic": "Iran's remaining military capability",
+        "positions": {
+          "NBC News": "Reports Trump said Iranians still have '21% to 22% of their missiles.'",
+          "Fox News": "Thiessen claims strikes 'buried the Iranian nuclear program' and rendered centrifuges inoperable. No other outlet corroborates these specific claims."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Available body text is fragmentary \u2014 largely photo captions and a brief summary paragraph. Frames the story as a test of the ceasefire amid broader Trump administration pressure on Iran. Mentions the war straining the global economy and threatening a hunger crisis, a humanitarian angle not prominent elsewhere.",
+      "The New York Times": "Headline-only. Headline leads with the drone interception count ('at least 4') and attributes to U.S. military. Cannot assess framing beyond headline.",
+      "BBC News": "Comprehensive and balanced timeline. Leads on the ceasefire being 'tested further.' Unique among outlets in noting the U.S. has granted visas to Iran's World Cup football team for the tournament in Los Angeles \u2014 a humanizing geopolitical detail. Includes context on the ceasefire origins (Feb. 28 U.S.-Israel strikes on Iran), the Strait of Hormuz closure's global impact, and the U.S. port blockade. Embeds Jeremy Bowen analysis link suggesting 'Trump needs this war to end but Iran is not backing down.'",
+      "Reuters": "Headline-only. Headline focuses narrowly on the seven ballistic missiles fired toward Kuwait and Bahrain, attributing to U.S. sources. Cannot assess framing beyond headline.",
+      "NBC News": "Most detailed U.S.-centric account. Leads with air raid sirens in Bahrain. Includes extensive Trump quotes from Wisconsin event and NBC's 'Meet the Press' interview. Uniquely reports the earlier incident of Iranian drones damaging a passenger terminal at Kuwait's main airport (killing one, wounding dozens). Connects the conflict to midterm election politics and fertilizer prices. Also reports U.S. forces boarded a sanctioned Iranian-linked oil tanker in the Indian Ocean and new sanctions. Covers the Israel-Lebanon dimension including Hezbollah rejecting a ceasefire and Israeli strikes killing nine in southern Lebanon.",
+      "Al Jazeera English": "Leads with Iran's perspective in the headline ('Iran fires missiles at Gulf after US targets Iranian radar sites'), framing the Iranian missiles as responsive to U.S. action. Uniquely includes the IRGC claim that the clash began when the U.S. tried to 'illegally' escort tankers. Reports condemnations from Egypt, Jordan, and Qatar \u2014 broader regional reaction not detailed by other outlets. Quotes Iran's foreign ministry at greater length, including the warning that the U.S. 'bears responsibility for all the effects and consequences.'",
+      "Fox News": "Does not report the drone/missile exchange in its body text at all. Instead features a pundit segment with Marc Thiessen praising Trump's earlier military operations (Operation Midnight Hammer, Operation Epic Fury) and warning against financial concessions to Iran. Entirely commentary-driven with no news reporting of the day's events in the retrieved text."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (e.g., CENTCOM press releases, Iranian government statements, UN communications) were located in the dossier. All reporting relies on outlet paraphrases of CENTCOM social media posts and Iranian state media."
+    ],
+    "missing_context": [
+      "No outlet provides the exact timeline of events with timestamps \u2014 the sequence of drone launches, U.S. radar strikes, and Iranian ballistic missile retaliation is described in narrative order but without precise hours, making it difficult to establish the escalation ladder.",
+      "The status of the tentative 60-day ceasefire extension is unclear \u2014 NBC News and BBC News mention Trump requested changes, but no outlet specifies what those changes are or what Iran's specific objections entail.",
+      "No outlet provides casualty figures for the radar site strikes in Iran. Whether Iranian military or civilian personnel were killed or injured is unreported.",
+      "Only NBC News mentions the earlier Kuwait airport drone attack that killed one person and wounded dozens \u2014 a significant recent precedent that other outlets omit.",
+      "No outlet discusses the legal framework under which the U.S. is conducting military operations, including whether Congress has authorized the use of force or whether the administration is invoking Article II or other authorities.",
+      "Fox News's retrieved body text contains only pundit commentary and no factual reporting of the day's events, which limits the dossier's right-leaning coverage to opinion framing rather than news coverage.",
+      "The CENTCOM social media posts cited by multiple outlets were not retrieved as primary sources; the dossier relies entirely on outlet paraphrases of these posts.",
+      "No outlet discusses the humanitarian impact of the ongoing port blockade on Iranian civilians or the broader economic consequences beyond oil prices.",
+      "Al Jazeera English uniquely reports condemnations from Egypt, Jordan, and Qatar \u2014 no other outlet corroborates or mentions these specific diplomatic reactions, making them single-source claims."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text reported the same exchange of fire but with materially different framing \u2014 particularly regarding who initiated the escalation, how Trump's posture is characterized, and what contextual details are included or omitted. Al Jazeera's Iran-responsive framing contrasts sharply with NBC's U.S.-centric account, and Fox News's body text contains only pundit commentary rather than event reporting. These framing divergences make this a coverage-comparison story, not a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/iran-us-bahrain-kuwait-missiles-drones-df859624fb659cb28cec798200cc85d4",
+      "title": "A new exchange of fire with Iran in the Gulf tests the fragile ceasefire - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/05/us/politics/iran-attack-drones-hormuz.html",
+      "title": "Iran Fired Drones Toward Strait of Hormuz With U.S. Shooting Down at Least 4, U.S. Military Says - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cvgzgyjk2weo",
+      "title": "US and Iran exchange strikes in Gulf in latest test of ceasefire - BBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/video/watch/idRW653206062026RP1/",
+      "title": "US says Iran fired seven ballistic missiles toward Kuwait, Bahrain - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/iran/us-military-says-shot-iranian-drones-launched-strait-hormuz-rcna348766",
+      "title": "Air raid sirens in Bahrain as Iranian missiles and drones head for Gulf neighbors - NBC News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/6/6/us-intercepts-iranian-attacks-as-israel-continues-to-bomb-lebanon",
+      "title": "Iran fires missiles at Gulf after US targets Iranian radar sites - Al Jazeera"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/live-news/iran-war-news-trump-latest-oil-prices-kuwait-bahrain-hormuz-june-6",
+      "title": ""
+    }
+  ]
+}
