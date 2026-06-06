@@ -1,0 +1,133 @@
+{
+  "story_id": "2026-06-06-missing-american-student-found-eb14b3f7ae",
+  "headline_seed": "Missing American student found dead in Japan after dayslong search - CNN",
+  "brief": {
+    "story_id": "2026-06-06-missing-american-student-found-eb14b3f7ae",
+    "consensus_facts": [
+      "James 'Weston' Higginbotham, a 20-year-old Auburn University student, was found dead in a mountainous area outside Kyoto, Japan, by a volunteer search-and-rescue group on Saturday, June 6, 2026.",
+      "Higginbotham went missing on May 29, 2026, while on a family vacation in Japan.",
+      "He was last seen on CCTV footage in the Yamashina area of Kyoto, near a path leading to hiking trails.",
+      "Before disappearing, Higginbotham had a disagreement with his mother over her use of ChatGPT during the trip; he opposed AI due to its environmental resource consumption, consistent with his studies in biosystems/sustainability engineering.",
+      "His family tracked his movements via the Life360 app; he boarded a train and visited stores before his location was turned off, which his mother said was out of character.",
+      "A police search lasting approximately 72 hours involved more than 100 officers, K-9 units, and helicopters, and ended without finding him.",
+      "After police concluded their official search, the family launched their own search efforts with hired professional search-and-rescue personnel and local volunteers.",
+      "His mother, Nancy Higginbotham, announced the discovery of his body via a Facebook post, calling it an 'unimaginable loss.'",
+      "A cause of death was not immediately released.",
+      "Kyoto Prefectural Police said it was 'highly probable' that Higginbotham left his family intentionally, but they remained concerned for his safety because he did not speak Japanese.",
+      "Auburn University President Christopher B. Roberts confirmed Higginbotham's death and called him a 'valued member of the Auburn Family.'"
+    ],
+    "disagreements": [
+      {
+        "topic": "Specific last-seen location description",
+        "positions": {
+          "CNN": "Last seen on CCTV walking alone in the Yamashina area, on a path leading to a hiking trail in the nearby woods.",
+          "CBS News": "Last seen leaving the Yamashina train station in Kyoto.",
+          "NBC News": "Last seen at the Kyoto train station on May 29.",
+          "ABC News": "Does not specify a precise last-seen location beyond Kyoto area."
+        }
+      },
+      {
+        "topic": "Family's hometown",
+        "positions": {
+          "CNN (timeline)": "Describes the family as 'hailing from Birmingham, Alabama.'",
+          "ABC News": "Describes Higginbotham as 'a native of Hoover, Alabama,' citing the university and the mayor of Hoover."
+        }
+      },
+      {
+        "topic": "Date police began searching the forest",
+        "positions": {
+          "CNN": "Police decided on June 2 to search the forest after CCTV was confirmed, but were hindered by a storm that night; search began June 3. CNN notes a correction was issued about the date police first searched.",
+          "NBC News": "Heavy rains from a typhoon delayed the search until Wednesday (June 3).",
+          "CBS News": "Does not specify the exact date police began forest search."
+        }
+      },
+      {
+        "topic": "Nature of weather event that delayed search",
+        "positions": {
+          "CNN": "Describes 'a storm that brought wind and heavy rain.'",
+          "NBC News": "Specifically attributes the delay to 'heavy rains from a typhoon.'"
+        }
+      },
+      {
+        "topic": "Cost of private search-and-rescue",
+        "positions": {
+          "CBS News": "Reports the family said the professional search and rescue crew was expected to cost over $100,000.",
+          "CNN, NBC News, ABC News": "Do not mention a specific cost figure."
+        }
+      },
+      {
+        "topic": "Emotional state framing before disappearance",
+        "positions": {
+          "NBC News": "Reports the family 'feared he could have been emotionally distressed.'",
+          "CNN": "Describes a 'disagreement' and 'butting heads' but does not use the phrase 'emotionally distressed.'",
+          "ABC News": "Police said it was 'highly probable' he left intentionally but does not characterize emotional state."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN (Article 1)": "Leads with the discovery of the body and the family's grief. Prominently features the ChatGPT/AI disagreement as a key narrative element and contextualizes it with Higginbotham's environmentalism. Includes details about the family's independent search effort launching on the same day the body was found. Notes a correction about the date police first searched the forest, suggesting earlier reporting errors. Uses language like 'passionate naturalist' to characterize the victim.",
+      "CNN (Article 5 \u2014 Timeline)": "Provides the most granular, chronological account of any outlet, functioning as a detailed explainer piece. Leads with the final outcome but structures the entire piece as a day-by-day reconstruction from May 22 through June 6. Includes unique details such as the family arriving in Japan on May 22 to celebrate the younger brother's high school graduation, the father hiking eight miles to 'get a good lay of the land,' and the family meeting at a local coffee shop to coordinate the search. This is the most comprehensive single piece in the dossier.",
+      "CBS News (Article 2)": "Straightforward breaking-news report focused on the mother's Facebook announcement. Leads with the death confirmation and quotes the mother's request for privacy. Includes Auburn University president's statement. Relatively brief and does not elaborate extensively on the AI argument or search logistics. Cross-promotes related CBS News content.",
+      "CBS News (Article 6)": "Earlier piece (updated with death confirmation) that centers the ChatGPT argument as the primary narrative frame \u2014 the headline itself leads with it. Includes the most direct quotes from the mother about the AI dispute ('a sore subject') and her fear that he was injured and stuck. Unique detail: the professional search crew was expected to cost over $100,000. Also includes a quote from the father expressing confidence they would find him. This piece treats the AI angle as the hook more than any other outlet.",
+      "ABC News (Article 3)": "Concise breaking-news report. Leads with the body being found by volunteers. Includes the police assessment that it was 'highly probable' Higginbotham left intentionally, which is a distinctive detail ABC News highlights more than other outlets. Notes his cause of death is unclear. Relatively spare on narrative detail compared to CNN's coverage.",
+      "ABC News (Article 7)": "Earlier investigative-angle piece focused on Kyoto Prefectural Police's assessment that Higginbotham likely left his family intentionally. Unique framing: leads with the police perspective rather than the family's. Includes a notable detail that police said if Higginbotham is found, 'they will act according to his wishes and privacy,' suggesting authorities were treating this partly as a voluntary departure. Quotes Hoover Mayor Nick Derzis. Does not mention the ChatGPT argument.",
+      "NBC News (Article 4)": "Leads with the body being found. Unique emphasis on the family's characterization that Higginbotham may have been 'emotionally distressed,' a framing no other outlet uses in those terms. Attributes the search delay to a 'typhoon' specifically, which is stronger weather language than CNN's 'storm.' Includes context about his opposition to AI and sustainable design values. Notes the article is behind a subscription paywall for full content."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (police reports, official statements, embassy communications) were located for this story. All reporting relies on the family's social media posts (primarily Nancy Higginbotham's Facebook), statements from Kyoto Prefectural Police relayed through reporters, and an Auburn University statement. The family's Facebook post functions as the de facto primary source for the death confirmation, and all outlets cite it consistently."
+    ],
+    "missing_context": [
+      "No cause of death has been reported by any outlet; it is unclear whether an autopsy has been conducted or when results might be available.",
+      "No outlet reports the exact location where the body was found within the mountainous area, or how far it was from the last CCTV sighting.",
+      "No outlet addresses whether foul play is suspected or has been ruled out by Japanese authorities.",
+      "No outlet reports on the condition of the body or any items found with him, which could help establish what happened.",
+      "The role and identity of the volunteer search-and-rescue group that found the body is not detailed by any outlet \u2014 it is unclear if this was the privately hired team or separate local volunteers.",
+      "No outlet explains Japanese legal procedures for handling the death of a foreign national, including repatriation of remains, autopsy requirements, or consular involvement beyond a mention of embassy contact.",
+      "No outlet provides information about what Higginbotham purchased at the stores he visited, which could indicate his intentions (e.g., supplies for hiking).",
+      "No outlet explores the terrain difficulty or specific dangers of the Yamashina mountain/forest area in detail sufficient for readers to understand the risk level.",
+      "The GoFundMe mentioned in the CNN timeline piece is not explored in terms of amount raised or how funds were used.",
+      "No outlet addresses whether his phone or personal effects were recovered, or whether his phone was ever turned back on after location was disabled.",
+      "The family's hometown is reported as both Birmingham and Hoover, Alabama (Hoover is a suburb of Birmingham); no outlet clarifies the discrepancy."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "All seven articles come from lean-left outlets and agree on the core facts: the student was found dead, the circumstances of his disappearance, and the family's response. While there are minor framing differences (emphasis on the AI argument, police assessment of intentional departure, emotional distress language), these do not rise to the level of materially different framings that would warrant a META post. The story is a straightforward tragic outcome with strong consensus across outlets. No primary source divergence exists to highlight. A REPORT is the appropriate format.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/06/us/james-weston-higginbotham-found-dead",
+      "title": ""
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/james-weston-higginbotham-found-dead-japan-kyoto/",
+      "title": "Missing Auburn University student in Japan found dead, mother says: \"Unimaginable loss\" - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/american-missing-japan-found-dead-mountainous-area-kyoto/story?id=133651194",
+      "title": "American missing in Japan found dead in mountainous area near Kyoto - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/body-missing-auburn-university-student-found-japan-rcna348792",
+      "title": "Body of missing Auburn University student found in Japan - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/06/us/timeline-james-weston-higginbotham-missing-hnk",
+      "title": "The US college student missing in Japan has been found dead. Here\u2019s a timeline of key moments in the case - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/james-weston-higginbotham-missing-japan-mom-chatgpt/",
+      "title": "Mom of Auburn college student missing in Japan says they argued over ChatGPT before he disappeared - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/highly-probable-american-missing-japan-left-intentionally-police/story?id=133588559",
+      "title": "'Highly probable' that American missing in Japan left intentionally: Police - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
