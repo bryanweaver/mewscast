@@ -1,0 +1,141 @@
+{
+  "story_id": "2026-06-07-israel-strikes-beirut-after-de8fdba5e2",
+  "headline_seed": "Israel strikes Beirut after Hezbollah attack, risking Iran response - Axios",
+  "brief": {
+    "story_id": "2026-06-07-israel-strikes-beirut-after-de8fdba5e2",
+    "consensus_facts": [
+      "Israel struck Beirut's southern suburbs (Dahieh) on Sunday, June 7, 2026, days after a US-brokered ceasefire agreement went into effect.",
+      "Israeli Prime Minister Benjamin Netanyahu's office said the strikes targeted Hezbollah command centers/headquarters in response to Hezbollah firing toward Israeli territory.",
+      "The Israeli military said it intercepted two projectiles crossing into Israeli territory from Lebanon.",
+      "Hezbollah did not claim responsibility for firing at Israel and did not immediately comment on the strikes.",
+      "Three Lebanese soldiers \u2014 including Brigadier General Wissam Sabra \u2014 were killed in an Israeli strike on Saturday, June 6, with funerals held on Sunday.",
+      "A ceasefire has been in effect since April 17 but has been repeatedly violated by both sides.",
+      "This was the third Israeli strike on Beirut's southern suburbs since the April 17 ceasefire.",
+      "Lebanon's army commander Gen. Rodolphe Haikal traveled to Pakistan on Saturday amid Pakistani mediation efforts between Iran and the US.",
+      "Iran has demanded that any lasting truce extend to Lebanon.",
+      "Pakistan's interior minister was in Tehran on Sunday in a fresh bid to restart US-Iran negotiations."
+    ],
+    "disagreements": [
+      {
+        "topic": "Casualty count from the Sunday Beirut strikes",
+        "positions": {
+          "BBC News": "Two killed and at least 17 injured, citing Lebanon's state news agency.",
+          "Al Jazeera English": "At least two killed and 11 injured, citing the Lebanese National News Agency (NNA).",
+          "Associated Press": "Photo captions reference destruction but the retrieved body text does not provide a casualty figure.",
+          "NBC News": "States 'no immediate word of casualties' \u2014 suggesting the AP wire version it carried was filed before casualty reports came in."
+        }
+      },
+      {
+        "topic": "Whether the US explicitly told Israel not to strike Beirut",
+        "positions": {
+          "Associated Press": "States the strikes came 'despite a US request not to attack Lebanon's capital.'",
+          "BBC News": "Reports Israel had 'limited its Beirut attacks under US pressure' and that the US had previously 'instructed the Israelis to stand down,' referencing a Trump Truth Social post.",
+          "NBC News": "Does not describe a direct US request not to strike on this occasion.",
+          "Al Jazeera English": "Does not mention a US request not to strike."
+        }
+      },
+      {
+        "topic": "Whether there was a warning before the strikes",
+        "positions": {
+          "Associated Press": "Explicitly says strikes came 'without warning.'",
+          "BBC News": "Does not mention whether a warning was issued.",
+          "NBC News": "Does not mention whether a warning was issued.",
+          "Al Jazeera English": "Does not mention whether a warning was issued."
+        }
+      },
+      {
+        "topic": "Number of blasts / strikes",
+        "positions": {
+          "BBC News": "Reports 'two air strikes on two apartment buildings.'",
+          "Al Jazeera English": "Reports 'at least three large blasts' per its correspondent."
+        }
+      },
+      {
+        "topic": "Framing of targets \u2014 civilian vs. military infrastructure",
+        "positions": {
+          "Al Jazeera English": "Describes the target as 'a densely populated civilian neighbourhood.'",
+          "NBC News": "Calls them 'sprawling urban neighborhoods' targeted for 'command centers.'",
+          "BBC News": "Uses Israel's framing \u2014 'terrorist headquarters' \u2014 while noting it was a 'residential building.'"
+        }
+      },
+      {
+        "topic": "Trump's position on linking Lebanon to Iran deal",
+        "positions": {
+          "BBC News": "Reports Trump told NBC's Meet the Press he was 'not demanding that Lebanon be part of any peace deal with Iran, separating the two tracks.'",
+          "NBC News": "Does not mention the Trump Meet the Press interview.",
+          "Al Jazeera English": "Does not mention Trump's position on linkage."
+        }
+      },
+      {
+        "topic": "Iranian response/threat",
+        "positions": {
+          "BBC News": "Quotes Iranian parliament spokesperson Ebrahim Rezaie promising 'a decisive and painful response.'",
+          "NBC News": "Reports Iran had warned an attack on the capital would 'trigger renewed full-scale war across the Mideast' but does not cite a post-strike Iranian statement.",
+          "Al Jazeera English": "Does not include an Iranian reaction to the Sunday strike."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "The retrieved body text is almost entirely photo captions rather than a full article. Leads with the fact that strikes came 'without warning' and 'despite a US request not to attack Lebanon's capital,' foregrounding the diplomatic breach. Emphasizes the human toll through images of funerals for Lebanese soldiers killed the day before. Wire-style neutral language but the 'without warning' and 'despite US request' framing implicitly casts Israel as defying its patron.",
+      "NBC News": "Carries the AP wire report with substantial additional context on the broader US-Iran war, the Strait of Hormuz blockade, energy prices, Pakistani mediation, and Trump's political exposure ahead of midterms. Leads with the strike itself but quickly pivots to the geopolitical stakes. Notably includes details about Iranian attacks on the Ali Al Salem air base in Kuwait and the US 5th Fleet in Bahrain, US blockade of Iranian ports, and the Kuwait airport drone attack \u2014 none of which appear in other outlets' coverage of this specific story. Does not mention Trump's Meet the Press interview separating Lebanon from the Iran deal. The broadest contextual piece in the dossier.",
+      "BBC News": "Leads with the diplomatic angle \u2014 'first attack on the Lebanese capital since a truce brokered by the US last week.' Provides the most granular casualty figures (two dead, 17 injured). Uniquely reports Trump's Meet the Press statement declining to link Lebanon to the Iran deal, and the Israeli Arabic-language spokesman's provocative 'To be continued' post on X. Also uniquely reports that Trump posted on Truth Social that there would be 'no troops going to Beirut.' Includes context on Hezbollah leader Naim Qassem's rejection of disarmament and Parliament Speaker Nabih Berri calling the deal 'a trap.' Frames the ceasefire as existing 'in name only.'",
+      "Axios": "Article body was not retrievable (403 error). Headline \u2014 'Israel strikes Beirut after Hezbollah attack, risking Iran response' \u2014 uniquely foregrounds the Iran escalation risk in its headline framing, treating the potential Iranian response as the lead news value rather than the strike itself.",
+      "Reuters": "Article body was not retrievable (headline only). Headline \u2014 'Israeli military says it hit Hezbollah in Beirut suburbs' \u2014 uses Israeli sourcing ('Israeli military says') and frames the event through Israel's stated action, without mentioning casualties, ceasefire context, or Iran.",
+      "The New York Times": "Article body was not retrievable (headline only). Headline \u2014 'Israel Bombs Beirut Outskirts as Fighting With Hezbollah Escalates' \u2014 uses 'bombs' (stronger verb) and emphasizes escalation rather than ceasefire violation or diplomatic context.",
+      "Al Jazeera English": "Leads with the civilian dimension \u2014 'hits civilian area,' 'densely populated civilian neighbourhood' \u2014 foregrounding harm to non-combatants. Uniquely includes quotes from Lebanese President Joseph Aoun calling the attack 'aimed at thwarting all efforts to reach a solution' and PM Nawaf Salam calling it 'a heinous crime.' Provides the names of all three Lebanese soldiers killed Saturday. Does not mention Trump, US diplomatic requests, or the broader Iran-US war dynamics in the retrieved text. The framing is squarely from the Lebanese/victim perspective."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. All analysis is based on outlet reporting only."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides specifics on what the renewed June 3 ceasefire agreement actually contained \u2014 its terms, enforcement mechanisms, or how it differed from the April 17 agreement.",
+      "No outlet reports what specific Hezbollah firing preceded the Israeli strikes \u2014 the nature, scale, targets, or damage of the claimed projectiles toward northern Israel \u2014 making it impossible to assess proportionality.",
+      "The Israeli Arabic-language spokesman's 'To be continued' post (reported by BBC) raises the question of whether further strikes followed; no outlet provides follow-up.",
+      "No outlet explains what authority or mechanism exists to enforce the ceasefire, or what consequences either side faces for violations.",
+      "The role of the Lebanese army in the south \u2014 and whether it is supposed to be deploying under ceasefire terms \u2014 is not explained, despite the killing of three Lebanese soldiers being a major development.",
+      "No outlet reports on civilian displacement from Dahieh as a result of this or prior strikes, despite BBC noting 'mass flight from the suburb' the previous week.",
+      "NBC News uniquely provides extensive context on the broader US-Iran conflict (Strait of Hormuz, Kuwait airport attack, US blockade of Iranian ports, energy price spikes, midterm elections) that no other outlet in the dossier addresses \u2014 readers of other outlets would lack this wider war context.",
+      "Three outlets (Axios, Reuters, NYT) returned no usable body text, limiting the depth of cross-source verification."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (AP, NBC, BBC) plus Al Jazeera cover the same event with materially different framings \u2014 AP emphasizes the diplomatic breach, NBC embeds the event in the broader US-Iran war, BBC foregrounds Trump's position-shift on linkage, and Al Jazeera centers the civilian and Lebanese-government perspective. The divergences in casualty figures, characterization of targets, and contextual framing are substantive enough to warrant a coverage-comparison META post rather than a straight REPORT.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/iran-us-ceasefire-hezbollah-israel-28d80744e192ae0d5cce73a5a08af906",
+      "title": "Israel strikes Beirut\u2019s southern suburbs days after US-supported ceasefire deal - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/iran/israel-strikes-beiruts-southern-suburbs-days-ceasefire-agreement-rcna348847",
+      "title": "Israel strikes Beirut\u2019s southern suburbs days after ceasefire agreement - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c0qyevk8139o",
+      "title": "Israel renews strikes on Beirut suburb after Trump-imposed pause - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/06/07/israel-strikes-lebanon-beirut-iran-response-trump",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/israeli-military-says-it-intercepted-two-projectiles-that-crossed-lebanon-2026-06-07/",
+      "title": "Israeli military says it hit Hezbollah in Beirut suburbs - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/07/world/middleeast/israel-beirut-attacks-hezbollah.html",
+      "title": "Israel Bombs Beirut Outskirts as Fighting With Hezbollah Escalates - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/6/7/lebanon-army-chief-in-pakistan-funeral-planned-for-troops-killed-by-israel",
+      "title": "Israel hits civilian area in Beirut\u2019s southern suburbs, kills at least two - Al Jazeera"
+    }
+  ]
+}
