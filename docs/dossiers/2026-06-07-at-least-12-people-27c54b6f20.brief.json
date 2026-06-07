@@ -1,0 +1,126 @@
+{
+  "story_id": "2026-06-07-at-least-12-people-27c54b6f20",
+  "headline_seed": "At least 12 people shot at an Ohio festival and a search for suspects is still ongoing, police say - NPR",
+  "brief": {
+    "story_id": "2026-06-07-at-least-12-people-27c54b6f20",
+    "consensus_facts": [
+      "At least 12 people were shot near the Old West End Festival in Toledo, Ohio, on Saturday, June 6, 2026.",
+      "Two of the victims were in critical condition.",
+      "Toledo Police Deputy Chief Joe Heffernan said it appeared at least two shooters were involved and they were 'probably shooting at each other.'",
+      "No suspects were in custody as of Saturday night, and police were actively searching for them.",
+      "The shooting occurred around 5:37 p.m. local time.",
+      "The ages of victims ranged from 14 to 61, with most in their early 20s.",
+      "Police had extra officers on duty for the festival, including off-duty officers working for the event.",
+      "Ohio Gov. Mike DeWine issued a statement saying he was 'deeply concerned' and that 'summer festivals should be safe spaces for families.'",
+      "Police urged the public to come forward with cellphone photos and videos from the festival.",
+      "The Old West End Festival is an annual two-day event in Toledo's historic district featuring live music, food, and home tours.",
+      "Police Lt. Dan Gerken described the scale of the shooting as extraordinary, saying it was the most victims he had ever seen at a single scene.",
+      "The second day of the festival was canceled following the shooting."
+    ],
+    "disagreements": [
+      {
+        "topic": "Youngest victim's age",
+        "positions": {
+          "NPR": "14 years old",
+          "ABC News": "14 years old",
+          "USA Today": "14 years old",
+          "NBC News": "14 years old",
+          "CNN": "14 years old",
+          "BBC News": "16 years old"
+        }
+      },
+      {
+        "topic": "Whether all victims were expected to survive",
+        "positions": {
+          "CNN": "Toledo Mayor Kapszukiewicz told WTOL all are expected to survive.",
+          "BBC News": "Mayor told WTOL 11 all were expected to survive.",
+          "NPR": "No mention of survival prognosis beyond two being critical.",
+          "ABC News": "No mention of survival prognosis beyond two being critical.",
+          "NBC News": "No mention of survival prognosis beyond two being critical.",
+          "USA Today": "No fatalities reported as of late Saturday; no broader survival prognosis stated."
+        }
+      },
+      {
+        "topic": "Exact cross-streets of the shooting",
+        "positions": {
+          "USA Today": "Delaware and Glenwood avenues",
+          "BBC News": "Investigation includes area of Delaware Avenue and Robinwood Avenue",
+          "CNN": "Does not specify exact cross-streets beyond the festival area",
+          "NPR": "Does not specify exact cross-streets"
+        }
+      },
+      {
+        "topic": "Festival cancellation",
+        "positions": {
+          "NBC News": "Sunday festivities canceled; quotes Old West End Association statement.",
+          "CNN": "Second day canceled; quotes organizers' statement.",
+          "NPR": "Officials were 'discussing with organizers whether it would continue through the weekend' \u2014 suggesting a decision had not yet been made.",
+          "ABC News": "No mention of cancellation.",
+          "USA Today": "No mention of cancellation.",
+          "BBC News": "No mention of cancellation."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "Leads with hard facts and the ongoing manhunt. Gives substantial space to eyewitness Kevin Berry's account, including his Navy medical training and observing a gun tossed to the ground. Includes city safety director George Kral's quote about the festival being 'iconic.' Does not mention the festival cancellation as final, only that discussions were underway. Does not contextualize within broader gun violence statistics.",
+      "The New York Times": "Headline-only; no body text available for analysis. Headline mirrors other outlets' framing: 'At Least 12 People Shot Near Street Festival in Toledo, Ohio, Police Say.'",
+      "BBC News": "International framing; identifies Toledo as being 'in the midwestern US state of Ohio' for a non-American audience. Unique eyewitness Tito Aguilar describes seeing 'juveniles' attacking another young person before gunshots, a detail no other outlet includes. Reports youngest victim age as 16, diverging from other outlets' 14. Includes embedded map context. Does not mention festival cancellation or gun violence statistics.",
+      "ABC News": "Shortest of the full-text articles. Tightly focused on police statements. Leads with the two-shooter theory. Includes Heffernan's quote about bullets going 'anywhere' as a framing device. No eyewitness accounts, no governor's statement, no festival cancellation, no broader context.",
+      "USA Today": "Standard breaking-news structure. Unique in specifying 'Delaware and Glenwood avenues' as the cross-streets. Gives prominent space to Lt. Gerken's plea to parents: 'Talk to your kids.' Notes no fatalities had been reported. Does not mention festival cancellation or broader gun violence patterns.",
+      "NBC News": "Leads with the ongoing manhunt angle ('gunmen still at large'). Unique detail about 'mobile security cameras' being used at the festival. First outlet to confirm the festival cancellation with a direct quote from the Old West End Association. Notes 'several hundred people' were at the festival. Includes a brief description of the festival's offerings.",
+      "CNN": "Most contextually rich framing. Unique among all outlets in placing the shooting within broader US gun violence patterns, citing it as 'one of at least 170' mass shootings in the US this year per the Gun Violence Archive. Includes Mayor Kapszukiewicz's statement that this 'has happened in too many American cities' and 'we must do better.' Provides atmospheric detail about the crime scene (abandoned sneakers, toppled coolers). Reports Toledo's crime statistics \u2014 a 15% reduction in shooting incidents in 2025 vs. 2024. Only outlet to describe the scene in vivid, narrative detail. Also confirms festival cancellation."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (police press releases, official statements, court filings) were located in the dossier. All reporting is based on a police news conference and social media statements from the governor and mayor. Alignment cannot be assessed."
+    ],
+    "missing_context": [
+      "No outlet provides descriptions or identifying information about the suspects beyond 'at least two shooters,' leaving it unclear what police are asking the public to look for.",
+      "BBC News's eyewitness Tito Aguilar describes 'juveniles' attacking another young person before the shooting \u2014 a possible precipitating incident \u2014 but no other outlet corroborates or explores this detail.",
+      "No outlet reports whether any weapons were recovered at the scene, despite Kevin Berry (NPR, CNN) describing seeing a gun tossed to the ground.",
+      "No outlet addresses whether the festival had security screening, weapons policies, or metal detectors at entry points.",
+      "No primary source (official press release, police report) was available for verification of the facts reported from the news conference.",
+      "Only CNN provides broader statistical context on mass shootings in 2026 or Toledo's crime trends; other outlets treat the event in isolation.",
+      "No outlet reports on the specific conditions of the two critically injured victims beyond 'critical condition.'"
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six outlets with full body text corroborate the core facts with only minor discrepancies (victim age, cross-streets). Framing differences exist but are not materially divergent enough to warrant a META post \u2014 the disagreements are small factual discrepancies rather than competing narratives. No primary source is available to create tension. This is a straightforward multi-source confirmed breaking news story.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/07/nx-s1-5849137/12-people-shot-ohio-festival",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/06/us/toledo-ohio-shooting-festival.html",
+      "title": "At Least 12 People Shot Near Street Festival in Toledo, Ohio, Police Say - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4gyqzkgwn2o",
+      "title": "Manhunt for suspects after 12 people shot near festival in Ohio - BBC"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/multiple-people-shot-outdoor-festival-ohio-police/story?id=133654043",
+      "title": "12 wounded, 2 critically, in shooting near Ohio festival: Police - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/nation/2026/06/06/ohio-shooting-injures-multiple-people-near-festival-police-say/90440681007/",
+      "title": "Suspects sought after 12 shot, injured at Ohio festival, police say - USA Today"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/ohio-old-west-end-festival-shooting-rcna348826",
+      "title": "At least 12 shot near Ohio festival, gunmen still at large - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/06/us/old-west-end-festival-toledo-ohio-shooting",
+      "title": "Police search for suspects after at least 12 people shot near a festival in Toledo, Ohio, authorities say - CNN"
+    }
+  ]
+}
