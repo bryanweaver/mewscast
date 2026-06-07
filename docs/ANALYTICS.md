@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-06-06 23:20 UTC*
+*Last updated: 2026-06-07 23:21 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,10 +12,10 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 362 | - |
-| Likes | 364 | +4 |
-| Reposts | 60 | +0 |
-| Replies | 363 | - |
+| Posts tracked | 365 | - |
+| Likes | 370 | +3 |
+| Reposts | 61 | +1 |
+| Replies | 366 | - |
 
 ### X (Twitter)
 
@@ -43,14 +43,14 @@ Rideshare drivers are ...
 **[X]** 7 likes, 0 reposts
 > Elon Musk is requiring banks and law firms working on the SpaceX IPO to buy Grok...
 
+**[BLUESKY]** 4 likes, 2 reposts
+> U.S. forces shot down 4 Iranian drones and struck radar sites on Qeshm Island. I...
+
 **[BLUESKY]** 4 likes, 1 reposts
 > SAVE Act likely dead in Senate, but GOP states aren't waiting.
 
 Florida, South D...
 
-**[BLUESKY]** 3 likes, 2 reposts
-> Millions expected at Saturday's 'No Kings' rally — 3,100+ events in all 50 state...
-
 ---
 
-*Data snapshots: 11872 total across 588 posts*
+*Data snapshots: 11952 total across 591 posts*
