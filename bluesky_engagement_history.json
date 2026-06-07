@@ -979,6 +979,11 @@
       "did": "did:plc:6kttanh5b7sciw52rbwxmpsm",
       "handle": "sonicmega.bsky.social",
       "timestamp": "2026-06-06T20:34:13.416870"
+    },
+    {
+      "did": "did:plc:e6mw5n465m43gnub5xoyqwnr",
+      "handle": "garryojelly.bsky.social",
+      "timestamp": "2026-06-07T01:50:07.190037"
     }
   ],
   "liked_posts": [
@@ -3466,6 +3471,11 @@
       "uri": "at://did:plc:6kttanh5b7sciw52rbwxmpsm/app.bsky.feed.post/3mnnaltgihc25",
       "author": "sonicmega.bsky.social",
       "timestamp": "2026-06-06T20:34:13.236390"
+    },
+    {
+      "uri": "at://did:plc:e6mw5n465m43gnub5xoyqwnr/app.bsky.feed.post/3mnmuttqddc23",
+      "author": "garryojelly.bsky.social",
+      "timestamp": "2026-06-07T01:50:07.100307"
     }
   ],
   "last_cleanup": "2026-06-05T20:44:19.866198",
