@@ -1,0 +1,129 @@
+{
+  "story_id": "2026-06-08-6-people-stabbed-at-94589bc0ef",
+  "headline_seed": "6 people stabbed at Penn Station. Here's what we know. - CBS News",
+  "brief": {
+    "story_id": "2026-06-08-6-people-stabbed-at-94589bc0ef",
+    "consensus_facts": [
+      "Multiple people were stabbed at or near New York City's Penn Station on Sunday evening, June 7, 2026, at approximately 7 p.m.",
+      "Six people were injured and taken to hospitals; five were confirmed stabbed.",
+      "One person suffered serious injuries; none of the injuries are believed to be life-threatening.",
+      "Five patients were transported to Bellevue Hospital; a sixth was taken to a separate hospital.",
+      "A suspect was taken into custody following the incident.",
+      "Amtrak Police responded to the scene and are leading the investigation.",
+      "A knife was recovered from the scene.",
+      "New York City Mayor Zohran Mamdani issued a statement calling the attack 'unacceptable violence,' praising first responders, and confirming no impacts to Amtrak service.",
+      "Witnesses described officers pepper-spraying and tackling the suspect, with multiple officers needed to subdue him.",
+      "The incident occurred the night before NBA Finals Game 3 at Madison Square Garden, which sits directly above Penn Station."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number stabbed in headline framing",
+        "positions": {
+          "CBS News": "Headline and body say six people were taken to hospital, at least five confirmed stabbed.",
+          "ABC News": "Reports five people were stabbed; does not reference a sixth person taken to hospital.",
+          "Fox News": "Headline says 'Five stabbed near Penn Station'; body notes six civilians injured total.",
+          "CNN": "Reports six people injured, five confirmed stabbed, sixth taken to a different hospital with condition undisclosed."
+        }
+      },
+      {
+        "topic": "Location framing \u2014 inside vs. near Penn Station",
+        "positions": {
+          "CBS News": "Reports stabbing at Penn Station.",
+          "CNN": "Reports stabbing at Penn Station, references the West 33rd and 7th Avenue entrance.",
+          "Fox News": "Headline says 'near Penn Station'; body references FDNY response to West 33rd Street and Seventh Avenue.",
+          "ABC News": "Reports stabbing at Penn Station."
+        }
+      },
+      {
+        "topic": "Suspect description and characterization",
+        "positions": {
+          "CBS News": "Describes suspect as 'an emotionally disturbed person with no terror links' per police sources.",
+          "CNN": "Notes suspect 'may be unhoused' per a law enforcement official; no mention of 'emotionally disturbed' label.",
+          "ABC News": "Identifies suspect as 'a man in his 50s' experiencing homelessness; no mention of 'emotionally disturbed' designation.",
+          "Fox News": "Does not describe the suspect's housing status or mental health; says 'authorities have not released information about a possible suspect or motive.'"
+        }
+      },
+      {
+        "topic": "Terror nexus characterization",
+        "positions": {
+          "CBS News": "Explicitly reports 'no terror nexus' per high-ranking NYPD source, and a law enforcement source described it as a 'random act of violence.'",
+          "CNN": "Does not mention terror nexus assessment in its reporting.",
+          "ABC News": "Does not mention terror nexus assessment.",
+          "Fox News": "Does not mention terror nexus assessment; says circumstances and motive 'not immediately clear.'"
+        }
+      },
+      {
+        "topic": "Security context around NBA Finals and Trump attendance",
+        "positions": {
+          "CNN": "Leads heavily with the NBA Finals and Trump security angle, describing heightened security, drone deployments, and federal security planning for Trump's attendance at Game 3.",
+          "ABC News": "Mentions NBA Finals context and notes Trump will attend, and that the watch party outside MSG was cancelled due to security protocols.",
+          "Fox News": "Mentions NBA Finals and FIFA World Cup as context for busy transit period, but does not mention Trump's planned attendance.",
+          "CBS News": "Does not mention NBA Finals, Trump, or security context."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Leads with the hospital count and factual details of the attack. Unique in reporting a law enforcement source calling it a 'random act of violence' and a high-ranking NYPD source saying 'no terror nexus.' Also unique in quoting a witness who said he had previously seen the suspect. Includes the mayor's full statement. Does not connect the incident to the NBA Finals or Trump's visit at all \u2014 treats it as a standalone crime story.",
+      "The New York Times": "Headline-only in this dossier ('6 Wounded in Stabbing at Penn Station in Manhattan'). No body text available for analysis. Headline uses 'wounded' rather than 'stabbed,' a slightly softer framing.",
+      "CNN (Article 3)": "The most aggressive framing tying the stabbing to the NBA Finals and Trump's planned attendance. The headline itself references the NBA Finals. Leads with a Reuters photo and frames the stabbing as a security concern ahead of a high-profile event. Provides the most detailed security context (drone deployments, intelligence sharing, federal security plans). Includes witness color and a quote from a bystander expressing fear. Also unique in noting this is the first NBA Finals at MSG since 1999.",
+      "CNN (Article 6)": "A video digest page with minimal text. Confirms five stabbed and suspect in custody. Provides no additional reporting beyond the summary line. Surrounded by unrelated video content about ICE shootings in Minneapolis.",
+      "ABC News": "The most concise report. Leads with the injury count and that none are life-threatening. Unique in identifying the suspect as 'a man in his 50s.' Does not include witness quotes or scene color. Briefly mentions NBA Finals and Trump's attendance and the cancellation of the MSG watch party \u2014 a detail no other outlet reported.",
+      "NBC News": "No usable article body \u2014 the page returned only privacy policy and cookie consent text. Cannot be analyzed for content or framing.",
+      "Fox News": "Frames as a straight crime story with emphasis on emergency response. Headline says 'near Penn Station' rather than 'at,' subtly distancing the attack from the station itself. Notably does not mention the suspect's housing status or mental health, nor the terror nexus assessment \u2014 says motive and suspect information were 'not immediately clear.' Unique in mentioning FIFA World Cup events as additional context for crowds. Does not mention Trump's planned attendance at Game 3."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (police reports, official press releases, court filings) were located for this story. All reporting relies on law enforcement sources (named and unnamed), official statements from Mayor Mamdani and Amtrak, and witness accounts."
+    ],
+    "missing_context": [
+      "No outlet has identified the suspect by name, and only ABC News provides a demographic detail (man in his 50s). The suspect's identity, criminal history, and any prior encounters with law enforcement or mental health services remain unreported.",
+      "The distinction between 'emotionally disturbed person' (CBS News's police source language) and 'experiencing homelessness' (ABC News and CNN) is unresolved \u2014 these may both be true, but no outlet reconciles them, and they carry very different policy implications.",
+      "No outlet reports whether any of the victims knew each other or the suspect, or whether the attack had any identifiable pattern (e.g., targeted a specific area of the station).",
+      "No outlet provides detail on the type of knife used or how the suspect obtained it, despite a knife being recovered.",
+      "The relationship between this incident and security planning for the NBA Finals and Trump's visit is left entirely speculative by CNN \u2014 no official is quoted linking the two events, yet the framing implies a connection.",
+      "ABC News uniquely reports the cancellation of the MSG watch party; no other outlet confirms this claim.",
+      "NBC News returned no usable article content, reducing the effective dossier to five outlets (four with full body text plus one headline-only from The New York Times).",
+      "No outlet reports whether the suspect has been charged or what specific charges may be pending.",
+      "No outlet mentions the victim demographics or whether any of the stabbed individuals were transit workers, commuters, or bystanders."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text corroborate the core facts of a mass stabbing at Penn Station with a suspect in custody. While there are framing differences \u2014 especially CNN's NBA Finals security angle versus the straight crime framing elsewhere \u2014 the underlying facts are largely consistent. The disagreements are minor (five vs. six injured, 'at' vs. 'near' Penn Station, suspect description) and the story is still developing, making a straightforward REPORT the appropriate format.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/newyork/news/penn-station-nyc-5-people-stabbed-nypd/",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/07/nyregion/penn-station-stabbing.html",
+      "title": "6 Wounded in Stabbing at Penn Station in Manhattan - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/07/us/penn-station-nyc-stabbing",
+      "title": "6 wounded in stabbing at New York\u2019s Penn Station ahead of NBA finals - CNN"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/5-stabbed-new-york-citys-penn-station-suspect/story?id=133670482",
+      "title": "5 stabbed at New York City's Penn Station, suspect in custody: Sources - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/video/shorts/six-people-stabbed-at-new-york-s-penn-station-264722501920",
+      "title": "Six people stabbed at New York's Penn Station - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/08/us/video/five-stabbed-at-new-yorks-penn-station-digvid-hnk",
+      "title": "Multiple people stabbed at New York\u2019s Penn Station - CNN"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/us/five-stabbed-near-penn-station-leaving-one-seriously-injured-investigation-continues",
+      "title": "Five stabbed near Penn Station, leaving one seriously injured as investigation continues - Fox News"
+    }
+  ]
+}
