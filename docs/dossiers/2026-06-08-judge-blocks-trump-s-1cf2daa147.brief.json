@@ -1,0 +1,78 @@
+{
+  "story_id": "2026-06-08-judge-blocks-trump-s-1cf2daa147",
+  "headline_seed": "Judge blocks Trump's $100,000 H-1B visa fee - CNBC",
+  "brief": {
+    "story_id": "2026-06-08-judge-blocks-trump-s-1cf2daa147",
+    "consensus_facts": [
+      "All six outlets' headlines agree that a federal judge blocked or vacated President Trump's $100,000 H-1B visa fee, with Reuters, Bloomberg, and The Economic Times explicitly characterizing it as 'unlawful' in their headlines.",
+      "Headline-level consensus across all outlets identifies the core event: a judicial ruling striking down the $100,000 fee imposed on H-1B visa applications by the Trump administration."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the ruling",
+        "positions": {
+          "Reuters": "Headline uses 'unlawful' \u2014 implies a constitutional or statutory finding.",
+          "Bloomberg": "Headline uses 'thrown out' \u2014 more casual, emphasizes the practical outcome.",
+          "The Hill": "Headline uses 'blocks' \u2014 suggests an injunction-style framing rather than a vacatur.",
+          "CNBC": "Body text specifies the fee was 'vacated' and found to violate both the Administrative Procedure Act and the Constitution \u2014 the most legally precise characterization available in the dossier."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only. Uses 'unlawful' in the headline, mirroring judicial language. No body text available to assess depth or framing beyond the headline.",
+      "CNBC": "Only outlet with full retrievable body text. Leads with the vacatur and the APA/Constitutional violations. Provides significant context: the H-1B program's 1990 origins, its use by U.S. tech giants, the previous fee range ($2,000\u2013$5,000), Trump's September proclamation and his stated rationale about 'large-scale replacement of American workers,' and the December lawsuit by 20 states. Names Judge Leo Sorokin and identifies U.S. District Court in Massachusetts. Notes the White House did not respond to a request for comment. Tags the story as breaking news.",
+      "Bloomberg": "Headline-only (paywall blocked body). Uses 'thrown out' \u2014 the most colloquial framing among the outlets. No body text available.",
+      "Bloomberg Law News": "Headline-only. Identical headline to Bloomberg proper ('Thrown Out by Judge'). No body text available.",
+      "The Economic Times": "Headline-only. Mirrors Reuters' 'unlawful' language almost verbatim, suggesting reliance on the same wire copy. No body text available.",
+      "The Hill": "Headline-only. Uses 'blocks' and '$100k' rather than '$100,000' \u2014 more conversational shorthand. No body text available."
+    },
+    "primary_source_alignment": [
+      "No primary source (court ruling) was located in the dossier. CNBC's body text is the only outlet providing specifics about the ruling's legal basis (APA violation, unconstitutional tax), but these claims cannot be verified against the actual court document."
+    ],
+    "missing_context": [
+      "Only one outlet (CNBC) provided retrievable full body text. All other outlets were headline-only due to paywalls, RSS stubs, or redirect links. This severely limits the ability to establish consensus beyond headline-level agreement.",
+      "The actual court ruling (Judge Leo Sorokin, U.S. District Court, District of Massachusetts) was not located as a primary source. The legal reasoning, scope of the vacatur, and whether a stay was issued are unknown from the dossier alone.",
+      "No outlet in the dossier addresses whether the administration plans to appeal the ruling.",
+      "No outlet discusses the practical impact: how many pending or future H-1B applications are affected, or whether fees already collected will be refunded.",
+      "CNBC references a lawsuit filed by 20 states but does not name the lead plaintiff state or the specific case caption, which would help readers track the case.",
+      "No outlet discusses which specific presidential proclamation (September 2025, per CNBC) imposed the fee, or whether other provisions of that proclamation survive the ruling.",
+      "No outlet provides the perspective of employers or immigration attorneys on the practical consequences of the ruling.",
+      "No outlet mentions whether Congress has taken any legislative action regarding H-1B fees that might be relevant to the court's analysis."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "All six outlets agree at the headline level on the core event \u2014 a judge struck down Trump's $100,000 H-1B fee \u2014 but only one outlet (CNBC) provides substantive body text. There is insufficient material for a META post comparing framing across full reports. A straightforward REPORT with heavy attribution to CNBC and clear disclosure of the single-source limitation is the most responsible approach.",
+    "confidence": 0.45
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/trumps-100000-h-1b-visa-fee-is-unlawful-us-judge-rules-2026-06-08/",
+      "title": "Trump's $100,000 H-1B visa fee is unlawful, US judge rules - Reuters"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/06/08/trump-h1b-visa-fee-blocks.html",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-08/trump-s-100-000-h-1b-visa-fee-thrown-out-by-judge",
+      "title": "Trump\u2019s $100,000 H-1B Visa Fee Thrown Out by Judge - Bloomberg.com"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bloomberglaw.com/immigration/trumps-100-000-h-1b-visa-fee-thrown-out-by-judge",
+      "title": "Trump\u2019s $100,000 H-1B Visa Fee Thrown Out by Judge - Bloomberg Law News"
+    },
+    {
+      "outlet": "The Economic Times",
+      "url": "https://m.economictimes.com/nri/latest-updates/trumps-100000-h-1b-visa-fee-is-unlawful-us-judge-rules/articleshow/131593494.cms",
+      "title": "Trump's $100,000 H-1B visa fee is unlawful, US judge rules - The Economic Times"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/regulation/court-battles/5915068-judge-blocks-trump-h1b-fee/",
+      "title": "Judge blocks $100k fee for H-1B visas imposed by Trump - The Hill"
+    }
+  ]
+}
