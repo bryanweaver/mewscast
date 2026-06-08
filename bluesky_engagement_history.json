@@ -999,6 +999,11 @@
       "did": "did:plc:2mmeerzvebnx3yim56b72nr2",
       "handle": "niya.rest",
       "timestamp": "2026-06-08T01:53:35.333933"
+    },
+    {
+      "did": "did:plc:6fzthh5xfd3ol7t4wvhqfms5",
+      "handle": "luxomancer.bsky.social",
+      "timestamp": "2026-06-08T14:28:57.924385"
     }
   ],
   "liked_posts": [
@@ -3511,6 +3516,11 @@
       "uri": "at://did:plc:2mmeerzvebnx3yim56b72nr2/app.bsky.feed.post/3mnqknwx3rc2a",
       "author": "niya.rest",
       "timestamp": "2026-06-08T01:53:35.146032"
+    },
+    {
+      "uri": "at://did:plc:6fzthh5xfd3ol7t4wvhqfms5/app.bsky.feed.post/3mnruwd47u22v",
+      "author": "luxomancer.bsky.social",
+      "timestamp": "2026-06-08T14:28:57.751519"
     }
   ],
   "last_cleanup": "2026-06-05T20:44:19.866198",
