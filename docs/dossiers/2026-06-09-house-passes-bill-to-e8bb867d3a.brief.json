@@ -1,0 +1,129 @@
+{
+  "story_id": "2026-06-09-house-passes-bill-to-e8bb867d3a",
+  "headline_seed": "House passes bill to fund ICE and Border Patrol through the remainder of Trump's term - NPR",
+  "brief": {
+    "story_id": "2026-06-09-house-passes-bill-to-e8bb867d3a",
+    "consensus_facts": [
+      "The House passed a roughly $70 billion bill to fund ICE and Border Patrol, with a vote of 214 to 212.",
+      "The legislation was passed using the budget reconciliation process, allowing Republicans to bypass the usual 60-vote Senate filibuster threshold.",
+      "The bill funds ICE and Border Patrol through the remainder of President Trump's term (approximately three years).",
+      "The Senate passed the bill last week before the House vote on Tuesday, June 9, 2026; the bill now heads to President Trump's desk.",
+      "Rep. Kevin Kiley, a California independent who caucuses with Republicans, voted against the bill on final passage, joining all Democrats in opposition.",
+      "Democrats had refused to fund ICE and Border Patrol without reforms, including requirements for body cameras and judicial warrants before entering homes.",
+      "The bill's progress was delayed by Trump's request for an 'anti-weaponization' fund of nearly $1.8 billion, which provoked Republican pushback and was ultimately abandoned.",
+      "The legislation ends a monthslong funding impasse that followed the fatal shootings of two people during immigration operations in Minneapolis earlier in 2026."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the Minneapolis shooting victims",
+        "positions": {
+          "NPR": "Refers to the victims as 'two protesters' without naming them.",
+          "NBC News": "Names the victims as 'Renee Good and Alex Pretti' and describes them as 'two American citizens.'"
+        }
+      },
+      {
+        "topic": "Trump's controversial funding request details",
+        "positions": {
+          "CBS News": "Reports Trump requested $1 billion for White House ballroom construction AND the $1.8 billion anti-weaponization fund as separate items; notes ballroom language was stripped and DOJ said it would no longer pursue the fund.",
+          "NBC News": "Mentions only the $1.8 billion anti-weaponization fund and concern about payouts to Jan. 6 rioters; does not mention the ballroom request.",
+          "NPR": "Does not mention either the ballroom or anti-weaponization fund controversy."
+        }
+      },
+      {
+        "topic": "Duration and characterization of the DHS funding lapse",
+        "positions": {
+          "NPR": "Describes a '115 day standoff over immigration policy.'",
+          "NBC News": "Describes 'months of drama and partisan bickering' and calls the DHS shutdown 'the longest in U.S. history'; notes it lasted roughly 75 days before partial resolution.",
+          "The Washington Post": "Describes a 'four-month lapse in funding.'",
+          "CBS News": "Describes a 'monthslong stalemate.'"
+        }
+      },
+      {
+        "topic": "Senate vote count",
+        "positions": {
+          "NBC News": "Does not provide the specific Senate vote tally.",
+          "CBS News": "Does not provide the specific Senate vote tally.",
+          "NPR": "Reports one Republican (Sen. Lisa Murkowski) joined all Democrats in voting against it but does not give the exact tally.",
+          "The Washington Post": "Body text was not fully retrievable; no detail available."
+        }
+      },
+      {
+        "topic": "Rep. Tim Walberg's initial opposition on final passage",
+        "positions": {
+          "CBS News": "Reports that Walberg initially voted no, tying the vote, and then flipped; GOP leaders closed the vote immediately after.",
+          "NPR": "Does not mention Walberg.",
+          "NBC News": "Does not mention Walberg."
+        }
+      },
+      {
+        "topic": "Prior ICE funding context",
+        "positions": {
+          "NPR": "Details that ICE received a $75 billion boost last summer through reconciliation, making it the highest-funded federal law enforcement agency and enabling a hiring surge that doubled its ranks.",
+          "NBC News": "Does not quantify or detail the prior reconciliation funding.",
+          "CBS News": "Does not quantify or detail the prior reconciliation funding."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only entries (Articles 1 and 3). Neutral wire framing: 'US House passes $70 billion bill to fund ICE, Border Patrol.' No body text available for deeper analysis.",
+      "NPR": "Leads with the vote and immediately frames it as funding agencies 'not just for the year, but through the rest of President Trump's term.' Provides the most granular budget breakdown ($38B for ICE, $22B for Border Patrol, $5B for border tech, $350M for sanctuary city enforcement). Heavily emphasizes the oversight concerns \u2014 quotes Sen. Murkowski at length and notes Democrats failed to secure any reforms. Highlights the prior $75B reconciliation boost and its effect on ICE hiring. Frames the outcome as a Democratic loss and a weakening of congressional oversight. Does not mention the anti-weaponization fund controversy or name the Minneapolis victims.",
+      "NBC News": "Leads with the partisan drama framing \u2014 'weeks of setbacks and delays' \u2014 and names the Minneapolis victims (Renee Good and Alex Pretti) as 'American citizens,' adding human weight. Includes quotes from both Rep. Bennie Thompson (D) and House Appropriations Chair Tom Cole (R), providing both-sides balance. Mentions the anti-weaponization fund controversy and Jan. 6 rioter payout concerns. Notes the looming Sept. 30 government funding deadline. Includes a Sen. Lindsey Graham quote praising the bill. Frames Democrats as having lost the fight but still holding principled ground.",
+      "The Washington Post": "Headline emphasizes 'Republican delays' \u2014 the only outlet to put intra-party dysfunction in the headline. Subhead frames the bill as ending a 'four-month lapse.' Full body text was behind a paywall and not retrievable, so deeper framing analysis is limited to the headline and lede fragment, which centers the story on tensions between Trump and congressional Republicans rather than the partisan Democrat-Republican fight.",
+      "The New York Times": "Headline-only. Labels it 'G.O.P.'s $70 Billion Immigration Bill,' attributing ownership explicitly to Republicans. No body text available.",
+      "CBS News": "Leads with the vote result and frames it as ending a 'monthslong stalemate.' Uniquely provides the most detailed play-by-play of House floor drama: the 30-minute hold on a procedural vote, Freedom Caucus resistance, and Rep. Walberg's last-second vote flip. Includes Speaker Johnson's quote framing the three-year funding as strategically removing Democrats' leverage. Also uniquely reports on the $1 billion White House ballroom construction request as a separate obstacle. Quotes Rep. Kiley's concerns about the 'strictly party-line process.' The most process-focused account in the dossier."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., bill text, roll-call record, CBO score) was located in the dossier. All factual claims rest solely on outlet reporting, reducing ability to verify specific budget figures, vote tallies, or spending stipulations independently."
+    ],
+    "missing_context": [
+      "No primary source \u2014 neither the bill text, a CBO score, nor the official roll-call vote record \u2014 was available in the dossier. Key figures like the $70 billion total and specific line-item breakdowns cannot be independently verified.",
+      "No outlet provides a detailed accounting of how the prior $75 billion reconciliation funding (referenced by NPR) has been spent, which would contextualize whether the new $70 billion is additive or partially overlapping.",
+      "None of the articles with full body text address what specific enforcement activities or operational changes the new funding would enable beyond hiring and equipment \u2014 e.g., expansion of detention capacity, deportation flight operations, or interior enforcement priorities.",
+      "No outlet discusses potential legal challenges to the reconciliation process being used for immigration enforcement funding, or whether the Byrd Rule was at issue during Senate consideration.",
+      "The Washington Post's full body text was not retrievable (paywalled), limiting analysis. The New York Times and Reuters provided headline-only entries. This means the dossier is effectively built on three full-text sources (NPR, NBC News, CBS News), all lean-left. No center-right or right-leaning outlet with body text is represented, creating a framing gap.",
+      "No outlet reports on ICE or Border Patrol's current operational status during the funding lapse \u2014 e.g., whether any enforcement activities were curtailed, or whether the agencies were fully operational using prior reconciliation funds.",
+      "Only NPR mentions the DHS inspector general's $20 million for detention oversight in the earlier April bill; no outlet explores whether the new bill includes any inspector general or oversight funding.",
+      "No outlet explores the precedent-setting nature of multi-year reconciliation funding for law enforcement agencies in historical context beyond Murkowski's brief quote."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text confirm the core facts (vote count, dollar amount, reconciliation process, partisan dynamics) with strong agreement. While framing differs, the substantive factual core is well-established across sources. The framing differences are notable but secondary to the main news event \u2014 this is a straight news story suitable for a REPORT with framing notes woven in.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us-house-advances-70-billion-immigration-enforcement-bill-2026-06-09/",
+      "title": "US House passes $70 billion bill to fund ICE, Border Patrol - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/09/nx-s1-5851664/house-reconciliation-vote-immigration-enforcement-ice-border-patrol",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/us-house-passes-70-billion-bill-fund-ice-border-patrol-2026-06-09/",
+      "title": "US House passes $70 billion bill to fund ICE, Border Patrol - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/republicans-pass-bill-fund-ice-border-patrol-end-trumps-term-rcna349197",
+      "title": "Republicans pass bill to fund ICE and Border Patrol through the end of Trump\u2019s term - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/06/09/ice-funding-bill-is-up-house-vote-after-weeks-republican-delays/",
+      "title": "House passes $70 billion immigration enforcement funding through Trump\u2019s term - The Washington Post"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/09/us/politics/house-immigration-bill.html",
+      "title": "House Passes G.O.P.\u2019s $70 Billion Immigration Bill - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/house-vote-ice-funding-reconciliation/",
+      "title": "House approves bill to fund ICE for rest of Trump's term, ending monthslong impasse - CBS News"
+    }
+  ]
+}
