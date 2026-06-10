@@ -45,6 +45,7 @@ from dossier_renderer import (
     render_index_page,
     render_sitemap,
 )
+from r2_uploader import upload_dossier_image
 
 
 def _load_config():
@@ -655,6 +656,10 @@ def _persist_dossier_image(
             shutil.copy2(image_source_path, dest)
 
         rel_path = f"images/{safe_id}.png"
+
+        # Upload the full-res image to Cloudflare R2 (the canonical public
+        # store). Fail-soft: a failed upload never blocks publishing.
+        upload_dossier_image(dest, key=f"{safe_id}.png")
 
         # Generate a small WebP thumbnail for the homepage card feed. Tiny
         # (~40 KB) and committed to git, so the feed grid loads fast without
