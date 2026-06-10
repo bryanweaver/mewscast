@@ -1039,6 +1039,11 @@
       "did": "did:plc:bcnz5cangvcqg3ylaq2gpwhk",
       "handle": "joyousjoyness.com",
       "timestamp": "2026-06-10T17:17:16.613391"
+    },
+    {
+      "did": "did:plc:prnvrdt3xmdvqq5nhr44rima",
+      "handle": "xenta.bsky.social",
+      "timestamp": "2026-06-10T21:02:45.678910"
     }
   ],
   "liked_posts": [
@@ -3596,6 +3601,11 @@
       "uri": "at://did:plc:bcnz5cangvcqg3ylaq2gpwhk/app.bsky.feed.post/3mnx4sh3ycg2f",
       "author": "joyousjoyness.com",
       "timestamp": "2026-06-10T17:17:16.533205"
+    },
+    {
+      "uri": "at://did:plc:prnvrdt3xmdvqq5nhr44rima/app.bsky.feed.post/3mnxgqtpgsc2n",
+      "author": "xenta.bsky.social",
+      "timestamp": "2026-06-10T21:02:45.476922"
     }
   ],
   "last_cleanup": "2026-06-05T20:44:19.866198",
