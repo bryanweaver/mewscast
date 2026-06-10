@@ -44,6 +44,7 @@ from dossier_renderer import (
     render_index_page,
     render_sitemap,
 )
+from r2_uploader import upload_dossier_image
 
 
 def _load_config():
@@ -654,6 +655,8 @@ def _persist_dossier_image(
             shutil.copy2(image_source_path, dest)
 
         rel_path = f"images/{safe_id}.png"
+
+        upload_dossier_image(dest, key=f"{safe_id}.png")
 
         # Write into dossier JSON so the renderer can find the image AND so
         # the audit trail captures the exact prompt that was sent to Grok.
