@@ -23,6 +23,8 @@ import os
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
+from r2_uploader import public_image_url
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -576,7 +578,7 @@ def _render_post_image(data: dict) -> str:
         return ""
     return (
         '<div class="post-image-container">\n'
-        f'  <img class="post-image" src="./{_esc(image_path)}"'
+        f'  <img class="post-image" src="{_esc(public_image_url(image_path))}"'
         f' alt="AI-generated illustration for this story">\n'
         '</div>'
     )
@@ -650,9 +652,9 @@ def render_dossier_page(dossier_data: dict) -> str:
   <meta property="og:title" content="{_esc(headline)}">
   <meta property="og:description" content="{_esc(og_description)}">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="{f'https://mewscast.us/dossiers/{_esc(image_path)}' if image_path else 'https://mewscast.us/images/walter-croncat-dossier-og.png'}">
+  <meta property="og:image" content="{_esc(public_image_url(image_path)) if image_path else 'https://mewscast.us/images/walter-croncat-dossier-og.png'}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{f'https://mewscast.us/dossiers/{_esc(image_path)}' if image_path else 'https://mewscast.us/images/walter-croncat-dossier-og.png'}">
+  <meta name="twitter:image" content="{_esc(public_image_url(image_path)) if image_path else 'https://mewscast.us/images/walter-croncat-dossier-og.png'}">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
