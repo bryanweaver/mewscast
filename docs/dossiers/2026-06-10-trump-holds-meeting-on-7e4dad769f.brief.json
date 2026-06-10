@@ -1,0 +1,153 @@
+{
+  "story_id": "2026-06-10-trump-holds-meeting-on-7e4dad769f",
+  "headline_seed": "Trump holds meeting on Iran strike options - Axios",
+  "brief": {
+    "story_id": "2026-06-10-trump-holds-meeting-on-7e4dad769f",
+    "consensus_facts": [
+      "The U.S. military launched strikes against multiple targets in Iran on Wednesday evening (June 10, 2026), the second consecutive day of renewed strikes.",
+      "U.S. Central Command described the strikes as 'additional self-defense strikes' against 'multiple targets in Iran' in response to 'Iran's unwarranted and continued aggression.'",
+      "President Trump warned earlier Wednesday that the U.S. would 'hit them hard' again, accusing Iran of taking too long to negotiate a deal.",
+      "Defense Secretary Pete Hegseth said the U.S. would strike 'key facilities' in Iran and stated 'if we need to negotiate with bombs, we will negotiate with bombs.'",
+      "The strikes followed Iran's downing of a U.S. Apache helicopter near the Strait of Hormuz earlier in the week, which triggered the initial round of U.S. retaliatory strikes on Tuesday.",
+      "Iran retaliated after Tuesday's U.S. strikes by firing missiles and/or drones at U.S. bases and allies in the region.",
+      "Iranian media reported explosions or air defense activations near Bandar Abbas and Sirik in southern Iran.",
+      "Targets struck by the U.S. were located in southern Iran.",
+      "Trump met with his national security team on Wednesday afternoon to discuss military options before the strikes were launched.",
+      "Iran's president Masoud Pezeshkian said Iran would stand firm against pressure and characterized U.S. threats as a sign of weakness.",
+      "Iran's foreign ministry accused the U.S. of 'damaging the diplomatic process' with contradictory messages.",
+      "A fragile ceasefire between the U.S. and Iran, roughly two months old, has been under severe strain with both sides exchanging fire."
+    ],
+    "disagreements": [
+      {
+        "topic": "Specific targets struck in the second round of strikes",
+        "positions": {
+          "CBS News": "Reports ammunition depots, command-and-control nodes, and warehouses were targeted, citing two U.S. officials.",
+          "Axios": "Reports air defense systems, radars, and drone command-and-control units were targeted, citing a U.S. official.",
+          "BBC News": "Does not specify target types beyond 'multiple targets in Iran.'",
+          "CNN": "Does not specify target types for the second round but reports on a damaged water reservoir from earlier strikes."
+        }
+      },
+      {
+        "topic": "Strait of Hormuz closure",
+        "positions": {
+          "BBC News": "Reports Iran's top military command declared the Strait of Hormuz 'completely closed to all types of vessels, including commercial ships' in response to the latest strikes.",
+          "Associated Press (Article 1)": "Reports the U.S. military disabled an oil tanker in the Gulf of Oman suspected of violating the American blockade, implying the U.S. is enforcing passage, not closure.",
+          "CNN": "Reports Trump announced a 'secret mission' supporting oil tankers through the Strait, with 200+ commercial ships traversing the waterway \u2014 contradicting any full closure claim.",
+          "Other outlets": "Do not report on the Strait of Hormuz closure announcement."
+        }
+      },
+      {
+        "topic": "Attendees of Trump's Wednesday national security meeting",
+        "positions": {
+          "Axios": "Names VP Vance, Secretary of State Rubio, CIA Director Ratcliffe, Joint Chiefs Chairman Gen. Dan Caine, envoy Steve Witkoff, and Hegseth joining remotely from CENTCOM, citing two U.S. sources.",
+          "Other outlets": "Do not name specific meeting attendees."
+        }
+      },
+      {
+        "topic": "Status of the ceasefire",
+        "positions": {
+          "CBS News": "Describes a 'brittle two-month-old ceasefire' that 'hasn't stopped the two countries from exchanging fire' and notes the Trump administration 'insisted the ceasefire is still in place.'",
+          "BBC News": "Describes an April ceasefire 'initially meant to last for two weeks' with 'intermittent fire' since.",
+          "Axios": "Refers to past strikes as 'calibrated to avoid casualties and leave open the possibility of a deal' but does not explicitly characterize ceasefire status.",
+          "CNN": "Does not explicitly characterize the ceasefire status in the available text."
+        }
+      },
+      {
+        "topic": "Strike on water infrastructure",
+        "positions": {
+          "CNN": "Reports in detail on a destroyed drinking water reservoir in Bamani, southern Iran, geolocated by independent researchers, with munitions experts identifying GBU-39 bomb fragments. Notes water facilities are protected under the Geneva Convention and references Trump's earlier suggestion of targeting desalination plants.",
+          "Other outlets": "No other outlet in the dossier mentions strikes on water infrastructure."
+        }
+      },
+      {
+        "topic": "Qatar's diplomatic role",
+        "positions": {
+          "CNN": "Reports a Qatari delegation traveled to Tehran to 'bridge the remaining gaps' and remained in the country as new strikes were launched.",
+          "Other outlets": "No other outlet in the dossier mentions Qatar's diplomatic mission."
+        }
+      },
+      {
+        "topic": "Trump's frustration timeline",
+        "positions": {
+          "Axios": "Reports Trump had been 'growing increasingly frustrated over nearly two weeks of waiting for an Iranian response to his latest offer.'",
+          "CBS News": "Reports Trump accused Iran of 'playing us for suckers' without specifying a timeline for frustration.",
+          "Other outlets": "Do not detail the timeline of Trump's frustration with negotiations."
+        }
+      },
+      {
+        "topic": "Scale and intent of the new strikes",
+        "positions": {
+          "Axios": "Reports one option Trump was considering was 'an operation that is big in scale but short in duration' aimed at pressing Iran to change its negotiating position, citing two U.S. sources.",
+          "Other outlets": "Do not report on the specific operational options Trump was considering."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press (Article 1)": "The AP live updates page is a fragmented aggregation that leads with the disabling of an oil tanker enforcing the U.S. blockade, then pivots to an entirely unrelated story about Trump's triumphal arch construction near the Lincoln Memorial. The Iran strikes are not detailed in the available body text, suggesting either the relevant update was not captured or the page buries the strike news among many unrelated updates. The juxtaposition of military escalation with a vanity construction project is striking editorially.",
+      "Associated Press (Article 6)": "The second AP article provides some strike context but the captured body text is dominated by photo captions and brief scene-setting. It includes Trump's claim that inflation will 'come down like a rock' once the Iran war ends and his assertion that U.S. forces are moving millions of barrels of oil nightly through the Strait. These economic framing elements are not emphasized by other outlets. The article also notes Iranian fire hitting Bahrain, Kuwait, and Jordan \u2014 a detail not prominently featured elsewhere.",
+      "CBS News": "Leads squarely on the military action and Trump's vow to hit Iran 'hard.' Provides strong operational detail (ammunition depots, command-and-control nodes, warehouses) from two U.S. officials. Gives significant space to Hegseth's 'negotiate with bombs' quote. Includes Iran's diplomatic complaint about contradictory messages. Frames the story within the broader context of stalled indirect negotiations on the ceasefire, blockade, Strait, and nuclear program. Provides structured navigation links to related Iran war coverage. Relatively balanced between military and diplomatic dimensions.",
+      "BBC News": "Leads with the strikes and Trump's deal-making rhetoric. Uniquely reports Iran's military declaring the Strait of Hormuz 'completely closed to all types of vessels, including commercial ships' \u2014 a major escalation detail not found in other outlets. Provides a concise chronological narrative. Gives space to Iran's president Pezeshkian pushing back. Mentions explosions on Qeshm island, a detail not in other outlets. The BBC's international perspective gives relatively more weight to the Iranian response and the Strait closure than U.S.-focused outlets.",
+      "Axios": "Leads with the strategic framing \u2014 the big picture of pressuring Tehran to sign a deal versus the risk of escalation. Uniquely names all attendees of Trump's Wednesday national security meeting (Vance, Rubio, Ratcliffe, Gen. Caine, Witkoff, Hegseth). Provides behind-the-scenes detail about Trump's two weeks of frustration and the option of a 'big in scale but short in duration' operation. The Axios style surfaces insider knowledge and unnamed-source detail that other outlets lack. Frames Hegseth's comments more fully. Does not include Iranian civilian impact or humanitarian dimensions.",
+      "Reuters": "Headline-only capture; no substantive body text available for analysis. The headline ('US launches new strikes after Trump threatens to attack Iran very hard') aligns with the consensus framing of other outlets.",
+      "CNN": "Provides the most comprehensive body text in the dossier. Uniquely reports on the destroyed water reservoir in Bamani with geolocated photos, munitions expert identification of GBU-39 fragments, and a Geneva Convention framing \u2014 the only outlet to raise potential war crimes questions. Reports Hegseth 'dodged a question about whether attacking civilian infrastructure targets would amount to a war crime.' Uniquely reports on the Qatari diplomatic delegation still in Tehran during the strikes. Includes market impact data (Brent crude at $91.10, S&P and Nasdaq declines). Also includes Lebanon/Hezbollah context and UN human rights investigation. CNN provides the widest aperture, covering military, diplomatic, humanitarian, legal, and economic dimensions."
+    },
+    "primary_source_alignment": [
+      "No primary sources (e.g., CENTCOM statements, White House transcripts, or UN documents) were located for this story.",
+      "All outlets reference the same CENTCOM statement posted on X about 'additional self-defense strikes' against 'multiple targets in Iran' in response to 'Iran's unwarranted and continued aggression,' but the original statement text was not independently captured in the dossier.",
+      "Without the primary source, it is impossible to verify whether outlets are quoting the CENTCOM statement accurately or selectively."
+    ],
+    "missing_context": [
+      "No primary source documents (CENTCOM press releases, White House statements, Iranian government statements) were captured, making independent verification of quoted language impossible.",
+      "No outlet in the dossier provides casualty figures \u2014 either military or civilian \u2014 from the U.S. strikes on Iran or from Iranian retaliatory strikes on U.S. bases.",
+      "Only CNN raises the question of whether strikes on civilian infrastructure (water facilities) could constitute war crimes; no outlet reports on any formal legal review or rules-of-engagement framework governing target selection.",
+      "The BBC uniquely reports Iran declared the Strait of Hormuz 'completely closed,' while CNN reports Trump claimed 200+ commercial ships have traversed it recently. No outlet reconciles these contradictory claims or clarifies the current operational status of the Strait.",
+      "No outlet provides detail on the terms of the deal the U.S. is seeking from Iran or what specifically Iran has rejected, despite multiple references to stalled negotiations.",
+      "No outlet reports Congressional reaction to or authorization for the escalating strikes, nor any War Powers Act considerations.",
+      "Only Axios names the attendees of Trump's national security meeting; no outlet reports dissent or debate within the administration about the strike decision.",
+      "No outlet provides context on the scale of these strikes relative to prior U.S. military operations against Iran (e.g., comparison to the April initial strikes or historical operations).",
+      "The Qatari diplomatic mission reported by CNN is not mentioned by any other outlet; its status and whether it has been affected by the new strikes is unclear.",
+      "Market and economic impact (oil prices, equity declines) is mentioned only by CNN; no outlet discusses the broader economic consequences of potential Strait closure for global energy markets.",
+      "Reuters provided only a headline; its full reporting was not captured, reducing the breadth of the dossier's wire-service coverage."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text reported the same core events but with materially different emphases: BBC uniquely reports the Strait of Hormuz closure; CNN uniquely raises water infrastructure destruction and potential war crimes; Axios uniquely provides insider meeting details and operational options. The divergences in what each outlet surfaces and buries \u2014 particularly on humanitarian, legal, and diplomatic dimensions \u2014 make this a coverage-comparison story, not a straight report. No primary source was available to anchor a PRIMARY post.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/live/trump-administration-updates-06-10-2026",
+      "title": "Live updates: US says it\u2019s striking targets in Iran again as tensions escalate - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/us-iran-strikes-trump-centcom-hard-deal/",
+      "title": "U.S. launches more strikes on Iranian targets after Trump promises to hit Iran \"hard\" - CBS News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4gyp9v0e93o",
+      "title": "US launches new strikes on Iran after Trump vows to 'hit them hard' - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/06/10/trump-iran-strike-situation-room-meeting",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/iran-targets-us-bases-jordan-gulf-after-trump-orders-strikes-near-hormuz-2026-06-10/",
+      "title": "US launches new strikes after Trump threatens to attack Iran 'very hard' - Reuters"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/iran-us-ceasefire-hezbollah-israel-10-june-2026-b7ec462890f3c2afa12bd5c0672f2b6b",
+      "title": "US military says it\u2019s striking \u2018multiple targets\u2019 in Iran in second day of renewed fire - AP News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/09/world/live-news/iran-war-trump-israel",
+      "title": "Live updates: US military has launched strikes \u2018against multiple targets in Iran\u2019 - CNN"
+    }
+  ]
+}
