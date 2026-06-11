@@ -1,0 +1,111 @@
+{
+  "story_id": "2026-06-11-el-ni-o-forms-a920aea0cf",
+  "headline_seed": "El Ni\u00f1o forms in Pacific as experts say it will likely turbocharge extreme weather - The Guardian",
+  "brief": {
+    "story_id": "2026-06-11-el-ni-o-forms-a920aea0cf",
+    "consensus_facts": [
+      "NOAA has officially declared that El Ni\u00f1o conditions have formed in the tropical Pacific Ocean.",
+      "NOAA gives a 63% chance this El Ni\u00f1o will become 'very strong' during November-January, potentially ranking among the largest El Ni\u00f1o events in the historical record going back to 1950.",
+      "The three strongest El Ni\u00f1o events on record occurred in 1982-83, 1997-98, and 2015-16.",
+      "A 'very strong' or 'Super' El Ni\u00f1o is defined by tropical Pacific sea surface temperatures exceeding 2\u00b0C above average.",
+      "El Ni\u00f1o is expected to boost global temperatures, with 2027 likely to become the warmest year on record.",
+      "El Ni\u00f1o is expected to turbocharge extreme weather events globally, including heat waves, floods, droughts, and wildfires.",
+      "El Ni\u00f1o tends to suppress Atlantic hurricane activity while increasing Pacific hurricane activity.",
+      "Australia, Indonesia, and parts of northern South America face increased drought and wildfire risk during El Ni\u00f1o.",
+      "The El Ni\u00f1o is forming on top of already elevated global temperatures from human-caused climate change, raising concerns about compounding effects.",
+      "El Ni\u00f1o formed after the cooler La Ni\u00f1a pattern ended earlier in 2025."
+    ],
+    "disagreements": [
+      {
+        "topic": "Historical comparison benchmark",
+        "positions": {
+          "Associated Press": "Specifically compares this El Ni\u00f1o to the 1997 event and says it could rival or exceed it, citing billions of dollars in damage from that event.",
+          "CNN": "References all three Super El Ni\u00f1os (1982-83, 1997-98, 2015-16) without singling out one as the primary benchmark.",
+          "BBC News": "References all three strongest events without naming a single benchmark, but notes some models show temperatures potentially climbing more than 3\u00b0C above average."
+        }
+      },
+      {
+        "topic": "Specificity of ocean temperature projections",
+        "positions": {
+          "BBC News": "Reports that some US and European (ECMWF) models show tropical Pacific temperatures potentially climbing more than 3\u00b0C above average by year's end.",
+          "CNN": "States that 'some reliable computer models suggest that bar [2\u00b0C] will be greatly exceeded' but does not cite a specific 3\u00b0C figure.",
+          "Associated Press": "Does not report specific model projections for peak temperature anomaly."
+        }
+      },
+      {
+        "topic": "Whether all agencies have declared El Ni\u00f1o",
+        "positions": {
+          "BBC News": "Notes that Japan's Meteorological Agency concurs El Ni\u00f1o conditions are present but adds 'Not every agency is ready to call it, though' \u2014 without specifying which agencies disagree.",
+          "CNN": "Does not mention any agency hesitation; frames NOAA's declaration as definitive.",
+          "Associated Press": "Does not mention other agencies' positions."
+        }
+      },
+      {
+        "topic": "UN Secretary-General's statement",
+        "positions": {
+          "Associated Press": "Quotes UN Secretary-General Ant\u00f3nio Guterres calling El Ni\u00f1o an 'urgent climate warning' and saying it 'will pour fuel on the fire of a warming world.'",
+          "CNN": "Does not include a Guterres statement.",
+          "BBC News": "Does not include a Guterres statement but quotes Mohamed Adow of Power Shift Africa calling it 'a deadly siren to be feared.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only; no usable body text (paywall). Headline emphasizes economic angle \u2014 'Heat and Crop Risks' \u2014 placing agricultural and commodity impacts front and center, distinct from other outlets' broader weather framing.",
+      "CNN": "Most detailed and consumer-facing coverage. Leads with the 63% Super El Ni\u00f1o probability and structures the article as a 'what it means for you' explainer. Heavy emphasis on US-specific impacts (hurricanes, California atmospheric rivers, winter weather). Frames 2027 as virtually guaranteed warmest year. Uses the phrase 'Super El Ni\u00f1o' prominently. Buries the economic impacts and coral bleaching lower in the piece. Does not quote any external scientists or UN officials \u2014 relies primarily on NOAA data.",
+      "BBC News": "International framing with significant attention to global equity impacts. Leads with NOAA declaration but quickly pivots to expert commentary (Prof Adam Scaife of UK Met Office, Prof Liz Stephens of University of Reading). Uniquely includes Mohamed Adow of Power Shift Africa warning about impacts on East African communities. Notes that not all agencies have declared El Ni\u00f1o, introducing a note of caution absent from other coverage. Includes the specific detail about ECMWF models showing 3\u00b0C+ anomalies. Also uniquely notes the UK may feel faint effects.",
+      "The Washington Post": "Headline-only; no usable body text. Headline uses the phrase 'domino weather effects across the planet,' suggesting a cascading-impacts framing.",
+      "USA Today": "No substantive article body text; content is a video embed surrounded by advertising. The headline references satellite imagery illustrating the Pacific Ocean transition. No editorial or factual content to analyze.",
+      "Associated Press": "Wire framing: concise, attribution-heavy, leads with the news peg. Uniquely describes El Ni\u00f1o as 'Nature's chaotic climate agent.' Quotes UN Secretary-General Guterres and Clark University climate scientist Abby Frazier, neither of whom appears in other outlets' coverage. Specifically benchmarks against 1997 El Ni\u00f1o and emphasizes potential for billions of dollars in damage. Shortest substantive article; likely truncated or early-release version."
+    },
+    "primary_source_alignment": [
+      "No primary source document (e.g., the actual NOAA Climate Prediction Center advisory or diagnostic discussion) was located in the dossier. All outlets cite NOAA's announcement, but the underlying document is not available for independent verification.",
+      "The 63% figure for 'very strong' El Ni\u00f1o and the phrase 'largest El Ni\u00f1o events in the historical record going back to 1950' appear consistently across CNN, BBC News, and AP, suggesting accurate paraphrasing of the NOAA statement, but this cannot be confirmed without the primary source.",
+      "CNN reports NOAA gives '100% odds of El Ni\u00f1o continuing through the fall' \u2014 this specific claim does not appear in other outlets and cannot be verified against the primary source."
+    ],
+    "missing_context": [
+      "The actual NOAA Climate Prediction Center advisory/discussion document was not obtained as a primary source, making it impossible to verify whether outlets are accurately quoting or paraphrasing.",
+      "No outlet in the dossier provides historical context on the economic cost estimates of prior Super El Ni\u00f1os beyond AP's general reference to 'billions of dollars' from 1997-98.",
+      "BBC News notes that 'not every agency is ready to call it' El Ni\u00f1o but does not specify which agencies disagree \u2014 a significant gap given this is framed as a global consensus declaration.",
+      "No outlet discusses how current climate model reliability for El Ni\u00f1o strength prediction has improved or not since prior events.",
+      "No outlet addresses the potential interaction between this El Ni\u00f1o and the Indian Ocean Dipole (IOD), which has historically modulated El Ni\u00f1o impacts in Africa and Australia.",
+      "No outlet quantifies potential food price impacts or agricultural production losses in specific commodity markets, despite Bloomberg's headline flagging 'crop risks.'",
+      "Three of six dossier articles (Bloomberg, Washington Post, USA Today) provided no usable body text, significantly limiting the breadth of the meta-analysis. Consensus is effectively built on three outlets (CNN, BBC News, AP).",
+      "No outlet discusses what governments or international organizations are doing to prepare for or mitigate the expected impacts."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (CNN, BBC News, AP) strongly agree on the core facts \u2014 NOAA's El Ni\u00f1o declaration, the 63% Super El Ni\u00f1o probability, and the expected global impacts. While there are some framing differences (US-centric vs. global equity vs. wire brevity), the factual core is consistent and the story is straightforward enough for a REPORT rather than a META. No primary source divergence was detectable.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-10/el-nino-emerges-in-pacific-raising-heat-risks-and-crop-threats",
+      "title": "El Ni\u00f1o Emerges in Pacific, Raising Heat and Crop Risks - Bloomberg"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/11/weather/super-el-nino-declared-global-impacts-climate",
+      "title": "El Ni\u00f1o is here and rapidly strengthening. Here\u2019s what it means for your weather - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c75ylx7g00xo",
+      "title": "El Ni\u00f1o has begun, scientists say, and could bring record heat - BBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/weather/2026/06/11/el-nio-is-here-noaa-declares/",
+      "title": "El Ni\u00f1o is officially here, bringing domino weather effects across the planet - The Washington Post"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/videos/news/weather/2026/06/11/el-nios-typical-warm-water-advances-in-the-pacific-ocean/90492365007/",
+      "title": "Satellites illustrate Pacific Ocean's transition to El Ni\u00f1o - USA Today"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/el-nino-climate-change-flood-drought-damage-7eafacd2bcf04ade9d7f555dfd488178",
+      "title": "El Nino is here and scientists fear it\u2019ll be big, bad and costly with heat, floods, droughts, fires - AP News"
+    }
+  ]
+}
