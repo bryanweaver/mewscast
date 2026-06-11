@@ -1,0 +1,131 @@
+{
+  "story_id": "2026-06-11-police-blast-water-cannons-58803b3864",
+  "headline_seed": "Police blast water cannons at protesters amid unrest over stabbing in Belfast - NPR",
+  "brief": {
+    "story_id": "2026-06-11-police-blast-water-cannons-58803b3864",
+    "consensus_facts": [
+      "A 30-year-old Sudanese man, later identified in court as Hadi Alodid, was arrested on suspicion of attempted murder after a knife attack on a man in his 40s in north Belfast on the night of Monday, June 9, 2026.",
+      "The victim, identified as Stephen Ogilvie, sustained serious injuries including slash wounds to his face, back, and eyes; he was blinded in his left eye.",
+      "A kitchen knife was recovered at the scene.",
+      "Police said there was no information at this stage to suggest the attack was terrorism-related.",
+      "The suspect entered Northern Ireland from the Republic of Ireland in 2023 and was granted leave to remain in the UK.",
+      "Video of the attack spread rapidly on social media and was seized upon by anti-immigration and far-right activists who called for protests.",
+      "On Tuesday night (June 9-10), masked protesters torched a bus, vehicles, and set fire to homes believed to house immigrants in Belfast, pelted police with objects, and left more than two dozen people homeless.",
+      "Firefighters rescued families, including one with a baby, from burning homes; they were taken to police stations for safety.",
+      "On Wednesday night (June 10-11), police deployed water cannons against protesters who set fires and hurled bricks, rocks, and bottles during a second night of violence.",
+      "Demonstrators tore bricks from walls and smashed sidewalks with sledgehammers to use as projectiles against riot police.",
+      "PSNI Chief Constable Jon Boutcher said 200 additional officers would be deployed and the PSNI was calling in support from other UK police forces.",
+      "Bus and train operators in Belfast curtailed services due to expected protests.",
+      "The victim's family appealed for an end to the violence, saying migrants 'make a deeply valuable contribution to our country' and that they did not want the tragedy used to fuel hostility.",
+      "Politicians from both sides of Northern Ireland's power-sharing government condemned the violence \u2014 First Minister Michelle O'Neill called it 'thuggery' and Deputy First Minister Emma Little-Pengelly called it 'utterly wrong.'",
+      "Prime Minister Keir Starmer condemned the stabbing as 'sickening' and said violence against people based on their background would not be tolerated.",
+      "Northern Ireland's five main political parties issued a joint statement condemning the attack and calling for calm.",
+      "Alodid appeared by video link in Belfast Magistrates' Court on Wednesday, was charged with attempted murder, possession of a knife, and threatening to kill a radiographer, and was remanded in custody."
+    ],
+    "disagreements": [
+      {
+        "topic": "Suspect's initial nationality identification",
+        "positions": {
+          "BBC News": "Reports that the PSNI initially said the suspect was believed to be Somali, then corrected to Sudanese.",
+          "NPR": "States suspect is from Sudan with no mention of initial Somali misidentification.",
+          "CBS News (Article 6)": "Notes the PSNI initially said the suspect was believed to be Somali but corrected to Sudanese."
+        }
+      },
+      {
+        "topic": "Suspect's immigration route details",
+        "positions": {
+          "BBC News": "Chief Constable said suspect traveled from Sudan to Paris, flew to Dublin, then took a bus to Belfast on 10 February 2023, the date he claimed asylum.",
+          "NPR": "Says Alodid entered Northern Ireland from the Republic of Ireland in 2023, applied for asylum, and was given a 5-year permit to remain \u2014 no Paris or bus details.",
+          "CBS News (Article 6)": "Says the suspect came into Northern Ireland from Dublin before gaining permission to remain; no Paris detail."
+        }
+      },
+      {
+        "topic": "Description of the attack's apparent nature",
+        "positions": {
+          "CBS News (Article 6)": "Describes the video as showing 'what appears to have been an attempted beheading' \u2014 slashing to head and neck.",
+          "NPR": "Describes the attack as a stabbing with deep cuts to head, face, and back, with no beheading characterization.",
+          "BBC News": "Describes 'serious slash wounds to his back and face and eye injuries' with no beheading characterization."
+        }
+      },
+      {
+        "topic": "Victim family statement wording on protests",
+        "positions": {
+          "CBS News (Article 4)": "Quotes family saying 'overnight unrest is not welcome' and 'peaceful protest is the only way forward.'",
+          "NPR": "Quotes family appealing for an end to violence and saying they do not want the tragedy to divide people, without the 'peaceful protest is the only way forward' line."
+        }
+      },
+      {
+        "topic": "Reference to prior UK anti-immigration incidents",
+        "positions": {
+          "CBS News (Article 6)": "Extensively references both the 2025 Northern Ireland riots over a sexual assault case and the recent Southampton protests over the Henry Nowak murder.",
+          "ABC News": "References the Southampton sentencing and protests.",
+          "CBS News (Article 4)": "Quotes a protester referencing the Southampton incident.",
+          "NPR": "Does not reference prior incidents in England.",
+          "BBC News": "Does not reference prior incidents in England in the provided text."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "Leads with the water cannon deployment on the second night of violence, then provides substantial court hearing detail (naming both suspect and victim, charges, and in-court statements). Includes the Irish border sensitivity angle \u2014 quoting politicians who say the stabbing should prompt a review of the open border and contextualizing it within the peace process. Includes quotes from an immigrant resident expressing fear. Overall frame: law enforcement response, judicial process, and political consequences including border policy.",
+      "BBC News": "Focuses on the initial arrest and the attack itself rather than the subsequent protests (the article predates the second night of violence). Provides the most granular detail on the suspect's travel route (Sudan \u2192 Paris \u2192 Dublin \u2192 Belfast by bus, specific date of February 10, 2023). Leads with police and political condemnation. Includes a vivid first-person account from the 999 caller, giving a human-impact angle. Emphasizes the Chief Constable's plea not to let outside social media actors influence Northern Irish behavior. Does not mention the Southampton parallel.",
+      "CBS News (Article 4)": "Runs an AP-sourced piece covering the second night of violence with water cannons. Closely mirrors the NPR/AP version but adds a unique on-the-ground CBS News interview with two protesters ('Chris and John') who felt compelled to show solidarity with the victim but rejected the street violence. Includes the 'foreigners out' shout detail attributed to BBC reporter Kelly Bonner. Includes the fuller family statement with 'peaceful protest is the only way forward.' Frame: street-level tension with nuanced protester voices.",
+      "CBS News (Article 6)": "An earlier, more analytical piece focused on the stabbing itself and the buildup to protests. Uniquely describes the video as showing an 'attempted beheading.' Provides extensive political context \u2014 quotes DUP MP Gavin Robinson calling for an end to 'uncontrolled immigration,' references Tommy Robinson circulating the video, and draws parallels to the 2025 Northern Ireland riots and the recent Southampton protests. Frame: pattern of anti-immigration unrest with far-right amplification.",
+      "ABC News": "Shortest full-text piece. Leads with the 'UK leaders call for calm' angle. Briefly covers the stabbing facts and first night of protest, including the bus torching. Uniquely extends the story to Southampton, noting protests there around an asylum-seeker hotel despite the victim and killer both being British. Frame: nationwide anti-immigration tension, not just a Belfast story.",
+      "The New York Times": "Headline-only; no body text available for analysis. Headline emphasizes the arrest in the 'brutal' stabbing.",
+      "Associated Press": "Photo captions only; no substantive body text. Provides visual documentation (burning vehicles, burnt-out houses, firefighters) but no narrative analysis."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (court filings, official police statements, government releases) were located in the dossier. All facts are drawn from outlet reporting. Court hearing details \u2014 charges, suspect statements, victim injuries \u2014 come primarily from NPR and CBS News (Article 4), both sourcing the AP wire, and from BBC News's own reporting."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides detail on the suspect's asylum claim or the basis for his refugee status/leave to remain \u2014 what category it fell under, whether it was reviewed, or whether any red flags were raised during the process.",
+      "No outlet reports on the condition or response of the immigrant communities targeted by the arson attacks beyond one quote from Anselme Shima (Congo) \u2014 how many people were displaced, where they were relocated, what support they received.",
+      "The Irish border dimension is raised only by NPR and only in a truncated passage at the end of the article. No outlet explores how the Common Travel Area facilitated the suspect's entry or what policy mechanisms exist (or don't) to screen entrants.",
+      "No outlet provides detail on how many arrests were made during the two nights of rioting, or what charges rioters may face.",
+      "No outlet reports on the specific far-right accounts or networks that organized the protests beyond a general reference to Tommy Robinson (CBS News Article 6) and unnamed 'social media agitators.'",
+      "The victim Stephen Ogilvie's current medical status beyond 'serious condition' and loss of sight in one eye is not updated.",
+      "No primary source documents were available in the dossier, limiting the ability to cross-check outlet claims against official records.",
+      "The New York Times and Associated Press articles lacked full body text, reducing the breadth of cross-outlet corroboration available."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text confirm the core facts of the stabbing, the court appearance, and two nights of violent protests with consistent detail. While there are some framing differences (beheading characterization, border angle, prior-incident parallels), the factual core is well-corroborated and the story is a major breaking event warranting a straightforward factual report rather than a meta-coverage piece.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/11/g-s1-127401/uk-anti-immigration-protests-belfast",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cdejnjdg08eo",
+      "title": "Man arrested on suspicion of attempted murder after 'brutal' knife attack in Belfast - BBC"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/09/world/europe/belfast-stabbing-arrest-northern-ireland.html",
+      "title": "Man Arrested in \u2018Brutal\u2019 Stabbing in Belfast, Police Say - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/belfast-stabbing-suspect-court-anti-immigrant-protests-northern-ireland/",
+      "title": "Belfast protests erupt again after stabbing as police deploy water cannons - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/police-northern-ireland-arrest-man-after-violent-belfast-133706385",
+      "title": "UK leaders call for calm as protests break out after Belfast street stabbing - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/belfast-northern-ireland-stabbing-far-right-calls-anti-immigration-protests/",
+      "title": "Brutal stabbing attack in Belfast sparks calls for anti-immigration protests in Northern Ireland - CBS News"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/northern-ireland-belfast-stabbing-2aa3099d39874fa72a67ca94783c0721",
+      "title": "UK leaders call for calm as protests break out after Belfast street stabbing - AP News"
+    }
+  ]
+}
