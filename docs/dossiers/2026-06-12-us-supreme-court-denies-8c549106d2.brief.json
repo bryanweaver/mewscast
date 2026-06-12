@@ -1,0 +1,101 @@
+{
+  "story_id": "2026-06-12-us-supreme-court-denies-8c549106d2",
+  "headline_seed": "US Supreme Court denies Alabama's request to carry out nitrogen gas execution - BBC",
+  "brief": {
+    "story_id": "2026-06-12-us-supreme-court-denies-8c549106d2",
+    "consensus_facts": [
+      "The U.S. Supreme Court denied Alabama's emergency request to carry out the nitrogen gas execution of death row inmate Jeffery Lee.",
+      "Two lower courts had ruled that Alabama's nitrogen gas execution method likely violates the Eighth Amendment's ban on cruel and unusual punishment.",
+      "Justices Clarence Thomas, Samuel Alito, and Neil Gorsuch dissented, indicating they would have granted Alabama's request.",
+      "Jeffery Lee, 49, was convicted of killing two people during a 1998 pawnshop robbery and has been on death row for over two decades.",
+      "A jury had recommended a life sentence for Lee, but a judge overrode that recommendation and imposed the death penalty under a since-abolished judicial override procedure.",
+      "Alabama Attorney General Steve Marshall called the halted execution 'a miscarriage of justice' and vowed the state would pursue carrying out Lee's sentence.",
+      "Alabama has used nitrogen gas executions since introducing the method in January 2024.",
+      "The scheduled execution time was 6:00 PM local time on Thursday, and the Supreme Court order arrived after that time had passed.",
+      "Alabama can still seek to execute Lee using a different method such as lethal injection or the electric chair."
+    ],
+    "disagreements": [
+      {
+        "topic": "Vote count on the Supreme Court decision",
+        "positions": {
+          "The Independent": "Explicitly reports a 6-3 vote.",
+          "BBC News": "Reports three named dissenters but does not characterize the decision as 6-3.",
+          "Associated Press": "Body text is essentially captions only; does not provide vote details.",
+          "ABC News": "Headline-only; no vote details."
+        }
+      },
+      {
+        "topic": "Number of prior nitrogen gas executions in Alabama",
+        "positions": {
+          "BBC News": "Reports Alabama has executed seven people using nitrogen gas.",
+          "The Independent": "Refers to Lee's planned execution as what would have been 'the country's ninth execution by nitrogen gas,' implying eight prior nationwide (not necessarily all Alabama)."
+        }
+      },
+      {
+        "topic": "Whether the order was signed or explained",
+        "positions": {
+          "BBC News": "Describes the order as 'brief, unsigned' and says it 'did not provide an explanation.'",
+          "The Independent": "Says 'no explanation for the ruling was provided' but does not describe the order as unsigned."
+        }
+      },
+      {
+        "topic": "Role of Judge Emily Marks and the procedural timeline",
+        "positions": {
+          "The Independent": "Provides detailed procedural history: Judge Marks initially ruled the method constitutional in May, the 11th Circuit reversed on Monday, Marks then reevaluated and ruled it unconstitutional on Tuesday, and Alabama appealed to the Supreme Court.",
+          "BBC News": "Mentions a federal judge permanently banned the method 'this week' and references the lower court's findings but does not name Judge Marks or detail the procedural back-and-forth."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "The AP article body consists almost entirely of photo captions and no substantive reporting text. The headline conveys the core fact \u2014 Supreme Court denied Alabama's request and lower court ruled the method unconstitutional \u2014 but there is no analytical framing to evaluate from the body text alone. This is likely a truncated or incompletely scraped article.",
+      "ABC News": "Headline-only stub that mirrors AP wire language nearly verbatim ('Supreme Court rejects Alabama request to carry out nitrogen gas execution after lower court said method unconstitutional'). No body text to analyze for framing. Likely running the AP wire.",
+      "BBC News": "Leads with the Supreme Court denial and immediately contextualizes with the lower courts' constitutional ruling. Gives significant space to Alabama AG Marshall's reaction. Notes the jury override that led to Lee's death sentence. Includes the detail that Alabama has executed seven people by nitrogen gas since 2024. Uses relatively neutral, international-audience-oriented tone. Does not include Lee's final meal details or his defense team's statement.",
+      "The Independent": "The most detailed article in the dossier. Leads with 'reprieve' framing, emphasizing Lee was 'granted a reprieve.' Provides the fullest procedural history (Judge Marks, 11th Circuit panel, re-evaluation). Uniquely includes Lee's defense team's statement ('His jury voted for life... the Constitution prevailed'). Includes humanizing detail about Lee's last hours (potato chips, Skittles, water, Sprite \u2014 no final meal requested). Frames the ruling as 'a rare, albeit temporary, victory for opponents of capital punishment.' Includes the 11th Circuit's specific finding about the 'three minutes' to lose awareness being 'intolerable.' Also uniquely quotes Alabama AG's office characterizing a permanent ban as 'unprecedented in American history.' The framing leans toward highlighting the cruelty argument and the jury override injustice.",
+      "The Independent (Bulletin)": "Second Independent URL is a headline-only bulletin linking to the main article. Contains no additional substantive body text."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court orders, filings, or official statements) were located in the dossier. All claims about the Supreme Court order, the 11th Circuit ruling, and Judge Marks's decisions come from outlet reporting only and cannot be verified against source documents."
+    ],
+    "missing_context": [
+      "No primary source documents were available \u2014 the actual Supreme Court order, the 11th Circuit opinion, and Judge Marks's rulings would be essential for verifying outlet claims about the legal reasoning.",
+      "No outlet explains the specific scientific or medical basis for nitrogen hypoxia causing suffering \u2014 what experts testified during the April bench trial is referenced but not detailed.",
+      "No outlet provides context on the broader status of nitrogen gas execution laws in other states beyond Alabama, or whether other states' protocols differ.",
+      "The AP article body appears to be incomplete (only photo captions), meaning one of the most important wire sources in the dossier is effectively missing.",
+      "No outlet discusses whether the Supreme Court's denial sets any precedent or is merely procedural (emergency docket denials typically do not).",
+      "No outlet explores the history or outcomes of Alabama's seven (or eight) prior nitrogen gas executions in detail, particularly whether prior legal challenges were mounted.",
+      "The disagreement between BBC (seven executions) and The Independent (ninth execution nationwide) is unresolved \u2014 no outlet clarifies whether other states have also conducted nitrogen gas executions.",
+      "No outlet mentions the identities or reactions of the victims' families beyond Marshall's general statement on their behalf.",
+      "No outlet discusses what alternative execution method Alabama might pursue or the timeline for doing so."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets (BBC News and The Independent) provide substantive body text corroborating the core facts of the Supreme Court's denial, the constitutional ruling, and the key players involved. While there are some framing differences, the factual core is well-aligned across sources. The absence of primary source documents and the limited number of full-text articles argue for a straightforward REPORT rather than a META post.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/execution-alabama-nitrogen-d5b019f8837f937234bedd341a719354",
+      "title": "Supreme Court nixes Alabama request for nitrogen execution, which lower court ruled unconstitutional - AP News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/wireStory/supreme-court-rejects-alabama-request-carry-nitrogen-gas-133804218",
+      "title": "Supreme Court rejects Alabama request to carry out nitrogen gas execution after lower court said method unconstitutional - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cn4dx72lwn7o",
+      "title": ""
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/alabama-execution-jeffery-lee-nitrogen-gas-denied-b2994707.html",
+      "title": "Supreme Court denies Alabama\u2019s request to move forward with nitrogen gas execution - The Independent"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/bulletin/news/supreme-court-alabama-execution-nitrogen-gas-b2994732.html",
+      "title": "Supreme Court blocks Alabama from executing Jeffery Lee using nitrogen gas - The Independent"
+    }
+  ]
+}
