@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-06-12-live-updates-interim-us-ef7f0acf76",
+  "headline_seed": "Live updates: Interim US-Iran agreement appears to take shape - CNN",
+  "brief": {
+    "story_id": "2026-06-12-live-updates-interim-us-ef7f0acf76",
+    "consensus_facts": [
+      "The US and Iran are edging toward an interim deal that would extend their ceasefire, reopen the Strait of Hormuz, and create a framework for further negotiations on Iran's nuclear program \u2014 reported in the body text of both CNN and The Business Times (sourcing Bloomberg).",
+      "The agreement is described as a memorandum of understanding (MOU); both CNN and The Business Times report the text has been largely agreed but has not yet received final signoff.",
+      "Geneva, Switzerland, is the most likely location for a signing ceremony, which could take place as early as Sunday \u2014 reported by both CNN and The Business Times.",
+      "Iran's government has not confirmed a final deal; both CNN and The Business Times quote Iranian officials saying no conclusion has been reached, though progress has been made.",
+      "President Donald Trump announced Thursday that the US had 'ended the war with Iran' and referenced a 'very strong memorandum of understanding,' per both CNN and The Business Times.",
+      "The interim deal would include an approximately 60-day extended ceasefire period for further negotiations \u2014 reported by both CNN and The Business Times.",
+      "Oil prices fell and equities rose following Trump's Thursday announcement \u2014 reported by The Business Times; CNN references the pattern of markets reacting to Trump's deal signals.",
+      "Israel is pressing the US on the terms of any deal and is skeptical it will lead to a final agreement \u2014 reported by both CNN and The Business Times.",
+      "Trump indicated Vice President JD Vance and envoy Steve Witkoff would represent the US at any signing \u2014 reported by The Business Times; CNN references ongoing US military and security planning for weekend talks.",
+      "The deal's finalization requires approval from Iran's Supreme Leader (identified as Mojtaba Khamenei by The Business Times); both CNN and The Business Times note communication difficulties with Iran's leadership."
+    ],
+    "disagreements": [
+      {
+        "topic": "Frozen Iranian funds / financial terms",
+        "positions": {
+          "The Business Times": "Reports Iranian news agency Mehr says the MOU includes release of $24 billion in frozen Iranian funds, US withdrawal from areas near Iran, lifting oil sanctions, and $300 billion in reconstruction plans. Also notes Trump has previously balked at unfreezing funds.",
+          "CNN": "Reports Israel is pressing the US to prevent unfreezing of Iranian assets. Does not specify dollar figures for frozen funds.",
+          "Reuters": "Headline references 'frozen funds' haggling but body text was not retrievable."
+        }
+      },
+      {
+        "topic": "Scope of what the deal covers beyond the ceasefire",
+        "positions": {
+          "CNN": "Focuses on nuclear program talks and Strait of Hormuz reopening; mentions Israeli concerns about Lebanon ceasefire being included.",
+          "The Business Times": "Includes all of the above plus detailed claims about US troop withdrawal, sanctions lifting, reconstruction funding, and mine-clearing operations in the Strait with UK and France assistance."
+        }
+      },
+      {
+        "topic": "Netanyahu's posture toward the deal",
+        "positions": {
+          "CNN": "Reports Netanyahu said Trump committed to removing Iran's enriched uranium, dismantling its nuclear program, limiting missiles, and ending proxy support. Notes Trump has only publicly mentioned enriched uranium, not missiles or proxies.",
+          "The Business Times": "Reports Netanyahu has signaled he'd prefer more strikes to further degrade Iran's military; mentions Trump swore at Netanyahu during a call urging him to ease Lebanon operations."
+        }
+      },
+      {
+        "topic": "Iran's Supreme Leader identity",
+        "positions": {
+          "The Business Times": "Identifies Iran's Supreme Leader as Mojtaba Khamenei, noting he has been in hiding since the conflict erupted.",
+          "CNN": "References Iran's supreme leader without naming him specifically."
+        }
+      },
+      {
+        "topic": "Feasibility of 60-day nuclear negotiation window",
+        "positions": {
+          "CNN": "Quotes Chatham House analyst saying a deal following JCPOA principles is feasible in 60 days, but a deal with different goals is 'very, very unlikely.' Notes the original JCPOA took over two years.",
+          "The Business Times": "Does not address feasibility of the 60-day window for nuclear negotiations specifically."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg (Article 1)": "Headline-only; no body text retrievable (paywall). Headline frames story around timing relative to G7 summit, emphasizing the diplomatic calendar and institutional setting ('Edge Toward Interim Deal Signing Close to G7 Next Week').",
+      "CNN": "Leads with a structured bullet-point summary emphasizing the provisional nature of the deal \u2014 'by no means firmly agreed yet.' Gives substantial space to skepticism: regional expert H.A. Hellyer saying 'there's no deal in reality,' Israel's doubts, and Trump's pattern of 38 previous deal teasings that reversed course. Includes a pointed literary analogy ('The Grand Old Duke of York') mocking Trump's repetitive deal-announcement cycle. Buries the financial terms almost entirely \u2014 no dollar figures for frozen assets or reconstruction. Emphasizes the gap between Trump's claims and Iran's non-confirmation.",
+      "Reuters": "Headline-only; no body text retrievable. Headline uniquely foregrounds the 'frozen funds' haggling as the central tension, framing the story through the financial dispute rather than the diplomatic or military dimensions.",
+      "Bloomberg (Article 4 \u2014 The Pulse video)": "Video segment listing only; no substantive body text. Pairs the US-Iran story with the SpaceX IPO as co-lead, framing it as a markets-moving event. The episode playlist reveals Bloomberg has been tracking the deal's on-again-off-again trajectory since late May, with titles like 'Iran Says No Progress in US Talks' (June 4) and 'Tentative US-Iran Deal' (May 29).",
+      "The Business Times": "Runs what appears to be a Bloomberg wire story in full. Leads with the G7 timing and Geneva signing logistics. Provides the most granular detail of any outlet: names Mojtaba Khamenei as Supreme Leader, specifies he's been in hiding, names Qatar and Pakistan as mediators, reports Iranian claims of $24B in frozen funds and $300B reconstruction, details mine-clearing by UK and France, quantifies pre-conflict Strait traffic at ~140 ships/day, reports Trump swearing at Netanyahu, and provides Brent crude price ($88/barrel, down 3.2%). Buries skepticism lower in the piece compared to CNN. More market-and-logistics oriented than politically skeptical."
+    },
+    "primary_source_alignment": [
+      "No primary source (the MOU text, official statements, or transcripts) was located for this story. All reporting is based on unnamed diplomatic sources, unnamed officials, and Iranian media citations.",
+      "The absence of the MOU text is itself significant: multiple outlets note it 'has not been made public yet,' meaning all specific terms (frozen funds, nuclear provisions, reconstruction) are based on leaked or reported claims that cannot be verified against the document."
+    ],
+    "missing_context": [
+      "The MOU text itself has not been made public; no outlet can verify the specific terms being reported, and all financial figures ($24B frozen funds, $300B reconstruction) originate from Iranian news agency Mehr and have not been independently confirmed.",
+      "No outlet provides a clear accounting of casualties, civilian harm, or humanitarian impact of the war since late February \u2014 The Business Times mentions 'killing thousands of people' but gives no specifics.",
+      "No outlet explains the legal or constitutional basis under which Trump is conducting this war or negotiating this deal \u2014 no mention of Congressional authorization or War Powers Act considerations.",
+      "Reuters body text was not retrievable (redirect/aggregation issue), removing a key wire-service perspective from the analysis. Bloomberg's primary article was paywalled. This leaves only two outlets (CNN and The Business Times/Bloomberg wire) with substantive body text.",
+      "No outlet details what happened to the original April 8 ceasefire terms or why they nearly collapsed \u2014 only The Business Times provides a compressed timeline of escalation (Apache helicopter downing, retaliatory strikes, exchanges of fire).",
+      "The identity of Iran's Supreme Leader as Mojtaba Khamenei (rather than Ali Khamenei) is mentioned only by The Business Times \u2014 no outlet explains when or how this leadership change occurred, which would be highly significant context for readers.",
+      "No outlet addresses what 'reopening' the Strait of Hormuz means operationally for global energy supply chains, insurance rates for shipping, or timeline for normalizing LNG and oil flows beyond The Business Times' mention of roughly one month.",
+      "CNN's claim that Trump has made 38 previous deal announcements that reversed course is a striking figure but is not sourced or corroborated by any other outlet.",
+      "No outlet examines the domestic political dynamics in Iran \u2014 who supports or opposes the deal beyond the Supreme Leader's office.",
+      "Israel's specific red lines on the deal (Lebanon ceasefire, asset unfreezing, nuclear terms) are described differently by CNN and The Business Times, and no outlet reconciles these into a coherent picture of Israeli demands."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with full body text (CNN and The Business Times) report the same developing story with materially different emphasis \u2014 CNN foregrounds skepticism and Trump's pattern of false starts while The Business Times foregrounds logistics, market impact, and detailed financial terms from Iranian sources. No primary source is available. The dossier's thin retrievable-text base and the significant divergence in framing make this a coverage-analysis story rather than a straight report.",
+    "confidence": 0.58
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-12/us-and-iran-nearing-a-peace-deal-around-g7-meeting-next-week",
+      "title": "US, Iran Edge Toward Interim Deal Signing Close to G7 Next Week - Bloomberg.com"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/12/world/live-news/iran-war-trump-israel",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/finance/iran-seeks-funds-us-talks-edge-interim-deal-sources-say-2026-06-11/",
+      "title": "US, Iran haggle over frozen funds as they inch toward interim deal, sources say - Reuters"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/videos/2026-06-12/the-pulse-6-12-2026-video",
+      "title": "Watch SpaceX IPO Raises $75 Billion, US-Iran Edge Towards Interim Deal | The Pulse 6/12/2026 - Bloomberg.com"
+    },
+    {
+      "outlet": "The Business Times",
+      "url": "https://www.businesstimes.com.sg/international/global/us-iran-edge-toward-interim-deal-signing-close-g7-next-week",
+      "title": "US, Iran edge toward interim deal signing close to G7 next week - The Business Times"
+    }
+  ]
+}
