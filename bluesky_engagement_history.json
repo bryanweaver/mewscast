@@ -1074,6 +1074,11 @@
       "did": "did:plc:zqku2atob2nz3jjhn2bitwex",
       "handle": "rappcats.bsky.social",
       "timestamp": "2026-06-12T14:05:23.958015"
+    },
+    {
+      "did": "did:plc:rkpyxmp26mzyk7y4knhv27mg",
+      "handle": "erikaceous.vtubers.social",
+      "timestamp": "2026-06-12T16:57:58.298005"
     }
   ],
   "liked_posts": [
@@ -3666,6 +3671,11 @@
       "uri": "at://did:plc:zqku2atob2nz3jjhn2bitwex/app.bsky.feed.post/3mo3n2jdpt22l",
       "author": "rappcats.bsky.social",
       "timestamp": "2026-06-12T14:05:23.739455"
+    },
+    {
+      "uri": "at://did:plc:rkpyxmp26mzyk7y4knhv27mg/app.bsky.feed.post/3mo43dykdoc2p",
+      "author": "erikaceous.vtubers.social",
+      "timestamp": "2026-06-12T16:57:58.154610"
     }
   ],
   "last_cleanup": "2026-06-05T20:44:19.866198",
