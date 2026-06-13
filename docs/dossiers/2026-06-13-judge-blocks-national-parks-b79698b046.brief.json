@@ -1,0 +1,97 @@
+{
+  "story_id": "2026-06-13-judge-blocks-national-parks-b79698b046",
+  "headline_seed": "Judge Blocks National Parks From Removing \u2018Negative\u2019 Signs and Depictions of Slavery - The New York Times",
+  "brief": {
+    "story_id": "2026-06-13-judge-blocks-national-parks-b79698b046",
+    "consensus_facts": [
+      "All seven outlets' headlines reference a federal judge blocking or ordering a halt to the Trump administration's efforts to alter or remove displays, signs, and exhibits at National Park Service sites; however, only CBS News provided retrievable body text, so body-level consensus cannot be established across multiple outlets.",
+      "Headline-level consensus across Reuters, The New York Times, The Washington Post, CBS News, and The Hill confirms the ruling involved a judge ordering restoration or blocking removal of National Parks interpretive materials under a Trump executive order.",
+      "Multiple headlines (NYT, CBS News) specifically reference the removal of depictions of slavery or changes to history as central to the dispute.",
+      "Multiple headlines (Reuters, The Washington Post) use or reference the word 'censorship' in describing the judge's characterization of the administration's actions."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope and framing of what the judge blocked",
+        "positions": {
+          "The New York Times": "Headline emphasizes removal of 'negative' signs and depictions of slavery specifically.",
+          "Reuters": "Headline frames it broadly as halting 'censorship' of park exhibits.",
+          "The Washington Post": "Headline frames it as blocking a 'Trump national parks order' and quotes 'censorship.'",
+          "The Hill": "Headline emphasizes 'restoration' of displays removed under a Trump executive order.",
+          "CBS News": "Body text provides the broadest scope, including slavery exhibits, climate change materials, Pride flag imagery, and labor history films as examples of removed content."
+        }
+      },
+      {
+        "topic": "Whether the story is framed as about censorship, history rewriting, or executive overreach",
+        "positions": {
+          "Reuters": "Frames as 'censorship' \u2014 uses the judge's language in headline.",
+          "The New York Times": "Frames around specific content removed \u2014 'negative' signs and slavery depictions.",
+          "CBS News": "Frames as the administration's effort 'to rewrite the past' and uses extensive judge quotes about 'white-out pen' and 'half-truths.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only. Leads with the judge ordering a 'halt' and frames the administration's actions as 'censorship' using quotation marks, suggesting it is the judge's characterization. Wire-neutral phrasing. No body text available for deeper analysis.",
+      "The New York Times": "Headline-only. Leads with specific content categories \u2014 'negative' signs and 'depictions of slavery' \u2014 making the story concrete and emotionally resonant. The use of scare quotes around 'negative' signals editorial skepticism about the administration's framing. No body text available.",
+      "The Washington Post": "Headline-only. Frames the ruling as blocking 'Trump national parks order,' directly attributing the policy to Trump personally. Quotes 'censorship' as the judge's word. No body text available.",
+      "CBS News": "Only outlet with full body text. Leads with Trump's effort to 'rewrite the past' being 'struck down.' Provides extensive detail: names the judge (U.S. District Judge Angel Kelley, Massachusetts), cites the executive order title ('Restoring Truth and Sanity to American History,' March 2025), details specific examples of removed content (slavery exhibits at Independence National Historical Park under George Washington, basalt bubble sign at Sunset Crater with Pride flag image, labor history films at Lowell National Historical Park), quotes the judge's 'white-out pen' and 'half-truths' language, specifies the 21-day restoration deadline and weekly status reports, names plaintiffs (National Parks Conservation Association, Association of National Park Rangers), and names Interior Secretary Doug Burgum as the implementing official. CBS notes an email seeking comment from the Interior Department was sent but does not report any response. The piece is thorough but entirely from the plaintiffs' and court's perspective \u2014 no administration defense or legal argument is presented.",
+      "The New York Times (live blog)": "Headline-only. This is a separate live blog entry about workers removing Trump's name from the Kennedy Center, which is a related but distinct story. Included in the dossier but not directly about the national parks ruling.",
+      "The Washington Post (Kennedy Center)": "Headline-only. Same as above \u2014 covers the Kennedy Center name removal, a related but separate story. Not directly about the national parks ruling.",
+      "The Hill": "Headline-only. Frames as a court ordering 'restoration' of displays, emphasizing the remedy rather than the censorship finding. Headline references 'diversity' in the URL slug, which may reflect an editorial choice to frame this within DEI/diversity debates. No body text available."
+    },
+    "primary_source_alignment": [
+      "No primary source (court order/preliminary injunction) was located in the dossier. CBS News quotes extensively from Judge Kelley's ruling, but the underlying document is not available for independent verification of those quotes or for identifying details no outlet mentioned.",
+      "Without the primary source, it is impossible to assess whether any outlet mischaracterized the scope of the injunction, the legal standard applied (likelihood of success on the merits, irreparable harm, etc.), or any conditions or limitations the judge placed on the order."
+    ],
+    "missing_context": [
+      "Only one outlet (CBS News) provided retrievable full body text. All other outlets were headline-only, severely limiting the ability to establish cross-outlet consensus or identify meaningful framing divergences beyond headline word choice.",
+      "No outlet in the dossier presents the Trump administration's legal defense or rationale for the executive order beyond the order's title. The administration's arguments before the court are entirely absent.",
+      "The primary source document \u2014 the actual preliminary injunction by Judge Angel Kelley \u2014 was not located. This is essential for verifying judicial quotes, understanding the legal reasoning, and identifying details no outlet surfaced.",
+      "No outlet discusses the legal standard for preliminary injunctions (likelihood of success on the merits, irreparable harm, balance of equities, public interest) or how the judge applied it, which would be critical for understanding the ruling's durability on appeal.",
+      "CBS News mentions the lawsuit was filed in February but does not specify which February (presumably February 2026 based on context). The timeline of the executive order (March 2025), the Secretary's Order (referenced as May 20, 2025), and the lawsuit filing could use clarification.",
+      "No outlet discusses whether the administration has indicated it will appeal the preliminary injunction.",
+      "The Kennedy Center name-removal stories (NYT and Washington Post) appear in the dossier but are a separate story; their inclusion may reflect conflation in the story-clustering pipeline rather than editorial relevance to the parks ruling.",
+      "No outlet discusses the First Amendment or other constitutional basis for the ruling, which would help readers understand the legal framework.",
+      "CBS News mentions climate change materials were among those removed but provides no specific examples beyond listing it as a category. The scope of climate-related content removal is not detailed."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Despite having only one full-text source, the headline-level consensus across five relevant outlets is strong enough to confirm the core event \u2014 a federal judge blocked the Trump administration's removal of interpretive materials from National Park Service sites. The framing differences are largely at the headline level and not substantive enough for a META post. A straightforward REPORT with careful attribution to CBS News for body-level details and explicit disclosure of the single-source limitation is appropriate.",
+    "confidence": 0.45
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/trump-administration-must-restore-history-science-materials-parks-us-judge-rules-2026-06-12/",
+      "title": "US judge orders halt to Trump administration's 'censorship' of park exhibits - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/12/us/politics/judge-national-parks-trump.html",
+      "title": "Judge Blocks National Parks From Removing \u2018Negative\u2019 Signs and Depictions of Slavery - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/06/13/judge-blocks-trump-national-parks-order-calling-it-censorship/",
+      "title": "Judge blocks Trump national parks order, calling it \u2018censorship\u2019 - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/trump-national-park-history-changes-court-ruling-judge/",
+      "title": "Trump's changes to history at national parks must be undone, judge rules - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/06/12/us/trump-news",
+      "title": "Workers Start Removing Trump\u2019s Name From Kennedy Center - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/style/2026/06/12/kennedy-center-removes-trumps-name-building/",
+      "title": "Kennedy Center removes Trump\u2019s name from building - The Washington Post"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/regulation/court-battles/5922592-judge-rules-trump-parks-diversity/",
+      "title": "Judge orders restoration of National Parks displays removed under Trump executive order - The Hill"
+    }
+  ]
+}
