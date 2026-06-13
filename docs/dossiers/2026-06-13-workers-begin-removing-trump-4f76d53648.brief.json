@@ -1,0 +1,111 @@
+{
+  "story_id": "2026-06-13-workers-begin-removing-trump-4f76d53648",
+  "headline_seed": "Workers begin removing Trump's name from Kennedy Center early Saturday morning, after judge's order - CBS News",
+  "brief": {
+    "story_id": "2026-06-13-workers-begin-removing-trump-4f76d53648",
+    "consensus_facts": [
+      "Workers began removing President Donald Trump's name from the facade of the Kennedy Center, with scaffolding erected on Friday, June 12, 2026, and physical removal work beginning early Saturday, June 13.",
+      "U.S. District Judge Christopher Cooper ordered Trump's name removed from the Kennedy Center, ruling that the name was illegally added and setting a deadline of Friday, June 12.",
+      "Thunderstorms on Friday delayed the removal work, causing the administration to narrowly miss the court-ordered deadline; removal continued into early Saturday morning.",
+      "The Kennedy Center's Trump-aligned board of trustees voted in December to add Trump's name to the institution, rebranding it as the Trump-Kennedy Center.",
+      "Judge Cooper denied the Trump administration's last-minute request for a stay of his injunction pending appeal on Friday.",
+      "The D.C. Circuit Court of Appeals also rejected the administration's emergency request for a stay, with no noted dissents from the panel of two Obama-appointed judges and one Trump appointee."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope of Judge Cooper's order beyond naming",
+        "positions": {
+          "CBS News": "Explicitly reports that Cooper also blocked the Trump administration's plans for the Kennedy Center to close for renovations for two years.",
+          "Al Jazeera English": "Does not mention the two-year closure injunction.",
+          "Associated Press": "Does not mention the two-year closure injunction (photo gallery with captions only)."
+        }
+      },
+      {
+        "topic": "Broader context of Trump's Washington ambitions",
+        "positions": {
+          "Al Jazeera English": "Places the Kennedy Center saga in context of Trump's broader efforts to reshape Washington, DC sites, mentioning 'an enormous triumphal arch and a White House ballroom.'",
+          "CBS News": "Focuses narrowly on the Kennedy Center legal battle and board actions without referencing other Trump building projects.",
+          "Associated Press": "No broader context provided (photo captions only)."
+        }
+      },
+      {
+        "topic": "The plaintiff and legal challenge details",
+        "positions": {
+          "CBS News": "Identifies Democratic Rep. Joyce Beatty of Ohio as the plaintiff and provides extensive detail on her lawyers' filings accusing the administration of 'gamesmanship' and 'running out the clock.'",
+          "Al Jazeera English": "References the board and Justice Department seeking to halt removal but does not name the plaintiff.",
+          "USA Today": "Does not identify the plaintiff by name."
+        }
+      },
+      {
+        "topic": "Onlooker and protester activity",
+        "positions": {
+          "CBS News": "Reports a crowd chanting 'Take it down' after midnight as crews continued work.",
+          "USA Today": "Describes protesters waving a US flag and holding a sign reading 'you're no JFK' during scaffolding construction on June 12.",
+          "Associated Press": "Mentions 'a man walks by workers' but no protest activity."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Photo gallery with descriptive captions only. No analytical framing. Straightforward visual documentation of scaffolding construction and workers on Friday, June 12. Notes weather delay. Wire-neutral tone.",
+      "CBS News": "The most detailed and substantive report in the dossier. Leads with the Saturday morning removal and the thunderstorm-caused delay. Provides extensive legal detail including the appellate court ruling, the administration's fundraising arguments, Rep. Beatty's lawyers' accusations of 'gamesmanship,' and the administration's own language about the building being in 'bad shape.' Includes Trump administration arguments about donor confusion and fundraising impacts. Also covers the board's December vote, Trump's removal of Democratic board members, and plans to change performance programming. This is the only outlet to report on the internal CBS News scoop about the center's general counsel memo instructing staff to begin switching the name back.",
+      "Al Jazeera English": "Brief report that frames the story within Trump's broader pattern of imposing himself on Washington landmarks and institutions, uniquely citing the planned triumphal arch and White House ballroom. Emphasizes Trump's dismissal of previous leadership and appointment of a board that named him chairman. Shortest substantive article; omits plaintiff identity and most legal procedural details.",
+      "Reuters": "Headline only: 'Workers remove Trump's name from Washington's Kennedy Center.' No body text available for analysis beyond the headline. Headline uses present tense, suggesting completed action.",
+      "The New York Times": "Headline only: 'Kennedy Center Begins Removing Trump's Name From Facade.' No body text available. Headline uses 'Begins Removing,' framing the institution as the actor rather than 'workers.'",
+      "USA Today": "Photo gallery format with brief captions. Describes protesters and scaffolding work. References Judge Cooper's May 29 ruling date and the June 12 deadline. Includes protester signage ('you're no JFK'), which subtly frames the story with an opposition voice. No substantive legal or political analysis.",
+      "The Washington Post": "Headline only: 'Workers begin removing Trump's name from Kennedy Center.' No body text available for analysis."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, orders, or motions) were located in the dossier. All legal details \u2014 including the appellate court's one-page unsigned order, the administration's emergency motion arguments, and Rep. Beatty's lawyers' filings \u2014 come exclusively from CBS News's reporting and cannot be independently verified against the underlying documents within this dossier."
+    ],
+    "missing_context": [
+      "No primary source documents (Judge Cooper's original order, the appellate court's one-page ruling, the administration's emergency motion, or Rep. Beatty's filings) were available in the dossier for independent verification.",
+      "Only three outlets (CBS News, Al Jazeera English, and Associated Press) provided substantive body text, with USA Today providing photo captions. Three outlets (Reuters, NYT, Washington Post) were headline-only. This limits the strength of consensus analysis.",
+      "No outlet in the dossier provides the original full name that was added to the building \u2014 CBS News references 'Trump-Kennedy Center' while USA Today's photo captions reference 'Donald J. Trump and John F. Kennedy Memorial Center for the Performing Arts,' a discrepancy that is not reconciled.",
+      "No outlet addresses potential contempt-of-court implications for missing the Friday deadline, even narrowly.",
+      "No outlet reports on the cost of the name addition or removal work.",
+      "No outlet discusses whether the Kennedy Center remained open to the public during the removal process or whether scheduled performances were affected.",
+      "The status of the planned two-year renovation closure \u2014 whether it proceeds, is permanently blocked, or is being appealed separately \u2014 is not clearly addressed beyond CBS News noting Cooper blocked it.",
+      "No right-leaning or conservative outlet is represented in the dossier with retrievable body text, leaving that perspective largely absent from the analysis."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets confirm the core facts of the name removal proceeding after a court order, with no major factual disagreements. While CBS News provides substantially more detail than other outlets, the basic narrative is consistent across all sources with body text. The framing differences are modest and mostly attributable to depth of coverage rather than ideological divergence, making this a straightforward REPORT rather than a META.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/photo-gallery/workers-prepare-remove-trump-s-name-kennedy-center-photos-b9736b7a5eda454eb7183b3ff968b691",
+      "title": "Workers prepare to remove Trump\u2019s name from the Kennedy Center, in photos - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/kennedy-center-trump-name-judge/",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/6/12/judge-keeps-order-in-place-to-remove-trumps-name-from-kennedy-center",
+      "title": "Judge keeps order in place to remove Trump\u2019s name from Kennedy Center - Al Jazeera"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/video/watch/idRW856313062026RP1/",
+      "title": "Workers remove Trump's name from Washington's Kennedy Center - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/12/arts/music/kennedy-center-trump-name.html",
+      "title": "Kennedy Center Begins Removing Trump\u2019s Name From Facade - The New York Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/picture-gallery/news/politics/2026/06/13/trump-name-removal-kennedy-center-photos/90525396007/",
+      "title": "Photos show workers stripping Trump name from Kennedy Center building - USA Today"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/style/2026/06/12/kennedy-center-removes-trumps-name-building/",
+      "title": "Workers begin removing Trump\u2019s name from Kennedy Center - The Washington Post"
+    }
+  ]
+}
