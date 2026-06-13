@@ -999,6 +999,11 @@
       "did": "did:plc:pddo6jeyx6ewnbzfhw4llai3",
       "handle": "lifeloverstar.bsky.social",
       "timestamp": "2026-06-13T01:49:54.799243"
+    },
+    {
+      "did": "did:plc:i53lwh5ng4rsgfj5as7ftte6",
+      "handle": "mcfattzz.bsky.social",
+      "timestamp": "2026-06-13T13:37:22.076430"
     }
   ],
   "liked_posts": [
@@ -3326,6 +3331,11 @@
       "uri": "at://did:plc:pddo6jeyx6ewnbzfhw4llai3/app.bsky.feed.post/3mo52ykexb22y",
       "author": "lifeloverstar.bsky.social",
       "timestamp": "2026-06-13T01:49:54.636248"
+    },
+    {
+      "uri": "at://did:plc:i53lwh5ng4rsgfj5as7ftte6/app.bsky.feed.post/3mo42kxx3bc2t",
+      "author": "mcfattzz.bsky.social",
+      "timestamp": "2026-06-13T13:37:21.945509"
     }
   ],
   "last_cleanup": "2026-06-12T20:54:10.868761",
