@@ -2,23 +2,23 @@
 
 Index of planning, strategy, and operations documents for the Mewscast / Walter Croncat project.
 
-## Strategy & Vision
+## Pipeline & Workflow
 
-- [Strategic Plan](STRATEGIC_PLAN.md) — 90-day plan and brand foundation
-- [Mewscast X API Strategy](Mewscast_X_API_Strategy.md) — API tier, pricing, and engagement strategy (2026)
-- [Walter Cronkite Report](Walter_Cronkite_Report.md) — sourced research on Cronkite's methods, ethics, voice, and the limits of his legend
-- [Croncat Journalism Workflow](Croncat_Journalism_Workflow.md) — the 7-stage Cronkite-modeled pipeline (Stages 1–7, 6 post types, verification gate, keystone sign-off rule)
+- [Croncat Journalism Workflow](Croncat_Journalism_Workflow.md) — the 7-stage Cronkite-modeled pipeline (design doc, principles, post types, keystone rule, implementation notes)
+- [Cost Analysis](COST_ANALYSIS.md) — per-cycle cost breakdown by post type and scheduling strategy
+- [Update Detection](UPDATE_DETECTION.md) — how the bot detects and handles story updates vs duplicates
+
+## Research & Strategy
+
+- [Walter Cronkite Report](Walter_Cronkite_Report.md) — sourced research on Cronkite's methods, ethics, and voice (underpins the journalism pipeline design)
+- [Mewscast X API Strategy](Mewscast_X_API_Strategy.md) — X API tier, PPU pricing, engagement best practices (2026)
 
 ## Operations
 
-- [Engagement README](README_ENGAGEMENT.md) — engagement bot operations
-- [Update Detection](UPDATE_DETECTION.md) — how the bot detects and handles story updates
-
-## Analytics
-
-- [Analytics](ANALYTICS.md)
-- [Analytics Plan](ANALYTICS_PLAN.md)
+- [Engagement README](README_ENGAGEMENT.md) — engagement bot operations (X and Bluesky)
+- [Analytics](ANALYTICS.md) — live engagement snapshot (auto-updated by GHA)
+- [Analytics Plan](ANALYTICS_PLAN.md) — SQLite + Streamlit analytics MVP design
 
 ## Project README
 
-The top-level [README.md](../README.md) contains the quick start, feature list, CLI reference, and test coverage summary.
+The top-level [README.md](../README.md) contains quick start, CLI reference, project structure, and test coverage.
