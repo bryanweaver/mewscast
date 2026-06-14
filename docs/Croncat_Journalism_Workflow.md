@@ -230,7 +230,7 @@ Source: Senate roll call vote 312, congress.gov.
 And that's the mews — coverage report.
 ```
 
-This format is **strong bookmark bait** (per `Mewscast_X_API_Strategy.md`, bookmarks are 10× a like in the algorithm) and is exactly the "headline vs reality" brand from `STRATEGIC_PLAN.md` — but elevated from snark to actual journalism.
+This format is **strong bookmark bait** (per `Mewscast_X_API_Strategy.md`, bookmarks are 10× a like in the algorithm) — the "headline vs reality" hook elevated from snark to actual journalism.
 
 #### `BULLETIN` — single-source breaking news
 - For genuinely breaking events where speed matters and only one outlet has it yet
@@ -420,7 +420,7 @@ In rough dependency order. None of this requires architectural rewrites — Mews
 
 ## 8. How This Connects to the Existing Plan
 
-This document **does not replace** anything in `Mewscast_X_API_Strategy.md` or `STRATEGIC_PLAN.md`. It implements them.
+This document **does not replace** anything in `Mewscast_X_API_Strategy.md`. It implements it.
 
 | From the existing plan | This doc says |
 |---|---|
@@ -456,7 +456,7 @@ This is the spirit of the entire workflow in five questions. It's also the most 
 
 ## 10. Measuring Whether This Is Working
 
-The existing analytics in `STRATEGIC_PLAN.md` §5 still apply, but we add **journalism quality KPIs** specific to this workflow:
+Beyond standard engagement analytics, we track **journalism quality KPIs** specific to this workflow:
 
 | Metric | Target | How measured |
 |---|---|---|
@@ -516,4 +516,3 @@ These notes document structural code changes that align the implementation with 
 
 - [`Walter_Cronkite_Report.md`](./Walter_Cronkite_Report.md) — the sourced research underpinning every principle in this document
 - [`Mewscast_X_API_Strategy.md`](./Mewscast_X_API_Strategy.md) — API tier, pricing, engagement, and the X-platform-specific tactics this workflow plugs into
-- [`STRATEGIC_PLAN.md`](./STRATEGIC_PLAN.md) — the broader 90-day plan and brand foundation
