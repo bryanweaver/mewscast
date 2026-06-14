@@ -1,0 +1,125 @@
+{
+  "story_id": "2026-06-14-twelve-people-killed-in-6e1a0af553",
+  "headline_seed": "Twelve people killed in Missouri plane crash, skydiving company says - Reuters",
+  "brief": {
+    "story_id": "2026-06-14-twelve-people-killed-in-6e1a0af553",
+    "consensus_facts": [
+      "Twelve people \u2014 one pilot and 11 skydivers \u2014 were killed when a skydiving plane crashed near Butler Memorial Airport in Butler, Missouri, on Sunday, June 14, 2026.",
+      "The crash occurred at approximately 11:30 a.m. local time.",
+      "Butler Memorial Airport is located roughly 60\u201365 miles south of Kansas City, Missouri.",
+      "The aircraft was a Pacific Aerospace P750 (also referred to as 750XL), a single-engine turboprop commonly used for skydiving, manufactured in 2010.",
+      "The plane was operated by Skydive Kansas City, and passengers were being taken up to jump at the time of the crash.",
+      "The plane crashed in a field near/adjacent to the airport shortly after takeoff.",
+      "The aircraft was engulfed in fire after crashing; first responders extinguished the blaze.",
+      "The FAA confirmed air traffic services were not being provided at the time of the crash.",
+      "The National Transportation Safety Board (NTSB) is leading the investigation, with the FAA also investigating.",
+      "Teams from both the NTSB and FAA were dispatched to the crash site.",
+      "Missouri State Highway Patrol, Butler Police Department, and Bates County Sheriff's Office responded to the scene.",
+      "Skydive Kansas City released a statement calling it 'a devastating loss' and said it is cooperating with authorities.",
+      "Dennis Jacobs, acting airport manager and Bates County Emergency Management Agency director, said the plane had just taken off and made a left turn before crashing, and he believed it was losing power.",
+      "Family members of those on board witnessed the crash."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether Skydive Kansas City commented or declined to comment",
+        "positions": {
+          "The Independent": "States 'Skydive Kansas City declined to comment when contacted by The Associated Press.'",
+          "CBS News / People.com / ABC News / Newsweek": "All report Skydive Kansas City released a public statement about the crash, which multiple outlets quote."
+        }
+      },
+      {
+        "topic": "Specifics of pre-crash flight behavior",
+        "positions": {
+          "People.com": "Cites Bates County Emergency Management officials saying the plane 'was unable to gain altitude after takeoff and made a sharp left turn before crashing about 300 yards from the runway,' and that it could not get above 100 feet.",
+          "The Independent / Newsweek": "Both cite Dennis Jacobs saying the plane 'had just taken off and made a left turn' and he believed it was losing power, stalled, and went down nose first. Less specific on altitude and distance.",
+          "ABC News": "Bates County Sheriff Anderson said the crash occurred 'shortly after the plane took off' but provided fewer details about the flight path."
+        }
+      },
+      {
+        "topic": "Crash location description",
+        "positions": {
+          "ABC News": "Sheriff Anderson said the plane crashed 'in a field that is part of the airport property.'",
+          "CBS News / Newsweek": "Sgt. Ewing said the plane 'landed in a field adjacent to the airport.'",
+          "People.com": "Reports the crash was 'about 300 yards from the runway.'"
+        }
+      },
+      {
+        "topic": "Day of the crash (Saturday vs. Sunday)",
+        "positions": {
+          "CBS News": "Body text contains an apparent discrepancy, at one point referring to the plane being 'manufactured in 2010' but also saying 'The plane that crashed Saturday was manufactured in 2010' \u2014 inconsistent with the rest of its own reporting and all other outlets, which say Sunday.",
+          "All other outlets": "Consistently report the crash occurred on Sunday, June 14, 2026."
+        }
+      },
+      {
+        "topic": "Skydiver experience level",
+        "positions": {
+          "People.com": "Reports via Jacobs that nine of the 11 skydivers were experienced and two were participating in tandem jumps.",
+          "Other outlets": "Do not report this detail."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only; no body text available for analysis. Headline uses 'aircraft operator says' as attribution, matching the Skydive Kansas City statement angle.",
+      "CBS News": "Leads with the death toll and crash facts. Includes background on the P750 aircraft type. Contains a minor internal inconsistency (referring to 'Saturday' once while the rest of the report and all other outlets say Sunday). Appends unrelated crash stories at the bottom. Does not include the airport manager's speculation about engine failure or the detail about witnesses being family members.",
+      "The New York Times": "Headline-only video page with a brief transcript fragment. The transcript snippet focuses on the human element \u2014 identifying families and making notifications \u2014 and mentions family witnesses. No substantive body text to analyze.",
+      "People.com": "Most human-interest-driven framing. Leads with the emotional detail that 'Loved Ones Watched from the Ground' in the headline. Provides the most granular details: 300 yards from the runway, under 100 feet altitude, nine experienced jumpers vs. two tandem. Includes the anecdote about a woman watching her brother die whose sister-in-law was supposed to be on the plane. Also reports the NTSB's statement about a preliminary report within 30 days and final report in 12\u201324 months. Embeds promotional content for its app.",
+      "The Independent": "Leads with a lengthy donation/subscription solicitation before reaching the story. Provides solid factual coverage including Jacobs's eyewitness account and speculation about engine failure. Adds contextual detail about Butler Memorial Airport serving ~30 privately owned aircraft and the seasonal nature of skydiving operations (late March/April through October/November). Uniquely states Skydive Kansas City 'declined to comment when contacted by The Associated Press,' which contradicts the company's press release quoted by other outlets \u2014 this may reflect different timing of outreach.",
+      "ABC News": "Shortest full-text article. Focuses on the sheriff's news briefing and his emotional response ('Our hearts go out to them'). Does not include the airport manager's speculation about engine failure. Does not report on the aircraft type or manufacture year in the body text. Cleanest, most restrained report.",
+      "Newsweek": "Most analytically framed. Uniquely includes an aviation safety expert (Jeff Guzzetti, former NTSB/FAA investigator) commenting on the broader pattern of poor maintenance in skydiving operations and the less stringent FAA rules governing skydiving planes vs. charter/airline operations. Also uniquely reports Jacobs's observation that 'it doesn't appear anyone tried to jump out before the crash.' Provides the most detail on the NTSB investigation process and timeline. Uses 'Brutal' in headline, attributing the word to Sgt. Ewing."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. All reporting relies on statements from the Missouri State Highway Patrol, Bates County Sheriff, FAA, NTSB, the acting airport manager, and Skydive Kansas City's press release. The Skydive Kansas City press release itself was not provided as a primary source in the dossier, though multiple outlets quote from it."
+    ],
+    "missing_context": [
+      "No outlet provides the pilot's name, qualifications, total flight hours, or history with Skydive Kansas City.",
+      "No outlet identifies any of the 12 victims by name; family notification is cited as the reason, but this limits the ability to verify the casualty count independently.",
+      "No outlet reports the aircraft's registration number or its maintenance history, which would be relevant given the expert commentary on skydiving plane maintenance standards.",
+      "Newsweek is the only outlet to include expert commentary on the regulatory framework governing skydiving operations (Part 91 vs. Part 135); other outlets omit this systemic context entirely.",
+      "No outlet reports weather conditions in detail beyond People.com quoting Jacobs saying 'the weather was very clear.'",
+      "No outlet provides Skydive Kansas City's safety record, inspection history, or any prior incidents.",
+      "The Skydive Kansas City press release was quoted by multiple outlets but not provided as a primary source in this dossier, limiting independent verification of exact wording.",
+      "CBS News contains an apparent Saturday/Sunday discrepancy in its body text that may confuse readers; no other outlet contains this error.",
+      "No outlet addresses whether the P750 aircraft type has a broader safety record or history of incidents in skydiving operations."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate the core facts of this breaking event with only minor disagreements. Framing differences exist but are not materially divergent enough to warrant a META post. No primary source is available to create tension with coverage. This is a straightforward multi-source confirmed breaking news story best served by a clear REPORT.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/video/watch/idRW893714062026RP1/",
+      "title": "Twelve people killed in Missouri plane crash, aircraft operator says - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/kansas-city-plane-crash-skydivers-pilot-killed/",
+      "title": "11 skydivers and pilot killed in plane crash near Kansas City - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/video/us/100000010966815/12-dead-in-missouri-skydiving-plane-crash.html",
+      "title": "Video: 12 Dead in Missouri Skydiving Plane Crash - The New York Times"
+    },
+    {
+      "outlet": "People.com",
+      "url": "https://people.com/12-dead-after-plane-carrying-skydivers-crashes-missouri-11997766",
+      "title": "12 Dead After Plane Carrying Skydivers Crashes as Their Loved Ones Watched from the Ground - People.com"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/missouri-plane-crash-butler-memorial-airport-b2995537.html",
+      "title": "Twelve dead after plane carrying skydivers crashes in Missouri, police say - The Independent"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/12-killed-plane-crash-missouri-airport-authorities/story?id=133867921",
+      "title": "11 skydivers and pilot killed in plane crash near Missouri airport: Authorities - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/missouri-plane-crash-12-dead-after-in-brutal-scene-12071462",
+      "title": "\"Brutal\" Missouri plane crash leaves 12 dead, authorities say - Newsweek"
+    }
+  ]
+}
