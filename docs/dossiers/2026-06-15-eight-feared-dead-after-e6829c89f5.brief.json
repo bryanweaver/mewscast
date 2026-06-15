@@ -1,0 +1,157 @@
+{
+  "story_id": "2026-06-15-eight-feared-dead-after-e6829c89f5",
+  "headline_seed": "Eight feared dead after US Air Force B-52 bomber plane crashes in California - BBC",
+  "brief": {
+    "story_id": "2026-06-15-eight-feared-dead-after-e6829c89f5",
+    "consensus_facts": [
+      "A U.S. Air Force B-52 Stratofortress crashed shortly after takeoff at Edwards Air Force Base in California on Monday, June 15, 2026, at approximately 11:20 a.m. local time (PDT).",
+      "Eight people were on board the aircraft at the time of the crash.",
+      "The aircraft was on a routine test mission when the crash occurred.",
+      "Air Force officials said 'initial indications are that the crash was not survivable.'",
+      "Emergency response personnel responded to the scene and officials were working to account for all personnel.",
+      "The crash is under investigation.",
+      "The Edwards airfield was closed after the crash, all inbound aircraft were diverted, and all non-commercial visitor passes were suspended.",
+      "Aerial footage showed a charred, smoking debris field in the desert at or near the base.",
+      "The B-52 Stratofortress is a long-range heavy bomber that has been in U.S. military service since the 1950s and is capable of carrying both nuclear and conventional weapons.",
+      "B-52 bombers typically carry a crew of five, including an aircraft commander, pilot, radar navigator, navigator, and electronic warfare officer.",
+      "Edwards Air Force Base is located approximately 100 miles north/northeast of Los Angeles in the Mojave Desert.",
+      "The 412th Test Wing oversees operations at Edwards Air Force Base."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of crew vs. people on board",
+        "positions": {
+          "NBC News": "Reports standard crew of five per Air Force specifications, while eight were aboard this flight.",
+          "BBC News": "Same \u2014 notes typical crew is five but eight were on this flight.",
+          "The Washington Post": "States eight were on board and notes the bomber 'typically carries a crew of five,' implying three additional personnel without explaining who they were.",
+          "The Guardian": "Reports eight on board and notes typical crew of five, does not explain the discrepancy.",
+          "Newsweek": "Reports eight on board, does not address the crew-size discrepancy.",
+          "The Independent": "Reports eight on board and notes the usual five-person crew; does not explain why three extra people were aboard."
+        }
+      },
+      {
+        "topic": "Whether the bomber was armed or carrying weapons",
+        "positions": {
+          "The Guardian": "Explicitly notes 'The military hasn't said whether the bomber was armed.'",
+          "All other outlets": "Do not address whether the aircraft was armed."
+        }
+      },
+      {
+        "topic": "Exact direction/location of Edwards relative to Los Angeles",
+        "positions": {
+          "NBC News": "About 100 miles northeast of Los Angeles.",
+          "BBC News": "About 100 miles north of Los Angeles.",
+          "The Washington Post": "Located 'just north of Los Angeles' and later 'to the north of Los Angeles.'",
+          "The Guardian": "About 100 miles north of Los Angeles.",
+          "Newsweek": "About 100 miles northeast of Los Angeles.",
+          "The Independent": "Located in Kern County (does not specify direction from LA)."
+        }
+      },
+      {
+        "topic": "Per-unit cost of a B-52",
+        "positions": {
+          "NBC News": "Each plane costs $84 million.",
+          "Newsweek": "Original per-unit cost about $94 million in today's dollars."
+        }
+      },
+      {
+        "topic": "Size of the current B-52 fleet",
+        "positions": {
+          "The Washington Post": "The service has about 70 B-52s remaining in its inventory.",
+          "Newsweek": "The U.S. Air Force currently operates 76 B-52 Stratofortress bombers (54 active-duty, 18 Reserve, plus approximately 12 in storage)."
+        }
+      },
+      {
+        "topic": "Radar/flight data analysis of the crash",
+        "positions": {
+          "The Washington Post": "Unique claim \u2014 a Washington Post analysis of radar tracking data shows the aircraft initially flew northeast around 11:10 a.m., gradually turned north, then 'abruptly hooking northwest and plunging at a rate of more than 5,000 feet per minute.'",
+          "All other outlets": "No other outlet reports independent radar or flight data analysis."
+        }
+      },
+      {
+        "topic": "Expert speculation on cause",
+        "positions": {
+          "The Guardian": "Quotes aviation safety expert Jeff Guzzetti suggesting a 'controllability issue' \u2014 possibly flight control malfunction, engine failure, or testing device failure \u2014 noting that flight tests are inherently riskier than normal operations.",
+          "The Washington Post": "Quotes retired Lt. Gen. Dave Deptula framing the crash in terms of the Air Force's aging, overstretched fleet rather than speculating on a specific cause.",
+          "All other outlets": "Do not include independent expert commentary on the probable cause."
+        }
+      },
+      {
+        "topic": "Connection to the U.S.-Iran war and broader Air Force strain",
+        "positions": {
+          "BBC News": "Notes the B-52 'has been participating in bombing raids on Iran during the latest US-Israeli war on the country.'",
+          "The Washington Post": "Extensively contextualizes: the Air Force has been 'under immense pressure' surging aircraft to support operations against Iran; references the March KC-135 midair collision in Iraq that killed six; quotes Deptula saying America cannot keep asking 'an aging, shrinking Air Force to respond' without more resources.",
+          "The Independent": "Notes B-52s have been deployed in support of 'President Donald Trump's war with Iran' and mentions Trump's same-day claim that a peace deal with Tehran is 'all signed.'",
+          "The Guardian": "Mentions the B-52 'has been used in conflicts ranging from the Vietnam war to recent operations in the Middle East' \u2014 no specific Iran war connection drawn.",
+          "NBC News": "Does not draw a connection to Iran or broader operational strain.",
+          "Newsweek": "Does not draw a connection to Iran or broader operational strain."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only entry. Attributes the casualty figure to CNN. No body text available for analysis.",
+      "NBC News": "Straightforward breaking-news treatment. Leads with the presumed fatalities and the crash circumstances. Includes basic B-52 specifications (cost, crew complement, nickname). Does not contextualize the crash within the Iran war or broader Air Force readiness issues. Includes boilerplate aircraft background but no independent expert commentary or flight data analysis. Short and factual.",
+      "BBC News": "Leads with the death toll fear and the official statement. Uniquely draws a direct line to the B-52's role in 'bombing raids on Iran during the latest US-Israeli war on the country' \u2014 the most explicit geopolitical framing in the dossier. Provides Cold War context about 'Mutually Assured Destruction' and the nuclear umbrella. Includes statements from two members of Congress (Obernolte, McClain). Does not include any independent expert commentary on the crash cause. Uses the phrase 'US-Israeli war' which is editorially loaded compared to other outlets.",
+      "The Washington Post": "The most analytically layered piece in the dossier. Leads with the crash basics but quickly pivots to broader context: the Air Force's 'immense pressure' from the Iran conflict, the March KC-135 crash that killed six, and a retired general's warning about an 'aging, shrinking Air Force.' Uniquely includes an independent radar data analysis showing the aircraft's final flight path and a descent rate exceeding 5,000 feet per minute. Notes a correction about the crash time. The reader comments summary (AI-generated by WaPo) references criticism of Trump and Hegseth, which the article itself does not editorialize about. Frames this as a systemic readiness story, not just an isolated accident.",
+      "The Guardian": "Leads with the presumed death toll and official statement. Uniquely raises the question of whether the bomber was armed \u2014 a detail no other outlet mentions. Includes the most substantive expert commentary, quoting Jeff Guzzetti (former FAA/NTSB investigator) at length on probable controllability issues and the inherent risk of flight tests. References Edwards' historical significance (Chuck Yeager). Uses 'recent operations in the Middle East' rather than naming the Iran war directly. The most safety-investigation-oriented framing in the dossier.",
+      "Newsweek": "The most specification-heavy piece. Devotes substantial space to B-52 background: cost per flying hour ($69,700\u2013$88,300), annual maintenance costs ($6.8M direct), the $48.6 billion modernization program, Rolls-Royce F130 engine replacement, fleet size breakdown (54 active, 18 Reserve, ~12 in storage), and Edwards AFB geography. Reads more like an explainer or reference article than breaking news coverage. Does not include expert commentary, geopolitical context, or flight data analysis. No connection drawn to Iran operations.",
+      "The Independent": "Leads with the death toll and 'horrific footage.' Uses emotionally charged language ('horrific California crash,' 'fiery crash'). Uniquely mentions Trump's same-day claim that an Iran peace deal is 'all signed' \u2014 contextualizing the crash against active geopolitical developments. Includes congressional reactions (Fong, Pfluger). Notes the B-52's role in Desert Storm and the Iran war. Somewhat tabloid framing compared to the rest of the dossier but includes solid factual detail."
+    },
+    "primary_source_alignment": [
+      "No primary source document was located for this story. All outlets appear to be working from the same Edwards Air Force Base statement posted on social media (X) and a subsequent press release. The quoted language \u2014 'An Air Force B-52 Stratofortress carrying eight people on a routine test mission crashed today shortly after take-off at 11:20 a.m. (PDT). Initial indications are that the crash was not survivable' \u2014 is consistent across all outlets with full body text, suggesting they are all drawing from the same official statement.",
+      "Without the primary source text available for independent comparison, it is not possible to verify whether any outlet added, omitted, or distorted language from the official statement."
+    ],
+    "missing_context": [
+      "No outlet explains why eight people were aboard an aircraft with a standard crew of five. The identity or role of the three additional personnel is unaddressed across all coverage \u2014 were they additional test crew, engineers, observers, or maintenance personnel?",
+      "No outlet reports whether the aircraft was carrying any weapons or munitions at the time of the crash. Only The Guardian notes this gap explicitly.",
+      "No outlet identifies the specific aircraft by tail number or states its age, except The Washington Post which quotes Deptula saying it was 'built in the early 1960s.' The specific test mission purpose is also unreported.",
+      "No outlet reports what new equipment or modifications, if any, were being tested on this flight \u2014 a critical detail given the test-mission context and The Guardian's expert noting that testing new equipment 'can create new challenges.'",
+      "No outlet addresses whether the crash site posed any environmental or hazardous materials risk, particularly given the B-52's capability to carry nuclear weapons.",
+      "The official Edwards AFB statement (the primary source) was not independently obtained for this dossier, limiting the ability to verify outlet quotations against the original text.",
+      "No outlet reports the names or ranks of the eight people on board, which is standard practice pending next-of-kin notification but is not explicitly noted by most outlets.",
+      "The Washington Post's radar data analysis \u2014 showing the aircraft's abrupt northwest hook and 5,000+ ft/min descent \u2014 is a single-source claim not corroborated by other outlets and its sourcing methodology is not described.",
+      "No outlet addresses the B-52's recent safety record or historical crash rate to contextualize whether this incident is anomalous.",
+      "The BBC's characterization of a 'US-Israeli war on Iran' and The Independent's mention of Trump claiming a peace deal is 'all signed' introduce geopolitical context that is not corroborated or explored by other outlets in this dossier, leaving readers without clarity on the operational tempo connection."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six outlets with full body text corroborate the core facts of this breaking story with high agreement. While framing diverges \u2014 particularly on Iran war context and systemic readiness themes \u2014 the factual core is solid and consistent. The disagreements are largely about emphasis and additional context rather than contradictory claims. A straight REPORT with appropriate hedging on the three unidentified additional crew members and the ongoing investigation status is the right format.",
+    "confidence": 0.88
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/eight-crew-believed-dead-california-b-52-bomber-crash-cnn-reports-2026-06-15/",
+      "title": "Eight crew believed dead in California B-52 bomber crash, CNN reports - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/air-force-bomber-crashed-takoff-california-base-rcna350183",
+      "title": "8 presumed dead after Air Force bomber crashes on takeoff at California base - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cqx10yql319o",
+      "title": ""
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/06/15/b-52-bomber-crashes-edwards-air-force-base-california/",
+      "title": "Air Force B-52 bomber crashes in California with 8 on board - The Washington Post"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jun/15/b52-bomber-crash-california-military-base",
+      "title": "Eight presumed dead after B-52 bomber crashes at California air force base - The Guardian"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/b52-crash-edwards-afb-stratofortress-california-air-force-12075664",
+      "title": "8 believed dead after B-52 bomber crashes at Edwards Air Force Base - Newsweek"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/california-plane-crash-b-52-bomber-edwards-air-force-b2996191.html",
+      "title": "Eight people aboard B-52 bomber feared dead in horrific California crash, Air Force says - The Independent"
+    }
+  ]
+}
