@@ -1,0 +1,81 @@
+{
+  "story_id": "2026-06-15-britain-unveils-sweeping-ban-4777ef28c9",
+  "headline_seed": "Britain unveils sweeping ban on social media for under-16s - NBC News",
+  "brief": {
+    "story_id": "2026-06-15-britain-unveils-sweeping-ban-4777ef28c9",
+    "consensus_facts": [
+      "All outlets covering this story headline that Britain is banning social media for children under 16; however, only NBC News provided retrievable full body text, so body-level consensus is limited.",
+      "Multiple outlet headlines (NBC News, The New York Times, NPR via NYT aggregation) confirm the UK is announcing a sweeping social media ban for under-16s, attributed to PM Keir Starmer's government."
+    ],
+    "disagreements": [
+      {
+        "topic": "Depth of detail available across outlets",
+        "positions": {
+          "NBC News": "Provides extensive body text with specifics: platforms covered (Snapchat, TikTok, YouTube, Instagram, Facebook, X), messaging exemptions (WhatsApp, Signal), consultation survey data (116,000+ responses, 83% of parents said risks outweigh benefits, 90% support age-16 minimum), legislative timeline (before Christmas, force next spring), \u00a3132.5M 'Every Child Can' program, U.S. Embassy concern, ARTICLE 19 criticism, YouTube pushback, Australia enforcement struggles, and Starmer quotes.",
+          "The New York Times": "Headline-only; no body text retrievable for comparison.",
+          "NPR (via NYT aggregation)": "Headline-only; no body text retrievable for comparison."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Article 1 is headline-only and covers an unrelated story (France-Britain Hormuz mission). Article 6 is headline-only and covers an unrelated story (Palestine Action ban). Neither is relevant to the social media ban story.",
+      "NBC News": "The sole outlet with retrievable full body text on the core story. Leads with Starmer's framing as both parent and PM. Provides substantial detail: named platforms, messaging exemptions, consultation data, legislative timeline, the \u00a3132.5M alternative-activity funding, and enforcement skepticism citing Australia's struggles. Includes critical voices (YouTube spokesperson, ARTICLE 19) and notes U.S. diplomatic pushback referencing free speech concerns and JD Vance. Also ties in related government actions on nude-image protections and Apple age-verification. The framing is broadly sympathetic to the policy rationale but includes skeptics and enforcement doubts.",
+      "Financial Times": "Article is paywalled and entirely unrelated (Britain's return to the EU). No usable content for this story.",
+      "Politico": "Article is blocked (403 error) and is unrelated (profile of Andy Burnham). No usable content for this story.",
+      "Associated Press": "Article covers an unrelated story (detention of a sanctioned Russian shadow-fleet tanker). No content on the social media ban.",
+      "The New York Times": "Headline-only ('Britain Announces Social Media Ban for Children'). No body text retrievable. Headline is neutral and factual. The aggregation page also links to NPR and NBC News headlines on the same story, confirming multi-outlet awareness."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the government press release, consultation report, or draft legislation text) was located in the dossier. NBC News references a government release and consultation data, but these claims cannot be independently verified against an original document in this brief."
+    ],
+    "missing_context": [
+      "Only one outlet (NBC News) provided retrievable full body text on this story. All other dossier articles were either headline-only, paywalled, blocked, or covered unrelated stories. This is a severe single-source limitation for body-level detail.",
+      "No primary source was retrieved \u2014 the UK government press release, the consultation survey results document, and the text of Starmer's video statement are all missing. These would be essential to verify NBC's reported statistics (116,000 responses, 83%/90% figures).",
+      "No right-leaning or conservative outlet coverage was retrieved, making it impossible to assess how this story is being framed across the political spectrum, particularly given the free-speech angle and U.S. diplomatic tension NBC references.",
+      "NBC News mentions Australia's enforcement struggles (7 in 10 parents reported children still had accounts) but no outlet explores the specific technical enforcement mechanism the UK plans to use, which is a central question for the policy's viability.",
+      "NBC News reports the U.S. Embassy expressed concern about burdens on American tech companies and free speech protections, but the Embassy statement itself was not retrieved as a primary source.",
+      "No coverage was retrieved discussing the UK's existing Online Safety Act and how this new ban intersects with or goes beyond that framework.",
+      "The \u00a3132.5M 'Every Child Can' program is mentioned only by NBC News \u2014 no independent reporting on this funding or its source was available in the dossier."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Despite multi-outlet headline awareness, only one outlet (NBC News) provided substantive body text. The story is time-sensitive \u2014 a major government policy announcement \u2014 but the dossier is too thin for a confident multi-source REPORT. A BULLETIN with appropriate hedging and attribution to NBC News is the responsible first post, with a plan to upgrade to REPORT once additional full-text sources or the government's primary document become available.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/france-britain-push-hormuz-mission-truce-nears-irans-stance-key-2026-06-15/",
+      "title": "France, Britain push Hormuz mission as truce nears, but Iran\u2019s stance key - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/united-kingdom/keir-starmer-social-media-restrictions-rcna350037",
+      "title": ""
+    },
+    {
+      "outlet": "Financial Times",
+      "url": "https://www.ft.com/content/37af5cdb-b7f6-42c9-8ad2-b2ef759e5cf8?syn-25a6b1a6=1",
+      "title": "Britain\u2019s return to the EU is only a matter of time - Financial Times"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/magazine/2026/06/14/andy-burnham-makerfield-election-profile-00960693",
+      "title": "He Quit Parliament. Now He\u2019s Set to Become Britain\u2019s Prime Minister. - Politico"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/shadow-fleet-russia-uk-starmer-moscow-110f493f617176d64d84e588754db091",
+      "title": "Britain detains sanctioned oil tanker believed to be linked to Russia\u2019s shadow fleet - AP News"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/britain-wins-appeal-that-palestine-action-ban-was-unlawful-2026-06-15/",
+      "title": "UK court upholds Britain's ban on Palestine Action group - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/15/world/europe/uk-social-media-children.html",
+      "title": "Britain Announces Social Media Ban for Children - The New York Times"
+    }
+  ]
+}
