@@ -1,0 +1,43 @@
+{
+  "story_id": "2026-06-15-trump-declares-d-c-b4c7ef4fd4",
+  "headline_seed": "Trump declares D.C.'s July 4th celebration a \"TRUMP RALLY\" - Axios",
+  "brief": {
+    "story_id": "2026-06-15-trump-declares-d-c-b4c7ef4fd4",
+    "consensus_facts": [
+      "Both outlets' headlines reference Trump declaring or framing a July 4 celebration in Washington D.C. as a 'Trump Rally.' This is headline-level consensus only; only Forbes provided retrievable body text, so no body-level consensus can be established."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "Axios": "Headline-only; no body text was retrievable (403 error). The headline seed ('Trump declares D.C.'s July 4th celebration a \"TRUMP RALLY\"') frames the story around Trump's declaration. No further framing analysis is possible without body text.",
+      "Forbes": "Leads with Trump's announcement of a 'Trump Rally' at the Lincoln Memorial on July 4, immediately juxtaposing it with the turmoil surrounding Freedom 250 and the Great American State Fair concert series. Forbes emphasizes the cascade of performer cancellations (Young MC, Martina McBride, the Commodores, Morris Day, Bret Michaels) and quotes Young MC saying artists were never told about political involvement. Forbes also notes at least eight states declining to participate and includes a 'CONTRA' section highlighting artists who have not dropped out (Flo Rida, Vanilla Ice). The piece frames the rally announcement as a pivot after the concert series collapsed, consistent with the headline framing it as a replacement. Forbes buries the specifics of what the rally itself will include (military bands, Trump's personal playlist, fireworks, flyovers, keynote remarks) lower in the piece, prioritizing the performer exodus narrative."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. Trump's original social media post or statement announcing the rally was not included in the dossier. Forbes appears to quote directly from a Trump statement ('the most spectacular TRUMP RALLY of them all,' 'LARGEST FIREWORKS SHOW IN HISTORY,' 'We will have none of those people that put you to sleep and constantly complain!'), but this underlying statement was not provided for independent verification."
+    ],
+    "missing_context": [
+      "Only one outlet (Forbes) provided retrievable body text. Axios returned a 403 error. This is a critically thin dossier for establishing consensus.",
+      "The original Trump statement or social media post announcing the rally is not included as a primary source and could not be independently verified against the Forbes reporting.",
+      "No outlet in this dossier addresses whether there are legal, permitting, or National Park Service considerations for holding a political rally at the Lincoln Memorial on July 4.",
+      "No information is provided about the status of Washington D.C.'s traditional, non-administration July 4 events (e.g., the Capitol Fourth concert, the National Independence Day Parade run by local organizers) and whether they continue separately.",
+      "No reporting on what 'keynote remarks' Trump plans to deliver or whether the event will include campaign-style content, voter registration, or other explicitly partisan elements beyond branding.",
+      "Forbes mentions Freedom 250 vs. America250 (the bipartisan nonprofit) but does not explain the current status or plans of America250's own semiquincentennial programming.",
+      "No sourcing on cost estimates for the rally, who is funding it (taxpayer funds vs. campaign funds vs. Freedom 250), or any legal questions about using public monuments for a branded political event.",
+      "Forbes mentions states citing cost as a reason for not participating in the Great American State Fair, with a quote from Gov. Healey about being charged, but does not detail what states were asked to pay or the total cost structure."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet provided usable body text, making this effectively a single-source story at the detail level. The story is time-sensitive (upcoming July 4 event with developing performer cancellations) and warrants a same-day hedge post that flags the key claims with clear single-source attribution, pending further corroboration.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/06/15/trump-rally-july-4-celebration-dc",
+      "title": ""
+    },
+    {
+      "outlet": "Forbes",
+      "url": "https://www.forbes.com/sites/maryroeloffs/2026/06/15/president-announces-trump-rally-on-july-4-as-freedom-250-events-in-turmoil/",
+      "title": "July 4 Celebration At Lincoln Memorial Will Be \u2018Trump Rally\u2019 - Forbes"
+    }
+  ]
+}
