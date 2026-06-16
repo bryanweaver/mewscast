@@ -1054,6 +1054,11 @@
       "did": "did:plc:64hidyitcp6mv3dckbiddyhj",
       "handle": "nyvinter.se",
       "timestamp": "2026-06-16T14:41:29.903351"
+    },
+    {
+      "did": "did:plc:yxzsbhd7dra3j6jkwffl6jhp",
+      "handle": "sheldonkitty.bsky.social",
+      "timestamp": "2026-06-16T17:42:10.955889"
     }
   ],
   "liked_posts": [
@@ -3446,6 +3451,11 @@
       "uri": "at://did:plc:64hidyitcp6mv3dckbiddyhj/app.bsky.feed.post/3mofsna2kzk2c",
       "author": "nyvinter.se",
       "timestamp": "2026-06-16T14:41:29.714706"
+    },
+    {
+      "uri": "at://did:plc:yxzsbhd7dra3j6jkwffl6jhp/app.bsky.feed.post/3mog2qrpm6s2z",
+      "author": "sheldonkitty.bsky.social",
+      "timestamp": "2026-06-16T17:42:10.748632"
     }
   ],
   "last_cleanup": "2026-06-12T20:54:10.868761",
