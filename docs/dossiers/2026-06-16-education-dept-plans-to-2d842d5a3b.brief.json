@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-06-16-education-dept-plans-to-2d842d5a3b",
+  "headline_seed": "Education Dept. plans to move special ed and civil rights out of the agency - The Washington Post",
+  "brief": {
+    "story_id": "2026-06-16-education-dept-plans-to-2d842d5a3b",
+    "consensus_facts": [
+      "The Trump administration announced on June 16, 2026, that it will move the Office of Special Education and Rehabilitative Services (OSERS) from the Education Department to the Department of Health and Human Services (HHS).",
+      "The administration also announced it will move the Education Department's Office for Civil Rights (OCR) to the Department of Justice (DOJ).",
+      "Education Secretary Linda McMahon framed the moves as aligning federal responsibilities with better-suited agencies.",
+      "The moves are part of the Trump administration's broader effort to dismantle the Education Department.",
+      "The Individuals with Disabilities Education Act (IDEA) guarantees disabled students access to free and appropriate public education; OSERS oversees its implementation.",
+      "Disability rights and special education advocates criticized the moves, warning they could disrupt services for students with disabilities.",
+      "Congressional Republicans hailed the moves while Democratic lawmakers and the Education Department's union criticized them."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope of what moves to HHS",
+        "positions": {
+          "NPR": "Describes the transfer as OSERS moving to HHS, encompassing programs supporting students with disabilities.",
+          "ABC News": "Specifies that HHS will receive the Offices of Special Education Programming (OSEP) and Rehabilitative Services Administration (RSA) \u2014 sub-offices within OSERS \u2014 rather than naming OSERS as a whole.",
+          "USA Today": "Describes it as OSERS entering an 'interagency agreement' to 'outsource its programs' to HHS, distinguishing this from a formal transfer."
+        }
+      },
+      {
+        "topic": "Legal mechanism \u2014 transfer vs. interagency agreement",
+        "positions": {
+          "USA Today": "Explicitly characterizes the moves as 'interagency agreements' used to effectively kill the Education Department without congressional action, noting laws mandate certain programs remain within the agency.",
+          "NPR": "Describes the moves as shifts/transfers without specifying the legal mechanism.",
+          "ABC News": "Describes transfers without specifying legal mechanism."
+        }
+      },
+      {
+        "topic": "Number of people affected",
+        "positions": {
+          "ABC News": "States 7 million people receive around $15 billion in grants through IDEA.",
+          "NPR": "Does not provide specific numbers of affected students.",
+          "USA Today": "Refers to 'millions of students with disabilities' without a specific figure."
+        }
+      },
+      {
+        "topic": "Whether the announcement constitutes a done deal",
+        "positions": {
+          "NPR": "Reports the administration 'said Tuesday it will move' the offices, framing it as a decision.",
+          "USA Today": "Says the Education Department 'is preparing to move core functions' and describes signed agreements, but also labels it a developing story.",
+          "ABC News": "Says the department 'is expected to announce' the moves, citing sources familiar, framing it as imminent but not yet finalized at time of filing."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline frames the story through a business/institutional lens \u2014 'Sheds More Programs in Bid to Dismantle Agency' \u2014 but the retrieved body text contains only boilerplate Bloomberg site navigation and a timestamp (June 16, 2026 at 5:26 PM UTC, updated 6:50 PM UTC). No substantive body text was available for analysis.",
+      "NPR": "Leads with Trump 'further gutting' the Education Department \u2014 strong active verb choice suggesting destructive intent. Centers the story on the impact to vulnerable populations. Gives prominent space to disability rights advocates and a former OSERS staffer speaking anonymously. Includes a vivid, concrete quote about schools buying 'football jerseys rather than pay for a one-on-one aide for a child with autism.' Frames McMahon's own language ('peel back the layers of federal bureaucracy') as a self-described push. Does not include any Republican praise or specific dollar figures for IDEA funding.",
+      "The Washington Post (Article 3)": "Headline-only capture. Headline is neutral and descriptive: 'Education Dept. plans to move special ed and civil rights out of the agency.' No body text available for framing analysis.",
+      "The Washington Post (Article 5)": "Brief AP-sourced body text. Neutral wire framing. Leads with dismantlement framing but provides minimal detail beyond the basic facts. No advocate or critic voices included in the retrieved text. Notes announcement was made Tuesday.",
+      "USA Today": "Most detailed reporting in the dossier. Leads with the potential disruption to students with disabilities. Uniquely emphasizes the legal tension \u2014 notes 'laws mandating that certain programs remain within the longstanding agency' and characterizes the mechanism as 'interagency agreements' designed to circumvent Congress. Provides important historical context: the Education Department cut its workforce in half in March 2025, previously fired nearly every worker in the special education division during a government shutdown (a USA Today exclusive), and later pleaded with OCR employees to return to clear a case backlog. Includes the department's rebuttal that the move 'will not impact students, parents or families.' Quotes Chad Rummel of the Council for Exceptional Children and Rachel Gittleman of the department's union. Only outlet to mention the department claims it spent six months listening to families.",
+      "ABC News": "Shortest substantive report. Leads with sourcing ('sources familiar') and frames it as 'a major step in dismantling.' Uniquely provides specific IDEA funding figures ($15 billion in grants, 7 million people). Notes Trump campaigned in 2024 on closing the agency. Labels it a developing story. Does not include advocate criticism or McMahon's full statement."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the actual interagency agreements, McMahon's full press release, or any executive orders) was located in the dossier. All outlet reporting is based on the administration's announcement and unnamed sources. The absence of the primary documents means it is impossible to verify whether outlets accurately characterize the legal mechanism, scope, or timeline of the transfers."
+    ],
+    "missing_context": [
+      "No outlet provides the full text of the interagency agreements or explains the precise legal authority under which the transfers are being executed.",
+      "USA Today alone raises the question of whether existing law prohibits moving these functions out of the Education Department without congressional action, but no outlet explores the legal arguments in depth or cites specific statutory provisions.",
+      "No outlet explains what happens to pending OCR discrimination cases or active IDEA compliance disputes during the transition.",
+      "No outlet reports on the position of HHS Secretary Robert F. Kennedy Jr. regarding taking on special education oversight, beyond USA Today naming him as running HHS.",
+      "No outlet explains whether the transferred staff retain their positions, change agencies, or face further layoffs.",
+      "No outlet addresses how states will practically interact with the new federal oversight structure or whether grant disbursement mechanisms will change.",
+      "The Bloomberg article body contained no substantive text \u2014 only navigation boilerplate \u2014 likely behind a paywall. This limits cross-source corroboration from the wire/center-right perspective.",
+      "No primary source document was available in the dossier, which is a significant gap given that the legal mechanism (interagency agreement vs. statutory transfer) is central to the story's implications."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with substantive body text corroborate the core facts of the announcement. While framing differs \u2014 NPR and USA Today emphasize disruption and advocate alarm, ABC News is terse and factual \u2014 the underlying event is not in dispute. The framing differences are real but predictable and do not rise to the level of a META post. A straightforward REPORT with noted advocate concerns and the legal-mechanism question flagged as unresolved is appropriate.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-16/education-dept-sheds-more-programs-in-bid-to-dismantle-agency",
+      "title": "Education Dept. Sheds More Programs in Bid to Dismantle Agency - Bloomberg.com"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/16/nx-s1-5717030/special-ed-civil-rights-education-department",
+      "title": "Trump further guts Education Dept. by shifting oversight of special ed, civil rights - NPR"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/education/2026/06/16/education-dept-plans-move-special-ed-civil-rights-out-agency/",
+      "title": "Education Dept. plans to move special ed and civil rights out of the agency - The Washington Post"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/06/16/education-department-trump-admin-changes/87846565007/",
+      "title": "Latest Education Dept. change could disrupt services for students with disabilities - USA Today"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/06/16/trump-civil-rights-special-education/89895c68-69a8-11f1-830e-133d20cadd28_story.html",
+      "title": "Trump moves oversight of special education and civil rights out of the Education Department - The Washington Post"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/department-education-taking-major-step-dismantling-sources/story?id=133927816",
+      "title": "Department of Education taking major step in dismantling itself: Sources - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
