@@ -1,0 +1,115 @@
+{
+  "story_id": "2026-06-16-live-updates-primary-elections-a082e2f4f4",
+  "headline_seed": "Live updates: Primary elections in Alabama, Oklahoma and Georgia further test Trump\u2019s influence - AP News",
+  "brief": {
+    "story_id": "2026-06-16-live-updates-primary-elections-a082e2f4f4",
+    "consensus_facts": [
+      "Primary and runoff elections are being held on Tuesday, June 16, 2026, in Georgia, Alabama, Oklahoma, Washington D.C., and at least one California congressional district.",
+      "Georgia's Republican Senate primary runoff features Rep. Mike Collins against Derek Dooley, with the winner to face Democratic Sen. Jon Ossoff in November.",
+      "Georgia's Republican gubernatorial primary runoff features Lt. Gov. Burt Jones against businessman Rick Jackson, with the winner to face Democrat Keisha Lance Bottoms in November.",
+      "Trump endorsed Rep. Mike Collins in the Georgia Senate runoff; Gov. Brian Kemp backed Derek Dooley, creating a proxy battle between the two Republican leaders.",
+      "Washington D.C. voters are choosing a Democratic mayoral nominee to replace Muriel Bowser, who is not seeking reelection, with Janeese Lewis George and Kenyan McDuffie as leading contenders.",
+      "D.C. is using ranked-choice voting for the first time, which could delay results if no candidate tops 50%.",
+      "Trump suggested he might order a federal takeover of D.C. if Janeese Lewis George, a self-described democratic socialist, wins the mayoral race.",
+      "Both Trump and Kemp endorsed Lt. Gov. Burt Jones in the Georgia governor's race.",
+      "Collins led the May 19 Georgia Senate primary with over 40% of the vote compared to Dooley's roughly 30%."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of Janeese Lewis George",
+        "positions": {
+          "CNN": "Describes her as 'a democratic socialist backed by several local labor unions' and contextualizes her potential win alongside similar candidates in other cities.",
+          "Fox News": "Leads with Trump's characterization of her as a 'crazy socialist' and frames the story around Trump's threat to retake D.C."
+        }
+      },
+      {
+        "topic": "Framing of the Georgia Senate race",
+        "positions": {
+          "CNN": "Frames it as a Trump vs. Kemp proxy battle, providing extensive context on their rivalry dating to 2020 election fraud claims.",
+          "The New York Times (results page)": "Presents it as a straightforward race for the Republican nomination to face Ossoff, with minimal framing around the Trump-Kemp rivalry.",
+          "NBC News": "Does not specifically discuss the Georgia Senate runoff dynamics; focuses on broad national primary context."
+        }
+      },
+      {
+        "topic": "Scope of races covered",
+        "positions": {
+          "CNN": "Focuses on Georgia, D.C., and briefly mentions Alabama, Oklahoma, and California.",
+          "The New York Times (results page)": "Covers Georgia, Alabama, Oklahoma, D.C., California 14th District, and Oklahoma 1st District with individual race sections.",
+          "Fox News": "Leads almost exclusively with the D.C. mayoral race and Trump's comments about Lewis George.",
+          "NBC News": "Provides a national framework for all 2026 primaries rather than focusing on specific races."
+        }
+      },
+      {
+        "topic": "Trump's threat regarding D.C.",
+        "positions": {
+          "CNN": "Reports Trump said he 'maybe would take back Washington, run it on the federal basis' if Lewis George wins, placed at the end of the D.C. section.",
+          "Fox News": "Leads its coverage with Trump's threat, quoting him saying 'We won't put up with it. We're not going to lose our businesses,' and adds context about the prior federalization of D.C. police last August."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "The AP article in the dossier consists entirely of photo captions from polling locations in D.C., Oklahoma, and Georgia. No substantive reporting on races, candidates, or Trump's influence is present in the retrieved body text. The headline references Trump's influence being tested, but the body text does not support any analytical claims.",
+      "The New York Times (headline-only, Article 2)": "Headline frames the story as a test of Trump's grip on Republicans. No body text available for analysis. The framing in the headline alone suggests an emphasis on Trump's political influence as the central narrative.",
+      "The New York Times (results page, Article 4)": "Provides a structured, data-forward results page covering multiple races across states. Leads with poll closing times and race-by-race breakdowns. Mentions Jon Ossoff as a potential 2028 presidential contender in the Georgia Senate section. Includes an Oklahoma 1st District note about 10 Republican candidates. The tone is clinical and informational rather than narrative-driven. Buries the Trump-Kemp dynamic by not mentioning it at all in the retrieved text.",
+      "Reuters": "Headline-only. Title frames the story as Trump endorsements facing tests in Georgia and Alabama primaries. No body text available for analysis.",
+      "NBC News": "Provides a broad national primer on 2026 primaries rather than specific race-day coverage. Frames everything through the lens of congressional control: Democrats needing four Senate seats and three House seats. Does not discuss any specific Tuesday race in the body text. Emphasizes methodology and accuracy of its Decision Desk. This is a standing elections page, not race-day reporting.",
+      "CNN": "The most detailed single-day reporting in the dossier. Leads with the Georgia Trump-vs-Kemp proxy battle narrative, giving it the most space and context. Provides significant background on the Trump-Kemp rivalry dating to 2020. Includes a secondary focus on the D.C. mayoral race with substantial detail on ranked-choice voting and the democratic socialist angle. Notes the broader trend of democratic socialists potentially governing three major cities. Places Trump's D.C. takeover threat at the end of the D.C. section rather than leading with it. Includes an embedded prompt asking readers if the economy is affecting their vote \u2014 editorial engagement strategy.",
+      "Fox News": "Leads and focuses almost exclusively on Trump's comments about a potential federal takeover of D.C. if Lewis George wins. Uses Trump's language ('crazy socialist') in the pinned lead item. Provides unique detail about Trump's prior federalization of D.C. police last August and Mayor Bowser's response. Does not discuss the Georgia races, Alabama, or Oklahoma in the retrieved body text. Frames the D.C. race as a confrontation between Trump and a socialist candidate rather than as a local governance choice."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All analysis is based solely on outlet reporting."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides details on the Alabama Senate primary candidates or dynamics, despite Alabama appearing in every headline. CNN mentions it exists but provides no substance.",
+      "No outlet provides detail on Oklahoma's Senate primary candidates or the state question on minimum wage referenced in the Reuters headline.",
+      "The California 14th District special election to replace Eric Swalwell is mentioned by the NYT results page and briefly by CNN, but no outlet provides candidate names or dynamics.",
+      "No outlet discusses voter turnout expectations or early voting data for any of the races.",
+      "The AP article body text contains only photo captions, not the substantive live-updates reporting its headline and URL suggest. The full AP live blog was not successfully retrieved.",
+      "No outlet provides polling data for the Georgia Senate or governor's runoffs beyond the May 19 primary results.",
+      "Fox News mentions Trump federalizing D.C.'s police force last August; no other outlet in the dossier provides context or confirmation of that event.",
+      "Reuters and NYT Article 2 are headline-only, significantly limiting the dossier's depth from wire and lean-left perspectives.",
+      "No outlet discusses the Democratic primary dynamics in Alabama or Oklahoma in any detail.",
+      "The dossier lacks any right-of-center outlet with full body text covering the Georgia races, creating a gap in understanding how conservative media frames the Trump-Collins endorsement beyond Trump's influence narrative."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets are covering the same election day but with materially different emphases: CNN leads with the Trump-Kemp proxy battle in Georgia, Fox News leads with Trump's threat to federalize D.C. over a socialist mayor, NBC frames everything through congressional control, and the NYT results page is data-only. The divergent framing choices across outlets are themselves the most interesting story for a Croncat audience, especially since results are not yet in.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/live/election-primary-06-16-2026",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/16/us/politics/elections-georgia-alabama-oklahoma-runoff.html",
+      "title": "Will Trump Retain His Grip on Republicans? What to Watch in Tuesday\u2019s Primaries. - The New York Times"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/georgia-republicans-take-ossoff-oklahoma-votes-minimum-wage-tuesdays-us-2026-06-16/",
+      "title": "Trump endorsements face tests in Georgia, Alabama primaries - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/interactive/2026/us/elections/results-key-races-june-16-ga-al-ok.html",
+      "title": "Live 2026 Election Results: Georgia, Alabama and Oklahoma Primary and Runoff Races - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-primary-elections/national",
+      "title": "National Primary Elections 2026: Live Results and Map - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/16/politics/georgia-alabama-oklahoma-washington-dc-primaries-what-to-watch",
+      "title": "What to watch in Tuesday\u2019s primaries in Georgia, Alabama, Oklahoma and Washington, DC - CNN"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/live-news/democracy-26-live-primary-election-results-california-georgia-alabama-oklahoma-dc-06-16-2026",
+      "title": "Live primary election results: California, Georgia, DC, Alabama, Oklahoma - Fox News"
+    }
+  ]
+}
