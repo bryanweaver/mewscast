@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-06-15 23:32 UTC*
+*Last updated: 2026-06-16 23:30 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,10 +12,10 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 388 | - |
-| Likes | 398 | +4 |
-| Reposts | 72 | +0 |
-| Replies | 390 | - |
+| Posts tracked | 391 | - |
+| Likes | 411 | +2 |
+| Reposts | 73 | +0 |
+| Replies | 393 | - |
 
 ### X (Twitter)
 
@@ -33,6 +33,9 @@ Tracking engagement for posts from the last 30 days.
 **[BLUESKY]** 10 likes, 5 reposts
 > A federal judge blocked the Trump administration's removal of National Park Serv...
 
+**[BLUESKY]** 11 likes, 1 reposts
+> #BreakingMews FBI foiled an alleged drone-and-gunman plot targeting the UFC even...
+
 **[BLUESKY]** 6 likes, 3 reposts
 > Workers began removing Trump's name from the Kennedy Center facade Saturday, a d...
 
@@ -46,9 +49,6 @@ Oil up 25% since ...
 
 Rideshare drivers are ...
 
-**[X]** 7 likes, 0 reposts
-> Elon Musk is requiring banks and law firms working on the SpaceX IPO to buy Grok...
-
 ---
 
-*Data snapshots: 12601 total across 614 posts*
+*Data snapshots: 12685 total across 617 posts*
