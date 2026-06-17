@@ -1,0 +1,46 @@
+{
+  "story_id": "2026-06-17-subcontractors-say-they-re-3ef572d67a",
+  "headline_seed": "Subcontractors say they\u2019re owed millions, face financial ruin, after helping build Obama Presidential Center - Fox News",
+  "brief": {
+    "story_id": "2026-06-17-subcontractors-say-they-re-3ef572d67a",
+    "consensus_facts": [
+      "Both Fox News articles report that subcontractors who worked on the Obama Presidential Center say they are still owed money as the center's grand opening approaches.",
+      "Both Fox News articles reference Black subcontracting companies among those claiming unpaid balances, with Omar Shareef, president of the African American Contractors Association, cited as an advocate raising concerns.",
+      "Both Fox News articles indicate the Obama Presidential Center is preparing to open on Juneteenth (Friday, June 19/20, 2026)."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "Fox News (Article 1)": "This is the substantive investigative piece. Leads with the contrast between the center's stated mission to uplift minority-owned and local businesses and the claims of unpaid subcontractors. Emphasizes personal financial and emotional toll on Adamson Plumbing owner Mike Owen (~$4M claimed losses). Highlights the star-studded pre-opening celebration (Springsteen, Stevie Wonder, John Legend) as a backdrop to contractor suffering. Includes the Obama Foundation's response that it paid Lakeside Alliance (the construction manager) and has no direct contractual relationship with subcontractors \u2014 effectively distancing the Foundation from liability. Notes the Foundation's $470M reserve fund is reportedly funded at only ~$1M, referencing a prior Fox News Digital investigation. Overall construction costs cited as $830M in 2021, likely past $1B now. Frames the project as chaotic with design changes, rework, and scheduling disruptions. Notes a culture of silence \u2014 confidentiality agreements and fear of retaliation. Includes prior Fox News Digital reporting on 'anti-racism' pledge in job listings and 'far-left' agenda framing, embedding this story in a broader editorial narrative critical of the Obama Foundation.",
+      "Fox News (Article 2)": "This is a video clip page with minimal body text \u2014 essentially a promotional stub for a 3:12 video segment. The only substantive content is a one-sentence summary stating that several Black subcontracting companies are still seeking payment and that Omar Shareef of the African American Contractors Association is the source. No additional reporting details, no numbers, no Foundation response. Functions as a companion piece to Article 1 rather than independent reporting."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, contracts, financial records, Foundation statements) were located in the dossier. All claims about amounts owed, the reserve fund balance, and construction costs rely solely on Fox News Digital's reporting and the subcontractors' own statements. The Obama Foundation's response \u2014 that it paid Lakeside Alliance and has no contractual relationship with subcontractors \u2014 is reported by Fox News but no underlying documentation (contracts, payment records) is available to verify either side's claims."
+    ],
+    "missing_context": [
+      "The entire dossier consists of two Fox News articles (one substantive, one a video stub), both from the same outlet and same investigation. There is zero independent corroboration from any other news organization. This is a single-outlet dossier.",
+      "No response from Lakeside Alliance (the construction manager joint venture) is included. Lakeside is the entity the Obama Foundation says was responsible for paying subcontractors, making their perspective critical to the story.",
+      "No details on how many subcontractors total are claiming unpaid balances, nor the aggregate dollar amount in dispute. The article references 'multiple construction firms' and losses ranging from 'hundreds of thousands to tens of millions' but is vague.",
+      "No information on whether any subcontractors have filed lawsuits, mechanic's liens, or formal legal actions \u2014 or whether any dispute resolution process is underway.",
+      "No reporting from non-Fox outlets (e.g., Chicago Tribune, Chicago Sun-Times, local TV news, or national outlets) on the same claims, which a fair-minded reader would need to assess the story's broader credibility and scope.",
+      "No detail on the contractual structure between the Obama Foundation, Lakeside Alliance, and the subcontractors \u2014 e.g., whether subcontractors had direct payment protections, bonding requirements, or dispute resolution mechanisms.",
+      "The $470M reserve fund claim (funded at ~$1M) references a prior Fox News Digital investigation but no primary documentation is available to verify this figure.",
+      "No context on whether payment disputes of this nature are common on large-scale construction projects of comparable size ($800M+), which would help readers assess whether these complaints reflect systemic problems specific to this project or industry-wide patterns.",
+      "Adamson Plumbing is noted as 'not minority-owned,' but is prominently featured alongside the racial equity framing. The article does not specify how many of the claimant firms are minority-owned vs. not."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "This is a single-outlet investigation with no independent corroboration from other news organizations and no primary source documents in the dossier. The claims are significant but unverified by a second source. A BULLETIN with appropriate hedging ('Fox News Digital reports...') is the responsible treatment until additional outlets or primary sources confirm or add context.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/politics/subcontractors-say-theyre-owed-millions-face-financial-ruin-helping-build-obama-presidential-center",
+      "title": ""
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/video/6398287620112",
+      "title": "Black subcontractors at Obama Presidential Center still seeking payment as Juneteenth opening nears, advocate says - Fox News"
+    }
+  ]
+}
