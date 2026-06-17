@@ -1,0 +1,72 @@
+{
+  "story_id": "2026-06-17-live-updates-trump-delays-1ac2c631f3",
+  "headline_seed": "Live Updates: Trump Delays Jay Clayton's Nomination to Pressure Congress on Voting Restrictions Bill - The New York Times",
+  "brief": {
+    "story_id": "2026-06-17-live-updates-trump-delays-1ac2c631f3",
+    "consensus_facts": [
+      "President Trump announced he is delaying Jay Clayton's nomination hearing to be Director of National Intelligence.",
+      "Trump made the announcement in an overnight post on Truth Social while at the G7 summit in Evian-les-Bains, France.",
+      "Trump linked the delay to frustration over the lapsed FISA Section 702 surveillance program and a voter ID bill (the Save America Act).",
+      "Trump said he would not approve FISA renewal without passage of the Save America Act voter ID legislation.",
+      "Clayton currently serves as U.S. Attorney for the Southern District of New York.",
+      "Bill Pulte will remain as acting Director of National Intelligence in the meantime.",
+      "Trump said he does not want Clayton removed from his current role until his replacement, Jamie McDonald, is approved as U.S. Attorney."
+    ],
+    "disagreements": [
+      {
+        "topic": "Headline framing of Trump's action",
+        "positions": {
+          "Associated Press": "Headline uses 'delays' Clayton's nomination and frames it as pushing Congress on 'voter ID bill'.",
+          "NBC News": "Headline uses 'delays' and cites frustration over both the 'spying tool' (FISA) and 'voter ID bill' \u2014 giving dual framing.",
+          "The New York Times": "Headline uses 'Pulls Back Intelligence Pick' and frames the pressure target as an 'Elections Bill' rather than 'voter ID bill' \u2014 a softer, broader label."
+        }
+      },
+      {
+        "topic": "Characterization of the voting legislation",
+        "positions": {
+          "NBC News": "Describes it as 'a bill requiring people to provide proof of citizenship to register to vote and to show ID at the polls' \u2014 specifying both registration and polling requirements.",
+          "Associated Press": "Headline refers to 'voter ID bill' but body text was not retrievable for further detail.",
+          "The New York Times": "Headline calls it an 'Elections Bill' with the broader label 'Voting Restrictions Bill' in the seed headline \u2014 implying restrictive framing."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Only a photo caption block was retrievable; no body text available. The headline frames Trump as actively using Clayton's nomination as leverage to 'push Congress on voter ID bill,' placing the voter ID element front and center. Without body text, no deeper framing analysis is possible.",
+      "NBC News": "The only outlet with full retrievable body text. Leads with the delay and Trump's frustration, then provides substantial context on the FISA lapse, Pulte's controversial acting role, Democratic concerns about Pulte pursuing politically motivated investigations, and Schumer's criticisms. Provides direct, lengthy Trump quotes from Truth Social including his 'Dumocrats' language. Notes the bipartisan nature of FISA opposition. Buries the detail that a court order from last March allows the program to continue for another 12 months \u2014 an important legal nuance that tempers the urgency framing. Includes context that the Republican-controlled Congress lacks support for the voting bill in either chamber. Attributes Democratic opposition to FISA renewal partly to Trump's instinct to install Pulte, a close ally, as acting DNI.",
+      "The New York Times": "Headline-only; no body text retrievable. Uses 'Pulls Back' rather than 'delays' \u2014 a slightly stronger verb implying withdrawal rather than postponement. Labels the legislation an 'Elections Bill' in the retrieved headline and 'Voting Restrictions Bill' in the seed headline, framing the bill through its restrictive impact rather than its stated purpose (voter ID/proof of citizenship). This is the most editorially charged label among the three outlets."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., Trump's Truth Social post, FISA legislation text, or Save America Act text) was located in the dossier. NBC News quotes Trump's Truth Social post at length, but the original post itself was not provided for independent verification."
+    ],
+    "missing_context": [
+      "Only one outlet (NBC News) provided full body text. The Associated Press article returned only photo captions, and The New York Times was headline-only. Consensus facts are therefore heavily dependent on NBC News's reporting cross-checked against headline-level agreement from the other two outlets.",
+      "Trump's full Truth Social post was not provided as a primary source; all quotes are filtered through NBC News's selection.",
+      "No outlet in the dossier explains the specific provisions of the Save America Act beyond NBC News's one-sentence summary of proof-of-citizenship and voter ID requirements.",
+      "No outlet addresses the current legal status of FISA Section 702 in detail \u2014 NBC News mentions a court order extending it for 12 months from last March, but does not clarify whether that extension is still in effect or when it expires.",
+      "No outlet discusses what practical intelligence consequences the FISA lapse has had so far or whether agencies have publicly described operational impacts.",
+      "No outlet provides details on the timeline or status of Jamie McDonald's confirmation process, which Trump set as a precondition.",
+      "No Republican congressional reaction to Trump's delay or his new preconditions is included in the available body text.",
+      "The dossier lacks any conservative-leaning outlet perspective (e.g., Fox News, New York Post, Daily Wire), leaving the slant matrix incomplete on the right side."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets confirm the core facts \u2014 Trump delayed Clayton's DNI nomination hearing and linked it to FISA and voter ID legislation \u2014 but the dossier is thin (only one full body text). There is insufficient framing divergence from retrievable body text to justify a META post. A straightforward REPORT with clear attribution to NBC News for detail and hedging on single-source depth is the responsible choice.",
+    "confidence": 0.52
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-jay-clayton-congress-voting-bill-bc75e8a07ea29788b602625cf1c54b47",
+      "title": "Trump delays Clayton's nomination for intelligence director to try to push Congress on voter ID bill - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/donald-trump/trump-delays-jay-clayton-nomination-intel-director-fisa-save-america-rcna350470",
+      "title": "Trump delays Jay Clayton\u2019s nomination for intel director, citing frustration over spying tool and voter ID bill - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/17/us/politics/senate-intelligence-nomination-voter-restrictions.html",
+      "title": "Trump Pulls Back Intelligence Pick to Pressure Congress on Elections Bill - The New York Times"
+    }
+  ]
+}
