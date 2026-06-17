@@ -1069,6 +1069,11 @@
       "did": "did:plc:jwa6ti2hat7u3zqockexklvv",
       "handle": "galaktix.bsky.social",
       "timestamp": "2026-06-17T01:57:19.295372"
+    },
+    {
+      "did": "did:plc:cc7tzd4bb5sh6d5taioq256d",
+      "handle": "candacepedraza.bsky.social",
+      "timestamp": "2026-06-17T14:16:02.460402"
     }
   ],
   "liked_posts": [
@@ -3476,6 +3481,11 @@
       "uri": "at://did:plc:jwa6ti2hat7u3zqockexklvv/app.bsky.feed.post/3moehwcr3522s",
       "author": "galaktix.bsky.social",
       "timestamp": "2026-06-17T01:57:19.132464"
+    },
+    {
+      "uri": "at://did:plc:cc7tzd4bb5sh6d5taioq256d/app.bsky.feed.post/3moiho3x7gs2p",
+      "author": "candacepedraza.bsky.social",
+      "timestamp": "2026-06-17T14:16:02.325831"
     }
   ],
   "last_cleanup": "2026-06-12T20:54:10.868761",
