@@ -22,6 +22,54 @@ If the shot type and post type seem to conflict (e.g. a META anchor-desk post dr
 
 ---
 
+## TELL THE STORY, NOT THE SETTING — this is the #1 rule
+
+The most common failure is a generic "Walter standing in front of a famous building" image. A SCOTUS story about weed smokers being allowed to own guns should NOT produce "Walter in front of the Supreme Court." That image could illustrate ANY court story — it tells the viewer nothing.
+
+**Core rules:**
+- The image should tell the STORY, not show the SETTING. A viewer should be able to guess what the article is about from the image alone.
+- Focus on the OBJECTS, EVIDENCE, and STAKES of the story — documents, weapons, money, substances, technology, people affected.
+- Avoid exterior establishing shots of famous buildings. Go INSIDE. Show the specific scene where the story's tension lives.
+- If the story involves a policy change or ruling, show the IMPACT on real people/objects, not the institution that made the ruling.
+
+**The test:** strip the caption away. Could someone see the image alone and roughly guess the headline? If the answer is "it's some court/political/tech story" — you picked the lazy setting. If the answer is "it's about guns and cannabis being legally linked" — you nailed the story.
+
+### Category examples — find the OBJECTS and CONFLICT of THIS story
+
+**Court / Legal stories:**
+- BAD: Walter in front of the Supreme Court building.
+- GOOD: Walter at a judge's bench examining a cannabis leaf next to a holstered firearm, with a constitutional document unfurled behind them.
+- GOOD: Walter studying a court opinion document with key phrases visible, dramatic side-lighting.
+
+**Political stories:**
+- BAD: Walter in front of the Capitol / White House.
+- GOOD: Walter in a smoke-filled back room with lobbyists' briefcases and a wall of campaign donation charts.
+- GOOD: Walter at a podium surrounded by microphones, flashbulbs popping, with protest signs visible in the background.
+
+**Economic / Finance stories:**
+- BAD: Walter in front of Wall Street or a bank.
+- GOOD: Walter on a trading floor staring at plummeting red ticker screens, papers flying.
+- GOOD: Walter at a kitchen table surrounded by bills and an overdue notice, warm lamplight.
+
+**Crime / Justice stories:**
+- BAD: Walter in front of a police station or courthouse.
+- GOOD: Walter in an evidence room examining tagged items under harsh fluorescent light.
+- GOOD: Walter behind crime scene tape with forensic markers visible.
+
+**Tech stories:**
+- BAD: Walter in front of a tech company HQ.
+- GOOD: Walter at a cluttered dev workstation with multiple monitors showing code and a cracked phone screen.
+- GOOD: Walter inside a server room with blinking lights and dangling ethernet cables.
+
+**Military / International stories:**
+- BAD: Walter in front of a military base or embassy.
+- GOOD: Walter in a press vest at a checkpoint with sandbags, looking through binoculars at a distant horizon.
+- GOOD: Walter at a diplomatic table with flags and untouched coffee cups, tense body language.
+
+These categories are illustrative, not exhaustive — apply the same instinct to health, sports, science, climate, and any other beat: find the specific objects, evidence, and human stakes of THIS story and build the scene around them.
+
+---
+
 ## VISUAL DIRECTION BY POST TYPE
 
 ### If post_type is REPORT or BULLETIN — "Reporter on Location"
