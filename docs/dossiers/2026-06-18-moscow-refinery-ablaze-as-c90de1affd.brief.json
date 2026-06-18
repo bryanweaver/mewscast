@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-06-18-moscow-refinery-ablaze-as-c90de1affd",
+  "headline_seed": "Moscow refinery ablaze as Ukraine launches biggest attack on Russian capital in years - NBC News",
+  "brief": {
+    "story_id": "2026-06-18-moscow-refinery-ablaze-as-c90de1affd",
+    "consensus_facts": [
+      "Ukrainian drones struck a major oil refinery in Moscow (the Kapotnya refinery), setting it ablaze in what multiple outlets describe as the largest Ukrainian attack on the Russian capital since the start of the full-scale war.",
+      "Close to 190-200 drones were intercepted or shot down on approach to Moscow, according to Russian officials cited by multiple outlets.",
+      "Ukrainian President Volodymyr Zelenskyy publicly claimed responsibility for the strikes, framing them as 'long-range sanctions' and warning that 'Moscow will burn' if Russian strikes on Ukraine continue.",
+      "The attack caused thick black smoke to rise over Moscow and disrupted commercial flights at the capital's major airports.",
+      "The refinery had also been struck by Ukrainian drones earlier in the week (Tuesday).",
+      "The attack came during a period of renewed diplomatic activity, with Zelenskyy meeting G7 leaders and reporting a coordination call with Trump and Macron."
+    ],
+    "disagreements": [
+      {
+        "topic": "Casualty figures in the Moscow region",
+        "positions": {
+          "BBC News": "Reports 17 people wounded in the Moscow region, citing local governor Andrei Vorobyov.",
+          "NBC News": "Does not specify a casualty figure for the Moscow region attack itself, though mentions an apartment building was damaged in Zhukovsky near Moscow."
+        }
+      },
+      {
+        "topic": "Total drones and missiles intercepted nationwide",
+        "positions": {
+          "BBC News": "Reports almost 1,000 drones and four Ukrainian cruise missiles intercepted across Russia in 24 hours, citing Russia's defence ministry.",
+          "NBC News": "Reports 190 drones shot down on approach to Moscow specifically, citing Moscow Mayor Sobyanin. Does not give a nationwide total.",
+          "CBS News": "Does not provide specific interception numbers but focuses on Russia's depletion of S-300 interceptors as an explanation for Ukraine's increasing success."
+        }
+      },
+      {
+        "topic": "Characterization of the attack's historical scale",
+        "positions": {
+          "NBC News": "Quotes state news agency Tass calling it 'the most massive drone attack on the Moscow region in two years.'",
+          "BBC News": "Calls it 'the largest Ukrainian attack since the start of the full-scale war' without the two-year qualifier."
+        }
+      },
+      {
+        "topic": "Additional strikes beyond Moscow",
+        "positions": {
+          "BBC News": "Reports an oil depot was struck in the southern Rostov region, where one person was killed.",
+          "NBC News": "Does not mention strikes on Rostov.",
+          "CBS News": "Does not mention strikes on Rostov."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters (Article 1)": "Headline-only. Leads with Zelenskyy's provocative quote 'Moscow will burn,' framing the story through Ukrainian rhetoric rather than the physical event. No body text available for deeper analysis.",
+      "NBC News": "The most detailed body text in the dossier. Leads with dramatic imagery of the burning refinery and contextualizes the attack as potential revenge for Russian strikes on a historic Ukrainian monastery. Devotes significant space to Moscow residents' reactions \u2014 fear, anxiety, and some appearing unfazed \u2014 humanizing the Russian civilian perspective. Integrates Trump's renewed engagement and the G7 summit as diplomatic context. Includes Zelenskyy's and Ukrainian FM Sybiha's direct quotes. Notes the Russian ban on sharing drone strike imagery and the irony of footage spreading anyway. Frames the attack within a broader arc of growing internal Russian discontent with Putin.",
+      "BBC News": "Shorter report focused on military facts: drone numbers, casualties, and Russian defense ministry claims. Includes the nationwide interception figure (almost 1,000 drones) and the Rostov oil depot strike that other outlets omit. Poses an editorial question in its headline \u2014 'Will Putin change tactics?' \u2014 signaling analytical framing. The body text included some unrelated stories (G7 protests, Pope Leo XIV in Spain), suggesting the scraped text captured a broader page layout.",
+      "Reuters (Article 4)": "Headline-only. Straightforward wire framing: 'Ukraine hits Moscow refinery in major attack on Russian capital.' Neutral, event-first construction.",
+      "Reuters (Article 5)": "Headline-only. A sidebar/feature angle focusing on Azov fighters, connecting the current strikes back to the fall of Mariupol. This is a human-interest/unit-profile frame rather than breaking news.",
+      "The New York Times": "Headline-only. Leads with the factual event: 'Ukraine Strikes Moscow Refinery in Large-Scale Drone Attack.' Neutral descriptive headline without rhetorical quotes or editorializing.",
+      "CBS News": "Full body text focuses on a distinct angle: Russia's depletion of S-300 missile interceptors and the strategic implications for Ukraine's deep-strike campaign. Sources three Ukrainian officials familiar with intelligence estimates. Cites analyst Rob Lee (FPRI) on the unsustainable rate of Russian air defense expenditure. Balances by noting Ukraine's own PAC-3 interceptor shortage. This is an analytical/intelligence piece rather than a breaking-news account of the refinery strike itself, though it references the Moscow attack as context. Frames the broader narrative as a potential shift in battlefield momentum toward Kyiv."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. All claims are drawn from outlet reporting, including quotes attributed to Zelenskyy, Russian officials, and unnamed Ukrainian intelligence officials. Without primary source material (e.g., official Ukrainian military communiqu\u00e9s, Russian defense ministry statements in full, or G7 summit transcripts), alignment cannot be assessed."
+    ],
+    "missing_context": [
+      "No outlet with full body text provides detailed information on the specific type or origin of drones used in the attack (e.g., manufacturer, model, whether they were domestically produced or supplied by allies).",
+      "No outlet quantifies the actual damage to the Kapotnya refinery's operational capacity or estimates economic impact.",
+      "No outlet provides the Russian government's official full response beyond Moscow Mayor Sobyanin's interception claims and Tass's characterization. Putin's personal reaction or the Kremlin's official statement is absent.",
+      "The monastery attack referenced by NBC News as a trigger for retaliation is not elaborated on \u2014 when it occurred, its name, the scale of damage, or international condemnation details are not provided in this dossier.",
+      "CBS News's intelligence analysis on S-300 shortages relies entirely on Ukrainian intelligence sources, which have an inherent interest in portraying Russian weakness. No independent or Russian-side verification is offered, and this limitation is not prominently flagged.",
+      "No outlet discusses potential civilian casualties at or near the refinery itself, only regional figures.",
+      "The Trump-Macron-Zelenskyy coordination call is referenced by NBC News but no details of its substance are provided by any outlet.",
+      "The dossier is heavily skewed: only 3 of 7 articles have retrievable body text (NBC News, BBC News, CBS News), and one of those (CBS News) covers a different analytical angle rather than the breaking event. Reuters contributed three headline-only entries, and The New York Times was headline-only. This limits the ability to assess true cross-outlet consensus.",
+      "No right-leaning or conservative outlets are represented in the dossier with body text, meaning the framing analysis lacks that perspective entirely."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with body text confirm the core facts of the attack (NBC News, BBC News, with CBS News providing strategic context). While framing differs \u2014 NBC News emphasizes drama and diplomacy, BBC News leads on military statistics, CBS News focuses on Russian air defense depletion \u2014 the factual core is consistent and well-corroborated. The story is a major breaking event that warrants a straightforward REPORT rather than a META, as the framing differences are matters of emphasis and angle rather than materially conflicting narratives.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/aerospace-defense/zelenskiy-says-moscow-will-burn-if-russian-strikes-continue-2026-06-18/",
+      "title": "Zelenskiy says 'Moscow will burn' if Russian strikes continue - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/russia/moscow-refinery-attack-ukrainian-drones-hit-kapotnya-russia-trump-war-rcna350665",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/videos/cgjx87jljqpo",
+      "title": "Will Putin change tactics after Ukrainian drone attacks? - BBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/europe/russia-attacks-kyiv-with-missiles-local-authorities-say-2026-06-17/",
+      "title": "Ukraine hits Moscow refinery in major attack on Russian capital - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/europe/ukraines-azov-fighters-were-forced-mariupol-now-theyre-hitting-back-2026-06-18/",
+      "title": "Ukraine's Azov fighters were forced from Mariupol. Now they're hitting back - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/18/world/europe/moscow-ukraine-drone-attack-fire.html",
+      "title": "Ukraine Strikes Moscow Refinery in Large-Scale Drone Attack - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/ukraine-russia-war-moscow-air-defense-interceptor-shortage-drone-strikes/",
+      "title": "Ukraine's deep strikes leaving Russia short on air defense missiles, possibly at an \"unsustainable rate\" - CBS News"
+    }
+  ]
+}
