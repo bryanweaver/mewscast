@@ -14,6 +14,8 @@ You are creating an image prompt for Walter Croncat, an AI news reporter cat. Th
 
 The shot type controls **camera angle, framing, and what's actually in frame**. It is independent of post type. Where the post type sets the *vibe* (field reporter vs anchor desk vs commentary), the shot type sets the *composition*. Both must be honored — don't let one override the other.
 
+**Even within a single shot type, vary Walter's pose and behavior.** The shot type defines the *framing*, not what Walter is *doing*. The same shot type should produce a different Walter every time — sniffing, batting, perched, turned away, mid-reaction (see "WALTER IS A CAT" below). Two posts that draw the same shot type must not look like the same photo with a new backdrop.
+
 **This cycle's shot type instruction:**
 
 {shot_type_description}
@@ -67,6 +69,39 @@ The most common failure is a generic "Walter standing in front of a famous build
 - GOOD: Walter at a diplomatic table with flags and untouched coffee cups, tense body language.
 
 These categories are illustrative, not exhaustive — apply the same instinct to health, sports, science, climate, and any other beat: find the specific objects, evidence, and human stakes of THIS story and build the scene around them.
+
+---
+
+## WALTER IS A CAT — LET HIM ACT LIKE ONE
+
+The second-most-common failure is sameness: Walter centered in frame, facing the camera, the lens looking heroically up at him, every single time. It reads as a stiff mascot pose, not a photograph. Walter is a CAT — the most engaging images let him behave like one and catch him candidly.
+
+**Walter doesn't have to be centered.** He can be off to the side, in the background, partially obscured behind an object, or reduced to a single telling detail — just his paw on a document, or his tail curling out of frame.
+
+**Walter doesn't have to face the camera.** He can be turned away, looking at something, sniffing something, batting at something. A cat absorbed in his own world is more natural than one posing for a portrait.
+
+**Use CAT BEHAVIORS to interact with the story's objects:**
+- Sniffing a suspicious document or piece of evidence
+- Batting at a gavel or a microphone
+- Sitting ON TOP OF important papers or a laptop
+- Peering around a corner at a crime scene
+- Knocking something off a desk (classic cat move)
+- Grooming himself while chaos unfolds behind him (pure feline indifference)
+- Curled up asleep on a pile of classified documents
+- Stalking / hunting a piece of evidence like prey
+- Pawing at a screen showing stock prices or election results
+
+**Vary the camera relationship — NOT always a low-angle hero shot looking up:**
+- Overhead / bird's-eye looking DOWN at Walter examining something on a desk
+- Eye-level candid, as if a photojournalist caught him mid-action
+- Over-the-shoulder, seeing what Walter sees
+- Wide shot where Walter is small in frame and the environment tells the story
+- Close-up on Walter's face reacting to something off-camera
+- Dutch angle (tilted horizon) for tension or unease
+
+**Why this matters for engagement:** the cat behaviors make images MORE shareable because they're funny and relatable. A cat sitting smugly on top of a stack of classified documents is inherently more engaging — and more on-brand — than a cat standing heroically in front of a building. Lean into the humor and the candor; that's what makes people stop and share.
+
+(Anatomy still applies: Walter is a realistic four-paw cat with no human hands — see ALWAYS APPLY below. "Batting at" and "pawing at" use his actual paws; he never grips or holds.)
 
 ---
 
