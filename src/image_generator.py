@@ -97,6 +97,65 @@ _DEFAULT_STYLE_ANCHOR = (
 )
 
 
+# Photographer-flavor rotation. One named reference is picked per call and
+# stacked AFTER the post-type style anchor. Concrete photographer names are
+# tokens the model recognizes — rotating them is the single highest-leverage
+# diversifier the locked anchor can apply without touching the dynamic
+# Haiku-written prompt. Picked at the anchor stage (not by Haiku) so the
+# Haiku doesn't try to "match" the name and instead just provides the
+# scene; the photographer-flavor steers the rendering pass.
+import random as _random  # noqa: E402
+
+_PHOTOGRAPHER_FLAVORS: dict[str, list[str]] = {
+    "REPORT": [
+        "Annie Leibovitz portrait stagecraft. ",
+        "Steve McCurry color saturation and locked eye contact. ",
+        "James Nachtwey on-the-ground photojournalism grit. ",
+        "Henri Cartier-Bresson decisive-moment timing. ",
+        "Magnum Photos editorial discipline. ",
+        "Eve Arnold candid intimacy. ",
+    ],
+    "META": [
+        "Gregory Crewdson cinematic dread and tableau staging. ",
+        "Saul Leiter rain-on-glass color abstraction. ",
+        "Edward Hopper isolation and quiet-hour mood. ",
+        "Andreas Gursky orderly scale. ",
+    ],
+    "ANALYSIS": [
+        "Tim Walker surreal scale and dreamlike props. ",
+        "Wes Anderson symmetrical composition and pastel discipline. ",
+        "Sally Mann tonal richness and quiet weight. ",
+        "Saul Steinberg illustrative wit. ",
+    ],
+    "BULLETIN": [
+        "Don McCullin war-photograph grain and weight. ",
+        "Robert Capa decisive-moment chaos. ",
+        "Susan Meiselas conflict-zone urgency. ",
+    ],
+    "PRIMARY": [
+        "Irving Penn studio austerity. ",
+        "Richard Avedon archival formal portraiture. ",
+        "Yousuf Karsh formal gravitas. ",
+    ],
+    "CORRECTION": [
+        "Saul Leiter quiet restraint. ",
+        "Robert Frank candid honesty. ",
+    ],
+}
+
+
+def _pick_photographer_flavor(post_type: Optional[str]) -> str:
+    """Pick one photographer-style reference for the given post type.
+    Returns "" for unknown / None post types so the legacy / default path
+    isn't perturbed (and so the no-post-type test invariants still hold)."""
+    if not post_type:
+        return ""
+    flavors = _PHOTOGRAPHER_FLAVORS.get(post_type)
+    if not flavors:
+        return ""
+    return _random.choice(flavors)
+
+
 # Locked style spec for Walter's "Field Notes" reply image — meant to be
 # instantly recognizable as a Walter Croncat brand asset on every render.
 # Reproducibility comes from over-specifying every visual element so Grok
@@ -184,7 +243,7 @@ class ImageGenerator:
         )
 
         image_cfg = _load_image_config()
-        self.model = image_cfg.get("model", "grok-imagine-image")
+        self.model = image_cfg.get("model", "grok-imagine-image-quality")
         self.aspect_ratio = image_cfg.get("aspect_ratio", "3:2")
         if self.aspect_ratio not in self.SUPPORTED_ASPECT_RATIOS:
             print(
@@ -201,13 +260,15 @@ class ImageGenerator:
 
     def _anchor_prompt(self, prompt: str, post_type: Optional[str] = None) -> str:
         """Compose the full prompt: subject anchor + eye-catch anchor +
-        post-type style anchor + the dynamic prompt.
+        post-type style anchor + (rotating) photographer flavor + the
+        dynamic prompt.
 
         Kept as its own method so tests can introspect the composition
         without needing to mock the OpenAI client.
         """
         style = POST_TYPE_STYLE_ANCHORS.get(post_type, _DEFAULT_STYLE_ANCHOR) if post_type else _DEFAULT_STYLE_ANCHOR
-        return f"{_SUBJECT_ANCHOR}{_EYECATCH_ANCHOR}{style}{prompt}"
+        flavor = _pick_photographer_flavor(post_type)
+        return f"{_SUBJECT_ANCHOR}{_EYECATCH_ANCHOR}{style}{flavor}{prompt}"
 
     def _generate_once(self, anchored_prompt: str) -> Optional[str]:
         """Single generation attempt. Returns the image URL or None."""

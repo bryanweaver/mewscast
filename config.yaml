@@ -271,10 +271,12 @@ content:
 # Per-post-type style anchors live in src/image_generator.py directly —
 # they're code, not config, because they're tied to the POST_TYPE enum.
 image:
-  # Model. "grok-imagine-image" is the default. A Flux or DALL-E swap
-  # would be a follow-up change (vendor decision): wire the alternate
-  # client into ImageGenerator.__init__ and flip the value here.
-  model: grok-imagine-image
+  # Model. xAI now steers all new requests at "grok-imagine-image-quality"
+  # ($0.05/image vs $0.02 for the older "grok-imagine-image"). The older
+  # model is still billable but undocumented on the generation page.
+  # A Flux or DALL-E swap would be a follow-up change (vendor decision):
+  # wire the alternate client into ImageGenerator.__init__ and flip here.
+  model: grok-imagine-image-quality
   # Aspect ratio. 3:2 reads well on both Bluesky and X; 16:9 is X-card
   # optimal but crops poorly on Bluesky; 4:5 is Bluesky-inline optimal
   # but wastes space on X. 3:2 is the best single-output compromise.

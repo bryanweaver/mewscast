@@ -892,7 +892,7 @@ class TestImageGenerator:
             api_key="fake-xai-key",
             base_url="https://api.x.ai/v1",
         )
-        assert gen.model == "grok-imagine-image"
+        assert gen.model == "grok-imagine-image-quality"
 
     @patch("image_generator.requests.get")
     @patch("image_generator.OpenAI")
@@ -929,7 +929,7 @@ class TestImageGenerator:
         # Verify the API was called with the anchored prompt and configured aspect ratio.
         mock_client.images.generate.assert_called_once()
         call_kwargs = mock_client.images.generate.call_args.kwargs
-        assert call_kwargs["model"] == "grok-imagine-image"
+        assert call_kwargs["model"] == "grok-imagine-image-quality"
         assert call_kwargs["n"] == 1
         assert "A cat reporting news" in call_kwargs["prompt"]
         assert call_kwargs["extra_body"]["aspect_ratio"] == gen.aspect_ratio
