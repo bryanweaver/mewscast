@@ -1,0 +1,112 @@
+{
+  "story_id": "2026-06-19-algae-clouded-trump-s-f517353258",
+  "headline_seed": "Algae clouded Trump's vision for the Reflecting Pool. But scientists aren't surprised - NPR",
+  "brief": {
+    "story_id": "2026-06-19-algae-clouded-trump-s-f517353258",
+    "consensus_facts": [
+      "The Lincoln Memorial Reflecting Pool turned green with algae after being refilled following a Trump-ordered renovation that included repainting the pool bottom 'American Flag Blue.'",
+      "The renovation project cost approximately $14 million in federal contracts.",
+      "Workers used hydrogen peroxide and nanobubble ozone technology to treat the algae bloom.",
+      "The Department of the Interior attributed the algae to residual material in dormant supply lines and said it was part of a normal startup process.",
+      "The Reflecting Pool has a long history of algae problems, including after its Obama-era renovation in 2012.",
+      "Trump personally selected the 'American Flag Blue' color for the pool's new sealant/coating.",
+      "Rips or tears appeared in the newly applied sealant on the pool floor.",
+      "The Interior Department claimed on social media that nanobubble technology had effectively killed the algae and crews were vacuuming dead algae from the pool bottom."
+    ],
+    "disagreements": [
+      {
+        "topic": "Cause of the algae bloom",
+        "positions": {
+          "NPR": "Reports multiple expert explanations: 'New Pond Syndrome,' the darker blue surface absorbing more sunlight and warming water, disruption of nutrient balance from renovations, and seasonal conditions. Quotes a George Mason University professor and a pool specialist.",
+          "CBS News": "Reports the Interior Department's explanation that algae came from residual material in dormant supply lines, while noting the pool's long history of algae problems.",
+          "BBC News": "Notes the pool 'has had issues with algae for decades' and references BBC Verify looking into the cause, but provides minimal detail.",
+          "Department of the Interior (via NPR and CBS News)": "Blames dormant supply lines and extreme heat, and contrasts current maintenance favorably with Obama and Biden administrations."
+        }
+      },
+      {
+        "topic": "Whether the darker paint color contributed to the problem",
+        "positions": {
+          "NPR": "Quotes pool specialist Steve Goodale saying the darker interior surface absorbs more sunlight, warms water, and leads to more prolific algae growth. Quotes professor Christova saying renovations may have accelerated the process.",
+          "CBS News": "Does not address the color's role in algae growth.",
+          "Department of the Interior (via NPR)": "Does not acknowledge the darker color as a contributing factor; instead blames supply lines and heat."
+        }
+      },
+      {
+        "topic": "Procurement of the cleanup contract",
+        "positions": {
+          "The New York Times": "Headline states 'Firm Tied to Trump Donor Got No-Bid Contract to Clean Reflecting Pool' \u2014 body text unavailable.",
+          "Other outlets": "No other outlet in the dossier addresses the no-bid contract or donor ties."
+        }
+      },
+      {
+        "topic": "Severity of the algae bloom relative to past incidents",
+        "positions": {
+          "The Washington Post": "Headline characterizes the bloom as 'one of biggest recorded in years' \u2014 body text unavailable.",
+          "NPR": "Does not compare the bloom's severity quantitatively to past incidents.",
+          "CBS News": "Does not quantify the bloom relative to past events."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only. Leads on the paint peeling, framing the story around the physical deterioration of the renovation rather than the algae. This is a distinct angle not emphasized in other outlets' available body text.",
+      "NPR": "The most detailed full-text article. Leads with the algae bloom but frames it primarily through expert scientific explanation ('New Pond Syndrome,' genus identification, ecological conditions). Gives substantial space to two independent experts \u2014 a pool specialist and a university aquatic ecologist \u2014 who both implicate the darker paint color as a contributing factor. Includes the Interior Department's response and its comparison to Obama/Biden, but places it lower in the story. Notably neutral in tone, letting experts and officials speak. Does not mention the sealant tears or the no-bid contract angle.",
+      "BBC News": "Brief video-centric coverage. Frames it as a factual explainer ('Why is newly renovated Reflecting Pool full of algae?'). References BBC Verify investigating the cause. Notes Trump blamed Biden for the pool's prior condition. Minimal detail overall; body text is mostly unrelated video descriptions from the same page.",
+      "The Washington Post": "Headline-only. Frames the bloom as historically significant ('one of biggest recorded in years') and ties it directly to the $14M renovation price tag, emphasizing the contrast between cost and outcome.",
+      "The New York Times (Late Night piece)": "Headline-only. Frames the story as cultural/entertainment fodder \u2014 late-night comedy coverage of the algae bloom. This is a media-reaction story, not a news report.",
+      "The New York Times (no-bid contract piece)": "Headline-only. Frames the story around potential corruption or cronyism \u2014 a Trump donor's firm receiving a no-bid contract to clean the pool. This is a distinctly political/investigative angle absent from other outlets' available body text.",
+      "CBS News": "Full-text article that covers both the algae bloom and the sealant tears, making it the only outlet with body text to report on the physical ripping of the pool lining. Frames the story as a series of 'snags' in Trump's renovation effort. Provides broader context about Trump's D.C. renovation agenda (East Wing demolition, Kennedy Center closure attempt, triumphal arch plans). Includes critics calling projects 'self-aggrandizing.' Quotes the Interior Department calling Trump 'an expert builder.' Does not quote independent scientists about the algae cause, relying instead on the Interior Department's explanation."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. All claims are drawn from outlet reporting and official statements relayed through those outlets."
+    ],
+    "missing_context": [
+      "No outlet with full body text provides quantitative data comparing this algae bloom's severity to past blooms (The Washington Post headline claims it is 'one of biggest recorded in years' but the body text was not available to verify the underlying data).",
+      "The New York Times reports a no-bid contract tied to a Trump donor for pool cleanup, but body text is unavailable, and no other outlet addresses this procurement angle \u2014 a potentially significant accountability dimension.",
+      "No outlet with available body text discusses the environmental review or permitting process for altering a historic landmark's appearance (the pool is on the National Mall, a National Historic Landmark).",
+      "Reuters highlights paint peeling in its headline, but body text is unavailable; NPR and CBS News do not mention peeling paint, though CBS News does report tears in the sealant \u2014 it is unclear if these are the same issue described differently.",
+      "No outlet discusses the original specifications or expected lifespan of the new sealant, or whether the algae treatment chemicals (hydrogen peroxide) might affect the sealant's integrity.",
+      "The $14 million cost figure appears in CBS News and The Washington Post headline, but no outlet breaks down what the money was spent on or compares it to the $30+ million Obama-era renovation CBS News mentions.",
+      "Three of seven articles are headline-only and one (BBC) has minimal usable body text, limiting the depth of cross-outlet verification."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same event with materially different framings \u2014 NPR emphasizes scientific explanation implicating the paint color, CBS News emphasizes the broader pattern of renovation 'snags' and sealant tears, The Washington Post frames it as historically severe, and The New York Times surfaces a no-bid contract angle. The divergence in emphasis, attribution of blame, and the significant angles that appear in only one outlet each make this a coverage-comparison story.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/paint-is-already-peeling-trumps-renovated-washington-reflecting-pool-2026-06-18/",
+      "title": "The paint is already peeling in Trump's renovated Washington Reflecting Pool - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/19/nx-s1-5863044/dc-reflecting-pool-algae-green-trump",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/videos/c0qynw823eeo",
+      "title": "Why is newly renovated Reflecting Pool in Washington DC full of algae? - BBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/nation/2026/06/18/algae-detected-reflecting-pool-higher-levels-than-any-june-past-5-years/",
+      "title": "Reflecting Pool algae bloom is one of biggest recorded in years after $14M renovation - The Washington Post"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/17/arts/television/late-night-trump-reflecting-pool-algae.html",
+      "title": "Late Night Wades Into the Reflecting Pool\u2019s Algae Bloom - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/lincoln-memorial-reflecting-pool-sealant-rips-algae-trump/",
+      "title": "Rips appear in Reflecting Pool's new sealant, chosen by Trump, after algae turn water green - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/18/us/politics/trump-donor-contract-reflecting-pool.html",
+      "title": "Firm Tied to Trump Donor Got No-Bid Contract to Clean Reflecting Pool - The New York Times"
+    }
+  ]
+}
