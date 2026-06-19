@@ -3654,6 +3654,21 @@
       "dossier_id": "2026-06-19-midjourney-medical-9572b75b35",
       "post_type": "REPORT",
       "post_pipeline": "journalism"
+    },
+    {
+      "timestamp": "2026-06-19T13:48:13.932433+00:00",
+      "topic": "Some local police have access to an ICE facial recognition app - NPR",
+      "url": "https://www.npr.org/2026/06/19/nx-s1-5863058/homeland-security-local-police-facial-recognition-identify-immigrants",
+      "source": "NPR",
+      "content": "DHS has a mobile app letting local police scan faces against 250 million federal records to identify immigrants, NPR reports.\n\nPhotos are stored 15 years. U.S. citizens will be swept up \u2014 citizenship can't be confirmed before the scan.\n\nAnd that's the mews.",
+      "image_prompt": "Photorealistic brown tabby cat with an intense, intelligent gaze and the bearing of a seasoned news anchor \u2014 dignified, authoritative, fully present. Correct four-paw anatomy, no human hands or fingers. Scroll-stopping editorial image. Dramatic cinematic lighting with strong highlights and deep shadows. Cinematic composition like a film still, not stock photography. Rich color grading, strong focal point, a single arresting detail the viewer can't look away from. When Walter's face is in frame, sharp eye contact with the viewer. Vanity Fair editorial portrait aesthetic. 85mm lens look, shallow depth of field, three-point lighting. Newsroom or field-reportage context. Authoritative, present-tense mood. Medium-shot portrait, Walter Croncat centered and prominent, press badge visible, eye-level framing. Walter is a realistic brown tabby cat examining a glowing smartphone displaying a facial recognition scan interface with a grid of 250 million federal records in the background. His expression is alert and investigative. Harsh fluorescent lighting casts dramatic shadows across a cold government office interior with filing cabinets and surveillance monitors blurred behind him. High contrast, saturated colors, cinematic horizontal framing. Realistic cat anatomy, no human hands.",
+      "x_tweet_id": "2067967692389147088",
+      "x_reply_tweet_id": "2067967709262786839",
+      "bluesky_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3moni7trj6x2v",
+      "bluesky_reply_uri": "at://did:plc:c6zobiwguxel3fcov34h46pw/app.bsky.feed.post/3moni7xyl7c22",
+      "dossier_id": "2026-06-19-some-local-police-have-983f6fc3d2",
+      "post_type": "REPORT",
+      "post_pipeline": "journalism"
     }
   ]
 }
