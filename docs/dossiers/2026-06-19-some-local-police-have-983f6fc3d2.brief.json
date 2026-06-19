@@ -1,0 +1,78 @@
+{
+  "story_id": "2026-06-19-some-local-police-have-983f6fc3d2",
+  "headline_seed": "Some local police have access to an ICE facial recognition app - NPR",
+  "brief": {
+    "story_id": "2026-06-19-some-local-police-have-983f6fc3d2",
+    "consensus_facts": [
+      "A newly revealed Department of Homeland Security document \u2014 a Privacy Threshold Analysis \u2014 outlines plans to give local police facial recognition technology to identify immigrants, first reported by the tech news outlet 404 Media.",
+      "The tool is a mobile app called the ICE Task Force Module that allows local police to scan the faces of people they stop and compares those scans against more than 250 million government records, including State Department visa records and TSA Traveler Verification Service records.",
+      "The app launched last September, suggesting police may already be using it.",
+      "Photos captured by the app are stored in an internal DHS system for 15 years.",
+      "The local officers using or intended to use the app are likely participants in the federal 287(g) program's Task Force Model, which gives local police authority to arrest immigrants on ICE's behalf during routine duties.",
+      "Clare Garvie of NYU's Policing Project raised concerns about whether police need pre-existing suspicion before using the app or could use it as a dragnet surveillance tool.",
+      "Privacy experts warned the app could chill freedom of speech and that U.S. citizens will inevitably be scanned and have their photos stored, since citizenship status cannot be known before a scan.",
+      "Patrick Eddington of the Cato Institute warned the technology could have large-scale effects on individual rights when scaled to local police.",
+      "DHS declined to provide detailed insight on how the app is used but stated ICE is committed to ensuring local police partners have tools to support the mass deportation mission and that its methods are constitutional.",
+      "Facial recognition technology used by ICE is not always accurate, and there have been cases of people wrongly identified and detained."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the app is already in active use vs. planned",
+        "positions": {
+          "NPR (Article 1)": "States the app 'launched last September, which suggests police are already using it' but hedges with 'suggests'.",
+          "NPR (Article 2 / Morning Edition)": "States 'we do know the app launched last September. That suggests that police have already been using it. We don't know for sure.' Slightly more explicit about uncertainty.",
+          "Times Union": "Does not address the facial recognition app at all; covers a separate local ICE arrest case involving traditional warrant checks, not the app."
+        }
+      },
+      {
+        "topic": "Whether Rensselaer police cooperated with ICE",
+        "positions": {
+          "Times Union": "Police Chief Famiglietti denies any ICE detail, saying it was a routine traffic stop that turned up a warrant; the mayor echoed this. Anti-ICE commenters on social media accused city police of working with ICE.",
+          "NPR (Articles 1 and 2)": "Do not cover the Rensselaer incident."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR (Article 1)": "The longer, written-for-web version leads with the expansion of federal facial recognition to local police and devotes substantial space to privacy concerns and expert criticism. Quotes two critics (Garvie and Eddington) and notes Homeland Security Secretary Mullin's congressional acknowledgment that facial recognition was used on protesters, including cross-referencing protesters across Oregon and Newark. Buries the DHS response near the bottom. Emphasizes the 15-year photo retention and the potential for U.S. citizens to be swept up. Notes approximately 1,300 police agencies in the Task Force Model. Mentions prior NPR reporting on ICE surveillance in Minnesota and Maine.",
+      "NPR (Article 2 / Morning Edition)": "A radio broadcast transcript covering the same story by the same reporter (Meg Anderson). Shorter and more conversational but hits the same key beats: 404 Media broke the story, 250 million records, September launch, 15-year retention, chilling effect on speech, citizens caught up. Adds a reference to former acting ICE Director Todd Lyons's letter to Congress indicating wide latitude to collect information. Less granular on the 287(g) structure. DHS response is again relegated to the end.",
+      "Times Union": "Covers a local Rensselaer, NY traffic stop that led to an ICE arrest \u2014 a tangentially related story about local-federal cooperation on immigration enforcement, not the facial recognition app. Focuses on the specific case of John Jairo Riascos Guaman, the 287(g) county agreement, community pushback on social media, and local officials' denials of ICE collaboration. Provides local political context including Rensselaer County's Republican leadership doubling down on ICE cooperation and New York State limitations on ICE cooperation. Does not mention the ICE Task Force Module app or facial recognition technology at all."
+    },
+    "primary_source_alignment": [
+      "No primary source document was located for this story. Both NPR articles reference the DHS Privacy Threshold Analysis document, first reported by 404 Media, but the document itself was not included in the dossier.",
+      "Without the primary source, it is impossible to verify NPR's characterizations of what the document states \u2014 including the 250 million records figure, the 15-year retention period, the September launch date, or the exact language about U.S. citizens potentially being scanned.",
+      "NPR Article 1 directly quotes the DHS document: 'It is conceivable that a photo taken by an ICE non-federal law enforcement officer using the TFM mobile application could be that of someone other than a removable individual, including U.S. citizens.' This quote cannot be independently verified without the primary source."
+    ],
+    "missing_context": [
+      "The underlying DHS Privacy Threshold Analysis document was not available in the dossier for independent verification of NPR's claims about its contents.",
+      "No outlet in this dossier provides a right-leaning or conservative perspective on the facial recognition app story; the dossier lacks ideological diversity on the main story.",
+      "The Times Union article covers a tangentially related local incident (traffic stop leading to ICE arrest) but does not address the facial recognition app, meaning there is effectively only one reporting outlet (NPR, via two versions of the same reporter's work) covering the core story.",
+      "No outlet reports on what safeguards or training, if any, accompany the app's deployment to local police \u2014 audit trails, supervisory review, accuracy thresholds, or bias testing.",
+      "No outlet reports on whether any of the approximately 1,300 Task Force Model agencies have publicly confirmed receiving or using the app.",
+      "The 404 Media original report that broke the story is referenced but not included in the dossier; its additional findings, if any, are unknown.",
+      "No outlet addresses whether the app's use has been subject to any legal challenges or court orders.",
+      "Homeland Security Secretary Mullin's congressional testimony about using facial recognition on protesters is mentioned by NPR Article 1 but no transcript or further detail is provided.",
+      "No outlet explores how the ICE Task Force Module differs technically from the existing Mobile Fortify app used by ICE and CBP, beyond noting the question exists.",
+      "The DHS statement claiming constitutional compliance is presented without any legal analysis of whether courts have weighed in on similar facial recognition deployments."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The core story \u2014 a DHS document revealing plans to give local police a facial recognition app for immigration enforcement \u2014 is substantively confirmed across two NPR articles (same reporter, same outlet, but with some distinct details in each version). The Times Union article is tangentially related and adds local 287(g) context but does not cover the app. There is no meaningful framing divergence since the coverage is essentially single-outlet. A straightforward REPORT with appropriate single-source caveats is warranted rather than a META, which requires materially different framings across outlets.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/19/nx-s1-5863058/homeland-security-local-police-facial-recognition-identify-immigrants",
+      "title": ""
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/18/nx-s1-5855721/dhs-document-shares-plan-to-give-local-police-departments-facial-recognition-tech",
+      "title": "DHS document shares plan to give local police departments facial recognition tech - NPR"
+    },
+    {
+      "outlet": "Times Union",
+      "url": "https://www.timesunion.com/news/article/ecuadorian-man-detained-ice-rensselaer-22306344.php",
+      "title": "ICE arrests Ecuadorian man after Rensselaer police find judicial warrant at traffic stop - Times Union"
+    }
+  ]
+}
