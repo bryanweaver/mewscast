@@ -289,6 +289,18 @@ image:
   # true once you've eyeballed enough generations to trust the QC.
   qc:
     enabled: true
+  # Watermark compositor. Applies the Walter paw + signature
+  # (docs/images/walter-signature.png) to every generated post image with
+  # contrast-aware tinting: dark ink on bright corners, light ink on dark
+  # corners, plus a soft halo for guaranteed legibility. Skipped for
+  # field-notes images (those already render a paw + signature via Grok).
+  # Opacity tuning was eyeballed against 5 representative posts at 0.45 /
+  # 0.60 / 0.75 — 0.60 was the sweet spot across all backgrounds.
+  watermark:
+    enabled: true
+    opacity: 0.60
+    size_ratio: 0.20
+    corner: bottom-right
     max_retries: 2
 
 engagement:

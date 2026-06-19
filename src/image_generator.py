@@ -258,6 +258,17 @@ class ImageGenerator:
         self.qc_enabled = bool(qc_cfg.get("enabled", False))
         self.qc_max_retries = int(qc_cfg.get("max_retries", 2))
 
+        # Watermark compositor config — applies the Walter signature asset
+        # (docs/images/walter-signature.png) to every generated post image
+        # with contrast-aware tinting. Field-notes images are NOT watermarked
+        # by this path (they use generate_field_notes, which already renders
+        # a paw + signature as part of the Grok prompt).
+        wm_cfg = image_cfg.get("watermark") or {}
+        self.watermark_enabled = bool(wm_cfg.get("enabled", True))
+        self.watermark_opacity = float(wm_cfg.get("opacity", 0.60))
+        self.watermark_size_ratio = float(wm_cfg.get("size_ratio", 0.20))
+        self.watermark_corner = wm_cfg.get("corner", "bottom-right")
+
     def _anchor_prompt(self, prompt: str, post_type: Optional[str] = None) -> str:
         """Compose the full prompt: subject anchor + eye-catch anchor +
         post-type style anchor + (rotating) photographer flavor + the
@@ -289,6 +300,28 @@ class ImageGenerator:
         img_response.raise_for_status()
         with open(save_path, "wb") as f:
             f.write(img_response.content)
+
+    def _maybe_watermark(self, image_path: str) -> None:
+        """Apply the Walter signature watermark to image_path in-place if
+        the feature is enabled. Best-effort: swallows errors so a watermark
+        failure never breaks the post pipeline (we'd rather post an
+        unwatermarked image than no image)."""
+        if not self.watermark_enabled:
+            return
+        try:
+            try:
+                from watermark import apply_watermark
+            except ImportError:
+                from src.watermark import apply_watermark  # pragma: no cover
+            apply_watermark(
+                image_path,
+                opacity=self.watermark_opacity,
+                size_ratio=self.watermark_size_ratio,
+                corner=self.watermark_corner,
+            )
+            print(f"✓ Watermark applied (opacity={self.watermark_opacity})")
+        except Exception as e:
+            print(f"⚠️  Watermark step failed (continuing unwatermarked): {e}")
 
     def generate_image(
         self,
@@ -337,14 +370,17 @@ class ImageGenerator:
                     passed, reason = check_image(save_path)
                     if passed:
                         print(f"✓ QC passed: {reason}")
+                        self._maybe_watermark(save_path)
                         return save_path, anchored_prompt
                     print(f"✗ QC failed (attempt {attempt}/{attempts}): {reason}")
                     if attempt < attempts:
                         print("   Retrying generation...")
                         continue
                     print("   Retries exhausted — returning the last attempt anyway")
+                    self._maybe_watermark(save_path)
                     return save_path, anchored_prompt
                 else:
+                    self._maybe_watermark(save_path)
                     return save_path, anchored_prompt
 
             return None, None
