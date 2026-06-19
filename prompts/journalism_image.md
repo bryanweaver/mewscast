@@ -10,6 +10,23 @@ You are creating an image prompt for Walter Croncat, an AI news reporter cat. Th
 
 ---
 
+## NON-NEGOTIABLE CYCLE INPUTS
+
+These four inputs were rolled *before* you saw this story. They are not suggestions, they are constraints — bake all four into your output prompt or the output is wrong.
+
+**Cat behavior (Walter MUST be doing this):**
+{cat_behavior}
+
+**Press badge:**
+{badge_instruction}
+
+**Chyron:**
+{chyron_instruction}
+
+Treat the cat-behavior instruction as the spine of the image — pick the shot framing, environment, and story object around what Walter is actively doing. A static "Walter standing in front of X" prompt is wrong; the behavior is the verb of the image.
+
+---
+
 ## SHOT TYPE — applies to all post types
 
 The shot type controls **camera angle, framing, and what's actually in frame**. It is independent of post type. Where the post type sets the *vibe* (field reporter vs anchor desk vs commentary), the shot type sets the *composition*. Both must be honored — don't let one override the other.
@@ -181,22 +198,22 @@ Stark, honest, unmistakable.
 
 ## ALWAYS APPLY (all post types)
 
-**Cat anatomy:**
+**Cat anatomy (still your job — anchor doesn't enforce this hard enough):**
 - Walter is a REALISTIC brown tabby cat — four paws, normal cat body, NO HUMAN HANDS
 - NEVER "holding", "gripping", "clutching" objects — objects are NEAR him, BESIDE him, on the desk
-- ALWAYS include "realistic cat anatomy" in the prompt
-- Press badge reads "PRESS" and "Walter Croncat" ONLY — never other text
+- Defer to the press-badge instruction above — do not add badge language on your own
 
-**Technical:**
-- HORIZONTAL LANDSCAPE format — cinematic framing
-- BOLD, SATURATED colors with HIGH CONTRAST
-- DRAMATIC lighting appropriate to the post type
-- Walter must be PROMINENT in frame — not tiny in the background
+**Frame:**
+- Walter's prominence in frame is set by the SHOT TYPE — don't override it
+- Don't lock Walter to dead-center on every prompt; respect the shot-type composition
 
 **Content moderation:**
 - NO sick/injured people, especially children
 - NO violence, weapons, or explicit imagery
 - USE metaphors and symbols instead of literal depictions of harm
+
+**Token discipline — the locked style anchor handles these, DO NOT repeat them:**
+The image generator prepends a fixed style anchor that already specifies cinematic lighting, high contrast, saturated colors, scroll-stopping editorial composition, photographic lens treatment (85mm / shallow DoF / three-point), realistic brown-tabby anatomy, and horizontal landscape format. If you repeat these tokens in your output prompt, the model overweights them and every image starts to look the same. **Do not include the words "cinematic," "high contrast," "saturated colors," "realistic cat anatomy," "horizontal landscape," "dramatic lighting," "85mm," "scroll-stopping" in your output.** Spend your token budget on the scene, the objects, the behavior, the badge instruction (relay it verbatim if a badge is specified), and the chyron — the only things this dynamic prompt actually contributes. (The press-badge instruction above is per-cycle; relay it as given, don't override it.)
 
 ---
 

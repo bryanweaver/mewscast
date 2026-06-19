@@ -554,6 +554,81 @@ def _pick_shot_type() -> tuple[str, str]:
     return chosen, descriptions[chosen]
 
 
+# Cat-behavior rotation. Survey of recent posts showed Walter defaulting to
+# "standing centered, looking at camera, expression focused" on nearly every
+# render — the journalism_image.md cat-behavior list existed but the Haiku
+# wasn't actually picking from it. This list is now an explicit per-cycle
+# injection (like shot type) so a concrete behavior is committed BEFORE the
+# Haiku writes the prompt body.
+#
+# Mix of "dignified" behaviors (Walter as poised reporter) and "candid"
+# behaviors (Walter as a real cat caught mid-action). Candid is the variance
+# unlocker — it's what breaks the stiff-mascot pose.
+_CAT_BEHAVIORS: list[tuple[str, int]] = [
+    # Dignified / reporter-mode behaviors
+    ("Sniffing intently at the focal object, nose nearly touching it", 5),
+    ("Peering around a corner or over an edge at the scene", 5),
+    ("Stalking low to the ground, eyes locked on a target in frame", 4),
+    ("Paw raised mid-step, frozen as if he just heard something", 4),
+    ("Mid-stride toward the action, ears forward, tail straight up", 5),
+    ("Head tilted slightly, intrigued by what's in front of him", 4),
+    ("Tail in a tense S-curve, head turned three-quarters toward camera", 4),
+    # Candid / cat-being-a-cat behaviors (the variance unlockers)
+    ("Mid-yawn, mouth open wide, eyes squeezed shut", 3),
+    ("Batting a paw at a dangling microphone, wire, or light cord", 3),
+    ("Sitting smugly ON TOP of the story's papers / documents / evidence", 3),
+    ("Grooming a paw with detached calm while chaos unfolds behind him", 3),
+    ("Curled up asleep on top of the story's key evidence", 2),
+    ("Mid-paw-swat at a coffee cup, mug captured mid-tip", 2),
+    ("Caught mid-blink, one eye closed in slow-shutter timing", 3),
+    ("Ears flat back, hackles slightly raised — wary of the scene", 2),
+]
+
+
+def _pick_cat_behavior() -> str:
+    """Roll a cat behavior from _CAT_BEHAVIORS using weights. Returns the
+    behavior string. Independent random call per cycle."""
+    import random as _random
+    behaviors = [b[0] for b in _CAT_BEHAVIORS]
+    weights = [b[1] for b in _CAT_BEHAVIORS]
+    return _random.choices(behaviors, weights=weights, k=1)[0]
+
+
+# Badge-visibility rotation. The "PRESS / Walter Croncat" badge appeared in
+# 8/8 of the prior survey images — locking visual identity to a label
+# instead of to the cat's bearing and the scene. Visibility now varies by
+# shot type with a random factor: badge-as-default-on becomes badge-when-
+# it-actually-helps.
+def _pick_badge_visibility(shot_label: str) -> bool:
+    """Decide whether Walter's press badge appears in this image.
+    Deterministic-ish by shot type with a random factor."""
+    import random as _random
+    # DETAIL never shows the full cat, so badge is incoherent
+    if shot_label == "DETAIL_NO_FULL_CAT":
+        return False
+    # WIDE: Walter is tiny — badge would just be a pixel smear
+    if shot_label == "WIDE_ESTABLISHING":
+        return _random.random() < 0.20
+    # THROUGH_THE_LENS: outer frame is the visual signature; let it carry
+    if shot_label == "THROUGH_THE_LENS":
+        return _random.random() < 0.25
+    # CLASSIC_PORTRAIT / LOW_ANGLE_HERO: Walter is the focal point
+    return _random.random() < 0.45
+
+
+# Chyron (broadcast-news lower-third) rotation. Adds a TV-broadcast layer to
+# ~30% of images. Grok renders text well — this turns the image into a
+# self-explanatory broadcast still: punchy headline, channel bug, optional
+# LIVE indicator. Skipped for CORRECTION (the format would undercut the
+# sober tone) and PRIMARY (document focus, not broadcast).
+def _pick_chyron(post_type: str) -> bool:
+    """Decide whether to render a broadcast chyron on this image."""
+    import random as _random
+    if post_type in ("CORRECTION", "PRIMARY"):
+        return False
+    return _random.random() < 0.30
+
+
 def _generate_journalism_image(
     draft: DraftPost, dossier: StoryDossier, save_path: str = "temp_image.png"
 ) -> tuple:
@@ -575,7 +650,43 @@ def _generate_journalism_image(
         # Roll a shot type. Keeps post-type vibes (REPORT-on-location vs META-
         # at-the-desk) intact while varying the camera angle / framing / crop.
         shot_label, shot_desc = _pick_shot_type()
-        print(f"[journalism] image shot type: {shot_label}")
+        cat_behavior = _pick_cat_behavior()
+        badge_visible = _pick_badge_visibility(shot_label)
+        chyron_visible = _pick_chyron(draft.post_type.value)
+        print(
+            f"[journalism] image rolls: shot={shot_label} "
+            f"behavior={cat_behavior[:40]!r} badge={badge_visible} "
+            f"chyron={chyron_visible}"
+        )
+
+        badge_instruction = (
+            "Walter wears a small press badge clipped to his collar — render "
+            "it as a SMALL plain rectangular tag, not a focal element. Do NOT "
+            "attempt readable text on the badge (text will be composited on "
+            "in post-processing)."
+            if badge_visible
+            else "No press badge visible on Walter in this shot. His identity "
+            "comes from his bearing, his behavior, and the scene around him "
+            "— not from a label. (A press credential will be added in "
+            "post-processing if needed.)"
+        )
+
+        chyron_instruction = (
+            "BROADCAST CHYRON: render a news-broadcast lower-third graphic "
+            "across the bottom of the frame as if this image is a still from "
+            "the WCN (Walter Croncast Network) broadcast. The chyron should "
+            "include: a punchy 3-7 WORD headline derived from the story (NOT "
+            "the full topic, a broadcaster's short headline) in bold sans-"
+            "serif; a small WCN channel bug in one corner; optionally a "
+            "ticker tape with a fragment of secondary text below the main "
+            "headline. Style: modern CNN/MSNBC-style chyron with a colored "
+            "bar (red for breaking, navy for standard, gold for analysis). "
+            "Render text crisply and legibly — Grok handles short broadcast-"
+            "graphic text well. This is part of the visual story, not an "
+            "overlay afterthought."
+            if chyron_visible
+            else "No broadcast chyron in this image."
+        )
 
         img_prompt_path = os.path.join(
             os.path.dirname(os.path.dirname(__file__)), "prompts", "journalism_image.md"
@@ -589,6 +700,9 @@ def _generate_journalism_image(
         img_request = img_request.replace("{article_section}", article_section)
         img_request = img_request.replace("{shot_type}", shot_label)
         img_request = img_request.replace("{shot_type_description}", shot_desc)
+        img_request = img_request.replace("{cat_behavior}", cat_behavior)
+        img_request = img_request.replace("{badge_instruction}", badge_instruction)
+        img_request = img_request.replace("{chyron_instruction}", chyron_instruction)
 
         from anthropic import Anthropic as _Anthropic
         _img_client = _Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
