@@ -1,0 +1,107 @@
+{
+  "story_id": "2026-06-19-midjourney-medical-9572b75b35",
+  "headline_seed": "Midjourney Medical",
+  "brief": {
+    "story_id": "2026-06-19-midjourney-medical-9572b75b35",
+    "consensus_facts": [
+      "Midjourney, the AI image generation company, announced a new medical division called Midjourney Medical on June 18, 2026, centered on a full-body ultrasound scanner.",
+      "The Midjourney Scanner uses a ring of ultrasound sensors submerged in water; users descend on a platform through the ring while ultrasonic waves pass through the body to create 3D images.",
+      "The scanner hardware is built using Butterfly Network's Ultrasound-on-Chip technology, with 40 Butterfly chips per system.",
+      "CEO David Holz claimed the scanner aims for image quality comparable to or 'in many ways superior to' MRI machines.",
+      "Midjourney says the target scan time is approximately 60 seconds.",
+      "Midjourney plans to open a spa facility in San Francisco (Union Square area) by the end of 2027, featuring the scanners alongside amenities like saunas, cold plunges, and hot tubs.",
+      "The company is initially offering 'detailed body composition maps' rather than diagnostic imaging, a framing that avoids requiring full FDA medical device clearance.",
+      "About a dozen people have been scanned with the prototype so far.",
+      "The system uses approximately 2 petaflops of computing power to process scan data."
+    ],
+    "disagreements": [
+      {
+        "topic": "Current scan time",
+        "positions": {
+          "The Verge": "Reports the 60-second scan time as a current capability without qualification.",
+          "Business Insider": "States 'prototypes of the system have generated 3D maps of the body in 60 seconds' as a reported claim.",
+          "Tech Times": "Reports the current prototype takes roughly 20 minutes per scan and that 60 seconds is a future goal, not a current reality, due to data transfer bottlenecks."
+        }
+      },
+      {
+        "topic": "Role of AI in the scanner",
+        "positions": {
+          "The Verge": "Notes uncertainty about what Midjourney's AI image generation tech has to do with the medical effort, 'beyond an alternative business for otherwise-unused AI compute.'",
+          "Business Insider": "Notes Midjourney did not respond to questions about how the technology uses AI.",
+          "Tech Times": "Explicitly states the current prototype 'runs without any AI in its imaging pipeline.'"
+        }
+      },
+      {
+        "topic": "Scaling ambitions",
+        "positions": {
+          "The Verge": "Mentions 10 scanners planned for the SF spa location.",
+          "Business Insider": "Reports Midjourney hopes to build 50,000 scanners worldwide by 2031.",
+          "Tech Times": "Does not mention the 50,000 figure but discusses a multi-generation hardware roadmap through 2028."
+        }
+      },
+      {
+        "topic": "Financial terms of Butterfly Network deal",
+        "positions": {
+          "The Verge": "Mentions partnership with Butterfly Network but no financial details.",
+          "Business Insider": "Does not mention financial terms.",
+          "Tech Times": "Reports specific deal terms from an SEC Form 8-K: $15 million upfront, $10 million/year licensing fees over five years, up to $74 million total."
+        }
+      },
+      {
+        "topic": "Team size and regulatory readiness",
+        "positions": {
+          "The Verge": "Mentions FDA clearances will be needed for medical applications but frames the project optimistically.",
+          "Business Insider": "Quotes radiologists raising concerns about false positives, incidental findings, and unnecessary follow-up care.",
+          "Tech Times": "Reports the team is nine people, none of whom have built or operated a regulated medical device, and emphasizes the 'very large gap' between prototype and commercial deployment."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only; no body text was retrievable due to a paywall. The headline uses the word 'Pivots,' implying a strategic shift from Midjourney's core business, and frames the product as an 'Ultrasound Machine' \u2014 clinical and hardware-focused language.",
+      "The Verge": "Leads with the novelty angle ('from generating cat images to full-body ultrasound scans'), treating the story as a surprising but interesting tech pivot. Reproduces Midjourney's own poetic marketing language at length ('shallow pool of golden light,' dolphin echolocation metaphor). Notes confusion about where AI fits in, but does not push hard on skepticism. Buries FDA clearance concerns near the end. Does not quote any outside medical experts or critics. Generally presents Holz's claims at face value.",
+      "Business Insider": "Frames the story around the spa experience and consumer accessibility ('map your body in 60 seconds and then send you to a sauna'). Distinguishes itself by including skeptical perspectives: quotes radiologists raising concerns about incidental findings and false positives, references the US Preventive Services Task Force's guidance on preventive scanning, and includes Hank Green's mixed reaction. Also notes Midjourney did not respond to questions about billing, health data storage, or AI usage. Provides a more balanced consumer-caution framing than The Verge.",
+      "Tech Times": "The most technically detailed and skeptical outlet. Leads by contrasting the announcement headline with the prototype's actual limitations (20-minute scan time, no AI in the pipeline, no FDA clearance, ~12 people scanned, nine-person team). Provides extensive technical explanation of CMUT chip technology, data volumes (17 GB/s raw data, 40 GB per slice), and the Butterfly Network licensing deal terms sourced from an SEC filing. Frames the story as a 'can they actually do this' engineering and regulatory challenge rather than a product announcement. Uniquely reports the USCT technology category has existed since the 1950s and has only been FDA-cleared for breast imaging, not whole-body scanning."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (e.g., Midjourney's blog post, SEC filings, FDA guidance documents) were located in the dossier. All claims are sourced from outlet reporting only.",
+      "Tech Times references a Butterfly Network Form 8-K SEC filing with specific financial terms; this document was not provided in the dossier and could not be independently verified.",
+      "Multiple outlets reference a Midjourney blog post from June 18, 2026, and a live launch event, but neither was provided as a primary source."
+    ],
+    "missing_context": [
+      "No outlet provided details on pricing for consumers \u2014 how much a scan would cost at the planned spa.",
+      "No outlet addressed health data privacy: who owns the scan data, where it is stored, whether it could be sold or shared with insurers.",
+      "No outlet explored whether Midjourney's existing AI image generation business would be affected by or fund the medical division, or whether this represents a revenue diversification play.",
+      "Business Insider and Tech Times raise skepticism from medical experts, but no outlet names a specific radiologist or medical institution on the record providing a detailed assessment.",
+      "No outlet discusses the competitive landscape for whole-body scanning startups (e.g., Prenuvo, Ezra) beyond a passing mention in Tech Times, or how Midjourney's offering would differ in clinical utility or cost.",
+      "The Midjourney blog post and the Butterfly Network SEC Form 8-K filing are referenced but not included as primary sources in the dossier, limiting independent verification.",
+      "No outlet addresses potential conflicts of interest or financial incentives in Midjourney promoting routine consumer scanning outside clinical contexts.",
+      "No outlet explores the implications of the 'general wellness' FDA guidance pathway \u2014 whether it has been contested or criticized by regulators or medical professionals.",
+      "Tech Times uniquely reports the prototype currently takes 20 minutes, not 60 seconds. No other outlet confirms or contradicts this specific claim, making it a single-source detail despite its materiality."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text cover the same announcement but with materially different framings: The Verge is largely credulous and reproduces marketing language, Business Insider adds consumer-caution perspectives from medical experts, and Tech Times provides deep technical skepticism and reveals that the current prototype runs at 20 minutes rather than the advertised 60-second target. The gap between the marketed vision and the reported prototype reality, plus the divergent levels of skepticism across outlets, makes this a classic coverage-analysis story.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-18/ai-startup-midjourney-pivots-to-health-with-ultrasound-machine",
+      "title": "AI Startup Midjourney Pivots to Health With Ultrasound Machine - Bloomberg.com"
+    },
+    {
+      "outlet": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/952011/midjourney-medical-ai-ultrasound-scan",
+      "title": "Midjourney goes from generating cat images to full-body ultrasound scans - The Verge"
+    },
+    {
+      "outlet": "Business Insider",
+      "url": "https://www.businessinsider.com/midjourney-medical-scanner-health-care-spa-2026-6",
+      "title": "The startup behind AI art wants to make body imaging feel like a spa day - Business Insider"
+    },
+    {
+      "outlet": "Tech Times",
+      "url": "https://www.techtimes.com/articles/318628/20260618/midjourney-full-body-ultrasound-scanner-targets-mri-speed-prototype-runs-20-minutes.htm",
+      "title": "Midjourney Full-Body Ultrasound Scanner Targets MRI Speed, But Prototype Runs 20 Minutes - Tech Times"
+    }
+  ]
+}
