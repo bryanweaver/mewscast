@@ -622,11 +622,15 @@ def _pick_badge_visibility(shot_label: str) -> bool:
 # LIVE indicator. Skipped for CORRECTION (the format would undercut the
 # sober tone) and PRIMARY (document focus, not broadcast).
 def _pick_chyron(post_type: str) -> bool:
-    """Decide whether to render a broadcast chyron on this image."""
-    import random as _random
+    """Decide whether to render a broadcast chyron on this image.
+
+    Always on, except for CORRECTION (the broadcast-graphic format would
+    undercut the sober correction tone) and PRIMARY (document focus, not a
+    broadcast still). Previously a ~30% roll; made unconditional so every
+    eligible post ships as a self-explanatory WCN broadcast still."""
     if post_type in ("CORRECTION", "PRIMARY"):
         return False
-    return _random.random() < 0.30
+    return True
 
 
 def _generate_journalism_image(
