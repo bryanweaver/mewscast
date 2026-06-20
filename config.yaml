@@ -297,7 +297,7 @@ image:
   # Opacity tuning was eyeballed against 5 representative posts at 0.45 /
   # 0.60 / 0.75 — 0.60 was the sweet spot across all backgrounds.
   watermark:
-    enabled: true
+    enabled: false   # paw signature disabled — chyron now carries WCN branding; avoids bottom-right overlap with the lower-third chyron
     opacity: 0.60
     size_ratio: 0.20
     corner: bottom-right
