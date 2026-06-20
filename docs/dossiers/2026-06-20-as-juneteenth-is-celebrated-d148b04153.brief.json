@@ -1,0 +1,89 @@
+{
+  "story_id": "2026-06-20-as-juneteenth-is-celebrated-d148b04153",
+  "headline_seed": "As Juneteenth is celebrated across the US, Obama\u2019s presidential center opens in Chicago - AP News",
+  "brief": {
+    "story_id": "2026-06-20-as-juneteenth-is-celebrated-d148b04153",
+    "consensus_facts": [
+      "Former President Barack Obama's presidential center opened to the public on Friday, June 19, 2026 (Juneteenth), in Chicago's South Side.",
+      "A dedication ceremony was held Thursday, June 18, 2026, featuring three former presidents alongside Obama.",
+      "Musical performers at the dedication included Stevie Wonder, Bruce Springsteen, Bono, John Legend, Christina Aguilera, Marc Anthony, and Eddie Vedder.",
+      "Barack and Michelle Obama personally greeted early visitors on the center's public opening day.",
+      "The Obamas read to schoolchildren at the center on opening day.",
+      "Juneteenth marks June 19, 1865, when Union troops arrived in Galveston, Texas, declaring enslaved people free, roughly 2.5 years after the Emancipation Proclamation.",
+      "Juneteenth celebrations took place across the country, including in Galveston, Texas, and Los Angeles's Leimert Park neighborhood.",
+      "The Obama Presidential Center campus includes a museum with a life-sized replica of the Oval Office.",
+      "Obama used his dedication speech to call on Americans to defend democracy."
+    ],
+    "disagreements": [
+      {
+        "topic": "Level of detail on Obama's speech content",
+        "positions": {
+          "Associated Press (Article 1)": "Provides only video captions and photo descriptions; no substantive speech quotes.",
+          "Associated Press (Article 2)": "Mentions Obama's 'call to defend democracy' but provides minimal direct quotation.",
+          "The Birmingham Times": "Provides direct quotes from Obama's speech, including his praise of bipartisan values and mention of John McCain and Mitt Romney, and notes Trump's conspicuous absence and his social media criticism of the $850 million center.",
+          "The Transylvania Times": "Appears to carry the same AP wire text but the body was largely unrecoverable due to site formatting artifacts."
+        }
+      },
+      {
+        "topic": "Trump's absence and criticism",
+        "positions": {
+          "The Birmingham Times": "Explicitly notes Trump was 'conspicuous both in his physical absence and by not being mentioned by any of the speakers or performers' and references his February social media post calling the $850 million center a 'total disaster.'",
+          "Associated Press (Articles 1 & 2)": "No mention of Trump's absence or his criticism of the center in the retrieved body text.",
+          "The Transylvania Times": "No mention in recoverable text."
+        }
+      },
+      {
+        "topic": "Center cost",
+        "positions": {
+          "The Birmingham Times": "Reports the center cost $850 million, attributed via Trump's social media criticism.",
+          "Associated Press (Articles 1 & 2)": "No cost figure mentioned.",
+          "The Transylvania Times": "No cost figure in recoverable text."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press (Article 1)": "Structured as a photo/video caption compilation rather than a narrative article. Leads with the dedication ceremony and celebrity performers, then alternates between Obama center images and Juneteenth celebration imagery from Galveston and Los Angeles. No substantive quotes or analytical framing. Treats the two stories \u2014 Juneteenth celebrations and Obama center opening \u2014 as parallel visual narratives.",
+      "Associated Press (Article 2)": "Focuses specifically on the Obamas surprising early visitors, reading to schoolchildren, and the personal, community-oriented dimension of the opening day. Leads with Obama's 'call to defend democracy' from the Thursday dedication. Avoids political controversy entirely \u2014 no mention of Trump, cost disputes, or broader political context. Warm, human-interest framing.",
+      "The Birmingham Times": "The most substantive and contextually rich article in the dossier. Leads by weaving together Juneteenth and the Obama center opening as a 'symbolic convergence of legacy and liberation.' Provides historical context for Juneteenth with expert quotes from Rice University professor W. Caleb McDaniel. Uniquely includes Trump's absence and criticism, the $850 million cost figure, and references to the Supreme Court hollowing out the Voting Rights Act and threats to Black political representation. Frames the story within ongoing racial justice struggles. Includes Obama's bipartisan praise of McCain and Romney. The most politically contextualized coverage.",
+      "The Transylvania Times": "Appears to syndicate the AP wire story but the article body is heavily polluted with site navigation, weather data, and markup artifacts, making substantive text largely unrecoverable. What is recoverable consists of photo captions consistent with AP coverage. No unique editorial framing discernible."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All claims rest on outlet reporting, predominantly from AP wire content and The Birmingham Times's expanded coverage."
+    ],
+    "missing_context": [
+      "No outlet provides detailed information about the Obama Presidential Center's funding sources \u2014 whether public, private, or a mix \u2014 beyond The Birmingham Times's passing reference to the $850 million figure via Trump's criticism.",
+      "No outlet discusses community opposition or support for the center's construction in Jackson Park, including the long-running debates about displacement, gentrification, and a community benefits agreement that marked the center's development history.",
+      "No outlet reports on attendance figures for either the dedication ceremony or the public opening day.",
+      "No outlet addresses how the center differs from traditional presidential libraries, particularly the decision not to house official presidential records (which are held by the National Archives digitally) \u2014 a distinction that shaped years of planning controversy.",
+      "No outlet mentions the 'John Lewis Plaza' naming (visible only in photo captions from AP Article 2 and The Transylvania Times) or explains its significance.",
+      "The Transylvania Times article body was largely unrecoverable due to site formatting artifacts, limiting the effective dossier to three outlets (two AP wire pieces and The Birmingham Times).",
+      "No primary source (e.g., Obama's full speech transcript, General Order No. 3 text, or center press materials) was available to verify claims against.",
+      "Coverage of Juneteenth celebrations beyond Galveston and Los Angeles is absent; no national scope or data on how widely the federal holiday is observed five years after its designation."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets confirm the core facts of both the Obama Presidential Center opening and Juneteenth celebrations. While The Birmingham Times adds political context the AP pieces omit, the framing differences are attributable to depth of coverage rather than materially conflicting narratives. This is a straightforward two-event story with solid consensus on the basics.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/juneteenth-june-19-holiday-celebration-obama-center-52dcbf757afbf9e43ee71296c440e35f",
+      "title": ""
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/obama-presidential-center-chicago-juneteenth-7f655b125d3cc28dcee91e1645842782",
+      "title": "Barack and Michelle Obama surprise first visitors to newly opened presidential center - AP News"
+    },
+    {
+      "outlet": "The Birmingham Times",
+      "url": "https://www.birminghamtimes.com/2026/06/as-juneteenth-is-celebrated-across-the-country-obamas-presidential-center-opening-inspires-in-chicago/",
+      "title": "As Juneteenth is Celebrated Across the Country, Obama\u2019s Presidential Center Opening Inspires in Chicago - The Birmingham Times"
+    },
+    {
+      "outlet": "The Transylvania Times",
+      "url": "https://www.transylvaniatimes.com/news/nation_world/as-juneteenth-is-celebrated-across-the-us-obamas-presidential-center-opens-in-chicago/article_14257105-af82-5788-af59-8ab844ae2c08.html",
+      "title": "As Juneteenth is celebrated across the US, Obama's presidential center opens in Chicago - The Transylvania Times"
+    }
+  ]
+}
