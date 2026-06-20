@@ -374,7 +374,7 @@ class TestPostJournalismCycleEmptyDossier:
                     "trend_detection": {"max_candidates": 5},
                     "triage": {"use_llm": False},
                     "source_gather": {"target_count": 3},
-                    "meta_analysis": {"model": "claude-opus-4-6"},
+                    "meta_analysis": {"model": "claude-opus-4-8"},
                     "composer": {"model": "claude-sonnet-4-6", "max_length": 280},
                     "verification": {},
                     "dry_run": {"drafts_dir": "drafts"},

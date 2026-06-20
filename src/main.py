@@ -1299,7 +1299,7 @@ def post_journalism_cycle(
     use_llm_triage = bool(triage_cfg.get("use_llm", False))
     target_sources = int(gather_cfg.get("target_count", 7))
     max_fallback_candidates = int(gather_cfg.get("max_fallback_candidates", 3))
-    meta_model = meta_cfg.get("model", "claude-opus-4-6")
+    meta_model = meta_cfg.get("model", "claude-opus-4-8")
     composer_model = composer_cfg.get("model", "claude-sonnet-4-6")
     max_length = int(composer_cfg.get("max_length", 280))
     long_form_max_length = int(composer_cfg.get("long_form_max_length", 4000))

@@ -239,7 +239,7 @@ pipelines:
 journalism:
   enabled: true
   meta_analyzer:
-    model: claude-opus-4-6
+    model: claude-opus-4-8
   post_composer:
     model: claude-sonnet-4-6
 

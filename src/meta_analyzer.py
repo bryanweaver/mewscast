@@ -7,7 +7,7 @@ Croncat differentiator: it does NOT paraphrase one outlet, it compares all
 outlets in the dossier against each other and against the primary source.
 
 Public API:
-    MetaAnalyzer(model="claude-opus-4-6", anthropic_client=None)
+    MetaAnalyzer(model="claude-opus-4-8", anthropic_client=None)
         .analyze(dossier: StoryDossier) -> MetaAnalysisBrief
 
 Implementation:
@@ -38,7 +38,7 @@ class MetaAnalyzer:
 
     def __init__(
         self,
-        model: str = "claude-opus-4-6",
+        model: str = "claude-opus-4-8",
         anthropic_client=None,
         prompt_loader=None,
     ):
