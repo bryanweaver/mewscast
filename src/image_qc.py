@@ -43,6 +43,34 @@ _HAIKU_MODEL = "claude-haiku-4-5-20251001"
 _ANTHROPIC_MAX_RAW_BYTES = 3_500_000
 _QC_DOWNSCALE_WIDTH = 1280  # px wide — preserves enough detail for anatomy QC
 
+# A mostly-black frame is a classic image-gen failure mode (the model returns a
+# near-empty canvas). It's cheap to catch locally without an API round-trip, so
+# we screen for it before the Haiku call. Mean pixel value (0-255) below this
+# threshold means the frame is effectively black.
+_BLACK_MEAN_THRESHOLD = 10.0
+
+
+def _is_mostly_black(path: str) -> Tuple[bool, float]:
+    """Return (is_black, mean_value) for an image.
+
+    Computes the average pixel value across the image after converting to
+    grayscale. A mean below `_BLACK_MEAN_THRESHOLD` means the frame is
+    effectively black (a common generation failure that should fail QC and
+    trigger a retry).
+
+    If PIL is unavailable or the file can't be read, returns (False, -1.0)
+    so the check is a no-op rather than a false-positive failure.
+    """
+    try:
+        from PIL import Image, ImageStat
+
+        with Image.open(path) as img:
+            gray = img.convert("L")
+            mean = ImageStat.Stat(gray).mean[0]
+        return mean < _BLACK_MEAN_THRESHOLD, mean
+    except Exception:
+        return False, -1.0
+
 
 def _encode_image(path: str) -> Tuple[str, str]:
     """Read an image file and return (base64_data, media_type).
@@ -118,6 +146,12 @@ def check_image(image_path: str) -> Tuple[bool, str]:
         return True, "qc-skipped: ANTHROPIC_API_KEY missing"
     if not os.path.exists(image_path):
         return False, f"qc-error: image not found at {image_path}"
+
+    # Cheap local pre-check: a mostly-black frame is a generation failure we
+    # can catch without spending an API call. Fail it so the caller retries.
+    is_black, mean = _is_mostly_black(image_path)
+    if is_black:
+        return False, f"rejected: image is mostly black (mean pixel {mean:.1f} < {_BLACK_MEAN_THRESHOLD})"
 
     try:
         from anthropic import Anthropic
