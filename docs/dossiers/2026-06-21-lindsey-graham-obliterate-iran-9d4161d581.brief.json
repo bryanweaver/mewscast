@@ -1,0 +1,96 @@
+{
+  "story_id": "2026-06-21-lindsey-graham-obliterate-iran-9d4161d581",
+  "headline_seed": "Lindsey Graham: 'Obliterate' Iran if there's Strait of Hormuz resistance - USA Today",
+  "brief": {
+    "story_id": "2026-06-21-lindsey-graham-obliterate-iran-9d4161d581",
+    "consensus_facts": [
+      "Sen. Lindsey Graham (R-South Carolina) appeared on CBS' 'Face the Nation with Margaret Brennan' on June 21, 2026.",
+      "Graham said he supports trying a diplomatic solution with Iran but expects the talks to fail.",
+      "Graham said that if the diplomatic deal fails, President Trump will take the Strait of Hormuz by force.",
+      "Graham said the United States would control the Strait of Hormuz and charge a fee for all who pass through to pay for the operation.",
+      "Graham said that if Iran contests U.S. control of the Strait of Hormuz, the U.S. 'will obliterate them.'",
+      "Graham said he spent over four hours (he said four-and-a-half hours) with President Trump on Friday, June 19, 2026.",
+      "Graham said the plan includes expanding the Abraham Accords in 2026 and getting Saudi Arabia to join.",
+      "Graham earlier objected to roughly $300 billion in reconstruction funds for Iran, calling the idea 'akin to a Marshall Plan for Germany with the Nazis still in charge.'",
+      "Graham said his position shifted because he now believes the reconstruction money would come from Sunni Gulf states (Saudi Arabia, Qatar, UAE) rather than the West.",
+      "Iran said the Strait of Hormuz would be closed again after accusing the U.S. and Israel of violating the ceasefire agreement.",
+      "A 60-day negotiating window with Iran began following the signing of a memorandum of understanding, with VP JD Vance and U.S. negotiators meeting Iranian officials in Switzerland."
+    ],
+    "disagreements": [
+      {
+        "topic": "Duration of Graham's meeting with Trump",
+        "positions": {
+          "USA Today": "Describes it as 'over four hours' on June 19",
+          "CBS News": "Quotes Graham saying 'four-and-a-half hours' on Friday"
+        }
+      },
+      {
+        "topic": "Size and characterization of reconstruction funds",
+        "positions": {
+          "USA Today": "Does not cite a dollar figure; references general wariness about sending U.S. funds to Iran",
+          "CBS News": "Specifies $300 billion in slated reconstruction funds and details Graham's shift from opposing it to accepting it if Sunni Gulf states provide the money"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "USA Today": "Leads with the most incendiary quote \u2014 'Obliterate' Iran \u2014 in both headline and lede. Frames Graham as stressing diplomacy 'amid ongoing talks' while foregrounding the military threat. Adds editorial context lines not attributed to Graham ('The U.S. has so far failed to rein in the Israeli government') and ties the Strait closure to the 'fragile peace deal.' Omits the $300 billion figure and the nuance of Graham's position change. Shortest of the full-text accounts.",
+      "CBS News": "As the originating outlet (the interview aired on its program), CBS provides the fullest coverage across multiple formats: a news writeup, two video pages, and two full transcripts. The news article and transcripts lead with the diplomacy-will-fail framing ('Let's try a diplomatic solution. I think it's going to fail') rather than the 'obliterate' line, presenting Graham's hawkishness in fuller context including his explanation of why he reversed on the $300 billion reconstruction funds. The transcripts surface additional material \u2014 the Abraham Accords/Saudi normalization history, Republican colleagues' dissent (Cruz, Cornyn, Cotton, Cassidy), CBS polling showing the war is unpopular, and Ambassador Mike Waltz's defense of the deal. The video and section-header pages are largely navigation chrome with minimal substantive body text.",
+      "The Washington Post": "Listed in the dossier as carrying a Washington Times headline ('Sen. Lindsey Graham predicts diplomatic talks with Iran will fail'), but the body could not be retrieved \u2014 the page returned a CAPTCHA/security-verification screen. This outlet's framing emphasizes the 'talks will fail' prediction over the 'obliterate' threat in its headline, but no body text is available to corroborate details."
+    },
+    "primary_source_alignment": [
+      "No standalone primary source (e.g., an official memorandum of understanding document or government press release) was provided in the dossier.",
+      "The closest thing to a primary source is CBS's own full transcript of the 'Face the Nation' interview (Articles 3 and 7), which is the originating record of Graham's quotes. USA Today's reporting aligns with this transcript on the key quotes ('obliterate them,' 'take the Strait of Hormuz over by force,' 'I think it's going to fail').",
+      "Both USA Today and CBS accurately reproduce the core 'obliterate' quote and the diplomacy-will-fail quote as they appear in the CBS transcript."
+    ],
+    "missing_context": [
+      "No outlet independently confirms Graham's characterization of Trump's private plans; the entire 'Trump will take the Strait of Hormuz by force' framing rests solely on Graham's account of a single meeting, not on any statement from the White House or Trump himself.",
+      "The legal and international-law basis for the U.S. unilaterally seizing and charging tolls on the Strait of Hormuz \u2014 an international waterway bordering Iran and Oman \u2014 is not examined by any outlet.",
+      "No outlet quotes an Iranian official, the Iranian government, or any non-U.S. party responding to Graham's 'obliterate' threat.",
+      "The full transcript (Article 7) contains material context that the standalone news writeups underplay: CBS polling showing 69% of Americans say the conflict was not worth the costs, 57% saying Trump's war created more problems than it solved, reported doubts from Trump's own national security team (Rubio, CIA director) about Iranian compliance, and Trump/Vance public criticism of Netanyahu \u2014 none of which appears in the USA Today piece.",
+      "USA Today inserts unattributed editorial assertions ('The U.S. has so far failed to rein in the Israeli government') that are not sourced to Graham or any named party.",
+      "The Washington Post/Washington Times entry could not be retrieved (CAPTCHA wall), so its body-level framing is unknown.",
+      "Single-outlet limitation disclosure: only two outlets in the dossier (USA Today and CBS News) provided substantive retrievable body text. CBS is also the originating broadcaster, so much of the corroboration is effectively the same underlying interview reported by the outlet that aired it. Genuine independent multi-outlet corroboration is thin.",
+      "No primary government document (the 14-point memorandum of understanding referenced by both outlets) was included in the dossier, so claims about its contents cannot be checked against the source text."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple CBS formats plus USA Today reported the same 'Face the Nation' appearance with materially different emphasis \u2014 USA Today foregrounds the 'obliterate' threat while CBS foregrounds the diplomacy-will-fail framing and the reconstruction-funds reversal \u2014 and the most consequential claim (Trump's alleged plan to seize the Strait by force) is single-sourced to Graham himself, making this a coverage-and-sourcing story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/06/21/lindsey-graham-trump-iran/90635769007/",
+      "title": ""
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/sen-lindsey-graham-us-trump-iran-talks-lets-try-diplomatic-solution-i-think-going-to-fail/",
+      "title": "Sen. Lindsey Graham: \"Let's try a diplomatic solution. I think it's going to fail.\" - CBS News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/lindsey-graham-face-the-nation-transcript-06-21-2026/",
+      "title": "Transcript: GOP Sen. Lindsey Graham on \"Face the Nation with Margaret Brennan,\" June 21, 2026 - CBS News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/video/face-the-nation-062126/",
+      "title": "6/21: Face The Nation - CBS News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/jun/21/sen-lindsey-graham-predicts-diplomatic-talks-iran-fail/",
+      "title": "Sen. Lindsey Graham predicts diplomatic talks with Iran will fail - Washington Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/video/sen-lindsey-graham-on-iran-talks-lets-try-a-diplomatic-solution-i-think-its-going-to-fail/",
+      "title": "Sen. Lindsey Graham on Iran talks: \"Let's try a diplomatic solution. I think it's going to fail\" - CBS News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/face-the-nation-full-transcript-06-21-2026/",
+      "title": "Full transcript of \"Face the Nation with Margaret Brennan,\" June 21, 2026 - CBS News"
+    }
+  ]
+}
