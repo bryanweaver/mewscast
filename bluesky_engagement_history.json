@@ -1139,6 +1139,11 @@
       "did": "did:plc:u3efskiflbfwjbikj2gzzpsp",
       "handle": "valleyguitarist.bsky.social",
       "timestamp": "2026-06-21T16:32:20.456216"
+    },
+    {
+      "did": "did:plc:4hlqhppsazwbhyfajonzdxzb",
+      "handle": "babymetalfanatic.bsky.social",
+      "timestamp": "2026-06-21T20:41:23.921908"
     }
   ],
   "liked_posts": [
@@ -3356,6 +3361,11 @@
       "uri": "at://did:plc:u3efskiflbfwjbikj2gzzpsp/app.bsky.feed.post/3mosrptisdc2i",
       "author": "valleyguitarist.bsky.social",
       "timestamp": "2026-06-21T16:32:20.384123"
+    },
+    {
+      "uri": "at://did:plc:4hlqhppsazwbhyfajonzdxzb/app.bsky.feed.post/3mot46tyenk2o",
+      "author": "babymetalfanatic.bsky.social",
+      "timestamp": "2026-06-21T20:41:23.757555"
     }
   ],
   "last_cleanup": "2026-06-20T01:48:18.140009",
