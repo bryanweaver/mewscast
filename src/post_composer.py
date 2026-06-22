@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from datetime import datetime
 from typing import Optional
 
@@ -108,6 +109,7 @@ class PostComposer:
         max_length: Optional[int] = None,
         correction_inputs: Optional[dict] = None,
         retry_reasons: Optional[list[str]] = None,
+        platform: Optional[str] = None,
     ) -> DraftPost:
         """Render a draft post for the chosen post type.
 
@@ -176,7 +178,8 @@ class PostComposer:
             prompt_target = max(target_floor, int(prompt_target * 0.93))
 
         prompt = self._build_prompt(
-            chosen_type, brief, dossier, prompt_target, correction_inputs or {}
+            chosen_type, brief, dossier, prompt_target, correction_inputs or {},
+            platform=platform,
         )
 
         if retry_reasons:
@@ -346,6 +349,7 @@ class PostComposer:
         dossier: StoryDossier,
         max_length: int,
         correction_inputs: dict,
+        platform: Optional[str] = None,
     ) -> str:
         loader = self._get_prompt_loader()
         filename = PROMPT_FILES[post_type]
@@ -356,18 +360,18 @@ class PostComposer:
         # Post-type-specific placeholders
         if post_type == PostType.BULLETIN:
             single_outlet = self._single_outlet(dossier)
-            return loader.load(filename, single_outlet=single_outlet, **common)
+            base = loader.load(filename, single_outlet=single_outlet, **common)
 
-        if post_type == PostType.META:
+        elif post_type == PostType.META:
             topic = self._meta_topic(brief, dossier)
-            return loader.load(filename, topic=topic, **common)
+            base = loader.load(filename, topic=topic, **common)
 
-        if post_type == PostType.PRIMARY:
+        elif post_type == PostType.PRIMARY:
             ps = dossier.primary_sources[0] if dossier.primary_sources else None
             primary_kind = ps.kind if ps else "primary_source"
             primary_title = ps.title if ps else "Primary source"
             primary_excerpt = (ps.excerpt or "") if ps else ""
-            return loader.load(
+            base = loader.load(
                 filename,
                 primary_source_kind=primary_kind,
                 primary_source_title=primary_title,
@@ -375,9 +379,9 @@ class PostComposer:
                 **common,
             )
 
-        if post_type == PostType.CORRECTION:
+        elif post_type == PostType.CORRECTION:
             ci = correction_inputs or {}
-            return loader.load(
+            base = loader.load(
                 filename,
                 original_post_text=ci.get("original_post_text", ""),
                 original_post_url=ci.get("original_post_url", ""),
@@ -389,8 +393,44 @@ class PostComposer:
                 max_length=max_length,
             )
 
-        # REPORT, ANALYSIS — only need the common placeholder set
-        return loader.load(filename, **common)
+        else:
+            # REPORT, ANALYSIS — only need the common placeholder set
+            base = loader.load(filename, **common)
+
+        return self._with_platform_guidance(base, platform)
+
+    # ---- per-platform fork ------------------------------------------------
+
+    def _with_platform_guidance(self, base_prompt: str, platform: Optional[str]) -> str:
+        """Prepend platform-specific tuning to the base post-type prompt.
+
+        The base post-type prompts (report_post.md etc.) are the shared
+        journalistic core — facts, sign-off, stakes, forbidden words. A
+        platform guidance file (prompts/platform_<platform>.md) layers
+        emphasis/ordering on top WITHOUT changing those rules.
+
+        `platform=None` (the default, used by the canonical/Bluesky compose)
+        injects nothing — output is byte-identical to pre-fork. A guidance
+        file that is only HTML comments / whitespace is also a no-op, so
+        platform_bluesky.md can document the seam without altering output.
+        """
+        if not platform:
+            return base_prompt
+        raw = self._platform_guidance(platform)
+        # Strip HTML comments before deciding whether there's real guidance.
+        guidance = re.sub(r"<!--.*?-->", "", raw, flags=re.DOTALL).strip()
+        if not guidance:
+            return base_prompt
+        return f"{guidance}\n\n{'═' * 40}\n\n{base_prompt}"
+
+    def _platform_guidance(self, platform: str) -> str:
+        """Raw-read prompts/platform_<platform>.md (no placeholder formatting,
+        so the file may contain any characters). Returns '' if absent."""
+        loader = self._get_prompt_loader()
+        try:
+            return loader._load_raw(f"platform_{platform}.md")
+        except FileNotFoundError:
+            return ""
 
     @staticmethod
     def _common_placeholders(

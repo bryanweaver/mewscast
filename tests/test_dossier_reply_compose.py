@@ -139,3 +139,101 @@ class TestComposeDossierReplyText:
         ]:
             out = compose(brief, 99)  # worst-case big count
             assert len(out) <= 240, f"hook too long ({len(out)}): {out}"
+
+
+# ---------------------------------------------------------------------------
+# Per-platform fork — _compose_platform_variant fallback behavior
+# ---------------------------------------------------------------------------
+
+@pytest.fixture
+def platform_variant(_main_module):
+    return _main_module._compose_platform_variant
+
+
+def _make_draft(text):
+    from dossier_store import DraftPost, PostType
+    return DraftPost(
+        text=text, post_type=PostType.REPORT, sign_off="And that's the mews.",
+        story_id="sid", outlets_referenced=[], primary_source_urls=[],
+    )
+
+
+class _StubGate:
+    """verify() returns passed=True/False per a preset sequence."""
+    def __init__(self, results):
+        self._results = list(results)
+        self.calls = 0
+
+    def verify(self, draft, dossier, brief=None):
+        passed = self._results[self.calls] if self.calls < len(self._results) else False
+        self.calls += 1
+        r = type("R", (), {})()
+        r.passed = passed
+        r.failures = [] if passed else ["char_limit_exceeded"]
+        return r
+
+
+class _StubComposer:
+    def __init__(self, variant_text="X VARIANT TEXT", raise_on_compose=False):
+        self.variant_text = variant_text
+        self.raise_on_compose = raise_on_compose
+        self.compose_calls = 0
+
+    def compose(self, brief=None, dossier=None, post_type=None,
+                platform=None, retry_reasons=None):
+        self.compose_calls += 1
+        if self.raise_on_compose:
+            raise RuntimeError("compose boom")
+        return _make_draft(self.variant_text)
+
+    def _effective_max_length(self, post_type):
+        return 280
+
+
+class TestComposePlatformVariant:
+    def test_variant_used_when_it_passes(self, platform_variant):
+        from dossier_store import PostType
+        canonical = _make_draft("CANONICAL")
+        composer = _StubComposer()
+        gate = _StubGate([True])
+        out = platform_variant(
+            composer, gate, brief=object(), dossier=object(),
+            post_type=PostType.REPORT, canonical=canonical, platform="x",
+        )
+        assert out.text == "X VARIANT TEXT"   # variant, not canonical
+        assert composer.compose_calls == 1     # no retry needed
+
+    def test_retry_then_pass_uses_variant(self, platform_variant):
+        from dossier_store import PostType
+        canonical = _make_draft("CANONICAL")
+        composer = _StubComposer()
+        gate = _StubGate([False, True])        # first fails, retry passes
+        out = platform_variant(
+            composer, gate, brief=object(), dossier=object(),
+            post_type=PostType.REPORT, canonical=canonical, platform="x",
+        )
+        assert out.text == "X VARIANT TEXT"
+        assert composer.compose_calls == 2
+
+    def test_falls_back_to_canonical_when_gate_keeps_failing(self, platform_variant):
+        from dossier_store import PostType
+        canonical = _make_draft("CANONICAL")
+        composer = _StubComposer()
+        gate = _StubGate([False, False])       # never passes
+        out = platform_variant(
+            composer, gate, brief=object(), dossier=object(),
+            post_type=PostType.REPORT, canonical=canonical, platform="x",
+        )
+        assert out is canonical                # safe fallback
+        assert composer.compose_calls == 2
+
+    def test_falls_back_to_canonical_on_compose_error(self, platform_variant):
+        from dossier_store import PostType
+        canonical = _make_draft("CANONICAL")
+        composer = _StubComposer(raise_on_compose=True)
+        gate = _StubGate([])
+        out = platform_variant(
+            composer, gate, brief=object(), dossier=object(),
+            post_type=PostType.REPORT, canonical=canonical, platform="x",
+        )
+        assert out is canonical                # exception → canonical
