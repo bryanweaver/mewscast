@@ -5,7 +5,6 @@ Index of planning, strategy, and operations documents for the Mewscast / Walter 
 ## Pipeline & Workflow
 
 - [Croncat Journalism Workflow](Croncat_Journalism_Workflow.md) — the 7-stage Cronkite-modeled pipeline (design doc, principles, post types, keystone rule, implementation notes)
-- [Cost Analysis](COST_ANALYSIS.md) — per-cycle cost breakdown by post type and scheduling strategy
 - [Update Detection](UPDATE_DETECTION.md) — how the bot detects and handles story updates vs duplicates
 
 ## Research & Strategy
@@ -15,9 +14,7 @@ Index of planning, strategy, and operations documents for the Mewscast / Walter 
 
 ## Operations
 
-- [Engagement README](README_ENGAGEMENT.md) — engagement bot operations (X and Bluesky)
 - [Analytics](ANALYTICS.md) — live engagement snapshot (auto-updated by GHA)
-- [Analytics Plan](ANALYTICS_PLAN.md) — SQLite + Streamlit analytics MVP design
 
 ## Project README
 
