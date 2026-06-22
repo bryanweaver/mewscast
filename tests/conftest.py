@@ -83,9 +83,9 @@ if not hasattr(_anthropic, "Anthropic"):
 # `bluesky_client`, `twitter_bot`, and `content_generator` via
 # `sys.modules.setdefault(...)` at module-import time. `setdefault` is a
 # no-op when the key already exists, so eagerly loading the REAL modules
-# here neutralises those stubs. Tests that previously relied on the stubs
-# (e.g. OutletReplyBot / XEngagementBot tests) keep working because they
-# mock at the *call site* (`b.bot = Mock()`), not at the module level.
+# here neutralises those stubs. Tests that relied on the stubs keep
+# working because they mock at the *call site* (`b.bot = Mock()`), not at
+# the module level.
 #
 # bs4 is the most consequential preload: news_fetcher.py uses real
 # BeautifulSoup parsing in its tests, and a MagicMock-shaped stub causes

@@ -66,56 +66,12 @@ _mock_bluesky_client.create_bluesky_client = MagicMock()
 sys.modules.setdefault("bluesky_client", _mock_bluesky_client)
 
 # Now we can safely import the source modules
-from src.engagement_bot import EngagementBot
 from src.bluesky_engagement_bot import BlueskyEngagementBot
 
 
 # ---------------------------------------------------------------------------
 # Helpers for building mock API response objects
 # ---------------------------------------------------------------------------
-
-def _make_twitter_user(
-    user_id="123",
-    username="catperson",
-    followers_count=500,
-    following_count=200,
-    description="I love my cat Whiskers",
-    verified=False,
-):
-    """Return a mock Twitter user object."""
-    user = Mock()
-    user.id = user_id
-    user.username = username
-    user.description = description
-    user.verified = verified
-    user.public_metrics = {
-        "followers_count": followers_count,
-        "following_count": following_count,
-    }
-    return user
-
-
-def _make_twitter_tweet(
-    tweet_id="t1",
-    author_id="123",
-    like_count=50,
-    retweet_count=10,
-    text="Look at my adorable cat!",
-    created_at=None,
-):
-    """Return a mock Twitter tweet object."""
-    tweet = Mock()
-    tweet.id = tweet_id
-    tweet.author_id = author_id
-    tweet.text = text
-    tweet.public_metrics = {
-        "like_count": like_count,
-        "retweet_count": retweet_count,
-    }
-    if created_at is None:
-        created_at = datetime.now(timezone.utc)
-    tweet.created_at = created_at
-    return tweet
 
 
 def _make_bluesky_author(
@@ -202,34 +158,6 @@ def empty_bluesky_history():
 
 
 @pytest.fixture
-def twitter_bot(empty_history, tmp_path):
-    """
-    Create an EngagementBot with mocked TwitterBot and history file.
-    The history file is written to a temp directory so tests are isolated.
-    """
-    with patch.dict(os.environ, {
-        "X_API_KEY": "k",
-        "X_API_SECRET": "s",
-        "X_ACCESS_TOKEN": "t",
-        "X_ACCESS_TOKEN_SECRET": "ts",
-        "X_BEARER_TOKEN": "b",
-    }):
-        mock_client = Mock()
-        bot = EngagementBot()
-        bot.bot = Mock()
-        bot.bot.client = mock_client
-
-        # Redirect history to tmp_path for test isolation
-        history_path = tmp_path / "engagement_history.json"
-        with open(history_path, "w") as f:
-            json.dump(empty_history, f)
-        bot.engagement_log_path = history_path
-        bot.engagement_history = empty_history
-
-        return bot
-
-
-@pytest.fixture
 def bluesky_bot(empty_bluesky_history, tmp_path):
     """
     Create a BlueskyEngagementBot with mocked atproto Client and history file.
@@ -260,376 +188,6 @@ def bluesky_bot(empty_bluesky_history, tmp_path):
 # ===================================================================
 # TWITTER ENGAGEMENT BOT TESTS
 # ===================================================================
-
-
-class TestTwitterHistoryTracking:
-    """Tests for engagement history load/save/cleanup on the Twitter bot."""
-
-    def test_load_empty_history_when_file_missing(self, tmp_path):
-        """When the history file does not exist, a default dict is returned."""
-        with patch.dict(os.environ, {
-            "X_API_KEY": "k", "X_API_SECRET": "s",
-            "X_ACCESS_TOKEN": "t", "X_ACCESS_TOKEN_SECRET": "ts",
-            "X_BEARER_TOKEN": "b",
-        }):
-            bot = EngagementBot()
-        bot.engagement_log_path = tmp_path / "nonexistent.json"
-        history = bot._load_engagement_history()
-
-        assert history["followed_users"] == []
-        assert history["liked_tweets"] == []
-        assert "last_cleanup" in history
-
-    def test_load_existing_history(self, tmp_path):
-        """When a history file exists, its data is returned faithfully."""
-        data = {
-            "followed_users": [{"user_id": "1", "username": "u", "timestamp": "2025-01-01T00:00:00"}],
-            "liked_tweets": [{"tweet_id": "t1", "author": "a", "timestamp": "2025-01-01T00:00:00"}],
-            "last_cleanup": "2025-01-01T00:00:00",
-        }
-        path = tmp_path / "history.json"
-        path.write_text(json.dumps(data))
-
-        with patch.dict(os.environ, {
-            "X_API_KEY": "k", "X_API_SECRET": "s",
-            "X_ACCESS_TOKEN": "t", "X_ACCESS_TOKEN_SECRET": "ts",
-            "X_BEARER_TOKEN": "b",
-        }):
-            bot = EngagementBot()
-        bot.engagement_log_path = path
-        history = bot._load_engagement_history()
-
-        assert len(history["followed_users"]) == 1
-        assert history["followed_users"][0]["user_id"] == "1"
-
-    def test_save_engagement_history_writes_json(self, twitter_bot):
-        """_save_engagement_history persists the current state to disk."""
-        twitter_bot.engagement_history["followed_users"].append(
-            {"user_id": "999", "username": "newcat", "timestamp": datetime.now().isoformat()}
-        )
-        twitter_bot._save_engagement_history()
-
-        with open(twitter_bot.engagement_log_path) as f:
-            saved = json.load(f)
-        assert any(e["user_id"] == "999" for e in saved["followed_users"])
-
-    def test_cleanup_skipped_when_recent(self, twitter_bot):
-        """Cleanup should be skipped if last_cleanup was less than 7 days ago."""
-        twitter_bot.engagement_history["last_cleanup"] = datetime.now().isoformat()
-        twitter_bot.engagement_history["followed_users"].append(
-            {"user_id": "old", "username": "old", "timestamp": (datetime.now() - timedelta(days=100)).isoformat()}
-        )
-        twitter_bot._cleanup_old_history()
-        # Old entry should still be there because cleanup was skipped
-        assert len(twitter_bot.engagement_history["followed_users"]) == 1
-
-    def test_cleanup_removes_old_entries(self, twitter_bot):
-        """Cleanup removes follows and likes older than 90 days."""
-        twitter_bot.engagement_history["last_cleanup"] = (
-            datetime.now() - timedelta(days=8)
-        ).isoformat()
-        old_ts = (datetime.now() - timedelta(days=100)).isoformat()
-        recent_ts = (datetime.now() - timedelta(days=10)).isoformat()
-
-        twitter_bot.engagement_history["followed_users"] = [
-            {"user_id": "old", "username": "old", "timestamp": old_ts},
-            {"user_id": "recent", "username": "recent", "timestamp": recent_ts},
-        ]
-        twitter_bot.engagement_history["liked_tweets"] = [
-            {"tweet_id": "old_t", "author": "a", "timestamp": old_ts},
-        ]
-
-        twitter_bot._cleanup_old_history()
-
-        assert len(twitter_bot.engagement_history["followed_users"]) == 1
-        assert twitter_bot.engagement_history["followed_users"][0]["user_id"] == "recent"
-        assert len(twitter_bot.engagement_history["liked_tweets"]) == 0
-
-
-class TestTwitterTargetSelection:
-    """Tests for how the Twitter bot selects accounts and posts."""
-
-    def test_skips_already_followed_users(self, twitter_bot):
-        """Users already in history should be excluded from candidates."""
-        twitter_bot.engagement_history["followed_users"] = [
-            {"user_id": "123", "username": "alreadyfollowed", "timestamp": datetime.now().isoformat()},
-        ]
-
-        user = _make_twitter_user(user_id="123", username="alreadyfollowed")
-        tweet = _make_twitter_tweet(author_id="123")
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_follow_cat_account()
-        assert result is False
-
-    def test_skips_low_follower_accounts(self, twitter_bot):
-        """Accounts with fewer than 100 followers should be filtered out."""
-        user = _make_twitter_user(user_id="1", followers_count=50)
-        tweet = _make_twitter_tweet(author_id="1")
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_follow_cat_account()
-        assert result is False
-
-    def test_skips_mega_accounts(self, twitter_bot):
-        """Accounts with more than 100K followers should be filtered out."""
-        user = _make_twitter_user(user_id="2", followers_count=200_000)
-        tweet = _make_twitter_tweet(author_id="2")
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_follow_cat_account()
-        assert result is False
-
-    def test_skips_verified_accounts(self, twitter_bot):
-        """Verified accounts should be filtered out."""
-        user = _make_twitter_user(user_id="3", verified=True)
-        tweet = _make_twitter_tweet(author_id="3")
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_follow_cat_account()
-        assert result is False
-
-    def test_skips_non_cat_bios(self, twitter_bot):
-        """Accounts without cat keywords in bio should be filtered out."""
-        user = _make_twitter_user(user_id="4", description="I love dogs and hiking")
-        tweet = _make_twitter_tweet(author_id="4")
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_follow_cat_account()
-        assert result is False
-
-    def test_skips_follow_spammers(self, twitter_bot):
-        """Accounts with follow ratio > 5 should be filtered out."""
-        user = _make_twitter_user(
-            user_id="5",
-            followers_count=200,
-            following_count=2000,  # ratio = 10, well above 5
-            description="cat lover",
-        )
-        tweet = _make_twitter_tweet(author_id="5")
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_follow_cat_account()
-        assert result is False
-
-    def test_successfully_follows_quality_account(self, twitter_bot):
-        """A cat-related account meeting all criteria should be followed."""
-        user = _make_twitter_user(
-            user_id="10",
-            username="qualitycat",
-            followers_count=500,
-            following_count=200,
-            description="Cat mom of two tabbies",
-            verified=False,
-        )
-        tweet = _make_twitter_tweet(author_id="10")
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-        twitter_bot.bot.client.follow_user.return_value = None
-
-        result = twitter_bot.find_and_follow_cat_account()
-        assert result is True
-        twitter_bot.bot.client.follow_user.assert_called_once_with(target_user_id="10")
-        assert any(
-            e["user_id"] == "10" for e in twitter_bot.engagement_history["followed_users"]
-        )
-
-    def test_no_search_results_returns_false(self, twitter_bot):
-        """When the search returns no data, the method returns False."""
-        response = Mock()
-        response.data = None
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        assert twitter_bot.find_and_follow_cat_account() is False
-
-
-class TestTwitterLikePost:
-    """Tests for the Twitter like-post flow."""
-
-    def test_skips_already_liked_tweets(self, twitter_bot):
-        """Tweets already in liked history should be skipped."""
-        twitter_bot.engagement_history["liked_tweets"] = [
-            {"tweet_id": "t1", "author": "a", "timestamp": datetime.now().isoformat()}
-        ]
-
-        user = _make_twitter_user(user_id="200")
-        tweet = _make_twitter_tweet(tweet_id="t1", author_id="200", like_count=50)
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_like_cat_post()
-        assert result is False
-
-    def test_skips_low_engagement_posts(self, twitter_bot):
-        """Posts with fewer than 5 likes should be filtered out."""
-        user = _make_twitter_user(user_id="201")
-        tweet = _make_twitter_tweet(tweet_id="t_low", author_id="201", like_count=2)
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_like_cat_post()
-        assert result is False
-
-    def test_skips_mega_viral_posts(self, twitter_bot):
-        """Posts with more than 10K likes should be filtered out."""
-        user = _make_twitter_user(user_id="202")
-        tweet = _make_twitter_tweet(tweet_id="t_viral", author_id="202", like_count=50_000)
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_like_cat_post()
-        assert result is False
-
-    def test_skips_old_posts(self, twitter_bot):
-        """Posts older than 24 hours should be filtered out."""
-        user = _make_twitter_user(user_id="203")
-        old_time = datetime.now(timezone.utc) - timedelta(hours=30)
-        tweet = _make_twitter_tweet(
-            tweet_id="t_old", author_id="203", like_count=50, created_at=old_time
-        )
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        result = twitter_bot.find_and_like_cat_post()
-        assert result is False
-
-    def test_successfully_likes_quality_post(self, twitter_bot):
-        """A recent post with moderate engagement should be liked."""
-        user = _make_twitter_user(user_id="204", username="catperson")
-        tweet = _make_twitter_tweet(
-            tweet_id="t_good",
-            author_id="204",
-            like_count=100,
-            retweet_count=20,
-            created_at=datetime.now(timezone.utc) - timedelta(hours=2),
-        )
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-        twitter_bot.bot.client.like.return_value = None
-
-        result = twitter_bot.find_and_like_cat_post()
-        assert result is True
-        twitter_bot.bot.client.like.assert_called_once_with(tweet_id="t_good")
-        assert any(
-            e["tweet_id"] == "t_good" for e in twitter_bot.engagement_history["liked_tweets"]
-        )
-
-
-class TestTwitterEngagementCycle:
-    """Tests for the top-level Twitter engagement cycle."""
-
-    def test_cycle_calls_follow_and_like(self, twitter_bot):
-        """run_engagement_cycle should attempt both follow and like."""
-        with patch.object(twitter_bot, "find_and_follow_cat_account", return_value=True) as mock_follow, \
-             patch.object(twitter_bot, "find_and_like_cat_post", return_value=True) as mock_like:
-            result = twitter_bot.run_engagement_cycle()
-
-        mock_follow.assert_called_once()
-        mock_like.assert_called_once()
-        assert result is True
-
-    def test_cycle_returns_false_when_both_fail(self, twitter_bot):
-        """Cycle returns False when neither follow nor like succeed."""
-        with patch.object(twitter_bot, "find_and_follow_cat_account", return_value=False), \
-             patch.object(twitter_bot, "find_and_like_cat_post", return_value=False):
-            result = twitter_bot.run_engagement_cycle()
-        assert result is False
-
-    def test_cycle_returns_true_when_only_like_succeeds(self, twitter_bot):
-        """Cycle returns True if at least one action succeeds."""
-        with patch.object(twitter_bot, "find_and_follow_cat_account", return_value=False), \
-             patch.object(twitter_bot, "find_and_like_cat_post", return_value=True):
-            result = twitter_bot.run_engagement_cycle()
-        assert result is True
-
-    def test_cycle_handles_follow_exception(self, twitter_bot):
-        """If follow throws, cycle should still attempt like."""
-        with patch.object(
-            twitter_bot, "find_and_follow_cat_account", side_effect=Exception("API down")
-        ), patch.object(twitter_bot, "find_and_like_cat_post", return_value=True) as mock_like:
-            result = twitter_bot.run_engagement_cycle()
-
-        mock_like.assert_called_once()
-        assert result is True
-
-    def test_cycle_handles_like_exception(self, twitter_bot):
-        """If like throws, cycle should still return based on follow result."""
-        with patch.object(twitter_bot, "find_and_follow_cat_account", return_value=True), \
-             patch.object(
-                 twitter_bot, "find_and_like_cat_post", side_effect=Exception("Rate limited")
-             ):
-            result = twitter_bot.run_engagement_cycle()
-        assert result is True
-
-
-class TestTwitterErrorHandling:
-    """Tests for graceful error handling in the Twitter engagement bot."""
-
-    def test_follow_api_error_returns_false(self, twitter_bot):
-        """If the search API raises, find_and_follow_cat_account returns False."""
-        twitter_bot.bot.client.search_recent_tweets.side_effect = Exception("Network error")
-        assert twitter_bot.find_and_follow_cat_account() is False
-
-    def test_like_api_error_returns_false(self, twitter_bot):
-        """If the search API raises, find_and_like_cat_post returns False."""
-        twitter_bot.bot.client.search_recent_tweets.side_effect = Exception("Timeout")
-        assert twitter_bot.find_and_like_cat_post() is False
-
-    def test_follow_user_api_error_returns_false(self, twitter_bot):
-        """If the follow_user call itself fails, the method returns False."""
-        user = _make_twitter_user(user_id="err1", description="cat lover")
-        tweet = _make_twitter_tweet(author_id="err1")
-
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-        twitter_bot.bot.client.follow_user.side_effect = Exception("403 Forbidden")
-
-        result = twitter_bot.find_and_follow_cat_account()
-        assert result is False
 
 
 # ===================================================================
@@ -1508,17 +1066,6 @@ class TestBlueskyErrorHandling:
 class TestPlatformDifferences:
     """Tests verifying key behavioral differences between Twitter and Bluesky bots."""
 
-    def test_twitter_follower_threshold_is_100(self, twitter_bot):
-        """Twitter bot requires at least 100 followers (vs 50 on Bluesky)."""
-        # 80 followers should be rejected on Twitter
-        user = _make_twitter_user(user_id="pd1", followers_count=80, description="cat person")
-        tweet = _make_twitter_tweet(author_id="pd1")
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        assert twitter_bot.find_and_follow_cat_account() is False
 
     def test_bluesky_follower_threshold_is_50(self, bluesky_bot):
         """Bluesky bot requires at least 50 followers (lower than Twitter)."""
@@ -1540,19 +1087,6 @@ class TestPlatformDifferences:
 
         assert bluesky_bot.find_and_follow_cat_account() is True
 
-    def test_twitter_like_threshold_is_5(self, twitter_bot):
-        """Twitter bot requires at least 5 likes to consider a post."""
-        user = _make_twitter_user(user_id="pd3")
-        tweet = _make_twitter_tweet(
-            tweet_id="t_low", author_id="pd3", like_count=4,
-            created_at=datetime.now(timezone.utc),
-        )
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        assert twitter_bot.find_and_like_cat_post() is False
 
     def test_bluesky_like_threshold_is_3(self, bluesky_bot):
         """Bluesky bot requires at least 3 likes (lower than Twitter's 5)."""
@@ -1571,20 +1105,6 @@ class TestPlatformDifferences:
 
         assert bluesky_bot.find_and_like_cat_post() is True
 
-    def test_twitter_recency_window_is_24h(self, twitter_bot):
-        """Twitter bot filters out posts older than 24 hours."""
-        user = _make_twitter_user(user_id="pd5")
-        # 25 hours old -- should be rejected
-        tweet = _make_twitter_tweet(
-            tweet_id="t_25h", author_id="pd5", like_count=50,
-            created_at=datetime.now(timezone.utc) - timedelta(hours=25),
-        )
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-
-        assert twitter_bot.find_and_like_cat_post() is False
 
     def test_bluesky_recency_window_is_48h(self, bluesky_bot):
         """Bluesky bot allows posts up to 48 hours old (longer than Twitter)."""
@@ -1605,37 +1125,16 @@ class TestPlatformDifferences:
 
         assert bluesky_bot.find_and_like_cat_post() is True
 
-    def test_twitter_has_no_follow_ratio_check(self, twitter_bot):
-        """Twitter bot does not have a _check_follow_ratio_safe method."""
-        assert not hasattr(twitter_bot, "_check_follow_ratio_safe")
 
     def test_bluesky_has_follow_ratio_check(self, bluesky_bot):
         """Bluesky bot has a _check_follow_ratio_safe method."""
         assert hasattr(bluesky_bot, "_check_follow_ratio_safe")
 
-    def test_twitter_uses_tweet_id_key(self, twitter_bot):
-        """Twitter bot history tracks liked_tweets with tweet_id keys."""
-        assert "liked_tweets" in twitter_bot.engagement_history
 
     def test_bluesky_uses_uri_key(self, bluesky_bot):
         """Bluesky bot history tracks liked_posts with uri keys."""
         assert "liked_posts" in bluesky_bot.engagement_history
 
-    def test_twitter_tracks_user_id_for_follows(self, twitter_bot):
-        """Twitter follow history uses user_id field."""
-        user = _make_twitter_user(user_id="follow_key_test", description="cat lover")
-        tweet = _make_twitter_tweet(author_id="follow_key_test")
-        response = Mock()
-        response.data = [tweet]
-        response.includes = {"users": [user]}
-        twitter_bot.bot.client.search_recent_tweets.return_value = response
-        twitter_bot.bot.client.follow_user.return_value = None
-
-        twitter_bot.find_and_follow_cat_account()
-        if twitter_bot.engagement_history["followed_users"]:
-            entry = twitter_bot.engagement_history["followed_users"][-1]
-            assert "user_id" in entry
-            assert "did" not in entry
 
     def test_bluesky_tracks_did_for_follows(self, bluesky_bot):
         """Bluesky follow history uses did field."""
@@ -1661,6 +1160,3 @@ class TestPlatformDifferences:
         """Bluesky bot supports reposting rescue posts (Twitter bot does not)."""
         assert hasattr(bluesky_bot, "find_and_repost_cat_rescue")
 
-    def test_twitter_has_no_repost_functionality(self, twitter_bot):
-        """Twitter bot does not have a repost/rescue method."""
-        assert not hasattr(twitter_bot, "find_and_repost_cat_rescue")
