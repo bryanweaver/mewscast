@@ -130,6 +130,54 @@ def _compose_dossier_reply_text(
     return "Full cross-outlet dossier on this story:"
 
 
+def _compose_platform_variant(
+    post_composer,
+    verification_gate,
+    brief,
+    dossier: StoryDossier,
+    post_type: PostType,
+    canonical: DraftPost,
+    platform: str,
+) -> DraftPost:
+    """Compose a platform-specific initial-post variant, verified independently.
+
+    The per-platform fork: Bluesky keeps the canonical `draft`; X gets its own
+    text composed with platform-specific guidance (prompts/platform_<p>.md).
+    Structural verification (sign-off, char limit, forbidden words) runs on the
+    variant; the expensive fabrication analyzer does NOT — the canonical already
+    cleared it and the variant restates the same facts from the same brief.
+
+    On any compose/verify failure — after one retry with the gate feedback —
+    this falls back to the canonical draft, so the platform always publishes
+    valid text and Bluesky's quality bar is never undercut by the X experiment.
+    """
+    def _try(reasons=None):
+        d = post_composer.compose(
+            brief=brief, dossier=dossier, post_type=post_type,
+            platform=platform, retry_reasons=reasons,
+        )
+        return d, verification_gate.verify(d, dossier, brief=brief)
+
+    try:
+        d, g = _try()
+        if g.passed:
+            return d
+        print(f"[journalism] {platform} variant failed gate: {g.failures}; retrying")
+        retry = list(g.failures) + [
+            f"{CHAR_LIMIT_REASON_PREFIX} draft MUST be <= "
+            f"{post_composer._effective_max_length(post_type)} chars"
+        ]
+        d, g = _try(retry)
+        if g.passed:
+            return d
+        print(f"[journalism] {platform} variant still failing ({g.failures}); "
+              f"falling back to canonical draft")
+    except Exception as e:
+        print(f"[journalism] {platform} variant compose error ({e}); "
+              f"falling back to canonical draft")
+    return canonical
+
+
 def _project_root() -> str:
     return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -1783,6 +1831,20 @@ def post_journalism_cycle(
     except Exception as e:
         print(f"[journalism] failed to persist extended dossier data: {e}")
 
+    # ---- Per-platform content fork ----------------------------------------
+    # Bluesky publishes the canonical `draft` (verified above) unchanged — it's
+    # the account's strongest surface. X gets its own initial-post text tuned
+    # for X's out-of-network retrieval ranking (prompts/platform_x.md), verified
+    # independently, with a safe fallback to the canonical draft on failure.
+    # Shared downstream: the Grok image and the dossier-link reply are unchanged.
+    x_draft = _compose_platform_variant(
+        post_composer, verification_gate, brief, dossier, chosen_type,
+        canonical=draft, platform="x",
+    )
+    x_variant_used = x_draft is not draft
+    print(f"[journalism] X variant: "
+          f"{'distinct from canonical' if x_variant_used else 'fell back to canonical'}")
+
     # ---- Stage 7: publish or dry-run write --------------------------------
 
     # Mark the story as seen BEFORE writing the draft so the seen-stories
@@ -1830,6 +1892,16 @@ def post_journalism_cycle(
         path = _write_draft_file(drafts_dir, draft, dossier)
         print(f"[journalism] DRY RUN draft written to {path}")
 
+        # Per-platform fork preview — eyeball X vs Bluesky before going live.
+        print("\n[journalism] ===== DRY RUN platform preview =====")
+        print(f"--- BLUESKY ({len(draft.text)} chars) ---\n{draft.text}\n")
+        if x_variant_used:
+            x_path = _write_draft_file(drafts_dir, x_draft, dossier, subfolder="x")
+            print(f"--- X ({len(x_draft.text)} chars) [written to {x_path}] ---\n{x_draft.text}\n")
+        else:
+            print("--- X --- fell back to the canonical draft (identical to Bluesky)\n")
+        print("[journalism] ===== end platform preview =====\n")
+
         # Best-effort image generation for dry-run dossier preview.
         # Save directly to the dossier images directory (no temp file).
         safe_id = _safe_filename_component(draft.story_id)
@@ -1866,9 +1938,9 @@ def post_journalism_cycle(
     is_meta = chosen_type == PostType.META
     if is_meta:
         sign_off = SIGN_OFFS.get(chosen_type)
-        x_post_text = _inline_dossier_url_into_meta(draft.text, dossier_url, sign_off)
+        x_post_text = _inline_dossier_url_into_meta(x_draft.text, dossier_url, sign_off)
     else:
-        x_post_text = draft.text
+        x_post_text = x_draft.text
     bluesky_post_text = draft.text
 
     # Generate the Field Notes reply image ONCE (per cycle) — both platforms

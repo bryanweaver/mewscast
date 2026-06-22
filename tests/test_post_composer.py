@@ -617,3 +617,53 @@ class TestErrorHandling:
         draft = composer.compose(brief=brief, dossier=dossier, post_type=PostType.REPORT)
         assert not draft.text.startswith('"')
         assert not draft.text.endswith('"')
+
+
+# ---------------------------------------------------------------------------
+# Per-platform fork — platform guidance injection
+#
+# Uses the REAL prompt loader (no stub) so the actual prompts/platform_*.md
+# files are exercised end-to-end through compose().
+# ---------------------------------------------------------------------------
+
+class TestPlatformFork:
+    def _capture_prompt(self, brief, dossier, platform):
+        captured: list[str] = []
+        client = _FakeClaude(
+            "Reuters reports 68-32.\n\nAnd that's the mews.",
+            capture_prompt=captured,
+        )
+        # Real loader (default) so platform_x.md / platform_bluesky.md are read.
+        composer = PostComposer(anthropic_client=client)
+        composer.compose(
+            brief=brief, dossier=dossier, post_type=PostType.REPORT, platform=platform,
+        )
+        assert captured, "prompt was not captured"
+        return captured[0]
+
+    def test_no_platform_is_baseline(self, brief, dossier):
+        """platform=None injects nothing — the canonical/Bluesky path."""
+        prompt = self._capture_prompt(brief, dossier, None)
+        assert "PLATFORM TUNING" not in prompt
+
+    def test_bluesky_is_noop(self, brief, dossier):
+        """platform='bluesky' is a documented no-op (comment-only file)."""
+        baseline = self._capture_prompt(brief, dossier, None)
+        bluesky = self._capture_prompt(brief, dossier, "bluesky")
+        assert "PLATFORM TUNING" not in bluesky
+        assert bluesky == baseline  # byte-identical to baseline
+
+    def test_x_injects_guidance_before_base(self, brief, dossier):
+        """platform='x' prepends the X tuning above the base post-type prompt."""
+        baseline = self._capture_prompt(brief, dossier, None)
+        x_prompt = self._capture_prompt(brief, dossier, "x")
+        assert "PLATFORM TUNING — X" in x_prompt
+        # The base prompt is preserved verbatim at the tail.
+        assert x_prompt.endswith(baseline)
+        # Guidance precedes the base post-type body.
+        assert x_prompt.index("PLATFORM TUNING") < x_prompt.index(baseline[:40])
+
+    def test_unknown_platform_is_noop(self, brief, dossier):
+        """A platform with no guidance file injects nothing (safe default)."""
+        baseline = self._capture_prompt(brief, dossier, None)
+        assert self._capture_prompt(brief, dossier, "nope") == baseline
