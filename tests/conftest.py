@@ -1,9 +1,8 @@
 """
 Shared test setup — loaded by pytest before any test module is collected.
 
-The project's main.py, twitter_bot.py, bluesky_bot.py, and outlet_reply_bot.py
-all pull in heavy third-party packages (tweepy, atproto, anthropic,
-content_generator). Several test files mock these via sys.modules at
+The project's main.py, twitter_bot.py, and bluesky_bot.py all pull in
+heavy third-party packages (tweepy, atproto, anthropic, content_generator). Several test files mock these via sys.modules at
 module-import time, and running them together in one pytest session
 produces order-dependent collisions (e.g. one file's bare
 types.ModuleType("tweepy") sticks around and another file's

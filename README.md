@@ -67,7 +67,7 @@ python src/main.py journalism --dry-run
 | `ANTHROPIC_API_KEY` | Anthropic API key |
 | `X_AI_API_KEY` | X AI API key (Grok image generation) |
 
-3. Go to Actions tab, enable workflows. `post-tweet.yml` runs on schedule automatically.
+3. Go to Actions tab, enable workflows. `journalism-publish.yml` runs on schedule automatically.
 
 ## Walter Croncat Journalism Pipeline
 
@@ -105,10 +105,8 @@ Walter Cronkite omitted "And that's the way it is" on nights he editorialized �
 ```yaml
 # config.yaml
 pipelines:
-  legacy:
-    enabled: false   # legacy single-article pipeline
   journalism:
-    enabled: true    # Walter Croncat journalism pipeline
+    enabled: true    # Walter Croncat journalism pipeline (the only pipeline)
 ```
 
 `--dry-run` is always allowed regardless of the switch.
@@ -151,35 +149,28 @@ Every pipeline run produces a `StoryDossier` + `MetaAnalysisBrief` written to `d
 ```
 mewscast/
 ├── .github/workflows/
-│   ├── post-tweet.yml              # Legacy scheduled posts
 │   ├── journalism-publish.yml      # Journalism pipeline (scheduled)
 │   ├── journalism-dry-run.yml      # Dry-run (manual trigger)
 │   ├── journalism-republish.yml    # Republish a saved draft
 │   ├── post-correction.yml         # Manual correction post
-│   ├── x-engage.yml                # X engagement automation
 │   ├── bluesky-engage.yml          # Bluesky engagement automation
 │   ├── engage-cats-bluesky.yml     # Cat community engagement (Bluesky)
-│   ├── outlet-reply.yml            # X outlet reply bot
 │   ├── bluesky-outlet-reply.yml    # Bluesky outlet reply bot
-│   ├── check-mentions.yml          # X mention replies
 │   ├── triage-review.yml           # Triage decision logging
 │   ├── track-analytics.yml         # Engagement analytics
 │   └── rebuild-history.yml         # Rebuild post history from X
 ├── src/
-│   ├── main.py                     # Entry point (legacy + journalism modes)
-│   ├── twitter_bot.py              # X/Twitter API integration
+│   ├── main.py                     # Entry point (journalism pipeline + CLI modes)
+│   ├── twitter_bot.py              # X/Twitter API integration (publish path)
 │   ├── bluesky_bot.py              # Bluesky API integration
 │   ├── bluesky_client.py           # Low-level Bluesky client
-│   ├── content_generator.py        # Legacy content generation
+│   ├── content_generator.py        # Content generation (source replies, image prompts)
 │   ├── image_generator.py          # AI image generation (Grok)
 │   ├── image_qc.py                 # Image quality checks
 │   ├── news_fetcher.py             # Google News RSS fetching
 │   ├── post_tracker.py             # Deduplication & history
 │   ├── prompt_loader.py            # Prompt template loader
-│   ├── engagement_bot.py           # X engagement automation
-│   ├── x_engagement_bot.py         # X engagement bot (newer)
 │   ├── bluesky_engagement_bot.py   # Bluesky engagement bot
-│   ├── outlet_reply_bot.py         # X outlet reply bot
 │   ├── bluesky_outlet_reply.py     # Bluesky outlet reply bot
 │   ├── x_retry.py                  # X API retry helpers
 │   ├── positive_news_post.py       # Positive news posts (WIP)
@@ -231,10 +222,8 @@ Key sections in `config.yaml`:
 
 ```yaml
 pipelines:
-  legacy:
-    enabled: false      # legacy single-article pipeline
   journalism:
-    enabled: true       # Walter Croncat journalism pipeline
+    enabled: true       # Walter Croncat journalism pipeline (the only pipeline)
 
 journalism:
   enabled: true
@@ -244,10 +233,10 @@ journalism:
     model: claude-sonnet-4-6
 
 content:
-  model: "claude-sonnet-4-6"   # legacy pipeline model
+  model: "claude-sonnet-4-6"   # content-generator model (source replies, image prompts)
 ```
 
-Cost at 2x/day journalism posts: ~$13/month (Opus meta-analysis is the largest cost). See `docs/COST_ANALYSIS.md` for full breakdown.
+Cost: roughly $15–20/month at the current 3×/day cadence — the Opus meta-analysis call dominates, with Grok images and Bluesky/X API a rounding error.
 
 ## Testing
 
@@ -294,7 +283,7 @@ pytest tests/ --cov=src --cov-report=html
 | "Rate limit exceeded" | X free tier: ~1,500 posts/month (50/day). Wait for reset or reduce frequency |
 | "Content generation failed" | Check Anthropic API key; verify credits at console.anthropic.com |
 | GitHub Actions not running | Confirm workflows are enabled; check secrets are set |
-| Both pipelines disabled error | Flip `pipelines.legacy.enabled` or `pipelines.journalism.enabled` to `true` in `config.yaml` |
+| Journalism pipeline disabled error | Flip `pipelines.journalism.enabled` to `true` in `config.yaml` |
 
 ## License
 
