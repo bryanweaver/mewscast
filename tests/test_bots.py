@@ -1430,46 +1430,36 @@ class TestMainPipeline:
     """Tests for the main.py orchestration pipeline."""
 
     def test_main_entry_point_scheduled_mode(self, all_env):
-        """main() in 'scheduled' mode dispatches to post_scheduled_tweet
-        when pipelines.legacy.enabled is True in config."""
-        legacy_cfg = {"pipelines": {"legacy": {"enabled": True}}}
-        with patch("src.main.post_scheduled_tweet", return_value=True) as mock_post, \
-             patch("src.main._load_config", return_value=legacy_cfg), \
+        """main() in 'scheduled' mode runs the journalism pipeline."""
+        cfg = {"pipelines": {"journalism": {"enabled": True}}}
+        with patch("src.main.post_journalism_cycle", return_value=True) as mock_cycle, \
+             patch("src.main._load_config", return_value=cfg), \
              patch("src.main.load_dotenv"), \
              patch("sys.argv", ["main.py", "scheduled"]), \
              pytest.raises(SystemExit) as exc_info:
             from src.main import main
             main()
-        mock_post.assert_called_once()
+        mock_cycle.assert_called_once()
         assert exc_info.value.code == 0
 
-    def test_main_entry_point_reply_mode(self, all_env):
-        """main() in 'reply' mode calls reply_to_mentions."""
-        with patch("src.main.reply_to_mentions", return_value=True) as mock_reply, \
+    def test_main_scheduled_mode_disabled_exits_nonzero(self, all_env):
+        """main() exits 1 when the journalism pipeline is disabled in config."""
+        cfg = {"pipelines": {"journalism": {"enabled": False}}}
+        with patch("src.main.post_journalism_cycle") as mock_cycle, \
+             patch("src.main._load_config", return_value=cfg), \
              patch("src.main.load_dotenv"), \
-             patch("sys.argv", ["main.py", "reply"]), \
+             patch("sys.argv", ["main.py", "scheduled"]), \
              pytest.raises(SystemExit) as exc_info:
             from src.main import main
             main()
-        mock_reply.assert_called_once()
-        assert exc_info.value.code == 0
-
-    def test_main_entry_point_both_mode(self, all_env):
-        """main() in 'both' mode calls both post and reply."""
-        with patch("src.main.post_scheduled_tweet", return_value=True) as mock_post, \
-             patch("src.main.reply_to_mentions", return_value=True) as mock_reply, \
-             patch("src.main.load_dotenv"), \
-             patch("sys.argv", ["main.py", "both"]), \
-             pytest.raises(SystemExit) as exc_info:
-            from src.main import main
-            main()
-        mock_post.assert_called_once()
-        mock_reply.assert_called_once()
-        assert exc_info.value.code == 0
+        mock_cycle.assert_not_called()
+        assert exc_info.value.code == 1
 
     def test_main_failure_exits_nonzero(self, all_env):
-        """main() exits with code 1 when posting fails."""
-        with patch("src.main.post_scheduled_tweet", return_value=False) as mock_post, \
+        """main() exits with code 1 when the journalism cycle fails."""
+        cfg = {"pipelines": {"journalism": {"enabled": True}}}
+        with patch("src.main.post_journalism_cycle", return_value=False), \
+             patch("src.main._load_config", return_value=cfg), \
              patch("src.main.load_dotenv"), \
              patch("sys.argv", ["main.py", "scheduled"]), \
              pytest.raises(SystemExit) as exc_info:
@@ -1487,242 +1477,18 @@ class TestMainPipeline:
         assert exc_info.value.code == 1
 
     def test_main_defaults_to_scheduled_via_env(self, all_env):
-        """main() defaults to 'scheduled' mode from BOT_MODE env var
-        and routes to post_scheduled_tweet when legacy pipeline is enabled."""
-        legacy_cfg = {"pipelines": {"legacy": {"enabled": True}}}
+        """main() defaults to 'scheduled' mode from BOT_MODE and runs journalism."""
+        cfg = {"pipelines": {"journalism": {"enabled": True}}}
         with patch.dict(os.environ, {"BOT_MODE": "scheduled"}), \
-             patch("src.main.post_scheduled_tweet", return_value=True) as mock_post, \
-             patch("src.main._load_config", return_value=legacy_cfg), \
+             patch("src.main.post_journalism_cycle", return_value=True) as mock_cycle, \
+             patch("src.main._load_config", return_value=cfg), \
              patch("src.main.load_dotenv"), \
              patch("sys.argv", ["main.py"]), \
              pytest.raises(SystemExit) as exc_info:
             from src.main import main
             main()
-        mock_post.assert_called_once()
+        mock_cycle.assert_called_once()
         assert exc_info.value.code == 0
-
-
-class TestPostScheduledTweet:
-    """Tests for the post_scheduled_tweet pipeline function."""
-
-    @pytest.fixture
-    def mock_all_deps(self, all_env, sample_config):
-        """Patch all dependencies used by post_scheduled_tweet."""
-        import yaml
-
-        config_yaml = yaml.dump(sample_config)
-
-        with patch("src.main.ContentGenerator") as mock_gen_cls, \
-             patch("src.main.TwitterBot") as mock_tw_cls, \
-             patch("src.main.BlueskyBot") as mock_bs_cls, \
-             patch("src.main.NewsFetcher") as mock_nf_cls, \
-             patch("src.main.ImageGenerator") as mock_ig_cls, \
-             patch("src.main.PostTracker") as mock_pt_cls, \
-             patch("builtins.open", mock_open(read_data=config_yaml)), \
-             patch("src.main.yaml.safe_load", return_value=sample_config):
-
-            mock_gen = MagicMock()
-            mock_tw = MagicMock()
-            mock_bs = MagicMock()
-            mock_nf = MagicMock()
-            mock_ig = MagicMock()
-            mock_pt = MagicMock()
-
-            mock_gen_cls.return_value = mock_gen
-            mock_tw_cls.return_value = mock_tw
-            mock_bs_cls.return_value = mock_bs
-            mock_nf_cls.return_value = mock_nf
-            mock_ig_cls.return_value = mock_ig
-            mock_pt_cls.return_value = mock_pt
-
-            # Set up news_categories on the fetcher
-            mock_nf.news_categories = ["politics", "tech"]
-
-            yield {
-                "generator": mock_gen,
-                "twitter": mock_tw,
-                "bluesky": mock_bs,
-                "news_fetcher": mock_nf,
-                "image_gen": mock_ig,
-                "tracker": mock_pt,
-            }
-
-    def test_successful_post_to_both_platforms(self, mock_all_deps):
-        """post_scheduled_tweet posts to both X and Bluesky on success."""
-        deps = mock_all_deps
-
-        # Setup: news fetcher returns articles
-        article = {
-            "title": "Big Story",
-            "url": "https://example.com/big",
-            "source": "Reuters",
-            "description": "A big story",
-        }
-        deps["news_fetcher"].get_top_stories.return_value = [article]
-        deps["news_fetcher"].get_articles_for_topic.return_value = []
-        deps["news_fetcher"].fetch_article_content.return_value = "Full article content here."
-
-        # Tracker says not duplicate
-        deps["tracker"].check_story_status.return_value = {
-            "is_duplicate": False,
-            "is_update": False,
-            "previous_posts": [],
-            "cluster_info": None,
-        }
-
-        # Content generator returns valid tweet
-        deps["generator"].generate_tweet.return_value = {
-            "tweet": "Breaking mews!",
-            "needs_source_reply": True,
-            "story_metadata": article,
-        }
-        deps["generator"].generate_image_prompt.return_value = "cat reporter prompt"
-        deps["generator"].generate_source_reply.return_value = "https://example.com/big"
-
-        # Image generator returns (path, anchored_prompt) tuple
-        deps["image_gen"].generate_image.return_value = (
-            "/tmp/image.png",
-            "anchored prompt",
-        )
-
-        # Twitter post succeeds
-        deps["twitter"].post_tweet_with_image.return_value = {"id": "x_123"}
-        deps["twitter"].reply_to_tweet.return_value = {"id": "x_reply_123"}
-
-        # Bluesky post succeeds
-        deps["bluesky"].post_skeet_with_image.return_value = {
-            "uri": "at://did:plc:abc/app.bsky.feed.post/bs_123",
-            "cid": "cid_bs_123",
-        }
-        deps["bluesky"].reply_to_skeet.return_value = {
-            "uri": "at://did:plc:abc/app.bsky.feed.post/bs_reply_123",
-            "cid": "cid_bs_reply_123",
-        }
-
-        from src.main import post_scheduled_tweet
-        result = post_scheduled_tweet()
-        assert result is True
-
-        # Verify posts were made
-        deps["twitter"].post_tweet_with_image.assert_called_once()
-        deps["bluesky"].post_skeet_with_image.assert_called_once()
-        # Verify post was recorded
-        deps["tracker"].record_post.assert_called_once()
-
-    def test_returns_false_when_no_valid_articles(self, mock_all_deps):
-        """post_scheduled_tweet returns False when all articles are duplicates."""
-        deps = mock_all_deps
-
-        deps["news_fetcher"].get_top_stories.return_value = []
-        deps["news_fetcher"].get_articles_for_topic.return_value = []
-
-        from src.main import post_scheduled_tweet
-        result = post_scheduled_tweet()
-        assert result is False
-
-    def test_continues_without_bluesky(self, mock_all_deps):
-        """post_scheduled_tweet continues if Bluesky connection fails."""
-        deps = mock_all_deps
-
-        # Make BlueskyBot constructor raise
-        with patch("src.main.BlueskyBot", side_effect=Exception("Bluesky down")):
-            article = {
-                "title": "Story",
-                "url": "https://example.com/s",
-                "source": "AP",
-                "description": "desc",
-            }
-            deps["news_fetcher"].get_top_stories.return_value = [article]
-            deps["news_fetcher"].fetch_article_content.return_value = "Content."
-            deps["tracker"].check_story_status.return_value = {
-                "is_duplicate": False, "is_update": False,
-                "previous_posts": [], "cluster_info": None,
-            }
-            deps["generator"].generate_tweet.return_value = {
-                "tweet": "Cat news!",
-                "needs_source_reply": False,
-                "story_metadata": None,
-            }
-            deps["twitter"].post_tweet.return_value = {"id": "x_only"}
-
-            from src.main import post_scheduled_tweet
-            result = post_scheduled_tweet()
-            # Should still succeed with X-only
-            assert result is True
-
-    def test_post_without_image(self, mock_all_deps):
-        """post_scheduled_tweet uses text-only post when image generation fails."""
-        deps = mock_all_deps
-
-        article = {
-            "title": "Story",
-            "url": "https://example.com/s",
-            "source": "AP",
-            "description": "desc",
-        }
-        deps["news_fetcher"].get_top_stories.return_value = [article]
-        deps["news_fetcher"].fetch_article_content.return_value = "Content."
-        deps["tracker"].check_story_status.return_value = {
-            "is_duplicate": False, "is_update": False,
-            "previous_posts": [], "cluster_info": None,
-        }
-        deps["generator"].generate_tweet.return_value = {
-            "tweet": "Cat news!",
-            "needs_source_reply": False,
-            "story_metadata": None,
-        }
-        deps["generator"].generate_image_prompt.side_effect = Exception("Image gen failed")
-        deps["twitter"].post_tweet.return_value = {"id": "x_no_img"}
-        deps["bluesky"].post_skeet.return_value = {
-            "uri": "at://did:plc:abc/post/1", "cid": "cid1"
-        }
-
-        from src.main import post_scheduled_tweet
-        result = post_scheduled_tweet()
-        assert result is True
-        # Should call text-only methods, not image methods
-        deps["twitter"].post_tweet.assert_called_once()
-        deps["twitter"].post_tweet_with_image.assert_not_called()
-
-
-class TestReplyToMentions:
-    """Tests for the reply_to_mentions pipeline function."""
-
-    def test_no_mentions_returns_true(self, all_env):
-        """reply_to_mentions returns True when there are no mentions."""
-        with patch("src.main.ContentGenerator") as mock_gen_cls, \
-             patch("src.main.TwitterBot") as mock_tw_cls:
-            mock_tw = MagicMock()
-            mock_tw_cls.return_value = mock_tw
-            mock_tw.get_mentions.return_value = []
-
-            from src.main import reply_to_mentions
-            result = reply_to_mentions()
-            assert result is True
-
-    def test_replies_to_each_mention(self, all_env):
-        """reply_to_mentions generates and posts a reply for each mention."""
-        with patch("src.main.ContentGenerator") as mock_gen_cls, \
-             patch("src.main.TwitterBot") as mock_tw_cls:
-            mock_gen = MagicMock()
-            mock_tw = MagicMock()
-            mock_gen_cls.return_value = mock_gen
-            mock_tw_cls.return_value = mock_tw
-
-            mention = Mock(
-                id="mention_1",
-                text="@mewscast what do you think?",
-                author_id="author_1",
-            )
-            mock_tw.get_mentions.return_value = [mention]
-            mock_gen.generate_reply.return_value = "Great question!"
-            mock_tw.reply_to_tweet.return_value = {"id": "reply_1"}
-
-            from src.main import reply_to_mentions
-            result = reply_to_mentions()
-            assert result is True
-            mock_gen.generate_reply.assert_called_once()
-            mock_tw.reply_to_tweet.assert_called_once_with("mention_1", "Great question!")
 
 
 # =========================================================================

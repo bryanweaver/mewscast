@@ -5,14 +5,10 @@ bot:
   name: "mewscast"
   version: "0.2.0"
 
-# Pipeline toggle. Both pipelines remain importable regardless of these flags
-# — the code is never deleted, only paused. `scheduled` CLI mode dispatches
-# based on these: if legacy is enabled it runs the legacy single-article
-# path; otherwise it runs the journalism cycle. This lets a flag flip
-# revert the behavior without a code change.
+# Pipeline toggle. The legacy single-article pipeline was removed 2026-06;
+# the Walter Croncat journalism pipeline is the only path. `scheduled` CLI
+# mode runs the journalism cycle; this flag is the kill switch.
 pipelines:
-  legacy:
-    enabled: false   # paused — Walter Croncat journalism pipeline is now primary
   journalism:
     enabled: true    # default output path; every scheduled post ships with a dossier
 
@@ -302,14 +298,6 @@ image:
     size_ratio: 0.20
     corner: bottom-right
     max_retries: 2
-
-engagement:
-  # Reply automation (optional)
-  # Free tier: 1 request/15min = 96/day (plenty of room!)
-  # Check mentions 3-4x/day for engagement
-  auto_reply: false  # Can enable once you have regular mentions
-  reply_to_mentions: true  # Builds community faster
-  reply_to_keywords: []
 
 safety:
   # Content filtering
