@@ -32,10 +32,14 @@ on:
         type: string
 
   # A/B test — 3 journalism posts/day (legacy gets the other 3 slots)
+  # Slots aligned to X news-prime windows (9–11am & 7–9pm ET) to maximize
+  # early-engagement velocity, which the For You retrieval model rewards
+  # (steep ~6h time-decay). Times are UTC (GitHub cron has no TZ); in winter
+  # (EST) they drift ~1h earlier, still acceptable.
   schedule:
-    - cron: '30 12 * * *'  # 12:30 PM UTC = 7:30 AM CDT (morning — catch overnight news)
-    - cron: '30 17 * * *'  # 5:30 PM UTC = 12:30 PM CDT (midday peak engagement)
-    - cron: '30 22 * * *'  # 10:30 PM UTC = 5:30 PM CDT (evening wrap-up)
+    - cron: '30 13 * * *'  # 13:30 UTC = 9:30 AM EDT (morning news prime)
+    - cron: '30 17 * * *'  # 17:30 UTC = 1:30 PM EDT (midday peak engagement)
+    - cron: '0 0 * * *'    # 00:00 UTC = 8:00 PM EDT (evening news prime)
 
 permissions:
   contents: write
