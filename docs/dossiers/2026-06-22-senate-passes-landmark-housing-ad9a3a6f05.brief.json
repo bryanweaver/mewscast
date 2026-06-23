@@ -1,0 +1,103 @@
+{
+  "story_id": "2026-06-22-senate-passes-landmark-housing-ad9a3a6f05",
+  "headline_seed": "Senate passes landmark housing affordability bill after bipartisan breakthrough - CBS News",
+  "brief": {
+    "story_id": "2026-06-22-senate-passes-landmark-housing-ad9a3a6f05",
+    "consensus_facts": [
+      "The U.S. Senate passed the 21st Century ROAD to Housing Act on Monday, June 22, 2026.",
+      "The bill passed by a vote of 85-5 (confirmed by CBS News, The Guardian, and Forbes).",
+      "The legislation now heads to the House of Representatives for approval.",
+      "The bill restricts large institutional investors from purchasing additional single-family homes; multiple outlets specify the threshold as those already owning 350 or more properties/units (The Washington Post, The Guardian, Forbes).",
+      "The bill aims to lower housing costs by increasing housing supply, streamlining permitting/construction, and cutting regulatory red tape.",
+      "Sen. Tim Scott (R-S.C.), chairman of the Senate Banking Committee, was a key negotiator and supporter (CBS News, The Guardian, Forbes).",
+      "Sen. Elizabeth Warren (D-Mass.), the top Banking Committee Democrat, supported the bill and characterized it as stopping private equity/investors from buying up homes (CBS News, The Guardian, Forbes).",
+      "The Senate passed an earlier version in March and the House approved another version in May before the chambers reached a bicameral agreement (CBS News, Forbes).",
+      "President Trump previously called for restrictions on institutional investors buying homes, and supporters credited him for that provision (CBS News, The Guardian, Forbes).",
+      "The bill's passage is framed as occurring ahead of the November midterm elections, with housing affordability a major voter concern (CBS News, The Guardian)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scale/historic framing of the bill",
+        "positions": {
+          "CBS News": "Describes it as 'the most sweeping housing legislation in decades.'",
+          "The Washington Post": "Calls it 'the first major housing legislation since the financial crisis.'",
+          "Forbes": "Quotes Warren calling it the 'biggest bipartisan housing bill in 30 years.'"
+        }
+      },
+      {
+        "topic": "Identity of the five 'no' votes",
+        "positions": {
+          "Forbes": "Specifies all five 'no' votes were Republicans: Rick Scott (Fla.), Ron Johnson (Wis.), Tommy Tuberville (Ala.), Rand Paul (Ky.), and Mike Lee (Utah).",
+          "CBS News": "Reports the 85-5 margin but does not name the dissenters.",
+          "The Guardian": "Reports the 85-5 margin but does not name the dissenters."
+        }
+      },
+      {
+        "topic": "Build-to-rent exception to the investor restriction",
+        "positions": {
+          "Forbes": "Notes the bill carves out an exception for 'build-to-rent' projects.",
+          "CBS News": "Does not mention any exception.",
+          "The Guardian": "Does not mention any exception."
+        }
+      },
+      {
+        "topic": "House timeline",
+        "positions": {
+          "CBS News": "Says the House is returning from recess this week and is 'expected to move quickly.'",
+          "Forbes": "Cites Politico that the House will try to fast-track consideration beginning Tuesday.",
+          "The Guardian": "Says only that it 'now heads to the House.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Most comprehensive body text. Leads on 'breakthrough and rare bipartisan consensus' tied to midterm affordability politics. Heavy on bipartisan quote-stacking from both parties (Scott, Warren, Hill, Waters, Thune, Schumer). Emphasizes the 45-plus provisions and the homeownership-dream framing. Notably includes Schumer's jab at 'chaos coming out of the White House,' giving the piece a subtle lean-left tilt while still crediting Republicans.",
+      "The Washington Post": "Body text largely truncated/paywalled, but the headline and lede frame the bill primarily as 'restraining investors' and barring institutional buyers from owning more than 350 single-family homes \u2014 a Wall-Street-versus-families angle. Notably surfaces reader skepticism via an AI comment summary doubting the bill will lower costs, injecting a critical undercurrent the other outlets omit.",
+      "The Guardian": "Leads on streamlining construction and permitting plus stopping investors. Emphasizes the 'fraught negotiations' and inter-chamber standoff backstory. Uniquely pivots mid-article to unrelated Trump dysfunction (derailed Jay Clayton confirmation, FISA, the Save America Act), framing the housing win against a backdrop of GOP legislative disarray \u2014 an editorial choice that broadens the political indictment.",
+      "Forbes": "Tightest, most fact-dense treatment. Leads on the investor-restriction angle and frames the bill as following through on a Trump promise. Uniquely names all five Republican 'no' votes and flags the build-to-rent carve-out and the 'build-to-rent' exception. Most attentive to procedural detail and dissent.",
+      "The Hill": "Headline-only entry (body is just a Google News redirect link). Headline frames the story as explanatory ('Here's what it would do') and notes Congress is 'finally' set to pass a housing bill. No retrievable body text to analyze."
+    },
+    "primary_source_alignment": [
+      "No primary source (roll-call vote, bill text, or committee press release) was located for this story. The 85-5 vote count, the 350-property investor threshold, and the build-to-rent exception could not be independently verified against the underlying document and rest solely on outlet reporting.",
+      "Because the actual bill text was unavailable, the full list of 'more than 45 housing provisions' referenced by CBS News (manufactured housing chassis updates, veterans' housing support, innovation fund, community banking bills) cannot be cross-checked."
+    ],
+    "missing_context": [
+      "No primary source was available \u2014 no roll-call record, no bill text, no committee release \u2014 so all key figures (85-5, the 350-home threshold) are outlet-attributed rather than document-verified.",
+      "Of five outlets, only CBS News provides full robust body text; The Washington Post is largely paywalled/truncated and The Hill is headline-only. Effective deep coverage rests on CBS News, The Guardian, and Forbes.",
+      "Two outlets (The Washington Post, The Guardian) cite a Reuters photo/byline context, and several quotes (Scott, Warren, Waters) appear nearly verbatim across outlets \u2014 suggesting reliance on shared press statements rather than fully independent reporting.",
+      "No outlet provides analysis of whether housing economists or the CBO believe the supply and investor provisions will actually lower prices; only The Washington Post hints at public skepticism via an AI-generated comment summary.",
+      "No outlet quantifies what share of single-family home purchases institutional investors owning 350+ properties actually represent, leaving the practical impact of the marquee provision unexamined.",
+      "None of the outlets specify when the House vote will occur beyond 'this week' or 'Tuesday,' nor whether the President is expected to sign on a specific timeline.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same Senate passage with materially different emphases \u2014 investor crackdown (WaPo/Forbes), bipartisan comity (CBS), and GOP legislative disarray (Guardian) \u2014 and no primary source was available to anchor the marquee facts, making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/senate-passes-landmark-housing-affordability-bill/",
+      "title": ""
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/business/2026/06/22/senate-housing-bill-targets-wall-street-investors-boost-affordability/",
+      "title": "Senate passes housing bill to boost affordability, restrain investors - The Washington Post"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jun/22/us-senate-housing-bill",
+      "title": "US Senate passes bipartisan bill to lower housing costs - The Guardian"
+    },
+    {
+      "outlet": "Forbes",
+      "url": "https://www.forbes.com/sites/zacharyfolk/2026/06/22/senate-passes-housing-bill-restricting-institutional-investors-from-purchasing-homes/",
+      "title": "Senate Passes Housing Bill Restricting Institutional Investors From Purchasing Homes - Forbes"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/senate/5932776-housing-bill-regulations-reform/",
+      "title": "Congress is finally set to pass a housing bill: Here\u2019s what it would do - The Hill"
+    }
+  ]
+}
