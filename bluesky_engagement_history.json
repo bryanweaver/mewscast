@@ -1179,6 +1179,11 @@
       "did": "did:plc:i5oehxdlu4iikwmwhxu3ynsj",
       "handle": "froodie.bsky.social",
       "timestamp": "2026-06-23T16:48:56.211500"
+    },
+    {
+      "did": "did:plc:y7zyzca3najszzy2ozxaggxr",
+      "handle": "jennifermach.bsky.social",
+      "timestamp": "2026-06-23T20:53:40.896318"
     }
   ],
   "liked_posts": [
@@ -3436,6 +3441,11 @@
       "uri": "at://did:plc:i5oehxdlu4iikwmwhxu3ynsj/app.bsky.feed.post/3movwvzla6s2t",
       "author": "froodie.bsky.social",
       "timestamp": "2026-06-23T16:48:56.126978"
+    },
+    {
+      "uri": "at://did:plc:y7zyzca3najszzy2ozxaggxr/app.bsky.feed.post/3mow5xfj4p22z",
+      "author": "jennifermach.bsky.social",
+      "timestamp": "2026-06-23T20:53:40.670540"
     }
   ],
   "last_cleanup": "2026-06-20T01:48:18.140009",
