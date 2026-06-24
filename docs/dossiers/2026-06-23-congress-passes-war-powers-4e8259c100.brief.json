@@ -1,0 +1,114 @@
+{
+  "story_id": "2026-06-23-congress-passes-war-powers-4e8259c100",
+  "headline_seed": "Congress passes war powers measure for first time, rebuking Trump's war with Iran - BBC",
+  "brief": {
+    "story_id": "2026-06-23-congress-passes-war-powers-4e8259c100",
+    "consensus_facts": [
+      "On Tuesday, June 23, 2026, the U.S. Senate approved a war powers resolution by a vote of 50-48.",
+      "Four Republican senators \u2014 Bill Cassidy (La.), Susan Collins (Maine), Lisa Murkowski (Alaska) and Rand Paul (Ky.) \u2014 joined Democrats in support.",
+      "Democratic Sen. John Fetterman of Pennsylvania was the only Democrat to vote against the resolution.",
+      "Two Republicans, Mitch McConnell and Dave McCormick, did not vote.",
+      "The same measure passed the House earlier this month by a 215-208 vote, with four Republicans joining all Democrats.",
+      "The resolution directs the president to remove U.S. Armed Forces from hostilities against Iran unless Congress declares war or authorizes the use of military force.",
+      "The measure is a concurrent resolution that does not require the president's signature and is described as largely symbolic / non-binding.",
+      "A White House official said the vote had no significance, attributed the outcome to Republican absences, and argued there are no hostilities to withdraw from because of the April 7 ceasefire.",
+      "This marked the tenth war powers vote Senate Democrats have forced since the war began.",
+      "The U.S. and Iran are engaged in ongoing negotiations, including a memorandum of understanding signed by both presidents, with the April ceasefire described as still in place."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the resolution is binding",
+        "positions": {
+          "CBS News": "Reports the administration considers the War Powers Resolution unconstitutional, and quotes Rep. Gregory Meeks asserting the measure IS binding under the War Powers Resolution despite Trump's claims.",
+          "BBC News": "States flatly it 'does not carry the force of the law' and 'will not be sent to Trump.'",
+          "NBC News / ABC News / NPR": "Characterize it as largely symbolic and non-binding without presenting the counter-argument that it is legally binding."
+        }
+      },
+      {
+        "topic": "Significance/first-of-its-kind framing",
+        "positions": {
+          "BBC News": "Frames it as the first time both chambers approved a concurrent resolution instructing a president to end military action since the 1973 War Powers Resolution.",
+          "CBS News": "Frames it as the first time such a measure made it through both chambers.",
+          "NBC News": "Notes the Senate has voted on war powers resolutions nine other times without reaching a majority, emphasizing this as the first to pass."
+        }
+      },
+      {
+        "topic": "Number of prior Senate war powers attempts",
+        "positions": {
+          "NBC News": "Says the Senate has voted on a war powers resolution nine other times without passing.",
+          "BBC News / CBS News": "Describe Tuesday's vote as the tenth time Senate Democrats have forced a war powers vote since the war began."
+        }
+      },
+      {
+        "topic": "War start date",
+        "positions": {
+          "BBC News": "States US-Israel strikes on Iran began on 28 February.",
+          "CBS News": "Says the war began in late February.",
+          "NBC News / ABC News / NPR": "Do not specify a precise start date."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('US Senate joins House in voting to halt Iran war, rebuking Trump'). No body text retrievable. Headline frames the vote as a rebuke of Trump using neutral wire phrasing.",
+      "NBC News": "Leads on the 'symbolic move rebuking Trump.' Heavily emphasizes the White House counter-spin ('no significance,' Republican absences) and notes that had McConnell and McCormick voted, the resolution would have failed on a 50-50 tie \u2014 a detail that undercuts the significance narrative. Adds context on GOP fractures over Trump's 14-point Iran memo and the parallel Vance-Iran negotiations.",
+      "BBC News": "Leads on the historic 'first time' framing, calling it a bipartisan show of disapproval. Adds the most surrounding context of any outlet: spiking petrol prices, rising public opposition, the $80bn Pentagon request, the 60-day legal threshold, and the disputed ceasefire-reset-the-clock argument. Presents the White House rebuttal but balances it against pressure on the administration.",
+      "ABC News": "Shortest substantive body. Leads with the White House dismissal ('no significance') and frames the rebuke as 'rare' but symbolic. Notes the four GOP senators had voted this way before, slightly deflating the novelty. Light on broader context.",
+      "NPR": "Leads on the bipartisan vote, then foregrounds partisan quotes \u2014 Schumer's statement framing it as standing up to Trump's 'costly, unnecessary' war, and Trump's Truth Social post invoking 'Trump Derangement Syndrome.' Frames the vote against the backdrop of delicate ongoing negotiations criticized by both parties.",
+      "The Washington Post": "Headline-only in this dossier ('Senate votes to block Trump from resuming Iran war'). No body text. Notably its headline frames the vote as blocking Trump from RESUMING the war \u2014 a forward-looking framing distinct from the 'end the war' framing of other outlets.",
+      "CBS News": "Most procedurally detailed body. Leads on the 'first time such a measure made it through both chambers.' Uniquely surfaces the binding-vs-symbolic legal dispute via Meeks, the administration's unconstitutionality claim, the parallel Kaine joint resolution that WOULD require Trump's signature, the prior pulled vote before Memorial Day, and named House Republican defectors (Massie, Fitzpatrick, Barrett, Davidson) plus Jared Golden's switch."
+    },
+    "primary_source_alignment": [
+      "No primary source (roll-call vote record, resolution text, or official transcript) was located for this story, so reported vote totals (50-48 Senate, 215-208 House) and named votes could not be independently verified against the underlying document.",
+      "The exact quoted text of the resolution ('remove United States Armed Forces from hostilities against the Islamic Republic of Iran' unless Congress declares war or authorizes force) appears consistently across NBC, CBS and BBC, but absent the primary document this is corroboration among outlets rather than verification against source."
+    ],
+    "missing_context": [
+      "No outlet quotes the full resolution text or links the actual roll-call vote; all vote counts and named votes are sourced to the outlets' own reporting, not a primary document.",
+      "The central legal dispute \u2014 whether a concurrent resolution is genuinely binding under the 1973 War Powers Resolution \u2014 is only explored by CBS News (via Meeks and the administration's unconstitutionality claim). Most outlets simply assert it is symbolic without explaining the unresolved legal question.",
+      "Outlets disagree or are silent on the precise war start date and the number of prior war powers attempts; the discrepancy between 'nine other votes' (NBC) and 'tenth time' (BBC/CBS) is not reconciled.",
+      "Only NBC and BBC mention the broader stakes (petrol price spikes, public opposition, the $80bn Pentagon request); ABC and NPR omit the economic/material context.",
+      "No outlet provides Iran's perspective or any Iranian government reaction to the Congressional vote itself, beyond passing mention of disputed nuclear-inspection claims.",
+      "The relationship between this concurrent resolution and Sen. Tim Kaine's separate joint resolution (which WOULD require Trump's signature) is detailed only by CBS; other outlets do not distinguish the two legislative tracks.",
+      "No article quotes any of the four Republican senators explaining their own votes; their motivations are inferred rather than reported firsthand."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets have full body text reporting the same event but diverge materially on framing \u2014 especially whether the resolution is binding (CBS vs. others), how 'historic' it is, and the WaPo headline's 'resuming the war' angle versus the 'end the war' angle elsewhere. With no primary source to anchor verification, the most honest post is a coverage comparison, not a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/us-senate-joins-house-voting-halt-iran-war-rebuking-trump-2026-06-23/",
+      "title": "US Senate joins House in voting to halt Iran war, rebuking Trump - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/senate-rebukes-trump-approving-house-passed-iran-war-powers-resolution-rcna351445",
+      "title": "Senate rebukes Trump by approving House-passed measure calling for end to Iran war - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/ce8j6g3v3r4o",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/senate-house-pass-war-powers-resolution-1st-time/story?id=134145998",
+      "title": "Congress passes war powers resolution, offering rare rebuke of Trump - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/23/nx-s1-5868599/senate-iran-war-powers-resolution",
+      "title": "In symbolic vote, Congress directs Trump to remove forces from Iran war - NPR"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/06/23/senate-votes-block-trump-resuming-iran-war/",
+      "title": "Senate votes to block Trump from resuming Iran war - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/senate-house-pass-iran-war-powers-resolution-trump/",
+      "title": "Senate adopts House-passed Iran resolution in symbolic rebuke of Trump - CBS News"
+    }
+  ]
+}
