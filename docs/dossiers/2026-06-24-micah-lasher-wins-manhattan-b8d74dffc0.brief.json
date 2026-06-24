@@ -1,0 +1,99 @@
+{
+  "story_id": "2026-06-24-micah-lasher-wins-manhattan-b8d74dffc0",
+  "headline_seed": "Micah Lasher Wins Manhattan Primary, Defeating Kennedy Heir and Others - The New York Times",
+  "brief": {
+    "story_id": "2026-06-24-micah-lasher-wins-manhattan-b8d74dffc0",
+    "consensus_facts": [
+      "Micah Lasher, a New York State Assemblyman, won the Democratic primary in New York's 12th Congressional District (reported by NBC News, CBS News, and CNBC).",
+      "The seat is being vacated by retiring longtime Rep. Jerry Nadler (reported by NBC News, CBS News, and Newsweek).",
+      "The district is centered in Manhattan, covering wealthy neighborhoods including the Upper West Side, Upper East Side, and Midtown (reported by CBS News and Newsweek).",
+      "Lasher defeated a crowded field that included fellow Assemblyman Alex Bores and Jack Schlossberg, a grandson of John F. Kennedy (reported by NBC News, CBS News, and CNBC).",
+      "Lasher was endorsed by Gov. Kathy Hochul, former Mayor Michael Bloomberg, and Rep. Jerry Nadler (reported by NBC News and CBS News).",
+      "Approximately $26 million was spent on advertising in the race, per AdImpact (reported by CBS News and Newsweek).",
+      "The race drew heavy spending from competing AI-affiliated super PACs centered on Alex Bores' candidacy (reported by NBC News and CNBC).",
+      "The eventual primary winner is heavily favored to win the November general election given the district's strong Democratic lean (reported by NBC News, CBS News, CNBC, and Newsweek)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total AI-related PAC spending in the race",
+        "positions": {
+          "NBC News": "Itemizes spending: Think Big (pro-AI, tied to Leading the Future) spent at least $8 million against Bores, and Jobs and Democracy PAC (backed by Anthropic) spent almost $7 million to defend him \u2014 roughly $15 million combined attributable to AI groups.",
+          "CNBC": "States two PACs affiliated with major AI companies pumped a combined $20 million into the race to back or oppose Bores."
+        }
+      },
+      {
+        "topic": "Schlossberg's first name spelling",
+        "positions": {
+          "NBC News": "Jack Schlossberg",
+          "CBS News": "Jack Schlossberg",
+          "CNBC": "Jake Schlossberg",
+          "Newsweek": "Jack Schlossberg"
+        }
+      },
+      {
+        "topic": "Whether Mamdani factored into the NY-12 race",
+        "positions": {
+          "CNBC": "Frames the night around three Mamdani-endorsed progressives winning and ousting incumbents elsewhere; notes NY-12 separately and does not list Lasher among Mamdani's endorsees.",
+          "Newsweek": "Reports Mayor Zohran Mamdani, who resides in the district, confirmed he voted but did not publicly endorse a candidate in the NY-12 race, though he endorsed in neighboring districts.",
+          "NBC News": "Does not mention Mamdani in connection with NY-12; attributes Lasher's backing to Hochul, Bloomberg, and Nadler."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in the dossier. Frames the result around the defeat of a 'Kennedy Heir and Others,' emphasizing the celebrity/dynastic angle over the AI-spending story. No body text available to assess lead or buried details.",
+      "NBC News": "Leads on Lasher's 'deep ties' and party-establishment backing (Hochul, Bloomberg, Nadler). Frames the AI proxy war as the thing that 'sucked up much of the oxygen' but positions Lasher as having 'sidestepped' it. Emphasizes the Bloomberg-funded allied group and Lasher's pro-redistricting stance. Schlossberg treated as a 'distant third' footnote.",
+      "CBS News": "Straight results framing. Leads on the projection and the district's geography and wealth. Lists the full eight-candidate field by name. Foregrounds the $26 million ad spend and Bloomberg's role; lighter on the AI-faction narrative than NBC or CNBC. Notes pre-election polling showed a tight Lasher-Bores-Schlossberg race.",
+      "CNBC": "Frames NY-12 as a secondary story within a larger 'Mamdani progressives win, incumbents fall' narrative. Leads on Lander, Avila Chevalier, and Valdez; Lasher's win appears mid-article. Emphasizes the 'stunning combined $20 million' AI PAC spending figure and the business/tech-money angle, consistent with its specialized financial focus.",
+      "The Hill": "Headline-only in the dossier. Frames the story as succession \u2014 'Former staffer set to succeed Nadler' \u2014 emphasizing Lasher's prior work for Nadler over the contest's competitive or AI-spending dimensions. No body text available to assess.",
+      "Newsweek": "Published as a pre-election preview (polls and odds), not a results piece. Heavy on polling detail, prediction markets (Kalshi 75%, Polymarket 74% for Lasher), and district demographics. Notably documents that several earlier polls had Bores or Schlossberg ahead and that undecideds were the largest bloc \u2014 useful context the results-day outlets omit."
+    },
+    "primary_source_alignment": [
+      "No primary source (official Board of Elections vote tally, certified results, or candidate concession statements) was located for this story. Outlet projections (NBC News and CBS News explicitly state they 'project' the winner) could not be checked against an official count.",
+      "No outlet provided final vote totals or percentages for Lasher's margin of victory; reporting rests on network projections rather than a canvassed result."
+    ],
+    "missing_context": [
+      "No outlet in the dossier with full body text reports Lasher's actual winning vote share or margin \u2014 all results coverage relies on network projections without numbers.",
+      "The AI PAC spending figures cannot be reconciled: NBC News' itemized totals (~$15M) and CNBC's '$20 million' figure are not squared, and neither states what was direct PAC spending versus total ad spend (CBS/Newsweek cite $26M overall from AdImpact).",
+      "Only Newsweek's pre-election piece reveals that polling was volatile and undecideds were the largest bloc, with Bores and Schlossberg leading at various points; the results-day outlets present Lasher's win without this competitive context.",
+      "No outlet explains why Bores \u2014 leading or near-leading in several late polls and the focus of $15\u201320M in AI spending \u2014 ultimately lost, beyond NBC's assertion that Lasher 'sidestepped' the AI war.",
+      "Newsweek notes Bores is 'a former Palantir employee,' a detail relevant to the AI-regulation fight that NBC and CNBC omit despite centering the AI narrative.",
+      "No outlet reports the general-election opponents Lasher will face or the timing of the November race beyond noting he is favored.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text report the same Lasher victory but frame it very differently \u2014 NBC and CBS as an establishment-backed win, CNBC as a footnote to a Mamdani-progressive wave, and Newsweek as a volatile horse race \u2014 while the two competing AI-spending figures ($15M vs. $20M) go unreconciled and no primary vote tally exists. The story is about divergent emphasis and an unresolved number, not a clean single-fact report.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/23/nyregion/ny12-nadler-primary-micah-lasher.html",
+      "title": "Micah Lasher Wins Manhattan Primary, Defeating Kennedy Heir and Others - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-election/new-york-house-district-12-democrat-primary-winner-lasher-rcna351424",
+      "title": "New York Democrat Micah Lasher wins House primary that drew big spending from AI groups - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/newyork/news/micah-lasher-primary-election-results-12th-congressional-district-ny/",
+      "title": "Assemblyman Micah Lasher wins crowded Democratic House primary in NY-12, CBS News projects - CBS News"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/06/24/mamdani-democrats-house-primary-lander-valdez-chevalier.html",
+      "title": "Three New York Democrats backed by Mamdani win House seat primaries; 2 incumbents lose - CNBC"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/campaign/5931215-micah-lasher-jerry-nadler-former-staffer-new-york-house-race/",
+      "title": "Former staffer set to succeed Nadler after House primary win - The Hill"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/bores-vs-lasher-vs-schlossberg-in-new-york-final-polls-and-odds-12109264",
+      "title": "Bores vs. Lasher vs. Schlossberg in New York: Final Polls and Odds - Newsweek"
+    }
+  ]
+}
