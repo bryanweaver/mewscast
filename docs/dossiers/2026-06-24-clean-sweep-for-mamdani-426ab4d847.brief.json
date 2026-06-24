@@ -1,0 +1,119 @@
+{
+  "story_id": "2026-06-24-clean-sweep-for-mamdani-426ab4d847",
+  "headline_seed": "Clean sweep for Mamdani-backed candidates in New York's Democratic primary - BBC",
+  "brief": {
+    "story_id": "2026-06-24-clean-sweep-for-mamdani-426ab4d847",
+    "consensus_facts": [
+      "New York City Mayor Zohran Mamdani, a democratic socialist, endorsed three congressional candidates who all won their Democratic primaries on Tuesday \u2014 a 'clean sweep.'",
+      "In the 10th District, former NYC comptroller Brad Lander defeated incumbent Rep. Dan Goldman.",
+      "In the 7th District, Assemblywoman Claire Valdez defeated Brooklyn Borough President Antonio Reynoso.",
+      "In the 13th District, Darializa Avila Chevalier defeated incumbent Rep. Adriano Espaillat, the chair of the Congressional Hispanic Caucus and a five-term incumbent.",
+      "The wins ousted two Democratic incumbents (Goldman and Espaillat).",
+      "The races focused heavily on the United States' relationship with Israel and the Israel-Gaza war.",
+      "Goldman was backed by pro-Israel groups/AIPAC; the Mamdani-backed candidates have accused Israel of genocide, which Israel denies.",
+      "Jack Schlossberg, grandson of John F. Kennedy, lost his bid in New York's 12th District; Micah Lasher won that primary.",
+      "House Minority Leader Hakeem Jeffries, who backed the incumbents, said he and Mamdani had 'agreed to strongly disagree.'",
+      "President Trump responded on social media, invoking 'communist' rhetoric and calling Goldman 'weak and pathetic.'",
+      "Primaries and/or runoffs also took place in Maryland, Utah and South Carolina on the same day.",
+      "In Utah, Democrats backed moderate former Rep. Ben McAdams over more liberal alternatives in a newly redrawn/created district.",
+      "The Mamdani-backed nominees are considered near-locks to win the safely Democratic seats in November.",
+      "Cait Conley won a competitive Democratic primary in the battleground 17th District to challenge Republican Rep. Mike Lawler.",
+      "Anthony Constantino, endorsed by Trump, won the Republican primary in the upstate 21st District (the seat vacated by Elise Stefanik), defeating party-establishment-backed Robert Smullen."
+    ],
+    "disagreements": [
+      {
+        "topic": "Darializa Avila Chevalier's occupation/description",
+        "positions": {
+          "BBC News": "Describes her as a 'doctoral student' who joined pro-Palestinian protests at Columbia University",
+          "CNN": "Describes her as a 'democratic socialist' / community advocate",
+          "The Guardian": "Describes her as a 'public defense investigator' / 'public defence investigator'",
+          "ABC News": "Describes her as a 'community advocate'",
+          "The Guardian (video)": "Describes her as a 'public defence investigator'"
+        }
+      },
+      {
+        "topic": "Lander's margin of victory",
+        "positions": {
+          "BBC News": "Lander beat Goldman 65.7% to 34.1% with most votes counted",
+          "ABC News": "States Lander 'will beat' Goldman without a margin",
+          "CNN / The Guardian": "Report the win but do not cite a specific margin"
+        }
+      },
+      {
+        "topic": "Whether the night signals a broad leftward shift",
+        "positions": {
+          "CNN": "Emphasizes that not all outcomes reflect a leftward shift; cites moderate wins in NY-12, Utah and Iowa as counterweight",
+          "BBC News (Zurcher analysis)": "Frames it as proof Mamdani's win 'was no fluke' and a movement 'spilling out into national politics,' while noting moderates also prevailed elsewhere",
+          "The Guardian": "Leads on Mamdani's 'growing influence' but notes moderate Democrats prevailed in several consequential districts"
+        }
+      },
+      {
+        "topic": "Chevalier's past controversial statements",
+        "positions": {
+          "BBC News (Zurcher analysis)": "Details her past comments (open borders, no prisons/police, expletive at Harris, calling Biden a rapist) and her disavowal of them; notes pushback from former DNC chair Jamie Harrison",
+          "ABC News / CNN / The Guardian / first BBC article": "Do not mention these past statements"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "ABC News": "Straight results-roundup framing. Leads on Mamdani 'flexing his political muscle' and the clean sweep, then enumerates projected winners across NY, Maryland, Utah and South Carolina. Heavily uses 'ABC News projects' calls. Gives notable space to the Republican 21st District race and the Trump-endorsed Constantino. Omits the Israel/Gaza dimension almost entirely and does not mention Goldman's pro-Israel backing or candidates' past statements.",
+      "BBC News": "Leads on Goldman's defeat as the capstone of the sweep and foregrounds the Israel-Gaza war as the dividing line, including the Brooklyn coffee shop incident and that both Lander and Goldman are Jewish. Provides the only specific vote margin. Includes Trump's reaction, Jeffries' 'agree to strongly disagree' line, and notes all three candidates vowed to 'abolish ICE' and 'tax the rich.' Frames the contest as exposing party divisions.",
+      "CNN": "Takeaways/analysis framing built around 'A moment of change for the Democratic Party.' Situates the NY wins in a national arc (Seattle, DC, LA, 2028 primary) but deliberately counterbalances by stressing moderate victories in NY-12, Utah and Iowa. Surfaces internal Democratic friction (Fetterman's 'dirtbag left,' Booker's 'big tent,' the crowd booing Jeffries). Most explicitly hedges against a simple 'leftward shift' narrative.",
+      "The New York Times / The Times": "Headline-only entry in the dossier ('Mamdani's picks deliver clean sweep in Democratic election'). No body text retrievable; cannot assess framing beyond the headline, which mirrors the consensus 'clean sweep' framing.",
+      "The Guardian": "Leads on Mamdani's 'growing influence' and frames the sweep as a successful 'gamble' of political capital. Calls Chevalier's win a 'stunning upset.' Gives substantial space to moderate winners (Suozzi, Gillen, Conley, McAdams, Constantino) and down-ballot results in Maryland, presenting a fuller results map. Quotes celebratory candidate lines and Trump's posts. Does not surface Chevalier's past controversial statements.",
+      "The Guardian (video)": "Short video-accompanying brief focused narrowly on Chevalier toppling Espaillat in the 13th District, tying it to the broader clean sweep. Sourced to AP. Minimal framing beyond the upset and the Mamdani connection."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official results, candidate statements, roll-call documents) were located for this story, so no report-versus-document comparison is possible."
+    ],
+    "missing_context": [
+      "No outlet provided official certified vote totals or turnout figures; only BBC cited a single race margin (Lander 65.7%-34.1%, 'most votes counted').",
+      "Only BBC's Zurcher analysis reported Chevalier's past controversial statements and her disavowal; readers of the other outlets would not know this context exists.",
+      "Outlets vary widely on Chevalier's professional description (doctoral student vs. public defense investigator vs. community advocate) and none reconcile the discrepancy.",
+      "No outlet quantifies how much money or organizing Mamdani's movement actually deployed, leaving 'political capital'/'influence' claims unsubstantiated.",
+      "Coverage does not detail the specific policy positions or voting records of the ousted incumbents beyond Israel stances, making the 'ideological' framing hard to evaluate.",
+      "No outlet reports the general-election competitiveness math for the swing districts (17th) in concrete polling or registration terms beyond labels like 'purple' and 'most endangered.'",
+      "South Carolina runoff results and Maryland down-ballot races referenced in headlines/lead-ins are largely unreported in detail across the dossier."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six retrievable outlet bodies reported the same clean-sweep event but with materially different emphases \u2014 BBC foregrounds Israel-Gaza and a vote margin, CNN and the Guardian counterweight with moderate wins, and only BBC's analysis surfaces Chevalier's controversial past \u2014 making a coverage-comparison the most honest treatment.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/clean-sweep-3-candidates-endorsed-mamdani-win-primaries/story?id=134152579",
+      "title": "Clean sweep as 3 candidates endorsed by Mamdani win primaries in New York - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/clye652m41po",
+      "title": ""
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/24/politics/takeaways-new-york-south-carolina-primary-elections",
+      "title": "Mamdani\u2019s hat trick in New York, Trump\u2019s hedged bet in South Carolina, and other takeaways from Tuesday\u2019s primaries - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.thetimes.com/us/american-politics/article/democratic-primaries-zohran-mamdani-influence-test-new-york-85p5890g6",
+      "title": "New York primary results: Mamdani\u2019s picks deliver clean sweep in Democratic election - The Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cly818y4v22o",
+      "title": "New York's Democratic primaries show Mamdani's win was no fluke - BBC"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jun/23/new-york-primary-results-house",
+      "title": "Mamdani-backed candidates sweep Democratic primaries in New York City - The Guardian"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/video/2026/jun/24/mamdani-backed-darializa-avila-chevalier-wins-democratic-nyc-primary-video",
+      "title": "Mamdani-backed Darializa Avila Chevalier wins Democratic NYC primary \u2013 video - The Guardian"
+    }
+  ]
+}
