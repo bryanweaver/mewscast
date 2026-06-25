@@ -1,0 +1,105 @@
+{
+  "story_id": "2026-06-25-under-pressure-from-trump-5d002ae131",
+  "headline_seed": "Under pressure from Trump, Republican-led Senate reverses course on Iran - The Washington Post",
+  "brief": {
+    "story_id": "2026-06-25-under-pressure-from-trump-5d002ae131",
+    "consensus_facts": [
+      "On Tuesday, June 23, 2026, the Republican-led US Senate voted for the first time to pass a war powers resolution aimed at curbing President Trump's ability to wage war with Iran (Bloomberg and The Washington Post body text).",
+      "On Wednesday, the Senate reversed course and rejected/blocked a war powers resolution after Trump pressured Republican senators (The Washington Post and ABC News body text).",
+      "Trump berated or clashed with Senate Republicans over their opposition to his Iran war during a Wednesday lunch/meeting at the US Capitol (The Washington Post and ABC News body text).",
+      "The reversal was widely framed as the Senate moving to appease Trump after he criticized Republicans for undermining his administration's negotiations with Iran (The Washington Post and ABC News body text)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Vote count of the Tuesday resolution that passed",
+        "positions": {
+          "Bloomberg": "Reports the Tuesday vote as 50-48 to end the US war with Iran.",
+          "The Washington Post": "Describes a resolution passing Tuesday but does not state a numeric tally in the retrievable body text.",
+          "ABC News": "Does not give the Tuesday tally; focuses on the Wednesday procedural vote."
+        }
+      },
+      {
+        "topic": "Vote count of the Wednesday reversal",
+        "positions": {
+          "ABC News": "Reports the Senate voted 47-50-1 late Wednesday to block the Kaine-led resolution from moving forward.",
+          "The Washington Post": "States the chamber rejected the resolution but gives no numeric tally in retrievable body text.",
+          "Bloomberg": "Does not provide a Wednesday tally in retrievable body text."
+        }
+      },
+      {
+        "topic": "Whether the two votes concern the same or separate resolutions",
+        "positions": {
+          "ABC News": "Frames Wednesday as a vote on a 'separate resolution' led by Democratic Sen. Tim Kaine, distinct from the measure that passed Tuesday.",
+          "The Washington Post": "Frames it as the Senate rejecting 'a resolution' / 'a similar measure' a day after a similar one passed, implying near-equivalence rather than clearly separate bills."
+        }
+      },
+      {
+        "topic": "Status of US-Iran hostilities at the time of the votes",
+        "positions": {
+          "Bloomberg": "States Trump reached an interim peace deal with Iran and the practical impact of the vote is unclear.",
+          "ABC News": "Cites Rand Paul saying 'hostilities seem to be over' and that the President asked for space to negotiate.",
+          "The Washington Post": "References ongoing negotiations with Tehran over its nuclear program without asserting a peace deal."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Across three articles, Bloomberg frames the story primarily as an intra-GOP power struggle ('Mad as a Murder Hornet,' 'Squabbles/Spars With Disaffected Senate,' 'Key Issues Dividing Trump and Senate Republicans'). It emphasizes the Wednesday lunch tension, Trump canceling a housing-bill signing ceremony, and the midterm-election stakes. Bloomberg uniquely supplies the 50-48 Tuesday tally and characterizes the resolution as 'largely symbolic,' noting Trump's interim peace deal and the legally controversial 1973 War Powers Act basis. Retrievable bodies are short (truncated at paywall), heavy on the political-color angle.",
+      "The Washington Post": "Two WP articles lead with the reversal as a capitulation: 'Under pressure from Trump, Republican-led Senate reverses course on Iran' and 'Senate Republicans reject war powers resolution after Trump berates them.' The framing centers on Trump's pressure, his complaint that the Tuesday passage undermined negotiations, and senators acting 'to try to appease him.' One WP piece is AP-bylined (Jalonick, Sloan, Cappelletti, Mascaro). The first WP article surfaces reader comments accusing the GOP of being 'spineless.' Body text is largely paywalled; minimal numeric detail provided.",
+      "ABC News": "Leads with the irony and personal drama: GOP Sen. Bill Cassidy clashed with Trump in a 'shouting match' yet hours later voted to block the resolution, 'delivering Trump a win.' ABC provides the most procedural detail of any outlet \u2014 the 47-50-1 Wednesday tally, the Kaine-led resolution, Cassidy's White House briefing from VP Vance and Envoy Witkoff, Rand Paul switching to 'present,' and Collins and Murkowski voting in favor. Frames the reversal as the product of direct presidential lobbying.",
+      "The New York Times": "Headline-only in the dossier ('Senate Votes to Direct End to Iran War, Rebuking Trump on War Powers'). Body text was not retrievable (CAPTCHA/load warning). The headline frames the Tuesday vote as a rebuke of Trump. Cannot assess full framing; treated as a label, not a report."
+    },
+    "primary_source_alignment": [
+      "No primary sources (roll-call votes, resolution text, transcripts, or press releases) were located for this story. The 50-48 Tuesday tally (Bloomberg) and the 47-50-1 Wednesday tally (ABC News) are each single-outlet figures that could not be checked against an official roll call.",
+      "Statements attributed to senators (Cassidy's thank-you post to Vance and Witkoff; Rand Paul's 'present' explanation) appear only in ABC News and were not corroborated by a primary document in the dossier."
+    ],
+    "missing_context": [
+      "No primary source \u2014 the actual roll-call votes for either day or the text of the resolution(s) \u2014 was available, so vote tallies and the precise relationship between Tuesday's and Wednesday's measures cannot be independently verified.",
+      "Bloomberg's body text is truncated at the paywall, and both Washington Post bodies are largely paywalled, so the full reporting underlying their framing is not visible in the dossier.",
+      "The New York Times article was headline-only (page did not load / CAPTCHA), so its reporting is unavailable as corroboration.",
+      "Outlets do not clearly reconcile whether the war is ongoing, paused, or ended: Bloomberg cites an 'interim peace deal,' ABC cites Rand Paul saying hostilities 'seem to be over,' and WP references 'ongoing negotiations' \u2014 readers are left without a settled status.",
+      "No outlet in the dossier explains the legal force (or lack thereof) of the resolution in detail beyond brief notes that it is 'largely symbolic' and 'does not have the force of law.'",
+      "The substance of the underlying Iran war/negotiations \u2014 what the interim deal entails, what triggered the conflict, and casualty or economic figures \u2014 is largely absent from the retrievable text.",
+      "No article body contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same Tuesday-to-Wednesday Senate reversal but with materially different emphases \u2014 Bloomberg as a GOP power struggle, the Washington Post as capitulation to Trump, ABC News as procedural drama around Cassidy \u2014 and the only hard tallies (50-48 and 47-50-1) are each single-source with no primary roll call to confirm them, making this a coverage-comparison story rather than a clean REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-25/-mad-as-a-murder-hornet-trump-squabbles-with-disaffected-senate",
+      "title": "\u2018Mad as a Murder Hornet\u2019 Trump Squabbles With Disaffected Senate - Bloomberg"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/06/25/under-pressure-trump-republican-led-senate-reverses-course-iran/",
+      "title": "Under pressure from Trump, Republican-led Senate reverses course on Iran - The Washington Post"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-24/trump-republicans-key-divisions-before-2026-midterms-iran-war-slush-fund",
+      "title": "Here Are the Key Issues Dividing Trump and Senate Republicans - Bloomberg"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-23/us-senate-votes-to-end-iran-war-in-rebuke-to-trump",
+      "title": "US Senate Votes to End Iran War in Rebuke to Trump - Bloomberg"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/reversal-senate-votes-block-war-powers-resolution-delivering/story?id=134193814",
+      "title": "In reversal, Senate votes to block war powers resolution, delivering Trump a win - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/23/us/politics/senate-trump-war-powers-iran.html",
+      "title": "Senate Votes to Direct End to Iran War, Rebuking Trump on War Powers - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/06/25/senate-republicans-trump-vote-reject-war-powers/391c1918-7052-11f1-8730-e7fd0e2a6404_story.html",
+      "title": "Senate Republicans reject war powers resolution after Trump berates them at Capitol meeting - The Washington Post"
+    }
+  ]
+}
