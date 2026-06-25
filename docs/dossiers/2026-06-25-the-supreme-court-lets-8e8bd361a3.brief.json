@@ -1,0 +1,122 @@
+{
+  "story_id": "2026-06-25-the-supreme-court-lets-8e8bd361a3",
+  "headline_seed": "The Supreme Court lets the Trump administration end legal protections for Haitians and Syrians - AP News",
+  "brief": {
+    "story_id": "2026-06-25-the-supreme-court-lets-8e8bd361a3",
+    "consensus_facts": [
+      "On Thursday, June 25, 2026, the U.S. Supreme Court ruled 6-3 that the Trump administration can end Temporary Protected Status (TPS) for Haitian and Syrian immigrants.",
+      "The decision overturned lower-court orders that had blocked the administration from terminating TPS.",
+      "The ruling split along ideological lines, with the six conservative justices in the majority and the three liberal justices dissenting.",
+      "The decision affects approximately 350,000 Haitians and roughly 6,000-6,100 Syrians.",
+      "Justice Samuel Alito wrote for the majority, holding that the TPS statute bars courts from reviewing government determinations to terminate or extend TPS designations.",
+      "The majority rejected the claim that ending Haiti's TPS was racially discriminatory, finding it insufficient to merit an injunction under Fifth Amendment equal-protection principles.",
+      "Justice Elena Kagan wrote for the liberal dissent, characterizing the decision's reading of the law as expanding what is excluded from judicial review.",
+      "TPS was created in 1990 to provide temporary legal status to people from countries deemed unsafe due to war, natural disasters, or other crises.",
+      "The U.S. first granted TPS to Haitians after the 2010 earthquake and to Syrians after the country's civil war began in 2012.",
+      "TPS recipients can legally live and work in the U.S. for up to 18 months, subject to extensions.",
+      "The ruling is expected to have implications for TPS holders from roughly a dozen other countries, with several outlets specifying about 13 countries.",
+      "Then-Homeland Security Secretary Kristi Noem made the decisions to terminate TPS for Haiti and Syria.",
+      "During his 2024 campaign, Trump amplified false claims about Haitian immigrants, including that they were eating people's pets.",
+      "Losing TPS exposes affected people to deportation through the normal legal process, though they may seek other avenues such as asylum."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of Syrians affected",
+        "positions": {
+          "The New York Times": "6,100 Syrians",
+          "BBC News": "6,100 Syrians",
+          "NBC News": "about 6,000 Syrians"
+        }
+      },
+      {
+        "topic": "Total scope of TPS program / people potentially affected",
+        "positions": {
+          "Associated Press": "TPS protects a total of 1.3 million people from 17 countries",
+          "ABC News": "ruling expected to have sweeping impact on approximately 1.3 million people who rely on TPS",
+          "Politico": "more than a million immigrants face possible deportation",
+          "The New York Times": "frames the immediate ruling as clearing a path for 350,000 Haitians and 6,100 Syrians, with implications for about a dozen other countries"
+        }
+      },
+      {
+        "topic": "Whether deportations can occur swiftly",
+        "positions": {
+          "Associated Press": "decision allows DHS to swiftly end TPS, exposing hundreds of thousands more to potential deportation",
+          "The New York Times": "ability to quickly expel depends on whether individuals already have pending deportation orders; many do not, allowing them to contest removal"
+        }
+      },
+      {
+        "topic": "Characterization of Alito's reasoning on the discrimination claim",
+        "positions": {
+          "BBC News": "Alito said Haitian migrants were unlikely to prove the actions were racially discriminatory",
+          "NBC News": "Alito said none of the cited statements, including Trump accusing Haitians of eating pets, were 'overtly racial' and were insufficient to show race-based termination",
+          "Politico": "Alito said the racial-discrimination claims were not strong enough to merit the lower court's injunction"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Opens with a human-interest image (Linda Joseph holding a candle at a Little Haiti vigil) before stating the ruling. Emphasizes the scale ('1.3 million people from 17 countries') and pairs the TPS decision with the separate asylum/border ruling as a 'second win' for Trump. Frames it as 'another victory' in Trump's 'sweeping crackdown on immigration.' Neutral wire phrasing but foregrounds the affected population.",
+      "The New York Times": "Pairs the TPS ruling with the southern-border asylum decision under a unifying frame: the Court is 'expanding Trump's power over immigration.' Leads on institutional power and political stakes, noting the conservative majority's 'deference to the president.' Notably adds nuance other outlets omit: that quick expulsion depends on existing deportation orders, and many TPS holders can still contest removal. Emphasizes the bipartisan 1990 origin of the program.",
+      "BBC News": "International framing covering both Thursday immigration rulings together, with substantial attention to the separate border/asylum 'metering' decision (including its 2016 Obama-era origin and 2021 Biden rescission). Quotes Kagan's 'racial undertones and overtones' line and Sotomayor's 'More people will die' dissent prominently. Includes the pet-eating rumor context. Balances legal mechanics with the human stakes.",
+      "Politico": "Specialist legal/political framing. Leads on the breadth \u2014 'more than a million immigrants' \u2014 and digs into Alito's reasoning, including his concession about future 'bizarre' decisions and the appropriations remedy. Uniquely surfaces the 'comically cursory' 53-minute State Department consultation detail. Heavy on reaction sourcing: quotes Tom Homan and Ron DeSantis welcoming the ruling from 'Alligator Alcatraz,' and Rep. Wasserman Schultz denouncing it as 'callous.' Most politically textured account.",
+      "Reuters": "Headline only \u2014 no retrievable body text. Headline ('Supreme Court lets Trump end deportation protections for Syrians and Haitians') aligns with the consensus event but provides no corroborating detail.",
+      "NBC News": "Leads on the practical consequence ('could be subject to deportation') and weights heavily toward advocate and recipient voices: lead counsel warning 'thousands of innocent people dying,' Syrian plaintiff Dahlia Doe, the NAACP's Derrick Johnson ('anti-Black immigration sentiment'), and Global Refuge's Krish O'Mara Vignarajah. Uniquely emphasizes the contradiction that the State Department still lists Haiti and Syria as 'do not travel' even as Noem deemed them safe, and notes last year's parallel Venezuela TPS rulings (600,000 people).",
+      "ABC News": "Foregrounds the scale ('sweeping impact on 1.3 million people') and the legal core \u2014 DHS gaining 'broad discretion with little-to-no judicial oversight.' Quotes Alito's statutory language directly. Includes DHS General Counsel James Percival's celebratory 'The T in TPS stands for TEMPORARY' statement and advocates' fears of 'deadly long term costs.' More compact than peers."
+    },
+    "primary_source_alignment": [
+      "No primary source (court opinion, dissent text, or docket filing) was provided in the dossier, so direct alignment between the underlying ruling and the reporting cannot be verified.",
+      "Quoted language attributed to Alito appears across outlets (BBC, NBC, Politico, ABC) with consistent substance \u2014 that the TPS statute bars judicial review of termination determinations \u2014 but the full opinion text was not available to confirm wording.",
+      "Kagan's dissent quotes diverge slightly: BBC attributes the 'racial undertones and overtones' line to Kagan while also noting the three liberal justices dissented; Politico attributes Kagan's procedural-review argument to 'the court's liberal wing.' Without the dissent text, exact attribution cannot be independently confirmed.",
+      "Sotomayor's 'More people will die' quote (BBC) relates to the separate border/asylum ruling, not the TPS decision \u2014 a distinction the primary documents would clarify but which is blurred in combined coverage."
+    ],
+    "missing_context": [
+      "Outlets disagree on whether the TPS ruling affects '1.3 million people' (AP, ABC) or the narrower 350,000 Haitians plus ~6,000 Syrians directly at issue; the larger figure refers to the entire TPS program's reach, but this distinction is not consistently spelled out for readers.",
+      "Only Politico surfaced the substantive procedural detail that Noem's office allegedly received a one-sentence State Department reply on Haiti just 53 minutes after asking \u2014 a fact central to whether the consultation requirement was meaningfully met; other outlets omitted it.",
+      "Only NBC and ABC prominently noted the contradiction that the State Department still lists both Haiti and Syria as 'do not travel' even as Noem certified conditions had improved.",
+      "Only NBC connected this ruling to last year's parallel Supreme Court decisions allowing revocation of TPS for 600,000 Venezuelans, important precedent context.",
+      "No outlet specified a concrete timeline or effective date for when terminations and deportations could actually begin.",
+      "The separate border/asylum 'metering' ruling is intertwined with the TPS ruling in several reports (AP, NYT, BBC); readers may conflate the two 6-3 decisions and their distinct legal questions.",
+      "Reuters appears in the dossier headline-only, so its independent reporting could not be assessed; this is an editorial disclosure of dossier limitation.",
+      "No primary source document was located for this story, limiting verification of direct quotes and the precise scope of the holding."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six outlets reported the same 6-3 ruling but with materially different emphasis \u2014 AP and ABC foreground the 1.3 million figure, Politico surfaces the 53-minute consultation detail and conservative reaction, NBC centers advocates and the 'do not travel' contradiction, and NYT adds the deportation-order nuance \u2014 making this a coverage-comparison story rather than a straight REPORT, especially since no primary source was available to anchor the specifics.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/immigration-supreme-court-haiti-syria-tps-1bbbf8115f984a0d53336656924e989d",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/25/us/politics/supreme-court-temporary-protected-status.html",
+      "title": "With TPS and Southern Border Decisions, Supreme Court Expands Trump\u2019s Power Over Immigration - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4g8ym422lko",
+      "title": "US Supreme Court allows Trump to restrict asylum seekers at border - BBC"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/06/25/supreme-court-temporary-protected-status-ruling-00975658",
+      "title": "Supreme Court allows Trump to end temporary protections for Haitians, Syrians - Politico"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/supreme-court-lets-trump-end-deportation-protections-syrians-haitians-2026-06-25/",
+      "title": "Supreme Court lets Trump end deportation protections for Syrians and Haitians - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/supreme-court/supreme-court-allows-trump-remove-protections-thousands-haitian-syrian-rcna263164",
+      "title": "Supreme Court allows Trump to remove protections from thousands of Haitian and Syrian immigrants - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/supreme-court-allows-trump-administrations-cancellation-tps-haitians/story?id=132122359",
+      "title": "Supreme Court allows cancellation of TPS for Haitians, Syrians, as attorneys warn of impact on thousands - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
