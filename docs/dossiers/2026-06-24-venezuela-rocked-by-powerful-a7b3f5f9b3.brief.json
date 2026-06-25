@@ -1,0 +1,116 @@
+{
+  "story_id": "2026-06-24-venezuela-rocked-by-powerful-a7b3f5f9b3",
+  "headline_seed": "Venezuela rocked by powerful back-to-back earthquakes - The Guardian",
+  "brief": {
+    "story_id": "2026-06-24-venezuela-rocked-by-powerful-a7b3f5f9b3",
+    "consensus_facts": [
+      "Two powerful earthquakes struck Venezuela on Wednesday evening, June 24, 2026, in quick succession.",
+      "The first quake was a foreshock and the second, larger quake was the mainshock, occurring roughly 39-40 seconds later, per the USGS.",
+      "Buildings collapsed in the capital, Caracas, and residents evacuated into the streets.",
+      "A tsunami advisory/warning was issued and later canceled.",
+      "The earthquakes were felt in neighboring Colombia, hundreds of kilometers away.",
+      "The Altamira and Los Palos Grandes neighborhoods of Caracas were among the hardest hit, with collapsed buildings reported there.",
+      "The USGS located the epicenter in northwest Venezuela, near towns including Yumare/San Felipe/Montalb\u00e1n.",
+      "Injuries and damage were reported, but no confirmed death or injury toll had been released at the time of reporting."
+    ],
+    "disagreements": [
+      {
+        "topic": "Magnitude of the quakes",
+        "positions": {
+          "Associated Press": "Reports a single '7.1-magnitude earthquake'",
+          "ABC News": "First quake 7.2 (foreshock), second 7.5 (mainshock)",
+          "BBC News": "7.2 (initially reported as 7.1) followed by stronger 7.5",
+          "CBS News": "First preliminarily 7.1, upgraded to 7.2; second 7.5",
+          "CNN": "Foreshock 7.2, followed by larger 7.5"
+        }
+      },
+      {
+        "topic": "Number of quakes",
+        "positions": {
+          "Associated Press": "Frames the event as a single 7.1-magnitude earthquake; headline says 'back-to-back' but body describes one quake",
+          "ABC News / BBC News / CBS News / CNN": "Two distinct earthquakes, a foreshock and a mainshock"
+        }
+      },
+      {
+        "topic": "Location of the epicenter / reference town",
+        "positions": {
+          "ABC News": "Foreshock near San Felipe; mainshock in Yumare",
+          "BBC News": "Second quake epicenter 23km southeast of Yumare, depth ~10km; first at depth 21.9km",
+          "CBS News": "First centered 17.6 miles NW of Montalb\u00e1n at 8.2 miles depth; second ~21 miles NW of Montalb\u00e1n",
+          "CNN": "Foreshock near San Felipe; mainshock 23km southeast of Yumare"
+        }
+      },
+      {
+        "topic": "Scope of tsunami threat",
+        "positions": {
+          "ABC News": "Advisory for coasts within 300km of epicenter; later expired",
+          "BBC News": "Warning for Venezuela coast and the islands of Aruba and Bonaire, plus Puerto Rico; later cancelled",
+          "CBS News": "Advisories specifically for Puerto Rico and the Virgin Islands; later canceled",
+          "CNN": "Possible hazardous waves within 300km; advisory for Puerto Rico and Virgin Islands canceled"
+        }
+      },
+      {
+        "topic": "Number of partially collapsed buildings in Caracas",
+        "positions": {
+          "CNN": "At least three buildings partially collapsed in eastern Caracas near Altamira Square",
+          "Other outlets": "Report collapsed buildings without specifying a count"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier; no body text retrievable. The single NYT item provided is not about the earthquake at all but about Delcy Rodr\u00edguez and Trump's narrative on Venezuela, suggesting the political framing of Venezuela coverage rather than disaster reporting. Cannot be treated as earthquake corroboration.",
+      "Associated Press": "Body text is essentially photo captions. Frames the event as a single 7.1-magnitude quake despite a 'back-to-back' headline. Heavy on visual/scene imagery (rescue workers, collapsed buildings, debris) and light on seismological detail or official sourcing.",
+      "ABC News": "Leads with the doublet structure (7.2 foreshock, 7.5 mainshock) and USGS technical framing. Emphasizes affected neighborhoods (Alta Mira, Palos Grandes), airport damage and suspended flights, and the tsunami advisory. Straightforward developing-story wire style.",
+      "BBC News": "Most detailed on official Venezuelan sourcing, quoting Interior Minister Diosdado Cabello on state TV and listing affected states. Notably includes opposition leader Mar\u00eda Corina Machado's statement of condolence \u2014 the only outlet to foreground both government and opposition voices. Includes precise USGS depth/timing data and cross-border (Colombia) impact.",
+      "CBS News": "Rich on eyewitness color (resident Roberto Damas quote) and Cabello's appeals to remain outside due to aftershocks. Frames the quakes as 'among the strongest to strike Venezuela in more than a century.' Notably appends 'Go deeper' links to opinion pieces about Trump and Venezuela ('What Does Trump Think He's Doing with Venezuela?'), injecting a political-context throughline absent from pure disaster coverage.",
+      "CNN": "Emphasizes geolocation/verification ('videos geolocated by CNN'), USGS warning that 'high casualties and extensive damage are probable,' and specifies at least three partially collapsed buildings near Altamira Square. Cautious on casualty figures, quoting a Chacao police officer that it is 'too soon' to release numbers."
+    },
+    "primary_source_alignment": [
+      "No primary source (USGS bulletin, official Venezuelan government statement, or tsunami warning center release) was included in the dossier. USGS data is cited secondhand through the outlets, so direct alignment cannot be verified.",
+      "Outlets attribute magnitude, foreshock/mainshock framing, depth, and tsunami advisories to the USGS and US Tsunami Warning System, but the underlying bulletins were not provided for confirmation."
+    ],
+    "missing_context": [
+      "No primary source was located for this story \u2014 magnitude, depth, and tsunami data are all relayed secondhand from outlets citing the USGS, leaving the official figures unverified within the dossier.",
+      "The AP entry, which is wire-grade, frames the event as a single 7.1 quake while the four other body-text outlets describe a 7.2/7.5 doublet \u2014 a meaningful discrepancy in the most basic facts that no outlet reconciles.",
+      "No confirmed casualty or injury figures were available from any outlet at the time of reporting; all numbers are pending.",
+      "Outlets disagree on the geographic scope of the tsunami advisory (Venezuela coast, Aruba/Bonaire, Puerto Rico, Virgin Islands) without a unified authoritative statement.",
+      "Little context on Venezuela's emergency-response capacity, building codes, or seismic history beyond CBS's 'strongest in more than a century' line.",
+      "The political backdrop (NYT and CBS gesture at Trump\u2013Venezuela tensions and the Maduro/Rodr\u00edguez situation) is not integrated with the disaster reporting, leaving unclear how the country's current governance crisis affects relief efforts."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets report the same core event with substantially consistent facts but a notable magnitude discrepancy between AP (single 7.1) and the others (7.2/7.5 doublet); a straightforward REPORT can convey the consensus while flagging that single disagreement, as the framing divergence is modest and no primary source exists to drive a META angle.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/23/world/americas/venezuela-oil-delcy-rodriguez-trump.html",
+      "title": "Delcy Rodr\u00edguez, Venezuela\u2019s President, Struggles to Uphold Trump\u2019s Narrative of Success - The New York Times"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/venezuela-earthquake-caracas-7179acaee70a9c543f953852f15d4814",
+      "title": "Back-to-back powerful earthquakes slam Venezuela, collapsing buildings in the capital of Caracas - AP News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/strong-71-magnitude-earthquake-recorded-coast-venezuela/story?id=134185994",
+      "title": "7.1 magnitude earthquake rattles Venezuelan capital, damage and injuries reported - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cjegdqw5d3yo",
+      "title": "Magnitude 7.1 earthquake rocks Venezuela as buildings shake in Caracas - BBC"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/7-1-magnitude-earthquake-venezuela-tsunami-advisory-puerto-rico-virgin-islands/",
+      "title": "Two 7+ magnitude earthquakes strike Venezuela, heavy damage reported in Caracas - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/24/americas/venezuela-earthquake-latam-intl",
+      "title": "Venezuela rocked by back-to-back 7.5 and 7.2 earthquakes - CNN"
+    }
+  ]
+}
