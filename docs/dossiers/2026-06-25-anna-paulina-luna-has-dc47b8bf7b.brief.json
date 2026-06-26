@@ -1,0 +1,111 @@
+{
+  "story_id": "2026-06-25-anna-paulina-luna-has-dc47b8bf7b",
+  "headline_seed": "Anna Paulina Luna has paralyzed the House, and fellow Republicans are mystified - Politico",
+  "brief": {
+    "story_id": "2026-06-25-anna-paulina-luna-has-dc47b8bf7b",
+    "consensus_facts": [
+      "Rep. Anna Paulina Luna (R-Fla.) is leading a group of conservatives blocking nearly all legislation on the House floor until the Senate passes the SAVE America Act.",
+      "The SAVE America Act would impose proof-of-citizenship/voter-ID requirements; reporting also ties it to a crackdown on mail-in voting.",
+      "The SAVE America Act has stalled in the Senate, with Senate Majority Leader John Thune saying the votes do not exist amid universal Democratic opposition.",
+      "House GOP leadership pulled/canceled scheduled votes as a result of the blockade.",
+      "House Speaker Mike Johnson met with President Trump at the White House on Thursday to try to break the impasse.",
+      "Johnson floated incorporating a narrow version of the SAVE America Act into a budget reconciliation package via a grant program encouraging states to adopt stricter voter-ID/REAL ID requirements, which Luna rejected as inadequate.",
+      "Luna says she has President Trump's backing for her hardball tactics.",
+      "A bipartisan housing bill passed the House this week (358-32) after passing the Senate (88-5); Luna dismissed its significance.",
+      "Trump declined/canceled his planned signing of the bipartisan housing package, wanting the elections bill addressed first.",
+      "Luna submitted an amendment to the National Defense Authorization Act that would direct Defense Department resources to the U.S. southwest border, and her staff used the AI chatbot Claude in producing the amendment summary.",
+      "Luna defended the AI usage on X, saying Claude was used only for the summary/spell-check, not to draft the actual legislative text, noting the House Office of Legislative Counsel drafts bill text and is prohibited from using AI."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether Luna will stand down after Trump's Thursday statement",
+        "positions": {
+          "Politico": "Reports that even after Trump's 'no more grandstanding' pronouncement, Luna would not say she is standing down and is now pushing to attach the SAVE America Act to the must-pass Pentagon bill.",
+          "Fox News": "Frames Luna as firmly committed, quoting 'as long as it takes,' with no indication of retreat and emphasizing she has the votes."
+        }
+      },
+      {
+        "topic": "Framing of Luna's relationship to leadership and Trump",
+        "positions": {
+          "Politico": "Frames Luna as a 'rogue member' who has 'paralyzed' the House, quoting Republicans who are frustrated and 'mystified,' and reporting many believe she is privately pushing Trump to keep pressure on the Senate.",
+          "Fox News": "Frames Luna and her allies as 'Trump allies' executing the president's stated priority, with leadership pressure portrayed as a logjam rather than dysfunction."
+        }
+      },
+      {
+        "topic": "Scope of the SAVE America Act's provisions",
+        "positions": {
+          "Politico": "Describes it as mandating strict proof-of-citizenship voting requirements 'among other provisions,' with Trump insisting on a mail-voting crackdown that divides the GOP.",
+          "Fox News": "Describes it as 'sprawling legislation' that would enact voter ID, crack down on mail-in voting, and ban sex change procedures for minors."
+        }
+      },
+      {
+        "topic": "Significance of the Claude/AI episode",
+        "positions": {
+          "Forbes": "Treats it as a substantive story about AI use in government, contextualizing with examples of AI errors in courts and rulemaking.",
+          "The Independent": "Centers the episode on Luna's defensive reaction and her subsequent tangent attacking outlets for using her past swimsuit modeling photos as 'clickbait.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN": "Headline and body (a video summary) focus on an unrelated bipartisan Luna-Moskowitz effort to force a vote lowering student loan interest rates to 2%. Does not cover the House floor blockade or the AI controversy. The remainder is a list of unrelated video segments. Minimal substantive text; presents Luna in a bipartisan, constructive light rather than as an obstructionist.",
+      "Politico": "The deepest reporting in the dossier. Leads on the 'paralyzed House' and GOP frustration, heavily sourcing anonymous Republicans calling Luna a 'rogue member' and quoting colorful criticism (LaLota's 'beating your dog because your neighbor won't cut his grass,' Womack's 'not our finest hour'). Emphasizes the theory that Luna privately pushes Trump, mirrors Trump's tactics, and details the procedural stakes (appropriations bills, defense bill, lost floor time). Frames the blockade as intra-GOP dysfunction.",
+      "Forbes": "Narrowly scoped to the Claude/AI amendment-summary controversy. Leads with Luna's defense, then pivots to broader context on AI use in government (UK, Italy, DOT rulemaking) and AI hallucination problems in courts and the Cohen/Bard episode. Neutral, explanatory tone; treats the floor blockade as out of scope.",
+      "Fox News": "Frames Luna and allies as 'Trump allies' freezing the floor to 'pressure Senate' \u2014 sympathetic to the conservative effort. Leads with Luna's 'as long as it takes' quote and her claim of having the votes and Trump's backing. Gives extensive space to Luna's own quotes dismissing the housing bill and Johnson's reconciliation proposal ('not drinking the Kool-Aid'). Describes the SAVE Act as including a ban on 'sex change procedures for minors,' a detail Politico does not surface. (Articles 4 and 7 are the same English/Spanish-domain article; Article 6 is a near-empty video page with chrome and an unrelated sidebar.)",
+      "The Independent": "Leads with the AI controversy but frames it through Luna's character, headlining her pivot to 'her modeling career.' Emphasizes her defensive, combative reaction \u2014 quoting her 'go touch some grass' remark and attacks on the Daily Mail. Uses 'MAGA superstar'/'right-wing lawmaker' descriptors and references her viral Mount Rushmore proposal. Tone is skeptical and personality-focused rather than policy-focused."
+    },
+    "primary_source_alignment": [
+      "No primary sources (roll-call votes, bill text, full transcripts, official statements) were located for this story, so no direct document-to-coverage comparison is possible.",
+      "The housing bill vote margins (House 358-32, Senate 88-5) appear only in Politico's body; Fox references the housing bill but does not state the margins. These figures could not be checked against an official roll call in this dossier."
+    ],
+    "missing_context": [
+      "No outlet provides the actual roll-call breakdown of the SAVE America Act or confirms whether it ever received a Senate floor vote \u2014 only that Thune says the votes aren't there.",
+      "No independent confirmation (beyond Luna's own claim) that 'most' congressional staff use Claude or other AI tools for bill summaries; Forbes notes no other lawmakers commented.",
+      "The exact number of House members committed to Luna's blockade is never quantified; only Luna's assertion that she 'has the votes' plus named allies (Miller, Norman, and per a Fox headline Fine, Self, Harris) is provided.",
+      "No outlet explains the parliamentary mechanics or precedent of how a procedural blockade indefinitely halts the floor, beyond noting it blocks 'rule' votes.",
+      "CNN's contribution covers an entirely separate Luna-Moskowitz student-loan effort and does not engage with the central blockade story, leaving its relevance to this dossier limited.",
+      "Single-source depth: Politico is the only outlet with substantial reporting on the internal GOP frustration and the 'Luna privately pushes Trump' theory; that theory rests on anonymous sources and is not corroborated elsewhere in the dossier.",
+      "No Democratic or Senate-side reaction is captured in detail beyond Thune's vote-count assertion and the noted Democratic opposition.",
+      "No primary source was located, so claims about vote margins, the SAVE Act's exact contents, and the housing package's status rely entirely on outlet reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets cover the same Luna-led House blockade but with sharply divergent framings \u2014 Politico's 'rogue member paralyzing the House,' Fox's sympathetic 'Trump allies pressuring the Senate,' and The Independent/Forbes treating a separate AI controversy \u2014 making the divergence in emphasis the actual story. The lack of any primary source and reliance on anonymous sourcing reinforce a coverage-comparison post over a straight REPORT.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/24/politics/video/cnn-sitroom-blitzer-anna-paulina-luna-jared-moskowitz-florida-student-loan-debt-interest",
+      "title": "Bipartisan duo tells CNN's Wolf Blitzer about plans to force vote to lower interest rates on student loans - CNN"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/06/25/anna-paulina-luna-save-america-house-00976560",
+      "title": ""
+    },
+    {
+      "outlet": "Forbes",
+      "url": "https://www.forbes.com/sites/alisondurkee/2026/06/24/gop-rep-luna-defends-using-claude-for-drafting-defense-bill-amendment-summary/",
+      "title": "Anna Paulina Luna Defends Claude AI Mistake In Bill Summary - Forbes"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/politics/as-long-takes-trump-allies-freeze-house-floor-pressure-senate-voter-id-bill.amp",
+      "title": "'As long as it takes': Trump allies freeze House floor to pressure Senate on voter ID bill - Fox News"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/us-politics/anna-paulina-luna-ai-modeling-b3003112.html",
+      "title": "MAGA superstar defends use of AI to help summarize a bill - then talks about her modeling career - The Independent"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/video/6399358718112",
+      "title": "Rep. Anna Paulina Luna says House floor will stay frozen until Senate passes SAVE America Act - Fox News"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://noticias.foxnews.com/politics/as-long-takes-trump-allies-freeze-house-floor-pressure-senate-voter-id-bill",
+      "title": "'As long as it takes': Trump allies freeze House floor to pressure Senate on voter ID bill - Fox News"
+    }
+  ]
+}
