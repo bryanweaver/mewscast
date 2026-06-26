@@ -1,0 +1,51 @@
+{
+  "story_id": "2026-06-26-russian-installed-authorities-declare-07e643f5e3",
+  "headline_seed": "Russian-installed authorities declare economic emergency in Crimea - NBC News",
+  "brief": {
+    "story_id": "2026-06-26-russian-installed-authorities-declare-07e643f5e3",
+    "consensus_facts": [
+      "All four outlets' headlines converge on power/energy disruption in Russian-held areas of Ukraine (Crimea, Sevastopol, and Kherson), attributed to Ukrainian strikes; only one outlet (NBC News, sourced to Reuters) provides retrievable body text, so detailed claims below are single-source and not treated as multi-body consensus."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "Reuters": "Three headline-only entries in this dossier, each framing a distinct slice of the same story with neutral wire phrasing: 'Russia-controlled areas of Ukraine's Kherson left with no power, Moscow official says' attributes the claim explicitly to a Moscow official; 'Ukrainian strikes knock out power in Sevastopol in Russian-held Crimea' foregrounds Ukrainian responsibility and the cause-effect link; 'Crimea's Sevastopol imposes temporary power curbs to households' leads on the administrative response rather than the attack. No body text was retrievable for any of the three, so framing is inferred from headline word choice only.",
+      "NBC News": "Only outlet with full body text, and it explicitly credits Reuters as the source. Leads with the Russia-installed authorities declaring a state of emergency in Crimea over economic issues. NBC reports that Sergei Aksyonov, the Russia-appointed head of Crimea, announced the emergency on Telegram, saying it would facilitate decision-making to ensure stable operations of sectors the population depends on, and notes authorities did not specify what it would mean in practice. NBC reports the emergency follows suspension of tourism and children's summer camps and a halt to all fuel sales in response to Ukrainian attacks. It contextualizes that Ukraine has been pounding energy and other targets to undermine Moscow's military and finances and cut it off from Crimea, which Russia annexed in 2014, and that drone attacks are worsening fuel shortages with rising prices and long queues at filling stations. NBC also reports Putin's claim that attacks on civilian infrastructure are meant to sow discord among the Russian population. Frame mixes the Russian-installed authorities' own statements with attributed context on Ukrainian motives."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Aksyonov's Telegram statement, referenced secondhand in NBC's Reuters-sourced report, was not provided as a primary document and could not be independently verified against coverage."
+    ],
+    "missing_context": [
+      "Only one of four dossier articles (NBC News) has retrievable body text, and that article is itself sourced entirely to Reuters \u2014 so there is effectively a single underlying source for all narrative detail, not independent corroboration.",
+      "The three Reuters entries are headline-only; their bodies could not be retrieved, so claims about Kherson's power loss, Sevastopol's outage, and household power curbs cannot be verified beyond their headlines.",
+      "No independent (non-Russian-installed) confirmation of the scope or duration of the economic emergency, fuel halt, or power outages is present in the dossier.",
+      "No specifics on what the 'state of emergency' entails in practice \u2014 NBC notes authorities themselves did not say.",
+      "No casualty figures, no quantification of fuel shortages or outage duration, and no Ukrainian government statement on the strikes are included.",
+      "No outlet in the dossier provides the date or scale of the Sevastopol museum drone strike referenced in NBC's photo caption beyond 'June 10.'"
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (NBC, itself sourced to Reuters) carries body text and the other three are headline-only, so there is no multi-body consensus and the story rests on a single time-sensitive wire thread; a same-day hedged bulletin is the responsible format until independent corroboration is available.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/russia-controlled-areas-ukraines-kherson-left-with-no-power-moscow-official-says-2026-06-25/",
+      "title": "Russia-controlled areas of Ukraine's Kherson left with no power, Moscow official says - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/ukraine/russian-installed-authorities-declare-economic-emergency-crimea-rcna351898",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/europe/russian-held-sevastopol-without-power-after-ukraine-strikes-moscow-installed-2026-06-24/",
+      "title": "Ukrainian strikes knock out power in Sevastopol in Russian-held Crimea - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/energy/crimeas-sevastopol-imposes-temporary-power-curbs-households-2026-06-25/",
+      "title": "Crimea's Sevastopol imposes temporary power curbs to households - Reuters"
+    }
+  ]
+}
