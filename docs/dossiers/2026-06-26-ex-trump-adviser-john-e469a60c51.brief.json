@@ -1,0 +1,122 @@
+{
+  "story_id": "2026-06-26-ex-trump-adviser-john-e469a60c51",
+  "headline_seed": "Ex-Trump adviser John Bolton pleads guilty to mishandling classified information - NBC News",
+  "brief": {
+    "story_id": "2026-06-26-ex-trump-adviser-john-e469a60c51",
+    "consensus_facts": [
+      "John Bolton, former national security adviser to President Donald Trump, pleaded guilty on Friday, June 26, 2026, to one count of unauthorized retention of national defense information.",
+      "Bolton was originally indicted in October 2025 on 18 counts (eight counts of transmission of national defense information and 10 counts of retention of national defense information) and had pleaded not guilty.",
+      "The plea was entered in federal court in Greenbelt, Maryland, before U.S. District Judge Theodore D. Chuang, an appointee of President Barack Obama.",
+      "Bolton faces a maximum sentence of up to five years (60 months) in prison and has agreed to pay a $2.25 million fine.",
+      "Bolton is scheduled to be sentenced on October 28.",
+      "In court, Bolton acknowledged the prosecutors' summary of his actions and said he was 'sorry for it.'",
+      "The retained documents included diary entries containing national defense information, some classified up to the Top Secret level, which Bolton used to prepare his memoir about his time in the Trump administration.",
+      "Prosecutors said Bolton sent the classified information to two family members via private email accounts and/or a messaging platform.",
+      "After Bolton left the White House in 2019, a cyber actor associated with Iran hacked into his personal email account that contained the national defense information.",
+      "Bolton's attorney Abbe Lowell said Bolton 'did what real leaders do,' taking responsibility for a mistake and saving the government from a case that could expose additional sensitive information.",
+      "Bolton served as Trump's national security adviser from April 2018 through September 2019 and later became a frequent critic of Trump.",
+      "Bolton is one of three high-profile Trump critics indicted under Trump's second administration, alongside former FBI Director James Comey and New York Attorney General Letitia James, whose initial cases were dismissed.",
+      "DOJ officials (Hayden O'Byrne and U.S. Attorney Kelly Hayes) framed the plea as a warning to public officials who mishandle classified information."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which count Bolton pleaded guilty to",
+        "positions": {
+          "NBC News": "Identifies it specifically as count 12 of the 18 charges",
+          "BBC News": "Describes it as a single charge of illegal retention without a count number",
+          "CNBC": "One criminal count of retaining national defense information, no count number",
+          "NPR": "One count of retention of national defense information, no count number"
+        }
+      },
+      {
+        "topic": "Fine payment and additional terms of the plea deal",
+        "positions": {
+          "NPR": "Half of the $2.25M must be paid within five days of sentencing; Bolton forgoes retirement benefits for himself and family",
+          "CNBC": "Bolton and his survivors barred from collecting an annuity or federal retirement pay",
+          "BBC News": "Bolton will debrief national security officials and perform 100 hours of community service (citing CBS News); no mention of payment timing",
+          "NBC News": "States the $2.25M agreement but does not detail community service or payment schedule"
+        }
+      },
+      {
+        "topic": "Method Bolton used to transmit information to family",
+        "positions": {
+          "NBC News": "Private email accounts and a messaging platform",
+          "NPR": "Texts or an AOL email account, more than a thousand pages shared",
+          "CNBC": "Personal accounts including a personal email account later hacked by Iran-linked actor",
+          "BBC News": "Sending diary entries with sensitive information to family members"
+        }
+      },
+      {
+        "topic": "Volume and detail of classified material",
+        "positions": {
+          "CNBC": "Specifies SCI material including foreign adversaries' military operation plans, covert U.S. actions abroad, and intelligence on adversary leaders from human sources and intercepts",
+          "NPR": "More than a thousand pages of daily activity notes",
+          "NBC News": "Documents classified up to Top Secret level, no page count",
+          "BBC News": "Some classified at top secret level, no page count or SCI detail"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier (body is a Google News redirect link, no retrievable text). Frames Bolton via the 'adviser-turned-critic' label, foregrounding the political reversal. Cannot assess deeper framing \u2014 no body text.",
+      "NBC News": "Full body text. Leads on the guilty plea and the specific count-12 detail. Heavily contextualizes Bolton within the broader pattern of Trump critics (James, Comey) being prosecuted, devoting significant space to the James and Comey cases including the seashell-photo indictment. Quotes both the defense's responsibility framing and DOJ's deterrence message. Neutral but situates the story within a politically-charged prosecution narrative.",
+      "BBC News": "Full body text and the most context-rich. Leads on the book-notes origin of the documents. Notably amplifies Lowell's contrast between Bolton and Trump's own Mar-a-Lago documents case. Adds expert voices (Carrie Cordero) framing the case as 'rare but not unprecedented,' and explicitly references a companion piece on 'Why John Bolton case is more serious than those against other Trump critics.' Includes Trump's 'sleazebag' insult and the hacker's Hillary-emails threat. International framing emphasizes the Trump-vs-Bolton personal feud.",
+      "CNBC": "Full body text with a business/specialized lens. Leads on the legal mechanics \u2014 the single count, the maximum sentence, the fine, and uniquely emphasizes the financial consequence that Bolton and survivors lose annuity/federal retirement pay. Provides the most granular DOJ description of the classified material (SCI, military operation plans, human sources). Notes the FBI raids on Aug. 22 and that part of the hearing was sealed. Contextualizes the James/Comey cases factually.",
+      "The Washington Post": "Headline-only in the dossier (body is a Google News redirect link, no retrievable text). Headline frames neutrally as a 'classified files case.' Cannot assess framing \u2014 no body text.",
+      "NPR": "Full body text. Leads on the courtroom scene and Bolton's contrition ('And I am sorry for it'). Most explicitly engages the 'is this politically motivated?' question, quoting former DOJ attorney Stacey Young and Brookings' Michael O'Hanlon to argue Bolton's case is an 'outlier' and 'legitimate' versus the 'vindictive' James/Comey prosecutions. Foregrounds the contrast with Trump avoiding punishment in the Mar-a-Lago case (Judge Cannon dismissal). Strong frame: this prosecution stood up to scrutiny while others did not.",
+      "NBC News (live blog)": "Full body text but story is a multi-topic live blog where Bolton is one bullet among Trump's Faith and Freedom speech, the Epstein/Leon Black testimony, and Iran/Strait of Hormuz tensions. Bolton coverage reduced to a single summary line ('pleaded guilty this morning to one charge of retaining national security information as part of a deal'). Minimal framing; treats it as one item in a busy news day."
+    },
+    "primary_source_alignment": [
+      "No primary source (court filing, plea agreement, indictment, or DOJ press release transcript) was provided in the dossier, so direct alignment cannot be verified.",
+      "Multiple outlets quote a DOJ statement and U.S. Attorney Kelly Hayes / acting Deputy Assistant AG Hayden O'Byrne, but the underlying plea agreement and statement of facts were not retrievable; specifics such as the exact count number (NBC's 'count 12'), the community-service term (BBC via CBS), and the payment schedule (NPR) are single-sourced and could not be cross-checked against the document itself."
+    ],
+    "missing_context": [
+      "No primary source (the plea agreement, statement of facts, or DOJ press release) was located, so terms like the community-service requirement, the debrief obligation, and the payment timeline rest on single-outlet reporting.",
+      "Two of the seven dossier entries (Reuters and The Washington Post) are headline-only Google News redirects with no retrievable body text, so their framing could not be assessed.",
+      "No outlet specifies what Bolton's actual sentence is likely to be versus the five-year maximum, nor whether prosecutors will recommend prison time at the Oct. 28 sentencing.",
+      "Outlets note Iran-linked hackers accessed Bolton's email but do not clarify whether any classified material was actually exfiltrated or how the government determined the extent of the breach.",
+      "No outlet quantifies the discrepancy between the original maximum exposure (NBC cites up to 10 years, $250,000 per count) and the five-year/$2.25M plea outcome in terms of how the deal was negotiated.",
+      "The 'why Bolton's case is different' framing relied on by BBC, NPR, NBC and others is sourced largely to former-DOJ and think-tank commentators (Cordero, Young, O'Hanlon) rather than to the court record itself; no outlet presents a sustained counter-argument that the prosecution was politically motivated, beyond noting Bolton previously made that claim.",
+      "No instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets (NBC News, BBC, CNBC, NPR) reported the same event with materially different emphasis \u2014 NPR and BBC foreground the 'is this a vindictive prosecution or a legitimate outlier?' debate, CNBC leads on the financial/retirement penalties and granular classified-material detail, and NBC situates it within the broader Trump-critics prosecution pattern. With no primary source available and meaningful single-source divergences on the plea terms, this is best treated as a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/trump-adviser-turned-critic-john-bolton-plead-guilty-classified-info-case-2026-06-26/",
+      "title": "Trump adviser-turned-critic John Bolton pleads guilty to mishandling classified documents - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/trump-administration/ex-trump-adviser-john-bolton-expected-plead-guilty-retaining-national-rcna351897",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/czxqwg4nrvlo",
+      "title": "Ex-Trump adviser John Bolton pleads guilty to mishandling classified documents - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/06/26/john-bolton-guilty-defense-trump.html",
+      "title": "Ex-Trump advisor John Bolton pleads guilty to retaining national defense information - CNBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/06/26/ex-national-security-adviser-john-bolton-expected-plead-guilty-classified-docs-case/",
+      "title": "Former Trump adviser John Bolton pleads guilty in classified files case - The Washington Post"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/trump-administration/live-blog/trump-john-bolton-epstein-leon-black-congress-iran-live-updates-rcna351855",
+      "title": "Live updates: Trump set to speak at Faith and Freedom conference - NBC News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/26/nx-s1-5871292/john-bolton-national-security-classified-documents",
+      "title": "John Bolton, former Trump national security adviser, pleads guilty in classified documents case - NPR"
+    }
+  ]
+}
