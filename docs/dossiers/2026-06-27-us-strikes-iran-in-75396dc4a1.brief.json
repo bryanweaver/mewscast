@@ -1,0 +1,100 @@
+{
+  "story_id": "2026-06-27-us-strikes-iran-in-75396dc4a1",
+  "headline_seed": "US strikes Iran in response to drone strike on commercial ship - Al Jazeera",
+  "brief": {
+    "story_id": "2026-06-27-us-strikes-iran-in-75396dc4a1",
+    "consensus_facts": [
+      "On Friday, June 26, 2026, the U.S. military carried out retaliatory strikes against Iran in response to a drone attack on a commercial cargo vessel in the Strait of Hormuz the previous day (Al Jazeera, AP, CBS News, NBC News).",
+      "U.S. Central Command announced the action via social media, describing it as a 'powerful response' to Iran's 'dangerous behavior' (Al Jazeera, CBS News).",
+      "The strikes targeted Iranian missile and drone storage facilities and coastal radar sites (Al Jazeera, CBS News).",
+      "A U.S. official confirmed the strikes had concluded, roughly an hour after CENTCOM's announcement (AP, CBS News).",
+      "Vice President JD Vance said on social media after the strikes that Iran should 'pick up the phone' over disagreements about the ceasefire agreement, adding that 'violence will be met with violence' (AP, CBS News).",
+      "President Trump blamed Iran for the drone strike on the ship and characterized it as a violation of the ceasefire/memorandum of understanding between the U.S. and Iran (AP, CBS News, NBC News).",
+      "The strikes marked the first U.S. strikes on Iran since the two countries agreed to extend a ceasefire the prior week, raising questions about whether the June 17 memorandum of understanding will hold (Al Jazeera, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Iranian retaliation following the U.S. strikes",
+        "positions": {
+          "Al Jazeera English": "Reports that Iran's IRGC said it responded with attacks against U.S. military installations in the region and warned that any repeated aggression would draw a 'more extensive' response.",
+          "Associated Press": "Does not report any Iranian counter-strike; coverage ends with U.S. strikes concluded.",
+          "CBS News": "Does not mention an Iranian counter-strike in the provided body.",
+          "NBC News": "Does not mention an Iranian counter-strike."
+        }
+      },
+      {
+        "topic": "Specific geographic targets of the strikes",
+        "positions": {
+          "Al Jazeera English": "Strikes reported near the southern Iranian port of Sirik.",
+          "CBS News": "Strikes hit multiple targets along the Strait of Hormuz and on Iran's Qeshm Island.",
+          "Associated Press": "Does not specify locations beyond Iran.",
+          "NBC News": "Does not specify locations."
+        }
+      },
+      {
+        "topic": "Details of the drone attack on the ship",
+        "positions": {
+          "CBS News": "Quotes Trump saying four shots were taken, three were knocked down, and one got through unnoticed and struck the ship; describes it as 'a very expensive ship.'",
+          "Associated Press": "Reports Trump saying one drone got through unnoticed and struck a ship Thursday.",
+          "Al Jazeera English": "Describes the vessel simply as a cargo ship struck by an Iranian drone, without the multi-drone detail."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in the dossier ('U.S. Military Strikes Missile and Drone Sites in Iran'). Emphasis is on the U.S. military action and the nature of the targets. No body text available to assess deeper framing.",
+      "Al Jazeera English": "Frames the event as a two-way 'exchange of fire,' uniquely foregrounding Iran's IRGC counter-strike and its warning of escalation. Leads with the U.S. response but gives substantial weight to Iran's perspective and to the threat to freedom of navigation. Closes by spotlighting doubt over whether the June 17 MoU will survive.",
+      "Reuters": "Headline-only in the dossier ('US strikes Iran in response to attack on cargo ship in Strait of Hormuz'). Headline frames the strikes as a direct, proportional response. The URL slug references Iran insisting on its right to control shipping in the Strait, suggesting that angle, but no body text is available to confirm.",
+      "Associated Press": "Live-blog format emphasizing official U.S. confirmation and Trump/Vance statements. Leads with Trump blaming Iran and Vance's 'violence will be met with violence' line. Frames the action as concluded and attributable to U.S. officials; omits any Iranian response.",
+      "CBS News": "Most detailed body in the dossier. Frames the story around the fraying ceasefire, leading with Trump's 'foolish violation' characterization. Adds reporting absent elsewhere: Qeshm Island targeting, a House Democrat (Rep. Suhas Subramanyam) calling the administration 'incompetent' and doubting the MoU will hold, and an Israel-Lebanon framework deal brokered by Rubio. Balances administration statements with domestic critical voices.",
+      "NBC News": "Short video-desk summary framing the strikes as 'retaliatory' and emphasizing that Trump 'teased' the retaliation hours after accusing Iran of violating the ceasefire. Most of the body is privacy/cookie boilerplate; minimal substantive reporting."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. CENTCOM's statement is quoted secondhand through Al Jazeera and CBS News but the underlying release was not in the dossier, so no direct alignment check against an original document is possible.",
+      "The June 17 memorandum of understanding referenced by multiple outlets is not present in the dossier; its actual terms (including control of the Strait and Iran's unfrozen funds, per CBS) cannot be verified against the source text."
+    ],
+    "missing_context": [
+      "No outlet reported casualty figures or damage assessments on either the Iranian targets or the struck cargo vessel.",
+      "The identity, flag, ownership, and cargo of the struck commercial ship are not specified in any article.",
+      "Iran's official denial or admission of responsibility for the drone strike is absent; coverage relies on Trump's attribution.",
+      "The full text and specific terms of the June 17 U.S.-Iran memorandum of understanding are not provided, despite being central to the dispute.",
+      "No independent verification of the Iranian IRGC counter-strike claim (reported only by Al Jazeera) \u2014 no confirmation of whether U.S. installations were actually hit or any U.S. acknowledgment.",
+      "Only two of six dossier articles (CBS News, Al Jazeera) plus partial AP/NBC text provide substantive body content; The New York Times and Reuters are headline-only, limiting corroboration for some details.",
+      "No outlet provides context on prior incidents in the Strait of Hormuz during this ceasefire period or the broader timeline of U.S.-Iran hostilities leading to the June 17 agreement."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four-plus outlets reported the same event but with materially different emphasis \u2014 Al Jazeera uniquely foregrounds an Iranian counter-strike and escalation warning, CBS adds domestic political criticism and target details, while AP and NBC stick to U.S. official framing \u2014 making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/06/26/world/us-iran-strikes-hormuz",
+      "title": "U.S. Military Strikes Missile and Drone Sites in Iran - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/6/26/us-strikes-iran-in-response-to-drone-strike-on-commercial-ship",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/iran-insists-right-control-shipping-strait-hormuz-after-ship-hit-near-oman-2026-06-26/",
+      "title": "US strikes Iran in response to attack on cargo ship in Strait of Hormuz - Reuters"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/live/trump-administration-updates-06-26-2026",
+      "title": "Live updates: US strikes Iran in response to drone attack on ship, US military says - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/us-iran-war-israel-hezbollah-strait-of-hormuz-peace-deal-talks/",
+      "title": "U.S.-Iran Latest: U.S. strikes Iran after Trump accuses Tehran of \"foolish violation\" of ceasefire - CBS News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/meet-the-press/video/u-s-strikes-iran-after-attack-on-commercial-vessel-in-strait-of-hormuz-265759301628",
+      "title": "U.S. strikes Iran after attack on commercial vessel in Strait of Hormuz - NBC News"
+    }
+  ]
+}
