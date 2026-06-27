@@ -1219,6 +1219,11 @@
       "did": "did:plc:3wpbo72ejmigvo4f7ecilyfc",
       "handle": "porschejunkie.bsky.social",
       "timestamp": "2026-06-27T13:35:26.181312"
+    },
+    {
+      "did": "did:plc:6tqj7degh4tkfo6yfqph74j4",
+      "handle": "gleafer.bsky.social",
+      "timestamp": "2026-06-27T16:23:54.478458"
     }
   ],
   "liked_posts": [
@@ -3256,6 +3261,11 @@
       "uri": "at://did:plc:3wpbo72ejmigvo4f7ecilyfc/app.bsky.feed.post/3mpb7sswghc2k",
       "author": "porschejunkie.bsky.social",
       "timestamp": "2026-06-27T13:35:25.990640"
+    },
+    {
+      "uri": "at://did:plc:6tqj7degh4tkfo6yfqph74j4/app.bsky.feed.post/3mp7ui7meuk2g",
+      "author": "gleafer.bsky.social",
+      "timestamp": "2026-06-27T16:23:54.399541"
     }
   ],
   "last_cleanup": "2026-06-27T13:35:24.697395",
