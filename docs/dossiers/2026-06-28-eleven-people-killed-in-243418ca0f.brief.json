@@ -1,0 +1,112 @@
+{
+  "story_id": "2026-06-28-eleven-people-killed-in-243418ca0f",
+  "headline_seed": "Eleven people killed in plane crash in northeastern France, officials say - Reuters",
+  "brief": {
+    "story_id": "2026-06-28-eleven-people-killed-in-243418ca0f",
+    "consensus_facts": [
+      "Eleven people were killed when a small civilian aircraft crashed in Tomblaine, in northeastern France, on Sunday, June 28, 2026.",
+      "The aircraft belonged to a parachutist/skydiving school and had taken off from the Nancy-Essey airfield.",
+      "Those killed were the pilot and 10 passengers, described by officials as five instructors and five students/skydivers.",
+      "The crash occurred shortly after 11 a.m. local time.",
+      "Yves Seguy, prefect of Meurthe-et-Moselle, said the plane fell almost vertically in the immediate vicinity of a housing estate/built-up area near a shopping centre, on the edge of the airfield.",
+      "No bystanders were killed or injured; officials noted it was lucky there were no additional/collateral victims.",
+      "French interior minister Laurent Nunez was traveling to the scene; transport minister Philippe Tabarot also said he was heading to the site.",
+      "Police urged the public to avoid the area around the airport to keep access clear for emergency services.",
+      "Relatives of the victims were present at the airfield when the crash occurred.",
+      "Thierry Pechey, president of the Meurthe-et-Moselle branch of the Order of Independent Nurses, said roughly half of the skydivers who died were nurses."
+    ],
+    "disagreements": [
+      {
+        "topic": "Aircraft type",
+        "positions": {
+          "The Independent": "Photo caption identifies the wreckage as a Pilatus PC-6 light aircraft; also reports the plane was 'likely rented in Germany' per the mayor.",
+          "CNN / BBC / The Straits Times": "Do not name the aircraft model, describing it only as a light/small civilian plane."
+        }
+      },
+      {
+        "topic": "Cause of the crash",
+        "positions": {
+          "The Independent / The Straits Times": "Seguy said the aircraft appeared to suffer damage/malfunction before plunging vertically.",
+          "CNN / BBC": "Do not assert a malfunction; describe only that the plane fell almost vertically and note a forensic/standard investigation is awaited."
+        }
+      },
+      {
+        "topic": "Precise crash location detail",
+        "positions": {
+          "The Independent": "Mayor Herve Feron said the plane crashed on a bicycle path near a residential area; reports power cuts to nearby houses.",
+          "CNN / BBC / The Straits Times": "Describe a housing development / built-up area near a shopping centre, without the bicycle-path or power-cut detail."
+        }
+      },
+      {
+        "topic": "Whether nurses were first-time skydivers",
+        "positions": {
+          "The Independent / Independent Bulletin": "Reports the independent nurses were skydiving for the first time.",
+          "CNN / BBC / The Straits Times": "Do not characterize the nurses as first-time skydivers."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN": "Headline and lead emphasize 'skydiving plane' and the death toll of 11. Notably contextualizes the crash by linking it to a recent skydiving plane crash in western Missouri that killed 12 and to a wider US debate over skydiving plane regulation, plus an aside about four major US plane crashes in four days \u2014 pulling a French local tragedy toward a US aviation-safety narrative. Sources BFMTV and Seguy. Includes minister-on-the-way detail and condolence quotes.",
+      "BBC News": "Straight wire-style framing (bylined Reuters/BBC reporters). Leads on the human breakdown \u2014 pilot plus 10 skydivers, five students and five instructors. Emphasizes officials' relief that there were no bystander casualties and the 'terrible tragedy' minister quote. Attributes location and bystander details to AFP. No external editorializing or US comparison. Two near-identical BBC versions (.com and .co.uk) appear in the dossier.",
+      "The New York Times": "Headline-only entry routed through a Google News/The Times link ('France plane crash: Eleven killed in skydiving flight'). No body text retrievable; contributes only headline-level corroboration of the death toll and skydiving framing.",
+      "The Independent": "Most detail-rich entry. Adds the Pilatus PC-6 identification, the 'likely rented in Germany' claim, the bicycle-path crash site, power cuts to nearby homes, the mayor's emotional quote ('I cannot recall a tragedy of this magnitude'), the malfunction characterization, and the specific police request to avoid Salvador Allende Street. Opens with a lengthy fundraising/house appeal unrelated to the story. Frames victims sympathetically, stressing first-time-skydiver nurses and family support measures.",
+      "The Straits Times": "Tightest, most neutral wire reproduction (Reuters-sourced, Paris dateline). Leads on the 11 dead and parachutist-school ownership, includes the malfunction/vertical-plunge detail and the 'give or take a few meters' near-miss quote. Adds that the local prosecutor did not immediately respond to a request for comment \u2014 the only outlet to flag that gap.",
+      "The Independent (Bulletin)": "Condensed bulletin restating the core facts \u2014 11 dead, parachutist-school plane, crash just after 11am near Nancy, first-time-skydiver nurses, minister en route, avoid-the-area police request. Mostly navigation, ad, and Taboola clutter surrounding a short summary; serves as a same-day quick-hit version of the longer Independent piece."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official accident reports, prefecture press releases in full, BEA aviation-safety documents) were located for this story. Several reports quote a Meurthe-et-Moselle prefecture statement and minister posts on X, but no underlying document was provided in the dossier for direct comparison.",
+      "All factual claims therefore rest on local-official statements (Prefect Yves Seguy, Mayor Herve Feron, the Order of Independent Nurses) relayed largely through BFM/BFMTV, AFP, and Reuters."
+    ],
+    "missing_context": [
+      "No confirmed official cause. Reports of a 'malfunction' or the aircraft 'appearing to suffer damage' are preliminary prefect statements, not findings from an aviation-safety investigation; a formal BEA/forensic inquiry is only just beginning.",
+      "The aircraft model is reported by only one outlet (The Independent: Pilatus PC-6) and not independently confirmed by the others.",
+      "The claim that the plane was 'likely rented in Germany' comes solely from the mayor and is hedged; no outlet confirms or follows up on it.",
+      "Nationalities and identities of the victims are not reported beyond the nurse/instructor breakdown.",
+      "No outlet reports the plane's maintenance history, age, operator name, or pilot experience.",
+      "Most outlets draw on the same upstream wires (Reuters and AFP) and the same broadcaster (BFM/BFMTV), so apparent corroboration partly reflects shared sourcing rather than fully independent reporting.",
+      "Only The Straits Times notes that the local prosecutor had not yet responded for comment; the status of any judicial inquiry is otherwise absent.",
+      "CNN is alone in linking this French crash to US skydiving-plane regulation debates and the recent Missouri crash; whether any comparable regulatory question applies in France is not addressed.",
+      "No injury or damage assessment for the housing estate/shopping-centre area beyond reported power cuts in one outlet."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets with full body text agree on the core facts (11 dead, skydiving-school plane, Tomblaine, no bystander casualties) with only minor framing and detail divergences; this is a straightforward developing-news event rather than a coverage-divergence story, though the cause remains officially undetermined.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/06/28/europe/plane-crash-france-skydiving-intl",
+      "title": "Skydiving plane crashes in France, killing 11 people, local officials say - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c5yz9yj9x74o",
+      "title": "Eleven killed in civilian aircraft crash in north-eastern France, authorities say - BBC"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.thetimes.com/world/europe/article/ten-skydivers-killed-in-france-plane-crash-5rjlst9n5",
+      "title": "France plane crash: Eleven killed in skydiving flight - The Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c5yz9yj9x74o",
+      "title": "Eleven killed after plane carrying skydivers crashes in eastern France - BBC"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/europe/plane-crash-tomblaine-france-skydivers-updates-b3004490.html",
+      "title": "Eleven killed in France plane crash during skydiving trip - The Independent"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/bulletin/news/tomblaine-nancy-plane-crash-latest-b3004498.html",
+      "title": "Eleven killed in French skydiving plane crash - The Independent"
+    },
+    {
+      "outlet": "The Straits Times",
+      "url": "https://www.straitstimes.com/world/europe/eleven-people-killed-in-plane-crash-in-northeastern-france-officials-say?ref=latest-headlines",
+      "title": "Eleven people killed in plane crash in northeastern France, officials say - The Straits Times"
+    }
+  ]
+}
