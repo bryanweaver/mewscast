@@ -1,0 +1,87 @@
+{
+  "story_id": "2026-06-27-central-europe-sizzles-as-d42e9166f7",
+  "headline_seed": "Central Europe sizzles as heat records are smashed in Switzerland, Denmark and Czech Republic - AP News",
+  "brief": {
+    "story_id": "2026-06-27-central-europe-sizzles-as-d42e9166f7",
+    "consensus_facts": [
+      "On Saturday, June 27, 2026, record-high temperatures were recorded across central and eastern Europe as a heat wave that had baked western Europe earlier in the week moved east.",
+      "The Danish Meteorological Institute reported a new record of 37 C (98.6 F) in \u00d8dum, north of Aarhus \u2014 the warmest day since Danish records began in 1874.",
+      "Switzerland set a record of 38.8 C (101.8 F) in the city of Basel.",
+      "The Czech Republic recorded its hottest day on record at 40.6 C (105 F) in the northern town of Doksany, with forecasters saying it could still rise.",
+      "In Germany, sections of the A2 Autobahn concrete burst due to the heat in two places outside Berlin, forcing closures, with other highway damage reported nationally per German daily Bild.",
+      "Deutsche Bahn and other rail companies advised against all nonessential train travel for the weekend, citing severe impact on transportation infrastructure.",
+      "In the western German city of Dormagen, dozens of nursing home residents were evacuated for medical care after indoor temperatures reached 35 C (95 F).",
+      "Air conditioning is not widespread in Germany and many European countries because the continent is largely unaccustomed to such heat.",
+      "German temperatures were expected to reach or hit around 40 C (104 F)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Germany's record temperature",
+        "positions": {
+          "ABC News": "States temperatures were 'expected to hit' 40 C (104 F); does not assert a confirmed all-time national record.",
+          "CBS News": "States Germany 'hit a record 106 degrees Fahrenheit' marking a new all-time high, citing provisional national weather service data via AFP."
+        }
+      },
+      {
+        "topic": "Nursing home death in Dormagen",
+        "positions": {
+          "CBS News": "Reports a resident at the home died overnight, with a city spokesperson telling dpa it was not yet clear whether heat was the cause.",
+          "ABC News": "Does not mention any death at the nursing home."
+        }
+      },
+      {
+        "topic": "Climate change attribution",
+        "positions": {
+          "Associated Press": "Lead/framing states the record-breaking heat 'would not have been possible without climate change,' citing a new study.",
+          "ABC News": "Makes no mention of climate change or attribution studies.",
+          "CBS News": "Makes no mention of climate change or attribution studies."
+        }
+      },
+      {
+        "topic": "France impact coverage",
+        "positions": {
+          "CBS News": "Reports France heat easing, Paris hospital authority (AP-HP) activating its emergency plan across all 38 hospitals, ~3,000 patients treated in 24 hours, calls up nearly 80% vs. 2025, and red alert over three-quarters of France.",
+          "ABC News": "Does not cover France in the provided body text."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "The retrievable body text is almost entirely photo captions plus a single lead sentence centering a climate-change attribution study ('would not have been possible without climate change'). It frames the event as evidence of climate change rather than leading with the temperature records themselves. Note: this AP body is thin (under ~500 characters of substantive prose) and does not contain the detailed wire reporting on Switzerland, Denmark, or the Czech Republic that the headline seed references.",
+      "ABC News": "Leads with infrastructure impact \u2014 the buckling Autobahn appears in the URL slug ('german-highways-buckling-extreme-heat'). Datelined BERLIN, Germany-centric. Reports the country-by-country records (Denmark, Switzerland, Czech Republic) in metric-first units with Fahrenheit conversions. Omits the France situation, the nursing home death, and any climate-change framing. Frames the story as a logistics/infrastructure disruption.",
+      "CBS News": "Most comprehensive body text. Leads with the records but uniquely asserts Germany hit an all-time national high of 106 F (citing AFP) and uniquely reports the overnight nursing home death and the extensive France hospital data. Presents figures Fahrenheit-first for a US audience. No climate-change attribution framing. Appends a sidebar of related US heat stories and links to opinion pieces ('The Economic Lessons From Europe's Heat Wave,' a Konstantin Kisin piece on 'Europe's Decline'), giving the package a domestic-relevance and commentary tilt around an otherwise straight news body."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The referenced climate-attribution 'new study' (cited only by AP) was not provided in the dossier, so its findings, authorship, and methodology cannot be verified against the reporting.",
+      "Institutional statements quoted in the dossier (Danish Meteorological Institute, Deutsche Bahn, Dormagen fire department, Paris AP-HP authority) are reported secondhand via outlets and German news agencies (Bild, dpa, AFP); no original document or transcript was available to cross-check the figures."
+    ],
+    "missing_context": [
+      "The ABC News and CBS News articles share nearly identical core paragraphs (same phrasing on records, Autobahn, Deutsche Bahn quote, nursing home evacuation), strongly suggesting a common wire origin \u2014 meaning the two lean-left outlets may not be independent corroboration but the same underlying report republished.",
+      "The AP attribution study is referenced only by its conclusion; no detail on who conducted it, the methodology, the magnitude of the climate signal, or its publication venue is provided.",
+      "No death toll or heat-related casualty figures for the heat wave overall are given; only the single unconfirmed Dormagen death (CBS) and France hospital activity (CBS) appear.",
+      "No outlet specifies how the new records compare numerically to previous records (margins of exceedance), nor the duration or forecast end of the heat wave.",
+      "No coverage of government policy responses, warnings, or emergency measures in Switzerland, Denmark, or the Czech Republic \u2014 only Germany and France impacts are detailed.",
+      "The discrepancy between ABC ('expected to hit 40 C') and CBS ('hit a record 106 F / new all-time high') on Germany's temperature is unresolved and unverified against an official source.",
+      "Units differ across outlets (ABC metric-first, CBS Fahrenheit-first), which can obscure that they are reporting the same underlying figures."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets cover the same event with materially different emphasis \u2014 AP foregrounds a climate-attribution study, ABC foregrounds infrastructure damage, and CBS adds a death, France hospital data, and a contested German all-time record \u2014 while two of them appear to share a common wire source. The divergence in framing and the unresolved temperature/death discrepancies make this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/europe-heat-germany-france-uk-69b2d990486f4b645c9ad6ea4252888c",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/german-highways-buckling-extreme-heat-central-europe-sizzles-134269256",
+      "title": "Central Europe sizzles as heat records are smashed in Switzerland, Denmark and Czech Republic - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/europe-heat-wave-switzerland-denmark-germany/",
+      "title": "Europe sizzles under heat wave as records are smashed in Switzerland, Denmark, Germany - CBS News"
+    }
+  ]
+}
