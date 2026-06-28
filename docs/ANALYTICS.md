@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-06-27 23:21 UTC*
+*Last updated: 2026-06-28 23:22 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,10 +12,10 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 423 | - |
-| Likes | 440 | +3 |
-| Reposts | 79 | +1 |
-| Replies | 427 | - |
+| Posts tracked | 426 | - |
+| Likes | 445 | +0 |
+| Reposts | 81 | +0 |
+| Replies | 430 | - |
 
 ### X (Twitter)
 
@@ -51,4 +51,4 @@ Rideshare drivers are ...
 
 ---
 
-*Data snapshots: 13617 total across 649 posts*
+*Data snapshots: 13701 total across 652 posts*
