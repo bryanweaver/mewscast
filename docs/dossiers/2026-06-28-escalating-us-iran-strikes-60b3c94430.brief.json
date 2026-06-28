@@ -1,0 +1,88 @@
+{
+  "story_id": "2026-06-28-escalating-us-iran-strikes-60b3c94430",
+  "headline_seed": "Escalating US-Iran strikes threaten interim peace agreement - The Guardian",
+  "brief": {
+    "story_id": "2026-06-28-escalating-us-iran-strikes-60b3c94430",
+    "consensus_facts": [
+      "The US struck multiple Iranian military targets on Saturday; CENTCOM said it hit 10 targets at multiple locations in and near the Strait of Hormuz.",
+      "Iran's IRGC launched ballistic missiles and drones at US military bases in Kuwait and Bahrain in response.",
+      "The US strikes were a response to an Iranian drone attack on the Panama-flagged Kiku tanker, which was carrying more than 2 million barrels of crude oil through the strait.",
+      "President Trump posted on Truth Social threatening to resume war and 'complete the job,' writing that if forced to act 'the Islamic Republic of Iran will no longer exist.'",
+      "A memorandum of understanding (MOU) signed by the US and Iran roughly 10 days to two weeks earlier governs the reopening of the Strait of Hormuz, under which Iran committed to make best efforts to allow safe passage of commercial vessels.",
+      "Both sides accuse each other of violating the ceasefire/MOU, with a central dispute over interpretation of terms regarding the Strait of Hormuz.",
+      "The escalating reciprocal strikes threaten to unravel the fragile ceasefire/peace agreement between the two countries.",
+      "Bahrain and Kuwait both condemned the Iranian attacks as violations of their sovereignty."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of Iranian targets struck by the US",
+        "positions": {
+          "NBC News": "CENTCOM said US fighter jets struck 10 Iranian military targets at multiple locations",
+          "Al Jazeera English": "Opens by saying the US 'struck five Iranian targets' but later cites CENTCOM's '10 Iranian military targets' figure; names locations as Sirik, Bandar-e Lengeh and Qeshm Island",
+          "Axios": "Says US aircraft targeted surveillance infrastructure, communications, air defense, drone storage and minelaying capabilities; describes it as the second wave of US strikes in 24 hours without a single target count"
+        }
+      },
+      {
+        "topic": "Status of the US-IRGC coordination hotline",
+        "positions": {
+          "Axios": "Reports the US and Iran agreed during Switzerland talks to establish a 'hotline' between the US military and IRGC, and that as of Saturday it was not yet operational",
+          "NBC News": "Does not mention the hotline",
+          "Al Jazeera English": "Does not mention the hotline"
+        }
+      },
+      {
+        "topic": "Specific US bases targeted by Iran",
+        "positions": {
+          "Al Jazeera English": "Names the US Ali Al Salem airbase in Kuwait and the US Fifth Naval Fleet at Port Salman in Bahrain",
+          "NBC News": "Identifies Bahrain as host of the US Navy's 5th Fleet but does not name specific Kuwaiti base",
+          "Axios": "Refers generally to US bases in Kuwait and Bahrain without naming them"
+        }
+      },
+      {
+        "topic": "Upcoming negotiations",
+        "positions": {
+          "Axios": "Reports a next round of US-Iranian technical talks planned for Tuesday in Switzerland, with uncertainty over whether it will take place",
+          "NBC News": "Does not mention scheduled Tuesday talks",
+          "Al Jazeera English": "Does not mention scheduled talks"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Leads on Trump's warning that the US 'could be forced to return to war' and the human/diplomatic stakes of unraveling peace. The most detailed of the three: includes extensive quotes from Trump, Vance, IRGC commanders, Iran's FM Araghchi, and an outside expert (LSE's Fawaz Gerges), who frames the MOU as 'vague and ambiguous' and questions whether the 'new normal' is a 'limbo state of no war and no peace.' Foregrounds Gulf-state condemnation and the cycle-of-retaliation timeline back to a Singapore-flagged ship attacked Thursday.",
+      "Al Jazeera English": "Shortest and most just-the-facts entry. Leads with Iran's attacks on Bahrain and Kuwait framed as a response to US strikes. Emphasizes named geography (specific Iranian sites struck and specific US bases hit) and foregrounds the sovereignty-violation condemnations from Bahrain and Kuwait. Opens with a 'five targets' figure that sits in tension with the later CENTCOM '10 targets' citation. No US official quotes beyond CENTCOM and no expert analysis.",
+      "Axios": "Uses its signature explainer structure ('Why it matters,' 'Between the lines,' 'Catch up quick'). Leads with the wordplay 'This is more fire than cease' and frames the core driver as differing interpretations of the MOU. Distinctively surfaces the non-operational hotline and the at-risk Tuesday Switzerland talks \u2014 process details the others omit. Notes the US lifted its port blockade in exchange for Iran's passage commitments. Foregrounds Trump's escalatory quote at the end."
+    },
+    "primary_source_alignment": [
+      "No primary source (MOU text, CENTCOM full statement, or official transcripts) was provided in the dossier. The MOU is referenced and partially quoted by all three outlets but the document itself is not available for direct comparison.",
+      "NBC News and Axios both characterize the dispute as rooted in differing interpretations of the MOU's Strait of Hormuz provisions; without the source text, the brief cannot independently verify either side's reading of the 'best efforts'/'designated route' language."
+    ],
+    "missing_context": [
+      "No primary source documents (the MOU text, the full CENTCOM statement, or official Iranian statements) were included, so the load-bearing claim that this is a dispute over MOU 'interpretation' cannot be checked against the actual wording.",
+      "No casualty figures beyond Bahrain reporting 'no loss of life' and Kuwait reporting two intercepted ballistic missiles with no damage; Iranian casualties from the US strikes are not reported by any outlet.",
+      "The discrepancy between Al Jazeera's opening 'five targets' and CENTCOM's '10 targets' is never reconciled within any single article.",
+      "No outlet provides independent verification of the Iranian attack on the Kiku tanker beyond CENTCOM's attribution; the IRGC's own account of that strike is not quoted.",
+      "Only Axios mentions the planned Tuesday Switzerland negotiations and the non-operational hotline; readers of the other two outlets would not know diplomatic mechanisms exist or are scheduled.",
+      "No oil-market or shipping-volume impact figures beyond the general '20% of the world's oil' (NBC) statistic; current effects on traffic are not quantified."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets across different slants reported the same escalation but with materially different emphasis \u2014 NBC leads on war-resumption stakes and expert framing, Al Jazeera on named geography and sovereignty, Axios on the MOU interpretation dispute and at-risk negotiations \u2014 and they diverge on the target count. This is a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/iran/escalating-us-iran-strikes-threaten-unravel-peace-efforts-rcna352093",
+      "title": "Iran strikes Kuwait and Bahrain as escalating attacks threaten to unravel peace efforts - NBC News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/6/28/iran-attacks-kuwait-and-bahrain-in-response-to-us-strikes",
+      "title": "Iran and US trade attacks as Strait of Hormuz ceasefire falters - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/06/28/us-iran-ceasefire-could-go-up-in-flames",
+      "title": "U.S.-Iran ceasefire could go up in flames - Axios"
+    }
+  ]
+}
