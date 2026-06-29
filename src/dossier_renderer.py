@@ -755,6 +755,39 @@ def render_index_page(entries: list[dict]) -> str:
     return page
 
 
+def render_feed_json(entries: list[dict], thumbs_dir: str) -> str:
+    """Build the homepage card-feed manifest (a JSON string) from dossiers.
+
+    ``entries`` is the same list shape ``render_index_page`` consumes.
+    ``thumbs_dir`` is the filesystem path to ``docs/dossiers/thumbs/`` — used
+    only to test whether a thumbnail exists; the emitted ``thumb`` URL is
+    relative to the ``docs/`` root (where the homepage lives). Entries are
+    sorted newest-first. ``thumb`` is ``None`` when no thumbnail is present, so
+    the client can fall back to the site OG image.
+    """
+    items = []
+    for entry in entries:
+        sid = _safe_filename(entry.get("story_id", ""))
+        post = entry.get("post") or {}
+        pub = post.get("published_at", "")
+        post_type = (post.get("draft") or {}).get("post_type", "")
+        conf = (entry.get("brief") or {}).get("confidence", 0) or 0
+        thumb_fs = os.path.join(thumbs_dir, f"{sid}.webp")
+        items.append({
+            "id": sid,
+            "headline": (entry.get("dossier") or {}).get("headline_seed", ""),
+            "date": pub,
+            "date_display": _parse_iso(pub),
+            "post_type": post_type,
+            "badge": _badge_class_for_post_type(post_type),
+            "confidence": int(conf * 100),
+            "thumb": f"dossiers/thumbs/{sid}.webp" if os.path.isfile(thumb_fs) else None,
+            "url": f"dossiers/{sid}.html",
+        })
+    items.sort(key=lambda x: x["date"] or "", reverse=True)
+    return json.dumps(items, ensure_ascii=False)
+
+
 def render_sitemap(
     entries: list[dict],
     base_url: str = "https://mewscast.us",

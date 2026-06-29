@@ -41,6 +41,7 @@ from draft_analyzer import analyze_draft, print_analysis
 from dossier_renderer import (
     bluesky_web_url,
     render_dossier_page,
+    render_feed_json,
     render_index_page,
     render_sitemap,
 )
@@ -655,6 +656,16 @@ def _persist_dossier_image(
 
         rel_path = f"images/{safe_id}.png"
 
+        # Generate a small WebP thumbnail for the homepage card feed. Tiny
+        # (~40 KB) and committed to git, so the feed grid loads fast without
+        # pulling the multi-MB originals. Fail-soft — never blocks publishing.
+        try:
+            from thumbnailer import make_thumbnail
+            thumb_dest = os.path.join(html_dir, "thumbs", f"{safe_id}.webp")
+            make_thumbnail(dest, thumb_dest)
+        except Exception as e:
+            print(f"[journalism] thumbnail generation failed (continuing): {e}")
+
         # Write into dossier JSON so the renderer can find the image AND so
         # the audit trail captures the exact prompt that was sent to Grok.
         raw = dossier_store.read_raw(draft.story_id)
@@ -756,6 +767,21 @@ def _render_dossier_html(dossier_store, draft: DraftPost, dossier: StoryDossier)
         with open(index_path, "w", encoding="utf-8") as f:
             f.write(index_html)
         print(f"[journalism] dossier index updated ({len(entries)} entries)")
+
+        # 3b. Build feed.json — the manifest the homepage card grid reads.
+        # One entry per dossier (newest first) with exactly the fields the
+        # client renders: headline, date, post type/badge, confidence, and the
+        # thumbnail + page URLs (relative to docs/ root). `thumb` is null when
+        # no thumbnail exists; the client falls back to the site OG image.
+        try:
+            feed_json = render_feed_json(entries, os.path.join(html_dir, "thumbs"))
+            feed_path = os.path.join(_project_root(), "docs", "feed.json")
+            with open(feed_path, "w", encoding="utf-8") as f:
+                f.write(feed_json)
+            count = feed_json.count('"id"')
+            print(f"[journalism] feed.json updated ({count} items)")
+        except Exception as e:
+            print(f"[journalism] feed.json generation failed (non-fatal): {e}")
 
         # 4. Regenerate sitemap.xml at docs/ root so new dossier pages
         # are discoverable by crawlers and agents. robots.txt at the same
