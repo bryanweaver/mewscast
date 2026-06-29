@@ -1,0 +1,111 @@
+{
+  "story_id": "2026-06-29-trump-s-final-appeal-5c04972beb",
+  "headline_seed": "Trump's final appeal of E Jean Carroll sex abuse case rejected - BBC",
+  "brief": {
+    "story_id": "2026-06-29-trump-s-final-appeal-5c04972beb",
+    "consensus_facts": [
+      "On Monday, June 29, 2026, the US Supreme Court declined to hear President Donald Trump's appeal in the E. Jean Carroll case (NBC News, BBC, CNBC, AP, ABC News).",
+      "The decision leaves in place a 2023 New York jury verdict finding Trump liable for sexually abusing and defaming Carroll, and a $5 million civil judgment that Trump must now pay (NBC News, BBC, CNBC, ABC News).",
+      "Carroll alleged Trump sexually assaulted her in the dressing room of a Manhattan department store (Bergdorf Goodman) in the mid-1990s (NBC News, BBC, CNBC, AP, ABC News).",
+      "The Supreme Court gave no explanation for declining to take up the case, as is customary for such orders (NBC News, BBC, CNBC).",
+      "Trump's lawyers had argued the trial judge improperly allowed the jury to view the 'Access Hollywood' tape and to hear testimony from two other women, Jessica Leeds and Natasha Stoynoff, who accused Trump of sexual misconduct (NBC News, BBC, CNBC, ABC News).",
+      "A federal appeals court had previously upheld the jury verdict and ruled the contested evidence did not warrant a new trial (NBC News, BBC, ABC News).",
+      "Carroll's attorney, Roberta Kaplan, issued a statement saying the decision 'affirms once and for all the jury's unanimous verdict' and ends Trump's 'quest to avoid accountability' (NBC News, BBC, CNBC, ABC News).",
+      "Trump responded in a Truth Social post vowing to keep fighting the 'Weaponization and Lawfare Case' with 'all of my power and strength' and calling it an injustice against the United States (NBC News, BBC, CNBC).",
+      "Trump has denied Carroll's allegations and previously said she was 'not my type' and that he never met her (NBC News, BBC, CNBC, ABC News).",
+      "A separate, related defamation case resulted in an $83 million (approximately $83.3 million) judgment against Trump, which he is still appealing at a lower federal appeals court (NBC News, BBC, CNBC, ABC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which lawsuit/case the Supreme Court declined to hear",
+        "positions": {
+          "NBC News": "Frames it as the second suit Carroll filed (2022), which included post-presidency defamation claims and went to trial first.",
+          "ABC News": "Headlines and frames it as the '2022 E. Jean Carroll defamation case.'",
+          "CNBC": "Describes it as the verdict from the 2023 trial in which Carroll alleged rape and defamation.",
+          "BBC": "Describes it as the civil case finding Trump defamed and sexually abused Carroll, with defamation stemming from a 2022 Truth Social post."
+        }
+      },
+      {
+        "topic": "Whether the jury found rape",
+        "positions": {
+          "BBC": "Explicitly notes the jury rejected Carroll's claim of rape as defined in New York's penal code, while finding sexual abuse and defamation.",
+          "NBC News": "Does not mention the rape finding distinction; refers to sexual abuse and defamation.",
+          "CNBC": "Notes Carroll's lawsuit alleged rape but states the judge found Trump sexually abused and defamed her, without detailing the rape rejection.",
+          "ABC News": "Refers to sexual abuse and defamation without addressing the rape claim outcome.",
+          "AP": "Refers to sexual abuse and defamation only."
+        }
+      },
+      {
+        "topic": "Whether Trump-appointed justices dissented",
+        "positions": {
+          "CNBC": "Explicitly notes none of the justices, three of whom were appointed by Trump, issued a written dissent.",
+          "NBC News": "Does not mention the composition of the court or absence of dissent.",
+          "BBC": "Does not mention the absence of dissent.",
+          "ABC News": "Does not mention the absence of dissent."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('US Supreme Court rebuffs Trump's appeal'). Uses the active verb 'rebuffs.' No body text available to assess emphasis.",
+      "NBC News": "Leads explicitly with the framing that the Court 'handed a loss to President Donald Trump.' Gives the most extensive treatment of Trump's combative Truth Social response and his legal team's 'Witch Hunts' / 'Carroll Hoaxes' statement, while also detailing Carroll's procedural history and the appeals court's reasoning. Balances Trump's evidentiary arguments with Carroll's rebuttals. Includes a subscription promo mid-article.",
+      "BBC News": "Frames it in the headline as Trump's 'final appeal' being 'rejected,' emphasizing finality. The only outlet to explicitly note the jury rejected the rape claim while finding sexual abuse and defamation. Includes Carroll's age (81) and that the Court gave no reasons. Neutral international framing; quotes both Kaplan and Trump's Truth Social post at length.",
+      "CNBC": "Business-news framing leading with the dollar figures ($5 million and $83.3 million). Uniquely highlights that none of the justices \u2014 'three of whom were appointed to the high court by Trump' \u2014 issued a written dissent. Quotes both Trump's legal team and Kaplan. Includes unrelated CNBC politics-coverage promo links.",
+      "Associated Press": "Body text is a brief stub (under ~500 characters). States only the core fact that the Court rejected Trump's push to throw out the $5 million finding of sexual abuse and later defamation. Largely caption and photo-credit material; no framing beyond the straight wire lede.",
+      "Bloomberg": "No usable body text \u2014 content is a robot/captcha gate. Headline ('Supreme Court Rejects Trump Appeal of Carroll Abuse Verdict') uses neutral wire phrasing. Cannot assess framing.",
+      "ABC News": "Leads with the practical consequence: 'The decision means Trump will have to pay the $5 million judgment.' Headlines it specifically as the '2022 E. Jean Carroll defamation case.' Notably includes a direct quote from Kaplan's legal argument that Trump's petition did not even challenge the Second Circuit's harmless-error holding \u2014 a detail other outlets summarize but do not quote. Standard summary framing."
+    },
+    "primary_source_alignment": [
+      "No primary source (the Supreme Court order, the cert petition, or the underlying verdict) was located for this story. Alignment between coverage and the underlying documents cannot be independently verified from the dossier.",
+      "Reports are internally consistent that the Supreme Court issued no written explanation, which is typical for cert denials; absent the order itself, this rests on outlet characterization (NBC News, BBC, CNBC)."
+    ],
+    "missing_context": [
+      "Several articles in the dossier are not full reports: Reuters and Bloomberg are headline-only (Bloomberg is a captcha gate), and AP's body is a short stub. Four outlets \u2014 NBC News, BBC, CNBC, and ABC News \u2014 provided substantive body text, which is the basis for the consensus facts above.",
+      "No outlet states the exact procedural mechanism (this was a denial of a writ of certiorari) in plain terms for general readers, nor whether any justice would have granted cert.",
+      "No primary source \u2014 neither the Supreme Court order list nor Trump's cert petition \u2014 was available, so claims about what Trump's lawyers argued and what the Court did rest entirely on outlet paraphrase.",
+      "Outlets disagree or are vague on which specific Carroll lawsuit reached the Court; a reader would benefit from a clear timeline distinguishing the $5 million case (resolved here) from the separate $83 million case (still on appeal).",
+      "No outlet explains the practical financial mechanics \u2014 when, how, or whether the $5 million has already been secured (e.g., via bond) pending these appeals.",
+      "Trump's and his legal team's characterizations ('hoax,' 'Witch Hunts,' 'Democrat-funded travesty') are quoted but not fact-checked against the record in any of the bodies.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same cert denial with materially different emphasis \u2014 NBC News framing it as a 'loss' for Trump, CNBC foregrounding the dollar figures and the absence of dissent from Trump-appointed justices, BBC uniquely noting the jury rejected the rape claim, and ABC leading on the payment consequence \u2014 making the divergence in framing, not the underlying event, the story.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/us-supreme-court-rebuffs-trumps-appeal-e-jean-carroll-case-2026-06-29/",
+      "title": "US Supreme Court rebuffs Trump's appeal in E. Jean Carroll case - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/supreme-court/supreme-court-rejects-trump-effort-overturn-e-jean-carroll-sexual-assa-rcna256546",
+      "title": "Supreme Court rejects Trump effort to overturn E. Jean Carroll sexual abuse and defamation verdict - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cn8q2z5wpn2o",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/06/29/supreme-court-trump-carroll-appeal.html",
+      "title": "Supreme Court rejects Trump bid to appeal E. Jean Carroll $5 million verdict - CNBC"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-supreme-court-e-jean-carroll-sexual-abuse-1a50d1e9e1d12898e78e0803c4627771",
+      "title": "Supreme Court rejects Trump\u2019s push to toss $5 million verdict in E. Jean Carroll sexual abuse case - AP News"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-29/supreme-court-rejects-trump-appeal-of-carroll-sex-abuse-verdict",
+      "title": "Supreme Court Rejects Trump Appeal of Carroll Abuse Verdict - Bloomberg.com"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/supreme-court-rejects-trumps-appeal-2022-jean-carroll/story?id=134308966",
+      "title": "Supreme Court rejects Trump's appeal of 2022 E. Jean Carroll defamation case - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
