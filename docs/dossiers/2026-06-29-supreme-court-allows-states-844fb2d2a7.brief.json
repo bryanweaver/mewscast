@@ -1,0 +1,93 @@
+{
+  "story_id": "2026-06-29-supreme-court-allows-states-844fb2d2a7",
+  "headline_seed": "Supreme Court allows states to count mail-in ballots that arrive late, rejecting RNC challenge - NBC News",
+  "brief": {
+    "story_id": "2026-06-29-supreme-court-allows-states-844fb2d2a7",
+    "consensus_facts": [
+      "The U.S. Supreme Court ruled on June 29, 2026, that states may count mail-in ballots that arrive after Election Day if they were postmarked by Election Day.",
+      "The decision was 5-4, with Justice Amy Coney Barrett authoring the majority opinion.",
+      "Barrett was joined by Chief Justice John Roberts and the three liberal justices in the majority.",
+      "The case rejected a challenge brought by the Republican National Committee (RNC) to a Mississippi state law.",
+      "The Mississippi law allows mail-in ballots to be counted up to five days after Election Day so long as they were postmarked by Election Day.",
+      "The Court held that the Mississippi law does not conflict with federal statutes setting Election Day as the Tuesday after the first Monday in November.",
+      "Barrett wrote that the election-day statutes say nothing about ballot receipt and the Court cannot add to the words Congress chose.",
+      "The 5th U.S. Circuit Court of Appeals had previously ruled that federal law preempts the state law; the Supreme Court reversed that decision.",
+      "Fourteen states (plus Washington, D.C.) have similar laws allowing late-arriving ballots to be counted.",
+      "President Trump has repeatedly criticized mail-in voting, claiming without evidence that it leads to fraud, and his administration backed the RNC challenge.",
+      "The ruling preserves these state laws ahead of the November 2026 midterm elections.",
+      "Twenty-nine states (and D.C.) allow at least some military and overseas ballots to be received after Election Day.",
+      "The case is known as Watson v. Republican National Committee, and the dispute dates back to 2024."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of jurisdictions with similar laws",
+        "positions": {
+          "NBC News": "Says the Mississippi law and 'similar measures in 13 other states' will remain in effect (i.e., 14 states total).",
+          "CBS News": "Says '14 states and the District of Columbia' accept and count such ballots.",
+          "The Guardian": "Says 'Fourteen states, Washington DC and three US territories' have similar laws."
+        }
+      },
+      {
+        "topic": "Composition of the dissent",
+        "positions": {
+          "NBC News": "Does not name the dissenting justices, stating only that the court divided 5-4.",
+          "CBS News": "Does not name the dissenting justices.",
+          "The Guardian": "Reports Justice Samuel Alito wrote the dissent, joined by Clarence Thomas and Neil Gorsuch ('Gorush'), with 'John Kavanaugh' [sic] joining in part."
+        }
+      },
+      {
+        "topic": "Characterization of the outcome",
+        "positions": {
+          "NBC News": "Frames it as 'a setback for President Donald Trump.'",
+          "The Guardian": "Frames the decision to side against Trump and the GOP as 'seen as a surprise.'",
+          "CBS News": "Frames it more neutrally as rejecting a GOP challenge without characterizing it as a setback or surprise."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Leads with the rejection of the RNC challenge and quickly frames the ruling as 'a setback for President Donald Trump,' noting his unsubstantiated fraud claims. Emphasizes the practical stakes (avoiding 'election-year upheaval') and the military/overseas voter angle. Names states like California, New York, and Texas. Includes a subscription promo mid-text. Does not name dissenting justices. Cites NBC's own prior reporting that hundreds of thousands voted via late-arriving ballots in 2024.",
+      "CBS News": "Most legally detailed and neutral of the full-text outlets. Leads with the holding and quotes Barrett's reasoning extensively, including her Framers' discretion argument. Frames the case in the context of the term's other election cases (Illinois late-ballot case, Voting Rights Act weakening, campaign finance case). Notes Trump administration backed the challenge but withholds editorial characterization. Does not name dissenters.",
+      "The Guardian": "Most explicitly framed around 'the fight for democracy' (a labeled section). Ties the ruling to the Court's earlier-term decision allowing Louisiana to 'effectively dismantle the Voting Rights Act' and a 'frenzy of gerrymandering across the south.' Uniquely names the dissenting bloc (Alito, Thomas, Gorsuch, with Kavanaugh joining in part) though with misspellings. Emphasizes Trump's hypocrisy (he voted by mail in March) and the existence of fraud safeguards like signature verification. Details oral-argument hypotheticals about recalling/changing ballots.",
+      "The Hill": "Headline-only entry; body text is merely a Google News RSS redirect link with no substantive reporting. Headline ('Supreme Court rules states can accept mail ballots after Election Day') aligns with the consensus but contributes no body-level facts."
+    },
+    "primary_source_alignment": [
+      "No primary source (the Watson v. RNC opinion itself) was provided in the dossier, so direct alignment cannot be verified.",
+      "Quoted excerpts from Barrett's majority opinion appear across CBS News and The Guardian and are mutually consistent: the election-day statutes set a voting deadline but say nothing about ballot receipt, and policy arguments about integrity belong to legislatures.",
+      "The Guardian's reporting of the dissent's authorship (Alito, joined by Thomas and Gorsuch, Kavanaugh in part) is uncorroborated by the other outlets and could not be checked against the opinion itself."
+    ],
+    "missing_context": [
+      "No primary source \u2014 the actual Supreme Court opinion in Watson v. RNC \u2014 was included in the dossier, so the full text of Barrett's majority opinion and the dissent could not be examined directly.",
+      "Only three of the four outlets (NBC News, CBS News, The Guardian) provided substantive body text; The Hill's entry is a headline plus an RSS redirect link with no reporting.",
+      "The exact content and reasoning of the dissent is sparsely covered; only The Guardian names dissenters, and no outlet quotes the dissenting opinion's argument.",
+      "Outlets diverge on whether the count is '14 states' or '14 states plus territories'; the precise list of affected jurisdictions is not fully enumerated by any single outlet.",
+      "None of the outlets explains why Barrett and Roberts broke from the other conservatives, beyond the text of Barrett's opinion \u2014 the internal split's reasoning is left to the (unprovided) opinion.",
+      "No outlet quantifies the practical electoral impact of the ruling beyond NBC's note that 'hundreds of thousands' voted via late-arriving ballots in 2024.",
+      "The Guardian misspells two justices' names ('Neil Gorush' for Gorsuch and 'John Kavanaugh' for Brett Kavanaugh), which a reader should be cautioned about."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets reported the same ruling with materially different framings \u2014 NBC emphasizing a 'setback for Trump,' The Guardian tying it to a broader 'fight for democracy' and Voting Rights Act narrative, and CBS staying clinically neutral \u2014 while a fourth (The Hill) provided only a headline, making the coverage divergence itself the story.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/supreme-court/supreme-court-allows-states-count-mail-ballots-arrive-late-rejecting-r-rcna266933",
+      "title": ""
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/supreme-court-mail-ballots-mississippi-law-watson-v-rnc/",
+      "title": "Supreme Court says states can count mail ballots that arrive after Election Day - CBS News"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jun/29/supreme-court-mail-in-ballots-election-ruling",
+      "title": "US supreme court upholds law to count mail-in ballots arriving after election day - The Guardian"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/regulation/court-battles/5943129-supreme-court-mail-ballots-election-day-rnc/",
+      "title": "Supreme Court rules states can accept mail ballots after Election Day - The Hill"
+    }
+  ]
+}
