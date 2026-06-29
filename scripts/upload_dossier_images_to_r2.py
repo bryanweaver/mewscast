@@ -45,8 +45,14 @@ def main() -> int:
         print("R2 env vars are not set. Aborting. (Use --dry-run to list files.)")
         return 2
 
-    pngs = sorted(IMAGES_DIR.glob("*.png"))
-    print(f"found {len(pngs)} png file(s) under {IMAGES_DIR}")
+    # Exclude *.field-notes.png — those are X/Bluesky reply media, never
+    # served on the web and never uploaded to R2 by the runtime pipeline.
+    # Uploading them here would be dead weight and inconsistent with runtime.
+    pngs = sorted(
+        p for p in IMAGES_DIR.glob("*.png")
+        if not p.name.endswith(".field-notes.png")
+    )
+    print(f"found {len(pngs)} web-served png file(s) under {IMAGES_DIR}")
 
     ok = 0
     fail = 0
