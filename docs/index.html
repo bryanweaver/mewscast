@@ -23,126 +23,123 @@
       color: #e6edf3;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      line-height: 1.5;
     }
-    .page {
-      max-width: 600px;
-      padding: 3rem 2rem;
-      text-align: center;
+    a { color: inherit; }
+
+    /* ---- top nav: keeps every section reachable ---- */
+    .topnav {
+      display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap;
+      padding: 0.85rem 1.5rem;
+      border-bottom: 1px solid #21262d;
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(13, 17, 23, 0.85);
+      backdrop-filter: blur(8px);
     }
-    .avatar {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 3px solid #30363d;
-      margin-bottom: 1.5rem;
+    .topnav .brand {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-weight: 700; font-size: 1.05rem; margin-right: auto;
+      text-decoration: none;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
+    .topnav .brand img { width: 30px; height: 30px; border-radius: 50%; border: 1px solid #30363d; }
+    .topnav nav { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+    .topnav nav a {
+      color: #8b949e; text-decoration: none; font-size: 0.9rem; white-space: nowrap;
+      transition: color 0.15s;
     }
-    .tagline {
-      color: #8b949e;
-      font-size: 1.1rem;
-      margin-bottom: 2.5rem;
-      line-height: 1.6;
-    }
-    .links {
+    .topnav nav a:hover { color: #e6edf3; }
+
+    /* ---- compact hero ---- */
+    .hero { text-align: center; padding: 2.5rem 1.5rem 1rem; }
+    .hero h1 { font-size: 2rem; letter-spacing: -0.02em; }
+    .hero p { color: #8b949e; margin-top: 0.5rem; font-size: 1.02rem; }
+
+    /* ---- feed ---- */
+    .feed-wrap { max-width: 1140px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
+    .feed-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      max-width: 520px;
-      margin: 0 auto;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
     }
-    @media (max-width: 500px) {
-      .links {
-        grid-template-columns: 1fr;
-        max-width: 360px;
-      }
+    .story-card {
+      background: #161b22; border: 1px solid #30363d; border-radius: 12px;
+      overflow: hidden; text-decoration: none; color: #e6edf3;
+      display: flex; flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s;
     }
-    a.card {
-      display: block;
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 1.25rem 1.5rem;
-      color: #e6edf3;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
+    .story-card:hover { border-color: #58a6ff; transform: translateY(-2px); }
+    .story-thumb { width: 100%; aspect-ratio: 16 / 10; background: #0d1117; }
+    .story-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .story-body { padding: 0.85rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+    .story-meta { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .story-headline { font-size: 0.98rem; font-weight: 600; line-height: 1.35; }
+    .story-date { color: #8b949e; font-size: 0.78rem; margin-top: auto; padding-top: 0.25rem; }
+
+    .badge {
+      padding: 0.12rem 0.5rem; border-radius: 999px;
+      font-size: 0.66rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
     }
-    a.card:hover {
-      border-color: #58a6ff;
-      background: #1c2129;
-    }
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-    .card-desc {
-      color: #8b949e;
-      font-size: 0.9rem;
-    }
-    .footer {
-      margin-top: 3rem;
-      color: #484f58;
-      font-size: 0.8rem;
-    }
-    .footer a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
+    .badge-report     { background: #58a6ff; color: #fff; }
+    .badge-meta       { background: #bc8cff; color: #fff; }
+    .badge-analysis   { background: #d29922; color: #000; }
+    .badge-bulletin   { background: #f85149; color: #fff; }
+    .badge-correction { background: transparent; color: #f85149; border: 1px solid #f85149; }
+    .badge-primary    { background: #3fb950; color: #000; }
+    .confidence { color: #8b949e; font-size: 0.72rem; }
+
+    .feed-empty { color: #8b949e; grid-column: 1 / -1; text-align: center; padding: 2rem; }
+    .feed-empty a { color: #58a6ff; }
+    #feed-sentinel { height: 1px; }
+
+    .footer { text-align: center; margin: 1rem auto 3rem; color: #484f58; font-size: 0.8rem; }
+    .footer a { color: #58a6ff; text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 520px) {
+      .hero h1 { font-size: 1.6rem; }
+      .topnav { gap: 0.75rem; }
+    }
   </style>
 </head>
 <body>
-<div class="page">
-  <img src="./images/walter-croncat-profile.jpg" alt="Walter Croncat" class="avatar">
+
+<header class="topnav">
+  <a class="brand" href="./">
+    <img src="./images/walter-croncat-profile.jpg" alt="Walter Croncat">
+    Walter Croncat
+  </a>
+  <nav>
+    <a href="./dossiers/">Dossiers</a>
+    <a href="./analytics.html">Analytics</a>
+    <a href="./reports/">Reports</a>
+    <a href="https://github.com/bryanweaver/mewscast">Source</a>
+    <a href="https://x.com/mewscast">X</a>
+    <a href="https://bsky.app/profile/mewscast.bsky.social">Bluesky</a>
+  </nav>
+</header>
+
+<section class="hero">
   <h1>Walter Croncat</h1>
-  <p class="tagline">
-    AI news reporter cat.<br>
-    Reads every wire. Compares every framing. Shows the receipts.
-  </p>
+  <p>AI news reporter cat. Reads every wire, compares every framing, shows the receipts.</p>
+</section>
 
-  <div class="links">
-    <a class="card" href="./dossiers/">
-      <div class="card-title">Journalism Dossiers</div>
-      <div class="card-desc">Every article read, every outlet compared, every check run. Open-source journalism.</div>
-    </a>
-
-    <a class="card" href="./analytics.html">
-      <div class="card-title">Analytics Dashboard</div>
-      <div class="card-desc">Follower growth, engagement metrics, posting history.</div>
-    </a>
-
-    <a class="card" href="./reports/">
-      <div class="card-title">Nightly Reports</div>
-      <div class="card-desc">Daily operational stats, pipeline health, and bug detection. Full transparency.</div>
-    </a>
-
-    <a class="card" href="https://github.com/bryanweaver/mewscast">
-      <div class="card-title">Open Source</div>
-      <div class="card-desc">The code behind the cat. MIT licensed.</div>
-    </a>
-
-    <a class="card" href="https://x.com/mewscast">
-      <div class="card-title">Follow on X</div>
-      <div class="card-desc">@mewscast — live posts, coverage reports, breaking mews.</div>
-    </a>
-
-    <a class="card" href="https://bsky.app/profile/mewscast.bsky.social">
-      <div class="card-title">Follow on Bluesky</div>
-      <div class="card-desc">@mewscast.bsky.social — live posts, coverage reports, breaking mews.</div>
-    </a>
+<main class="feed-wrap">
+  <div id="feed" class="feed-grid">
+    <p class="feed-empty">Loading the latest mews…</p>
   </div>
+  <div id="feed-sentinel"></div>
+  <noscript>
+    <p class="feed-empty" style="display:block">
+      The live feed needs JavaScript. <a href="./dossiers/">Browse the full dossier archive →</a>
+    </p>
+  </noscript>
+</main>
 
-  <div class="footer">
-    And that's the mews. &middot;
-    Made by <a href="https://x.com/bryanofearth">@bryanofearth</a>
-  </div>
+<div class="footer">
+  And that's the mews. &middot;
+  Made by <a href="https://x.com/bryanofearth">@bryanofearth</a>
 </div>
+
+<script src="./feed.js"></script>
 </body>
 </html>
