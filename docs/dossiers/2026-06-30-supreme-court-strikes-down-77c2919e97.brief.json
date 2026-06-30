@@ -1,0 +1,107 @@
+{
+  "story_id": "2026-06-30-supreme-court-strikes-down-77c2919e97",
+  "headline_seed": "Supreme Court strikes down long-standing campaign finance restrictions - NBC News",
+  "brief": {
+    "story_id": "2026-06-30-supreme-court-strikes-down-77c2919e97",
+    "consensus_facts": [
+      "On Tuesday, June 30, 2026, the US Supreme Court struck down federal limits on coordinated spending between national political party committees and their individual candidates.",
+      "The ruling was 6-3, split along ideological lines, with the six conservative justices in the majority and the three liberal justices dissenting.",
+      "Justice Brett Kavanaugh authored the majority opinion.",
+      "The court held that the coordinated party expenditure limits violate the First Amendment, on the theory that political spending is a form of speech.",
+      "The decision overturned a 2001 precedent (involving the Colorado Republican Federal Campaign Committee) in which the court had upheld the same limits.",
+      "The challenge was brought by Republican party committees including the National Republican Senatorial Committee, along with now-Vice President JD Vance and former Ohio Rep. Steve Chabot, who were 2022 candidates.",
+      "The Federal Election Commission / Trump administration declined to defend the law and sided with the challengers.",
+      "The struck-down restriction was part of the Federal Election Campaign Act, a post-Watergate-era law (cited variously as 1971 or 1974).",
+      "The ruling is part of a line of decisions narrowing campaign finance restrictions, including the 2010 Citizens United decision that enabled unlimited independent expenditures by super PACs.",
+      "Democratic Party committees (DNC, DSCC, DCCC) denounced the ruling as a win for billionaire donors and an invitation for corruption, while Republican committee leaders celebrated it."
+    ],
+    "disagreements": [
+      {
+        "topic": "Date the underlying law was enacted",
+        "positions": {
+          "Al Jazeera English": "Describes the Federal Election Campaign Act as a 1971 law (and the overturned precedent as a 'more than 50-year-old' provision)",
+          "NPR": "States the law 'had been enacted in 1974'",
+          "NBC News": "Does not pin a specific enactment year for the FECA"
+        }
+      },
+      {
+        "topic": "Scope of what was struck down \u2014 coordinated spending only vs. broader fundraising/spending",
+        "positions": {
+          "NBC News": "Frames the ruling narrowly as removing limits on coordinated spending between party committees and candidates",
+          "Axios": "Frames it as removing caps on coordinated party spending, making parties magnets for big-dollar money",
+          "NPR": "Frames it more broadly as striking down limits on how much parties 'may raise and spend,' saying parties now get 'the best of both worlds' \u2014 can coordinate AND raise unlimited funds"
+        }
+      },
+      {
+        "topic": "Age of the overturned precedent",
+        "positions": {
+          "Al Jazeera English": "Identifies it as a 2001 decision upheld 5-4",
+          "Axios": "Calls it a '25-year-old precedent'",
+          "NPR": "Identifies it as a 2001 Supreme Court case"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('US Supreme Court strikes down curbs on coordinated campaign spending'). No retrievable body text. Neutral wire phrasing ('curbs on coordinated campaign spending') that frames the outcome procedurally without valence.",
+      "NBC News": "Two entries. The dedicated article (by Lawrence Hurley) leads on the legal mechanics and the 6-3 Kavanaugh authorship, foregrounds JD Vance as the named challenger, and gives roughly balanced space to both Republican celebration and Democratic condemnation quotes. Notably observes that post-Citizens United, the existing caps 'have had an increasingly marginal effect' \u2014 a contextualizing note that softens the ruling's practical stakes. The live-blog entry bundles campaign finance as the third item behind birthright citizenship and transgender-athlete rulings, treating it as one of several term-ending decisions rather than the lead.",
+      "Al Jazeera English": "Frames it as a 'landmark ruling' on 'the final day of rulings.' Emphasizes the international/structural framing \u2014 the 50-plus-year-old law, the anti-corruption purpose of FECA, and the specifics of the overturned 2001 5-4 precedent. More clinical and less quote-driven than the US outlets; omits partisan reaction statements almost entirely.",
+      "Axios": "Most explicitly stakes-and-consequences framing. Uses 'Why it matters' and 'The intrigue' to argue parties become 'a far more powerful magnet for big-dollar money.' Uniquely includes Kavanaugh's 'More speech is generally better than less speech' quote and Kagan's dissent warning of 'quid pro quo corruption,' plus Trump's Truth Social reaction ('A BIG WIN FOR REPUBLICANS'). Frames it within both the midterm timeline and the insurgent-vs-establishment dynamic in both parties.",
+      "Bloomberg Law News": "Headline-only and OFF-TOPIC \u2014 the headline is about birthright citizenship ('Supreme Court Backs Birthright Citizenship in Blow to Trump'), not the campaign-finance ruling. Provides no corroboration for this story.",
+      "NPR": "By Grady Martin and Nina Totenberg. Leads with 'yet again loosened campaign finance restrictions,' the most editorially loaded framing of the set. Uniquely emphasizes that parties now get 'the best of both worlds' (coordination plus unlimited fundraising) and situates the ruling in a detailed historical arc (Citizens United 2010, Arizona public-financing 2011, aggregate limits 2014). Gives substantial space to the Democratic intervenors' corruption argument and the Republican counter-argument that 'it doesn't make any sense to think of a party as corrupting its candidates.' Notes 'practical implications... are unclear.'"
+    },
+    "primary_source_alignment": [
+      "No primary source (the Supreme Court opinion, docket, or full dissent text) was located for this story, so no direct opinion-versus-coverage comparison is possible.",
+      "The case name reported by Axios \u2014 National Republican Senatorial Committee v. Federal Election Commission \u2014 is the only outlet-supplied case caption and could not be verified against a filing in this dossier.",
+      "Direct quotes attributed to the opinion (Kavanaugh's 'More speech is generally better than less speech' and Kagan's dissent on 'quid pro quo corruption') appear only in Axios and could not be checked against the underlying text."
+    ],
+    "missing_context": [
+      "No outlet quotes the full reasoning or scope of the majority opinion or specifies exactly which statutory provision/section was invalidated, leaving the precise legal boundary of the ruling unclear.",
+      "Outlets disagree on whether the ruling affects only coordinated spending (NBC, Axios) or also unlimited fundraising by parties (NPR), and none reconciles this; a reader cannot tell from the dossier the exact practical scope.",
+      "The enactment year of the underlying Federal Election Campaign Act is reported inconsistently (1971 per Al Jazeera, 1974 per NPR), and no outlet clarifies the discrepancy.",
+      "No outlet provides the text or named author of the dissent beyond Axios's single Kagan quote; the other two dissenting justices and their reasoning are not identified.",
+      "The current dollar caps that were struck down are detailed only by NBC News (up to ~$4 million for Senate races, $127,000 for at-large House seats); no other outlet quantifies what changed.",
+      "No outlet explains the mechanics of how 'coordinated' versus 'independent' expenditures are legally defined and enforced post-ruling, leaving the enforcement landscape unaddressed.",
+      "Single-source limitation disclosure: several load-bearing details (the case caption, the Kavanaugh and Kagan quotes, Trump's reaction) appear in only one outlet (Axios) and should be treated as single-sourced rather than confirmed consensus."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text reported the same ruling but with materially different emphasis \u2014 NPR's 'best of both worlds' fundraising framing versus NBC's and Axios's narrower coordinated-spending framing, plus a genuine factual discrepancy over the law's enactment year \u2014 making this a coverage-comparison story rather than a straight REPORT, especially given no primary source was available to adjudicate the divergence.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/us-supreme-court-decide-republican-challenge-campaign-spending-curbs-2026-06-30/",
+      "title": "US Supreme Court strikes down curbs on coordinated campaign spending - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/supreme-court/supreme-court-strikes-long-standing-campaign-finance-restrictions-rcna252593",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/6/30/supreme-court-strikes-down-us-campaign-spending-limits-in-landmark-ruling",
+      "title": "Supreme Court strikes down US campaign spending limits in landmark ruling - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/06/30/supreme-court-campign-finance-spending-limits",
+      "title": "Supreme Court strikes down party spending limits - Axios"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bloomberglaw.com/us-law-week/supreme-court-strikes-down-trumps-birthright-citizenship-curbs",
+      "title": "Supreme Court Backs Birthright Citizenship in Blow to Trump (2) - Bloomberg Law News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/politics-news/live-blog/supreme-court-rulings-birthright-citizenship-co-elections-live-updates-rcna352220",
+      "title": "Live updates: Supreme Court strikes down Trump birthright citizenship order and rules against transgender athletes - NBC News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/06/30/nx-s1-5827039/supreme-court-campaign-finance",
+      "title": "Supreme Court strikes down limits on political party spending - NPR"
+    }
+  ]
+}
