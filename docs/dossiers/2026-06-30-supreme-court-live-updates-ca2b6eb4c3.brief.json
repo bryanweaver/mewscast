@@ -1,0 +1,101 @@
+{
+  "story_id": "2026-06-30-supreme-court-live-updates-ca2b6eb4c3",
+  "headline_seed": "Supreme Court Live Updates: Justices Reject Trump\u2019s Effort to End Birthright Citizenship - The New York Times",
+  "brief": {
+    "story_id": "2026-06-30-supreme-court-live-updates-ca2b6eb4c3",
+    "consensus_facts": [
+      "On June 30, 2026, the U.S. Supreme Court rejected President Donald Trump's executive order seeking to end or limit birthright citizenship, ruling it violated the 14th Amendment.",
+      "Chief Justice John Roberts wrote for the majority, stating: 'Citizenship, then and now, was the right to have rights \u2014 to freely participate in our political community... We keep that promise today.'",
+      "Justices Clarence Thomas, Samuel Alito, and Neil Gorsuch dissented.",
+      "Justice Brett Kavanaugh concurred in the judgment but would have ruled against the order on narrower, statutory grounds \u2014 arguing it violated a 1952 immigration law but not the 14th Amendment.",
+      "Trump issued the birthright citizenship executive order on the first day of his second term, seeking to deny automatic citizenship to children born to undocumented immigrants and temporary foreign residents.",
+      "Trump attended the oral arguments in person, the first time a sitting president had done so.",
+      "The ruling landed shortly before the nation's 250th anniversary.",
+      "The ACLU, whose national legal director Cecillia Wang argued the case, celebrated the ruling; Wang argued a president cannot change the Constitution by executive fiat.",
+      "The order, if upheld, would have affected hundreds of thousands of babies born on U.S. soil annually (USA Today cites roughly 255,000 per year, about 6% of births, per the Migration Policy Institute)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Vote count on the birthright ruling",
+        "positions": {
+          "USA Today": "Explicitly describes the decision as a 6-3 ruling.",
+          "The Guardian": "Does not state a numeric vote count but names the majority (Roberts, Sotomayor, Kagan, Jackson, Barrett) with Kavanaugh concurring in part and Thomas, Alito, Gorsuch dissenting \u2014 which implies a majority larger than 6-3 for the judgment."
+        }
+      },
+      {
+        "topic": "Composition of the majority",
+        "positions": {
+          "USA Today": "States Roberts wrote for the majority and identifies the three dissenters, but does not enumerate which justices joined the majority.",
+          "The Guardian": "Specifies Roberts was joined by liberal justices Sotomayor, Kagan, and Jackson, plus conservative Amy Coney Barrett, with Kavanaugh concurring in the judgment while dissenting in part."
+        }
+      },
+      {
+        "topic": "Trump's response to the ruling",
+        "positions": {
+          "USA Today": "Does not include Trump's post-ruling reaction in the retrievable body text.",
+          "The Guardian": "Quotes Trump calling the ruling 'too bad for our Country' and urging Congress to legislate against birthright citizenship."
+        }
+      },
+      {
+        "topic": "Characterization of Trump's motives on citizenship",
+        "positions": {
+          "USA Today": "Frames Trump's position as a legal/constitutional interpretation argument (that the citizenship clause has been misinterpreted).",
+          "The Guardian": "Adds that Trump has 'long sought to dismantle' birthright citizenship and ties it to the 'racist lie' that Obama was born in Kenya and questions over Kamala Harris's eligibility."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Provided two headline-only entries, neither about the central birthright citizenship story. Article 1 headlines a separate ruling allowing states to bar transgender athletes from girls' sports; Article 2 headlines a ruling expanding presidential power over regulators 'but not the Fed.' No retrievable body text, so NYT's framing of the birthright story itself cannot be assessed. Notably, the two NYT headlines emphasize rulings that expand state/executive power rather than the birthright loss \u2014 a different slice of the same term.",
+      "USA Today": "Leads squarely on the birthright ruling as a 'major blow' to Trump. Frames it as one in a string of repudiations (tariffs struck down, this ruling) while balancing with cases where the court backed Trump (deportation protections). Gives substantial space to the legal mechanics: Kavanaugh's narrower statutory reasoning, Thomas's dissent, the 1898 precedent, the 14th Amendment history. Includes hard numbers (255,000 children, 6% of births) and the procedural backstory of the order being blocked in New Hampshire. Comparatively restrained on Trump's rhetoric; the body cuts off mid-sentence.",
+      "The Guardian": "Leads with an image of people 'celebrating' the ruling and frames it explicitly as a 'blow to Trump agenda' and rejection of an 'anti-immigrant agenda.' Emphasizes the human/political stakes and partisan reactions (Jeffries quoting 'xenophobic enablers,' Johnson's disappointment). Uniquely details the opinion's length (194 pages, ~90 by Thomas in dissent) and enumerates the full majority coalition. Editorializes more sharply, describing Trump's history with the 'racist lie' about Obama and questions over Harris. Also filed adjacent stories (mail-in ballots, Lisa Cook/Fed) framing the broader term as a mix of Trump losses and the court's protectiveness of the Fed."
+    },
+    "primary_source_alignment": [
+      "No primary source (the Court's opinion, syllabus, or vote roll) was located for this story. The 194-page opinion referenced by The Guardian was not provided in the dossier, so alignment between reporting and the underlying document cannot be verified.",
+      "The two full-text outlets (USA Today and The Guardian) quote the Roberts majority language identically ('the right to have rights... We keep that promise today'), which is strong cross-outlet corroboration of that quotation even absent the primary document."
+    ],
+    "missing_context": [
+      "No primary source (the actual Supreme Court opinion) was included in the dossier, so the exact vote breakdown cannot be independently confirmed. USA Today says 6-3; The Guardian's enumerated coalition (Roberts + 3 liberals + Barrett majority, Kavanaugh concurring in judgment, 3 dissenting) is not cleanly reconciled to a single number in the text.",
+      "The New York Times, the outlet named in the headline seed, provided only headlines and none of them on the birthright story itself \u2014 so the lean-left flagship's actual framing of the central event is absent from the dossier.",
+      "No conservative or right-leaning outlet is present in the dossier; all body-text coverage is from lean-left (USA Today) and left (The Guardian) outlets. Trump-supporter and Republican perspectives appear only as quoted reactions, not as independent editorial framing.",
+      "The precise legal holding \u2014 whether the Court ruled on the merits of the 14th Amendment question or on a procedural/injunction posture \u2014 is somewhat ambiguous; USA Today notes an earlier 6-3 decision was only about the scope of lower-court injunctions, and it is not fully clear from the dossier how this final ruling relates procedurally.",
+      "USA Today's article body is truncated mid-sentence ('The parents representing their children in the lawsuit, Trump v.'), leaving some detail incomplete.",
+      "No article specifies the effective date or implementation mechanics of what happens now to the ~255,000 affected births per year going forward.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two full-text outlets (USA Today, The Guardian) plus headline-only NYT covered the same landmark ruling with materially different emphasis \u2014 USA Today foregrounds legal mechanics and a mixed scorecard, while The Guardian foregrounds celebration, partisan reaction, and Trump's history \u2014 and the dossier lacks the primary opinion and any right-leaning framing, making the coverage comparison itself the story.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/06/30/us/supreme-court-trans-athletes",
+      "title": "Supreme Court Allows States to Bar Transgender Athletes From Girls\u2019 Sports - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/06/29/us/trump-supreme-court-presidential-power",
+      "title": "Justices Expand Presidential Power Over Regulators, but Not the Fed - The New York Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/06/30/supreme-court-trump-birthright-citizenship/90060950007/",
+      "title": "Supreme Court rejects Trump's birthright citizenship order in major blow - USA Today"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jun/30/us-supreme-court-bithright-citizenship",
+      "title": "US supreme court upholds birthright citizenship in blow to Trump agenda - The Guardian"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jun/29/supreme-court-mail-in-ballots-election-ruling",
+      "title": "US supreme court upholds law to count mail-in ballots arriving after election day - The Guardian"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jun/29/supreme-court-trump-lisa-cook-ruling",
+      "title": "US supreme court rules Trump\u2019s firing of Lisa Cook from Fed was unconstitutional - The Guardian"
+    }
+  ]
+}
