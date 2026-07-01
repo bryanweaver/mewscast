@@ -1289,6 +1289,11 @@
       "did": "did:plc:7plcvkurwyb7vpkno2loekvg",
       "handle": "kaliune.bsky.social",
       "timestamp": "2026-07-01T01:50:37.360728"
+    },
+    {
+      "did": "did:plc:s7ot6ozwacdehidy4pt6pjkc",
+      "handle": "cartoonbeardy.bsky.social",
+      "timestamp": "2026-07-01T13:49:13.311692"
     }
   ],
   "liked_posts": [
@@ -3396,6 +3401,11 @@
       "uri": "at://did:plc:7plcvkurwyb7vpkno2loekvg/app.bsky.feed.post/3mpjxgma4j22g",
       "author": "kaliune.bsky.social",
       "timestamp": "2026-07-01T01:50:37.277676"
+    },
+    {
+      "uri": "at://did:plc:s7ot6ozwacdehidy4pt6pjkc/app.bsky.feed.post/3mpl7oaa7wc2s",
+      "author": "cartoonbeardy.bsky.social",
+      "timestamp": "2026-07-01T13:49:13.127382"
     }
   ],
   "last_cleanup": "2026-06-27T13:35:24.697395",
