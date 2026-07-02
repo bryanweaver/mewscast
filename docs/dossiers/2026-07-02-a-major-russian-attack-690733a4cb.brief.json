@@ -1,0 +1,134 @@
+{
+  "story_id": "2026-07-02-a-major-russian-attack-690733a4cb",
+  "headline_seed": "A major Russian attack kills 20 in Kyiv as Ukrainian strikes disrupt Moscow\u2019s oil sector - AP News",
+  "brief": {
+    "story_id": "2026-07-02-a-major-russian-attack-690733a4cb",
+    "consensus_facts": [
+      "Russia launched a major overnight drone and missile attack on Kyiv into Thursday, July 2, 2026.",
+      "Ukraine's air force said Russia fired 74 missiles and 496 drones in the attack.",
+      "Roughly 90 people were injured in the attack (Klitschko/officials cited across outlets).",
+      "President Volodymyr Zelenskyy and other Ukrainian officials warned of an incoming/massive attack before it began.",
+      "Residents sheltered in Kyiv metro/subway stations during hours of explosions.",
+      "Damage was recorded across roughly 30 locations in Kyiv, mainly residential buildings and civilian infrastructure.",
+      "Interior Minister Ihor Klymenko said about 20 residential buildings were damaged.",
+      "In the Darnytskyi district, six levels of a nine-story residential building collapsed after a strike.",
+      "Emergency crews searched rubble for victims, including a 15-year-old girl and her family (per Klitschko).",
+      "Russia's Defense Ministry framed the strikes as retaliation for Ukrainian long-range attacks on Russian infrastructure/oil facilities.",
+      "Foreign Minister Andrii Sybiha called it a 'night of horror' and rejected Russia's retaliation justification, invoking Ukraine's right to self-defense under Article 51 of the U.N. Charter.",
+      "Ukraine urged allies to supply more air defense systems, including Patriot missiles.",
+      "The Emergency Service deployed nearly 500 personnel and about 100 specialized vehicles.",
+      "Ukraine has been conducting a long-range drone campaign against Russian oil refineries and military sites, causing fuel shortages inside Russia."
+    ],
+    "disagreements": [
+      {
+        "topic": "Kyiv death toll",
+        "positions": {
+          "Associated Press": "at least 20 civilians killed (body references both 'at least 20' and an earlier headline figure of 8)",
+          "NPR": "at least 17 killed",
+          "BBC News": "20 killed",
+          "Reuters": "at least 18 killed (headline only)",
+          "NBC News": "at least 20 killed",
+          "CBS News": "at least 17 killed",
+          "ABC News": "at least 20 killed"
+        }
+      },
+      {
+        "topic": "Number of ballistic missiles / drones that got through",
+        "positions": {
+          "NPR": "does not specify how many penetrated defenses; notes 24 of 74 missiles were ballistic",
+          "BBC News": "25 ballistic missiles and 12 drones struck 33 locations; most repelled",
+          "ABC News": "nearly half of more than 70 missiles were ballistic (per Zelenskyy)"
+        }
+      },
+      {
+        "topic": "Characterization of the attack's scale",
+        "positions": {
+          "BBC News": "'most massive attack' on Kyiv by weapon count, though previous attacks killed more people",
+          "CBS News": "the biggest attack since Moscow's full-scale invasion",
+          "NBC News": "a large-scale attack",
+          "NPR": "a major drone and missile attack"
+        }
+      },
+      {
+        "topic": "Source independence",
+        "positions": {
+          "Associated Press": "original wire report",
+          "NPR": "explicitly bylined 'By The Associated Press'",
+          "NBC News": "explicitly sourced to The Associated Press",
+          "CBS News": "attributes key figures to Reuters",
+          "Reuters": "separate wire (headline only in dossier)"
+        }
+      },
+      {
+        "topic": "Number of people who sheltered in the metro",
+        "positions": {
+          "BBC News": "52,500 people, including 4,500 children, sheltered underground \u2014 highest in recent years",
+          "Other outlets": "note sheltering in metro stations but give no figure"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Original wire spot report, heavily built around photo captions and video description. Leads with the sensory scene ('shakes Kyiv for hours'). Internally inconsistent on the toll \u2014 headline/opening text cites 'at least 8' while the summary line says 'at least 20' \u2014 reflecting a developing story updated in place. Minimal analysis or Russian-side framing.",
+      "NPR": "Runs the AP copy in full. Frames the story as a two-sided military exchange in the headline ('as Ukraine keeps striking Moscow's oil sector'), foregrounding both Russia's stated retaliation motive and Ukraine's oil-refinery campaign. Uses the lower '17' figure. Adds Institute for the Study of War assessment that Russia's 2026 offensive has underperformed \u2014 the most analytical framing in the dossier.",
+      "BBC News": "Most on-the-ground and human-centered. Leads on 'most massive attack' by weapon volume while explicitly caveating that earlier attacks killed more. Heavy use of named survivor testimony (Svitlana, Oleksiy) and the 'This is not retaliation' rebuttal to Moscow's justification. Provides the most granular timeline (11+ hours, wave-by-wave) and unique metro-shelter figures. Includes Kremlin spokesman Peskov's vow to increase pressure.",
+      "Reuters": "Headline only in dossier ('at least 18 people killed'). Frames the event as a 'major strike.' No body text available for corroboration.",
+      "NBC News": "Republishes AP copy. Headline emphasizes both the '20' toll and Zelenskyy's advance warning of a 'massive strike.' Densely catalogs district-by-district damage. Adds detail that Zelenskyy cut short his Dublin/EU-presidency visit. Foregrounds Ukraine's air-defense appeals.",
+      "CBS News": "Frames it as 'the biggest attack since Moscow's full-scale invasion,' using the '17' figure and attributing weapon counts to Reuters. Uniquely reports Zelenskyy asking Washington for a license to manufacture Patriot missiles, and EU consideration of new sanctions. Includes Peskov's warning of more strikes. Sidebar links surface a 'Free Press' item questioning whether Ukraine is winning without U.S. help.",
+      "ABC News": "Attributes toll and damage figures largely to Zelenskyy's own statements. Notes damage in 'every district,' and specifies non-residential targets (ambulance station, research institute, hotel, businesses). Includes an earlier-in-the-timeline injury figure (34 initially recorded, 32 hospitalized), signaling a story captured mid-update. Datelined LVIV/LONDON/NEW YORK rather than Kyiv."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. Russia's Defense Ministry statement and Ukraine's air force figures are quoted secondhand through outlets, not provided as primary documents.",
+      "The Russian Defense Ministry's published target list (referenced by NPR) could not be independently verified against the underlying document within this dossier.",
+      "Ukrainian official casualty figures (Klitschko, Tkachenko, Klymenko, Sybiha, Zelenskyy) are cited via outlets, not from an original release, so the divergence between the 17 and 20 tolls cannot be resolved against a source document here."
+    ],
+    "missing_context": [
+      "The dossier's death toll ranges from 17 to 20 across outlets reporting at different timestamps; the divergence appears to be a function of a rising, developing toll rather than a factual dispute, but no outlet reconciles the figures.",
+      "Four of the seven items (NPR, NBC, and portions of CBS) trace back to the same AP wire copy, so apparent multi-outlet agreement partly reflects a single originating source rather than independent corroboration.",
+      "No outlet provides independent verification of Russia's claim that it struck 'military plants' rather than residential areas; the claim and Ukraine's rebuttal are both reported without adjudication.",
+      "No damage or casualty figures were reported for the Russian side of the exchange \u2014 the strikes on the Nizhny Novgorod refinery and the Luhansk railway bridge (only NPR details these) are noted without outcomes.",
+      "None of the outlets quantify what fraction of the 496 drones and 74 missiles were intercepted versus struck, beyond BBC's figure of 25 ballistic missiles and 12 drones hitting 33 locations.",
+      "No article body established the final, confirmed death toll \u2014 all note the count 'may rise,' leaving the story unresolved as filed.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Seven outlets covered the same event but diverge on the headline death toll (17 vs. 18 vs. 20) and on how they frame scale, motive, and the Ukraine-Russia exchange, and much of the apparent agreement traces to shared AP wire copy \u2014 making the coverage pattern itself the story.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/russia-ukraine-war-kyiv-missile-drone-attack-384d5b6bcdfc6e7d8c18f25130332ef7",
+      "title": ""
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/02/g-s1-131681/russian-attack-ukraine",
+      "title": "A major Russian attack kills 17 in Kyiv as Ukraine keeps striking Moscow's oil sector - NPR"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4gyv05gk4do",
+      "title": "'Most massive' Russian attack on Kyiv kills at least 20 - BBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/russian-drones-attack-ukrainian-capital-set-central-district-hotel-fire-2026-07-01/",
+      "title": "Russia bombards Kyiv in major strike, at least 18 people killed - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/ukraine/russian-drone-missile-attack-kyiv-injures-five-hits-residential-buildi-rcna352675",
+      "title": "Russian attacks kills at least 20, injures scores in Kyiv after Zelenskyy warned of \u2018massive strike\u2019 - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/ukraine-russia-war-heavy-attack-kyiv-deaths-injuries/",
+      "title": "Russia unleashes biggest attack yet on Kyiv, killing at least 17 people, officials say - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/kyiv-fire-missile-drone-attack-russian-strike-mayor/story?id=134395585",
+      "title": "20 dead, dozens injured in Kyiv as Ukraine hit with 'massive' Russian strike - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
