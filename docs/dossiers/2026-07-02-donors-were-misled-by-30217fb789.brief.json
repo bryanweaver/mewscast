@@ -1,0 +1,93 @@
+{
+  "story_id": "2026-07-02-donors-were-misled-by-30217fb789",
+  "headline_seed": "Donors were misled by Trump-backed Freedom 250, House Democrats allege - The Washington Post",
+  "brief": {
+    "story_id": "2026-07-02-donors-were-misled-by-30217fb789",
+    "consensus_facts": [
+      "A House Democratic staff interim report (from the House Natural Resources Committee / its oversight and investigations subcommittee) was released on July 2, 2026, alleging misconduct around America's 250th anniversary celebrations.",
+      "The report alleges that prospective donors to America250 \u2014 a bipartisan/nonpartisan nonprofit overseen by a congressional commission \u2014 were given Freedom 250's banking/routing/wire information instead, redirecting funds without donors' knowledge.",
+      "The report finds these actions could constitute potential wire fraud and charitable solicitation fraud under federal (and, per The Guardian, D.C.) law.",
+      "Freedom 250 is a Trump-backed entity structured as a subsidiary of the congressionally chartered National Park Foundation.",
+      "Freedom 250 is organizing 250th-anniversary programming, including Trump's Great American State Fair on the National Mall.",
+      "The report alleges Freedom 250 diverted or sidelined resources intended for America250, leaving the bipartisan group short of funds.",
+      "The report is an interim product of Democratic staff and has not been officially adopted by the full committee."
+    ],
+    "disagreements": [
+      {
+        "topic": "Named fundraiser tied to the alleged donor redirection",
+        "positions": {
+          "CNN": "Does not name the individual fundraiser; attributes donor-redirection claims to unnamed/confidential sources cited in the report.",
+          "The Guardian": "Names Meredith O'Rourke as a fundraiser who, per committee sources, misled prospective America250 donors by providing Freedom 250's banking and routing numbers."
+        }
+      },
+      {
+        "topic": "Scope of the allegations",
+        "positions": {
+          "CNN": "Focuses narrowly on donor redirection, the funding dispute, and a ~$100 million shortfall; details federal funding figures ($150M appropriated, $100M promised, $50M offered, $25M received, $68M sent from Interior to NPF).",
+          "The Guardian": "Frames a much broader 'web' of alleged corruption: voter-data harvesting, Christian nationalist ideology, pay-to-play presidential access ($500k\u2013$10M+ sponsorship tiers), a UFC South Lawn event, cryptocurrency bonuses, and $40M+ in federal contracts to Event Strategies."
+        }
+      },
+      {
+        "topic": "Report title",
+        "positions": {
+          "CNN": "Does not cite a report title.",
+          "The Guardian": "Cites the report title as 'From Vanity to Insanity: How the White House Cheated the American People Out of Their 250th Birthday.'"
+        }
+      },
+      {
+        "topic": "Presence of Freedom 250 / administration response",
+        "positions": {
+          "CNN": "Includes on-the-record denial from Freedom 250 spokesperson Danielle Alvarez ('categorically false,' 'partisan smear') and statements from America250 chair Rosie Rios.",
+          "The Guardian": "Does not include a Freedom 250 or administration response; quotes Rep. Jared Huffman at length instead."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The Washington Post": "Headline-only in this dossier ('Donors were misled by Trump-backed Freedom 250, House Democrats allege'). No retrievable body text for the relevant story; the headline foregrounds the allegation and attributes it to House Democrats, using the hedge 'allege.' The Post's two other dossier entries (a German hospital fire and an unannounced White House helipad) are unrelated and do not corroborate the Freedom 250 story.",
+      "CNN": "Leads with the donor-redirection allegation but couples it with heavy attribution ('according to a report from a group of House Democrats, citing confidential, unnamed sources'). Emphasizes the funding dispute and dollar figures, gives significant space to on-the-record denials from Freedom 250's Danielle Alvarez and statements from America250's Rosie Rios, and notes the report 'doesn't detail how much money was diverted, if at all.' Most balanced of the full-text entries; repeatedly flags the 'if true' conditionality.",
+      "The Guardian": "Most aggressive framing. Leads with 'hijacked and perverted,' quotes the report's charged title, and amplifies the broadest allegations (Christian nationalism, voter-data harvesting, pay-to-play access, UFC event, crypto bonuses, Event Strategies contracts). Presents allegations largely as findings, quotes Rep. Huffman extensively, and does not include a Freedom 250 or White House response. Notes the report is interim and not officially adopted, but otherwise buries the accused's side."
+    },
+    "primary_source_alignment": [
+      "No primary source (the interim House Natural Resources Committee Democratic staff report) was provided in the dossier, so no direct alignment check against the underlying document is possible.",
+      "Both CNN and The Guardian characterize the same report; where their descriptions overlap (donor redirection via Freedom 250 wire instructions, potential wire/charitable-solicitation fraud, funding diversion), the accounts are consistent. Where they diverge (report title, named individuals, breadth of allegations), the divergence appears to reflect editorial selection rather than a documented contradiction, but this cannot be verified without the report text."
+    ],
+    "missing_context": [
+      "No outlet or primary document establishes how much money, if any, was actually diverted \u2014 CNN explicitly states the report does not detail this.",
+      "The report is an interim product of Democratic committee staff that has not been adopted by the full committee; readers are not given the Republican or majority-committee response.",
+      "The underlying report itself is not in the dossier, so its specific evidentiary basis (beyond 'confidential, unnamed sources') cannot be assessed.",
+      "No independent verification (e.g., from law enforcement, an inspector general, or an outside audit) of the wire-fraud allegation appears in any article.",
+      "The Guardian's expansive claims (voter-data harvesting, crypto bonuses, Event Strategies contracts, presidential-access pricing) are single-sourced within this dossier and unconfirmed by CNN.",
+      "No outlet provides the total federal appropriation reconciliation clearly enough to confirm the $100M shortfall figure independently of the report's own accounting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only two of five dossier articles carry substantive body text on this story, and those two (CNN and The Guardian) report the same interim Democratic report with materially different breadth and framing \u2014 CNN hedged and response-balanced, The Guardian expansive and one-sided \u2014 while the Washington Post entries are headline-only or unrelated. That framing divergence, plus the absence of the underlying primary document, makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/07/02/donors-were-misled-by-trump-backed-freedom-250-house-democrats-allege/",
+      "title": "Donors were misled by Trump-backed Freedom 250, House Democrats allege - The Washington Post"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/02/politics/america-250-donors-democrats-report",
+      "title": "Trump-backed organizer of America\u2019s 250th birthday events may have duped donors, report from House Democrats alleges - CNN"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/07/02/germany-ludwigslust-fire-hospital-patients-roof-evacuation/38336f2a-75e7-11f1-b665-5f8be87f3787_story.html",
+      "title": "Fire breaks out in hospital in northern Germany, leaving 2 dead, report says - The Washington Post"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/06/30/trump-adds-white-house-helipad-resolve-marine-one-helicopter-issue/",
+      "title": "Trump begins construction of unannounced White House helipad - The Washington Post"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jul/02/trump-hijacked-250-anniversary",
+      "title": "Trump hijacked US\u2019s 250 anniversary to serve \u2018political ideology and pet projects\u2019, congressional report says - The Guardian"
+    }
+  ]
+}
