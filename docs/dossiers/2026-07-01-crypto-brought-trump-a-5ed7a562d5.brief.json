@@ -1,0 +1,118 @@
+{
+  "story_id": "2026-07-01-crypto-brought-trump-a-5ed7a562d5",
+  "headline_seed": "Crypto Brought Trump a Huge Windfall, Even as Many Investors Lost Big - The New York Times",
+  "brief": {
+    "story_id": "2026-07-01-crypto-brought-trump-a-5ed7a562d5",
+    "consensus_facts": [
+      "A federal financial disclosure report for 2025, released by the Office of Government Ethics on Tuesday, June 30, 2026, detailed President Donald Trump's income and assets.",
+      "The disclosure shows Trump earned over $1 billion from cryptocurrency ventures in 2025, with figures reported between roughly $1.2 billion and $1.4 billion depending on the outlet.",
+      "Trump received more than $500 million from World Liberty Financial, a crypto venture he and his family/sons co-founded, tied to sales of tokens including governance tokens.",
+      "Trump collected additional hundreds of millions of dollars (reported figures around $600-$635 million) from sales of the $TRUMP meme coin, associated with the entity CIC Digital.",
+      "Trump's crypto income in 2025 now exceeds the revenue from his real estate holdings, which he accumulated over decades.",
+      "The crypto assets tied to Trump have plunged sharply in value since their peaks, leaving many later investors with losses even as Trump locked in profits.",
+      "On Wednesday, July 1, 2026, Trump responded to questions about his finances by saying he does not manage his own investments (they are handled by outside professionals/funds) and attributed his gains to a rising stock market, saying 'everybody's profiting.'"
+    ],
+    "disagreements": [
+      {
+        "topic": "Total crypto income figure",
+        "positions": {
+          "Associated Press": "About $1.2 billion / nearly $1.2 billion from crypto businesses",
+          "NPR": "More than $1 billion from crypto ventures",
+          "Al Jazeera English": "More than $1.4 billion from family cryptocurrency ventures",
+          "Politico": "More than $1.4 billion of 2025 income from crypto ventures",
+          "The New York Times": "About $1.4 billion from crypto businesses"
+        }
+      },
+      {
+        "topic": "Meme coin sale figure and structure",
+        "positions": {
+          "Associated Press": "More than $600 million from CIC Digital LLC sales of meme coins stamped with Trump's face",
+          "Al Jazeera English": "$635 million from the sale of $TRUMP meme coins",
+          "Politico": "$635 million from a licensing deal CIC Digital had with an entity called Celebration Coins"
+        }
+      },
+      {
+        "topic": "Total overall income beyond crypto",
+        "positions": {
+          "Politico": "More than $2 billion reported on disclosures",
+          "The New York Times": "At least $2.2 billion total pulled in, versus a minimum of $622 million for all of 2024"
+        }
+      },
+      {
+        "topic": "Role of foreign / UAE investment",
+        "positions": {
+          "The New York Times": "One of the biggest hauls came when an investment firm tied to the United Arab Emirates bought nearly half of World Liberty Financial, blurring the line between foreign policy and private enterprise",
+          "Other outlets": "Do not mention the UAE transaction"
+        }
+      },
+      {
+        "topic": "Scale of investor losses / percentages",
+        "positions": {
+          "Politico": "$TRUMP memecoin down 98% from January 2025 peak; World Liberty asset down 87% from September all-time high; Melania Trump's memecoin also cratered",
+          "Associated Press": "States tokens and coins have plunged in value but gives no specific percentages",
+          "Other outlets": "Note investor losses generally or not at all without specific figures"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Files multiple versions (a text report, a broader wealth roundup, and a video). Leads with the ~$1.2 billion crypto figure and frames it against investor losses ('locking in profits while his investors were socked with losses'). Emphasizes Trump's distancing claim that outside funds manage his money and that stock gains drove his wealth. The roundup piece ('Crypto, real estate, watches') widens the lens to his full income mix. Neutral wire phrasing; foregrounds the profit-vs-loss split.",
+      "NPR": "Frames the story as an explanatory 'How?' \u2014 the segment is built around the question of how Trump earned more than $1 billion from crypto and how that eclipsed his real estate. Body text is thin (largely podcast/segment metadata) and does not itself lay out mechanisms in the provided text. Lead emphasis is on the eye-catching comparison to his decades-built real estate empire.",
+      "Al Jazeera English": "Uses the highest headline figure ($1.4bn) and immediately foregrounds 'conflicts of interest' and 'raising questions.' Bundles crypto income with media-company settlements and notes the disclosure covers both Trump and VP JD Vance. Emphasizes the 927-page document and that digital assets now generate one of the largest tranches of his income, overtaking inherited real estate.",
+      "Politico": "Sharpest adversarial framing via headline quote 'We should all only hope for such great rates of return.' Explicitly contrasts Trump's 'everybody's profiting' claim with ordinary investors who are 'saddled with investments deep in the red.' Provides the most granular breakdown (Celebration Coins licensing $635M, $236M token sales, $197M equity sale in Stablecoin Holdco) and the most specific loss percentages (98%, 87%). Quotes critics (historian Jeffrey Engel, Sen. Adam Schiff) and the White House rebuttal (spokesperson Anna Kelly), giving both sides but leading on the corruption/profiting-from-presidency angle.",
+      "The New York Times": "Frames as an investigative reveal that 'pulled back the curtain' on secretive business operations. Uses the broadest total ($2.2 billion overall, ~$1.4 billion crypto) and the sharpest year-over-year contrast ($622M in 2024). Uniquely surfaces the UAE-linked purchase of nearly half of World Liberty Financial as blurring foreign policy and private enterprise. Notes Trump's past hostility to crypto as a 'haven for drug dealers and scammers,' framing the turnabout as remarkable."
+    },
+    "primary_source_alignment": [
+      "No primary source (the actual OGE financial disclosure filing) was included in the dossier, so direct alignment against the underlying 927-page document cannot be verified here.",
+      "All outlets attribute their figures to the same Office of Government Ethics disclosure released Tuesday June 30, 2026; the divergence in totals (~$1.2B vs ~$1.4B) appears to stem from how outlets categorized or rounded line items rather than from conflicting source documents, but this cannot be confirmed without the filing itself."
+    ],
+    "missing_context": [
+      "No primary source (the OGE disclosure itself) was provided in the dossier; the ~$1.2B vs ~$1.4B discrepancy cannot be reconciled against the underlying document, which limits certainty on the true crypto figure.",
+      "Only the UAE-linked purchase of nearly half of World Liberty Financial is reported by a single outlet (The New York Times); no other outlet corroborates this transaction, so it remains single-source.",
+      "The specific loss percentages (98% for $TRUMP, 87% for the World Liberty asset) appear only in Politico and are not independently corroborated by other bodies in the dossier.",
+      "Outlets do not clearly explain the mechanics of how governance tokens, meme coins, and licensing deals convert into disclosed personal income, leaving the 'how' underdeveloped despite NPR framing the story around that question.",
+      "No outlet quantifies how many investors lost money or the aggregate size of investor losses, despite the losses being central to the framing.",
+      "The disclosure reportedly also covers VP JD Vance (per Al Jazeera) and media-company settlements, but these are largely unexamined across the coverage.",
+      "Two of the seven articles (both AP text/video variants and the NPR entry) provide limited body detail; the AP video item and NPR segment are largely metadata, so much apparent multi-outlet volume traces back to a small number of substantive reports, several sharing AP wire language."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five distinct outlets reported the same disclosure event with materially different emphasis \u2014 from AP's neutral wire framing to Politico's and Al Jazeera's conflict-of-interest angle to the NYT's UAE foreign-policy revelation \u2014 and they disagree on the headline dollar figure ($1.2B vs $1.4B), making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-financial-disclosure-crypto-060c15062b8fedc6104159ea13775463",
+      "title": "Trump filing shows he took in about $1.2 billion from crypto businesses last year - AP News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/01/nx-s1-5877466/president-trump-earned-more-than-1-billion-from-crypto-in-2025-how",
+      "title": "President Trump earned more than $1 billion from crypto in 2025. How? - NPR"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/6/30/donald-trump-reports-1-4bn-in-cryptocurrency-income-in-government-filing",
+      "title": "Donald Trump made $1.4bn in crypto income in 2025, raising his net worth - Al Jazeera"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/07/01/trump-crypto-financial-disclosure-losses-00984438",
+      "title": "'We should all only hope for such great rates of return' - Politico"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-finances-real-estate-crypto-bibles-golf-8b8b54fae333d1200f4c1b509991b544",
+      "title": "Crypto, real estate, watches: How Trump made over $1 billion last year - AP News"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/video/trump-filing-shows-he-took-in-about-1-2-billion-from-crypto-businesses-last-year-e750632861e2437db45e735a95accf93",
+      "title": "Trump filing shows he took in about $1.2 billion from crypto businesses last year - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/06/30/us/politics/trump-financial-disclosure-crypto-windfall.html",
+      "title": "Trump Pulled In About $1.4 Billion From Crypto Ventures, Financial Disclosure Shows - The New York Times"
+    }
+  ]
+}
