@@ -1,0 +1,117 @@
+{
+  "story_id": "2026-07-02-how-extreme-heat-is-fd7f270446",
+  "headline_seed": "How extreme heat is changing DC\u2019s July Fourth weekend event plans - The Hill",
+  "brief": {
+    "story_id": "2026-07-02-how-extreme-heat-is-fd7f270446",
+    "consensus_facts": [
+      "Washington, D.C.'s July 4, 2026 National Mall celebration marks the nation's 250th birthday and is organized by the Trump-allied Freedom 250 group under the 'Salute to America' banner.",
+      "President Trump is scheduled to give a speech ahead of the fireworks, with reported start times ranging from 9 p.m. to 9:50 p.m.",
+      "The fireworks display is expected to be the largest in the city's history, with organizers citing 850,000 shells; multiple outlets report the show could last roughly 40 minutes.",
+      "Mayor Muriel Bowser said the fireworks would not begin until 11 p.m., while Freedom 250 continued to advertise a 10:30 p.m. start.",
+      "Extreme heat is forecast for July 4, with a high near 99 degrees and a 'feels like'/heat index around 109-110 degrees; DC issued an Extreme Heat Alert and Bowser urged people to watch the heat and get home quickly.",
+      "Attendees entering the National Mall viewing area will pass through TSA-style/TSA-like security screening with magnetometers, and a long list of items is prohibited.",
+      "The main event was designated a National Special Security Event, with the tightest security in D.C. for a Fourth of July since shortly after 9/11.",
+      "The D.C. Metro will be free to ride starting at 5 p.m. on July 4, and public transit is encouraged given road closures and limited parking.",
+      "A military flyover/airshow is planned as part of the day's programming.",
+      "The event is free to attend and gates open as early as 1 p.m."
+    ],
+    "disagreements": [
+      {
+        "topic": "Time Trump's speech begins",
+        "positions": {
+          "Axios": "Trump is supposed to begin speaking at 9:50 p.m. per a Secret Service official; USA Today cites Axios for the 9:50 p.m. figure",
+          "CBS News": "President Trump has said he plans to speak at 9 p.m."
+        }
+      },
+      {
+        "topic": "Fireworks start time",
+        "positions": {
+          "CBS News / USA Today / Axios (Bowser)": "Mayor Bowser said fireworks won't begin until 11 p.m.",
+          "Axios / CBS News (Freedom 250)": "Freedom 250 continues to advertise/say around 10:30 p.m.",
+          "CBS News (historical)": "Fireworks usually begin around 9 p.m."
+        }
+      },
+      {
+        "topic": "Number of fireworks launch sites",
+        "positions": {
+          "USA Today": "850,000 shells launched from 10 sites",
+          "Axios / CBS News": "Cite 850,000 shells and 'largest ever' but do not specify 10 sites"
+        }
+      },
+      {
+        "topic": "Water policy at the Mall",
+        "positions": {
+          "USA Today (citing Washington Post)": "One bottle of water allowed per person",
+          "USA Today (citing Freedom 250 statement to FOX 5)": "Free bottled water will be distributed, plus free refill and misting stations"
+        }
+      },
+      {
+        "topic": "Whether the show could slip past midnight into July 5",
+        "positions": {
+          "Axios": "A past-midnight, July 5 fireworks show isn't out of the realm of possibility per a Secret Service official, especially with a 30% chance of precipitation",
+          "USA Today": "Festivities won't wrap up until nearly midnight",
+          "CBS News": "Notes the show could stretch late into the night without specifying past midnight"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Two distinct articles. The Kennedy Center piece leads with the $25,000 'presidential' ticket package and pivots into a lengthy account of the Kennedy Center's financial and legal turmoil over the removal of Trump's name \u2014 heaviest political framing in the dossier, tying the fireworks event to Trump institutional controversies. The second CBS article is straight logistics-and-security coverage (NSSE designation, magnetometers, capacity, Metro), leading with 'largest display ever' and tightest security since 9/11, and closes with a plug for CBS's own primetime special.",
+      "Axios": "Scoop-driven and process-focused. Leads with the 'why' \u2014 Trump's 45-minute speech pushing the fireworks later \u2014 and emphasizes uncertainty and flux, quoting an unnamed Secret Service official heavily. Frames the delay as a chain reaction that keeps crowds in 102-degree heat longer. Highlights made-for-TV elements (Guinness world-record attempt, 17-aircraft flyover, Qatar-gifted Air Force One).",
+      "The Washington Post / Washington Times": "Headline-only in this dossier (body text is a CAPTCHA/security-verification block). Headline signals a service-journalism roundup ('74 things to do'); no retrievable reporting to analyze.",
+      "USA Today": "Provides the most service-oriented and comprehensive coverage across three articles: a full schedule/logistics explainer (security, prohibited items, road closures, alternate viewing sites, Metro), a heat-danger piece framing conditions as 'life-threatening' and detailing Freedom 250's cooling preparations, and a historical piece contextualizing the heat against DC's hottest recorded Fourth (100 degrees in 1919). Leans on attribution to Accuweather, NWS, Axios, Washington Post, FOX 5, and WJLA. Foregrounds public-safety and reader-utility framing over politics."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All facts derive from outlet reporting, several of which themselves cite secondary sources (Axios cites an unnamed Secret Service official; USA Today cites Axios, Washington Post, FOX 5, WJLA, Accuweather, and NWS).",
+      "Court-related claims about the Kennedy Center name dispute (CBS News) reference filings by Rep. Joyce Beatty's attorneys dated June 19, but no filing text was provided in the dossier for verification."
+    ],
+    "missing_context": [
+      "No outlet in the dossier states definitively where proceeds from the Kennedy Center ticket packages will go; CBS explicitly notes this was unclear.",
+      "No source provides an official, confirmed final fireworks start time \u2014 the 10:30 p.m. vs. 11 p.m. discrepancy between Freedom 250 and the Mayor remains unresolved across all outlets.",
+      "The heat forecast figures diverge slightly across outlets (Axios cites 102\u00b0F expected; USA Today cites a high of 99\u00b0F with feels-like 109-110\u00b0F) without reconciliation.",
+      "No outlet quantifies expected attendance beyond the 150,000-capacity primary viewing area at the Washington Monument, leaving overall crowd size unstated.",
+      "The relationship between Freedom 250 (a Trump-allied private organizer) and federal/NPS authorities \u2014 including who is funding the record-attempt fireworks \u2014 is not detailed in any article.",
+      "No article addresses contingency or cancellation plans if the 30% precipitation chance or extreme heat forces changes, beyond Axios noting evacuation is possible.",
+      "No apparent instruction-injection attempts were detected in any article body; Article 3 (Washington Times) contained only a CAPTCHA/security-verification block rather than reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (CBS News, Axios, USA Today) covered the same July 4 event with materially different emphases \u2014 CBS foregrounds ticket-pricing and Kennedy Center controversy, Axios foregrounds speech-driven timing chaos, and USA Today foregrounds heat safety and logistics \u2014 with unresolved factual discrepancies on speech and fireworks start times. That divergence in framing, rather than a single clean event, makes this a coverage-comparison story.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/kennedy-center-fireworks-ticket-package-25000-presidential-tier/",
+      "title": "Kennedy Center selling $25,000 ticket package to watch D.C. July 4th fireworks - CBS News"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/local/washington-dc/2026/06/30/trump-july-4-speech-fireworks-show-dc-world-record",
+      "title": "Scoop: Trump's late July 4 speech throws D.C. fireworks timing into flux - Axios"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/jul/2/74-things-washington-dc-independence-day-weekend-july-3-5-2026/",
+      "title": "74 things to do in Washington, D.C. this Independence Day weekend: July 3-5 - Washington Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/2026/07/01/what-to-know-about-4th-of-july-events-fireworks-in-washington-dc/90765066007/",
+      "title": "Washington DC July 4th everything to know: fireworks shows, America 250 - USA Today"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/2026/07/02/will-there-be-water-at-the-national-mall-for-july-4-heat-wave-in-dc/90782131007/",
+      "title": "DC could have life-threatening heat July 4 for fireworks, Trump speech - USA Today"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/dc-july-4-fireworks-tsa-style-security-wont-start-until-11-pm/",
+      "title": "D.C.'s July 4th fireworks will have \"TSA-style\" security, won't start until 11 p.m., mayor says - CBS News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/2026/06/30/will-this-be-the-hottest-4th-of-july-ever-in-washington-dc/90749600007/",
+      "title": "What is the hottest 4th of July in Washington DC's history? - USA Today"
+    }
+  ]
+}
