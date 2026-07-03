@@ -1,0 +1,144 @@
+{
+  "story_id": "2026-07-03-ukrainian-suspect-hunted-by-a76560b16a",
+  "headline_seed": "Ukrainian suspect hunted by police after Monaco bomb attack was 'disguised as a man' - BBC",
+  "brief": {
+    "story_id": "2026-07-03-ukrainian-suspect-hunted-by-a76560b16a",
+    "consensus_facts": [
+      "Interpol issued a Red Notice for 39-year-old Anastasiia Berezovska, a Ukrainian woman named as the main suspect in the Monaco bombing.",
+      "Prosecutors say the suspect disguised herself as a man; investigators initially described the suspect as male before reviewing CCTV footage.",
+      "The suspect is wanted for attempted murder, placing an explosive device in a public place with criminal intent, and criminal conspiracy.",
+      "The suspect speaks German and last resided in Germany; she is reported to have a tattoo, possibly of a snake, on her right arm.",
+      "A parcel/package was left at the entrance of a Monaco apartment building and detonated by remote control as the victims arrived.",
+      "After the attack, the suspect fled on foot to France, then drove through Italy to Germany in a rented, German-registered car.",
+      "Local and French media reports identify the presumed target as Ukrainian-born businessman Vadym Yermolaiev, 58, though Monaco authorities have not officially confirmed the victims' identities.",
+      "Three people were injured: an adult man, a woman, and a 13-year-old boy; the adults were seriously injured and the child sustained minor injuries.",
+      "German police in Hesse (Main-Taunus district) searched the rented apartment and vehicle of a 39-year-old Ukrainian woman and will hand evidence to Monegasque authorities.",
+      "Prince Albert II of Monaco condemned the attack (described variously as 'an odious act' and a 'heinous crime').",
+      "Investigators believe the suspect scouted/cased the residence beforehand and likely did not act alone; they are searching for possible accomplices.",
+      "Monaco deputy prosecutor Morgan Raymond is the primary official cited for the investigation details."
+    ],
+    "disagreements": [
+      {
+        "topic": "Date of the attack",
+        "positions": {
+          "CBS News": "Says the explosion 'rocked Monaco on Monday' without a calendar date",
+          "BBC News": "Package left just before 21:00 local Monday, explosion shortly after; no calendar date",
+          "ABC News (US)": "Explicitly dates the bombing to June 29",
+          "CNN": "References June 29, 2026 in photo caption and says the bomb exploded 'four days ago'"
+        }
+      },
+      {
+        "topic": "Identity/relationship of the injured woman",
+        "positions": {
+          "BBC News": "Describes the victims as Yermolaiev, 'his partner' and 13-year-old son",
+          "ABC News (US)": "Identifies the woman as the boy's 46-year-old mother",
+          "CNN": "States the injured woman is NOT Yermolaiev's wife, citing that his wife told Suspilne she was not home and not hurt; identity of the woman and child remain unknown",
+          "ABC News (Australia)": "Describes her as Yermolaiev's 'partner'"
+        }
+      },
+      {
+        "topic": "Condition of the victims",
+        "positions": {
+          "BBC News": "As of Wednesday, the man was no longer in a life-or-death situation but the woman's condition had not stabilized (AFP)",
+          "ABC News (US)": "The 58-year-old man and his son are in stable condition; the 46-year-old woman remains in critical condition",
+          "CNN": "One victim in life-threatening condition, one seriously injured, one with minor injuries (as of Friday)"
+        }
+      },
+      {
+        "topic": "Yermolaiev's nationality and sanctions status",
+        "positions": {
+          "BBC News": "Cypriot citizen after renouncing Ukrainian citizenship in 2019; sanctioned by Kyiv since 2023; has interests in wine/alcohol business in Russian-annexed Crimea",
+          "CBS News": "Cypriot national originally from Ukraine; does not mention sanctions",
+          "ABC News (US)": "Ukrainian business tycoon 'with Russian ties'; does not mention Cypriot citizenship or sanctions",
+          "The Washington Post": "Headline describes him as a 'Russia-linked Ukrainian tycoon'"
+        }
+      },
+      {
+        "topic": "Arrests made in Monaco",
+        "positions": {
+          "CNN": "Two men were arrested in Monaco before being released due to lack of evidence",
+          "ABC News (Australia)": "Two people were arrested in Monaco earlier this week but have since been released",
+          "CBS News": "Does not mention any arrests",
+          "BBC News": "Does not mention arrests, but notes investigators are looking for accomplices"
+        }
+      },
+      {
+        "topic": "Additional injuries on the street",
+        "positions": {
+          "CNN": "Two other people were wounded by glass debris on the street outside the building",
+          "Other outlets": "Do not mention additional street injuries"
+        }
+      },
+      {
+        "topic": "Spelling of suspect's surname",
+        "positions": {
+          "CBS News / BBC News / CNN / ABC News (Australia)": "Anastasiia Berezovska",
+          "ABC News (US)": "Anastasiia Berezovsk"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Straightforward wire-style report leading on the Interpol Red Notice and the suspect's physical description. Emphasizes the tattoo and German-speaker detail. Notes the man 'no longer in a life-or-death situation' via AFP framing. Ends with unrelated CBS crime headlines and 'Go deeper with The Free Press' promotional links, diluting focus.",
+      "BBC News": "Most detailed body text. Leads on the 'disguised as a man' angle from the deputy prosecutor. Uniquely foregrounds Yermolaiev's Cypriot citizenship, renunciation of Ukrainian citizenship, Kyiv sanctions since 2023, and Crimea business interests \u2014 surfacing the geopolitical/Russia angle more fully than others. Provides granular hospital details (Nice CHU, Lenval children's hospital) and the German Hesse police statement in full.",
+      "ABC News (US)": "Frames the story as a 'major twist' and an 'investigation twist,' emphasizing the gender reveal as the news hook. Uniquely identifies the injured woman as the boy's 46-year-old mother and gives specific victim conditions. Misspells the suspect's surname as 'Berezovsk' throughout. Characterizes Yermolaiev as having 'Russian ties' without the sanctions detail.",
+      "CNN": "Richest on scene-setting and context. Leads on the disguise angle but invests heavily in Monaco's security profile (556 officers, 1,387 cameras, no homicides last year, 'first bomb assassination attempt ever' in Monaco). Uniquely reports two men arrested and released, two bystanders wounded by glass, and that the injured woman is not Yermolaiev's wife (citing Suspilne). Emphasizes bomb sophistication implying multiple perpetrators.",
+      "The Washington Post": "Headline-only (Google News RSS stub). Frames Yermolaiev as a 'Russia-linked Ukrainian tycoon' in the headline, foregrounding the geopolitical dimension. No retrievable body text.",
+      "ABC News (Australia)": "Uses an explainer/'in short' format with bullet summaries. Leads on 'woman who disguised herself as a man.' Attributes reporting to Reuters. Includes the arrests-and-release detail and the Frankfurt sighting. Notes the suspect scouted the area with hair visible one day \u2014 the key that unmasked the disguise. Page is cluttered with unrelated Australian news items.",
+      "The New York Times": "Headline-only stub (published via The Times/thetimes.com per URL). Frames around the 'Ukrainian woman is prime suspect' and 'tycoon bombing.' No retrievable body text."
+    },
+    "primary_source_alignment": [
+      "No primary source (Interpol Red Notice document, prosecutor's full statement, or German police statement in original) was provided in the dossier; alignment cannot be independently verified against source text.",
+      "Multiple outlets (BBC News, ABC News Australia) quote the German Hesse police statement nearly verbatim ('Evidence has been secured/secured which will be handed over to the Monegasque authorities'; 'The woman being sought is currently on the run'), suggesting a shared official statement, but the original was not supplied for direct comparison."
+    ],
+    "missing_context": [
+      "No outlet establishes a confirmed motive for the attack; several call it an 'attempted assassination' but none explain why Berezovska or possible accomplices targeted Yermolaiev.",
+      "No outlet reports whether Berezovska has any known prior connection to Yermolaiev, to Ukrainian or Russian state actors, or to organized crime \u2014 leaving the Russia/Ukraine geopolitical implication implied but unsupported.",
+      "The victims' identities remain officially unconfirmed by Monaco; the attribution to Yermolaiev rests entirely on unnamed French/Ukrainian media and law enforcement sources across all outlets.",
+      "Outlets disagree on the identity and relationship of the injured woman (partner vs. the boy's 46-year-old mother vs. explicitly 'not Yermolaiev's wife') and none reconciles the discrepancy.",
+      "No primary Interpol Red Notice text, prosecutor's transcript, or German police statement was included in the dossier, so all official claims are second-hand as relayed by outlets.",
+      "Two men were reportedly arrested and released in Monaco (CNN, ABC Australia), but no outlet clarifies who they were or why they were initially detained.",
+      "The Washington Post and The New York Times/Times entries are headline-only stubs with no retrievable body text, limiting cross-verification of the Russia-linked framing they lead with.",
+      "No outlet reports the current status of the manhunt beyond 'on the run' and a reported Frankfurt sighting; no outlet forecasts or details next investigative steps."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets have substantial body text reporting the same event but diverge materially on the injured woman's identity, victim conditions, arrests, and how heavily they foreground the Russia/sanctions angle. That framing divergence across multiple outlets makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/monaco-bomb-interpol-ukraine-woman-suspect/",
+      "title": "Interpol names Ukrainian woman as suspect in Monaco bombing - CBS News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4gy603z2qlo",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/monaco-bombing-investigation-twist-suspect-identified-ukrainian-woman/story?id=134439576",
+      "title": "Monaco bombing investigation twist: Suspect identified as a Ukrainian woman - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/03/europe/monaco-bomb-woman-suspect-intl",
+      "title": "Ukrainian woman who disguised herself as a man is main suspect in Monaco attack - CNN"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/07/03/monaco-bombing-ukraine-suspect-anastasiia-berezovska/62d3e8aa-76c2-11f1-b665-5f8be87f3787_story.html",
+      "title": "Interpol names suspect in Monaco bombing that reportedly targeted Russia-linked Ukrainian tycoon - The Washington Post"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-07-03/monaco-bomb-interpol-red-wanted-notice-anastasiia-berezovska/106878772",
+      "title": "Interpol issues wanted notice for Monaco bombing suspect - ABC News & Headlines \u2013 Australian Broadcasting Corporation"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.thetimes.com/world/europe/article/ukrainian-woman-suspect-monaco-tycoon-bombing-crpdjnvcl",
+      "title": "Pictured: Ukrainian woman is prime suspect in Monaco tycoon bombing - The Times"
+    }
+  ]
+}
