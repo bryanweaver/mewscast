@@ -1,0 +1,103 @@
+{
+  "story_id": "2026-07-04-fireworks-heat-and-politics-28bfa06c1f",
+  "headline_seed": "Fireworks, heat and politics: America celebrates its 250th birthday - AP News",
+  "brief": {
+    "story_id": "2026-07-04-fireworks-heat-and-politics-28bfa06c1f",
+    "consensus_facts": [
+      "The United States is marking the 250th anniversary of American independence on July 4, 2026 (AP, CBS News, BBC, Axios, Fox News, Asheville Citizen Times).",
+      "A major heatwave with temperatures near 100F/38C is affecting Fourth of July festivities in the eastern and central US (AP, BBC, Axios).",
+      "Extreme heat has caused cancellations or closures of some events, including the Great American State Fair on the National Mall in Washington D.C. (AP, BBC).",
+      "President Trump spoke at Mount Rushmore in South Dakota on Friday, July 3, warning of a communist threat to American liberty (AP, BBC, CBS News).",
+      "A record-setting fireworks display of approximately 850,000 fireworks over roughly 40 minutes is planned for Washington D.C., aiming to be the largest in history (BBC, CBS News).",
+      "The Washington D.C. fireworks will be launched from multiple sites including eight barges on the Potomac River (BBC, CBS News).",
+      "The D.C. event is organized by a White House-backed group called Freedom 250 / Freedom250, and Trump is scheduled to deliver remarks before the fireworks (BBC, CBS News).",
+      "Firework companies with five generations of family experience are producing displays for the celebrations (CBS News cites Pyrotecnico; Fox News cites Zambelli Fireworks)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Timing of Trump's remarks and the D.C. fireworks display",
+        "positions": {
+          "BBC News": "Trump expected to speak at approximately 21:45 (9:45 p.m.) local time, with fireworks beginning after his remarks; event begins at 19:00",
+          "CBS News": "Trump will deliver remarks at 9:45 p.m. Eastern and the fireworks display will get underway at 10:45 p.m."
+        }
+      },
+      {
+        "topic": "Framing of the political controversy over the celebration",
+        "positions": {
+          "BBC News": "Reports opponents accuse Trump of politicizing and 'hijacking' the anniversary, quotes Sen. Alex Padilla, and notes Freedom250 calls it a 'partisan smear'",
+          "Fox News": "Frames the controversy through a video headlined 'Louisiana gov slams Democrats for accusing Trump of hijacking America's birthday'",
+          "CBS News": "Largely omits the political controversy in its fireworks-focused body text",
+          "Axios": "Does not address the hijacking controversy; frames politics around fireworks rights and burn bans"
+        }
+      },
+      {
+        "topic": "Which family fireworks company is featured",
+        "positions": {
+          "CBS News": "Pyrotecnico, five generations, president Rocco Vitale, doing the D.C. show",
+          "Fox News": "Zambelli Fireworks, a five-generation family company in New Castle, Pennsylvania"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Wire copy consisting almost entirely of photo/video captions rather than a written narrative. Leads with heat's impact on festivities (State Fair closure), then juxtaposes Trump's Mount Rushmore 'communism' remarks with Sail250 military imagery in New York. Neutral captioning; the recurring image of rain on the Washington sculpture at Mount Rushmore quietly signals weather disruption.",
+      "CBS News": "Two distinct pieces. The San Francisco article is purely logistical/service journalism \u2014 Golden Gate Bridge closure, road closures, transit, viewing spots \u2014 with celebratory official quotes and no politics. The national Pyrotecnico piece leads on spectacle and scale ('biggest show we've done'), promotes CBS's own primetime special, and briefly references Trump's Mount Rushmore 'communist menace' speech only via sidebar links. Emphasizes awe and Americana; buries controversy.",
+      "BBC News": "Most comprehensive and politically framed. Leads on Trump's 'spectacular rally' and 'really long speech' amid the heatwave, foregrounds the accusation that Trump is politicizing the anniversary, music acts dropping out, and the Freedom250-vs-America250 commission dispute. Surfaces internal National Park Service documents warning of 'very unhealthy' air pollution from the fireworks \u2014 a detail no other outlet mentions. International/skeptical distance throughout.",
+      "Axios": "Specialized angle on public safety and climate. Leads on the collision between record backyard-fireworks demand and burn bans/drought/heat. Emphasizes wildfire risk, cites Cal Fire, a climatologist, and fireworks-association figures (20-25% sales increase), and reports three firefighters died in a Colorado fire. Frames the culture-war tension over fireworks as a 'right.' Notes Trump's D.C. plans only in passing.",
+      "Fox News": "Video segment framing that leans celebratory and patriotic. Focuses on the history and craft of fireworks (Zambelli Fireworks, drone technology) with a 'behind the scenes' human-interest tone. Surrounding video sidebar ('Louisiana gov slams Democrats for accusing Trump of hijacking America's birthday,' '250 years and counting') frames the political dispute sympathetically to Trump. Minimal body detail; mostly menu/navigation scaffolding.",
+      "The Asheville Citizen Times": "Hyperlocal, near-zero editorial content. A short video blurb about a fireworks show after an Asheville Tourists minor-league baseball game at HomeTrust Park on July 3. No politics, no heat, no national angle; page is dominated by ad content. Illustrates the grassroots, community-level celebration dimension of the story."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. BBC News references internal National Park Service documents obtained by the Washington Post and Politico warning of 'very unhealthy' air conditions from the D.C. fireworks, but those documents are not present in the dossier and could not be independently verified here."
+    ],
+    "missing_context": [
+      "The reported start times for Trump's remarks and the D.C. fireworks differ between BBC (fireworks after ~9:45 p.m. remarks) and CBS (remarks 9:45 p.m., fireworks 10:45 p.m.); no outlet reconciles the discrepancy.",
+      "No outlet in the dossier independently confirms the National Park Service air-pollution warning BBC attributes to Washington Post/Politico reporting; the underlying document is not in the dossier.",
+      "The distinction between the White House-backed Freedom250 group and the congressionally created bipartisan America250 commission is explained only by BBC; other outlets covering the D.C. event omit it.",
+      "No outlet provides an actual attendance figure or confirms whether heat/thunderstorms ultimately disrupted the D.C. event \u2014 coverage was largely filed before or on the morning of July 4.",
+      "The Guinness World Record claim for the largest fireworks show (surpassing the 2016 Philippines megachurch record) appears only in BBC and is not independently corroborated.",
+      "Axios's wildfire and firefighter-death reporting is not cross-referenced by any other outlet in the dossier, leaving that safety dimension single-sourced.",
+      "No article addresses the total cost of the D.C. Salute to America 250 celebration or who is funding the public-private partnership.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same 250th-anniversary celebrations but with materially divergent framings \u2014 BBC foregrounds political controversy and pollution warnings, CBS emphasizes spectacle, Axios focuses on wildfire risk, and Fox frames the dispute sympathetically to Trump \u2014 making the coverage-comparison itself the story.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/america-250-weekend-heat-united-states-1eeaf21e91ed583595611251649db93e",
+      "title": ""
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/sanfrancisco/news/golden-gate-bridge-july-4-2026-fireworks-america-250-what-to-know/",
+      "title": "Golden Gate Bridge to close for fireworks celebrating America's 250th. Here's what to know. - CBS News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cp36l4e6v9po",
+      "title": "Fireworks, flyovers and a 'really long' Trump speech ahead as US celebrates 250th - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/07/02/americas-250th-fireworks-party-collides-with-burn-bans",
+      "title": "America's 250th fireworks party collides with burn-bans - Axios"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/company-to-put-on-largest-fireworks-display-in-history-july-4-pyrotecnico/",
+      "title": "Family owned company prepares to put on the largest fireworks display in history: \"It is the biggest show that we've ever done\" - CBS News"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/video/6400124130112",
+      "title": "Behind the scenes of fireworks displays for America 250 - Fox News"
+    },
+    {
+      "outlet": "The Asheville Citizen Times",
+      "url": "https://www.citizen-times.com/videos/news/local/2026/07/04/tourists-host-america-250-fireworks-celebration/90800486007/",
+      "title": "Tourists host America 250 fireworks celebration - The Asheville Citizen Times"
+    }
+  ]
+}
