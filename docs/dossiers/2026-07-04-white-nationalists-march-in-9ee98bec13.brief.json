@@ -1,0 +1,114 @@
+{
+  "story_id": "2026-07-04-white-nationalists-march-in-9ee98bec13",
+  "headline_seed": "White Nationalists March in Washington Amid 250th Anniversary Celebrations - The New York Times",
+  "brief": {
+    "story_id": "2026-07-04-white-nationalists-march-in-9ee98bec13",
+    "consensus_facts": [
+      "On Saturday, July 4, 2026, members of the white nationalist group Patriot Front marched through Washington, DC, and surrounding areas.",
+      "The march coincided with the 250th anniversary of US independence and large-scale Fourth of July celebrations.",
+      "Marchers wore a uniform of navy-blue shirts, khaki pants, tan/khaki baseball caps, sunglasses, and white cloth face coverings.",
+      "Marchers carried US flags, Confederate flags, and Patriot Front banners; some carried shields and drums.",
+      "The group was photographed and filmed riding public transit/the Metro before marching.",
+      "Demonstrators chanted slogans including 'Reclaim America.'",
+      "The DC Metropolitan Police Department said it was 'tracking First Amendment activities' in the Eastern Market neighborhood and affirmed the right to peaceful expression while committing to public safety.",
+      "Patriot Front was founded in 2017 by Thomas Ryan Rousseau after a split from Vanguard America in the wake of the deadly Unite the Right rally in Charlottesville, Virginia.",
+      "Patriot Front's website/manifesto invokes those 'born to this nation of our European race' asserting a right to cultural independence.",
+      "Extremism researchers and civil rights organizations characterize Patriot Front as a white nationalist/fascist group tied to the goal of a white ethnostate."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of participants",
+        "positions": {
+          "Al Jazeera English": "Patriot Front's Telegram channel indicated the group expected more than 400 white nationalists; the video piece describes 'hundreds' who marched.",
+          "Newsweek": "Describes 'dozens of men marching in formation' in videos/photos, and separately notes an activist's claim of 'over 400,' without independently confirming a total.",
+          "Politico": "Does not give a participant count."
+        }
+      },
+      {
+        "topic": "Location emphasis",
+        "positions": {
+          "Al Jazeera English": "Emphasizes New Carrollton, Maryland, and appearances in front of the US Capitol.",
+          "Politico": "Emphasizes the Eastern Market neighborhood, Capitol Hill, and Union Station.",
+          "Newsweek": "Emphasizes Union Station and 'other areas of the city,' plus Eastern Market."
+        }
+      },
+      {
+        "topic": "Slogans chanted",
+        "positions": {
+          "Al Jazeera English": "'Reclaim America.'",
+          "Politico": "'Life, liberty, victory!' and 'Reclaim America!'",
+          "Al Jazeera English (video)": "Describes 'anti-immigrant slogans' generally.",
+          "Newsweek": "Cites an activist's social media claim referencing a 'total Aryan victory,' not independently verified."
+        }
+      },
+      {
+        "topic": "Flags carried",
+        "positions": {
+          "Politico": "Confederate, Patriot Front, and upside-down US flags.",
+          "Al Jazeera English": "US flags and a few Confederate flags.",
+          "Newsweek": "American flags, Confederate flags, and various banners."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Frames the event with the label 'Masked Patriot Front white nationalists stage July 4 march through DC' \u2014 neutral wire phrasing centering the group, the masks, and the date. A second Reuters headline reframes the day entirely around Trump's July 4 speech and storm threats, not the march.",
+      "The New York Times": "Headline-only in this dossier. Frames as 'White Nationalists March in Washington Amid 250th Anniversary Celebrations' \u2014 juxtaposing the extremist march against the celebratory anniversary backdrop. No body text available for corroboration.",
+      "Al Jazeera English": "Two pieces. The text article leads with the choreographed, masked nature of the march and provides the most historical/definitional context \u2014 explaining the Confederate flag's link to slavery and the Civil War, quoting George Washington University's Program on Extremism, and citing the group's Telegram '400+' expectation. The video piece frames more sharply, foregrounding 'hundreds of masked white nationalists,' Confederate flags, and 'anti-immigrant slogans,' and slots the story under a 'Freedom 250' banner.",
+      "Politico": "Headline 'Demonstrators in white supremacist attire protest on Capitol Hill.' Leads with the specific chants outside Union Station and the visual detail (white masks, tan caps, upside-down US flags). Uniquely situates the march within the broader political day \u2014 Trump's 'Salute to America,' the record 40-minute fireworks, the administration's 250th-anniversary priorities, and a separate anti-Trump '8647' demonstration marching toward the White House. Includes MPD statement and Rousseau/Charlottesville origin.",
+      "Newsweek": "Most detailed body text. Leads on the 'discordant note' against celebrations. Provides the deepest background: ADL and SPLC classifications, USA Today's reporting on internal documents (540+ members, every state except Hawaii, ties to Active Clubs, Rousseau's 600-member recruitment goal by July 4), the group's manifesto, and a 'Reaction' section quoting shocked social media posts from a Georgetown law professor and human rights attorneys. Notes no arrests reported by MPD."
+    },
+    "primary_source_alignment": [
+      "No primary source (court filing, police report, official transcript, or the Patriot Front roster itself) was included in this dossier, so no report-versus-document comparison is possible.",
+      "The closest quasi-primary material is quoted Patriot Front website/manifesto text and the MPD statement, both reproduced consistently across the full-text outlets (Al Jazeera English, Politico, Newsweek). Newsweek attributes membership figures (540+ members, 600-member goal) to internal documents obtained by USA Today, which is secondhand and not directly in this dossier."
+    ],
+    "missing_context": [
+      "No confirmed, independently verified participant count exists \u2014 figures range from Newsweek's 'dozens' visible on video to a Telegram-sourced '400+' expectation; outlets did not reconcile these.",
+      "No outlet reported any law enforcement response beyond MPD 'tracking' the activity, and only Newsweek explicitly notes that no arrests were reported.",
+      "No outlet obtained comment from Patriot Front or Rousseau; all note the group was unreachable.",
+      "No reaction from the White House, the Trump administration, or organizers of the official 'Salute to America' event was reported, despite the march occurring the same day as Trump's speech.",
+      "The dossier relies heavily on social-media video and posts; only Newsweek and Politico cite named on-record institutional sources (MPD, ADL, SPLC, GWU Program on Extremism).",
+      "Whether counterprotesters or bystanders directly interacted with the marchers is not reported; the anti-Trump '8647' demonstration Politico describes appears to be a separate event, not a counterprotest to Patriot Front.",
+      "No apparent instruction-injection attempts were detected in any article body; the non-article text was navigation, boilerplate, and social-share markup."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same event but with materially different emphasis \u2014 Al Jazeera foregrounds extremism context, Politico situates it in the day's broader politics, and Newsweek supplies the deepest organizational background \u2014 while the two most central outlets (Reuters, NYT) are headline-only, making a coverage-comparison the most honest framing.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/masked-patriot-front-white-nationalists-stage-july-4-march-through-dc-2026-07-04/",
+      "title": "Masked Patriot Front white nationalists stage July 4 march through DC - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/04/us/white-nationalists-march-in-washington-amid-250th-anniversary-celebrations.html",
+      "title": "White Nationalists March in Washington Amid 250th Anniversary Celebrations - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/7/4/white-nationalists-march-in-washington-dc-area-during-july-4-festivities",
+      "title": "White nationalists march in Washington, DC, area during July 4 festivities - Al Jazeera"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/07/04/patriot-front-white-supremacist-protests-july-4-00987020",
+      "title": "Demonstrators in white supremacist attire protest on Capitol Hill - Politico"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/trump-mark-us-250th-anniversary-with-campaign-style-rally-national-mall-2026-07-04/",
+      "title": "Trump vows July 4 speech will happen 'no matter what' after storms threaten Washington rally - Reuters"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/5/aje-onl-nf_white-nationalists-march-ahead-of-freedom-250-040726",
+      "title": "White nationalists march on Washington DC ahead of Freedom 250 celebrations - Al Jazeera"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/white-nationalist-group-patriot-front-marches-in-washington-on-july-4-12157867",
+      "title": "Masked Patriot Front members take to streets of Washington D.C. on July 4 - Newsweek"
+    }
+  ]
+}
