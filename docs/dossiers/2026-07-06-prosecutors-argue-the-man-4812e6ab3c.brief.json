@@ -1,0 +1,89 @@
+{
+  "story_id": "2026-07-06-prosecutors-argue-the-man-4812e6ab3c",
+  "headline_seed": "Prosecutors argue the man accused of killing Charlie Kirk should stand trial - AP News",
+  "brief": {
+    "story_id": "2026-07-06-prosecutors-argue-the-man-4812e6ab3c",
+    "consensus_facts": [
+      "Only two outlets in the dossier (CBS News and Fox News) provided substantive body text; the other five were headline-only or non-substantive.",
+      "CBS News and Fox News both report that a five-day preliminary hearing for Tyler Robinson, accused of killing Charlie Kirk, began Monday, July 6, 2026, in a Utah courtroom.",
+      "Both CBS News and Fox News report that prosecutors will lay out their case in what is described as a 'mini-trial,' and that Robinson is expected to come face-to-face with Kirk's family, including his widow Erika, for the first time.",
+      "Both CBS News and Fox News report that Robinson faces aggravated murder charges (Fox also cites witness tampering), and legal experts anticipate a mini-trial format.",
+      "All outlet headlines (AP, NYT, Reuters, CBS, Washington Post, The Hill, Fox News) reference prosecutors presenting or detailing their case against the man accused of killing Charlie Kirk; body-level corroboration is available only from CBS News and Fox News."
+    ],
+    "disagreements": [
+      {
+        "topic": "Depth of body-text reporting available",
+        "positions": {
+          "CBS News": "Provides detailed body text covering DNA evidence, alleged note and texts, death penalty considerations, and family statement.",
+          "Fox News": "Provides a short video-clip summary via legal contributor Josh Ritter, focused on the mini-trial framing and family confrontation.",
+          "Associated Press": "Body text consists only of photo captions; no substantive reporting retrievable.",
+          "The New York Times": "Headline only.",
+          "Reuters": "Headline only.",
+          "The Washington Post": "Headline only.",
+          "The Hill": "Headline only."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "No substantive body text retrieved \u2014 only photo captions describing Robinson's Dec. 11, 2025 hearing appearance, the arrival of Kirk's parents Robert and Kathryn, defense attorney Kathryn Nester, a memorial at Turning Point USA, and press outside the courthouse. Framing signal is visual: emphasizes the family's presence and the media spectacle rather than legal substance.",
+      "The New York Times": "Headline only ('Prosecutors to Detail Case Against Man Accused of Killing Charlie Kirk'). Uses cautious 'Man Accused of Killing' phrasing; forward-looking 'to Detail.' No body text to analyze.",
+      "Reuters": "Headline only ('Prosecutors present case against man accused of killing Charlie Kirk'). Neutral wire phrasing, active present tense, 'man accused' construction. No body text to analyze.",
+      "CBS News": "The only full-length report. Leads on the human dimension \u2014 Kirk's widow and parents expected in court, family statement quoted at length, Erika Kirk's forgiveness of Robinson. Then pivots to legal substance: death penalty sought, DNA on trigger/casing/towel, alleged confession note and texts ('I had enough of his hatred'), and the lower 'reasonable grounds' evidentiary standard vs. trial's 'beyond a reasonable doubt.' Quotes law professor Paul Cassell calling it a 'slam dunk' / 'overwhelming case.' Notes Trump's 'I hope he gets the death penalty' remark and Kirk's role galvanizing the youth conservative vote. Balanced attribution ('prosecutors allege,' 'authorities have said'); notes Robinson has entered no plea and defense has not commented on guilt.",
+      "The Washington Post": "Headline only ('Alleged killer of Charlie Kirk faces key evidence hearing on Monday'). Frames the hearing as a 'key evidence' moment; uses 'alleged killer.' No body text to analyze.",
+      "The Hill": "Headline only ('Prosecutors to detail case against alleged Charlie Kirk assassin'). Notably uses the stronger word 'assassin' rather than 'accused killer.' No body text to analyze.",
+      "Fox News": "A video clip from 'Fox & Friends First' with legal contributor Josh Ritter. Uses the strongest characterization \u2014 'accused Charlie Kirk killer' and 'accused of assassinating.' Emphasizes the mini-trial framing, the charges (aggravated murder and witness tampering), and the emotional beat of Robinson coming 'face-to-face with Kirk's family, including his widow Erika.' Light on evidentiary detail compared to CBS. Surrounding page is cluttered with unrelated promotional video links."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, charging documents, hearing transcripts) were located for this story. No alignment check against underlying documents is possible.",
+      "Evidentiary claims \u2014 DNA on the rifle trigger/cartridge casing/unfired rounds/towel, the alleged note and text messages \u2014 appear only via CBS News's attribution to 'authorities' and 'prosecutors,' and cannot be independently verified against a primary filing in this dossier."
+    ],
+    "missing_context": [
+      "Only two of seven articles (CBS News, Fox News) contained substantive body text; five were headline-only or caption-only. The apparent breadth of 'seven-outlet coverage' overstates the corroboration actually available.",
+      "No primary source (charging document, motion, or hearing transcript) was located, so all evidentiary specifics rest on single-outlet (CBS) attribution to prosecutors and authorities.",
+      "Robinson has not entered a plea and his defense has not commented on guilt or innocence \u2014 CBS notes this, but no outlet provides the defense's substantive position or any counter-evidence.",
+      "No outlet reports the outcome of the hearing or Judge Tony Graf's ruling \u2014 coverage is preview-stage, capturing only what is expected, not what occurred.",
+      "The 'slam dunk' / 'overwhelming case' characterization comes from a single outside legal expert (Paul Cassell) via CBS and reflects one commentator's view, not a court finding.",
+      "No article details the specific aggravating circumstances the state must prove for a death sentence beyond CBS's brief note that the shooting 'endangered others in attendance.'"
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Seven outlets carried the story but only two provided body text, and their word choices diverge sharply \u2014 from neutral 'accused' (Reuters, NYT) to 'assassin'/'assassinating' (The Hill, Fox News) \u2014 making this a coverage-and-framing story rather than a clean multi-source REPORT, especially with no primary source to anchor the evidentiary claims.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/charlie-kirk-tyler-robinson-hearing-83dafd6137d05655c73e7fea9b120dc8",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/06/us/charlie-kirk-hearing.html",
+      "title": "Prosecutors to Detail Case Against Man Accused of Killing Charlie Kirk - The New York Times"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/utah-prosecutors-seek-trial-charlie-kirk-murder-case-2026-07-06/",
+      "title": "Prosecutors present case against man accused of killing Charlie Kirk - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/tyler-robinson-preliminary-hearing-charlie-kirk-case/",
+      "title": "Charlie Kirk's alleged killer's 5-day preliminary hearing starts Monday. Here's what to expect. - CBS News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/nation/2026/07/06/accused-killer-charlie-kirk-due-court-key-evidence-hearing/",
+      "title": "Alleged killer of Charlie Kirk faces key evidence hearing on Monday - The Washington Post"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/regulation/court-battles/5954907-charlie-kirk-tyler-robinson-hearings/",
+      "title": "Prosecutors to detail case against alleged Charlie Kirk assassin - The Hill"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/video/6400343775112",
+      "title": "Prosecutors to lay out case against accused Charlie Kirk killer Tyler Robinson - Fox News"
+    }
+  ]
+}
