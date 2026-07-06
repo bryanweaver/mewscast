@@ -1,0 +1,128 @@
+{
+  "story_id": "2026-07-06-super-typhoon-bavi-makes-7317a4651e",
+  "headline_seed": "Super Typhoon Bavi makes landfall on US Pacific islands with huge wind gusts - BBC",
+  "brief": {
+    "story_id": "2026-07-06-super-typhoon-bavi-makes-7317a4651e",
+    "consensus_facts": [
+      "Super Typhoon Bavi made landfall over the U.S. territory of Rota in the Northern Mariana Islands on Monday local time, with the eye/western eyewall passing over the island.",
+      "Bavi had maximum sustained winds around 180 mph (290 km/h), placing it at Category 5 / super typhoon strength, with gusts reported around 215 mph (346 km/h) by some sources.",
+      "The Joint Typhoon Warning Center and/or the National Weather Service classified Bavi as a super typhoon, defined by sustained winds of 150 mph (240 km/h) or greater.",
+      "Rota is the southernmost inhabited island of the Northern Marianas, located roughly 40-50 km/miles northeast of Guam, with a population of around 1,500.",
+      "Local authorities on Rota reported 'major damages,' and a spokesperson said residents were experiencing heavy winds and flooding.",
+      "On Saipan, wind gusts of more than 100 mph (161 km/h) were recorded at the airport, per NWS meteorologist Landon Aydlett.",
+      "The region was already recovering from Super Typhoon Sinlaku, which struck in April, leaving many people on Saipan and Tinian without power.",
+      "The NWS warned of catastrophic/life-threatening conditions and told residents to move to interior rooms and stay away from windows.",
+      "Guam and the Northern Marianas opened emergency shelters, some of which reached or neared maximum capacity, redirecting people to other sites.",
+      "Forecasters warned of significant rainfall and flash flooding across the islands (with figures ranging from 8-12 inches on Guam to at least 20 inches regionally).",
+      "Scientists cited climate change, warmer ocean temperatures, and a strong El Ni\u00f1o event as factors making powerful typhoons more common.",
+      "Businesses and residents made last-minute preparations, including boarding up windows; AFP interviewees Pinky Cubacub (plywood), Miku Sakurai (cancelled Tokyo flight) appear across multiple outlets."
+    ],
+    "disagreements": [
+      {
+        "topic": "Storm's direction of movement",
+        "positions": {
+          "ABC News": "Traveling around 9 mph west toward the Philippines",
+          "NPR": "Moving west-northwest with maximum sustained winds of 180 mph"
+        }
+      },
+      {
+        "topic": "Storm phase framing (approaching vs. departing)",
+        "positions": {
+          "BBC News": "Framed as landfall in progress with conditions still deteriorating; winds not forecast to fall below typhoon force until early afternoon Monday",
+          "The Economic Times": "Quotes Aydlett saying 'Super Typhoon Bavi is leaving the area' and conditions are improving",
+          "ABC News": "Frames as coming 'just out of the peak of conditions' with slow improvement coming"
+        }
+      },
+      {
+        "topic": "Rainfall totals expected",
+        "positions": {
+          "ABC News": "At least 20 inches (51 cm) of rain by the time it passes the region",
+          "The Economic Times": "Guam could see eight to 12 inches (20 to 30 cm) of rain"
+        }
+      },
+      {
+        "topic": "Regional population figures",
+        "positions": {
+          "BBC News": "Guam has a population of about 170,000",
+          "The Economic Times": "The Northern Marianas and Guam collectively home to around 210,000 people"
+        }
+      },
+      {
+        "topic": "Sinlaku impact details",
+        "positions": {
+          "BBC News": "Sinlaku killed 17 people and caused about $1.5bn in damage",
+          "The Economic Times": "Sinlaku caused widespread devastation, ripping off roofs and leaving tens of thousands without power (no death toll or dollar figure cited)"
+        }
+      },
+      {
+        "topic": "Climate driver framing",
+        "positions": {
+          "BBC News": "A strong El Ni\u00f1o event is expected to push more storms into higher intensities; Bavi will be the 11th Cat 4/5 cyclone to hit US territory in the past decade",
+          "The Economic Times": "Cites hottest June on record (Copernicus) and WMO warning that El Ni\u00f1o has already begun and is likely to be strong",
+          "ABC News / NPR / NYT": "Do not emphasize El Ni\u00f1o or the decadal comparison"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "ABC News": "Wire-style (AP-sourced) breaking coverage leading on landfall over Rota and hard meteorological numbers (150+ mph, gusts to 215 mph). Emphasizes the 'imminent danger to life' framing and shelter/window guidance. Quotes meteorologist Aydlett suggesting conditions are just past peak. Minimal on climate context; no El Ni\u00f1o or decadal-trend framing.",
+      "BBC News": "The most comprehensive framing (three near-identical versions in the dossier at .com/.co.uk). Leads on the storm 'battering' the islands with vivid weather language ('howling winds and lashing rains'). Foregrounds human-interest AFP quotes (Cubacub, Sakurai), the recovery from Sinlaku (17 dead, $1.5bn), and prominently features climate change/El Ni\u00f1o context plus the striking '11th Cat 4/5 storm in a decade vs. 10 in prior 57 years' statistic. Tourist-destination framing of Guam.",
+      "NPR": "Leads on intense winds and forecaster warnings, with strong emphasis on vulnerable communities \u2014 people in 'substandard building materials' and those still without power from Sinlaku. Features local officials (Gov. Lou Leon Guerrero) and the meteorologist's personal exhaustion ('awake for nearly 24 hours') and stated goal of 'zero fatalities.' Frames Rota as facing 'near catastrophic' impact. Human-preparedness angle over climate context.",
+      "The New York Times": "Not a narrative article but an interactive maps/tracker page. Provides forecast wind, precipitation, and satellite context. Frames Bavi within broader typhoon-season and regional-geography education (Philippines, Japan, Taiwan) and notes prior Sinlaku damage to Guam. Sparse on live human impact or casualty detail.",
+      "The Economic Times": "Republishes AFP wire copy leading on 'major damage' at Rota. Uniquely emphasizes the storm's departure ('Bavi is leaving the area,' conditions improving) rather than ongoing landfall. Adds granular local detail \u2014 the Guam Plaza Hotel's $800,000 generator, cellphone tower down on Rota, NWS's dire 'uninhabitable for weeks' warning. Strong climate framing via Copernicus and WMO. Article is cluttered with unrelated tabloid links at the bottom."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (NWS advisories, JTWC bulletins, government press releases) were provided in the dossier, though several outlets quote NWS statements and X/Facebook Live briefings directly.",
+      "The most direct quotation of the underlying NWS advisory appears in The Economic Times: the warning that a direct hit would make Rota 'uninhabitable for weeks, perhaps longer,' with 'total roof failure and wall collapse' and power outages lasting 'weeks to possibly months' \u2014 a specific NWS forecast not surfaced by ABC, NPR, or NYT.",
+      "Without the primary advisories, the divergence on wind direction, rainfall totals, and storm phase (arriving vs. departing) cannot be reconciled against the source of record."
+    ],
+    "missing_context": [
+      "No outlet reports a confirmed casualty count for Bavi itself \u2014 coverage was captured during/immediately after landfall, so human toll is unknown.",
+      "No primary NWS or JTWC advisory document was included in the dossier; all meteorological figures are relayed second-hand through outlet paraphrase.",
+      "Outlets disagree on whether the storm was still intensifying/making landfall or already departing; the timeline of the eye's passage over Rota is not precisely pinned down across sources.",
+      "Little detail on federal (FEMA/military) response beyond Andersen Air Force Base restricting access; no reporting on relief mobilization for a region still without power from April's Sinlaku.",
+      "The ABC News claim that Bavi is moving 'west toward the Philippines' is not corroborated by other outlets and raises an unaddressed question of downstream regional risk that no outlet develops.",
+      "BBC's dramatic statistic (11th Cat 4/5 storm to hit US territory in a decade vs. 10 in prior 57 years) is presented without a cited source or methodology.",
+      "Four of the seven dossier items (three BBC versions plus ABC/ET AFP copy) trace substantially to two wire services (AP and AFP), so apparent multi-outlet corroboration partly reflects shared wire sourcing rather than fully independent reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five distinct outlets confirm the core facts of Bavi's Category 5 landfall over Rota with consistent meteorological figures and damage reports, and framing differences (climate emphasis, arriving vs. departing) are modest rather than materially contradictory. This is a straightforward multi-outlet event story rather than a coverage-divergence META piece.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/wireStory/fierce-winds-hit-us-pacific-territories-super-typhoon-134503010",
+      "title": "Fierce winds hit US Pacific territories as Super Typhoon Bavi approaches near Guam - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cr7xpgx50jxo",
+      "title": ""
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/05/g-s1-132052/guam-pacific-islands-brace-super-typhoon-bavi",
+      "title": "Super Typhoon Bavi brings intense winds to Guam and surrounding Pacific islands - NPR"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/interactive/2026/07/01/weather/bavi-map-path-tracker.html",
+      "title": "Maps: Tracking Super Typhoon Bavi - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "http://www.bbc.com/news/articles/cr7xpgx50jxo",
+      "title": "Evacuations in Guam as super typhoon Bavi approaches - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cr7xpgx50jxo",
+      "title": "Super Typhoon Bavi makes landfall on US Pacific islands with huge wind gusts - BBC"
+    },
+    {
+      "outlet": "The Economic Times",
+      "url": "https://m.economictimes.com/news/international/world-news/major-damage-as-super-typhoon-bavi-hits-us-island-of-rota/articleshow/132205513.cms",
+      "title": "'Major' damage as Super Typhoon Bavi hits US island of Rota - The Economic Times"
+    }
+  ]
+}
