@@ -1,0 +1,128 @@
+{
+  "story_id": "2026-07-07-marine-le-pen-to-da424e3a22",
+  "headline_seed": "Marine Le Pen to run for French presidency and appeal conviction in top court - BBC",
+  "brief": {
+    "story_id": "2026-07-07-marine-le-pen-to-da424e3a22",
+    "consensus_facts": [
+      "On Tuesday, July 7, 2026, a Paris appeals court upheld Marine Le Pen's conviction for misusing EU/European Parliament funds in a fake-jobs scheme (AP, NBC News, BBC, CNBC, CNN).",
+      "The appeals court shortened Le Pen's ban on holding elected office, preserving a path for her to run in the 2027 French presidential election (AP, NBC News, BBC, CNBC, CNN).",
+      "The court ordered Le Pen to wear an electronic monitoring tag/ankle bracelet as part of her sentence (AP, NBC News, BBC, CNBC, CNN).",
+      "Le Pen had previously said she could not or would not campaign while wearing an electronic tag because she would not feel free to move about (AP, NBC News, BBC, CNBC, CNN).",
+      "Le Pen was due to give / gave a prime-time interview on TF1 at 8 p.m. local time regarding her political future (NBC News, BBC, CNBC, CNN).",
+      "Le Pen was originally convicted and banned from public office in a March 2025 ruling (with the ban taking immediate effect), which she had denounced as political (NBC News, BBC, CNBC, CNN).",
+      "Le Pen can/will appeal to France's highest court, the Court of Cassation (NBC News, BBC, CNBC, CNN).",
+      "Jordan Bardella, 30, is the National Rally party president and had been positioned as a potential alternative presidential candidate; he expressed strong support for Le Pen (NBC News, BBC, CNBC, CNN).",
+      "Le Pen previously ran for president and lost to Emmanuel Macron in 2017 and 2022 (NBC News, BBC, CNN).",
+      "The first round of the 2027 presidential election is scheduled for April, with a second round in May (BBC, CNN).",
+      "The scheme involved misuse of European Parliament funds intended for parliamentary assistants between 2004 and 2016, used instead to pay party staff in France (NBC News, BBC, CNBC, CNN)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Amount of funds embezzled",
+        "positions": {
+          "NBC News": "\u20ac1.4 million ($1.6 million) in European Parliament money",
+          "BBC News": "\u20ac2.8m (\u00a32.4m) in EU funds",
+          "CNN": "\u20ac2.8 million ($3.2 million) of public funds",
+          "AP News": "Does not specify an amount",
+          "CNBC": "Does not specify an amount"
+        }
+      },
+      {
+        "topic": "Jail term / sentence structure",
+        "positions": {
+          "NBC News": "Describes the original March 2025 sentence: four-year jail term, two suspended, fine of 100,000 euros; does not restate a new appeal jail term",
+          "CNBC": "Appeal sentenced her to a three-year jail term: two suspended and one with an electronic ankle tag; ineligible for office 45 months, 30 suspended (15 already served)",
+          "CNN": "Three-year jail term, two suspended, one year at home with electronic monitoring; ban effectively reduced to 15 months (45 months with 30 suspended); \u20ac100,000 fine",
+          "BBC News": "Focuses on tag for one year; does not detail the full 45/30-month breakdown",
+          "AP News": "States she must wear an electronic bracelet; no detailed sentence breakdown"
+        }
+      },
+      {
+        "topic": "Whether Le Pen has definitively declared her candidacy",
+        "positions": {
+          "BBC News": "Reports she declared: 'I am candidate for the 2027 elections' and will not change her mind",
+          "CNN": "Reports she said she would run: 'There is no longer any scenario in which I could not run in 2027'",
+          "AP News": "Frames it as the court clearing the way for a 'possible' run; no declaration reported",
+          "NBC News": "Frames her involvement as still 'in doubt'; notes she may make an announcement in the TF1 interview",
+          "CNBC": "States it is 'now up to Le Pen to say if she will run'; no declaration reported (written before/around the interview)"
+        }
+      },
+      {
+        "topic": "Whether the Court of Cassation appeal would suspend the tag/sentence during a campaign",
+        "positions": {
+          "CNN": "Le Pen claims the appeal would put her sentence on hold so she could campaign without the tag, but notes legal expert opinion is divided",
+          "NBC News": "Says it is unclear whether judges would suspend the sentence pending a final ruling",
+          "BBC News": "Notes prosecutors will also appeal; if verdict confirmed she could wear the tag during the key campaign period"
+        }
+      },
+      {
+        "topic": "Le Pen vs. Bardella relative polling strength",
+        "positions": {
+          "CNBC": "Some recent surveys suggest Bardella would outperform Le Pen in the first round",
+          "CNN": "Cites an April IPSOS-La Tribune poll: Bardella 34% vs. Le Pen 32%, both above all other figures"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Sparse wire copy dominated by photo captions. Leads on the court 'clearing the way' for a 'possible' run while emphasizing the electronic bracelet as the key obstacle and Le Pen's prior statement that campaigning with one 'wouldn't be possible.' Frames outcome as conditional and open. Uses 'far-right' and 'popular' to describe Le Pen.",
+      "NBC News": "Leads on Le Pen being 'able to run' but stresses her involvement 'remained in doubt' and that the tag makes a campaign 'logistically and politically difficult.' Heavy on background: the \u20ac1.4m figure, the 'fake jobs' system, the 'witch hunt'/'democratic scandal' quotes, and death threats against the judge. Frames the tag as the decisive complication and leaves candidacy unresolved. Uses 'far-right.'",
+      "BBC News": "Most declarative framing: leads with Le Pen affirmatively announcing she WILL run AND appeal, calling it a 'remarkable political gamble.' Emphasizes the combative primetime interview and her Le Pen-as-president/Bardella-as-PM partnership vision. Uses '\u20ac2.8m' figure and the label 'hard-right' rather than 'far-right.' Ends speculation about a Bardella handover.",
+      "CNBC": "Business-desk framing leaning on legal/logistical mechanics: detailed sentence breakdown (45 months, 30 suspended, 15 served) and a 'judicial source' assessment that the tag complicates but probably doesn't make a campaign impossible. Written before the interview, so treats candidacy as undecided ('it is now up to Le Pen'). Surfaces the intra-RN Le Pen-vs-Bardella strategic split and quotes the European Parliament's lawyer on theft of taxpayer money. Uses 'far-right' and 'anti-immigrant.'",
+      "CNN": "Leads on Le Pen declaring she 'would run' and quotes her defiance. Provides the richest context and both-sides sourcing: notes opponents' 'equal treatment under law' argument, then extensively covers the anti-establishment reaction (Orb\u00e1n 'Je suis Marine,' Musk, the Kremlin, Trump's 'Witch Hunt'). Includes Macron's refusal to comment, biographical detail on the 'de-demonizing' of the party and Jean-Marie Le Pen, and the \u20ac2.8m figure. Uses 'far-right.'",
+      "Reuters": "Two entries in the dossier are headline-only and non-retrievable (one CAPTCHA/load warning, one an RSS link stub). Headlines emphasize the 'shortened ban but electronic tag' angle and a separate 'reactions' roundup. No body text available to analyze framing."
+    },
+    "primary_source_alignment": [
+      "No primary source (court ruling text, sentencing order, or full transcript) was located for this story. The actual appeal judgment \u2014 including the precise sentence terms and eligibility calculation \u2014 could not be checked against the reporting.",
+      "The most consequential factual point in the coverage \u2014 whether the Court of Cassation appeal automatically suspends Le Pen's sentence/tag \u2014 is presented as her own claim (CNN) with reporters noting expert disagreement (CNN, NBC). Without the primary legal documents, this brief cannot resolve it."
+    ],
+    "missing_context": [
+      "No primary source (the appeals court ruling itself) is in the dossier, so the exact sentence and eligibility mechanics rest entirely on outlet paraphrase \u2014 and outlets disagree on the embezzlement amount (\u20ac1.4m vs \u20ac2.8m).",
+      "The \u20ac1.4m (NBC) versus \u20ac2.8m (BBC, CNN) discrepancy is unexplained; it may reflect different measures (Le Pen's personal share vs. the party-wide total) but no outlet reconciles the figures.",
+      "No outlet independently establishes the legal answer to the central question of whether appealing to the Court of Cassation suspends the electronic tag during the campaign; it is reported as Le Pen's assertion plus a note that experts are divided.",
+      "The dossier does not clarify who the other convicted RN figures are beyond CNN's mention of four other European Parliament politicians and additional complicity defendants.",
+      "No outlet quantifies the practical terms of the tag beyond CNBC's unnamed 'judicial source' \u2014 the actual hours, weekend restrictions, and 'good behaviour' removal window are described speculatively, not from the ruling.",
+      "Reuters coverage (two dossier entries) could not be retrieved, so the wire 'reactions' roundup and Reuters' own framing of the sentence are absent from this analysis.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets covered the same ruling with materially different framings \u2014 from AP/NBC/CNBC treating the candidacy as unresolved to BBC/CNN reporting a definitive declaration \u2014 and they diverge on the embezzled amount and the sentence breakdown, while no primary court document is available to adjudicate. That coverage divergence is the story.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/france-le-pen-macron-bardella-verdict-election-dcd2a305d01a87f13f1d7c81dffeee90",
+      "title": "French court clears way for far-right leader Le Pen to run in 2027 - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/europe/france-far-right-marine-le-pen-presidential-election-macron-rcna353271",
+      "title": "French court allows far-right leader Marine Le Pen to run for president with ankle tag \u2014 a condition she rejects - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c7vygl3zymjo",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/07/french-court-opens-door-for-marine-le-pen-to-run-for-president-with-ankle-tag.html",
+      "title": "French court opens door for Marine Le Pen to run for president, with ankle tag - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/europe/french-court-shortens-le-pens-ban-office-orders-electronic-tag-2026-07-07/",
+      "title": "French court shortens Le Pen's ban from office but orders electronic tag - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/reactions-verdict-marine-le-pens-election-ban-2026-07-07/",
+      "title": "Reactions to French court ruling on Marine Le Pen - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/07/europe/marine-le-pen-france-court-ruling-intl",
+      "title": "French court clears a path for Le Pen to run for office with ankle monitor but upholds conviction - CNN"
+    }
+  ]
+}
