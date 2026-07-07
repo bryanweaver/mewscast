@@ -1379,6 +1379,11 @@
       "did": "did:plc:uinvl5vaekaxehv2rerf2pvu",
       "handle": "bibliowingate.bsky.social",
       "timestamp": "2026-07-07T15:42:55.292837"
+    },
+    {
+      "did": "did:plc:ibzqwvajfpn3cl2bwprp4yej",
+      "handle": "iliarakantira.bsky.social",
+      "timestamp": "2026-07-07T17:50:37.871291"
     }
   ],
   "liked_posts": [
@@ -3326,6 +3331,11 @@
       "uri": "at://did:plc:uinvl5vaekaxehv2rerf2pvu/app.bsky.feed.post/3mq2tm32kz22u",
       "author": "bibliowingate.bsky.social",
       "timestamp": "2026-07-07T15:42:55.212640"
+    },
+    {
+      "uri": "at://did:plc:ibzqwvajfpn3cl2bwprp4yej/app.bsky.feed.post/3mq35qqodr22n",
+      "author": "iliarakantira.bsky.social",
+      "timestamp": "2026-07-07T17:50:37.690211"
     }
   ],
   "last_cleanup": "2026-07-04T14:28:08.672970",
