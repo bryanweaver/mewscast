@@ -1,0 +1,117 @@
+{
+  "story_id": "2026-07-07-live-updates-midtown-manhattan-976007910c",
+  "headline_seed": "Live Updates: Midtown Manhattan Building Evacuated as Officials Warn of Collapse - The New York Times",
+  "brief": {
+    "story_id": "2026-07-07-live-updates-midtown-manhattan-976007910c",
+    "consensus_facts": [
+      "A high-rise under construction at 235 East 42nd Street in Midtown Manhattan was evacuated Tuesday morning, July 7, 2026, after structural support columns buckled.",
+      "The building formerly housed Pfizer offices and is being converted into residential apartments.",
+      "The FDNY received a call shortly before 8 a.m. reporting bricks falling from the 21st floor, where two support columns were found to have buckled.",
+      "Nearby buildings were also evacuated as a precaution, and surrounding streets were closed to pedestrians and vehicles.",
+      "No injuries were reported and all workers were accounted for, according to fire officials.",
+      "The developer overseeing the conversion (Metro Loft / Metro Loft Management) issued a statement saying it is working closely with the Department of Buildings and that worker and public safety remain its top priority.",
+      "Cliff Johnsen of Steamfitters Local 638 described the building's north side as 'crumbling' and said 'I-beams are bending like cigarettes,' a quote carried by multiple outlets."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total number of floors in the building",
+        "positions": {
+          "CNN": "Describes it as a 33-story building",
+          "Forbes": "Describes it as a 33-floor high-rise (headline) / 33-story",
+          "CBS News": "Describes it as a 38-story building"
+        }
+      },
+      {
+        "topic": "Extent and location of structural damage",
+        "positions": {
+          "CNN": "Columns buckled on the 21st floor; also reports multiple cracks and sagging floors on the 21st floor",
+          "CBS News": "Two columns buckled and floors sagging between the 21st and 26th floors; cracked windows and concrete falling from the roof"
+        }
+      },
+      {
+        "topic": "Precise location of the building relative to avenues",
+        "positions": {
+          "CNN": "Gives conflicting descriptions in its own live blog \u2014 'between 1st and 3rd Avenues' in one post and 'between 2nd and 3rd Avenues' in another",
+          "CBS News": "Lists 235 East 43rd Street as the unstable building in its evacuation list, while the address cited elsewhere is 235 East 42nd Street"
+        }
+      },
+      {
+        "topic": "Number of buildings evacuated",
+        "positions": {
+          "CBS News": "Specifies nine buildings evacuated and lists each address",
+          "CNN": "Says 'some nearby buildings' / 'a number of tall buildings' were evacuated without a total count",
+          "Forbes": "Says 'several nearby buildings' without a count"
+        }
+      },
+      {
+        "topic": "Attribution of blame",
+        "positions": {
+          "CBS News": "Prominently features union spokesperson Cliff Johnsen blaming the developer, saying they 'chose profit over safety' and that not enough steel was being added",
+          "CNN": "Carries Johnsen's 'cigarettes' quote but omits the explicit profit-over-safety accusation",
+          "Forbes": "Does not include union blame; relies on official statements only"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Two entries (Articles 1 and 3) are headline/video-only and blocked by an anti-bot wall; no retrievable body text. Headlines emphasize the collapse warning and evacuation ('Buildings Evacuated After Collapse Warning'). No substantive reporting available to analyze.",
+      "The New York Times": "Article 2 is not a NYT article body but a Google News RSS aggregation listing ten outlets' headlines. It contributes headline-level framing only: the dominant frame across the aggregated links is 'evacuation' plus 'collapse fears' and 'buckling beams/columns.' No original NYT body text is present in the dossier.",
+      "CNN": "Provides the most granular live-blog coverage (Article 4) plus a video item (Article 6). Leads on the mechanics \u2014 buckled columns on the 21st floor, cracks, sagging floors, falling bricks \u2014 and foregrounds official response: Mayor Zohran Mamdani, the planned noon news conference, FDNY and Department of Buildings involvement. Emphasizes the 'largest office-to-residential conversion in NYC history' project scope and the 2027 completion date. Carries the Steamfitters 'cigarettes' quote and a worker eyewitness account (Segundo Chauca) but stops short of amplifying explicit blame. Notes a nearby school with ~400 children evacuated.",
+      "CBS News": "Most investigative framing (Article 5). Leads on the instability and falling bricks but pivots hard to accountability: prominently platforms union spokesperson Cliff Johnsen's accusation that the developer 'chose profit over safety' and under-steeled the structure. Uniquely surfaces the site's regulatory history \u2014 a July 2025 $5,000 fine for falling window glass, an August 2025 $10,000 penalty and stop-work order for a falling metal panel, seven total violations, tens of thousands in fines, and a December worker injury. Notes all violations were listed as resolved with none open Tuesday morning. Reports 38 stories and nine specific evacuated addresses.",
+      "Forbes": "Shortest hard-news treatment (Article 7), explicitly flagged as a developing story. Leads on the collapse risk and falling bricks in a neutral 'Topline/Key Facts' wire format. Sticks to official statements (FDNY, Metro Loft Management via Bloomberg), reports 33 floors, no injuries, and offers no union blame or regulatory backstory."
+    },
+    "primary_source_alignment": [
+      "No primary source (FDNY incident report, Department of Buildings records, mayoral transcript, or developer filing) was located for this story, so no direct document-to-coverage comparison is possible.",
+      "The closest thing to a primary record \u2014 the Department of Buildings violation history \u2014 appears only via CBS News's secondary reporting and could not be independently verified against DOB filings within this dossier."
+    ],
+    "missing_context": [
+      "No primary source (FDNY report, DOB inspection records, or full mayoral press-conference transcript) was available; the noon news conference CNN previewed had not yet been reported on in the dossier.",
+      "The building's total floor count is reported inconsistently (33 vs. 38 stories) and no outlet reconciles the discrepancy.",
+      "The exact street-and-avenue location and the correct address (235 East 42nd vs. a 235 East 43rd Street reference in CBS's list) are not cleanly resolved across coverage.",
+      "The developer's regulatory violation history \u2014 central to CBS's accountability frame \u2014 is absent from CNN and Forbes, so readers of those outlets would not know the site had seven prior violations and stop-work orders.",
+      "No outlet includes a response from the developer to the union's specific 'profit over safety' / insufficient-steel allegation; only the generic 'top priority' statement is quoted.",
+      "The identity and role of the general contractor (235 GC LLC, named only by CBS in the violation context) versus developer Metro Loft is not clearly distinguished across outlets.",
+      "No engineering or independent structural expert (outside the union) is quoted on the cause of the buckling in any article.",
+      "Bloomberg articles 1 and 3 were inaccessible behind an anti-bot verification wall, so the wire's actual reporting could not be evaluated."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same evacuation but with materially different emphasis \u2014 CBS surfaced a substantial regulatory-violation history and union blame that CNN and Forbes omitted, while basic facts like floor count and address diverge \u2014 making this a coverage-comparison story rather than a straight REPORT. No primary source was available to adjudicate the discrepancies.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/videos/2026-07-07/midtown-buildings-evacuated-after-collapse-warning-video",
+      "title": "Watch Midtown Manhattan Buildings Evacuated After Collapse Warning - Bloomberg.com"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/07/07/nyregion/pfizer-building-midtown-collapse",
+      "title": "Live Updates: Midtown Manhattan Building Evacuated as Officials Warn of Collapse - The New York Times"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/videos/2026-07-07/nyc-building-evacuated-as-officials-warn-of-collapse-video",
+      "title": "Watch Manhattan Building Evacuated as Officials Warn of Collapse - Bloomberg.com"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/07/us/new-york-city-building",
+      "title": "Buckled columns at Midtown Manhattan high-rise under construction prompt evacuations - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/newyork/news/bricks-fall-midtown-east-building/",
+      "title": "Bricks fall from East 42nd Street building, prompting road closure and evacuations, FDNY says - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/07/us/video/nyc-high-rise-evacuated-mamdani-digvid",
+      "title": "New York City high-rise evacuated after reports of falling debris - CNN"
+    },
+    {
+      "outlet": "Forbes",
+      "url": "https://www.forbes.com/sites/conormurray/2026/07/07/manhattan-building-at-risk-of-collapse-evacuations-follow-falling-bricks/",
+      "title": "NYC Buildings Evacuated As Support Beams Buckle On 33-Floor High-Rise - Forbes"
+    }
+  ]
+}
