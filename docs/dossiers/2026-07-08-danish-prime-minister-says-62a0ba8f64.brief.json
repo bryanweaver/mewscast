@@ -1,0 +1,92 @@
+{
+  "story_id": "2026-07-08-danish-prime-minister-says-62a0ba8f64",
+  "headline_seed": "Danish Prime Minister Says Greenland Is \u2018Not For Sale\u2019 After Trump Renews Demands For Territory - Forbes",
+  "brief": {
+    "story_id": "2026-07-08-danish-prime-minister-says-62a0ba8f64",
+    "consensus_facts": [
+      "At a NATO summit in Turkey (Ankara), on Wednesday, July 8, 2026, U.S. President Donald Trump reiterated that the United States should control Greenland, a semiautonomous Danish territory.",
+      "Trump said Greenland is 'very important' for the U.S. but not important for Denmark, framing control as needed 'for the protection of the world.'",
+      "Danish Prime Minister Mette Frederiksen stated that Greenland is 'not for sale' and said Denmark is ready to defend 'every inch' of NATO, including its own territory.",
+      "Frederiksen invoked NATO's mutual-defense principle and called for respect for the Greenlandic people's right to self-determination and Danish sovereignty.",
+      "Trump suggested the U.S. could withdraw its troops from Europe in response to continued European pushback on the Greenland issue."
+    ],
+    "disagreements": [
+      {
+        "topic": "Rutte's stance on Greenland",
+        "positions": {
+          "CNBC (Article 3)": "Reports NATO Secretary General Mark Rutte said Trump 'absolutely has a point' on preventing China and Russia from accessing the Arctic, and that a 'good process' is in place on Denmark and Greenland.",
+          "ABC News (Article 2)": "Does not mention Rutte's supportive comments; frames the summit as Trump 'blasting' NATO and allies resisting him."
+        }
+      },
+      {
+        "topic": "Overall summit outcome / tone toward NATO",
+        "positions": {
+          "The Washington Post (Article 5, headline-only)": "Headline frames it as 'After Greenland bluster, Trump surprises NATO allies with praise' \u2014 implying a de-escalation or positive turn.",
+          "ABC News (Article 2)": "Frames Trump as criticizing NATO, singling out Spain as 'a terrible partner,' and threatening trade cutoffs \u2014 an adversarial tone with no mention of praise."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (body text is an unparsed RSS/Google News link). Neutral wire framing: 'Trump reiterates at NATO summit that Greenland should be controlled by US, not Denmark.' Frames as a reiteration, not a new escalation. No body-level detail retrievable.",
+      "ABC News": "Full body text. Leads on conflict: Trump 'took aim' at and 'blasts' NATO partners over both Greenland and his Iran campaign. Emphasizes friction (Spain called 'a terrible partner,' trade threats) and raises the stakes to an existential frame \u2014 that Trump's Greenland interest 'could put at risk the entire future of NATO.' Foregrounds Frederiksen's 'not for sale' and self-determination quotes. Adds broader geopolitical context (Ukraine, Iran, China trade deficit, Russia).",
+      "CNBC (Article 3)": "Full body text and the richest single source. Leads with a 'Key Points' box. Balances Trump's demand against Frederiksen's defense pledge, and uniquely surfaces Rutte saying Trump 'absolutely has a point' on the Arctic and that a 'framework of a future deal' was announced in late January with an ongoing U.S.-Denmark-Greenland working group. Includes direct extended quotes from both Trump ('We took Greenland and then stupidly we gave it back') and Frederiksen. More history and process detail than any other outlet.",
+      "The Washington Times (Article 4)": "Headline-only / body unretrievable (CAPTCHA security page). Headline (attributed to Washington Post seed but body is Washington Times) frames Denmark as pushing back and 'ready to defend Greenland.' Emphasizes Danish resolve.",
+      "The Washington Post (Article 5)": "Headline-only (body is an unparsed Google News link). Headline pivots to a softer, surprise-turn frame: 'After Greenland bluster, Trump surprises NATO allies with praise.' Signals a de-escalation angle not present in the adversarial framing of ABC News. No body-level detail retrievable.",
+      "The New York Times / The Times (Article 6)": "Headline-only (body is an unparsed Google News link); the item is actually from The Times (thetimes.com). Headline uses a colloquial, movie-poster framing: 'Just when Greenland thought it was safe, Trump strikes again' \u2014 emphasizing recurrence and Greenland as the target. No body-level detail retrievable.",
+      "CNBC (Article 7)": "Headline-only video page. Frames around Frederiksen's interview with CNBC's Steve Sedgwick: 'Denmark will defend Greenland.' Confirms the source of the CNBC quotes in Article 3 (same interview). Minimal standalone body text."
+    },
+    "primary_source_alignment": [
+      "No primary sources (transcripts of Trump's or Frederiksen's remarks, NATO summit communiqu\u00e9, or the reported U.S.-Denmark-Greenland working-group documents) were located for this story, so no report-versus-document divergence can be assessed."
+    ],
+    "missing_context": [
+      "Only two of seven dossier articles (ABC News and CNBC Article 3) have substantial retrievable body text. Reuters, Washington Times, Washington Post, and The Times are headline-only or blocked, so most 'consensus' rests on just two full-text outlets \u2014 one of which (CNBC Article 7) is the same interview cited inside CNBC Article 3.",
+      "No primary transcript of Trump's or Frederiksen's exact words is in the dossier; all quotes are as relayed by outlets.",
+      "The CNBC detail that Trump and Rutte announced a 'framework of a future deal' in late January and that a U.S.-Denmark-Greenland working group has been meeting is single-source (CNBC only); no other full-text outlet corroborates it.",
+      "No Greenlandic voices or officials are directly quoted in any full-text article \u2014 coverage relays Denmark's and the U.S.'s positions but not Greenland's own government, despite the self-determination framing.",
+      "No specifics on what U.S. 'control' would mean (purchase, treaty, basing, annexation) are pinned down; earlier reporting that Trump 'refused to rule out the use of military force' is mentioned only by CNBC and not updated here.",
+      "The apparent tonal contradiction between ABC News (Trump blasting allies) and the Washington Post headline (Trump surprising allies with praise) cannot be reconciled because the Post body is unavailable.",
+      "No article quantifies the scale of U.S. troop drawdown in Europe that Trump threatened, nor Denmark's or NATO's formal response to the withdrawal threat.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same NATO-summit event with materially divergent framings \u2014 ABC News frames Trump as blasting allies while the Washington Post headline frames him as surprising them with praise, and CNBC uniquely surfaces Rutte's supportive stance and a prior 'framework' deal. That framing spread, combined with most outlets being headline-only, makes this a coverage-comparison story rather than a straightforward REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/europe/trump-says-greenland-should-be-controlled-by-us-not-denmark-2026-07-07/",
+      "title": "Trump reiterates at NATO summit that Greenland should be controlled by US, not Denmark - Reuters"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/nato-summit-supposed-focus-defense-spending-trumps-strikes-134572678",
+      "title": "Trump blasts NATO for rejecting his efforts to claim Greenland as leaders hold a summit in Turkey - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/08/greenland-trump-nato-denmark.html",
+      "title": "Trump doubles down on push for control over Greenland as Denmark vows to defend it - CNBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/jul/8/denmark-pushes-back-donald-trump-remarks-says-ready-defend-greenland/",
+      "title": "Denmark pushes back on Trump remarks, says it\u2019s ready to defend Greenland - Washington Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/07/08/denmark-says-it-will-defend-greenland-trump-threatens-revive-nato-crisis/",
+      "title": "After Greenland bluster, Trump surprises NATO allies with praise - The Washington Post"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.thetimes.com/world/europe/article/trump-seize-greenland-nato-news-56lgvhr26",
+      "title": "Just when Greenland thought it was safe, Trump strikes again - The Times"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/video/2026/07/08/denmark-will-defend-greenland-says-prime-minister-mette-frederiksen.html",
+      "title": "Denmark will defend Greenland, says Prime Minister Mette Frederiksen - CNBC"
+    }
+  ]
+}
