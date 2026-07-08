@@ -723,18 +723,30 @@ class SourceGatherer:
     def _filter_relevant_articles(self, records: list[ArticleRecord],
                                   headline: str,
                                   seed_urls: set[str] | None = None) -> list[ArticleRecord]:
-        """Two-pass relevance filter.
+        """Two-gate relevance filter that keeps only same-story articles.
 
-        Pass 1 (heuristic): check proper-noun overlap between headline and
-        article title+body. Articles with 2+ matches are kept, 0 matches
-        are dropped, 1 match is borderline.
+        Gate 1 (cheap heuristic): proper-noun overlap between headline and
+        article title+body. Articles with ZERO matches are dropped outright —
+        they are definitionally off-topic and not worth an API call.
 
-        Pass 2 (Haiku): borderline articles are sent to Claude Haiku for a
-        yes/no classification. ~$0.001 per call.
+        Gate 2 (Haiku): every remaining non-seed article — whether the
+        heuristic called it "relevant" or "borderline" — is sent to Claude
+        Haiku for a same-story yes/no. ~$0.001 per call. Haiku is the
+        authority: the noun heuristic alone is too coarse for broad political
+        stories, where an adjacent-but-different article (e.g. a subpoena or
+        budget piece) shares generic nouns like "Trump" or "Democrats" and
+        clears the 2-match bar without being about the same event. Gating only
+        the "borderline" bucket on Haiku let those padded sources through and
+        inflated the dossier's outlet count past what the story could support.
 
-        Seed articles (URLs in ``seed_urls``) are exempt: they came from the
-        trending tweet itself and are definitionally on-topic, even when the
-        body is a shell URL with no extractable proper nouns.
+        Seed articles (URLs in ``seed_urls``) bypass both gates: they came from
+        the trending tweet itself and are definitionally on-topic, even when
+        the body is a shell URL with no extractable proper nouns.
+
+        Degrades gracefully: with no API key (or on any Haiku error)
+        ``_haiku_relevance_check`` returns True, so the filter falls back to
+        "keep everything with >=1 noun match" rather than dropping real
+        sources.
 
         Returns filtered list of relevant articles.
         """
@@ -749,7 +761,7 @@ class SourceGatherer:
             return records
 
         relevant: list[ArticleRecord] = []
-        borderline: list[ArticleRecord] = []
+        candidates: list[ArticleRecord] = []  # >=1 noun match — must clear Haiku
         dropped: list[str] = []
 
         for article in records:
@@ -758,26 +770,25 @@ class SourceGatherer:
                 relevant.append(article)
                 continue
             verdict = self._heuristic_relevance(article, headline_nouns)
-            if verdict == "relevant":
-                relevant.append(article)
-            elif verdict == "borderline":
-                borderline.append(article)
-            else:
+            if verdict == "irrelevant":
                 dropped.append(f"{article.outlet} ({article.title[:50]})")
+            else:
+                # Both "relevant" and "borderline" heuristic verdicts still go
+                # to Haiku — noun overlap is too coarse to be the final word.
+                candidates.append(article)
 
         if dropped:
-            print(f"[source_gatherer] relevance filter dropped {len(dropped)} "
-                  f"off-topic articles: {', '.join(dropped)}")
+            print(f"[source_gatherer] heuristic dropped {len(dropped)} "
+                  f"zero-match articles: {', '.join(dropped)}")
 
-        # Pass 2: Haiku for borderline cases
-        for article in borderline:
-            print(f"[source_gatherer] borderline article from {article.outlet} "
-                  f"— checking with Haiku...")
+        # Gate 2: Haiku is the authority on topical alignment for everything
+        # that cleared the cheap heuristic.
+        for article in candidates:
             if self._haiku_relevance_check(headline, article):
-                print(f"   ✓ Haiku says relevant")
                 relevant.append(article)
             else:
-                print(f"   ✗ Haiku says off-topic — dropping {article.outlet}")
+                print(f"[source_gatherer] Haiku says off-topic — dropping "
+                      f"{article.outlet} ({article.title[:50]})")
 
         if len(relevant) < len(records):
             print(f"[source_gatherer] relevance filter: {len(relevant)}/{len(records)} "
