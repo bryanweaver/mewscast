@@ -1,0 +1,114 @@
+{
+  "story_id": "2026-07-07-mcconnell-speaks-to-republican-7a6ad1975d",
+  "headline_seed": "McConnell speaks to Republican leaders as speculation swirls about his health, remains hospitalized - AP News",
+  "brief": {
+    "story_id": "2026-07-07-mcconnell-speaks-to-republican-7a6ad1975d",
+    "consensus_facts": [
+      "Sen. Mitch McConnell, R-Ky., 84, has been hospitalized since June 14, 2026, and remains hospitalized more than three weeks later.",
+      "McConnell's office has not disclosed the reason for his hospitalization or specific details about his condition.",
+      "McConnell's office issued a statement on July 2, 2026, saying he 'continues to improve' and 'appreciates the outpouring of support' while recovering and working with staff on Kentucky and Senate matters.",
+      "Senate Majority Leader John Thune, R-S.D., spoke with McConnell by phone on Monday and described it as a 'lengthy and substantive conversation that covered a variety of topics, including national security.'",
+      "Senate Majority Whip / No. 2 Republican John Barrasso, R-Wyo., spoke with McConnell by phone Tuesday for roughly 20 minutes; his spokeswoman Kate Noyes said McConnell 'was fully engaged and is eager to get back to the Senate.'",
+      "The disclosure of these calls came amid rampant speculation from conservative influencers online about McConnell's health.",
+      "News outlets reported on EMS/fire dispatch radio traffic indicating an unconscious person at McConnell's address who was in cardiac arrest and receiving CPR; McConnell was not explicitly named in the recording.",
+      "McConnell is retiring at the end of his current term, which ends in January 2027, and was the longest-serving Senate party leader in US history.",
+      "McConnell has a history of health incidents, including a 2023 concussion from a fall, public 'freezing' episodes during press conferences, polio in childhood, and other falls.",
+      "Republican strategist/commentator Scott Jennings, a longtime McConnell ally, posted on social media that he also spoke with McConnell (about 20 minutes) on Tuesday."
+    ],
+    "disagreements": [
+      {
+        "topic": "Barrasso call \u2014 specific topics discussed",
+        "positions": {
+          "Associated Press": "Discussed Senate races ahead of the midterms, the Supreme Court, and other topics.",
+          "Politico": "Caught up about Senate races, the 'Graham Platner scandal' and the 'recent Supreme Court ruling on coordinated spending limits,' plus the Senate agenda.",
+          "CBS News": "Reports only that they spoke ~20 minutes and that McConnell 'was fully engaged and is eager to get back to the Senate,' without listing topics."
+        }
+      },
+      {
+        "topic": "Scott Jennings' current affiliation",
+        "positions": {
+          "Associated Press": "Describes Jennings as a 'Republican strategist.'",
+          "Politico": "Describes Jennings as a longtime McConnell adviser 'who is now a CNN commentator.'"
+        }
+      },
+      {
+        "topic": "Origin/prominence of the health speculation",
+        "positions": {
+          "BBC News": "Attributes speculation prominently to Trump ally and far-right influencer Laura Loomer, who claimed McConnell was in a 'vegetative state' and 'brain dead,' and adds an angle about wife Elaine Chao's China trip.",
+          "Politico": "Attributes speculation generally to 'conservative influencers online' without naming Loomer.",
+          "Associated Press / CBS News": "Reference 'speculation' about his prognosis but do not name specific influencers.",
+          "Associated Press (Article 5)": "Does not mention the online speculation or EMS dispatch calls at all."
+        }
+      },
+      {
+        "topic": "Nature of the June 14 event",
+        "positions": {
+          "NBC News": "Characterizes the June 14 admission as following a 'medical emergency.'",
+          "CBS News": "Reports EMS responded to an unconscious person at McConnell's home on June 14 (same day as admission) but has not confirmed the identity.",
+          "Associated Press (Article 5)": "Refers only to 'undisclosed'/'unspecified health issues,' no medical-emergency characterization."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Two AP wire pieces. Article 1 leads on the reassurance angle \u2014 GOP leaders speaking to McConnell \u2014 and frames the calls as pushback against speculation, quoting Thune, Barrasso and Jennings. Article 5 is drier and more restrained: it foregrounds the information vacuum ('details are scarce'), the narrow 53-47 majority context, and McConnell's health history, while notably omitting the EMS dispatch calls and named influencers. Neutral wire phrasing throughout; avoids amplifying the 'brain dead' claims.",
+      "The New York Times": "Headline-only in the dossier. Headline ('Hospitalized for 3 Weeks, and Aides Won't Say Why') foregrounds the secrecy/accountability angle. No body text available to assess framing.",
+      "BBC News": "The most expansive and speculation-forward framing. Leads with 'Questions swirl,' then gives substantial space to Laura Loomer's 'vegetative state'/'brain dead' claims and allegations of a 'cover-up,' plus a distinct Elaine Chao\u2013China subplot with confirmation from the Chinese government. Balances this with the GOP leaders' pushback statements and a lengthy biographical retrospective. International-outlet lens explaining the story to non-US readers.",
+      "Politico": "Specialized Capitol Hill framing in a live-blog format. Leads on the mechanics \u2014 which leaders spoke and when \u2014 and is the most specific about call content (names the 'Graham Platner scandal' and the Supreme Court coordinated-spending ruling). Emphasizes the contrast between rampant online speculation and the office's information blackout, and notes McConnell staff proactively emailed outlets to flag the calls. Attributes speculation to 'conservative influencers' without naming Loomer.",
+      "NBC News": "Effectively headline/teaser-only (body is paywalled). Available text frames the admission as following a 'medical emergency' and stresses that 'questions over McConnell's health continue.' Insufficient body text to assess full framing.",
+      "CBS News": "Leads on the GOP leaders' calls as the news hook, then pivots to the EMS dispatch call detail (cardiac arrest, CPR, unconscious person) reviewed by CBS, while carefully hedging that the senator was not named and the identity is unconfirmed. Adds earlier Thune quotes from mid-June ('sounded good,' 'in good spirits'). Restrained on named influencers; does not mention Loomer."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The EMS/fire dispatch radio traffic is referenced by multiple outlets (BBC, Politico, CBS) but no transcript or recording is included in the dossier, so its exact contents cannot be independently verified here.",
+      "McConnell's office statements (June 14, ~June 21, July 2) are quoted secondhand through outlets rather than provided as primary documents; the July 2 'continues to improve' language is consistently quoted across AP, BBC, Politico, and CBS."
+    ],
+    "missing_context": [
+      "No outlet reports the actual medical reason for McConnell's hospitalization \u2014 the central unanswered question of the story.",
+      "No outlet independently confirms the identity of the unconscious/cardiac-arrest person in the EMS dispatch call; all references remain unverified radio traffic.",
+      "The dossier contains no primary-source document (no EMS recording/transcript, no full text of McConnell's office statements as issued).",
+      "Only BBC provides detail on the special-election/succession mechanics under Kentucky law in the event of an early vacancy; other outlets omit what would happen to his seat.",
+      "No outlet provides an on-the-record medical source, attending physician statement, or independent medical assessment \u2014 all condition claims trace back to McConnell's own office or to political allies.",
+      "The Thune and Barrasso call accounts, plus Jennings' post, all originate from McConnell allies with an interest in countering the 'vegetative state' claims; no outlet notes independent verification that the calls occurred as described.",
+      "Two of the seven dossier articles (NYT, NBC) are headline/teaser-only with minimal or no retrievable body text, limiting cross-outlet corroboration for their specific framings."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with substantial body text reported the same event \u2014 GOP leaders speaking with a hospitalized McConnell \u2014 but with materially different emphasis, ranging from BBC amplifying named influencer 'brain dead' claims to AP's Article 5 omitting the speculation and EMS calls entirely. The story is fundamentally about an information vacuum and divergent coverage of it, making it a coverage-report rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/mcconnell-health-hospital-senate-21a76f059653c6c713e660abb7722c5e",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/06/us/politics/mitch-mcconell-health-hospitalization.html",
+      "title": "McConnell Has Been Hospitalized for 3 Weeks, and Aides Won\u2019t Say Why - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4gyjpkzew1o",
+      "title": "Questions swirl over top US Republican McConnell's hospital stay - here's what we know - BBC"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/live-updates/2026/07/07/congress/mitch-mcconnell-health-thune-barrasso-00988874",
+      "title": "Senate GOP leaders say they\u2019ve spoken with Mitch McConnell - Politico"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/mitch-mcconnell-senate-illness-hospital-566a584e28137458111cd28ecfceaf8e",
+      "title": "Sen. McConnell is 'continuing his recovery,' but details are scarce after a lengthy hospital stay - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/mitch-mcconnell-remains-hospitalized-three-weeks-rcna353183",
+      "title": "Mitch McConnell remains hospitalized after more than three weeks - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/mitch-mcconnell-health-gop-senators/",
+      "title": "Senate GOP leaders say they've spoken with Mitch McConnell as speculation about his health continues - CBS News"
+    }
+  ]
+}
