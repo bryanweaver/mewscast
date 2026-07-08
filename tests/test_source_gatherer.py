@@ -352,6 +352,125 @@ class TestBuildSearchQuery:
 
 
 # ---------------------------------------------------------------------------
+# Relevance filter — Gate 2 (Haiku) must vet EVERY article that clears the
+# cheap heuristic, not just the 1-match "borderline" bucket.
+# ---------------------------------------------------------------------------
+# Regression guard for the "godless communists" dossier (2026-07-05), where
+# two adjacent-but-different articles — a Trump-finances subpoena story and a
+# 250th-birthday story — shared generic nouns ("Trump", "Democrats") with the
+# headline, scored 2+ heuristic matches, and were admitted as "sources"
+# without ever being checked for same-story alignment. That padded the
+# outlet count past what the story could actually support.
+
+class TestRelevanceFilter:
+    HEADLINE = "Trump Calls Democrats Communists Ahead Of Midterms"
+
+    def _gatherer(self, registry_path):
+        return SourceGatherer(news_fetcher=None, registry_path=registry_path)
+
+    def _rec(self, outlet, title, body):
+        from dossier_store import ArticleRecord  # noqa: E402
+        return ArticleRecord(
+            outlet=outlet,
+            url=f"https://example.com/{outlet.replace(' ', '')}",
+            title=title,
+            body=body,
+            fetched_at="2026-07-05T00:00:00+00:00",
+        )
+
+    def test_heuristic_relevant_articles_still_go_to_haiku(
+        self, real_registry_path, monkeypatch
+    ):
+        g = self._gatherer(real_registry_path)
+        on_topic_1 = self._rec(
+            "Associated Press", "Fact check: Trump's communist label",
+            "Trump called Democrats communists. Experts say no Communist "
+            "Party candidate has won office ahead of the midterms.",
+        )
+        on_topic_2 = self._rec(
+            "USA Today", "Will the communist attack matter in the midterms?",
+            "Trump keeps calling Democrats communists as the midterms approach.",
+        )
+        adjacent_1 = self._rec(
+            "Axios", "Democrats plot subpoena storm over Trump finances",
+            "Trump's financial disclosure has Democrats planning subpoenas "
+            "ahead of the midterms.",
+        )
+        adjacent_2 = self._rec(
+            "NPR", "House Democrats accuse Trump of hijacking the 250th",
+            "Democrats say Trump turned the birthday into self-enrichment "
+            "ahead of the midterms.",
+        )
+        records = [on_topic_1, on_topic_2, adjacent_1, adjacent_2]
+
+        # Sanity: the cheap heuristic rates BOTH adjacent articles "relevant"
+        # (they share 2+ generic nouns) — which is exactly why the heuristic
+        # cannot be the final word.
+        nouns = SourceGatherer._extract_headline_nouns(self.HEADLINE)
+        assert SourceGatherer._heuristic_relevance(adjacent_1, nouns) == "relevant"
+        assert SourceGatherer._heuristic_relevance(adjacent_2, nouns) == "relevant"
+
+        checked = []
+
+        def fake_haiku(headline, article):
+            checked.append(article.outlet)
+            return "communist" in article.body.lower()
+
+        monkeypatch.setattr(
+            SourceGatherer, "_haiku_relevance_check", staticmethod(fake_haiku)
+        )
+
+        kept = {a.outlet for a in g._filter_relevant_articles(records, self.HEADLINE)}
+
+        # The adjacent articles were routed to Haiku, not auto-admitted.
+        assert "Axios" in checked and "NPR" in checked
+        # Only the genuinely on-topic outlets survive.
+        assert kept == {"Associated Press", "USA Today"}
+
+    def test_seed_articles_bypass_haiku(self, real_registry_path, monkeypatch):
+        g = self._gatherer(real_registry_path)
+        seed = self._rec(
+            "USA Today", "", "https://x.com/photo shell body with no nouns"
+        )
+        called = []
+        monkeypatch.setattr(
+            SourceGatherer,
+            "_haiku_relevance_check",
+            staticmethod(lambda h, a: called.append(a.outlet) or False),
+        )
+        kept = g._filter_relevant_articles(
+            [seed], self.HEADLINE, seed_urls={seed.url}
+        )
+        assert [a.outlet for a in kept] == ["USA Today"]
+        assert called == []  # seed never hits Haiku
+
+    def test_no_api_key_degrades_to_heuristic(self, real_registry_path, monkeypatch):
+        # _haiku_relevance_check returns True with no key / on error, so the
+        # filter must fall back to "keep everything with >=1 noun match"
+        # rather than dropping real sources.
+        g = self._gatherer(real_registry_path)
+        on_topic = self._rec(
+            "Associated Press", "Trump communist label",
+            "Trump called Democrats communists.",
+        )
+        adjacent = self._rec(
+            "Axios", "Subpoena storm", "Trump and Democrats and subpoenas.",
+        )
+        off_topic = self._rec(
+            "ESPN", "Local team wins", "The home team beat the visitors in overtime.",
+        )
+        monkeypatch.setattr(
+            SourceGatherer, "_haiku_relevance_check", staticmethod(lambda h, a: True)
+        )
+        kept = {a.outlet for a in g._filter_relevant_articles(
+            [on_topic, adjacent, off_topic], self.HEADLINE
+        )}
+        # Zero-match ESPN dropped by the cheap gate; the rest pass through.
+        assert "ESPN" not in kept
+        assert {"Associated Press", "Axios"} <= kept
+
+
+# ---------------------------------------------------------------------------
 # Bug 5: post_journalism_cycle short-circuits on empty dossier
 # ---------------------------------------------------------------------------
 # Stubbed at the main-module level: we want to assert that when Stage 3
