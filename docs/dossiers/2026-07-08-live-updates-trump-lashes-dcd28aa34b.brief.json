@@ -1,0 +1,103 @@
+{
+  "story_id": "2026-07-08-live-updates-trump-lashes-dcd28aa34b",
+  "headline_seed": "Live Updates: Trump Lashes Out at NATO Summit but Offers New Help to Ukraine - The New York Times",
+  "brief": {
+    "story_id": "2026-07-08-live-updates-trump-lashes-dcd28aa34b",
+    "consensus_facts": [
+      "President Donald Trump attended a NATO summit in Ankara, Turkiye, held over two days in early July 2026, and publicly said he was 'very disappointed' / 'very upset' with NATO.",
+      "Trump criticized NATO allies for not supporting the US in its war with Iran, singling out European countries by name (Al Jazeera and ABC News both cite Italy, Germany and France; ABC News adds Britain).",
+      "Trump reiterated his desire for the United States to control Greenland, which is Danish territory, and Danish PM Mette Frederiksen responded that Greenland is not for sale.",
+      "Trump praised Turkish President Recep Tayyip Erdogan, citing 'chemistry' between the US and Turkiye, and moved to lift 2020 sanctions on Turkiye while signaling openness to selling F-35 fighter jets.",
+      "NATO allies announced tens of billions of dollars in new arms deals at the summit (ABC News and The Times of Israel both report this; ABC News specifies roughly $72 billion).",
+      "The alliance is described as 77 years old, and the summit occurred at a fraught moment with tensions over defense spending, the Iran war, and Greenland (Al Jazeera and The Times of Israel)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which allies Trump singled out for not helping in Iran",
+        "positions": {
+          "Al Jazeera English": "Italy, Germany and France turned the US down",
+          "ABC News": "Singled out Britain, France, Germany and Italy"
+        }
+      },
+      {
+        "topic": "The Spain trade threat (central to the NYT and Times of Israel headlines)",
+        "positions": {
+          "The Times of Israel": "Trump called Spain a 'wasted cause' and 'terrible partner,' ordered Treasury Secretary Bessent to 'cut off' trade; notes this was the second such order and that after a March threat trade continued normally; Spain's government treated it as 'business as usual'",
+          "The New York Times": "Headline only \u2014 frames the trade cutoff as 'unlikely' but provides no retrievable body text",
+          "Al Jazeera English / ABC News / Fox News": "Do not mention the Spain trade threat in retrievable body text"
+        }
+      },
+      {
+        "topic": "Status of the Iran ceasefire",
+        "positions": {
+          "The Times of Israel": "Reports an overnight flare-up between US and Iranian forces and that Trump declared the Iran ceasefire 'over'",
+          "Al Jazeera English / ABC News / Fox News": "Do not mention a ceasefire being declared over"
+        }
+      },
+      {
+        "topic": "US troop withdrawals from Europe",
+        "positions": {
+          "ABC News": "Trump did not rule out further troop withdrawals from Europe ('Well, we're going to see')",
+          "Al Jazeera English / The Times of Israel / Fox News": "Do not report on troop withdrawals in retrievable text"
+        }
+      },
+      {
+        "topic": "New help to Ukraine (from the story's headline seed)",
+        "positions": {
+          "The Times of Israel": "Notes Trump met Ukrainian President Zelensky on the sidelines but provides no detail on new aid",
+          "Al Jazeera English / ABC News / Fox News / NYT": "No retrievable body text describes new help to Ukraine"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier. The retrievable headline ('Trump Lashes Out at Spain: Cut Off All Trade. Here's Why That's Unlikely.') frames the Spain trade threat as bluster unlikely to materialize \u2014 a skeptical, explanatory angle. No body text is available, so the analytical framing cannot be verified against reporting.",
+      "Al Jazeera English": "Leads on Trump's disappointment with NATO and frames the summit as exposing tensions over European defense spending, Ukraine and Greenland. Emphasizes Trump's grievance that allies didn't back the US in Iran and his warm posture toward Erdogan (sanctions relief, F-35 talk). International-desk tone; frames the alliance as fragile at 77 years old.",
+      "ABC News": "Leads with a dual framing \u2014 'Huge arms deals' ($72bn) alongside Trump's disappointment \u2014 pairing concrete alliance action against Trump's grievance. Foregrounds NATO Secretary-General Rutte's call for a defense 'revolution' and European spending increases, giving the alliance an agentive, unified-response narrative. Also surfaces the Meloni feud, Greenland, and potential troop withdrawals \u2014 the broadest issue set of the full-text outlets.",
+      "The Times of Israel": "The most detailed and Iran-centric account. Foregrounds the Spain trade cutoff ('wasted cause,' 'hopeless,' 'bad people') and quotes the Bessent exchange verbatim. Uniquely reports the Iran ceasefire being declared 'over' and an overnight US-Iran flare-up, framing the summit through the lens of fallout from the Iran war. Also gives Spain's government rebuttal and analyst context on Spain's limited trade vulnerability, providing some balance to the confrontation framing.",
+      "Fox News": "A video clip page ('Trump lashes out at NATO over Greenland, Iran during high-stakes meeting') with almost no substantive body text \u2014 mostly site navigation and unrelated video links. The available framing centers on Greenland and defense spending and includes an American Military Project commentator ('testing' NATO allies), suggesting a framing sympathetic to Trump's posture as strategic, but there is insufficient text to analyze fully."
+    },
+    "primary_source_alignment": [
+      "No primary sources (transcripts, official NATO communique, White House readout, or Spanish/Danish government statements in full) were located for this story, so reporting cannot be checked against underlying documents.",
+      "Direct quotes attributed to Trump (e.g., on Greenland, Spain, and being 'disappointed with NATO') appear only in secondary outlet accounts; a full press-conference transcript would be needed to confirm exact wording and context."
+    ],
+    "missing_context": [
+      "Only two outlets (ABC News and The Times of Israel) provided substantial full body text; Al Jazeera English is moderate-length, while The New York Times is headline-only and Fox News is effectively a navigation/clip page with no reporting. Several claims below rest on a single full-text source.",
+      "The story's headline seed promises 'New Help to Ukraine,' but no outlet in the dossier provides retrievable detail on what that help is \u2014 only that Trump met Zelensky on the sidelines (Times of Israel).",
+      "The claim that Trump declared the Iran ceasefire 'over' and that there was an overnight US-Iran military flare-up appears only in The Times of Israel and is not corroborated by any other outlet here \u2014 a significant, unverified escalation claim.",
+      "The $72 billion arms-deal figure is attributed by ABC News to 'one NATO official' and is single-sourced; the Times of Israel says only 'tens of billions,' and no itemized breakdown or official NATO document is provided.",
+      "No outlet provides the actual outcome or reaction of the named allies (Italy, Germany, France, Britain) to Trump's criticism beyond Trump's own characterization; only Denmark's and Spain's responses are quoted.",
+      "Context on whether the March 2026 Spain trade threat had any measurable effect is only lightly addressed (Times of Israel notes trade 'continued normally'); no trade-data or economic detail from other outlets.",
+      "Dates are internally inconsistent across the dossier \u2014 arrival described as Tuesday, summit sessions on Wednesday, with articles timestamped July 7 and July 8 \u2014 and no outlet clearly reconciles the summit timeline."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets covered the same NATO summit with materially different emphases \u2014 ABC News foregrounds arms deals, Times of Israel foregrounds the Spain trade cutoff and an unverified Iran ceasefire collapse, Al Jazeera foregrounds alliance tension, and NYT/Fox are headline/clip-only \u2014 making this a coverage-comparison story. The thin full-text base and single-sourced key claims mean it cannot be filed as a clean REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/08/world/europe/trump-spain-trade-us-iran-nato.html",
+      "title": "Trump Lashes Out at Spain: \u2018Cut Off All Trade.\u2019 Here\u2019s Why That\u2019s Unlikely. - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/7/7/trump-lashes-out-at-nato-as-first-day-of-summit-wraps-in-turkiye",
+      "title": "Trump lashes out at NATO as first day of summit wraps in Turkiye - Al Jazeera"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-07-08/nato-reveals-arms-deals-at-summit/106890932",
+      "title": "Huge arms deals struck at NATO but Trump 'disappointed' with leaders - ABC News & Headlines \u2013 Australian Broadcasting Corporation"
+    },
+    {
+      "outlet": "The Times of Israel",
+      "url": "https://www.timesofisrael.com/trump-lashes-out-at-allies-at-nato-summit-orders-trade-halt-with-wasted-cause-spain/",
+      "title": "Trump lashes out at allies at NATO summit, orders trade halt with \u2018wasted cause\u2019 Spain - The Times of Israel"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/video/6400532127112",
+      "title": "Trump lashes out at NATO over Greenland, Iran during high-stakes meeting - Fox News"
+    }
+  ]
+}
