@@ -1,0 +1,118 @@
+{
+  "story_id": "2026-07-08-family-demands-an-independent-6e664c27fb",
+  "headline_seed": "Family demands an independent probe after ICE officer fatally shoots a man in Houston - AP News",
+  "brief": {
+    "story_id": "2026-07-08-family-demands-an-independent-6e664c27fb",
+    "consensus_facts": [
+      "Lorenzo Salgado Araujo, a 52-year-old Mexican national, was fatally shot by an ICE officer in Houston on Tuesday, July 7, 2026.",
+      "The shooting occurred during a targeted ICE enforcement operation involving an attempted vehicle stop, shortly before 7 a.m. local time.",
+      "The Department of Homeland Security stated that Salgado Araujo ignored multiple verbal commands, rammed an ICE vehicle, and attempted to run over an ICE officer, who fired in self-defense.",
+      "DHS has not released video, images, or other evidence to support its account of the shooting.",
+      "Salgado Araujo was taken to a hospital where he died from his injuries.",
+      "Salgado Araujo had lived in the U.S. for roughly 35 years, worked in construction building homes, and was working to obtain legal status/a work permit; he had three American-citizen sons.",
+      "His son, Ronaldo Salgado, spoke at a news conference in Houston on Wednesday, July 8, 2026, saying his father 'did not deserve to die' and did not deserve to be 'reduced to a headline of Mexican man shot and killed by ICE.'",
+      "Three other men in the van were taken into federal custody after the shooting, including Salgado Araujo's brother (Ronaldo's uncle).",
+      "Democratic U.S. Rep. Sylvia Garcia of Texas said Salgado Araujo had no criminal convictions/record and called for a full, transparent, and independent investigation.",
+      "The League of United Latin American Citizens (LULAC) is assisting the family and calling for an independent investigation, with its officials saying they do not trust ICE's account.",
+      "The family and advocates drew parallels to the earlier fatal shooting of Renee Good in Minneapolis, where DHS's 'weaponized vehicle' account was later contradicted by video.",
+      "DHS said its Office of Inspector General is investigating the shooting and the FBI is investigating an alleged assault on a federal officer."
+    ],
+    "disagreements": [
+      {
+        "topic": "Where Ronaldo learned of his father's death",
+        "positions": {
+          "The Guardian": "The family, including his wife and three sons, found out about his death from news reports; neither ICE nor local officials informed them.",
+          "The Hill": "Ronaldo drove to the hospital but found out his father had died from a local news report.",
+          "CBS News": "Does not detail how the family learned of the death."
+        }
+      },
+      {
+        "topic": "Wording of DHS's account of the alleged ramming",
+        "positions": {
+          "Time Magazine": "Quotes DHS: 'From information we are receiving, he rammed an ICE law enforcement vehicle...weaponized his vehicle in an attempt to run over an ICE law enforcement officer.'",
+          "CBS News": "States 'The man's car struck an ICE vehicle' and quotes DHS that he 'refused to follow multiple verbal commands.'",
+          "The Guardian": "Says DHS accused Salgado of having 'weaponized his vehicle' to run over an officer."
+        }
+      },
+      {
+        "topic": "Number and framing of prior federal-officer shootings referenced",
+        "positions": {
+          "The Guardian": "Federal immigration officials have been involved in at least 23 shootings since January 2025; cites Good, Pretti, Sosa-Celis, and Ruben Ray Martinez.",
+          "CBS News": "References Pretti, Good, and Ruben Ray Martinez without a total count.",
+          "Time Magazine": "References two Americans shot in Minneapolis (Good and Pretti) about six months earlier.",
+          "The Hill": "References Good and Pretti in Minnesota."
+        }
+      },
+      {
+        "topic": "Whether a body count of prior contradicted cases is cited",
+        "positions": {
+          "CBS News": "Details Pretti case (claimed gun, video showed none) and Ruben Ray Martinez case (video shows vehicle stationary/low speed).",
+          "The Guardian": "Adds the Julio Cesar Sosa-Celis case in which an ICE officer was charged in May with assault and falsely reporting a crime; notes Martinez's death was not made public for nearly a year."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text is almost entirely photo/video captions rather than a full narrative article. Leads visually on the son wiping away tears and the makeshift memorial. Neutral captions attribute the ramming claim to 'federal agents' and the family's demand for an independent probe. Minimal substantive reporting in retrievable body.",
+      "CBS News": "Leads with the humanizing detail that the victim had 'no criminal convictions' and was 'driving a crew to a homebuilding site.' Explicitly flags that federal officials 'don't provide evidence' in a subhead. Devotes substantial space to a pattern of prior ICE shootings (Pretti, Good, Ruben Ray Martinez) where official accounts were contradicted by video. Includes advocates' 'open season on Latinos' quote and the $5,000 reward. Frames ICE's credibility as the central question.",
+      "Reuters": "Headline-only in the dossier (body is a Google News redirect link). Headline frames the story as 'demands for transparency, independent probe' \u2014 sympathetic to the family/advocate framing but no retrievable reporting to assess.",
+      "NBC News": "Body is truncated behind a subscription/paywall gate. Retrievable text leads with the son's grief ('every detail...still replaying in Ronaldo Salgado's mind') and the headline quote 'we want answers.' Frames it as a traffic stop for an immigration arrest. Insufficient body to assess full framing.",
+      "Time Magazine": "Explainer/'What We Know' format that structurally separates 'What do federal officials say' from 'What does Araujo's family say,' giving both accounts space. Notably quotes the fullest version of the DHS statement including the hedge 'From information we are receiving.' Emphasizes that DHS 'didn't provide evidence' and foregrounds the Minneapolis parallel via Rep. Garcia's 'Remember Renee Good?' quote.",
+      "The Hill": "Sourced from NewsNation. Uses the family/advocate quote 'We do not believe them' as its headline hook. Gives the most detailed minute-by-minute family timeline (6:45 a.m. crew pickup, shot ten minutes later). Distinctively includes local-official reactions: Mayor Whitmire declining a local probe but urging a transparent federal one, and Harris County Commissioner Briones and Councilwoman Plummer criticizing the Trump administration. Balances DHS's statement with heavy local political reaction.",
+      "The Guardian": "Most explicitly critical framing toward DHS, stating the department 'has repeatedly come under fire for false and misleading statements.' Leads with the emotional 'He did not deserve to die' quote and the fact the family learned of the death from news reports. Provides the widest catalog of prior contested shootings (at least 23 since January 2025, plus the Sosa-Celis case where an officer was charged) and notes FBI refused to share evidence with state investigators."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (DHS's full written statement, the DHS OIG or FBI filings, court records, or the bystander videos) were included in the dossier, so no direct primary-source comparison is possible.",
+      "The DHS statement itself is quoted secondhand through outlets; Time Magazine's version includes the qualifier 'From information we are receiving,' which CBS News and The Guardian omit or paraphrase \u2014 a divergence that could only be resolved against the original DHS text."
+    ],
+    "missing_context": [
+      "No outlet provides any independent confirmation or footage of the alleged ramming; the entire official account rests on an unverified DHS statement, and the dossier contains no primary DHS document to check the quoted wording against.",
+      "The bystander videos referenced (Juliet Martinez's footage and the Facebook video Ronaldo describes) are described but not available in the dossier, so their contents cannot be independently assessed.",
+      "The names, charges (if any), and current status of the three men detained after the shooting \u2014 including the victim's brother \u2014 are not reported; the family says they have not heard from them.",
+      "No outlet reports the ICE officer's identity, whether the officer has been placed on leave, or any detail about the officer's account beyond DHS's self-defense claim.",
+      "The status, timeline, or scope of the DHS Office of Inspector General investigation and the FBI's parallel probe is not detailed beyond their existence.",
+      "Only The Guardian gives a cumulative figure ('at least 23 shootings since January 2025'); the sourcing and definition of that count is not explained, and other outlets neither corroborate nor dispute it.",
+      "None of the retrievable full-text outlets is a right-leaning or pro-administration source that might present ICE's account more favorably or add operational context; the slant matrix here skews left/center, which limits the range of framing.",
+      "No article contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with substantive body text reported the same event but with materially different emphasis \u2014 from CBS and The Guardian foregrounding a pattern of contradicted ICE accounts, to The Hill centering local officials, to Time's balanced 'what we know' structure \u2014 and the central factual dispute (DHS's unverified ramming claim versus the family's account) turns on evidence no outlet or primary source could produce, making this a coverage-and-credibility story rather than a settled straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/ice-houston-shooting-lorenzo-salgado-araujo-2d01ba69caf2445f05005096891ba5b2",
+      "title": ""
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/lorenzo-salgado-araujo-mexican-houston-ice-shooting/",
+      "title": "Sons of Mexican man killed by ICE officer in Houston demand independent investigation - CBS News"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/americas/fatal-ice-shooting-houston-sparks-demands-transparency-independent-investigation-2026-07-08/",
+      "title": "Fatal ICE shooting in Houston sparks demands for transparency, independent probe - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/son-man-fatally-shot-ice-officer-traffic-stop-says-want-answers-rcna353490",
+      "title": "Son of man fatally shot by ICE officer during traffic stop says \u2018we want answers\u2019 - NBC News"
+    },
+    {
+      "outlet": "Time Magazine",
+      "url": "https://time.com/article/2026/07/08/what-we-know-about-the-fatal-ice-shooting-in-houston/",
+      "title": "What We Know About the Fatal ICE Shooting in Houston - Time Magazine"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/5959687-family-advocates-fatal-ice-shooting/",
+      "title": "\u2018We do not believe them\u2019: Family, advocates want answers after fatal ICE shooting - The Hill"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jul/08/texas-ice-shooting-victim-son",
+      "title": "\u2018He did not deserve to die\u2019: family of man fatally shot by ICE agent speaks out - The Guardian"
+    }
+  ]
+}
