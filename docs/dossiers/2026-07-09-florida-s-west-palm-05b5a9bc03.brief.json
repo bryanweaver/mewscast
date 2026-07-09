@@ -1,0 +1,41 @@
+{
+  "story_id": "2026-07-09-florida-s-west-palm-05b5a9bc03",
+  "headline_seed": "Florida's West Palm Beach airport is now named after Trump, but flyers will still see the PBI airport code \u2013 for now - CBS News",
+  "brief": {
+    "story_id": "2026-07-09-florida-s-west-palm-05b5a9bc03",
+    "consensus_facts": [
+      "Both outlets' headlines reference the Palm Beach, Florida airport being renamed after President Donald Trump; only one outlet (CBS News) provided full body text, so body-level details below are single-source and are documented under framing_analysis rather than consensus."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Frames the event as an official, completed action: 'Palm Beach, Florida airport officially changes name to honor Trump.' Uses neutral wire phrasing ('to honor Trump') and no body text was retrievable for corroboration of details.",
+      "CBS News": "Provides the only full-text account. Leads on the practical passenger-facing angle \u2014 the mismatch between the new name and the still-current PBI airport code \u2014 rather than the political symbolism. CBS reports that: Florida Gov. Ron DeSantis signed a law in March to change the name; the FAA name change took effect July 9; the IATA 3-letter code changes from PBI to DJT on Aug. 18, creating a 40-day gap; the code change was requested by major airlines (Delta, United, American, JetBlue, Southwest); IATA rarely changes location codes; airlines have 'hard coded' systems so PBI searches route to DJT and flight attendants may say 'welcome to West Palm Beach'; nearly eight million passengers use the airport annually; Trump uses it to reach Mar-a-Lago; Palm Beach County commissioners approved a licensing deal in May barring Trump from royalties while permitting use of his name/image; and there are 12 U.S. airports named after presidents. The framing emphasizes logistical confusion and includes a note that the name change 'may be received in different ways by our passengers.'"
+    },
+    "primary_source_alignment": [
+      "No primary sources (e.g., the DeSantis-signed law, FAA guidance, IATA notice, or the county licensing agreement) were located for this story. Claims about these documents come solely from CBS News reporting and could not be independently verified against the underlying records."
+    ],
+    "missing_context": [
+      "Only one of two outlets (CBS News) provided retrievable full body text; Reuters was headline-only. Body-level details in this brief are therefore single-source and not wire consensus.",
+      "No primary source documents were available to verify the March DeSantis law, FAA July 9 guidance, the IATA Aug. 18 code-change notice, or the May county licensing deal.",
+      "No outlet detailed the cost of new signage, systems updates, or who bears those expenses.",
+      "Coverage does not quantify the passenger confusion risk beyond the analyst's general characterization of the 40-day PBI/DJT gap.",
+      "No reporting on public reaction, local political opposition or support, or the vote breakdown among Palm Beach County commissioners on the May licensing deal.",
+      "No outlet lists the other 11 presidentially named airports or compares the process by which this renaming occurred to those precedents."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only one outlet (CBS News) supplied body text and there is no primary source or framing conflict to adjudicate, so this is a straightforward single-source report rather than a META coverage-comparison; confidence is limited by the thin dossier.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/palm-beach-florida-home-trumps-resort-names-its-airport-after-him-2026-07-09/",
+      "title": "Palm Beach, Florida airport officially changes name to honor Trump - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/donald-j-trump-international-airport-new-letter-code-passenger-confusion/",
+      "title": ""
+    }
+  ]
+}
