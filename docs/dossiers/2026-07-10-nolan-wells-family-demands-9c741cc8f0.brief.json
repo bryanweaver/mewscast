@@ -1,0 +1,116 @@
+{
+  "story_id": "2026-07-10-nolan-wells-family-demands-9c741cc8f0",
+  "headline_seed": "Nolan Wells' family demands answers about US teen's death after boating trip - BBC",
+  "brief": {
+    "story_id": "2026-07-10-nolan-wells-family-demands-9c741cc8f0",
+    "consensus_facts": [
+      "Nolan Xavier Wells, an 18-year-old from Ocean Springs, Mississippi, was found dead after failing to return from a July 4 boating trip to Horn Island.",
+      "Wells played American football at Southwest Mississippi Community College and previously at Ocean Springs High School.",
+      "His body was recovered from the water off the island on July 6, two days after he went missing.",
+      "The Jackson County Sheriff's Office is investigating the death and has stated no foul play is suspected / it is not being treated as a homicide.",
+      "The Sheriff's Office has asked anyone who was on or near Horn Island on July 4 to come forward and requested original, unedited photos and videos, including of 'alleged altercations' involving Wells.",
+      "Civil rights attorney Ben Crump has been hired by the family and has ordered an independent autopsy; results were not yet released.",
+      "A state/official autopsy was conducted but results have not been released, with officials citing pending toxicology.",
+      "Wells' parents, Christine and Elmore Wonsley, are demanding an honest, thorough, and transparent investigation into their son's death.",
+      "A press conference was held Friday, July 10, 2026, in New York City attended by the parents, Ben Crump, and Rev. Al Sharpton.",
+      "Horn Island is an undeveloped barrier island in the Gulf Islands National Seashore managed by the National Park Service, described as having no staff, drinking water, shelter, facilities, or communication.",
+      "Attention has focused on the fact that Wells appeared to be the only Black teen in a group of mostly white friends, raising questions about a possible racial element."
+    ],
+    "disagreements": [
+      {
+        "topic": "Cause of death characterization",
+        "positions": {
+          "NPR": "State officials have not announced a cause of death; medical examiner is waiting on toxicology; there has been 'a lot of speculation.'",
+          "BBC News": "Police initially suggested accidental drowning, which the mother said made her 'uncomfortable'; Crump noted Wells knew how to swim.",
+          "ABC News": "Authorities said they suspect Wells drowned but are still investigating; results could take weeks."
+        }
+      },
+      {
+        "topic": "Why Wells was left behind on the island",
+        "positions": {
+          "NPR": "A mother of one of Wells' friends said Wells chose to stay on the island when his friends left; a video reportedly shows an argument on the island.",
+          "BBC News": "Crump cited conflicting reports about whether Wells was going to leave with friends or asked to stay; parents told CBS Mornings staying behind was 'not in his character.'",
+          "ABC News (Article 6)": "The sheriff is investigating a friend's mother's claim that Wells stayed behind after a mechanical issue caused the boat to take on water."
+        }
+      },
+      {
+        "topic": "Nature of suspicious circumstances raised by the family",
+        "positions": {
+          "BBC News": "Mother troubled that Wells' cell phone and car keys returned from the island in his friends' possession without him.",
+          "ABC News": "Family alleges deleted messages from their son's phone contributed to their suspicion.",
+          "NPR": "Frames open questions around the leaving-behind and possible racial element rather than phone/keys specifics."
+        }
+      },
+      {
+        "topic": "Framing of race in the case",
+        "positions": {
+          "BBC News": "Quotes Crump directly stating the family distrusts Mississippi law enforcement to fairly investigate 'where their black son ended up dead after going out on a boat with three young white men.'",
+          "NPR": "Quotes Sharpton: 'We're not bringing in race, but we're not discounting race either'; notes race angle is driven largely by social media.",
+          "ABC News": "Frames family's request as wanting 'that same respect that would be given to anybody else' without explicit racial framing of the friend group."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text is caption-only \u2014 a series of photo captions from the National Action Network press conference. No reporting substance beyond identifying attendees (Christine and Elmore Wonsley, Ben Crump) and the setting. Functionally a wire photo package, not a full article.",
+      "NPR": "Most comprehensive body text. Leads with the family's demand for honesty and transparency, then provides a structured 'what we know / what we're learning / where the investigation stands' explainer. Explicitly flags that key details are coming from social media and that speculation is high. Foregrounds the racial dimension but attributes the framing to public attention and quotes Sharpton's hedge. Notes the Sheriff's Office did not respond to press requests. Emphasizes local geography and the genuine danger of the island waters via the United Cajun Navy source \u2014 the only outlet to introduce a benign/accidental-risk context.",
+      "BBC News": "Detailed and the most explicit on the racial and distrust angle, quoting Crump on the family's distrust of Mississippi law enforcement and 'three young white men.' Leads on the family 'demanding answers.' Surfaces concrete suspicious details others omit or downplay: the phone and car keys returning without Wells, the mother's discomfort with the drowning theory, Wells being a swimmer. Includes fundraising ($388,000 GoFundMe) and Tyler Perry's involvement in the funeral \u2014 human-interest and celebrity elements no other outlet carries.",
+      "NBC News": "Video segment with no substantive body text \u2014 the transcript is dominated by privacy/cookie boilerplate. Only usable content is the summary line that the family is asking for answers after Wells was found dead during a boating trip in Mississippi, reported by Aaron Gilchrist. Contributes little beyond confirming NBC covered the family's demand.",
+      "ABC News": "Three items. Article 5 (GMA parent interview) leads on the parents 'breaking their silence' and labels the death 'mysterious'/'suspicious,' emphasizing the alleged deleted phone messages. Article 6 (sheriff video) is the only source foregrounding the mechanical-failure/boat-taking-on-water explanation the sheriff is investigating. Article 7 (parents on GMA) is a video stub with mostly navigation chrome. ABC's framing centers the family's emotional testimony and the 'suspicious death' angle while also uniquely surfacing the sheriff's mechanical-issue line."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (autopsy reports, sheriff's press release full text, court filings) were located for this story. All 'official' statements are relayed secondhand through outlet reporting.",
+      "The Jackson County Sheriff's Office press release is referenced by NPR, BBC, and ABC but not provided in full; the actual wording of 'no foul play suspected' and the request for altercation footage could not be verified against the source document.",
+      "Neither the state autopsy nor Crump's independent autopsy results exist yet, so no cause-of-death claim in any article can be checked against a primary finding."
+    ],
+    "missing_context": [
+      "No autopsy results \u2014 state or independent \u2014 have been released, so no outlet can confirm cause of death; all drowning/foul-play characterizations remain unconfirmed.",
+      "The identities, statements, and accounts of the friends who were on the trip are almost entirely absent; reporting relies on a single friend's mother's secondhand account relayed via social media and the sheriff.",
+      "The 'video reportedly showing an argument' (NPR) is never sourced, dated, or verified in any article \u2014 its provenance and contents are unknown.",
+      "The alleged 'deleted messages' from Wells' phone (ABC) are an unverified family claim; no outlet reports how this was determined or corroborated.",
+      "No outlet provides the sheriff's own detailed timeline of the search-and-recovery, only that multiple local, state, and federal agencies were involved.",
+      "The contradiction between the sheriff's mechanical-failure/boat-taking-on-water line (ABC Article 6) and the racial-distrust framing (BBC, NPR) is never reconciled in any single article.",
+      "No response was obtained from the friends' families beyond the one anonymous 'friend's mother' claim, and the Sheriff's Office did not respond to NPR/Gulf States Newsroom/MPB requests for comment.",
+      "AP and NBC provided no substantive body text (photo captions and privacy boilerplate respectively), so this dossier's reporting substance rests primarily on NPR, BBC, and ABC."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (NPR, BBC, ABC) reported the same event but framed it differently \u2014 some foregrounding racial distrust and suspicious details, one uniquely surfacing a mechanical boat-failure explanation \u2014 while core facts like cause of death remain unconfirmed and no primary source exists. This is a coverage-divergence story best handled by comparing how outlets are shaping an unresolved investigation.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/nolan-wells-autopsy-mississippi-death-crump-sharpton-d6a9efbecbe2e0b2c6f1edfd86de50a5",
+      "title": "Family of Mississippi teen who died after July 4 trip call for transparency, deeper investigation - AP News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/10/nx-s1-5887443/nolan-wells-mississippi-investigation-ben-crump",
+      "title": "Investigation continues into the death of Mississippi teen Nolan Wells - NPR"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cx238gzzy74o",
+      "title": ""
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/now/video/family-of-nolan-wells-demand-answers-after-he-died-during-boating-trip-266500165930",
+      "title": "Family of Nolan Wells demand answers after he died during boating trip - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/parents-nolan-wells-call-investigation-seek-answers-mysterious/story?id=134627407",
+      "title": "Parents of Nolan Wells call for 'thorough investigation' amid unanswered questions about son's 'suspicious' death - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/video/134643968/",
+      "title": "Video Sheriff speaks out amid investigation into Nolan Wells\u2019 death - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/video/134644170/",
+      "title": "Video Parents of Nolan Wells break their silence on \u2018GMA\u2019 - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
