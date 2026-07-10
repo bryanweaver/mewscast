@@ -1409,6 +1409,11 @@
       "did": "did:plc:dywkguzs7xgdglihioka5lup",
       "handle": "weevillle.bsky.social",
       "timestamp": "2026-07-09T21:36:10.428421"
+    },
+    {
+      "did": "did:plc:ahkd76su5nhzdz5z2fs67wji",
+      "handle": "sofialmallo.bsky.social",
+      "timestamp": "2026-07-10T04:52:52.965495"
     }
   ],
   "liked_posts": [
@@ -3401,6 +3406,11 @@
       "uri": "at://did:plc:dywkguzs7xgdglihioka5lup/app.bsky.feed.post/3mqaifn6boc2h",
       "author": "weevillle.bsky.social",
       "timestamp": "2026-07-09T21:36:10.344002"
+    },
+    {
+      "uri": "at://did:plc:ahkd76su5nhzdz5z2fs67wji/app.bsky.feed.post/3mqaen4dm7k26",
+      "author": "sofialmallo.bsky.social",
+      "timestamp": "2026-07-10T04:52:52.880063"
     }
   ],
   "last_cleanup": "2026-07-04T14:28:08.672970",
