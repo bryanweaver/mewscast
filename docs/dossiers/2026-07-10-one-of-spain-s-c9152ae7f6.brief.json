@@ -1,0 +1,108 @@
+{
+  "story_id": "2026-07-10-one-of-spain-s-c9152ae7f6",
+  "headline_seed": "One of Spain's deadliest wildfires kills at least 12 people, with 23 others missing - NPR",
+  "brief": {
+    "story_id": "2026-07-10-one-of-spain-s-c9152ae7f6",
+    "consensus_facts": [
+      "A wildfire in the Almeria province of southern Spain killed at least 12 people, in one of the country's deadliest wildfires on record.",
+      "Twenty-three people were reported missing or unaccounted for after the fire.",
+      "The blaze broke out on Thursday afternoon near the town/municipality of Los Gallardos in Almeria province.",
+      "Antonio Sanz, Andalusia's head of emergency services, said most or all of the dead were foreign nationals who ignored shelter-in-place instructions and tried to flee.",
+      "Four of the dead were believed to be British, identified as such because their vehicle was right-hand drive.",
+      "Seven other victims died after abandoning their cars and attempting to flee on foot along a route that was not the official evacuation route.",
+      "Eight people were injured, some seriously (four seriously, per NPR and The Guardian).",
+      "Roughly 150 firefighters and 220 soldiers from Spain's military emergencies unit were deployed to battle the blaze.",
+      "Juan Manuel Moreno, regional president of Andalusia, provided the missing/casualty figures and condolences.",
+      "Spanish Prime Minister Pedro Sanchez expressed condolences, citing 'immense sadness and desolation.'",
+      "Authorities said a fallen power line was reported as a possible cause of the fire, though it had not been officially confirmed.",
+      "The fire occurred amid a heatwave affecting Spain and much of Europe.",
+      "The circumstances resemble the 2017 Portugal wildfire that killed around 66 people, many of whom died in their cars while fleeing."
+    ],
+    "disagreements": [
+      {
+        "topic": "Cause of the fire (power line)",
+        "positions": {
+          "NPR": "Reports callers said a fallen power line sparked the blaze; cause not officially confirmed.",
+          "The Guardian": "Authorities believe the blaze may have been caused by a fallen power line.",
+          "The Canberra Times": "Reports the fallen power cable theory but adds that utility company Endesa ruled it out after technicians found the cable carried no voltage."
+        }
+      },
+      {
+        "topic": "Nationalities/composition of victims",
+        "positions": {
+          "NPR": "Four British nationals and other unspecified foreign nationals among the dead.",
+          "The Guardian": "At least four believed British; most others foreigners, identification pending.",
+          "The Canberra Times": "One Spaniard among the victims, the rest foreign nationals; area popular with French, Britons and Belgians."
+        }
+      },
+      {
+        "topic": "Area burned in 2026 fire season to date",
+        "positions": {
+          "The Canberra Times": "About 57,000 hectares burned in 2026 so far, about half the annual average for the past two decades and 40% of all EU-burned area.",
+          "NPR": "Does not cite a 2026 season-to-date figure; cites last year's 393,000 hectares.",
+          "The Guardian": "Does not cite a 2026 season-to-date figure; cites 2025's record 393,000 hectares."
+        }
+      },
+      {
+        "topic": "Prior deadliest-fire benchmark in Spain",
+        "positions": {
+          "The Canberra Times": "Death toll surpasses that of 2005, when 11 firefighters were killed in Guadalajara.",
+          "NPR": "Does not cite the 2005 Guadalajara benchmark.",
+          "The Guardian": "Does not cite the 2005 Guadalajara benchmark."
+        }
+      },
+      {
+        "topic": "Headline death toll",
+        "positions": {
+          "Reuters": "Headline states twelve killed, 23 missing.",
+          "NPR": "At least 12 killed, 23 missing.",
+          "The Guardian": "At least 12 killed, 23 missing.",
+          "The Canberra Times": "Headline says eleven killed, but body text states at least 12 died."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier; no body text retrievable. The headline emphasizes the scale ('one of Spain's deadliest wildfires') and pairs the death toll with the missing count. Serves as wire corroboration of the top-line numbers but contributes no independent body-level detail.",
+      "NPR": "Runs an Associated Press wire story. Leads with the death toll and the record-setting nature of the fire, then quickly pivots to a broader climate frame \u2014 dedicating substantial space to European heat waves, France's Tour de France disruption, Copernicus climate data, and attribution of intensified fires to fossil-fuel-driven climate change. Frames the Spain fire as one node in a continental climate story.",
+      "The Guardian": "Reported by a named correspondent (Sam Jones in Madrid) rather than a bare wire feed. Leads with the human tragedy and the British victims, quotes emergency minister Antonio Sanz and local officials extensively, and stresses the 'death trap' ravine detail. Adds a distinctive political frame: describes the disaster as 'exacerbated by climate breakdown amid a continental rollback of green policies' \u2014 an editorial linkage not present in the other outlets.",
+      "The Canberra Times": "Runs an Australian Associated Press wire story behind a subscription notice. Headline undercounts ('Eleven killed') versus its own body ('at least 12'). Adds unique reporting: the Endesa utility rebuttal of the power-line cause, the 2005 Guadalajara benchmark, specific missing-persons anecdotes (red Ford Fiesta, US relative's brother in a group of 10), the Spaniard-among-victims detail, and forest-firefighter commentary on earlier fire seasons. Least climate-editorial framing of the three full-text outlets."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No official emergency-agency bulletin, government statement transcript, or utility company filing was included in the dossier, so no report-versus-document comparison is possible."
+    ],
+    "missing_context": [
+      "No primary source (Andalusia emergency service bulletin, Guardia Civil statement, or Endesa technical report) was available to independently verify the death toll, missing count, or the disputed cause of the fire.",
+      "The cause is unresolved within the dossier itself: three outlets cite a fallen power line while The Canberra Times reports Endesa's technicians ruled it out on the grounds the cable carried no voltage. No outlet reconciles this contradiction.",
+      "Three of four outlets (Reuters wire, NPR/AP, Canberra Times/AAP) trace to wire services; the independence of corroboration is limited since AP and AAP wire copy overlap substantially. Only The Guardian offers original on-the-ground reporting from a named correspondent.",
+      "No outlet provides a confirmed final identification of victims or their nationalities beyond preliminary inferences (e.g., right-hand-drive vehicle used to guess British nationality).",
+      "No outlet clarifies whether the '23 missing' overlaps with, or is separate from, the eventual death toll \u2014 the figures are reported side by side without explaining how they may resolve.",
+      "Containment status of the fire (percentage contained, whether it was still spreading at time of publication) is not clearly stated across outlets.",
+      "Reuters is headline-only in this dossier, so its full framing and any additional detail it may carry could not be assessed."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (NPR, The Guardian, The Canberra Times) plus a corroborating Reuters headline agree on the core facts \u2014 death toll, location, cause theory, and victim circumstances \u2014 with framing differences that are real but modest rather than materially contradictory. The one substantive divergence (the disputed power-line cause) is best handled inside a straightforward REPORT that flags the contradiction.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/environment/wildfires-southern-spain-kill-12-emergency-agency-says-2026-07-10/",
+      "title": "Twelve killed, 23 missing in one of Spain's deadliest wildfires - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/10/nx-s1-5888160/southern-spain-wildfire-almeria",
+      "title": ""
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/jul/10/wildfire-southern-spain-temperatures-almeria-los-gallardos-bedar",
+      "title": "Wildfire in southern Spain kills at least 12 amid heatwave - The Guardian"
+    },
+    {
+      "outlet": "The Canberra Times",
+      "url": "https://www.canberratimes.com.au/story/9308473/eleven-killed-in-one-of-spains-deadliest-wildfires/",
+      "title": "Eleven killed in one of Spain's deadliest wildfires - The Canberra Times"
+    }
+  ]
+}
