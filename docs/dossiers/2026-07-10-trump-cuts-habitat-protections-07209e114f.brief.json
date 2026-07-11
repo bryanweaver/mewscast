@@ -1,0 +1,71 @@
+{
+  "story_id": "2026-07-10-trump-cuts-habitat-protections-07209e114f",
+  "headline_seed": "Trump Cuts Habitat Protections for Endangered Species - The New York Times",
+  "brief": {
+    "story_id": "2026-07-10-trump-cuts-habitat-protections-07209e114f",
+    "consensus_facts": [
+      "All four outlet headlines/bodies reference the Trump administration reducing or rolling back habitat-related protections tied to the Endangered Species Act. Only two of four articles (NPR/KLCC and Fox News) contain substantive body text; Bloomberg and The New York Times are headline-only.",
+      "Both full-text articles (Fox News and NPR/KLCC) center on Trump administration actions that critics say weaken habitat protections for wildlife, with land-use and industry activity (logging, energy) at the center of the dispute."
+    ],
+    "disagreements": [
+      {
+        "topic": "Nature of the policy change",
+        "positions": {
+          "Fox News": "Frames it as the Interior and Commerce Departments rescinding an 'outdated' regulatory definition of 'harm' that past administrations 'weaponized' \u2014 returning the ESA to its 'original intent' and ending federal overreach.",
+          "Bloomberg (headline only)": "Headline frames it as Trump 'allowing habitat destruction' in an Endangered Species rollback.",
+          "The New York Times (headline only)": "Headline frames it as Trump 'cutting habitat protections' for endangered species."
+        }
+      },
+      {
+        "topic": "Effect on wildlife and local economies",
+        "positions": {
+          "Fox News": "Emphasizes economic benefit \u2014 relieving 'job-killing' burdens on families, businesses, fishermen, ranchers, energy developers; cites a study estimating the spotted owl listing cost 16,000\u201332,000 timber jobs.",
+          "NPR/KLCC": "Emphasizes potential harm \u2014 a proposal to triple logging across three Oregon/Washington national forests could push elk onto private land, damage crops, and diminish elk hunting, itself a $125M regional economy (2019)."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only in the dossier. Uses strong causal framing \u2014 'Trump Allows Habitat Destruction' \u2014 attributing an active permissive role to the administration. No body text available to assess reporting depth or sourcing.",
+      "The New York Times": "Headline-only in the dossier. Frames the action as Trump 'cutting' protections 'for endangered species' \u2014 declarative and consequence-focused. No body text available to assess.",
+      "NPR (KLCC/Oregon Public Broadcasting)": "Full body text. Reports a specific, local angle: a federal draft proposal to triple logging across the Malheur, Umatilla, and Wallowa-Whitman national forests (4.9M acres, 15-year horizon). Leads with elk-hunter fears and the assumption the administration will rescind the 'roadless rule,' opening 722,000 acres to roadbuilding. Balances critics (ODFW manager Nick Myatt, Theodore Roosevelt Conservation Partnership's Tristan Henry) against logging proponents (Amanda Sullivan-Astor of Associated Oregon Loggers) and a Forest Service statement. Notably does not mention the ESA 'harm' definition rollback that Fox and the headlines reference \u2014 this is a related-but-distinct timber/roadless story.",
+      "Fox News": "Full body text, framed as an EXCLUSIVE. Leads with administration officials' justification \u2014 the ESA 'harm' rule was 'weaponized' and a 'burden' on families and businesses. Heavily sources administration voices (Interior Secretary Burgum, Commerce Secretary Lutnick, USFWS Director Nesvik). Emphasizes the legal basis (Loper Bright v. Raimondo overturning Chevron deference), cites specific species (dunes sagebrush lizard, lesser prairie-chicken, northern spotted owl) as examples of alleged overreach, and foregrounds economic/job costs. Buries or omits environmental-harm perspective and offers no quotes from conservation groups."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The actual Interior/Commerce rule rescinding the ESA 'harm' definition, the Federal Register notice, and the draft Blue Mountains forest plan were not provided in the dossier, so no direct document-to-coverage comparison is possible.",
+      "Fox News cites Loper Bright v. Raimondo (2024) and the 1995 Supreme Court ruling upholding Interior Secretary Bruce Babbitt's habitat-inclusive 'harm' definition; these legal references could not be verified against the underlying opinions in this dossier."
+    ],
+    "missing_context": [
+      "Editorial disclosure: only two of four articles (Fox News, NPR/KLCC) have substantive body text. Bloomberg and The New York Times are headline-only, so their reporting cannot be corroborated or compared beyond headline framing. This significantly limits what can be called consensus.",
+      "The two full-text articles may be covering two distinct actions: Fox News describes a nationwide ESA regulatory 'harm' definition rescission; NPR/KLCC describes a separate draft plan to triple logging in specific Oregon/Washington national forests tied to the 'roadless rule.' No outlet in the dossier explicitly connects or distinguishes these two actions.",
+      "No outlet provides the environmental or scientific counter-argument to the administration's claim that narrowing 'harm' still 'protects species' \u2014 e.g., independent assessments of how habitat-modification protections affect species survival.",
+      "The effective date, comment period specifics (beyond NPR noting comments open through September for the timber plan), and legal-challenge status of the ESA rule change are not detailed.",
+      "Fox News's cited figure of 16,000\u201332,000 lost timber jobs comes from a single 2021 study; no counter-data or context on regional economic gains from conservation-linked activity is presented.",
+      "No injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets across the slant matrix cover the same broad development with sharply different framings ('allows habitat destruction' / 'cuts protections' vs. scraps a 'weaponized' 'burden'), and two of them appear to describe different underlying actions \u2014 a coverage-comparison story rather than a straight REPORT, especially given no primary source and two headline-only outlets.",
+    "confidence": 0.45
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bloomberglaw.com/environment-and-energy/trump-cuts-species-harm-definition-allows-habitat-destruction",
+      "title": "Trump Allows Habitat Destruction in Endangered Species Rollback - Bloomberg Law News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/10/climate/endangered-species-act-harm.html",
+      "title": "Trump Cuts Habitat Protections for Endangered Species - The New York Times"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.klcc.org/environment/2026-07-10/as-trump-focuses-on-timber-in-the-blue-mountains-elk-hunters-fear-habitat-could-diminish",
+      "title": "As Trump focuses on timber in the Blue Mountains, elk hunters fear habitat could diminish - NPR for Oregonians"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-admin-scraps-weaponized-wildlife-rule-became-burden-american-families-businesses-burgum",
+      "title": "Trump admin scraps \u2018weaponized\u2019 wildlife rule that became 'burden' on American families and businesses: Burgum - Fox News"
+    }
+  ]
+}
