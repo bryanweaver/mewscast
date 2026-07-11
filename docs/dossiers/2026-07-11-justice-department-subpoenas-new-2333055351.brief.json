@@ -1,0 +1,117 @@
+{
+  "story_id": "2026-07-11-justice-department-subpoenas-new-2333055351",
+  "headline_seed": "Justice Department subpoenas New York Times reporters over Air Force One reporting - NPR",
+  "brief": {
+    "story_id": "2026-07-11-justice-department-subpoenas-new-2333055351",
+    "consensus_facts": [
+      "The Justice Department subpoenaed New York Times journalists on Friday over their reporting on the new, Qatari-gifted Air Force One (corroborated by NPR, CNBC, NBC News, The Washington Post, CBS News).",
+      "Four Times reporters \u2014 Julian E. Barnes, Eric Lipton, Tyler Pager and Eric Schmitt \u2014 received subpoenas (NPR, CNBC; Washington Post and CBS reference the four reporters on the article without naming all).",
+      "The subpoenas seek to compel the reporters to testify before a federal grand jury in Manhattan on Wednesday (NPR, CNBC, Washington Post, CBS News).",
+      "Federal agents delivered some subpoenas to the reporters at their homes (NPR, CNBC, Washington Post, CBS News).",
+      "The Times, citing anonymous sources, reported the Secret Service urged Trump to use the older Air Force One instead of the new Qatari-donated jet, and that the new plane lacked some advanced security features, including antimissile capabilities (NPR, CNBC, Washington Post, CBS News).",
+      "David McCraw, a lawyer for the Times, condemned the subpoenas, calling the appearance of federal agents on reporters' doorsteps something that 'should shock the conscience of any American who believes in the Constitution and the press freedom it protects' (NPR, CNBC, Washington Post, CBS News).",
+      "Jay Clayton, U.S. Attorney for the Southern District of New York, issued the subpoenas; Trump recently nominated Clayton to be director of national intelligence (NPR, Washington Post).",
+      "The subpoenas specified only that testimony was sought 'in regard to an alleged violation of federal criminal law' (NPR, Washington Post).",
+      "Before publication, a senior FBI official contacted a Times reporter and editor asking them not to publish the story and to identify their sources; both refused (NPR, Washington Post).",
+      "The Justice Department previously sought to compel testimony from Washington Post and Wall Street Journal reporters but later withdrew those subpoenas (CNBC, Washington Post).",
+      "The FBI earlier searched the property of Washington Post reporter Hannah Natanson and seized electronic devices as part of a leak investigation (NPR, Washington Post).",
+      "Trump flew the new Air Force One to a NATO summit in Turkey but departed on an older jet to Mildenhall, England, then switched to the newer plane for the flight home to Joint Base Andrews (CNBC, CBS News).",
+      "The plane swap coincided with a collapsed ceasefire with Iran, U.S. airstrikes on Iran, and Iranian attacks on three Gulf Arab states (CNBC, CBS News).",
+      "Trump denied security concerns, saying the Mildenhall stop was so service members could view the new jet, and White House spokesman Steven Cheung/Chung said the plane is a state-of-the-art aircraft with high-level security protocols (CNBC, CBS News).",
+      "Reporters Committee for Freedom of the Press president Bruce D. Brown said the subpoenas break from longstanding Justice Department practice of seeking information from reporters only as a last resort (NPR, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the Justice Department publicly responded",
+        "positions": {
+          "NPR": "Reached out to FBI and SDNY but did not immediately hear back.",
+          "CNBC": "No immediate response from the White House or DOJ.",
+          "The Washington Post": "DOJ did not immediately respond to a request for comment.",
+          "CBS News": "Reports the DOJ issued a statement addressing the subpoenas, saying 'reporters are not the targets, those leaking classified information are' and framing the action as a routine leak investigation."
+        }
+      },
+      {
+        "topic": "Independent corroboration of the security-concern reporting",
+        "positions": {
+          "CBS News": "Reports it independently confirmed the Secret Service advised using the old jet, with U.S. officials saying the new plane was hurried into service and a former official expressing concern about insufficient defensive capabilities.",
+          "NPR": "Attributes the security claims solely to the Times' anonymously sourced reporting.",
+          "CNBC": "Attributes the security claims to the Times, citing anonymous sources, plus general speculation about the $400 million retrofit.",
+          "The Washington Post": "Attributes the security claims to the Times' reporting."
+        }
+      },
+      {
+        "topic": "Number and naming of subpoenaed reporters",
+        "positions": {
+          "NPR": "Names all four reporters and states four were subpoenaed.",
+          "CNBC": "Names all four reporters.",
+          "NBC News": "States four journalists were subpoenaed (headline/lede only; body truncated behind paywall).",
+          "The Washington Post": "Says subpoenas included the four reporters on the article without naming each.",
+          "CBS News": "Says 'some' Times journalists were subpoenaed; notes DOJ did not specify recipients."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier (Google News redirect). Frames the story as an attributed claim \u2014 'newspaper says' \u2014 placing the sourcing burden on the Times. No body text available to analyze emphasis.",
+      "NPR": "Full body text. Leads with the visceral image of federal agents on reporters' doorsteps and the 'brazen act' quote. Frames the subpoenas explicitly as 'the latest escalation in Trump's years-long effort to cow and control U.S. media,' cataloguing prior settlements with ABC and CBS and actions against the WSJ, WaPo and BBC. Emphasizes press-freedom stakes and the Clayton nomination/Senate accountability angle. Does not include a DOJ statement defending the action.",
+      "CNBC": "Full body text. Balances the press-freedom framing ('major escalation,' 'systematic pattern') with substantial detail on the underlying Air Force One story, the plane swap, the Iran context, and the White House's on-record denials via spokesman Cheung. Gives the administration's rebuttal space that NPR omits. Business-outlet framing surfaces the $400 million retrofit figure.",
+      "The New York Times": "Headline-only in the dossier. As the subject and originator of the story, its headline frames the event as Trump escalating 'Pressure on Media,' foregrounding the press-freedom narrative. No body text to analyze; note the inherent conflict of the Times reporting on subpoenas of its own journalists.",
+      "NBC News": "Body text truncated behind a paywall/subscription wall. Available lede states four journalists were subpoenaed over 'security concerns regarding the new, Qatari-gifted Air Force One jet.' Neutral, straightforward framing in what is retrievable; full emphasis cannot be assessed.",
+      "The Washington Post": "Full body text. Most procedurally detailed account \u2014 leads on the 'unusually aggressive step,' explains grand-jury mechanics, source-protection risks, contempt/obstruction exposure, and the DOJ's historical restraint. Notably even-handed: states that complaints about unfair coverage 'are voiced by virtually every administration.' Foregrounds its own reporter Natanson's device seizure and the WSJ/WaPo withdrawn subpoenas.",
+      "CBS News": "Full body text. Distinctive for being the only outlet to publish a substantive DOJ statement defending the subpoenas ('reporters are not the targets, those leaking classified information are') and for independently corroborating the Secret Service advice and the new plane's capability gaps via its own U.S. officials and a former official. Gives the most balanced he-said/she-said structure of the full-text outlets."
+    },
+    "primary_source_alignment": [
+      "No primary source (subpoenas, DOJ filing, or official press release) was located for this story. All accounts derive from the Times' own reporting and statements, plus statements from the Times' attorney, the Reporters Committee, and \u2014 in CBS's case only \u2014 a DOJ statement quoted secondhand.",
+      "Because the actual subpoenas are not in the dossier, the precise wording, legal basis, and full list of recipients cannot be independently verified against a document \u2014 outlets rely on the Times' characterization."
+    ],
+    "missing_context": [
+      "No outlet publishes the full text of the subpoenas or the specific statute allegedly violated; the only characterization ('alleged violation of federal criminal law') comes from the Times describing its own subpoenas.",
+      "No outlet reports whether or how the Times intends to challenge the subpoenas (Washington Post explicitly notes the Times did not say).",
+      "The dossier's Reuters, New York Times, and NBC News entries are headline-only or paywall-truncated, limiting cross-verification; the four full-text outlets (NPR, CNBC, Washington Post, CBS) are all lean-left or specialized, with no full-text center-right body available for framing balance.",
+      "CBS News is the only outlet carrying the DOJ's on-record defense; readers relying on NPR alone would not know the department publicly framed the action as a leak investigation rather than an attack on reporters.",
+      "No outlet independently verifies the core underlying claim \u2014 that the new Air Force One actually lacks antimissile/defensive countermeasures \u2014 beyond the Times' anonymous sources and CBS's anonymous U.S. officials; the White House flatly denies it.",
+      "No outlet clarifies the outcome or legal precedent of the earlier WaPo/WSJ subpoenas beyond noting they were withdrawn, nor the current status of the Natanson device review.",
+      "The White House spokesman is named 'Cheung' by CNBC and 'Chung' by CBS \u2014 a minor discrepancy in a shared quote left unreconciled.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four full-text outlets reported the same event with materially different emphasis \u2014 NPR foregrounds press-freedom escalation with no DOJ rebuttal, CBS uniquely carries the DOJ's leak-investigation defense and independent corroboration, and the Washington Post adds procedural even-handedness \u2014 making this a coverage-comparison story rather than a straight REPORT, especially given no primary document exists to anchor the claims.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/media-telecom/trump-administration-subpoenas-new-york-times-journalists-over-air-force-one-2026-07-11/",
+      "title": "Trump administration subpoenas New York Times journalists over Air Force One story, newspaper says - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/11/g-s1-133160/justice-department-subpoenas-new-york-times-reporters-over-air-force-one-reporting",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/11/new-york-times-reporters-issued-subpoenas-over-air-force-one-reporting.html",
+      "title": "New York Times reporters are subpoenaed after Air Force One reporting, newspaper says - CNBC"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/11/business/media/new-york-times-trump-subpoenas.html",
+      "title": "Times Journalists Subpoenaed as Trump Escalates Pressure on Media - The New York Times - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/justice-department/justice-department-subpoenas-new-york-times-journalists-air-force-one-rcna470538",
+      "title": "Trump administration subpoenas New York Times journalists over new Air Force One reporting - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/07/11/justice-dept-subpoenas-ny-times-journalists-over-air-force-one-report/",
+      "title": "Justice Dept. subpoenas N.Y. Times journalists over reports on new Air Force One - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/trump-air-force-one-security-subpoena-journalists/",
+      "title": "Several New York Times journalists issued subpoenas after Air Force One reporting - CBS News"
+    }
+  ]
+}
