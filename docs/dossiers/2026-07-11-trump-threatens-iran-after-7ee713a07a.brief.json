@@ -1,0 +1,51 @@
+{
+  "story_id": "2026-07-11-trump-threatens-iran-after-7ee713a07a",
+  "headline_seed": "Trump threatens Iran after chants for his death erupted at Khamenei funeral - Al Jazeera",
+  "brief": {
+    "story_id": "2026-07-11-trump-threatens-iran-after-7ee713a07a",
+    "consensus_facts": [
+      "Both articles are from the same outlet (Al Jazeera English) and appear to be the standard and AMP versions of a single report; the dossier therefore effectively contains one source, not two independent ones.",
+      "Al Jazeera reports that US President Donald Trump posted on Truth Social threatening to 'decimate and destroy all areas of Iran' if he faces an assassination attempt.",
+      "Al Jazeera reports that a statement attributed to Iran's new Supreme Leader Ayatollah Mojtaba Khamenei pledged to avenge his slain predecessor and father, calling it 'the demand of the nation.'",
+      "Al Jazeera reports that funeral processions for the former supreme leader occurred over a week across Tehran, Qom, Najaf, Karbala, and concluded with burial in Mashhad on Thursday.",
+      "Al Jazeera reports banners and chants calling for Trump to be killed were widespread at the funeral events."
+    ],
+    "disagreements": [
+      {
+        "topic": "size of the funeral crowds",
+        "positions": {
+          "Al Jazeera (attributed)": "At least 15 million people thronged the streets per the report; Iranian sources are quoted claiming the total was more than 30 million."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Al Jazeera English": "Both dossier entries are the same Al Jazeera report (standard and AMP versions). Leads with Trump's threat to 'decimate and destroy all areas of Iran' juxtaposed against the Khamenei statement pledging vengeance, framing an escalatory standoff. The fuller AMP version adds a 'Threats and talks' section that significantly softens the escalation narrative \u2014 reporting that Trump says peace-deal talks continue, that Qatari and Omani mediation is active, and that US negotiators (Vance, Rubio, Witkoff, Kushner) were expected to meet Iran's FM Araghchi. Attributes the specific-assassination-plot claim to Israeli intelligence via 'US media,' CNN, and the Wall Street Journal without independent confirmation. Quotes Iran's Ghalibaf vowing Iran 'will never surrender.' Notes Khamenei has not been seen publicly since his March 8 appointment and allegedly suffered facial injuries in a US-Israeli strike \u2014 sourced to 'senior sources.' Overall framing balances bellicose rhetoric against behind-the-scenes diplomacy."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Trump's exact Truth Social quotes and the Khamenei statement are reproduced within the Al Jazeera report but no independent primary document (full post, official transcript, or state-TV recording) was provided in the dossier for verification."
+    ],
+    "missing_context": [
+      "Only one outlet (Al Jazeera English) is present in the dossier, appearing twice as its standard and AMP versions. There is no independent second-source corroboration for any claim, so nothing here rises to genuine multi-outlet consensus.",
+      "The claim of a 'new and specific Iranian plot to assassinate Trump' is attributed to Israeli intelligence relayed through unnamed sources, CNN, and the Wall Street Journal \u2014 none of these are directly in the dossier for verification.",
+      "The claim that the new supreme leader suffered facial disfigurement and injuries is sourced only to unnamed 'senior sources.'",
+      "Crowd-size figures (15 million vs. Iranian-sourced 30 million+) are not independently verified.",
+      "No US-government or independent confirmation is provided that '1000 Missiles are Locked and Loaded' or that military orders were actually given, beyond the text of the social-media post itself.",
+      "Background on the earlier US-Israeli strike that reportedly killed the former supreme leader and four family members, and the sequence of the Hormuz tanker attacks and US air strikes, is referenced but not detailed."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "The dossier contains only a single outlet (Al Jazeera, duplicated as standard and AMP), so there is no genuine multi-outlet consensus and this time-sensitive escalation story warrants a same-day hedged post that flags the single-source limitation rather than a full REPORT or META.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/7/11/trump-threatens-iran-after-chants-for-his-death-erupted-at-khamenei-funeral",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/amp/news/2026/7/11/trump-threatens-iran-after-chants-for-his-death-erupted-at-khamenei-funeral",
+      "title": "Trump threatens Iran after chants for his death erupted at Khamenei funeral - Al Jazeera"
+    }
+  ]
+}
