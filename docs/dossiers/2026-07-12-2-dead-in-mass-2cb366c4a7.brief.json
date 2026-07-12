@@ -1,0 +1,118 @@
+{
+  "story_id": "2026-07-12-2-dead-in-mass-2cb366c4a7",
+  "headline_seed": "2 dead in mass shooting at Canada\u2019s largest Latin street festival, police say - CNN",
+  "brief": {
+    "story_id": "2026-07-12-2-dead-in-mass-2cb366c4a7",
+    "consensus_facts": [
+      "Two people were killed in a shooting at a Latin street festival in Toronto, Canada, on Saturday, July 11, 2026.",
+      "The shooting occurred during the Salsa on St. Clair festival in Midtown Toronto, a celebration of Latin/Latino culture.",
+      "The festival was marking its 22nd annual iteration.",
+      "Police responded to an active shooter situation and found six people with gunshot wounds; two were pronounced dead at the scene (CNN, BBC, CBS, and NBC all cite six with gunshot wounds; Fox cites five found).",
+      "No suspect or suspects had been apprehended at the time of reporting; a manhunt/search was underway.",
+      "Police secured the scene and urged the public to stay away from the area.",
+      "Police reported the shooting at approximately 8:12\u20138:15 p.m. local time.",
+      "The shooting occurred in the area of St. Clair Avenue near Arlington Avenue (per NBC and Fox)."
+    ],
+    "disagreements": [
+      {
+        "topic": "number of victims found with gunshot wounds",
+        "positions": {
+          "CNN": "Six victims found with gunshot wounds",
+          "BBC News": "Six victims with gunshot wounds found",
+          "CBS News": "Six people found with gunshot wounds, two of whom died",
+          "NBC News": "Six people suffered gunshot wounds (headline says 3 wounded, body references 'at least four others' and six with wounds)",
+          "Fox News": "Five people found suffering from gunshot wounds"
+        }
+      },
+      {
+        "topic": "number wounded/injured (excluding the two killed)",
+        "positions": {
+          "CNN": "'Several others' injured; six total found with gunshot wounds",
+          "CBS News": "Four wounded (headline and body)",
+          "NBC News": "Headline says three wounded; body says 'at least four others were wounded' and 'six others were wounded'",
+          "Fox News": "Three others injured"
+        }
+      },
+      {
+        "topic": "reported time of the shooting",
+        "positions": {
+          "BBC News": "Approximately 20:12 local time (01:12 BST)",
+          "NBC News": "Just before 8:15 p.m. ET",
+          "Fox News": "8:12 p.m. local time"
+        }
+      },
+      {
+        "topic": "number of suspects",
+        "positions": {
+          "CNN": "A suspect or suspects remain at large",
+          "BBC News": "The suspect, or suspects, had not yet been apprehended",
+          "NBC News": "At least one gunman 'still outstanding'",
+          "Fox News": "Police have not yet confirmed any arrests"
+        }
+      },
+      {
+        "topic": "location/neighborhood name",
+        "positions": {
+          "CNN": "The city's midtown",
+          "CBS News": "Midtown Toronto",
+          "Fox News": "Midtown Toronto's Hillcrest Village"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN": "Leads on the manhunt and the emotional scene ('People gathered in crowds down the street just after sunset on a warm summer night to celebrate with music and dance'). Emphasizes the cultural significance of the 22-year festival and the large law enforcement presence. Two near-identical articles (Article 1 and 2) from the same story. Neutral, developing-story framing with no casualty detail beyond 'several others' injured.",
+      "BBC News": "Straight breaking-news wire style. Precise on timing (20:12 local / 01:12 BST) and geography ('St Clair Avenue, located in midtown Toronto, is lined with shops and restaurants'). Frames the event around the festival schedule (11\u201312 July). Minimal emotional coloring; repeated invitations to refresh for updates.",
+      "CBS News": "Concise, fact-forward framing focused on casualty count ('at least 2 killed... four more wounded') and the active-shooter designation. Attributes festival identification to CTV News. Notably appends a list of unrelated shooting stories and a 'Free Press' promotional block ('The Evil of the San Diego Mosque Shooting'), embedding this event within a broader gun-violence content stream.",
+      "NBC News": "Headline emphasizes '2 killed, 3 wounded' but the body text is internally inconsistent, citing both 'six others were wounded' and 'at least four others.' Most specific on precise location (St. Clair Avenue and Arlington Avenue) and timeline (reported just before 8:15 p.m.; scene secured by 9:20 p.m.). Includes a subscription paywall prompt. Focuses on the two-day festival structure.",
+      "Fox News": "Frames with vivid language ('Gunfire shatters Toronto Latin street festival'). Uniquely reports operational detail: the TTC suspended St. Clair West station service on Line 1 due to a 'security incident,' since resumed. Reports a lower found-wounded count (five). Places the festival in 'Hillcrest Village.' Article tail carries unrelated 'Antisemitism Exposed' newsletter promotion and reporter credentials referencing prior crisis coverage."
+    },
+    "primary_source_alignment": [
+      "No primary source (police press release, official statement, or transcript) was located for this story. All outlets attribute their core facts to the Toronto Police Service, largely via police statements on X and reporting from CTV News, meaning the reports substantially trace to shared upstream sourcing rather than independent verification."
+    ],
+    "missing_context": [
+      "No outlet reports a confirmed motive or whether the shooting was targeted or random.",
+      "No outlet identifies the two people killed or provides ages, identities, or conditions of the wounded.",
+      "No outlet reports the exact total number of people injured with certainty \u2014 counts range from three to six across and within outlets, and none reconcile the discrepancy.",
+      "No outlet clarifies whether the two killed are counted within or in addition to the total 'found with gunshot wounds' figure, creating ambiguity in casualty math.",
+      "Most outlets rely on Toronto Police statements and CTV News as shared upstream sources; independent corroboration is limited, so overlapping reporting does not equal independent confirmation.",
+      "No outlet reports weapon type, number of shots, or whether the incident was contained to a single location.",
+      "Only Fox News reports the TTC transit disruption at St. Clair West; no other outlet corroborates or mentions it.",
+      "This is an actively developing, same-day breaking story; all outlets flag that details are incomplete and subject to revision."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets (six articles) with full body text corroborate the core facts \u2014 two killed, roughly six wounded, active shooter at large during Toronto's Salsa on St. Clair festival \u2014 with only minor casualty-count and timing discrepancies typical of a breaking story rather than meaningful framing divergence. No primary source diverges from coverage, so a straightforward REPORT that flags the developing counts is appropriate.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/11/world/toronto-shooting-sat-intl",
+      "title": ""
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://us.cnn.com/2026/07/11/world/toronto-shooting-sat-intl",
+      "title": "2 dead in mass shooting at Canada\u2019s largest Latin street festival, police say - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/ce3e66e1x3go",
+      "title": "At least two killed in Toronto street festival shooting - BBC"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/deadly-shooting-toronto-street-festival/",
+      "title": "At least 2 killed in mass shooting at Toronto street festival, police say - CBS News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/toronto-festival-shooting-rcna545415",
+      "title": "2 killed, 3 wounded in shooting at Toronto festival - NBC News"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/world/gunfire-shatters-toronto-latin-street-festival-leaving-least-2-dead-3-injured",
+      "title": "Gunfire shatters Toronto Latin street festival, leaving at least 2 dead and 3 injured - Fox News"
+    }
+  ]
+}
