@@ -1,0 +1,112 @@
+{
+  "story_id": "2026-07-12-sen-lindsey-graham-dies-1bef26fe9f",
+  "headline_seed": "Sen. Lindsey Graham dies at 71 after \u2018brief and sudden illness\u2019 - NBC News",
+  "brief": {
+    "story_id": "2026-07-12-sen-lindsey-graham-dies-1bef26fe9f",
+    "consensus_facts": [
+      "Sen. Lindsey Graham, R-S.C., died on Saturday evening/night, July 11, 2026, at age 71.",
+      "Graham's office announced the death, attributing it to a 'brief and sudden illness.'",
+      "Emergency personnel responded to a call for cardiac arrest at Graham's Washington/Capitol Hill home Saturday night, according to emergency audio reviewed by NBC News and NPR.",
+      "Graham was scheduled to appear on NBC News' 'Meet the Press' on Sunday.",
+      "President Donald Trump paid tribute to Graham on Truth Social, calling him 'one of the greatest people and Senators I have ever known' and a 'true American Patriot.'",
+      "Graham was first elected to the Senate in 2002, succeeding the retiring Strom Thurmond.",
+      "Graham previously served in the House of Representatives from 1995 to 2003.",
+      "Graham was a foreign policy hawk and close ally of Trump, and was chairman of the Senate Budget Committee.",
+      "Graham had recently won his June primary and was seeking a fifth Senate term in the November election.",
+      "Graham served over three decades in the U.S. Air Force, Air Force Reserve and South Carolina Air National Guard, retiring in 2015 at the rank of colonel.",
+      "Graham had recently traveled abroad, including a trip involving Ukraine and the NATO Summit in Turkey, where he worked on strategy to end the war in Ukraine.",
+      "Israeli Prime Minister Benjamin Netanyahu paid tribute, saying 'Israel has lost one of its greatest friends. America has lost a great patriot. I have lost a beloved friend.'",
+      "Senate Majority Leader John Thune called Graham 'a strong advocate for the United States and a strong ally to freedom-loving countries across the globe.'",
+      "Sen. Dick Durbin, D-Ill., who was with Graham at the NATO Summit in Turkey, credited Graham for cosponsoring the DREAM Act and described him as a fierce partisan and bipartisan ally.",
+      "Graham grew up in Central, South Carolina, where his family ran a restaurant and pool hall, and he was the first in his family to attend college, earning a law degree from the University of South Carolina."
+    ],
+    "disagreements": [
+      {
+        "topic": "Time of death phrasing",
+        "positions": {
+          "Associated Press": "Died 'Saturday evening'",
+          "NBC News": "Died 'Saturday night'",
+          "CBS News": "Died 'Saturday evening'",
+          "NPR": "Died 'late Saturday night'"
+        }
+      },
+      {
+        "topic": "Whether Graham showed prior signs of illness",
+        "positions": {
+          "NBC News": "A top staffer said there was 'no indication' Graham was feeling unwell prior to his death",
+          "Associated Press": "Does not address; only cites 'brief and sudden illness' statement",
+          "NPR": "Office 'did not immediately reply to a request for information on his cause of death'; only cites cardiac arrest audio"
+        }
+      },
+      {
+        "topic": "Successor / succession focus",
+        "positions": {
+          "NBC News": "Gov. Henry McMaster will appoint an interim replacement until Jan. 3; special primary expected by Aug. 11",
+          "Politico": "Rep. Nancy Mace is considering a run for the vacant seat and plans to begin polling this week, per two anonymous sources; may face Trump resistance",
+          "The New York Times (headline only)": "Frames the story around the re-election question \u2014 'What Happens Now?'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Wire-brief format focused on tributes and Graham's foreign policy legacy (Ukraine, trans-Atlantic ties, Israel). Largely a photo-caption package with minimal narrative body; leads with his role as a Trump ally and global foreign-policy advocate. Neutral phrasing.",
+      "NBC News": "Most comprehensive account. Leads with the death and Trump's tribute, then surfaces original reporting: police scanner audio indicating cardiac arrest, photographs of paramedics carrying a person from the home, and a staffer's claim of 'no indication' of prior illness. Ties the death to Sen. Mitch McConnell's ongoing hospitalization, framing a broader Senate-health subtext. Extensive biographical and succession detail.",
+      "Politico": "Almost entirely forward-looking political-mechanics angle rather than obituary. Exclusive framing on Nancy Mace weighing a Senate bid, emphasizing her past electoral losses and potential clash with Trump over the Epstein files. Treats Graham's death primarily as a political vacancy to be filled. Heavy site-navigation boilerplate in the scraped body.",
+      "The Washington Post": "Headline-only in dossier. Frames Graham straightforwardly as 'longtime senator from South Carolina.' No body text available to assess emphasis.",
+      "CBS News": "Frames the story through Sen. Dick Durbin's tribute, emphasizing Graham's bipartisan streak and his cosponsorship of the DREAM Act \u2014 an angle largely absent elsewhere. Includes the cardiac-arrest emergency-call detail and Trump's tribute. Chicago-local CBS framing centered on Durbin (D-Ill.).",
+      "NPR": "Obituary-format with the fullest legacy narrative. Emphasizes Graham's arc from 'fierce Trump critic' (quoting the 2015 'race-baiting, xenophobic religious bigot' line) to staunch ally, and his role as 'the last surviving member' of the 'three amigos' with McCain and Lieberman. Highlights his legislative record (ACB confirmation, One Big Beautiful Bill Act) and, like NBC, connects his death to McConnell's hospitalization and questions of congressional health transparency.",
+      "The New York Times": "Headline-only in dossier. Frames the story around the electoral consequences \u2014 Graham 'Was Facing Re-election in November. What Happens Now?' Emphasis is on succession/politics rather than obituary. No body text to assess further."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The only near-primary material is the Graham office statement ('brief and sudden illness') quoted consistently across AP, NBC News, CBS News and NPR, and emergency/police scanner audio cited by NBC News and NPR indicating a cardiac-arrest call. No official cause of death document, death certificate, or full office statement text was available for direct verification."
+    ],
+    "missing_context": [
+      "No outlet reported an official confirmed cause of death; all references to 'cardiac arrest' come from emergency-call/scanner audio, not an official medical statement.",
+      "The tension between the office's 'brief and sudden illness' phrasing and the NBC staffer's 'no indication' of prior illness, plus the cardiac-arrest audio, is not reconciled by any outlet.",
+      "No outlet in the dossier provided independent confirmation of Politico's anonymously sourced Nancy Mace reporting; it rests on 'two people familiar with her thinking' and 'two Trump allies.'",
+      "The precise mechanics and timeline of South Carolina's succession (interim appointment vs. special primary by Aug. 11 vs. November general) appear only in NBC News; other outlets did not corroborate the specifics.",
+      "Two of seven outlets (The Washington Post, The New York Times) are headline-only, so their full framing and any reporting they added could not be assessed.",
+      "No outlet addressed the status of Graham's recent Ukraine sanctions initiatives or what becomes of legislation he was shepherding as Budget Committee chair.",
+      "AP, NBC, CBS and NPR all rely on the same Graham office statement and the same tribute quotes (Trump, Netanyahu, Thune, Durbin), so apparent multi-outlet agreement on those quotes reflects shared sourcing rather than independent verification."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets have substantive body text reporting the same core death but with materially different emphases \u2014 NPR and NBC run legacy/health-transparency angles, Politico and NYT pivot to succession politics, CBS foregrounds bipartisan tributes \u2014 making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/lindsey-graham-death-reactions-30c9758bfc124c30e8e4db0e4dd719e2",
+      "title": "Lindsey Graham draws tributes for his support of Ukraine, trans-Atlantic ties and Israel - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/politics-news/sen-lindsey-graham-dies-71-brief-sudden-illness-rcna552722",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/07/12/nancy-mace-lindsey-graham-senate-seat-00994088",
+      "title": "Nancy Mace considering running for Lindsey Graham\u2019s Senate seat - Politico"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/07/12/lindsey-graham-longtime-south-carolina-senator-dies-71/",
+      "title": "Lindsey Graham, longtime senator from South Carolina, dies at 71 - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/chicago/news/sen-dick-durbin-honors-memory-sen-lindsey-graham/",
+      "title": "Sen. Dick Durbin honors memory of Sen. Lindsey Graham and his support of the DREAM Act - CBS News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/12/nx-s1-5890790/us-sen-lindsey-graham-dies",
+      "title": "Sen. Lindsey Graham of South Carolina, Trump ally and foreign policy hawk, dies at 71 - NPR"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/12/us/politics/lindsey-graham-death-reelection-seat.html",
+      "title": "Lindsey Graham Was Facing Re-election in November. What Happens Now? - The New York Times"
+    }
+  ]
+}
