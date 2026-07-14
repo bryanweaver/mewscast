@@ -1,0 +1,99 @@
+{
+  "story_id": "2026-07-14-trump-backs-off-20-257768ee3d",
+  "headline_seed": "Trump Backs Off 20% Fee for Strait of Hormuz Shipments - Bloomberg.com",
+  "brief": {
+    "story_id": "2026-07-14-trump-backs-off-20-257768ee3d",
+    "consensus_facts": [
+      "President Donald Trump backed off/reversed his plan to charge non-Iranian ships a fee for passing through the Strait of Hormuz (reported by NBC News, USA Today, and The Washington Post).",
+      "The reversal came roughly one day after Trump had announced the toll plan (USA Today and AP describe the plan being announced Monday and reversed Tuesday).",
+      "Trump said Gulf/Middle East countries would instead invest in the United States rather than pay fees at the strait (USA Today and The Washington Post).",
+      "The reversal occurred amid renewed US-Iran fighting, with the US launching strikes on Iran on Monday night (AP and USA Today both report US strikes on Iran on Monday night).",
+      "The US blockade would apply only to ships tied to Iranian ports or carrying Iranian cargo (USA Today states this; AP references a reinstated blockade on Iranian ports)."
+    ],
+    "disagreements": [
+      {
+        "topic": "The specific fee figure",
+        "positions": {
+          "USA Today": "Explicitly states Trump had proposed a 20% fee on passing ships.",
+          "AP": "Refers to charging ships for 'safe passage' without stating the 20% figure in retrievable body text.",
+          "The Washington Post": "Refers to plans to 'charge fees' / a 'shipping toll' without stating the 20% figure in body text.",
+          "Bloomberg": "Headline references '20% Fee' but body text is unavailable (paywall/robot wall)."
+        }
+      },
+      {
+        "topic": "Stated reason for the reversal",
+        "positions": {
+          "USA Today": "Trump said he changed his mind after calls from Middle East leaders ('kings and emirs') who offered to invest billions instead of paying tolls.",
+          "AP": "Frames the backtrack against a backdrop of intensifying attacks and a collapsed interim peace deal, without detailing the phone-call motive.",
+          "The Washington Post": "Attributes the shift to Gulf countries agreeing to invest in the US, without the phone-call detail."
+        }
+      },
+      {
+        "topic": "Timeline framing of blockade status",
+        "positions": {
+          "AP": "Says Trump was 'reinstating' a blockade and vowed to reinstate an American blockade of Iranian ports.",
+          "USA Today": "Says the blockade would only affect ships tied to Iranian ports or cargo, framing it as a narrowing rather than a reinstatement."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Body text unavailable across all three Bloomberg entries (robot/subscription wall). Headlines carry the sharpest specific claims: the '20% Fee' figure, 'Oil Tops $86 a Barrel as Trump Reinstates Naval Blockade on Iran,' and a separate 'Trump to Support Graham-Led Russia Sanctions Bill.' These are labels, not retrievable reporting, and cannot corroborate body-level facts.",
+      "NBC News": "Live-blog format; leads the Hormuz reversal but embeds it within a crowded domestic-news feed dominated by the Maine ICE shooting, Susan Collins criticism, the E. Jean Carroll judgment, and Trump's planned election-integrity address. The strait reversal is stated plainly but not deeply developed; much of the energy is on ICE and Senate politics.",
+      "Associated Press": "Emphasizes escalation over de-escalation \u2014 leads with US strikes on Iran and the 'reinstating' of a blockade, framing the fee backtrack as one beat inside an intensifying war narrative. Heavy on scene-setting imagery (Tehran mourners, Bandar Abbas smoke) and the Iraqi PM White House visit. Least focused on the 20% figure itself.",
+      "USA Today": "Most detailed body-text account of the reversal. Leads directly on Trump walking back the 20% toll one day after announcing it, quotes his Truth Social post and his 'kings and emirs' explanation, and adds granular context: WTO shipping-standstill data, US troop withdrawal from Iraq by Sept. 30, and the Graham/Russia sanctions bill. Frames the reversal as a concrete policy flip-flop.",
+      "The Washington Post": "Runs an AP-bylined piece (Gambrell, Binkley, Boak), so it is not an independent source from AP. Body text is largely site chrome/navigation; the substantive content is a brief summary that Trump backtracked and Gulf countries would invest instead, set against a shattered interim peace deal. Frames it as a business/economy story."
+    },
+    "primary_source_alignment": [
+      "No primary source (Truth Social post text, White House transcript, or WTO shipping dataset) was included in the dossier. USA Today quotes from Trump's Truth Social post and Oval Office remarks, but the underlying document itself was not provided for verification.",
+      "USA Today references World Trade Organization shipping data showing crude oil shipments through the strait unrecorded since July 7 and LNG since July 5, but the WTO data itself is not in the dossier and could not be independently checked."
+    ],
+    "missing_context": [
+      "The Washington Post article carries an AP byline (Gambrell, Binkley, Boak), meaning WaPo and AP are effectively the same wire source, not two independent corroborations. Consensus facts shared only between those two should be treated as single-sourced.",
+      "Only USA Today's body text confirms the specific '20% fee' figure that appears in the Bloomberg and story headlines; no other retrievable body text states it, so the headline number rests on limited body-level corroboration.",
+      "All three Bloomberg articles were blocked by a subscription/robot wall, so the outlet with the most specific quantitative headlines (20% fee, $86 oil, naval blockade) contributed no verifiable reporting.",
+      "No outlet in the dossier provides the actual mechanics of how the promised Gulf 'investments' would be structured, their dollar value, timeline, or whether any agreement is binding \u2014 the substitute-for-tolls claim is asserted but not documented.",
+      "No independent verification of the claimed US strikes on Iran or Iranian counterstrikes on Bahrain is provided; USA Today notes it 'reached out to the Pentagon for confirmation,' indicating these remained unconfirmed at publication.",
+      "The domestic-politics context (ICE shootings, Collins criticism, Graham's death and succession, the Thursday election-integrity address) is prominent in NBC and USA Today but unrelated to the strait reversal; a reader may need this separated to avoid conflating storylines."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "At least three retrievable-body outlets (NBC, AP, USA Today) reported the same reversal but with materially different framings \u2014 de-escalation flip-flop vs. war-escalation backdrop vs. buried live-blog item \u2014 and the sharpest number (20% fee, $86 oil) lives only in paywalled Bloomberg headlines while WaPo is really AP under another masthead. That coverage divergence, plus the single-sourced fee figure, makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-14/trump-backs-off-20-fee-for-strait-of-hormuz-shipments",
+      "title": ""
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/trump-administration/live-blog/trump-iran-congress-kagan-barrett-darline-graham-ice-doj-live-updates-rcna587383",
+      "title": "Live updates: Trump backs off plan to toll ships in Strait of Hormuz; Maine Senate candidates speak out against ICE shooting - NBC News"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/iran-us-hormuz-strait-war-july-14-2026-abd060c55feea216625689e57d8f76be",
+      "title": "Trump backs away from plan to charge fees in the Strait of Hormuz as attacks intensify - AP News"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-13/latest-oil-market-news-and-analysis-for-july-14",
+      "title": "Oil Tops $86 a Barrel as Trump Reinstates Naval Blockade on Iran - Bloomberg.com"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-13/trump-to-support-graham-led-russia-sanctions-bill",
+      "title": "Trump to Support Graham-Led Russia Sanctions Bill - Bloomberg.com"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/world/2026/07/14/iran-us-war-trump-strait-of-hormuz--live/90910381007/",
+      "title": "Trump backs off plan to charge tolls at Strait of Hormuz: Live updates - USA Today"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/business/2026/07/14/iran-us-hormuz-strait-war-july-14-2026/b82cf3f0-7f3c-11f1-8a16-393bd03340b0_story.html",
+      "title": "Trump backs away from plans to charge fees in the Strait of Hormuz as attacks intensify - The Washington Post"
+    }
+  ]
+}
