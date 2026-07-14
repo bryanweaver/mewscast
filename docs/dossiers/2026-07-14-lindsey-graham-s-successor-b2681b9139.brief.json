@@ -1,0 +1,86 @@
+{
+  "story_id": "2026-07-14-lindsey-graham-s-successor-b2681b9139",
+  "headline_seed": "Lindsey Graham\u2019s successor to be sworn in and Maine ICE shooting sparks outcry: Morning Rundown - NBC News",
+  "brief": {
+    "story_id": "2026-07-14-lindsey-graham-s-successor-b2681b9139",
+    "consensus_facts": [
+      "A man was shot and killed by an ICE officer in Biddeford, Maine, during a traffic stop on Monday morning (reported in NBC News body text and ABC News body text).",
+      "Sen. Lindsey Graham's sister was appointed/selected to finish his Senate term (reported in NBC News body text and referenced in ABC News body text)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the man killed in Maine was the target of the ICE action",
+        "positions": {
+          "NBC News": "Homeland Security Secretary Markwayne Mullin told Sen. Angus King the man was NOT the target of an arrest warrant; two advocacy groups (Presente! and Maine Immigrant Rights Coalition) say he was a 26-year-old Colombian authorized to work in the U.S. with a Social Security number, while ICE claimed he was 'an illegal alien' who tried to flee.",
+          "ABC News": "Headlines that the man killed was 'not intended target' per an official; body text is largely navigation/teaser and does not elaborate."
+        }
+      },
+      {
+        "topic": "What the man said during the stop",
+        "positions": {
+          "NBC News": "ICE says the driver attempted to flee; one neighbor with a direct view said he heard the man say 'I tried to stop.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier ('Video appears to show events around alleged ICE shooting in Maine'). No retrievable body text \u2014 the entry is a Google News RSS link wrapper. Uses hedging wire language ('appears to show,' 'alleged') consistent with neutral wire caution, but provides no substantive reporting to analyze.",
+      "NBC News": "The only outlet with substantive body text. Frames the day as a multi-story Morning Rundown, leading with the Graham succession as a human-interest political story (emphasizing the sibling adoption backstory and Trump's 'fabulous tribute' recommendation to Gov. McMaster) and treating the ICE shooting as a co-lead. On the shooting, NBC foregrounds the contradiction between ICE's 'illegal alien' claim and advocacy groups' account that the victim was a work-authorized Colombian with an SSN, and includes a neighbor's 'I tried to stop' quote that undercuts the flee narrative. Also carries a private-equity/bowling economic feature and an inflation preview. In separate video items, NBC runs a protest/vigil piece for the shooting victim and a 'fitting tribute' segment from a former SC governor plus Trump reflecting on his final call with Graham \u2014 coverage that humanizes both the Graham appointment and the victim.",
+      "ABC News": "Body text is almost entirely site chrome, live-stream listings, and video teasers rather than article prose. The retrievable framing is in the headline and teaser: 'Man killed in ICE-involved shooting in Maine was not intended target: Official,' attributing the not-the-target claim to an official and noting local elected leaders and multiple sources. Teaser links also connect the Maine shooting to a prior Houston ICE shooting ('Man killed by ICE in Maine days after Houston shooting') and list a Scarborough, ME demonstration 'call for end of ICE killings,' signaling a pattern/protest framing.",
+      "CBS News": "No article prose \u2014 the page is a video index. The retrievable content is that Rep. Chellie Pingree (D-Maine) appeared on 'The Daily Report' to discuss the shooting, framing the story through a Democratic lawmaker's response rather than through incident facts.",
+      "Walter Croncat editorial note on duplicate NBC entries": "Four of the seven dossier items are NBC News properties (main Morning Rundown, a vigil short, a Meet the Press 'fitting tribute' segment, and a Trump reflection short). Only the Morning Rundown item contains reportable body text; the other three NBC pages returned privacy-policy/opt-out boilerplate or video-navigation text with no substantive content."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court filings, ICE statements in full, autopsy/medical examiner records, the video Reuters references, or official South Carolina appointment paperwork were available in the dossier, so no report-vs-document comparison can be made."
+    ],
+    "missing_context": [
+      "Only one outlet (NBC News) provided substantive body text. ABC News and CBS News entries were navigation/teaser/video-index pages, and three of the seven items were NBC video pages returning privacy-policy boilerplate. Reuters was headline-only. This means most 'consensus' rests on a single reporting outlet, with ABC's headline as thin corroboration.",
+      "The name of the man killed in Maine is not reported in any dossier item; he is identified only as a 26-year-old Colombian per advocacy groups.",
+      "No outlet body text reports what happened to the ICE officer, whether the officer has been placed on leave, or whether any investigation (state, federal, or internal) has been opened.",
+      "Reuters references a video that 'appears to show events around' the shooting, but no dossier item describes or authenticates the video's contents.",
+      "The ABC teaser links the Maine shooting to a prior Houston ICE shooting, but no body text explains that incident or establishes a documented pattern.",
+      "No official ICE full statement, medical examiner finding, or independent confirmation of the victim's work authorization/Social Security status appears \u2014 the work-authorization claim comes solely from two advocacy organizations via NBC.",
+      "On the Graham succession: no outlet body text confirms Darline Graham Nordone was actually sworn in (NBC reports she 'is set to' be sworn in 'this afternoon' per 'two sources familiar'); the swearing-in in the headline seed is not verified in the provided bodies.",
+      "No detail on whether Graham Nordone intends to run for the seat, or the timeline/rules of the South Carolina primary to permanently fill it, beyond NBC noting the race 'is beginning to take shape.'"
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets nominally covered the same two events, but only NBC News supplied real reporting while ABC, CBS, and Reuters offered headlines, teasers, or boilerplate \u2014 so the story is really about how thin and single-source the coverage is, especially the disputed ICE-shooting facts (ICE's 'illegal alien' claim vs. advocacy-group and neighbor accounts). That divergence and the single-outlet dependence make this a coverage-report rather than a clean REPORT.",
+    "confidence": 0.45
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/video/watch/idRW773614072026RP1/?chan=us-news",
+      "title": "Video appears to show events around alleged ICE shooting in Maine - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/lindsey-graham-sister-maine-ice-shooting-morning-rundown-rcna587412",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/video/man-killed-ice-involved-shooting-maine-intended-target-134737406",
+      "title": "Video Man killed in ICE-involved shooting in Maine was not intended target: Official - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/video/rep-chellie-pingree-speaks-out-about-ice-shooting-in-maine/",
+      "title": "Rep. Chellie Pingree speaks out about ICE shooting in Maine - CBS News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/video/shorts/protesters-hold-vigil-for-victim-of-maine-ice-shooting-266632773540",
+      "title": "Protesters hold vigil for victim of Maine ICE shooting - NBC News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/meet-the-press/video/appointment-of-lindsey-graham-s-sister-to-senate-a-fitting-tribute-former-south-carolina-governor-266606661732",
+      "title": "Appointment of Lindsey Graham's sister to Senate a 'fitting tribute\u2019: Former South Carolina governor - NBC News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/video/shorts/trump-reflects-on-final-phone-call-with-lindsey-graham-266615365713",
+      "title": "Trump reflects on final phone call with Lindsey Graham - NBC News"
+    }
+  ]
+}
