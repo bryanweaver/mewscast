@@ -1,0 +1,116 @@
+{
+  "story_id": "2026-07-14-house-passes-trump-backed-1397310515",
+  "headline_seed": "House passes Trump-backed bill that would make daylight saving time permanent - NBC News",
+  "brief": {
+    "story_id": "2026-07-14-house-passes-trump-backed-1397310515",
+    "consensus_facts": [
+      "The US House of Representatives passed the Sunshine Protection Act on Tuesday, July 14, 2026, by a vote of 308-117.",
+      "The bill would make daylight saving time permanent, ending the twice-a-year practice of changing clocks.",
+      "The legislation was authored/sponsored by Rep. Vern Buchanan, R-Fla.",
+      "President Donald Trump publicly backed the bill, calling it a 'very nice WIN for the Republican Party' on Truth Social.",
+      "The bill now heads to the Senate, where its prospects are uncertain amid skepticism from members of both parties.",
+      "Under the bill, states would have the option to opt out and remain on permanent standard time.",
+      "Hawaii and most of Arizona do not currently observe daylight saving time.",
+      "Roughly 19-20 states have already passed legislation that would enact permanent daylight saving time if Congress authorizes it, per the National Conference of State Legislatures.",
+      "The Senate passed a version of daylight saving time legislation in 2022, but it failed to advance in the House.",
+      "Opponents, including medical/sleep experts, argue permanent standard time better aligns with circadian rhythms and cite safety concerns about dark winter morning commutes, especially for children.",
+      "The US briefly tried permanent/year-round daylight saving time in the 1970s (1974) but reversed it after public backlash over dark mornings.",
+      "Recent AP-NORC polling shows the current clock-change system is unpopular with Americans, though opinions on the alternative are divided."
+    ],
+    "disagreements": [
+      {
+        "topic": "Polling specifics",
+        "positions": {
+          "NBC News": "Cites a 2025 AP-NORC poll that clock-changing is unpopular but opinions on how to change the system are divided; no specific percentages given.",
+          "Fox News": "Cites an AP-NORC survey released in December: just 12% favor the current system, nearly half opposed, 40% no opinion, and more support year-round daylight saving over standard time by a 14-point margin."
+        }
+      },
+      {
+        "topic": "Senate outlook / named obstacles",
+        "positions": {
+          "NBC News": "Names Sen. Tom Cotton, R-Ark., as the specific obstacle who objected to fast-tracking in October and will ask Majority Leader Thune not to bring it up; quotes a senior Hill aide.",
+          "Fox News": "Describes general bipartisan Senate skepticism without naming Cotton or Thune; states Trump is expected to sign if it reaches his desk.",
+          "The Guardian": "States only that the bill next goes to the Senate, without naming specific opponents.",
+          "The Washington Post": "Body text unavailable behind paywall; deck notes objections from medical groups and Midwestern lawmakers."
+        }
+      },
+      {
+        "topic": "Regional/party breakdown of the vote",
+        "positions": {
+          "Fox News": "Provides detailed breakdown: coastal-area members (Louisiana, Florida, New Jersey) supported it, Midwest and agriculture-heavy states opposed; Democrats nearly evenly split with Minority Leader Hakeem Jeffries opposing; just 22 Republicans opposed, naming Reps. Steil (Wis.), Crawford (Ark.), Zinke (Mont.), Hageman (Wyo.).",
+          "NBC News": "Does not provide a regional or party breakdown of the vote.",
+          "The Guardian": "Notes bipartisan support including some Democratic co-sponsors, but no detailed breakdown."
+        }
+      },
+      {
+        "topic": "White House lobbying activity",
+        "positions": {
+          "Fox News": "Reports the White House urged lawmakers to support the bill via an internal memo sent to Hill offices Tuesday, calling it a 'popular, common-sense reform.'",
+          "NBC News": "Does not mention a White House memo.",
+          "The Guardian": "Does not mention a White House memo."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Leads with a light 'sprang forward' pun and the color detail of Rep. DesJarlais playing 'Here Comes the Sun.' Foregrounds the Senate roadblock by naming Sen. Tom Cotton and quoting skeptical House Republicans (Burchett), giving substantial space to the bill's likely stall. Balances proponent quotes (McCormick's mental-health argument) with historical context (Nixon-era repeal, Uniform Time Act).",
+      "The Washington Post": "Full body text is paywalled; only the headline, deck, and an AI comment summary are retrievable. Frames the vote as 'delivering a win for President Donald Trump' while immediately noting it came 'over the objections of medical groups and lawmakers who represent Midwestern states.' The surfaced reader-comment summary emphasizes opposition favoring permanent standard time \u2014 a framing choice highlighting dissent.",
+      "The Hill": "Headline-only in the dossier (Google News RSS link); no retrievable body text. Headline is neutral and descriptive: 'House passes bill to make daylight saving time permanent.' Cannot corroborate body-level detail.",
+      "The Guardian": "Leads with the human-interest quote 'Americans are tired of the clock change' and emphasizes bipartisanship (Democratic co-sponsors, Trump backing). Notably links to a companion piece asserting science confirms clock-changing is bad for health, and closes by flagging that sleep specialists favor fixed standard time \u2014 giving the health-science counterpoint visible placement.",
+      "Fox News": "Two articles. The vote story leads with proponents' framing (Rep. Cammack's infant son's sleep, Salazar's tourism pitch) and casts it as bipartisan common sense, but also gives the fullest detail on the vote's regional/party splits and the strongest polling numbers favoring the change. The earlier 'clears key House hurdle' piece adds a distinctly right-leaning angle: quotes Freedom Caucus Rep. Keith Self calling it 'majoring in the minors \u2014 fiddling with the clocks while the country burns,' framing intra-GOP objections about legislative priorities (border, SAVE America Act). Both include the sleep-doctor downside and Scanlon's standard-time counterargument."
+    },
+    "primary_source_alignment": [
+      "No primary sources (roll-call vote record, bill text, or committee report) were located for this story. The 308-117 tally is reported consistently across NBC News, The Guardian, and Fox News but could not be independently verified against an official House roll-call document.",
+      "Fox News's specific named dissenters (Steil, Crawford, Zinke, Hageman) and its claim of '22 Republicans opposed' and 'Jeffries opposing' are single-outlet and unverified against the actual roll call.",
+      "Fox News's reference to a White House internal memo to Hill offices could not be checked against the memo itself."
+    ],
+    "missing_context": [
+      "Only three outlets (NBC News, The Guardian, Fox News x2) provided substantial body text. The Washington Post article is paywalled and The Hill entries are headline-only Google News RSS stubs; consensus is drawn from the three full-text outlets.",
+      "The AP-NORC polling is cited by two outlets with materially different specificity and even different framings (NBC's '2025 poll' vs. Fox's 'released in December'); no outlet linked to the underlying poll data.",
+      "No outlet quantified the actual health or economic evidence beyond advocacy claims \u2014 the 'reduce traffic accidents, lower crime' benefits attributed to Buchanan are asserted, not sourced to studies in the coverage.",
+      "No outlet clarified the practical difference in sunrise/sunset times region by region (e.g., which cities would see 9 a.m. winter sunrises), beyond general statements.",
+      "The Guardian's article body appears to blend the House rules committee advancement (Monday, 6-4 vote) with the final passage; the timeline of committee-to-floor steps is clearest in the two Fox pieces (Energy and Commerce 48-1 markup in May, Rules Committee 6-4 on Monday).",
+      "Article 7 (The Hill) is entirely off-topic \u2014 it concerns Trump's support for a Russia sanctions bill by Sen. Graham and is unrelated to daylight saving time; it appears to be a mis-included dossier item.",
+      "No outlet included a direct statement from the Senate leadership office on whether or when a floor vote would occur (NBC relies on an anonymous 'senior Hill aide')."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets reported the same 308-117 vote but with materially different emphasis \u2014 NBC foregrounds the Senate stall via Sen. Cotton, The Guardian and The Washington Post foreground medical/standard-time objections, and Fox foregrounds proponent testimony plus the intra-GOP 'majoring in the minors' critique. The divergent framing, differing poll citations, and single-source vote-breakdown details make this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/house-passes-bill-daylight-saving-time-permanent-sunshine-protection-rcna587531",
+      "title": ""
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/07/14/trumps-plan-make-daylight-saving-time-permanent-get-vote-house/",
+      "title": "House passes Trump\u2019s plan to make daylight saving time permanent - The Washington Post"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/house/5968255-house-sunshine-protection-act-daylight-saving-time/",
+      "title": "House passes bill to make daylight saving time permanent - The Hill"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jul/14/house-committee-advances-daylight-saving-time-bill",
+      "title": "Bill to make daylight saving time permanent passes US House vote: \u2018Americans are tired of the clock change\u2019 - The Guardian"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/politics/house-passes-major-daylight-saving-time-reform-trump-signals-support-ending-clock-change",
+      "title": "House passes Daylight Saving Time reform as Trump signals support for ending clock change - Fox News"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-backed-daylight-saving-time-bill-clears-key-house-hurdle",
+      "title": "Trump-backed Daylight Saving Time bill clears key House hurdle - Fox News"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/administration/5966436-lindsey-graham-russia-sanctions/",
+      "title": "White House says Trump supports Graham\u2019s Russia sanctions bill - The Hill"
+    }
+  ]
+}
