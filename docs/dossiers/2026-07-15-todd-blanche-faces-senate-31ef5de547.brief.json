@@ -1,0 +1,109 @@
+{
+  "story_id": "2026-07-15-todd-blanche-faces-senate-31ef5de547",
+  "headline_seed": "Todd Blanche faces Senate hearing to be Trump's attorney general - BBC",
+  "brief": {
+    "story_id": "2026-07-15-todd-blanche-faces-senate-31ef5de547",
+    "consensus_facts": [
+      "Todd Blanche testified before the Senate Judiciary Committee on July 15, 2026, in a confirmation hearing on his nomination by President Trump to be U.S. attorney general.",
+      "Blanche has served as acting attorney general since April 2026, when Trump fired his predecessor, Pam Bondi.",
+      "Blanche is Trump's former personal/defense lawyer and previously served as the Justice Department's No. 2 official.",
+      "A federal judge on Monday (before the hearing) issued a scathing ruling criticizing the DOJ and Blanche over a settlement of Trump's lawsuit against the IRS, describing it as an effort to 'earmark billions of dollars from American taxpayers to redress grievances not defined in the law.'",
+      "The settlement included a now-scuttled proposal for a nearly $1.8 billion 'anti-weaponization' fund to compensate people who claimed they were unfairly targeted by politicized prosecutions, with concern it could compensate those convicted in the Jan. 6, 2021, Capitol attack.",
+      "Blanche has said the $1.8 billion fund is no longer moving forward.",
+      "Republican Sens. Thom Tillis (N.C.) and John Cornyn (Texas), both Judiciary Committee members, have raised questions about Blanche's role in the IRS settlement and had not fully committed to supporting him.",
+      "Committee Democrats, led by ranking member Sen. Dick Durbin (Ill.), are unified in opposition; Durbin characterized Blanche as a 'yes-man' who placed loyalty to Trump above the department's independence.",
+      "Committee Chairman Sen. Chuck Grassley (R-Iowa) supports Blanche, calling him well qualified and praising his law-enforcement record.",
+      "A single Republican 'no' vote on the Judiciary Committee could block Blanche's nomination.",
+      "Sen. Lindsey Graham (R-S.C.), a committee member, died over the weekend, and Republican leadership had not yet named a replacement on the committee.",
+      "Blanche faced scrutiny over the DOJ's handling of the release of files related to convicted sex offender Jeffrey Epstein, including sloppy redactions that exposed some victims' names.",
+      "Trump publicly praised Blanche in a Truth Social/social media post on Tuesday, calling him a 'great lawyer, always very fair,' and urged 'every Republican Senator' to confirm him 'ASAP.'",
+      "Under Blanche's leadership, the DOJ accelerated investigations of Trump's political rivals/perceived foes."
+    ],
+    "disagreements": [
+      {
+        "topic": "Republican senators' current stance on Blanche",
+        "positions": {
+          "The Washington Post": "In Article 7, Tillis 'said he was leaning toward giving Blanche his support,' while Cornyn's questions Wednesday could determine his backing; Sen. John Kennedy (R-La.) also undecided.",
+          "NPR": "Frames Tillis and Cornyn simply as among the 'handful' who have raised questions, without noting Tillis leaning toward support.",
+          "The Washington Post (Article 5)": "Reports Tillis told CNN he now has 'a more positive predisposition' toward the nomination but still going through the process."
+        }
+      },
+      {
+        "topic": "Committee partisan composition after Graham's death",
+        "positions": {
+          "The Washington Post (Article 7)": "States there are 11 Republicans on the Judiciary Committee to the Democrats' 10 following Graham's death.",
+          "The Washington Post (Article 5) and NPR": "Note Graham's death and the unfilled seat but do not give an explicit post-death 11-10 count."
+        }
+      },
+      {
+        "topic": "Scope of the Epstein files controversy",
+        "positions": {
+          "CNBC": "Emphasizes DOJ improperly failed to redact victims' names (~1% of redactions needed fixing, per Blanche) and that Epstein victims released a video urging the Senate to block him.",
+          "The Washington Post (Article 7)": "Reports Republicans criticized both sloppy redactions exposing victims AND over-redaction potentially obscuring names of others complicit in Epstein's crimes.",
+          "BBC News": "Does not focus on Epstein files; instead centers on Blanche's defense of FBI Director Kash Patel."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Blanche faces Senate grilling in bid to be Trump's attorney general'). No body text retrievable. Frames the event as a 'grilling' \u2014 combative posture \u2014 but provides no reportable detail here.",
+      "The New York Times": "Headline-only ('Watch Live: Todd Blanche... Answers Questions at Confirmation Hearing'). No body text. Live-video framing, neutral 'Answers Questions' language rather than 'grilling.'",
+      "BBC News": "Narrow live-blog excerpt that ignores the confirmation's central controversies (Epstein files, $1.8B fund) and instead spotlights the single most dramatic exchange: Sen. Sheldon Whitehouse's pointed questions about FBI Director Kash Patel's alleged drinking, absences, and jet use, and Blanche's 'full faith' defense and dismissal of the question as 'extraordinarily obnoxious.' Emphasizes theater and personality clash; buries the substantive nomination stakes.",
+      "CNBC": "Most substantive body text. Leads with Blanche defending the DOJ's Epstein files handling and his admission that ~1% of redactions had to be fixed ('There were mistakes... I take responsibility'). Uniquely details Durbin's criticism of Blanche's crypto-related asset holdings while ordering dismantling of DOJ crypto enforcement, and elaborates on the IRS settlement giving Trump/family effective IRS immunity and the Miami judge referring her order to the New York State Bar over a pending ethics complaint against Blanche. Specialized/financial angle; heavy on documented specifics and quotes.",
+      "The Washington Post": "Two articles. Article 5 (preview) frames Blanche as 'the attorney general [Trump] has always wanted' \u2014 a loyalist who turns 'presidential demands into action' \u2014 and contextualizes via Trump's history of firing AGs (Sessions, Barr, Bondi). Article 7 (hearing-day) leads on the 'trust' theme, quoting Blanche's 'I am here today to earn your trust once more' against Durbin's 'yes-man' attack and Grassley's praise; foregrounds the GOP vote math (Tillis leaning yes, Cornyn/Kennedy undecided, 11-10 committee split) and both the Epstein and IRS-settlement controversies. Analytical, Trump-loyalty-centered framing throughout.",
+      "NPR": "Frames the hearing as 'high-stakes' and centers the 'politicization of justice' theme. Emphasizes DOJ actions targeting Trump foes (Comey and SPLC indictments, E. Jean Carroll investigation), the 1,200 former DOJ employees' letter opposing him and alleging 'improper, unlawful' firings, and Blanche's dismissive 'I'm not a math guy' response. Balances with Grassley's support and a police-organization endorsement. Institutional-independence framing."
+    },
+    "primary_source_alignment": [
+      "No primary sources (hearing transcript, roll-call vote, the Monday federal judge's order, or the 1,200-signature DOJ letter) were located in this dossier, so no direct document-vs-coverage comparison is possible.",
+      "The federal judge's Monday order is quoted by multiple outlets ('earmark billions of dollars from American taxpayers to redress grievances not defined in the law'; 'improper purpose'; self-dealing), but the underlying ruling itself is not in the dossier for verification."
+    ],
+    "missing_context": [
+      "No primary sources were provided \u2014 no hearing transcript, no committee roll-call/vote result, no copy of the Monday judge's order, and no text of the 1,200-signatory DOJ employee letter. Claims about these documents are secondhand through the outlets.",
+      "The hearing was ongoing/live at the time of these reports (NYT offers a 'Watch Live'), so no outcome \u2014 no committee vote, no confirmation result \u2014 is reported; the story is mid-event.",
+      "Reuters and The New York Times appear as headline-only in this dossier with no retrievable body text, so their substantive framing cannot be assessed beyond word choice.",
+      "CNBC's specific details \u2014 Durbin's criticism of Blanche's crypto asset holdings while he dismantled DOJ crypto enforcement, the New York State Bar ethics complaint referral, and the ~1% redaction-error figure \u2014 are single-source (CNBC only) and are not corroborated by another full-text body in the dossier.",
+      "BBC's Kash Patel exchange (Whitehouse's questions on drinking, jet use, absences; Blanche's 'full faith' defense) is single-source in this dossier and not corroborated by another full-text body.",
+      "No outlet reports the current whip count for the full Senate floor beyond the 53-47 GOP majority (per WaPo Article 5) and the general 'can only afford to lose three' math; the committee-stage outcome is presented as the immediate hurdle but not resolved.",
+      "None of the outlets independently verify Patel's alleged conduct referenced in the BBC exchange; the allegations are presented as prior accusations."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with retrievable body text (BBC, CNBC, two Washington Post pieces, NPR) covered the same hearing but with materially different emphases \u2014 BBC on the Patel clash, CNBC on Epstein files and crypto/ethics specifics, WaPo on Trump-loyalty and the GOP vote math, NPR on institutional independence \u2014 making this a coverage-comparison story rather than a straight REPORT, and the absence of primary sources further warrants a meta framing.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/blanche-face-senate-grilling-bid-be-trumps-attorney-general-2026-07-15/",
+      "title": "Blanche faces Senate grilling in bid to be Trump's attorney general - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/07/15/us/todd-blanche-hearing-attorney-general",
+      "title": "Watch Live: Todd Blanche, Trump's Attorney General Pick, Answers Questions at Confirmation Hearing - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/live/czx5xk7gep4t",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/15/todd-blanche-attorney-general-trump-senate-nomination-hearing.html",
+      "title": "Todd Blanche defends handling of Jeffrey Epstein files in Senate confirmation hearing - CNBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/07/14/blanche-aims-sway-gop-skeptics-attorney-general-nominee-faces-senate-test/",
+      "title": "Blanche to face skeptics in GOP after judge\u2019s scathing criticism - The Washington Post"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/15/nx-s1-5891870/todd-blanche-senate-confirmation-attorney-general",
+      "title": "Todd Blanche faces high-stakes confirmation hearing for attorney general - NPR"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/07/15/todd-blanche-faces-capitol-hill-grilling-bid-become-attorney-general/",
+      "title": "Trump ally Blanche vows to regain senators\u2019 trust at AG confirmation hearing - The Washington Post"
+    }
+  ]
+}
