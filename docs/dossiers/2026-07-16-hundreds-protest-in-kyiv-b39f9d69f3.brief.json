@@ -1,0 +1,95 @@
+{
+  "story_id": "2026-07-16-hundreds-protest-in-kyiv-b39f9d69f3",
+  "headline_seed": "Hundreds protest in Kyiv over Zelenskyy\u2019s dismissal of defence minister - Al Jazeera",
+  "brief": {
+    "story_id": "2026-07-16-hundreds-protest-in-kyiv-b39f9d69f3",
+    "consensus_facts": [
+      "Hundreds of protesters gathered in Kyiv on Thursday, July 16, 2026, after President Volodymyr Zelenskyy dismissed Defense Minister Mykhailo Fedorov (CBS News, Al Jazeera).",
+      "Fedorov is 35 years old and previously served in a technology/digital role before becoming defense chief; he is widely credited with a data-driven, drone-focused approach to the war against Russia (CBS News, Al Jazeera).",
+      "Fedorov's dismissal came as part of a broader cabinet reshuffle during which Ukraine's parliament approved a new prime minister (CBS News, Al Jazeera).",
+      "Fedorov is credited with negotiating an arrangement that cut off Starlink satellite internet access for Russian forces (CBS News, Al Jazeera).",
+      "Zelenskyy cited friction/tensions between Fedorov and military leadership as a factor in the decision, wanting greater unity between the Defense Ministry and military leadership (CBS News, Al Jazeera).",
+      "Supporters credit Fedorov with reforming defense procurement and fighting corruption, which won him enemies within the political and military establishment (CBS News, Al Jazeera)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope of protests beyond Kyiv",
+        "positions": {
+          "Al Jazeera English": "Reports protests also took place in Lviv, Odesa and Dnipro, citing local media.",
+          "CBS News": "Mentions protests 'in Kyiv and other Ukrainian cities' but does not name the additional cities.",
+          "NBC News": "Describes 'furious protests erupted in Ukraine' without specifying cities (body largely paywalled)."
+        }
+      },
+      {
+        "topic": "Zelenskyy's underlying motive for the ouster",
+        "positions": {
+          "CBS News": "Cites unnamed officials saying Fedorov's growing popularity had led some in Kyiv to view him as a potential political rival to Zelenskyy, in addition to the friction with Syrskyi.",
+          "Al Jazeera English": "Frames it primarily as Zelenskyy wanting the ministry and military leadership to work with greater unity; does not raise the political-rival angle."
+        }
+      },
+      {
+        "topic": "Criticism of Fedorov's record",
+        "positions": {
+          "Al Jazeera English": "Notes critics say he failed to deliver quickly enough on promises to overhaul military recruitment.",
+          "CBS News": "Presents Fedorov almost entirely positively via protester and military-source quotes; does not surface the recruitment criticism."
+        }
+      },
+      {
+        "topic": "Name of the new prime minister and resignation details",
+        "positions": {
+          "CBS News": "Names Serhii Koretskyi (former CEO of Naftogaz) as approved premier, a day after lawmakers accepted Yulia Svyrydenko's resignation.",
+          "Al Jazeera English": "States parliament approved a new prime minister but does not name the individual."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Longest and most detailed body in the dossier. Leads with backlash and 'major backlash' framing, emphasizing Fedorov as a 'widely respected figure' whose ouster came 'right as Ukraine is seen by many analysts as turning the tide.' Heavily sympathetic to Fedorov: quotes a protester ('Fedorov was not the problem... it is Zelenskyy'), a resigning Air Force deputy commander, a pro-government media pause, and an anonymous armed-forces source on Starlink's battlefield impact. Reports the political-rival theory and Silicon Valley/Trump-administration ties. Buries or omits any substantive criticism of Fedorov's record.",
+      "Al Jazeera English": "Measured, geographically specific framing. Leads on the physical protest near the Ivan Franko National Theatre and the parliamentary approval of a new PM. Names additional protest cities (Lviv, Odesa, Dnipro) and quotes chants ('Shame!', 'The Russians are celebrating'). Uniquely provides historical context by linking the site to last July's 'cardboard protest' over anticorruption agencies. Notably the only outlet to include a critical note (recruitment reform failures), giving a more two-sided account.",
+      "The Times of India": "No substantive article body \u2014 the text is a generic 'About the TOI World Desk' boilerplate blurb. Despite a headline referencing 'Syrskyy go away' chants and Zelenskyy ousting the defense minister, no reportable content is present. Contributes only at the headline level.",
+      "NBC News": "Body is paywalled/truncated ('Subscribe to read this story'). The retrievable text frames the story as 'furious protests' over ousting 'the man widely viewed as spearheading Kyiv's recent success in the drone war,' echoing the sympathetic-to-Fedorov emphasis but offering no further verifiable detail.",
+      "The Hill": "No article body \u2014 content is only a Google News RSS redirect link and the headline 'Protesters rally in Kyiv as Zelenskyy moves to oust Ukraine's defense minister.' The attribution ('AP-International') indicates this is Associated Press wire content. Contributes only at the headline level."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No roll-call vote record for the new prime minister's approval, no official dismissal decree, and no full text of Fedorov's or Zelenskyy's statements were available in the dossier. All claims rest on outlet reporting and quoted social-media posts."
+    ],
+    "missing_context": [
+      "Only two of five articles (CBS News and Al Jazeera English) have substantive body text. NBC News is paywalled, The Hill is a headline-and-link stub, and The Times of India body is generic boilerplate. Consensus is therefore drawn from a two-outlet base, not five.",
+      "The Hill's content is attributed to the Associated Press; if NBC or others also carry AP wire copy, apparent corroboration could reflect a single wire source rather than independent reporting.",
+      "No outlet provides a hard, verified crowd-size figure \u2014 all say 'hundreds' without a source or official estimate.",
+      "No primary documentation (dismissal decree, parliamentary vote tally, full transcript of Zelenskyy's remarks) was available to verify the sequence and official rationale of the reshuffle.",
+      "The specifics and terms of the Starlink arrangement barring Russian forces are asserted (via Fedorov's own claims and an anonymous source in CBS) but not independently documented.",
+      "Little context on who Serhii Koretskyi's or the incoming defense leadership actually are, or the identity of Fedorov's replacement \u2014 CBS mentions a replacement being rejected by a lawmaker but does not name the successor.",
+      "No Russian or independent-analyst perspective is included on whether the reshuffle materially affects Ukraine's battlefield trajectory; the 'turning the tide' claim is attributed to unnamed 'analysts' and 'observers.'"
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with full text (CBS News and Al Jazeera English) cover the same event with materially different emphasis \u2014 CBS runs an unreservedly pro-Fedorov backlash narrative while Al Jazeera adds critical context and historical framing \u2014 while three other outlets contribute only headlines or stubs. The divergence in framing plus the thin, uneven source base makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/ukrainian-protest-zelenskyy-oust-defense-chief-mykhailo-fedorov-russia-war/",
+      "title": "Ukrainian's Zelenskyy faces major backlash for ousting defense chief Mykhailo Fedorov amid progress vs. Russia - CBS News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/7/16/hundreds-protest-in-kyiv-over-zelenskyys-dismissal-of-defence-minister",
+      "title": ""
+    },
+    {
+      "outlet": "The Times of India",
+      "url": "https://timesofindia.indiatimes.com/world/europe/syrskyy-go-away-hundreds-protest-in-kyiv-as-zelenskyy-ousts-defence-minister-watch/articleshow/132436038.cms",
+      "title": "'Syrskyy go away': Hundreds protest in Kyiv as Zelenskyy ousts defence minister - Watch - The Times of India"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/ukraine/protests-ukraine-zelenskyy-defense-minister-fedorov-drone-war-russia-rcna587783",
+      "title": "Furious Ukrainians protest ousting of the man seen as spearheading turnaround against Russia - NBC News"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/ap/ap-international/ap-protesters-rally-in-kyiv-as-zelenskyy-moves-to-oust-ukraines-defense-minister-2/",
+      "title": "Protesters rally in Kyiv as Zelenskyy moves to oust Ukraine\u2019s defense minister - The Hill"
+    }
+  ]
+}
