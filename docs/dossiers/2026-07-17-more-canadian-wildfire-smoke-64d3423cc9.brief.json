@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-07-17-more-canadian-wildfire-smoke-64d3423cc9",
+  "headline_seed": "More Canadian wildfire smoke shrouds US midwest, mid-Atlantic and north-east - The Guardian",
+  "brief": {
+    "story_id": "2026-07-17-more-canadian-wildfire-smoke-64d3423cc9",
+    "consensus_facts": [
+      "Smoke from wildfires burning in Canada (and northern Minnesota) drifted into the US midwest, mid-Atlantic and north-east on Friday, July 17, 2026, triggering air quality alerts across multiple states.",
+      "As of Friday, Detroit, Chicago and Washington DC ranked among the world's most polluted major cities, with Detroit's air quality registering as the worst of any major city in the world.",
+      "New York City had been blanketed by smoke since earlier in the week, with visibility reduced and an orange haze over landmarks such as the Empire State Building.",
+      "A large share of the fires \u2014 particularly a cluster in northern/northwestern Ontario \u2014 were burning out of control and generating the plumes reaching the US.",
+      "Health officials advised people to stay indoors, close windows, limit outdoor activity and use N95/KN95-grade masks and air purifiers.",
+      "Experts attribute increasingly severe wildfire seasons in part to human-caused climate change producing hotter, drier conditions.",
+      "Fine particulate matter from wildfire smoke poses elevated health risks, especially for children, older adults, pregnant people and those with heart or lung conditions.",
+      "Organizers of the World Cup final in East Rutherford/New Jersey said they were monitoring the smoke situation ahead of the weekend match.",
+      "Detroit's AQI was reported at a hazardous level well above 400 on Friday morning (BBC and NPR cite 435)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of active wildfires in Canada",
+        "positions": {
+          "BBC News": "More than 890 fires actively burning in Canada as of Friday, with more than 190 in Ontario",
+          "CBS News": "More than 100 wildfires burning in Canada",
+          "The Guardian": "194 out-of-control and large fires burning as of Thursday"
+        }
+      },
+      {
+        "topic": "Amount of land burned in Canada",
+        "positions": {
+          "BBC News": "Nearly 3 million hectares destroyed",
+          "The Guardian": "Nearly 6 million acres estimated burned (roughly 2.4 million hectares), less than a quarter of the 2023 total"
+        }
+      },
+      {
+        "topic": "Detroit AQI figure",
+        "positions": {
+          "BBC News": "Detroit worst air quality in the world (via IQAir), figure not numerically cited in BBC text but corroborated numerically elsewhere",
+          "NPR": "Detroit AQI 435 Friday morning",
+          "The Guardian": "Chicago and Detroit reached hazardous 361 (per AirNow), does not cite the 435 figure for Detroit"
+        }
+      },
+      {
+        "topic": "Political framing of responsibility",
+        "positions": {
+          "BBC News": "Foregrounds a partisan blame dispute: four Michigan Republican Congress members accuse Canada of inaction; Canadian officials and scientists push back",
+          "NPR / CBS News / The Guardian": "Do not cover the Republican letter or blame dispute; frame the story as health, air quality and climate-driven"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News": "Leads on politics and the cross-border blame dispute \u2014 the headline names 'US Republicans accuse Canada of wildfire inaction.' Foregrounds the Michigan lawmakers' open letter and quotes Carney, Ford and scientists rebutting the claim that Canada could have prevented the fires. Uses BBC Verify to complicate the political narrative ('the picture is more complicated,' 'weather doesn't care about international borders'). Also uniquely reports First Nations evacuations (10 communities, Namaygoosisagagun 'burnt to ashes') and Ford's spending figures.",
+      "Bloomberg": "Body text not retrievable (bot-check page). Headline only: 'Canadian Oil Refinery Shut Down Could Crimp Northeast US Supply' \u2014 signals a distinct economic/energy angle to the wildfire disruption that no other outlet in the dossier develops. Cannot be corroborated.",
+      "NPR": "Frames the story almost entirely as a personal-health explainer ('like smoking half a pack a day'). Leads with the health analogy and AQI, cites Detroit at 435, and devotes most of the piece to who is at risk and how to protect yourself. Notes this is an updated version of an earlier January 2025 article. Downplays politics entirely; emphasizes long-term health impacts (dementia, preterm birth, premature death) and climate change as driver.",
+      "CBS News": "Service-and-maps framing: leads on the scale of exposure ('millions of people are exposed'), then walks state-by-state through alert levels (Minnesota, Michigan, Wisconsin, New York, New Jersey, Pennsylvania Code Purple, DC Code Red, New England). Includes protective advice and vivid on-the-ground color (Boston 'campsite' quote, Armstrong, Ontario freight train video). Ties fires to drought/heat and warming from burning coal, oil and gas. Notes World Cup monitoring.",
+      "The Guardian": "Leads on the human scale \u2014 '109 million people face another day of poor air quality' \u2014 with specific AQI readings by city (Chicago/Detroit 361, Baltimore 281, DC 247, NYC 184, Philadelphia/Cleveland ~260). Emphasizes the transnational reach of smoke (Copernicus scientist Parrington: plumes moving toward Europe and the Arctic), the 2023 comparison, western US fires in Oregon/Washington/Idaho, and the World Cup final weather outlook. Climate-forward but not political-blame focused.",
+      "The New York Times": "Body text not retrievable \u2014 the dossier entry contains only an aggregated Google News link list (NYT live blog headline plus CNN and Washington Post headlines). Headline signals a live-updates/maps format: 'Air Quality at Dangerous Levels in U.S. and Canada.' Cannot be analyzed for framing beyond the dangerous-air-quality label."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The open letter from the four Michigan Republican members of Congress (James, Moolenaar, Bergman, McClain) referenced by BBC News is not included in the dossier as a primary document, so its full text and exact demands cannot be verified against BBC's characterization.",
+      "Underlying data cited by multiple outlets (Canadian Wildland Fire Information System, Canadian Interagency Forest Fire Center, AirNow, IQAir, Copernicus/CAMS, NASA FIRMS) was not provided as primary source excerpts and cannot be independently checked here."
+    ],
+    "missing_context": [
+      "The full text of the Michigan Republicans' letter was not provided, so readers cannot independently assess how BBC characterized its demands or whether the lawmakers proposed specific policy mechanisms.",
+      "Only four of six dossier entries have substantive body text (BBC, NPR, CBS, The Guardian). Bloomberg is a bot-check page and The New York Times entry is a headline/link aggregation \u2014 neither could be analyzed for content, and Bloomberg's distinct oil-refinery/energy-supply angle is uncorroborated.",
+      "The fire-count discrepancy (BBC: 890+ / Guardian: 194 large-and-out-of-control / CBS: 'more than 100') is likely a difference between total active fires and large/out-of-control fires, but no outlet reconciles the definitions explicitly.",
+      "No outlet quantifies how much of the current smoke is attributable to Minnesota fires versus Canadian fires, despite both being repeatedly cited as sources.",
+      "The proportion of fires caused by lightning versus human activity is mentioned only by BBC (roughly half lightning); other outlets omit ignition causes.",
+      "Impacts on Canadian communities \u2014 First Nations evacuations, the Armstrong freight-train incident, the Wabakimi/Northwest Territories fires \u2014 are covered unevenly (BBC and CBS and Guardian each surface different pieces); no single outlet gives a complete picture of Canadian-side damage.",
+      "No dossier article contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text reported the same wildfire-smoke event but with materially different framings \u2014 BBC foregrounds a partisan US-Canada blame dispute while NPR, CBS and The Guardian frame it as health, air-quality and climate coverage \u2014 and key numbers (fire counts, land burned, AQI figures) diverge across sources, making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cwyq93j34lgo",
+      "title": "US Republicans accuse Canada of wildfire inaction - BBC"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-17/canadian-oil-refinery-shut-down-could-crimp-northeast-us-supply",
+      "title": "Canadian Oil Refinery Shut Down Could Crimp Northeast US Supply - Bloomberg.com"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/17/g-s1-134227/wildfire-smoke-canada-us",
+      "title": "Wildfire smoke is like smoking 'half a pack a day.' Here\u2019s how to protect yourself - NPR"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/wildfires-smoke-millions-exposed-midwest-northeast-us/",
+      "title": "Maps show wildfire smoke forecast, air quality alerts due to pollution from Canadian, Minnesota fires - CBS News"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jul/17/canada-wildfire-smoke-midwest-mid-atlantic-north-east",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/07/17/weather/wildfire-smoke-air-quality",
+      "title": "Wildfire Smoke Maps and Live Updates: Air Quality at Dangerous Levels in U.S. and Canada - The New York Times"
+    }
+  ]
+}
