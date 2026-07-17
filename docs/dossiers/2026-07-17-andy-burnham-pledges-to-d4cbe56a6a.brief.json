@@ -1,0 +1,87 @@
+{
+  "story_id": "2026-07-17-andy-burnham-pledges-to-d4cbe56a6a",
+  "headline_seed": "Andy Burnham pledges to restore hope as he is declared leader of Britain\u2019s Labour Party - AP News",
+  "brief": {
+    "story_id": "2026-07-17-andy-burnham-pledges-to-d4cbe56a6a",
+    "consensus_facts": [
+      "Andy Burnham was officially declared leader of Britain's governing Labour Party on Friday, July 17, 2026.",
+      "Burnham, the former mayor of Greater Manchester, is set to become UK prime minister on Monday, replacing outgoing PM Keir Starmer.",
+      "Burnham was the only contender in the Labour leadership contest, securing nominations from 379 of the 403 Labour lawmakers in the House of Commons.",
+      "In his first speech as leader, Burnham said 'We're going to give them hope back' and called the moment a proud and emotional one for which he is ready.",
+      "The leadership declaration took place at a special party conference at TUC (Trades Union Congress) headquarters in London.",
+      "Burnham won a special election for a seat in Parliament roughly a month prior and has revealed little detail about his policy priorities.",
+      "Starmer was under pressure to resign following disastrous Labour results in local elections in May, and was effectively forced out by a Labour rebellion.",
+      "Starmer will remain PM until Monday, when he formally tenders his resignation to King Charles III, after which the king will ask Burnham to form a government.",
+      "Burnham signaled priorities including transferring power from Westminster/Whitehall to local communities, economic renewal, and a pro-business stance.",
+      "Burnham will arrive in Downing Street largely unknown to voters outside Manchester."
+    ],
+    "disagreements": [
+      {
+        "topic": "Central framing of Burnham's message",
+        "positions": {
+          "CBS News": "Frames the message primarily around 'hope' and policy substance (social care, industrial jobs, critique of 1980s Thatcher-era policies).",
+          "ABC News": "Frames the message around 'hope' and decentralization of power, plus reassuring a party whose popularity has 'nosedived'.",
+          "The Guardian": "Frames the message around Burnham's pledge to 'beat Britain's new right' and unify Labour against infighting."
+        }
+      },
+      {
+        "topic": "Who declared/announced the result",
+        "positions": {
+          "The Guardian": "Reports Burnham was declared leader by Shabana Mahmood, described as frontrunner to be his chancellor and chair of the party's ruling executive.",
+          "CBS News": "Attributes the announcement to 'the center-left party' without naming an individual.",
+          "ABC News": "Does not name who declared the result."
+        }
+      },
+      {
+        "topic": "Wire sourcing",
+        "positions": {
+          "ABC News": "Explicitly carries an AP dateline/byline ('LONDON (AP)'), indicating it is an AP wire story.",
+          "CBS News": "Original-styled report with its own contributors (Emmet Lyons, Frank Andrews) credited.",
+          "The Guardian": "Original reporting bylined to Rowena Mason, Whitehall editor."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press (wire)": "Provides essentially no article body \u2014 the content is a video description and photo captions. Frames Burnham as 'likely Britain's next Prime Minister' and poses the explainer question of why there is no general election ('in the UK, it's all about the parties'). Emphasizes ceremony and the family moment (hugging his wife) via captions rather than substance.",
+      "CBS News": "Leads on the mechanics: declared leader, only contender, 379 of 403 nominations, timeline to Monday. Devotes substantial space to policy priorities (social care, industrial jobs, public control of sectors) and frames his economic critique around Thatcher-era 'wrong turns in the 1980s.' Notably includes a dedicated section on Burnham's past criticism of President Trump \u2014 the only outlet to foreground the US/Trump angle. Closes with links to Free Press pieces skeptical of Burnham ('Does Britain's Next Prime Minister Believe in Anything?'), subtly introducing a critical counter-note.",
+      "ABC News": "Runs the AP wire copy. Leads on 'hope' and 'purpose to the floundering government,' emphasizing decentralization ('take power back from Westminster and Whitehall'). Frames Starmer's exit around 'missteps and judgment errors' and Labour trailing 'anti-immigration party Reform UK.' Straight wire tone; buries policy detail behind the atmospheric 'hope' language.",
+      "The Guardian": "Leads explicitly on the combative frame: Burnham 'ready to beat Britain's new right.' Emphasizes party unity and the warning that infighting is 'an indulgence.' Uniquely names Shabana Mahmood as the declarer and likely chancellor, and reports Burnham's rejection of 'wearing too many Tory clothes' or trying to 'out-Reform Reform.' Includes personal color (tributes to David Blunkett and Neil Kinnock, football clubs) and frames Burnham defending against the charge he is too northern-focused. Most substantive on internal party positioning."
+    },
+    "primary_source_alignment": [
+      "No primary source (full speech transcript, roll-call of nominations, or Labour Party press release) was located for this story. Direct quotes ('We're going to give them hope back'; 'take power back from Westminster and Whitehall') are corroborated across CBS, ABC and The Guardian, but the underlying speech text and the official nomination breakdown could not be independently verified against a primary document."
+    ],
+    "missing_context": [
+      "No outlet provides the full nomination breakdown \u2014 379 of 403 leaves 24 lawmakers unaccounted for; whether they abstained, backed no one, or opposed is not explained.",
+      "No outlet details the specific 'Labour rebellion' or the 'political rival from within Labour' (referenced obliquely by CBS) that precipitated Starmer's exit \u2014 the mechanics of the internal coup are left vague.",
+      "None of the outlets explain the constitutional detail (touched only by AP's explainer framing) for readers unfamiliar with why a governing-party leadership change installs a new PM without a general election.",
+      "Concrete, costed policy is absent across all outlets \u2014 every report notes Burnham 'has revealed little detail,' but none flags the accountability gap of an incoming PM taking office without a manifesto or press conferences.",
+      "No polling numbers are given for Reform UK vs. Labour despite ABC stating Labour 'regularly trails' Reform \u2014 the magnitude of the gap is unquantified.",
+      "The AP wire item (Article 1) contains only photo captions and a video blurb, not a reported article body; readers relying on the AP link would receive almost no substantive text."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (CBS, ABC, Guardian) reported the same declaration event but with materially different emphases \u2014 CBS foregrounds the Trump angle, ABC runs straight AP 'hope' framing, and The Guardian leads on 'beat Britain's new right' and names Shabana Mahmood \u2014 making the divergence in framing the story worth surfacing. No primary source was available to adjudicate.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/andy-burnham-uk-labour-party-leadership-eba3703e98f3f9790f74f2cd7ee4cee1",
+      "title": ""
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/andy-burnham-uk-prime-minister-labour-party-leader/",
+      "title": "Andy Burnham to become U.K.'s prime minister Monday after being declared Labour Party leader - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/andy-burnham-declared-leader-britains-labour-party-become-134840790",
+      "title": "Andy Burnham is declared leader of Britain's Labour Party, will become prime minister on Monday - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/politics/2026/jul/17/andy-burnham-becomes-labour-leader-final-step-towards-uk-pm",
+      "title": "Burnham declares he is ready to \u2018beat Britain\u2019s new right\u2019 as he becomes Labour leader - The Guardian"
+    }
+  ]
+}
