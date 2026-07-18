@@ -1,0 +1,115 @@
+{
+  "story_id": "2026-07-18-two-u-s-troops-1d67a0bc13",
+  "headline_seed": "Two U.S. troops killed, one missing in Iranian missile attack on Jordan - Axios",
+  "brief": {
+    "story_id": "2026-07-18-two-u-s-troops-1d67a0bc13",
+    "consensus_facts": [
+      "US Central Command (CENTCOM) announced on Saturday that two US service members were killed in action on July 17 while defending against Iranian ballistic missile and drone attacks in Jordan (NBC News, BBC, Axios, CNN).",
+      "One US service member is currently listed as missing in action (NBC News, BBC, CNN).",
+      "Four American service members were medically evacuated to hospitals in Jordan and have since been discharged (NBC News, BBC, Axios, CNN).",
+      "Additional personnel who sustained minor injuries were evaluated and returned to duty (NBC News, BBC, Axios, CNN).",
+      "CENTCOM said it would withhold the identities of the two killed service members until 24 hours after next-of-kin notification (NBC News, CNN).",
+      "The deaths occurred amid an escalating conflict between the US and Iran following the collapse or fraying of a ceasefire (BBC, CNN, Axios)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total US death toll in the war",
+        "positions": {
+          "BBC News": "Puts the American death toll in the war with Iran at 14, noting a US Navy pilot declared dead earlier this month.",
+          "CNN": "Puts the death toll at 15, calling these the first US military fatalities since March and citing 6 Army Reserve soldiers killed March 1, an Army sergeant days later, and 6 more in a March 12 KC-135 crash.",
+          "Axios": "Puts the number of US service members killed in the war at 16, calling these the first US troop deaths since fighting resumed two weeks ago."
+        }
+      },
+      {
+        "topic": "Date and location of the attack",
+        "positions": {
+          "NBC News": "Says troops were killed 'Friday' (July 17); does not specify where in Jordan the attack occurred.",
+          "BBC News": "Says attacks occurred in Jordan on Friday; does not name a specific base.",
+          "Axios": "Says at least two Iranian ballistic missiles hit the Muwaffaq Salti Air Base in Jordan 'on Saturday'; also cites CENTCOM's July 17 date for the killings.",
+          "CNN": "Does not name a specific base; references CENTCOM's July 17 date."
+        }
+      },
+      {
+        "topic": "When the last prior US fatality occurred",
+        "positions": {
+          "CNN": "First US military fatalities 'since March.'",
+          "Axios": "First US troops killed 'since the fighting resumed two weeks ago.'",
+          "BBC News": "Frames the deaths in relation to a Navy pilot declared dead 'earlier this month.'"
+        }
+      },
+      {
+        "topic": "Iranian casualties and additional strike details",
+        "positions": {
+          "CNN": "Reports Iranian officials said 12 Iranians killed over the last day, bringing Iran's toll in the latest phase to 50, and cites an Iranian claim that a water desalinization plant was destroyed in a US strike.",
+          "BBC News": "Reports Jordan intercepted 10 Iranian missiles overnight without reporting damage, and that the US carried out a seventh consecutive night of strikes on Iran.",
+          "NBC News": "Does not report Iranian casualties or intercept figures.",
+          "Axios": "Does not report Iranian casualties or intercept figures."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier; body text is an unretrievable Google News redirect link. Headline ('Two US service members in Jordan killed in Iranian attack, US says') attributes the account to the US and does not mention the missing service member. No body-level reporting available to analyze.",
+      "NBC News": "Straightforward wire-style account attributing all details to CENTCOM. Leads on the two deaths and the missing member, emphasizes that the location was unspecified and details were withheld. Notably does NOT provide a cumulative war death toll, avoiding the count discrepancy other outlets carry. Frames as a developing story.",
+      "BBC News": "International framing that situates the deaths in the broader war. Uniquely adds context on Jordan intercepting 10 Iranian missiles and the US conducting a 'seventh consecutive night of strikes' after Trump declared the ceasefire 'over.' Puts the cumulative American death toll at 14, tied to a previously reported Navy pilot's death.",
+      "Axios": "Body text is heavily polluted with cookie/consent boilerplate, but the reporting core is intact. Most specific on the attack: names the Muwaffaq Salti Air Base and cites 'at least two Iranian ballistic missiles' and social-media impact videos. Uses the highest cumulative figure (16) and frames these as the first deaths since fighting resumed 'two weeks ago.' Reports the strike as occurring 'on Saturday' while quoting CENTCOM's July 17 date, an internal timeline inconsistency.",
+      "Bloomberg": "Headline-only; body text is a bot-verification wall with no reporting. Headline ('US Says Two Service Members Killed by Iran Strikes in Jordan') attributes to the US and omits the missing member. Nothing to analyze at the body level.",
+      "CNN": "Most historically contextualized account. Leads on the two deaths and one missing, but heavily emphasizes that these are the first US fatalities 'since March,' walking through prior incidents (March 1 Kuwait strike, an Army sergeant, March 12 KC-135 crash). Puts cumulative toll at 15. Uniquely adds Iranian casualty figures and an Iranian desalinization-plant claim, and notes it sought White House comment. Frames the deaths against a 'fragile ceasefire' that 'all but collapsed.'",
+      "The Washington Post": "Listed as Washington Post (lean-left) but the URL and body point to the Washington Times. Body text is unretrievable \u2014 a Cloudflare 403 security-verification page with no reporting content. Nothing to analyze; also note the outlet-name/source mismatch in the dossier."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. However, four outlets (NBC News, BBC, Axios, CNN) quote or paraphrase the same CENTCOM statement/X post nearly verbatim, so the CENTCOM release functions as a de facto shared primary source.",
+      "The direct CENTCOM quote reproduced by Axios and CNN is identical: 'On July 17, two U.S. service members in Jordan were killed in action... one service member is currently missing in action. Four American service members were medically evacuated to Jordanian hospitals. They have since been discharged.' All four full-text outlets align on this core.",
+      "The CENTCOM statement itself does not appear to give a cumulative war death toll \u2014 the figures of 14 (BBC), 15 (CNN), and 16 (Axios) are outlet-added context, not part of the shared source, which is why they diverge."
+    ],
+    "missing_context": [
+      "Editorial disclosure: of seven articles, only four (NBC News, BBC, Axios, CNN) had retrievable body text. Reuters and Bloomberg were headline-only, and the Washington Post/Washington Times entry returned a 403 security page. Consensus is drawn only from the four full-text outlets.",
+      "The cumulative US death toll is reported as three different numbers (14, 15, 16) with no outlet reconciling the discrepancy or explaining what accounts for the difference.",
+      "No outlet identifies the two killed or the missing service member, as CENTCOM withheld identities pending next-of-kin notification \u2014 expected, but the brief should note identities remain unknown.",
+      "The exact base and precise timing are inconsistent: only Axios names Muwaffaq Salti Air Base, and Axios simultaneously says 'Saturday' while citing CENTCOM's July 17 (Friday) date. Other outlets do not confirm the base name.",
+      "No outlet provides independent confirmation of the base strike beyond CENTCOM's statement and (per Axios) unverified social-media videos.",
+      "No US official reaction beyond the CENTCOM statement is reported (CNN notes it reached out to the White House but had no response); no Iranian claim of responsibility for the specific fatal strike is quoted.",
+      "The dossier contains an outlet-labeling mismatch: 'The Washington Post (lean-left)' points to a washingtontimes.com URL and body \u2014 the actual outlet appears to be the Washington Times.",
+      "No apparent instruction-injection attempts were detected in any article body; the non-reporting text was cookie-consent boilerplate (Axios), a bot wall (Bloomberg), and a Cloudflare 403 page (Washington Times)."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same CENTCOM-sourced event but diverge materially on the cumulative death toll (14 vs. 15 vs. 16), the base name, and the timeline framing, making the coverage differences themselves the story worth reporting.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/two-us-service-members-jordan-killed-iranian-attack-us-says-2026-07-18/",
+      "title": "Two US service members in Jordan killed in Iranian attack, US says - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/middle-east/two-us-service-members-killed-jordan-another-missing-centom-says-rcna588181",
+      "title": "Two U.S. service members killed in Jordan and another is missing, military says - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cn8nynv8ze8o",
+      "title": "Two US troops killed and one missing in Jordan following Iran attack - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/07/18/iran-jordan-us-deaths-military-two-dead",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-18/us-military-says-two-service-members-killed-in-action-in-jordan",
+      "title": "US Says Two Service Members Killed by Iran Strikes in Jordan - Bloomberg.com"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/18/politics/iran-war-us-service-members-killed-jordan",
+      "title": "Two US service members killed, one missing following Iranian strikes in Jordan - CNN"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/jul/18/two-us-troops-killed-another-missing-iranian-attack-base-jordan/",
+      "title": "Two U.S. troops killed, another missing after Iranian attack on base in Jordan - Washington Times"
+    }
+  ]
+}
