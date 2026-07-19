@@ -1,0 +1,121 @@
+{
+  "story_id": "2026-07-19-russian-missile-attack-on-2448b4d233",
+  "headline_seed": "Russian missile attack on Kyiv kills 1 and exposes holes in air defenses - AP News",
+  "brief": {
+    "story_id": "2026-07-19-russian-missile-attack-on-2448b4d233",
+    "consensus_facts": [
+      "Russia attacked Kyiv overnight into Sunday, July 19, 2026, with ballistic missiles and other weapons.",
+      "The attack began around 1:30 a.m. local time and continued for several hours, with explosions echoing across the capital.",
+      "One person was killed in the Kyiv attack.",
+      "Russia launched 41 missiles and 125 drones across Ukraine overnight, according to the Ukrainian air force (per ABC News and CBS News).",
+      "President Volodymyr Zelenskyy said most of the missiles targeted the capital.",
+      "The strikes sparked fires in multiple Kyiv districts, damaging residential buildings, office and industrial sites, a dormitory, and vehicles, per Ukraine's State Emergency Service.",
+      "The attack again highlighted Ukraine's shortage of U.S.-made Patriot air defense systems, its most effective means of intercepting ballistic missiles.",
+      "U.S. President Trump has said he is prepared to grant Ukraine licenses to produce Patriot interceptor missiles, though details and timeline remain unclear (per ABC News and CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "number of injured",
+        "positions": {
+          "Associated Press": "eight others injured",
+          "ABC News": "16 people wounded",
+          "Al Jazeera English (news article)": "at least 16 wounded",
+          "CBS News": "16 others wounded",
+          "Al Jazeera English (video newsfeed)": "nine others injured"
+        }
+      },
+      {
+        "topic": "number of city districts affected",
+        "positions": {
+          "ABC News": "fires in five districts",
+          "CBS News": "fires in five districts",
+          "Al Jazeera English (news article)": "spanned six districts, per Ukraine's national police"
+        }
+      },
+      {
+        "topic": "whether this was the largest ballistic missile attack of the war",
+        "positions": {
+          "Al Jazeera English (news article)": "Frames it as the largest number of ballistic missiles fired since the start of the war, per Ukraine's foreign minister",
+          "Associated Press": "Does not characterize it as a record; describes it as an overnight attack including ballistic missiles",
+          "CBS News": "Does not call it a record; details 25 ballistic missiles and interception figures"
+        }
+      },
+      {
+        "topic": "air defense interception outcome",
+        "positions": {
+          "CBS News": "Ukraine shot down at least 17 ballistic missiles; forces intercepted/suppressed 108 drones and 18 missiles; suggests replenished Patriot stockpile",
+          "Associated Press": "Does not report interception figures",
+          "ABC News": "Does not report interception figures; emphasizes Patriot shortage"
+        }
+      },
+      {
+        "topic": "Russian justification for the strike",
+        "positions": {
+          "CBS News": "Reports Russia's defense ministry claimed it targeted Ukrainian military-linked sites, including Flamingo drone plants and Neptune missile parts",
+          "Associated Press": "Does not report Russian ministry claims",
+          "ABC News": "Does not report Russian ministry claims"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Wire-service minimalism. Leads with the human toll (one killed, eight injured) and timing. Body is largely photo captions; no strategic context on Patriots or air-defense gaps. Lowest injured figure (eight) in the dossier.",
+      "ABC News": "Leads with casualties then immediately pivots to the strategic frame \u2014 Ukraine's shortage of U.S.-made Patriots. Ties the escalation to Russia's motive of choking Ukrainian strikes on its oil facilities. Surfaces Trump's Patriot licensing offer and a civilian eyewitness (Viktoria Shejko) to convey the psychological toll. Reports 16 wounded and 41 missiles/125 drones.",
+      "Al Jazeera English (news article)": "Frames the event as a superlative \u2014 'largest ballistic missile attack since the start of the war' \u2014 attributed to Ukraine's foreign minister. Uniquely foregrounds Ukraine's domestic political turmoil: Zelenskyy's removal of defense minister Mykhailo Fedorov, street protests, and soldier dismay, quoting critics calling it 'the worst mistake of his presidency.' Reports 16 wounded and six districts.",
+      "Reuters": "Headline-only in this dossier ('Russia pounds Kyiv in major ballistic missile attack'). Word choice 'pounds' and 'major' emphasizes scale. No body text to analyze.",
+      "CBS News": "Most granular military reporting: 25 ballistic missiles, interception counts (108 drones, 18 missiles suppressed; at least 17 ballistic missiles downed), and speculation about replenished Patriot stockpiles. Uniquely includes Russia's defense ministry's target justification and detailed rescue narratives. Also links to a sidebar on Zelenskyy's cabinet shake-up. Reports 16 wounded and five districts.",
+      "Al Jazeera English (video newsfeed)": "Short video-desk brief. Reports one killed and nine injured \u2014 the second-lowest injury figure. Adds that a supermarket was among buildings hit. Minimal strategic context.",
+      "Al Jazeera English (port-attacks article)": "A related but distinct July 17 story, not about the July 19 Kyiv strike. Frames a two-day toll of 10 killed across both sides (Mykolaiv port, Odesa, Marhanets, Kherson, and an occupied-Kherson Ukrainian strike) alongside the domestic protests over the defense-minister removal. Provides context on the broader bombardment campaign and Zelenskyy's cabinet crisis."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Casualty figures, missile/drone counts, and interception claims all trace to Ukrainian officials (air force, State Emergency Service, national police, foreign minister) and, in CBS's case, Russia's defense ministry \u2014 none independently verifiable from the dossier."
+    ],
+    "missing_context": [
+      "The injured count is unreconciled across outlets \u2014 AP says 8, Al Jazeera's video says 9, and ABC, CBS, and Al Jazeera's article say 16 \u2014 with no explanation for the discrepancy (possibly reflecting figures updated over time).",
+      "No outlet independently verifies the missile/drone launch totals or interception figures; all rest on Ukrainian military claims and, for the strike's targeting rationale, a Russian defense ministry claim (only CBS).",
+      "Only Al Jazeera characterizes this as the 'largest' ballistic missile attack of the war; no outlet provides comparative data to substantiate the superlative.",
+      "The connection between the Kyiv strike and Ukraine's domestic political crisis (Zelenskyy's removal of defense minister Mykhailo Fedorov and ensuing protests) is raised by Al Jazeera and CBS's sidebar but omitted by AP and ABC in their strike coverage.",
+      "No outlet quantifies how many Patriot interceptors Ukraine actually has or specifies the timeline or feasibility of the U.S. licensing arrangement, which ABC notes could take years.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five full-text outlets reported the same overnight Kyiv attack but diverged materially on the injured count (8 vs. 9 vs. 16), district count, whether it was a record attack, and which strategic/political context to foreground \u2014 a coverage-comparison story rather than a straight REPORT, with no primary source to anchor a PRIMARY treatment.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/russia-ukraine-attack-ballistic-missiles-ddea9c0a10367fc84b3cb563896102e3",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/1-killed-8-injured-overnight-russian-attack-kyiv-134886832",
+      "title": "1 killed, 8 injured in an overnight Russian attack on Kyiv - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war",
+      "title": "Russia launches largest ballistic missile attack on Kyiv since start of war - Al Jazeera"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/europe/russian-ballistic-missiles-rock-kyiv-one-killed-officials-say-2026-07-19/",
+      "title": "Russia pounds Kyiv in major ballistic missile attack - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/russia-ballistic-missile-attack-kyiv-ukraine/",
+      "title": "Russia launches deadly, massive ballistic missile attack in Kyiv, Ukraine - CBS News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/19/at-least-one-killed-as-russian-ballistic-missiles-hit-kyiv",
+      "title": "At least one killed as Russian ballistic missiles hit Kyiv - Al Jazeera"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/7/17/ukraine-suffers-port-attacks-as-protests-persist-over-defence-shake-up",
+      "title": "Ten killed in Russia-Ukraine as protests continue over Kyiv defence revamp - Al Jazeera"
+    }
+  ]
+}
