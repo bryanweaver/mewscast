@@ -1,0 +1,68 @@
+{
+  "story_id": "2026-07-19-tropical-depression-forms-in-4e8f3ba1e6",
+  "headline_seed": "Tropical depression forms in Gulf, National Hurricane Center says - USA Today",
+  "brief": {
+    "story_id": "2026-07-19-tropical-depression-forms-in-4e8f3ba1e6",
+    "consensus_facts": [
+      "A tropical depression has formed in the Gulf, west of the Florida peninsula, per the National Hurricane Center.",
+      "The system is expected to become a tropical storm named Bertha, the second named storm of the Atlantic season (Arthur was the first).",
+      "Both outlets cite the NHC advising interests along the northern Gulf coast \u2014 Florida, Alabama, Mississippi, and Louisiana \u2014 to monitor the system.",
+      "The system is expected to bring heavy rain to portions of the northern Gulf coast over the coming days.",
+      "Both articles are dated July 19, 2026, and reflect NHC updates from that day.",
+      "Both define a tropical depression versus tropical storm using the 39-mph maximum-sustained-wind threshold for the upgrade to a named storm."
+    ],
+    "disagreements": [
+      {
+        "topic": "Likelihood of intensification into a hurricane",
+        "positions": {
+          "USA Today": "Cites Naples Daily News that Saharan dust and strong wind shear would likely prevent the system from becoming a hurricane.",
+          "Forbes": "Does not address a hurricane ceiling; focuses on rising development probability (raised to 80%) and the shift to now expecting Tropical Storm Bertha, without discussing shear or dust as limiting factors."
+        }
+      },
+      {
+        "topic": "Broader climate framing",
+        "positions": {
+          "USA Today": "Devotes significant space to an 'Atlantic Ni\u00f1a' and a 'Super El Ni\u00f1o' as an 'atmospheric shield' for the U.S. hurricane season, citing Severe Weather Europe and Climate.gov.",
+          "Forbes": "Makes no mention of Atlantic Ni\u00f1a, El Ni\u00f1o, or seasonal climate patterns; keeps the piece to the immediate system and forecast reasoning."
+        }
+      },
+      {
+        "topic": "Warning status detail",
+        "positions": {
+          "USA Today": "States a tropical storm warning was in effect for the Florida Panhandle through Monday night.",
+          "Forbes": "Does not mention a specific tropical storm warning for the Florida Panhandle; frames the guidance as 'monitor progress' language."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "USA Today": "Straightforward wire-style news lead on the depression forming, then pivots substantially to educational and climate-context material \u2014 the tropical-depression-vs-storm definition, and a lengthy 'Atlantic Ni\u00f1a'/'Super El Ni\u00f1o' section framing conditions as an 'atmospheric shield.' Emphasizes the limiting factors (Saharan dust, wind shear) that would prevent a hurricane, giving a somewhat reassuring tone. Attributes climate framing to secondary sources (Severe Weather Europe, Climate.gov, NASA). Includes cross-promotional links to unrelated weather stories.",
+      "Forbes": "Written first-person by meteorologist Marshall Shepherd, emphasizing forecaster reasoning and the trajectory of rising development odds (80% probability, upgrade to depression, now expected to become Bertha). Leads on the operational forecast and quotes NHC discussion text directly, plus color from storm chaser Josh Morgerman. Stresses caution against 'wishcasting' and hyperbole while noting the system could be a prolific rain producer, citing the author's own 2007 study. More technical and process-focused than USA Today; omits seasonal climate framing entirely."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the full NHC advisory text or discussion product) was included in the dossier. Both outlets paraphrase and partially quote NHC language, but the underlying advisory could not be independently checked against the reporting."
+    ],
+    "missing_context": [
+      "No primary source (NHC advisory/discussion) was provided, so the exact wording, forecast track map, and probability figures cannot be verified against the original document.",
+      "The two articles show internal timestamp/version inconsistencies (Forbes text at points says a depression 'is likely to form' while its update header says it has already been upgraded), reflecting a rapidly evolving forecast that neither piece fully reconciles.",
+      "Neither outlet provides specifics on expected rainfall totals, storm surge risk, or evacuation guidance a Gulf-coast reader would want.",
+      "USA Today's climate framing (Atlantic Ni\u00f1a as an 'atmospheric shield') and Forbes's forecast emphasis are not reconciled; a reader cannot tell whether the 'shield' claim conflicts with the rising development odds Forbes reports.",
+      "No official current maximum sustained wind speed for the depression is stated in either article.",
+      "No apparent instruction-injection attempts were detected in the article bodies."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets confirm the core facts \u2014 a Gulf tropical depression expected to become Tropical Storm Bertha with heavy rain for the northern Gulf coast \u2014 with only modest framing differences (climate context vs. forecast reasoning) and no primary source to diverge from, making this a straightforward report rather than a coverage-meta piece.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/weather/2026/07/19/tropical-depression-florida-gulf-national-hurricane-center-storm-watch/90973407007/",
+      "title": ""
+    },
+    {
+      "outlet": "Forbes",
+      "url": "https://www.forbes.com/sites/marshallshepherd/2026/07/19/national-hurricane-center-watching-system-gain-strength-in-the-gulf/",
+      "title": "System In The Gulf Now Expected To Become Tropical Storm Bertha - Forbes"
+    }
+  ]
+}
