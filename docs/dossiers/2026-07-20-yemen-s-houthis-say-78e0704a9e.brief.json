@@ -1,0 +1,104 @@
+{
+  "story_id": "2026-07-20-yemen-s-houthis-say-78e0704a9e",
+  "headline_seed": "Yemen's Houthis say they will impose naval blockade against Saudi Arabia - Reuters",
+  "brief": {
+    "story_id": "2026-07-20-yemen-s-houthis-say-78e0704a9e",
+    "consensus_facts": [
+      "Yemen's Iran-aligned Houthi rebels announced on Monday, July 20, 2026, a maritime blockade/embargo against Saudi Arabia, effective immediately.",
+      "The Houthis framed the move using the phrase 'an eye for an eye' and described it as targeting the 'criminal Saudi enemy.'",
+      "The Houthis said the blockade was a response to what they called an unjust, oppressive Saudi siege on Yemen.",
+      "The blockade is understood to target ships carrying Saudi exports transiting the Bab el-Mandeb Strait, the gateway to the Red Sea.",
+      "The announcement was delivered via a statement from the Houthis' armed forces / military spokesman Yahya Saree (Sarea).",
+      "The move comes amid an escalating US-Iran conflict and threatens global energy supplies and trade beyond the Gulf."
+    ],
+    "disagreements": [
+      {
+        "topic": "Framing of the Houthi-Saudi grievance timeline",
+        "positions": {
+          "ABC News": "Frames grievance as a 12-year siege and notes a 2022 truce that held until last week, when the Houthis accused Saudi Arabia of bombing Yemen's main international airport and fired missiles in response.",
+          "The Korea Times": "States the two 'traded fire last week for the first time in years' without specifying the 12-year framing or the airport incident.",
+          "NBC News": "Does not specify a 12-year timeline; frames the move primarily in the context of the US-Iran war and Iranian pressure on the Houthis."
+        }
+      },
+      {
+        "topic": "Iran's role in prompting the blockade",
+        "positions": {
+          "NBC News": "Reports Iran had pressed the Houthis to close the Bab el-Mandeb gateway if the US continued attacking Iranian power infrastructure.",
+          "ABC News": "Reports Iran's Revolutionary Guard Corps had threatened to use the Houthis to block the strait as US-Iran fighting intensified.",
+          "The Korea Times": "Does not mention Iranian pressure or direction; presents the blockade as a bilateral Houthi-Saudi retaliation."
+        }
+      },
+      {
+        "topic": "Scale of oil-supply impact",
+        "positions": {
+          "NBC News": "Full closure of Bab el-Mandeb would reduce global oil supply by 7%, on top of an existing 10% cut from the Gulf war; oil briefly jumped above $90/barrel.",
+          "ABC News": "Notes threat to energy supplies and describes Saudi use of the East-West pipeline as a lifeline but gives no percentage figures.",
+          "The Korea Times": "No quantified oil-supply impact provided."
+        }
+      },
+      {
+        "topic": "Source attribution",
+        "positions": {
+          "NBC News": "Explicitly sourced to Reuters (bylined 'By Reuters').",
+          "ABC News": "Bylined to ABC Middle East Correspondent Matthew Doran, citing Reuters/Al-Masirah TV for the statement.",
+          "The Korea Times": "Datelined SANAA with AP-Yonhap imagery; appears to draw on wire reporting."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Houthis impose Saudi naval blockade, opening new front in US-Iran war'). No retrievable body text \u2014 the frame emphasizes a 'new front' in the US-Iran war. Serves as the underlying wire that NBC and others carry.",
+      "NBC News": "Full body text, explicitly a Reuters wire republish. Leads on the blockade 'widening threat to global oil supplies' and situates it as a new front against the US in its Iran war. Emphasizes quantified market impact (7% supply cut, $90 oil, Strait of Hormuz) and heavily foregrounds diplomacy \u2014 a proposed 10-day ceasefire, Iranian and Pakistani mediation efforts. Buries the local Houthi-Saudi history.",
+      "Bloomberg": "Two headline-only entries ('Vow to Impose Maritime Blockade' article and a video). Both bodies are paywall/robot-check boilerplate with no substantive content. Frame is a straightforward 'vow to impose' \u2014 slightly more tentative verb ('vow'/'plan') than NBC/ABC's 'declare.' No analyzable body.",
+      "ABC News": "Fullest independent reporting in the dossier, bylined to a correspondent. Leads on escalation and energy-supply threat but distinctively develops the local context: the decade-plus Houthi-Saudi conflict, the 2022 truce, last week's airport-bombing accusation and missile exchange, and the strategic role of Saudi Arabia's East-West pipeline and Red Sea exports. Includes IRGC threats to use the Houthis. Most context-rich framing.",
+      "The Korea Times": "Short wire-style item datelined SANAA. Leads on the 'maritime embargo' and the 'eye for an eye' quote, noting the pair 'traded fire last week for the first time in years.' Minimal context, no oil figures, no diplomacy angle. Tightest, most stripped-down frame."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. The Houthi armed-forces statement/Yahya Saree's X post is quoted secondhand by NBC News, ABC News, and The Korea Times but the full text was not provided in the dossier.",
+      "The directly quoted language \u2014 'a maritime embargo against the criminal Saudi enemy, based on the equation of an eye for an eye, effective immediately' \u2014 is consistent across NBC News and The Korea Times, and paraphrased consistently by ABC News."
+    ],
+    "missing_context": [
+      "No primary-source document (the full Houthi statement, or Yahya Saree's X post text) was available in the dossier for direct verification.",
+      "Half the dossier (Reuters and both Bloomberg entries) is headline-only or paywall/robot-check boilerplate, so much of the 'consensus' rests substantively on NBC News (a Reuters republish) and ABC News \u2014 meaning some corroboration traces back to the same Reuters wire, not fully independent sourcing.",
+      "No Saudi Arabian response was available \u2014 NBC explicitly notes 'no immediate response from Saudi Arabia.'",
+      "No independent verification of the Houthis' enforcement capability, or of how many vessels the blockade would actually affect, is provided.",
+      "No outlet clarifies whether the blockade would practically disrupt non-Saudi shipping through Bab el-Mandeb/Suez, which ABC explicitly flags as unclear.",
+      "No detail on the reported 10-day ceasefire proposal (its terms, mediators, or status) beyond NBC's mention that Iran's Foreign Ministry acknowledged proposals were presented.",
+      "No injection attempts were detected in any article body; all untrusted content was boilerplate, wire text, or standard reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets reported the same Houthi blockade declaration but with materially different framings \u2014 NBC/Reuters foreground the US-Iran war and oil markets, ABC develops the decade-long Houthi-Saudi conflict and pipeline context, while half the dossier is headline-only \u2014 making this a coverage-comparison story rather than a straightforward single REPORT.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/us-launches-iran-strikes-ninth-day-another-american-confirmed-killed-2026-07-20/",
+      "title": "Houthis impose Saudi naval blockade, opening new front in US-Iran war - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/middle-east/yemen-houthis-maritime-embargo-saudi-arabia-oil-rcna588345",
+      "title": "Yemen\u2019s Houthis declare naval blockade on Saudi Arabia, widening threat to global oil supplies - NBC News"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-20/yemen-s-houthis-vow-to-impose-maritime-blockade-on-saudi-arabia?srnd=homepage-americas",
+      "title": "Yemen\u2019s Houthis Vow to Impose Maritime Blockade on Saudi Arabia - Bloomberg.com"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/videos/2026-07-20/yemeni-houthis-plan-maritime-blockade-of-saudi-arabia-video",
+      "title": "Watch Yemeni Houthis Plan Maritime Blockade of Saudi Arabia - Bloomberg.com"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-07-20/houthis-declare-maritime-blockade-on-saudi-arabia/106938064",
+      "title": "Iran-backed Houthis declare maritime blockade on Saudi Arabia - ABC News & Headlines \u2013 Australian Broadcasting Corporation"
+    },
+    {
+      "outlet": "The Korea Times",
+      "url": "https://www.koreatimes.co.kr/amp/world/20260720/yemens-houthis-declare-naval-blockade-against-saudi-arabia-statement",
+      "title": "Yemen's Houthis declare naval blockade against Saudi Arabia: statement - The Korea Times"
+    }
+  ]
+}
