@@ -1,0 +1,117 @@
+{
+  "story_id": "2026-07-21-tropical-storm-bertha-forms-b8d5f965f0",
+  "headline_seed": "Tropical Storm Bertha forms off the Florida coast, prompting storm alerts - ABC News - Breaking News, Latest News and Videos",
+  "brief": {
+    "story_id": "2026-07-21-tropical-storm-bertha-forms-b8d5f965f0",
+    "consensus_facts": [
+      "Tropical Storm Bertha formed Monday, July 20-21, 2026, in the Gulf of Mexico, upgraded from Tropical Depression Two.",
+      "Bertha is the second named storm of the 2026 Atlantic hurricane season, following Tropical Storm Arthur.",
+      "As of the evening advisory, the storm was located about 110 miles south of Panama City, Florida (Axios reports about 105 miles as of 4pm Monday).",
+      "Bertha had maximum sustained winds of about 40 mph and was moving slowly at about 3 mph in a west-northwest direction.",
+      "The National Hurricane Center said additional strengthening is possible as the storm approaches land.",
+      "A tropical storm watch was in effect for a stretch of the Gulf Coast from the Ochlockonee River in Florida westward toward southeastern Louisiana.",
+      "A storm surge watch was in effect from the mouth of the Mississippi River to the Alabama/Florida border, with possible surge of up to 4 feet.",
+      "Forecasters projected rainfall of 2 to 4 inches, with locally higher totals up to 8 inches, along the Gulf Coast through Friday.",
+      "Rainfall could cause flash flooding, especially in urban areas.",
+      "The storm is forecast to move near or along the northern Gulf Coast for several days, tracking west toward Louisiana and Texas.",
+      "Tropical Storm Arthur, the season's first named storm, made landfall in June along the Gulf Coast of Texas."
+    ],
+    "disagreements": [
+      {
+        "topic": "Storm surge magnitude and locations",
+        "positions": {
+          "Associated Press": "Storm surges of up to four feet in portions of the Louisiana and Mississippi coastlines.",
+          "CBS News": "Storm surge raising waters up to 4 feet in some locations along the Gulf Coast.",
+          "Axios": "Surge from the Mississippi River to the Alabama/Florida border could be 2 to 4 feet; Lake Pontchartrain and coastal areas west of the river could get 1 to 3 feet."
+        }
+      },
+      {
+        "topic": "Distance of storm center from Panama City",
+        "positions": {
+          "Associated Press": "About 110 miles south of Panama City as of 8 p.m.",
+          "USA Today": "About 110 miles south of Panama City.",
+          "abcnews.com": "About 110 miles south of Panama City as of 8 p.m. ET.",
+          "Axios": "About 105 miles south of Panama City as of 4pm Monday."
+        }
+      },
+      {
+        "topic": "Landfall / storm evolution timeline",
+        "positions": {
+          "Axios": "Forecast to make landfall late Wednesday in southeast Louisiana; reach Louisiana Wednesday and Texas Friday.",
+          "abcnews.com": "Near or south of New Orleans by Wednesday; forecast to weaken back to a tropical depression Thursday and possibly dissipate or become post-tropical by end of week near Texas.",
+          "Associated Press": "Expected to stay near or along the northern Gulf Coast early this week, pushing west toward Texas; no specific landfall day given.",
+          "CBS News": "Expected track moves west from the Panhandle before reaching the New Orleans area and eventually eastern Texas later this week."
+        }
+      },
+      {
+        "topic": "Maximum rainfall totals",
+        "positions": {
+          "CBS News/USA Today/AP": "Up to 8 inches in some areas.",
+          "Axios": "Heaviest rainfall of up to 16 inches currently expected to be over the Gulf; 2 to 4 inches along the coast, 3 to 5 inches in New Orleans."
+        }
+      },
+      {
+        "topic": "When the depression formed",
+        "positions": {
+          "abcnews.com": "The tropical depression formed over the weekend / Sunday.",
+          "Associated Press": "Focuses on Bertha forming Monday evening; does not specify weekend formation of the depression."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Straight wire framing. Leads on the storm's formation, location, wind speed and the threat of rain, surge and wind. Neutral, fact-dense. Emphasizes 'erratic' drift and 'potentially life-threatening storm surges.' Adds an isolated-tornado threat for the Florida Big Bend that few others mention.",
+      "CBS News": "Service-journalism framing built around a forecast map and path. Leads on the Gulf Coast rain threat. Emphasizes flash flooding and the storm's track toward New Orleans and eastern Texas. Notably ends with unrelated promotional/aggregation links (other weather stories, Free Press items) that dilute the story.",
+      "Axios": "Most local and preparedness-focused of the dossier, centered on New Orleans. Leads on why it matters \u2014 residents in storm-prep mode, sandbag stations running out. Uniquely emphasizes the New Orleans Sewerage and Water Board's scrutiny after Tropical Storm Arthur power failures, drainage system capacity numbers, and specific rip-current and wind-damage threats. Includes the highest rainfall figure (up to 16 inches over the Gulf).",
+      "The Washington Post": "Body text is largely truncated/paywalled, with only a lede visible. Framing is hedged and conditional \u2014 headline says 'If this system becomes a tropical storm' and emphasizes that most rain would stay offshore over the Gulf. Downplays land impact relative to other outlets. Rest of retrieved content is navigation, related-article lists, and subscription prompts.",
+      "USA Today": "Tracker/explainer framing organized around a path map and spaghetti models. Leads on the depression strengthening into Bertha. Emphasizes 'life-threatening' surf and rip current conditions and defines what a tropical storm watch means. Padded with SEO-style related hurricane-season links.",
+      "abcnews.com": "Concise breaking-news framing. Leads on New Orleans potentially seeing tropical storm conditions by Wednesday. Uniquely notes the depression formed Sunday and that Bertha is forecast to weaken back to a depression Thursday and possibly become post-tropical by week's end. Defines tropical storm wind thresholds and names specific affected cities (Panama City, Pensacola, Mobile, Gulfport)."
+    },
+    "primary_source_alignment": [
+      "No primary source (NHC advisory text, NWS bulletin, or official transcript) was included in the dossier. All outlets attribute their figures to the National Hurricane Center and National Weather Service, but the underlying advisories were not provided for direct verification.",
+      "Because reporting cannot be checked against the source advisory, minor numeric divergences (105 vs 110 miles, 4-foot vs 16-inch rainfall framing) cannot be adjudicated here."
+    ],
+    "missing_context": [
+      "No primary source (the NHC advisory itself) was located, so all figures are relayed second-hand from the same forecasting agencies.",
+      "The Washington Post article body was largely paywalled/truncated, leaving only a hedged lede; its full reporting could not be assessed.",
+      "No outlet places Bertha in the context of the full 2026 seasonal forecast (e.g., predicted number of storms, El Ni\u00f1o/La Ni\u00f1a conditions), though USA Today links to such stories without summarizing them.",
+      "Outlets differ on whether the heaviest rain stays offshore (Washington Post, Axios) or hits populated coastal areas hardest; a reader is not given a clear reconciliation of these framings.",
+      "No outlet quantifies population at risk or references specific evacuation orders or emergency declarations beyond Axios's New Orleans sandbag/prep coverage.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate the same core facts with only minor numeric and timeline differences and no materially conflicting framing; no primary source diverges from coverage, making this a straightforward multi-source REPORT rather than a META.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/gulf-tropical-depression-flooding-c5f0b7264dad58ae7450fdd87436ec09",
+      "title": "Tropical Storm Bertha forms on track approaching US Gulf Coast - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/tropical-storm-bertha-gulf-coast-maps-path/",
+      "title": "Tropical Storm Bertha forms, threatening Gulf Coast. See a forecast map and its path. - CBS News"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/local/new-orleans/2026/07/20/tropical-storm-bertha-landfall-louisiana-rainfall",
+      "title": "Tropical Storm Bertha expected to dump rain on Gulf Coast - Axios"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/weather/2026/07/20/tropical-storm-bertha-may-soon-form-where-would-it-bring-heavy-rains/",
+      "title": "If this system becomes a tropical storm, these states could get rain-soaked - The Washington Post"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/weather/2026/07/20/tropical-storm-bertha-path-tracker/90979522007/",
+      "title": "See path tracker as Tropical Storm Bertha forms in the Gulf - USA Today"
+    },
+    {
+      "outlet": "abcnews.com",
+      "url": "https://abcnews.com/US/tropical-storm-bertha-takes-shape-off-florida-coast/story?id=134917136",
+      "title": ""
+    }
+  ]
+}
