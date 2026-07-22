@@ -1,0 +1,109 @@
+{
+  "story_id": "2026-07-21-zelensky-sacks-ukraine-s-b71bc04985",
+  "headline_seed": "Zelensky sacks Ukraine's top army commander after days of protests - BBC",
+  "brief": {
+    "story_id": "2026-07-21-zelensky-sacks-ukraine-s-b71bc04985",
+    "consensus_facts": [
+      "Ukrainian President Volodymyr Zelensky dismissed the commander-in-chief of Ukraine's armed forces, Oleksandr Syrskyi, on Tuesday (July 21, 2026).",
+      "The dismissal came days after Zelensky removed Defence Minister Mykhailo Fedorov, a move that triggered days of street protests across Ukraine.",
+      "Syrskyi was replaced by Mykhailo Drapatyi, described as a popular, battle-hardened general.",
+      "Fedorov, 35, was praised for pioneering innovative technology and recruitment approaches, particularly drones, and his tenure coincided with recent Ukrainian battlefield successes.",
+      "Fedorov and Syrskyi had a reported conflict/rivalry, and Fedorov's removal amid this dispute prompted a backlash against Syrskyi.",
+      "On Tuesday, Zelensky offered Fedorov a prominent position in government, but it was not clear whether Fedorov accepted.",
+      "Fedorov publicly congratulated Drapatyi on his appointment, calling it 'a new hope in the fight/struggle of free people for freedom and justice,' and said he had called Syrskyi to thank him for defending Ukraine.",
+      "On Monday, Syrskyi published an op-ed for the Militarny website in which he apologized if he had offended Fedorov, defended his record, and rejected claims he opposed drone warfare, saying he could not switch a million-strong army to drones in two months.",
+      "Syrskyi is widely seen in Ukraine as a Soviet-school commander reluctant to implement radical reforms."
+    ],
+    "disagreements": [
+      {
+        "topic": "Duration of protests",
+        "positions": {
+          "BBC News": "States Fedorov's ousting prompted 'six days of widespread protests.'",
+          "CNN": "Describes 'days of widespread protests' without specifying a number.",
+          "The Washington Post": "Refers to the dismissal coming 'days after' Fedorov's firing but does not quantify protest days."
+        }
+      },
+      {
+        "topic": "Exact wording of the position offered to Fedorov",
+        "positions": {
+          "BBC News": "Zelensky offered Fedorov a 'worthy position in power.'",
+          "CNN": "Zelensky offered a 'prominent position in government that would allow him to unify the technical component of our state and ensure its development.'"
+        }
+      },
+      {
+        "topic": "When Syrskyi took command / tenure length",
+        "positions": {
+          "The Washington Post": "States Syrskyi had led the Ukrainian military since February 2024.",
+          "BBC News / CNN": "Do not specify Syrskyi's start date."
+        }
+      },
+      {
+        "topic": "Drapatyi's identity/background emphasis",
+        "positions": {
+          "BBC News": "Describes Drapatyi, 43, as popular and battle-hardened and 'thought to be a close friend of Fedorov's.'",
+          "CNN": "Identifies him as commander of Ukraine's Joint Forces, known for a viral 2014 video driving an armored vehicle through a separatist barricade in Mariupol.",
+          "The Washington Post": "Body text truncated; does not detail Drapatyi."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News": "Provides the most complete account across two articles (one escalation piece, one on the sacking). Leads on the dismissal as Zelensky 'bowing to pressure' from protesters. Emphasizes the generational and doctrinal contrast (Fedorov, 35, energetic reformer vs. Syrskyi, 60, Soviet-school), quotes protesters and Syrskyi's op-ed at length, and frames Fedorov's endorsement of Drapatyi as likely 'defusing the political crisis.' Closes with the note that 'many will not forgive' Zelensky for the original choice \u2014 the closest to editorial tone in the dossier.",
+      "The New York Times": "Headline-only in the dossier ('Zelensky Faces Pressure to Remove Ukraine's Top General'). Frames the story at the pressure/anticipation stage rather than the completed sacking, suggesting it was filed July 20, before the dismissal. No body text available to assess further.",
+      "The Times of Israel": "Headline-only; body text blocked by a CAPTCHA/verification page. Headline ('Zelensky fires military chief after protests and names a replacement') frames it as a completed action with a replacement named. No usable body text.",
+      "CNN": "Leads on the sacking 'following widespread protests' and frames the episode as revealing 'an unprecedented public split in the military over Kyiv's strategy.' Emphasizes Fedorov's tech/drone innovation and its link to battlefield success, quotes Syrskyi's op-ed defending himself, and adds distinctive color on Drapatyi's 2014 Mariupol viral video. Attributes reporting to CNN's Kyiv-based team.",
+      "The Washington Post": "Body largely truncated by page furniture, ads, and related-article links. The retrievable lede frames Syrskyi's ouster as part of a 'major shake-up' and stresses Fedorov as 'the architect of Ukraine's increasingly successful long-range drone assaults on Russia.' Uniquely notes Syrskyi had led the military since February 2024 and 'repeatedly clashed with the younger defense minister.' Includes an AI-generated summary of reader comments showing mixed support/criticism of Zelensky."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. Syrskyi's Militarny op-ed is referenced and quoted by BBC News and CNN but was not provided as a standalone primary source in the dossier, so its full text could not be independently checked against the reporting."
+    ],
+    "missing_context": [
+      "No outlet provided the specific rationale Zelensky gave for firing Syrskyi beyond the protest pressure and the Fedorov conflict \u2014 the official stated reason is absent.",
+      "None of the outlets with body text explain the actual policy substance of the Fedorov-Syrskyi conflict beyond generic references to contracts, procurement, mobilization, and drones.",
+      "No outlet reports whether Fedorov ultimately accepted the government position offered by Zelensky \u2014 all leave it explicitly unresolved.",
+      "The dossier lacks any Russian, US, or NATO-ally reaction to a leadership change at the top of Ukraine's military during active war.",
+      "No outlet quantifies protest turnout with hard numbers (BBC says 'thousands' and 'six days'; others are vaguer).",
+      "The Times of Israel and The Washington Post full bodies were not retrievable (CAPTCHA block and page-furniture truncation respectively), and The New York Times was headline-only, limiting cross-outlet corroboration to primarily BBC News and CNN.",
+      "No article addresses the constitutional/legal process for appointing a new commander-in-chief or whether the changes had been formalized (BBC notes decisions 'will be formalised tomorrow')."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with substantial body text (BBC News and CNN) corroborate the core facts with no material framing conflict, making this a straightforward confirmed-event story rather than a divergent-coverage META case; the remaining outlets were headline-only or truncated and add emphasis but not contradiction.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cyvl35z3917o",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/20/world/europe/ukraine-zelensky-general-defense-minister.html",
+      "title": "Zelensky Faces Pressure to Remove Ukraine\u2019s Top General - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c7vgel8374yo",
+      "title": "Row escalates in Ukraine over army chief's future - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cyvl35z3917o",
+      "title": "Zelensky sacks Ukraine's top army commander after days of protests - BBC"
+    },
+    {
+      "outlet": "The Times of Israel",
+      "url": "https://www.timesofisrael.com/liveblog_entry/ukraines-zelensky-fires-military-chief-after-protests-and-names-a-replacement/",
+      "title": "Ukraine\u2019s Zelensky fires military chief after protests and names a replacement - The Times of Israel"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/21/europe/ukraine-military-chief-sacked-intl",
+      "title": "Zelensky sacks Ukraine\u2019s military chief following widespread protests - CNN"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/07/21/zelensky-ousts-ukraines-military-commander-major-shake-up-continues/",
+      "title": "Zelensky ousts Ukraine\u2019s military commander as major shake-up continues - The Washington Post"
+    }
+  ]
+}
