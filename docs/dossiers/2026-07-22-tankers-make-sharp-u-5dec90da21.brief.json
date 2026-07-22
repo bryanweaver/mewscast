@@ -1,0 +1,88 @@
+{
+  "story_id": "2026-07-22-tankers-make-sharp-u-5dec90da21",
+  "headline_seed": "Tankers make sharp U-turns after Houthi shipping threat - BBC",
+  "brief": {
+    "story_id": "2026-07-22-tankers-make-sharp-u-5dec90da21",
+    "consensus_facts": [
+      "At least seven oil tankers made U-turns near Yemen after the Houthis announced a 'maritime embargo' against Saudi Arabia; both BBC and The Washington Post report the figure of seven vessels reversing course.",
+      "The Houthi group is described as Iran-linked/Iran-aligned/Iran-backed by both BBC and The Washington Post.",
+      "The course changes and reversals are documented via ship-tracking data from MarineTraffic (cited by both BBC and The Washington Post).",
+      "The affected shipping route is the Red Sea; the reversals involve ships bound to or from Saudi Arabia (both BBC and The Washington Post)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which vessels turned around and how they are characterized",
+        "positions": {
+          "BBC News": "Names specific vessels (Rodos, Mica, Liu Jiang Kou, New Prime) and says at least seven tankers plus at least eight Red Sea-bound ships made U-turns.",
+          "The Washington Post": "Characterizes the lead example as a 'large cargo ship' / 'Chinese-operated container ship' bound for Saudi Arabia turned back Tuesday, one of seven vessels; does not enumerate the same named tanker list."
+        }
+      },
+      {
+        "topic": "Source of the ship-tracking analysis",
+        "positions": {
+          "BBC News": "Attributes analysis to MarineTraffic, Kpler, Signal Ocean, Vanguard, and EOS Risk Group.",
+          "The Washington Post": "Attributes analysis to MarineTraffic and to the maritime firm Lloyd's List."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg (wire)": "Two Bloomberg entries (Articles 1 and 3) returned only bot-check/paywall boilerplate with no retrievable body text. Headlines frame the story as 'Houthi Threat Takes Hold as Tankers Balk' and 'Chinese Oil Tanker U-Turns in Red Sea After Houthi Attack Threat' \u2014 the latter emphasizing a specifically Chinese vessel, a China angle not centered in the BBC body text.",
+      "BBC News (international)": "The only full-text outlet with substantial detail (appears twice, Articles 2 and 5, from .com and .co.uk). Leads on the ship-tracking evidence and BBC Verify methodology. Emphasizes the mechanics of specific vessel reversals (Rodos, Mica, Liu Jiang Kou, New Prime), the strategic context of the Strait of Hormuz closure diverting 70%+ of Saudi crude to Yanbu, and analyst warnings about freight and energy-price knock-on effects. Frames the embargo as retaliation for a Saudi blockade of Houthi-controlled Yemen and grounds it in the 2014-onward civil war. Hedges heavily: 'reasons for each course change cannot be independently verified.'",
+      "Reuters (wire)": "Headline-only; body text is a Google News RSS redirect link with no article content. Headline frames the story around the Houthi email warning shipping companies to avoid Saudi ports ('email shows'), emphasizing documentary evidence \u2014 the same email the BBC says it also saw.",
+      "Financial Times (international)": "Headline-only; body text is subscription-plan boilerplate. Headline 'Saudi tankers reverse course after Houthi threats' frames the vessels as 'Saudi tankers' specifically, narrowing the frame compared with BBC's broader multi-flag vessel list.",
+      "The Washington Post (lean-left)": "Full text present but heavily degraded by ads/nav boilerplate. Substantive reporting is thin: leads on 'seven ships reversed course' and frames the risk as a 'widening war' that could 'add to the economic turmoil caused by oil shipping disruptions.' Attributes analysis to Lloyd's List (distinct from BBC's sourcing) and highlights a Chinese-operated container ship as its lead example."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. The underlying Houthi email to shipowners (banning loading/discharging at Saudi ports and warning vessels 'may be subject to targeting in any location within the operational reach') is referenced by BBC as seen by the BBC and by Reuters in its headline ('email shows'), but the document itself is not in the dossier and cannot be verified against the reporting.",
+      "The Aspides EU naval advisory (recommending Israeli/US/Saudi-linked vessels avoid the Red Sea and Gulf of Aden) is cited by BBC as 'an advisory seen by Reuters' but is not provided as a primary source here."
+    ],
+    "missing_context": [
+      "Only two outlets in the dossier have substantive retrievable body text (BBC News, which appears twice, and The Washington Post, which is largely ad/nav clutter). Bloomberg (x2), Reuters, and Financial Times returned bot-check, RSS-redirect, or subscription boilerplate \u2014 so most claimed 'coverage breadth' is headline-level only.",
+      "The two BBC articles (Articles 2 and 5) are the same report published on .com and .co.uk; they should be counted as one source, not two, despite appearing as separate dossier entries.",
+      "The Houthi email and the Aspides advisory are both described only secondhand; neither primary document is available, so their exact wording and scope cannot be independently confirmed.",
+      "No outlet quantifies the actual market/price impact that had materialized as of publication \u2014 BBC cites analyst warnings of 'higher freight rates, higher energy prices' but no confirmed price move.",
+      "No Saudi, Houthi, or Iranian official is directly quoted beyond Saudi Arabia's general vow to 'take all necessary measures'; the Houthi rationale is reported via their email and prior statements only.",
+      "No outlet reports whether any vessel was actually attacked following the embargo announcement \u2014 the story is entirely about deterrence behavior (U-turns, armed-guard broadcasts), not confirmed strikes."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only one substantive source (BBC, duplicated across two URLs) plus a degraded Washington Post entry have retrievable text, and they broadly agree on the core facts (seven tankers reversing after the Houthi embargo) without materially conflicting framings. With no primary source and thin corroboration, this is a straightforward REPORT built on the BBC's verified account, not a META coverage-comparison story.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-07-21/oil-tankers-make-u-turn-after-houthi-threats",
+      "title": "Houthi Threat Takes Hold as Tankers Balk - Bloomberg.com"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cn0n127lpzgo",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-21/chinese-oil-tanker-u-turns-in-red-sea-after-houthi-attack-threat?srnd=homepage-americas",
+      "title": "Chinese Oil Tanker U-Turns in Red Sea After Houthi Attack Threat - Bloomberg.com"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/houthis-warn-shipping-companies-avoid-saudi-ports-email-shows-2026-07-21/",
+      "title": "Houthis warn shipping companies to avoid Saudi ports, email shows - Reuters"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cn0n127lpzgo",
+      "title": "Tankers make sharp U-turns after Houthi shipping threat - BBC"
+    },
+    {
+      "outlet": "Financial Times",
+      "url": "https://www.ft.com/content/6e28eae4-cd7b-48e8-ae5e-d555de88f428?syn-25a6b1a6=1",
+      "title": "Saudi tankers reverse course after Houthi threats - Financial Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/07/21/ships-bound-saudi-arabia-turn-around-sign-new-red-sea-blockade/",
+      "title": "7 ships have reversed course as Houthis enforce Red Sea blockade - The Washington Post"
+    }
+  ]
+}
