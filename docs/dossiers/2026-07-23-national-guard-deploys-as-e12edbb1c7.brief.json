@@ -1,0 +1,92 @@
+{
+  "story_id": "2026-07-23-national-guard-deploys-as-e12edbb1c7",
+  "headline_seed": "National Guard deploys as flash floods in West Virginia inundate homes and businesses - AP News",
+  "brief": {
+    "story_id": "2026-07-23-national-guard-deploys-as-e12edbb1c7",
+    "consensus_facts": [
+      "Torrential rains caused flash floods in West Virginia that inundated homes and businesses, washed out bridges, and led to numerous water rescues (ABC News, CBS News).",
+      "Gov. Patrick Morrisey declared a state of emergency for all 55 counties Tuesday night and deployed National Guard members to the hardest-hit areas in the northern part of the state (ABC News, CBS News).",
+      "Forecasters said up to 7 inches of rain fell in some places (ABC News, CBS News).",
+      "Emergency crews reported dozens of rescues of people stuck in submerged vehicles, but some rescuers were unable to reach locations cut off by floodwaters (ABC News, CBS News).",
+      "Video and photos on social media showed submerged vehicles in parking lots, including at a Walmart in Weston where muddy water surged into the store, with a nearby hotel's main/first floor inundated (ABC News, CBS News).",
+      "Aerial views showed extensive flooding in Buckhannon, West Virginia, on Wednesday, July 22, 2026 (Associated Press, CBS News).",
+      "The northern West Virginia communities of Lewis and Upshur counties were among the hardest hit (Associated Press, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of National Guard members deployed",
+        "positions": {
+          "ABC News": "100 National Guard members sent, with an additional 200 expected by late Wednesday morning (300 total).",
+          "CBS News": "500 National Guard members sent to the hardest-hit areas."
+        }
+      },
+      {
+        "topic": "Casualties / people unaccounted for",
+        "positions": {
+          "ABC News": "No deaths were immediately reported.",
+          "CBS News": "Some residents were unaccounted for; Morrisey said officials are 'concerned about fatalities' with no exact number; more than 100 people needed rescue."
+        }
+      },
+      {
+        "topic": "Number of people rescued",
+        "positions": {
+          "ABC News": "Describes 'numerous' and 'dozens' of rescues without a total figure.",
+          "CBS News": "More than 100 people have needed to be rescued from floodwaters."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Both AP entries (Articles 1 and 3) provide only a brief two-sentence summary \u2014 'parts of West Virginia are cut off' and Guard deployed to northern areas \u2014 accompanied mostly by photo/video captions. Article 3's body is largely unrelated AP video promos (scam industry, ICE charges, Trump child separations, coal utility costs) with no additional flood reporting. Minimal framing; functions as a wire stub and caption feed rather than a full report.",
+      "ABC News": "Leads with the human-impact frame \u2014 homes and businesses inundated, bridges washed out, water rescues. Emphasizes the NWS 'SEEK HIGHER GROUND NOW!' warning and a personal Facebook anecdote from a hotel guest (Bob Pfister). Reports the lower/staggered Guard figure (100 plus 200) and explicitly states no deaths were immediately reported. Reads as a straightforward early wire-derived account.",
+      "CBS News": "The fullest account (Article 4). Leads on severity and uncertainty \u2014 residents unaccounted for, fears of fatalities, more than 100 rescued, 19 helicopters deployed. Adds historical context (a decade-earlier flood that killed 23 in the same areas; a USGS gauge record surpassing the 1985 flood tied to 47 deaths), infrastructure closures (I-79, US Route 48), a Fayetteville sinkhole, and broader regional storm context including 14 tornadoes across six states. Notes officials did not immediately respond to AP inquiries. Article 5 is a near-empty Chicago video stub dominated by site navigation with only a one-sentence lede. CBS emphasizes scale and unresolved danger more than the other outlets.",
+      "The Transylvania Times": "Contains no original reporting on the West Virginia floods in the retrievable body text \u2014 the article body is almost entirely site navigation, cookie notices, and a local North Carolina flood watch. Republishes the shared wire headline but provides no usable flood coverage; functions as a syndicated headline placeholder with a localized NC weather alert attached."
+    },
+    "primary_source_alignment": [
+      "The only primary source is a fragment of a National Weather Service flood-safety page (weather.gov/safety/flood), reached via The Transylvania Times' North Carolina flood watch. It defines a Flood Watch and warns of localized amounts up to 5 inches for parts of North Carolina \u2014 it is not a West Virginia-specific document and does not corroborate or contradict the core West Virginia flood figures.",
+      "No primary source (e.g., Gov. Morrisey's emergency declaration, National Guard deployment order, or NWS Charleston bulletin) was provided that would let us adjudicate the conflicting Guard-deployment numbers (100+200 vs. 500) or the casualty/rescue figures."
+    ],
+    "missing_context": [
+      "The conflicting National Guard troop counts (ABC's 300 combined vs. CBS's 500) are not reconciled by any provided primary source; the discrepancy may reflect reporting at different times as deployment scaled up, but no outlet clarifies this.",
+      "No confirmed death toll for the July 2026 event is established in any article; CBS reports only official 'concern about fatalities.'",
+      "CBS notes West Virginia officials (communications director Lars Dalseide, Homeland Security's Andy Malinoski, National Guard PA officer Sgt. 1st Class Ariana Shuemake, and county EM heads) did not immediately provide additional information \u2014 a transparency gap the other outlets do not mention.",
+      "The exact geographic scope and per-community rainfall/damage totals are only partially reported; only CBS provides the '4.5 inches in 37 minutes' detail and the USGS Sand Run record data.",
+      "Two of the six 'articles' (AP video stub, CBS Chicago video stub) and The Transylvania Times entry contained little to no substantive flood reporting; effective full-text coverage came from only ABC News and CBS News.",
+      "No article contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets reported the same event but diverge materially on load-bearing numbers \u2014 National Guard deployment (300 vs. 500) and casualty/rescue counts \u2014 while the only primary source is an unrelated NWS safety page, making the coverage divergence itself the story rather than a clean set of agreed facts.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/west-virginia-flash-flooding-919eb8602f8954b99c517ac4fae1cd64",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/wireStory/national-guard-deployed-flash-floods-west-virginia-inundate-134979525",
+      "title": "National Guard is deployed as flash floods in West Virginia inundate homes and businesses - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/video/national-guard-is-deployed-as-flash-floods-in-west-virginia-inundate-homes-and-businesses-f8805f2d04b742bfa5cff87743bcf49e",
+      "title": "National Guard is deployed as flash floods in West Virginia inundate homes and businesses - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/west-virginia-flash-floods-national-guard/",
+      "title": "National Guard deployed as flash floods inundate West Virginia, dropping 7 inches of rain - CBS News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/chicago/video/national-guard-deploys-for-flash-floods-in-west-virginia/",
+      "title": "National Guard deploys for flash floods in West Virginia - CBS News"
+    },
+    {
+      "outlet": "The Transylvania Times",
+      "url": "https://www.transylvaniatimes.com/news/nation_world/national-guard-is-deployed-as-flash-floods-in-west-virginia-inundate-homes-and-businesses/article_c44e5679-6b96-505d-b925-bb634d639700.html",
+      "title": "National Guard is deployed as flash floods in West Virginia inundate homes and businesses - The Transylvania Times"
+    }
+  ]
+}
