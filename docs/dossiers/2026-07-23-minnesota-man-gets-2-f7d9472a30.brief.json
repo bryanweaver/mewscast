@@ -1,0 +1,86 @@
+{
+  "story_id": "2026-07-23-minnesota-man-gets-2-f7d9472a30",
+  "headline_seed": "Minnesota man gets 2 life sentences for killing Democratic lawmaker and her husband - CNN",
+  "brief": {
+    "story_id": "2026-07-23-minnesota-man-gets-2-f7d9472a30",
+    "consensus_facts": [
+      "Vance Boelter, 59, was sentenced in federal court in Minneapolis for the killing of Minnesota House Speaker Melissa Hortman and her husband Mark Hortman.",
+      "Boelter pleaded guilty in June, roughly a year after the June 14, 2025 attacks, in exchange for prosecutors not seeking the death penalty.",
+      "The sentence was two consecutive life terms plus 40 years.",
+      "Boelter also critically wounded state Sen. John Hoffman and his wife Yvette in the attacks.",
+      "Boelter went to Melissa Hortman's home around 3:30 a.m. on June 14, 2025, wearing a tactical uniform and mask and disguised as a police officer.",
+      "Boelter admitted he spent months identifying and stalking his targets before driving to their homes with the intention of killing them.",
+      "The attacks sparked the largest police search in Minnesota state history.",
+      "The Hortman family's golden retriever was shot in the attack and did not survive.",
+      "Federal defender Manny Atwal represented Boelter in the sentencing proceedings."
+    ],
+    "disagreements": [
+      {
+        "topic": "Timing/framing of the article (event completed vs. anticipated)",
+        "positions": {
+          "CNN": "Reports the sentencing as having occurred Thursday, with detailed victim impact statements from the hearing.",
+          "Associated Press": "Headline states the sentencing occurred; body text is only photo captions with no narrative reporting.",
+          "The Independent": "Frames the sentencing as forthcoming ('set to be sentenced in federal court Thursday'), written in anticipation rather than aftermath."
+        }
+      },
+      {
+        "topic": "Dog's fate \u2014 shot vs. euthanized",
+        "positions": {
+          "CNN": "Describes Gilbert, the golden retriever, as shot by Boelter but still alive when the family arrived at the veterinary hospital.",
+          "The Independent": "States the golden retriever was 'gravely injured in the shootings and had to be euthanized.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier. Frames Boelter as 'assassinating' a Democratic lawmaker and emphasizes he 'faces life in prison' \u2014 anticipatory phrasing. No body text available to corroborate details.",
+      "CNN": "Leads heavily on the human and emotional dimension \u2014 victim impact statements from survivors John and Yvette Hoffman, and the Hortman children. Emphasizes the family's fury that death was not on the table and their objection to taxpayer-funded incarceration. Includes the judge's remark that it was the longest sentence in his career. Frames Boelter as silent and unemotional. Least focused on the mechanics of the plea deal, most focused on grief and legacy.",
+      "Associated Press": "Body text consists entirely of photo captions (arrest photo, family arriving at courthouse, funeral, bullet holes in the Hoffman door). Headline confirms the two life sentences. No narrative reporting available, so framing is carried by imagery emphasizing the family and physical evidence of violence.",
+      "The New York Times": "Headline-only in the dossier. Uses the neutral term 'Gunman' and 'Ordered to Spend Life in Prison,' framing around the court's action rather than the political dimension emphasized by Reuters. No body text available to corroborate.",
+      "The Independent": "Written in anticipation of the sentencing rather than reporting it as done. Leads with a lengthy fundraising appeal before the story. Emphasizes the prosecutorial 'assault on democracy' framing and the mechanics of the plea deal and sentence. Uniquely details Boelter's defense requests (Florida prison placement, work to pay restitution, therapy programs), the sealed presentencing memo, the two other lawmakers Boelter visited that night, his state charges, and the Hoffmans' April personal injury lawsuit."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, sentencing transcript, plea agreement, presentencing memorandum) were located for this story. The Independent notes the presentencing memorandum was sealed as of early Thursday, which limits primary-source availability.",
+      "The Independent quotes directly from prosecutors' and the defense's sentencing letters ('Vance Boelter committed an assault on democracy'; Atwal's request for Florida placement), but these letters themselves are not included in the dossier as primary sources.",
+      "Because two outlets (CNN, The Independent) have substantive body text and broadly corroborate the core facts, the sentence and plea details are well-supported without a primary document, but exact charge counts and sentence structure cannot be independently verified against the filings."
+    ],
+    "missing_context": [
+      "None of the retrievable articles report a clear, corroborated motive for Boelter's targeting of Democratic lawmakers beyond references to his 'political positions'; the underlying ideology or grievance is not explained.",
+      "The status and timeline of Boelter's separate state charges (two counts of murder, four counts of attempted murder, impersonating a police officer, animal cruelty) is mentioned only by The Independent and not resolved.",
+      "No outlet with body text explains why federal charges were pursued and how the federal case relates to the parallel state prosecution.",
+      "The Reuters and NYT articles are headline-only, so their reporting cannot be independently verified or compared at the body-text level.",
+      "The discrepancy over whether the dog was euthanized versus still recovering is unresolved between CNN and The Independent.",
+      "No outlet details the outcome or current status of the Hoffmans' personal injury lawsuit filed in April (mentioned only by The Independent).",
+      "The specific six federal counts to which Boelter pleaded guilty are referenced (The Independent says 'six counts') but not itemized in any article."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets covered the same sentencing but with materially different emphasis \u2014 CNN centers victim grief, The Independent centers plea mechanics and prosecutorial framing while writing in anticipation, AP offers only photo captions, and Reuters and NYT are headline-only \u2014 making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/minnesota-man-faces-life-prison-assassinating-democratic-lawmaker-2026-07-23/",
+      "title": "Minnesota man faces life in prison for assassinating Democratic lawmaker - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/23/us/mn-lawmakers-killing-sentencing",
+      "title": ""
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/hortman-hoffman-minnesota-lawmakers-boelter-sentencing-b9b2823e5386f2e4fbc465d23095dab8",
+      "title": "Minnesota man gets 2 life sentences for killing Democratic lawmaker and her husband - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/23/us/vance-boelter-murder-sentencing.html",
+      "title": "Gunman Ordered to Spend Life in Prison for Shooting Minnesota Lawmakers - The New York Times"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/minneapolis-minnesota-democratic-florida-bureau-of-prisons-b3019941.html",
+      "title": "Man who pleaded guilty to killing top Minnesota Democratic lawmaker and her husband to be sentenced - The Independent"
+    }
+  ]
+}
