@@ -1,0 +1,118 @@
+{
+  "story_id": "2026-07-23-saudis-must-recognise-israel-db275dd467",
+  "headline_seed": "Saudis must recognise Israel for nuclear deal, says Trump - BBC",
+  "brief": {
+    "story_id": "2026-07-23-saudis-must-recognise-israel-db275dd467",
+    "consensus_facts": [
+      "President Donald Trump said on Thursday (July 23, 2026) via a Truth Social post that the US-Saudi civilian nuclear deal is 'totally subject to Saudi Arabia joining the very respected and successful Abraham Accords' (AP, Washington Post, BBC, CNBC).",
+      "Trump stated the deal does not include uranium enrichment, writing 'There will be no enrichment of material!' (AP, Washington Post, BBC, CNBC).",
+      "The US and Saudi Arabia signed a civilian nuclear cooperation agreement the day before Trump's statement, on Wednesday, July 22, 2026 (AP, Washington Post, BBC, CNBC, NPR).",
+      "US Energy Secretary Chris Wright signed the agreement with his Saudi counterpart, described in some reports as Saudi Energy Minister Prince Abdulaziz bin Salman (Washington Post, CNBC).",
+      "The text of the deal has not been publicly released (Washington Post, BBC, CNBC).",
+      "The agreement will be submitted to Congress for review; Trump's Republican Party controls both chambers and opponents are not expected to have the votes to block it (Washington Post, BBC, CNBC).",
+      "Nonproliferation experts and lawmakers have raised concerns the deal could trigger nuclear proliferation or a regional arms race (AP, Washington Post, BBC, CNBC, NPR).",
+      "Israel is widely believed to possess nuclear weapons but neither confirms nor denies this (Washington Post, BBC, NPR).",
+      "Israeli PM Benjamin Netanyahu's office welcomed Trump's statement, calling Saudi Arabia joining the accords 'an historic leap forward for peace in the Middle East' (Washington Post, BBC).",
+      "Saudi Arabia has previously conditioned normalization with Israel on the establishment of a Palestinian state (Washington Post, BBC).",
+      "Crown Prince Mohammed bin Salman said (to CBS News in 2018 per BBC) that Saudi Arabia would seek a nuclear weapon if Iran developed one (Washington Post, BBC)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the deal permits future uranium enrichment",
+        "positions": {
+          "AP": "Notes nonproliferation experts raised concerns the deal 'fails to include guardrails to prevent enrichment of uranium to weapons-grade levels,' while reporting Trump's claim of no enrichment.",
+          "The Washington Post": "States Trump's no-enrichment assertion 'appears to contradict how people familiar with the deal have described it,' and that the deal creates 'a pathway to a Saudi nuclear enrichment program.'",
+          "BBC": "Reports earlier US media suggested the deal could allow future enrichment, but 'Trump's remarks appear to deny this.'",
+          "NPR": "Reports the memo it saw lacks 'gold standard' provisions preventing the use of American-built plants to enrich uranium or other fuel supplied by other countries.",
+          "CNBC": "Reports Trump's no-enrichment claim largely at face value without noting contradiction."
+        }
+      },
+      {
+        "topic": "Which countries have joined the Abraham Accords",
+        "positions": {
+          "Washington Post": "Describes the accords generally as normalizing relations between Israel and Muslim-majority countries; does not enumerate.",
+          "BBC": "States five countries have recognised Israel: UAE and Bahrain (first term), plus Sudan, Morocco and Kazakhstan."
+        }
+      },
+      {
+        "topic": "IAEA oversight and inspection regime",
+        "positions": {
+          "The Washington Post": "Reports the deal exempts Saudis from aggressive international inspections required in other deals (e.g., UAE); instead American teams would conduct sensitive inspections.",
+          "NPR": "Reports Saudi Arabia is 'not required to adopt terms that would lead to greater oversight from the International Atomic Energy Agency.'"
+        }
+      },
+      {
+        "topic": "Whether the Abraham Accords condition is in the deal text or newly added",
+        "positions": {
+          "The Washington Post": "Frames it as 'a new condition' added a day after signing, 'throwing the future of that deal into confusion.'",
+          "BBC": "States it was 'not immediately clear if the condition... was stipulated in the text of the nuclear deal... or that Saudi Arabia had agreed to that condition.'",
+          "AP": "Reports the condition as stated by Trump without framing it as a reversal.",
+          "CNBC": "Reports the condition without characterizing it as newly added."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Bare-bones wire treatment. Leads with Trump's social media statement and the no-enrichment/Abraham Accords conditions. Includes a single line of expert skepticism about missing 'guardrails' against weapons-grade enrichment. Neutral, minimal, event-driven. Notably front-loads photo captions unrelated to the story (Trump in Georgia, Rubio in Manila).",
+      "The Washington Post": "The most skeptical and detailed framing. Headline emphasizes doubt ('throwing pact into doubt'). Explicitly frames the Abraham Accords condition as a reversal and contradiction, ties it to Trump's 'on-again, off-again approach to policymaking' (citing the Strait of Hormuz shipping-toll reversal as a parallel), and flags that Trump's no-enrichment claim contradicts sources familiar with the deal. Adds context on the failed Biden-era deal, the 2023 near-normalization interrupted by Oct. 7, and anonymous sources on American-run inspections replacing IAEA oversight.",
+      "BBC News": "International, measured framing. Leads on the recognition-of-Israel condition. Emphasizes uncertainty about whether the condition is even in the deal text or agreed by Saudi Arabia. Uniquely enumerates the five Abraham Accords signatories and provides Iran-conflict context. Balances the proliferation concern with an Israeli minister's comment that Israel 'can manage' peaceful Saudi nuclear power, and quotes a think-tank expert calling US-enabled enrichment 'quite shocking.'",
+      "CNBC": "Business-specialized, matter-of-fact framing. Bullet-point 'Key Points' lead. Reports Trump's claims largely at face value with less contradiction-flagging than the Post or NPR. Emphasizes the commercial and Congressional-review angles (Atomic Energy Act) and the multibillion-dollar partnership. Includes Sen. Chris Murphy's warning of a 'nuclear race' but frames the story more transactionally.",
+      "Bloomberg": "Headline-only; body text is a bot-detection/paywall block. Headline frames the story as the nuclear deal being 'subject to joining Abraham Accords.' No retrievable reporting.",
+      "Reuters": "Headline-only; body is an embedded Google News link. Headline frames Trump as pegging the deal to Saudi Arabia joining the accords. No retrievable reporting.",
+      "NPR": "Newsletter-digest format burying the story among unrelated items (House bills, FDA peptides, Nolan Wells autopsy, student visas). Leads its top-stories section with the deal itself rather than Trump's new condition \u2014 notably its top story treats the Wednesday signing, and it emphasizes the missing 'gold standard' nonproliferation provisions and lack of IAEA oversight. Cites Israeli former minister Avigdor Lieberman's arms-race warning and notes worries about a US-Israel rift. Does not center the Abraham Accords condition as prominently as the other full-text outlets."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. The text of the nuclear cooperation agreement has not been publicly released (confirmed by Washington Post, BBC, and CNBC), so no outlet's claims can be checked against the underlying document.",
+      "The closest to primary material is NPR's reference to 'an administration memo about the agreement seen by NPR' \u2014 a single-outlet, non-public document that cannot be independently verified within this dossier.",
+      "Trump's own Truth Social post is quoted consistently across AP, Washington Post, BBC and CNBC, and the quoted language matches across those outlets."
+    ],
+    "missing_context": [
+      "No outlet obtained or published the actual text of the deal, so all characterizations of its enrichment and inspection provisions rely on Trump's post, anonymous sources, or a memo \u2014 the core factual dispute (does it permit enrichment?) remains unresolved in the dossier.",
+      "Saudi Arabia had not responded to Trump's statement at the time of any report; the Saudi position on the newly-stated Abraham Accords condition is entirely absent.",
+      "The White House did not respond to requests for comment (Washington Post, BBC) on whether the deal proceeds if the Saudis decline to join the accords \u2014 a decisive open question left unanswered.",
+      "No outlet clarifies the mechanism or legal standing of Trump attaching an Abraham Accords condition after the agreement was already signed \u2014 whether this is a formal contractual term, a political statement, or a unilateral add-on.",
+      "The specific safeguards, timeline, dollar value, and reactor-supply terms of the deal are only vaguely described; NPR gives the most detail but from an unverified memo.",
+      "Bloomberg and Reuters are headline-only (paywall/bot-block and Google News redirect respectively), so only four of seven outlets provided usable body text \u2014 the wire-level corroboration is thinner than the outlet count suggests.",
+      "Editorial disclosure: consensus facts here rest on four full-text outlets (AP, Washington Post, BBC, CNBC, plus NPR's digest); the two wire services in the matrix (Bloomberg, Reuters) contributed only headlines."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four-plus outlets reported the same Trump statement but with materially different framings \u2014 the Washington Post and NPR flag a contradiction between Trump's no-enrichment claim and the deal's actual reported provisions, while CNBC and AP report the claim closer to face value \u2014 and the actual deal text is unreleased, so the story is as much about the divergence in coverage and the unresolved enrichment question as about the event itself.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-saudia-arabia-nuclear-israel-abraham-accords-6d498a1e851f226c04831bbedf979ec9",
+      "title": "Trump says Saudi nuclear pact requires kingdom to normalize Israel relations through Abraham Accords - AP News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/07/23/trump-adds-condition-nuclear-deal-with-saudi-arabia-throwing-pact-into-doubt/",
+      "title": "Trump adds condition to nuclear deal with Saudi Arabia, throwing pact into doubt - The Washington Post"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cwye71yq8wwo",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/23/trump-saudi-arabia-nuclear-power.html",
+      "title": "Trump says Saudi nuclear deal does not include enrichment, Riyadh must join Abraham Accords - CNBC"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-23/trump-says-saudi-nuclear-deal-subject-to-joining-abraham-accords",
+      "title": "Trump Says Saudi Nuclear Deal Subject to Joining Abraham Accords - Bloomberg.com"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/trump-says-us-saudi-nuclear-deal-conditional-country-joining-abraham-accords-2026-07-23/",
+      "title": "Trump pegs nuclear deal to Saudi Arabia joining Abraham Accords - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/07/23/g-s1-135097/up-first-newsletter-saudi-arabia-nuclear-deal-house-bills-peptides-nolan-wells",
+      "title": "U.S. signs nuclear deal with Saudi Arabia. And, Nolan Wells' independent autopsy results - NPR"
+    }
+  ]
+}
