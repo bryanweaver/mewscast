@@ -45,7 +45,7 @@ from dossier_renderer import (
     render_index_page,
     render_sitemap,
 )
-from r2_uploader import upload_dossier_image
+from r2_uploader import upload_dossier_image, public_image_url
 
 
 def _load_config():
@@ -2194,39 +2194,58 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
     if skip_bluesky:
         print(f"[republish] Bluesky already posted ({_prior.get('bluesky_uri')}) — X only")
 
-    # ---- Generate image ------------------------------------------------
+    # ---- Obtain image --------------------------------------------------
+    # Prefer the exact image from the original publish — R2 holds the
+    # canonical full-res, already-watermarked copy keyed by story_id (see
+    # _persist_dossier_image). Regeneration is the fallback for drafts
+    # that never published anywhere.
     image_path = None
     image_prompt = None
     try:
-        print(f"[republish] generating {post_type.value}-style image...")
-        img_prompt_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)), "prompts", "journalism_image.md"
-        )
-        with open(img_prompt_path, "r", encoding="utf-8") as f:
-            img_template = f.read()
-
-        img_request = img_template.replace("{post_type}", post_type.value)
-        img_request = img_request.replace("{topic}", post_text[:200])
-        img_request = img_request.replace("{draft_text}", post_text[:500])
-        img_request = img_request.replace("{article_section}", "")
-
-        from anthropic import Anthropic as _Anthropic
-        _img_client = _Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-        _img_resp = _img_client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=350,
-            messages=[{"role": "user", "content": img_request}],
-        )
-        image_prompt = _img_resp.content[0].text.strip().strip('"').strip("'")
-        if len(image_prompt) > 800:
-            image_prompt = image_prompt[:800]
-        print(f"[republish] image prompt: {image_prompt[:100]}...")
-
-        img_gen = ImageGenerator()
-        # Capture the full anchored prompt for audit (posts_history.json).
-        image_path, image_prompt = img_gen.generate_image(image_prompt, post_type=post_type.value)
+        import requests as _requests
+        _orig_url = public_image_url(f"images/{_safe_filename_component(story_id)}.png")
+        _resp = _requests.get(_orig_url, timeout=30)
+        if _resp.ok and _resp.headers.get("content-type", "").startswith("image/"):
+            image_path = "temp_image.png"
+            with open(image_path, "wb") as f:
+                f.write(_resp.content)
+            print(f"[republish] reusing original image from {_orig_url}")
+        else:
+            print(f"[republish] no original image in R2 ({_resp.status_code}) — regenerating")
     except Exception as e:
-        print(f"[republish] image generation failed (continuing): {e}")
+        print(f"[republish] original image fetch failed (will regenerate): {e}")
+
+    if image_path is None:
+        try:
+            print(f"[republish] generating {post_type.value}-style image...")
+            img_prompt_path = os.path.join(
+                os.path.dirname(os.path.dirname(__file__)), "prompts", "journalism_image.md"
+            )
+            with open(img_prompt_path, "r", encoding="utf-8") as f:
+                img_template = f.read()
+
+            img_request = img_template.replace("{post_type}", post_type.value)
+            img_request = img_request.replace("{topic}", post_text[:200])
+            img_request = img_request.replace("{draft_text}", post_text[:500])
+            img_request = img_request.replace("{article_section}", "")
+
+            from anthropic import Anthropic as _Anthropic
+            _img_client = _Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+            _img_resp = _img_client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=350,
+                messages=[{"role": "user", "content": img_request}],
+            )
+            image_prompt = _img_resp.content[0].text.strip().strip('"').strip("'")
+            if len(image_prompt) > 800:
+                image_prompt = image_prompt[:800]
+            print(f"[republish] image prompt: {image_prompt[:100]}...")
+
+            img_gen = ImageGenerator()
+            # Capture the full anchored prompt for audit (posts_history.json).
+            image_path, image_prompt = img_gen.generate_image(image_prompt, post_type=post_type.value)
+        except Exception as e:
+            print(f"[republish] image generation failed (continuing): {e}")
 
     # ---- Load brief sidecar for dossier-reply personalization ----------
     # The full dossier JSON is gitignored; the brief sidecar is committed
