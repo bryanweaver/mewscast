@@ -1,0 +1,83 @@
+{
+  "story_id": "2026-07-24-us-attacks-iran-as-3c6b093c18",
+  "headline_seed": "US attacks Iran as Houthis allow Chinese ships to pass: What\u2019s the latest? - Al Jazeera",
+  "brief": {
+    "story_id": "2026-07-24-us-attacks-iran-as-3c6b093c18",
+    "consensus_facts": [
+      "Yemen's Iran-aligned Houthis announced a naval blockade against Saudi Arabia this week (announced Monday, July 20/21), threatening tankers that use Saudi Arabian Red Sea ports.",
+      "Two Chinese supertankers carrying Saudi crude oil successfully exited the Bab el-Mandeb strait despite the Houthi blockade, per London Stock Exchange Group (LSEG) vessel-tracking data.",
+      "Multiple oil tankers carrying Saudi crude made U-turns away from Houthi-controlled waters earlier in the week when the blockade began.",
+      "The Bab el-Mandeb strait is a major global shipping chokepoint used by a large share of maritime and energy traffic.",
+      "US President Donald Trump publicly commented on the situation, indicating the US would respond to Houthi threats against shipping.",
+      "The Saudi oil transiting the strait is destined primarily for Asian markets, including China and India."
+    ],
+    "disagreements": [
+      {
+        "topic": "When the Chinese tankers exited the Red Sea",
+        "positions": {
+          "Al Jazeera English": "Says the two Chinese supertankers exited the Bab al-Mandeb strait on Friday.",
+          "Newsweek": "Says the pair of Chinese oil tankers exited the Red Sea together on Thursday.",
+          "Reuters": "Headline-only; states the tankers exited but no retrievable date in body."
+        }
+      },
+      {
+        "topic": "Number of tankers that changed course / made U-turns",
+        "positions": {
+          "The Guardian": "Three oil tankers loaded with Saudi crude for China and India made U-turns on Tuesday; Houthis claimed six ships had changed course.",
+          "Newsweek": "Cites the Institute for the Study of War saying seven vessels changed course due to Houthi warnings, including the Xin Long Yang and a COSCO vehicle carrier."
+        }
+      },
+      {
+        "topic": "Why the Chinese ships were allowed through",
+        "positions": {
+          "Newsweek": "Attributes it to ship-by-ship transit clearances granted by the Houthis to COSCO, possibly tied to a broader Beijing-Houthi-Iran commercial understanding (per analysts Cichen Shen and Arif Gasilov); notes the ships had loaded oil before the blockade began.",
+          "The Guardian": "Frames it as an open question, citing the Atlantic Council's Allison Minor that the Houthis 'may be less willing to cut deals with Chinese ships carrying Saudi oil,' contrasting with prior deals with Russia and China."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Two Chinese supertankers with Saudi oil exit Red Sea'). Neutral wire framing focused narrowly on the tanker transit event. No body text available to assess emphasis; the headline foregrounds the successful passage rather than the blockade or US strikes.",
+      "Al Jazeera English": "Frames the story as a running situation report ('What's the latest'). Leads with US attacks on Iran continuing for a 13th consecutive night and explosions in Iranian cities, then pivots to shipping disruptions. Emphasizes the contrast between only one tanker crossing the Strait of Hormuz (lowest since May 7) and the two Chinese tankers exiting Bab al-Mandeb. Brief and aggregative; light on causal explanation.",
+      "Newsweek": "China-desk framing (bylined China Editor John Feng). Leads with the exception made for Chinese vessels, naming specific ships (Xin Long Yang, Cosnew Lake), cargo volumes (~2 million barrels each), owner (state-owned COSCO), and load port (Yanbu). Heavily sourced to shipping analysts (Lloyd's List, Gasilov Group) and ISW. Emphasizes the Beijing-Houthi-Iran commercial relationship and hedges that a full Chinese exemption is 'premature to conclude.' Includes Trump's Truth Social statement about paying for ship damages with Iranian money. Most detailed article in the dossier.",
+      "The Guardian": "Leads on the Houthi threat itself and the enforcement of the blockade, framing it as an escalating regional crisis compounding Iran's Hormuz chokehold. Emphasizes the diplomatic dimension \u2014 collapsed US-Iran interim deal, mediation efforts, possible 10-day ceasefire per Axios, Rubio's comments. Foregrounds expert commentary (Atlantic Council's Allison Minor) and situates the blockade within the longer 2023-2025 Houthi Red Sea campaign and the Gaza war origins. Published earliest (July 21), so precedes the confirmed Chinese tanker transits."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. The dossier rests entirely on secondary reporting and vessel-tracking data (LSEG, MarineTraffic) cited by outlets; the underlying tracking data and any Houthi communications were not provided for independent verification.",
+      "Trump's Truth Social statement is quoted directly and at length by Newsweek but is not corroborated by a linked primary post in the dossier; The Guardian separately quotes a different Trump remark from a White House meeting, so the two outlets capture different Trump statements rather than the same one."
+    ],
+    "missing_context": [
+      "Only two of the four dossier articles (Newsweek and The Guardian) have substantial body text; Reuters is headline-only and Al Jazeera English is a very short aggregated update. Several detailed claims (ship names, cargo volumes, analyst attribution) originate from Newsweek alone and are single-source.",
+      "The Guardian article was published July 21, before the Chinese tankers actually transited, so its framing predates the confirmed outcome reported by the other outlets \u2014 a timeline gap readers should be aware of.",
+      "No outlet confirms whether the Houthis charged a levy or fee for the Chinese tankers' Bab el-Mandeb passage; Newsweek explicitly flags this as unclear.",
+      "No outlet reports the Houthis' own official statement or reasoning for the clearances directly; the 'Beijing-Houthi-Iran understanding' is analyst inference, not confirmed by the parties.",
+      "COSCO and China's Foreign Ministry did not respond to comment requests (per Newsweek); the Chinese and Houthi sides of the arrangement are unrepresented.",
+      "No outlet provides current casualty figures or specifics on the 13 consecutive nights of US strikes on Iran beyond CENTCOM's target categories; the military dimension is thinly reported relative to the shipping angle.",
+      "The fate of the struck Saudi tanker Encelia and any crew casualties is reported only by Newsweek and left unresolved."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets across the slant matrix covered the same intertwined event (Houthi blockade, Chinese tanker exception, ongoing US-Iran strikes) with materially different emphasis \u2014 Newsweek on the China commercial angle, The Guardian on diplomacy and blockade enforcement, Al Jazeera on the military situation report \u2014 making the divergence in framing itself the story. No primary source is available, so a straight REPORT would overstate the solidity of the single-sourced details.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/energy/two-chinese-supertankers-with-saudi-oil-head-bab-el-mandeb-red-sea-exit-2026-07-23/",
+      "title": "Two Chinese supertankers with Saudi oil exit Red Sea - Reuters"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/7/24/us-attacks-iran-as-houthis-allow-chinese-ships-to-pass-whats-the-latest",
+      "title": ""
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/houthis-attacking-red-sea-ships-but-letting-chinas-through-12233601",
+      "title": "Iran ally makes exception for Chinese oil tankers after Red Sea strikes - Newsweek"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/jul/21/houthis-threaten-attack-tankers-saudi-arabian-ports-red-sea-shipping",
+      "title": "Houthis threaten to attack shipping tankers if they use Saudi Arabian ports on Red Sea - The Guardian"
+    }
+  ]
+}
