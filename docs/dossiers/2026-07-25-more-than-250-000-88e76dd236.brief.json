@@ -1,0 +1,112 @@
+{
+  "story_id": "2026-07-25-more-than-250-000-88e76dd236",
+  "headline_seed": "More than 250,000 people flee their homes in France and Spain as wildfires burn - AP News",
+  "brief": {
+    "story_id": "2026-07-25-more-than-250-000-88e76dd236",
+    "consensus_facts": [
+      "Wildfires are burning simultaneously in Spain and France amid a heatwave, displacing large numbers of people across both countries.",
+      "Spain declared a national emergency for the first time in response to the fires (reported by Associated Press and Al Jazeera English).",
+      "Approximately 60,000 to 70,000 people were evacuated in central Spain, in the Madrid area and towns west of the capital (Associated Press cites ~60,000-70,000; CBS News cites 70,000 in Madrid).",
+      "Spanish Prime Minister Pedro S\u00e1nchez said fire crews faced 'complex' or 'difficult' hours ahead and that the priority was to save lives (reported by Associated Press and CBS News).",
+      "In France, authorities evacuated Bordeaux suburbs as a major wildfire in the Gironde region advanced toward the city (Associated Press and CBS News).",
+      "The fires spread rapidly due to tinderbox conditions worsened by successive heatwaves (Associated Press and CBS News).",
+      "The overall total displaced across Spain and France exceeds a quarter-million people (Associated Press cites 'more than a quarter-million'; CBS News cites more than 267,000)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total number of people displaced",
+        "positions": {
+          "Associated Press": "More than a quarter-million (250,000+) displaced across southern Europe this week.",
+          "CBS News": "More than 267,000 forced to flee parts of Western Europe on Saturday.",
+          "The New York Times": "Headline (via aggregation) references 'more than 250,000 evacuated'; The Guardian aggregated headline says 'more than 250,000'; BBC aggregated headline says 270,000.",
+          "Al Jazeera English": "Reports the number forced to flee 'has now passed the 100,000 mark' (published July 24, one day earlier)."
+        }
+      },
+      {
+        "topic": "Number evacuated in central Spain / Madrid area",
+        "positions": {
+          "Associated Press": "Some 70,000 evacuated in central Spain; ~60,000 evacuated from towns west of Madrid; separately cites ~200,000 evacuated as fires rage in central Spain.",
+          "CBS News": "70,000 evacuated in Madrid.",
+          "Al Jazeera English": "About 40,000 ordered to evacuate or shelter indoors west of Madrid; tens of thousands driven from homes."
+        }
+      },
+      {
+        "topic": "Cause of the fire / arrests",
+        "positions": {
+          "Al Jazeera English": "Spanish police arrested a tractor driver accused of sparking a wildfire with farm machinery; a second suspect is under investigation.",
+          "Associated Press": "Does not mention an arrest or cause attribution.",
+          "CBS News": "Does not mention an arrest; attributes rapid spread to tinderbox conditions and heatwaves."
+        }
+      },
+      {
+        "topic": "Number evacuated in France",
+        "positions": {
+          "CBS News": "At least 197,000 evacuated in France, described by Interior Minister Nunez as 'probably' the biggest peacetime evacuation the country has seen.",
+          "Associated Press": "Does not give a specific France-wide evacuation figure; describes protective evacuation of Bordeaux suburbs."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Wire-style, on-scene reporting leading with firefighters in Gironde and the threat to Bordeaux's wine region. Emphasizes the France angle first, then Spain's national emergency and Madrid-area evacuations. Contains some internally inconsistent figures (70,000, 60,000, and 200,000 appear in the same body), reading like stitched-together dispatches and photo captions. No attribution of cause; neutral phrasing throughout.",
+      "The New York Times": "Represented largely by headline-only entries plus one live-updates aggregation. Framing across its headlines emphasizes scale and human displacement ('Hundreds of Thousands Flee', 'Fires Rage... Forcing Thousands to Flee', 'Smoke Chokes Skies'). A separate NYT piece frames France as turning to Spain to learn adaptation, foregrounding a climate-adaptation and cross-border-lessons angle. Body text not retrievable for these, so specifics are unavailable.",
+      "Al Jazeera English": "Leads with the human-cause and accountability angle \u2014 the arrest of a tractor driver accused of sparking a fire and a second suspect under investigation \u2014 tied to a ban on farm machinery in tinderbox conditions. Published July 24, one day before the others, so its figures are lower (100,000+ displaced, 40,000 ordered to evacuate west of Madrid). Emphasizes that the fire is 'beyond the capacity of firefighters to contain' via a Madrid emergency official.",
+      "CBS News": "Most detailed body text in the dossier. Leads on the 267,000 figure and out-of-control blazes, then weaves in human-interest voices (evacuees Jacqueline Villafranca and Luis), official quotes from S\u00e1nchez and French ministers Nunez and Lecornu, and concrete resource details (1,000 soldiers, A400M transport, international aircraft from Italy, Greece, Netherlands, Portugal, Croatia, Czech Republic, Slovakia). Explicitly foregrounds the climate-change connection, citing scientists and calling Europe the fastest-warming continent. Notes no deaths but dozens of injured French firefighters.",
+      "The Guardian": "Appears only as an aggregated headline within the NYT live-updates entry: 'France and Spain race to control wildfires as more than 250,000 evacuated \u2013 live.' Frames the story around scale and the race to contain. No body text available.",
+      "BBC": "Appears only as an aggregated headline within the NYT live-updates entry: 'Spanish PM warns of complex hours ahead as wildfires displace 270,000 in Spain and France.' Frames around S\u00e1nchez's warning and cites the highest displacement figure (270,000). No body text available."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court filings, official government declarations, emergency-management releases, or satellite-data reports were provided in the dossier, so no direct document-versus-coverage comparison is possible.",
+      "Several figures attributed to officials (S\u00e1nchez, Nunez, Lecornu, Madrid emergency chief Novillo, European Forest Fire Information System satellite data) appear only via outlet paraphrase and could not be verified against a primary document in this dossier."
+    ],
+    "missing_context": [
+      "Displacement figures vary widely across outlets (100,000 to 270,000+) partly because articles were published on different days (Al Jazeera July 24 vs. others July 25); no single outlet reconciles the running totals or clarifies whether figures are cumulative across both countries.",
+      "The Associated Press body contains internally inconsistent Spain evacuation numbers (70,000, 60,000, and 200,000) without reconciliation.",
+      "Only Al Jazeera reports a human cause and arrests; no other full-text outlet corroborates or addresses the tractor-driver arrest, leaving the cause of the Spanish fires as a single-source claim in this dossier.",
+      "Only CBS News provides a France-wide evacuation figure (197,000) and the international aid breakdown; these are single-source details and not independently corroborated within the dossier.",
+      "Body text was retrievable for only three outlets (Associated Press, Al Jazeera English, CBS News); the four New York Times entries and the aggregated Guardian and BBC headlines had no retrievable body, limiting cross-outlet corroboration.",
+      "No outlet in the dossier reports on casualties among civilians in detail beyond CBS's note of no deaths and dozens of injured French firefighters; the human toll picture is incomplete.",
+      "No article quantifies property destroyed or provides an economic damage estimate.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets plus several headline-only entries cover the same event with materially different framings and sharply divergent displacement figures (100,000 to 270,000+), and the cause-and-accountability angle appears in only one outlet. This is a coverage-comparison story rather than a clean single-fact REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/europe-wildfires-france-spain-93678a31ff53fc46564b6dfd9934eae1",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/24/world/europe/france-spain-climate-heat-wildfires.html",
+      "title": "Faced With Heat and Wildfires, France Turns to Spain to Learn How to Cope - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/7/24/spanish-police-accuse-tractor-driver-of-sparking-wildfire-as-blazes-spread",
+      "title": "Spanish police accuse tractor driver of sparking wildfire as blazes spread - Al Jazeera"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/07/25/world/france-spain-wildfires-evacuations",
+      "title": "Live Updates: Hundreds of Thousands Flee as Fires Rage in Spain and France - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/wildfires-france-spain-madrid-bordeaux-evacuations-europe/",
+      "title": "Wildfires in France and Spain force 200,000 to flee as crews continue to battle untamed blazes - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/25/world/europe/wildfires-photos-spain-france.html",
+      "title": "Wildfire Smoke Chokes Skies in Spain and France - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/25/world/europe/france-spain-wildfires-evacuations.html",
+      "title": "Fires Rage in Spain and France, Forcing Thousands to Flee - The New York Times"
+    }
+  ]
+}
