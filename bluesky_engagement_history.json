@@ -1504,6 +1504,11 @@
       "did": "did:plc:ix6aqhct5sahtl5m2nogwppc",
       "handle": "blindcatcarlos.bsky.social",
       "timestamp": "2026-07-26T04:26:47.054808"
+    },
+    {
+      "did": "did:plc:petk4t44e35bp6altnkzhe52",
+      "handle": "bookwormkarou.bsky.social",
+      "timestamp": "2026-07-26T14:28:06.539220"
     }
   ],
   "liked_posts": [
@@ -3241,6 +3246,11 @@
       "uri": "at://did:plc:ix6aqhct5sahtl5m2nogwppc/app.bsky.feed.post/3mrjitcless2c",
       "author": "blindcatcarlos.bsky.social",
       "timestamp": "2026-07-26T04:26:46.922570"
+    },
+    {
+      "uri": "at://did:plc:petk4t44e35bp6altnkzhe52/app.bsky.feed.post/3mrkgw3ryqk2f",
+      "author": "bookwormkarou.bsky.social",
+      "timestamp": "2026-07-26T14:28:06.454558"
     }
   ],
   "last_cleanup": "2026-07-25T16:44:21.396500",
