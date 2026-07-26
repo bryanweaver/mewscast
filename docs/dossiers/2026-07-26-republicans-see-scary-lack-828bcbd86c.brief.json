@@ -1,0 +1,69 @@
+{
+  "story_id": "2026-07-26-republicans-see-scary-lack-828bcbd86c",
+  "headline_seed": "Republicans see \u2018scary\u2019 lack of enthusiasm among core voters ahead of midterms - The Washington Post",
+  "brief": {
+    "story_id": "2026-07-26-republicans-see-scary-lack-828bcbd86c",
+    "consensus_facts": [
+      "The 2026 midterm elections are approaching, with USA Today marking July 26 as 100 days until the November 3 vote.",
+      "President Trump's endorsement power in Republican primaries has been consequential; Politico and USA Today both report Trump-backed candidates unseating incumbents including Sen. John Cornyn of Texas.",
+      "Florida holds primaries on August 18, 2026, according to Politico and USA Today (which also cites Alaska's Aug. 18 nonpartisan primary).",
+      "Democrat Troy Jackson was nominated by Maine Democrats to challenge Republican Sen. Susan Collins, replacing Graham Platner, who ended his campaign after sexual assault allegations he denies \u2014 reported by both USA Today and Politico."
+    ],
+    "disagreements": [
+      {
+        "topic": "Size of the Democratic polling lead on the generic ballot",
+        "positions": {
+          "USA Today": "Cites competing polls \u2014 a July 23 Emerson poll showing Democrats +11 (53%-42%), and a Washington Post-Ipsos poll showing a narrower Democrats +3 (48%-45%).",
+          "The Washington Post (headline-only)": "Headline frames the story around a 'scary' lack of enthusiasm among core Republican voters rather than a topline Democratic lead."
+        }
+      },
+      {
+        "topic": "Magnitude of Republican redistricting gains",
+        "positions": {
+          "USA Today": "Ballotpedia (June) estimated Republicans could pick up ~10 additional House seats; the Center for Politics estimated a five- to nine-seat advantage."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The Washington Post": "Headline-only in this dossier. Frames the midterm picture around Republican weakness \u2014 a 'scary' enthusiasm deficit among core GOP voters. No body text available to corroborate the specific claim; the emphasis is on GOP internal alarm rather than horse-race numbers.",
+      "Politico": "Two body-text articles, both operational/tactical in focus. 'Trump leaves Florida Republicans guessing' emphasizes Trump as a kingmaker whose late endorsements are decisive, quoting Rep. Randy Fine ('It was because of the president') and RPOF Chair Evan Power. 'How Republicans plan to conquer Troy Jackson' leads almost entirely on GOP attack messaging \u2014 quoting NRSC and Senate Leadership Fund memos calling Jackson a 'radical, ill-tempered career politician' and a 'socialist,' and citing GOP framing without equal space for Jackson beyond brief responses. Politico foregrounds Republican strategy and confidence.",
+      "USA Today": "The most balanced, data-heavy piece. Leads on the 100-day marker and the tension between Democratic polling leads and structural GOP advantages (redistricting, Senate rural bias). Cites multiple polls, named analysts (Nate Cohn, Kyle Kondik), and enumerates key Senate races. Notes the war in Iran as a GOP liability and Speaker Johnson breaking with Trump. Frames the race as genuinely in doubt rather than favoring either party."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The NRSC 'messaging guidance' document and donor memo referenced in Politico's Jackson article, and the Washington Post-Ipsos and Emerson polls cited by USA Today, were not provided as primary documents in the dossier \u2014 they are described secondhand and cannot be independently verified against original text here."
+    ],
+    "missing_context": [
+      "The Washington Post story \u2014 which supplied the headline seed about a 'scary' lack of GOP voter enthusiasm \u2014 is headline-only. No body text was retrievable, so the central claim of this story's headline (a core-voter enthusiasm deficit) is UNCORROBORATED by any full-text source in the dossier. Readers should treat the headline framing as unverified within this dossier.",
+      "Only two of the four articles (both from Politico) plus USA Today provide substantial body text; the framings that overlap are largely about Trump's endorsement power and the Maine Senate race, not about GOP voter enthusiasm \u2014 meaning the dossier does not actually deliver reporting substantiating its own headline seed.",
+      "No outlet with body text quantifies or documents the alleged GOP enthusiasm gap (e.g., early-vote turnout data, primary participation figures, or polling on enthusiasm specifically) \u2014 the enthusiasm angle rests entirely on an unretrieved headline.",
+      "USA Today's poll citations rely on the underlying pollster releases (Emerson, WaPo-Ipsos, Catawba-YouGov), none of which are provided; the disagreement between an 11-point and a 3-point Democratic lead is left unreconciled.",
+      "Jackson's own detailed rebuttal to the NRSC/SLF characterizations is minimal in Politico's piece; a fuller account of his platform or record beyond GOP framing is absent.",
+      "No article body directly connects the individual race dynamics (Florida primaries, Maine Senate) back to a national GOP enthusiasm problem \u2014 the stories sit adjacent to the headline theme rather than proving it."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The dossier's headline seed (a 'scary' GOP enthusiasm deficit) comes from a headline-only Washington Post entry that no full-text outlet corroborates, while the three body-text articles emphasize materially different angles (Trump's endorsement power, Florida primaries, and GOP attack strategy in Maine). This gap between the labeled story and the actual retrievable reporting is itself the story worth surfacing.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/07/26/republican-enthusiasm-problem-hits-even-core-voters/",
+      "title": "Republicans see \u2018scary\u2019 lack of enthusiasm among core voters ahead of midterms - The Washington Post"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/07/26/florida-trump-house-endorsements-01011185",
+      "title": "Trump leaves Florida Republicans guessing ahead of August primaries - Politico"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/elections/2026/07/26/100-days-midterms-polls-redistricting-democrats-republicans-senate-house/91037142007/",
+      "title": "100 days until the midterms: Dems lead in polling, GOP in redistricting - USA Today"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/07/26/how-republicans-conquer-troy-jackson-01012340",
+      "title": "How Republicans plan to conquer Troy Jackson - Politico"
+    }
+  ]
+}
