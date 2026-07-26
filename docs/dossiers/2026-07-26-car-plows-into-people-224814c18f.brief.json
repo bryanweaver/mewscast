@@ -1,0 +1,104 @@
+{
+  "story_id": "2026-07-26-car-plows-into-people-224814c18f",
+  "headline_seed": "Car Plows Into People Near a Pride Event in Berlin, Killing at Least One - The New York Times",
+  "brief": {
+    "story_id": "2026-07-26-car-plows-into-people-224814c18f",
+    "consensus_facts": [
+      "A van drove into a crowd near Berlin's Christopher Street Day (LGBTQ+ pride) event on Saturday night, July 25, 2026, killing one person.",
+      "At least 15 to 16 people were injured, some with life-threatening injuries (NBC News reports at least 15; ABC News reports about 16).",
+      "According to police, a white van drove into Tiergarten Park \u2014 just off the route the pride march had passed along earlier \u2014 and hit several people before colliding with a tree.",
+      "Police called off the pride event and interrupted a band's stage performance near the Brandenburg Gate around 10:15 p.m. local time, urging people to leave the area immediately.",
+      "Police officer Florian Nath said in a video on the Berlin police X account that an intensive search for possible suspects was underway.",
+      "Hundreds of thousands of people had gathered in Berlin for the Christopher Street Day parade, one of Europe's largest LGBTQ+ celebrations, and had celebrated peacefully with around 80 floats before the incident."
+    ],
+    "disagreements": [
+      {
+        "topic": "injury count",
+        "positions": {
+          "NBC News": "at least 15 injured",
+          "ABC News": "about 16 injured",
+          "Bloomberg (headline)": "14 hurt",
+          "Reuters (headline)": "one killed, injury count not specified in headline"
+        }
+      },
+      {
+        "topic": "suspect identity and motive",
+        "positions": {
+          "ABC News": "Police identified a 'suspected perpetrator' who is not yet arrested and is known to police as a member of Berlin's 'Islamist scene'; police were also investigating whether some victims suffered stab wounds.",
+          "NBC News": "Reports only that police were searching for suspects; no mention of a suspect being identified or of an Islamist connection or stab wounds."
+        }
+      },
+      {
+        "topic": "characterization of the incident (attack vs. accident)",
+        "positions": {
+          "ABC News": "Frames it as an 'attack'; quotes Mayor Wegner calling it an attack on 'our free and cosmopolitan society'; filed under 'Disasters, Accidents and Emergency Incidents'.",
+          "NBC News": "Uses neutral phrasing \u2014 'a van drove into a crowd' \u2014 and does not characterize it as an attack or accident.",
+          "The New York Times (headline)": "Headline URL references 'berlin-car-attack'.",
+          "Reuters (headline)": "'Vehicle mows down crowd' \u2014 describes action without assigning intent."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Vehicle mows down crowd at Berlin Pride festival, killing one'). Body text is an unrendered Google News redirect link, not a report. 'Mows down' is vivid, action-forward language; leads with the death toll. No corroborating body content available.",
+      "The New York Times": "Headline-only ('Car Plows Into People Near a Pride Event in Berlin, Killing at Least One'). Body is an unrendered redirect link. The URL slug ('berlin-car-attack') signals an attack framing, but no body text is available to assess emphasis. Hedges with 'at Least One' on the death toll.",
+      "Associated Press": "Body text consists entirely of photo captions (emergency personnel, stretchers, thermal blankets, Mayor Kai Wegner speaking). No narrative reporting retrievable. The captions emphasize the human toll and emergency response and confirm the event was the cancellation of Christopher Street Day.",
+      "Bloomberg": "Headline-only ('One Dead, 14 Hurt After Car Plows Into Berlin Pride Parade'); body is a bot-check/CAPTCHA wall. Notable for the specific '14 hurt' figure in its headline, lower than NBC and ABC's counts.",
+      "NBC News": "Full body text, sourced to the Associated Press. Neutral, factual framing throughout \u2014 'a van drove into a crowd.' Leads with the death and injury toll and the calling-off of festivities. Emphasizes the peaceful celebration beforehand (dancing, 80 floats). Notably omits any mention of a suspect being identified, an Islamist connection, or stab wounds \u2014 reflecting its earlier AP-sourced snapshot (updated 5:57 PM EDT).",
+      "The Washington Post": "Headline-only, and the URL resolves to the Washington Times, not the Washington Post \u2014 a possible outlet mismatch in the dossier. Body is a CAPTCHA/security-verification wall. Headline uses neutral 'a car drives into the crowd' phrasing. No retrievable content.",
+      "ABC News (Australian Broadcasting Corporation)": "Fullest body text in the dossier. Leads with the death and injury toll, then advances the story further than any other retrievable source: police identified a 'suspected perpetrator' described as a member of Berlin's 'Islamist scene,' not yet arrested, and note investigations into possible stab wounds. Includes Mayor Wegner's quotes framing it as an 'attack on our free and cosmopolitan society,' the 2,200 officers on duty, and the crisis hotline. Filed under 'Disasters, Accidents and Emergency Incidents.'"
+    },
+    "primary_source_alignment": [
+      "No primary source (police statement transcript, official press release, or court filing) was located for this story. All 'police said' claims are relayed secondhand through the outlets and cannot be checked against an underlying document.",
+      "The most consequential single-source claim \u2014 that the suspect is a member of Berlin's 'Islamist scene' (ABC News) \u2014 is attributed to an unnamed police spokesperson and cannot be corroborated against a primary source in this dossier."
+    ],
+    "missing_context": [
+      "Only two of seven articles (NBC News and ABC News) contain substantive retrievable body text; both ultimately trace to the Associated Press wire, so cross-outlet corroboration is weaker than the outlet count suggests. Reuters, NYT, AP (captions only), Bloomberg, and the Washington Post/Times entries are headline-only or blocked by bot-checks/CAPTCHA.",
+      "No name, age, nationality, or confirmed motive for the 'suspected perpetrator' is reported; ABC's 'Islamist scene' characterization comes from an unnamed police spokesperson and no other retrievable outlet corroborates it.",
+      "No outlet in the retrievable text confirms whether the death and injuries resulted solely from the vehicle or also from the alleged stab wounds ABC says police were investigating; the two possible causes are not reconciled.",
+      "No identity or condition details on the person killed, and no breakdown of how many of the injured had life-threatening injuries.",
+      "No confirmed timeline reconciling reported times (van entered Tiergarten ~10 p.m.; event called off ~10:15 p.m.).",
+      "It is unclear whether the incident is officially being treated as a terrorist attack, a targeted anti-LGBTQ+ attack, or another category \u2014 outlets diverge between 'attack' framing (ABC, NYT slug) and neutral 'drove into a crowd' phrasing (NBC).",
+      "The Washington Post entry links to a Washington Times URL; the dossier does not resolve which outlet actually published, and no body text is available from either."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Seven outlets were gathered but only NBC News and ABC News have substantive text (both AP-derived), and they diverge materially \u2014 ABC advances an unnamed-source 'Islamist scene' suspect claim and 'attack' framing that NBC's earlier snapshot lacks, while headline outlets split on the injury count (14 vs. 15 vs. 16). The story is best served by a coverage-report that flags the single-sourced suspect claim and the retrievability limits rather than a straight REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/berlin-pride-parade-called-off-after-car-hits-crowds-police-say-2026-07-25/",
+      "title": "Vehicle mows down crowd at Berlin Pride festival, killing one - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/25/world/europe/berlin-car-attack.html",
+      "title": "Car Plows Into People Near a Pride Event in Berlin, Killing at Least One - The New York Times"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/germany-berling-lgbtq-pride-parade-8b3c8ded8033ab246cb55f7bd1c47e2f",
+      "title": "Van slams into people gathered for Berlin\u2019s LGBTQ+ event, killing 1 and injuring at least 16 - AP News"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-25/one-dead-14-injured-after-car-plows-into-berlin-pride-parade",
+      "title": "One Dead, 14 Hurt After Car Plows Into Berlin Pride Parade - Bloomberg.com"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/germany/people-injured-berlin-lgbtq-march-car-drives-into-crowd-rcna589250",
+      "title": "One dead and 15 injured during Berlin\u2019s LGBTQ+ parade after car drives into crowd - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/jul/25/several-people-injured-berlins-lgbtq-march-car-drives-crowd/",
+      "title": "Several people are injured at Berlin\u2019s LGBTQ march after a car drives into the crowd - Washington Times"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-07-26/berlin-pride-parade-called-off-after-car-hits-crowds/106959326",
+      "title": "Police identify suspect after van hits Berlin pride parade crowd - ABC News & Headlines \u2013 Australian Broadcasting Corporation"
+    }
+  ]
+}
