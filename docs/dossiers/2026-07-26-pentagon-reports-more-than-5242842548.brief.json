@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-07-26-pentagon-reports-more-than-5242842548",
+  "headline_seed": "Pentagon reports more than 600 Iran war casualties in quiet database update - The Guardian",
+  "brief": {
+    "story_id": "2026-07-26-pentagon-reports-more-than-5242842548",
+    "consensus_facts": [
+      "The Pentagon's Defense Casualty Analysis System (DCAS) altered its Iran war casualty figures, at one point dropping the death toll from 18 to 14 by removing four service members killed in Jordan and Iraq.",
+      "The four removed service members were killed during renewed fighting after the Trump administration had declared a ceasefire in April.",
+      "The Pentagon attributed the changes to temporary data disruptions, glitches, or site anomalies rather than a substantive recount.",
+      "The number of wounded troops listed dropped from 482 to 420 during the week.",
+      "The war with Iran began in February 2026 under the name Operation Epic Fury.",
+      "The Pentagon introduced or used an 'overseas operations' label/category for casualties occurring after the ceasefire.",
+      "The July 7 date is tied to the Trump administration's claim that a new conflict with Iran began, per a War Powers notification sent to Congress.",
+      "Lawmakers raised concerns that the administration is obfuscating the casualty count and/or attempting to skirt the 60-day War Powers limit by rebranding the conflict.",
+      "A dignified transfer of the four fallen service members took place at Dover Air Force Base on July 22, 2026, attended by President Trump and Defense Secretary Pete Hegseth."
+    ],
+    "disagreements": [
+      {
+        "topic": "Current state of the casualty count",
+        "positions": {
+          "Associated Press": "Reports the four killed and dozens of wounded were removed from the Iran war tally and placed in a new separate category (as of AP's reporting, the removal stood).",
+          "CNN": "Reports the Pentagon updated the database on Saturday, restoring the four killed and recording 140+ additional wounded, bringing totals to 18 dead and 624 wounded.",
+          "ABC News": "Reports the database had not been updated in more than a day and continued to undercount, with the death toll still at 14 and wounded at 420.",
+          "CBS News": "Reports that as of Friday the site still showed only 14 killed and 420 wounded, and last update was July 22."
+        }
+      },
+      {
+        "topic": "Total wounded figure",
+        "positions": {
+          "CNN": "624 wounded when combined with updated Operation Epic Fury totals, up from a previous peak of 482.",
+          "ABC News": "420 listed as of the reporting, down from 482 earlier in the week.",
+          "CBS News": "420 as of Friday, dozens fewer than the 482 listed earlier in the week; a US official said even 482 undercounts the true number."
+        }
+      },
+      {
+        "topic": "Cause of the data changes",
+        "positions": {
+          "Pentagon (via CBS)": "Sean Parnell said the DCAS site errors were due to a temporary data disruption and anomalies being resolved with the Military Services.",
+          "Pentagon (via CNN)": "Acting press secretary Joel Valdez said decreases were due to temporary data disruptions on the DCAS website.",
+          "CNN": "Observed data glitches causing fluctuating totals but notes the Pentagon did not respond to follow-up inquiries.",
+          "The New York Times (via CBS)": "First reported the missing numbers citing three sources who said the removal was because the four died after the April ceasefire declaration.",
+          "Pentagon on NYT reporting (via CBS)": "Parnell accused the NYT of 'colluding with anonymous sources to push a completely fake story.'"
+        }
+      },
+      {
+        "topic": "Injury severity and scale since July 7",
+        "positions": {
+          "CBS News": "Nearly 100 service members injured since July 7; Parnell said 96% returned to duty and most injuries were 'minor concussions.'",
+          "CNN": "Reports 140+ additional wounded recorded in the Saturday update."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Neutral wire framing centered on the reclassification ('no longer listed... placed in a new, separate category'). Leads with the Dover transfer imagery and ties the accounting change to broader questions about the escalation and its domestic unpopularity. Does not assert the update was reversed \u2014 captures a mid-story snapshot.",
+      "CNN": "Most current and most detailed on the numbers. Leads with the Saturday restoration and the eclipsing of 600 wounded, framing the story as a transparency controversy with active congressional pressure. Foregrounds the War Powers Act angle heavily, including Murkowski and Rubio quotes, and discloses its own minute-by-minute monitoring methodology plus a funding-partnership disclosure. Frames the July 7 date as legally significant to the administration's clock-reset argument.",
+      "The New York Times": "Headline-only in this dossier. Two entries: one on Trump holding off on major escalation as advisers raise concerns, another on the Pentagon changing how it reports casualties. No body text available to assess emphasis, though CBS credits the NYT with first reporting the missing database numbers.",
+      "ABC News": "Frames the story around outrage and transparency failure ('sparking questions and outrage'). Emphasizes the database as 'the government's authoritative public record' and the moral weight of casualty reporting via a Biden-era Air Force official quote. Leads on the undercount persisting and the 'overseas operations' relabeling as a possible War Powers dodge. Captures the pre-restoration state (14 dead, 420 wounded).",
+      "CBS News": "Most granular on the mechanics and the Pentagon's rebuttal. Leads with the removal of four deaths and the 14-vs-18 discrepancy, then digs into DD 1300 reporting procedure, the missing 13th/14th name, the missing Navy commander (Cmdr. Gabriel Edwards), and the Inherent Resolve/overseas-operations reclassification history. Notably includes Parnell's attack on the NYT and the concussion-severity caveat. Also surfaces that officials have not briefed reporters since May."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. The DCAS database itself \u2014 the underlying document at the center of the dispute \u2014 was not captured in the dossier, so its exact contents at any given timestamp cannot be independently verified here.",
+      "The War Powers notification/letter Trump sent to Congress (referenced by CNN as sent 'earlier this month' and by CBS as dated July 10) is not included as a primary source; outlets characterize its July 7 effective date but the document text is unavailable.",
+      "The Senate Armed Services Committee Democrats' letter to Hegseth (CNN) and Parnell's/Valdez's full statements on X (CBS, CNN) are quoted secondhand and not reproduced as primary sources."
+    ],
+    "missing_context": [
+      "The dossier lacks a single reconciled timeline: AP/ABC/CBS capture the pre-restoration state (14 dead, 420-482 wounded) while CNN captures a later Saturday update (18 dead, 624 wounded). A reader cannot tell from any single article that the numbers were later restored unless they read CNN.",
+      "No primary source (the DCAS site snapshots, the War Powers letter, the SASC letter, or Parnell's full statements) is included, so the central factual dispute rests entirely on outlet characterizations.",
+      "The legal question of whether the War Powers Act clock reset is valid is presented via quotes (Murkowski, Rubio) but no outlet cites the actual statutory text or a definitive legal ruling.",
+      "The status of Cmdr. Gabriel Edwards (Navy, missing after a July 1 helicopter emergency landing) and whether his death was confirmed \u2014 which would affect the count \u2014 is left unresolved in CBS's reporting and not addressed by others.",
+      "No outlet provides an independent verification of the wounded totals; both the 482 and 624 figures trace to Pentagon data or CNN's observation of Pentagon data, and a US official told CBS even 482 undercounts the true number.",
+      "The distinction between 'minor concussions' and traumatic brain injuries (raised only by CBS) is not quantified or followed up on across outlets.",
+      "No article gives Iran's account, casualty figures on the Iranian side, or the diplomatic status of the strikes beyond the ceasefire framing."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets covered the same DCAS accounting controversy but captured it at different moments and with materially different framings \u2014 from AP's neutral reclassification snapshot to ABC's 'outrage' framing to CNN's later restoration showing 18 dead and 624 wounded \u2014 making the divergence in numbers and emphasis the actual story. The absence of any primary source and the unreconciled timeline make this a coverage-report, not a straight REPORT.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/iran-war-casualty-count-pentagon-us-troops-4c578fc74746052627b1c87845fdc0d5",
+      "title": "Pentagon\u2019s official Iran war death toll no longer lists 4 troops killed during renewed fighting - AP News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/26/politics/iran-war-casualties",
+      "title": "Iran war casualty count eclipses 600 as Pentagon quietly changes accounting - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/25/us/politics/trump-iran-military.html",
+      "title": "Trump Holds Off on Major War Escalation Against Iran as Advisers Raise Concerns - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/07/26/us/politics/pentagon-casualties-iran-war.html",
+      "title": "Pentagon Changes How It Reports Casualties in Iran War - The New York Times"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/pentagon-lowers-count-iran-war-dead-wounded-sparking/story?id=135043063",
+      "title": "Pentagon lowers count of Iran war dead and wounded, sparking questions and outrage - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/pentagon-website-4-iran-war-killed-names/",
+      "title": "Pentagon website \"anomalies\" that removed names of 4 killed in Iran war remain - CBS News"
+    }
+  ]
+}
