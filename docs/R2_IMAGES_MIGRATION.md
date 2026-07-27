@@ -84,15 +84,17 @@ Open a PR from `chore/images-to-r2` → `main`. Once merged, the next
 journalism-publish run uploads to R2 and emits the new URLs automatically.
 
 ### 8. (Optional) Reclaim `.git` history
-After main has the new world for ~a week and nothing has regressed:
-```
-git filter-repo --path docs/dossiers/images/ --invert-paths
-git push --force origin main
-```
-**This is destructive — rewrites history, invalidates other clones, breaks
-PRs that touch images.** Coordinate first. If you skip this, `.git` keeps
-the old 1.2 GB but the working tree stays small forever — that's the
-acceptable middle ground.
+**✅ Done 2026-07-27.** All 308 historical images (including the 103
+`*.field-notes.png` the original seed skipped — backfilled via
+`scripts/seed_missing_history_images_to_r2.py` and the one-off
+`seed-history-images` workflow) were verified present at
+`images.mewscast.us`, then history was rewritten with
+`git filter-repo --path docs/dossiers/images/ --invert-paths` and
+force-pushed to every branch (main's protection was toggled off and back
+on for the push). Fresh clones are now ~45 MB, down from ~1.6 GB.
+Pre-rewrite backup bundle: `~/mewscast-pre-rewrite-2026-07-27.bundle`.
+Any clone made before the rewrite must be re-cloned or hard-reset to
+`origin/main` — old local branches reference dead history.
 
 ## Cost sanity check
 
