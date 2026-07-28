@@ -1,6 +1,6 @@
 # Mewscast Analytics
 
-*Last updated: 2026-07-27 23:52 UTC*
+*Last updated: 2026-07-28 23:47 UTC*
 
 Tracking engagement for posts from the last 30 days.
 
@@ -12,10 +12,10 @@ Tracking engagement for posts from the last 30 days.
 
 | Metric | Total | Since Last Run |
 |--------|-------|----------------|
-| Posts tracked | 506 | - |
-| Likes | 553 | +1 |
+| Posts tracked | 509 | - |
+| Likes | 554 | +0 |
 | Reposts | 100 | +0 |
-| Replies | 516 | - |
+| Replies | 519 | - |
 
 ### X (Twitter)
 
@@ -49,4 +49,4 @@ Oil up 25% since ...
 
 ---
 
-*Data snapshots: 16069 total across 732 posts*
+*Data snapshots: 16152 total across 735 posts*
