@@ -1,0 +1,127 @@
+{
+  "story_id": "2026-07-28-japan-earthquake-searches-continue-6dc3b17255",
+  "headline_seed": "Japan earthquake searches continue into night, with people missing in mall and collapsed factory - BBC",
+  "brief": {
+    "story_id": "2026-07-28-japan-earthquake-searches-continue-6dc3b17255",
+    "consensus_facts": [
+      "A major earthquake struck Kumamoto prefecture on Japan's southern main island of Kyushu on the afternoon of Tuesday, July 28, 2026, at around 4:27 p.m. local time (per AP, NBC News, USA Today).",
+      "The Japan Meteorological Agency gave the earthquake a preliminary magnitude of 7.1 (per AP, USA Today, NBC News).",
+      "A tsunami advisory/warning was issued after the quake and was later lifted within about two hours (per AP, USA Today, NBC News).",
+      "People were trapped at the Aeon Mall in Kashima Town, Kumamoto prefecture, after an explosion was reported there following the quake (per AP, USA Today, NBC News).",
+      "At least 50 people were injured/taken to hospital according to authorities and local news reports (per USA Today, NBC News, CNN citing NHK).",
+      "Prime Minister Sanae Takaichi confirmed reports of injuries, damage to roads, bridges and buildings, plus blackouts and fires (per AP, NBC News, USA Today).",
+      "Kumamoto Castle's stone walls sustained damage (per AP, USA Today, NBC News).",
+      "A chimney at Nippon Paper Industries' Yatsushiro mill partially collapsed and a bridge was damaged (per USA Today, NBC News; AP references a partially collapsed bridge in Yatsushiro).",
+      "Authorities warned that additional strong earthquakes could occur over roughly the next week (per USA Today, NBC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Earthquake magnitude",
+        "positions": {
+          "Associated Press": "Reports magnitude 7.1 per the Japan Meteorological Agency.",
+          "USA Today": "Reports magnitude 7.1 per the Japan Meteorological Agency.",
+          "NBC News": "Leads with a 6.8 magnitude, noting the JMA preliminary figure was 7.1 but the U.S. Geological Survey later revised it to 6.8.",
+          "The Guardian": "Headline (in Article 2 list) references a 6.8 magnitude earthquake."
+        }
+      },
+      {
+        "topic": "Number of dead / fatalities",
+        "positions": {
+          "Associated Press": "Does not confirm any deaths in body text.",
+          "USA Today": "Does not confirm deaths; reports injuries only (50+, and elsewhere 'more than 100' feared injured).",
+          "NBC News": "Reports commercial broadcaster TBS quoting local police that 'quite a few' people are believed killed after the mall explosion, and Fuji TV saying multiple deaths were confirmed at the mall \u2014 attributed, not verified.",
+          "France 24": "Headline (in Article 2 list) states 'at least one killed.'"
+        }
+      },
+      {
+        "topic": "Number of people trapped/missing at the mall",
+        "positions": {
+          "NBC News": "Reports 20 to 30 mall employees unaccounted for, per NHK; describes number of trapped as 'unknown.'",
+          "USA Today": "Reports 'many people' feared trapped, per authorities.",
+          "Associated Press": "Refers to 'workers missing' and injuries but gives no specific trapped count in body text.",
+          "CNN": "Describes 'several trapped' but confirms authorities are still assessing loss of life."
+        }
+      },
+      {
+        "topic": "Injury count",
+        "positions": {
+          "USA Today": "States at least 50 injured, and in one caption cites reporting of 'more than 100' injured.",
+          "NBC News": "At least 50 injured; at least 12 houses collapsed.",
+          "CNN": "One hospital reported more than 50 injuries, per NHK."
+        }
+      },
+      {
+        "topic": "Scale of evacuation",
+        "positions": {
+          "NBC News": "Reports roughly 300,000 people in Kumamoto prefecture instructed to seek shelter at evacuation centers.",
+          "Associated Press": "Does not mention a mass evacuation figure.",
+          "USA Today": "Does not mention an evacuation figure."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (no retrievable body text). Frames the story around the quake plus 'workers missing after mall blast,' foregrounding the industrial/human-cost angle in the headline itself.",
+      "The New York Times": "Body text is actually an aggregated Google News link list rather than NYT reporting. The NYT headline emphasizes 'Many Feared Trapped in Mall Collapse ... Officials Say' \u2014 attributed, cautious framing centered on the mall. The list also surfaces competing outlet headlines (NBC, CNN, BBC, NPR, France 24, USA Today, Japan Times, Guardian) with varying magnitudes (7.1 vs 6.8) and casualty framings.",
+      "BBC News": "Provides no wire-style summary; instead runs a single human-interest 'Your Voice' vignette from Michal Posen, a London expat English teacher in Kumamoto, emphasizing personal experience (falling TV, smashed mirror, aftershocks, empty shops) and the psychological echo of the 2016 Kumamoto quake. Personalizes rather than quantifies.",
+      "Associated Press": "Neutral wire framing. Leads with the Prime Minister's confirmation of injuries and infrastructure damage, then the magnitude and lifted tsunami advisory. Anchors claims to officials and Kyodo News imagery; avoids unverified casualty figures. Notably conservative \u2014 no death count, no evacuation figure.",
+      "The New York Times ": "N/A",
+      "USA Today": "Photo-gallery format. Emphasis is visual \u2014 Aeon Mall damage, fires, collapsed bridge, Kumamoto Castle walls, paper-mill chimney. Text captions carry the reporting: 50+ injured (with one caption citing 'more than 100'), mall explosion, tsunami warning lifted, warning of further quakes and landslide risk. Frames the event as a broad disaster scene rather than a single casualty narrative.",
+      "NBC News": "Most detailed body text. Leads on scale \u2014 'hundreds of thousands to evacuate' and 300,000 sheltering. Uniquely foregrounds the USGS downgrade to 6.8 versus JMA's 7.1. Surfaces the most aggressive (attributed) casualty claims via TBS and Fuji TV. Adds context layers absent elsewhere: nuclear plant safety (Sendai, Genkai), the 2016 Kumamoto quakes, the 2011 Fukushima disaster, Ring of Fire geology, suspended rail service, and the deployment of 300 service members.",
+      "CNN": "Video-centric item with thin text. Frames cautiously \u2014 'several trapped,' authorities 'still confirming the extent of damage and loss of life,' one hospital reporting 50+ injuries per NHK. Most of the page body is unrelated video promos (Graham tribute, hurricanes, tornadoes), so the earthquake content is brief."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (JMA bulletins, government statements in full, USGS reports) were included in the dossier, so no direct source-versus-coverage comparison is possible.",
+      "The closest thing to a primary reference is Prime Minister Takaichi's statement, quoted secondhand via AP and NBC News; both render it consistently (injuries, infrastructure damage, priority on saving lives, warning of continued tremors)."
+    ],
+    "missing_context": [
+      "No outlet in the retrievable body text confirms a verified death toll from an official source; NBC's fatality claims are attributed to broadcasters (TBS, Fuji TV) and remain unconfirmed. A fair-minded reader should treat casualty figures as provisional.",
+      "The magnitude discrepancy (JMA 7.1 vs USGS 6.8) is only explained by NBC News; other outlets present 7.1 as settled without noting the revision.",
+      "No primary source (JMA seismic bulletin, USGS report, official casualty tally, or full text of the PM's statement) was located, limiting verification of the hard numbers.",
+      "Reuters is headline-only, so its actual reporting cannot be assessed; the 'mall blast' framing in its headline is not corroborated by body text in this dossier.",
+      "The cause of the mall 'explosion' (gas line, structural, other) is not explained by any outlet.",
+      "The distinction between 'trapped,' 'missing,' and 'unaccounted for' is used loosely across outlets without a consolidated official figure.",
+      "No outlet provides a definitive count of collapsed buildings beyond NBC's 'at least 12 houses,' nor a total for the paper-mill workers unaccounted for.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "At least three outlets with full body text (AP, USA Today, NBC News) report the same event with materially different emphasis and figures \u2014 most notably the 7.1-vs-6.8 magnitude split and diverging, largely unverified casualty claims \u2014 making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/environment/magnitude-71-earthquake-hits-japans-kyushu-region-jma-says-2026-07-28/",
+      "title": "Major quake hits southern Japan, workers missing after mall blast - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/07/28/world/japan-earthquake-kumamoto-tsunami",
+      "title": "Many Feared Trapped in Mall Collapse After Japan Earthquake, Officials Say - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/live/c9q2481v855t",
+      "title": ""
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/japan-earthquake-tsunami-09e6f40acbcc96053946c9c104e7a242",
+      "title": "A 7.1 magnitude quake hits Japan's southern Kyushu island and dozens are injured or missing - AP News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/picture-gallery/news/world/2026/07/28/japan-major-earthquake-photo/91073883007/",
+      "title": "7.1 magnitude earthquake hits Japan \u2014 Photos - USA Today"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/japan/earthquake-rocks-japan-tsunami-warnings-rcna589574",
+      "title": "Major earthquake rocks southern Japan, forcing hundreds of thousands to evacuate - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://edition.cnn.com/2026/07/28/world/video/people-trapped-in-japan-mall-after-quake-ldn-digvid-vrtc",
+      "title": "Several trapped in collapsed mall after Japan quake - CNN"
+    }
+  ]
+}
