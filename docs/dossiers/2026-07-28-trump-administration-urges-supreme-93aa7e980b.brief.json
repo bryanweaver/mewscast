@@ -1,0 +1,115 @@
+{
+  "story_id": "2026-07-28-trump-administration-urges-supreme-93aa7e980b",
+  "headline_seed": "Trump administration urges Supreme Court to allow order targeting mail-in voting before midterms - AP News",
+  "brief": {
+    "story_id": "2026-07-28-trump-administration-urges-supreme-93aa7e980b",
+    "consensus_facts": [
+      "The Trump administration asked the US Supreme Court on Monday, July 27, 2026, to allow it to move forward with implementing an executive order restricting mail-in voting ahead of the November 2026 midterm elections.",
+      "President Trump signed the executive order in March 2026.",
+      "The order requires the US Postal Service to deliver mail ballots only to people on lists of eligible voters, and directs federal agencies to help create those lists of eligible/verified voters.",
+      "The order directs prioritized federal investigation or prosecution of election officials who send or receive ballots to ineligible voters.",
+      "Twenty-three Democratic-led states (with Al Jazeera and Politico also noting Washington, D.C.) sued to challenge the order.",
+      "A federal district judge in Massachusetts blocked the order in June 2026.",
+      "The Boston-based 1st US Circuit Court of Appeals declined over the weekend (Saturday) to pause that ruling, upholding the block, prompting the administration's emergency appeal to the Supreme Court.",
+      "Solicitor General D. John Sauer filed the administration's argument, framing the executive order as an intra-branch directive/general policy guidance and requesting an immediate administrative stay so agencies can prepare for the November election.",
+      "Trump has for years claimed, without providing evidence of fraud on a scale capable of influencing an election outcome, that mail-in voting leads to widespread fraud."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which agencies are tasked with creating the voter/citizenship lists",
+        "positions": {
+          "CNN": "Names the US Postal Service and the Department of Homeland Security as gaining new roles; DHS to provide lists of residents it believes are eligible.",
+          "Al Jazeera English": "Says the order directed federal agencies generally to help create state lists of eligible voters.",
+          "Politico": "Says the order directs the Homeland Security Department and the Social Security Administration to create a list of verified absentee voters.",
+          "Associated Press (Article 5)": "Says the order tasked the director of US Citizenship and Immigration Services and the commissioner of the Social Security Administration to create a 'state citizenship list.'"
+        }
+      },
+      {
+        "topic": "Name of the district judge who blocked the order",
+        "positions": {
+          "Al Jazeera English": "Identifies the judge as US District Judge Indira Talwani, who ruled Trump lacked authority to unilaterally change how states administer federal elections.",
+          "CNN": "Does not name the judge; refers only to a federal district court.",
+          "Politico": "Does not name the judge; refers to a federal judge in Massachusetts who cited improper timing and the rulemaking process.",
+          "Associated Press (Article 5)": "Does not name the judge."
+        }
+      },
+      {
+        "topic": "Rationale cited by the district court for blocking the order",
+        "positions": {
+          "Al Jazeera English": "Judge Talwani ruled Trump lacked authority to unilaterally change how states administer federal elections, noting states oversee voter-eligibility requirements.",
+          "Politico": "Judge argued the timing made it impossible for the Postal Service to propose a rule through proper channels and would deny Congress its required opportunity to weigh in on rulemaking."
+        }
+      },
+      {
+        "topic": "Whether the order threatens to withhold federal funds",
+        "positions": {
+          "Politico": "States the order threatens to withhold federal funds from states that don't comply.",
+          "CNN": "Does not mention withholding federal funds.",
+          "Al Jazeera English": "Does not mention withholding federal funds.",
+          "Associated Press (Article 5)": "Does not mention withholding federal funds."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press (Article 1)": "Headline-only/caption-only entry with no substantive body text \u2014 just photo captions of ballot counting, the Supreme Court, and Trump. Provides no reporting to frame; effectively a placeholder.",
+      "CNN": "Most detailed of the dossier. Leads on Trump 'asking the Supreme Court to let him curtail mail voting,' framing it as 'setting up a major elections dispute.' Emphasizes the rarity of improper voting and Trump's history of 'conspiracy theories' about the 2020 election he lost. Notably includes the New Jersey revelation of ~400 non-citizen ballots but contextualizes it as still 'exceedingly rare.' Highlights judicial partisanship (two Biden-appointed judges, one Trump appointee who partly dissented) and the DHS database false-positive problem that could wrongly purge eligible voters. Frames the administration's legal strategy as procedural ('sued prematurely') rather than a defense of the order's merits.",
+      "Al Jazeera English": "Concise, neutral international framing. Leads on 'sweeping restrictions on mail-in voting' as part of Trump's broader push 'to reshape how federal elections are run.' Uniquely names Judge Indira Talwani and centers the constitutional/federalism argument (states oversee voter eligibility). Omits the fraud-context editorializing and partisan-judge detail found in CNN.",
+      "Politico": "Body text is heavily padded with site navigation menu artifacts. The actual reporting leads on the DOJ's procedural argument that it needs an 'immediate administrative stay' to prepare for November. Uniquely reports the threat to withhold federal funds and the Social Security Administration's role. Adds substantial context on Trump's broader agenda: the SAVE America Act, his primetime address, declassified documents that 'did not provide proof' of rigging, and the ODNI 2020 China review. Frames it within Trump's pattern of trying to overhaul elections via executive order.",
+      "Associated Press (Article 5)": "Short wire item leading on the appeals court angle rather than the Supreme Court appeal: 'US appeals court upholds injunction.' Neutral phrasing. Specifies the list-creating agencies as USCIS director and SSA commissioner and calls the product a 'state citizenship list.' Emphasizes the geographic scope ('nearly half of U.S. states').",
+      "Bloomberg (Article 6)": "Headline-only via Google News RSS snippet: 'US Asks Supreme Court to Restore Trump Mail-In Voting Order.' No body text to analyze. Headline frames the ask as 'restoring' the order.",
+      "Bloomberg (Article 7)": "Headline-only; body is a robot-check/paywall interstitial with no reporting. Headline matches Article 6."
+    },
+    "primary_source_alignment": [
+      "No primary source (court filing, executive order text, or appeals court opinion) was located for this story, so no direct document-to-coverage comparison is possible.",
+      "The Solicitor General's quoted language appears only in CNN ('an intra-branch directive from the president to his subordinates') and Politico ('Every day that the agencies are unable to take steps...'); these quotes are unverified against the filing itself and should be treated as single-outlet renderings of the brief."
+    ],
+    "missing_context": [
+      "No outlet reproduces or links the actual executive order text or the Supreme Court filing, so the precise scope of the order's requirements cannot be independently verified from the dossier.",
+      "Outlets disagree on which agencies create the voter lists (DHS, USCIS, Social Security Administration named variously) with no reconciliation \u2014 the underlying order would resolve this but was not provided.",
+      "No outlet reports the current composition of the Supreme Court or which justice would field the emergency application, nor any expected timeline for the Court's response.",
+      "The New Jersey figure of ~400 improper non-citizen ballots appears only in CNN and is not corroborated or sourced elsewhere in the dossier; its provenance is not detailed.",
+      "Only two of seven dossier entries (CNN and Politico) contain substantial original reporting; two AP entries are caption/short-wire, and both Bloomberg entries plus one AP entry are headline-only or paywalled, limiting corroboration depth.",
+      "No outlet quotes the challenging states' attorneys or the Republican-intervenor states directly; only the administration's Solicitor General is quoted."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same Supreme Court appeal but diverge materially on which federal agencies are tasked with building voter lists and on the district court's rationale, while heavy-context outlets (CNN, Politico) add fraud-rarity and broader-agenda framing that thinner wires omit \u2014 making this a coverage-comparison story rather than a straightforward REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-mail-voting-appeal-executive-order-supreme-court-5482700c21f4945d6991dff24776b525",
+      "title": ""
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/27/politics/trump-supreme-court-mail-voting-executive-order",
+      "title": "Trump asks Supreme Court to let him curtail mail voting - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/7/27/trump-asks-us-supreme-court-to-allow-mail-in-voting-restrictions",
+      "title": "Trump asks US Supreme Court to allow mail-in voting restrictions - Al Jazeera"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/07/27/trump-asks-scotus-to-permit-blocks-on-mail-in-ballots-before-midterms-01013126",
+      "title": "Trump asks SCOTUS to permit blocks on mail-in ballots before midterms - Politico"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-mail-voting-appeal-executive-order-8bfb1f787f84fc60f9b6b284794b18b5",
+      "title": "US appeals court upholds injunction that blocks Trump\u2019s order to create a federal voter list - AP News"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bloomberglaw.com/us-law-week/us-asks-supreme-court-to-restore-trump-mail-in-voting-order",
+      "title": "US Asks Supreme Court to Restore Trump Mail-In Voting Order (2) - Bloomberg Law News"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-27/us-asks-supreme-court-to-restore-trump-mail-in-voting-order",
+      "title": "US Asks Supreme Court to Restore Trump Mail-In Voting Order - Bloomberg.com"
+    }
+  ]
+}
