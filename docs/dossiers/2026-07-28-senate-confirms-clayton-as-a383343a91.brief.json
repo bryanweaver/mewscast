@@ -1,0 +1,121 @@
+{
+  "story_id": "2026-07-28-senate-confirms-clayton-as-a383343a91",
+  "headline_seed": "Senate confirms Clayton as new director of intelligence - NBC News",
+  "brief": {
+    "story_id": "2026-07-28-senate-confirms-clayton-as-a383343a91",
+    "consensus_facts": [
+      "The US Senate confirmed Jay Clayton as director of national intelligence on Tuesday, July 28, 2026.",
+      "The confirmation vote was 51-47 along party lines, with Republicans in favor and Democrats opposed.",
+      "Clayton was serving as the US attorney for the Southern District of New York (Manhattan federal prosecutor) at the time of confirmation.",
+      "Clayton replaces Bill Pulte, a Trump loyalist and housing official (Federal Housing Finance Agency Director) who had been acting DNI since June.",
+      "Trump's first DNI, Tulsi Gabbard, resigned earlier in 2026, precipitating the succession.",
+      "At his July 15 confirmation hearing, Clayton refused/declined to say that Joe Biden won or that Trump lost the 2020 election.",
+      "Clayton's office issued subpoenas to New York Times journalists over their reporting on security concerns involving Trump's Qatari-gifted Air Force One.",
+      "Many Democrats initially welcomed or signaled support for Clayton's nomination, but the final vote fell along party lines."
+    ],
+    "disagreements": [
+      {
+        "topic": "Timing/month of Gabbard's resignation",
+        "positions": {
+          "ABC News": "States Gabbard resigned in May and Pulte was tapped as acting DNI thereafter.",
+          "The Guardian": "States Gabbard resigned 'earlier this year' without specifying May.",
+          "NBC News": "States Gabbard said she was resigning due to her husband's cancer diagnosis, without specifying the month."
+        }
+      },
+      {
+        "topic": "Reason for Gabbard's departure",
+        "positions": {
+          "NBC News": "Attributes resignation to her husband's cancer diagnosis.",
+          "ABC News": "Cites resignation without stated reason.",
+          "The Guardian": "Cites resignation without stated reason."
+        }
+      },
+      {
+        "topic": "How Clayton characterized the 2020 election at his hearing",
+        "positions": {
+          "NBC News": "Says Clayton 'refused to say who won the 2020 election.'",
+          "ABC News": "Says Clayton refused to say Biden won, 'instead saying he had been certified as the winner.'",
+          "The Guardian": "Says Clayton 'sidestepped several questions' and 'declined to say that Trump lost it.'"
+        }
+      },
+      {
+        "topic": "Status of the FISA reauthorization angle",
+        "positions": {
+          "ABC News": "Foregrounds that confirmation 'could clear a path' to reauthorize FISA, which 'went dark' after Democrats revolted; notes Sen. Fetterman as the sole Democratic exception and GOP frustration (Thune) over Pulte's appointment timing.",
+          "NBC News": "Does not mention FISA.",
+          "The Guardian": "Does not mention FISA.",
+          "The Washington Post": "Body text not retrievable beyond framing; does not mention FISA in available text."
+        }
+      },
+      {
+        "topic": "Pulte's job cuts at ODNI",
+        "positions": {
+          "NBC News": "Reports Pulte announced a fifth round of cuts, described as 'approximately 30% Staff Reduction from Weeks Ago,' potentially putting workforce near 1,000 from ~2,000, without figures on positions cut.",
+          "The Guardian": "States only that Pulte 'oversaw several rounds of layoffs at the agency' without figures.",
+          "ABC News": "Does not mention specific cut figures."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Two entries in the dossier (wire and Bloomberg Government News) are headline-only, both reading 'US Senate Confirms Clayton to Replace Pulte as Trump's Spy Chief.' No retrievable body text \u2014 bot-check and RSS snippet only. Frames the story as a straight replacement/succession with the loaded term 'Spy Chief.' No analytical content available.",
+      "NBC News": "Full body text. Leads on the vote and Clayton's prosecutorial credentials, then pivots heavily to Democratic concerns: Warner's 'serious reservations' about caving to political pressure and accusations the White House used intelligence agencies for 'partisan political warfare.' Gives substantial space to Pulte's undisclosed ODNI workforce cuts and the failure to brief the Senate committee. Balances with Cotton's endorsement of Clayton as 'highly qualified.' Emphasizes the 2020-election refusal and Pulte's investigations of Trump's 'perceived political enemies.'",
+      "ABC News": "Full body text. Uniquely frames the story around FISA \u2014 leads with the surveillance-tool reauthorization angle and the 'monthslong stalemate.' Emphasizes procedural mechanics: Democratic revolt over Pulte, Fetterman as lone crossover, and notable GOP frustration (Thune) with the administration's timing. Reports Trump abruptly canceling Clayton's hearing over the McDonald SDNY succession. Notes the 2020-election answer ('certified as the winner') and the NYT subpoenas more neutrally than the Guardian.",
+      "The Washington Post": "One entry is full-text but truncated to a summary/paywall shell \u2014 usable content is the headline 'intelligence czar,' the deck, and the note that the '51-to-47 vote was more partisan than expected' given Democrats 'initially welcomed the pick.' A second WaPo-slugged entry links to the Washington Times and returned only a CAPTCHA wall. Available framing casts the vote as a souring of expected bipartisanship.",
+      "The Guardian": "Full body text and most pointed framing. Headline labels Clayton a 'Trump ally.' Emphasizes election-integrity concerns: Clayton's CNBC remarks questioning California's ballot counting, his refusal to affirm voter fraud is rare, and Wyden's charge that Clayton would be the president's 'election conspiracy win.' Characterizes Pulte's tenure via 'sloppy and ugly acts of political retribution' (Letitia James prosecution, Lisa Cook removal effort) and Trump's declassification of intelligence supporting 'false claims about the 2020 election.' Most editorial word choice of the full-text outlets.",
+      "Washington Times": "Listed under The Washington Post slant but is a separate outlet URL; returned only a CAPTCHA/security-verification page. No retrievable content."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The 51-47 roll-call vote \u2014 the central hard fact \u2014 could not be verified against an official Senate roll-call record and rests entirely on outlet reporting (NBC News, ABC News, The Guardian, and the Washington Post shell all cite 51-47).",
+      "No transcript of Clayton's July 15 confirmation hearing was available to independently check the competing characterizations of his 2020-election answer.",
+      "Pulte's cited social-media post announcing an 'approximately 30% Staff Reduction' (NBC News) was not available as a primary document; the figure and its interpretation (~1,000 remaining) are attributed to Pulte and unnamed former officials."
+    ],
+    "missing_context": [
+      "No outlet gives an exact number of ODNI positions eliminated or whether affected employees were fired versus reassigned \u2014 NBC News notes Pulte himself declined to specify.",
+      "None of the retrievable articles clarify the current status of the FISA reauthorization after Clayton's confirmation; ABC News only says it 'could clear a path.'",
+      "No outlet reports Clayton's own stated agenda or priorities for ODNI, or whether he addressed the workforce cuts he is inheriting.",
+      "The dossier lacks any Republican-leaning or right-slant full-text outlet; both Bloomberg entries are headline-only, both Washington Post/Washington Times entries are paywalled or CAPTCHA-blocked, leaving all substantive framing to NBC News, ABC News, and The Guardian.",
+      "No official Senate roll-call, ODNI statement, or hearing transcript was in the dossier, so key facts are single-channel (outlet-reported) rather than document-verified.",
+      "It is unclear from the coverage what became of James McDonald's SDNY succession that Trump tied to Clayton's hearing timing (ABC News), and whether Clayton has yet vacated the SDNY role."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (NBC News, ABC News, The Guardian) report the same 51-47 confirmation but with materially different emphases \u2014 FISA mechanics, ODNI workforce cuts, and election-integrity conspiracy concerns respectively \u2014 while Bloomberg and the Post/Times entries yielded only headlines or blocked pages. The divergence in framing, not the underlying event, is the story.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-28/us-senate-confirms-clayton-to-replace-pulte-as-trump-s-spy-chief",
+      "title": "US Senate Confirms Clayton to Replace Pulte as Trump\u2019s Spy Chief - Bloomberg"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/national-security/senate-confirms-clayton-new-director-intelligence-rcna589654",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bgov.com/bloomberg-government-news/us-senate-confirms-clayton-to-replace-pulte-as-trumps-spy-chief",
+      "title": "US Senate Confirms Clayton to Replace Pulte as Trump\u2019s Spy Chief - Bloomberg Government News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/senate-votes-confirm-jay-clayton-director-national-intelligence/story?id=135167184",
+      "title": "Senate votes to confirm Jay Clayton as director of national intelligence - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/07/28/senate-confirms-jay-clayton-new-intelligence-czar/",
+      "title": "Senate confirms Jay Clayton as new intelligence czar - The Washington Post"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/jul/28/senate-confirms-jay-clayton-director-national-intelligence/",
+      "title": "Senate confirms Jay Clayton as Director of National Intelligence - Washington Times"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/jul/28/senate-confirms-jay-clayton-national-intelligence-director",
+      "title": "Senate confirms Trump ally Jay Clayton as director of national intelligence - The Guardian"
+    }
+  ]
+}
