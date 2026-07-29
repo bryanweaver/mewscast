@@ -1564,6 +1564,11 @@
       "did": "did:plc:rhetom5z3cxarr4xsxlbllcl",
       "handle": "bibliovoreorc.bsky.social",
       "timestamp": "2026-07-29T15:07:23.955945"
+    },
+    {
+      "did": "did:plc:zfvffdvjztbx6n4s4wdbpuem",
+      "handle": "boulapoire.eurosky.social",
+      "timestamp": "2026-07-29T17:03:01.246003"
     }
   ],
   "liked_posts": [
@@ -3366,6 +3371,11 @@
       "uri": "at://did:plc:rhetom5z3cxarr4xsxlbllcl/app.bsky.feed.post/3mrs5ivzglc23",
       "author": "bibliovoreorc.bsky.social",
       "timestamp": "2026-07-29T15:07:23.785352"
+    },
+    {
+      "uri": "at://did:plc:zfvffdvjztbx6n4s4wdbpuem/app.bsky.feed.post/3mrsakovr3s2k",
+      "author": "boulapoire.eurosky.social",
+      "timestamp": "2026-07-29T17:03:01.065450"
     }
   ],
   "last_cleanup": "2026-07-25T16:44:21.396500",
