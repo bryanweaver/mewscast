@@ -1,0 +1,99 @@
+{
+  "story_id": "2026-07-29-todd-blanche-attorney-general-557710adb7",
+  "headline_seed": "Todd Blanche attorney general nomination on edge as Cornyn questions Trump-IRS settlement - CNBC",
+  "brief": {
+    "story_id": "2026-07-29-todd-blanche-attorney-general-557710adb7",
+    "consensus_facts": [
+      "Todd Blanche is the acting attorney general and Trump's nominee to be the permanent attorney general.",
+      "Sen. John Cornyn, R-Texas, a member of the Senate Judiciary Committee, canceled a scheduled meeting with Blanche over concerns about the settlement of Trump's lawsuit against the IRS.",
+      "Cornyn told reporters he is 'not prepared to vote yes,' putting Blanche's committee advancement in doubt.",
+      "The Senate Judiciary Committee is scheduled to vote Thursday on whether to advance Blanche's nomination to the full Senate.",
+      "Sen. Thom Tillis, R-North Carolina, another Judiciary Committee Republican, shares Cornyn's concerns; a single Republican holdout could sink Blanche's advancement.",
+      "The core dispute involves a settlement provision that shields Trump, his family, and their business entities from IRS audits and enforcement actions for tax returns filed before the settlement, plus a roughly $1.8 billion 'anti-weaponization' fund to compensate people who claim they were wronged by the DOJ.",
+      "Blanche testified at his July 15 confirmation hearing that the 'weaponization fund is dead,' that the settlement does not extend immunity to non-parties, and that it does not apply to agencies beyond the IRS and Treasury.",
+      "Cornyn and Tillis are demanding a written commitment from the DOJ formally killing the fund and codifying Blanche's sworn testimony; Cornyn says he has not received responsive written assurances.",
+      "Committee Chairman Sen. Chuck Grassley, R-Iowa, set a roughly 4 p.m. ET Wednesday deadline to decide whether Thursday's vote could proceed.",
+      "The settlement resolved a lawsuit Trump filed against the IRS over the illegal leaking of his tax records by an agency contractor, who pleaded guilty in 2023."
+    ],
+    "disagreements": [
+      {
+        "topic": "Size of the anti-weaponization fund",
+        "positions": {
+          "ABC News": "Describes the fund as $1.776 billion (announced by Trump in May), and Trump's underlying suit as $10 billion",
+          "CNBC": "Describes the fund as $1.8 billion",
+          "CNN": "Describes the fund as $1.8 billion"
+        }
+      },
+      {
+        "topic": "Whether a DOJ written proposal has been provided to Cornyn",
+        "positions": {
+          "CNBC": "DOJ official says the department 'provided a written proposal to Senator Cornyn's staff yesterday'; Cornyn says he 'hasn't seen a single piece of writing that is responsive'",
+          "CNN": "Same DOJ statement quoted verbatim; Cornyn again disputes receiving anything responsive",
+          "Associated Press": "States only that the DOJ has not adequately addressed Cornyn's concerns in writing, without the DOJ's counter-claim"
+        }
+      },
+      {
+        "topic": "Tone/likelihood of resolution",
+        "positions": {
+          "CNN": "Emphasizes Tillis's optimism, calling it 'just a drafting exercise' and saying he doesn't believe 'there's a game being played'",
+          "CNBC": "Emphasizes Cornyn's combative posture ('they better get real'; 'they're mistaken')",
+          "Associated Press": "Frames neutrally as a nomination 'at risk of delay'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Shortest, most neutral wire treatment. Leads on the vote being 'in doubt' and Cornyn calling off the meeting. Notes Tillis's backing and the single-holdout math. Omits the DOJ's rebuttal, the Epstein survivors, and the fund's dollar figure. Straightforward procedural framing.",
+      "ABC News": "Leads with the specific policy substance \u2014 the 'Anti-Weaponization Fund' and the tax addendum Blanche signed the day after the settlement. Uniquely provides the fullest backstory: the $1.776 billion figure, the $10 billion original suit, the 2023 contractor guilty plea, and the 'self-dealing' and Jan. 6 payout accusations. Frames the standoff around Cornyn wanting sworn testimony reduced to writing. Emphasizes the substantive controversy over the procedural drama.",
+      "CNBC": "Business/politics detail-heavy. Leads on the nomination being 'in peril' and Cornyn canceling the meeting 'for the second time.' Foregrounds Cornyn's confrontational quotes ('beats me,' 'they're mistaken,' 'they better get real'). Prominently includes the DOJ's written counter-claim and Cornyn's rebuttal. Uniquely notes the political-independence angle \u2014 both Cornyn and Tillis are leaving the Senate in January (Cornyn lost a primary to Paxton whom Trump endorsed; Tillis retiring), freeing them from reelection pressure. Also cites committee math (12 R / 10 D).",
+      "CNN": "Two articles across two days. Leads on the nomination 'hanging in the balance' and the 'controversial' fund. Heavy on process detail and dueling quotes; includes both Cornyn's demands and the DOJ's written-proposal claim. Uniquely surfaces Tillis's optimism and 'drafting exercise' characterization, Grassley's deflection ('You'll have to ask Tillis and Cornyn'), and Cornyn's Tuesday X post ('there is no deal'). Also uniquely reports Epstein survivors on Capitol Hill urging Cornyn and Tillis to vote no, and one survivor calling Blanche 'condescending.' Frames the fund repeatedly as a 'slush fund' per critics and notes Trump himself refused to declare it dead.",
+      "Bloomberg": "Headline-only in this dossier (body text is a robot-check/paywall page). Headline asserts Cornyn says there is 'no deal' to pave the way for Blanche's confirmation. No retrievable reporting to analyze."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The underlying documents \u2014 the IRS settlement, the tax addendum Blanche signed, Blanche's July 15 sworn confirmation-hearing transcript, and any DOJ written proposal to Cornyn \u2014 were not available in the dossier and could not be checked against the reporting.",
+      "Because the central factual dispute (whether the DOJ's written proposal is 'responsive' to Cornyn's request) turns on a document no outlet published, that dispute cannot be adjudicated from the dossier."
+    ],
+    "missing_context": [
+      "No outlet published the text of the DOJ's alleged written proposal to Cornyn's staff, so readers cannot judge whether Cornyn's 'not responsive' claim or the DOJ's 'we provided a written proposal' claim is more accurate.",
+      "The precise fund figure is inconsistent across outlets ($1.776 billion in ABC vs. $1.8 billion in CNBC/CNN) and no outlet reconciles or sources the discrepancy.",
+      "None of the outlets explain what specific legal or drafting obstacle has prevented DOJ from simply codifying testimony Blanche already gave under oath \u2014 Tillis calls it 'just a drafting exercise' but the actual sticking point is never spelled out.",
+      "No outlet reports how the full Senate math would play out even if Blanche clears committee \u2014 the coverage stops at the committee vote.",
+      "The Democratic committee members' stated reasoning is largely absent; CNBC notes only that every Democrat is expected to vote no, without their rationale.",
+      "The Bloomberg article was inaccessible (bot-check/paywall page), so its reporting could not be incorporated; its headline claim ('no deal') is corroborated by CNN's reference to Cornyn's Tuesday X post but its body could not be verified."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text corroborate the same core facts with only modest framing differences (Cornyn's combativeness vs. Tillis's optimism, and a $1.776B-vs-$1.8B figure gap), and no primary source was available to diverge from coverage \u2014 this is a straightforward multi-outlet REPORT rather than a coverage-divergence META.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/todd-blanche-john-cornyn-attorney-general-nomination-b61afbc8fc5d6ab0e7d10cb828cd99cd",
+      "title": "Blanche nomination at risk of delay as senator seeks assurances on Trump settlement - AP News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/todd-blanches-ag-prospects-uncertain-2-key-gop/story?id=135135864",
+      "title": "Todd Blanche\u2019s AG prospects uncertain as 2 key GOP votes hold out - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/29/todd-blanche-attorney-general-trump-irs-audit-cornyn.html",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-28/cornyn-says-no-deal-to-pave-way-for-blanche-confirmation",
+      "title": "Cornyn Says No \u2018Deal\u2019 to Pave Way For Blanche Confirmation - Bloomberg.com"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/29/politics/todd-blanche-nomination-cornyn",
+      "title": "Blanche nomination in peril as key GOP senator rails on DOJ over controversial fund - CNN"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/07/28/politics/blanche-nomination-uncertain-weaponization-fund",
+      "title": "Blanche nomination uncertain as key GOP senator says DOJ \u2018radio silent\u2019 on demand to spike controversial fund - CNN"
+    }
+  ]
+}
