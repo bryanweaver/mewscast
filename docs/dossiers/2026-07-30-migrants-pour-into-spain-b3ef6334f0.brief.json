@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-07-30-migrants-pour-into-spain-b3ef6334f0",
+  "headline_seed": "Migrants pour into Spain's Ceuta from Morocco, military called in - Reuters",
+  "brief": {
+    "story_id": "2026-07-30-migrants-pour-into-spain-b3ef6334f0",
+    "consensus_facts": [
+      "On Thursday, July 30, 2026, thousands of migrants streamed from Morocco into the small Spanish territory of Ceuta.",
+      "At least nine people died during the crossings (reported by CBS News, Al Jazeera, and Fox News).",
+      "Spain announced it would deploy its military/Armed Forces to support the Civil Guard in restoring order in Ceuta.",
+      "Local authorities in Ceuta, led by regional government head Juan Jes\u00fas Vivas, asked Madrid to declare a national emergency and send the army.",
+      "Spain's Interior Ministry said it would guarantee citizen safety and border integrity but that the government could not declare a national emergency over migration concerns.",
+      "Video footage showed crowds, mainly Moroccans and predominantly young men, walking around the breakwaters at Tarajal beach, with some families with women and children also present.",
+      "Some crossers shouted 'Viva Espa\u00f1a!' to a freelance photographer working for the Associated Press.",
+      "The scenes recalled the May 2021 Ceuta crisis, when more than 8,000 migrants entered in two days.",
+      "It was not immediately clear what prompted the surge; Ceuta officials pointed to a recent Spanish Supreme Court ruling limiting immediate pushbacks of sea arrivals, but some migration advocates questioned that explanation.",
+      "Prime Minister Pedro S\u00e1nchez and Interior Minister Fernando Grande-Marlaska were expected to visit Ceuta (Friday per CBS/Fox).",
+      "Italian Prime Minister Giorgia Meloni threatened to suspend Italy's participation in the Schengen open-border agreement with Spain to defend Italy's borders."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of migrants who arrived recently",
+        "positions": {
+          "CBS News": "Cites Vivas that more than 1,500 migrants entered in the past week, with thousands more crossing overnight and Thursday; Interior Ministry would not confirm a figure.",
+          "Fox News": "States nearly 3,000 migrants had entered Ceuta by land or sea this year through mid-July, before this week's crossings; describes 'thousands' this week.",
+          "ABC News": "Says 'thousands' streamed in Thursday but gives no cumulative or weekly figure.",
+          "Associated Press": "Says 'thousands' crossed Thursday; no specific numbers provided."
+        }
+      },
+      {
+        "topic": "Morocco's role and response",
+        "positions": {
+          "CBS News": "Reports Spain's Interior Ministry said Morocco was 'closely cooperating' and stopping numerous people, but Morocco's Interior Ministry did not respond to requests for comment; notes 2021 precedent of Morocco easing controls amid a diplomatic dispute.",
+          "Fox News": "Reports Morocco is cooperating and Moroccan police intercepted numerous migrants; frames around Spain 'scrambling to contain the crisis' and cites a White House rebuke of the Spanish government.",
+          "ABC News": "Does not address Morocco's cooperation or motives in the provided body text."
+        }
+      },
+      {
+        "topic": "US / White House reaction",
+        "positions": {
+          "Fox News": "References a headline that the 'White House blasts Spanish government' over the surge and denied emergency request, and notes outreach to DHS, the Center for Immigration Studies, and the Migration Policy Institute.",
+          "CBS News": "Does not mention any White House or US reaction.",
+          "ABC News": "Does not mention any White House or US reaction.",
+          "Associated Press": "Does not mention any White House or US reaction."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier ('Migrants pour into Spain's Ceuta from Morocco, military called in'). No body text retrievable; the phrase 'pour into' and 'military called in' emphasize scale and state response. Cannot assess deeper framing.",
+      "CBS News": "Most detailed entry. Leads on the military deployment and death toll, then provides rich context: on-the-ground quotes ('absolute chaos'), the 2021 precedent, the Polisario/diplomatic backdrop, the Supreme Court ruling debate, geographic detail on swimming routes, and the Meloni Schengen threat. Balanced sourcing including a Moroccan human rights voice; humanizes crossers (families, women, children).",
+      "Al Jazeera English": "Retrieved body is largely site navigation and boilerplate; the substantive text is a short video-desk summary. It emphasizes that police barricades were 'overwhelmed,' the nine deaths, and specifically foregrounds Italy's support for temporarily tightening controls on all travellers from Spain \u2014 giving the EU/Italy angle prominence.",
+      "Associated Press": "Sparse body \u2014 captions plus a lead paragraph. Emphasizes the scale ('thousands'), local officials' request for a national emergency and army intervention, and repeatedly notes it was 'not immediately clear' what prompted the surge. Neutral wire framing centered on the border and imagery of belongings floating in the sea.",
+      "The Washington Post": "Headline-only in the dossier ('What to know about the Spanish enclave of Ceuta as migrant arrivals from Morocco spike'). No body text retrievable; the explainer framing ('What to know') signals a context/background angle rather than breaking-news casualties. Cannot assess deeper framing.",
+      "ABC News": "Runs the AP wire copy. Leads on 'thousands' breaching the frontier and the emergency/army request, notes the ministry's refusal to declare emergency, and includes the humanizing detail of families and the 'Viva Espa\u00f1a!' scene. Omits the death toll present in other outlets, and does not surface Morocco's role, the court ruling, or the Meloni threat.",
+      "Fox News": "Leads on the military deployment, the death toll, and 'overwhelmed' border. Uniquely foregrounds a US/White House angle \u2014 cross-linking a story that the White House 'blasts' the Spanish government and the denied emergency request \u2014 and stacks related immigration headlines (EU 'didn't have control,' intercepted migrant vessels). Frames Madrid as 'scrambling.' Still includes the advocates' skepticism about the court ruling and the humanizing family detail, largely drawn from AP."
+    },
+    "primary_source_alignment": [
+      "No primary source (court ruling, government press release, or official migration report) was located for this story. Spain's Interior Ministry migration report was not yet published (CBS notes it was due Aug. 3), so the cited Supreme Court ruling and official arrival figures could not be verified against source documents.",
+      "Because no primary document is available, the causal claim that a Spanish Supreme Court ruling drove the surge rests entirely on attribution to Ceuta officials, and is itself contested within the coverage."
+    ],
+    "missing_context": [
+      "No outlet provided a confirmed total number of migrants who crossed on Thursday; Spain's Interior Ministry declined to confirm and the next official report was pending (Aug. 3).",
+      "The circumstances of the at least nine deaths were not explained by any outlet; officials did not provide details beyond bodies seen in the water.",
+      "Morocco's own account is absent \u2014 its Interior Ministry did not respond to requests for comment, so the 'closely cooperating' characterization comes only from the Spanish side.",
+      "The text of the referenced Spanish Supreme Court ruling was not quoted or linked by any outlet, leaving the central alleged cause unverifiable.",
+      "The Meloni/Schengen threat is reported as a statement, but no outlet explains the legal or practical basis for suspending Schengen with a country Italy does not border.",
+      "The Fox News 'White House blasts Spanish government' claim appears only in Fox's coverage (as a cross-linked headline) and is not corroborated by any other outlet in the dossier.",
+      "Reuters and The Washington Post appear only as headlines with no retrievable body text, limiting corroboration for their specific angles."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (CBS News, AP/ABC, Al Jazeera, Fox News) reported the same event but with materially different emphases \u2014 CBS leaning into humanitarian and diplomatic context, Fox foregrounding a US/White House angle, Al Jazeera the EU/Italy dimension \u2014 and much of the reporting traces back to a single AP wire, making the coverage-of-the-coverage the real story.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/europe/thousands-migrants-cross-into-spains-ceuta-foot-efe-reports-2026-07-30/",
+      "title": "Migrants pour into Spain's Ceuta from Morocco, military called in - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/spain-deploys-military-ceuta-morocco-border-migrants/",
+      "title": "Spain deploys military to Morocco border after thousands of migrant crossings, at least 9 deaths - CBS News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/7/31/spain-deploys-military-to-ceuta-after-deadly-migrant-surge",
+      "title": "Spain deploys military to Ceuta after deadly migrant surge - Al Jazeera"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/spain-ceuta-tarajal-morocco-migrants-5c864e5f951e2a7cf7a3eac417668e97",
+      "title": "Spain deploys military to Ceuta after thousands of people breach Morocco\u2019s border and at least 9 die - AP News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/07/30/spain-morocco-immigration-european-union/c7391ece-8c38-11f1-8912-d71e69d679d7_story.html",
+      "title": "What to know about the Spanish enclave of Ceuta as migrant arrivals from Morocco spike - The Washington Post"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/ceuta-asks-madrid-declare-national-emergency-thousands-cross-135222179",
+      "title": "Thousands of people break through border separating Morocco from Spain's Ceuta - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/world/spain-deploys-military-after-thousands-migrants-overwhelm-border-enclave-least-9-dead",
+      "title": "Spain deploys military after thousands of migrants overwhelm border enclave, at least 9 dead - Fox News"
+    }
+  ]
+}
