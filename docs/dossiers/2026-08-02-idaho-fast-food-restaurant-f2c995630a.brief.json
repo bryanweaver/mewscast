@@ -1,0 +1,108 @@
+{
+  "story_id": "2026-08-02-idaho-fast-food-restaurant-f2c995630a",
+  "headline_seed": "Idaho fast food restaurant shooting leaves 3 dead and 7 injured - Politico",
+  "brief": {
+    "story_id": "2026-08-02-idaho-fast-food-restaurant-f2c995630a",
+    "consensus_facts": [
+      "A shooting occurred at an In-N-Out Burger restaurant in Twin Falls, southern Idaho, on Saturday afternoon (Aug. 1, 2026).",
+      "Three people were killed and seven more were injured, some critically (per Politico and Associated Press body text, both citing the Twin Falls city spokesman).",
+      "The suspected gunman was found dead near the restaurant; police were still working to determine the shooter's identity and motive.",
+      "Twin Falls Police Chief Matthew Hicks said in a news conference, 'We believe the threat to the community is over,' and described it as 'a very chaotic scene.' (Politico and ABC News)",
+      "Witness Lane Koehn, 34, described seeing a person with an AR-style rifle emerge from the drive-thru while a man with a pistol fired at the shooter, and saw an In-N-Out employee drag a wounded, uniformed woman across the parking lot. (Politico and ABC News)",
+      "Officials had not yet released victims' names as they were still notifying next of kin. (Politico and ABC News)"
+    ],
+    "disagreements": [
+      {
+        "topic": "casualty count",
+        "positions": {
+          "Politico": "Three killed and seven injured, per Twin Falls city spokesman Josh Palmer; some in critical condition.",
+          "Associated Press": "Three killed and seven injured, per Twin Falls city spokesman.",
+          "ABC News": "Reports 'multiple people dead and others injured'; notes Chief Hicks 'did not yet know exactly how many were killed or wounded,' and that County Commissioner Brent Reinke said Sheriff Jack Johnson had told him five people were hurt.",
+          "Al Jazeera English": "Headline: 'At least three dead'; body notes several wounded.",
+          "Reuters": "Headline only: 'Three dead in Idaho shopping center shooting.'"
+        }
+      },
+      {
+        "topic": "whether the suspect is counted in the fatality total",
+        "positions": {
+          "Politico": "Spokesman Palmer 'did not know if the suspect was included in the fatality count.'",
+          "ABC News": "States 'The shooter was among the dead' without clarifying whether counted in the total.",
+          "Al Jazeera English": "Says footage showed the suspected gunman firing before he was killed."
+        }
+      },
+      {
+        "topic": "location characterization",
+        "positions": {
+          "Al Jazeera English": "Frames it as a 'shopping mall mass shooting.'",
+          "Reuters": "Frames it as a 'shopping center shooting.'",
+          "Politico": "Frames it as a fast food restaurant shooting in a 'busy shopping plaza.'",
+          "Associated Press": "Frames it as a fast food restaurant shooting.",
+          "ABC News": "Frames it as a fast food restaurant shooting."
+        }
+      },
+      {
+        "topic": "source independence",
+        "positions": {
+          "Politico": "Bylined 'By Associated Press' \u2014 the Politico story is the AP wire report.",
+          "Associated Press": "Original AP wire report; Politico and AP are effectively the same source, not two independent ones."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Al Jazeera English": "Headline-only/video framing. Leads on 'mass shooting' and 'shopping mall,' emphasizing the scale and public-space nature. Highlights that footage captured the suspect firing into a vehicle before he was killed. International-desk brevity; no local official quotes.",
+      "Politico": "Runs the full AP wire under a Politico dateline, bylined 'By Associated Press.' Most detailed account: leads on the casualty figures (3 dead, 7 injured), attributes numbers to named city spokesman Josh Palmer and Chief Hicks, and foregrounds multiple named witness accounts (Koehn, Dodaro, Rodriguez). Notes the restaurant opened just a week earlier (July 24) and gives Twin Falls geographic/demographic context. Frames as a fast-food-restaurant shooting rather than a 'mall' event.",
+      "Reuters": "Headline only ('Three dead in Idaho shopping center shooting'). Neutral wire phrasing; 'shopping center' framing. No retrievable body to assess emphasis.",
+      "Associated Press": "Original wire report but only a short lede plus photo/video captions retrievable. Leads on casualty count attributed to the city spokesman; frames as a restaurant shooting. Emphasizes witness cellphone footage in captions.",
+      "NBC News": "No substantive body text retrievable \u2014 the article is a video segment ('Witnesses and 911 calls detail scene of Idaho shooting') and the scraped text is almost entirely a cookie/privacy-consent notice. Framing signal is limited to the headline, which emphasizes witness testimony and 911 audio.",
+      "ABC News": "Uses more cautious casualty language ('multiple people dead and others injured') and foregrounds official uncertainty \u2014 explicitly noting Hicks 'did not yet know exactly how many were killed or wounded.' Surfaces a competing early figure (Sheriff Johnson's five-injured count via Commissioner Reinke) that the AP/Politico version does not include. States plainly 'The shooter was among the dead.' Carries the same Koehn witness account as Politico."
+    },
+    "primary_source_alignment": [
+      "No primary source (police report, official press release, court filing, or news-conference transcript) was located for this story. All accounts rest on statements from Twin Falls officials relayed through wire reporting and witness interviews."
+    ],
+    "missing_context": [
+      "No outlet identifies the shooter or a motive \u2014 all note this was still under investigation at the time of reporting.",
+      "The casualty figures diverge between the AP-sourced '3 dead/7 injured' and ABC's account of official uncertainty plus a 'five hurt' figure from the sheriff; no outlet reconciles these numbers or confirms a final count.",
+      "It remains unresolved across all outlets whether the suspected gunman is included in the three-fatality count.",
+      "Two of the six dossier items (Politico and AP) are the same underlying source \u2014 the AP wire \u2014 so the apparent multi-outlet agreement on '3 dead, 7 injured' rests on a single wire report, not two independent newsrooms.",
+      "NBC News and Al Jazeera contributed no substantive independent body text; NBC's entry is dominated by a privacy/cookie consent notice rather than reporting.",
+      "No outlet reports the identity or condition of the man with the pistol who returned fire, whether he was a bystander, or any law-enforcement characterization of his role.",
+      "No outlet reports the condition or fate of the wounded uniformed employee described by witness Koehn.",
+      "No primary source (news-conference transcript, hospital statement in full, or police release) was available to independently verify official figures."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same event with materially different casualty framing and precision \u2014 AP/Politico give firm '3 dead, 7 injured' while ABC foregrounds official uncertainty and a competing sheriff's figure \u2014 and the core '3 dead, 7 injured' number traces to a single AP wire shared by two outlets, making the coverage divergence itself the story worth reporting.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/2/at-least-three-dead-in-idaho-shopping-mall-mass-shooting",
+      "title": "At least three dead in Idaho shopping mall mass shooting - Al Jazeera"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/08/02/idaho-shooting-in-n-out-01021548",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/three-dead-idaho-shopping-center-shooting-2026-08-02/",
+      "title": "Three dead in Idaho shopping center shooting - Reuters"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/shooting-idaho-twin-falls-15be31e5c532e7dfe4b7108d83dd47be",
+      "title": "Idaho fast food restaurant shooting leaves 3 dead and 7 injured, city spokesman says - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/video/shorts/witnesses-and-911-calls-detail-scene-of-idaho-shooting-267641413951",
+      "title": "Witnesses and 911 calls detail scene of Idaho shooting - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/wireStory/multiple-people-dead-after-shooting-fast-food-restaurant-135298500",
+      "title": "Multiple people dead after shooting at fast food restaurant in southern Idaho - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
