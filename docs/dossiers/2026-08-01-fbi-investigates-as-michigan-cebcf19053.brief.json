@@ -1,0 +1,101 @@
+{
+  "story_id": "2026-08-01-fbi-investigates-as-michigan-cebcf19053",
+  "headline_seed": "FBI investigates as Michigan joins Minnesota in reporting cyberattacks on its water systems - AP News",
+  "brief": {
+    "story_id": "2026-08-01-fbi-investigates-as-michigan-cebcf19053",
+    "consensus_facts": [
+      "On Saturday, Michigan reported cyberattacks on nine of its water systems, joining Minnesota.",
+      "Earlier in the week, Minnesota authorities reported cyberattacks targeting over 30 water systems in the state.",
+      "Dale George, communications director for Michigan's Department of Environment, Great Lakes, and Energy, said Michigan received 'a small number of reports from Michigan communities indicating activity consistent with what federal agencies described.'",
+      "George stated that 'all systems continued to operate safely, issues were addressed by local operators, and there are no known impacts that posed a public health concern.'",
+      "The FBI is investigating and has not publicly identified a culprit.",
+      "The FBI stated it 'is aware of recent public reporting around Water and Wastewater (WWS) sectors' and that it and interagency partners 'are fully engaged to protect critical infrastructure.'",
+      "The FBI, CISA, and other agencies warned in an advisory last week that Iranian hackers have been targeting water and wastewater systems and operational controls of other critical infrastructure.",
+      "The source of the attacks remains under investigation; no actor has been definitively attributed.",
+      "Local utilities such as water plants often lack the funding and expertise to install security patches, making them attractive targets due to ease of penetration and the panic disruptions can cause.",
+      "A federal cyber alert regarding attempts to tamper with operational technology at water systems was issued Tuesday.",
+      "The FBI advisory referenced that at least seven states have reported incidents, though only Minnesota and Michigan have been publicly identified."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of states affected",
+        "positions": {
+          "Associated Press": "Focuses on Minnesota and Michigan without emphasizing a seven-state figure.",
+          "CBS News": "States cyber activity affected water systems in 'at least seven states' this week.",
+          "Al Jazeera English": "Reports the FBI advisory said at least seven states have reported incidents, but only Minnesota and Michigan identified.",
+          "The Independent": "Does not foreground a seven-state count; frames it as Michigan being 'the latest state.'"
+        }
+      },
+      {
+        "topic": "Iran attribution",
+        "positions": {
+          "Associated Press": "Notes attacks came amid warnings that Iranian hackers have focused on such systems; no attribution asserted.",
+          "CBS News": "Reports U.S. officials and sources are probing whether Iranian hackers are responsible, and also whether an actor tried to appear Iran-based to stir the pot.",
+          "Al Jazeera English": "Notes breaches came after warnings about Iranian hackers; no attribution.",
+          "The Independent": "Notes attacks coincide with Iranian hacker warnings and cites historical Iranian interest in U.S. water systems."
+        }
+      },
+      {
+        "topic": "Trump's political comments",
+        "positions": {
+          "Associated Press": "Does not mention Trump's remarks.",
+          "CBS News": "Reports Trump said Friday he doesn't think Iran is to blame, instead blaming Minnesota and Gov. Tim Walz, and includes Walz's rebuttal.",
+          "Al Jazeera English": "Does not mention Trump or Walz.",
+          "The Independent": "Reports Trump claimed without evidence the attacks were Minnesota's fault and includes Walz's response."
+        }
+      },
+      {
+        "topic": "Severity of operational impact",
+        "positions": {
+          "Associated Press": "Emphasizes all systems operated safely with no known public health concern.",
+          "CBS News": "Reports some utilities forced to switch to manual operations, and that federal authorities reported loss of monitoring/control, pressure loss and flooding in at least some cases.",
+          "Al Jazeera English": "Only reports systems continued to operate safely.",
+          "The Independent": "Reports localized disruptions including Braham going offline and asking residents to minimize water use, but no water-quality issues."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Straightforward wire framing. Leads on Michigan joining Minnesota and the reassurance that systems operated safely. Notes Iran warnings as context but asserts no attribution. Omits Trump's political comments and the seven-state figure entirely, keeping the piece tightly on confirmed operational facts.",
+      "CBS News": "The most expansive and investigation-focused. Leads with the scope ('at least seven states') and the central question of Iranian involvement, citing unnamed U.S. officials and sources. Uniquely foregrounds the political dimension \u2014 Trump blaming Minnesota and Walz's sharp rebuttal about CISA cuts \u2014 and includes granular local detail (South St. Paul, Braham) and technical specifics (PLCs, CISA acting director quotes). Emphasizes both the threat severity and the political conflict.",
+      "Al Jazeera English": "Shortest and most stripped-down account. Leads on Michigan's nine systems and FBI investigation. Reports the seven-state advisory figure but adds no political commentary, no local detail, and no technical specifics. Neutral, minimal international-wire framing.",
+      "The Independent": "Opens with a lengthy fundraising/self-promotion appeal before the news. Frames the story around a 'growing threat to critical infrastructure' while balancing reassurance that systems remain safe. Adds historical context (2016 Iranian hacker charges over a New York dam) and local disruption detail (Braham, Plymouth). Includes Trump's comments and Walz's response, noting Trump spoke 'without evidence.'"
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The brief relies entirely on outlet reporting, much of which is built from the same AP wire base plus CBS's independently sourced additions.",
+      "The FBI's Saturday statement is quoted near-identically across AP, Al Jazeera, and The Independent, indicating a shared wire/statement origin rather than independent corroboration."
+    ],
+    "missing_context": [
+      "No outlet identifies which of the other five states (beyond Minnesota and Michigan) reported incidents, leaving the seven-state figure unverified in detail.",
+      "The CBS claim that Iranian involvement is being probed, and that the actor may have tried to appear Iran-based, rests on unnamed U.S. officials and sources not independently corroborated by the other outlets.",
+      "No outlet provides technical detail on how the intrusions occurred beyond references to internet-exposed programmable logic controllers and default-password exploitation cited in prior 2023 incidents.",
+      "Walz's claim that the Trump administration cut CISA funding is presented as a political assertion without independent verification of the budget figures involved.",
+      "No outlet quantifies how many of the affected systems experienced actual service disruption versus monitoring-only impacts, beyond a few named Minnesota examples.",
+      "The AP and Al Jazeera versions omit the political dimension (Trump/Walz) entirely, while CBS and The Independent foreground it \u2014 a reader relying on only one outlet would get a materially different picture of the story's stakes."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same core event but with materially divergent framing \u2014 AP and Al Jazeera stay narrowly operational, while CBS and The Independent add the Trump/Walz political conflict and the seven-state Iran-attribution probe. This coverage divergence, not a single set of facts, is the story.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/cyberattack-minnesota-water-systems-77d52a1d7356e608500a1ddb0ec373a6",
+      "title": ""
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/us-investigating-iran-cyberattack-minnesota-water-systems/",
+      "title": "U.S. investigating if Iran was behind cyberattack on water systems in 7 states, including Minnesota and Michigan - CBS News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/1/michigan-joins-minnesota-in-reporting-cyber-attacks-with-fbi-investigating",
+      "title": "Michigan joins Minnesota in reporting cyberattacks, with FBI investigating - Al Jazeera"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/michigan-minnesota-cyberattacks-water-systems-b3025904.html",
+      "title": "More states experience water system cyberattacks as FBI continues to investigate - The Independent"
+    }
+  ]
+}
