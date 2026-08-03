@@ -1564,6 +1564,11 @@
       "did": "did:plc:34z7teenjp727apl5mdzzbjf",
       "handle": "peggletwink69.exploration.team",
       "timestamp": "2026-08-03T04:30:53.093307"
+    },
+    {
+      "did": "did:plc:mbggqx6ndo56sgfyi7fxyn2n",
+      "handle": "swansonian.bsky.social",
+      "timestamp": "2026-08-03T15:41:57.947225"
     }
   ],
   "liked_posts": [
@@ -3321,6 +3326,11 @@
       "uri": "at://did:plc:34z7teenjp727apl5mdzzbjf/app.bsky.feed.post/3ms5a4om7gk2s",
       "author": "peggletwink69.exploration.team",
       "timestamp": "2026-08-03T04:30:52.971350"
+    },
+    {
+      "uri": "at://did:plc:mbggqx6ndo56sgfyi7fxyn2n/app.bsky.feed.post/3ms6ianprlc2d",
+      "author": "swansonian.bsky.social",
+      "timestamp": "2026-08-03T15:41:57.825431"
     }
   ],
   "last_cleanup": "2026-08-01T16:46:16.439226",
