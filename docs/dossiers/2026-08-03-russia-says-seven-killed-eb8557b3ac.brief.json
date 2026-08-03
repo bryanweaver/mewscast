@@ -1,0 +1,117 @@
+{
+  "story_id": "2026-08-03-russia-says-seven-killed-eb8557b3ac",
+  "headline_seed": "Russia says seven killed and 40 injured by Ukrainian drone hitting beach - live updates - BBC",
+  "brief": {
+    "story_id": "2026-08-03-russia-says-seven-killed-eb8557b3ac",
+    "consensus_facts": [
+      "Russian officials say a Ukrainian drone struck a Black Sea beach area, killing seven people including three children and wounding dozens; corroborated by BBC News and CBS News.",
+      "The regional governor named is Veniamin Kondratyev, who called it a deliberate attack on civilians; corroborated by BBC News and CBS News.",
+      "A suspected Ukrainian drone struck a Wildberries warehouse (described as Russia's biggest online retailer / 'Russia's Amazon'); corroborated by BBC News and Reuters (headline).",
+      "Russian planes dropped eight glide bombs over roughly 90 minutes on residential districts of Zaporizhzhia, killing one person (a 71-year-old woman) and wounding dozens; corroborated by Associated Press and ABC News.",
+      "Ukrainian President Zelenskyy renewed urgent pleas for US-made Patriot air defense systems, citing a shortage of interceptors linked to the Iran war; corroborated by ABC News, CBS News, and CNN.",
+      "President Trump backed away from an earlier commitment to let Ukraine build its own Patriot interceptors, saying he had not made a final decision; corroborated by ABC News and CNN.",
+      "A funeral was held for members of the same family killed by a ballistic missile strike on Kryvyi Rih on July 30; corroborated by CBS News, with related casualty context in CNN.",
+      "Ukraine has escalated retaliatory strikes on Russian territory and infrastructure in recent months to pressure Moscow toward negotiations; corroborated by BBC News and CBS News."
+    ],
+    "disagreements": [
+      {
+        "topic": "Ukrainian-strike death toll inside Russia on Monday",
+        "positions": {
+          "BBC News": "Seven killed at the beach resort near Gelendzhik (geolocated to Arkhipo-Osipovka), plus at least three injured at the Wildberries warehouse",
+          "CBS News": "Ukrainian strikes killed 11 in Russia and annexed Crimea on Monday, of which seven (including three children) died on the Black Sea beach",
+          "Reuters": "Headline states Ukrainian drones killed eight in Russia (headline-only, body not retrievable)"
+        }
+      },
+      {
+        "topic": "Location naming of the beach strike",
+        "positions": {
+          "BBC News": "Beach resort near Gelendzhik; BBC Verify geolocated to Arkhipo-Osipovka",
+          "CBS News": "A Russian beach on the Black Sea coast (no specific town named)"
+        }
+      },
+      {
+        "topic": "Ukrainian responsibility for the beach strike",
+        "positions": {
+          "BBC News": "Russia has blamed Ukraine, which has not yet responded",
+          "CBS News": "Reports Russia's claim of a 'deliberate attack by the Kyiv regime' without noting a Ukrainian response"
+        }
+      },
+      {
+        "topic": "Overnight/latest Ukrainian casualty count in Ukraine",
+        "positions": {
+          "ABC News": "Sunday-evening Zaporizhzhia bombing killed 1 and wounded 31; 181 drones launched, 163 intercepted, 14 caused damage",
+          "CNN": "At least nine killed and 30 wounded in the latest Kyiv-area attack (four children); only 1 of 27 ballistic missiles shot down; 14 civilians killed and 87 injured across Ukraine over 24 hours",
+          "Associated Press": "Zaporizhzhia glide-bomb attack killed one and wounded dozens (no broader national toll given)"
+        }
+      },
+      {
+        "topic": "Moscow restaurant bombing death toll and details",
+        "positions": {
+          "ABC News (Rome embassy story)": "Russian Embassy in Rome says the Balzi Rossi bombing killed five and injured 19; National Anti-Terrorism Committee initially reported three dead and 21 injured; Russian media claim it targeted a general (possibly Col.-Gen. Alexander Chaiko)"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Extremely thin, near-duplicate wire lede focused solely on the Russian glide-bomb attack on Zaporizhzhia (1 killed, dozens wounded). Does not mention the Russian-claimed beach strike or Wildberries at all. Neutral, sourced entirely to regional chief Ivan Fedorov. Frames the story as Russian aggression against Ukrainian civilians.",
+      "ABC News": "Two separate wire pieces. The Zaporizhzhia piece leads on Russian glide bombs killing civilians, adds strong context on the weapons' destructiveness and Ukraine's lack of countermeasures, and pivots to Zelenskyy's Patriot plea and Trump's licensing reversal. The second piece foregrounds the Russian Embassy in Rome's accusation against Ukraine over the Moscow restaurant bombing, but carefully hedges with conflicting death tolls and unverifiable claims about the intended target. Overall framing centers Ukrainian suffering while noting Russian counter-narratives with skepticism.",
+      "BBC News": "The only outlet leading squarely on the Russian-claimed beach strike (seven killed, three children, ~40 injured), geolocated independently via BBC Verify to Arkhipo-Osipovka. Explicitly attributes the death claim to Russia and notes Ukraine 'has not yet responded.' Balances by covering the Wildberries warehouse strike, Ukraine's rationale for targeting it, Moscow's denial, and Zelenskyy's comments on Putin dragging out the war. Most even-handed presentation of both sides' claims.",
+      "Reuters": "Headline-only in this dossier ('Ukrainian drones kill eight in Russia and strike Wildberries warehouse, governors say'). Frames from the Russian-casualty angle and attributes to 'governors,' but no body text is retrievable, so its framing cannot be fully assessed.",
+      "CBS News": "Leads with the human-interest funeral of a family 'wiped off the map' in a Russian strike on Kryvyi Rih, heavily emphasizing grief, a mourner's 'desire for vengeance,' and the priest's account. Frames the war primarily through Ukrainian civilian loss and UN warnings of an escalatory trend, then folds in the Russian-claimed beach strike (7 killed) lower in the piece with Kondratyev's 'deliberate attack' quote. Provides the highest Russian-side toll (11 killed in Russia/Crimea) but positions Ukrainian retaliation as pressure for negotiations.",
+      "CNN": "Frames the story around Zelenskyy's warning that air defenses are being 'overwhelmed' and the political fallout from Trump backing away from Patriot manufacturing. Leads with Russian attacks on Kyiv killing nine (four children), emphasizes the interception failure rate (1 of 27 missiles), and personalizes the toll via a slain 22-year-old police officer. Notes in one line that Russia intercepted 274 Ukrainian drones. Framing centers Western-aid politics and Ukrainian vulnerability; the Russian-claimed beach casualties are not mentioned."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All casualty figures, attributions, and geolocations rest on outlet reporting, which itself relies on Russian regional governors (Kondratyev), Ukrainian regional officials (Fedorov, Ganzha, Klitschko), and BBC Verify's independent geolocation of the beach strike to Arkhipo-Osipovka.",
+      "No independent document (military statement, forensic report, or UN finding) corroborates who launched or what struck the Black Sea beach; the 'deliberate attack on civilians' characterization is a Russian government claim, not a verified finding."
+    ],
+    "missing_context": [
+      "No outlet retrieved or cited a primary source; the entire dossier rests on partisan government spokespeople on both sides, with only BBC Verify offering independent geolocation.",
+      "Ukraine had not responded to the beach-strike allegation at the time of reporting; no outlet presents Ukraine's account of whether a drone was aimed at a military target and went astray, nor Russian air-defense involvement in the crash.",
+      "The headline seed frames 'Ukrainian drone hitting beach,' but only BBC and CBS carry the beach story in body text; AP, ABC's lead piece, and CNN omit it entirely, meaning several outlets do not corroborate the headline event at all.",
+      "Casualty figures for the beach strike vary and are unverified: BBC and CBS cite seven dead (three children) per the Russian governor, while Reuters' headline says eight killed in Russia overall \u2014 the discrepancy between the beach toll and total Russian toll is not reconciled by any outlet.",
+      "No outlet independently verified whether the Wildberries warehouse actually supplies the Russian military (Ukraine's claim) versus being a purely civilian logistics site (Moscow's denial).",
+      "The Moscow restaurant bombing carries conflicting death tolls (five vs. three) from Russian sources themselves, and claims it targeted a general are explicitly unverified; readers get no independent confirmation of the target or perpetrator.",
+      "No outlet quantifies how frequently Russian-claimed civilian deaths from Ukrainian strikes are later disputed or shown to involve air-defense debris, which would help readers weight the beach claim.",
+      "Reuters' body text was unavailable, so its 'eight killed' figure and framing could not be corroborated against the two full-text outlets (BBC, CBS) covering the same event."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six outlets covered overlapping same-day violence but with materially divergent emphasis \u2014 some lead on Russian civilian deaths from a Ukrainian drone, others on Ukrainian civilian deaths from Russian strikes, and several omit the headline beach event entirely \u2014 with all casualty claims resting on unverified partisan officials and no primary source. This is a coverage-divergence story, not a clean single-event REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/russia-ukraine-war-glide-bombs-patriots-zaporizhzhia-9e4000f63b54cf814704ff60373f2bb9",
+      "title": "Russia blasts southern Ukrainian city with glide bombs while Ukrainian drones kill 9 - AP News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/russian-planes-fire-salvo-glide-bombs-southern-ukraine-135318363",
+      "title": "Russia fires glide bombs at a southern Ukraine city, killing 1 and wounding dozens - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/live/c74y9d19jd7t",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/ukrainian-drones-kill-two-russia-strike-wildberries-warehouse-governors-say-2026-08-02/",
+      "title": "Ukrainian drones kill eight in Russia and strike Wildberries warehouse, governors say - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/family-killed-russia-strike-funeral-ukraine/",
+      "title": "Funeral held for family \"wiped off the map\" in Russian strike on Ukraine, neighbor says - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/russian-embassy-rome-blames-ukraine-deadly-italian-restaurant-135324989",
+      "title": "Russian Embassy in Rome blames Ukraine for deadly Italian restaurant bombing in Moscow - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/01/europe/zelensky-air-defenses-russia-attack",
+      "title": "Zelensky warns air defenses are being overwhelmed as Russia pounds Ukraine, killing 9 - CNN"
+    }
+  ]
+}
