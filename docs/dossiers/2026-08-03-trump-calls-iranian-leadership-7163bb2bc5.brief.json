@@ -1,0 +1,107 @@
+{
+  "story_id": "2026-08-03-trump-calls-iranian-leadership-7163bb2bc5",
+  "headline_seed": "Trump calls Iranian leadership \u2018extremely duplicitous\u2019 after Tehran denies new talks will start Monday - NBC News",
+  "brief": {
+    "story_id": "2026-08-03-trump-calls-iranian-leadership-7163bb2bc5",
+    "consensus_facts": [
+      "President Donald Trump described Iran's leadership as duplicitous (variously quoted as 'unbelievably duplicitous' or 'extremely duplicitous') in a post on Truth Social.",
+      "Trump claimed Iran asked for talks to end the war and then publicly announced no discussions were being held.",
+      "Iranian Foreign Ministry spokesman Esmaeil Baghaei (also transliterated Baqaei) stated Iran is not currently holding negotiations with the United States.",
+      "Trump said the ongoing situation was Iran's 'last chance' to sign a deal, using the phrase 'I want to give them every last chance before decapitation.'",
+      "The dispute centers on the Strait of Hormuz and Iran's nuclear program, amid a months-long US-Iran conflict.",
+      "Trump said he called off what he described as a major planned attack to allow for a possible deal.",
+      "Trump asserted talks were being held at the request of Iran and backed by Gulf Arab states (Saudi Arabia, UAE, Qatar)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether US-Iran talks are actually taking place",
+        "positions": {
+          "NBC News": "Reports Trump insisting talks are 'going on right now' while Iran's spokesman says 'We currently do not have negotiations with America'; frames it as a direct factual contradiction.",
+          "The Washington Post": "Frames the war as remaining 'in limbo,' noting the two sides 'have offered differing versions of reality,' with Trump claiming active talks and Iran denying direct negotiations.",
+          "Al Jazeera English": "Reports Trump's claim that talks are ongoing 'at the request of Iran' alongside his 'duplicitous' framing, with less emphasis on adjudicating the contradiction.",
+          "Reuters": "Headline only: 'Trump says talks with Iran under way but Tehran denies any planned' \u2014 states the contradiction at headline level."
+        }
+      },
+      {
+        "topic": "Exact quote of Trump's characterization of Iran",
+        "positions": {
+          "NBC News": "'unbelievably duplicitous'",
+          "Al Jazeera English": "'unbelievably duplicitous'",
+          "The Times of Israel": "Headline says 'Unbelievably duplicitous' (body not retrievable).",
+          "Headline seed / NBC headline": "Rendered as 'extremely duplicitous' in the story headline seed."
+        }
+      },
+      {
+        "topic": "What Iran says it is actually negotiating",
+        "positions": {
+          "NBC News": "Iran says it is in discussions with Oman over a temporary safe route through the Strait of Hormuz, not with the US.",
+          "The Washington Post": "Iran denies direct negotiations with the US; less detail on the Oman track in retrievable text.",
+          "Al Jazeera English": "Emphasizes Trump's framing that talks are Iran-requested and Gulf-backed; does not foreground the Oman channel in the retrievable excerpt."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier. Neutral wire phrasing that presents both sides symmetrically: 'Trump says talks with Iran under way but Tehran denies any planned.' No body text available to assess emphasis.",
+      "NBC News": "Most detailed body text. Leads with Trump's 'unbelievably duplicitous' quote and juxtaposes it directly against Iran's denial, then supplies substantial context: the sixth month of conflict, the June memorandum of understanding, the July collapse of the ceasefire, the Oman route talks, Trump's pattern of threatening and canceling attacks, US casualties, rising energy prices, and Saudi outreach. Frames the episode as the latest 'twist' in an on-again-off-again war, emphasizing Trump's inconsistency and the 'whiplash' dynamic.",
+      "Al Jazeera English (last chance article)": "Leads on Trump's ultimatum framing \u2014 'last chance,' 'decapitation,' and US 'total control' over the strait. Foregrounds Trump's assertion that talks are Iran-requested and Gulf-backed, and his insistence the US will enforce free navigation via blockade. Presents Trump's claims more directly and with less counterbalancing of Iran's denial than NBC.",
+      "Al Jazeera English (why has Trump halted attacks article)": "Explainer framing focused on the deal Trump is 'hinting at.' Notes Iran's denial that it asked the US to hold off (calling the claim 'nothing but a new lie') and emphasizes the strait remaining shut and Red Sea disruption by Houthis. Gives more weight to Iranian rebuttals and regional stakes than the 'last chance' piece.",
+      "The Washington Post (whiplash article)": "Headline frames the episode as a 'weekend of whiplash,' emphasizing Trump's reversal from calling off 'the biggest attack since WWII' to Iran flatly denying talks. Body text in the dossier is heavily truncated by page furniture; includes an AI-generated summary of reader comments expressing skepticism of Trump, which is reader sentiment rather than reporting.",
+      "The Washington Post (ceasefire talks article)": "By Karen DeYoung. Frames the story around dueling realities \u2014 Trump saying talks are 'going on right now' versus Iran saying 'We are not currently holding negotiations' \u2014 and explicitly notes it is 'far from the first time' the two sides offered differing versions of reality. Emphasizes the limbo/uncertainty. Body largely truncated by site chrome.",
+      "The Times of Israel": "Headline-only in the dossier (body blocked by CAPTCHA). Headline echoes Trump's framing closely: 'Unbelievably duplicitous Iran begged for talks, now denies they're happening' \u2014 adopts the 'begged' characterization Trump used, foregrounding his perspective."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (Trump's full Truth Social post, the Iranian Foreign Ministry statement transcript, or any US-Iran memorandum) were located for this story, so no direct source-to-report comparison is possible.",
+      "The 'unbelievably duplicitous' quote is reported consistently by NBC News and Al Jazeera from Trump's Truth Social post, but the full post text is only partially quoted and not independently verifiable within the dossier."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides the full verbatim text of the Iranian Foreign Ministry statement, so readers cannot see the exact scope of Iran's denial versus Trump's claim.",
+      "The exact adjective Trump used varies across sources ('unbelievably' vs. 'extremely duplicitous' in the headline seed); the discrepancy is not reconciled.",
+      "Only NBC News provides substantial historical context (June MOU, July ceasefire collapse, sixth month of war, US casualties); the other retrievable outlets assume this background.",
+      "No outlet independently verifies whether any talks are in fact occurring \u2014 all reporting relies on competing assertions from Trump and Iranian officials.",
+      "The Oman-mediated Strait of Hormuz route talks are detailed only by NBC News; other outlets do not corroborate the specifics of that channel.",
+      "No casualty figures, no specifics on the claimed 'biggest attack since WWII,' and no independent confirmation of the Strait of Hormuz's operational status are corroborated across outlets.",
+      "Two of the seven dossier entries (Reuters, The Times of Israel) are headline-only, and two Washington Post entries are heavily truncated by page furniture, limiting body-level corroboration to primarily NBC News and Al Jazeera.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (NBC News, Al Jazeera, Washington Post) reported the same event with materially different emphasis \u2014 NBC foregrounding Trump's inconsistency and the whiplash pattern, Al Jazeera foregrounding his 'last chance' ultimatum, and the core factual dispute being whether talks even exist \u2014 making this a coverage-comparison story rather than a settled straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/trump-says-iran-talks-take-place-monday-sets-no-deadline-deal-2026-08-02/",
+      "title": "Trump says talks with Iran under way but Tehran denies any planned - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/iran/trump-iran-talks-attacks-canceled-hormuz-nuclear-rcna590535",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/3/trump-blasts-duplicitous-iran-after-tehran-denies-it-is-in-talks-with-the-us",
+      "title": "Trump says ongoing talks are Iran\u2019s \u2018last chance\u2019 - Al Jazeera"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/08/02/trump-cancels-iran-attack-citing-progress-deal-tehran-israel-alert/",
+      "title": "Iran rejects Trump\u2019s claim that talks will restart, adding to weekend of whiplash - The Washington Post"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/08/03/trump-claims-active-ceasefire-talks-iran-denies-direct-negotiations/",
+      "title": "Trump claims active ceasefire talks, but Iran denies direct negotiations - The Washington Post"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/2/why-has-trump-halted-iran-attacks-and-what-is-the-deal-he-is-hinting-at",
+      "title": "Why has Trump halted Iran attacks, and what is the deal he is hinting at? - Al Jazeera"
+    },
+    {
+      "outlet": "The Times of Israel",
+      "url": "https://www.timesofisrael.com/trump-unbelievably-duplicitous-iran-begged-for-talks-now-denies-theyre-happening/",
+      "title": "Trump: \u2018Unbelievably duplicitous\u2019 Iran begged for talks, now denies they\u2019re happening - The Times of Israel"
+    }
+  ]
+}
