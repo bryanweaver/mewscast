@@ -1,0 +1,135 @@
+{
+  "story_id": "2026-08-04-arson-arrest-made-over-89de430b67",
+  "headline_seed": "Arson arrest made over largest of Washington state's wildfires - BBC",
+  "brief": {
+    "story_id": "2026-08-04-arson-arrest-made-over-89de430b67",
+    "consensus_facts": [
+      "A 37-year-old man named Aaron F. Farinacci was arrested Monday, August 3, 2026, in connection with the Old Trails Fire in Spokane County, Washington.",
+      "Farinacci was booked on a preliminary charge of first-degree arson and held on a $1 million bond.",
+      "The investigation began after a witness reported seeing a man kneeling near grass at the site where the fire started, and later observed smoke coming from the area.",
+      "Farinacci was found in possession of waterproof matches and a butane lighter when detained by law enforcement, according to Spokane County Sheriff John Nowels.",
+      "Three major fires \u2014 Old Trails, Fairview, and Autumn Lane \u2014 have been burning in the Spokane area since Saturday.",
+      "More than 700 structures/buildings in the Spokane area have been destroyed.",
+      "Roughly 60,000 to 67,000 people have been evacuated in Spokane County.",
+      "No deaths or injuries have been confirmed.",
+      "Authorities were attempting to contact 14 people who had not been reachable but who were not considered missing.",
+      "Washington Gov. Bob Ferguson described the event as a 'nightmare situation' and 'likely the worst natural disaster in Spokane history,' and said the arson allegation makes the situation 'more heartbreaking.'",
+      "There are 16 to 17 major wildfires burning across Washington state.",
+      "Spokane resident Anna Andreachi, who lost her home, said 'All of our memories are gone. My dad just died, and all of his stuff was still in there too.'",
+      "Joe Cvancara saved his home by digging a fire line and described feeling 'survivor's guilt,' pledging to open his home to neighbors.",
+      "The fires remain uncontained (0% containment), and dangerous heat and wind conditions are forecast to return midweek."
+    ],
+    "disagreements": [
+      {
+        "topic": "Acreage burned by the Spokane-area fires",
+        "positions": {
+          "CNN (Aug 3 live blog)": "More than 8,000 acres consumed with 0% containment",
+          "CNN (Aug 4 article)": "More than 10,000 acres engulfed as of Tuesday morning",
+          "BBC News": "Thousands of acres of land burned near Spokane (no precise figure)"
+        }
+      },
+      {
+        "topic": "Number of people evacuated",
+        "positions": {
+          "Associated Press": "About 5,000 homes evacuated / 60,000 evacuations referenced in caption",
+          "CNN": "Nearly 65,000 people evacuated",
+          "BBC News": "More than 60,000 people",
+          "CBS News": "Some 67,000 people under evacuation orders"
+        }
+      },
+      {
+        "topic": "Statewide count of major wildfires",
+        "positions": {
+          "CNN": "17 major fires (about 260,000-262,000 acres)",
+          "BBC News": "16 wildfires in Washington state",
+          "CBS News": "At least 16 major fires burning in Washington state"
+        }
+      },
+      {
+        "topic": "Farinacci's prior manslaughter conviction detail",
+        "positions": {
+          "BBC News": "States Nowels said Farinacci had a previous manslaughter conviction (no further detail)",
+          "CBS News": "States Farinacci 'has a prior manslaughter conviction' (no further detail)",
+          "CNN (Aug 4)": "Provides specifics: convicted of manslaughter in Arizona in 2012 for a 2010 offense, sentenced to 12 years, released December 2020",
+          "Associated Press": "Does not mention a prior conviction",
+          "CNN (Aug 3 live blog)": "Does not mention a prior conviction"
+        }
+      },
+      {
+        "topic": "Status of the 14 unreachable residents",
+        "positions": {
+          "CNN (Aug 3) / BBC / AP": "14 people still being contacted / not yet missing",
+          "CNN (Aug 4) / CBS News": "By midday Tuesday all 14 had been contacted; everyone reported missing has been located"
+        }
+      },
+      {
+        "topic": "Farinacci's own account of events",
+        "positions": {
+          "CNN (Aug 4)": "Cites arrest affidavit: Farinacci denied starting the fire and denied being in the area, said he was walking a route he walks almost every day",
+          "Other outlets": "Do not report Farinacci's denial or account"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Wire copy that is largely a photo-caption dump; leads on structure and evacuation damage (600 structures, 60,000 evacuations, 5,000 homes) rather than the arson arrest. Does not name the suspect or mention the prior conviction in the retrievable body. Human-interest emphasis via Lizzie Davis and the Sim family. Notably references that the governor spoke with Trump about the wildfires \u2014 a political angle no other outlet in the dossier carries.",
+      "CNN": "Two CNN articles. The Aug 3 live blog leads with the arson arrest but foregrounds the 'climate crisis' as an explicit bucket, tying Washington and Oregon record fire seasons to climate change and quoting Gov. Ferguson heavily on the emotional 'anguish' angle. The Aug 4 article is the most procedurally detailed of the dossier: it names the public defender, court hearing time, the full Arizona manslaughter record, and \u2014 uniquely \u2014 quotes the arrest affidavit including Farinacci's denial. CNN leads with the arrest and the 'dire' devastation framing.",
+      "BBC News": "International-desk framing that leads squarely on the arson arrest as the headline event, then pivots quickly to victim narratives (Anderson family, pregnant GoFundMe recipient, Andreachi, Cvancara). Includes the prior manslaughter conviction but without specifics. Closes with a climate-science paragraph attributing warm, dry wildfire conditions to human-induced climate change. Emphasizes scale (Spokane as a city of 230,000, 280 miles from Seattle) for a non-US audience.",
+      "Reuters": "Headline-only in the dossier. Headline frames it as 'Arson suspect arrested as wildfires rage around Spokane' \u2014 arrest plus active-disaster emphasis. No body text available to analyze.",
+      "CBS News": "Leads its headline and lede with the suspect's prior manslaughter conviction \u2014 the most aggressive framing of Farinacci's criminal history among the outlets \u2014 paired with the 'residents left with nothing' human-loss angle. Strong on firefighting logistics and meteorology: quotes California Interagency Incident Management Team spokesperson Daniel Ramey on the wildland-urban interface, the dry July, and the Wednesday-Friday heat trend. Broadens context to Utah and Idaho fires.",
+      "The New York Times": "Headline-only in the dossier. Headline is the most restrained: 'Man Arrested on Suspicion of Arson in Spokane Wildfire' \u2014 neutral, uses 'on suspicion,' no reference to prior record or scale. No body text available to analyze."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. CNN's Aug 4 article quotes an investigating officer's arrest affidavit filed in court (Farinacci's denial, the 'point of origin' determination, the fire cause consistent with open flame to vegetation), but the affidavit itself was not provided in the dossier for independent verification.",
+      "CNN's Aug 4 article also references Arizona Department of Corrections records and Maricopa County records for the 2012 manslaughter conviction; these underlying records were not provided in the dossier."
+    ],
+    "missing_context": [
+      "No outlet reports a stated or alleged motive for the arson, nor any connection between Farinacci and the affected neighborhoods beyond his being a Spokane resident.",
+      "Only CNN reports Farinacci's own denial and his account (walking a habitual route); the wire and other outlets omit the defense side entirely, and no outlet notes that a preliminary arson charge and possession of matches/a lighter is not, by itself, proof of ignition.",
+      "The causes of the other two fires (Fairview and Autumn Lane) remain officially undetermined per multiple outlets, but the arson arrest applies only to the Old Trails Fire \u2014 a distinction easy for a reader to blur into 'the fires were arson.'",
+      "No outlet provides the containment status broken down by individual fire, nor a clear reconciliation of the acreage figures (8,000 vs 10,000 vs 262,000 statewide) that shift across the two-day reporting window.",
+      "No outlet quantifies the FEMA emergency-declaration status beyond CNN's note that the request was made; the outcome is unreported.",
+      "The dossier lacks any primary court document, so the affidavit language cited by CNN cannot be independently checked against the source.",
+      "The AP body is essentially photo captions and lacks the substantive arrest reporting the other bodies carry; its brevity limits how much of the AP framing can be assessed."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text reported the same arrest with materially different emphasis \u2014 CBS leading on the prior manslaughter conviction, CNN uniquely surfacing the affidavit and Farinacci's denial, AP largely omitting the arrest, and BBC/CNN foregrounding climate \u2014 making the divergence in framing, not the core facts, the real story.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/wildfire-spokane-washington-evacuate-8e42b37783bda01e7d004d71e546458e",
+      "title": "Authorities arrest arson suspect in connection with one of the devastating Spokane wildfires - AP News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/03/us/live-news/spokane-washington-wildfires",
+      "title": "Arson arrest made in connection to Washington wildfire as officials race to contain flames - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c5y3ppmmev1o",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/arson-suspect-arrested-wildfires-rage-around-spokane-washington-2026-08-04/",
+      "title": "Arson suspect arrested as wildfires rage around Spokane, Washington - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/spokane-washington-wildfires-homes-destroyed/",
+      "title": "Spokane wildfire arson suspect had prior manslaughter conviction; blazes leave some residents with nothing - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/04/us/spokane-wildfires-arson-arrest.html",
+      "title": "Man Arrested on Suspicion of Arson in Spokane Wildfire - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/04/us/spokane-county-fires-washington-hnk",
+      "title": "Man arrested on suspicion of arson in 1 of 3 wildfires torching Washington\u2019s Spokane area - CNN"
+    }
+  ]
+}
