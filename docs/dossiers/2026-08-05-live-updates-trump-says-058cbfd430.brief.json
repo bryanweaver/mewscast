@@ -1,0 +1,118 @@
+{
+  "story_id": "2026-08-05-live-updates-trump-says-058cbfd430",
+  "headline_seed": "Live Updates: Trump says Strait of Hormuz deal could happen today or tomorrow amid Iran-Oman talks - CBS News",
+  "brief": {
+    "story_id": "2026-08-05-live-updates-trump-says-058cbfd430",
+    "consensus_facts": [
+      "President Trump said a deal to reopen the Strait of Hormuz could be reached as early as Wednesday or Thursday, reported by Associated Press, CBS News, CNBC, and ABC News.",
+      "Iran and Oman have been in direct talks focused on the mechanics of reopening the Strait of Hormuz, reported by Associated Press, CBS News, and CNBC.",
+      "The U.S. (with Israel) launched the war against Iran on Feb. 28, 2026, reported by Associated Press, CBS News, and ABC News.",
+      "Roughly 20% of the world's crude oil and/or LNG passes through the Strait of Hormuz, reported by BBC News, CNBC, and CBS News.",
+      "Trump warned that if talks fail, Iran would be 'hit very hard,' reported by CNBC and CBS News.",
+      "The U.N. rights chief Volker Turk said at least 56 people have been executed in Iran on national security-related charges since March 19, including 27 in cases linked to protests, reported by CBS News and ABC News.",
+      "Yemen's Iran-backed Houthis said they attacked a Saudi oil tanker ('Wafa') off Yanbu in the Red Sea \u2014 the eighth Saudi tanker targeted since the July 22 blockade began, reported by CBS News (in two live-update pages).",
+      "Reports emerged that the U.S. had used nearly all of its stockpile of long-range precision missiles (ATACMS and Precision Strike Missiles) during the war, reported by CBS News and CNBC; U.S. officials disputed the characterization.",
+      "The U.S. and Iran signed a memorandum of understanding in June that framed negotiations for a war-ending deal, reported by CBS News and ABC News."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the U.S. is directly negotiating with Iran",
+        "positions": {
+          "BBC News": "Iran says it is negotiating with Oman but NOT the U.S., and has no plans to; Trump insisted talks were taking place and called Iran 'duplicitous.'",
+          "CNBC": "Treasury Secretary Bessent said 'We are in talks with the Iranians'; a Pakistani official described the U.S. as involved 'indirectly,' with Pakistan mediating between Iran and Oman.",
+          "CBS News": "Frames the talks as direct Iran-Oman discussions, with the U.S. and Iran to return to the table under June MOU terms if approved."
+        }
+      },
+      {
+        "topic": "Whether the proposed deal includes transit fees/tolls",
+        "positions": {
+          "CBS News (Strait of Hormuz deal live page)": "The proposal under negotiation would have NO tolls or service fees for transiting ships.",
+          "CBS News (Rubio live page, earlier update)": "The proposal includes a 'service fee' with revenue split between Iran and Oman.",
+          "Reuters (headline only)": "Headline states the proposed deal would give Iran control of inbound traffic; does not address fees in retrievable text."
+        }
+      },
+      {
+        "topic": "Status of U.S. missile stockpiles",
+        "positions": {
+          "CBS News": "Two sources say the U.S. has used 'virtually all' of its ATACMS and Precision Strike Missiles; Pentagon spokesman and Sec. Hegseth dismiss the reporting.",
+          "CNBC": "Reuters and CNN reported severe depletion (including ~80% of THAAD interceptors); White House, Pentagon, and Trump insist there are 'more than enough' munitions."
+        }
+      },
+      {
+        "topic": "Current openness of the Strait of Hormuz",
+        "positions": {
+          "CNBC": "CENTCOM says the southern route through Omani waters 'remains free and open,' having assisted 1,000+ vessels; Trump says the strait 'is going to be open very soon.'",
+          "CBS News": "Notes the state of commercial traffic remains 'murky'; Iran and Oman allege they control the waterway; cites CENTCOM's open-southern-route claim.",
+          "BBC News": "Cites Kpler vessel-tracking data showing commercial shipping has slowed, with a ~28% drop in crossings between July 30 and Aug. 2."
+        }
+      },
+      {
+        "topic": "Timeline of the announced talks",
+        "positions": {
+          "BBC News": "Reports Trump said new talks would begin Monday and that he called off 'massive' strikes; article dated '2 days ago,' reflecting an earlier phase.",
+          "Associated Press / CNBC / CBS News": "Report Trump's Aug. 4-5 statements that a deal could come Wednesday or Thursday."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Terse wire lead focused on the potential Wednesday deal and its economic stakes (a fifth of global oil/gas). Uniquely frames the war's original goals as 'toppling Tehran's government and ending its nuclear program' and foregrounds Trump's domestic political pressure ahead of midterms.",
+      "CBS News": "Live-blog format aggregating many threads. Leads on Trump's optimism but gives substantial space to accountability angles: Sen. Baldwin's push to release the Kuwait attack probe (6 U.S. troops killed), U.N. execution figures, and the missile-stockpile depletion story. Notably contains an internal contradiction across its two live pages on whether the deal includes service fees.",
+      "BBC News": "Most skeptical framing. Leads on the U.S.-Iran contradiction \u2014 Iran denies negotiating with Washington \u2014 and foregrounds Trump's history of announcing near-deals that collapsed. Includes independent Kpler shipping data and Reuters/Ipsos polling showing only a third of Americans support the war. Emphasizes political risk to Trump.",
+      "CNBC": "Market-first framing. Leads on the imminence of a deal and tracks oil (Brent/WTI) and equity moves in detail. Surfaces the multi-party mediation structure (Pakistan mediating, U.S. 'indirect') via MS NOW sourcing, and gives prominent play to CENTCOM's claim the southern route is already open. Balances the missile-shortage reports against official denials.",
+      "Reuters": "Headline-only in this dossier. The headline asserts the proposed deal 'would give Iran control of inbound traffic' \u2014 a framing that emphasizes an Iranian concession/control angle not foregrounded in the headlines of other outlets. No body text available to corroborate.",
+      "ABC News": "Live-update format but thin and somewhat scattered. Recaps the Feb. 28 launch and June MOU, then pivots to an IDF strike on Hezbollah in southern Lebanon and the U.N. execution figures \u2014 broadening the frame beyond Hormuz to the wider regional conflict. Contains a garbled/typo passage ('Addine')."
+    },
+    "primary_source_alignment": [
+      "No primary source (deal text, MOU, CENTCOM statement in full, or U.N. report) was located for this story. All claims rest on outlet reporting and named/unnamed official statements; the underlying Iran-Oman proposal and June memorandum of understanding could not be independently verified against source documents."
+    ],
+    "missing_context": [
+      "No primary source document was available \u2014 the actual text of the proposed Iran-Oman agreement, the June memorandum of understanding, or CENTCOM's full statement \u2014 so the competing fee/no-fee and 'Iran controls inbound traffic' claims cannot be adjudicated against a source.",
+      "The dossier relies heavily on CBS News, which supplied two of the seven articles; several 'consensus' items are corroborated partly across CBS's own two live pages, which should be weighted as effectively one outlet's reporting where the same wire (AFP) is cited.",
+      "The fee question is directly contradictory within CBS News itself (one page says no tolls, another says a service fee split between Iran and Oman) and no outlet reconciles this discrepancy.",
+      "BBC's article appears older ('2 days ago') and reflects an earlier stage (talks beginning Monday, strikes called off) than the Aug. 4-5 statements in AP/CNBC/CBS \u2014 readers should note the reporting is not all from the same moment.",
+      "No outlet quantifies the current economic impact in concrete terms beyond oil-price moves; the human cost inside Iran (executions) and to U.S. troops (6 killed in Kuwait) appears only in CBS and ABC and is not integrated with the deal coverage.",
+      "The role and leverage of Pakistan as mediator (per CNBC's sourcing) is unconfirmed by other outlets and not explained in depth.",
+      "No article independently verifies Trump's claim that Saudi Arabia, UAE, and Qatar urged him against strikes; it rests solely on Trump's own account (BBC)."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with body text reported the same imminent-Hormuz-deal event but with materially different framings \u2014 from CNBC's market lens to BBC's skepticism about whether talks with the U.S. exist at all \u2014 and outlets (including CBS against itself) directly contradict each other on transit fees and missile stockpiles, making a coverage-comparison the honest story. No primary source was available, which lowers confidence.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/iran-war-us-hormuz-trump-august-5-2026-ecdbd96f2b46c70beb5926d8508f9c55",
+      "title": "Trump says deal to reopen the Strait of Hormuz could come as early as Wednesday - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-deal/",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c23579jzv08o",
+      "title": "Iran says it is in talks with Oman but not the US after Trump says negotiations to resume - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/05/us-iran-war-trump-hormuz-bessent-iran-deal-close.html",
+      "title": "Trump says Hormuz deal could be agreed Wednesday or Thursday as he hails \u2018very good\u2019 Iran talks - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/us-iran-having-very-good-discussions-trump-says-2026-08-05/",
+      "title": "Proposed Hormuz deal would give Iran control of inbound traffic, sources say - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-donald-trump-us-denies-negotiations-begin-strikes-called-off/",
+      "title": "Rubio says progress made in Strait of Hormuz talks after Trump threatens \"decapitation\" - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/live-updates/iran-live-updates-trump-deal-imminent-iran-oman/?id=135317231",
+      "title": "Iran live updates: Trump says more details on Iran to be announced 'in 48 hours' - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
