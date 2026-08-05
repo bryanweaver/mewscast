@@ -1614,6 +1614,11 @@
       "did": "did:plc:o5esm7oe5c5p36nze65sadlm",
       "handle": "bridgettereed.bsky.social",
       "timestamp": "2026-08-05T17:17:46.255365"
+    },
+    {
+      "did": "did:plc:tg4a7h2yrb2rmqlmr767yngo",
+      "handle": "theartpalate.com",
+      "timestamp": "2026-08-05T21:19:39.717115"
     }
   ],
   "liked_posts": [
@@ -3421,6 +3426,11 @@
       "uri": "at://did:plc:o5esm7oe5c5p36nze65sadlm/app.bsky.feed.post/3msbv3hfyv22g",
       "author": "bridgettereed.bsky.social",
       "timestamp": "2026-08-05T17:17:46.107768"
+    },
+    {
+      "uri": "at://did:plc:tg4a7h2yrb2rmqlmr767yngo/app.bsky.feed.post/3msdvlu742c2f",
+      "author": "theartpalate.com",
+      "timestamp": "2026-08-05T21:19:39.551037"
     }
   ],
   "last_cleanup": "2026-08-01T16:46:16.439226",
