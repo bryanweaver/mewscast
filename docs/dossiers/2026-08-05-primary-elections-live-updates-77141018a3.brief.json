@@ -1,0 +1,109 @@
+{
+  "story_id": "2026-08-05-primary-elections-live-updates-77141018a3",
+  "headline_seed": "Primary Elections Live Updates: In Michigan Senate Race, El-Sayed and Stevens Face Off - The New York Times",
+  "brief": {
+    "story_id": "2026-08-05-primary-elections-live-updates-77141018a3",
+    "consensus_facts": [
+      "Michigan held a Democratic Senate primary on Tuesday, August 4, 2026, pitting Rep. Haley Stevens against Abdul El-Sayed (BBC, NBC News, CNN, Washington Post, USA Today).",
+      "The winner of the Democratic primary will face Republican Mike Rogers, who was unopposed in the GOP primary, in the November general election (BBC, NBC News, USA Today).",
+      "Stevens was backed by the Democratic Party establishment while El-Sayed ran a progressive/left-wing insurgent campaign (BBC, NBC News, CNN, USA Today).",
+      "The Michigan Senate seat is in a battleground/swing state that Trump won in 2024 and could help determine control of the Senate (BBC, USA Today).",
+      "AIPAC (the American Israel Public Affairs Committee) played a role in Democratic primaries this cycle, including spending to oppose progressive candidates (BBC, USA Today, CNN).",
+      "In Missouri, Rep. Wesley Bell defeated former Rep. Cori Bush in a 2024 rematch (Washington Post, USA Today, CNN).",
+      "Multiple states held primaries on August 4, 2026, including Michigan, Missouri, Virginia, Kansas, and Washington (Washington Post, USA Today).",
+      "El-Sayed, a former public health official/physician, would be the first Muslim US senator if elected (BBC, Washington Post)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Early results / who is leading in Michigan Senate primary",
+        "positions": {
+          "CNN": "Reports progressive Abdul El-Sayed has an early lead over Haley Stevens, and leads in a key University of Michigan county.",
+          "USA Today": "Reports polls have closed and votes are rolling in but does not declare a leader.",
+          "The Washington Post": "Reports still waiting on results ('While we're waiting for the results of the Michigan Senate Democratic primary').",
+          "BBC": "Does not report early results; frames the outcome as still to be decided.",
+          "NBC News": "Provides live-results framing without declaring a leader."
+        }
+      },
+      {
+        "topic": "El-Sayed's occupation/background descriptor",
+        "positions": {
+          "BBC": "Describes him as a former public health official.",
+          "NBC News": "Describes him as a physician.",
+          "USA Today": "Describes him as a former Detroit-based public health officer.",
+          "The Washington Post": "Frames him via 'Michigan could elect the first Muslim senator.'"
+        }
+      },
+      {
+        "topic": "AIPAC spending against Stevens' opponent",
+        "positions": {
+          "BBC": "States AIPAC spent almost $30m to back Stevens in the race.",
+          "USA Today": "References AIPAC's role in Cori Bush's defeats but gives no Michigan dollar figure.",
+          "CNN": "Frames Cori Bush's loss as 'an early blow to the left's push against AIPAC' without a figure."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Body text is boilerplate about AP's election-tabulation methodology and institutional self-description ('no spin, no bias, just facts'), not substantive reporting on the Michigan race. Provides no retrievable race-level facts; functions as a results-page landing note for the Virginia Senate primary.",
+      "The New York Times": "Headline-only in the dossier. Frames the story as a head-to-head 'face off' between El-Sayed and Stevens. No body text available to analyze emphasis, lead, or omissions.",
+      "BBC News": "Richest framing: leads on the Democratic Party's internal 'bitter' and 'bruising' divisions, casting it as establishment vs. left-wing insurgent. Heavily emphasizes the Israel-Gaza divide, El-Sayed's would-be historic status as first Muslim senator, AIPAC's ~$30m spending, and Stevens' viral Midwestern accent. Also notes the DOJ sending election monitors to four Michigan cities, framed as previewing 'Trump's goal of federal election oversight.'",
+      "NBC News": "Frames via a 'bruising Democratic primary battle,' balancing establishment (Stevens) vs. progressive luminaries (El-Sayed). Leads into a promotion of the reporter's 'Data Dive' newsletter and live-results product; substantive content is thin, mostly methodology on 'expected vote.'",
+      "CNN": "Emphasizes El-Sayed's early lead and progressive momentum, packaging the Michigan race among many 'key races' and streaming products. Threads a broader narrative of the intra-Democratic left-vs-center fight (Cori Bush's loss as 'a blow to the left's push against AIPAC') and heavy cross-promotion of CNN polls, videos, and midterm guides.",
+      "The Washington Post": "The dossier article is actually the Virginia Senate primary results page (Warner unopposed; three Republicans compete, Mizusawa wins the nomination), but its live-update rail is dominated by Michigan. Frames Michigan as 'tensions between the left and centrist factions,' highlights 'the massive deluge of money,' the first-Muslim-senator angle, and Black voters as potentially decisive. Notes Stevens hitting Trump over election monitors.",
+      "USA Today": "Leads on polls closing in Michigan as Democrats' 'most consequential race,' framing it as Stevens (Obama-administration establishment) warning El-Sayed's progressivism risks the seat vs. El-Sayed's outsider-enthusiasm argument. Broadens to Missouri (Bell over Bush), Virginia (Luria), Kansas, and Washington. Emphasizes Benson's Michigan governor primary win and frames Bell as a 'pro-Israel congressman' fending off Bush."
+    },
+    "primary_source_alignment": [
+      "No primary sources (roll-call votes, filings, official results certifications, transcripts) were located for this story, so no report-vs-document divergence can be assessed.",
+      "The closest thing to primary data \u2014 vote tallies \u2014 is sourced through the Associated Press Decision Desk (cited by NBC News and via AP's own results project), but the AP article body in the dossier contains only methodology boilerplate, not the tallies themselves."
+    ],
+    "missing_context": [
+      "The dossier does not contain a final called result for the Michigan Senate Democratic primary; coverage captures a race still in progress (CNN reports an early El-Sayed lead, others await results).",
+      "Only two of the seven dossier articles (BBC and USA Today) contain substantial race-specific reporting; NBC and CNN bodies are largely product/promotional scaffolding, AP's is institutional boilerplate, the Washington Post article is primarily the Virginia results page, and NYT is headline-only.",
+      "The AIPAC spending figure of ~$30m in the Michigan race appears in only one outlet (BBC) and is uncorroborated elsewhere in the dossier.",
+      "No outlet in the dossier reports turnout figures or the specific margin in any Michigan race.",
+      "The DOJ sending election monitors to four Michigan cities is reported only by BBC (and referenced obliquely via Stevens' comments in the Washington Post rail); the identity of the cities and the legal basis is not detailed.",
+      "Coverage of Virginia, Kansas, and Washington primaries is fragmentary and mostly confined to headline-rail snippets rather than full reporting.",
+      "No article provides polling numbers for the Michigan Senate primary itself; issue-salience polling (healthcare, cost of living, Israel) is cited generally by BBC without direct figures.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same live Michigan primary night with materially different emphasis \u2014 BBC on party division and Israel, CNN on El-Sayed's early lead, USA Today on the establishment-vs-progressive framing and downballot races \u2014 and the dossier's body-text depth varies sharply by outlet, making a coverage-comparison the honest story rather than a settled REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/projects/elections-2026/virginia-primary-results-us-senate/",
+      "title": "Virginia U.S. Senate Primary Election Live Results 2026 - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/08/04/us/midterms-elections-michigan-virginia",
+      "title": "Primary Elections Live Updates: In Michigan Senate Race, El-Sayed and Stevens Face Off - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c62q0kkr6k2o",
+      "title": "Michigan Democratic rivals Haley Stevens and Abdul El-Sayed duel in Senate primary - BBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-primary-elections/michigan-senate-results",
+      "title": "Michigan Senate Primary Election 2026 Live Results: Stevens, El-Sayed, Rogers and More - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/election/2026/primaries/michigan",
+      "title": "Live results: Michigan primary election - CNN"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/elections/results/2026/08/04/virginia-us-senate-primary-election-live-results-2026/",
+      "title": "Live results: Virginia U.S. Senate primary election 2026 - The Washington Post"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/elections/2026/08/04/primary-elections-results-updates-august-4--live/91150444007/",
+      "title": "Election results live: Polls close in MI as Stevens, El-Sayed face off in crucial race - USA Today"
+    }
+  ]
+}
