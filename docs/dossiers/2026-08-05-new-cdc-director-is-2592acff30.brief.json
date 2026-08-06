@@ -1,0 +1,108 @@
+{
+  "story_id": "2026-08-05-new-cdc-director-is-2592acff30",
+  "headline_seed": "New CDC director is confirmed, giving agency its first permanent leader in a year - NBC News",
+  "brief": {
+    "story_id": "2026-08-05-new-cdc-director-is-2592acff30",
+    "consensus_facts": [
+      "The Senate voted 51-44 on Wednesday, Aug. 5, 2026, to confirm Dr. Erica Schwartz as director of the CDC (NBC News, Axios, ABC News, CNN).",
+      "The vote fell largely along party lines, with Sen. Tim Kaine (D-Va.) the only Democrat to support Schwartz (NBC News, Axios, CNN).",
+      "Schwartz becomes the CDC's first permanent director in roughly a year (NBC News, Axios, ABC News, CNN, Pharmacy Times).",
+      "Schwartz previously served as deputy surgeon general during Trump's first administration and was a Navy physician and Coast Guard chief medical officer (NBC News, Axios, ABC News, CNN, Pharmacy Times).",
+      "President Trump nominated Schwartz in April 2026, one month past the legal deadline for naming a permanent director (NBC News, ABC News, Pharmacy Times).",
+      "A series of acting directors led the CDC since August 2025, when Health Secretary Robert F. Kennedy Jr. fired previous director Susan Monarez after 29 days (about less than a month) (NBC News, Axios, CNN, Pharmacy Times).",
+      "Monarez said she was dismissed for refusing to rubber-stamp Kennedy's vaccine policies (NBC News, Axios, CNN).",
+      "Schwartz will replace/succeed Dr. Jay Bhattacharya, who ran the CDC while also directing the NIH since February (NBC News, ABC News, CNN).",
+      "At her July confirmation hearing, Schwartz faced tough questioning about her independence from Kennedy and vaccine policy, and public health experts said she failed to give clear answers (NBC News, Axios, ABC News).",
+      "Sen. Bill Cassidy (R-La.), HELP Committee chair and a physician, was initially skeptical but decided to support Schwartz after conversations, saying 'she knows what she is doing and will stand against those who do not' (NBC News, Axios, CNN).",
+      "Cassidy's support was tied in part to HHS modifying a CDC webpage about vaccines and autism (NBC News, CNN); the disputed claim was edited but discussions were described as ongoing.",
+      "Schwartz will inherit a measles crisis at a 35-year high and a growing cyclosporiasis outbreak linked to shredded iceberg lettuce (NBC News, Pharmacy Times)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Interim leadership sequence after Monarez's firing",
+        "positions": {
+          "NBC News": "A series of acting directors led since August 2025; Schwartz takes over from Jay Bhattacharya, who has helmed the agency since February while also directing NIH.",
+          "CNN": "Kennedy installed then-deputy secretary Jim O'Neill as interim head first; officials later soured on O'Neill, and the agency was then overseen by Bhattacharya.",
+          "ABC News": "Schwartz will replace Bhattacharya, who took over as acting CDC director in February."
+        }
+      },
+      {
+        "topic": "Schwartz's stance on the vaccine-autism webpage at the hearing",
+        "positions": {
+          "NBC News": "Schwartz said vaccines are safe and effective but was unaware of some of Kennedy's vaccine policy changes and dodged questions.",
+          "ABC News": "Sen. Bernie Sanders asked if she would remove the webpage; Schwartz accepted there is 'overwhelming evidence' vaccines don't cause autism but did not commit to removing the webpage.",
+          "Axios": "She hedged on whether she would tell Congress if told to adopt 'unscientific' or harmful policies, saying she didn't believe Trump or Kennedy would do that."
+        }
+      },
+      {
+        "topic": "Framing of who nominated/described Schwartz",
+        "positions": {
+          "ABC News": "Trump nominated her in April, describing her as 'incredibly talented.'",
+          "CNN": "Describes her as a notable departure from prior MAHA-line contenders and the first Black woman to serve as CDC director.",
+          "Pharmacy Times": "Nominated April 16, 2026; emphasizes her 27 years of uniformed service and MD/MPH/JD credentials."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Leads on the confirmation and the 'first permanent director in a year' framing, then pivots heavily to the political tension with Kennedy. Emphasizes Kennedy's anti-vaccine history, the blocked immunization schedule change, the fired vaccine advisory panel, and the autism webpage controversy. Foregrounds critics (National Public Health Coalition) and Cassidy's 'crazy, stupid things' quote while including HHS's rebuttal. Frames Schwartz as a conventional pick who didn't distance herself from Kennedy.",
+      "Axios": "Compact 'why it matters' wire style. Leads on the vote as a step toward refilling depleted Trump health leadership while stressing unresolved questions about political interference. Uniquely extends the story to Sean Kaufman's pending HHS nomination and Cassidy's unspecified 'key personnel changes' concessions. Frames Schwartz as the 'less polarizing' pick facing morale and staffing problems.",
+      "ABC News": "Shortest and most straightforward of the full-text pieces. Leads on the vote and biography (Brown MD, Navy service, deputy surgeon general). Emphasizes Trump's 'incredibly talented' praise. Focuses the hearing coverage on Sanders's autism-webpage exchange rather than the broader Kennedy-independence fight. Least adversarial framing toward the administration.",
+      "The Washington Post": "Off-topic to the confirmation itself \u2014 this article covers the cyclosporiasis outbreak expanding to 15 states, tied to Taylor Farms lettuce from central Mexico. Relevant only as backdrop to the public-health crises Schwartz inherits. Note the article body is largely navigation boilerplate and a paywall; the AI-generated reader-comment summary attributes response weaknesses to Trump-administration CDC/FDA staff cuts.",
+      "CNN": "Most context-rich framing. Uniquely emphasizes Schwartz as the first Black woman CDC director and a 'notable departure' from MAHA-line contenders. Provides the fullest behind-the-scenes narrative: Jim O'Neill's interim tenure and his ouster, White House/HHS souring on him, and Cassidy's negotiations over the autism webpage. Gives extended space to Cassidy's insistence that vaccines don't cause autism and that website work continues.",
+      "The New York Times": "Headline-only in the dossier ('Senate Confirms C.D.C. Director'). No body text available; cannot assess framing beyond a neutral, event-based headline label.",
+      "Pharmacy Times": "Trade-publication framing centered on Schwartz's professional credentials and career. Leads with 'Key Takeaways' emphasizing her Coast Guard oversight of 42 clinics and 150 sick bays, influenza-pandemic expertise, and MD/MPH/JD training plus UnitedHealthcare executive experience. Uniquely flags her support for US withdrawal from WHO and APHA's conditional backing. Frames confirmation as a career milestone amid public-health crises rather than a partisan fight."
+    },
+    "primary_source_alignment": [
+      "No primary sources (roll-call vote record, hearing transcript, HHS press release, or the CDC webpage in question) were located for this story, so reported details \u2014 including the 51-44 tally and Schwartz's hearing quotes \u2014 could not be independently verified against underlying documents."
+    ],
+    "missing_context": [
+      "No outlet published the full roll-call breakdown beyond noting Kaine crossed over and '44' voted no; the '51-44' does not account for all 100 senators (absences/non-votes) and none explain the gap.",
+      "The exact wording of the CDC vaccine-autism webpage before and after HHS's edit is described differently across outlets (NBC News, CNN, ABC News each paraphrase it), and no outlet quotes the current text verbatim.",
+      "The interim-leadership timeline is inconsistent across outlets: CNN describes a Jim O'Neill interim period that NBC News and ABC News omit entirely, leaving unclear how many acting directors there actually were between August 2025 and Schwartz.",
+      "Only Pharmacy Times mentions Schwartz's stated support for US withdrawal from WHO and APHA's conditional backing; no other outlet addresses these, and none provide detail on her actual WHO position.",
+      "Only Axios connects the confirmation to the broader pattern of pending HHS nominations (Sean Kaufman) and unspecified 'key personnel changes' Cassidy secured; the specifics of those concessions remain unreported.",
+      "No outlet quantifies the CDC's morale/staffing problems (Axios references them without figures) or ties them to the concurrent cyclosporiasis-response concerns raised in the Washington Post piece.",
+      "Schwartz's private-sector role as a UnitedHealthcare executive (only in Pharmacy Times) is not examined for potential conflicts of interest by any outlet."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same 51-44 confirmation but with materially different emphasis \u2014 NBC News and CNN foreground the Kennedy political fight, ABC News stays biographical, Axios extends to other nominations, and Pharmacy Times focuses on credentials and a WHO-withdrawal detail others omit. That divergence in framing, plus an inconsistent interim-leadership timeline and no primary source, makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/health/health-news/new-cdc-director-confirmed-erica-shwartz-rcna590994",
+      "title": ""
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/08/05/senate-confirms-cdc-director",
+      "title": "Senate confirms Schwartz for CDC director - Axios"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Health/senate-votes-confirm-dr-erica-schwartz-cdc-director/story?id=135398156",
+      "title": "Senate votes to confirm Dr. Erica Schwartz as CDC director - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/health/2026/08/04/cdc-expands-largest-known-cyclospora-outbreak-15-states/",
+      "title": "CDC expands largest known cyclosporiasis outbreak to 15 states - The Washington Post"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/05/health/erica-schwartz-senate-vote",
+      "title": "Dr. Erica Schwartz confirmed as CDC\u2019s first official director in a year - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/08/05/us/trump-news",
+      "title": "Senate Confirms C.D.C. Director - The New York Times"
+    },
+    {
+      "outlet": "Pharmacy Times",
+      "url": "https://www.pharmacytimes.com/view/erica-schwartz-confirmed-as-cdc-director-amid-public-health-crises",
+      "title": "Erica Schwartz Confirmed as CDC Director Amid Public Health Crises - Pharmacy Times"
+    }
+  ]
+}
