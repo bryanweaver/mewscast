@@ -1,0 +1,97 @@
+{
+  "story_id": "2026-08-07-live-updates-trump-targets-5d7db257f3",
+  "headline_seed": "Live Updates: Trump Targets Birthright Citizenship Again in New Executive Orders - The New York Times",
+  "brief": {
+    "story_id": "2026-08-07-live-updates-trump-targets-5d7db257f3",
+    "consensus_facts": [
+      "President Trump signed two executive orders on Thursday, Aug. 6, 2026, aimed at narrowing birthright citizenship.",
+      "The orders follow a 6-3 Supreme Court ruling that struck down Trump's earlier executive order (issued on his first day in office in 2025) as unconstitutional/out of step with the 14th Amendment.",
+      "One order lists categories of children deemed ineligible for birthright citizenship when neither parent is a citizen, including children of 'alien enemies'/foreign terrorist organizations, children of foreign government employees/diplomatic staff, and children of parents who engage in a 'commercial transaction' to be present in the U.S. to give birth.",
+      "A second order directs the State Department and Department of Homeland Security to crack down on 'birth tourism' by issuing new rules and guidance.",
+      "Trump said at the Oval Office signing that the Supreme Court decision was 'very unfortunate' and that the administration is 'making adjustments.'",
+      "White House deputy chief of staff Stephen Miller described 'birth tourism' as something discussed 'for years, but for decades,' characterizing it as people pretending to be tourists to secure citizenship for a child.",
+      "The 14th Amendment states that all persons born or naturalized in the U.S., and subject to the jurisdiction thereof, are citizens.",
+      "The ACLU condemned the new orders and predicted they would fail in court, stating birthright citizenship is guaranteed by the Constitution and any order attacking it would meet the same fate as the last one.",
+      "The new orders are widely expected to face legal challenges.",
+      "The orders do not apply to children with at least one parent who is a U.S. citizen.",
+      "The extent of 'birth tourism' is disputed and uncertain, with far lower research/Census estimates than the administration's figures."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scale of birth tourism / number of affected births per year",
+        "positions": {
+          "Politico": "Cites non-partisan Migration Policy Institute: U.S. Census data shows about 26,000 babies a year, versus the administration's estimate of more than 3.5 million yearly.",
+          "USA Today": "Researchers estimate anywhere from 2,000 to 39,000 children born to birth tourists each year; 140 university professors told SCOTUS it is an 'infinitesimal proportion'; Trump said the number is in the 'hundreds of thousands.'",
+          "CBS News": "Does not quantify; notes only that Miller called it a longstanding concern."
+        }
+      },
+      {
+        "topic": "Composition of the Supreme Court majority",
+        "positions": {
+          "Politico": "Details the split: five justices (Chief Justice Roberts, Justice Barrett and three liberal justices) agreed the Constitution guarantees birthright citizenship, while Justice Kavanaugh said the order violated a federal statute \u2014 a 6-3 outcome.",
+          "CBS News": "States the Court ruled 6-3 that the order was unlawful, without breaking down the individual justices.",
+          "USA Today": "States the justices ruled 6-3 against the administration and quotes Roberts writing for the majority, without a full justice-by-justice breakdown."
+        }
+      },
+      {
+        "topic": "Territorial-citizenship provision framing",
+        "positions": {
+          "CBS News": "Says the order lists children born in a U.S. territory 'where citizenship is not conferred by Federal statute'; notes people born in territories like Puerto Rico are currently citizens under federal law.",
+          "Politico": "Frames it as applying to children born to foreigners in U.S. territories 'but only if Congress changes the law' to end automatic citizenship there.",
+          "USA Today": "Does not emphasize the territorial provision."
+        }
+      },
+      {
+        "topic": "Date of the underlying Supreme Court ruling",
+        "positions": {
+          "USA Today": "Identifies the ruling as June 30.",
+          "Politico": "Says the orders come 'a little over a month' after the ruling but gives no exact date.",
+          "CBS News": "Gives no exact date for the ruling."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Leads on Trump signing 'two executive orders in his latest effort to refuse citizenship to some children.' Devotes substantial space to Miller's 'birth tourism' rhetoric and to the ACLU's rebuttal, then pivots to the historical/legal context, including the Roberts\u2013Sauer exchange from oral arguments ('It's a new world. It's the same Constitution'). Notably includes Trump's claim that the 14th Amendment 'was for the babies of slaves.' Does not quantify birth tourism. Appends related links, including a Free Press item headlined 'Trump Will Lose on Birthright Citizenship.'",
+      "Politico": "Most policy-mechanics-focused of the group. Leads on the orders being 'intended to narrow' citizenship and 'crack down' on birth tourism. Uniquely foregrounds a hard numerical contrast \u2014 Migration Policy Institute's 26,000 births vs. the administration's 3.5 million claim \u2014 casting doubt on the scale rationale. Gives the fullest breakdown of the Supreme Court vote (Roberts, Barrett, three liberals, plus Kavanaugh's statutory basis). Frames the orders explicitly as 'attempts to work around Trump's loss.' Body is padded with site navigation boilerplate.",
+      "USA Today": "Leads on Trump 'again' targeting birthright citizenship 'after Supreme Court loss,' emphasizing the orders are 'more narrowly tailored' and would 'impact fewer people.' Presents competing birth-tourism figures (2,000\u201339,000 researchers; 'infinitesimal' per 140 professors; Trump's 'hundreds of thousands'). Situates the move within Trump's broader 'hardline immigration agenda centered around mass deportations.' Closes on Roberts's majority quote about citizenship as 'the right to have rights,' giving the legal counterweight the last word.",
+      "The Economist": "Headline-only in the dossier (a 'World in Brief' roundup bundling the item with 'Iran's plan for Hormuz'). Provides no body text and cannot corroborate any claim; treated as a label, not a report."
+    },
+    "primary_source_alignment": [
+      "No primary sources (the executive orders themselves, the Supreme Court opinion, or transcripts) were located in the dossier. The precise text and legal scope of the two orders cannot be verified against the outlets' characterizations.",
+      "Outlets paraphrase overlapping but non-identical lists of who is targeted; without the order texts, the exact enumerated categories and their legal triggers (especially the territorial/Puerto Rico provision) cannot be confirmed."
+    ],
+    "missing_context": [
+      "No outlet reproduces the full text of either executive order or provides a link to the signed documents, leaving readers dependent on administration and reporter characterizations.",
+      "The Supreme Court's actual reasoning is only lightly excerpted; the full opinion, its holding on the 'subject to the jurisdiction thereof' clause, and how it bears on the new categories are not laid out.",
+      "None of the outlets explains the current legal status of children of foreign diplomats (already excluded) in enough detail to clarify how much the new order actually expands existing exceptions.",
+      "The mechanism by which the second order (directing State/DHS rulemaking) would operate procedurally \u2014 timelines, rule content, enforcement authority \u2014 is not detailed.",
+      "The wide divergence in birth-tourism estimates (from ~2,000 up to the administration's millions) is presented but never reconciled or sourced to a single authoritative dataset, leaving the true scale unresolved.",
+      "No outlet reports who, if anyone, has committed to filing suit or in which court, beyond the ACLU's general statement of opposition."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text reported the same signing event but with materially different emphasis \u2014 Politico and USA Today foreground contested birth-tourism numbers while CBS foregrounds rhetoric and legal history \u2014 and no primary-source order text is available to adjudicate the divergent characterizations, making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/trump-new-executive-orders-birthright-citizenship/",
+      "title": "Trump issues new executive orders aimed at birthright citizenship after Supreme Court ruling - CBS News"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/08/06/trump-rolls-out-orders-intended-to-narrow-birthright-citizenship-and-target-birth-tourism-01028097",
+      "title": "Trump rolls out orders intended to narrow birthright citizenship and target 'birth tourism' - Politico"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/08/06/trump-birthright-citizenship-executive-order/91203636007/",
+      "title": "Trump again targets birthright citizenship after Supreme Court loss - USA Today"
+    },
+    {
+      "outlet": "The Economist",
+      "url": "https://www.economist.com/the-world-in-brief/2026/08/06/68fec387-841d-48b1-bdc7-e701e179e03e",
+      "title": "World in Brief: Iran's plan for Hormuz; Trump targets birthright citizenship again - The Economist"
+    }
+  ]
+}
