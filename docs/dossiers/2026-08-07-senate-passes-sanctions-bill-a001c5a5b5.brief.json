@@ -1,0 +1,99 @@
+{
+  "story_id": "2026-08-07-senate-passes-sanctions-bill-a001c5a5b5",
+  "headline_seed": "Senate passes sanctions bill on Russia and Iran named for late Sen. Lindsey Graham - NBC News",
+  "brief": {
+    "story_id": "2026-08-07-senate-passes-sanctions-bill-a001c5a5b5",
+    "consensus_facts": [
+      "The Senate passed a sanctions bill targeting Russia and Iran on Friday, Aug. 7, 2026.",
+      "The vote was 86-11 (reported by NBC News, Axios, CBS News, and ABC News).",
+      "The bill was renamed in honor of the late Republican Sen. Lindsey Graham of South Carolina, its lead proponent, who died suddenly in July 2026.",
+      "The full title is The Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 (NBC News and CBS News; Axios uses a shorter variant omitting 'Iran').",
+      "The bill allows the president to impose tariffs of up to 100% on the largest buyers of Russian oil and gas, limited to the top five importers (NBC News, Axios, CBS News).",
+      "The legislation includes additional sanctions on Russian President Vladimir Putin, government officials, oligarchs, and Russian financial institutions (NBC News, CBS News).",
+      "The bill extends or renews sanctions on Iran's energy and weapons sectors, added at the urging of President Trump (NBC News, Axios, CBS News).",
+      "Sen. Rand Paul, R-Ky., secured a vote on an amendment to strip the tariff authority from the bill, which failed (Axios, CBS News).",
+      "The bill passed with overwhelming bipartisan support and now heads to the Republican-controlled House, where its future is uncertain (NBC News, CBS News, ABC News).",
+      "Graham championed the bill alongside Sen. Richard Blumenthal, D-Conn. (NBC News, Axios, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Procedural advance vote count",
+        "positions": {
+          "NBC News": "States the chamber voted 86-12 to advance the bill procedurally last month.",
+          "CBS News": "Describes a June 29 procedural advance vote watched by Zelenskyy but does not give a numeric count."
+        }
+      },
+      {
+        "topic": "Official name of the bill",
+        "positions": {
+          "NBC News": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 (includes Iran).",
+          "CBS News": "The Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 (includes Iran).",
+          "Axios": "Lindsey O. Graham Sanctioning Russia Act (omits 'Iran' from the title)."
+        }
+      },
+      {
+        "topic": "Named Democratic critics / how opposition was resolved",
+        "positions": {
+          "Axios": "Names Sen. Raphael Warnock, D-Ga., as raising tariff-authority concerns; notes the Paul amendment failed.",
+          "CBS News": "Reports Warnock dropped his opposition after securing a commitment from U.S. Trade Rep. Jamieson Greer, entering a letter into the record he said closed a tariff loophole.",
+          "NBC News": "References a group of Democrats and Rand Paul criticizing the bill over tariff authority but does not name Warnock or the Greer commitment."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Leads on Graham's death as 'the final push' for a long-stalled bill, framing passage as tribute. Heavy use of Ukraine war imagery (multiple embedded photo captions of Kyiv air strikes) to underscore stakes. Quotes Majority Leader Thune at length on protecting Ukraine. Notes Trump's 'last-minute demand' added Iran provisions. Mentions Democratic and Rand Paul criticism but keeps it brief. Emphasizes the appointment of Graham's sister Darline as successor.",
+      "Axios": "Tightest, most transactional framing in signature bullet format ('Why it matters,' 'Between the lines,' 'The details'). Leads on the vote and the grant of 'fresh authority' to Trump. Uniquely emphasizes the 'shadow fleet' tanker provision. Names Warnock as the specific Democratic objector and frames GOP leaders as having 'fast-tracked' the bill despite concerns. Notably omits 'Iran' from the bill title it cites.",
+      "CBS News": "Most detailed body text. Frames the bill as 'long-stalled' after 'more than a year of negotiations' that repeatedly stalled against White House resistance. Foregrounds the tariff-authority fight most prominently \u2014 quotes House Democrat Gregory Meeks calling it a 'Trojan horse for tariff authorities' and a 'massive backdoor.' Details Warnock's resolution via the Greer letter and the 15% import exception. Adds Zelenskyy's presence at the funeral and Senate gallery, and Speaker Johnson's reaction. Signals likely House Democratic resistance.",
+      "ABC News": "Headline-plus-stub only. States the bill was approved 86-11 with 'overwhelming bipartisan support' and flags it as a developing story. No analysis or detail beyond the core vote fact.",
+      "The New York Times": "Headline-only via Google News RSS. Title frames the story as 'Targeting Russia and Iran' \u2014 gives equal billing to both countries. No body text available for framing analysis.",
+      "The Hill": "Headline-only via Google News RSS. Title emphasizes 'overwhelmingly passes' and mentions Russia only (not Iran or Graham). No body text available for framing analysis."
+    },
+    "primary_source_alignment": [
+      "No primary sources (roll-call vote record, bill text, or press releases) were located for this story. The final 86-11 vote count could not be independently verified against an official Senate record and rests solely on outlet reporting."
+    ],
+    "missing_context": [
+      "No outlet provided the official roll-call breakdown of which 11 senators voted no, beyond noting Rand Paul and some Democrats opposed it.",
+      "No outlet clarified the discrepancy between the reported 86-12 procedural advance vote (NBC) and the 86-11 final passage vote.",
+      "No outlet published the actual bill text or a link to it; specific statutory language on the tariff waiver certification and the 15% import exception is summarized only by CBS.",
+      "Coverage does not specify when the House is expected to take up the bill beyond CBS noting the chamber is on a five-week August recess.",
+      "The countries most affected (China and India as top crude buyers, Europe for gas) are named only by CBS; other outlets discuss the tariff mechanism abstractly without identifying targets.",
+      "No outlet detailed the substance of the Greer commitment letter that resolved Warnock's objection beyond his characterization of it.",
+      "Two of the six dossier sources (The New York Times, The Hill) are headline-only via Google News RSS and contributed no body text; ABC News provided only a brief stub."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets (NBC News, Axios, CBS News) provide full body text that corroborate the same core facts \u2014 the 86-11 vote, the Graham renaming, the tariff and Iran provisions \u2014 with differences that are matters of emphasis rather than material contradiction. The story is a straightforward, well-corroborated legislative event best filed as a REPORT.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/senate-passes-sanctions-bill-russia-iran-named-late-sen-lindsey-graham-rcna589949",
+      "title": ""
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/08/07/senate-republicans-democrats-russia-sanctions",
+      "title": "Senate passes new Russia sanctions - Axios"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/russia-sanctions-bill-iran-senate-lindsey-graham/",
+      "title": "Senate passes long-stalled Russia sanctions bill championed by Lindsey Graham - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/senate-approves-russia-sanctions-bill-named-after-sen/story?id=135464099",
+      "title": "Senate approves Russia sanctions bill named after Sen. Lindsey Graham - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/07/us/politics/senate-russia-sanctions.html",
+      "title": "Senate Passes Sanctions Bill Targeting Russia and Iran - The New York Times"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/senate/6012606-senate-russia-iran-sanctions/",
+      "title": "Senate overwhelmingly passes Russia sanctions bill - The Hill"
+    }
+  ]
+}
