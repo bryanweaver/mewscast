@@ -1,0 +1,125 @@
+{
+  "story_id": "2026-08-07-live-updates-teen-gunman-dfa125f416",
+  "headline_seed": "Live updates: Teen gunman dead after killing teachers in Thailand\u2019s worst school shooting in years - CNN",
+  "brief": {
+    "story_id": "2026-08-07-live-updates-teen-gunman-dfa125f416",
+    "consensus_facts": [
+      "A 14-year-old boy carried out a shooting at Debsirin Nonthaburi School in Bang Kruai district, Nonthaburi province, on the outskirts of Bangkok, Thailand, on Friday, August 7, 2026.",
+      "Before attacking the school, the teen fatally shot his grandparents at their home, where he lived.",
+      "The weapon used was a handgun that belonged to his grandfather.",
+      "The suspect died after turning the weapon on himself.",
+      "At least five people were killed at the school (initial reports of six, including students, were later revised down to five).",
+      "Roughly 23 to more than 30 people were injured, with about nine in critical condition (figures vary by outlet).",
+      "Police said the gunman fired at least 26 bullets and was found with 34 additional rounds of ammunition.",
+      "Prime Minister Anutin Charnvirakul commented publicly, expressing sorrow and indicating the attack appeared planned; he raised the prospect of tightening gun laws or school security.",
+      "Thailand has among the highest rates of civilian gun ownership in Southeast Asia \u2014 roughly 15 guns per 100 people / about 10 million firearms, per 2017 Small Arms Survey data \u2014 and the second-highest number of gun homicides in the region after the Philippines.",
+      "The attack is described as one of Thailand's deadliest school shootings/mass killings in recent years, following a February 2026 school shooting and a 2022 childcare/nursery massacre that killed dozens."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total death toll and whether students were among the dead",
+        "positions": {
+          "Reuters": "Headline states the teen killed 7 in a rampage at home and school before shooting himself (implying 5 at school plus 2 grandparents).",
+          "CNN (live updates, Article 2)": "Revised toll: five teachers killed at school and no students; two grandparents killed at home; suspect also died.",
+          "CNN (Article 3)": "Earlier figure: at least six fatally shot at the school, three students and three teachers; youngest victim age 12.",
+          "Al Jazeera English": "At least five killed at the school; earlier authorities said six, later revised to five; grandparents also killed.",
+          "CBS News": "Five school staff members killed; officials earlier gave a higher toll and initially said students were among the victims.",
+          "USA Today": "At least five killed at the school, all teachers and staff; grandparents also killed."
+        }
+      },
+      {
+        "topic": "Description of school victims (teachers vs. staff vs. students)",
+        "positions": {
+          "CNN (Article 2)": "Five teachers, no students.",
+          "CNN (Article 3)": "Three students and three teachers (earlier figure).",
+          "CBS News": "Five school staff members.",
+          "USA Today": "All teachers and staff.",
+          "Al Jazeera English": "Five people killed; suspect identified as a student, no further detail on victims' roles."
+        }
+      },
+      {
+        "topic": "Number injured",
+        "positions": {
+          "CNN (Article 2)": "More than 30 injured, including students.",
+          "CNN (Article 3)": "More than 20 wounded, nine critical.",
+          "Al Jazeera English": "At least 23 injured.",
+          "CBS News": "More than 30 injured, around nine critical.",
+          "USA Today": "23 wounded."
+        }
+      },
+      {
+        "topic": "Suspect's motive and background",
+        "positions": {
+          "CNN (Articles 2 & 3)": "Suspect under stress over studies; grandmother was a strict teacher; searched websites about mass shootings; attack appeared carefully planned with specific targets.",
+          "CBS News": "Described by a classmate as 'troubled' and 'bullied'; interested in the FBI and guns; interrogated friend said he was under study-related stress; attack appeared clearly planned.",
+          "Al Jazeera English": "No motive detail provided; suspect identified as an enrolled student.",
+          "USA Today": "No motive detail provided."
+        }
+      },
+      {
+        "topic": "Number of bullets fired vs. ammunition remaining framing",
+        "positions": {
+          "Al Jazeera English / CBS / USA Today": "Fired at least 26 bullets, found with 34 additional rounds.",
+          "CNN (Article 2)": "PM said the suspect still had more than 30 rounds remaining and it could have been much worse."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (no retrievable body text). Frames the event as a personal 'rampage' spanning home and school, leading with the total kill count of 7 including the shooter's suicide. Cannot assess buried or emphasized details beyond the headline.",
+      "CNN (Article 2 \u2014 live updates)": "Structured as a live blog leading with the revised death toll and the correction that no students died. Heavily emphasizes gun-policy context \u2014 repeatedly citing Thailand's per-capita firearm ownership and comparing it to the United States, which is not directly relevant to this event. Foregrounds the PM's warning that it 'could have been much worse,' mental-health angles (UNICEF), and the search history for mass-shooting websites. Frames the story as a policy and prevention story.",
+      "CNN (Article 3 \u2014 main article)": "Earlier version reporting the higher, unrevised toll of six killed including three students, with youngest victim age 12. Leads with vivid on-scene human detail: students sheltering under desks, verified classroom video, a CNN staffer's personal connection to the school, and an emergency worker's account of performing CPR on the gunman. Emphasizes emotional immediacy and eyewitness texture over policy.",
+      "Al Jazeera English": "Most restrained and factually spare account. Leads with the confirmed number killed and the sequence (grandparents then school). Careful to flag the revision from six to five and to attribute figures to police. Includes the specific ballistics detail (26 fired, 34 remaining). Notably omits motive speculation and gun-policy editorializing; frames it as a straight police-sourced incident report.",
+      "CBS News": "Leads with a human-characterization frame \u2014 the suspect described as 'troubled' and 'bullied' by a classmate, interested in the FBI and guns. Draws heavily on AFP eyewitness quotes (a student, a motorcycle-taxi driver) for graphic emotional detail. Notes the school's own admission that security screening was lax, and situates the event within a pattern of prior Thai school shootings. Balances human interest with policy and precedent.",
+      "USA Today": "A photo gallery rather than a narrative article. Framing is visual and community-focused: grieving relatives, forensic work at the residence, evacuated students. Captions carry the core facts (five killed, all teachers/staff; 26 bullets fired, 34 rounds found; 23 wounded) and situate the event as the country's worst mass killing in nearly four years. Emphasizes the human and communal aftermath over investigative or policy angles."
+    },
+    "primary_source_alignment": [
+      "No primary sources (police statements in full, official government releases, court filings, or studies) were included in this dossier, so no direct primary-source comparison is possible.",
+      "The Small Arms Survey (2017) gun-ownership figures cited by CNN, CBS, and USA Today function as a secondary reference point; the underlying dataset was not provided for verification.",
+      "The Thai national police statement and PM Anutin's remarks are referenced across outlets but only via journalistic paraphrase; the original statements were not in the dossier."
+    ],
+    "missing_context": [
+      "No outlet provided the primary police statement or an official government release in full \u2014 all figures are journalistic paraphrases of police/PM remarks, which explains the toll discrepancies.",
+      "The death toll was actively being revised during the reporting window; readers are not consistently told which figures are provisional versus confirmed, and the two CNN articles in this dossier carry conflicting tolls (six with students dead vs. five teachers, no students) without cross-reference.",
+      "No outlet clarified how the 14-year-old accessed a registered firearm kept in the home \u2014 a central unanswered question all outlets acknowledge but none resolve.",
+      "The relationship between the 'stress over studies' motive (CNN) and the 'bullied' characterization (CBS) is not reconciled; both are single-outlet, single-source claims relayed from friends/classmates and should be treated as unverified.",
+      "CNN's repeated comparison of Thailand's gun statistics to the United States is context not native to this Thai event and may reflect an editorial emphasis rather than reporting relevance.",
+      "No outlet reported the names or full identities of the five slain school staff, nor confirmation of the total number of fatalities including the grandparents in a single reconciled figure.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six outlets covered the same event but diverge materially on the death toll, whether students were killed, injury counts, and the suspect's motive \u2014 including two conflicting CNN versions \u2014 while emphasis ranges from gun policy to eyewitness trauma to visual aftermath. This is a coverage-comparison story about how a fast-moving, revised toll was reported differently, not a settled straight REPORT.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/shooting-takes-place-school-thailand-officials-say-2026-08-07/",
+      "title": "Thai teen kills 7 in rampage at home and school before shooting himself - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/07/world/live-news/thailand-school-shooting-intl-hnk",
+      "title": ""
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/07/asia/thailand-school-shooting-intl-hnk",
+      "title": "Teen kills classmates, teachers, and his grandparents in Thai gun rampage, police say - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/7/one-killed-four-injured-in-thailand-school-shooting-officials-say",
+      "title": "At least five killed in Thailand school shooting, police say - Al Jazeera"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/thailand-high-school-shooting-dead-injured-nonthaburi/",
+      "title": "Thailand high school shooting leaves 5 dead after teen suspect kills his grandparents, officials say - CBS News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/picture-gallery/news/world/2026/08/07/thailand-teen-school-teacher-shooting-photo/91211541007/",
+      "title": "Thailand school shooting \u2014 See the grieving community and officials' response - USA Today"
+    }
+  ]
+}
