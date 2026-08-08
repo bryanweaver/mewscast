@@ -1,0 +1,104 @@
+{
+  "story_id": "2026-08-08-senate-passes-stopgap-bill-3e8daea2b5",
+  "headline_seed": "Senate Passes Stopgap Bill to Avert Shutdown, Avoiding Skirmish Before Midterms - The New York Times",
+  "brief": {
+    "story_id": "2026-08-08-senate-passes-stopgap-bill-3e8daea2b5",
+    "consensus_facts": [
+      "The Senate passed a stopgap funding bill early Saturday to avert a government shutdown ahead of the midterm elections.",
+      "The vote was 90-6 in favor of the measure.",
+      "The bill would fund the government at existing levels through Dec. 11.",
+      "The bill now goes to the House, which must approve it and send it to President Trump before the Oct. 1 fiscal year deadline to avoid a shutdown.",
+      "The House previously passed a different short-term funding bill (through Dec. 4).",
+      "The bill includes a provision, sought by Democrats, aimed at preventing the Trump administration from putting political appointees in charge of approving/reviewing federal grants for political reasons.",
+      "The Senate worked through a late-night session that stretched into the early morning hours before adjourning for August recess.",
+      "Lawmakers in both parties were motivated to avoid a shutdown fight ahead of the November election."
+    ],
+    "disagreements": [
+      {
+        "topic": "Present vote / individual senator detail",
+        "positions": {
+          "Politico": "Reports Sen. Darline Graham of South Carolina voted present.",
+          "NBC News": "Does not mention any present vote; describes only the 90-6 tally.",
+          "Axios": "Does not mention any present vote; describes only the 90-6 bipartisan tally."
+        }
+      },
+      {
+        "topic": "Additional provisions emphasized",
+        "positions": {
+          "Politico": "Emphasizes the grants rule block, the ICE/Border Patrol funding prohibition ($70B enacted earlier), the delayed hemp ban, and House GOP objections.",
+          "NBC News": "Emphasizes SNAP and WIC food program preservation, disaster relief, and national security measures.",
+          "Axios": "Emphasizes the grants rule block, blocking money transfers to Border Patrol, rejection of $1 billion for Trump's proposed battleships, and the one-month hemp ban delay."
+        }
+      },
+      {
+        "topic": "Immigration enforcement funding language",
+        "positions": {
+          "Politico": "States the bill ensures ICE and Border Patrol don't get new funding under the patch; notes Republicans enacted $70B earlier this year.",
+          "Axios": "Frames it as preventing the administration from transferring money from other programs to the Border Patrol.",
+          "NBC News": "Does not mention immigration enforcement funding language."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in the dossier. Frames the story as averting a shutdown and 'Avoiding Skirmish Before Midterms,' emphasizing the political timing. A second NYT article (Article 4) is about an unrelated ballroom project court fight and is not on-topic for this story.",
+      "Politico": "Most detailed on the legislative mechanics and internal party conflict. Leads on the 90-6 vote and puts the onus on the House. Heavily emphasizes the coming 'December brawl' over the grants rule, quoting Kennedy ('fight like hell'), Collins, Murray, and House Republicans (Rutherford, Van Drew) who dislike the Senate language. Frames the bill as setting up a year-end standoff rather than a clean resolution.",
+      "NBC News": "Straightforward wire-style account. Leads on the 90-6 vote and the goal of removing shutdown threat before midterms. Uniquely emphasizes SNAP/WIC preservation and disaster relief add-ons. Frames the motivation around 'broad anti-incumbency mood' and the political risk of a pre-election shutdown for both parties.",
+      "Axios": "Bulleted 'why it matters / state of play / what's next' format. Leads on the bipartisan vote pushing the deadline past Election Day. Uniquely surfaces the rejected $1 billion battleship request and attributes the grants-rule detail to the Associated Press. Frames the outcome as trading a pre-election shutdown fight for a 'potentially much larger post-election showdown' in December.",
+      "The Hill": "Headline-only in the dossier. Neutral, factual framing: 'Senate passes stopgap funding bill to prevent shutdown ahead of midterms.' No body text available to assess emphasis.",
+      "The Times of India": "Headline-only in the dossier; body text is only an author bio. Headline mirrors the neutral wire framing: 'US Senate passes stopgap funding bill to avert government shutdown ahead of midterms.' No substantive body to analyze."
+    },
+    "primary_source_alignment": [
+      "No primary sources (roll-call vote record, bill text, or official statements) were located for this story. The 90-6 vote count and Dec. 11 funding date are corroborated across three full-text outlets (Politico, NBC News, Axios) but could not be verified against the underlying Senate record.",
+      "The White House statement of administration policy in support of the Senate bill is reported only by Politico and could not be verified against the primary document."
+    ],
+    "missing_context": [
+      "No primary source (roll-call vote, bill text, or official statement) was available in the dossier; all details rest on outlet reporting rather than verified documents.",
+      "Only three of seven dossier articles (Politico, NBC News, Axios) provided substantive body text; NYT (both articles), The Hill, and The Times of India were headline-only or off-topic.",
+      "Outlets do not identify the six senators who voted 'no,' leaving the composition of the dissent bloc unclear.",
+      "No outlet explains how the House and Senate versions (Dec. 4 vs. Dec. 11 dates, differing provisions) will be reconciled, or the procedural path to a single enacted bill.",
+      "Axios attributes the grants-rule detail to the Associated Press, indicating some reporting may trace to a shared wire source rather than independent confirmation.",
+      "The Axios detail about a rejected $1 billion battleship request appears in only one outlet and is not corroborated elsewhere.",
+      "No injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (Politico, NBC News, Axios) corroborate the core facts \u2014 the 90-6 vote, Dec. 11 funding level, and the shift of the deadline past the midterms \u2014 with complementary rather than contradictory framing. The divergences are matters of emphasis on which provisions to highlight, not conflicting accounts, making this a straightforward multi-outlet REPORT.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/08/us/politics/senate-passes-stopgap-bill-shutdown.html",
+      "title": "Senate Passes Stopgap Bill to Avert Shutdown, Avoiding Skirmish Before Midterms - The New York Times"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/08/08/senate-government-funding-01030015",
+      "title": "Senate passes funding bill to avert October shutdown - Politico"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/senate-passes-short-term-bill-prevent-shutdown-midterm-elections-rcna591359",
+      "title": "Senate passes short-term bill to prevent a shutdown before the midterm elections - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/08/07/us/trump-news",
+      "title": "Appeals Panel Blocks Ballroom Project, Setting Up Likely Supreme Court Fight - The New York Times"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/08/08/senate-government-funding-shutdown-stopgap",
+      "title": "Senate passes stopgap to avert pre-election shutdown - Axios"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/senate/6018009-senate-government-funding-bill/",
+      "title": "Senate passes stopgap funding bill to prevent shutdown ahead of midterms - The Hill"
+    },
+    {
+      "outlet": "The Times of India",
+      "url": "https://timesofindia.indiatimes.com/world/us/us-senate-passes-stopgap-funding-bill-to-avert-shutdown-ahead-of-midterms/articleshow/133049620.cms",
+      "title": "US Senate passes stopgap funding bill to avert government shutdown ahead of midterms - The Times of India"
+    }
+  ]
+}
