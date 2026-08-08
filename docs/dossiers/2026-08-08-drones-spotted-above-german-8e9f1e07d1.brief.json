@@ -1,0 +1,93 @@
+{
+  "story_id": "2026-08-08-drones-spotted-above-german-8e9f1e07d1",
+  "headline_seed": "Drones spotted above German military base two days after suspected drone attack - Reuters",
+  "brief": {
+    "story_id": "2026-08-08-drones-spotted-above-german-8e9f1e07d1",
+    "consensus_facts": [
+      "A drone carrying explosives was discovered at Germany's Leipzig/Halle Airport shortly before midnight on Tuesday and was defused.",
+      "German Interior Minister Alexander Dobrindt described the Leipzig incident as a 'new quality/level of danger' and characterized it as a professional hybrid threat scenario.",
+      "The Leipzig drone was found near/between Ukrainian Antonov cargo aircraft on the tarmac.",
+      "The explosive on the drone was fist-sized and believed to be Semtex.",
+      "Leipzig/Halle Airport is a major cargo hub used for military support to Ukraine and hosts NATO-related logistics.",
+      "German and European security experts have pointed to Russia as the most likely origin of the Leipzig threat, though the German government stopped short of officially attributing it.",
+      "A DHL aircraft leaving Leipzig due to the airport closure struck an object believed to be a second drone and was diverted to Hannover with minor/nose damage.",
+      "Germany recorded more than 1,000 suspicious drone overflights in 2025."
+    ],
+    "disagreements": [
+      {
+        "topic": "The Mechernich military base drone sighting (headline event)",
+        "positions": {
+          "Associated Press (wire)": "Reports in detail: two drones spotted over the Bundeswehr base in Mechernich around 10 p.m. Thursday, confirmed by German Joint Force Command, with Euskirchen police opening an investigation.",
+          "Al Jazeera English (international)": "Does not mention the Mechernich base sighting; focuses on a separate drone explosion in Bulgaria plus general German drone concerns.",
+          "The Guardian (left)": "Does not cover the Mechernich sighting; focuses exclusively on the Leipzig airport bomb.",
+          "Newsweek": "Does not cover the Mechernich sighting; focuses on the Leipzig incident and the broader war question."
+        }
+      },
+      {
+        "topic": "Attribution of responsibility for the Leipzig drone",
+        "positions": {
+          "Associated Press (wire)": "No attribution; reports only Dobrindt's 'new quality of danger' framing.",
+          "The Guardian (left)": "Suspicion directed at Russia; cites MP Roderich Kiesewetter blaming Russia directly as a 'targeted hybrid attack.'",
+          "Newsweek": "Points to Russia as most likely, but adds China as a possible part of the threat picture and cites experts framing it as potential 'state terrorism' or a 'declaration of war.'",
+          "Al Jazeera English (international)": "Does not address Leipzig attribution; on the separate Bulgaria drone, cites it as most likely a Ukrainian Maya decoy drone, unintentional."
+        }
+      },
+      {
+        "topic": "Time the Leipzig drone entered airport territory",
+        "positions": {
+          "The Guardian (left)": "States police believe the drone had been on site for several hours before being found.",
+          "Newsweek": "Specifies footage showed it entered airport territory around 7 p.m. from the south."
+        }
+      },
+      {
+        "topic": "Whether German armed forces were conducting operations at Leipzig at the time",
+        "positions": {
+          "The Guardian (left)": "German defence ministry officials said its armed forces were not conducting military transport operations at the airport at the time.",
+          "Associated Press (wire)": "Does not address; describes SALIS NATO airlift as operational almost daily at the hub."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press (wire)": "Leads on the headline event \u2014 two drones over the Mechernich Bundeswehr base Thursday \u2014 and frames it as a follow-on to the Leipzig discovery. Neutral wire phrasing, sourced to official statements (Joint Force Command, Operational Command spokeswoman). Provides no attribution and adds NATO SALIS context to underscore the base's strategic value. The only outlet to actually report the story's headline event.",
+      "Al Jazeera English (international)": "Reframes the story regionally, leading on a drone explosion in Bulgaria near the Trans-Balkan gas pipeline rather than Germany. Emphasizes escalation tied to Russia's war but notably includes exculpatory detail: Bulgarian defence ministry assessment that it was likely a Ukrainian Maya decoy drone with 'no reason to suspect intentional' action, and Ukraine's denial. Broadest geographic frame, most cautious on intent.",
+      "The Guardian (left)": "Deep-dive exclusively on the Leipzig airport bomb, leading on the 'catastrophe with multiple casualties possibly narrowly averted' and the proximity to a Ukrainian plane loaded with ammunition. Emphasizes the classified police report, the 'ripped detonator,' Russia suspicion including a named MP blaming Moscow directly, and historical Russian sabotage (2024 DHL firebombs, Lithuania trial). Detail-rich, escalation-forward, Russia-centered.",
+      "Newsweek": "Frames the story around the largest possible question \u2014 'is Germany de facto at war, and with whom?' \u2014 leaning heavily on named security experts (Krause, Kremb). Distinctively raises China alongside Russia and cites a prior Chinese espionage conviction. Emphasizes German unpreparedness against drones and jurisdictional dysfunction. Most interpretive and threat-escalatory framing; commentary-heavy relative to the wire report."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Several outlets reference underlying documents not in the dossier \u2014 a classified police report quoted by WDR/NDR/S\u00fcddeutsche (Guardian), Bild newspaper reporting, and ARD's citation of an internal official report (Newsweek) \u2014 none of which are directly available for verification."
+    ],
+    "missing_context": [
+      "No primary source (police report, official Bundeswehr statement, or press release) was provided; key Leipzig details rest on unnamed classified reports relayed through German broadcasters and Bild.",
+      "Only one outlet \u2014 Associated Press \u2014 actually reports the headline event (the Mechernich base drone sighting). The other three cover the earlier Leipzig incident or the separate Bulgaria drone, so the headline story itself is effectively single-sourced.",
+      "No outlet reports any official Russian or Chinese response beyond noting the Russian embassy in Berlin did not immediately respond (Newsweek).",
+      "No confirmed attribution for the Mechernich sighting; whether it is connected to the Leipzig incident is asserted only by temporal proximity, not evidence.",
+      "The Bulgaria drone (Al Jazeera) is assessed as likely a Ukrainian decoy and unintentional \u2014 a counter-narrative to the Russia-escalation framing that the German-focused outlets do not engage with.",
+      "No outlet quantifies how many of Germany's 1,000+ 2025 drone overflights were attributed to any state actor, leaving the escalation claim without a verified baseline."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets covered overlapping but materially different events (the Mechernich base sighting, the Leipzig bomb, and a Bulgaria drone) with divergent framings on attribution and intent \u2014 Russia-centered escalation versus a cautious 'likely Ukrainian decoy' read \u2014 making the coverage divergence itself the story. Note the headline event is effectively single-sourced to AP, which the composer should disclose.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/germany-drones-bd27c9c8e08c8a02ad2f06e49be99478",
+      "title": "2 drones spotted flying over German military base after drone with explosives found at cargo airport - AP News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/8/drones-spotted-in-bulgaria-and-germany-raise-concerns-of-russian-escalation",
+      "title": "Drones spotted in Bulgaria and Germany raise concerns of Russian escalation - Al Jazeera"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/06/leipzig-drone-bomb-found-near-ukrainian-plane-carrying-ammunition",
+      "title": "Leipzig drone bomb was found near Ukrainian plane carrying ammunition, say police - The Guardian"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/germany-faces-question-once-unthinkable-a-new-war-with-russia-12291838",
+      "title": "Germany Faces Question Once Unthinkable: A New War With Russia? - Newsweek"
+    }
+  ]
+}
