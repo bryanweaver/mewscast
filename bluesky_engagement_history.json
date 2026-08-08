@@ -1,81 +1,6 @@
 {
   "followed_users": [
     {
-      "did": "did:plc:nis7pvuvdama6lh5pgslrxc5",
-      "handle": "blindcatrescue.bsky.social",
-      "timestamp": "2026-05-03T20:20:58.168575"
-    },
-    {
-      "did": "did:plc:hvx2gr5dtg2dm6dnsp2ybm4d",
-      "handle": "mehoward.bsky.social",
-      "timestamp": "2026-05-04T01:40:46.655404"
-    },
-    {
-      "did": "did:plc:ct7x5vbeoksnlkni3ql56pw7",
-      "handle": "lmt7.bsky.social",
-      "timestamp": "2026-05-04T13:38:52.452819"
-    },
-    {
-      "did": "did:plc:gecmcml4p4yd6qo2ifynexre",
-      "handle": "chrrrlwav.bsky.social",
-      "timestamp": "2026-05-04T16:31:51.456551"
-    },
-    {
-      "did": "did:plc:5qewlc6ufkrqjiqd5dv5kxzu",
-      "handle": "mallweasel.bsky.social",
-      "timestamp": "2026-05-04T20:38:27.497932"
-    },
-    {
-      "did": "did:plc:rdwoizey4rgr5p67zfdiqhx2",
-      "handle": "nonviolence.bsky.social",
-      "timestamp": "2026-05-05T01:39:52.848376"
-    },
-    {
-      "did": "did:plc:vcpqgt4bfahgxralkpjzpwqx",
-      "handle": "cats-dogs-world.bsky.social",
-      "timestamp": "2026-05-05T13:39:00.037848"
-    },
-    {
-      "did": "did:plc:7ssingpiouvbnyjlvtd4ivcn",
-      "handle": "localswampgay.bsky.social",
-      "timestamp": "2026-05-05T16:32:27.113262"
-    },
-    {
-      "did": "did:plc:ywrwzfxvfoirfbaf3fwgppd4",
-      "handle": "madlymyself.bsky.social",
-      "timestamp": "2026-05-05T20:34:45.973298"
-    },
-    {
-      "did": "did:plc:svwjqizdhs73y5bndou4666w",
-      "handle": "universalfacts.bsky.social",
-      "timestamp": "2026-05-06T01:40:16.096929"
-    },
-    {
-      "did": "did:plc:6assmjwnz6wlhuqouwvqziz4",
-      "handle": "shimaira.com",
-      "timestamp": "2026-05-06T13:38:52.624414"
-    },
-    {
-      "did": "did:plc:5xtv7qtqx2whkwkdr3xy6poo",
-      "handle": "seakelpie.bsky.social",
-      "timestamp": "2026-05-07T20:35:39.710095"
-    },
-    {
-      "did": "did:plc:bucg2dsfr66ecm7kc3bmepwv",
-      "handle": "bella.meangirls.online",
-      "timestamp": "2026-05-08T01:41:14.399608"
-    },
-    {
-      "did": "did:plc:qu5ft2kdl4hyjp5aphxewzq2",
-      "handle": "caromthomas.bsky.social",
-      "timestamp": "2026-05-10T13:34:07.604635"
-    },
-    {
-      "did": "did:plc:tgkr3q2c5smfv3spg7wkkirg",
-      "handle": "wynautwarrior.bsky.social",
-      "timestamp": "2026-05-10T16:17:23.232172"
-    },
-    {
       "did": "did:plc:ttb3nxboqkdgnzxwjboa33f4",
       "handle": "mofubot.moe",
       "timestamp": "2026-05-11T01:41:45.717385"
@@ -1669,154 +1594,14 @@
       "did": "did:plc:grtpqn5td2lpqipxqd5jwvcs",
       "handle": "annapjudson.bsky.social",
       "timestamp": "2026-08-08T16:19:06.743826"
+    },
+    {
+      "did": "did:plc:vcpqgt4bfahgxralkpjzpwqx",
+      "handle": "cats-dogs-world.bsky.social",
+      "timestamp": "2026-08-08T20:38:32.584004"
     }
   ],
   "liked_posts": [
-    {
-      "uri": "at://did:plc:nis7pvuvdama6lh5pgslrxc5/app.bsky.feed.post/3mkxxwrvtm52p",
-      "author": "blindcatrescue.bsky.social",
-      "timestamp": "2026-05-03T20:20:58.022440"
-    },
-    {
-      "uri": "at://did:plc:hvx2gr5dtg2dm6dnsp2ybm4d/app.bsky.feed.post/3mkyiqpbad22i",
-      "author": "mehoward.bsky.social",
-      "timestamp": "2026-05-04T01:40:46.438082"
-    },
-    {
-      "uri": "at://did:plc:ct7x5vbeoksnlkni3ql56pw7/app.bsky.feed.post/3mky4log7522p",
-      "author": "lmt7.bsky.social",
-      "timestamp": "2026-05-04T13:38:52.251433"
-    },
-    {
-      "uri": "at://did:plc:gecmcml4p4yd6qo2ifynexre/app.bsky.feed.post/3mkzzheq7o22y",
-      "author": "chrrrlwav.bsky.social",
-      "timestamp": "2026-05-04T16:31:51.271761"
-    },
-    {
-      "uri": "at://did:plc:5qewlc6ufkrqjiqd5dv5kxzu/app.bsky.feed.post/3ml2jcb677c2e",
-      "author": "mallweasel.bsky.social",
-      "timestamp": "2026-05-04T20:38:27.137884"
-    },
-    {
-      "uri": "at://did:plc:rdwoizey4rgr5p67zfdiqhx2/app.bsky.feed.post/3mkzguhzlrk2k",
-      "author": "nonviolence.bsky.social",
-      "timestamp": "2026-05-05T01:39:52.701406"
-    },
-    {
-      "uri": "at://did:plc:vcpqgt4bfahgxralkpjzpwqx/app.bsky.feed.post/3ml4bsqfyup2n",
-      "author": "cats-dogs-world.bsky.social",
-      "timestamp": "2026-05-05T13:38:59.881441"
-    },
-    {
-      "uri": "at://did:plc:7ssingpiouvbnyjlvtd4ivcn/app.bsky.feed.post/3ml4m6ynet22w",
-      "author": "localswampgay.bsky.social",
-      "timestamp": "2026-05-05T16:32:26.893801"
-    },
-    {
-      "uri": "at://did:plc:ywrwzfxvfoirfbaf3fwgppd4/app.bsky.feed.post/3ml42fh6pok2t",
-      "author": "madlymyself.bsky.social",
-      "timestamp": "2026-05-05T20:34:45.792535"
-    },
-    {
-      "uri": "at://did:plc:svwjqizdhs73y5bndou4666w/app.bsky.feed.post/3ml563h7cus24",
-      "author": "universalfacts.bsky.social",
-      "timestamp": "2026-05-06T01:40:15.898726"
-    },
-    {
-      "uri": "at://did:plc:6assmjwnz6wlhuqouwvqziz4/app.bsky.feed.post/3ml5msace4226",
-      "author": "shimaira.com",
-      "timestamp": "2026-05-06T13:38:52.436871"
-    },
-    {
-      "uri": "at://did:plc:hhuio3s6ad4qddcb5r72d4du/app.bsky.feed.post/3ml6vbaeqt22g",
-      "author": "zoeweatherwax.bsky.social",
-      "timestamp": "2026-05-06T16:31:22.493803"
-    },
-    {
-      "uri": "at://did:plc:sm7cgqxxg6to24kc4pbcimyu/app.bsky.feed.post/3ml44zplb5k2k",
-      "author": "emersson69.bsky.social",
-      "timestamp": "2026-05-06T20:38:37.457794"
-    },
-    {
-      "uri": "at://did:plc:joob27mt5e2oycloccvtfepp/app.bsky.feed.post/3mla3cr34ok2x",
-      "author": "azurelionheart.bsky.social",
-      "timestamp": "2026-05-07T01:40:48.881165"
-    },
-    {
-      "uri": "at://did:plc:55azw7fx2is4rkfstuvdalgf/app.bsky.feed.post/3ml7g2xodac24",
-      "author": "findoutproductions.bsky.social",
-      "timestamp": "2026-05-07T13:38:18.651477"
-    },
-    {
-      "uri": "at://did:plc:evzmobrnzmf6d6bn7m25obr4/app.bsky.feed.post/3ml5evtbpws2l",
-      "author": "crankycyborg.bsky.social",
-      "timestamp": "2026-05-07T16:33:28.613651"
-    },
-    {
-      "uri": "at://did:plc:5xtv7qtqx2whkwkdr3xy6poo/app.bsky.feed.post/3mla2t5j2xs2d",
-      "author": "seakelpie.bsky.social",
-      "timestamp": "2026-05-07T20:35:39.524832"
-    },
-    {
-      "uri": "at://did:plc:bucg2dsfr66ecm7kc3bmepwv/app.bsky.feed.post/3ml5z2p45us27",
-      "author": "bella.meangirls.online",
-      "timestamp": "2026-05-08T01:41:14.177654"
-    },
-    {
-      "uri": "at://did:plc:2ueobvaxabvuef4ikswj7u2b/app.bsky.feed.post/3mldss7nuok2f",
-      "author": "bilalsahin07.bsky.social",
-      "timestamp": "2026-05-08T13:37:17.500227"
-    },
-    {
-      "uri": "at://did:plc:bucg2dsfr66ecm7kc3bmepwv/app.bsky.feed.post/3mlbib6pidk2z",
-      "author": "bella.meangirls.online",
-      "timestamp": "2026-05-08T16:28:24.824754"
-    },
-    {
-      "uri": "at://did:plc:vbwxkgjnm4cuvgwcya5gvruk/app.bsky.feed.post/3mleh64m62k24",
-      "author": "igreggreene.bsky.social",
-      "timestamp": "2026-05-08T20:31:11.487512"
-    },
-    {
-      "uri": "at://did:plc:pigsxguri7lpkysj7vhhkalp/app.bsky.feed.post/3mlf3tk2jy22s",
-      "author": "unidedtypingobj.bsky.social",
-      "timestamp": "2026-05-09T01:40:17.599368"
-    },
-    {
-      "uri": "at://did:plc:2gvjyduzqzllqqx2ifysz2lu/app.bsky.feed.post/3mlgdynv2r22j",
-      "author": "womenriseup2026.bsky.social",
-      "timestamp": "2026-05-09T13:33:37.159293"
-    },
-    {
-      "uri": "at://did:plc:y22e7leqeis6doi6w7qshvkq/app.bsky.feed.post/3mlgmwnng3c2n",
-      "author": "chickenparm7.bsky.social",
-      "timestamp": "2026-05-09T16:16:13.409968"
-    },
-    {
-      "uri": "at://did:plc:safbow2f3gktij5szi2n7l3t/app.bsky.feed.post/3mlgppcfba22e",
-      "author": "artkett1412.bsky.social",
-      "timestamp": "2026-05-09T20:22:31.342620"
-    },
-    {
-      "uri": "at://did:plc:i7kvf5o6cvw4itu4g3sd6roi/app.bsky.feed.post/3mlhlyythos2f",
-      "author": "timberdoodlydoo.bsky.social",
-      "timestamp": "2026-05-10T01:40:11.383372"
-    },
-    {
-      "uri": "at://did:plc:qu5ft2kdl4hyjp5aphxewzq2/app.bsky.feed.post/3mlilo4eeek26",
-      "author": "caromthomas.bsky.social",
-      "timestamp": "2026-05-10T13:34:07.405191"
-    },
-    {
-      "uri": "at://did:plc:tgkr3q2c5smfv3spg7wkkirg/app.bsky.feed.post/3mlj4igqppc2u",
-      "author": "wynautwarrior.bsky.social",
-      "timestamp": "2026-05-10T16:17:23.064192"
-    },
-    {
-      "uri": "at://did:plc:6kkncnf2ns4qpjz4g5yjg5xc/app.bsky.feed.post/3mljfane5ek2e",
-      "author": "jamkataclysms.bsky.social",
-      "timestamp": "2026-05-10T20:23:37.700099"
-    },
     {
       "uri": "at://did:plc:ttb3nxboqkdgnzxwjboa33f4/app.bsky.feed.post/3mlk4ycdtmk2l",
       "author": "mofubot.moe",
@@ -3531,9 +3316,14 @@
       "uri": "at://did:plc:grtpqn5td2lpqipxqd5jwvcs/app.bsky.feed.post/3msl34zherk2m",
       "author": "annapjudson.bsky.social",
       "timestamp": "2026-08-08T16:19:06.578963"
+    },
+    {
+      "uri": "at://did:plc:vcpqgt4bfahgxralkpjzpwqx/app.bsky.feed.post/3mslvi4qgxp2h",
+      "author": "cats-dogs-world.bsky.social",
+      "timestamp": "2026-08-08T20:38:32.486146"
     }
   ],
-  "last_cleanup": "2026-08-01T16:46:16.439226",
+  "last_cleanup": "2026-08-08T20:38:32.065797",
   "sessions": [
     {
       "timestamp": "2026-05-11T01:22:58.277333+00:00",
