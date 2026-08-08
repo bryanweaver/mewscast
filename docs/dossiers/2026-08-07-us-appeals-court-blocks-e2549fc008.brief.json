@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-08-07-us-appeals-court-blocks-e2549fc008",
+  "headline_seed": "US appeals court blocks Trump\u2019s $400 million White House ballroom project - Reuters",
+  "brief": {
+    "story_id": "2026-08-07-us-appeals-court-blocks-e2549fc008",
+    "consensus_facts": [
+      "On Friday, Aug. 7, 2026, a three-judge panel of the U.S. Court of Appeals for the D.C. Circuit ruled 2-1 that the Trump administration lacks authority to build a new White House ballroom without congressional approval.",
+      "The project is a roughly 90,000-square-foot ballroom estimated at $400 million, built on the site of the demolished East Wing.",
+      "Judges Patricia Millett (an Obama appointee) and Bradley Garcia (a Biden appointee) formed the majority; Judge Neomi Rao (a Trump appointee) dissented.",
+      "The majority wrote that whether a ballroom should be built 'is for Congress to decide and is not a matter for Executive self-help,' and that the ruling has nothing to do with whether the ballroom is desirable as policy.",
+      "The majority described the president as a 'temporary tenant, not the owner' of the White House, with no constitutionally assigned authority over the property.",
+      "The panel upheld a lower-court ruling by U.S. District Judge Richard Leon that halted the project.",
+      "The court paused (stayed) its decision for 14 days to allow the government to seek Supreme Court review.",
+      "Trump responded on Truth Social that his administration would 'immediately' appeal to the Supreme Court, calling the ruling 'horrendous, politically motivated, and unlawful.'",
+      "Trump characterized the ballroom project as tied to national security, and the ruling permits below-ground construction (including a bunker/security infrastructure) to continue.",
+      "The lawsuit was brought by the National Trust for Historic Preservation, a privately funded nonprofit, whose president and CEO Brent Leggs praised the ruling.",
+      "The East Wing was demolished in October 2025 and construction began without congressional approval.",
+      "In her dissent, Rao argued the National Trust lacked standing to sue and that the president likely had authority to build the ballroom."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the ruling's language",
+        "positions": {
+          "Al Jazeera English": "Describes the opinion as 'sharply worded' and emphasizes the reflection on the White House as the 'people's house.'",
+          "Bloomberg": "Emphasizes the harshest exchanges, quoting the majority calling the DOJ's maintenance-statute argument 'patently unreasonable' and warning against 'utter lawlessness.'",
+          "Associated Press": "Uses flat, neutral wire phrasing with no quoted characterization of tone."
+        }
+      },
+      {
+        "topic": "Length and detail of the opinion cited",
+        "positions": {
+          "Bloomberg": "States the opinion was 101 pages and details oral-argument exchanges (Statue of Liberty/Mount Rushmore hypotheticals).",
+          "CBS News": "Quotes extensively from the opinion but does not cite page length.",
+          "Axios": "Summarizes the holding without page length or oral-argument detail.",
+          "Al Jazeera English": "Quotes the opinion but omits procedural depth and page length."
+        }
+      },
+      {
+        "topic": "How Judge Leon's original ruling is dated",
+        "positions": {
+          "CBS News": "Says Leon ruled in March that the challenge was likely to succeed, later amending to allow underground work in April.",
+          "Bloomberg": "Says Leon found in March that Trump overstepped and identifies Leon as a George W. Bush appointee.",
+          "Axios": "References Leon clarifying in April that below-ground work was allowed without dating the original ruling."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Minimal body text \u2014 essentially a caption package with photo credits. Leads on the court ordering a halt because the project 'lacks congressional approval.' Neutral wire phrasing; no dissent detail, no Trump reaction, no plaintiff quotes. Effectively a stub.",
+      "CBS News": "Comprehensive. Leads on the court's authority finding and immediately frames it as 'teeing up Supreme Court fight.' Heavy on direct quotes from the majority opinion and Rao's dissent. Notably fact-checks Trump's claim that the ruling endangers workers by noting the lower court explicitly allowed the bunker work to continue. Gives balanced space to both Leggs's celebration and Trump's condemnation, plus detailed procedural timeline.",
+      "Al Jazeera English": "Shorter, quote-forward. Foregrounds the 'people's house' framing and 'permanent and irreversible harm' language. Emphasizes the appointing presidents of the majority judges. Omits Trump's reaction and the 14-day stay entirely, focusing on the constitutional/preservation angle for an international audience.",
+      "Axios": "Structured in its signature 'big picture / latest / driving the news' format. Leads with Trump's promise to appeal to SCOTUS rather than the ruling itself, framing the story forward toward the high court. Includes the fact-check that below-ground security work is exempt. Ends by pointing to a 'Republicans turn ballroom fight into referendum on Trump's safety' angle, signaling the partisan framing battle.",
+      "Bloomberg": "Most detailed on the legal substance. Cites the 101-page opinion, the case caption, the $2.74 million maintenance appropriation the court called 'patently unreasonable' to stretch into a $400 million project, and vivid oral-argument hypotheticals (Statue of Liberty, Mount Rushmore, Vietnam Memorial). Contextualizes the ballroom within Trump's broader reshaping of Washington monuments (Lincoln Memorial pool, Memorial Circle arch, Kennedy Center renaming). Frames it explicitly as 'a blow for Trump.'",
+      "NBC News": "Headline/video-only. The retrievable body is a video player transcript and playlist menu with no substantive article text. Headline frames it as a 'major setback to Trump's White House ballroom.' No usable reporting beyond the label.",
+      "NPR": "Off-topic. The retrieved article concerns Trump's renewed effort to fire Fed Governor Lisa Cook and contains nothing about the ballroom ruling. It does not contribute to this story and appears to be a mismatched dossier entry."
+    },
+    "primary_source_alignment": [
+      "No primary source (the court opinion itself) was included in the dossier, so no independent verification against the underlying document is possible.",
+      "The most quoted passages \u2014 'Executive self-help,' 'temporary tenant, not the owner,' 'patently unreasonable,' and the 'utter lawlessness' warning \u2014 appear consistently across CBS News, Axios, Bloomberg, and Al Jazeera, suggesting accurate quotation, but this is cross-outlet corroboration, not primary-source confirmation.",
+      "Bloomberg alone cites the case caption (National Trust for Historic Preservation v. NPS, D.C. Cir., No. 26-05123) and 101-page length; these details are uncorroborated by any other body text in the dossier."
+    ],
+    "missing_context": [
+      "No outlet reports whether Congress has taken or plans any action on authorizing (or refusing) the ballroom, which is the crux of the ruling.",
+      "No outlet clarifies the current physical status of construction \u2014 how much has already been built during the periods construction was permitted to continue under stays.",
+      "The funding mechanism ('largely private donations') is repeatedly asserted but no outlet independently verifies the donors or the total raised versus spent.",
+      "Details of the underlying court opinion could not be independently verified; no primary source (the D.C. Circuit opinion) was included in the dossier.",
+      "The dossier is uneven: AP is a caption stub, NBC is a video/playlist page with no article text, and the NPR article is entirely off-topic (about firing Fed Governor Lisa Cook), so only four outlets \u2014 CBS News, Al Jazeera, Axios, and Bloomberg \u2014 provided substantive body text usable for consensus.",
+      "No outlet explores the precedent implications of the standing question Rao raised, beyond quoting the majority's rebuttal."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets (CBS News, Al Jazeera, Axios, Bloomberg) reported the same ruling with materially different emphasis \u2014 Axios leads with the SCOTUS appeal, Bloomberg with the legal substance and monument context, Al Jazeera with the constitutional 'people's house' framing, CBS with a fact-check of Trump's safety claim \u2014 making a coverage-comparison the right frame. The absence of the actual court opinion and the uneven dossier (an AP stub, an off-topic NPR piece, a video-only NBC entry) further argue for a META post over a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-ballroom-court-ruling-1528247275ec6103da892d271d4ee883",
+      "title": "Appeals court rules Trump can\u2019t build White House ballroom without congressional approval - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/white-house-ballroom-trump-appeals-court/",
+      "title": "Appeals court says Trump lacks authority to build White House ballroom, teeing up Supreme Court fight - CBS News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/7/us-appeals-court-upholds-injunction-pausing-trumps-white-house-ballroom",
+      "title": "US appeals court upholds injunction pausing Trump\u2019s White House ballroom - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/08/07/trump-ballroom-project-blocked-appeals-court",
+      "title": "Trump says he'll ask SCOTUS to reverse ballroom project ban - Axios"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bloomberglaw.com/us-law-week/trump-cant-construct-white-house-ballroom-appeals-court-says",
+      "title": "Trump Can\u2019t Build White House Ballroom, Appeals Court Says (3) - Bloomberg Law News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/nightly-news/video/appeals-court-deals-major-setback-to-trump-s-white-house-ballroom-267969605589",
+      "title": "Appeals court deals major setback to Trump's White House ballroom - NBC News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/08/07/nx-s1-5925167/trump-lisa-cook-federal-reserve",
+      "title": "Trump renews push to fire Fed Governor Lisa Cook - NPR"
+    }
+  ]
+}
