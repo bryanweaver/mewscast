@@ -1,0 +1,98 @@
+{
+  "story_id": "2026-08-09-man-arrested-after-boat-49985ae675",
+  "headline_seed": "Man arrested after boat capsizes near Statue of Liberty killing woman and infant - BBC",
+  "brief": {
+    "story_id": "2026-08-09-man-arrested-after-boat-49985ae675",
+    "consensus_facts": [
+      "A boat capsized in New York Harbor near Liberty Island on the evening of Saturday, August 8, 2026.",
+      "Police received a 911 call at approximately 10:25 p.m. local time reporting the overturned vessel.",
+      "A 27-year-old woman and a five-month-old baby girl died after the capsizing; they were transported to NYU Langone hospital in Brooklyn in critical condition and later pronounced dead.",
+      "The boat's operator/captain, a 46-year-old man, was arrested and charged with 13 counts of reckless endangerment.",
+      "Roughly a dozen additional people were rescued from the water before police arrived and were transported to hospitals.",
+      "The NYPD's Harbor Unit, SCUBA Team, and Aviation responded to the scene.",
+      "The U.S. Coast Guard is conducting an investigation, including whether the operation constituted an illegal charter.",
+      "US Coast Guard Captain Doreen McCarthy praised the swift actions of partner agencies and a Good Samaritan vessel that assisted in the rescue.",
+      "The cause of the capsizing remains under investigation."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of people aboard/rescued",
+        "positions": {
+          "BBC News": "States a nearby vessel rescued 12 people from the water before police arrived; does not give a total count aboard.",
+          "People.com": "States the vessel was carrying at least 14 people; a dozen additional were rescued.",
+          "The Guardian": "States a dozen other people were rescued before police arrived; does not give a total count aboard."
+        }
+      },
+      {
+        "topic": "Identity of the deceased",
+        "positions": {
+          "BBC News": "Reports the names of passengers have not been released.",
+          "People.com": "Reports the woman and child have not yet been publicly identified and their relationship is unconfirmed.",
+          "The Guardian": "Names the victims as Sara Sanchez and her daughter Antonella and describes the baby as her five-month-old daughter."
+        }
+      },
+      {
+        "topic": "Name of the captain",
+        "positions": {
+          "BBC News": "Does not name the operator, describing him only as a 46-year-old Manhattan resident.",
+          "People.com": "Names the captain as Manuel Hernandez, 46.",
+          "The Guardian": "Names the captain as Manuel Hernandez, 46."
+        }
+      },
+      {
+        "topic": "Location of the arrest",
+        "positions": {
+          "BBC News": "Does not specify where the arrest occurred.",
+          "People.com": "States the arrest occurred in northwestern Brooklyn during the early hours of Sunday, Aug. 9.",
+          "The Guardian": "States he was arrested in the early hours of Sunday morning but does not specify location."
+        }
+      },
+      {
+        "topic": "Type of boat",
+        "positions": {
+          "BBC News": "Does not describe the boat type.",
+          "People.com": "Describes it as a 22-foot bowrider powerboat, per CNN affiliate WABC.",
+          "The Guardian": "Does not describe the boat type."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News": "Leads on the arrest and reckless endangerment charge, framing it as a crime/rescue story. Emphasizes the multi-agency rescue operation (two Coast Guard boats, four fire boats, two police boats, a helicopter) and the illegal-charter angle, defining what an illegal charter is for readers. Keeps the operator anonymous and withholds victim names. Neutral, wire-style phrasing. Notably reports 12 rescued without stating a total number aboard.",
+      "People.com": "Uses a 'NEED TO KNOW' bullet format typical of the outlet, leading with the captain's charge and naming him (Manuel Hernandez). Adds the most granular procedural detail: at least 14 aboard, 22-foot bowrider powerboat (attributed to WABC), the northwestern Brooklyn arrest, and extensive Coast Guard statement quotes. Explicitly notes the victims are unidentified and their relationship unconfirmed \u2014 the most cautious outlet on the family question. Includes promotional/app and newsletter inserts. Frames it partly as true-crime content.",
+      "The Guardian": "Leads with the human toll \u2014 'woman and her five-month-old die' \u2014 and is the only outlet to name the victims (Sara Sanchez and daughter Antonella) and to assert they are mother and daughter. Foregrounds the Coast Guard commander's condolence quote ('deeply saddened by the tragic loss of life'), giving the piece a more mournful, victim-centered tone. Credits Associated Press for contributed reporting. Uses a stock file photo of Governors Island rather than the incident scene."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, official press releases in full, charging documents) were located for this story. All reporting derives from NYPD, FDNY, and US Coast Guard statements paraphrased or partially quoted by the three outlets. Verification against an underlying document is not possible from this dossier."
+    ],
+    "missing_context": [
+      "No outlet explains what specifically the captain did to warrant 13 separate counts of reckless endangerment, nor why the count is 13 given at least 14 people were aboard.",
+      "No outlet reports the outcome of the illegal-charter determination \u2014 only that the Coast Guard is investigating it.",
+      "The exact total number of people aboard is inconsistent across outlets (BBC and Guardian cite '12 rescued'; People cites 'at least 14 aboard'), and no outlet reconciles the discrepancy.",
+      "Only The Guardian names the victims and asserts a mother-daughter relationship, while BBC and People say names were withheld and the relationship unconfirmed; no outlet explains the source or timing of the Guardian's identification.",
+      "No outlet reports weather, water conditions, whether life jackets were aboard or worn, or any mechanical/operational cause of the capsizing.",
+      "No outlet reports whether the captain has obtained legal representation or has entered a plea (People notes representation is unclear).",
+      "No primary source (charging document or official press release) was available, so all figures and quotes rest on outlet paraphrases of agency statements. This is a single-agency-sourcing situation dressed across three outlets.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "All three outlets confirm the same core facts (capsizing near Liberty Island, two deaths, a 46-year-old captain charged with 13 counts of reckless endangerment, roughly a dozen rescued) with only minor divergence on victim identification and headcount, and there is no primary source contradicting coverage. This is a straightforward multi-outlet-confirmed news event rather than a coverage-divergence story.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c935w1d05d7o",
+      "title": ""
+    },
+    {
+      "outlet": "People.com",
+      "url": "https://people.com/captain-arrested-after-woman-baby-die-in-boat-incident-at-statue-of-liberty-12037147",
+      "title": "Captain Charged After Boat Capsizes Near Statue of Liberty, Killing Woman and 5-Month-Old Baby - People.com"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/09/man-charged-new-york-harbor-boat-capsized-deaths",
+      "title": "Captain charged after woman and her five-month-old die in New York boat capsizing - The Guardian"
+    }
+  ]
+}
