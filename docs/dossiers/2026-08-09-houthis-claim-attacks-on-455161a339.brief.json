@@ -1,0 +1,113 @@
+{
+  "story_id": "2026-08-09-houthis-claim-attacks-on-455161a339",
+  "headline_seed": "Houthis claim attacks on Saudi Arabian oil facility and Yemeni port, and other Mideast news - AP News",
+  "brief": {
+    "story_id": "2026-08-09-houthis-claim-attacks-on-455161a339",
+    "consensus_facts": [
+      "Yemen's Houthis claimed responsibility for a drone attack on a Saudi Aramco refinery in Jazan/Jizan, southwestern Saudi Arabia, on Sunday, Aug. 9, 2026 (AP, NPR, CNBC).",
+      "Saudi Arabia's Energy Ministry said a fire at the Aramco refinery was extinguished with no injuries and did not state the cause (AP, NPR, CNBC).",
+      "The Houthis said the strike was in response to Saudi drone incursions into Yemeni airspace (NPR, CNBC).",
+      "Iranian Foreign Minister Abbas Araghchi said Iran is not in direct talks with the U.S., but that messages are being exchanged through intermediaries (NPR, CNBC).",
+      "Araghchi said an agreement with Oman on transit routes does not mean the Strait of Hormuz will reopen, which depends on additional conditions conveyed through intermediaries (NPR, CNBC).",
+      "Iran's Supreme National Security Council secretary Mohammad Bagher Zolghadr laid out sweeping demands for reopening the strait: lifting the naval blockade and sanctions, U.S. military withdrawal from the region, war reparations, release of frozen assets, and an end to attacks on Iran's allies (NPR, CNBC).",
+      "Under a June interim/memorandum-of-understanding deal, a schedule to end sanctions, a compensation plan, and negotiations over frozen assets would be part of a final deal (NPR, CNBC).",
+      "Iran and Oman are working on a temporary arrangement in which inbound traffic transits Iranian waters and outbound traffic transits Omani waters (NPR, CNBC).",
+      "On Thursday, Houthi attacks in Marib and Hadramout provinces killed at least 30 government troops, and separate Houthi attacks in southern Saudi Arabia wounded 11 civilians, including a young child (Al Jazeera, AP Article 7).",
+      "The escalation is described as the most significant since the April/2022 truce that halted major fighting between the Houthis and the Saudi-led coalition (AP, NPR, Al Jazeera, AP Article 7)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Attack on Mocha port",
+        "positions": {
+          "Associated Press (Article 1)": "States as fact that the Houthis attacked a crucial Red Sea port, killing people, further escalating the conflict.",
+          "NPR": "Attributes the Mocha port attack to a Yemeni government official (Fayed al-Noman); notes there was no immediate Houthi comment.",
+          "CNBC": "Does not mention the Mocha port attack.",
+          "Al Jazeera": "Does not mention a Mocha port attack (article predates Sunday events)."
+        }
+      },
+      {
+        "topic": "Source and verification of the Houthi Aramco claim",
+        "positions": {
+          "NPR": "Attributes the claim to Houthi military spokesperson Yahya Saree.",
+          "CNBC": "Attributes the claim to Iranian state-backed agency Mehr and explicitly states CNBC has not independently verified it."
+        }
+      },
+      {
+        "topic": "Location/nature of civilian casualties on Thursday",
+        "positions": {
+          "Al Jazeera": "Says a Houthi attack on southern Saudi Arabia on Thursday wounded 11 civilians, including a young child.",
+          "AP (Article 7)": "Says more than 10 civilians, including a 4-year-old child, were injured in the southern Najran region; details seven Saudis, one Yemeni, two Egyptians, and one Pakistani wounded."
+        }
+      },
+      {
+        "topic": "Timing/status of a Hormuz deal",
+        "positions": {
+          "CNBC": "Reports U.S. Treasury Secretary Scott Bessent said an agreement to open Hormuz could come as soon as Wednesday, and that Trump and Rubio indicated agreement was imminent; also cites Iranian draft plan restricting traffic.",
+          "NPR": "Frames the deal as 'in the final stages' per Araghchi and describes an anticipated joint announcement, without the U.S. official timing claims."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Article 1 is a brief roundup lead that packages the Aramco attack, the Mocha port attack, Iran's Hormuz demands, Pentagon weapons production, and Israel's Gaza stance into a single Mideast wrap. It states the Mocha port attack and resulting deaths as established fact without in-line attribution. Article 7 is a separate, more granular piece leading on the human toll \u2014 a 4-year-old child injured \u2014 and foregrounds the Saudi military spokesman's characterization of 'terrorist' attacks and 'flagrant violation' of humanitarian law, while noting the Houthis gave no statement.",
+      "NPR": "Republishes AP wire copy under its own byline ('By The Associated Press'). Leads on the Houthi Aramco claim, then pivots heavily to Iran-U.S. diplomacy and the Strait of Hormuz. Most detailed on Araghchi's remarks, the Supreme National Security Council demands, CENTCOM blockade figures (53 vessels redirected, two disabled, two boarded), and the anonymous-sourced Iran-Oman deal mechanics. Careful attribution throughout (names the Yemeni official on the Mocha claim, flags 'no immediate Houthi comment').",
+      "Al Jazeera English": "Dated Aug. 7, frames the story as escalation buildup \u2014 '12 fresh missile attacks,' at least 30 soldiers killed \u2014 and emphasizes the regional-war context, explicitly tying the reignited conflict to 'the war launched by the United States and Israel against Iran.' Foregrounds anonymous Saudi intelligence warning of imminent IRGC-supervised attacks on energy, ports, and airports. Provides the deepest historical framing (2014 Houthi seizure of Sanaa, 2015 coalition campaign, 2022 truce).",
+      "CNBC": "Business-desk framing centered on energy markets. Leads on the extinguished refinery fire, then quickly moves to the Hormuz diplomacy and its market impact \u2014 Brent at $83.55, WTI at $78.18, ship traffic down 33% per Kpler. Notably careful with sourcing: attributes the Houthi claim to Iranian state media Mehr and states twice that it has not independently verified claims. Uniquely includes the Iranian draft plan to ban U.S. and Israeli ships and Bessent's imminent-deal comments.",
+      "Reuters": "Two headline-only entries. 'Saudi expects imminent two-pronged attack from Iran's allies' frames the story around anticipatory threat from the north and south. 'Yemen's Houthis attack Saudi refinery after kingdom signs defence pact' uniquely ties the refinery attack to a Saudi defence pact \u2014 a causal/contextual link no full-text outlet in the dossier mentions. Body text unavailable, so these framings cannot be corroborated."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. No court filings, official statements in full, roll-call votes, or transcripts were available in the dossier. The Saudi Energy Ministry statement and Houthi/Mehr claims are quoted only secondhand through outlet reporting, and the June memorandum of understanding, the Zolghadr statement, and the CENTCOM figures could not be independently checked against source documents."
+    ],
+    "missing_context": [
+      "Only four articles have substantial body text (AP Article 1, AP Article 7, NPR, CNBC, Al Jazeera); the two Reuters entries are headline-only and cannot corroborate any claim.",
+      "NPR's article is AP wire copy, so AP Article 1 and NPR are effectively one source, not two independent confirmations, for the shared Sunday details.",
+      "Reuters' headline uniquely ties the refinery attack to a Saudi 'defence pact,' but no full-text outlet in the dossier explains or corroborates what pact this refers to or its terms.",
+      "No outlet provides independent verification of the Houthi claim of responsibility for the Aramco attack; NPR relies on the Houthi spokesman and CNBC on Iranian state media, both explicitly unconfirmed.",
+      "The Saudi Energy Ministry did not state the cause of the refinery fire, leaving the link between the Houthi claim and the actual fire unconfirmed by Saudi authorities.",
+      "No casualty figure was given for the Sunday Mocha port attack despite AP Article 1 asserting people were killed; NPR notes the claim came from a Yemeni government official with no Houthi comment.",
+      "Coverage does not quantify damage to the Aramco refinery or any impact on production capacity, only that the fire was extinguished with no injuries.",
+      "No outlet provides the Houthi/Iranian side's response to the Saudi military's 'terrorist' and 'humanitarian law violation' characterizations beyond the claim of responding to Saudi airspace violations.",
+      "The exact date of the June interim deal's 60-day negotiating deadline is given only approximately ('in just over a week' per CNBC); the precise expiry is not stated.",
+      "No independent confirmation of the anonymous-sourced Iran-Oman transit-route mechanics; both NPR and CNBC rely on unnamed people or media reports."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same escalation with materially different framings \u2014 AP/NPR as a diplomacy-weighted Mideast roundup, CNBC as an energy-markets story, Al Jazeera as regional-war escalation, and Reuters headlines adding an unverified 'defence pact' angle \u2014 while key claims (the Houthi attack, the Mocha port strike) rest on single or unverified sources, making a coverage-comparison post more honest than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/yemen-houthis-iran-hormuz-mideast-roundup-aug-9-2026-6c5aa0c5debcca3fa36316a8b0b67400",
+      "title": ""
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/08/09/nx-s1-5926387/yemens-houthis-claim-attack-on-aramco-oil-facility-in-saudi-arabia-and-other-middle-east-news",
+      "title": "Yemen's Houthis claim attack on Aramco oil facility in Saudi Arabia, and other Middle East news - NPR"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/7/houthi-strikes-hit-yemen-as-saudi-arabia-braces-for-attacks-what-we-know",
+      "title": "Houthi strikes in Yemen as Saudi Arabia braces for attacks: What we know - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/09/saudi-aramco-extinguishes-refinery-fire-houthis-claim-attack.html",
+      "title": "Saudi Aramco extinguishes fire at refinery as Houthis claim responsibility - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/saudi-arabia-expects-imminent-attacks-north-south-senior-official-says-2026-08-06/",
+      "title": "Saudi expects imminent two-pronged attack from Iran's allies, official says - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/energy/fire-extinguished-aramco-facility-jizan-saudi-arabia-says-2026-08-09/",
+      "title": "Yemen's Houthis attack Saudi refinery after kingdom signs defence pact - Reuters"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/houthi-rebel-attacks-marib-hadhramaut-c1cbd145c5e740b93a4731980ec4e697",
+      "title": "Saudi military says Houthi attacks left 11 civilians, including a child, injured near Yemen border - AP News"
+    }
+  ]
+}
