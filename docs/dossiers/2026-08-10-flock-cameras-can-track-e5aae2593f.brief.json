@@ -1,0 +1,39 @@
+{
+  "story_id": "2026-08-10-flock-cameras-can-track-e5aae2593f",
+  "headline_seed": "Flock Cameras Can Track Every Car in America. Police Love Them. Citizens Don\u2019t. - The New York Times",
+  "brief": {
+    "story_id": "2026-08-10-flock-cameras-can-track-e5aae2593f",
+    "consensus_facts": [],
+    "disagreements": [],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier \u2014 no retrievable body text beyond the linked title. The headline 'Flock Cameras Can Track Every Car in America. Police Love Them. Citizens Don't.' frames the story as a national civil-liberties conflict, setting up a clean adversarial binary between law enforcement (who value the surveillance capability) and the public (who distrust it). The framing emphasizes the scale of tracking ('Every Car in America') and positions the piece as a systemic policy examination rather than a single incident. No body-level claims can be verified from this dossier entry.",
+      "People.com": "The only outlet with full body text. Reports a specific, concrete abuse case: former Mooresville, North Carolina police officer Elizabeth Anne Snowman was arrested and charged with misdemeanor computer access after an internal LPR-system audit allegedly showed she used Flock cameras 31 times for personal reasons, including to track her boyfriend's ex-wife across state lines, and was allegedly 'untruthful' about her reasons. People reports she posted a $5,000 bond, that the offense date was Aug. 5, 2026, and that two accesses occurred while off-duty. People frames the story through its crime desk as an individual wrongdoing narrative \u2014 emphasizing the personal-drama angle ('track down boyfriend's ex') rather than the broader surveillance-policy debate the NYT headline foregrounds. Sourcing is attributed to the Mooresville PD statement, a police chief's press briefing, online court records reviewed by People, and secondhand reporting from WSOC-TV, Spectrum News 1, and WLOS."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The Snowman court records, the Mooresville PD press statement, and the police chief's press-briefing transcript are all referenced by People.com but none were provided in the dossier for independent verification."
+    ],
+    "missing_context": [
+      "Only one of the two dossier articles (People.com) has retrievable full body text; the New York Times entry is headline-only, so nothing in this brief rises to multi-outlet consensus.",
+      "The NYT headline promises a national-scale examination of Flock surveillance and the police-vs-citizen tension, but its body text is unavailable \u2014 the systemic scope, statistics on Flock deployment, and any policy or legal analysis it may contain cannot be assessed here.",
+      "The two dossier articles address different levels of the story: NYT (by headline) the national policy picture, People a single local abuse case. Their relationship \u2014 whether the Snowman case is cited as an example in the NYT piece \u2014 cannot be confirmed from the dossier.",
+      "No independent confirmation of the People.com specifics (31 accesses, $5,000 bond, Aug. 5 offense date, off-duty accesses) \u2014 all trace to the Mooresville PD statement and local TV outlets; no court document was provided.",
+      "Snowman's plea, legal representation, and side of the story are absent; People notes her docket did not list plea or attorney information.",
+      "Missing broader context a reader would want: how many jurisdictions use Flock cameras, what audit and access controls exist, whether misuse is systemic or isolated, and what Flock Safety itself says. None of this is in the retrievable dossier."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (People.com) has retrievable body text \u2014 the NYT entry is headline-only \u2014 so there is no multi-outlet consensus to build a full REPORT on, but the single-source Snowman story is concrete, timely, and illustrates the surveillance-abuse theme the NYT headline flags, warranting a same-day hedged post pending fuller sourcing.",
+    "confidence": 0.3
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/10/us/flock-cameras-can-track-every-car-in-america-police-love-them-citizens-dont.html",
+      "title": "Flock Cameras Can Track Every Car in America. Police Love Them. Citizens Don\u2019t. - The New York Times"
+    },
+    {
+      "outlet": "People.com",
+      "url": "https://people.com/officer-used-flock-camera-during-work-hours-to-track-down-boyfriend-s-ex-police-12036737",
+      "title": "Officer Used Flock Camera During Work Hours to Track Down Boyfriend\u2019s Ex: Police - People.com"
+    }
+  ]
+}
