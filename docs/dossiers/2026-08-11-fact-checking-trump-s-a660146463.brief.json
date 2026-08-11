@@ -1,0 +1,55 @@
+{
+  "story_id": "2026-08-11-fact-checking-trump-s-a660146463",
+  "headline_seed": "Fact-Checking Trump\u2019s Claims About Childhood Vaccines After Executive Order - The New York Times",
+  "brief": {
+    "story_id": "2026-08-11-fact-checking-trump-s-a660146463",
+    "consensus_facts": [
+      "President Trump signed an executive order concerning childhood vaccines around August 10, 2026.",
+      "The executive order recommends changes to childhood vaccination schedules, including spreading out vaccinations over a longer period.",
+      "Trump linked or suggested a connection between vaccines and autism, a claim the outlets characterize as unproven or debunked.",
+      "Multiple outlets framed their coverage as fact-checks of Trump's vaccine claims made in connection with the order."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier; no body text retrievable. The headline frames the story as 'Fact-Checking Trump's Claims About Childhood Vaccines After Executive Order,' positioning the outlet as adjudicating the accuracy of specific claims. No body-level detail available for analysis.",
+      "CNN": "Two entries. The video piece (Article 2) frames the story as a fact-check discussion with CNN's Daniel Dale and Dr. Paul Offit, tying it to 'common myths' about vaccines and describing the order as 'reshaping childhood vaccines.' The written fact-check (Article 4) is the most substantive body text in the dossier and takes an assertive posture, stating in its own voice that Trump made 'numerous false or misleading claims' and that he 'has long pushed vaccine misinformation.' It systematically enumerates specific claims \u2014 vaccines/autism link, MMR lethality, dose size ('bottle of soda'), autism prevalence figures, number of required injections \u2014 and rebuts each with named medical experts (Dr. Aaron Milstone, Dr. Sean O'Leary, Dr. Alycia Halladay, Dr. Adam Ratner, Dr. Ofer Levy) and CDC/IDSA sources. It also reports that the Trump administration altered CDC website language 'last fall' to include what CNN calls 'unscientific talking points.'",
+      "CBS News": "Body text is largely site navigation and video chrome, but the retrievable caption frames the order as Trump 'recommending that parents spread out vaccination schedules for their children, alleging an unproven connection with autism.' Fact-check is delivered by CBS medical contributor Dr. C\u00e9line Gounder. Uses the qualifier 'unproven' rather than CNN's stronger 'false or misleading.'"
+    },
+    "primary_source_alignment": [
+      "No primary source (the executive order text itself) was included in the dossier. The specific provisions, scope, and legal language of the order cannot be verified against the outlets' characterizations. All descriptions of what the order 'recommends' are secondhand outlet summaries."
+    ],
+    "missing_context": [
+      "Single substantive-source limitation: Of four articles, only CNN's written fact-check (Article 4) contains substantial body text (>500 characters). The NYT entry is headline-only, and the CNN video and CBS entries are mostly navigation/caption fragments. The detailed claim-by-claim rebuttals therefore rest primarily on one outlet's reporting and should not be read as multi-outlet wire consensus at the body level.",
+      "The actual text of the executive order was not provided; readers cannot see the precise wording, whether it is binding versus advisory, its effective date, or what agency it directs.",
+      "No coverage in the dossier of the reaction from public health agencies, medical associations as institutions, state governments, or vaccine manufacturers to the order itself (as opposed to the underlying autism claim).",
+      "No dissenting or supporting voices defending the administration's rationale are quoted, so readers see only the rebuttal side of the fact-check framing.",
+      "The CNN article text is truncated mid-sentence, so the full list of claims fact-checked and their rebuttals is incomplete.",
+      "No outlet in the dossier quantifies the practical effect of the order \u2014 e.g., which vaccines or how many children would be affected by a revised schedule."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets confirm the core event \u2014 Trump signed an executive order changing childhood vaccine recommendations and repeated autism claims the medical consensus rejects \u2014 with consistent framing across sources, making this a straightforward REPORT; it is not a META because only one outlet supplied substantive body text and the primary source was unavailable, limiting genuine framing-divergence analysis.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/10/well/trump-vaccines-fact-check.html",
+      "title": "Fact-Checking Trump\u2019s Claims About Childhood Vaccines After Executive Order - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/11/us/video/cnn-sitroom-brown-dale-fact-check-trump-vaccines",
+      "title": "Fact-checking Pres. Trump\u2019s Vaccine Claims - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/video/fact-check-trumps-childhood-vaccine-recommendationi/",
+      "title": "Fact-checking medical claims after Trump's new order on childhood vaccine recommendations - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/11/politics/fact-check-trump-false-vaccines-autism",
+      "title": "Fact check: Trump makes numerous false and misleading claims about vaccines and autism - CNN"
+    }
+  ]
+}
