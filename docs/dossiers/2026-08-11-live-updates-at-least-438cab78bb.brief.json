@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-08-11-live-updates-at-least-438cab78bb",
+  "headline_seed": "Live updates: At least 111 dead following 7.4 magnitude earthquake in Colombia - CNN",
+  "brief": {
+    "story_id": "2026-08-11-live-updates-at-least-438cab78bb",
+    "consensus_facts": [
+      "A magnitude 7.4 earthquake struck western Colombia on Monday, August 10, 2026.",
+      "The epicenter was in San Jos\u00e9 del Palmar, in the Choc\u00f3 region of western Colombia, roughly 150\u2013250 miles west of Bogot\u00e1.",
+      "The quake struck at a depth of approximately 107 kilometers (about 62\u201366 miles), per USGS and reported by multiple outlets.",
+      "Buildings collapsed across multiple western Colombian cities including Cali, Pereira, Manizales, and Quibd\u00f3.",
+      "The tremor was felt in the capital Bogot\u00e1, prompting evacuations, and dozens of people were killed with many more injured.",
+      "Multiple airports suspended operations following the quake.",
+      "The earthquake occurred roughly a month after deadly back-to-back quakes struck neighboring Venezuela, killing thousands.",
+      "President Abelardo de la Espriella and the government mobilized emergency and disaster response efforts.",
+      "The city of Pereira reported a significant share of the deaths."
+    ],
+    "disagreements": [
+      {
+        "topic": "total death toll",
+        "positions": {
+          "CNN (live blog, Article 1)": "At least 132 dead and 570 injured, per the Colombian Association of Capital Cities.",
+          "CNN (video, Article 4)": "At least 111 deaths confirmed, per President de la Espriella.",
+          "ABC News (Article 5)": "At least 47 people killed (headline says 20 dead).",
+          "NBC News (Article 7)": "More than 100 people killed (headline-level)."
+        }
+      },
+      {
+        "topic": "Pereira death toll",
+        "positions": {
+          "CNN (Article 1)": "Pereira reported 60 deaths alone.",
+          "ABC News (Article 5)": "At least 18 people killed in Pereira."
+        }
+      },
+      {
+        "topic": "death toll in neighboring Venezuela's earlier quakes",
+        "positions": {
+          "CNN (Article 1)": "More than 6,300 people killed in Venezuela.",
+          "ABC News (Article 5)": "More than 5,000 people killed in Venezuela."
+        }
+      },
+      {
+        "topic": "distance of epicenter from Bogot\u00e1",
+        "positions": {
+          "CNN (Article 1)": "About 150 miles west of Bogot\u00e1.",
+          "ABC News (Article 5)": "About 250 miles (400 km) west of Bogot\u00e1."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN": "Provides the most substantive coverage across two entries. The live blog (Article 1) leads with a rising death toll (132) and rescue efforts, foregrounds human-interest angles (cable car rescues, celebrity solidarity from Karol G and Shakira, an eyewitness account from Cali), and includes expert geological context distinguishing this quake from Venezuela's. Also emphasizes the $15.5M US aid commitment. The separate video (Article 4) reports a lower, earlier figure of 111 deaths attributed to the president, illustrating how CNN's own numbers evolved across the day.",
+      "Al Jazeera English": "Frames the story visually and dramatically around a single video of soldiers fleeing a collapsing military barracks in Cali. The body text is almost entirely site navigation and related-video listings; minimal reported detail beyond the magnitude, location (western Colombia), and mention of evacuations and damage across several cities.",
+      "The New York Times": "Headline-only in this dossier \u2014 an interactive map titled 'Map: 7.4-Magnitude Earthquake Shakes Colombia.' Emphasis is on geographic/visual explanation; no retrievable body text to analyze.",
+      "ABC News": "Leads with a comparatively conservative death toll (headline '20 dead,' body '47 killed'), attributing figures city by city (18 in Pereira, 2 in Manizales, 27 in Valle del Cauca). Emphasizes USGS/Colombian seismological data, describes it as the highest-magnitude quake in Colombia in a decade with 2.8 and 4.8 aftershocks, and includes an on-the-ground taxi-driver eyewitness. Draws an explicit parallel to Venezuela's quakes.",
+      "NBC News": "Two video entries with essentially no reported body text. Article 6 is a 'Nightly News' clip listing labeled 'Deadly earthquake hits Colombia'; Article 7 is a short-form video headlined 'Colombia earthquake kills more than 100 people' but its body is entirely a privacy/opt-out notice. NBC's contribution is headline-level only: framing the quake as deadly with a 100+ toll."
+    },
+    "primary_source_alignment": [
+      "No primary sources (USGS bulletins, government disaster declarations, official death-toll releases) were included in the dossier, so no direct primary-source alignment could be performed.",
+      "Death toll figures are attributed by outlets to secondary authorities \u2014 the Colombian Association of Capital Cities (CNN's 132), President de la Espriella (CNN video's 111), and USGS/Colombia's Geological Service (ABC's data) \u2014 but none of these underlying documents were provided for verification."
+    ],
+    "missing_context": [
+      "No outlet with full body text reconciles the widely divergent death tolls (47 vs. 111 vs. 132), which reflect a rapidly evolving, same-day count rather than settled figures; readers are not told the tolls are provisional snapshots from different hours.",
+      "The two figures cited for the earlier Venezuela earthquakes conflict (CNN: 6,300+; ABC: 5,000+), and neither outlet flags the discrepancy.",
+      "No outlet details the status or scale of rescue operations at the collapsed Cali hospital pediatric/neonatal units beyond CNN's single mention.",
+      "The number of people still trapped or missing is not quantified in any source.",
+      "Distance-from-Bogot\u00e1 figures differ substantially (150 vs. 250 miles) without explanation.",
+      "This dossier is dominated by a single outlet (CNN) for substantive reporting; Al Jazeera and NBC entries are largely video/navigation shells and NYT is headline-only, limiting independent corroboration of specifics.",
+      "No article contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two full-text outlets (CNN and ABC News) plus corroborating headlines independently confirm the core event \u2014 a 7.4 quake in western Colombia with dozens dead and widespread building collapse \u2014 making the hard facts solid; the main divergence is a rapidly evolving death toll typical of breaking disaster coverage rather than materially different framing, so a straightforward REPORT that flags the provisional toll is warranted.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/10/world/live-news/colombia-earthquake-san-jose-del-palmar",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/11/soldiers-take-cover-as-colombia-quake-flattens-military-barracks",
+      "title": "Soldiers take cover as Colombia quake flattens military barracks - Al Jazeera"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/interactive/2026/08/10/world/earthquake-colombia-tracker.html",
+      "title": "Map: 7.4-Magnitude Earthquake Shakes Colombia - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/10/world/video/over-100-dead-after-powerful-earthquake-hits-colombia-digvid-vrtc",
+      "title": "Over 100 dead after powerful earthquake hits Colombia - CNN"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/powerful-earthquake-shakes-colombia-ecuador-prompting-people-evacuate-135515580",
+      "title": "20 dead after 7.4-magnitude earthquake shakes western Colombia - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/nightly-news/video/deadly-earthquake-hits-colombia-268072005648",
+      "title": "Deadly earthquake hits Colombia - NBC News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/video/shorts/colombia-earthquake-kills-more-than-100-people-268075077710",
+      "title": "Colombia earthquake kills more than 100 people - NBC News"
+    }
+  ]
+}
