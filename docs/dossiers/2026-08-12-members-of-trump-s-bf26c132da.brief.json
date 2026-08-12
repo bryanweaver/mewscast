@@ -1,0 +1,99 @@
+{
+  "story_id": "2026-08-12-members-of-trump-s-bf26c132da",
+  "headline_seed": "Members of Trump's cabinet remained on decoy plane, after Trump's quiet exit - BBC",
+  "brief": {
+    "story_id": "2026-08-12-members-of-trump-s-bf26c132da",
+    "consensus_facts": [
+      "President Donald Trump secretly switched planes as he departed a NATO summit in Turkey on July 8, boarding the old Air Force One in view of cameras before being transported to a different aircraft via a catering truck.",
+      "The plane swap was carried out in response to a possible Iranian threat.",
+      "The original aircraft retained the 'Air Force One' call sign and functioned as a decoy after Trump exited it.",
+      "Secretary of State Marco Rubio and Treasury Secretary Scott Bessent remained aboard the decoy aircraft.",
+      "Defense Secretary Pete Hegseth was aboard the second aircraft that flew with Trump.",
+      "Journalists and some White House staff aboard the decoy plane were not aware that Trump had been smuggled off.",
+      "Speaking to reporters on Tuesday night, Trump said the decision to switch planes was made by the Secret Service and the U.S. military.",
+      "Trump downplayed the specific threat, saying he gets 'a lot of threats' and provided no specifics.",
+      "The Washington Post first reported the secret flight on Monday (August 10)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Nature of the Iranian threat",
+        "positions": {
+          "BBC News": "Cites CBS News that the U.S. detected a credible Iranian threat to fire a missile at the plane; describes an assassination threat context.",
+          "The Washington Post": "Frames it as an 'Iranian assassination threat against President Donald Trump.'",
+          "ABC News": "Trump 'brushed off' the specific threat, saying 'I guess there was a threat out there. I didn't really ask too much about it.'"
+        }
+      },
+      {
+        "topic": "What the cabinet secretaries knew",
+        "positions": {
+          "BBC News": "States it is unclear what the cabinet secretaries and other officials knew of the operation.",
+          "ABC News": "Reports all three Cabinet members (Rubio, Bessent, Hegseth) were aware that Trump had secretly switched planes."
+        }
+      },
+      {
+        "topic": "Relative risk of the two flights",
+        "positions": {
+          "BBC News": "Does not characterize which plane was more dangerous; notes it is unclear what danger occupants faced.",
+          "ABC News (headline seed)": "Trump said he was at 'greater risk' on the secret flight than the decoy Air Force One.",
+          "ABC News (body)": "Quotes Trump saying the alternate plane offered 'Equal safety.'"
+        }
+      },
+      {
+        "topic": "Type of second aircraft",
+        "positions": {
+          "BBC News": "Identifies it as a smaller C-32A military aircraft (modified Boeing 757) using call sign 'Reach 18.'",
+          "The Washington Post": "Describes it as an 'alternate military aircraft.'",
+          "ABC News": "Describes it as 'a military aircraft.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News": "Two articles. The lead article foregrounds the cabinet-succession angle \u2014 Rubio and Bessent remaining on the decoy to preserve the line of succession \u2014 and provides the deepest institutional context, including historical precedent (Clinton's 2000 Islamabad decoy) and Secret Service 'shell game' practices. The second BBC article emphasizes the operational mechanics (catering truck, call signs, window shades) and journalist-safety concerns, quoting the Committee to Protect Journalists. BBC repeatedly hedges on what officials knew and what danger existed, attributing key claims to CBS News (its U.S. partner) and the Washington Post.",
+      "The Washington Post": "Original exclusive breaker of the story. Frames it around contradiction and secrecy \u2014 the headline stresses the flight 'contradicting public statements' and that Air Force One 'became a decoy.' A follow-up article shifts to the political accountability angle, leading with Democrats (Schumer) demanding a congressional briefing and stressing that the White House kept Congress 'in the dark.' Emphasis on transparency failures and oversight. Much of the body text is paywalled/truncated in the dossier.",
+      "ABC News": "Leads on Trump's own words and his deflection of responsibility onto the Secret Service and military ('I do what they say'). Uniquely reports that all three named Cabinet members were aware of the switch. Presents Trump downplaying the threat. Framing centers on Trump's characterization of events rather than institutional or oversight concerns; relatively neutral and quote-driven."
+    },
+    "primary_source_alignment": [
+      "No primary source (court filing, transcript, official White House statement, or intelligence document) was located for this story. All accounts rest on anonymous sourcing to CBS News, the Washington Post, and ABC News, plus on-tarmac remarks by Trump. The underlying intelligence about the alleged Iranian threat has not been made public and cannot be independently verified from this dossier."
+    ],
+    "missing_context": [
+      "No outlet confirms the substance of the alleged Iranian threat with any independently verifiable evidence; the threat assessment remains attributed to anonymous officials.",
+      "The White House had not confirmed the secret switch at the time of reporting; official on-record confirmation is absent.",
+      "It remains unclear how Trump moved from the C-32A back to the legacy Air Force One before landing at RAF Mildenhall (noted only by BBC).",
+      "The dossier does not resolve the direct contradiction within ABC's own reporting between the headline seed ('greater risk') and Trump's quoted claim of 'equal safety.'",
+      "No outlet reports whether any Air Force personnel or crew on the decoy plane were briefed, only that press and 'some' staff were not.",
+      "The Washington Post articles were largely paywalled/truncated in the dossier, so the full extent of WaPo's original reporting and the Schumer briefing demand could not be fully assessed from body text.",
+      "Reporting references a related DOJ investigation into leaks and subpoenas of New York Times journalists over Air Force One reporting (BBC only); no outlet ties this directly to the current disclosure or explains its status.",
+      "None of the articles quantify or specify what defensive systems the Qatari-donated jet has versus the legacy Air Force One, beyond BBC noting the older planes have anti-missile laser technology."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five articles across three outlets reported the same event with materially different emphasis \u2014 BBC on succession and precedent, the Washington Post on secrecy and congressional oversight, ABC on Trump's deflection and cabinet awareness \u2014 and they diverge on key claims such as what officials knew and the nature of the threat, making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c4g306eln8wo",
+      "title": ""
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/08/11/democrats-demand-briefing-trumps-secret-flight-turkey/",
+      "title": "Democrats demand briefing on Trump\u2019s secret flight from Turkey - The Washington Post"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cm2g90vvy62o",
+      "title": "Trump hid in catering truck in secret plane swap over Iran threat, reports say - BBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/08/10/trump-flew-secrecy-amid-iran-threat-air-force-one-became-decoy/",
+      "title": "Contradicting public statements, Trump took secret flight from Turkey amid Iranian threat - The Washington Post"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/trump-greater-risk-secret-flight-decoy-air-force/story?id=135564018",
+      "title": "Trump says he was at 'greater risk' on secret flight than decoy Air Force One - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
