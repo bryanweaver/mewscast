@@ -1,0 +1,80 @@
+{
+  "story_id": "2026-08-11-university-of-michigan-plans-7ef82960ae",
+  "headline_seed": "University of Michigan plans to mask grades for new students - The Washington Post",
+  "brief": {
+    "story_id": "2026-08-11-university-of-michigan-plans-7ef82960ae",
+    "consensus_facts": [
+      "The University of Michigan announced plans to mask first-semester grades for freshmen in its College of Literature, Science, and the Arts.",
+      "Under the plan, first-semester classes will appear on official transcripts only as 'P' (pass) or 'NC'/'no credit' rather than letter grades, and those grades will not factor into GPA.",
+      "The university framed the change as a way to reduce stress and help address the mental health crisis among college-aged students.",
+      "Both The Washington Post and The Independent report that MIT has previously used a form of pass/no-credit grading for first-year students.",
+      "The announcement triggered a divided reaction, with support and criticism appearing on social media and among observers."
+    ],
+    "disagreements": [
+      {
+        "topic": "Effective date of the policy",
+        "positions": {
+          "The Washington Post": "Says the plan starts fall 2027 ('starting fall 2027').",
+          "The Independent": "Says the plan begins 'next fall' and describes it as a pilot program."
+        }
+      },
+      {
+        "topic": "Precedent institutions cited",
+        "positions": {
+          "The Washington Post": "Cites MIT (pass/no credit since 1968) and Swarthmore College (stopped publishing first-semester letter grades in the 1970s).",
+          "The Independent": "Cites MIT and the California Institute of Technology (Caltech); does not mention Swarthmore."
+        }
+      },
+      {
+        "topic": "Scope / who is affected",
+        "positions": {
+          "The Washington Post": "States the LSA college is affected but does not quantify student numbers.",
+          "The Independent": "Specifies the LSA college educates roughly half of the university's 8,000 first-year undergraduates."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Retrievable content is only an RSS/aggregation link list (headlines of multiple outlets), not a full article body. Its own headline ('University of Michigan Will Ease Up on Grades for Student Mental Health') frames the move sympathetically, emphasizing student mental health rather than academic-standards concerns. No body-level reporting available.",
+      "The Washington Post (Washington Times mirror, Article 2)": "Body unavailable \u2014 blocked by a CAPTCHA/security-verification page. No usable content; headline states freshmen 'will no longer get grades in first semester.'",
+      "washingtonpost.com (Article 3)": "Full body available. Leads with the social-media 'firestorm' and frames the story as controversy-driven. Emphasizes critics \u2014 quotes novelist Walter Kirn ('Next stop: students needn't attend classes...') and ties the move to broader concerns about grade inflation and AI cheating. Balances with a supportive quote from Swarthmore's provost Richard Wicentowski. Reports the fall 2027 start and the university's own justification ('curb the mental health crisis').",
+      "The Independent": "Full body available. Frames the policy more neutrally-to-favorably, leading with the mental-health rationale and the university's own explanatory quotes. Provides the most granular detail: pilot-program status, scope (~half of 8,000 first-years), that faculty will still track grades internally for honors/scholarships, and supporting data on grade inflation (74.1% of UM undergrad grades in the A range in 2022 vs 57.6% a decade earlier; UCSD remedial-math figures; Harvard's A-cap). Includes student body president Summit Louth's approval and both supportive Reddit and critical X reactions, presenting a balanced 'divided reaction' picture."
+    },
+    "primary_source_alignment": [
+      "No primary source (university press release or official policy document) was located for this story. All facts derive from secondary reporting, some of it quoting the university's online statement second-hand.",
+      "Both The Washington Post and The Independent quote the university directly ('curb the mental health crisis' / acclimation and intrinsic-motivation language), but the full text of the university's announcement is not in the dossier, so exact wording and full scope cannot be independently verified."
+    ],
+    "missing_context": [
+      "The effective date is ambiguous across outlets \u2014 The Washington Post says fall 2027 while The Independent says 'next fall' (which from an Aug 2026 dateline would imply fall 2026 or 2027); no outlet resolves the discrepancy.",
+      "Only The Independent notes that faculty will continue tracking grades internally for honors and scholarship eligibility \u2014 a material detail absent from The Washington Post's account.",
+      "No outlet clarifies whether the policy is a finalized decision or still a 'pilot program' in design; The Independent quotes a spokesperson saying more details are coming in the fall, suggesting it is not final.",
+      "The New York Times and the Washington Times entries provided no usable body text (aggregation list and CAPTCHA block, respectively), so this brief rests effectively on two full-text sources.",
+      "No outlet provides data on whether similar policies at MIT, Caltech, or Swarthmore have measurably improved mental-health outcomes or affected academic performance.",
+      "No article quotes University of Michigan administrators by name or the faculty/students shaping the pilot; official on-record institutional voices are thin."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with full body text (washingtonpost.com and The Independent) reported the same policy with materially different framing \u2014 one controversy-led, one rationale-led \u2014 and diverge on the effective date, precedent schools, and scope, while no primary source was available. This is a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/11/us/university-michigan-grades-freshmen-pass-fail.html",
+      "title": "University of Michigan Will Ease Up on Grades for Student Mental Health - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/aug/11/university-michigan-college-freshmen-no-longer-get-grades-first/",
+      "title": "University of Michigan college freshmen will no longer get grades in first semester - Washington Times"
+    },
+    {
+      "outlet": "ashingtonpost.com",
+      "url": "https://www.washingtonpost.com/education/2026/08/11/university-michigan-plans-mask-grades-new-students/",
+      "title": ""
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/university-of-michigan-freshman-grades-mental-health-b3031127.html",
+      "title": "University of Michigan drops grades for freshmen in the first semester to \u2018curb mental health crisis\u2019 - The Independent"
+    }
+  ]
+}
