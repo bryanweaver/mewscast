@@ -1,0 +1,127 @@
+{
+  "story_id": "2026-08-13-democratic-senators-demand-answers-2240419af0",
+  "headline_seed": "Democratic senators demand answers about conditions aboard USS Abraham Lincoln - CBS News",
+  "brief": {
+    "story_id": "2026-08-13-democratic-senators-demand-answers-2240419af0",
+    "consensus_facts": [
+      "Democratic Sen. Richard Blumenthal of Connecticut wrote a letter Wednesday to Defense Secretary Pete Hegseth (and acting Navy Secretary Hung Cao) demanding answers about conditions aboard the USS Abraham Lincoln.",
+      "The USS Abraham Lincoln has more than 5,000 sailors and Marines aboard.",
+      "The Lincoln left its home port of San Diego in November and has not made a port call in more than 200 days, setting a modern-day record for consecutive days at sea.",
+      "The carrier was redirected/rerouted to the Middle East to support US operations in the war with Iran.",
+      "Blumenthal cited widespread reports of shortages of basic supplies, water contamination, plumbing issues, deteriorating mental health, deck safety concerns, and disruptions in the mail system.",
+      "The Navy stated it had not identified or observed an increase in reported suicidal ideation or suicide attempts aboard the ship, and said it provides religious, medical and mental health support resources.",
+      "Democratic Sen. Ruben Gallego of Arizona called for the Navy to allow a bipartisan congressional delegation to visit the Lincoln to conduct an oversight investigation.",
+      "Democratic Rep. Mike Levin of California described family accounts of moldy showers, broken toilets, no hot water for weeks, and inadequate food/meals of half a cup of rice and two tortillas.",
+      "Family members raised concerns about conditions and mental health to Navy leadership, including acting Navy Secretary Hung Cao, during recent town hall meetings in San Diego.",
+      "Military news outlets (Navy Times, Stars and Stripes) reported multiple crew members had attempted or prepared to jump overboard.",
+      "Reporting relied on military-specific outlets Navy Times, Stars and Stripes, and MS NOW, which reviewed audio/video of the family meetings."
+    ],
+    "disagreements": [
+      {
+        "topic": "Length of the deployment",
+        "positions": {
+          "CBS News": "Deployed more than 250 days, at sea without coming ashore in over 200 days.",
+          "Al Jazeera English": "Continuously at sea for a record length of nearly seven months; mission was meant to end in May but repeatedly extended.",
+          "CNN": "Deployed for more than 250 days, no port call in more than 200 days; left San Diego last November, war now entering its sixth month.",
+          "Newsweek": "Left San Diego in November, more than 200 days continuously at sea; deployed just under nine months overall with a brief port call in Guam in December."
+        }
+      },
+      {
+        "topic": "The sailor-overboard incident",
+        "positions": {
+          "CBS News": "A sailor assigned to the air wing went overboard earlier this month, recovered safely, treated and transferred off ship; CNN was first to report it.",
+          "CNN": "A sailor went overboard last month, quickly rescued wearing a life vest, not injured, considered a mental health episode; previously unreported.",
+          "Al Jazeera English / The Hill / Newsweek": "Do not report the specific single sailor-overboard rescue incident; focus on family accounts of attempted jumps."
+        }
+      },
+      {
+        "topic": "Which carrier will replace the Lincoln",
+        "positions": {
+          "CNN": "The USS George Washington carrier group is headed to the Middle East to replace the Lincoln; the swap was previously planned.",
+          "Newsweek": "Cao said the Lincoln would be relieved by the USS Theodore Roosevelt carrier group, without specifying when."
+        }
+      },
+      {
+        "topic": "Navy's internal mental-health trend",
+        "positions": {
+          "CBS News / CNN": "Navy says no identified increase in suicidal ideation/attempts.",
+          "CNN": "Adds that the Navy's internal tracking of suicidal-ideation reports had gone down in recent months and that it does not believe deployment length correlates with self-harm."
+        }
+      },
+      {
+        "topic": "Number and nature of overboard attempts",
+        "positions": {
+          "Newsweek": "At least two incidents in which personnel attempted or appeared to prepare to go overboard, per Navy Times; names specific family members (Annabelle Loma, Maria Rodriguez).",
+          "CBS News / CNN": "Reference 'several' or 'multiple' attempts citing Military Times/Stars and Stripes/Navy Times without a firm count."
+        }
+      },
+      {
+        "topic": "Navy's characterization of on-ship conditions",
+        "positions": {
+          "CBS News": "Navy official says current reports confirm continuous access to clean water, functional AC, and healthy meal options; prioritized food, hygiene, then mail.",
+          "CNN / Newsweek": "Emphasize family accounts of shortages and contamination; Newsweek notes April complaints were denied and Hegseth previously dismissed them as 'fake news.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Two entries: a full news article and a video/liveblog stub. The full article leads on the Senate Democrats' demand, then prominently platforms the Navy official's rebuttal (clean water, functional AC, healthy meals, prioritization of supplies) and the safe recovery of the overboard sailor \u2014 giving substantial space to the Navy's reassurance. Frames the overboard incident as recovered 'safely' and notes the family notification followed policy. Sits within a 'War with Iran' vertical, contextualizing the story as part of that broader coverage.",
+      "Al Jazeera English": "Frames the story around the US-Israel war with Iran and questions of operational sustainability. Leads on the 'outcry' over sailors trying to jump ship. Uniquely foregrounds Blumenthal's political critique \u2014 that the administration 'repeatedly commits US forces to conflicts of its own choosing.' Notably omits the specific single-sailor rescue and the Navy's on-record rebuttal, focusing on the letter's demands and questions.",
+      "CNN": "Leads with its exclusive \u2014 a sailor going overboard last month, 'not previously reported' \u2014 framing the piece as new reporting that adds to a growing list of concerns. Includes a suicide-help editor's note. Provides the most granular detail: the George Washington replacement plan, the tearful spouse testimony, Vice Adm. Cahill's acknowledgment, and Rep. Levin's specific quotes. Balances family accounts against the Navy's denial and its internal claim that ideation reports went down.",
+      "The Hill": "Headline-only (Google News RSS redirect stub); no retrievable body text. Headline emphasizes 'attempted suicides' and Democrats pressing Hegseth, framing the mental-health angle most sharply of any headline.",
+      "Newsweek": "Two entries: a bulletin video-transcript roundup and a full article. The full article (by defense reporter Ellie Cook) provides the most historical context \u2014 that complaints first surfaced in April, were denied, and Hegseth dismissed them as 'fake news' \u2014 and names specific family members with detailed accounts. Frames the story as a longer-running controversy the Navy has downplayed. The bulletin bundles the Lincoln story with unrelated items (Leavitt resignation, daylight saving), giving it brief roundup treatment."
+    },
+    "primary_source_alignment": [
+      "No primary source (Blumenthal's actual letter, the Navy's full statement, or the town-hall recordings) was included in the dossier. Outlets quote fragments of the Blumenthal letter and Navy statements, but the underlying documents could not be independently checked against the coverage.",
+      "The direct quotes attributed to Blumenthal's letter are largely consistent across CBS News, CNN, Al Jazeera, and Newsweek, though each outlet excerpts different passages."
+    ],
+    "missing_context": [
+      "No primary source documents (the full Blumenthal letter, the complete Navy statement, or the town-hall audio/video that MS NOW reviewed) were provided in the dossier, so all quotes are as-excerpted by outlets.",
+      "Outlets disagree on the replacement carrier \u2014 CNN names the USS George Washington while Newsweek cites the USS Theodore Roosevelt \u2014 and none reconcile the discrepancy or give a firm arrival date.",
+      "No outlet provides an independently verified count of overboard attempts; figures range from 'several/multiple' to 'at least two,' all attributed to family members via Navy Times/Stars and Stripes.",
+      "No Republican lawmaker or non-Democratic official is quoted; the political demand is presented entirely from Democratic senators and representatives, with only the Navy/Pentagon as counterweight.",
+      "The precise cause and current status of the individual sailor who went overboard (returned to duty vs. evacuated) is unresolved; CNN explicitly notes it was 'not immediately clear.'",
+      "No outlet quantifies or independently verifies the water-contamination or food-shortage claims beyond family testimony and the Navy's contradicting on-record statement.",
+      "The exact total deployment duration is stated inconsistently (more than 250 days at sea vs. 'just under nine months overall' including a December Guam port call), and outlets do not fully reconcile these figures."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets (four with substantial body text) reported the same event with materially different emphasis \u2014 CBS foregrounds the Navy's reassurances, CNN leads with an exclusive overboard incident, Al Jazeera foregrounds the war-policy critique, and Newsweek adds the 'fake news' backstory \u2014 and they conflict on key details like the replacement carrier and the number of overboard attempts. That divergence, plus the absence of the underlying primary documents, makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/uss-abraham-lincoln-democratic-senators-inquiry-demand/",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/13/reports-of-us-sailors-in-middle-east-trying-to-jump-ship-spark-outcry",
+      "title": "Reports of US sailors in Middle East trying to jump ship spark outcry - Al Jazeera"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/chicago/video/senate-democrats-demand-answers-about-conditions-on-board-uss-abraham-lincoln/",
+      "title": "Senate Democrats demand answers about conditions on board USS Abraham Lincoln - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/13/politics/uss-abraham-lincoln-conditions-extended-deployment-hnk",
+      "title": "Sailor went overboard from the USS Abraham Lincoln last month as conditions on the ship prompt lawmakers\u2019 demand for answers - CNN"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/senate/6027665-blumenthal-hegseth-carrier-conditions/",
+      "title": "USS Abraham Lincoln: Senate Democrats press Hegseth for answers on reports of attempted suicides - The Hill"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/videos/leavitt-steps-down-democrats-demand-lincoln-probe-daylight-saving-debate-the-bulletin-august-13",
+      "title": "Leavitt Steps Down, Democrats Demand Lincoln Probe, Daylight Saving Debate: The Bulletin, August 13 - Newsweek"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/uss-abraham-lincoln-conditions-face-investigation-calls-as-families-raise-alarm-12317345",
+      "title": "Officials Demand USS Abraham Lincoln Investigation as Families Raise Alarm - Newsweek"
+    }
+  ]
+}
