@@ -1,0 +1,131 @@
+{
+  "story_id": "2026-08-13-u-s-ambassador-calls-e5a58523fe",
+  "headline_seed": "U.S. ambassador calls settler siege of Palestinian homes a 'horrific act of terror' - NPR",
+  "brief": {
+    "story_id": "2026-08-13-u-s-ambassador-calls-e5a58523fe",
+    "consensus_facts": [
+      "Israeli settlers besieged Palestinian family homes in the West Bank village of Qusra, south of Nablus, beginning Sunday (Aug. 9, 2026).",
+      "Settlers cut off water and electricity to the homes and prevented occupants from leaving as food and water supplies dwindled.",
+      "At least one of the besieged homes is owned by a Palestinian American who complained to the US embassy.",
+      "U.S. Ambassador to Israel Mike Huckabee condemned the settlers on X, calling the siege a 'horrific act of terror' and the settlers 'Israeli terrorists.'",
+      "Huckabee is described as a longtime supporter of Israel's settler movement, making the rebuke notable.",
+      "At times numbering dozens, settlers threw stones and attempted to bring down a nearby stone wall.",
+      "The Israeli military intervened but initially failed to disperse the settlers, and announced it would deploy additional troops to the area.",
+      "The Israeli military declared the area a closed military zone and blocked journalists from approaching.",
+      "A newly completed mosque in Qusra was set on fire in an apparent settler attack the previous month.",
+      "The Qusra siege follows a broader surge in settler violence in the occupied West Bank."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of families/homes besieged",
+        "positions": {
+          "NPR": "Refers to the home of an American Palestinian family plus 'at least one other' property targeted",
+          "Associated Press": "States settlers besieged three homes",
+          "Al Jazeera English": "States settlers besieged three Palestinian families",
+          "BBC News": "States two Palestinian families (Abu Ridi and Hassan) were trapped",
+          "The Guardian": "States two Palestinian families were besieged"
+        }
+      },
+      {
+        "topic": "Homeowner's name spelling",
+        "positions": {
+          "NPR": "Lou Ridi (owner); brother Qusai Abu Rida",
+          "Associated Press": "Loui Ridi",
+          "BBC News": "Qusay Abu Ridi (trapped brother)",
+          "Al Jazeera English": "Aisha Abu Rida (resident under siege)",
+          "The Guardian": "Yousef Hassan family / Refqa Hassan"
+        }
+      },
+      {
+        "topic": "Terminology for the perpetrators",
+        "positions": {
+          "NPR": "'settlers' / 'Jewish settlers'",
+          "Associated Press": "'settlers'",
+          "NBC News": "'violent Jewish settlers' / 'Jewish settlers'",
+          "BBC News": "'Israeli settlers'",
+          "Al Jazeera English": "'Israeli settlers'",
+          "The Guardian": "'Israeli militants' / 'settlers'"
+        }
+      },
+      {
+        "topic": "Stated aim of the settlers",
+        "positions": {
+          "NPR": "Does not state a clear aim; notes settlers say the area should belong to Israel",
+          "BBC News": "'The stated aim of the settlers is to empty the area of its Palestinian residents,' but also says it is 'not clear exactly what the settlers want'",
+          "Al Jazeera English": "Residents describe it as an attempt to steal their land",
+          "The Guardian": "Aim is to take over properties through a campaign of terror / ethnic cleansing"
+        }
+      },
+      {
+        "topic": "Casualty/displacement statistics cited",
+        "positions": {
+          "BBC News": "Cites UN: 76 Palestinians (18 children) killed in West Bank this year; three Israelis killed; 127 communities displaced since Jan 2023; ~3,800 displaced in 2026",
+          "The Guardian": "Cites B'Tselem: since 2020 Israeli civilians/soldiers killed 1,100+ Palestinians with one indictment; 64 communities forcibly displaced over three years; 4,800+ driven from homes",
+          "NPR": "Cites earlier incident: killing of a settler triggered violence leaving two Israeli soldiers and four Palestinians dead"
+        }
+      },
+      {
+        "topic": "Blocking of medical care",
+        "positions": {
+          "The Guardian": "Reports settlers blocked an ambulance from reaching a sick two-year-old on Monday; family later evacuated Tuesday",
+          "Other outlets": "Do not report the ambulance/medical-blocking detail"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "Runs the AP-sourced version. Leads with Huckabee's 'horrific act of terror' condemnation and emphasizes that the rebuke is 'unusually sharp' while noting he defended the Israeli military's response. Frames Huckabee as a settler-movement ally, adds context on the 1967 war and competing claims to the land, and gives roughly equal weight to the military's dismantling of 'illegal outposts.'",
+      "Associated Press": "Wire copy, tightly factual. Leads on Huckabee's 'horrific act of terror' quote and frames it as an 'unusually sharp rebuke from the Trump administration.' States three homes besieged. Minimal editorializing; the provided body is short and centers the diplomatic angle over the humanitarian one.",
+      "NBC News": "Body text is largely truncated/paywalled ('We are getting your experience ready'), so full reporting is not retrievable. The available lead centers resident Aisha Hassan's first-person account from a hilltop and uses the strongest descriptor among wire-derived pieces \u2014 'violent Jewish settlers.' Sourced to AP but headlined with 'horrific act of terror' condemnation.",
+      "BBC News": "Most detailed on the military response and diplomatic mechanics. Leads on troop deployment and the army's failure to remove settlers. Notably reports that the first soldiers on scene 'prayed with the settlers' and would be disciplined. States the settlers' aim is to empty the area of Palestinians while also saying their exact goal is unclear. Heavy on UN statistics and includes Israeli UN Ambassador Danny Danon's defense of settlements for balance.",
+      "Al Jazeera English": "Foregrounds the Palestinian residents' perspective and steadfastness, quoting Aisha Abu Rida at length ('we will remain steadfast... even if we are martyred'). Frames the siege explicitly as an attempt to steal land. Adds the Anadolu-sourced detail that the military operation would continue until Sunday. Emphasizes the fourth-day duration and the human endurance angle over diplomatic framing.",
+      "The Guardian": "The most explicitly framed as 'ethnic cleansing.' Uses 'Israeli militants' rather than 'settlers' in the headline. Leads with the trapped Hassan family and the March killing of Amir Moatasem Odeh nearby, emphasizing impunity (one indictment since 2020 per B'Tselem). Includes the blocked-ambulance detail, the Jalud al-Tubasi precedent, quotes from B'Tselem's director, and notes elite Israelis threatening legal action over 'Jewish terrorism.' Most detailed on the military chain of command (Gen. Bluth, Chief of Staff Zamir)."
+    },
+    "primary_source_alignment": [
+      "No primary source (Huckabee's actual X post text, IDF statement, UN or B'Tselem report) was included in the dossier. Huckabee's quoted words are corroborated across NPR, AP, BBC and The Guardian, but the full post is only excerpted, not provided verbatim as a document.",
+      "The UN figures (BBC) and B'Tselem figures (The Guardian) are cited secondhand within articles; the underlying reports were not supplied, so their exact scope and dates cannot be independently verified from this dossier."
+    ],
+    "missing_context": [
+      "No outlet reports whether any settlers were ultimately arrested or charged; NPR notes Israeli police did not respond to questions about arrests, leaving accountability an open question across all coverage.",
+      "The precise number of homes besieged is unresolved \u2014 outlets split between 'two,' 'three,' and one plus 'at least one other' \u2014 and no outlet reconciles the discrepancy.",
+      "NBC News body text was not retrievable (paywall/loading placeholder), so its full framing could not be assessed.",
+      "No primary source document (the verbatim Huckabee X post, the IDF spokesperson statements, or the UN/B'Tselem underlying reports) was provided, so the meta-analysis relies entirely on outlet paraphrase.",
+      "None of the outlets provide the settlers' own account or an on-record statement from the settler group; the Israeli government's position is represented only via the military spokesperson and, in the BBC, Ambassador Danon on settlements generally.",
+      "No outlet clarifies the current status or fate of the besieged properties after the reported evacuations of some family members, beyond noting the siege continued."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six outlets covered the same Qusra siege but with materially different framings \u2014 from AP/NPR's diplomatic 'unusually sharp rebuke' angle, to the BBC's military-and-statistics treatment, to The Guardian's explicit 'ethnic cleansing' framing \u2014 and they diverge on basic facts like whether two or three families were besieged, making this a coverage-comparison story rather than a straight report.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/08/13/g-s1-138574/us-west-bank-settlers",
+      "title": ""
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/israel-west-bank-settler-violence-palestinian-qusra-huckabee-aad901d8ee7cf54e5e4952bf61a4f6d1",
+      "title": "Settler siege of Palestinian homes in the West Bank a 'horrific act of terror,' US ambassador says - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/israel/settlers-besiege-palestinians-west-bank-village-qusra-terror-rcna592285",
+      "title": "Jewish settlers besiege Palestinians in occupied West Bank village; U.S. condemns \u2018horrific act of terror\u2019 - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cj4kppdk2qwo",
+      "title": "More troops to be sent to West Bank village besieged by Israeli settlers - BBC"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/13/israeli-settlers-besiege-three-palestinian-families-in-occupied-west-bank",
+      "title": "Israeli settlers\u2019 siege of Palestinian homes in West Bank enters fourth day - Al Jazeera"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/12/israeli-militants-besiege-two-palestinian-families-in-their-west-bank-homes",
+      "title": "Israeli militants besiege two Palestinian families in their West Bank homes - The Guardian"
+    }
+  ]
+}
