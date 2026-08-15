@@ -1714,6 +1714,11 @@
       "did": "did:plc:7q4pm3jzqjww2fxcm6jxuu7e",
       "handle": "dialancea.bsky.social",
       "timestamp": "2026-08-15T02:13:45.076505"
+    },
+    {
+      "did": "did:plc:atzseybj6kr4tvtvp73bqyfh",
+      "handle": "arthistory.bsky.social",
+      "timestamp": "2026-08-15T13:28:26.156825"
     }
   ],
   "liked_posts": [
@@ -3561,6 +3566,11 @@
       "uri": "at://did:plc:7q4pm3jzqjww2fxcm6jxuu7e/app.bsky.feed.post/3mt3inpsur226",
       "author": "dialancea.bsky.social",
       "timestamp": "2026-08-15T02:13:45.002081"
+    },
+    {
+      "uri": "at://did:plc:atzseybj6kr4tvtvp73bqyfh/app.bsky.feed.post/3mt4qyqc2fc2d",
+      "author": "arthistory.bsky.social",
+      "timestamp": "2026-08-15T13:28:25.983019"
     }
   ],
   "last_cleanup": "2026-08-08T20:38:32.065797",
