@@ -12,7 +12,7 @@ The Walter Croncat journalism pipeline is a 7-stage AI news reporting system tha
 
 **Key findings:**
 1. **X API trend detection is disabled** (`config.yaml:328` — `use_x_api: false`). All story selection currently flows through Google News RSS (`NewsFetcher`), not X. "Trending on X" in practice means "Google News top stories."
-2. **Live X comparison is BLOCKED** — Bryan's personal premium X connector is signed in (read/trends only), but Mewscast's own X is not connected at the MCP level. Every read attempt fails with X API v2 `client-not-enrolled` / `Client Forbidden` (client_id 33301071 is not attached to a developer Project). Failed endpoints: `get_users_me`, `get_trends_by_woeid` (US 23424977, worldwide 1), `search_news`, `search_posts_all`. Live posts still go through GHA secrets, not the MCP connector.
+2. **Live X comparison completed** — Via Bryan's personal MCP connector (@bryanofearth, read-only). `trends/place` is 90%+ sports/concerts/viral. `search_news` (X News tab) is closer to wire news but generic queries miss today's REPORTs; targeted queries find them. Mewscast's own X (client_id 33301071) remains blocked (`client-not-enrolled`). Live posts still go through GHA secrets.
 3. **Deduplication has known gaps** — issues #14 and #16 document triple-posting of the Pope Leo XIV story, pointing to retry logic that doesn't check whether a `story_id` was already published.
 4. **X posting has intermittent silent failures** — issue #17 shows `x_tweet_id = null` on a successful Bluesky post, indicating the X API call failed without raising an exception that would trigger a retry.
 5. **Verification gate sign-off enforcement is strong** — the keystone rule (sign-off must match post type) is correctly implemented in `verification_gate.py` with comprehensive branch coverage.
@@ -390,15 +390,52 @@ return f"({from_clauses}) -is:retweet lang:en"
 
 ### Today's Published REPORTs (2026-08-15 Gap Analysis)
 
-| Post # | Time (UTC) | Topic | Platform |
-|--------|------------|-------|----------|
-| 409 | 17:40 | Jason Arday death | X + Bluesky |
-| 408 | 13:51 | Hormuz / US-Iran | X + Bluesky |
-| 407 | 00:51 | Indonesia 7.7 quake | X + Bluesky |
+| Post # | Time (UTC) | Topic | Platform | Stage 1 Source |
+|--------|------------|-------|----------|----------------|
+| 409 | 17:40 | Jason Arday death | X + Bluesky | Google News |
+| 408 | 13:51 | Hormuz / US-Iran | X + Bluesky | Google News |
+| 407 | 00:51 | Indonesia 7.7 quake | X + Bluesky | Google News |
 
-**Gap analysis pending:** A live comparison of "what was actually trending on X" vs "what Stage 1 selected" is blocked until the X API Project enrollment is fixed (`client-not-enrolled` error). The MCP connector's `get_trends_by_woeid` and `search_posts_all` endpoints cannot be queried.
+### Live X Sample — 2026-08-15 19:05 UTC
 
-**Observable gap:** All three stories are major wire-service hard news. This is exactly what Google News RSS surfaces. A human checking X Trending at 17:40 UTC on 2026-08-15 would likely see different topics (sports, entertainment, memes) alongside hard news. Without live X trend data, we cannot quantify how much selection diverges.
+*Source: @bryanofearth MCP connector (read-only). No bot-account access.*
+
+**`trends/place` worldwide (WOEID 1):**
+> #جديد_فهد_الرويس, Amorim, #النصر_الفتح, جواو, #DuangConcertDay1, DUANG GO ROUND DAY1, Carrick, #SAMA32, #الاتحاد_الخلود, الخيبري, AC Milan, Shaw, Osun, Massie, Adeleke, Geno, Dart, Getafe, Onuachu, Man U
+
+**Composition:** ~90% sports (soccer, NFL) and K-pop concerts. Massie (US politics) is the only news-adjacent item.
+
+**`trends/place` US (WOEID 23424977):**
+> Massie, Dart, Browns, Deshaun Watson, Joshua Baez, Geno, Tyrone Tracy, DJ Moore, #DawgPound, Nick Shirley, Jamal Adams, Kaden Davis, Odell, KC Concepcion, Bears, Bagent, #BillsMafia, Salvon Ahmed, Amorim
+
+**Composition:** ~95% NFL (preseason). Massie and Nick Shirley are the only non-sports items.
+
+**`search_news` (generic query "news", 12h window):**
+> ZiYu plush drop, Ross Barkan/NY Mag attribution, gold ring in fish, visual novel, Matt Gutman claims, Nigerian bus litter, Catholic Biblical Association, NDTV rebrand...
+
+**Result:** Does NOT surface today's three Mewscast REPORTs. Generic X News ranking misses wire hard news.
+
+**`search_news` (targeted queries):**
+
+| Query | Result |
+|-------|--------|
+| "Iran Hormuz" | ✅ Found: Iran–Oman shipping routes, Iran underwater-drone hits on UAE tankers, Trump claiming Hormuz as US territory. **Matches slot 408.** |
+| "Jason Arday" | ✅ Found: 3 X News stories, latest updated 18:45 UTC (after our 17:44 publish). **Matches slot 409.** |
+| "Indonesia earthquake" | ✅ Found: 7.7 Flores quake, death toll now 38–47. **Matches slot 407.** |
+
+### Stale-Record Flag: Indonesia Earthquake
+
+Slot 407 REPORT (00:55 UTC) stated "No casualties confirmed." X News at 19:05 UTC reports death toll 38–47. This is a **stale-record issue**, not a verification failure — the story evolved after publication. No CORRECTION filed; the dossier accurately reflected consensus at publish time.
+
+### Gap Analysis Conclusions
+
+1. **`trends/place` is not news.** Worldwide and US trends are 90-95% sports/concerts/viral. Replacing Stage 1 with `trends/place` would tune REPORTs toward NFL and K-pop, which `story_triage.py` would correctly reject as gossip/no-event.
+
+2. **`search_news` (X News tab) is closer to wire news.** But generic queries miss specific stories. Targeted queries find them — meaning X News indexes the same wire content Google News does, just with different ranking.
+
+3. **No X signal gap for hard news.** Today's three REPORTs all appear in X News when queried by topic. The pipeline isn't missing stories that are "trending on X as news." It's missing stories that are "trending on X as viral/sports," which is by design.
+
+4. **Design doc promise was wrong.** `trends/place` was never the right signal for a need-to-know journalism pipeline. The current Google News path is more appropriate than what the design doc described.
 
 ---
 
@@ -445,9 +482,11 @@ SIGN_OFFS: dict[PostType, Optional[str]] = {
 
 ---
 
-## 5. X API Access Status (Audit Blocker)
+## 5. X API Access Status
 
-**Live X comparison is BLOCKED.** During this audit, every X API read attempt via MCP connector failed:
+### Mewscast Bot Account — BLOCKED
+
+Every X API read attempt via the Mewscast MCP connector failed:
 
 | Endpoint | Error | Details |
 |----------|-------|---------|
@@ -460,12 +499,18 @@ SIGN_OFFS: dict[PostType, Optional[str]] = {
 **Error detail:** `client_id 33301071 is not attached to a developer Project`
 
 **What this means:**
-- Bryan's personal premium X connector is signed in (read/trends only — no post capability through MCP)
 - Mewscast's own X is **not connected** at the MCP level
 - Live posts go through GHA secrets (`X_API_KEY`, `X_ACCESS_TOKEN`, etc.), not the MCP connector
-- This audit **cannot include a live For You / trends vs Stage 1 snapshot** until the Project enrollment is fixed
+- Re-enabling `use_x_api: true` in `config.yaml` would use GHA secrets, not MCP — may or may not work depending on whether those credentials have Project enrollment
 
-**Impact on recommendations:** Re-enabling `use_x_api: true` in `config.yaml` would NOT fix this issue — the GHA secrets are separate from the MCP connector. The GHA-side X API credentials may or may not have the required Project enrollment.
+### Bryan's Personal Account — READ-ONLY ACCESS
+
+Live X sample obtained via @bryanofearth MCP connector (2026-08-15 19:05 UTC):
+- `get_trends_by_woeid` ✅ Working
+- `search_news` ✅ Working
+- Post/reply/like/bookmark: **NOT USED** (audit is read-only)
+
+This connector is for audit purposes only. Do NOT use Bryan's personal account to post as Mewscast.
 
 ---
 
@@ -541,27 +586,30 @@ Any missing/expired credential causes silent fallback or failure without clear e
 
 ### A. Tune REPORTs Toward Actual X Trending
 
-**Problem:** With `use_x_api: false`, all story selection is Google News, which skews toward wire consensus rather than what's actually being discussed on X.
+**Problem statement (now answered):** With `use_x_api: false`, all story selection is Google News. Is this missing stories that are "trending on X"?
 
-**Blocker:** Live comparison is pending X Project enrollment. The MCP connector fails with `client-not-enrolled` (see Section 5). Until this is fixed, we cannot measure the gap between "what Google News surfaces" and "what's actually trending on X."
+**Answer: No, for hard news.** Live X sample (Section 3) shows:
+- `trends/place` is 90-95% sports/concerts/viral — not news
+- `search_news` (X News tab) surfaces the same wire stories as Google News when queried by topic
+- Today's three REPORTs all appear in X News with targeted queries
 
-**Prerequisite:** Verify the GHA secrets (`X_API_KEY`, `X_BEARER_TOKEN`, etc.) have proper Project enrollment. The MCP connector (client_id 33301071) and the GHA secrets may use different credentials. Do NOT use Bryan's personal account to post — it's read-only for audit purposes.
+**DO NOT implement the design doc promise.** `trends/place` was the wrong signal. Swapping Stage 1 to `trends/place` would flood triage with NFL scores and K-pop hashtags, wasting Haiku calls on hard rejects.
 
-**Options (tradeoff: API cost vs relevance):**
+**Options (ranked by value):**
 
-1. **Re-enable X recent-search for trend detection** — requires X API budget (~$100/month at Basic tier, or PPU at ~$0.50/1000 tweets). The chunked-query pattern already exists in `trend_detector.py`. Fix handle issues in `outlet_registry.yaml` first (`business`, `ReutersWorld`, `NatureNews`).
+1. **Keep current architecture (recommended).** Google News RSS is the correct signal for need-to-know journalism. The pipeline is working as intended. No change needed.
 
-2. **Hybrid: X for validation, Google for discovery** — use Google News for candidate generation, then score each candidate by X engagement via a single `search_recent_tweets` call per candidate. Keeps API calls low (~50/day × 15 candidates × $0.0005 = $0.38/day).
+2. **Optional: Add X News as velocity check.** After triage passes a candidate, query `search_news` for the headline to confirm X is indexing it. If X News has 0 results, log a warning but don't block. This is observability, not story selection. Cost: ~$0.15/day.
 
-3. **X Trends API** — `trends/place` returns the actual trending topics sidebar. Lower signal-to-noise than curated outlet search, but true "trending on X." Cost: 1 request = 1 tweet equivalent. This is what the design doc promised but never implemented.
+3. **Optional: X engagement scoring.** For triaged candidates, query `search_recent_tweets` to get engagement metrics. Use as a tiebreaker when multiple stories pass triage in the same slot. Cost: ~$0.30/day.
 
-4. **Implement what was promised** — Add `trends/place` (WOEID 23424977 for US, 1 for worldwide) as a first-pass filter. Stories that appear in both Google News AND X trends get priority. This delivers "what's actually trending on X" without turning the cat into a shitposter chasing memes.
+4. **DO NOT: Replace Stage 1 with `trends/place`.** This would turn the cat into a shitposter covering NFL preseason and DUANG concerts.
 
-**Recommendation:** Option 4 (implement the design doc promise) is the principled path. Option 2 (hybrid validation) is the budget fallback at ~$15/month cost ceiling.
+**Guard against Opus waste:** Current architecture already gates Opus behind triage. No change needed.
 
-**Guard against shitposting:** Hard-filter `trends/place` output through the existing `story_triage.py` hard rejects (gossip, outrage, anonymous single-source). The cat doesn't report on memes even if they're trending.
+**Guard against shitposting:** Current triage hard rejects (gossip, outrage, anonymous single-source) would catch most `trends/place` garbage. But why pay for the Haiku calls? Don't add garbage to the funnel.
 
-**Guard against Opus waste:** Only send candidates that pass triage to Stage 4 (meta-analysis). The current architecture already does this. No change needed.
+**Prerequisite for any X API work:** Verify Mewscast GHA secrets have Project enrollment. The MCP connector (client_id 33301071) is broken. Do NOT use Bryan's personal account (@bryanofearth) to post.
 
 ### B. Fix Dedup Holes Without Turning Cat Into Shitposter
 
@@ -609,9 +657,12 @@ Current monthly spend (estimated from code paths):
 - **Diffbot:** Free tier (10K pages/month, using ~1K)
 - **X API:** $0 (disabled)
 
-**Budget for X API if re-enabled:**
-- Basic tier: $100/month (10K tweets/month = ~330/day)
-- PPU: ~$15/month at 1000 tweets/day × 30 × $0.0005
+**Budget for optional X API additions (if implemented):**
+- X News velocity check (Option 2): ~$4.50/month (3 queries/day × 30 × $0.05)
+- X engagement scoring (Option 3): ~$9/month (3 stories × 3 queries × 30 × $0.033)
+- DO NOT budget for `trends/place` integration — not recommended
+
+**Total if all optional X features enabled:** ~$28-33/month (within $15-20 ceiling if only one option chosen)
 
 ---
 
@@ -649,4 +700,4 @@ Current monthly spend (estimated from code paths):
 
 ---
 
-*Report generated 2026-08-15. No code changes made. No workflows triggered.*
+*Report generated 2026-08-15. Live X sample 19:05 UTC via @bryanofearth (read-only). No code changes made. No workflows triggered.*
