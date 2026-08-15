@@ -484,33 +484,11 @@ SIGN_OFFS: dict[PostType, Optional[str]] = {
 
 ## 5. X API Access Status
 
-### Mewscast Bot Account — BLOCKED
+**Live X sample obtained** via @bryanofearth MCP connector (id 29801273), 2026-08-15 19:05 UTC. Read-only — no tweets, likes, or bookmarks. See Section 3 for full results.
 
-Every X API read attempt via the Mewscast MCP connector failed:
+**Mewscast bot account:** Live posts go through GHA secrets (`X_API_KEY`, `X_ACCESS_TOKEN`, etc.), not MCP. Re-enabling `use_x_api: true` in `config.yaml` would use those GHA secrets.
 
-| Endpoint | Error | Details |
-|----------|-------|---------|
-| `get_users_me` | `client-not-enrolled` | Client Forbidden |
-| `get_trends_by_woeid` (US 23424977) | `client-not-enrolled` | Client Forbidden |
-| `get_trends_by_woeid` (worldwide 1) | `client-not-enrolled` | Client Forbidden |
-| `search_news` | `client-not-enrolled` | Client Forbidden |
-| `search_posts_all` | `client-not-enrolled` | Client Forbidden |
-
-**Error detail:** `client_id 33301071 is not attached to a developer Project`
-
-**What this means:**
-- Mewscast's own X is **not connected** at the MCP level
-- Live posts go through GHA secrets (`X_API_KEY`, `X_ACCESS_TOKEN`, etc.), not the MCP connector
-- Re-enabling `use_x_api: true` in `config.yaml` would use GHA secrets, not MCP — may or may not work depending on whether those credentials have Project enrollment
-
-### Bryan's Personal Account — READ-ONLY ACCESS
-
-Live X sample obtained via @bryanofearth MCP connector (2026-08-15 19:05 UTC):
-- `get_trends_by_woeid` ✅ Working
-- `search_news` ✅ Working
-- Post/reply/like/bookmark: **NOT USED** (audit is read-only)
-
-This connector is for audit purposes only. Do NOT use Bryan's personal account to post as Mewscast.
+*Historical note: Mewscast MCP connector (client_id 33301071) returned `client-not-enrolled` errors earlier in this audit; @bryanofearth connector used instead for reads.*
 
 ---
 
@@ -584,32 +562,29 @@ Any missing/expired credential causes silent fallback or failure without clear e
 
 ## 7. Recommendations (Not Implemented)
 
-### A. Tune REPORTs Toward Actual X Trending
+### A. Stage 1 Story Selection
 
-**Problem statement (now answered):** With `use_x_api: false`, all story selection is Google News. Is this missing stories that are "trending on X"?
+**The real punchline:** `config.yaml` has `use_x_api: false` since 2026-05-02. Today's pipeline is 100% Google News RSS. The design doc promised `trends/place`; implementation shipped watchlist recent-search; config then disabled even that.
 
-**Answer: No, for hard news.** Live X sample (Section 3) shows:
+**Live X sample verdict (Section 3):**
 - `trends/place` is 90-95% sports/concerts/viral — not news
-- `search_news` (X News tab) surfaces the same wire stories as Google News when queried by topic
+- `search_news` (X News) surfaces the same wire stories as Google News when queried by topic
 - Today's three REPORTs all appear in X News with targeted queries
+- No X signal gap for hard news
 
-**DO NOT implement the design doc promise.** `trends/place` was the wrong signal. Swapping Stage 1 to `trends/place` would flood triage with NFL scores and K-pop hashtags, wasting Haiku calls on hard rejects.
+**Recommendations:**
 
-**Options (ranked by value):**
+1. **DO NOT replace Stage 1 with `trends/place`.** Swapping to it would flood triage with NFL scores and DUANG concerts. The cat would become a shitposter.
 
-1. **Keep current architecture (recommended).** Google News RSS is the correct signal for need-to-know journalism. The pipeline is working as intended. No change needed.
+2. **Keep need-to-know triage.** It would correctly reject most of the `trends/place` list. The existing hard rejects (gossip, outrage, anonymous single-source) are the firewall.
 
-2. **Optional: Add X News as velocity check.** After triage passes a candidate, query `search_news` for the headline to confirm X is indexing it. If X News has 0 results, log a warning but don't block. This is observability, not story selection. Cost: ~$0.15/day.
+3. **Optional third signal: X News (`search_news`) for candidate generation**, or `trends/place` only as a velocity check on already-triaged stories. Not a replacement — an additive signal after triage. Cost: ~$4-9/month.
 
-3. **Optional: X engagement scoring.** For triaged candidates, query `search_recent_tweets` to get engagement metrics. Use as a tiebreaker when multiple stories pass triage in the same slot. Cost: ~$0.30/day.
+4. **If re-enabling `use_x_api: true`:** That path is still watchlist recent-search, not For You, not `trends/place`. Fix `outlet_registry.yaml` handle issues first (`business`, `ReutersWorld`, `NatureNews`).
 
-4. **DO NOT: Replace Stage 1 with `trends/place`.** This would turn the cat into a shitposter covering NFL preseason and DUANG concerts.
+5. **Don't burn Opus on sports/viral.** Current architecture gates Opus behind triage. No change needed.
 
-**Guard against Opus waste:** Current architecture already gates Opus behind triage. No change needed.
-
-**Guard against shitposting:** Current triage hard rejects (gossip, outrage, anonymous single-source) would catch most `trends/place` garbage. But why pay for the Haiku calls? Don't add garbage to the funnel.
-
-**Prerequisite for any X API work:** Verify Mewscast GHA secrets have Project enrollment. The MCP connector (client_id 33301071) is broken. Do NOT use Bryan's personal account (@bryanofearth) to post.
+6. **Don't spray.** Issues #14/#16 (Pope Leo duplicates) still open. Fix dedup before adding more candidates to the funnel.
 
 ### B. Fix Dedup Holes Without Turning Cat Into Shitposter
 
