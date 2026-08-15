@@ -1,0 +1,89 @@
+{
+  "story_id": "2026-08-14-magnitude-7-7-quake-7665ff76fb",
+  "headline_seed": "Magnitude-7.7 quake hits off coast of Indonesia, USGS says - NBC News",
+  "brief": {
+    "story_id": "2026-08-14-magnitude-7-7-quake-7665ff76fb",
+    "consensus_facts": [
+      "A magnitude-7.7 earthquake struck off the coast of Indonesia in the Flores region, according to the USGS.",
+      "The epicenter was located approximately 68 km (42 miles) north-northwest of the city of Ende.",
+      "The quake struck at 5:58 a.m. local time on Saturday (Aug. 15) Indonesia time.",
+      "Indonesian authorities (BMKG) issued a tsunami warning following the quake.",
+      "The initial quake was followed by aftershocks.",
+      "Buildings, including facilities in Maumere, were reported damaged.",
+      "Australia's tsunami warning center said the quake posed no tsunami threat to the Australian mainland, islands, or territories.",
+      "As of reporting, officials had not confirmed any casualties.",
+      "Indonesia is prone to earthquakes due to its location on the Pacific 'Ring of Fire.'"
+    ],
+    "disagreements": [
+      {
+        "topic": "Depth of the earthquake",
+        "positions": {
+          "ABC News": "10 kilometers depth (per USGS)",
+          "The Straits Times": "15 kilometers depth (BMKG recorded the first quake at a depth of 15km)",
+          "NBC News": "Describes it only as a 'shallow undersea quake' without a specific depth figure"
+        }
+      },
+      {
+        "topic": "Aftershock magnitude",
+        "positions": {
+          "NBC News": "Followed by two aftershocks (no magnitude given)",
+          "The Straits Times": "Followed by several aftershocks including one of magnitude 6.1",
+          "ABC News": "Does not mention aftershocks"
+        }
+      },
+      {
+        "topic": "Extent of confirmed damage",
+        "positions": {
+          "NBC News": "Cites resident Yohanna Embu describing damaged buildings and a collapsed Pelni port waiting room in Maumere",
+          "The Straits Times": "Notes 'no initial reports of damage' per disaster agency spokesperson, but also cites verified video of a building collapsing at a Maumere port and cracked hospital walls",
+          "ABC News": "Reports no damage details at all"
+        }
+      },
+      {
+        "topic": "Tsunami wave detection/projection",
+        "positions": {
+          "NBC News": "No specific wave heights; officials monitoring tide gauges",
+          "The Straits Times": "Alert for waves of 0.5m to 3m; tsunami waves of 19cm to 30cm detected; sea observed receding"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Leads on the USGS magnitude report and tsunami warning, then pivots quickly to a broader global-seismic-events frame \u2014 linking the quake to a recent Colombia quake and deadly Venezuela quakes, plus the historical 1992 Flores tsunami that killed ~2,500. Emphasizes the human angle via a single named resident (Yohanna Embu). Notes wire contributions from AP and Reuters. Frames the event within a running series of recent major earthquakes worldwide.",
+      "ABC News": "Bare-bones wire treatment \u2014 essentially a two-paragraph breaking alert. Reports only the magnitude, depth (10km), time, epicenter location, and the boilerplate 'Ring of Fire' context. No casualties, no damage, no eyewitnesses, no tsunami warning details. Least detailed of the three; functions as a headline-plus stub.",
+      "The Straits Times": "By far the most detailed and on-the-ground reporting. Leads on the quake and tsunami warning, then layers in multiple named eyewitnesses (Lukas Lotar), verified social video, specific tsunami modeling by province, wave-height alerts, and detected wave measurements. Emphasizes the evacuation and immediate human response. Provides the deepest historical context, invoking the 2004 Boxing Day tsunami (220,000 dead), 2018 Lombok, and 2018 Palu disasters. Regional outlet framing that treats this as a major local/regional story rather than one item in a global roundup."
+    },
+    "primary_source_alignment": [
+      "No primary source (USGS event page or BMKG bulletin) was included in the dossier, so direct alignment against an underlying document cannot be performed.",
+      "The USGS magnitude-7.7 figure and the ~68km-north-northwest-of-Ende epicenter are attributed consistently across all three outlets, but the depth figure diverges between outlets citing USGS (10km) and BMKG (15km), which a primary source would resolve."
+    ],
+    "missing_context": [
+      "No outlet confirmed a final casualty count; all reporting occurred while the situation was still developing and 'no casualties reported' may simply reflect timing, not outcome.",
+      "No outlet clarified whether the tsunami warning was later lifted or upgraded \u2014 coverage stops at the warning/detection stage.",
+      "The depth discrepancy (USGS 10km vs. BMKG 15km) is left unreconciled by all outlets; no primary source was provided to settle it.",
+      "None of the outlets provided a comprehensive damage assessment or figures on displaced/evacuated persons beyond descriptions of 'hundreds' evacuating.",
+      "No outlet addressed the reliability of early social-media video beyond Reuters' geolocation verification of the Maumere port clip.",
+      "The dossier contains only three articles, two of which (NBC and ABC) lean-left and rely heavily on the same AP/Reuters wire feeds, limiting source independence; the Straits Times provides the primary independent regional reporting.",
+      "No primary source document (USGS or BMKG bulletin) was located for this story, limiting the ability to verify the numbers against an authoritative record."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets confirm the core facts of the quake with broadly consistent framing (a breaking natural-disaster event), and the divergences are minor numerical and detail-level differences rather than materially different narratives, making this a straightforward REPORT rather than a META coverage story.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/indonesia/earthquake-indonesia-rcna592638",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/wireStory/magnitude-77-earthquake-strikes-off-coast-indonesia-usgs-135659935",
+      "title": "A magnitude 7.7 earthquake strikes off coast of Indonesia, USGS says - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Straits Times",
+      "url": "https://www.straitstimes.com/asia/se-asia/strong-7-7-magnitude-quake-strikes-off-indonesia-usgs?ref=latest-headlines",
+      "title": "Strong 7.7-magnitude quake strikes off Indonesia: USGS - The Straits Times"
+    }
+  ]
+}
