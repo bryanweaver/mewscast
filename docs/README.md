@@ -4,7 +4,7 @@ Index of planning, strategy, and operations documents for the Mewscast / Walter 
 
 ## Pipeline & Workflow
 
-- [Croncat Journalism Workflow](Croncat_Journalism_Workflow.md) — the 7-stage Cronkite-modeled pipeline (design doc, principles, post types, keystone rule, implementation notes)
+- [Croncat Journalism Workflow](Croncat_Journalism_Workflow.md) — the 7-stage Cronkite-modeled pipeline (design doc, principles, post types, keystone rule, implementation notes). See [§14 As Built](Croncat_Journalism_Workflow.md#14-as-built-2026-08-15) for current Stage 1 status.
 - [Update Detection](UPDATE_DETECTION.md) — how the bot detects and handles story updates vs duplicates
 
 ## Research & Strategy
