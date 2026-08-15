@@ -512,6 +512,20 @@ These notes document structural code changes that align the implementation with 
 
 ---
 
+## 14. As Built (2026-08-15)
+
+Current state of Stage 1 trend detection, for the record.
+
+**`config.yaml` `trend_detection.use_x_api` has been `false` since 2026-05-02.** Stage 1 runs entirely on Google News RSS via `NewsFetcher.get_top_stories()`. No X API calls occur during trend detection.
+
+**Watchlist recent-search is implemented but off.** `src/trend_detector.py` contains the query pattern (`from:{outlet_registry handles} -is:retweet lang:en`) and the code path exists, but it is gated behind `use_x_api` and has never run in production.
+
+**`trends/place` was never implemented.** The design doc (§1 above) mentions it as a possible input; no code was written. Live sampling on 2026-08-15 ~19:05 UTC showed worldwide and US trending topics were 90%+ sports and viral content (NFL, Man United, concerts). Need-to-know triage (§2) would reject most of that. Watchlist search plus targeted X News remains closer to journalism than live trends.
+
+**Journalism posts use GHA / tweepy bot credentials.** Publishing runs on GitHub Actions with the existing `@WalterCroncat` bot keys. Personal X MCP tokens are not used for journalism output.
+
+---
+
 ## Companion Docs
 
 - [`Walter_Cronkite_Report.md`](./Walter_Cronkite_Report.md) — the sourced research underpinning every principle in this document
