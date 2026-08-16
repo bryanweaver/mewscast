@@ -1,0 +1,54 @@
+{
+  "story_id": "2026-08-15-us-democrats-finalise-major-61fe4dbb8a",
+  "headline_seed": "US Democrats finalise major shakeup to 2028 presidential primary calendar - Al Jazeera",
+  "brief": {
+    "story_id": "2026-08-15-us-democrats-finalise-major-61fe4dbb8a",
+    "consensus_facts": [
+      "Only one article in the dossier (Al Jazeera English) contains substantive body text; the New York Times, Washington Post, and AP entries are headline-only or contain no reportable body prose, so the following are headline-level consensus, not body-corroborated wire consensus.",
+      "Multiple outlets (New York Times headline, Al Jazeera body, AP headline) reference the Democratic Party's 2028 presidential primary calendar and identify South Carolina as the first nominating contest."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier. Frames the story around the outcome \u2014 'Democrats Make South Carolina the First Contest in 2028 Presidential Primary Calendar' \u2014 leading with the structural result rather than the DNC process. No body text available to assess deeper framing.",
+      "Al Jazeera English": "The only full-text source. Frames the vote as a 'shakeup' tied to Democrats' ambition to 'take back the White House.' Reports specifics: DNC members voted Saturday in Austin, Texas; South Carolina primary set for January 22, 2028; Nevada February 1; New Hampshire February 8; with New Mexico, Michigan and Virginia rounding out the early states. Emphasizes the rationale of giving 'greater influence to states with more racial diversity' to represent 'key constituencies,' and surfaces past controversy, noting New Hampshire officials defied party leaders in 2024 by citing a state law requiring their primary be first in the nation.",
+      "The Washington Post": "Headline-only in this dossier, and the headline ('Democrats abandon Senate races in deep-red states, boosting independents') is about a different subject \u2014 Senate race withdrawals \u2014 not the primary calendar. Appears tangential or off-topic to this story.",
+      "Associated Press": "Body text consists only of photo captions from the DNC Summer Meeting in Austin (Aug. 13, 2026), naming DNC Chair Ken Martin and member Donna Brazile at Labor Council and Black Caucus meetings. The headline frames the calendar as giving 'Black and Latino voters and union members an early say,' emphasizing demographic and labor constituencies, but no article prose is available to corroborate specifics."
+    },
+    "primary_source_alignment": [
+      "No primary source (DNC roll-call vote, resolution text, or official calendar release) was located for this story, so reported dates and state order cannot be verified against the underlying document."
+    ],
+    "missing_context": [
+      "Single-source limitation: only Al Jazeera English provided substantive body text. All calendar specifics \u2014 the January 22, 2028 South Carolina date, the Nevada/New Hampshire order, and inclusion of New Mexico, Michigan and Virginia \u2014 rest on one outlet and are not corroborated by a second full-text report in this dossier.",
+      "No primary source (DNC resolution, vote tally, or official calendar document) was available to confirm the reported dates and sequencing.",
+      "The Washington Post headline in the dossier concerns Democrats dropping out of deep-red Senate races, a different topic; it does not corroborate the primary-calendar story and may have been mis-gathered.",
+      "AP's body text is limited to photo captions, so its headline claim that the calendar gives Black, Latino, and union voters an early say cannot be verified from the provided material.",
+      "No outlet body text explains how Republicans are structuring their own 2028 calendar, nor whether New Hampshire intends to again defy the party in 2028.",
+      "No exact vote count or margin from the DNC members' vote is reported in any full-text article."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (Al Jazeera English) supplied substantive body text, so the calendar specifics are effectively single-source and cannot be presented as confirmed wire consensus. A same-day hedged BULLETIN is appropriate until a second full report or the DNC primary source is available.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/15/us/politics/democrats-new-presidential-primary-calendar.html",
+      "title": "Democrats Make South Carolina the First Contest in 2028 Presidential Primary Calendar - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/15/us-democrats-finalise-major-shakeup-to-2028-presidential-primary-calendar",
+      "title": ""
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/08/15/why-democrats-are-dropping-out-senate-races-deep-red-states/",
+      "title": "Democrats abandon Senate races in deep-red states, boosting independents - The Washington Post"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/dnc-2028-presidential-calendar-democrats-south-carolina-be664f26ad5652f054c7f19e483a4d63",
+      "title": "Democrats' 2028 presidential calendar gives Black and Latino voters and union members an early say - AP News"
+    }
+  ]
+}
