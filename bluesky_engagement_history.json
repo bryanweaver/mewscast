@@ -1,111 +1,6 @@
 {
   "followed_users": [
     {
-      "did": "did:plc:ttb3nxboqkdgnzxwjboa33f4",
-      "handle": "mofubot.moe",
-      "timestamp": "2026-05-11T01:41:45.717385"
-    },
-    {
-      "did": "did:plc:ha4ida3azk3jx25jlqxznnop",
-      "handle": "jupforjupiter.bsky.social",
-      "timestamp": "2026-05-11T13:57:15.168952"
-    },
-    {
-      "did": "did:plc:tzlofhl7uutvmutxol2oms44",
-      "handle": "squidliquor.bsky.social",
-      "timestamp": "2026-05-12T01:40:37.917894"
-    },
-    {
-      "did": "did:plc:x7bwclgiamtdxxl5zlfxv323",
-      "handle": "7omdowling.bsky.social",
-      "timestamp": "2026-05-12T13:39:26.866727"
-    },
-    {
-      "did": "did:plc:wzkju4uimisdjsiu5w2mwzbz",
-      "handle": "jmwallach.bsky.social",
-      "timestamp": "2026-05-12T16:45:07.515731"
-    },
-    {
-      "did": "did:plc:5kydynj3pme74rk5ynru3m6d",
-      "handle": "reactiveashley.cat",
-      "timestamp": "2026-05-12T20:41:36.329614"
-    },
-    {
-      "did": "did:plc:n6hqeku2kjvwhjlnnscea25s",
-      "handle": "coffeeknife.wrenspace.dev",
-      "timestamp": "2026-05-13T01:42:44.279658"
-    },
-    {
-      "did": "did:plc:vylhnwytcf2dfxjmsgql4pcw",
-      "handle": "goblininthecave.bsky.social",
-      "timestamp": "2026-05-13T13:46:55.602492"
-    },
-    {
-      "did": "did:plc:gmqkkpmppncbdcctmszz7smh",
-      "handle": "bella-oliver.bsky.social",
-      "timestamp": "2026-05-13T20:42:49.839451"
-    },
-    {
-      "did": "did:plc:secrhbncqijjy5u6opylmplm",
-      "handle": "okwaitno.bsky.social",
-      "timestamp": "2026-05-14T01:44:45.529597"
-    },
-    {
-      "did": "did:plc:btw2623blxkvero5inapo3ba",
-      "handle": "ryuusea.bsky.social",
-      "timestamp": "2026-05-14T13:38:46.910518"
-    },
-    {
-      "did": "did:plc:sn5ouio7y2yqpvktoz5idirc",
-      "handle": "creativecadre.bsky.social",
-      "timestamp": "2026-05-14T16:37:16.238598"
-    },
-    {
-      "did": "did:plc:h7os7k2dguso65qqgf7l3kfi",
-      "handle": "tiinamenzel.bsky.social",
-      "timestamp": "2026-05-14T20:39:12.159752"
-    },
-    {
-      "did": "did:plc:vhz5pedv6vcwo5e3mju4ou57",
-      "handle": "neonspacecat.bsky.social",
-      "timestamp": "2026-05-15T01:42:42.363367"
-    },
-    {
-      "did": "did:plc:wjsefzwyhdw24zqttqshkiy3",
-      "handle": "wordnerdy.bsky.social",
-      "timestamp": "2026-05-15T13:37:36.091944"
-    },
-    {
-      "did": "did:plc:gtlbvnec76rnawrnr2c6rp7r",
-      "handle": "foxofwonders.bsky.social",
-      "timestamp": "2026-05-15T16:33:37.260765"
-    },
-    {
-      "did": "did:plc:3wp4ie7xhoamxhtvxwoujl5y",
-      "handle": "cls180.bsky.social",
-      "timestamp": "2026-05-16T01:40:39.270510"
-    },
-    {
-      "did": "did:plc:24bkqdxcl6qw6au5lvnb26vv",
-      "handle": "dernowak-schreibt.bsky.social",
-      "timestamp": "2026-05-16T13:34:09.809364"
-    },
-    {
-      "did": "did:plc:mc5yoflbuvempkhecxqf2ogp",
-      "handle": "foxalis.com",
-      "timestamp": "2026-05-16T20:23:17.203230"
-    },
-    {
-      "did": "did:plc:fjd5rmoam57ucvki2lb5o3ds",
-      "handle": "suzisteffen.bsky.social",
-      "timestamp": "2026-05-17T01:41:09.692578"
-    },
-    {
-      "did": "did:plc:4g3fljkzvmv3svauqfokp2gw",
-      "handle": "tonyasong.bsky.social",
-      "timestamp": "2026-05-18T01:46:20.974985"
-    },
-    {
       "did": "did:plc:4icp5wsmyi7z6n3gnfziyvd4",
       "handle": "pixiesherry.bsky.social",
       "timestamp": "2026-05-18T14:13:57.236651"
@@ -1719,134 +1614,14 @@
       "did": "did:plc:atzseybj6kr4tvtvp73bqyfh",
       "handle": "arthistory.bsky.social",
       "timestamp": "2026-08-15T13:28:26.156825"
+    },
+    {
+      "did": "did:plc:7c54vrhyhccfkw3khptd3wsj",
+      "handle": "petallu.bsky.social",
+      "timestamp": "2026-08-16T02:21:18.072171"
     }
   ],
   "liked_posts": [
-    {
-      "uri": "at://did:plc:ttb3nxboqkdgnzxwjboa33f4/app.bsky.feed.post/3mlk4ycdtmk2l",
-      "author": "mofubot.moe",
-      "timestamp": "2026-05-11T01:41:45.500396"
-    },
-    {
-      "uri": "at://did:plc:ha4ida3azk3jx25jlqxznnop/app.bsky.feed.post/3mljezyo5es2q",
-      "author": "jupforjupiter.bsky.social",
-      "timestamp": "2026-05-11T13:57:15.070088"
-    },
-    {
-      "uri": "at://did:plc:qjgnvaaepvl5fiteyaensslu/app.bsky.feed.post/3mllnjne56m27",
-      "author": "swordcrossdzine.bsky.social",
-      "timestamp": "2026-05-11T16:51:39.409697"
-    },
-    {
-      "uri": "at://did:plc:x7ay7pyd7e66wfcwjx2dws5i/app.bsky.feed.post/3mllya4ksnk27",
-      "author": "destinytoro.com",
-      "timestamp": "2026-05-11T20:44:06.754054"
-    },
-    {
-      "uri": "at://did:plc:tzlofhl7uutvmutxol2oms44/app.bsky.feed.post/3mlmi3t6vjk24",
-      "author": "squidliquor.bsky.social",
-      "timestamp": "2026-05-12T01:40:37.752657"
-    },
-    {
-      "uri": "at://did:plc:x7bwclgiamtdxxl5zlfxv323/app.bsky.feed.post/3mln4gd2um22y",
-      "author": "7omdowling.bsky.social",
-      "timestamp": "2026-05-12T13:39:26.687677"
-    },
-    {
-      "uri": "at://did:plc:wzkju4uimisdjsiu5w2mwzbz/app.bsky.feed.post/3mlo77ohets2i",
-      "author": "jmwallach.bsky.social",
-      "timestamp": "2026-05-12T16:45:07.424134"
-    },
-    {
-      "uri": "at://did:plc:5kydynj3pme74rk5ynru3m6d/app.bsky.feed.post/3mlohvzbd2s2d",
-      "author": "reactiveashley.cat",
-      "timestamp": "2026-05-12T20:41:36.129773"
-    },
-    {
-      "uri": "at://did:plc:n6hqeku2kjvwhjlnnscea25s/app.bsky.feed.post/3mlp5xzkous2d",
-      "author": "coffeeknife.wrenspace.dev",
-      "timestamp": "2026-05-13T01:42:44.184899"
-    },
-    {
-      "uri": "at://did:plc:vylhnwytcf2dfxjmsgql4pcw/app.bsky.feed.post/3mlq7ufbe7q2m",
-      "author": "goblininthecave.bsky.social",
-      "timestamp": "2026-05-13T13:46:55.426136"
-    },
-    {
-      "uri": "at://did:plc:gmqkkpmppncbdcctmszz7smh/app.bsky.feed.post/3mloz6tffik25",
-      "author": "bella-oliver.bsky.social",
-      "timestamp": "2026-05-13T20:42:49.626046"
-    },
-    {
-      "uri": "at://did:plc:secrhbncqijjy5u6opylmplm/app.bsky.feed.post/3mlrdc3jihs2o",
-      "author": "okwaitno.bsky.social",
-      "timestamp": "2026-05-14T01:44:45.279072"
-    },
-    {
-      "uri": "at://did:plc:btw2623blxkvero5inapo3ba/app.bsky.feed.post/3mlrwudqur22e",
-      "author": "ryuusea.bsky.social",
-      "timestamp": "2026-05-14T13:38:46.722924"
-    },
-    {
-      "uri": "at://did:plc:sn5ouio7y2yqpvktoz5idirc/app.bsky.feed.post/3mlsqx7oh7c2w",
-      "author": "creativecadre.bsky.social",
-      "timestamp": "2026-05-14T16:37:16.009508"
-    },
-    {
-      "uri": "at://did:plc:h7os7k2dguso65qqgf7l3kfi/app.bsky.feed.post/3mlte6ikp7s2h",
-      "author": "tiinamenzel.bsky.social",
-      "timestamp": "2026-05-14T20:39:12.027169"
-    },
-    {
-      "uri": "at://did:plc:vhz5pedv6vcwo5e3mju4ou57/app.bsky.feed.post/3mlu6yeehns22",
-      "author": "neonspacecat.bsky.social",
-      "timestamp": "2026-05-15T01:42:42.205305"
-    },
-    {
-      "uri": "at://did:plc:wjsefzwyhdw24zqttqshkiy3/app.bsky.feed.post/3mlvggvhwz227",
-      "author": "wordnerdy.bsky.social",
-      "timestamp": "2026-05-15T13:37:35.879210"
-    },
-    {
-      "uri": "at://did:plc:gtlbvnec76rnawrnr2c6rp7r/app.bsky.feed.post/3mlvn4adru22s",
-      "author": "foxofwonders.bsky.social",
-      "timestamp": "2026-05-15T16:33:37.062128"
-    },
-    {
-      "uri": "at://did:plc:cyt4bxfmtrmawwbhwajwacau/app.bsky.feed.post/3mlw5ou5ewx23",
-      "author": "s0ap.bsky.social",
-      "timestamp": "2026-05-15T20:33:52.257958"
-    },
-    {
-      "uri": "at://did:plc:3wp4ie7xhoamxhtvxwoujl5y/app.bsky.feed.post/3mltlxeinjs2a",
-      "author": "cls180.bsky.social",
-      "timestamp": "2026-05-16T01:40:39.054076"
-    },
-    {
-      "uri": "at://did:plc:24bkqdxcl6qw6au5lvnb26vv/app.bsky.feed.post/3mlxohgeik22k",
-      "author": "dernowak-schreibt.bsky.social",
-      "timestamp": "2026-05-16T13:34:09.601035"
-    },
-    {
-      "uri": "at://did:plc:pqntauca2i73u6nyuupdlkl2/app.bsky.feed.post/3mlya2q3sak2q",
-      "author": "sregorn.bsky.social",
-      "timestamp": "2026-05-16T16:17:51.568070"
-    },
-    {
-      "uri": "at://did:plc:mc5yoflbuvempkhecxqf2ogp/app.bsky.feed.post/3mlyjjihxmc2m",
-      "author": "foxalis.com",
-      "timestamp": "2026-05-16T20:23:17.045197"
-    },
-    {
-      "uri": "at://did:plc:fjd5rmoam57ucvki2lb5o3ds/app.bsky.feed.post/3mlyeql7bnk2p",
-      "author": "suzisteffen.bsky.social",
-      "timestamp": "2026-05-17T01:41:09.514818"
-    },
-    {
-      "uri": "at://did:plc:4g3fljkzvmv3svauqfokp2gw/app.bsky.feed.post/3mm3qtassp22f",
-      "author": "tonyasong.bsky.social",
-      "timestamp": "2026-05-18T01:46:20.771788"
-    },
     {
       "uri": "at://did:plc:4icp5wsmyi7z6n3gnfziyvd4/app.bsky.feed.post/3mm4witpdu22a",
       "author": "pixiesherry.bsky.social",
@@ -3576,9 +3351,14 @@
       "uri": "at://did:plc:kcva2cegmmmoquwjxrumscz3/app.bsky.feed.post/3mt5iyudyss2x",
       "author": "pashion.bsky.social",
       "timestamp": "2026-08-15T20:30:11.396911"
+    },
+    {
+      "uri": "at://did:plc:7c54vrhyhccfkw3khptd3wsj/app.bsky.feed.post/3mt5uappt3s2f",
+      "author": "petallu.bsky.social",
+      "timestamp": "2026-08-16T02:21:17.923043"
     }
   ],
-  "last_cleanup": "2026-08-08T20:38:32.065797",
+  "last_cleanup": "2026-08-16T02:21:17.287810",
   "sessions": [
     {
       "timestamp": "2026-05-18T14:41:25.055149+00:00",
