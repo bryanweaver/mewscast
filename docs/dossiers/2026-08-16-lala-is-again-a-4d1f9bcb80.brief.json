@@ -1,0 +1,108 @@
+{
+  "story_id": "2026-08-16-lala-is-again-a-4d1f9bcb80",
+  "headline_seed": "Lala is again a tropical storm, sending drenching rain and winds across the Hawaiian islands - AP News",
+  "brief": {
+    "story_id": "2026-08-16-lala-is-again-a-4d1f9bcb80",
+    "consensus_facts": [
+      "Hurricane Lala weakened to a tropical storm on Sunday after passing near Hawaii without making a direct landfall (CNN, Al Jazeera, NPR).",
+      "Lala had strengthened to a Category 1 hurricane on Saturday before weakening (CNN, Al Jazeera, NPR).",
+      "As a tropical storm, Lala was sustaining top winds of about 70 mph (CNN, NPR).",
+      "At least one person died in a storm-related car accident, reported in the South Point area of the Big Island (CNN, Al Jazeera, NPR).",
+      "Approximately 130,000 utility customers lost power across Hawaii (CNN, Al Jazeera, NPR).",
+      "Hawaii Gov. Josh Green said 19 buildings/roofs were lost in the storm (CNN, Al Jazeera, NPR).",
+      "At least three hospitals switched to generator power, per Gov. Josh Green (Al Jazeera, NPR).",
+      "Total rainfall of nearly three feet (one meter / up to about 35 inches) was expected on higher windward slopes of the Big Island (CNN, Al Jazeera, NPR).",
+      "The National Hurricane Center warned of life-threatening flooding and mudslides, especially in steep terrain (CNN, Al Jazeera, NPR).",
+      "A search-and-rescue mission was launched after flash floods apparently swept several occupied homes off their foundations near the island's southern tip (CNN, NPR).",
+      "Tropical storm warnings were in effect for other islands including Maui, Molokai, Lanai, Kahoolawe, Oahu, and Kauai as the storm moved west (CNN, NPR).",
+      "Hawaii County Mayor Kimo Alameda and Gov. Josh Green were the primary officials providing updates (CNN, Al Jazeera, NPR).",
+      "Resident Christine Matsuda of Waimea described 'big gusts every few minutes' rattling her house (Al Jazeera, NPR)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Historical framing of landfall rarity",
+        "positions": {
+          "CNN": "Frames it as Hawaii's potential first hurricane landfall in more than 30 years, citing 1992's Iniki as the last landfalling hurricane and 2018's Tropical Storm Olivia as the last tropical system landfall.",
+          "Al Jazeera": "States the Big Island 'has not suffered a direct hurricane landfall in 155 years.'",
+          "NPR": "Does not assign a specific historical timeframe; simply notes the storm skirted Hawaii without landfall."
+        }
+      },
+      {
+        "topic": "Deaths and severity of impact tone",
+        "positions": {
+          "CNN": "Leads with '1 dead, thousands without power' and emphasizes tens of thousands losing power, roofs lost, and 30+ inches of rain already fallen on the Big Island.",
+          "Al Jazeera": "Emphasizes the storm 'just escaping primary impact zones' while still noting one death and heavy damage.",
+          "NPR": "Emphasizes the storm 'wasn't done punishing the Big Island' and details ongoing rescue and forecast risks."
+        }
+      },
+      {
+        "topic": "Rainfall totals already recorded vs. forecast",
+        "positions": {
+          "CNN": "Reports the Big Island 'got over 30 inches of rain' (past tense, already fallen).",
+          "NPR": "Frames the ~35 inches as a forecast total by the time the storm is gone ('will have been hit with as much as 35 inches').",
+          "Al Jazeera": "Frames up to 90cm (35 inches) as an NHC forecast for some areas."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press (wire)": "Both AP entries (Articles 1 and 4) are photo-caption-only with no substantive body text. Article 1's captions still label the storm 'Hurricane Lala' while the satellite caption says 'Tropical Storm Lala.' Article 4's headline explicitly frames the event as Lala 'skirting' the Big Island 'without making landfall.' No reporting body available; the wire narrative reaches readers primarily through NPR's republication of AP copy.",
+      "CNN": "Two entries. The main article (Article 2) leads hardest on human toll and disruption: '1 dead, thousands without power,' nearly 70% of the Big Island dark, 190+ flights postponed, homes swept off foundations. It leans into the historic-landfall angle (first in 30+ years) and includes extensive resident color and evacuation detail. The video piece (Article 6) is a raw-footage clip whose surrounding text is mostly a playlist of unrelated CNN videos. CNN emphasizes drama and scale.",
+      "Al Jazeera English (international)": "Most compact narrative. Frames Lala as narrowly missing \u2014 'edging the Hawaiian coast and just escaping primary impact zones' \u2014 while stressing the striking historical claim that the Big Island has not had a direct hurricane landfall 'in 155 years,' a figure no other outlet uses. Attributes power-outage figure to Reuters and quotes AP's Christine Matsuda, signaling reliance on wire aggregation.",
+      "Reuters (wire)": "Headline-only entry (Article 5); body is an unresolved Google News RSS link. Headline emphasizes the 'more than 100,000 without power' figure and the downgrade to tropical storm. No retrievable body text, so Reuters cannot corroborate body-level facts; other outlets cite Reuters for the outage count.",
+      "NPR": "Republishes AP copy under a byline of 'The Associated Press.' Provides the fullest, most granular narrative: the search-and-rescue operation in Na'alehu and Wai'ohinu, precise storm positioning (105 miles WNW of Kailua-Kona at 2 a.m.), the NHC note that mountain winds run up to 30% stronger, off-grid housing for 210,000 islanders, and lengthy resident quotes. Framing stresses continued danger ('wasn't done punishing the Big Island') and the March flooding context. Effectively the AP wire's full text as filtered through NPR."
+    },
+    "primary_source_alignment": [
+      "No primary sources (NHC advisories, county civil-defense releases, or utility statements) were included in the dossier, so no direct document-to-coverage comparison is possible.",
+      "Key quantitative claims \u2014 70 mph winds, ~130,000 without power, up to 35 inches of rain, storm position \u2014 are attributed by outlets to the National Hurricane Center, poweroutage.us, Reuters, and Gov. Josh Green, but none of those underlying documents were provided for verification."
+    ],
+    "missing_context": [
+      "No primary source (NHC advisory text, Hawaii County civil-defense bulletin, or Hawaiian Electric statement) was located, so the widely cited figures cannot be checked against original documents.",
+      "The historical-landfall framing is inconsistent and unreconciled: CNN's '30+ years' (based on 1992 Iniki) and Al Jazeera's '155 years' measure different things (last hurricane strike vs. last direct landfall on the Big Island specifically), and no outlet explains the discrepancy.",
+      "Two of the seven dossier entries (both AP) contain only photo captions, and two more (Reuters and CNN's video piece) are effectively headline/playlist stubs, so substantive reporting rests on just three full-text narratives \u2014 CNN, Al Jazeera, and NPR \u2014 with NPR being republished AP wire copy.",
+      "NPR and portions of Al Jazeera derive from the same AP wire, meaning apparent multi-outlet agreement partly reflects a single wire origin rather than fully independent corroboration.",
+      "No outlet quantifies confirmed structural losses beyond '19 roofs' and the swept homes; total damage estimates, injury counts, and the number of people rescued are absent.",
+      "The number of shelter evacuees is given only by CNN (around 130 people, per the mayor) and is not corroborated elsewhere.",
+      "No article body contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (CNN, Al Jazeera, NPR) reported the same event with materially different emphasis and an unreconciled historical-landfall discrepancy (30 years vs. 155 years), while two AP entries and a Reuters stub carried no usable body \u2014 making the coverage pattern itself, and its reliance on shared AP wire copy, the story worth surfacing.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/hawaii-lala-hurricane-tropical-damage-a9fafe9ffc24572c671d1b43414c0ac2",
+      "title": ""
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/15/weather/tropical-storm-lala-inches-toward-hurricane-strength-and-hawaiis-big-island",
+      "title": "1 dead, thousands without power as Tropical Storm Lala lashes Hawaii - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/16/hurricane-lala-weakens-to-a-tropical-storm-but-flooding-persists-in-hawaii",
+      "title": "Hurricane Lala weakens to a tropical storm, but flooding persists in Hawaii - Al Jazeera"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/hawaii-tropical-storm-lala-hurricane-0c3d63c8a87943cdf8d57c530a7ed9d0",
+      "title": "Hurricane Lala skirts Hawaii's Big Island without making landfall as heavy wind, rain lash region - AP News"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/environment/more-than-100000-without-power-hawaii-lala-downgraded-tropical-storm-2026-08-16/",
+      "title": "More than 100,000 without power in Hawaii as Lala downgraded to tropical storm - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/16/weather/video/hawaii-hurrican-lala-lashes-big-island-raw-vrtc-digvid",
+      "title": "Hurricane Lala lashes Hawaii\u2019s Big Island - CNN"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/08/16/g-s1-138926/lala-tropical-storm-hawaii-hurricane",
+      "title": "Lala is again a tropical storm, sending drenching rain and winds across Hawaii - NPR"
+    }
+  ]
+}
