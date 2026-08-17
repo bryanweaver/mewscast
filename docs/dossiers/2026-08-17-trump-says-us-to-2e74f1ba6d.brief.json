@@ -1,0 +1,107 @@
+{
+  "story_id": "2026-08-17-trump-says-us-to-2e74f1ba6d",
+  "headline_seed": "Trump says US to scale back military drills with South Korea after it stayed out of Iran war - BBC",
+  "brief": {
+    "story_id": "2026-08-17-trump-says-us-to-2e74f1ba6d",
+    "consensus_facts": [
+      "On Sunday, Aug. 16, 2026, President Donald Trump announced via Truth Social that he directed Defense Secretary Pete Hegseth to 'substantially reduce' joint US-South Korea military exercises.",
+      "Trump cited his 'very good relationship' with North Korean leader Kim Jong Un as a reason, calling the drills a signal that is 'totally inappropriate and hostile.'",
+      "Trump complained the exercises are costly and largely paid for by the United States.",
+      "Trump noted that he had asked the President of South Korea to join the US in the 'Denuclearization' of Iran and was told 'No thanks!'",
+      "The exercises in question are the annual Ulchi Freedom Shield drills, scheduled to begin Monday, involving about 18,000 South Korean soldiers.",
+      "Trump said it was 'too late to cancel' the drills.",
+      "Earlier in the weekend, Trump posted an old 2018 photograph of himself and Kim, describing them as friends who get along 'GREAT.'",
+      "North Korea recently conducted a ballistic missile test that experts and officials assessed as a protest against the drills.",
+      "Trump has previously scaled back US-South Korea exercises, including a suspension in 2018 during denuclearization negotiations with Kim.",
+      "North Korea condemned the drills as a rehearsal for aggressive war."
+    ],
+    "disagreements": [
+      {
+        "topic": "Duration of the Ulchi Freedom Shield drills",
+        "positions": {
+          "BBC News": "Describes the event as an '11-day' exercise",
+          "CNN": "Says the drills were set to go for '10 days'"
+        }
+      },
+      {
+        "topic": "South Korea's response",
+        "positions": {
+          "BBC News": "Seoul said the drills would proceed 'as scheduled'",
+          "NBC News": "South Korea's embassy and U.S. Forces Korea did not immediately respond to requests for comment",
+          "CNN": "Does not report a Seoul response",
+          "Axios": "Does not report a Seoul response"
+        }
+      },
+      {
+        "topic": "Aircraft carrier redeployment detail",
+        "positions": {
+          "NBC News": "USS George Washington sent to replace USS Abraham Lincoln in the Persian Gulf; Lincoln has drawn scrutiny over onboard conditions",
+          "Axios": "USS George Washington redeployed from Pacific to Middle East to replace USS Abraham Lincoln, leaving the US without a Pacific carrier",
+          "BBC News / CNN": "Do not mention the carrier redeployment"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Trump instructs Pentagon to reduce military exercises with South Korea'). Neutral wire phrasing, frames it as an instruction to the Pentagon. No body text available to assess emphasis.",
+      "NBC News": "Full body text. Leads with Trump's direction to the Defense Department and immediately pairs the two stated motives \u2014 the Iran-war refusal and the Kim relationship. Emphasizes the ambiguity of what a 'scaled-down' drill looks like and that non-responses were sought from Seoul's embassy and U.S. Forces Korea. Surfaces the aircraft-carrier redeployment and the recent North Korean missile launch as context.",
+      "BBC News": "Full body text. Frames the story around the Iran-war linkage in the headline ('after it stayed out of Iran war'). Notes Seoul said drills proceed 'as scheduled,' adds significant historical context (2018 suspension, 2020 Covid scale-back, 2019 diplomacy collapse, Trump's 2019 North Korea visit), and highlights Trump's frustration with other allies (Japan, France, UK). Notes South Korea's recent proposal to formally end the Korean War.",
+      "Axios": "Full body text buried under heavy cookie/tracking boilerplate. Uses a scannable format (big picture, what he's saying, context, friction point, what we're watching). Emphasizes the naming/history of Ulchi Freedom Shield (annual since 2022, roots decades back) and foregrounds the carrier redeployment as the key 'what we're watching' angle.",
+      "Bloomberg": "Headline-only in this dossier ('Trump Says He's Curtailing Military Drills With South Korea'). Body blocked by anti-bot wall. Frames as a self-report ('Trump Says'). No body text available to assess emphasis.",
+      "CNN": "Full body text, filed under 'middleeast.' Leads on the reduction and cites both the Kim relationship and Seoul's lack of Iran help. Quotes Trump's post at greater length than others. Adds distinctive context: Kim's claim that the Iran war vindicated North Korea keeping nuclear weapons, Kim's March speech accusing Washington of 'state sponsored terrorism,' details on Camp Humphreys, and the 2019 Hanoi summit failure. Historical framing on prior scale-backs and Trump's cost complaints.",
+      "The New York Times": "Headline-only in this dossier ('Trump Orders Pentagon to Curtail Military Exercises With Ally South Korea'). Word choice emphasizes 'Ally' \u2014 foregrounding the tension of pulling back from an ally. No body text available to assess emphasis."
+    },
+    "primary_source_alignment": [
+      "No primary source (full Truth Social post text as an official document, transcript, or Pentagon release) was located in the dossier. The Truth Social quotes reproduced across NBC News, BBC News, Axios, and CNN are mutually consistent in wording, but no independent primary document was available to verify against."
+    ],
+    "missing_context": [
+      "Four of seven outlets (NBC News, BBC News, Axios, CNN) provided full body text; Reuters, Bloomberg, and The New York Times were headline-only, so their framing could not be fully assessed.",
+      "No outlet clarifies what a 'substantially reduced' version of Ulchi Freedom Shield would concretely look like \u2014 the operational impact remains unspecified.",
+      "No official confirmation from the Pentagon or Secretary Hegseth was reported; the announcement rests entirely on Trump's Truth Social post.",
+      "The exact number of US troops stationed in South Korea is given only by BBC News (about 28,500); other outlets omit it.",
+      "The drills' duration is reported inconsistently (BBC: 11 days; CNN: 10 days) and no outlet reconciles the discrepancy.",
+      "No South Korean government official is quoted directly beyond BBC's brief 'as scheduled' line; the reaction from Seoul is thinly sourced across the dossier.",
+      "No outlet reports whether North Korea responded specifically to Trump's reduction announcement (as opposed to the drills generally).",
+      "No primary source document (official transcript or release) was provided, so all quotations depend on outlet reproduction of the social media post."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same event with materially different emphasis \u2014 BBC leaning on historical and alliance context, Axios and NBC foregrounding the aircraft-carrier redeployment, CNN adding North Korea's nuclear framing \u2014 while three others appeared headline-only, making the divergence in coverage itself the story worth reporting.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/china/trump-instructs-pentagon-reduce-military-exercises-with-south-korea-2026-08-16/",
+      "title": "Trump instructs Pentagon to reduce military exercises with South Korea - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/trump-administration/trump-orders-military-substantially-reduce-joint-exercises-south-korea-rcna592832",
+      "title": "Trump orders military to \u2018substantially reduce\u2019 joint exercises with South Korea - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cx2lll7zvn0o",
+      "title": ""
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/08/16/trump-us-south-korea-military-drills-cut",
+      "title": "Trump tells Hegseth to cut back U.S.-South Korea drills - Axios"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-16/trump-says-he-s-curtailing-military-drills-with-south-korea",
+      "title": "Trump Says He\u2019s Curtailing Military Drills With South Korea - Bloomberg.com"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/16/middleeast/trump-south-korea-military-exercises",
+      "title": "Trump says US will reduce military exercises with South Korea, citing lack of help with Iran - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/16/us/politics/trump-south-korea-military-exercises.html",
+      "title": "Trump Orders Pentagon to Curtail Military Exercises With Ally South Korea - The New York Times"
+    }
+  ]
+}
