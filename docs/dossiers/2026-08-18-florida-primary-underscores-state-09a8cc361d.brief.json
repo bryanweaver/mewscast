@@ -1,0 +1,52 @@
+{
+  "story_id": "2026-08-18-florida-primary-underscores-state-09a8cc361d",
+  "headline_seed": "Florida Primary Underscores State\u2019s New Identity as a Republican Juggernaut - The New York Times",
+  "brief": {
+    "story_id": "2026-08-18-florida-primary-underscores-state-09a8cc361d",
+    "consensus_facts": [
+      "Only one article in the dossier (Politico) has retrievable body text; the three New York Times articles are headline-only, so no cross-outlet body-level consensus exists.",
+      "At the headline level, both The New York Times and Politico frame Florida's 2026 primary around Republican dominance of the state."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "The New York Times": "Three entries, all headline-only. The lead headline ('Florida Primary Underscores State's New Identity as a Republican Juggernaut') frames the primary as confirmation of a structural GOP realignment in Florida \u2014 emphasizing identity and dominance rather than specific races. A second headline ('Trump Votes by Mail Again in Florida') foregrounds Trump's personal participation and implicitly the mail-vote angle. A third headline ('Hegseth Campaigns for Republican Zach Nunn in Iowa') is off-topic to the Florida primary and points to a separate Iowa race. No body text is available to verify any of these framings; they cannot be treated as reporting, only as labels.",
+      "Politico": "The only full-text source. Frames Primary Day through a tactical, insider 'five things to watch' newsletter lens. Politico reports that Rep. Byron Donalds is widely expected to clinch the GOP gubernatorial nomination and former Rep. David Jolly is expected to become the Democratic nominee; that polls close at 7 p.m. (7 p.m. Central in the Panhandle); that Gov. Ron DeSantis declined to endorse a successor including his own lieutenant governor Jay Collins, and did not vote early or by mail; that Donalds refused to debate his GOP rivals; and that today's primaries are the first test of DeSantis-pushed new congressional maps. Politico emphasizes margins, progressive insurgent races (Angie Nixon, Oliver Larkin, Elijah Manley, Victoria Doyle), Trump's endorsement influence (Catalina Lauf, Cory Mills, Randy Fine), and redistricting/retirement effects (Debbie Wasserman Schultz in District 20, retirements of Frederica Wilson, Neal Dunn, Daniel Webster). Politico echoes the NYT-style framing that Florida has shifted 'from the nation's biggest swing state to one now dominated by the GOP.'"
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story, so no alignment or divergence between coverage and underlying documents can be assessed."
+    ],
+    "missing_context": [
+      "Only one of four dossier articles (Politico) has usable body text; the three New York Times entries are headline-only, so the 'Republican juggernaut' thesis of the seed headline cannot be corroborated or examined at the body level within this dossier.",
+      "No actual primary results are present \u2014 Politico's piece is a pre-election 'things to watch' preview, so no outlet in the dossier reports vote outcomes.",
+      "The slant matrix is narrow: NYT (lean-left) and Politico (specialized) only. No right-leaning or center outlet body text is present to test the 'Republican dominance' framing from another angle.",
+      "The Hegseth/Iowa NYT headline appears unrelated to the Florida primary and may have been mis-gathered into this dossier; its relevance is unverifiable without body text.",
+      "No turnout figures, registration-advantage numbers, or historical baselines are provided to substantiate claims that Florida shifted from swing state to GOP-dominated.",
+      "No primary source, roll call, or official election document was included to independently verify any candidate or race detail."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (Politico) has substantive body text, and it is a same-day, time-sensitive Primary Day preview with no results yet in \u2014 a thin, single-source dossier that warrants a hedged same-day post rather than a corroborated REPORT or a multi-outlet META.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/18/us/politics/florida-primary-republican-dominance.html",
+      "title": "Florida Primary Underscores State\u2019s New Identity as a Republican Juggernaut - The New York Times"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/newsletters/florida-playbook/2026/08/18/5-things-to-watch-on-primary-day-01039923",
+      "title": "5 things to watch on Primary Day - Politico"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/17/us/politics/trump-mail-vote-florida-election.html",
+      "title": "Trump Votes by Mail Again in Florida - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/17/us/politics/hegseth-iowa-campaign-nunn.html",
+      "title": "Hegseth Campaigns for Republican Zach Nunn in Iowa - The New York Times"
+    }
+  ]
+}
