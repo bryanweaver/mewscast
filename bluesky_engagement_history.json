@@ -1664,6 +1664,11 @@
       "did": "did:plc:cdx42mzpdd54h6pmg2mf5s5l",
       "handle": "ptelea.gay",
       "timestamp": "2026-08-18T16:18:56.911318"
+    },
+    {
+      "did": "did:plc:tgfouerai3w4qga7nkrmtcem",
+      "handle": "abbyolcese.bsky.social",
+      "timestamp": "2026-08-18T20:32:06.715862"
     }
   ],
   "liked_posts": [
@@ -3451,6 +3456,11 @@
       "uri": "at://did:plc:cdx42mzpdd54h6pmg2mf5s5l/app.bsky.feed.post/3mtd5lbjd5c25",
       "author": "ptelea.gay",
       "timestamp": "2026-08-18T16:18:56.739441"
+    },
+    {
+      "uri": "at://did:plc:tgfouerai3w4qga7nkrmtcem/app.bsky.feed.post/3mtezoijn522h",
+      "author": "abbyolcese.bsky.social",
+      "timestamp": "2026-08-18T20:32:06.530086"
     }
   ],
   "last_cleanup": "2026-08-16T02:21:17.287810",
