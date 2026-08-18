@@ -1659,6 +1659,11 @@
       "did": "did:plc:bdewww5jsvc7ngy576yk6f36",
       "handle": "animalarchaeology.com",
       "timestamp": "2026-08-18T13:40:14.979719"
+    },
+    {
+      "did": "did:plc:cdx42mzpdd54h6pmg2mf5s5l",
+      "handle": "ptelea.gay",
+      "timestamp": "2026-08-18T16:18:56.911318"
     }
   ],
   "liked_posts": [
@@ -3441,6 +3446,11 @@
       "uri": "at://did:plc:bdewww5jsvc7ngy576yk6f36/app.bsky.feed.post/3mtece57ijs2b",
       "author": "animalarchaeology.com",
       "timestamp": "2026-08-18T13:40:14.782042"
+    },
+    {
+      "uri": "at://did:plc:cdx42mzpdd54h6pmg2mf5s5l/app.bsky.feed.post/3mtd5lbjd5c25",
+      "author": "ptelea.gay",
+      "timestamp": "2026-08-18T16:18:56.739441"
     }
   ],
   "last_cleanup": "2026-08-16T02:21:17.287810",
