@@ -1,0 +1,84 @@
+{
+  "story_id": "2026-08-17-lake-powell-hits-lowest-0e03b64ba4",
+  "headline_seed": "Lake Powell Hits Lowest Level On Record As Water Crisis Continues - The New York Times",
+  "brief": {
+    "story_id": "2026-08-17-lake-powell-hits-lowest-0e03b64ba4",
+    "consensus_facts": [
+      "Lake Powell, the second-largest reservoir in the United States, dropped to a record-low elevation of 3,519.91 feet on Saturday, breaking the previous record set in April 2023 (ABC News, The Independent).",
+      "Lake Powell is part of the Colorado River system, which supplies water to roughly 40 million people across seven U.S. states \u2014 California, Arizona, Nevada, New Mexico, Utah, Wyoming and Colorado (International Business Times, The Independent).",
+      "Lake Powell's record low follows Lake Mead \u2014 the largest U.S. reservoir \u2014 hitting its own record low roughly a week to two weeks earlier (ABC News, The Independent).",
+      "The combined storage of Lake Powell and Lake Mead is at its lowest level since 1957, before Glen Canyon Dam and Lake Powell existed in their current form (ABC News, International Business Times, The Independent).",
+      "The reservoir is approximately 30 feet above the elevation at which turbines would cease generating hydroelectric power (International Business Times, The Independent).",
+      "Jack Schmidt, director of the Center for Colorado River Studies at Utah State University, is cited across outlets characterizing the situation as unprecedented and warning of drastic action (ABC News, International Business Times).",
+      "Persistent overuse, low snowpack in the Rocky Mountains, and a dry winter are cited as drivers of the decline (International Business Times, The Independent)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Timing gap between Lake Mead and Lake Powell record lows",
+        "positions": {
+          "ABC News": "Says Lake Powell hit its record 'less than two weeks after' Lake Mead's record low",
+          "The Independent": "Says Lake Powell's milestone comes 'a week after' Lake Mead hit its historic low"
+        }
+      },
+      {
+        "topic": "Whether the record low will hold",
+        "positions": {
+          "ABC News": "Emphasizes federal caution that the figure is 'provisional and subject to revision' given the razor-thin 0.01-foot margin, noting the record could be walked back but the trend means an actual record is days away",
+          "The Independent": "States the record low as an established fact without emphasizing the provisional caveat",
+          "International Business Times": "Reports the level as 3,519 feet (rounded) as an established record without the provisional caveat"
+        }
+      },
+      {
+        "topic": "Distance/threshold to loss of power generation",
+        "positions": {
+          "International Business Times": "States turbines stop at 3,490 feet and that a 30-foot further drop would end power generation; cites CNN that this 'scary threshold' could be reached this year without extraordinary measures",
+          "The Independent": "States the reservoir is about 30 feet above the level where turbines cease generating, and that federal officials warned in April a 'major intervention' is needed to prevent reaching that limit by year's end"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "ABC News": "Frames the story through expert voices, leading with the reservoir milestone and heavily quoting scientists Jack Schmidt and Sharon Megdal. Emphasizes the 'unprecedented' and 'crisis/critical' framing, uses a savings-account analogy, and is the only outlet to prominently stress the provisional nature of the record. Notably includes a speculative reference to 'this year's El Nino' bringing rain, and closes on the multi-year recovery timeline. Human/expert-driven, science-forward angle.",
+      "USA Today": "Effectively no substantive body text \u2014 the retrieved content is site navigation, subscription prompts, and unrelated video teasers (Trump/Oman/Iran). Only a one-line video caption states Lake Powell's level dropped to its lowest ever amid Western drought, threatening power and water for millions. Headline invokes 'climate crisis' framing, but no reportable body detail exists.",
+      "International Business Times": "Leads with the power-generation angle in both headline and body \u2014 'close to not being able to generate power.' Data-heavy: cites specific figures (lost ~31.5 feet over 12 months, 3,490-foot turbine threshold, 3,370-foot dead-pool level), attributes much of its reporting to CNN and PBS, and provides basin-by-basin water-use breakdowns from the California Institute of Public Policy. Emphasizes structural overuse (use exceeding supply by ~1 million acre-feet/year for 25 years) and the 1922 Compact. Most systems/infrastructure-focused framing.",
+      "The Independent": "Opens with a lengthy fundraising/mission appeal before the story. Frames the milestone as 'heightening anxiety' over the Colorado River crisis, emphasizes governance failure \u2014 states struggling to agree on a long-term strategy and the USBR's proposed 10-year scheme with supply cuts for Arizona, California and Nevada. Uniquely surfaces the tourism impact (marinas relocating, boat ramps closing) and the environmental trade-off: the decision not to release cool water from Glen Canyon Dam, prioritizing hydropower over a threatened native fish. Broadest policy-and-consequences framing."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. Outlets attribute the elevation figures to U.S. Bureau of Reclamation data (ABC News, The Independent) and to the Lake Powell Water Database (International Business Times), but the underlying documents were not provided in the dossier and could not be independently verified.",
+      "The USBR's July 10-year proposal and the Glen Canyon Dam cool-water release decision (both cited by The Independent) could not be checked against primary documents."
+    ],
+    "missing_context": [
+      "USA Today's article contains no usable body text \u2014 only navigation, subscription prompts, and unrelated video content \u2014 so it provides no independent corroboration despite appearing in the dossier.",
+      "No primary source (Bureau of Reclamation data release, the USBR 10-year proposal, or the Glen Canyon cool-water decision memo) was included in the dossier; all figures rest on outlet reporting of these documents.",
+      "Several outlets rely on the same secondary wires and outlets (International Business Times explicitly cites CNN and PBS for its key figures and thresholds), so apparent agreement may reflect shared upstream sourcing rather than independent verification.",
+      "No outlet quantifies how much of the decline is attributable to climate/drought versus structural overallocation, though IBT notes 25 years of use exceeding supply \u2014 the causal breakdown is left vague.",
+      "The environmental trade-off (foregoing cool-water release for a threatened native fish to preserve hydropower) appears only in The Independent; no other outlet mentions it, and the species is not named.",
+      "None of the outlets specify what 'draconian steps' or 'major intervention' would concretely entail, nor which junior water-rights holders or states would bear cuts first.",
+      "ABC News references 'this year's El Nino' potentially bringing rain \u2014 a forward-looking claim not corroborated by other outlets and not tied to a dated forecast."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with usable body text (ABC News, International Business Times, The Independent) report the same record-low event but with materially different emphases \u2014 expert-driven crisis, power-generation mechanics, and governance/environmental trade-offs respectively \u2014 while a fourth (USA Today) supplied no usable body text and no primary source could be verified. That framing divergence and sourcing fragility make this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/lake-powell-nations-largest-reservoir-hits-record-low/story?id=135642013",
+      "title": "Lake Powell, nation's second-largest reservoir, hits record-low level - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/videos/news/2026/08/17/record-low-lake-powell-highlights-growing-drought-challenges-in-the-west/91339256007/",
+      "title": "Lake Powell hits record low as drought worsens climate crisis - USA Today"
+    },
+    {
+      "outlet": "International Business Times",
+      "url": "https://www.ibtimes.com/second-largest-us-reservoir-hits-lowest-level-ever-it-close-not-being-able-generate-power-3806482",
+      "title": "The Second Largest U.S. Reservoir Hits Lowest Level Ever. It Is Close To Not Being Able To Generate Power. - International Business Times"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/lake-powell-united-states-colorado-river-nevada-arizona-b3033949.html",
+      "title": "Lake Powell hits record low, threatening key water and electricity supply for millions - The Independent"
+    }
+  ]
+}
