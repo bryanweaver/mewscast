@@ -48,12 +48,15 @@ permissions:
 jobs:
   dry-run:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Setup environment
         uses: ./.github/actions/setup-python-env
+        with:
+          install-playwright-browser: 'true'
 
       - name: Run Walter Croncat journalism dry-run
         env:
