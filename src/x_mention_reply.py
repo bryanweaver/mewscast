@@ -6,22 +6,23 @@ Scope:
   - Replies to OUR journalism tweets (people who summoned us)
 
 Voice rules (locked by Bryan):
-  - Drive-by bait ("Slop", one-word dunk): Reply with ONLY the dossier link.
-    No argument. No dunk. Point at the receipts. Cronkite.
-  - Serious question: Straight Cronkite text from that episode's dossier.
-    No hashtags, no sign-off.
-  - One reply per person.
+  - Drive-by bait ("Slop", insults, one-word dumps): ONE Walter Grok meme,
+    almost no caption. Do NOT generate a new image for every follow-up.
+  - If they keep going or ask a real question: answer from that episode's
+    dossier. Straight, sourced, Cronkite. No second meme.
+  - Cap one reply per person per story unless they ask a new factual question.
 
 NOT in scope:
   - Cold outlet replies (X blocked those in API v2, 2026-02-23)
   - Likes, follows, quotes (X removed like writes from self-serve April 2026)
   - AP/Reuters drafts (Bryan taps those by hand)
+  - Restyle of existing field-notes receipts thread
 
 Safety:
-  - One reply per person (dedup)
+  - One meme per person per story (dedup)
+  - Second touch allowed only for dossier-text after a meme (not a second meme)
   - Caps: 3 replies per run, 5 per day
   - Skip our own tweets/replies
-  - Skip anything that fails Cronkite standard
 """
 from __future__ import annotations
 
@@ -234,6 +235,22 @@ def validate_reply_text(text: str) -> tuple[bool, str]:
 # History management
 # ---------------------------------------------------------------------------
 
+def compose_meme_prompt() -> str:
+    """Compose a Grok image prompt for a Walter meme response to bait.
+    
+    Uses the "HOW DARE YOU" / indignant reaction meme template with Walter.
+    """
+    return (
+        "Photorealistic brown tabby cat with an intense, indignant expression, "
+        "sitting in a professional news anchor chair at a microphone, dramatic "
+        "studio lighting. The cat's expression conveys dignified outrage — "
+        "eyebrows raised, ears slightly back, mouth slightly open as if about "
+        "to speak. Think Greta Thunberg 'HOW DARE YOU' energy but with feline "
+        "gravitas. Professional news studio setting, dramatic lighting, "
+        "cinematic composition. The cat is the star. No text overlays."
+    )
+
+
 def load_history(history_path: Path) -> dict:
     """Load reply history from JSON file."""
     if history_path.exists():
@@ -244,6 +261,7 @@ def load_history(history_path: Path) -> dict:
             print(f"⚠️  Could not load history: {e}")
     return {
         "replies": [],
+        "memes_by_conversation": {},  # conversation_id -> meme reply info
         "last_cleanup": datetime.now(timezone.utc).isoformat(),
     }
 
@@ -269,12 +287,29 @@ def daily_reply_count(history: dict) -> int:
     return count
 
 
-def has_replied_to_user(history: dict, user_id: str) -> bool:
-    """Check if we've already replied to this user (one reply per person)."""
+def has_memed_user_in_conversation(history: dict, user_id: str, conversation_id: str) -> bool:
+    """Check if we've already sent a meme to this user in this conversation."""
     for r in history.get("replies", []):
-        if r.get("author_id") == user_id:
+        if (r.get("author_id") == user_id and 
+            r.get("conversation_id") == conversation_id and
+            r.get("reply_type") == "meme"):
             return True
     return False
+
+
+def has_cronkite_replied_in_conversation(history: dict, user_id: str, conversation_id: str) -> bool:
+    """Check if we've already sent a Cronkite reply to this user in this conversation."""
+    for r in history.get("replies", []):
+        if (r.get("author_id") == user_id and 
+            r.get("conversation_id") == conversation_id and
+            r.get("reply_type") == "cronkite"):
+            return True
+    return False
+
+
+def get_conversation_meme_path(history: dict, conversation_id: str) -> Optional[str]:
+    """Get the meme image path we used in this conversation (for reuse)."""
+    return history.get("memes_by_conversation", {}).get(conversation_id)
 
 
 def cleanup_old_history(history: dict) -> None:
@@ -380,6 +415,7 @@ class XMentionReplyBot:
         self.history_path = Path(__file__).parent.parent / HISTORY_FILENAME
         self.history = load_history(self.history_path)
         self.twitter_bot = None
+        self.image_generator = None
         self.replies_this_run = 0
     
     def _init_twitter(self):
@@ -387,6 +423,12 @@ class XMentionReplyBot:
         if self.twitter_bot is None:
             from twitter_bot import TwitterBot
             self.twitter_bot = TwitterBot()
+    
+    def _init_image_generator(self):
+        """Lazy-init image generator."""
+        if self.image_generator is None:
+            from image_generator import ImageGenerator
+            self.image_generator = ImageGenerator()
     
     def _get_our_user_id(self) -> Optional[str]:
         """Get our own user ID to skip self-replies."""
@@ -396,6 +438,41 @@ class XMentionReplyBot:
             return str(me.data.id) if me and me.data else None
         except Exception as e:
             print(f"⚠️  Could not get our user ID: {e}")
+            return None
+    
+    def _generate_meme_image(self, save_path: str) -> Optional[str]:
+        """Generate a Walter meme image for bait response."""
+        self._init_image_generator()
+        prompt = compose_meme_prompt()
+        
+        if self.dry_run:
+            print(f"   [DRY RUN] Would generate meme with prompt: {prompt[:80]}...")
+            return save_path
+        
+        try:
+            path, _ = self.image_generator.generate_image(
+                prompt=prompt,
+                save_path=save_path,
+                post_type=None,
+            )
+            return path
+        except Exception as e:
+            print(f"⚠️  Meme generation failed: {e}")
+            return None
+    
+    def _post_meme_reply(self, tweet_id: str, image_path: str) -> Optional[dict]:
+        """Post a meme reply to a tweet. Almost no caption."""
+        self._init_twitter()
+        
+        if self.dry_run:
+            print(f"   [DRY RUN] Would reply to {tweet_id} with meme image")
+            return {"id": "dry-run-reply-id"}
+        
+        try:
+            # Almost no caption - just a period to satisfy API
+            return self.twitter_bot.reply_to_tweet_with_image(tweet_id, ".", image_path)
+        except Exception as e:
+            print(f"⚠️  Meme reply failed: {e}")
             return None
     
     def _fetch_mentions(self) -> list[dict]:
@@ -456,11 +533,6 @@ class XMentionReplyBot:
             print("   ⏭  Skipping (our own tweet)")
             return False
         
-        # One reply per person — strict dedup
-        if has_replied_to_user(self.history, author_id):
-            print("   ⏭  Skipping (already replied to user)")
-            return False
-        
         # Find the parent journalism post for this conversation
         parent_post = None
         for post in journalism_tweets:
@@ -468,87 +540,110 @@ class XMentionReplyBot:
                 parent_post = post
                 break
         
-        # Need a parent journalism post with a dossier to reply
+        # Need a parent journalism post to reply
         if not parent_post:
             print("   ⏭  Skipping (not a reply on our journalism tweet)")
             return False
         
         dossier_id = parent_post.get("dossier_id")
-        if not dossier_id:
-            print("   ⏭  Skipping (no dossier_id on parent post)")
-            return False
         
-        dossier_url = get_dossier_url(dossier_id)
-        if not dossier_url:
-            print("   ⏭  Skipping (invalid dossier_id)")
-            return False
+        # Check if we've already interacted with this user in this conversation
+        already_memed = has_memed_user_in_conversation(self.history, author_id, conversation_id)
+        already_cronkite = has_cronkite_replied_in_conversation(self.history, author_id, conversation_id)
         
-        # Classify and respond
+        # Classify the comment
         if is_bait(text):
-            # Drive-by bait → reply with ONLY the dossier link
-            # No argument. No dunk. Point at the receipts. Cronkite.
-            print("   📎 Detected bait, replying with dossier link...")
+            # Drive-by bait
+            if already_memed:
+                # Already memed this user in this thread → silence
+                print("   ⏭  Skipping (already memed, more bait = silence)")
+                return False
             
-            result = self._post_text_reply(tweet_id, dossier_url)
+            if already_cronkite:
+                # Already gave Cronkite reply → silence for more bait
+                print("   ⏭  Skipping (already Cronkite replied, more bait = silence)")
+                return False
+            
+            # First touch bait → generate ONE Walter Grok meme
+            print("   🎭 Detected bait, generating Walter meme...")
+            
+            # Check if we have an existing meme for this conversation (reuse)
+            existing_meme = get_conversation_meme_path(self.history, conversation_id)
+            if existing_meme and os.path.exists(existing_meme):
+                print(f"   📎 Reusing existing meme: {existing_meme}")
+                meme_path = existing_meme
+            else:
+                # Generate new meme
+                safe_id = re.sub(r"[^\w\-]", "_", conversation_id)[:50]
+                meme_path = f"temp_meme_{safe_id}.png"
+                meme_path = self._generate_meme_image(meme_path)
+                if not meme_path:
+                    print("   ⚠️  Meme generation failed, skipping")
+                    return False
+            
+            result = self._post_meme_reply(tweet_id, meme_path)
             
             if result:
                 self.history.setdefault("replies", []).append({
                     "tweet_id": tweet_id,
                     "author_id": author_id,
                     "conversation_id": conversation_id,
-                    "reply_type": "dossier_link",
+                    "reply_type": "meme",
                     "reply_id": result.get("id"),
-                    "dossier_url": dossier_url,
+                    "meme_path": meme_path,
                     "timestamp": datetime.now(timezone.utc).isoformat(),
                 })
+                # Track meme per conversation for reuse
+                self.history.setdefault("memes_by_conversation", {})[conversation_id] = meme_path
                 self.replies_this_run += 1
-                print(f"   ✓ Dossier link reply posted: {dossier_url}")
+                print(f"   ✓ Meme reply posted")
                 return True
             return False
         
         elif is_serious_question(text):
-            # Serious question → Cronkite reply from dossier
+            # Real question
+            if already_cronkite:
+                # Already gave Cronkite reply → don't repeat
+                print("   ⏭  Skipping (already Cronkite replied to this user)")
+                return False
+            
+            # Serious question → Cronkite reply from dossier (allowed after meme)
             print("   📝 Serious question, composing Cronkite reply...")
+            
+            if not dossier_id:
+                print("   ⏭  Skipping (no dossier_id on parent post)")
+                return False
             
             dossier_data = load_dossier_data(dossier_id)
             reply_text = compose_cronkite_reply(text, dossier_data)
             
-            if reply_text:
-                is_valid, reason = validate_reply_text(reply_text)
-                if not is_valid:
-                    print(f"   ⏭  Skipping (reply validation failed: {reason})")
+            if not reply_text:
+                # Fall back to dossier URL
+                dossier_url = get_dossier_url(dossier_id)
+                if dossier_url:
+                    reply_text = dossier_url
+                else:
+                    print("   ⏭  Skipping (no dossier data available)")
                     return False
-                
-                result = self._post_text_reply(tweet_id, reply_text)
-                if result:
-                    self.history.setdefault("replies", []).append({
-                        "tweet_id": tweet_id,
-                        "author_id": author_id,
-                        "conversation_id": conversation_id,
-                        "reply_type": "cronkite",
-                        "reply_id": result.get("id"),
-                        "timestamp": datetime.now(timezone.utc).isoformat(),
-                    })
-                    self.replies_this_run += 1
-                    print(f"   ✓ Cronkite reply posted")
-                    return True
-            else:
-                # Fall back to dossier link if we can't compose a reply
-                print("   📎 No dossier data, falling back to dossier link...")
-                result = self._post_text_reply(tweet_id, dossier_url)
-                if result:
-                    self.history.setdefault("replies", []).append({
-                        "tweet_id": tweet_id,
-                        "author_id": author_id,
-                        "conversation_id": conversation_id,
-                        "reply_type": "dossier_link",
-                        "reply_id": result.get("id"),
-                        "dossier_url": dossier_url,
-                        "timestamp": datetime.now(timezone.utc).isoformat(),
-                    })
-                    self.replies_this_run += 1
-                    print(f"   ✓ Dossier link reply posted: {dossier_url}")
-                    return True
+            
+            is_valid, reason = validate_reply_text(reply_text)
+            if not is_valid:
+                print(f"   ⏭  Skipping (reply validation failed: {reason})")
+                return False
+            
+            result = self._post_text_reply(tweet_id, reply_text)
+            if result:
+                self.history.setdefault("replies", []).append({
+                    "tweet_id": tweet_id,
+                    "author_id": author_id,
+                    "conversation_id": conversation_id,
+                    "reply_type": "cronkite",
+                    "reply_id": result.get("id"),
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                })
+                self.replies_this_run += 1
+                print(f"   ✓ Cronkite reply posted")
+                return True
             return False
         
         else:

@@ -6,6 +6,7 @@ unit tests here cover the deterministic pieces:
   - question detection
   - reply validation (no hashtags, no sign-off, no dunks)
   - dossier URL generation
+  - meme prompt composition
   - Cronkite reply composition
   - dedup helpers
 """
@@ -26,11 +27,14 @@ from x_mention_reply import (  # noqa: E402
     is_bait,
     is_serious_question,
     get_dossier_url,
+    compose_meme_prompt,
     compose_cronkite_reply,
     has_hashtags,
     has_sign_off,
     validate_reply_text,
-    has_replied_to_user,
+    has_memed_user_in_conversation,
+    has_cronkite_replied_in_conversation,
+    get_conversation_meme_path,
 )
 
 
@@ -126,6 +130,22 @@ class TestGetDossierUrl:
         assert get_dossier_url("../etc/passwd") is None
         assert get_dossier_url("foo bar") is None
         assert get_dossier_url("foo<script>") is None
+
+
+class TestComposeMemePrompt:
+    """Tests for meme prompt composition."""
+
+    def test_prompt_mentions_cat(self):
+        prompt = compose_meme_prompt()
+        assert "cat" in prompt.lower()
+
+    def test_prompt_mentions_indignant(self):
+        prompt = compose_meme_prompt()
+        assert "indignant" in prompt.lower() or "outrage" in prompt.lower()
+
+    def test_prompt_no_text_overlays(self):
+        prompt = compose_meme_prompt()
+        assert "no text" in prompt.lower()
 
 
 class TestComposeCronkiteReply:
@@ -251,29 +271,43 @@ class TestValidateReplyText:
 class TestDedupHelpers:
     """Tests for deduplication helpers."""
 
-    def test_has_replied_to_user(self):
+    def test_has_memed_user_in_conversation(self):
         history = {
             "replies": [
-                {"author_id": "123", "reply_type": "dossier_link"},
-                {"author_id": "456", "reply_type": "cronkite"},
+                {"author_id": "123", "conversation_id": "conv_a", "reply_type": "meme"},
+                {"author_id": "456", "conversation_id": "conv_b", "reply_type": "cronkite"},
             ]
         }
-        assert has_replied_to_user(history, "123") is True
-        assert has_replied_to_user(history, "456") is True
-        assert has_replied_to_user(history, "789") is False
+        assert has_memed_user_in_conversation(history, "123", "conv_a") is True
+        assert has_memed_user_in_conversation(history, "123", "conv_b") is False
+        assert has_memed_user_in_conversation(history, "456", "conv_b") is False  # cronkite, not meme
+        assert has_memed_user_in_conversation(history, "789", "conv_a") is False
 
-    def test_has_replied_with_any_reply_type(self):
+    def test_has_cronkite_replied_in_conversation(self):
         history = {
             "replies": [
-                {"author_id": "123", "reply_type": "dossier_link"},
+                {"author_id": "123", "conversation_id": "conv_a", "reply_type": "meme"},
+                {"author_id": "456", "conversation_id": "conv_b", "reply_type": "cronkite"},
             ]
         }
-        # Any reply type counts — one reply per person
-        assert has_replied_to_user(history, "123") is True
+        assert has_cronkite_replied_in_conversation(history, "123", "conv_a") is False  # meme, not cronkite
+        assert has_cronkite_replied_in_conversation(history, "456", "conv_b") is True
+        assert has_cronkite_replied_in_conversation(history, "456", "conv_a") is False
 
-    def test_empty_replies_list(self):
+    def test_get_conversation_meme_path(self):
+        history = {
+            "memes_by_conversation": {
+                "conv_123": "/path/to/meme.png",
+            }
+        }
+        assert get_conversation_meme_path(history, "conv_123") == "/path/to/meme.png"
+        assert get_conversation_meme_path(history, "conv_456") is None
+
+    def test_empty_history(self):
         history = {"replies": []}
-        assert has_replied_to_user(history, "123") is False
+        assert has_memed_user_in_conversation(history, "123", "conv") is False
+        assert has_cronkite_replied_in_conversation(history, "123", "conv") is False
+        assert get_conversation_meme_path({}, "conv") is None
 
 
 class TestEdgeCases:
@@ -299,7 +333,8 @@ class TestEdgeCases:
         assert is_bait("what") is False  # Not in bait list
 
     def test_empty_history(self):
-        assert has_replied_to_user({}, "123") is False
+        assert has_memed_user_in_conversation({}, "123", "conv") is False
+        assert has_cronkite_replied_in_conversation({}, "123", "conv") is False
 
     def test_dossier_url_alphanumeric_only(self):
         # Valid patterns
