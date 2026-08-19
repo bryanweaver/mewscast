@@ -1,0 +1,86 @@
+name: X Mention Reply (Walter Croncat)
+
+# Replies to mentions and replies on our journalism posts.
+#
+# Voice rules:
+#   - Drive-by bait ("Slop", one-word dunk): ONE Walter Grok meme, almost no caption
+#   - Serious question: Cronkite text from that episode's dossier
+#   - Second touch: only if they ask a real question (no second meme)
+#
+# NOT in scope:
+#   - Cold outlet replies (X blocked those in API v2, 2026-02-23)
+#   - Likes, follows, quotes (X removed like writes from self-serve April 2026)
+
+on:
+  schedule:
+    # A few times a day, not a spray
+    - cron: '30 13 * * *'   # 1:30 PM UTC =  8:30 AM CDT
+    - cron: '30 18 * * *'   # 6:30 PM UTC =  1:30 PM CDT
+    - cron: '30 23 * * *'   # 11:30 PM UTC = 6:30 PM CDT
+
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run in dry-run mode (find mentions but do not post)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  x-mention-reply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
+        with:
+          install-playwright-browser: 'false'
+
+      - name: Run X mention reply bot
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
+        run: |
+          cd src
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python x_mention_reply.py --dry-run
+          else
+            python x_mention_reply.py
+          fi
+
+      - name: Commit updated reply history
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if [ -f x_mention_reply_history.json ]; then
+            git add x_mention_reply_history.json
+            if ! git diff --staged --quiet; then
+              git commit -m "Update X mention reply history [skip ci]"
+              for i in {1..3}; do
+                git pull --rebase --autostash origin main && git push && break || {
+                  echo "Push failed (attempt $i/3), retrying..."
+                  sleep $((i * 2))
+                }
+              done
+            fi
+          else
+            echo "No X mention reply history yet"
+          fi
+
+      - name: Report status
+        if: failure()
+        run: echo "❌ Workflow failed - check logs above"
