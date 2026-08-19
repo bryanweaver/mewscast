@@ -1,0 +1,50 @@
+{
+  "story_id": "2026-08-19-uae-trade-embargo-could-7a8d2d7df9",
+  "headline_seed": "UAE trade embargo could shut Iran\u2019s key economic escape route: Here\u2019s why - Al Jazeera",
+  "brief": {
+    "story_id": "2026-08-19-uae-trade-embargo-could-7a8d2d7df9",
+    "consensus_facts": [
+      "Both outlets' coverage references a deterioration in Iran-UAE relations as of August 19, 2026; The Washington Post is headline-only, so all substantive details come from a single full-text source (Al Jazeera English) and are not wire consensus."
+    ],
+    "disagreements": [
+      {
+        "topic": "responsibility for the reported missile attack on the UAE",
+        "positions": {
+          "Al Jazeera English": "Reports the UAE accuses Iranian forces of firing two ballistic missiles at its territory, while Iran denies launching missiles and calls the reported attack a 'false flag operation' by Israel and the United States.",
+          "The Washington Post": "Headline-only; does not provide attribution details in retrievable body text."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The Washington Post": "Headline-only entry with no retrievable body text (the article body is a Google News RSS redirect link, not reporting). The headline 'Iran and UAE ties sour, and other major developments in the Middle East' frames the story as one item in a broader regional roundup, de-emphasizing the embargo relative to Al Jazeera's dedicated treatment. No body-level claims can be attributed to this outlet.",
+      "Al Jazeera English": "Leads with the UAE imposing an 'indefinite trade embargo' on Iron over 'alleged missile attacks,' framing the embargo's economic severity as the central story. Al Jazeera reports the UAE announced the embargo Wednesday, accusing Iranian forces of firing two ballistic missiles; that Iran denied it and called it a 'false flag operation' by Israel and the US; and quotes retired US general and former assistant secretary of state Mark Kimmitt saying the UAE embargo may be 'even more significant than the embargo being put on by the United States,' referencing US sanctions and an 'ongoing American naval blockade of Iranian ports.' The framing emphasizes Iran's economic vulnerability and reliance on the UAE for critical imports and financial-market access."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The UAE government announcement, the text of the embargo order, and any evidence regarding the alleged missile attacks are absent from the dossier, so no report can be checked against an underlying document."
+    ],
+    "missing_context": [
+      "Only one of the two dossier articles (Al Jazeera English) has retrievable body text; The Washington Post entry is headline-only and cannot corroborate any substantive claim. Therefore no genuine multi-outlet consensus exists for this story.",
+      "No primary source (UAE official statement, embargo text, or independent evidence of the missile attacks) is available to verify who fired the missiles or the embargo's scope and terms.",
+      "The dossier does not establish independent verification of the 'two ballistic missiles' claim or of Iran's 'false flag' counterclaim \u2014 both are attributed positions, not confirmed facts.",
+      "No detail on the embargo's specific goods, duration mechanisms, enforcement, or effective date beyond 'indefinite' and 'announced Wednesday.'",
+      "The claim of an 'ongoing American naval blockade of Iranian ports' appears only within a single analyst quote and is not independently corroborated in the dossier.",
+      "No Iranian, UAE, US, or Israeli official on-record response beyond the summarized denial is included; the sourcing rests heavily on one analyst (Mark Kimmitt).",
+      "No casualty or damage figures from the alleged missile attacks are reported."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet provides usable body text on a fast-moving, high-stakes regional development with unverified competing claims and no primary source, which warrants a same-day hedged bulletin rather than a REPORT or META that would falsely imply corroboration.",
+    "confidence": 0.3
+  },
+  "articles": [
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national/2026/08/19/iran-usa-hormuz-persian-gulf-war/1a9e8094-9bbc-11f1-9cc4-2dc9b46e2d5c_story.html",
+      "title": "Iran and UAE ties sour, and other major developments in the Middle East - The Washington Post"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/19/uae-trade-embargo-could-shut-irans-key-economic-escape-route-heres-why",
+      "title": ""
+    }
+  ]
+}
