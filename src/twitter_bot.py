@@ -322,6 +322,41 @@ class TwitterBot:
             print(f"✗ Error fetching timeline: {e}")
             return []
 
+    def pin_tweet(self, tweet_id: str) -> bool:
+        """
+        Pin a tweet to profile. Tries v1.1 account/pin_tweet.json endpoint.
+        
+        Args:
+            tweet_id: ID of the tweet to pin
+            
+        Returns:
+            True if pin succeeded, False otherwise
+        """
+        import requests
+        from requests_oauthlib import OAuth1
+        
+        auth = OAuth1(
+            self.api_key,
+            self.api_secret,
+            self.access_token,
+            self.access_token_secret
+        )
+        
+        url = "https://api.twitter.com/1.1/account/pin_tweet.json"
+        params = {"id": tweet_id}
+        
+        try:
+            response = requests.post(url, auth=auth, params=params)
+            if response.status_code == 200:
+                print(f"✓ Tweet pinned successfully! ID: {tweet_id}")
+                return True
+            else:
+                print(f"✗ Pin failed: status={response.status_code} body={response.text}")
+                return False
+        except Exception as e:
+            print(f"✗ Pin request error: {e}")
+            return False
+
     def get_trending_topics(self, count: int = 5) -> list:
         """
         Get trending topics from X
