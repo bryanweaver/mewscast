@@ -5,7 +5,7 @@ unit tests here cover the deterministic pieces:
   - bait detection
   - question detection
   - reply validation (no hashtags, no sign-off, no dunks)
-  - meme prompt composition
+  - dossier URL generation
   - Cronkite reply composition
   - dedup helpers
 """
@@ -25,16 +25,12 @@ if _src not in sys.path:
 from x_mention_reply import (  # noqa: E402
     is_bait,
     is_serious_question,
-    compose_meme_caption,
-    compose_meme_prompt,
+    get_dossier_url,
     compose_cronkite_reply,
     has_hashtags,
     has_sign_off,
     validate_reply_text,
     has_replied_to_user,
-    has_memed_in_thread,
-    get_meme_for_thread,
-    has_dossier_replied_in_thread,
 )
 
 
@@ -110,32 +106,26 @@ class TestIsSeriousQuestion:
         assert is_serious_question("I disagree") is False
 
 
-class TestComposeMemeCaption:
-    """Tests for meme caption composition."""
+class TestGetDossierUrl:
+    """Tests for dossier URL generation."""
 
-    def test_caption_is_minimal(self):
-        caption = compose_meme_caption("slop")
-        assert len(caption) <= 10  # Almost no caption
+    def test_valid_dossier_id(self):
+        url = get_dossier_url("2026-08-15-kushner-gaza")
+        assert url == "https://mewscast.us/dossiers/2026-08-15-kushner-gaza.html"
 
-    def test_caption_has_no_hashtags(self):
-        caption = compose_meme_caption("slop")
-        assert "#" not in caption
+    def test_dossier_id_with_dots(self):
+        url = get_dossier_url("2026.08.15.kushner")
+        assert url == "https://mewscast.us/dossiers/2026.08.15.kushner.html"
 
+    def test_empty_dossier_id_returns_none(self):
+        assert get_dossier_url("") is None
+        assert get_dossier_url(None) is None
 
-class TestComposeMemePrompt:
-    """Tests for meme prompt composition."""
-
-    def test_prompt_mentions_cat(self):
-        prompt = compose_meme_prompt("slop")
-        assert "cat" in prompt.lower()
-
-    def test_prompt_mentions_indignant(self):
-        prompt = compose_meme_prompt("slop")
-        assert "indignant" in prompt.lower() or "outrage" in prompt.lower()
-
-    def test_prompt_no_text_overlays(self):
-        prompt = compose_meme_prompt("slop")
-        assert "no text" in prompt.lower()
+    def test_invalid_dossier_id_returns_none(self):
+        # Contains invalid characters
+        assert get_dossier_url("../etc/passwd") is None
+        assert get_dossier_url("foo bar") is None
+        assert get_dossier_url("foo<script>") is None
 
 
 class TestComposeCronkiteReply:
@@ -264,7 +254,7 @@ class TestDedupHelpers:
     def test_has_replied_to_user(self):
         history = {
             "replies": [
-                {"author_id": "123", "reply_type": "meme"},
+                {"author_id": "123", "reply_type": "dossier_link"},
                 {"author_id": "456", "reply_type": "cronkite"},
             ]
         }
@@ -272,46 +262,18 @@ class TestDedupHelpers:
         assert has_replied_to_user(history, "456") is True
         assert has_replied_to_user(history, "789") is False
 
-    def test_has_replied_excludes_dossier_followup(self):
+    def test_has_replied_with_any_reply_type(self):
         history = {
             "replies": [
-                {"author_id": "123", "reply_type": "dossier_followup"},
+                {"author_id": "123", "reply_type": "dossier_link"},
             ]
         }
-        # dossier_followup doesn't count as first-touch
+        # Any reply type counts — one reply per person
+        assert has_replied_to_user(history, "123") is True
+
+    def test_empty_replies_list(self):
+        history = {"replies": []}
         assert has_replied_to_user(history, "123") is False
-
-    def test_has_memed_in_thread(self):
-        history = {
-            "memes_by_thread": {
-                "conv_123": "/path/to/meme.png",
-            }
-        }
-        assert has_memed_in_thread(history, "conv_123") is True
-        assert has_memed_in_thread(history, "conv_456") is False
-
-    def test_get_meme_for_thread(self):
-        history = {
-            "memes_by_thread": {
-                "conv_123": "/path/to/meme.png",
-            }
-        }
-        assert get_meme_for_thread(history, "conv_123") == "/path/to/meme.png"
-        assert get_meme_for_thread(history, "conv_456") is None
-
-    def test_has_dossier_replied_in_thread(self):
-        history = {
-            "replies": [
-                {
-                    "author_id": "123",
-                    "conversation_id": "conv_abc",
-                    "reply_type": "dossier_followup",
-                },
-            ]
-        }
-        assert has_dossier_replied_in_thread(history, "conv_abc", "123") is True
-        assert has_dossier_replied_in_thread(history, "conv_abc", "456") is False
-        assert has_dossier_replied_in_thread(history, "conv_xyz", "123") is False
 
 
 class TestEdgeCases:
@@ -338,6 +300,13 @@ class TestEdgeCases:
 
     def test_empty_history(self):
         assert has_replied_to_user({}, "123") is False
-        assert has_memed_in_thread({}, "conv") is False
-        assert get_meme_for_thread({}, "conv") is None
-        assert has_dossier_replied_in_thread({}, "conv", "123") is False
+
+    def test_dossier_url_alphanumeric_only(self):
+        # Valid patterns
+        assert get_dossier_url("abc123") is not None
+        assert get_dossier_url("a-b-c") is not None
+        assert get_dossier_url("a.b.c") is not None
+        assert get_dossier_url("a_b_c") is not None
+        # Invalid patterns
+        assert get_dossier_url("a/b") is None
+        assert get_dossier_url("a b") is None
