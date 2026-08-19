@@ -6,21 +6,27 @@ Scope:
   - Replies to OUR journalism tweets (people who summoned us)
 
 Voice rules (locked by Bryan):
-  - Drive-by bait ("Slop", insults, one-word dumps): ONE Walter Grok meme,
-    almost no caption. Do NOT generate a new image for every follow-up.
-  - If they keep going or ask a real question: answer from that episode's
-    dossier. Straight, sourced, Cronkite. No second meme.
-  - Cap one reply per person per story unless they ask a new factual question.
+  1. Drive-by bait ("Slop", insults, one-word dumps): ONE Walter Grok meme
+     (HOW DARE YOU style), almost no caption. Do NOT generate a new image
+     for every follow-up — reuse per conversation.
+  2. After one meme, if they keep posting empty stuff (nothing, lol, more
+     slop, no real question): SILENCE. Do not reply again.
+  3. Only reply again if they ask something the dossier can answer — then
+     Cronkite text from that episode's dossier. No second meme.
+  4. Cap one reply per person per story unless they ask a new factual question.
 
-NOT in scope:
+REPLY-ONLY — do NOT:
+  - Auto-like (X removed like writes from self-serve April 2026)
+  - Auto-follow (X removed follow writes from self-serve April 2026)
+  - Auto-quote (not in scope)
   - Cold outlet replies (X blocked those in API v2, 2026-02-23)
-  - Likes, follows, quotes (X removed like writes from self-serve April 2026)
   - AP/Reuters drafts (Bryan taps those by hand)
   - Restyle of existing field-notes receipts thread
 
 Safety:
   - One meme per person per story (dedup)
   - Second touch allowed only for dossier-text after a meme (not a second meme)
+  - More bait after meme = silence
   - Caps: 3 replies per run, 5 per day
   - Skip our own tweets/replies
 """
