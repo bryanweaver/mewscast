@@ -1,0 +1,109 @@
+{
+  "story_id": "2026-08-19-8-takeaways-and-surprises-d7cd95de64",
+  "headline_seed": "8 takeaways and surprises from Florida, Wyoming and Alaska primaries - The Washington Post",
+  "brief": {
+    "story_id": "2026-08-19-8-takeaways-and-surprises-d7cd95de64",
+    "consensus_facts": [
+      "Primary elections were held Tuesday in Florida, Alaska and Wyoming ahead of the November 2026 midterms (CNBC, CNN, ABC News, NPR, CBS News).",
+      "In Alaska's Senate race, Republican incumbent Sen. Dan Sullivan and former Democratic Rep. Mary Peltola advanced to the general election under the state's top-four ranked-choice system (CNBC, CNN, ABC News).",
+      "There is unresolved uncertainty over whether a second man named Dan Sullivan, a Republican, will also advance to Alaska's Senate general election, a scenario Democrats view as potentially beneficial (CNBC, CNN, ABC News).",
+      "Rep. Byron Donalds, R-Fla., was endorsed by Trump and won the Republican gubernatorial primary in Florida to replace term-limited Gov. Ron DeSantis (CNBC, CNN).",
+      "Embattled Republican Rep. Cory Mills of Florida, who faces ethics/DOJ investigations, lost to former news anchor Ryan Elijah (CNN, ABC News).",
+      "Trump endorsed Mills in February but omitted him from his later list of Florida endorsements (CNN, ABC News).",
+      "Data centers emerged as a top issue among Florida voters (CNBC, CNN).",
+      "California also held a special election Tuesday to fill a vacant House seat (CNN, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Florida Democratic gubernatorial nominee",
+        "positions": {
+          "CNN": "Democrats nominated former Rep. David Jolly, a former Republican who left the GOP in 2018 and became a Democrat last year.",
+          "CNBC": "Article cuts off before naming the Florida Democratic gubernatorial nominee."
+        }
+      },
+      {
+        "topic": "Florida Senate Democratic primary",
+        "positions": {
+          "CNN": "Democratic socialist state Rep. Angie Nixon won the Democrats' Senate primary in Florida, described as an upset demonstrating growing socialist influence.",
+          "Other outlets": "Not mentioned in retrievable body text."
+        }
+      },
+      {
+        "topic": "Peltola's ideological positioning",
+        "positions": {
+          "CNBC": "Peltola is running a centrist campaign, has distanced herself from Kamala Harris's endorsement and rejected ties to the national Democratic Party, while borrowing some tax proposals from the left.",
+          "NPR": "Frames the night as 'a mixed bag for progressive Democratic candidates, particularly in Florida.'"
+        }
+      },
+      {
+        "topic": "California special election context",
+        "positions": {
+          "CNN": "Describes California voters choosing between two Democrats to fill a House vacancy.",
+          "CBS News": "Identifies the California race as a special election to finish former Rep. Eric Swalwell's term."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "Headline-plus-brief-lede only; frames the night through the lens of progressive Democrats, calling it 'a mixed bag' and emphasizing Florida's rightward trend. Minimal reported detail \u2014 essentially a teaser for a radio segment.",
+      "CNBC": "The most detailed body text in the dossier. Frames the primaries thematically around industry/policy issues: data centers in Florida, crypto in Wyoming (retiring 'crypto queen' Sen. Cynthia Lummis), and taxes in Alaska. Leads with market/policy stakes and control of Congress, quoting a TD Cowen analysis on divided-government gridlock. Emphasizes Peltola's tax proposals and the duplicate-Dan-Sullivan wrinkle. Article cuts off mid-Florida section.",
+      "The Washington Post": "Headline-only (the '8 takeaways and surprises' seed). No retrievable body text; frames the story as a listicle of takeaways and surprises but provides no corroborating detail.",
+      "CNN": "Rich body text framing the night around Trump's mixed endorsement record and intra-GOP dynamics. Leads with the DeSantis succession, emphasizes Donalds finishing below 50% as a surprise vulnerability (using unnamed GOP fundraiser/operative quotes), and catalogues Trump-endorsed losers (Iowa, Minnesota, Georgia, South Carolina, plus Florida's 19th and Wyoming governor). Also spotlights democratic socialist Angie Nixon's win and Mills's loss.",
+      "The New York Times": "Headline-only, and the headline is a logistics/service piece ('When to Expect Election Results') rather than a results analysis. No reported substance to frame.",
+      "ABC News": "Straightforward wire-style results reporting citing AP projections. Leads with Mills losing to Elijah and the Alaska Senate advancement of Sullivan and Peltola, plus Tom Begich (D) advancing in the Alaska governor race. Neutral, projection-focused phrasing with little interpretation.",
+      "CBS News": "Video segment with almost no substantive transcript \u2014 mostly site navigation boilerplate. Frames the primaries as 'major decisions' and notes the California special election for Swalwell's seat; references a linked video about a 'major upset by democratic socialist' but provides no textual detail."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official vote canvasses, candidate filings, or certified results) were located for this story, so no report-versus-document comparison can be made. All results in the dossier rest on outlet reporting and AP/CNN Decision Desk projections."
+    ],
+    "missing_context": [
+      "Of seven articles, only three (CNBC, CNN, ABC News) have substantial retrievable body text; NPR is a brief teaser, and The Washington Post, The New York Times and CBS News are effectively headline/boilerplate only \u2014 so much of the 'coverage' is thinner than the outlet count suggests.",
+      "The Washington Post headline promises '8 takeaways and surprises' but no body text was retrievable, so the specific eight items driving the story remain unavailable in this dossier.",
+      "Wyoming results are sparsely covered: CNN reports Rep. Harriet Hageman won the GOP Senate primary to replace retiring Sen. Cynthia Lummis and that Trump's pick Megan Degenfelder lost the governor primary to state Sen. Eric Barlow, but no other outlet's body text corroborates these Wyoming outcomes.",
+      "No outlet in the retrievable text reports final vote percentages or turnout figures for any of the headline races.",
+      "The exact status of the second Dan Sullivan (whether he ultimately advanced) is left unresolved across all outlets.",
+      "CNBC's article and CNN's article both appear truncated mid-Florida coverage, leaving the full Florida Senate and House results incomplete.",
+      "No outlet provides polling detail or sourcing behind the claim that Democrats are 'ahead in the polls' beyond CNBC's single TD Cowen citation.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same primary night with materially different framings \u2014 CNBC leads on industry/policy themes, CNN on Trump's endorsement record and a Donalds under-performance, NPR on progressive fortunes \u2014 while several high-profile outlets (Washington Post, NYT, CBS) contributed headline-only or boilerplate content, making the divergence and coverage gaps the real story rather than a single clean set of facts.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/08/19/nx-s1-5936467/takeaways-from-tuesdays-primaries-in-florida-alaska-and-wyoming",
+      "title": "Takeaways from Tuesday's primaries in Florida, Alaska and Wyoming - NPR"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/18/primary-elections-alaska-florida-wyoming-midterms.html",
+      "title": "Data centers, crypto, and tax revisions take center stage in Tuesday primaries - CNBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/08/19/takeaways-surprises-florida-wyoming-alaska-primaries/",
+      "title": "8 takeaways and surprises from Florida, Wyoming and Alaska primaries - The Washington Post"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/18/politics/takeaways-florida-alaska-primaries",
+      "title": "Key takeaways from Tuesday\u2019s primaries in Florida, Alaska and Wyoming - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/18/us/politics/florida-alaska-california-wyoming-results-timing.html",
+      "title": "When to Expect Election Results in Alaska, California, Florida and Wyoming - The New York Times"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/primaries-3-states-tuesday-narrow-field-key-senate/story?id=135721707",
+      "title": "Primaries: Trump-endorsed Mills of Florida loses, as candidates vie for final 2 spots in Alaska Senate race - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/video/florida-more-to-make-major-decisions-in-primary-elections/",
+      "title": "Florida, Alaska and Wyoming to make major decisions in primary elections - CBS News"
+    }
+  ]
+}
