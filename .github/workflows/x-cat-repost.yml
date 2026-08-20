@@ -1,0 +1,75 @@
+name: X Cat Repost (Native RT)
+
+# Native retweet of cute cat posts from other accounts.
+#
+# Bryan's workflow: find a cute cat post, copy the tweet ID, dispatch this
+# workflow. Walter will RT it natively (classic retweet, no quote/commentary).
+#
+# Cap: 2 RTs per UTC day. History stored in x_cat_repost_history.json.
+#
+# X API note: POST /2/users/:id/retweets may 403 on self-serve tiers.
+# Run with dry_run=true first to verify the plan, then dry_run=false to test
+# one live RT. If you get a 403, the endpoint is blocked for your tier —
+# we do NOT fall back to quote_tweet.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tweet_id:
+        description: 'Tweet ID to retweet (required)'
+        required: true
+        type: string
+      dry_run:
+        description: 'Dry run (print plan, post nothing)'
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  repost:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-python-env
+
+      - name: Run X cat repost
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          ARGS="--tweet-id '${{ github.event.inputs.tweet_id }}'"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          echo "Running: python src/x_cat_repost.py $ARGS"
+          eval python src/x_cat_repost.py $ARGS
+
+      - name: Commit history file if changed
+        if: success() && github.event.inputs.dry_run == 'false'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if [ -f x_cat_repost_history.json ]; then
+            git add x_cat_repost_history.json
+            if ! git diff --staged --quiet; then
+              git commit -m "Update x_cat_repost_history.json [skip ci]"
+              for i in {1..3}; do
+                git pull --rebase --autostash origin main && git push && break || {
+                  echo "Push failed (attempt $i/3), retrying..."
+                  sleep $((i * 2))
+                }
+              done
+            else
+              echo "No changes to x_cat_repost_history.json"
+            fi
+          fi

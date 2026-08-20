@@ -262,6 +262,56 @@ class TwitterBot:
             print(f"✗ Error posting quote tweet: {e}")
             return None
 
+    def retweet(self, tweet_id: str) -> Optional[dict]:
+        """
+        Native retweet (classic RT) of a specific tweet.
+
+        This is a native retweet, NOT a quote tweet. If the API returns a 403
+        (common on X self-serve tiers since April 2026), the caller should
+        handle it — this method does NOT fall back to quote_tweet.
+
+        Args:
+            tweet_id: ID of the tweet to retweet
+
+        Returns:
+            Retweet response data if successful, None if failed
+        """
+        try:
+            response = self.client.retweet(tweet_id)
+            data = getattr(response, "data", None) or {}
+            retweeted = data.get("retweeted") if isinstance(data, dict) else getattr(data, "retweeted", None)
+            if retweeted:
+                print(f"✓ Retweet successful! Tweet ID: {tweet_id}")
+                return {"retweeted": True, "source_tweet_id": tweet_id}
+            print(f"   Retweet {tweet_id} returned unexpected payload: {data}")
+            return None
+        except tweepy.TooManyRequests as e:
+            print(f"✗ Rate limit exceeded on retweet")
+            print(f"   Error: {e}")
+            raise
+        except tweepy.TweepyException as e:
+            print(f"✗ Error retweeting {tweet_id}: {e}")
+            if hasattr(e, "response") and e.response is not None:
+                print(f"   Response status: {e.response.status_code}")
+                print(f"   Response body: {e.response.text}")
+            return None
+
+    def get_me(self) -> Optional[dict]:
+        """
+        Get the authenticated user's profile info.
+
+        Returns:
+            User data dict with 'id' and 'username', or None if failed
+        """
+        try:
+            response = self.client.get_me()
+            if response and getattr(response, "data", None):
+                return {"id": response.data.id, "username": response.data.username}
+            return None
+        except tweepy.TweepyException as e:
+            print(f"✗ Error fetching authenticated user: {e}")
+            return None
+
     def delete_tweet(self, tweet_id: str) -> bool:
         """
         Delete a tweet
