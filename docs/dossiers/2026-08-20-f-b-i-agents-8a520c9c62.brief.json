@@ -1,0 +1,50 @@
+{
+  "story_id": "2026-08-20-f-b-i-agents-8a520c9c62",
+  "headline_seed": "F.B.I. Agents Search Eric Swalwell\u2019s Home as Part of Federal Inquiry - The New York Times",
+  "brief": {
+    "story_id": "2026-08-20-f-b-i-agents-8a520c9c62",
+    "consensus_facts": [
+      "Both outlets' headlines reference the FBI taking action against former Rep. Eric Swalwell as part of a federal inquiry/investigation; only one outlet (USA Today) provided full body text, so the substantive details below are single-source and not wire consensus."
+    ],
+    "disagreements": [
+      {
+        "topic": "Nature of the FBI action (framing at headline level)",
+        "positions": {
+          "The New York Times": "Headline characterizes the action as agents 'search[ing] Eric Swalwell's Home' \u2014 frames it as a search of a residence.",
+          "USA Today": "Headline says FBI agents 'confront' Swalwell \u2014 a broader, more personal framing; body describes multiple search warrants including seizure of his cell phone at an airport and evidence from his D.C. residence."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier; no body text retrievable. Leads on the physical search of Swalwell's home as part of a 'federal inquiry,' using restrained, procedural language ('search,' 'inquiry'). No detail on the underlying allegations is available from the provided content.",
+      "USA Today": "The only full-text article in the dossier. USA Today reports (attributing to CBS News, CNN, and 'other media outlets') that FBI agents executed multiple search warrants over the weekend as part of a federal investigation into allegations of sexual misconduct; that Swalwell was served the first warrant at San Francisco Airport on Saturday and had his cell phone seized; and that a second warrant Sunday targeted his D.C. residence. It links the action to FBI Director Kash Patel's reported push to release files on a decade-old closed investigation into Swalwell and Christine Fang, a suspected Chinese intelligence operative, and to records President Trump declassified Monday. USA Today emphasizes context favorable to Swalwell's prior conduct \u2014 that he cut ties with Fang in 2015, assisted the FBI, was never charged, and had the House Ethics Committee close its probe in 2023 \u2014 while also noting he ended his gubernatorial bid and resigned from Congress in April after women accused him of sexual assault and misconduct. Notably, USA Today's own reporting frames the current search as tied to sexual-misconduct allegations, distinct from the older Fang matter it also recaps."
+    },
+    "primary_source_alignment": [
+      "No primary sources (search warrants, court filings, DOJ statements, declassified files) were located for this story. All factual claims rest on secondary reporting, with USA Today itself attributing key details to CBS News and CNN rather than to primary documents."
+    ],
+    "missing_context": [
+      "Only one of the two dossier articles (USA Today) has retrievable body text; the New York Times entry is headline-only, so no cross-outlet corroboration of the substantive details is possible within this dossier.",
+      "USA Today's core details (multiple warrants, cell phone seizure at SFO, D.C. residence search) are attributed to CBS News and CNN, not independently confirmed \u2014 effectively single-sourced through those wire/network reports.",
+      "No primary documents were available: the search warrants, their stated scope, and any accompanying affidavit or DOJ statement are not in the dossier.",
+      "The relationship between the current sexual-misconduct investigation and the separately recapped Fang/declassified-files matter is not fully clarified; USA Today presents both but does not establish whether they are connected.",
+      "The FBI declined to comment, and no statement from Swalwell or his legal representatives is included.",
+      "No specific charges have been filed; the coverage describes an investigative stage only.",
+      "The article is explicitly labeled 'breaking news,' meaning details may be incomplete or subject to revision."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet supplied full body text (itself attributing key facts to CBS News and CNN), the story is explicitly breaking and time-sensitive, and no primary source is available \u2014 conditions that call for a hedged same-day bulletin rather than a fully corroborated REPORT or META.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/20/us/eric-swalwell-fbi-search-home.html",
+      "title": "F.B.I. Agents Search Eric Swalwell\u2019s Home as Part of Federal Inquiry - The New York Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/2026/08/20/fbi-agents-confront-eric-swalwell-in-a-federal-investigation/91387085007/",
+      "title": "FBI agents confront Eric Swalwell as part of a federal investigation - USA Today"
+    }
+  ]
+}
