@@ -1689,6 +1689,11 @@
       "did": "did:plc:scuxv2iaqpug3fuvv7vpo3uj",
       "handle": "wildjoy.bsky.social",
       "timestamp": "2026-08-19T20:35:42.060342"
+    },
+    {
+      "did": "did:plc:zu2qhmssesr7w5mij4cec2bc",
+      "handle": "annaecook.com",
+      "timestamp": "2026-08-20T02:16:38.428568"
     }
   ],
   "liked_posts": [
@@ -3501,6 +3506,11 @@
       "uri": "at://did:plc:scuxv2iaqpug3fuvv7vpo3uj/app.bsky.feed.post/3mtfchzb7gc2n",
       "author": "wildjoy.bsky.social",
       "timestamp": "2026-08-19T20:35:41.864961"
+    },
+    {
+      "uri": "at://did:plc:zu2qhmssesr7w5mij4cec2bc/app.bsky.feed.post/3mti2ult2nk26",
+      "author": "annaecook.com",
+      "timestamp": "2026-08-20T02:16:38.275667"
     }
   ],
   "last_cleanup": "2026-08-16T02:21:17.287810",
