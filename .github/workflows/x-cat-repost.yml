@@ -46,13 +46,26 @@ jobs:
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          TWEET_ID_RAW: ${{ github.event.inputs.tweet_id }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: |
-          ARGS="--tweet-id '${{ github.event.inputs.tweet_id }}'"
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
-            ARGS="$ARGS --dry-run"
+          # Strip whitespace and markdown backticks from tweet_id
+          TWEET_ID=$(echo "$TWEET_ID_RAW" | tr -d '`' | tr -d '[:space:]')
+
+          # Validate tweet_id is digits only
+          if ! [[ "$TWEET_ID" =~ ^[0-9]+$ ]]; then
+            echo "Error: tweet_id must contain only digits, got: '$TWEET_ID_RAW' -> '$TWEET_ID'"
+            exit 1
           fi
-          echo "Running: python src/x_cat_repost.py $ARGS"
-          eval python src/x_cat_repost.py $ARGS
+
+          # Build command args
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "Running: python src/x_cat_repost.py --tweet-id $TWEET_ID --dry-run"
+            python src/x_cat_repost.py --tweet-id "$TWEET_ID" --dry-run
+          else
+            echo "Running: python src/x_cat_repost.py --tweet-id $TWEET_ID"
+            python src/x_cat_repost.py --tweet-id "$TWEET_ID"
+          fi
 
       - name: Commit history file if changed
         if: success() && github.event.inputs.dry_run == 'false'
