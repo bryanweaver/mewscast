@@ -1,0 +1,115 @@
+{
+  "story_id": "2026-08-21-charter-plane-crash-near-b75a18f3b4",
+  "headline_seed": "Charter plane crash near Alaskan military site kills 8 - Al Jazeera",
+  "brief": {
+    "story_id": "2026-08-21-charter-plane-crash-near-b75a18f3b4",
+    "consensus_facts": [
+      "A charter aircraft carrying eight people crashed at/near the Cape Newenham Long Range Radar Site in western Alaska on Thursday, and all eight on board were killed.",
+      "The aircraft was a Cessna 441 operated by Anchorage-based charter company Security Aviation.",
+      "The plane departed Ted Stevens Anchorage International Airport bound for Cape Newenham, roughly 450 miles west/southwest of Anchorage.",
+      "The crash occurred at approximately 12:15 p.m. local time.",
+      "Those on board included two pilots and six passengers, according to NTSB Alaska region chief Clint Johnson.",
+      "The U.S. military described the aircraft as a 'civilian-contracted aircraft' and did not specify the mission those on board were carrying out.",
+      "The radar site is managed by the Pacific Air Forces Regional Support Center and is part of a network tracking aircraft in Alaska's airspace and along its borders.",
+      "U.S. Air Force Lt. Gen. Robert Davis, commander of Alaskan Command, called it 'a devastating loss for our military family' and said those aboard were 'dedicated professionals carrying out a vital mission in a demanding environment.'",
+      "Search-and-rescue crews landed near the site and confirmed there were no survivors.",
+      "The names of those on board will be released 24 hours after next of kin are notified.",
+      "The FAA and NTSB will investigate the crash, with the NTSB leading the probe.",
+      "Alaska Sen. Lisa Murkowski expressed condolences on X, noting she had traveled extensively with Security Aviation and thanking the responding agencies.",
+      "Two of those killed were U.S. Army Corps of Engineers employees."
+    ],
+    "disagreements": [
+      {
+        "topic": "Who chartered the flight and the 'civilian-contracted' characterization",
+        "positions": {
+          "CBS News": "Reports the Army Corps said it had chartered the plane, explicitly flags a 'discrepancy' with the military's 'civilian-contracted aircraft' language, and says CBS has reached out to the corps about it.",
+          "The Guardian": "States plainly that USACE chartered the flight and two of its employees were killed, without framing it as a discrepancy.",
+          "CNN": "Says the USACE Alaska District was aware one of its chartered flights crashed and two USACE employees were among the victims.",
+          "NBC News": "Confirms two USACE employees were aboard via a Joint Base Elmendorf-Richardson statement but does not describe the corps as having chartered the plane.",
+          "Associated Press": "Does not mention USACE involvement at all; refers only to the military's 'civilian-contracted aircraft' framing.",
+          "Al Jazeera English": "Does not mention USACE involvement; describes only a 'civilian-contracted' Cessna operated by Security Aviation."
+        }
+      },
+      {
+        "topic": "Crash location relative to the airstrip",
+        "positions": {
+          "Associated Press": "Says the crash happened 'west of Cape Newenham' and 'near' the radar site airport.",
+          "Al Jazeera English": "Says the plane crashed 'west of Cape Newenham LRRS Airport.'",
+          "The Guardian": "Says it crashed 'on land near the Cape Newenham airport,' citing Johnson.",
+          "CBS News": "Says it was 'believed to have crashed on approach to Cape Newenham,' citing Johnson.",
+          "CNN": "Says it crashed 'near its destination' and 'went down at Cape Newenham Airport.'",
+          "USA Today": "Says the crash 'occurred at Cape Newenham Long Range Radar Site Airport.'",
+          "NBC News": "Says the crash happened 'at Cape Newenham Long Range Radar Site Airport.'"
+        }
+      },
+      {
+        "topic": "Weather and terrain as a factor",
+        "positions": {
+          "CNN": "Uniquely reports foggy conditions with visibility under 800 feet just before noon per the National Weather Service, and describes the runway on a mountain slope with high terrain making an aborted landing 'improbable.'",
+          "AP / NBC News / USA Today / CBS News / The Guardian / Al Jazeera English": "Do not mention weather conditions or terrain hazards."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Straight wire treatment. Leads with the raw facts \u2014 eight killed, remote radar site, military statement. Heavily anchored to Lt. Gen. Davis's quote. Notably omits USACE involvement and the Murkowski/Security Aviation angle. Neutral, spare phrasing.",
+      "NBC News": "Leads with the eight fatalities and immediately surfaces the two Army Corps of Engineers employees as a lede-level detail via a Joint Base Elmendorf-Richardson statement. Adds the Murkowski condolence and Security Aviation identification, plus notes Security Aviation did not respond to a comment request. Credits AP contribution.",
+      "Al Jazeera English": "Shortest treatment in the dossier. Bare-bones: eight dead, Cessna 441, Security Aviation, no survivors. Uses GMT timestamp (20:15) reflecting an international audience. Omits USACE, Murkowski, weather, and terrain. Emphasizes the 'radar site' military framing in its headline seed.",
+      "USA Today": "Standard national-desk summary built around the Davis quote and Murkowski. Notably does not mention USACE involvement despite other outlets carrying it. Includes an inline promo link to an unrelated Pennsylvania crash. Credits Reuters contribution.",
+      "CBS News": "The only outlet to explicitly interrogate the 'civilian-contracted' vs. 'Army Corps chartered' discrepancy, stating it has reached out to the corps for clarification. Sources the USACE detail to sister station KTUU. Otherwise leans on the Davis statement and Murkowski condolence.",
+      "The Guardian": "Leads with the human toll ('kills all eight onboard'). States flatly that USACE chartered the flight and lost two employees, without CBS's discrepancy framing. Includes USACE's line about coordinating with authorities. Anchored to the Davis quote and Murkowski. Credits AP.",
+      "CNN": "The most reported-out and analytical entry. Adds substantial original detail no other outlet carries: foggy weather with sub-800-foot visibility, the mountainside gravel runway, high terrain making aborted landings 'improbable,' the one-to-two-year NTSB timeline, and Security Aviation's own marketing copy about its Cessna Conquests. Frames the crash within operational/environmental hazard context rather than solely as a military-family loss."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (NTSB preliminary report, FAA filing, full military press release, or USACE statement text) were located for this story. All claims trace to official statements paraphrased through the outlets, plus wire contributions from AP and Reuters.",
+      "Because AP and Reuters feed several of these outlets, some apparent corroboration reflects shared wire sourcing rather than fully independent verification \u2014 notably the Davis quote block and the Murkowski statement, which recur near-verbatim across NBC, USA Today, CBS, The Guardian, and CNN."
+    ],
+    "missing_context": [
+      "No outlet reconciles the core discrepancy CBS flagged: the military calls it a 'civilian-contracted aircraft' while USACE says it chartered the flight \u2014 the two framings may be compatible, but only CBS treats it as an open question requiring clarification.",
+      "Only CNN reports weather (heavy fog, visibility under 800 feet) and terrain hazards; a fair-minded reader would want to know whether these conditions were a factor, and no outlet states a cause \u2014 appropriately, since the NTSB probe is just beginning.",
+      "No outlet identifies any of the eight victims by name (withheld pending next-of-kin notification), nor the specific mission or work at the radar site \u2014 the military declined to say, and outlets did not independently establish it.",
+      "No outlet reports Security Aviation's safety record or maintenance history for the Cessna 441, which would contextualize the operator.",
+      "Several outlets rely on the same AP/Reuters wire feed, so cross-outlet agreement on quotes overstates the number of truly independent confirmations.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Seven outlets reported the same event with materially different emphasis \u2014 CBS flags a 'civilian-contracted' vs. 'Army Corps chartered' discrepancy that most outlets smooth over, CNN alone surfaces weather and terrain hazards, and AP/Al Jazeera/USA Today omit the USACE angle entirely. The divergence in what is emphasized versus buried makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/alaska-charter-plane-crash-bda232d16205502288149db380610d05",
+      "title": "Charter plane crash kills 8 near remote radar site in western Alaska, military says - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/charter-plane-carrying-8-crashes-western-alaska-rcna593687",
+      "title": "Charter plane crash at remote radar site in Alaska kills 8 - NBC News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/21/charter-plane-crash-near-alaskan-military-site-kills-8",
+      "title": ""
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/nation/2026/08/21/alaska-plane-crash-charter-flight/91398694007/",
+      "title": "8 dead after charter plane crash in western Alaska, military says - USA Today"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/charter-plane-crash-cape-newenham-alaska/",
+      "title": "Charter plane crash kills 8 at remote radar site in western Alaska, military says - CBS News"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/21/charter-plane-crash-alaska-deaths",
+      "title": "Charter plane crash in Alaska kills all eight onboard near US military airstrip - The Guardian"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/21/us/alaska-charter-plane-crash-hnk",
+      "title": "Charter plane crashes near remote radar site in western Alaska, killing all 8 on board - CNN"
+    }
+  ]
+}
