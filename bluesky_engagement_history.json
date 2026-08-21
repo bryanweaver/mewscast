@@ -1709,6 +1709,11 @@
       "did": "did:plc:it5w6ohci23h5jrr3hl26ygl",
       "handle": "lukurio.bsky.social",
       "timestamp": "2026-08-20T20:36:00.536388"
+    },
+    {
+      "did": "did:plc:qas3zzvt6rbruew2ex4on5iw",
+      "handle": "cuppaoptimism.bsky.social",
+      "timestamp": "2026-08-21T02:22:55.266449"
     }
   ],
   "liked_posts": [
@@ -3541,6 +3546,11 @@
       "uri": "at://did:plc:it5w6ohci23h5jrr3hl26ygl/app.bsky.feed.post/3mtk34qq3u22v",
       "author": "lukurio.bsky.social",
       "timestamp": "2026-08-20T20:36:00.360031"
+    },
+    {
+      "uri": "at://did:plc:qas3zzvt6rbruew2ex4on5iw/app.bsky.feed.post/3mtkmred5ms2s",
+      "author": "cuppaoptimism.bsky.social",
+      "timestamp": "2026-08-21T02:22:55.060115"
     }
   ],
   "last_cleanup": "2026-08-16T02:21:17.287810",
