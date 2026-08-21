@@ -1,0 +1,67 @@
+{
+  "story_id": "2026-08-21-trump-pauses-quota-tariff-7b215b21e8",
+  "headline_seed": "Trump pauses quota tariff on 300,000 tons of beef ahead of midterms - Politico",
+  "brief": {
+    "story_id": "2026-08-21-trump-pauses-quota-tariff-7b215b21e8",
+    "consensus_facts": [
+      "President Trump announced on Friday (Aug. 21, 2026) via Truth Social that the U.S. would waive/exempt higher tariffs on up to 300,000 metric tons of imported ground beef.",
+      "Trump stated there is a commitment that this beef will be sold at 25 percent below current market prices.",
+      "Trump framed the move as a way to reduce prices for Americans while giving space for the U.S. beef herd to grow again.",
+      "The stated purpose of the measure is to lower historically high beef prices for consumers.",
+      "U.S. cattle industry groups and ranchers have opposed moves to increase beef imports, arguing it undercuts American producers."
+    ],
+    "disagreements": [
+      {
+        "topic": "Duration and mechanics of the tariff pause",
+        "positions": {
+          "Politico": "Describes it as exempting 300,000 metric tons from tariffs; says Trump will formally sign an executive order within two weeks; does not specify a 90-day window.",
+          "CBS News": "Specifies the U.S. will allow the beef in for the next 90 days with 'no out-of-quota tariff,' pausing higher tariffs triggered when trade volume surpasses a WTO-defined quota."
+        }
+      },
+      {
+        "topic": "Framing of blame for high prices",
+        "positions": {
+          "Politico": "Emphasizes Trump shifting blame onto former President Biden and notes voters blame the current administration.",
+          "CBS News": "Attributes rising prices to structural factors \u2014 shrinking cattle herds, drought, and strong consumer demand \u2014 without foregrounding partisan blame."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Politico": "Leads on the political and electoral angle \u2014 the headline itself frames the move as timed 'ahead of midterms.' Emphasizes voter punishment of the GOP over cost of living, Trump's blame-shifting to Biden, and internal GOP dissent (Sen. Tim Sheehy's opposition, Agriculture Secretary Brooke Rollins' prior resistance, the shelved May plan). Frames the story chiefly as domestic politics and intra-party tension rather than trade or economics.",
+      "The New York Times": "Headline-only in this dossier ('Trump Tariff Talks Leave Key Canadian Official Hopeful'). This article is about Canada trade negotiations, not the beef tariff pause, and provides no body-level corroboration of the beef story.",
+      "CBS News": "Leads on consumer prices and affordability \u2014 foregrounds the 90-day quota mechanics, cites specific price data ($6.89/lb ground beef, up 57% over five years; 9% year-over-year rise), and grounds the story in structural causes (drought, shrinking herds, herd culls). Includes USDA supportive framing and industry opposition. More economics/consumer-focused and less partisan than Politico; cross-links to skeptical 'Free Press' pieces on Trump's tariffs."
+    },
+    "primary_source_alignment": [
+      "No primary source (executive order text, Truth Social post in full, or USDA statement) was located in the dossier. Both Politico and CBS quote the Truth Social post, but the underlying document was not provided for direct verification.",
+      "Politico notes the executive order has not yet been signed and is expected within two weeks, meaning no formal order text exists to align against at time of coverage."
+    ],
+    "missing_context": [
+      "Neither full-text outlet quantifies how large 300,000 metric tons is relative to total U.S. beef supply \u2014 CBS notes experts previously called the Argentina increase too small to move prices, but does not apply that math to this larger figure.",
+      "The source country or countries of the imported beef is not specified in either full-text article.",
+      "No detail on who 'committed' to selling the beef at 25 percent below market price, or how that commitment would be enforced.",
+      "The interaction between this pause and existing WTO quota rules is only briefly sketched by CBS and absent in Politico.",
+      "The NYT article in the dossier is off-topic (Canada trade talks) and does not corroborate the beef story, leaving only two on-topic sources, one of which is a mismatched headline.",
+      "Effectively only two of three dossier articles cover this story with body text (Politico and CBS); the NYT entry is a headline for a different story, so consensus rests on two outlets."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets (Politico and CBS News) confirm the core facts with only modest framing divergence \u2014 political timing versus consumer affordability \u2014 and no primary source diverges from coverage, making this a straightforward REPORT rather than a coverage-report META.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/08/21/trump-ground-beef-import-tariffs-01045353",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/20/world/canada/trump-carney-tariffs-trade-deal.html",
+      "title": "Trump Tariff Talks Leave Key Canadian Official Hopeful - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/trump-waives-ground-beef-import-tariffs/",
+      "title": "Trump temporarily waives higher beef tariffs in bid to lower prices - CBS News"
+    }
+  ]
+}
