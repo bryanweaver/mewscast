@@ -1724,6 +1724,11 @@
       "did": "did:plc:akyrywovq4ehveepv62unovt",
       "handle": "gilibug.bsky.social",
       "timestamp": "2026-08-21T20:32:37.179943"
+    },
+    {
+      "did": "did:plc:kfjioolmzhvvajlj3yb7ks2p",
+      "handle": "doodlebeth.com",
+      "timestamp": "2026-08-22T02:15:33.535252"
     }
   ],
   "liked_posts": [
@@ -3576,6 +3581,11 @@
       "uri": "at://did:plc:akyrywovq4ehveepv62unovt/app.bsky.feed.post/3mtmlaq46is2h",
       "author": "gilibug.bsky.social",
       "timestamp": "2026-08-21T20:32:36.772165"
+    },
+    {
+      "uri": "at://did:plc:kfjioolmzhvvajlj3yb7ks2p/app.bsky.feed.post/3mtlktym6lk22",
+      "author": "doodlebeth.com",
+      "timestamp": "2026-08-22T02:15:33.218497"
     }
   ],
   "last_cleanup": "2026-08-16T02:21:17.287810",
