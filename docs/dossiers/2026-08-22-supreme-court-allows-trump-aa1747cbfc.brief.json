@@ -1,0 +1,108 @@
+{
+  "story_id": "2026-08-22-supreme-court-allows-trump-aa1747cbfc",
+  "headline_seed": "Supreme Court allows Trump's ballroom construction to proceed for now - Axios",
+  "brief": {
+    "story_id": "2026-08-22-supreme-court-allows-trump-aa1747cbfc",
+    "consensus_facts": [
+      "On Friday, August 21, 2026, the U.S. Supreme Court issued a temporary order allowing construction of Trump's White House ballroom to continue for now.",
+      "Chief Justice John Roberts signed the brief order, which paused a lower-court ruling that would have halted construction.",
+      "The order was procedural \u2014 it did not rule on the legality of the project and did not give a timeline for a final decision.",
+      "Lower courts had found the project required congressional approval; the D.C. Circuit affirmed this before the case reached the Supreme Court.",
+      "U.S. District Judge Richard Leon ordered above-ground ballroom construction stopped but allowed below-ground/national-security construction to proceed.",
+      "The ballroom is being built on the site of the former East Wing of the White House, which was demolished.",
+      "The National Trust for Historic Preservation sued to stop the project, arguing the president needed congressional approval.",
+      "Trump praised the decision on social media, calling the 'Military/Ballroom Complex' vital for national security and 'THE GREATEST OF ITS KIND.'",
+      "The Trump administration argued the ballroom is an 'integrated military complex' vitally required by national security and the president's safety.",
+      "Solicitor General D. John Sauer represented the administration and argued it was too late to stop the project, which he said was roughly 65% complete.",
+      "Trump originally said private donors would fund the ballroom, but taxpayer money has since been implicated in the project's costs.",
+      "Polling cited indicates the project is unpopular with the public."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total cost of the project",
+        "positions": {
+          "NPR": "Estimated to cost taxpayers at least $300 million.",
+          "Al Jazeera English": "Describes it as a '$400m White House ballroom project.'",
+          "Axios": "Joint cost of ballroom and underground bunker projected at least $600 million, up $400 million from the original announcement; ~$352 million in taxpayer dollars redirected in June from the One Big Beautiful Bill.",
+          "Los Angeles Times": "Private donations said to cover most of the $400-million ballroom cost; one estimate put ballroom plus bunker at $600 million, with taxpayers covering half (per Washington Post)."
+        }
+      },
+      {
+        "topic": "Ballroom size / scale",
+        "positions": {
+          "NPR": "90,000-square-foot addition, twice the size of the main part of the White House complex.",
+          "Los Angeles Times": "A huge new complex expected to dwarf the historic Executive Mansion; seating for 1,000 dinner guests.",
+          "Reuters": "Headline-only; no size detail.",
+          "Al Jazeera English": "No specific size figure given.",
+          "Axios": "No specific size figure given."
+        }
+      },
+      {
+        "topic": "Justification / threat environment",
+        "positions": {
+          "NPR": "Notes Trump cited lack of event space and claimed security benefits (bomb shelters, hospital, sniper nests, drone port).",
+          "Axios": "Cites White House pointing to an alleged plot against the July UFC fight and a White House Correspondents' Dinner attack as evidence of heightened threat.",
+          "Los Angeles Times": "Frames the security claim as Trump's assertion about protection from drones, terrorists and snipers, noting opponents dispute the scope of executive power."
+        }
+      },
+      {
+        "topic": "Framing of who prevailed",
+        "positions": {
+          "Axios": "Explicitly calls the decision 'a major win for the administration.'",
+          "NPR": "Frames it neutrally as allowing construction 'for now' and emphasizes the Trust's argument that continuing effectively ends the case.",
+          "Los Angeles Times": "Frames it as Roberts giving the court 'more time' amid a broader confrontation over executive power."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (body text is a Google News redirect link, not a report). Neutral wire phrasing: 'lets Trump continue work ... for now.' Cannot be used for body-level corroboration.",
+      "NPR": "Leads on the procedural stay but quickly foregrounds cost and the taxpayer contradiction ('despite the president saying repeatedly that taxpayers would not foot the bill'). Emphasizes the Trust's argument that allowing construction effectively ends the case and that every court found the project 'patently unlawful.' Includes unpopularity polling (56% disapproval) and the full procedural history. Frames security claims as Trump's assertions, listing 'sniper nests and a drone port' in a way that highlights their unusual nature.",
+      "Al Jazeera English": "Shortest full-text account. Leads on the temporary stay, then pivots to a power-and-image frame: Trump 'seeks to expand presidential power and mould the capital in his own image.' Notably emphasizes the court's conservative composition ('six justices appointed by right-wing presidents, compared to three named by left-leaning leaders') and the administration's track record on the emergency docket. Uses the $400m figure. Gives Trump's celebratory quotes prominent placement.",
+      "Axios": "Most explicitly outcome-framed: 'a major win for the administration.' Structured in Axios house style (Why it matters / Driving the news / Zoom in). Provides the most granular cost reporting ($600 million joint, $352 million redirected from the One Big Beautiful Bill) and the specific threat justifications (UFC fight plot, Correspondents' Dinner attack). Notes Trump 'long mused' about a ballroom and that he claimed the project wouldn't interfere with the structure before the East Wing was demolished \u2014 a subtle credibility frame.",
+      "Los Angeles Times": "Most detailed on the legal and constitutional stakes. Leads on Trump's national-security claim and Roberts needing 'more time.' Heavily emphasizes the executive-power confrontation, quoting the Society for the Rule of Law warning that under Trump's theory 'the President could bulldoze the entire White House and replace it with a skyscraper.' Notes Trump 'bulldozed the historic East Wing before the courts had resolved' authority, framing irreversibility as a central concern. Details the funding dispute and bipartisan congressional reluctance."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court order, filings, or the Supreme Court's brief order) were located in the dossier, so no direct document-versus-coverage comparison is possible.",
+      "Quotes attributed to the administration's petition and Solicitor General Sauer's briefs appear in Axios and the Los Angeles Times with consistent wording ('integrated military complex,' 'vitally required by national security,' '65% complete,' '250-person crew working 20 hours a day'), but these are reported quotations, not verified against the underlying filings."
+    ],
+    "missing_context": [
+      "No outlet reproduces or links the actual text of Roberts's order, so readers cannot see the precise procedural mechanism or any stated conditions.",
+      "The cost figures are inconsistent across outlets ($300M, $400M, $600M) and none fully reconcile ballroom-only vs. ballroom-plus-bunker vs. taxpayer-share figures \u2014 a reader cannot determine the total public cost with confidence.",
+      "No outlet specifies when the Supreme Court will actually rule on the merits, or whether the stay effectively resolves the case as the National Trust warned it would.",
+      "The administration's security claims (sniper nests, drone port, bomb shelters, alleged UFC-fight plot, Correspondents' Dinner attack) are reported largely as assertions; no outlet provides independent verification of the cited threats.",
+      "None of the outlets detail the vote breakdown or whether any justices dissented from or noted the stay order.",
+      "No primary source was located for this story; the brief relies entirely on secondary reporting, including quoted excerpts that were not independently verified against filings.",
+      "Reuters appears in the dossier as headline-only (its 'body' is a Google News redirect link), so it provides no corroborating body-level reporting despite being a wire outlet."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text reported the same procedural stay but with materially different framings \u2014 from Axios's 'major win' to the Los Angeles Times's executive-power confrontation to Al Jazeera's emphasis on court composition \u2014 and the cost figures diverge significantly across sources, making this a coverage-comparison story rather than a straight report.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/supreme-court-lets-trump-continue-work-white-house-ballroom-now-2026-08-21/",
+      "title": "Supreme Court lets Trump continue work on White House ballroom for now - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/08/21/nx-s1-5935417/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
+      "title": "Supreme Court allows Trump\u2019s ballroom construction to continue for now - NPR"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/21/us-supreme-court-allows-trumps-ballroom-project-to-continue-for-now",
+      "title": "US Supreme Court allows Trump\u2019s ballroom project to continue for now - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/08/21/trump-ballroom-construction-supreme-court",
+      "title": ""
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://www.latimes.com/politics/story/2026-08-21/supreme-court-trump-white-house-ballroom",
+      "title": "Trump cites national security as Supreme Court weighs challenge to ballroom - Los Angeles Times"
+    }
+  ]
+}
