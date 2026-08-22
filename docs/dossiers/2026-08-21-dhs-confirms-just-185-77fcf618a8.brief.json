@@ -1,0 +1,89 @@
+{
+  "story_id": "2026-08-21-dhs-confirms-just-185-77fcf618a8",
+  "headline_seed": "DHS confirms just 185 non-citizens on Nevada voter rolls after claiming there were thousands more - The Guardian",
+  "brief": {
+    "story_id": "2026-08-21-dhs-confirms-just-185-77fcf618a8",
+    "consensus_facts": [
+      "In July 2026, DHS claimed Nevada had as many as 15,903 non-citizens on its voter rolls.",
+      "In an August meeting with Nevada election officials, DHS acknowledged it had manually reviewed only a fraction of those cases and confirmed just 185 registrants as non-citizens.",
+      "More than 14,000 flagged cases remained unresolved, and DHS separately identified roughly 6,200 (6,218) as 'higher confidence matches' not yet manually reviewed.",
+      "DHS official Kimberley Vogt told Nevada officials the 15,903 figure was 'preliminary' and had not undergone a 'full manual review' of each name.",
+      "DHS reached its figures by comparing Nevada's public voter rolls with federal immigration records.",
+      "Nevada Secretary of State Francisco (Cisco) Aguilar, a Democrat, said the federal government made sweeping public claims without providing the underlying proof.",
+      "DHS Secretary Markwayne Mullin publicly announced in July that DHS identified roughly 250,000 non-citizens registered to vote across four states (Nevada, Pennsylvania, New Jersey and California).",
+      "This week the US Census Bureau released an analysis claiming roughly 24,000 non-citizens voted in the 2020 election, which Trump promoted; experts criticized its methodology and transparency.",
+      "David Becker of the Center for Election Innovation & Research criticized the administration for making baseless claims without showing its methodology.",
+      "During the August meeting, Nevada chief deputy secretary of state C. Murphy Hebert pressed DHS on whether the 15,000 number had been vetted, and Vogt characterized it as a ceiling that could only decrease."
+    ],
+    "disagreements": [
+      {
+        "topic": "Trump's stated national total of non-citizens registered across four states",
+        "positions": {
+          "CNN": "Quotes Mullin saying DHS identified 250,000 noncitizens registered to vote in four states.",
+          "NPR": "Reports DHS announced it had found 250,000 noncitizens on public voter rolls in the four states.",
+          "The Guardian": "Reports Trump claimed in a 16 July primetime address that a DHS review found about 278,000 non-citizens registered across four states."
+        }
+      },
+      {
+        "topic": "Whether the '185 confirmed' framing undercuts DHS's findings",
+        "positions": {
+          "CNN": "DHS spokesperson disputed that the Nevada correspondence undercut its findings but did not address other questions.",
+          "The Guardian": "DHS spokesperson called the characterization 'false,' saying the 185 were only those that had gone through manual review and the 6,218 additional names were shared at Nevada's request.",
+          "NPR": "Does not directly report a DHS rebuttal on the 185 figure; focuses on the Census Bureau report and broader state pushback."
+        }
+      },
+      {
+        "topic": "Date of the key DHS-Nevada meeting",
+        "positions": {
+          "CNN": "References an August 13 meeting.",
+          "The Guardian": "References a 14 August meeting."
+        }
+      },
+      {
+        "topic": "Date of Mullin's threat of fines and prison time",
+        "positions": {
+          "CNN": "Not specified in this framing.",
+          "The Guardian": "Reports a 15 July press conference where Mullin threatened election officials with fines and prison time."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN": "Leads with the collapse of a 'bombshell' \u2014 juxtaposing Mullin's on-camera 'facts don't lie' rhetoric against the private DHS admission that only 185 of 15,903 were confirmed. Emphasizes the recording and dozen-plus emails CNN reviewed, the gap between public claims and private acknowledgments, and ties it to the broader push for the SAVE America Act and the Census Bureau report. Frames the story primarily as accountability journalism exposing a discrepancy.",
+      "NPR": "Leads not on Nevada but on the Census Bureau report and its ties to the Trump-aligned America First Policy Institute, treating Nevada as one data point in a pattern. Emphasizes expert quotes (Becker, Morse), the tiny 0.02% figure, and a named GOP official (Raffensperger) whose own audit found fewer than a dozen noncitizen voters. Frames the story as a systemic critique of repeated, methodologically dubious federal claims, giving weight to the 'exclusive' angle on AFPI involvement.",
+      "The Guardian": "Leads directly with the numeric contrast in the headline (185 vs. thousands). Emphasizes the primetime Trump address and the 278,000 national figure, DHS's letters softening the claim to a 'ceiling,' and the presence of election denier Heather Honey now working at DHS. Includes DHS's on-record 'false' rebuttal and quotes Aguilar on disenfranchisement risk. Frames the story as evidence of a determined effort to spread false information, foregrounding voter-protection stakes."
+    },
+    "primary_source_alignment": [
+      "No primary source document was provided in the dossier. However, CNN and The Guardian both cite direct quotes from a recording of the DHS-Nevada meeting and emails obtained via public records request; these primary-adjacent materials corroborate the 185-confirmed and 15,903-preliminary figures.",
+      "The direct quotes attributed to Kimberley Vogt (the 'ceiling' language and 'it hasn't had a full manual review of each one') appear consistently in both CNN and The Guardian, indicating both drew on the same underlying recording."
+    ],
+    "missing_context": [
+      "No outlet provides DHS's actual matching methodology in detail \u2014 all note it was not disclosed, but none obtained or published the algorithm or data-matching criteria.",
+      "None of the outlets report the equivalent confirmed-vs-preliminary breakdown for the other three states (California, Pennsylvania, New Jersey), leaving the national picture incomplete.",
+      "No outlet states how many of the 185 confirmed non-citizens, if any, had actually voted (versus merely being registered) \u2014 the story conflates registration with voting in places.",
+      "The timeline relative to Nevada's ballot-mailing deadline is mentioned but not specified with a concrete date, despite being cited as the reason DHS shared the 6,218 subset early.",
+      "No outlet provides the base rate or historical context of how many total registered voters Nevada has, which would contextualize the 185 and 15,903 figures.",
+      "Heather Honey's specific role at DHS is asserted by The Guardian but not corroborated by CNN or NPR, and no outlet details what she did on the Nevada matter.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets reported the same core discrepancy but with materially different framings \u2014 CNN as an exposed 'bombshell,' NPR as a systemic pattern tied to AFPI and the Census report, and The Guardian foregrounding disenfranchisement \u2014 and the numeric claims (250,000 vs. 278,000) diverge, making this a coverage-comparison story rather than a straight report.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/21/politics/markwayne-mullin-voter-fraud-nevada",
+      "title": "Trump officials touted a voter fraud bombshell. Their data hasn\u2019t proved it - CNN"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/08/19/nx-s1-5938799/trump-census-bureau-noncitizen-voting",
+      "title": "Experts raise alarms over Census Bureau report Trump is touting on noncitizen voting - NPR"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/21/dhs-confirm-nevada-voter-numbers",
+      "title": ""
+    }
+  ]
+}
