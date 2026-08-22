@@ -1739,6 +1739,11 @@
       "did": "did:plc:d44hrsqtvrm4k3h7bm7xypiz",
       "handle": "senorspilunco.bsky.social",
       "timestamp": "2026-08-22T16:10:32.630988"
+    },
+    {
+      "did": "did:plc:gfduowslansixnitcb43rms5",
+      "handle": "paulinedrawsbears.bsky.social",
+      "timestamp": "2026-08-22T20:30:32.436834"
     }
   ],
   "liked_posts": [
@@ -3606,6 +3611,11 @@
       "uri": "at://did:plc:d44hrsqtvrm4k3h7bm7xypiz/app.bsky.feed.post/3mtonjfqrqk23",
       "author": "senorspilunco.bsky.social",
       "timestamp": "2026-08-22T16:10:32.441868"
+    },
+    {
+      "uri": "at://did:plc:gfduowslansixnitcb43rms5/app.bsky.feed.post/3mtowftrz2c2v",
+      "author": "paulinedrawsbears.bsky.social",
+      "timestamp": "2026-08-22T20:30:32.231747"
     }
   ],
   "last_cleanup": "2026-08-16T02:21:17.287810",
