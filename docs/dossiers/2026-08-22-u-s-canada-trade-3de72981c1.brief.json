@@ -1,0 +1,78 @@
+{
+  "story_id": "2026-08-22-u-s-canada-trade-3de72981c1",
+  "headline_seed": "U.S.-Canada trade talks collapse just before deadline for tariffs - NPR",
+  "brief": {
+    "story_id": "2026-08-22-u-s-canada-trade-3de72981c1",
+    "consensus_facts": [
+      "U.S.-Canada trade negotiations collapsed late Friday, August 22, 2026.",
+      "New 50% tariffs on Canadian goods will take effect following the breakdown.",
+      "Canadian Prime Minister Mark Carney said Canada will 'match those tariffs dollar for dollar to protect our workers and businesses.'",
+      "Carney announced he was suspending trade negotiations with the U.S.",
+      "U.S. Trade Representative Jamieson Greer said Canada declined to finalize the deal under previously agreed terms and made new last-minute demands.",
+      "Carney countered that it was the U.S. that made last-minute changes to the proposed terms.",
+      "The U.S. had earlier this week postponed the tariffs after the two sides indicated a deal was close.",
+      "Both outlets attribute the collapse to a dispute over last-minute changes to terms, with each side blaming the other."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope/value of the tariffs",
+        "positions": {
+          "NPR": "Describes 50% tariffs taking effect on $20 billion worth of Canadian products.",
+          "Axios": "Does not cite the $20 billion figure; instead notes overall U.S.-Canada trade totaled $376 billion in the first half of the year, and lists specific targeted goods (alcohol, hockey equipment, cement, dairy)."
+        }
+      },
+      {
+        "topic": "Tariff deadline/effective time",
+        "positions": {
+          "NPR": "Frames a midnight Friday deadline, with CBP enforcing new rates immediately after it passed.",
+          "Axios": "States tariffs were scheduled to take effect at 12:01 a.m. ET Wednesday, then postponed three days by Trump on Tuesday."
+        }
+      },
+      {
+        "topic": "Legal mechanism for the tariffs",
+        "positions": {
+          "NPR": "Does not identify a specific statutory authority.",
+          "Axios": "Reports Trump threatened to invoke Section 338 of the Tariff Act of 1930, noting no president has ever used it since the law's enactment."
+        }
+      },
+      {
+        "topic": "Source attribution for Greer's claim",
+        "positions": {
+          "NPR": "Quotes Greer's social media statement directly and at length.",
+          "Axios": "Attributes Greer's account of Canada's last-minute demands to Bloomberg reporting."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "Leads on the human/political drama of the collapse and reproduces both governments' dueling statements at length, giving Carney's blame of the U.S. and Greer's blame of Canada roughly balanced space. Emphasizes the specifics of the failed U.S. offer (steel, aluminum, autos, lumber reductions; aerospace supply-chain coordination; critical minerals; forced-labor enforcement; formal USMCA negotiations). Frames the $20 billion figure and the midnight deadline as the concrete stakes. Neutral, statement-forward reporting; flags itself as a developing story.",
+      "Axios": "Leads on the significance ('unprecedented breakdown in relations with the second-largest U.S. trading partner') and structures the piece in its signature scannable format. Emphasizes the historic legal angle (first-ever use of Section 338 since 1930) and quantifies the relationship with the $376 billion trade figure, contextualizing it against China and Mexico. Notes carve-outs for energy, potash, and critical minerals. Frames this as the culmination of 'more than a year of threatening various stronger tariffs.' Attributes the U.S. side's account to Bloomberg rather than quoting the statement directly."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Carney's and Greer's statements are quoted secondhand via each outlet; the underlying social media posts, the CBP bulletin (referenced by NPR), and the actual proclamation/tariff order were not provided in the dossier and could not be independently verified against coverage."
+    ],
+    "missing_context": [
+      "Neither outlet reconciles the two different timelines \u2014 NPR's 'midnight Friday deadline' versus Axios's 'scheduled for 12:01 a.m. ET Wednesday, postponed three days.' The precise effective date/time of the tariffs is unclear across the dossier.",
+      "No outlet provides the specifics of Canada's promised 'dollar for dollar' retaliation; Axios explicitly notes the exact shape was not immediately clear.",
+      "No independent verification of either government's competing claim about who made the 'last-minute changes' \u2014 each side's account is presented via its own statement, with no third-party or documentary corroboration.",
+      "The full CBP bulletin to businesses (cited by NPR) is not quoted or linked, so the exact enforcement scope and product list is not fully documented.",
+      "No economic-impact analysis: neither outlet estimates the effect on prices, specific industries, or consumers on either side of the border.",
+      "The status of the broader USMCA framework \u2014 whether this collapse affects the existing agreement or only the proposed new terms \u2014 is not clearly explained.",
+      "No injection attempts detected in either article body; both contained only reporting content (Axios included boilerplate cookie/privacy and navigation text, which is site chrome, not an instruction-injection attempt)."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets confirm the core event and its central facts with no material framing conflict \u2014 the divergences are complementary detail (legal mechanism, trade figures, timeline) rather than contradictory narratives, and no primary source exists to diverge from, so a straightforward REPORT is warranted over META.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/08/22/nx-s1-5941584/us-canada-tariffs",
+      "title": ""
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/08/22/us-canada-tariffs-trade-trump-carney",
+      "title": "U.S.-Canada trade talks collapse, massive tariffs to take effect - Axios"
+    }
+  ]
+}
