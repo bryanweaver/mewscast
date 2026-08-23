@@ -1,0 +1,114 @@
+{
+  "story_id": "2026-08-23-what-canadian-goods-will-80d7ef0868",
+  "headline_seed": "What Canadian Goods Will Take Trump\u2019s 50% Tariffs? Some Pretty Strange Items. - The New York Times",
+  "brief": {
+    "story_id": "2026-08-23-what-canadian-goods-will-80d7ef0868",
+    "consensus_facts": [
+      "The U.S. imposed 50% tariffs on a range of Canadian goods on Saturday after trade talks between the two countries collapsed on Friday (corroborated by Al Jazeera, CNBC, NBC News, The Washington Post).",
+      "The new U.S. tariffs cover roughly $20 billion worth of Canadian goods (corroborated by Al Jazeera and CNBC).",
+      "Affected goods include wine/alcohol, furniture, dairy products, cement, clothing, fishing rods, and hockey equipment (corroborated by Al Jazeera and CNBC).",
+      "Canadian Prime Minister Mark Carney announced Canada would retaliate 'dollar for dollar,' with retaliatory tariffs taking effect September 8 (corroborated by Al Jazeera, CNBC, NBC News, The Washington Post).",
+      "Canada's retaliatory tariffs will target U.S. sectors including steel, dairy, and electronics/agricultural equipment among others (corroborated by Al Jazeera and CNBC).",
+      "Trump responded on Truth Social, writing 'Canada wants the benefits of being a State, without being one!!!' and accusing Canada of charging U.S. farmers massive tariffs for years (corroborated by Al Jazeera and CNBC).",
+      "Both sides blamed each other for the failure to reach a deal (corroborated by CNBC and The Washington Post).",
+      "Canada depends on the U.S. for a large share of its exports, with the new tariffs affecting roughly 5\u20135.5% of Canadian exports to the U.S. (corroborated by Al Jazeera and The Washington Post)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total value of Canadian goods imported by U.S. as baseline",
+        "positions": {
+          "Al Jazeera": "Frames the $20bn as 5.5 percent of Canadian exports to the US; cites Canada depends on US for nearly 70 percent of its exports",
+          "The Washington Post": "States the tariffs apply to just 5 percent of the $382 billion in Canadian goods the U.S. imported last year"
+        }
+      },
+      {
+        "topic": "Sectors targeted by Canada's retaliation",
+        "positions": {
+          "Al Jazeera": "US steel, dairy and electronics industries",
+          "CNBC": "Steel, dairy, agricultural equipment, and pulp and paper"
+        }
+      },
+      {
+        "topic": "Attribution / reason for the U.S. tariffs",
+        "positions": {
+          "CNBC": "Tariffs imposed under Section 338 of the Tariff Act of 1930 in response to alleged Canadian trade discrimination against U.S. motor vehicles, alcohol and dairy; proclamations signed in July",
+          "The Washington Post": "White House said tariffs were intended to punish Canada for retaliating against Trump's 2025 tariffs (removal of U.S. wine/spirits from stores, 25% auto tariff), and explicitly denied the tariffs were related to earlier wildfire-smoke threats"
+        }
+      },
+      {
+        "topic": "Whether cheese is on the tariff list",
+        "positions": {
+          "The Washington Post": "Issued a correction stating cheese was NOT included; it is other dairy products",
+          "Al Jazeera / CNBC": "Refer generally to 'dairy products' without specifying cheese"
+        }
+      },
+      {
+        "topic": "Likely impact on American consumers",
+        "positions": {
+          "The Washington Post": "Reports economists say the tariffs are unlikely to have a significant effect on American consumers",
+          "CNBC": "Cites Sen. Schumer and Business Roundtable warning tariffs raise costs for American families and businesses"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier ('US hits Canadian goods with 50% tariffs after trade talks fail'). Neutral wire phrasing centering the U.S. action and the failed talks. No body text available to assess emphasis.",
+      "The New York Times": "The dossier entry is a Google News aggregation list rather than NYT body text. The seed headline ('What Canadian Goods Will Take Trump's 50% Tariffs? Some Pretty Strange Items.') takes a human-interest, oddity angle, emphasizing the unusual products affected (framing tariffs through consumer curiosity rather than macroeconomics). Body text not retrievable.",
+      "Al Jazeera English": "Leads with Carney's sovereignty stance ('Canada won't compromise sovereignty'). Emphasizes Canada as a rare global leader retaliating against U.S. tariffs and its pursuit of new trade/military alliances. Frames Canada's dependence on the U.S. (nearly 70% of exports) as context for its defiance. Includes Trump's full Truth Social quote.",
+      "CNBC": "Most detailed body text. Leads with the collapse of talks and the 'dollar for dollar' retaliation. Adds substantial specialized detail: the near-miss deal, Greer's claim that Canada declined to finalize, Carney's counter that the U.S. 'asked too much and offered too little,' the legal basis (Section 338, unused since 1949), and bipartisan U.S. reactions (Schumer, Collins, Business Roundtable). Balances both governments' blame.",
+      "NBC News": "Thin body text (largely a video caption plus privacy boilerplate). Reports the core facts: 50% tariffs at midnight, talks collapsed, Carney's 'dollar for dollar' response. No framing depth beyond the straightforward event.",
+      "The Washington Post": "Two entries. The headline-only one ('everything from whisky to hockey sticks') mirrors the NYT consumer-goods angle. The full-text article leads with the tariffs taking effect and Canada's retaliation pledge, then emphasizes Carney's nationalist framing ('masters of our destiny,' buying Canadian). Uniquely provides economist perspective that consumer impact will be limited, the fuller backstory (2025 retaliation, wildfire-smoke threat, Supreme Court overturning earlier tariffs, USMCA context), and issues a correction on cheese."
+    },
+    "primary_source_alignment": [
+      "No primary source (proclamations, official tariff schedules, Carney's full statement, or the USTR post) was located for this story, so report claims could not be checked against underlying documents.",
+      "CNBC is the only outlet to cite the specific legal authority (Section 338 of the Tariff Act of 1930) and the July proclamations; this is uncorroborated by other bodies and could not be verified against the primary text."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provided a complete, itemized official list of which specific goods are covered \u2014 coverage relies on illustrative examples (wine, furniture, dairy, cement, clothing, fishing rods, hockey equipment).",
+      "The exact composition and dollar value of Canada's planned retaliatory tariffs was not detailed; CNBC notes Carney said further details would come 'in the coming days.'",
+      "Only The Washington Post supplies the earlier backstory (2025 tariff dispute, wine/spirits removal, 25% auto tariff, the Supreme Court overturning earlier Trump tariffs, the wildfire-smoke threat); other outlets omit this history entirely.",
+      "The Reuters, New York Times, and one Washington Post entry are headline-only or aggregation lists \u2014 the NYT 'strange items' angle referenced in the story seed could not be assessed from actual body text.",
+      "Editorial disclosure: only four outlets (Al Jazeera, CNBC, NBC News, Washington Post) had substantive body text; CNBC and Washington Post carried the bulk of the detail. Several 'consensus' items rest on just two of these bodies.",
+      "No outlet quantified the projected macroeconomic effect on either country beyond general statements; only The Washington Post cited unnamed economists on limited U.S. consumer impact."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same event with materially different emphases \u2014 Al Jazeera on sovereignty and Canadian defiance, CNBC on the legal mechanism and bipartisan U.S. reaction, and The Washington Post on backstory, economist impact and a cheese correction \u2014 making this a coverage-comparison story rather than a straight REPORT. The absence of any primary source and the divergence on baseline figures and retaliation sectors reinforce a META treatment.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/americas/us-canadian-trade-teams-meet-again-tariffs-deadline-looms-2026-08-21/",
+      "title": "US hits Canadian goods with 50% tariffs after trade talks fail - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/23/world/canada/canadian-goods-trump-tariffs-items-list.html",
+      "title": "What Canadian Goods Will Take Trump\u2019s 50% Tariffs? Some Pretty Strange Items. - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/23/canada-to-hit-us-with-retaliatory-tariffs-as-trade-war-escalates",
+      "title": "Canada to hit US with retaliatory tariffs as trade war escalates - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/22/us-canada-trade-talks-collapse-ushering-in-wave-of-new-tariffs.html",
+      "title": "As U.S.-Canada trade talks collapse, Carney says retaliatory tariffs will start Sept. 8 - CNBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/now/video/u-s-imposes-50-tariffs-on-some-canadian-goods-after-trade-talks-collapse-268712517975",
+      "title": "U.S. imposes 50% tariffs on some Canadian goods after trade talks collapse - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/business/2026/08/22/trumps-new-tariffs-canada-will-hit-everything-whisky-hockey-sticks/",
+      "title": "Trump\u2019s new tariffs on Canada will hit everything from whisky to hockey sticks - The Washington Post"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/business/2026/08/22/new-50-percent-tariffs-canada-go-into-effect-after-deal-with-us-falls-through/",
+      "title": "Canada sets retaliatory tariffs in response to 50% U.S. levies as trade talks fail - The Washington Post"
+    }
+  ]
+}
