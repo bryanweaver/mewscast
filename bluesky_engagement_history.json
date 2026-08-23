@@ -1619,6 +1619,11 @@
       "did": "did:plc:goqh2c3wbkm5ff3swd2y4vtx",
       "handle": "resistor2025bull.bsky.social",
       "timestamp": "2026-08-23T02:23:18.699970"
+    },
+    {
+      "did": "did:plc:lckw7hywcin576ukcgqspqoa",
+      "handle": "shannaleehorvik.com",
+      "timestamp": "2026-08-23T13:29:49.559674"
     }
   ],
   "liked_posts": [
@@ -3356,6 +3361,11 @@
       "uri": "at://did:plc:goqh2c3wbkm5ff3swd2y4vtx/app.bsky.feed.post/3mtpoylu7xs2k",
       "author": "resistor2025bull.bsky.social",
       "timestamp": "2026-08-23T02:23:18.561820"
+    },
+    {
+      "uri": "at://did:plc:lckw7hywcin576ukcgqspqoa/app.bsky.feed.post/3mtpa3rmpe225",
+      "author": "shannaleehorvik.com",
+      "timestamp": "2026-08-23T13:29:49.476813"
     }
   ],
   "last_cleanup": "2026-08-23T02:23:17.928980",
