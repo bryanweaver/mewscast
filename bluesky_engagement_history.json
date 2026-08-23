@@ -1,136 +1,6 @@
 {
   "followed_users": [
     {
-      "did": "did:plc:4icp5wsmyi7z6n3gnfziyvd4",
-      "handle": "pixiesherry.bsky.social",
-      "timestamp": "2026-05-18T14:13:57.236651"
-    },
-    {
-      "did": "did:plc:bhiotyqjuyatyjgb442hgrec",
-      "handle": "sheridesabike.bsky.social",
-      "timestamp": "2026-05-18T16:56:30.992841"
-    },
-    {
-      "did": "did:plc:ovut6nri3mhxr6u75cvaniuj",
-      "handle": "austereluna.bsky.social",
-      "timestamp": "2026-05-18T20:40:32.114667"
-    },
-    {
-      "did": "did:plc:sqi6jaratc4ma2llobhog2kj",
-      "handle": "rochasaurusrex.bsky.social",
-      "timestamp": "2026-05-19T01:45:31.593205"
-    },
-    {
-      "did": "did:plc:qme7pahhiipcejekzpfmd2sc",
-      "handle": "wispybun.bsky.social",
-      "timestamp": "2026-05-19T14:02:36.556862"
-    },
-    {
-      "did": "did:plc:mcb6n67plnrlx4lg35natk2b",
-      "handle": "nowbreezing.ntw.app",
-      "timestamp": "2026-05-19T16:58:16.388754"
-    },
-    {
-      "did": "did:plc:q7lxnvf2nwv5tzamcrwjooy3",
-      "handle": "mrwilson.lincolnite.com",
-      "timestamp": "2026-05-19T20:43:38.424959"
-    },
-    {
-      "did": "did:plc:4am7ahlxc2ekgfrvbm4vf5ow",
-      "handle": "shivvy.bsky.social",
-      "timestamp": "2026-05-20T01:47:12.667805"
-    },
-    {
-      "did": "did:plc:odk33glwtnn7e2y4v77ljfh3",
-      "handle": "rachmarie.bsky.social",
-      "timestamp": "2026-05-20T13:56:42.906642"
-    },
-    {
-      "did": "did:plc:f5xsjnzgx7qadmxx6wxy7oje",
-      "handle": "dianne-r-thomas.bsky.social",
-      "timestamp": "2026-05-20T17:03:50.423636"
-    },
-    {
-      "did": "did:plc:7wgm3kp46nzalxyxfxo5cm5x",
-      "handle": "birdko.art",
-      "timestamp": "2026-05-21T01:46:18.092631"
-    },
-    {
-      "did": "did:plc:r5wfqowcynorym5ijkuyhy3v",
-      "handle": "sk8tie.bsky.social",
-      "timestamp": "2026-05-21T14:08:38.910316"
-    },
-    {
-      "did": "did:plc:sc3dthu2px7i2yuc5skv765v",
-      "handle": "mehnaazasad.eurosky.social",
-      "timestamp": "2026-05-21T16:52:29.989542"
-    },
-    {
-      "did": "did:plc:shzd3zpsiy2p7wnjjbdr57us",
-      "handle": "tizzybit.bsky.social",
-      "timestamp": "2026-05-21T20:45:03.573662"
-    },
-    {
-      "did": "did:plc:o7ghawtf76j4ytgu4x5ltoso",
-      "handle": "chronocross.bsky.social",
-      "timestamp": "2026-05-22T01:46:09.127681"
-    },
-    {
-      "did": "did:plc:dmd755i72m2oouexkzsqd7dc",
-      "handle": "gaywatson.bsky.social",
-      "timestamp": "2026-05-22T13:50:38.287247"
-    },
-    {
-      "did": "did:plc:ogfdkk4gfxjol2s66y6fbfxz",
-      "handle": "zencoffeebreak.com",
-      "timestamp": "2026-05-22T20:40:57.335110"
-    },
-    {
-      "did": "did:plc:f4femsbigep6shpcmhzfbt53",
-      "handle": "lisavipes.bsky.social",
-      "timestamp": "2026-05-23T01:41:28.537868"
-    },
-    {
-      "did": "did:plc:llro6wdsb2fkoqer3say6xi2",
-      "handle": "josepheckert.bsky.social",
-      "timestamp": "2026-05-23T13:34:40.990097"
-    },
-    {
-      "did": "did:plc:4jx2ckuli42inmqh2ibu2lgr",
-      "handle": "shedinn.bsky.social",
-      "timestamp": "2026-05-23T16:19:38.719749"
-    },
-    {
-      "did": "did:plc:wd6oxqkm2kwlodiduohlwjmi",
-      "handle": "margaretwanders.bsky.social",
-      "timestamp": "2026-05-23T20:25:06.515922"
-    },
-    {
-      "did": "did:plc:lfv4566rg2djk5uquyxmbrea",
-      "handle": "oldmatecans.bsky.social",
-      "timestamp": "2026-05-24T01:45:43.246868"
-    },
-    {
-      "did": "did:plc:ryfpdtbv2xakxjxxgmdpgjzy",
-      "handle": "whymaige.bsky.social",
-      "timestamp": "2026-05-24T13:34:41.205162"
-    },
-    {
-      "did": "did:plc:6o53b4kljtcmbgi5b63qh2n3",
-      "handle": "flmfrkcentral.bsky.social",
-      "timestamp": "2026-05-24T16:20:01.919670"
-    },
-    {
-      "did": "did:plc:onaf7axypwdps2ce5btav7cc",
-      "handle": "laylapiglet.com",
-      "timestamp": "2026-05-24T20:29:13.465258"
-    },
-    {
-      "did": "did:plc:4lsoaqrbijcc6wd2jh7wx3op",
-      "handle": "soitssara.bsky.social",
-      "timestamp": "2026-05-25T01:49:18.340150"
-    },
-    {
       "did": "did:plc:v2hwso5qpqpdftob6yy6raqp",
       "handle": "felineandfloss.bsky.social",
       "timestamp": "2026-05-25T14:04:52.312945"
@@ -1744,149 +1614,14 @@
       "did": "did:plc:gfduowslansixnitcb43rms5",
       "handle": "paulinedrawsbears.bsky.social",
       "timestamp": "2026-08-22T20:30:32.436834"
+    },
+    {
+      "did": "did:plc:goqh2c3wbkm5ff3swd2y4vtx",
+      "handle": "resistor2025bull.bsky.social",
+      "timestamp": "2026-08-23T02:23:18.699970"
     }
   ],
   "liked_posts": [
-    {
-      "uri": "at://did:plc:4icp5wsmyi7z6n3gnfziyvd4/app.bsky.feed.post/3mm4witpdu22a",
-      "author": "pixiesherry.bsky.social",
-      "timestamp": "2026-05-18T14:13:57.090800"
-    },
-    {
-      "uri": "at://did:plc:bhiotyqjuyatyjgb442hgrec/app.bsky.feed.post/3mm5daqnplc2n",
-      "author": "sheridesabike.bsky.social",
-      "timestamp": "2026-05-18T16:56:30.898805"
-    },
-    {
-      "uri": "at://did:plc:ovut6nri3mhxr6u75cvaniuj/app.bsky.feed.post/3mm337ylra22v",
-      "author": "austereluna.bsky.social",
-      "timestamp": "2026-05-18T20:40:31.936582"
-    },
-    {
-      "uri": "at://did:plc:sqi6jaratc4ma2llobhog2kj/app.bsky.feed.post/3mm3id5zwhk2p",
-      "author": "rochasaurusrex.bsky.social",
-      "timestamp": "2026-05-19T01:45:31.300651"
-    },
-    {
-      "uri": "at://did:plc:qme7pahhiipcejekzpfmd2sc/app.bsky.feed.post/3mm7fju53rc27",
-      "author": "wispybun.bsky.social",
-      "timestamp": "2026-05-19T14:02:36.309279"
-    },
-    {
-      "uri": "at://did:plc:mcb6n67plnrlx4lg35natk2b/app.bsky.feed.post/3mm7tf7ciow2p",
-      "author": "nowbreezing.ntw.app",
-      "timestamp": "2026-05-19T16:58:16.118648"
-    },
-    {
-      "uri": "at://did:plc:q7lxnvf2nwv5tzamcrwjooy3/app.bsky.feed.post/3mmaaa6xrzd2p",
-      "author": "mrwilson.lincolnite.com",
-      "timestamp": "2026-05-19T20:43:38.240158"
-    },
-    {
-      "uri": "at://did:plc:4am7ahlxc2ekgfrvbm4vf5ow/app.bsky.feed.post/3mmaodgkgfk2q",
-      "author": "shivvy.bsky.social",
-      "timestamp": "2026-05-20T01:47:12.468559"
-    },
-    {
-      "uri": "at://did:plc:odk33glwtnn7e2y4v77ljfh3/app.bsky.feed.post/3mmbzukxn6c2j",
-      "author": "rachmarie.bsky.social",
-      "timestamp": "2026-05-20T13:56:42.763062"
-    },
-    {
-      "uri": "at://did:plc:f5xsjnzgx7qadmxx6wxy7oje/app.bsky.feed.post/3mmbzlorel22j",
-      "author": "dianne-r-thomas.bsky.social",
-      "timestamp": "2026-05-20T17:03:50.213407"
-    },
-    {
-      "uri": "at://did:plc:cyt4bxfmtrmawwbhwajwacau/app.bsky.feed.post/3mmcpbjknlq2q",
-      "author": "s0ap.bsky.social",
-      "timestamp": "2026-05-20T20:52:30.091142"
-    },
-    {
-      "uri": "at://did:plc:7wgm3kp46nzalxyxfxo5cm5x/app.bsky.feed.post/3mmcfjf4vhc2g",
-      "author": "birdko.art",
-      "timestamp": "2026-05-21T01:46:17.876356"
-    },
-    {
-      "uri": "at://did:plc:r5wfqowcynorym5ijkuyhy3v/app.bsky.feed.post/3mmehzn6q5c2c",
-      "author": "sk8tie.bsky.social",
-      "timestamp": "2026-05-21T14:08:38.758471"
-    },
-    {
-      "uri": "at://did:plc:sc3dthu2px7i2yuc5skv765v/app.bsky.feed.post/3mmertuak322p",
-      "author": "mehnaazasad.eurosky.social",
-      "timestamp": "2026-05-21T16:52:29.751939"
-    },
-    {
-      "uri": "at://did:plc:shzd3zpsiy2p7wnjjbdr57us/app.bsky.feed.post/3mmfb24avak2o",
-      "author": "tizzybit.bsky.social",
-      "timestamp": "2026-05-21T20:45:03.478793"
-    },
-    {
-      "uri": "at://did:plc:o7ghawtf76j4ytgu4x5ltoso/app.bsky.feed.post/3mmfs7ebvos2i",
-      "author": "chronocross.bsky.social",
-      "timestamp": "2026-05-22T01:46:08.927670"
-    },
-    {
-      "uri": "at://did:plc:dmd755i72m2oouexkzsqd7dc/app.bsky.feed.post/3mmgvxudh3c2e",
-      "author": "gaywatson.bsky.social",
-      "timestamp": "2026-05-22T13:50:38.096573"
-    },
-    {
-      "uri": "at://did:plc:sm7cgqxxg6to24kc4pbcimyu/app.bsky.feed.post/3mmeely5wwk2w",
-      "author": "emersson69.bsky.social",
-      "timestamp": "2026-05-22T16:43:54.588290"
-    },
-    {
-      "uri": "at://did:plc:ogfdkk4gfxjol2s66y6fbfxz/app.bsky.feed.post/3mmhrlcja4k2v",
-      "author": "zencoffeebreak.com",
-      "timestamp": "2026-05-22T20:40:57.134707"
-    },
-    {
-      "uri": "at://did:plc:f4femsbigep6shpcmhzfbt53/app.bsky.feed.post/3mmib7jw74s26",
-      "author": "lisavipes.bsky.social",
-      "timestamp": "2026-05-23T01:41:28.383730"
-    },
-    {
-      "uri": "at://did:plc:llro6wdsb2fkoqer3say6xi2/app.bsky.feed.post/3mmjhw7caxc2y",
-      "author": "josepheckert.bsky.social",
-      "timestamp": "2026-05-23T13:34:40.796030"
-    },
-    {
-      "uri": "at://did:plc:4jx2ckuli42inmqh2ibu2lgr/app.bsky.feed.post/3mmhthxemnc2s",
-      "author": "shedinn.bsky.social",
-      "timestamp": "2026-05-23T16:19:38.635150"
-    },
-    {
-      "uri": "at://did:plc:wd6oxqkm2kwlodiduohlwjmi/app.bsky.feed.post/3mmk47teo7k2h",
-      "author": "margaretwanders.bsky.social",
-      "timestamp": "2026-05-23T20:25:06.342578"
-    },
-    {
-      "uri": "at://did:plc:lfv4566rg2djk5uquyxmbrea/app.bsky.feed.post/3mmksvfcffc2m",
-      "author": "oldmatecans.bsky.social",
-      "timestamp": "2026-05-24T01:45:43.021515"
-    },
-    {
-      "uri": "at://did:plc:ryfpdtbv2xakxjxxgmdpgjzy/app.bsky.feed.post/3mmllzbggbk2w",
-      "author": "whymaige.bsky.social",
-      "timestamp": "2026-05-24T13:34:41.027495"
-    },
-    {
-      "uri": "at://did:plc:6o53b4kljtcmbgi5b63qh2n3/app.bsky.feed.post/3mmmeetihsk2j",
-      "author": "flmfrkcentral.bsky.social",
-      "timestamp": "2026-05-24T16:20:01.748253"
-    },
-    {
-      "uri": "at://did:plc:onaf7axypwdps2ce5btav7cc/app.bsky.feed.post/3mmmo5am6ok2w",
-      "author": "laylapiglet.com",
-      "timestamp": "2026-05-24T20:29:13.256904"
-    },
-    {
-      "uri": "at://did:plc:4lsoaqrbijcc6wd2jh7wx3op/app.bsky.feed.post/3mmndjeztfs2x",
-      "author": "soitssara.bsky.social",
-      "timestamp": "2026-05-25T01:49:18.246574"
-    },
     {
       "uri": "at://did:plc:v2hwso5qpqpdftob6yy6raqp/app.bsky.feed.post/3mmojr33j4c22",
       "author": "felineandfloss.bsky.social",
@@ -3616,9 +3351,14 @@
       "uri": "at://did:plc:gfduowslansixnitcb43rms5/app.bsky.feed.post/3mtowftrz2c2v",
       "author": "paulinedrawsbears.bsky.social",
       "timestamp": "2026-08-22T20:30:32.231747"
+    },
+    {
+      "uri": "at://did:plc:goqh2c3wbkm5ff3swd2y4vtx/app.bsky.feed.post/3mtpoylu7xs2k",
+      "author": "resistor2025bull.bsky.social",
+      "timestamp": "2026-08-23T02:23:18.561820"
     }
   ],
-  "last_cleanup": "2026-08-16T02:21:17.287810",
+  "last_cleanup": "2026-08-23T02:23:17.928980",
   "sessions": [
     {
       "timestamp": "2026-05-25T14:28:28.784396+00:00",
@@ -9340,12 +9080,6 @@
     "at://did:plc:pwp5anxneq7ejwvzdncwodvt/app.bsky.feed.post/3mf7h53s6wk2h"
   ],
   "reposted_posts": [
-    {
-      "uri": "at://did:plc:qdcrtszsols5wmoyzdfxusrt/app.bsky.feed.post/3mmez2uzwrk2j",
-      "author": "princesskim.bsky.social",
-      "text": "\ud83d\udea8 Sterling is now kill commanded- \ud83c\udd98\n \nGood with dogs- needs a no cat home! \n\nGood boy- loves people-",
-      "timestamp": "2026-05-23T13:34:41.349045"
-    },
     {
       "uri": "at://did:plc:qdcrtszsols5wmoyzdfxusrt/app.bsky.feed.post/3mmwkgwrins2c",
       "author": "princesskim.bsky.social",
