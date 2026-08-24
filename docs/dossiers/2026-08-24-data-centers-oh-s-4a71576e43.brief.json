@@ -1,0 +1,91 @@
+{
+  "story_id": "2026-08-24-data-centers-oh-s-4a71576e43",
+  "headline_seed": "Data centers\u2019 \u2018oh s--t\u2019 moment - Politico",
+  "brief": {
+    "story_id": "2026-08-24-data-centers-oh-s-4a71576e43",
+    "consensus_facts": [
+      "Politicians across both parties have moved to restrict or pause new data center construction; Politico, NBC News, and Axios all frame this as a bipartisan backlash.",
+      "Texas Gov. Greg Abbott ordered state regulators to audit data centers seeking to connect to the power grid before allowing projects to proceed; reported by both Politico and Axios.",
+      "Pennsylvania Gov. Josh Shapiro imposed new restrictions/an executive order on data centers despite previously courting major tech investment (including a large Amazon investment); reported by both Politico and Axios.",
+      "The data center backlash has become a political liability heading into the 2026 midterms and beyond; reported by Politico, NBC News (headline/body), and Axios."
+    ],
+    "disagreements": [
+      {
+        "topic": "Michigan restrictions",
+        "positions": {
+          "Politico": "Reports Michigan GOP Senate nominee Mike Rogers came out in support of a one-year moratorium on building new data centers.",
+          "Axios": "Does not mention Rogers or Michigan; instead cites New York Gov. Kathy Hochul's one-year moratorium on hyperscaler data centers (a detail Politico does not mention)."
+        }
+      },
+      {
+        "topic": "Abbott's tone toward the industry",
+        "positions": {
+          "Politico": "Frames Abbott's move as a political U-turn amid conservative-voter complaints, without quoting the harshest language.",
+          "Axios": "Foregrounds Abbott's quote that data center companies 'dug their own grave' and 'got the backlash they deserve.'"
+        }
+      },
+      {
+        "topic": "Amazon investment figure in Pennsylvania",
+        "positions": {
+          "Politico": "Describes Shapiro luring 'tens of billions of dollars' from Amazon, Microsoft and Google without a single figure.",
+          "Axios": "Specifies a $20 billion Amazon data center investment celebrated last year."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only in this dossier (Australia data-center power use seen jumping sevenfold by 2036). Body text is a bot-check/paywall wall with no reporting. The headline frames data centers as a power-demand story on a different continent and timeline, not the US political backlash. Cannot corroborate any consensus fact.",
+      "Politico": "Full body text. Leads on the tech industry's internal 'oh s--t' panic, relying heavily on anonymous AI-industry sources to dramatize a split between those treating the backlash as a lasting crisis and those brushing it off. Emphasizes named political defectors (Abbott, Shapiro, Rogers) and frames moratoriums as having migrated from progressive outliers like Bernie Sanders into the bipartisan mainstream. Frames the story as a strategic crisis for tech, not primarily a policy or consumer story.",
+      "Reuters": "Two headline-only entries in this dossier (Strait of Hormuz ship transits; gold prices ahead of US inflation data). Neither is about data centers; both are off-topic wire items that surfaced on the keyword 'data.' No relevance to this story and no corroboration value.",
+      "NBC News": "Effectively headline-plus-fragment only; the body is truncated behind a loading wall. What is retrievable frames the story around Republicans wrestling with the backlash while Trump promotes benefits, and notes that as recently as last month some Republicans in major races were skeptical of the backlash. Angle centers on GOP intra-party tension.",
+      "Axios": "Full body text. Leads on Abbott's blunt 'dug their own grave' quote and frames the story as a red-state political reckoning for the AI industry. Adds hard data other outlets omit: an Annenberg Public Policy Center survey showing 61% of Americans now oppose a new data center in their area (up from 49% in March), with 69% of Democrats, 54% of Republicans and 53% of independents opposed. Also uniquely reports the NRSC warned AI companies the backlash imperiled a key Ohio Senate seat, Abbott's claim that fewer than 10% of data center companies responded to a state information request, and Trump's argument that saying no to data centers is a mistake because the industry 'could be bigger than oil.'"
+    },
+    "primary_source_alignment": [
+      "No primary sources (surveys, executive orders, transcripts, or filings) were included in the dossier. The Annenberg Public Policy Center survey and Abbott's ABC/Fox interviews are referenced by Axios but not provided as primary documents, so their figures and quotes cannot be independently verified against source text here.",
+      "Shapiro's executive order and Abbott's regulatory directives are described secondhand by Politico and Axios; the underlying orders were not available for direct comparison."
+    ],
+    "missing_context": [
+      "Only two of six dossier articles (Politico and Axios) have substantive full body text. NBC News is a truncated fragment, Bloomberg is a bot-check wall, and both Reuters entries are off-topic headline-only items. Consensus is therefore drawn from a two-outlet base, and single-outlet details are attributed as such.",
+      "The Bloomberg and both Reuters entries appear to be keyword-matched off-topic articles (Australian power demand, Strait of Hormuz shipping, gold prices) rather than coverage of the US data center backlash; they contribute nothing to this story.",
+      "Politico's framing rests almost entirely on anonymous AI-industry sources; no on-the-record industry rebuttal or named company spokesperson is quoted in either full-text article.",
+      "No outlet with full text quantifies the actual electricity-price or water-use impact of data centers on affected communities; the consumer harms driving the backlash are described but not measured.",
+      "Neither full-text article gives the industry's substantive counterargument on jobs, grid investment, or economic benefit beyond Trump's 'bigger than oil' line \u2014 the pro-buildout case is thinly represented.",
+      "The methodology, sample size, and margin of error of the Annenberg survey cited by Axios are not provided, so the 61%/49% shift cannot be evaluated.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with full text (Politico and Axios) cover the same data center backlash with materially different framings \u2014 Politico centers tech-industry panic via anonymous sources while Axios foregrounds Abbott's blunt quotes and hard survey data \u2014 making this a coverage-comparison story rather than a straight REPORT, especially given the dossier's thin and partly off-topic outlet mix.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-24/australia-data-center-power-use-seen-jumping-sevenfold-by-2036?srnd=homepage-americas",
+      "title": "Australia Data-Center Power Use Seen Jumping Sevenfold by 2036 - Bloomberg"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/08/24/data-centers-oh-s-t-moment-01046465",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/energy/fewer-than-20-ships-transit-key-strait-hormuz-over-weekend-data-shows-2026-08-24/",
+      "title": "Fewer than 20 ships transit key Strait of Hormuz over weekend, data shows - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/india/gold-hits-over-3-month-high-ahead-us-inflation-data-fed-chair-speech-2026-08-24/",
+      "title": "Gold climbs to more than three-month high as markets await US inflation data - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-election/republicans-data-center-backlash-trump-rcna592410",
+      "title": "Republicans wrestle with data center backlash as Trump promotes the benefits - NBC News"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/08/23/greg-abbott-texas-data-centers-ai-backlash",
+      "title": "Texas welcomed the AI boom. Now Abbott says data centers \"dug their own grave\" - Axios"
+    }
+  ]
+}
