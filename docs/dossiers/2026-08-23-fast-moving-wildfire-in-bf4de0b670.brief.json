@@ -1,0 +1,120 @@
+{
+  "story_id": "2026-08-23-fast-moving-wildfire-in-bf4de0b670",
+  "headline_seed": "Fast-moving wildfire in Reno, Nevada, forces tens of thousands to evacuate homes - The Guardian",
+  "brief": {
+    "story_id": "2026-08-23-fast-moving-wildfire-in-bf4de0b670",
+    "consensus_facts": [
+      "A fast-moving wildfire named the Hawk Fire ignited Saturday (Aug. 22, 2026) on a hillside near Peavine Mountain in the Humboldt\u2013Toiyabe National Forest just outside Reno, Nevada.",
+      "The fire was human-caused according to authorities, with the cause still under investigation (reported by ABC News, CBS News, The Guardian, and The Independent).",
+      "Approximately 90,000 residents were urged to evacuate, with 42,000 under mandatory 'GO NOW' orders and an additional 45,000 in an evacuation warning zone (ABC News, CBS News, The Guardian, The Independent).",
+      "Six people were injured, including three civilians and three first responders (ABC News, CBS News, The Guardian, The Independent).",
+      "The 'GO NOW' evacuation zone reached the edge of the University of Nevada, Reno campus (ABC News, CBS News, The Guardian, The Independent).",
+      "Nevada Gov. Joe Lombardo declared a state of emergency in Washoe County and mobilized the Nevada National Guard, including two helicopter crews and 60 troops (CBS News, The Guardian, The Independent, The Economic Times).",
+      "Strong, gusty winds, low humidity, and dry vegetation fueled the rapid, shifting spread of the fire (CBS News, The Guardian, The Independent, The Economic Times).",
+      "Multiple structures/homes were destroyed by the fire (ABC News, CBS News, The Guardian, The Independent).",
+      "Nearly 10,000 homes and businesses in Washoe County were without power on Sunday, and portions of U.S. Route 395 were closed (CBS News, The Guardian, The Independent).",
+      "The Reno-Sparks Convention Center was opened to evacuees (pets not permitted), and Reno casinos offered hotel room discounts to evacuees (CBS News, The Guardian, The Independent).",
+      "Reno has a population of more than 280,000 residents (CBS News, The Guardian, The Independent).",
+      "The Hawk Fire follows three wildfires earlier in the month that forced more than 13,000 residents north of Reno to evacuate (CBS News, The Guardian).",
+      "Richard Edwards, chief of Truckee Meadows Fire & Rescue, described the incident as 'very dynamic' and driven by winds moving rapidly into residential areas (CBS News, The Economic Times)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Size of the fire (acreage)",
+        "positions": {
+          "ABC News": "More than 13,000 acres as of Sunday",
+          "CBS News": "More than 13,000 acres",
+          "The Guardian": "More than 15,000 acres (6,000 hectares) on Sunday",
+          "The Independent": "20 square miles (53 sq km)",
+          "The Economic Times": "More than 10,500 acres (10,523 acres) by Saturday evening"
+        }
+      },
+      {
+        "topic": "Number of firefighters/personnel on the incident",
+        "positions": {
+          "ABC News": "About 1,000 firefighters and other first responders",
+          "The Guardian": "Approximately 400 personnel currently working on the incident",
+          "The Independent": "800 fire personnel on the scene (plus National Guard)"
+        }
+      },
+      {
+        "topic": "Containment status",
+        "positions": {
+          "ABC News": "Zero percent contained as of Sunday afternoon",
+          "CBS News": "0% contained as of Sunday morning",
+          "The Independent": "Describes fire as 'uncontained' without a percentage",
+          "The Guardian": "Does not cite a containment percentage"
+        }
+      },
+      {
+        "topic": "Power outage trajectory",
+        "positions": {
+          "CBS News": "Nearly 10,000 homes and businesses without power Sunday",
+          "The Guardian": "Nearly 10,000 homes and businesses without power Sunday",
+          "The Independent": "Nearly 10,000 without power Sunday, down from 60,000 on Saturday"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Two entries in the dossier. Article 1 is headline-only ('Fast-moving wildfire closes in on Reno... forces evacuations'). Article 3 is the most comprehensive human-services account: leads on the 90,000 evacuation figure and the fire reaching the university, then details school closures, hospital evacuations, shelter/pet logistics, airport status, and the mayor's plea. Emphasizes community impact and official response over cause or blame.",
+      "ABC News": "Leads and headlines the human-caused finding and the 13,000-acre/42,000-evacuation scale. Opens bluntly with 'the fire, which injured six, is human-caused.' Foregrounds the danger and uncertainty of damage assessment, quoting a Forest Service official calling it 'a dangerous place to be.' Frames around scale, cause, and unresolved damage totals.",
+      "The Guardian": "Headlines 'tens of thousands to evacuate' and the human-caused nature. Reports the highest acreage figure (15,000). Distinctive for on-the-ground human detail \u2014 quotes evacuee Tyler Duvall, taxidermy-shop owner David Barb, and Sheriff Darin Balaam's 'extremely confusing' account of shifting winds. Also uniquely notes the county detention facility being monitored and links to a separate piece on firefighter staffing shortages, subtly adding a systemic-resource angle.",
+      "The Independent": "Front-loads a lengthy fundraising/mission appeal before the news. Headlines the 'nearly 90,000 evacuate' and human-caused angle. Uniquely reports the power-outage trajectory (down from 60,000 Saturday to 10,000 Sunday) and cites 800 fire personnel. Uses vivid framing ('leaping over fire engines') and the sheriff's 'Please get out if you can right now' quote to emphasize immediacy and danger.",
+      "The Cumberland Times-News": "Effectively contentless in the dossier \u2014 the body text is entirely site navigation, cookie notices, and a Cumberland, MD local weather blurb. The headline references shifting winds and thousands evacuating, but no reportable article body was retrieved.",
+      "The Economic Times": "Reports the earliest/smallest acreage figure (10,523 acres, Saturday evening) and reads as an earlier-in-the-cycle update. Heavily emphasizes directing residents to the 'Perimeter Map' platform for evacuation info and repeats the fire chief's wind-driven quotes. Notably interrupted throughout by unrelated 'ALSO READ' promotional links (MacKenzie Scott, cancer research, defamation lawsuits), diluting the news focus."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official incident reports, press releases, state-of-emergency declaration text, or fire agency data feeds) were located for this story, so no report-vs-document comparison is possible.",
+      "All outlets rely on officials' Sunday news-conference statements, social-media posts from Gov. Lombardo, Mayor Schieve, and Truckee Meadows Fire & Rescue, and Associated Press wire material \u2014 meaning several 'independent' outlets share a common underlying source."
+    ],
+    "missing_context": [
+      "No primary source (the state-of-emergency declaration, an official incident command report, or a Truckee Meadows/Perimeter Map data snapshot) was retrieved, so the divergent acreage and personnel figures cannot be reconciled against an authoritative document.",
+      "The acreage discrepancy (10,500 to 20 sq mi/~15,000 acres) is largely explained by different reporting timestamps \u2014 The Economic Times reflects Saturday evening while The Guardian reflects Sunday \u2014 but no outlet explicitly reconciles these figures for the reader.",
+      "No outlet reports the specific human cause of the fire (accident, equipment, arson, etc.) \u2014 only that it was 'human-caused' and under investigation.",
+      "The exact number of homes destroyed or damaged remained unclear; ABC News notes officials could not complete a damage assessment due to unsafe conditions, but no outlet provides a firm structure-loss count.",
+      "No outlet quantifies the fire's proximity in miles/time to populated centers or projects evacuation-zone changes; conditions were described as rapidly shifting without hard geographic detail.",
+      "The Cumberland Times-News entry contained no usable article body (navigation/boilerplate only), so it provides no independent corroboration despite appearing in the outlet count.",
+      "Two of the seven dossier entries (CBS News Article 1 and The Cumberland Times-News) are effectively headline-only or bodyless; useful full-text reporting comes from ABC News, CBS News (Article 3), The Guardian, The Independent, and The Economic Times."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate the core facts (Hawk Fire, ~90,000 evacuations, six injuries, human cause, state of emergency) with no meaningful ideological framing divergence \u2014 the differences are mostly timestamp-driven numbers and editorial detail, making this a straightforward multi-source REPORT rather than a coverage-conflict META.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/video/fast-moving-wildfire-closes-reno-nevada-forces-evacuations/",
+      "title": "Fast-moving wildfire closes in on Reno, Nevada, forces evacuations - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/fast-growing-hawk-fire-explodes-2500-acres-spurs/story?id=135876227",
+      "title": "Fast-growing Hawk Fire grows to 13,000 acres near Reno, spurs 42,000 evacuations - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/hawk-fire-reno-nevada-evacuations/",
+      "title": "Fast-growing Hawk Fire near Reno, Nevada forces thousands to evacuate - CBS News"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/aug/23/wildfire-reno-nevada-hawk-fire",
+      "title": ""
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/reno-nevada-hawk-fire-human-caused-b3037862.html",
+      "title": "Fast-moving wildfire in Nevada forces nearly 90,000 to evacuate was human caused, sheriff says - The Independent"
+    },
+    {
+      "outlet": "The Cumberland Times-News",
+      "url": "https://www.times-news.com/news/fast-moving-wildfire-amid-shifting-winds-threatens-reno-nevada-forcing-thousands-to-evacuate/article_9955985d-6afb-55e1-b4bb-36efa713e3fa.html",
+      "title": "Fast-moving wildfire amid shifting winds threatens Reno, Nevada, forcing thousands to evacuate - The Cumberland Times-News"
+    },
+    {
+      "outlet": "The Economic Times",
+      "url": "https://m.economictimes.com/news/international/global-trends/hawk-fire-latest-update-evacuations-emergency-declared-as-fast-moving-nevada-brush-fire-grows-to-more-than-10500-acres-near-reno/articleshow/133440750.cms",
+      "title": "Hawk Fire latest update: Evacuations, emergency declared as fast-moving Nevada brush fire grows to more th - The Economic Times"
+    }
+  ]
+}
