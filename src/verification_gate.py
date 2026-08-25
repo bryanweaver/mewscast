@@ -264,12 +264,13 @@ class VerificationGate:
         # Branch 1: this post type has a customary sign-off (REPORT, META,
         # ANALYSIS, PRIMARY).
         #
-        # Missing sign-off is NOT a rejection. Per user preference, an
-        # occasional missing sign-off is acceptable — rejecting a whole
-        # story because the composer forgot to type a closing line costs
-        # more than it buys. The keystone rule below still applies:
-        # the draft must not end with a DIFFERENT post type's sign-off.
-        # That's the opinion/reporting confusion we actually care about.
+        # REPORT posts MUST end with the exact sign-off "And that's the mews."
+        # — this is the keystone rule that earns audience trust. Missing the
+        # sign-off is a gate failure for REPORT posts.
+        #
+        # For META, ANALYSIS, and PRIMARY, missing sign-off is still allowed
+        # (rejecting a whole story for a forgotten closing line is too costly),
+        # but a *wrong* sign-off is always rejected.
         if expected is not None:
             if text.endswith(expected):
                 # Paranoia: a draft like "And that's the mews — coverage
@@ -284,9 +285,19 @@ class VerificationGate:
                         )
                 return True, None
 
-            # No expected sign-off at the end — allowed, but make sure a
-            # DIFFERENT type's sign-off didn't sneak in instead. That
-            # would be opinion-smuggling and is the actual trust breach.
+            # REPORT posts MUST have their sign-off — the keystone rule.
+            # "And that's the mews." is the seal of straight reporting;
+            # publishing a REPORT without it violates audience trust.
+            if draft.post_type == PostType.REPORT:
+                return False, (
+                    f"signoff_matches_type: Your {draft.post_type.value} draft MUST end with "
+                    f"'{expected}'. The sign-off is not optional for REPORT posts — "
+                    f"it is the seal of straight reporting."
+                )
+
+            # For other signed types (META, ANALYSIS, PRIMARY), missing
+            # sign-off is tolerated — but a DIFFERENT type's sign-off is
+            # always rejected (opinion-smuggling).
             for other in other_sign_offs:
                 if text.endswith(other):
                     return False, (

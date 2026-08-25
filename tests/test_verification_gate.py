@@ -118,18 +118,24 @@ class TestSignoffMatchesTypeKeystone:
         result = gate.verify(draft, two_outlet_dossier)
         assert result.passed, f"keystone REPORT happy path should pass: {result.failures}"
 
-    def test_report_with_no_signoff_passes(self, gate, two_outlet_dossier):
-        """A REPORT missing its sign-off is allowed — per user preference,
-        rejecting a whole story because the composer forgot the closing
-        line costs more than it buys. The keystone integrity rule is that
-        no *wrong* sign-off sneaks in (tested separately below), not that
-        every REPORT must carry one."""
+    def test_report_with_no_signoff_fails(self, gate, two_outlet_dossier):
+        """A REPORT missing its sign-off MUST be rejected. The sign-off
+        'And that's the mews.' is the keystone seal of straight reporting;
+        publishing a REPORT without it violates audience trust.
+
+        This test covers the confirmed production misses:
+        - 2026-08-23 morning #432 REPORT Canadian 50% tariffs
+        - 2026-08-24 midday #436 REPORT Bessent Iran sanctions
+        where the published social copy lacked the sign-off but the gate
+        incorrectly PASSED."""
         draft = _make_draft(
             "Reuters reports the Senate voted 68-32.",
             PostType.REPORT,
         )
         result = gate.verify(draft, two_outlet_dossier)
-        assert result.passed, f"missing sign-off should be allowed: {result.failures}"
+        assert not result.passed, "REPORT without sign-off should FAIL"
+        assert any("signoff_matches_type" in f for f in result.failures)
+        assert any("MUST end with" in f for f in result.failures)
 
     def test_report_with_meta_signoff_fails(self, gate, two_outlet_dossier):
         draft = _make_draft(
@@ -904,3 +910,145 @@ class TestDatesMatchBrief:
         )
         result = gate.verify(draft, two_outlet_dossier, brief=brief)
         assert result.passed, f"year in framing_analysis should pass: {result.failures}"
+
+
+# ---------------------------------------------------------------------------
+# REPORT sign-off enforcement — the keystone rule for social copy
+# ---------------------------------------------------------------------------
+
+class TestReportSignoffEnforcement:
+    """Comprehensive tests for the REPORT sign-off requirement.
+
+    These tests cover the confirmed production misses:
+    - 2026-08-23 morning #432 REPORT Canadian 50% tariffs
+      (dossier had sign-off, posts_history social copy did not, gate PASSED)
+    - 2026-08-24 midday #436 REPORT Bessent Iran sanctions
+      (published Bluesky + posts_history ended without sign-off, gate PASSED)
+
+    The fix: REPORT posts MUST end with 'And that's the mews.' — it is not
+    optional. The gate must FAIL if the sign-off is missing from the text
+    that will actually be published.
+    """
+
+    def test_report_social_copy_without_signoff_must_fail(self, gate, two_outlet_dossier):
+        """The exact failure from production: social copy has no sign-off."""
+        draft = _make_draft(
+            "Canadian 50% tariffs on select goods take effect Monday, "
+            "per Reuters and Associated Press.",
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed, "REPORT social copy without sign-off MUST fail"
+        assert any("signoff_matches_type" in f for f in result.failures)
+
+    def test_report_with_signoff_passes(self, gate, two_outlet_dossier):
+        """REPORT with correct sign-off passes."""
+        draft = _make_draft(
+            "Canadian 50% tariffs take effect Monday, per Reuters and "
+            "Associated Press.\n\nAnd that's the mews.",
+            PostType.REPORT,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert result.passed, f"REPORT with sign-off should pass: {result.failures}"
+
+    def test_report_truncated_to_remove_signoff_fails(self, gate, two_outlet_dossier):
+        """If truncation would remove the sign-off, that draft must fail.
+
+        This catches the failure mode where a draft that originally had the
+        sign-off gets truncated (e.g., by a character limit), and the
+        resulting text no longer ends with the sign-off.
+        """
+        # Simulate a truncated draft where the sign-off got cut off
+        full_text = (
+            "Treasury Secretary Scott Bessent announces new Iran sanctions "
+            "targeting energy and banking sectors, according to Reuters and "
+            "Associated Press reporting.\n\nAnd that's the mews."
+        )
+        # Truncate to remove the sign-off
+        truncated = full_text[:150]  # cuts before sign-off
+        draft = _make_draft(truncated, PostType.REPORT)
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed, "truncated REPORT without sign-off MUST fail"
+        assert any("signoff_matches_type" in f for f in result.failures)
+
+    def test_report_sign_off_exact_match_required(self, gate, two_outlet_dossier):
+        """Sign-off must be exact — variations or typos must fail."""
+        variations = [
+            "And thats the mews.",  # missing apostrophe
+            "And that's the mews",   # missing period
+            "And that's the news.",  # wrong word
+            "And that's the mews!",  # wrong punctuation
+            "And that's the mews.\n",  # trailing newline changes endswith
+        ]
+        for variant in variations:
+            text = f"Reuters reports the vote.\n\n{variant}"
+            # The only variant that might pass is the one with trailing newline
+            # since we strip before checking. Let's be explicit.
+            draft = _make_draft(text.rstrip(), PostType.REPORT)
+            if text.rstrip().endswith("And that's the mews."):
+                # This one should pass
+                result = gate.verify(draft, two_outlet_dossier)
+                assert result.passed, f"exact sign-off should pass: {result.failures}"
+            else:
+                result = gate.verify(draft, two_outlet_dossier)
+                assert not result.passed, f"variant '{variant}' should fail"
+
+    def test_meta_without_signoff_still_passes(self, gate, two_outlet_dossier):
+        """META posts are allowed to pass without sign-off (unchanged behavior)."""
+        draft = _make_draft(
+            "COVERAGE REPORT: Reuters and Associated Press diverge on framing.",
+            PostType.META,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert result.passed, f"META without sign-off should still pass: {result.failures}"
+
+    def test_analysis_without_signoff_still_passes(self, gate, two_outlet_dossier):
+        """ANALYSIS posts are allowed to pass without sign-off (unchanged behavior)."""
+        draft = _make_draft(
+            "ANALYSIS\n\nReuters notes a pattern in the eight-state coalition.",
+            PostType.ANALYSIS,
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert result.passed, f"ANALYSIS without sign-off should still pass: {result.failures}"
+
+    def test_bulletin_still_forbids_signoff(self, gate):
+        """BULLETIN must still have NO sign-off (unchanged behavior)."""
+        dossier = _make_dossier(("Reuters",))
+        # BULLETIN with sign-off should fail
+        draft = _make_draft(
+            "Reuters reports a strike. Not yet confirmed.\n\nAnd that's the mews.",
+            PostType.BULLETIN,
+            outlets_referenced=["Reuters"],
+        )
+        result = gate.verify(draft, dossier)
+        assert not result.passed, "BULLETIN with sign-off should fail"
+        assert any("signoff_matches_type" in f for f in result.failures)
+
+        # BULLETIN without sign-off (with hedge) should pass
+        draft_ok = _make_draft(
+            "Reuters reports a strike. Not yet confirmed by other outlets.",
+            PostType.BULLETIN,
+            outlets_referenced=["Reuters"],
+        )
+        result_ok = gate.verify(draft_ok, dossier)
+        assert result_ok.passed, f"BULLETIN without sign-off should pass: {result_ok.failures}"
+
+    def test_correction_still_forbids_signoff(self, gate, two_outlet_dossier):
+        """CORRECTION must still have NO sign-off (unchanged behavior)."""
+        # CORRECTION with sign-off should fail
+        draft = _make_draft(
+            "CORRECTION: The vote was 68-32, not 72-28.\n\nAnd that's the mews.",
+            PostType.CORRECTION,
+            outlets_referenced=[],
+        )
+        result = gate.verify(draft, two_outlet_dossier)
+        assert not result.passed, "CORRECTION with sign-off should fail"
+
+        # CORRECTION without sign-off should pass
+        draft_ok = _make_draft(
+            "CORRECTION: The vote was 68-32, not 72-28. Source: congress.gov.",
+            PostType.CORRECTION,
+            outlets_referenced=[],
+        )
+        result_ok = gate.verify(draft_ok, two_outlet_dossier)
+        assert result_ok.passed, f"CORRECTION without sign-off should pass: {result_ok.failures}"
