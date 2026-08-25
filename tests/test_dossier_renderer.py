@@ -12,7 +12,7 @@ import pytest
 # Ensure src/ is on the path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from dossier_renderer import bluesky_web_url, render_dossier_page, render_index_page
+from dossier_renderer import bluesky_web_url, render_dossier_page, render_feed_json, render_index_page
 
 
 # ---------------------------------------------------------------------------
@@ -259,3 +259,99 @@ class TestRenderIndexPage:
         newer_pos = output.index("Newer story")
         older_pos = output.index("Older story")
         assert newer_pos < older_pos, "Entries should be sorted newest first"
+
+
+class TestRenderFeedJson:
+    """Tests for the homepage feed.json manifest generation.
+
+    Regression test added after discovering that feed.json was not being
+    committed by the publish workflow, causing the homepage to show stale
+    dossiers. See: cursor/fix-feed-json-commit-5ed5
+    """
+
+    @pytest.fixture
+    def feed_entry(self):
+        """Minimal dossier entry for feed.json testing."""
+        return {
+            "story_id": "2026-08-25-test-story-abc123",
+            "dossier": {"headline_seed": "Test story headline"},
+            "post": {
+                "draft": {"post_type": "REPORT"},
+                "published_at": "2026-08-25T14:00:00+00:00",
+            },
+            "brief": {"confidence": 0.6},
+        }
+
+    def test_new_dossier_appears_in_feed(self, feed_entry, tmp_path):
+        """A newly rendered dossier must appear in feed.json with id + url."""
+        entry = copy.deepcopy(feed_entry)
+        entry["story_id"] = "2026-08-25-canada-tariff-test-abc123"
+        entry["dossier"]["headline_seed"] = "Canada tariff test story"
+        entry["post"]["published_at"] = "2026-08-25T14:00:00+00:00"
+        entry["post"]["draft"]["post_type"] = "REPORT"
+        entry["brief"]["confidence"] = 0.6
+
+        thumbs_dir = tmp_path / "thumbs"
+        thumbs_dir.mkdir()
+
+        feed_json_str = render_feed_json([entry], str(thumbs_dir))
+        feed_data = json.loads(feed_json_str)
+
+        assert len(feed_data) == 1
+        item = feed_data[0]
+        assert item["id"] == "2026-08-25-canada-tariff-test-abc123"
+        assert item["url"] == "dossiers/2026-08-25-canada-tariff-test-abc123.html"
+        assert item["headline"] == "Canada tariff test story"
+        assert item["post_type"] == "REPORT"
+        assert item["confidence"] == 60
+
+    def test_feed_sorted_newest_first(self, feed_entry, tmp_path):
+        """Feed entries must be sorted newest first by published_at."""
+        older = copy.deepcopy(feed_entry)
+        older["story_id"] = "2026-06-01-older-story"
+        older["post"]["published_at"] = "2026-06-01T10:00:00+00:00"
+        older["dossier"]["headline_seed"] = "June story"
+
+        newer = copy.deepcopy(feed_entry)
+        newer["story_id"] = "2026-08-25-newer-story"
+        newer["post"]["published_at"] = "2026-08-25T10:00:00+00:00"
+        newer["dossier"]["headline_seed"] = "August story"
+
+        thumbs_dir = tmp_path / "thumbs"
+        thumbs_dir.mkdir()
+
+        feed_json_str = render_feed_json([older, newer], str(thumbs_dir))
+        feed_data = json.loads(feed_json_str)
+
+        assert len(feed_data) == 2
+        assert feed_data[0]["id"] == "2026-08-25-newer-story"
+        assert feed_data[1]["id"] == "2026-06-01-older-story"
+
+    def test_feed_includes_thumb_when_present(self, feed_entry, tmp_path):
+        """Feed entry should include thumb path when thumbnail file exists."""
+        entry = copy.deepcopy(feed_entry)
+        entry["story_id"] = "2026-08-25-thumb-test"
+        entry["post"]["published_at"] = "2026-08-25T10:00:00+00:00"
+
+        thumbs_dir = tmp_path / "thumbs"
+        thumbs_dir.mkdir()
+        (thumbs_dir / "2026-08-25-thumb-test.webp").write_text("fake")
+
+        feed_json_str = render_feed_json([entry], str(thumbs_dir))
+        feed_data = json.loads(feed_json_str)
+
+        assert feed_data[0]["thumb"] == "dossiers/thumbs/2026-08-25-thumb-test.webp"
+
+    def test_feed_thumb_null_when_missing(self, feed_entry, tmp_path):
+        """Feed entry thumb should be null when no thumbnail file exists."""
+        entry = copy.deepcopy(feed_entry)
+        entry["story_id"] = "2026-08-25-no-thumb"
+        entry["post"]["published_at"] = "2026-08-25T10:00:00+00:00"
+
+        thumbs_dir = tmp_path / "thumbs"
+        thumbs_dir.mkdir()
+
+        feed_json_str = render_feed_json([entry], str(thumbs_dir))
+        feed_data = json.loads(feed_json_str)
+
+        assert feed_data[0]["thumb"] is None
