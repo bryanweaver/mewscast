@@ -1,0 +1,87 @@
+{
+  "story_id": "2026-08-25-canada-has-one-important-af325416fe",
+  "headline_seed": "Canada has one important edge in the North American trade war - Politico",
+  "brief": {
+    "story_id": "2026-08-25-canada-has-one-important-af325416fe",
+    "consensus_facts": [
+      "US-Canada trade negotiations collapsed late Friday, and a 50% US tariff on roughly $20 billion in Canadian imports took effect that weekend (BBC and both Politico articles).",
+      "Prime Minister Mark Carney promised 'dollar-for-dollar' retaliatory tariffs on US goods in response (BBC and Politico).",
+      "Each side blamed the other for introducing unreasonable last-minute demands that broke the talks (BBC and Politico).",
+      "Canada and the US had appeared close to a deal earlier in the week, which Trump publicly touted as a 'DEAL' before it fell apart (BBC references earlier optimism; Politico details Trump's Tuesday-night announcement).",
+      "US-Canada trade totals roughly $900 billion to $1 trillion annually, making Canada one of the top US trading partners (Politico articles).",
+      "Trump posted on Truth Social accusing Canadian officials of 'bluster' and warning that consequences 'will be far WORSE' unless they 'fall in line' (BBC and Politico both quote this).",
+      "US Trade Representative Jamieson Greer led the negotiations for the US side (BBC and Politico)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Who caused the breakdown in talks",
+        "positions": {
+          "BBC News": "Reports both sides' accusations neutrally \u2014 Canada says US added 'unacceptable' last-minute demands including a clause limiting which countries Canada could sign trade deals with; US says Canada introduced last-minute changes.",
+          "Politico (Inside the 72 hours)": "Presents competing explanations in depth \u2014 US officials blame a late Canadian ask on heavy-duty truck tariffs (Section 232), while Carney flatly denies Canada made any last-minute requests and points to turf wars between Greer's USTR and Lutnick's Commerce Department."
+        }
+      },
+      {
+        "topic": "Scope of the tariff threat on autos",
+        "positions": {
+          "BBC News": "Trump threatened to hike tariffs on Canadian cars, trucks and auto parts from 25% to 50% as of 1 January.",
+          "Politico (political will)": "Frames the same auto threat as expanding the 50% tariffs to Canadian steel, cars, trucks and parts, 'upping the ante' amid an already-escalating standoff."
+        }
+      },
+      {
+        "topic": "Where the US is vulnerable",
+        "positions": {
+          "Politico (political will)": "Argues the US's key disadvantage is political \u2014 Americans are less willing than Canadians to endure tariff pain, and Trump faces November midterms.",
+          "BBC News": "Emphasizes Canada's economic leverage \u2014 Canada supplies 60% of US crude oil imports and nearly 100% of US natural gas exports, and Ford floated charging extra for energy and critical minerals."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two headline-only entries with no retrievable body text. One frames the story as global stakes ('World braces as Trump's Canada tariff stand-off escalates'); the other spotlights a bizarre Trump provocation ('Trump threatens to change the name of Lake Ontario to Lake America'). Neither can be used for consensus; the Lake Ontario claim appears in no other dossier source and is single-source, unverifiable here.",
+      "BBC News": "Leads on the auto-tariff escalation (25% to 50% on cars, trucks, parts). Emphasizes Canadian defiance and human impact \u2014 quotes Ford telling Trump to 'kiss my ass,' Carney's icebreaker funding announcement, and small-business owners on both sides fearing price shocks. Foregrounds Canada's energy leverage and the USMCA-unraveling recession risk from Oxford Economics. Balanced 'each side accuses the other' framing on the breakdown.",
+      "Politico (political will)": "Frames the entire story around a thesis: Canada's 'important edge' is domestic political unity versus American ambivalence about tariffs. Leads with the asymmetry of political will, cites POLITICO and NYT/Siena polling showing US voter disapproval, quotes Sen. Collins (R-Maine) calling the tariffs a 'mistake,' and notes Trump faces midterms. Acknowledges Canada's larger economic exposure (three-quarters of exports to US, near a quarter of GDP) but casts it as offset by US political fragility.",
+      "Politico (Inside the 72 hours)": "Reconstructs the deal's collapse as a fast-moving inside narrative built on 'more than a dozen' anonymous officials and lobbyists. Emphasizes internal US administration friction between Greer (USTR) and Lutnick (Commerce) as a likely cause of the 'disconnect,' while giving space to the White House's denial and its claim that a late Canadian ask on heavy trucks was decisive. Presents Carney's flat denial of last-minute requests prominently."
+    },
+    "primary_source_alignment": [
+      "No primary sources (transcripts, official statements in full, poll documents, or the trade text) were located for this story. All claims rest on outlet reporting, much of it anonymously sourced, and cannot be checked against an underlying document."
+    ],
+    "missing_context": [
+      "The dossier has only three retrievable full-text articles (BBC and two Politico pieces); the two Reuters entries are headline-only and cannot corroborate any body-level fact. Politico's two articles share an outlet, so much of the deeper 'consensus' rests effectively on two independent bodies (BBC and Politico), not five.",
+      "The Reuters 'Lake Ontario to Lake America' claim is single-source and headline-only; no body text explains or verifies it, so it cannot be treated as confirmed.",
+      "No outlet provides the actual text of the disputed 'last-minute demands' or the trade-deal framework, leaving the central dispute (who changed the terms) unresolvable from the dossier.",
+      "The retaliatory Canadian tariffs are variously dated as effective 'Saturday' (Politico) and set to take effect '8 September' (BBC); the dossier does not reconcile whether these are the same measures or separate tranches.",
+      "No source quantifies the actual dollar impact on US consumers or specifies which US industries beyond autos, steel and aluminum are exposed \u2014 the political-will thesis is asserted via polling but not tied to concrete economic figures.",
+      "Mexico's position and any USMCA renegotiation timeline are mentioned only in passing (BBC notes both Canada and Mexico want a 16-year extension the US rejects) without detail.",
+      "No article body was found for the Reuters wire pieces, so the outlet slant matrix is effectively covered by only two distinct newsrooms with full reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple newsrooms cover the same trade-war escalation but with materially different framings \u2014 BBC foregrounds Canadian defiance and energy leverage while Politico builds a thesis around US political vulnerability and internal administration turf wars \u2014 and no primary source exists to adjudicate the core who-broke-the-deal dispute. That divergence makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/world-braces-trumps-canada-tariff-stand-off-escalates-2026-08-25/",
+      "title": "World braces as Trump's Canada tariff stand-off escalates - Reuters"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c93vpd60654o",
+      "title": "US-Canada trade war heats up as Trump threatens to hike auto tariffs - BBC"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/08/25/us-canadian-trade-war-political-will-01048491",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/trump-threatens-change-name-lake-ontario-lake-america-amid-canada-trade-war-2026-08-25/",
+      "title": "Trump threatens to change the name of Lake Ontario to Lake America amid Canada trade war - Reuters"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/08/22/us-canada-trade-deal-01046788",
+      "title": "Inside the 72 hours that cratered the US-Canada trade deal - Politico"
+    }
+  ]
+}
