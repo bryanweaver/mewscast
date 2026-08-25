@@ -39,7 +39,7 @@ class PromptLoader:
         Load a prompt template and format it with provided values
 
         Args:
-            filename: Name of the prompt file (e.g., 'tweet_generation.md')
+            filename: Name of the prompt file (e.g., 'report_post.md')
             **kwargs: Values to substitute into the template
 
         Returns:
