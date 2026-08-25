@@ -70,6 +70,42 @@ _JOURNALISM_POST_TYPE_ALIASES = {
 }
 
 
+def _verify_final_social_text(
+    text: str,
+    post_type: PostType,
+    platform: str,
+) -> tuple[bool, str]:
+    """Verify the final social text that will actually be posted.
+
+    This is a belt-and-suspenders check that runs AFTER the main verification
+    gate and right BEFORE posting. It catches any text transformations that
+    might have occurred between gate verification and publish time.
+
+    For REPORT posts, the sign-off "And that's the mews." is REQUIRED.
+    This was the root cause of production misses:
+    - 2026-08-23 morning #432 REPORT Canadian 50% tariffs
+    - 2026-08-24 midday #436 REPORT Bessent Iran sanctions
+
+    Returns (ok, reason) — ok=True means safe to publish, ok=False means abort.
+    """
+    if post_type != PostType.REPORT:
+        return True, ""
+
+    expected_signoff = SIGN_OFFS[PostType.REPORT]  # "And that's the mews."
+    if not expected_signoff:
+        return True, ""
+
+    stripped = (text or "").rstrip()
+    if stripped.endswith(expected_signoff):
+        return True, ""
+
+    return False, (
+        f"[journalism] ABORT {platform}: REPORT social copy missing sign-off "
+        f"'{expected_signoff}'. Gate passed but final text lacks the seal. "
+        f"Text ends with: '...{stripped[-50:]}'"
+    )
+
+
 def _inline_dossier_url_into_meta(
     text: str,
     dossier_url: str,
@@ -2046,97 +2082,109 @@ def post_journalism_cycle(
             print(f"[journalism] dossier HTML render failed (non-fatal): {e}")
 
     if twitter_bot is not None:
-        try:
-            if image_path:
-                x_result = twitter_bot.post_tweet_with_image(x_post_text, image_path)
-            else:
-                x_result = twitter_bot.post_tweet(x_post_text)
-            if x_result:
-                tweet_id = x_result.get("id")
-                x_success = True
-                print(f"[journalism] X post ok: {tweet_id}")
-                _persist_post_artifacts()
+        # Final verification: ensure the actual social copy has the sign-off
+        x_ok, x_reason = _verify_final_social_text(x_post_text, chosen_type, "X")
+        if not x_ok:
+            print(x_reason)
+            print("[journalism] X publish BLOCKED by final verification")
+        else:
+            try:
+                if image_path:
+                    x_result = twitter_bot.post_tweet_with_image(x_post_text, image_path)
+                else:
+                    x_result = twitter_bot.post_tweet(x_post_text)
+                if x_result:
+                    tweet_id = x_result.get("id")
+                    x_success = True
+                    print(f"[journalism] X post ok: {tweet_id}")
+                    _persist_post_artifacts()
 
-                if not is_meta:
-                    # Dossier reply — try the Field Notes image first (same
-                    # visual asset Bluesky uses). On failure or when not
-                    # eligible, fall back to the plain-text dossier reply.
+                    if not is_meta:
+                        # Dossier reply — try the Field Notes image first (same
+                        # visual asset Bluesky uses). On failure or when not
+                        # eligible, fall back to the plain-text dossier reply.
+                        time.sleep(2)
+                        x_fn_reply_id = None
+                        if field_notes_image_path:
+                            x_fn_reply_id = _post_x_field_notes_reply(
+                                twitter_bot,
+                                tweet_id,
+                                field_notes_image_path,
+                                dossier_url,
+                            )
+                        if x_fn_reply_id:
+                            reply_tweet_id = x_fn_reply_id
+                            _persist_post_artifacts()
+                        else:
+                            brief_dict = brief.to_dict() if brief else {}
+                            outlet_count = len(dossier.articles) if dossier.articles else 0
+                            reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
+                            reply_body = f"{reply_hook}\n{dossier_url}"
+                            try:
+                                reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
+                                if reply_result:
+                                    reply_tweet_id = reply_result.get("id")
+                                    print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
+                                    _persist_post_artifacts()
+                            except Exception as re:
+                                print(f"[journalism] X dossier reply failed: {re}")
+                    else:
+                        print("[journalism] META — dossier URL inlined, no self-reply")
+            except Exception as e:
+                print(f"[journalism] X publish failed: {e}")
+
+    if bluesky_bot is not None:
+        # Final verification: ensure the actual social copy has the sign-off
+        bs_ok, bs_reason = _verify_final_social_text(bluesky_post_text, chosen_type, "Bluesky")
+        if not bs_ok:
+            print(bs_reason)
+            print("[journalism] Bluesky publish BLOCKED by final verification")
+        else:
+            try:
+                if image_path:
+                    bs_result = bluesky_bot.post_skeet_with_image(bluesky_post_text, image_path)
+                else:
+                    bs_result = bluesky_bot.post_skeet(bluesky_post_text)
+                if bs_result:
+                    bluesky_uri = bs_result.get("uri")
+                    bluesky_success = True
+                    print(f"[journalism] Bluesky post ok: {bluesky_uri}")
+                    _persist_post_artifacts()
+
+                    # Dossier reply — Field Notes image (generated once above,
+                    # reused across platforms). On any failure or when the
+                    # feature isn't eligible, fall back to the prior link-card
+                    # reply so the dossier link still ships.
                     time.sleep(2)
-                    x_fn_reply_id = None
+                    field_notes_uri = None
                     if field_notes_image_path:
-                        x_fn_reply_id = _post_x_field_notes_reply(
-                            twitter_bot,
-                            tweet_id,
+                        field_notes_uri = _post_bluesky_field_notes_reply(
+                            bluesky_bot,
+                            bluesky_uri,
                             field_notes_image_path,
                             dossier_url,
                         )
-                    if x_fn_reply_id:
-                        reply_tweet_id = x_fn_reply_id
+                    if field_notes_uri:
+                        bluesky_reply_uri = field_notes_uri
                         _persist_post_artifacts()
                     else:
+                        # Fallback: clickable link card (no banner thumbnail).
                         brief_dict = brief.to_dict() if brief else {}
                         outlet_count = len(dossier.articles) if dossier.articles else 0
                         reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
-                        reply_body = f"{reply_hook}\n{dossier_url}"
                         try:
-                            reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
+                            reply_result = bluesky_bot.reply_to_skeet_with_link(
+                                bluesky_uri, dossier_url,
+                                text=reply_hook,
+                            )
                             if reply_result:
-                                reply_tweet_id = reply_result.get("id")
-                                print(f"[journalism] X dossier reply ok: {reply_tweet_id}")
+                                bluesky_reply_uri = reply_result.get("uri")
+                                print(f"[journalism] Bluesky dossier reply ok: {bluesky_reply_uri}")
                                 _persist_post_artifacts()
                         except Exception as re:
-                            print(f"[journalism] X dossier reply failed: {re}")
-                else:
-                    print("[journalism] META — dossier URL inlined, no self-reply")
-        except Exception as e:
-            print(f"[journalism] X publish failed: {e}")
-
-    if bluesky_bot is not None:
-        try:
-            if image_path:
-                bs_result = bluesky_bot.post_skeet_with_image(bluesky_post_text, image_path)
-            else:
-                bs_result = bluesky_bot.post_skeet(bluesky_post_text)
-            if bs_result:
-                bluesky_uri = bs_result.get("uri")
-                bluesky_success = True
-                print(f"[journalism] Bluesky post ok: {bluesky_uri}")
-                _persist_post_artifacts()
-
-                # Dossier reply — Field Notes image (generated once above,
-                # reused across platforms). On any failure or when the
-                # feature isn't eligible, fall back to the prior link-card
-                # reply so the dossier link still ships.
-                time.sleep(2)
-                field_notes_uri = None
-                if field_notes_image_path:
-                    field_notes_uri = _post_bluesky_field_notes_reply(
-                        bluesky_bot,
-                        bluesky_uri,
-                        field_notes_image_path,
-                        dossier_url,
-                    )
-                if field_notes_uri:
-                    bluesky_reply_uri = field_notes_uri
-                    _persist_post_artifacts()
-                else:
-                    # Fallback: clickable link card (no banner thumbnail).
-                    brief_dict = brief.to_dict() if brief else {}
-                    outlet_count = len(dossier.articles) if dossier.articles else 0
-                    reply_hook = _compose_dossier_reply_text(brief_dict, outlet_count)
-                    try:
-                        reply_result = bluesky_bot.reply_to_skeet_with_link(
-                            bluesky_uri, dossier_url,
-                            text=reply_hook,
-                        )
-                        if reply_result:
-                            bluesky_reply_uri = reply_result.get("uri")
-                            print(f"[journalism] Bluesky dossier reply ok: {bluesky_reply_uri}")
-                            _persist_post_artifacts()
-                    except Exception as re:
-                        print(f"[journalism] Bluesky dossier reply failed: {re}")
-        except Exception as e:
-            print(f"[journalism] Bluesky publish failed: {e}")
+                            print(f"[journalism] Bluesky dossier reply failed: {re}")
+            except Exception as e:
+                print(f"[journalism] Bluesky publish failed: {e}")
 
     if not (x_success or bluesky_success):
         print("[journalism] no platform accepted the post; failing cycle")
@@ -2325,95 +2373,107 @@ def republish_draft(story_id: str, post_text: str, post_type_str: str = "REPORT"
             print(f"[republish] posts_history upsert failed (non-fatal): {e}")
 
     if not skip_x:
-        try:
-            twitter_bot = TwitterBot()
-            if image_path:
-                x_result = twitter_bot.post_tweet_with_image(x_post_text, image_path)
-            else:
-                x_result = twitter_bot.post_tweet(x_post_text)
-            if x_result:
-                tweet_id = x_result.get("id")
-                x_success = True
-                print(f"[republish] X post ok: {tweet_id}")
-                _persist_post_artifacts()
-
-                if is_meta:
-                    print("[republish] META — dossier URL inlined, no X self-reply")
+        # Final verification: ensure the actual social copy has the sign-off
+        x_ok, x_reason = _verify_final_social_text(x_post_text, post_type, "X")
+        if not x_ok:
+            print(x_reason)
+            print("[republish] X publish BLOCKED by final verification")
+        else:
+            try:
+                twitter_bot = TwitterBot()
+                if image_path:
+                    x_result = twitter_bot.post_tweet_with_image(x_post_text, image_path)
                 else:
-                    # Dossier reply — Field Notes image first, plain-text fallback.
-                    time.sleep(2)
-                    x_fn_reply_id = None
-                    if field_notes_image_path:
-                        x_fn_reply_id = _post_x_field_notes_reply(
-                            twitter_bot,
-                            tweet_id,
-                            field_notes_image_path,
-                            dossier_url,
-                        )
-                    if x_fn_reply_id:
-                        reply_tweet_id = x_fn_reply_id
-                        _persist_post_artifacts()
+                    x_result = twitter_bot.post_tweet(x_post_text)
+                if x_result:
+                    tweet_id = x_result.get("id")
+                    x_success = True
+                    print(f"[republish] X post ok: {tweet_id}")
+                    _persist_post_artifacts()
+
+                    if is_meta:
+                        print("[republish] META — dossier URL inlined, no X self-reply")
                     else:
-                        reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
-                        reply_body = f"{reply_hook}\n{dossier_url}"
-                        try:
-                            reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
-                            if reply_result:
-                                reply_tweet_id = reply_result.get("id")
-                                print(f"[republish] X dossier reply ok: {reply_tweet_id}")
-                                _persist_post_artifacts()
-                        except Exception as re:
-                            print(f"[republish] X dossier reply failed: {re}")
-        except Exception as e:
-            print(f"[republish] X publish failed: {e}")
+                        # Dossier reply — Field Notes image first, plain-text fallback.
+                        time.sleep(2)
+                        x_fn_reply_id = None
+                        if field_notes_image_path:
+                            x_fn_reply_id = _post_x_field_notes_reply(
+                                twitter_bot,
+                                tweet_id,
+                                field_notes_image_path,
+                                dossier_url,
+                            )
+                        if x_fn_reply_id:
+                            reply_tweet_id = x_fn_reply_id
+                            _persist_post_artifacts()
+                        else:
+                            reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
+                            reply_body = f"{reply_hook}\n{dossier_url}"
+                            try:
+                                reply_result = twitter_bot.reply_to_tweet(tweet_id, reply_body)
+                                if reply_result:
+                                    reply_tweet_id = reply_result.get("id")
+                                    print(f"[republish] X dossier reply ok: {reply_tweet_id}")
+                                    _persist_post_artifacts()
+                            except Exception as re:
+                                print(f"[republish] X dossier reply failed: {re}")
+            except Exception as e:
+                print(f"[republish] X publish failed: {e}")
 
     # ---- Publish to Bluesky --------------------------------------------
     # Bluesky keeps the link-card self-reply even for META, because the
     # 300-char cap truncates long META bodies and the card is how users
     # reach the dossier.
     if not skip_bluesky:
-        try:
-            bluesky_bot = BlueskyBot()
-            if image_path:
-                bs_result = bluesky_bot.post_skeet_with_image(bluesky_post_text, image_path)
-            else:
-                bs_result = bluesky_bot.post_skeet(bluesky_post_text)
-            if bs_result:
-                bluesky_uri = bs_result.get("uri")
-                bluesky_success = True
-                print(f"[republish] Bluesky post ok: {bluesky_uri}")
-                _persist_post_artifacts()
-
-                # Dossier reply — reuse the field-notes image generated above
-                # for both platforms.
-                time.sleep(2)
-                field_notes_uri = None
-                if field_notes_image_path:
-                    field_notes_uri = _post_bluesky_field_notes_reply(
-                        bluesky_bot,
-                        bluesky_uri,
-                        field_notes_image_path,
-                        dossier_url,
-                    )
-                if field_notes_uri:
-                    bluesky_reply_uri = field_notes_uri
-                    _persist_post_artifacts()
+        # Final verification: ensure the actual social copy has the sign-off
+        bs_ok, bs_reason = _verify_final_social_text(bluesky_post_text, post_type, "Bluesky")
+        if not bs_ok:
+            print(bs_reason)
+            print("[republish] Bluesky publish BLOCKED by final verification")
+        else:
+            try:
+                bluesky_bot = BlueskyBot()
+                if image_path:
+                    bs_result = bluesky_bot.post_skeet_with_image(bluesky_post_text, image_path)
                 else:
-                    # Fallback: clickable link card, no banner thumbnail.
-                    reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
-                    try:
-                        reply_result = bluesky_bot.reply_to_skeet_with_link(
-                            bluesky_uri, dossier_url,
-                            text=reply_hook,
+                    bs_result = bluesky_bot.post_skeet(bluesky_post_text)
+                if bs_result:
+                    bluesky_uri = bs_result.get("uri")
+                    bluesky_success = True
+                    print(f"[republish] Bluesky post ok: {bluesky_uri}")
+                    _persist_post_artifacts()
+
+                    # Dossier reply — reuse the field-notes image generated above
+                    # for both platforms.
+                    time.sleep(2)
+                    field_notes_uri = None
+                    if field_notes_image_path:
+                        field_notes_uri = _post_bluesky_field_notes_reply(
+                            bluesky_bot,
+                            bluesky_uri,
+                            field_notes_image_path,
+                            dossier_url,
                         )
-                        if reply_result:
-                            bluesky_reply_uri = reply_result.get("uri")
-                            print("[republish] Bluesky dossier reply ok")
-                            _persist_post_artifacts()
-                    except Exception as re:
-                        print(f"[republish] Bluesky dossier reply failed: {re}")
-        except Exception as e:
-            print(f"[republish] Bluesky publish failed: {e}")
+                    if field_notes_uri:
+                        bluesky_reply_uri = field_notes_uri
+                        _persist_post_artifacts()
+                    else:
+                        # Fallback: clickable link card, no banner thumbnail.
+                        reply_hook = _compose_dossier_reply_text(reply_brief, reply_outlet_count)
+                        try:
+                            reply_result = bluesky_bot.reply_to_skeet_with_link(
+                                bluesky_uri, dossier_url,
+                                text=reply_hook,
+                            )
+                            if reply_result:
+                                bluesky_reply_uri = reply_result.get("uri")
+                                print("[republish] Bluesky dossier reply ok")
+                                _persist_post_artifacts()
+                        except Exception as re:
+                            print(f"[republish] Bluesky dossier reply failed: {re}")
+            except Exception as e:
+                print(f"[republish] Bluesky publish failed: {e}")
 
     if not (x_success or bluesky_success):
         print("[republish] no platform accepted the post")
