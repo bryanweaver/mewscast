@@ -1,0 +1,103 @@
+{
+  "story_id": "2026-08-24-trump-administration-proposes-more-5e3758baa0",
+  "headline_seed": "Trump administration proposes more than $100K fee for H-1B visas - Politico",
+  "brief": {
+    "story_id": "2026-08-24-trump-administration-proposes-more-5e3758baa0",
+    "consensus_facts": [
+      "The Trump administration posted a proposed rule in the Federal Register on Monday, August 24, 2026, that would impose a fee of $103,265 on H-1B visa petitions (Politico, CNN, Washington Post headline, The Independent).",
+      "The proposal follows a June 2026 ruling by a federal judge that struck down Trump's earlier $100,000 H-1B fee as an unlawful tax requiring congressional approval (Politico, CNN, The Independent).",
+      "Trump first introduced the $100,000 H-1B fee in September 2025 via executive/presidential action (Politico, CNN, The Independent).",
+      "The proposed rule opens a 30-day public comment period and is not yet final (Politico, CNN, The Independent).",
+      "The administration justifies the fee as a way to recover/fund immigration system costs and to encourage companies to hire American workers (Politico, CNN, The Independent).",
+      "H-1B annual caps are 65,000 general visas plus 20,000 for holders of advanced degrees (CNN, The Independent; Politico frames the cap as 85,000 total with 20,000 for advanced degrees).",
+      "Prior to Trump's order, standard H-1B fees were far lower \u2014 roughly $2,000 to $5,000 (CNN cites ~$3,000; The Independent cites $2,000-$5,000)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the proposal is 'new' or a move to make the existing fee 'permanent'",
+        "positions": {
+          "Politico": "Frames it as a revived proposal after the earlier fee was blocked ('DHS revived the proposal on Monday').",
+          "CNN": "Frames it as a plan to 'add' a new $103,265 fee after the previous attempt was voided.",
+          "The Independent": "Frames it as moving to make the fee 'permanent' before a temporary rule expires in September, one year after issuance."
+        }
+      },
+      {
+        "topic": "Framing of the annual H-1B cap",
+        "positions": {
+          "Politico": "States approvals are 'capped at 85,000 per year, with 20,000 spots for people with advanced degrees.'",
+          "CNN": "States law allows 65,000 annually plus another 20,000 reserved for advanced-degree holders.",
+          "The Independent": "States 65,000 general visas annually plus 20,000 for advanced-degree holders."
+        }
+      },
+      {
+        "topic": "Petition/registration volume figures",
+        "positions": {
+          "Politico": "Nearly 400,000 petitions (most for renewal) approved in FY2024; caps at 85,000.",
+          "The Independent": "About 344,000 H-1B registrations last year, down over 25% from 2024 and less than half the 794,000 in 2023."
+        }
+      },
+      {
+        "topic": "Prior standard fee amount",
+        "positions": {
+          "CNN": "The fee was previously about $3,000.",
+          "The Independent": "Standard fees ranged between $2,000 and $5,000."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Politico": "Leads on the dollar figure and the legal backdrop (a judge blocked the earlier fee). Emphasizes the breadth of opposition \u2014 labor unions, research universities, dozens of states \u2014 and the sector-level impacts (hospitals, tech, AI researchers). Includes DHS's own admission that petition volume may drop. Notes the fee would fund CBP and ICE. Situates the story within a 'sweeping effort' to restrict immigration. Reports the White House declined to comment.",
+      "Bloomberg": "Headline-only in dossier (body unretrievable \u2014 CAPTCHA wall). Headline frames it as Trump 'devising' a new fee 'after court defeat,' emphasizing the legal setback as context.",
+      "The Hill": "Headline-only in dossier (body blocked, 403/CAPTCHA). Neutral headline: 'Trump administration proposes new H-1B visa fee.' No body-level framing available.",
+      "CNN": "Leads on the dollar figure and the legal setback. Prominently features administration justifications ('recovering' costs, hire American workers) and quotes VP JD Vance's X post ('hire and train Americans'). Balances with economists' argument that the program aids competitiveness and job creation. Details the Sorokin ruling, noting the judge was an Obama appointee and viewed the fee as a tax.",
+      "The Washington Post": "In the dossier only as a 'Tracking Trump' roundup ('The 7'), where the H-1B fee is one of several bulleted items alongside Canadian tariffs and a 'secret White House bunker.' The roundup links to a standalone WaPo immigration story ('Trump administration proposes $103,000 fee for H-1B visas after legal setback') but that full body is not in the dossier. Framing here is aggregation/tracking, not deep single-story coverage.",
+      "The Independent": "Frames the story as an effort to make the fee 'permanent' before a temporary rule expires. Most detailed on the legal posture: appeals court in Boston reviewing the ruling, a separate Chamber of Commerce challenge, and that filings could be amended. Uniquely reports that roughly 70 employers paid the $100,000 fee on 85 applications as of late February, that the fee would not apply to those already in the US on student visas or to renewals, and cites declining registration volumes and separate DHS fee rules (up to $4,500 for extensions/transfers). Presents both critics' and business groups' positions."
+    },
+    "primary_source_alignment": [
+      "No primary source (the Federal Register proposed rule or the June court ruling) was located for this story. Outlets reference the Federal Register posting and Judge Leo Sorokin's June ruling, but neither document is in the dossier for direct comparison.",
+      "The $103,265 figure is consistently reported across Politico, CNN, and The Independent, but cannot be independently verified against the underlying rule text here."
+    ],
+    "missing_context": [
+      "No full body text was available for Bloomberg (wire) or The Hill (center) \u2014 both were blocked by CAPTCHA/403 walls \u2014 and the Washington Post's dedicated immigration article was only referenced, not included. Body-level analysis rests on three outlets: Politico, CNN, and The Independent.",
+      "No primary source (Federal Register proposed rule or the June court decision) was retrieved, so all figures and legal characterizations are as reported by outlets, not verified against source documents.",
+      "Only The Independent specifies key carve-outs \u2014 that the fee would not apply to visa renewals or to foreign nationals already in the US on student visas; the other outlets do not mention these exemptions, which materially affect who bears the cost.",
+      "Outlets disagree on or present differing petition/registration volumes and the prior standard fee amount without reconciling the discrepancy (e.g., 344,000 registrations vs. nearly 400,000 approved petitions; $3,000 vs. $2,000-$5,000).",
+      "The exact legal status of the earlier fee is only partially explained \u2014 The Independent notes an appeals court is reviewing and a separate Chamber of Commerce challenge is pending, while Politico and CNN focus mainly on the June ruling itself.",
+      "None of the retrievable articles quantify the projected revenue the fee would generate or provide independent economic analysis of the claimed impact on American hiring."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (Politico, CNN, The Independent) reported the same event with materially different framings \u2014 'new fee' vs. making a fee 'permanent' \u2014 plus divergent cap and volume figures, while two outlets and a key WaPo article were paywalled/blocked and no primary source was retrievable. This is a coverage-comparison story with notable framing divergence rather than a clean single-event REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/08/24/trump-100k-fee-for-h-1b-visas-01047182",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-24/trump-devises-new-100-000-h-1b-visa-fee-after-defeat-in-court",
+      "title": "Trump Devises New $100,000 H-1B Visa Fee After Court Defeat - Bloomberg"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/newsletters/technology/6047891-trump-administration-proposes-new-h-1b-visa-fee/",
+      "title": "Trump administration proposes new H-1B visa fee - The Hill"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/24/politics/trump-administration-h-1b-visa-fee",
+      "title": "Trump administration proposes $103,000 fee for H-1B visas - CNN"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/the-seven-trump/2026/08/24/tracking-trump-trump-threatens-new-canadian-tariffs-proposed-100k-h-1b-visa-fee-secret-white-house-bunker-more/",
+      "title": "Tracking Trump: Trump threatens new Canadian tariffs; a proposed $100k H-1B visa fee; a secret White House bunker; and more - The Washington Post"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/americas/us-politics/h1b-visa-fee-trump-us-increase-b3038397.html",
+      "title": "Trump moves to make $100,000 fee for H-1B worker visas permanent - The Independent"
+    }
+  ]
+}
