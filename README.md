@@ -189,7 +189,6 @@ mewscast/
 │   ├── dossier_renderer.py         # Renders dossier HTML viewer pages
 │   └── field_notes.py              # Field-notes reply composer
 ├── prompts/                        # Claude prompt templates
-│   ├── tweet_generation.md         # Legacy tweet prompt
 │   ├── meta_analysis.md            # Stage 4 meta-analysis prompt
 │   ├── report_post.md              # REPORT post type
 │   ├── meta_post.md                # META post type
