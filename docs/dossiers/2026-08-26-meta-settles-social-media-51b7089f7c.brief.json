@@ -1,0 +1,105 @@
+{
+  "story_id": "2026-08-26-meta-settles-social-media-51b7089f7c",
+  "headline_seed": "Meta settles social media addiction case with California, other states for $16.7 billion - CNBC",
+  "brief": {
+    "story_id": "2026-08-26-meta-settles-social-media-51b7089f7c",
+    "consensus_facts": [
+      "Meta and a coalition of US state attorneys general have agreed to a proposed settlement resolving a landmark federal child-safety lawsuit (corroborated by NPR and CNBC body text).",
+      "The lawsuit alleged Meta designed apps like Facebook and Instagram to be addictive to children and misrepresented or hid the mental-health harms they posed (NPR and CNBC).",
+      "The case was co-led by California Attorney General Rob Bonta along with the AGs of Colorado, New Jersey, and Kentucky (NPR and CNBC).",
+      "Bonta's office described the effort as a bipartisan coalition of 51 attorneys general, and the settlement resolves the claims of those states (NPR and CNBC).",
+      "Bonta issued a statement saying the settlement 'will make social media less dangerous for our kids' and that Meta agreed to 'massive transformations' to reduce harm 'within months' (quoted identically by NPR and CNBC).",
+      "The trial was taking place at the federal courthouse in Oakland, California, and the settlement came during the trial's second week, midway through proceedings originally expected to run into early October (NPR and CNBC).",
+      "The settlement requires Meta to make product changes for minors, including daily/usage time limits and nighttime blocks for teen users (NPR and CNBC).",
+      "Instagram head Adam Mosseri testified in the trial's defense phase this week and was questioned about the effectiveness of Meta's teen safety features (NPR and CNBC).",
+      "The proposed settlement must still be approved by the presiding judge (NPR states this explicitly; CNBC references a proposed 'consent judgement' pending court approval)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total settlement dollar figure",
+        "positions": {
+          "Reuters": "Headline states $16.68 billion.",
+          "NPR": "Reports $17 billion in penalties to be paid over 10 years.",
+          "CNBC": "Reports Meta agreed to pay a maximum of $16.7 billion per the states' framing, but that Meta itself said the agreement 'includes a payment of approximately $18 billion' distributed over 10 years \u2014 with the total also covering claims related to the Cambridge Analytica case.",
+          "Bloomberg": "Headline references settlement of teen social media harm case but gives no figure (body inaccessible)."
+        }
+      },
+      {
+        "topic": "Number of states in the coalition",
+        "positions": {
+          "NPR": "Describes California, Colorado, Kentucky and New Jersey representing a larger consortium; says the settlement resolves cases and claims of 51 states/AGs.",
+          "CNBC": "States the case was brought by a group of 29 states and co-led by four AGs, while also citing Bonta's reference to a 'bipartisan coalition of 51 attorneys general.'"
+        }
+      },
+      {
+        "topic": "How settlement funds are allocated and conditioned",
+        "positions": {
+          "CNBC": "Reports Meta said participating states get about $12.7 billion (70%) over 10 years, with the remaining $5.3 billion (30%) contingent on YouTube and TikTok implementing app changes and matching payments; also reports Meta expects to accrue a ~$10 billion legal expense in Q3 2026.",
+          "NPR": "Does not mention any tiered payment structure or conditions tied to competitors' behavior."
+        }
+      },
+      {
+        "topic": "Specific product changes required",
+        "positions": {
+          "NPR": "Details a default two-hour daily limit for under-18 users, a midnight\u20136am block (parent-liftable), default night/schooltime notification blocks, a ban on displaying like/reaction counts for minors, a ban on cosmetic surgery filters for minors, a non-personalized feed option, an independent auditor, and an injunction against false safety statements.",
+          "CNBC": "Lists daily usage limits, nighttime blocks, 'enhanced age assurance measures,' and additional parental tools, but does not enumerate the like-count, cosmetic-filter, or non-personalized-feed provisions."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two headline-only entries. The primary Aug. 26 headline frames the story as 'Meta reaches $16.68 billion settlement over social media harms to children' \u2014 leads on the dollar figure and the harm-to-children angle. An earlier Reuters headline (Article 5) frames it as still in the discussion stage, attributed to Bloomberg News, showing the story's evolution from rumored talks to confirmed deal. No body text retrievable.",
+      "NPR": "Full body text. Leads with the settlement as resolving a 'landmark federal child safety lawsuit' and centers Bonta's victory framing and quotes. Emphasizes the substantive product-safety concessions in granular detail (time limits, filter bans, auditor, injunction) and the litigation's tobacco-litigation parallel. Foregrounds whistleblower Arturo B\u00e9jar's testimony and the accusation that Meta oversold its 'Take a Break' feature. Frames the outcome as a public-interest win for children; does not report the tiered payment structure, the Cambridge Analytica component, or Meta's larger ~$18 billion figure.",
+      "CNBC": "Full body text, specialized/business slant. Leads on the settlement as a major legal event but frames heavily through the financial and market lens \u2014 notes Meta shares rose 5% in premarket trading, the $10 billion Q3 legal accrual, and the detailed payment mechanics. Uniquely reports Meta's own characterization ('approximately $18 billion' including Cambridge Analytica claims) and the contingent 70/30 split tied to YouTube and TikTok compliance. Presents both the states' 'maximum $16.7 billion' figure and Meta's larger figure side by side. Also notes prior New Mexico rulings against Meta as context. Buries the specific youth-protection product provisions relative to NPR.",
+      "Bloomberg": "Two headline-only entries; bodies blocked by anti-bot/subscription wall. Headline (Article 4) frames neutrally as 'Meta, States Agree to Settle Teen Social Media Harm Case.' A prior video (Article 6) framed Bonta's Meta trial commentary alongside unrelated topics (mail ballots, Paramount talks). No analyzable body content."
+    },
+    "primary_source_alignment": [
+      "No primary source (court filing, consent judgment, or Bonta press release) was included in the dossier, so no direct document-to-report comparison is possible.",
+      "CNBC references the actual court filing / proposed 'consent judgement' released Wednesday and quotes it ('Each Party waives all rights to appeal this Final Judgment'), but the filing itself was not provided for independent verification.",
+      "The most material discrepancy that a primary source would resolve is the headline dollar figure: the states frame it as $16.7B (a maximum), while Meta frames it as ~$18B including Cambridge Analytica claims and conditioned on competitor behavior. Without the filing, the brief cannot adjudicate which figure the judgment actually specifies."
+    ],
+    "missing_context": [
+      "Only two of six dossier articles (NPR and CNBC) have retrievable full body text; the four Reuters and Bloomberg entries are headline-only or blocked by paywalls/anti-bot walls. Consensus is therefore built on a two-outlet base, and readers should weigh it accordingly.",
+      "The dossier contains no primary source \u2014 the actual court filing / consent judgment and Bonta's full press release were not provided \u2014 so the exact settlement figure, payment schedule, and enforceable terms cannot be independently verified against the underlying document.",
+      "The single most consequential unresolved point is why the reported total ranges from $16.68B (Reuters) to $17B (NPR) to a Meta-stated ~$18B (CNBC); the discrepancy hinges on whether Cambridge Analytica claims and competitor-contingent funds are included, which no single outlet fully reconciles.",
+      "No outlet included Meta's substantive response to the settlement beyond CNBC's brief financial statement; Meta's characterization of the product concessions and whether it admits wrongdoing is not covered (NPR notes it was still seeking comment).",
+      "The mechanism by which $5.3B is contingent on YouTube/TikTok compliance \u2014 including what happens if those competitors refuse \u2014 appears only in CNBC and is not corroborated or explained elsewhere.",
+      "No outlet reported the anticipated timeline for judicial approval by Judge Yvonne Gonzalez Rogers or what happens to the remaining scheduled trial weeks now that a settlement is proposed.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The two full-text outlets (NPR and CNBC) report the same settlement with materially different emphasis \u2014 NPR foregrounds child-safety concessions while CNBC foregrounds the financial mechanics and a larger Meta-stated figure \u2014 and the core dollar amount diverges across all outlets ($16.68B / $17B / ~$18B), a discrepancy no source fully reconciles and no primary document was available to settle. This is a coverage-divergence story, not a clean single-figure REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/meta-settles-with-us-states-over-social-media-harms-2026-08-26/",
+      "title": "Meta reaches $16.68 billion settlement over social media harms to children - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/08/26/nx-s1-5944781/meta-settlement-child-safety-lawsuit",
+      "title": "California says states, Meta agree to $17 billion settlement in child safety trial - NPR"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/26/meta-social-media-trial-settlement.html",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-26/meta-states-agree-to-settle-teen-social-media-harm-case",
+      "title": "Meta, States Agree to Settle Teen Social Media Harm Case - Bloomberg"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/litigation/meta-us-states-have-discussed-settling-teen-social-media-harm-case-bloomberg-2026-08-26/",
+      "title": "Meta, US states have discussed settling teen social media harm case, Bloomberg News reports - Reuters"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/videos/2026-08-24/california-ag-on-mail-ballots-paramount-and-meta-trial-video",
+      "title": "Watch California AG Bonta on Mail Ballots, Paramount Talks, Meta Trial - Bloomberg"
+    }
+  ]
+}
