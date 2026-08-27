@@ -1,0 +1,80 @@
+{
+  "story_id": "2026-08-27-alerts-from-trump-s-15dd095475",
+  "headline_seed": "Alerts from Trump\u2019s helicopter went unheard at Reagan National - Politico",
+  "brief": {
+    "story_id": "2026-08-27-alerts-from-trump-s-15dd095475",
+    "consensus_facts": [
+      "The NTSB released a preliminary report on Thursday, Aug. 27, 2026, about an Aug. 4 incident in which President Trump's helicopter (Marine One) came close to a commercial passenger jet near Ronald Reagan Washington National Airport.",
+      "Marine One's crew made calls/warnings that the helicopter was preparing to depart, but controllers at Reagan National did not receive them; recordings posted by ATC.com show the calls were made.",
+      "The Marine One crew tried to relay the required three-minute notification through the helicopter facility at Joint Base Anacostia-Bolling, but that relay attempt was also unsuccessful.",
+      "The two aircraft came within about 0.82 nautical miles (roughly 0.8 mile / 1.3 km) laterally and approximately 700 feet vertically at their closest point.",
+      "The other aircraft was an Envoy Air flight; its crew received a traffic warning from their collision-avoidance system after takeoff but did not visually spot Marine One.",
+      "About one week before the incident (on July 30), HMX-1 / Marine One personnel met with Reagan National tower staff to discuss communication issues; both sides agreed to use backup methods, including relaying notifications through another aircraft, if direct radio failed.",
+      "FAA technicians later determined there was inadequate line-of-sight coverage between the radio receiver site and where Marine One was operating; the radios were subsequently moved from a nearby residential neighborhood to the top of Reagan National's control tower.",
+      "Subsequent radio checks/tests after the equipment was moved showed no deficiencies.",
+      "The Pentagon has a longstanding agreement (dating to 2013) with the FAA to provide controllers a three-minute warning before the president's helicopter takes off.",
+      "The incident and separation rules trace to safety procedures implemented after the Jan. 29, 2025 midair collision between an airliner and an Army Black Hawk near the airport that killed 67 people.",
+      "No one was injured and neither aircraft was damaged."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the 700-foot vertical separation met FAA standards",
+        "positions": {
+          "Fox News": "Reports that the 700 feet of vertical separation met the applicable FAA standard, noting Class B airspace requires either 1.5 nautical miles lateral OR 500 feet vertical separation.",
+          "The Washington Post": "Frames the event as briefly getting 'too close' and as seeming to violate safety procedures, without noting the vertical-separation standard was met."
+        }
+      },
+      {
+        "topic": "Marine One's destination that day",
+        "positions": {
+          "The Washington Post": "States the president was headed to Andrews Air Force Base.",
+          "Fox News": "States Trump departed for a planned trip to Los Angeles (via Air Force One), with the jet bound for Pensacola, Florida."
+        }
+      },
+      {
+        "topic": "Details of the initial radio calls",
+        "positions": {
+          "Fox News": "Specifies the first call to Reagan's helicopter-control frequency was not received and a second transmission was 'broken and completely unreadable.'",
+          "The Washington Post": "Quotes ATC.com audio of the Marine One pilot saying 'three minutes to life' and the controller's surprised response ('no three minutes, roger, proceed as briefed')."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Politico": "No usable body text was retrievable \u2014 the scraped content is navigation menus, boilerplate, and image placeholders. The headline seed ('Alerts from Trump's helicopter went unheard at Reagan National') frames the story around a communications failure but the article body provides no reportable content.",
+      "The Washington Post": "Leads on the timeline angle: controllers warned pilots about radio failures one week before the close call, emphasizing that the agreed-upon backup plan also failed. Frames the event as seeming to 'violate safety procedures' and ties it repeatedly to last year's fatal 67-death collision and a broken Pentagon-tower hotline. Stresses officials' assurance the president was never in danger. Uses AP wire copy (by Josh Funk). Includes the ATC.com audio quotes highlighting controller surprise.",
+      "Fox News": "Leads on Marine One's 'repeated but unsuccessful attempts' to notify the airport, framing the crew as having done their part. Prominently notes the FAA/NTSB characterized it as a 'momentary loss of separation' and that the 700-foot vertical gap met the applicable FAA standard \u2014 the most exculpatory framing of the three. Foregrounds Transportation Secretary Sean Duffy's remarks and includes extensive technical detail (Envoy flight number, aircraft type, TCAS behavior, absence of a resolution advisory). Surrounds the piece with links to other recent air-safety close-call stories."
+    },
+    "primary_source_alignment": [
+      "No primary source (the NTSB preliminary report itself) was provided in the dossier. Both the Washington Post and Fox News attribute their reporting to the NTSB preliminary report released Thursday, but the underlying document was not available for direct comparison.",
+      "Because the primary document is absent, divergences such as the FAA-standard-compliance framing (Fox) versus the 'seemed to violate safety procedures' framing (Washington Post) cannot be adjudicated against the source text."
+    ],
+    "missing_context": [
+      "Only two of the three outlets (The Washington Post and Fox News) have usable full body text; the Politico article body was not retrievable (navigation/boilerplate only), so its framing could not be assessed beyond the headline.",
+      "The NTSB preliminary report itself was not included in the dossier, so all report-level details are second-hand via two outlets, one of which (Washington Post) is running AP wire copy.",
+      "No outlet explains why the standard three-minute warning system was routed through a temporary radio setup \u2014 Fox notes Marine One was operating from the Ellipse during White House construction, but the Washington Post does not fully clarify this operational context.",
+      "No outlet quantifies how long the radios had been positioned in the residential neighborhood with inadequate line-of-sight, or whether prior flights had been affected.",
+      "No outlet reports what disciplinary, procedural, or oversight follow-up (if any) will result, or names the responsible party for the failed relay through Joint Base Anacostia-Bolling.",
+      "The two outlets partly rely on the same underlying sources (NTSB report, ATC.com audio, AP), so corroboration is less independent than it appears."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with full body text confirm the same core facts about the Aug. 4 close call and the NTSB preliminary findings, with only modest framing differences (Fox emphasizing the met FAA standard, the Post emphasizing the prior warning and fatal-crash context). This is a straightforward corroborated news event rather than a coverage-divergence story, especially since the third outlet (Politico) provided no usable body text.",
+    "confidence": 0.68
+  },
+  "articles": [
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/08/27/ntsb-marine-one-reagan-airport-01052838",
+      "title": ""
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/08/27/marine-one-ntsb-trump-reagan-close-call/5a0f6b96-a240-11f1-8606-1d40ad00172e_story.html",
+      "title": "Controllers warned Trump copter pilots about radio failures 1 week before they came close to jet - The Washington Post"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/politics/trump-helicopters-radio-warnings-went-unheard-before-close-call-passenger-jet-report-says",
+      "title": "Trump helicopter\u2019s radio warnings went unheard before close call with passenger jet, report says - Fox News"
+    }
+  ]
+}
