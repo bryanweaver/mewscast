@@ -1,0 +1,105 @@
+{
+  "story_id": "2026-08-27-nepal-flash-flood-live-fbb6f55697",
+  "headline_seed": "Nepal flash flood live updates: more than 1,000 people missing after glacial collapse at Tibet border - The Guardian",
+  "brief": {
+    "story_id": "2026-08-27-nepal-flash-flood-live-fbb6f55697",
+    "consensus_facts": [
+      "A flash flood struck the Nepal-China (Tibet) border region on Wednesday, killing well over 150 people and leaving hundreds of tourists missing (Al Jazeera reports at least 165 dead and 162 bodies recovered; NBC News reports at least 157 dead).",
+      "A wall of mud, rock, and debris collapsed into a river at the border, and verified security-camera footage from the Chinese side shows people fleeing as it engulfed buildings and vehicles (Al Jazeera and NBC News).",
+      "Hundreds of tourists were reported missing, a large share of them foreign nationals, including Indians on pilgrimage as well as Australians, Britons, Americans and others (Al Jazeera cites 579 tourists, more than 400 foreign; NBC News cites 484 tourists, 391 foreign).",
+      "Chinese state broadcaster CCTV reported three deaths in Tibet's Gyirong county and hundreds still missing, with officials fearing 'major casualties' (Al Jazeera and NBC News).",
+      "The floodwaters swept away villages, homes, roads, bridges and hydropower/power projects, with television images showing collapsed homes, floating cars and a metal bridge being washed away (Al Jazeera and NBC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "death toll",
+        "positions": {
+          "Al Jazeera English": "At least 165 killed; 162 bodies recovered by Nepal police plus at least three in Tibet",
+          "NBC News": "At least 157 killed on the Nepali side"
+        }
+      },
+      {
+        "topic": "total number missing",
+        "positions": {
+          "Reuters (Article 4, headline-only)": "Nearly 1,500 missing in Nepal and China",
+          "The Guardian (headline seed)": "More than 1,000 people missing",
+          "Al Jazeera English": "579 tourists unaccounted for in Nepal (400+ foreign); China's CCTV reports 558 missing including 260 foreign nationals; 28 Nepali police unaccounted for",
+          "NBC News": "484 tourists missing per PM's office (391 foreign, 93 Nepali); China reports 265 missing in Gyirong"
+        }
+      },
+      {
+        "topic": "breakdown of missing foreign nationals",
+        "positions": {
+          "Al Jazeera English": "142 Indians, 34 Australians, plus nationals of Malaysia, Netherlands, Portugal, South Africa, South Korea, UK and US",
+          "NBC News": "133 Indians on Kailash pilgrimage, 47 Americans, 34 Australians, 33 Britons, 24 Canadians; separately 8 South Koreans working at a hydropower plant"
+        }
+      },
+      {
+        "topic": "trigger of the flood",
+        "positions": {
+          "Reuters (Article 1, headline-only)": "Frames the trigger as an open question ('What triggered the catastrophic flood?')",
+          "The New York Times (Article 6, headline-only)": "Headline frames the flood as 'Causing Quake'",
+          "NBC News": "Reports initial suggestion of an earthquake triggering an avalanche (per Foreign Minister), but also cites Nepal's disaster authority attributing it to a landslide of ice and rock in the Lhende River; German Research Center for Geosciences noted a 4.4-magnitude quake ~7 minutes before the video timestamp",
+          "The Guardian (headline seed)": "Attributes the event to a 'glacial collapse'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Both Reuters items are headline-only in this dossier. Article 1 ('What triggered the catastrophic flood on the Nepal-Tibet border?') frames coverage around the causal mystery \u2014 an explainer angle. Article 4 ('Nearly 1,500 missing in Nepal and China after devastating Himalaya flood') leads with the highest missing-persons figure in the dossier and frames the event at Himalaya/regional scale. Body text unavailable, so these figures cannot be corroborated at body level here.",
+      "The New York Times": "All three NYT items are headline-only. Article 2 is a photo-essay ('Photos: A Deadly Flood Tears Through Nepal and Tibet') emphasizing visual impact. Article 6 ('Catastrophic Flood Hits Nepal, Engulfing Crowds and Causing Quake') foregrounds human crowds and an unusual causal claim that the flood caused a quake. Article 7 is an explainer ('What to Know About Deadly Flash Floods in Nepal and Tibet'). Emphasis leans toward scale, human impact, and reader orientation; no body text available for corroboration.",
+      "Al Jazeera English": "Leads with the rescue effort and a hard death toll (165 killed, 162 bodies recovered), then layers in the missing-tourist tallies from both Nepali and Chinese sources side by side, giving prominence to the international dimension and the divergence between Nepal's and China's official figures. Neutral, casualty-forward wire-style reporting. Includes the dramatic security-footage description but does not dwell on the flood's cause.",
+      "NBC News": "Republishes Reuters reporting with added on-the-ground survivor testimony (Keshav Prasad Baral, the man who lost his wife; the man who clung to a mango tree), giving the piece a strong human-interest frame. Devotes significant space to the cause debate \u2014 earthquake-vs-landslide \u2014 and to the climate-change angle via scientist Alton Byers on thawing permafrost destabilizing slopes. Also emphasizes the nationality breakdown of missing tourists and diplomatic responses (US State Department, Canada's PM). The most detailed body text in the dossier."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Alignment cannot be assessed against any underlying document. Available attributions in the body-text articles include Nepal Police, Nepal's Ministry of Culture and Tourism, the PM's office, China's CCTV, the German Research Center for Geosciences, Planet Labs satellite imagery cited by Nepal's National Disaster Risk Reduction and Management Authority, and scientist Alton Byers \u2014 none of which is reproduced as a primary document in this dossier."
+    ],
+    "missing_context": [
+      "Only two of seven articles (Al Jazeera English and NBC News) have retrievable full body text; the four Reuters/NYT items and the Guardian headline seed are headline-only, so their casualty and missing-persons figures cannot be independently corroborated here.",
+      "The two highest missing-persons figures in the dossier (Reuters 'nearly 1,500' and Guardian 'more than 1,000') appear only in headlines with no accompanying body text to explain how those totals were calculated or reconciled with the smaller official tallies (579/484 tourists) in the full-text pieces.",
+      "No full-text outlet provides a figure for local Nepali residents missing \u2014 both Al Jazeera and NBC explicitly note this number was 'not clear,' meaning the true casualty scope beyond tourists is unquantified.",
+      "The cause of the flood is unresolved in the coverage: earthquake-triggered avalanche vs. ice-and-rock landslide vs. 'glacial collapse' (Guardian headline) are all in play, and no outlet reconciles the 4.4-magnitude quake's role as cause vs. effect (NYT headline even claims the flood caused the quake).",
+      "Only NBC News surfaces the climate-change dimension (permafrost thaw destabilizing slopes); the wider coverage in this dossier does not contextualize whether this event fits a documented pattern of glacial lake outburst or debris flows in the region.",
+      "No outlet in the dossier provides confirmed status (rescued vs. deceased) for the named missing groups over time, given the live/still-unfolding nature of the event at the detection timestamp."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets are covering the same fast-moving disaster with materially divergent numbers (deaths 157 vs 165; missing ranging from 265/484 up to 'nearly 1,500') and competing causal frames (earthquake vs landslide vs glacial collapse), while most sources are headline-only and no primary source exists \u2014 making a coverage-comparison brief more honest than a single authoritative REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/environment/what-triggered-catastrophic-flood-nepal-tibet-border-2026-08-26/",
+      "title": "What triggered the catastrophic flood on the Nepal-Tibet border? - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/26/world/asia/flood-nepal-tibet.html",
+      "title": "Photos: A Deadly Flood Tears Through Nepal and Tibet - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/26/at-least-eight-killed-in-nepal-flash-floods-that-swept-away-villages-roads",
+      "title": "At least 160 killed, hundreds missing, as flash flood hits Nepal and Tibet - Al Jazeera"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/environment/rescuers-search-survivors-after-devastating-nepal-flood-2026-08-27/",
+      "title": "Nearly 1,500 missing in Nepal and China after devastating Himalaya flood - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/asia/flash-flood-nepal-tibet-villages-destroyed-american-tourists-missing-rcna594473",
+      "title": "Hundreds missing after flood hits Nepal-Tibet border, 157 bodies recovered - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/26/world/asia/nepal-landslide-tibet.html",
+      "title": "Catastrophic Flood Hits Nepal, Engulfing Crowds and Causing Quake - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/26/world/asia/nepal-tibet-floods-wtk.html",
+      "title": "What to Know About Deadly Flash Floods in Nepal and Tibet - The New York Times"
+    }
+  ]
+}
