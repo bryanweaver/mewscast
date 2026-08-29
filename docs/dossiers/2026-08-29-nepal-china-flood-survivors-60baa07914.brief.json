@@ -1,0 +1,109 @@
+{
+  "story_id": "2026-08-29-nepal-china-flood-survivors-60baa07914",
+  "headline_seed": "Nepal-China flood survivors reach safe areas as families await news of nearly 3,000 missing - AP News",
+  "brief": {
+    "story_id": "2026-08-29-nepal-china-flood-survivors-60baa07914",
+    "consensus_facts": [
+      "Catastrophic flash floods struck the Nepal-China border region on Wednesday, Aug. 26, 2026.",
+      "The floods were triggered by a glacier collapse in the Himalayas that also formed a new upstream lake, prompting warnings of further flooding.",
+      "By Saturday, Aug. 29, the death toll in Nepal exceeded 670 (AP: 669; CNN: 675), with roughly 2,400-2,500 people still missing in Nepal.",
+      "Chinese authorities reported at least seven deaths in Tibet, with more than 550 missing, and official reports out of Tibet have been slow.",
+      "Roughly 3,000 people remained missing across Nepal and China combined as of Saturday.",
+      "More than 3,700 people have been rescued in Nepal, including aerial evacuations by army helicopter.",
+      "Nepal's Nuwakot district \u2014 including the village of Trishuli/Devighat \u2014 was among the hardest hit, with homes buried in mud and debris and residents returning to salvage belongings.",
+      "Excavation equipment and heavy machinery were brought into flooded villages to dig through rubble.",
+      "Hundreds of the missing are foreigners who were in the area to work, trek, or make a pilgrimage to a sacred Hindu site (Mount Kailash).",
+      "Rescuers reached a devastated Chinese border-crossing area (Gyirong Port) and described finding little but ruins/debris, with no sign of survivors."
+    ],
+    "disagreements": [
+      {
+        "topic": "Combined death toll in Nepal and Tibet as of Saturday",
+        "positions": {
+          "Associated Press": "States the combined toll rose to 676 dead in one passage and 633 in another within the same article; Nepal's disaster agency figure given as 669 dead with 2,426 missing.",
+          "CNN": "At least 675 killed in Nepal, plus at least seven in China; 2,498 still missing in Nepal as of Saturday evening local time."
+        }
+      },
+      {
+        "topic": "Number missing in Nepal",
+        "positions": {
+          "Associated Press": "2,426 missing (Nepal disaster agency), earlier figures of 977 (Friday) and 1,924 in prior updates.",
+          "CNN": "2,498 still missing in Nepal as of Saturday evening; earlier cites nearly 2,500."
+        }
+      },
+      {
+        "topic": "Day the flooding occurred",
+        "positions": {
+          "Associated Press": "Wednesday, Aug. 26, 2026.",
+          "CNN": "Refers to flooding 'on Wednesday' but in one Anderson Cooper passage says operations followed flash flooding 'on Wednesday' while dating the disaster to this week (Aug. 26 cited in captions)."
+        }
+      },
+      {
+        "topic": "Missing hydropower workers",
+        "positions": {
+          "CNN": "Nearly 900 Nepali hydropower workers unaccounted for and possibly trapped in remote tunnels; about 361 rescued (per Independent Power Producers' Association).",
+          "Associated Press": "Reports more than 100 people believed trapped inside a tunnel at a hydropower plant in the worst-hit district (Article 6); does not cite the ~900 figure."
+        }
+      },
+      {
+        "topic": "Nepal's request for outside assistance (headline-only Reuters items)",
+        "positions": {
+          "Reuters (Article 2)": "Headline states Nepal resumes flood rescue and seeks technical help and billions of dollars \u2014 body text not retrievable.",
+          "Reuters (Article 3)": "Headline states a Chinese rescue team found 'nothing but ruins' at the flood-hit Himalayan border crossing \u2014 body text not retrievable."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Provides the fullest body-text reporting across four articles. Article 1 leads on the human dimension \u2014 survivors reaching relief centers, families awaiting news, a woman reunited with her dog \u2014 while updating combined toll figures (internally inconsistent: 676 vs 633 vs 669). Article 5 is a country-by-country breakdown of foreign nationals missing (30+ countries), emphasizing the international scope. Article 6 leads on dramatic rescue imagery ('survivors caked in mud'), the glacier-collapse cause, the new lake threat, and notes Nepal reversed course to accept foreign rescue teams 'apparently under pressure.' Neutral wire phrasing; heavy on on-the-ground color and evolving official numbers.",
+      "Reuters": "Represented only by two headline-only items with no retrievable body text. Headlines emphasize (a) Nepal seeking technical help and 'billions of dollars' \u2014 a financial/aid-need frame absent from other bodies \u2014 and (b) the 'nothing but ruins' devastation at the Chinese border crossing. Cannot assess lead choice, emphasis, or omissions beyond the headlines.",
+      "CNN": "Live-blog format leading with a bulleted summary: dayslong rescue, ~900 missing hydropower workers, grim toll, agonizing family waits, and a 'searing' human detail (a mud-covered toy bunny at the Chinese crossing). Emphasizes the diaspora and international grief angle heavily \u2014 vigils in Sydney, Long Island, and a missing couple in New Jersey \u2014 and foregrounds correspondent Anderson Cooper's on-scene reporting ('liquid concrete'). Highlights the ~900 hydropower workers figure more prominently than AP. Notes China's slow official reporting out of Tibet."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (official disaster-authority bulletins, government press releases, or agency statements) were provided in the dossier; alignment cannot be independently verified against underlying records.",
+      "All casualty and missing-persons figures in the coverage are attributed second-hand to Nepal's Disaster Management Authority, Nepali police, Chinese state media/CCTV, national foreign ministries, and Nepal's tourism board \u2014 none of these source documents were included for direct comparison."
+    ],
+    "missing_context": [
+      "Only two of six dossier articles (Associated Press and CNN) contain substantial full body text; both Reuters entries are headline-only, and multiple AP entries share bylines/wire origin, so cross-outlet corroboration is narrower than the six-outlet count suggests.",
+      "The AP body text itself contains internally inconsistent combined death-toll figures (676, 633, and 669 all appear) \u2014 no outlet resolves or explains the discrepancy, which stems from differing agency counts and verification methods (AP explicitly notes tallies 'may vary').",
+      "No outlet provides the underlying methodology or timing for how Nepal's disaster authority versus Nepali police arrive at differing death counts (e.g., 579 vs 553), beyond noting the difference exists.",
+      "The Reuters headline claim that Nepal is seeking 'billions of dollars' in aid is not corroborated in any retrievable body text; the scale and recipients of aid requests are otherwise unaddressed.",
+      "No outlet quantifies the total affected population, displacement numbers, or reconstruction needs beyond casualty and rescue figures.",
+      "Coverage does not clarify whether the reported dam burst on the Tibet side (AP Article 6) caused additional casualties or how it relates to the new upstream lake threat.",
+      "No article in the dossier contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same disaster but with materially different emphasis \u2014 AP foregrounds on-the-ground rescue and international scope, CNN foregrounds the ~900 missing hydropower workers and diaspora grief, and the headline-only Reuters items surface an aid-funding angle no other body confirms \u2014 while the casualty figures diverge and even conflict within a single AP article, making this a coverage-comparison story rather than a clean single REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/nepal-china-flood-rescue-fde34c839b648f93f6aa011f044deb00",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/china/nepal-needs-help-technical-areas-not-search-rescue-foreign-minister-says-2026-08-29/",
+      "title": "Nepal resumes flood rescue, seeks technical help and billions of dollars - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/environment/rescuers-scour-nepal-flood-debris-risk-fresh-flooding-grows-2026-08-28/",
+      "title": "Chinese rescue team finds 'nothing but ruins' at flood-hit Himalayan border crossing - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/08/29/world/live-news/nepal-china-flood",
+      "title": "Live updates: Death toll rises and thousands still missing in Nepal and China after catastrophic floods - CNN"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/nepal-china-tibet-floods-missing-14d8016689e5ea7603a55de8e1986236",
+      "title": "People from more than 30 countries are missing after the flash floods in Nepal and China - AP News"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/nepal-tibet-china-glacier-floods-ae9973b5fd2b1dc6d54c3e88b1b55bdc",
+      "title": "Rescuers retrieve flood survivors caked in mud as death toll in Nepal-China border disaster climbs - AP News"
+    }
+  ]
+}
