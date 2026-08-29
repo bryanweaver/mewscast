@@ -1,0 +1,112 @@
+{
+  "story_id": "2026-08-28-trump-administration-considering-trading-727fa332bd",
+  "headline_seed": "Trump administration considering trading Yosemite land to private developer - Los Angeles Times",
+  "brief": {
+    "story_id": "2026-08-28-trump-administration-considering-trading-727fa332bd",
+    "consensus_facts": [
+      "The Trump administration is considering a land exchange that would give a private developer a parcel of Yosemite National Park land to build a road.",
+      "The developer is Kingsbarn Realty Capital, a Nevada-based real estate/investment firm founded and led by CEO Jeff Pori.",
+      "The road would connect Kingsbarn's adjacent private property to a Yosemite route, giving a planned development more direct access to the park.",
+      "Under the proposed arrangement, the Park Service would give up land or an interest/easement and in return receive land of equal value elsewhere in California that has not yet been determined.",
+      "The original reporting came from the Washington-based outlet NOTUS, published Friday, citing anonymous sources and agency documents.",
+      "The Department of the Interior acknowledged a proposal is under consideration but denied inappropriate influence and stated no final decisions have been made, emphasizing any deal would comply with federal laws and review processes.",
+      "Congressional Democrats, including Sen. Adam Schiff, have objected to the deal, with Schiff saying the administration 'appears hellbent on moving forward' and cares only about 'whether there is money involved.'",
+      "The Interior Department notified Congress earlier this year that it was considering enabling the exchange via the Land and Water Conservation Fund, drawing Democratic criticism that the fund is meant for conservation.",
+      "Conservation groups and park advocates have criticized the proposed deal."
+    ],
+    "disagreements": [
+      {
+        "topic": "Size of the Yosemite land parcel / road",
+        "positions": {
+          "Los Angeles Times": "Describes it as an '11-mile strip of land within Yosemite' that Kingsbarn asked NPS to purchase to build a shorter access road.",
+          "Hindustan Times": "Describes it as 'a quarter-mile stretch of Yosemite National Park.'",
+          "People.com": "Does not specify a length; describes it as a parcel within the western boundaries of the park."
+        }
+      },
+      {
+        "topic": "Size of Kingsbarn's adjacent property",
+        "positions": {
+          "People.com": "83 acres of land just outside the park.",
+          "Hindustan Times": "Property 'about five miles from one of the park's defining ancient sequoia groves' (does not give acreage).",
+          "Los Angeles Times": "Does not give acreage; refers to the parcel by a former name, 'Hazel Green Ranch.'"
+        }
+      },
+      {
+        "topic": "Company location",
+        "positions": {
+          "Los Angeles Times": "Nevada-based.",
+          "People.com": "Nevada-based.",
+          "Hindustan Times": "Las Vegas, Nevada (also renders the name 'Kingsburn' in one instance)."
+        }
+      },
+      {
+        "topic": "Distance from development to park under current roads",
+        "positions": {
+          "Los Angeles Times": "Kingsbarn's attorney says residents would have to drive 28 miles using current roads.",
+          "Hindustan Times": "Current entrance point lies more than 10 miles away, around an hour's drive."
+        }
+      },
+      {
+        "topic": "Political-donation angle",
+        "positions": {
+          "Los Angeles Times": "Prominently notes Jeff Pori is a donor to Trump, the RNC and other Republican groups per FEC records, and quotes Sen. Padilla warning against projects chosen on connections; also gives Kingsbarn's rebuttal via Lanny Davis.",
+          "People.com": "Does not mention Pori's donations.",
+          "Hindustan Times": "Does not mention Pori's donations."
+        }
+      },
+      {
+        "topic": "Prior history of the proposal",
+        "positions": {
+          "Los Angeles Times": "Reports previous proposals for the land were repeatedly denied under the George W. Bush and Obama administrations and in court.",
+          "People.com": "Does not mention prior denials.",
+          "Hindustan Times": "Does not mention prior denials."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Los Angeles Times": "The originating full-text report with the most detail. Leads on the land swap and immediately frames it around political pressure and precedent. Uniquely surfaces the donation angle (Pori as Trump/RNC donor), the prior Bush/Obama-era denials and court losses, the 'Hazel Green Ranch' identity, the 11-mile figure, the 28-mile driving claim, and named California senators (Padilla, Schiff). Notably balances by including the developer's rebuttal through Lanny Davis, framing the road as an 'environmentally friendly' solution. Ties into a related 'public lands vs. Trump administration' storyline (Point Reyes cows).",
+      "The New York Times": "Headline-only in this dossier, and the headline is about a different story entirely (U.S. taking control of Venezuelan oil), not Yosemite. Provides no body-level corroboration for this story, though People.com cites the NYT as a co-reporter of the Yosemite documents.",
+      "People.com": "Frames it as a consumer/lifestyle-inflected story ('Hand Part of Yosemite to Private Developer'). Leads on the 'give away' framing and the shortcut into the park. Emphasizes critic reactions\u2014former Yosemite supervisor Don Neubacher ('so ridiculous, it makes you sick') and the park employees' union (NFFE Local 465) statement, which other outlets omit. Notes the swap-for-equal-value mechanic and the stringent NPS approval rules requiring both House and Senate. Adds historical context on Yosemite's protection (Lincoln, Grant, Roosevelt). Attributes sourcing to NOTUS and The New York Times.",
+      "Hindustan Times": "Written as an explainer ('What we know so far') for an international audience. Leans heavily on the NOTUS report, emphasizing the 'under pressure' and 'full weight' of Interior framing and the 'web of limited-liability companies' detail unique to this outlet. Gives the smallest parcel figure (quarter-mile) and the spring-2025 start date. Quotes an anonymous NOTUS source on 'very unusual' political pressure. Contains a spelling inconsistency ('Kingsburn') and cross-promotes unrelated Trump stories."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. The underlying NOTUS report (by Anna Kramer) and the agency documents/fact sheet it references are cited second-hand by the outlets but were not provided in the dossier, so no direct document-vs-coverage comparison is possible.",
+      "The Los Angeles Times claims to have independently reviewed documents including a project 'fact sheet,' but that document is not in the dossier and cannot be verified here."
+    ],
+    "missing_context": [
+      "Editorial disclosure: Only three outlets (Los Angeles Times, People.com, Hindustan Times) provided substantive body text; The New York Times entry is headline-only and its headline is about an unrelated Venezuela oil story. Several detailed claims (donation records, prior denials, LLC structure, specific acreage/mileage) originate from a single outlet each and are flagged as disagreements rather than consensus.",
+      "All coverage ultimately traces back to a single originating report from NOTUS; the LAT adds independent document review and the NYT is cited as a co-reporter, but reporting is not fully independent across the outlets.",
+      "No outlet provides the exact location, acreage, or value of the 'equal value' California land the Park Service would receive in exchange\u2014it is described as undetermined.",
+      "The competing parcel-size figures (11-mile strip vs. quarter-mile stretch) are not reconciled by any outlet and may describe different things (the road length vs. the land width).",
+      "No outlet reports the timeline or procedural stage of the potential deal beyond 'discussions began spring 2025' and 'notified Congress earlier this year.'",
+      "The full text and specific denials in the Interior Department statement vary between outlets; the exact scope of what Interior denied is not uniformly presented.",
+      "No outlet provides detail on the environmental review requirements' status or whether any NEPA process has begun.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets covered the same underlying NOTUS-sourced story with materially different emphasis and conflicting details (parcel size, acreage, driving distance, and whether the political-donation angle is central), while the NYT entry is off-topic\u2014making this a coverage-comparison story rather than a clean single-source REPORT.",
+    "confidence": 0.68
+  },
+  "articles": [
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://www.latimes.com/california/story/2026-08-28/trump-administration-considering-trading-yosemite-land-to-private-developer",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/08/28/us/trump-news",
+      "title": "Trump Administration Live Updates: President Says U.S. To Take Control of Big Portion of Venezuelan Oil - The New York Times"
+    },
+    {
+      "outlet": "People.com",
+      "url": "https://people.com/trump-administration-looking-to-give-yosemite-land-to-private-developer-reports-12072161",
+      "title": "Trump Reportedly Considering Deal to Hand Part of Yosemite to Private Developer - People.com"
+    },
+    {
+      "outlet": "Hindustan Times",
+      "url": "https://www.hindustantimes.com/world-news/us-news/is-trump-giving-away-part-of-yosemite-national-park-to-kingsbarn-realty-capital-for-resort-what-we-know-so-far-101787939727178.html",
+      "title": "Is Trump giving away part of Yosemite National Park to Kingsbarn Realty? What we know so far | Hindustan Times - Hindustan Times"
+    }
+  ]
+}
