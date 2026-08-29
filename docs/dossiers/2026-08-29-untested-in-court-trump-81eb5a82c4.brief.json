@@ -1,0 +1,42 @@
+{
+  "story_id": "2026-08-29-untested-in-court-trump-81eb5a82c4",
+  "headline_seed": "Untested in court, Trump\u2019s new tariffs on Canada raise legal questions - AP News",
+  "brief": {
+    "story_id": "2026-08-29-untested-in-court-trump-81eb5a82c4",
+    "consensus_facts": [
+      "Both outlets' headlines state that Trump's new tariffs on Canada raise legal questions because they are untested in court."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "Associated Press": "The only full-text source in the dossier. AP reports that a week before publication Trump invoked Section 338 of the Tariff Act of 1930 (Smoot-Hawley) to impose a 50% tax on $20 billion worth of Canadian imports, prompting dollar-for-dollar retaliation from Ottawa. AP frames the story around legal fragility: it emphasizes that Section 338 has never been used or litigated ('a blank canvas'), quotes trade lawyer Ryan Majerus of King & Spalding, and cites legal scholars Peter Harrell and Jennifer Hillman of Georgetown (writing in Reason) plus Sara Albrecht of the Liberty Justice Center. The framing foregrounds arguments that the statute may be obsolete or superseded by the Trade Expansion Act of 1962 and the Trade Act of 1974, and that the tariffs may fail legal tests because the administration did not calculate the dollar amount of alleged harm, targeted unrelated goods (hockey sticks, cement), and because Canada's dairy protections apply to many trading partners and were part of a trade pact Trump himself negotiated. AP leans on skeptical legal voices while also including Trump's self-description as 'Tariff Man' and his defense of Smoot-Hawley. Neutral wire phrasing throughout, but the sourcing tilts toward critics of the tariff's legality.",
+      "The Seattle Times": "Headline-only in the dossier \u2014 carries the identical AP headline 'Untested in court, Trump's new tariffs on Canada raise legal questions' via a Google News syndication link. No independent body text; this is a republication of the AP wire, not an independent second source."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Section 338 of the Tariff Act of 1930, the presidential proclamation invoking it, and the referenced Harrell/Hillman Reason article were all described secondhand through AP and could not be independently verified against original documents."
+    ],
+    "missing_context": [
+      "Only one outlet in the dossier (Associated Press) has retrievable full body text. The Seattle Times entry is a headline-only republication of the same AP wire, so there is no independent corroboration \u2014 all substantive claims trace to a single source.",
+      "No primary source (the actual presidential proclamation, the text of Section 338, or the Georgetown scholars' Reason article) was included in the dossier for direct verification.",
+      "No indication of whether any legal challenge to the Canada tariffs has actually been filed, or by whom.",
+      "AP references earlier Trump tariffs that were 'successfully challenged' at the Supreme Court but the dossier provides no detail on that prior ruling or how it bears on the Section 338 tariffs.",
+      "No response from the Trump administration or the Office of the U.S. Trade Representative defending the legal basis of the Section 338 invocation is included.",
+      "No detail on the status of the reported US-Canada trade deal referenced in AP's related-stories list, which may affect whether the tariffs remain in effect.",
+      "No comment from the Canadian government beyond the mention of dollar-for-dollar retaliation."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only one outlet (AP) provides body text, with the second entry being a headline-only republication of the same wire, so there is no framing divergence or primary-source conflict to justify a META. The single well-sourced wire story supports a straightforward REPORT that attributes claims explicitly to AP and its named sources.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-tariff-canada-supreme-court-depression-e5501950e025dbe8df2b7ec662dbe2e4",
+      "title": ""
+    },
+    {
+      "outlet": "The Seattle Times",
+      "url": "https://www.seattletimes.com/business/untested-in-court-trumps-new-tariffs-on-canada-raise-legal-questions/",
+      "title": "Untested in court, Trump\u2019s new tariffs on Canada raise legal questions - The Seattle Times"
+    }
+  ]
+}
