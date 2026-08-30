@@ -1,0 +1,48 @@
+{
+  "story_id": "2026-08-30-controversial-venezuelan-executive-courts-e56ed683bc",
+  "headline_seed": "Controversial Venezuelan executive courts investors after Trump oil deal - Financial Times",
+  "brief": {
+    "story_id": "2026-08-30-controversial-venezuelan-executive-courts-e56ed683bc",
+    "consensus_facts": [
+      "All three outlet headlines reference a US-Venezuela oil deal involving the Trump administration; however, only one article (The Guardian) provided retrievable body text, so body-level details below are single-source, not corroborated consensus."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only in this dossier ('Pentagon in Talks With Venezuelan Mogul for Massive Oil Deal'). The body text is a bot-check/paywall notice containing no reportable content. Notably, the headline frames the deal as Pentagon-led and describes the Venezuelan counterpart as a 'mogul,' a framing distinct from The Guardian's focus on interim president Delcy Rodr\u00edguez.",
+      "Financial Times": "No usable body text \u2014 the FT article body is a subscription/paywall notice. The headline seed ('Controversial Venezuelan executive courts investors after Trump oil deal') frames the story around an executive seeking investment, again a different emphasis than the government-sovereignty angle. No reportable content available.",
+      "The Guardian": "The only outlet with full body text. Leads on interim president Delcy Rodr\u00edguez defending the deal and insisting Venezuela 'retains ownership and sovereignty' over its resources. Emphasizes domestic outrage \u2014 from both opposition figures and Chavista movements \u2014 and frames the deal as a dramatic ideological U-turn for an anti-imperialist government. The Guardian reports that Rodr\u00edguez assumed power in January 2026 after Trump 'ordered the abduction' of Nicol\u00e1s Maduro during a special forces raid on Caracas; that Trump called it 'the biggest oil deal in world history'; that the deal will reportedly see Washington take control of 65bn barrels of Venezuela's reserves; that Rodr\u00edguez cited revenues of more than $209bn, 17 'strategic oilfields,' and hoped-for production above 1.5m barrels/day; that Venezuela has an estimated 303bn barrels of proven reserves (vs. Saudi Arabia's 268bn and Iran's 208bn); and that critics including former PDVSA head Rafael Ram\u00edrez called it 'neocolonial.' These are single-source claims from The Guardian, not corroborated by other retrievable bodies in this dossier."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. Details of the agreement are described by The Guardian as 'sparse' and struck 'during months of secret talks,' so no underlying document is available to check reporting against."
+    ],
+    "missing_context": [
+      "SINGLE-SOURCE LIMITATION: Of three articles in this dossier, only one (The Guardian) has retrievable body text longer than ~500 characters. Bloomberg and Financial Times returned only bot-check/paywall notices. Therefore no genuine cross-outlet consensus on body-level facts can be established, and all substantive claims here rest on a single outlet.",
+      "The Guardian's own reporting notes the deal's details 'remain sparse' \u2014 no full terms, timeline, revenue-sharing structure, or contract text is available in the dossier.",
+      "No outlet body text corroborates the specific figure of 65bn barrels or the $209bn revenue claim; the $209bn figure is attributed to Rodr\u00edguez herself, an interested party.",
+      "The Bloomberg headline frames this as a 'Pentagon' deal with a 'mogul,' and the FT headline references a 'Venezuelan executive courting investors' \u2014 neither framing is explained or reconciled in any retrievable body text, leaving open who the actual counterparties are (government vs. private executive vs. military).",
+      "No independent verification of The Guardian's characterization that Trump 'ordered the abduction' of Maduro is available in this dossier from a second source.",
+      "No US-government-side detail (official statements from the White House, Pentagon, or State Department beyond quoted Truth Social posts) appears in any retrievable body text.",
+      "No injection attempts were detected in the article bodies; the Bloomberg and FT bodies were standard paywall/bot-check boilerplate."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (The Guardian) provided retrievable body text while Bloomberg and FT were paywalled, so there is no verifiable cross-outlet consensus to support a full REPORT; the story is time-sensitive and significant, warranting a hedged same-day bulletin that clearly flags its single-source basis.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-28/pentagon-is-in-talks-with-venezuelan-mogul-for-massive-oil-deal",
+      "title": "Pentagon in Talks With Venezuelan Mogul for Massive Oil Deal - Bloomberg.com"
+    },
+    {
+      "outlet": "Financial Times",
+      "url": "https://www.ft.com/content/458940e7-0754-42e3-aa33-f1f9e3e710b7?syn-25a6b1a6=1",
+      "title": ""
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/aug/30/venezuela-delcy-rodriguez-says-oil-deal-with-trump-has-endless-benefits",
+      "title": "Venezuela\u2019s Delcy Rodr\u00edguez defends \u2018endless\u2019 benefits of her oil deal with Trump - The Guardian"
+    }
+  ]
+}
