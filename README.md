@@ -175,7 +175,6 @@ mewscast/
 │   ├── x_retry.py                  # X API retry helpers
 │   ├── positive_news_post.py       # Positive news posts (WIP)
 │   ├── draft_analyzer.py           # Draft analysis helpers
-│   ├── vocab_report.py             # Vocabulary reporting utility
 │   │
 │   ├── # Walter Croncat journalism pipeline (Stages 1–7)
 │   ├── trend_detector.py           # Stage 1 — X search + watchlist
@@ -201,8 +200,6 @@ mewscast/
 ├── scripts/                        # Utility scripts
 │   ├── journalism_dry_run.py       # End-to-end smoke test (--mock)
 │   ├── rebuild_history.py          # Rebuild post history from X
-│   ├── filter_history.py           # Clean up post history
-│   ├── analytics.py                # Analytics collection
 │   └── triage_review.py            # Triage review tooling
 ├── docs/                           # Documentation (see docs/README.md)
 ├── dossiers/                       # Story dossiers (gitignored)
