@@ -22,11 +22,12 @@ This document records what was shipped and what was refused in the dead-files cl
 - `scripts/preview_watermark.py` — local preview tool, never automated
 - `scripts/backfill_thumbnails.py` — one-shot backfill, never automated
 
-### README Corrections (404/ghost removals only)
+### README Corrections (404/ghost removals + track_analytics swap)
 
 - Removed `src/positive_news_post.py` (never existed)
 - Removed `src/vocab_report.py` (deleted)
 - Removed `scripts/analytics.py` and `scripts/filter_history.py` (deleted)
+- Replaced `scripts/analytics.py` with `scripts/track_analytics.py` (the live analytics path)
 - Removed ghost test files `test_outlet_reply.py` and `test_x_engagement.py` (never existed)
 
 ### Supporting Files Added
