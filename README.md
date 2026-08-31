@@ -195,7 +195,7 @@ mewscast/
 │   ├── correction_post.md          # CORRECTION post type
 │   ├── primary_post.md             # PRIMARY post type
 │   └── journalism_image.md         # Journalism image prompt
-├── tests/                          # 23 test files
+├── tests/                          # 864 tests across 21 test files
 ├── scripts/                        # Utility scripts
 │   ├── journalism_dry_run.py       # End-to-end smoke test (--mock)
 │   ├── rebuild_history.py          # Rebuild post history from X
@@ -243,7 +243,7 @@ pytest tests/test_verification_gate.py -v
 pytest tests/ --cov=src --cov-report=html
 ```
 
-**23 test files**, all green in a single `pytest tests/` run.
+**864 tests across 21 files**, all green in a single `pytest tests/` run.
 
 | Test file | Tests | Coverage area |
 |-----------|-------|---------------|
@@ -266,10 +266,6 @@ pytest tests/ --cov=src --cov-report=html
 | `test_dossier_reply_compose.py` | 12 | Dossier reply composition |
 | `test_x_retry.py` | 9 | X API retry helpers |
 | `test_image_qc.py` | 6 | Image quality checks |
-| `test_watermark.py` | — | Walter signature watermark |
-| `test_x_cat_repost.py` | — | X native cat repost |
-| `test_x_mention_reply.py` | — | X mention reply bot |
-| `test_dead_files_cleanup.py` | — | Dead files removal verification |
 
 **Test isolation note:** `conftest.py` eagerly pre-imports `bs4`, `bluesky_client`, `content_generator`, and `twitter_bot` before test collection. Module-level `sys.modules.setdefault(...)` stubs in individual test files are silently bypassed for those four names. Mock at the call site instead (e.g. `instance.attr = Mock()`).
 

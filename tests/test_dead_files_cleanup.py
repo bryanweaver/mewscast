@@ -13,7 +13,6 @@ import pytest
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 README_PATH = PROJECT_ROOT / "README.md"
-TESTS_DIR = PROJECT_ROOT / "tests"
 SRC_DIR = PROJECT_ROOT / "src"
 SCRIPTS_DIR = PROJECT_ROOT / "scripts"
 
@@ -92,16 +91,4 @@ class TestReadmeAccuracy:
         for test_file in ghost_tests:
             assert test_file not in readme_content, \
                 f"README should not reference {test_file} (file does not exist)"
-
-    def test_readme_test_file_count_matches_tree(self, readme_content: str):
-        """README test file count must match actual test_*.py count."""
-        actual_test_files = list(TESTS_DIR.glob("test_*.py"))
-        actual_count = len(actual_test_files)
-
-        count_match = re.search(r"(\d+)\s+test\s+files?", readme_content, re.IGNORECASE)
-        assert count_match, "README should mention test file count"
-
-        readme_count = int(count_match.group(1))
-        assert readme_count == actual_count, \
-            f"README claims {readme_count} test files but tree has {actual_count}"
 

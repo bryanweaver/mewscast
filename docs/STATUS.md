@@ -22,16 +22,12 @@ This document records what was shipped and what was refused in the dead-files cl
 - `scripts/preview_watermark.py` — local preview tool, never automated
 - `scripts/backfill_thumbnails.py` — one-shot backfill, never automated
 
-### README Corrections
+### README Corrections (404/ghost removals only)
 
 - Removed `src/positive_news_post.py` (never existed)
 - Removed `src/vocab_report.py` (deleted)
 - Removed `scripts/analytics.py` and `scripts/filter_history.py` (deleted)
-- Added `scripts/track_analytics.py` (the live analytics path)
 - Removed ghost test files `test_outlet_reply.py` and `test_x_engagement.py` (never existed)
-- Added missing tests: `test_watermark.py`, `test_x_cat_repost.py`, `test_x_mention_reply.py`, `test_dead_files_cleanup.py`
-- Updated test file count from 21 to 23
-- Added missing workflows: `post-pin-explainer.yml`, `seed-history-images.yml`, `test-dedup.yml`, `x-cat-repost.yml`, `x-mention-reply.yml`
 
 ### Supporting Files Added
 
