@@ -1,0 +1,124 @@
+{
+  "story_id": "2026-08-31-death-toll-rises-in-b5eb95d5b1",
+  "headline_seed": "Death Toll Rises in Grand Canyon Flood as Search Efforts Continue - The New York Times",
+  "brief": {
+    "story_id": "2026-08-31-death-toll-rises-in-b5eb95d5b1",
+    "consensus_facts": [
+      "A catastrophic flash flood struck the Nepal-Tibet (China) border region on Wednesday, Aug. 27, at around 8:40 a.m. local time, inundating areas along the Trishuli River.",
+      "The disaster was triggered by a high-altitude collapse near the Langtang Lirung peak \u2014 a glacier/bedrock failure that produced a rock-and-ice avalanche and landslide, registering as magnitude 5.2 (reported as a landslide by ABC News/USGS and as a glacial/bedrock collapse by CBS News and CNN).",
+      "On the Chinese/Tibetan side, authorities reported at least 16 people confirmed dead (Al Jazeera, CBS News, CNN, ABC News).",
+      "Hundreds of missing are workers at hydropower projects along the Trishuli River, and rescuers pumped air into a buried tunnel while searching for survivors (CBS News, CNN).",
+      "Hundreds of foreign nationals from more than a dozen countries were among the missing, including Americans; Chinese state media reported 261 foreigners missing in Tibet (CBS News, CNN, Al Jazeera, ABC News).",
+      "The U.S. State Department, via spokesperson Tommy Pigott on ABC's 'This Week,' said it activated $3.6 million in emergency humanitarian assistance including up to three months of food for up to 10,000 households (CBS News, CNN, ABC News).",
+      "Residents in flood-affected districts were placed on high alert for fresh flooding after water levels rose in the Bhotekoshi/Bhote Koshi River, with Chinese authorities informing Nepal of increased upstream flow (CBS News, CNN)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total confirmed death toll (reflecting different reporting timestamps)",
+        "positions": {
+          "CNN": "750 total confirmed dead (734 in Nepal, 16 in China) as of Sunday",
+          "ABC News (Article 5)": "797 total, with at least 781 bodies recovered in Nepal as of Sunday",
+          "CBS News": "death toll climbed to 903 with the Nepal figure at 903 as of Monday",
+          "ABC News (Article 6)": "at least 955 total, with 939 bodies recovered in Nepal as of Monday",
+          "Al Jazeera": "at least 939 dead in Nepal plus 16 in Tibet, bringing regional toll to 955"
+        }
+      },
+      {
+        "topic": "Number of people missing",
+        "positions": {
+          "CNN": "around 3,000 missing overall; at least 2,498 in Nepal and 546 in China as of Sunday",
+          "ABC News (Article 5)": "at least 2,502 missing in Nepal plus 546 in China",
+          "CBS News": "4,247 missing, plus 546 on the Chinese side",
+          "ABC News (Article 6)": "more than 4,400 missing; 3,925 listed missing in Nepal plus 546 in China",
+          "Al Jazeera": "4,471 missing on both sides; 3,925 missing nationwide in Nepal including 592 foreigners"
+        }
+      },
+      {
+        "topic": "Number of Americans unaccounted for",
+        "positions": {
+          "CNN": "18 Americans among the missing (citing Chinese figures on foreigners in Tibet)",
+          "ABC News (Article 5)": "85 Americans still missing as of Sunday; nine evacuated",
+          "CBS News": "85 Americans unaccounted for; nine safely evacuated",
+          "ABC News (Article 6)": "80 Americans unaccounted for as of Monday; 13 U.S. citizens made their way to safety"
+        }
+      },
+      {
+        "topic": "Cause characterization",
+        "positions": {
+          "ABC News": "describes it as a landslide about 12 miles northeast of the Rasuwagadhi border post, registered as a 5.2-magnitude landslide by USGS",
+          "CBS News": "describes bedrock underneath a glacier collapsing, taking part of the glacier with it, registering as magnitude 5.2",
+          "CNN": "describes a large portion of a glacier near Langtang Lirung breaking and plunging into the river, triggering an avalanche and landslide"
+        }
+      },
+      {
+        "topic": "Barrier/dammed lake status",
+        "positions": {
+          "CNN": "Chinese officials said a barrier lake formed from the initial landslide overflowed but is stable, with low chance of complete breach",
+          "Other outlets": "Do not mention the barrier lake"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier; the retrievable content is a Google News redirect link, not body text. The headline 'Death Toll Rises in Grand Canyon Flood as Search Efforts Continue' points to the Grand Canyon, Arizona flooding \u2014 a separate, much smaller event from the Nepal-Tibet disaster that dominates the rest of the dossier. Cannot assess NYT framing beyond the headline focus on rising toll and continued search.",
+      "Al Jazeera English": "A photo essay ('In Pictures') foregrounding scale and the human toll. Leads with the highest cumulative figures (939 dead in Nepal, 955 regional, 4,471 missing) and emphasizes the cross-border and international dimension \u2014 foreigners, hydropower workers, and India recovering 17 bodies downstream in Uttar Pradesh not yet in the official toll. Most granular on district-level missing counts (Nuwakot 1,158; Rasuwa 865) and on missing soldiers, police, and officials.",
+      "CBS News": "Leads with the ongoing-danger angle \u2014 fresh flood warnings and residents on high alert \u2014 then pivots to a strong human-interest and climate frame. Gives extended survivor voice (Govind Shreshta, Sharmila Tamang) and a dedicated 'Victims of climate change' section quoting Nepal's foreign minister on Nepal's 0.1% emissions share, while carefully noting scientists say it is too early to draw a direct link. Highlights the Americans-unaccounted-for angle and Malaysia's aid pledge.",
+      "CNN": "Live-blog format with the most operational detail on the rescue: air being pumped into the Trishuli-3 'A' tunnel, drilling a manhole, 898 hydropower workers unaccounted for with 361 rescued, and dramatic army rescue video. Uniquely reports the barrier-lake overflow and Chinese officials' six-to-seven-minute timeline for the avalanche hitting Gyirong Port. Reflects an earlier snapshot (750 dead, ~3,000 missing).",
+      "ABC News": "Filed multiple time-stamped updates tracking the rising toll (797 then 955) and missing count (3,000+ then 4,400+). Leads consistently with the American angle (85 then 80 unaccounted for; evacuations) and State Department quotes. Adds forensic geography \u2014 flood destruction traced at least 62 miles downriver via verified video/satellite analysis \u2014 and a UN assessment that 65,000 people need water/sanitation support and 22,000 children need protection.",
+      "ABC News (Grand Canyon, Article 7)": "A separate U.S. story: leads on a second body recovered at the Grand Canyon (toll of two) and 14 people 'may be missing or unaccounted' after Saturday's flash flood, with continued flood watch. This is the event the NYT headline references \u2014 distinct from the Nepal-Tibet disaster."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official disaster-authority bulletins, State Department transcripts, USGS records, or UN assessments) were provided in the dossier, so no direct document-to-coverage comparison is possible.",
+      "Several figures are attributed to primary-adjacent sources within the articles \u2014 Nepal's National Disaster Risk Reduction and Management Authority posts to X, China's Xinhua, USGS magnitude data, and State Department 'This Week' statements \u2014 but the underlying documents themselves were not supplied for verification."
+    ],
+    "missing_context": [
+      "The dossier conflates two unrelated flood events: the New York Times headline (Article 1) concerns a Grand Canyon, Arizona flash flood (2 dead, ~14 missing per ABC Article 7), while Articles 2-6 concern the far larger Nepal-Tibet border flood (900+ dead). The story ID and headline seed are tied to the Grand Canyon event, but the bulk of the retrievable coverage is about Nepal.",
+      "No full body text was available for the headline outlet (The New York Times, Article 1) \u2014 only a redirect link \u2014 so its actual reporting could not be assessed.",
+      "The differing death and missing tallies are largely a function of different reporting timestamps (Sunday vs. Monday snapshots) rather than genuine factual dispute, but no single article reconciles the full timeline of how the numbers climbed.",
+      "The wide spread in 'Americans missing' figures (18 vs. 80-85) is not explained \u2014 CNN's 18 appears to derive from Chinese figures on foreigners in Tibet, while ABC/CBS's 80-85 are State Department figures for Nepal; no outlet reconciles the two.",
+      "Al Jazeera notes 17 bodies recovered in India's Uttar Pradesh not yet included in official tolls, meaning the true regional death count may be understated; only Al Jazeera reports this.",
+      "None of the outlets detail the safety, engineering, or regulatory status of the affected hydropower projects where hundreds of workers were trapped \u2014 a fair-minded reader would want to know why so many workers were in the flood path.",
+      "Little context is provided on early-warning systems: whether upstream monitoring existed for the glacial-lake/barrier-lake hazard and whether warnings could have reached workers or residents before the wall of water arrived.",
+      "No article contains any apparent instruction-injection attempt; all article bodies were treated as data."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (Al Jazeera, CBS, CNN, ABC) reported the same Nepal-Tibet flood with materially different framings and time-stamped figures, and the dossier itself mixes in a separate Grand Canyon event via the NYT headline \u2014 making this a coverage-comparison story rather than a straight REPORT, especially given the unexplained divergences in death, missing, and American-casualty counts.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/08/31/us/grand-canyon-floods.html",
+      "title": "Death Toll Rises in Grand Canyon Flood as Search Efforts Continue - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/gallery/2026/8/31/photos-nearly-1000-dead-thousands-missing-in-nepal-china-border",
+      "title": "Photos: Nearly 1,000 dead, thousands missing in Nepal\u2013China border floods - Al Jazeera"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/nepal-flooding-warning-death-toll-rescue/",
+      "title": "Nepal on high alert for fresh flooding after river levels rise as death toll passes 900 - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://edition.cnn.com/2026/08/29/world/live-news/nepal-china-flood",
+      "title": "August 29, 2026 \u2014 Death toll rises, thousands missing in Nepal-China floods - CNN"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/nepal-tibet-flood-death-toll-rises-750-officials/story?id=136067514",
+      "title": "Nepal-Tibet flood death toll rises to 797, officials say, more than 3,000 missing - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/International/nepal-tibet-flood-death-toll-surpasses-900-officials/story?id=136081207",
+      "title": "Nepal-Tibet flood death toll surpasses 900, officials say, more than 4,400 missing - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/20-missing-unaccounted-grand-canyon-after-flash-flood/story?id=136074360",
+      "title": "At least 2 dead in Grand Canyon flash flooding as urgent search for missing continues - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
