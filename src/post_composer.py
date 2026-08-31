@@ -445,7 +445,7 @@ class PostComposer:
         )
         headline_only_count = len(dossier.articles) - full_text_count
 
-        # Time/date context — same shape used by content_generator
+        # Time/date context
         now = datetime.now()
         current_date = now.strftime("%B %d, %Y")
         day_of_week = now.strftime("%A")

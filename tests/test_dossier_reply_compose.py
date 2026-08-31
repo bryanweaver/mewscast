@@ -8,7 +8,7 @@ below 2).
 import pytest
 
 
-# Heavy module mocking (tweepy, atproto, anthropic, content_generator)
+# Heavy module mocking (tweepy, atproto, anthropic)
 # is done once in tests/conftest.py before any test module is collected.
 # main.py is imported lazily inside fixtures so its module-level state
 # doesn't leak into other test files' fixtures (seen under pytest 9.x:

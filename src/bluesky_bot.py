@@ -11,7 +11,7 @@ from atproto import Client
 from atproto import models
 from typing import Optional
 from PIL import Image
-from content_generator import _truncate_at_sentence
+from truncate import _truncate_at_sentence
 from bluesky_client import create_bluesky_client
 
 # URLs in plain reply text are NOT auto-clickable in Bluesky — the
