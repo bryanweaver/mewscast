@@ -1,0 +1,123 @@
+{
+  "story_id": "2026-08-31-us-strikes-iran-s-360b96a1db",
+  "headline_seed": "US strikes Iran\u2019s Larak Island in first attack in weeks - Al Jazeera",
+  "brief": {
+    "story_id": "2026-08-31-us-strikes-iran-s-360b96a1db",
+    "consensus_facts": [
+      "US forces struck two Iranian launchers on Larak Island on Sunday, according to US Central Command (CNN, Axios, ABC, CNBC).",
+      "The strike was the first US military action against Iran in over a month, with the last known strikes occurring in late July (CNN, Axios, ABC, CNBC).",
+      "CENTCOM said Iranian Revolutionary Guard forces were observed preparing to launch rockets carrying sea mines into the Strait of Hormuz (CNN, Axios, CNBC).",
+      "Iran's IRGC responded by launching missile (and, per some, drone) strikes on the King Hussein and Al-Azraq US bases in Jordan (CNN, Al Jazeera, ABC, CNBC).",
+      "Jordan's armed forces said they intercepted eight missiles that entered the kingdom's airspace (CNN, Al Jazeera, Axios, ABC).",
+      "The IRGC characterized the US strike as an aggression that would be met with punishment/'punishment of the aggressor' (CNN, Al Jazeera, Axios, ABC, CNBC).",
+      "CENTCOM said it completed clearing sea mines from the strait's international shipping routes last week (CNN, Axios, ABC, CNBC).",
+      "Trump previously said any ship or boat placing new mines would be immediately and systematically destroyed under a 'zero tolerance' policy (CNN, Axios, ABC).",
+      "The US-Iran war has now passed the six-month mark, having begun in late February 2026 (ABC, CNBC).",
+      "US Central Command's spokesperson is identified as Capt. Tim Hawkins (CNN, Axios, CNBC)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Casualties from the US strike on Larak Island",
+        "positions": {
+          "CNN": "Reports the IRGC accused the US of an attack that 'resulted in casualties among Iranian forces and civilians' but gives no figure; a US official reported no impacts from the Iranian retaliation.",
+          "Axios": "Tasnim News Agency (IRGC-affiliated) reported a drone conducted the strike and two people were killed and two wounded.",
+          "ABC News": "IRGC said the attack killed and wounded several Iranian fighters and civilians; no precise toll provided.",
+          "CNBC": "IRGC said the US attack killed and wounded several Iranian soldiers; no precise toll.",
+          "Al Jazeera": "Does not report Iranian casualties from the Larak strike."
+        }
+      },
+      {
+        "topic": "Method of the US strike",
+        "positions": {
+          "CNN": "Describes a US strike on 'rocket launchers'; does not specify a drone.",
+          "Axios": "Notes Tasnim (Iran-affiliated) reported a drone conducted the strike.",
+          "CNBC": "Describes a strike on rocket launchers; does not specify a drone.",
+          "ABC News": "Describes a strike on rocket launchers; does not specify a drone."
+        }
+      },
+      {
+        "topic": "Type of Iranian retaliation weapons",
+        "positions": {
+          "CNN": "Missiles fired into Jordan, later citing IRGC 'missile and drone strikes.'",
+          "Al Jazeera": "Combined missile and drone operation.",
+          "Axios": "Ballistic missiles, per a US official.",
+          "ABC News": "Ballistic missiles, citing Iranian media and Axios.",
+          "CNBC": "Combined missile and drone operation."
+        }
+      },
+      {
+        "topic": "Oil price movement",
+        "positions": {
+          "Reuters": "Headline states oil jumped more than 1% after the attack (a prior URL version referenced more than 2%).",
+          "CNN": "Reports Brent crude rose 2.8% to $90.57 and US crude rose 2.7% to $85.64."
+        }
+      },
+      {
+        "topic": "Whether US-Iran negotiations are ongoing",
+        "positions": {
+          "CNN": "White House said Thursday there are no ongoing negotiations, though Iran-Oman talks over restoring maritime traffic continue with Qatari backing.",
+          "Others": "Do not address the diplomatic track in detail."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier; frames the story through markets ('Oil jumps more than 1% after US attack on Iran's Larak island'), leading with the economic impact rather than the military or human dimension. No body text available to assess buried or omitted details.",
+      "CNN": "Leads with Iranian retaliation ('Iran retaliated against US forces on Sunday') and provides the fullest chronology. Foregrounds the US official framing of the strike as pre-emptive minelaying prevention, embeds the White House 'no negotiations' line, notes the Iran-Oman/Qatar diplomatic track, and closes on oil prices and Treasury's 'economic D-Day' sanctions. Consistently attributes Iranian claims to state broadcaster IRIB and Fars.",
+      "Al Jazeera English": "Leads with and centers the Iranian retaliation ('Punishment of the Aggressor'), giving most space to the IRGC's own account of damage inflicted on US bases and its defiant warnings about Hormuz. Omits Iranian casualties from the Larak strike and does not carry the US/CENTCOM justification narrative, presenting the exchange primarily from Tehran's vantage point.",
+      "Axios": "Leads with the US rationale ('to prevent the deployment of sea mines') and heavily quotes CENTCOM's framing of a 'limited, precise action' against an 'imminent threat.' Notably the only outlet to surface the Iranian (Tasnim) claim of a drone strike killing two and wounding two. Uses a structured 'Why it matters / Driving the news / What they're saying' format that privileges the official US narrative.",
+      "ABC News (Australian Broadcasting Corporation)": "Provides the most context-rich framing: recaps the six-month war, the Feb. 28 US-Israeli attack, thousands killed and millions displaced, 18 US service members killed, and the Hormuz blockade cutting off ~a fifth of world oil transit. Frames the current period as a 'stalemate' with a pivot to 'economic warfare,' detailing Bessent's weekly sanctions plan. Balances US-official and Iranian-media attributions.",
+      "CNBC": "Leads with Trump's escalatory threat to blow Kharg Island 'to smithereens,' foregrounding the market/energy angle and the widening of targets to Iran's main oil export hub. Adds unique maritime detail \u2014 a US Navy blockade, Iran targeting vessels outside the northern lane, and a tanker struck by an unknown projectile Saturday per UK Maritime Trade Operations. Frames the story through energy-market and shipping-security stakes."
+    },
+    "primary_source_alignment": [
+      "No primary sources (CENTCOM statements in full, IRGC official releases, Jordanian military statement, or oil-market data) were located for this story. All claims rest on outlet reporting and paraphrased/partial official statements.",
+      "The CENTCOM spokesperson quotes (Capt. Tim Hawkins) appear consistently across CNN, Axios, and CNBC, but no full primary CENTCOM release was in the dossier to verify wording or context.",
+      "Iranian casualty and damage claims are sourced entirely to Iranian state/affiliated media (IRIB, Fars, Tasnim) as relayed by outlets; no independent primary confirmation is available."
+    ],
+    "missing_context": [
+      "Dossier limitation: five of six articles have full body text (CNN, Al Jazeera, Axios, ABC, CNBC); Reuters is headline-only and cannot corroborate body-level details. Consensus facts above are drawn only from the five full-text outlets.",
+      "No independent verification of Iranian casualty figures \u2014 the two-killed/two-wounded figure comes solely from IRGC-affiliated Tasnim via Axios, and 'several' killed/wounded from IRGC via IRIB.",
+      "No independent verification of the IRGC's claim that its strikes inflicted 'heavy damage' on the Jordanian bases; US/Jordanian sources report all eight missiles intercepted with no casualties, a direct factual conflict left unresolved.",
+      "No outlet provides Jordan's own political reaction to Iranian missiles transiting/targeting its territory, nor how US bases came to be described as 'US-operated' on Jordanian soil.",
+      "The exact number and type of Iranian projectiles is inconsistent (eight intercepted per Jordan, but 'missile and drone' operations described elsewhere) and no outlet reconciles the count.",
+      "No casualty or damage assessment for the US side beyond 'no impact/no casualties' from an unnamed US official.",
+      "Reuters' headline references two different oil-percentage figures across the URL ('more than 2%') versus the title ('more than 1%'); no body text to clarify which is current.",
+      "Limited attribution transparency: much of the US account rests on a single unnamed 'US official' repeated across outlets, which may represent one source rather than independent corroboration.",
+      "No article contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets reported the same US-Iran exchange but with materially divergent framings \u2014 Al Jazeera centers Iran's retaliation narrative, Axios and CNN privilege the CENTCOM justification, CNBC leads on Trump's escalation threat and energy stakes, and ABC supplies the war's full context \u2014 while key facts like casualties and damage remain contested between US/Jordanian and Iranian sources. That divergence, plus the absence of any primary source, makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/energy/oil-jumps-more-than-2-after-us-attack-irans-larak-island-2026-08-30/",
+      "title": "Oil jumps more than 1% after US attack on Iran's Larak island - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://edition.cnn.com/2026/08/30/politics/us-iran-strikes-larak-island",
+      "title": "US strikes Iranian rocket launchers, official says, marking first attack in a month - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/30/us-strikes-irans-lark-island-in-first-attack-in-weeks",
+      "title": ""
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/08/30/us-iran-strike-hormuz-mines",
+      "title": "U.S. strikes Iran to prevent Hormuz mine threat - Axios"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://www.abc.net.au/news/2026-08-31/middle-east-war-us-strikes-launched-iran-larak-island/107096404",
+      "title": "Iran retaliates to US strikes, Iranian state media reports - ABC News & Headlines \u2013 Australian Broadcasting Corporation"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/30/us-iran-strikes-strait-hormuz.html",
+      "title": "U.S. strikes Iranian rocket launchers near Strait of Hormuz - CNBC"
+    }
+  ]
+}
