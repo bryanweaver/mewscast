@@ -51,3 +51,9 @@ This document records what was shipped and what was refused in the dead-files cl
 4. **Action SHA-pinning of untouched YAML** — Only edited files that needed changes. Did not SHA-pin actions in workflows that weren't otherwise modified.
 
 5. **pyproject.toml / uv / FastAPI** — Repository uses `requirements.txt`; no new package managers or frameworks added.
+
+6. **README inventory gold-plating (reviewer bounce)** — The following were attempted but reverted per review feedback (claim is "404s gone", not "README must list all live files"):
+   - Adding missing workflows to README (`post-pin-explainer.yml`, `seed-history-images.yml`, `test-dedup.yml`, `x-cat-repost.yml`, `x-mention-reply.yml`)
+   - Adding missing tests to README table (`test_watermark.py`, `test_x_cat_repost.py`, `test_x_mention_reply.py`, `test_dead_files_cleanup.py`)
+   - Updating README test file count from 21 to 23
+   - Enforcing README workflow-list or test-table completeness invariants in tests
