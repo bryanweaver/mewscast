@@ -1,0 +1,47 @@
+name: Open Issue on Failure
+
+on:
+  workflow_run:
+    workflows:
+      - "Bluesky Engagement"
+      - "Bluesky Outlet Reply"
+      - "Engage Cats Bluesky"
+      - "Journalism Dry Run"
+      - "Journalism Publish"
+      - "Journalism Republish"
+      - "Post Correction"
+      - "Post/Pin Explainer"
+      - "Rebuild History"
+      - "Seed History Images"
+      - "Test Dedup (L4 LLM gate)"
+      - "Track Analytics"
+      - "Triage Review"
+      - "X Cat Repost"
+      - "X Mention Reply"
+    types:
+      - completed
+
+permissions:
+  issues: write
+
+jobs:
+  open-issue:
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'failure'
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+
+      - uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3
+        with:
+          python-version: "3.11"
+
+      - name: Open failure issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: python scripts/open_failure_issue.py
