@@ -26,5 +26,4 @@ The following patterns and tools are explicitly prohibited:
 
 ## Known Leftovers
 
-- **Bluesky engagement duplicate** — `bluesky-engage.yml` and `engage-cats-bluesky.yml` both write `bluesky_engagement_history.json`. Do not disable either until a later claim picks a schema.
 - **pytest not in CI** — pytest is used by `tests/` but is not in `requirements.txt` and there is no pytest GitHub Actions job. Missing CI is not a hold; do not add a pytest workflow without explicit instruction.
