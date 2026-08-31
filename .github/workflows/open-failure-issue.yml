@@ -4,20 +4,20 @@ on:
   workflow_run:
     workflows:
       - "Bluesky Engagement"
-      - "Bluesky Outlet Reply"
-      - "Engage Cats Bluesky"
-      - "Journalism Dry Run"
-      - "Journalism Publish"
-      - "Journalism Republish"
+      - "Bluesky Outlet Reply (Walter Croncat)"
+      - "Engage with Cat Community (Bluesky)"
+      - "Journalism Dry Run (Walter Croncat)"
+      - "Journalism Publish (Walter Croncat)"
+      - "Post and Pin Explainer"
       - "Post Correction"
-      - "Post/Pin Explainer"
-      - "Rebuild History"
-      - "Seed History Images"
+      - "Rebuild Post History from X"
+      - "Republish Draft (Walter Croncat)"
+      - "Seed history images to R2"
       - "Test Dedup (L4 LLM gate)"
       - "Track Analytics"
-      - "Triage Review"
-      - "X Cat Repost"
-      - "X Mention Reply"
+      - "Triage Review (Walter Croncat)"
+      - "X Cat Repost (Native RT)"
+      - "X Mention Reply (Walter Croncat)"
     types:
       - completed
 
