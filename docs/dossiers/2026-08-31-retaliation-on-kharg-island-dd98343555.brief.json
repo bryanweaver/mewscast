@@ -1,0 +1,57 @@
+{
+  "story_id": "2026-08-31-retaliation-on-kharg-island-dd98343555",
+  "headline_seed": "Retaliation on Kharg Island weighed as US-Iran hostilies reignite - Fox News",
+  "brief": {
+    "story_id": "2026-08-31-retaliation-on-kharg-island-dd98343555",
+    "consensus_facts": [
+      "Both outlets in the dossier reference renewed hostilities between the US and Iran as of late August 2026, with only Al Jazeera providing substantial body text on the specific exchange of strikes."
+    ],
+    "disagreements": [
+      {
+        "topic": "Location of the US strike in Iran",
+        "positions": {
+          "Al Jazeera English": "Reports a US attack on Larak Island in southern Iran, prompting Iranian retaliation.",
+          "Fox News": "The headline seed references Kharg Island as the site of weighed retaliation; the Fox body text does not confirm or discuss any specific island strike."
+        }
+      },
+      {
+        "topic": "Nature of the current escalation",
+        "positions": {
+          "Al Jazeera English": "Frames the story around an actual completed exchange of missile and drone strikes (US strike on Larak Island, Iranian strikes on King Hussein and Al Azraq bases in Jordan, and a downed MQ-9 Reaper).",
+          "Fox News": "Frames the story around US warnings and messaging, quoting VP Vance describing Trump's social-media posts as warnings to Iran over attacks on commercial shipping \u2014 no confirmed strikes described in the body."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Al Jazeera English": "Leads with Iran's retaliatory missile strikes on two US bases in Jordan, sourcing the IRGC statement and its 'Punishment of the Aggressor' operation name. Reports a US attack on Larak Island (not Kharg) as the trigger. Includes Jordanian military confirmation of intercepting eight missiles and no injuries, plus a claim that the IRGC downed a US MQ-9 Reaper over the Strait of Hormuz. Presents both the Iranian claims (with attribution) and the Jordanian counter-claim. Focuses on the military exchange itself.",
+      "Fox News": "Provided with no headline in the dossier body and a live-blog-style entry. Leads on VP JD Vance's comments framing Trump's social-media posts as warnings of 'consequences' to Iran over alleged attacks on commercial shipping. Emphasizes US messaging, deterrence, and characterization of Iran as 'behaving like a terrorist country.' Does not describe any completed US strike on an island (despite the Kharg Island headline seed) and does not corroborate Al Jazeera's account of the Larak strike or the Jordan retaliation."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All claims about specific strikes, casualties, missile intercepts, and the downed drone rest on outlet reporting and, for Al Jazeera, on IRGC and Jordanian military statements that could not be independently verified against a primary document."
+    ],
+    "missing_context": [
+      "Only one of the two outlets (Al Jazeera English) provided substantial body text (>500 characters); the Fox News entry is a short live-blog snippet, so no true two-outlet body-level consensus exists.",
+      "The headline seed references 'Kharg Island' but Al Jazeera reports the strike occurred on 'Larak Island.' Neither body text reconciles this discrepancy, and it is unclear whether these are the same event, two different events, or an error.",
+      "No independent verification of the IRGC's damage claims ('destroyed technical and repair infrastructure') \u2014 Al Jazeera reports these as IRGC assertions only.",
+      "No US official confirmation of the Larak Island strike, the strikes on King Hussein and Al Azraq bases, or the downing of the MQ-9 Reaper appears in either dossier article.",
+      "No casualty figures beyond 'no injuries reported' at the Jordan bases; no details on the scale or targets of the alleged US strike.",
+      "No context on the alleged Iranian attacks on commercial shipping that Vance references, nor on how they connect to the strikes Al Jazeera describes.",
+      "No timeline reconciling Al Jazeera's account (dated Aug. 30) with the Fox coverage and story detection date (Aug. 31)."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (Al Jazeera English) has substantial body text describing an active, time-sensitive military exchange, while Fox provides only tangential messaging coverage and an unreconciled Kharg-vs-Larak Island discrepancy remains. This warrants a same-day hedged bulletin rather than a REPORT, since core facts lack two-outlet body-level corroboration.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/8/30/us-strikes-irans-lark-island-in-first-attack-in-weeks",
+      "title": "Iran attacks US bases in Jordan after US strikes Larak Island - Al Jazeera"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://www.foxnews.com/live-news/us-iran-news-war-trump-jordan-latest-today-august-31",
+      "title": ""
+    }
+  ]
+}
