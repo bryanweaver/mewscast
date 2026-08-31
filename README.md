@@ -153,17 +153,12 @@ mewscast/
 │   ├── journalism-dry-run.yml      # Dry-run (manual trigger)
 │   ├── journalism-republish.yml    # Republish a saved draft
 │   ├── post-correction.yml         # Manual correction post
-│   ├── post-pin-explainer.yml      # Post and pin explainer thread
 │   ├── bluesky-engage.yml          # Bluesky engagement automation
 │   ├── engage-cats-bluesky.yml     # Cat community engagement (Bluesky)
 │   ├── bluesky-outlet-reply.yml    # Bluesky outlet reply bot
 │   ├── triage-review.yml           # Triage decision logging
 │   ├── track-analytics.yml         # Engagement analytics
-│   ├── rebuild-history.yml         # Rebuild post history from X
-│   ├── seed-history-images.yml     # Seed history images to R2
-│   ├── test-dedup.yml              # Test L4 LLM dedup gate
-│   ├── x-cat-repost.yml            # X native cat repost
-│   └── x-mention-reply.yml         # X mention reply bot
+│   └── rebuild-history.yml         # Rebuild post history from X
 ├── src/
 │   ├── main.py                     # Entry point (journalism pipeline + CLI modes)
 │   ├── twitter_bot.py              # X/Twitter API integration (publish path)
@@ -250,31 +245,31 @@ pytest tests/ --cov=src --cov-report=html
 
 **23 test files**, all green in a single `pytest tests/` run.
 
-| Test file | Coverage area |
-|-----------|---------------|
-| `test_bluesky_outlet_reply.py` | Bluesky outlet reply bot |
-| `test_bots.py` | Bluesky + X bot posting pipeline |
-| `test_content_generator.py` | Legacy content generation |
-| `test_deduplication.py` | Post deduplication logic |
-| `test_dossier_renderer.py` | Dossier HTML renderer |
-| `test_dossier_reply_compose.py` | Dossier reply composition |
-| `test_dossier_store.py` | Data classes + JSON persistence |
-| `test_engagement.py` | Engagement bot behavior |
-| `test_field_notes.py` | Field-notes reply composer |
-| `test_image_generator.py` | Image generation |
-| `test_image_qc.py` | Image quality checks |
-| `test_meta_analyzer.py` | Stage 4: prompt, JSON parsing, retry |
-| `test_post_composer.py` | Stage 5: per-type prompt dispatch |
-| `test_primary_source_finder.py` | Stage 3: primary source pattern matching |
-| `test_source_gatherer.py` | Stage 3: slant-diverse fetch |
-| `test_story_triage.py` | Stage 2: heuristic scoring |
-| `test_trend_detector.py` | Stage 1: watchlist query + clustering |
-| `test_verification_gate.py` | Stage 6: keystone sign-off rule + all hard rules |
-| `test_watermark.py` | Walter signature watermark |
-| `test_x_cat_repost.py` | X native cat repost |
-| `test_x_mention_reply.py` | X mention reply bot |
-| `test_x_retry.py` | X API retry helpers |
-| `test_dead_files_cleanup.py` | Dead files removal verification |
+| Test file | Tests | Coverage area |
+|-----------|-------|---------------|
+| `test_bots.py` | 118 | Bluesky + X bot posting pipeline |
+| `test_engagement.py` | 95 | Engagement bot behavior |
+| `test_content_generator.py` | 95 | Legacy content generation |
+| `test_field_notes.py` | 49 | Field-notes reply composer |
+| `test_source_gatherer.py` | 41 | Stage 3: slant-diverse fetch |
+| `test_deduplication.py` | 70 | Post deduplication logic |
+| `test_verification_gate.py` | 58 | Stage 6: keystone sign-off matrix + all hard rules |
+| `test_post_composer.py` | 22 | Stage 5: per-type prompt dispatch |
+| `test_dossier_renderer.py` | 22 | Dossier HTML renderer |
+| `test_dossier_store.py` | 28 | Data classes + JSON persistence |
+| `test_trend_detector.py` | 23 | Stage 1: watchlist query + clustering |
+| `test_story_triage.py` | 25 | Stage 2: heuristic scoring |
+| `test_primary_source_finder.py` | 18 | Stage 3: primary source pattern matching |
+| `test_meta_analyzer.py` | 14 | Stage 4: prompt, JSON parsing, retry |
+| `test_image_generator.py` | 16 | Image generation |
+| `test_bluesky_outlet_reply.py` | 20 | Bluesky outlet reply bot |
+| `test_dossier_reply_compose.py` | 12 | Dossier reply composition |
+| `test_x_retry.py` | 9 | X API retry helpers |
+| `test_image_qc.py` | 6 | Image quality checks |
+| `test_watermark.py` | — | Walter signature watermark |
+| `test_x_cat_repost.py` | — | X native cat repost |
+| `test_x_mention_reply.py` | — | X mention reply bot |
+| `test_dead_files_cleanup.py` | — | Dead files removal verification |
 
 **Test isolation note:** `conftest.py` eagerly pre-imports `bs4`, `bluesky_client`, `content_generator`, and `twitter_bot` before test collection. Module-level `sys.modules.setdefault(...)` stubs in individual test files are silently bypassed for those four names. Mock at the call site instead (e.g. `instance.attr = Mock()`).
 
