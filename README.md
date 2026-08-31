@@ -133,9 +133,6 @@ python src/main.py journalism --topic "US tariffs on China" --dry-run
 
 # Republish a saved dry-run draft
 python src/main.py republish <story_id>
-
-# Offline smoke test (stubs X, Google News, and Claude calls)
-python scripts/journalism_dry_run.py --mock
 ```
 
 Rejected drafts (verification gate failures after one retry) land in `drafts/rejected/`.
@@ -197,7 +194,6 @@ mewscast/
 │   └── journalism_image.md         # Journalism image prompt
 ├── tests/                          # 864 tests across 21 test files
 ├── scripts/                        # Utility scripts
-│   ├── journalism_dry_run.py       # End-to-end smoke test (--mock)
 │   ├── rebuild_history.py          # Rebuild post history from X
 │   ├── track_analytics.py          # Engagement analytics
 │   └── triage_review.py            # Triage review tooling
