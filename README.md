@@ -173,9 +173,7 @@ mewscast/
 │   ├── bluesky_engagement_bot.py   # Bluesky engagement bot
 │   ├── bluesky_outlet_reply.py     # Bluesky outlet reply bot
 │   ├── x_retry.py                  # X API retry helpers
-│   ├── positive_news_post.py       # Positive news posts (WIP)
 │   ├── draft_analyzer.py           # Draft analysis helpers
-│   ├── vocab_report.py             # Vocabulary reporting utility
 │   │
 │   ├── # Walter Croncat journalism pipeline (Stages 1–7)
 │   ├── trend_detector.py           # Stage 1 — X search + watchlist
@@ -201,8 +199,7 @@ mewscast/
 ├── scripts/                        # Utility scripts
 │   ├── journalism_dry_run.py       # End-to-end smoke test (--mock)
 │   ├── rebuild_history.py          # Rebuild post history from X
-│   ├── filter_history.py           # Clean up post history
-│   ├── analytics.py                # Analytics collection
+│   ├── track_analytics.py          # Engagement analytics
 │   └── triage_review.py            # Triage review tooling
 ├── docs/                           # Documentation (see docs/README.md)
 ├── dossiers/                       # Story dossiers (gitignored)
@@ -253,8 +250,6 @@ pytest tests/ --cov=src --cov-report=html
 | `test_bots.py` | 118 | Bluesky + X bot posting pipeline |
 | `test_engagement.py` | 95 | Engagement bot behavior |
 | `test_content_generator.py` | 95 | Legacy content generation |
-| `test_outlet_reply.py` | 62 | X outlet reply bot |
-| `test_x_engagement.py` | 61 | X engagement bot |
 | `test_field_notes.py` | 49 | Field-notes reply composer |
 | `test_source_gatherer.py` | 41 | Stage 3: slant-diverse fetch |
 | `test_deduplication.py` | 70 | Post deduplication logic |

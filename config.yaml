@@ -399,8 +399,6 @@ journalism:
                                    # tekedia.com/x-restricts-programmatic-
                                    # bot-replies-to-boost-genuine-users-
                                    # interaction/
-                                   # Audit trail: successful follows logged
-                                   # to outlet_reply_history.json.follows[].
     priority_outlets:              # Only reply to these outlet X handles
       - Reuters
       - AP
