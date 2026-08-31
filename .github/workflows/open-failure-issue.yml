@@ -5,7 +5,6 @@ on:
     workflows:
       - "Bluesky Engagement"
       - "Bluesky Outlet Reply (Walter Croncat)"
-      - "Engage with Cat Community (Bluesky)"
       - "Journalism Dry Run (Walter Croncat)"
       - "Journalism Publish (Walter Croncat)"
       - "Post and Pin Explainer"
