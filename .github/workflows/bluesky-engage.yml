@@ -20,13 +20,6 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: Random delay
-        run: |
-          # Random delay 1-5 minutes
-          DELAY=$((RANDOM % 300 + 60))
-          echo "Waiting ${DELAY} seconds..."
-          sleep $DELAY
-
       - uses: actions/checkout@v4
       - name: Setup environment
         uses: ./.github/actions/setup-python-env
