@@ -388,7 +388,6 @@ class TestPostJournalismCycleEmptyDossier:
         # --- Stub the external services (bots / fetcher / stores)
         monkeypatch.setattr(main, "TwitterBot", MagicMock())
         monkeypatch.setattr(main, "BlueskyBot", MagicMock())
-        monkeypatch.setattr(main, "ContentGenerator", MagicMock())
         monkeypatch.setattr(main, "NewsFetcher", MagicMock())
         monkeypatch.setattr(main, "PostTracker", MagicMock())
 

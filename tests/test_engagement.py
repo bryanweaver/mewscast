@@ -50,10 +50,10 @@ _mock_anthropic = types.ModuleType("anthropic")
 _mock_anthropic.Anthropic = MagicMock
 sys.modules.setdefault("anthropic", _mock_anthropic)
 
-# Mock bare 'content_generator' (imported by twitter_bot.py)
-_mock_content_generator = types.ModuleType("content_generator")
-_mock_content_generator._truncate_at_sentence = lambda text, max_len=280: text[:max_len]
-sys.modules.setdefault("content_generator", _mock_content_generator)
+# Mock bare 'truncate' (imported by twitter_bot.py)
+_mock_truncate = types.ModuleType("truncate")
+_mock_truncate._truncate_at_sentence = lambda text, max_len=280: text[:max_len]
+sys.modules.setdefault("truncate", _mock_truncate)
 
 # Mock bare 'twitter_bot' (imported by engagement_bot.py)
 _mock_twitter_bot_mod = types.ModuleType("twitter_bot")

@@ -13,7 +13,7 @@ from googlenewsdecoder import gnewsdecoder
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from bs4 import BeautifulSoup
-from content_generator import _truncate_at_sentence
+from truncate import _truncate_at_sentence
 
 
 PAYWALL_INDICATORS: frozenset[str] = frozenset({

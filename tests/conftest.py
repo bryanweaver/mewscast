@@ -2,7 +2,7 @@
 Shared test setup — loaded by pytest before any test module is collected.
 
 The project's main.py, twitter_bot.py, and bluesky_bot.py all pull in
-heavy third-party packages (tweepy, atproto, anthropic, content_generator). Several test files mock these via sys.modules at
+heavy third-party packages (tweepy, atproto, anthropic). Several test files mock these via sys.modules at
 module-import time, and running them together in one pytest session
 produces order-dependent collisions (e.g. one file's bare
 types.ModuleType("tweepy") sticks around and another file's
@@ -79,7 +79,7 @@ if not hasattr(_anthropic, "Anthropic"):
 
 # ---- Pre-import REAL first-party + dependency modules with proper stubs in
 # place. Several test files install bare stub modules for `bs4`,
-# `bluesky_client`, `twitter_bot`, and `content_generator` via
+# `bluesky_client`, `twitter_bot`, and `truncate` via
 # `sys.modules.setdefault(...)` at module-import time. `setdefault` is a
 # no-op when the key already exists, so eagerly loading the REAL modules
 # here neutralises those stubs. Tests that relied on the stubs keep
@@ -89,7 +89,7 @@ if not hasattr(_anthropic, "Anthropic"):
 # bs4 is the most consequential preload: news_fetcher.py uses real
 # BeautifulSoup parsing in its tests, and a MagicMock-shaped stub causes
 # `'str' object has no attribute 'decompose'` style runtime errors.
-for _mod in ("bs4", "bluesky_client", "content_generator", "twitter_bot"):
+for _mod in ("bs4", "bluesky_client", "truncate", "twitter_bot"):
     if _mod not in sys.modules:
         try:
             __import__(_mod)

@@ -995,229 +995,31 @@ class TestImageGenerator:
         assert result_path == "temp_image.png"
 
 
-# =========================================================================
-# Content Generator Tests
-# =========================================================================
-
-class TestContentGenerator:
-    """Tests for ContentGenerator tweet/content generation."""
-
-    @pytest.fixture
-    def generator(self, anthropic_env, sample_config_yaml):
-        """Create a ContentGenerator with mocked Anthropic client."""
-        with patch("src.content_generator.Anthropic") as mock_cls:
-            from src.content_generator import ContentGenerator
-            gen = ContentGenerator(config_path=sample_config_yaml)
-            gen.client = MagicMock()
-            yield gen
-
-    def test_generate_tweet_basic(self, generator):
-        """generate_tweet returns dict with tweet, needs_source_reply, and story_metadata."""
-        mock_response = Mock()
-        mock_response.content = [Mock(text="Breaking mews from the perch!")]
-        generator.client.messages.create.return_value = mock_response
-
-        result = generator.generate_tweet(topic="stock market volatility")
-        assert "tweet" in result
-        assert "needs_source_reply" in result
-        assert result["needs_source_reply"] is False
-        assert "story_metadata" in result
-
-    def test_generate_tweet_with_story_metadata(self, generator):
-        """generate_tweet sets needs_source_reply=True when story_metadata provided."""
-        mock_response = Mock()
-        mock_response.content = [Mock(text="Cat news about politics!")]
-        generator.client.messages.create.return_value = mock_response
-
-        story = {
-            "title": "Big political scandal",
-            "source": "Reuters",
-            "article_content": "The scandal involved many officials.",
-            "url": "https://example.com/scandal",
-        }
-        result = generator.generate_tweet(
-            trending_topic="political scandal", story_metadata=story
-        )
-        assert result["needs_source_reply"] is True
-        assert result["story_metadata"] == story
-
-    def test_generate_tweet_removes_quotes(self, generator):
-        """generate_tweet strips wrapping quotes from Claude output."""
-        mock_response = Mock()
-        mock_response.content = [Mock(text='"Quoted tweet text"')]
-        generator.client.messages.create.return_value = mock_response
-
-        result = generator.generate_tweet(topic="tech news")
-        assert not result["tweet"].startswith('"')
-        assert not result["tweet"].endswith('"')
-
-    def test_generate_tweet_api_error_returns_fallback(self, generator):
-        """generate_tweet returns fallback content when Claude API fails."""
-        generator.client.messages.create.side_effect = Exception("API down")
-
-        result = generator.generate_tweet(topic="economy")
-        assert result is not None
-        assert "tweet" in result
-        assert "economy" in result["tweet"]
-        assert result["needs_source_reply"] is False
-
-    def test_generate_tweet_validation_failure_returns_none(self, generator):
-        """generate_tweet returns None when content validation fails."""
-        mock_response = Mock()
-        # This tweet contains a prohibited meta-commentary pattern
-        mock_response.content = [Mock(text="I cannot generate content about this topic")]
-        generator.client.messages.create.return_value = mock_response
-
-        result = generator.generate_tweet(
-            trending_topic="test",
-            story_metadata={"title": "Test", "article_content": "Content", "source": "Src"},
-        )
-        assert result is None
-
-    def test_validate_tweet_content_blocks_meta_commentary(self, generator):
-        """_validate_tweet_content rejects meta-commentary patterns."""
-        result = generator._validate_tweet_content("I can't access the article")
-        assert result["valid"] is False
-        assert "meta-commentary" in result["reason"]
-
-    def test_validate_tweet_content_blocks_contradictions(self, generator):
-        """_validate_tweet_content rejects news-contradiction patterns."""
-        result = generator._validate_tweet_content("This never happened and is complete fiction")
-        assert result["valid"] is False
-        assert "contradiction" in result["reason"]
-
-    def test_validate_tweet_content_blocks_temporal_skepticism(self, generator):
-        """_validate_tweet_content rejects temporal skepticism patterns."""
-        result = generator._validate_tweet_content("The date says 2025 but that's a typo")
-        assert result["valid"] is False
-
-    def test_validate_tweet_content_allows_valid_tweet(self, generator):
-        """_validate_tweet_content passes a normal news cat tweet."""
-        result = generator._validate_tweet_content(
-            "Breaking mews from this cat's perch: stocks are volatile today."
-        )
-        assert result["valid"] is True
-        assert result["reason"] is None
-
-    def test_generate_source_reply_with_url(self, generator):
-        """generate_source_reply returns just the URL when available."""
-        metadata = {
-            "title": "Breaking Story",
-            "url": "https://example.com/story",
-            "source": "Reuters",
-        }
-        reply = generator.generate_source_reply("Original tweet", metadata)
-        assert reply == "https://example.com/story"
-
-    def test_generate_source_reply_without_url(self, generator):
-        """generate_source_reply builds text fallback without URL."""
-        metadata = {
-            "title": "Breaking Story",
-            "source": "Reuters",
-            "context": "Story context here",
-        }
-        reply = generator.generate_source_reply("Original tweet", metadata)
-        assert "Breaking Story" in reply
-        assert "Reuters" in reply
-
-    def test_generate_reply_success(self, generator):
-        """generate_reply returns a cat-reporter-style reply."""
-        mock_response = Mock()
-        mock_response.content = [Mock(text="This cat agrees, great point!")]
-        generator.client.messages.create.return_value = mock_response
-
-        reply = generator.generate_reply("Original post about tech")
-        assert "This cat agrees" in reply
-
-    def test_generate_reply_api_error_returns_fallback(self, generator):
-        """generate_reply returns fallback text when Claude API fails."""
-        generator.client.messages.create.side_effect = Exception("Error")
-
-        reply = generator.generate_reply("Some tweet")
-        assert "reporter" in reply.lower() or "breaking" in reply.lower()
-
-    def test_generate_image_prompt_success(self, generator):
-        """generate_image_prompt returns a prompt for Grok."""
-        mock_response = Mock()
-        mock_response.content = [Mock(text="Cat reporter at desk with breaking news")]
-        generator.client.messages.create.return_value = mock_response
-
-        prompt = generator.generate_image_prompt("politics", "A tweet about politics")
-        assert "Cat reporter" in prompt
-
-    def test_generate_image_prompt_truncated_to_budget(self, generator):
-        """generate_image_prompt caps output at the 800-char budget (raised
-        from 200 during the A5 image overhaul — richer prompts produce
-        materially better generations on Grok/Flux/Imagen)."""
-        mock_response = Mock()
-        mock_response.content = [Mock(text="X" * 1200)]
-        generator.client.messages.create.return_value = mock_response
-
-        prompt = generator.generate_image_prompt("topic", "tweet text")
-        assert len(prompt) <= 800
-
-    def test_generate_image_prompt_api_error_returns_fallback(self, generator):
-        """generate_image_prompt returns fallback on API error."""
-        generator.client.messages.create.side_effect = Exception("Error")
-
-        prompt = generator.generate_image_prompt("economy", "tweet about economy")
-        assert "cat" in prompt.lower() or "detective" in prompt.lower()
-        assert "economy" in prompt
-
-    def test_vocab_selection_matches_topic(self, generator):
-        """_select_vocab_for_story returns topic-matched phrases."""
-        result = generator._select_vocab_for_story("President signs new bill")
-        # Should match "politics" category due to "president" keyword
-        assert isinstance(result, str)
-        assert len(result) > 0
-
-    def test_vocab_selection_no_match_uses_universal(self, generator):
-        """_select_vocab_for_story falls back to universal phrases."""
-        result = generator._select_vocab_for_story("Obscure topic with no keyword matches")
-        assert isinstance(result, str)
-        assert len(result) > 0
-
-    def test_analyze_media_framing_no_content(self, generator):
-        """analyze_media_framing returns no issues when article_content is missing."""
-        result = generator.analyze_media_framing({"title": "Test"})
-        assert result["has_issues"] is False
-
-    def test_analyze_media_framing_api_error(self, generator):
-        """analyze_media_framing returns no issues on API error."""
-        generator.client.messages.create.side_effect = Exception("Error")
-        result = generator.analyze_media_framing({
-            "title": "Test",
-            "article_content": "Content here",
-            "source": "Src",
-        })
-        assert result["has_issues"] is False
-
-
 class TestTruncateAtSentence:
     """Tests for the _truncate_at_sentence utility function."""
 
     def test_short_text_unchanged(self):
         """Text under max_length is returned as-is."""
-        from content_generator import _truncate_at_sentence
+        from truncate import _truncate_at_sentence
         assert _truncate_at_sentence("Short text.", 100) == "Short text."
 
     def test_truncates_at_sentence_boundary(self):
         """Text is cut at the last complete sentence within limit."""
-        from content_generator import _truncate_at_sentence
+        from truncate import _truncate_at_sentence
         text = "First sentence. Second sentence. Third sentence that is very long."
         result = _truncate_at_sentence(text, 35)
         assert result == "First sentence. Second sentence."
 
     def test_truncates_at_exclamation(self):
         """Truncation works with ! sentence endings."""
-        from content_generator import _truncate_at_sentence
+        from truncate import _truncate_at_sentence
         text = "Breaking mews! This is huge! More details coming soon in an update."
         result = _truncate_at_sentence(text, 30)
         assert result.endswith("!")
 
     def test_falls_back_to_space(self):
         """Falls back to word boundary when no sentence boundary is found."""
-        from content_generator import _truncate_at_sentence
+        from truncate import _truncate_at_sentence
         text = "Thisisaverylongwordwithoutspaces but then more words"
         result = _truncate_at_sentence(text, 45)
         assert len(result) <= 45
@@ -1616,41 +1418,6 @@ class TestPlatformDifferences:
 
 class TestErrorHandling:
     """Tests for error handling and edge cases across the pipeline."""
-
-    def test_content_generator_handles_empty_topic_list(self, anthropic_env, tmp_path):
-        """ContentGenerator handles missing topics gracefully."""
-        import yaml
-        config = {
-            "content": {
-                "topics": [],
-                "cat_vocabulary_by_topic": {},
-                "cat_vocabulary_universal": ["mews"],
-                "engagement_hooks": [],
-                "time_of_day": {},
-                "cat_humor": [],
-                "editorial_guidelines": [],
-                "style": "test",
-                "max_length": 250,
-                "model": "test-model",
-            },
-            "safety": {"avoid_topics": []},
-            "post_angles": {"framing_chance": 0.0},
-        }
-        config_file = tmp_path / "config.yaml"
-        config_file.write_text(yaml.dump(config))
-
-        with patch("src.content_generator.Anthropic"):
-            from src.content_generator import ContentGenerator
-            gen = ContentGenerator(config_path=str(config_file))
-            gen.client = MagicMock()
-
-            mock_response = Mock()
-            mock_response.content = [Mock(text="A test tweet")]
-            gen.client.messages.create.return_value = mock_response
-
-            # Should not raise even with empty topics (provide explicit topic)
-            result = gen.generate_tweet(topic="test topic")
-            assert result is not None
 
     def test_bluesky_bot_skeet_with_exactly_300_chars(self, bluesky_env):
         """BlueskyBot posts text that is exactly at the 300-char limit."""

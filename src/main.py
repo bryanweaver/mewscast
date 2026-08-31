@@ -13,7 +13,6 @@ from datetime import datetime, timezone
 from typing import Optional
 from dotenv import load_dotenv
 
-from content_generator import ContentGenerator
 from twitter_bot import TwitterBot
 from bluesky_bot import BlueskyBot
 from news_fetcher import NewsFetcher
@@ -456,8 +455,7 @@ def _generate_journalism_image(
             messages=[{"role": "user", "content": img_request}],
         )
         image_prompt = _img_resp.content[0].text.strip().strip('"').strip("'")
-        # Budget raised to 800 as part of A5 overhaul — matches the legacy
-        # content_generator.generate_image_prompt path.
+        # Budget raised to 800 as part of A5 overhaul.
         if len(image_prompt) > 800:
             image_prompt = image_prompt[:800]
         print(f"[journalism] image prompt ({draft.post_type.value}): {image_prompt[:100]}...")
@@ -1089,7 +1087,6 @@ def post_journalism_cycle(
     # creds), we fall through and the Bluesky path keeps publishing alone.
     twitter_bot = None
     bluesky_bot = None
-    generator = None
     tracker = None
 
     print("[journalism] Initializing TwitterBot for publish path...")
@@ -1100,7 +1097,7 @@ def post_journalism_cycle(
         twitter_bot = None
 
     if not dry_run:
-        print("[journalism] Initializing Bluesky + content generator for publish mode...")
+        print("[journalism] Initializing Bluesky for publish mode...")
         bluesky_bot = None
         for _attempt in range(1, 4):
             try:
@@ -1115,11 +1112,6 @@ def post_journalism_cycle(
         if twitter_bot is None and bluesky_bot is None:
             print("[journalism] both X and Bluesky bots failed to init; aborting publish cycle")
             return False
-        try:
-            generator = ContentGenerator()
-        except Exception as e:
-            print(f"[journalism] ContentGenerator init failed: {e}")
-            generator = None
         dedup_config = config.get("deduplication", {}) or {}
         tracker = PostTracker(config=dedup_config)
 

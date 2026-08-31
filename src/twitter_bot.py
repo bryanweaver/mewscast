@@ -4,7 +4,7 @@ Twitter/X bot integration using tweepy
 import os
 import tweepy
 from typing import Optional
-from content_generator import _truncate_at_sentence
+from truncate import _truncate_at_sentence
 
 
 class TwitterBot:
