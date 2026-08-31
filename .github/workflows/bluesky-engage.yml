@@ -1,12 +1,13 @@
 name: Bluesky Engagement
 
 on:
-  # Run 4 times a day to catch mentions (all within 7am–11pm CDT)
+  # Run 4 times a day: 8am, 11am, 3pm, 8pm CDT (all within 7am–11pm CDT)
+  # CDT is UTC-5, so times are 13:00, 16:00, 20:00, 01:00 UTC
   schedule:
-    - cron: '30 13 * * *'  # 1:30 PM UTC = 8:30 AM CDT
-    - cron: '30 16 * * *'  # 4:30 PM UTC = 11:30 AM CDT
-    - cron: '30 19 * * *'  # 7:30 PM UTC = 2:30 PM CDT
-    - cron: '30 0 * * *'   # 12:30 AM UTC = 7:30 PM CDT (prev day)
+    - cron: '0 13 * * *'  # 1 PM UTC = 8 AM CDT
+    - cron: '0 16 * * *'  # 4 PM UTC = 11 AM CDT
+    - cron: '0 20 * * *'  # 8 PM UTC = 3 PM CDT
+    - cron: '0 1 * * *'   # 1 AM UTC = 8 PM CDT (prev day)
 
   # Allow manual triggering
   workflow_dispatch:
@@ -30,6 +31,14 @@ jobs:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
         run: |
           python scripts/bluesky_engage.py
+
+      - name: Engage with cat community on Bluesky
+        env:
+          BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+        run: |
+          cd src
+          python bluesky_engagement_bot.py
 
       - name: Commit engagement history
         if: success()

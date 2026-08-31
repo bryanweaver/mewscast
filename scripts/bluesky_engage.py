@@ -35,11 +35,20 @@ def main():
         else:
             history = {}
 
-        # Ensure required keys exist
-        if 'sessions' not in history:
-            history['sessions'] = []
+        # Ensure all critical keys exist (preserves other path's data)
         if 'liked_uris' not in history:
             history['liked_uris'] = []
+        if 'liked_posts' not in history:
+            history['liked_posts'] = []
+        if 'followed_users' not in history:
+            history['followed_users'] = []
+        # Ensure extra keys exist
+        if 'sessions' not in history:
+            history['sessions'] = []
+        if 'last_cleanup' not in history:
+            history['last_cleanup'] = datetime.now(timezone.utc).isoformat()
+        if 'reposted_posts' not in history:
+            history['reposted_posts'] = []
 
         # Also pull URIs from existing liked_posts if present (old format)
         if 'liked_posts' in history:
