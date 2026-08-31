@@ -337,9 +337,6 @@ def main():
                 P(f"- [{b['type']}] {b['detail']}{ref}")
             P("")
 
-    # Save bugs metadata for later gh issue creation
-    issue_payload = [b for b in unique_bugs if b.get("open_issue")]
-
     # Write dated report to docs/reports/ for public site
     reports_dir = os.path.join(ROOT, "docs", "reports")
     os.makedirs(reports_dir, exist_ok=True)
@@ -355,11 +352,6 @@ def main():
     latest_path = os.path.join(reports_dir, "latest.md")
     with open(latest_path, "w", encoding="utf-8") as f:
         f.write(report_text)
-
-    # Write issues JSON
-    issues_path = os.path.join(reports_dir, f"{date_slug}-issues.json")
-    with open(issues_path, "w", encoding="utf-8") as f:
-        json.dump(issue_payload, f, indent=2, default=str)
 
     # Rebuild the reports index page
     _rebuild_reports_index(reports_dir)
