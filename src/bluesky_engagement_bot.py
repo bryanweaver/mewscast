@@ -27,12 +27,24 @@ class BlueskyEngagementBot:
         """Load engagement history to avoid duplicates"""
         if self.engagement_log_path.exists():
             with open(self.engagement_log_path, 'r') as f:
-                return json.load(f)
-        return {
-            'followed_users': [],
-            'liked_posts': [],
-            'last_cleanup': datetime.now().isoformat()
-        }
+                history = json.load(f)
+        else:
+            history = {}
+        # Ensure all critical keys exist (preserves other path's data)
+        if 'followed_users' not in history:
+            history['followed_users'] = []
+        if 'liked_posts' not in history:
+            history['liked_posts'] = []
+        if 'liked_uris' not in history:
+            history['liked_uris'] = []
+        # Ensure extra keys exist
+        if 'last_cleanup' not in history:
+            history['last_cleanup'] = datetime.now().isoformat()
+        if 'sessions' not in history:
+            history['sessions'] = []
+        if 'reposted_posts' not in history:
+            history['reposted_posts'] = []
+        return history
 
     def _save_engagement_history(self):
         """Save engagement history"""

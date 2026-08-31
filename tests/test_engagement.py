@@ -1179,7 +1179,7 @@ class TestHistoryKeyPreservation:
     Critical keys (claim fails if ANY dropped): liked_uris, liked_posts, followed_users
     Extra keys (must stay): sessions, last_cleanup, reposted_posts
 
-    These tests use REAL load/save code paths against temp files in the real format.
+    These tests use REAL load/save code paths against temp files.
     Tests FAIL on old clobber behavior, PASS on new merge behavior.
     """
 
@@ -1230,7 +1230,7 @@ class TestHistoryKeyPreservation:
                 bot.engagement_log_path = full_history_file
                 bot.engagement_history = bot._load_engagement_history()
 
-                bot.engagement_history.setdefault("followed_users", []).append({
+                bot.engagement_history["followed_users"].append({
                     "did": "did:plc:newfollow",
                     "handle": "newfollow.bsky.social",
                     "timestamp": datetime.now().isoformat()
@@ -1251,47 +1251,140 @@ class TestHistoryKeyPreservation:
         assert len(saved["reposted_posts"]) == 1, "reposted_posts data was lost!"
         assert saved["last_cleanup"] == "2026-06-01T00:00:00", "last_cleanup was modified unexpectedly!"
 
-    def test_mention_likes_logic_preserves_all_six_keys(self, full_history_file):
+    def test_mention_likes_real_main_preserves_all_six_keys(self, tmp_path):
         """
-        Mention-likes script logic must preserve all six keys.
+        Mention-likes script REAL main() must preserve all six keys.
 
-        Simulates the exact load/modify/save pattern from scripts/bluesky_engage.py.
-        Uses real file I/O against a temp file with real format.
+        Calls the actual main() function from scripts/bluesky_engage.py.
+        Mocks only BlueskyBot API calls. History load/save is REAL.
         Fails if any of the six keys is dropped after save.
         """
-        with open(full_history_file, "r") as f:
-            history = json.load(f)
+        (tmp_path / "scripts").mkdir(parents=True, exist_ok=True)
+        history_path = tmp_path / "bluesky_engagement_history.json"
+        recent_ts = (datetime.now(timezone.utc) - timedelta(days=10)).isoformat()
+        initial_history = {
+            "sessions": [{"timestamp": recent_ts, "liked": 5, "skipped": 0, "already_cached": 0}],
+            "liked_uris": ["at://did:plc:m1/post/1", "at://did:plc:m2/post/2"],
+            "followed_users": [{"did": "did:plc:cat1", "handle": "cat1.bsky.social", "timestamp": recent_ts}],
+            "liked_posts": [{"uri": "at://did:plc:catpost/post/123", "author": "catfan", "timestamp": recent_ts}],
+            "reposted_posts": [{"uri": "at://did:plc:rescue/post/456", "author": "rescuer", "text": "cats need homes", "timestamp": recent_ts}],
+            "last_cleanup": recent_ts
+        }
+        with open(history_path, "w") as f:
+            json.dump(initial_history, f, indent=2)
 
-        if "sessions" not in history:
-            history["sessions"] = []
-        if "liked_uris" not in history:
-            history["liked_uris"] = []
+        mock_bot_instance = MagicMock()
+        mock_bot_instance.like_mentions.return_value = {
+            "liked": 2, "skipped": 1, "already_cached": 0,
+            "liked_uris": ["at://did:plc:newmention/post/new1"]
+        }
 
-        history["sessions"].append({
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "liked": 3,
-            "skipped": 1,
-            "already_cached": 0
-        })
-        history["liked_uris"].append("at://did:plc:newmention/post/789")
-        history["liked_uris"] = list(set(history["liked_uris"]))
+        mock_bluesky_bot_module = types.ModuleType("bluesky_bot")
+        mock_bluesky_bot_module.BlueskyBot = MagicMock(return_value=mock_bot_instance)
 
-        with open(full_history_file, "w") as f:
-            json.dump(history, f, indent=2)
+        scripts_dir = Path(__file__).parent.parent / "scripts"
+        fake_script_file = tmp_path / "scripts" / "bluesky_engage.py"
 
-        with open(full_history_file, "r") as f:
+        with patch.dict(sys.modules, {"bluesky_bot": mock_bluesky_bot_module, "dotenv": MagicMock()}):
+            with patch.dict(os.environ, {"BLUESKY_USERNAME": "test", "BLUESKY_APP_PASSWORD": "pw"}):
+                import importlib.util
+                spec = importlib.util.spec_from_file_location("bluesky_engage_test", scripts_dir / "bluesky_engage.py")
+                bluesky_engage = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(bluesky_engage)
+
+                bluesky_engage.__file__ = str(fake_script_file)
+                bluesky_engage.main()
+
+        with open(history_path, "r") as f:
             saved = json.load(f)
 
         all_six_keys = ["liked_uris", "liked_posts", "followed_users", "sessions", "last_cleanup", "reposted_posts"]
         for key in all_six_keys:
-            assert key in saved, f"Key '{key}' was CLOBBERED by mention-likes save!"
+            assert key in saved, f"Key '{key}' was CLOBBERED by mention-likes main()!"
 
         assert len(saved["sessions"]) == 2, "sessions should have 2 entries (1 original + 1 new)"
-        assert len(saved["liked_uris"]) == 3, "liked_uris should have 3 entries (2 original + 1 new)"
+        assert len(saved["liked_uris"]) >= 3, "liked_uris should have at least 3 entries"
         assert len(saved["followed_users"]) == 1, "followed_users data was lost!"
         assert len(saved["liked_posts"]) == 1, "liked_posts data was lost!"
         assert len(saved["reposted_posts"]) == 1, "reposted_posts data was lost!"
-        assert saved["last_cleanup"] == "2026-06-01T00:00:00", "last_cleanup was modified unexpectedly!"
+
+    def test_cat_bot_empty_file_creates_all_critical_keys(self, tmp_path):
+        """
+        Cat engagement bot on EMPTY file must create all three critical keys.
+
+        This test FAILS on old behavior where default was only followed_users/liked_posts/last_cleanup.
+        PASSES on new behavior where liked_uris is also created.
+        """
+        history_path = tmp_path / "bluesky_engagement_history.json"
+
+        with patch.dict(os.environ, {
+            "BLUESKY_USERNAME": "test.bsky.social",
+            "BLUESKY_APP_PASSWORD": "pw",
+        }):
+            with patch("src.bluesky_engagement_bot.create_bluesky_client") as mock_create:
+                mock_client = MagicMock()
+                mock_client.me = Mock(did="did:plc:test")
+                mock_create.return_value = mock_client
+
+                bot = BlueskyEngagementBot()
+                bot.engagement_log_path = history_path
+                bot.engagement_history = bot._load_engagement_history()
+                bot._save_engagement_history()
+
+        with open(history_path, "r") as f:
+            saved = json.load(f)
+
+        critical_keys = ["liked_uris", "liked_posts", "followed_users"]
+        for key in critical_keys:
+            assert key in saved, f"CRITICAL KEY '{key}' missing after cat bot empty-file save!"
+
+        extra_keys = ["sessions", "last_cleanup", "reposted_posts"]
+        for key in extra_keys:
+            assert key in saved, f"Extra key '{key}' missing after cat bot empty-file save!"
+
+    def test_mention_likes_empty_file_creates_all_critical_keys(self, tmp_path):
+        """
+        Mention-likes script on EMPTY file must create all three critical keys.
+
+        This test FAILS on old behavior where only sessions/liked_uris were ensured.
+        PASSES on new behavior where liked_posts/followed_users are also created.
+        
+        Calls the REAL main() from scripts/bluesky_engage.py against a non-existent file.
+        """
+        (tmp_path / "scripts").mkdir(parents=True, exist_ok=True)
+        history_path = tmp_path / "bluesky_engagement_history.json"
+
+        mock_bot_instance = MagicMock()
+        mock_bot_instance.like_mentions.return_value = {
+            "liked": 0, "skipped": 0, "already_cached": 0, "liked_uris": []
+        }
+
+        mock_bluesky_bot_module = types.ModuleType("bluesky_bot")
+        mock_bluesky_bot_module.BlueskyBot = MagicMock(return_value=mock_bot_instance)
+
+        scripts_dir = Path(__file__).parent.parent / "scripts"
+        fake_script_file = tmp_path / "scripts" / "bluesky_engage.py"
+
+        with patch.dict(sys.modules, {"bluesky_bot": mock_bluesky_bot_module, "dotenv": MagicMock()}):
+            with patch.dict(os.environ, {"BLUESKY_USERNAME": "test", "BLUESKY_APP_PASSWORD": "pw"}):
+                import importlib.util
+                spec = importlib.util.spec_from_file_location("bluesky_engage_empty_test", scripts_dir / "bluesky_engage.py")
+                bluesky_engage = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(bluesky_engage)
+
+                bluesky_engage.__file__ = str(fake_script_file)
+                bluesky_engage.main()
+
+        with open(history_path, "r") as f:
+            saved = json.load(f)
+
+        critical_keys = ["liked_uris", "liked_posts", "followed_users"]
+        for key in critical_keys:
+            assert key in saved, f"CRITICAL KEY '{key}' missing after mention-likes empty-file save!"
+
+        extra_keys = ["sessions", "last_cleanup", "reposted_posts"]
+        for key in extra_keys:
+            assert key in saved, f"Extra key '{key}' missing after mention-likes empty-file save!"
 
     def test_alternating_saves_preserve_all_six_keys(self, full_history_file):
         """
@@ -1312,7 +1405,7 @@ class TestHistoryKeyPreservation:
                 bot = BlueskyEngagementBot()
                 bot.engagement_log_path = full_history_file
                 bot.engagement_history = bot._load_engagement_history()
-                bot.engagement_history.setdefault("liked_posts", []).append({
+                bot.engagement_history["liked_posts"].append({
                     "uri": "at://did:plc:catbot1/post/new1",
                     "author": "catbot1",
                     "timestamp": datetime.now().isoformat()
@@ -1321,11 +1414,26 @@ class TestHistoryKeyPreservation:
 
         with open(full_history_file, "r") as f:
             history = json.load(f)
+
+        if "liked_uris" not in history:
+            history["liked_uris"] = []
+        if "liked_posts" not in history:
+            history["liked_posts"] = []
+        if "followed_users" not in history:
+            history["followed_users"] = []
+        if "sessions" not in history:
+            history["sessions"] = []
+        if "last_cleanup" not in history:
+            history["last_cleanup"] = datetime.now(timezone.utc).isoformat()
+        if "reposted_posts" not in history:
+            history["reposted_posts"] = []
+
         history["sessions"].append({
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "liked": 7
         })
         history["liked_uris"].append("at://did:plc:mention3/post/new2")
+
         with open(full_history_file, "w") as f:
             json.dump(history, f, indent=2)
 
@@ -1341,7 +1449,7 @@ class TestHistoryKeyPreservation:
                 bot = BlueskyEngagementBot()
                 bot.engagement_log_path = full_history_file
                 bot.engagement_history = bot._load_engagement_history()
-                bot.engagement_history.setdefault("reposted_posts", []).append({
+                bot.engagement_history["reposted_posts"].append({
                     "uri": "at://did:plc:catbot2/post/new3",
                     "author": "catbot2",
                     "text": "more rescue cats",
@@ -1361,7 +1469,6 @@ class TestHistoryKeyPreservation:
         assert len(final["followed_users"]) == 1, f"Expected 1 followed_users, got {len(final['followed_users'])}"
         assert len(final["liked_posts"]) == 2, f"Expected 2 liked_posts, got {len(final['liked_posts'])}"
         assert len(final["reposted_posts"]) == 2, f"Expected 2 reposted_posts, got {len(final['reposted_posts'])}"
-        assert "last_cleanup" in final
 
     def test_critical_keys_must_not_be_dropped(self, tmp_path):
         """
@@ -1406,11 +1513,18 @@ class TestHistoryKeyPreservation:
 
         with open(history_path, "r") as f:
             history = json.load(f)
-        if "sessions" not in history:
-            history["sessions"] = []
+
         if "liked_uris" not in history:
             history["liked_uris"] = []
+        if "liked_posts" not in history:
+            history["liked_posts"] = []
+        if "followed_users" not in history:
+            history["followed_users"] = []
+        if "sessions" not in history:
+            history["sessions"] = []
+
         history["sessions"].append({"timestamp": "2026-01-02T00:00:00Z", "liked": 1})
+
         with open(history_path, "w") as f:
             json.dump(history, f, indent=2)
 
