@@ -44,17 +44,21 @@ def _gh_request(
         return e.code, json.loads(e.read().decode()) if e.fp else {}
 
 
-def issue_exists_for_run(token: str, repo: str, run_id: str) -> bool:
-    """Search open+closed issues for one mentioning this run_id."""
-    query = f"repo:{repo} {run_id} in:body"
+def issue_exists_for_run(token: str, repo: str, run_id: str, run_url: str) -> bool:
+    """Search open+closed issues for one mentioning this run URL.
+    
+    Returns True if an issue exists OR if search fails (fail closed to
+    prevent duplicates on API errors like 403 rate limit).
+    """
+    query = f'repo:{repo} "**Run ID:** {run_id}" in:body'
     url = (
         "https://api.github.com/search/issues?"
         + urllib.parse.urlencode({"q": query, "per_page": "5"})
     )
     status, data = _gh_request("GET", url, token)
     if status != 200:
-        print(f"[open_failure_issue] search failed: {status} {data}")
-        return False
+        print(f"[open_failure_issue] search failed: {status} {data}, skipping create")
+        return True
     items = data.get("items", []) if isinstance(data, dict) else []
     return len(items) > 0
 
@@ -106,7 +110,7 @@ def main() -> int:
         print(f"[open_failure_issue] missing env vars: {', '.join(missing)}")
         return 1
 
-    if issue_exists_for_run(token, repo, run_id):
+    if issue_exists_for_run(token, repo, run_id, run_url):
         print(f"[open_failure_issue] issue already exists for run {run_id}, skipping")
         return 0
 

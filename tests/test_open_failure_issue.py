@@ -57,10 +57,15 @@ class TestIssueExistsForRun:
         mock_response.__enter__ = MagicMock(return_value=mock_response)
         mock_response.__exit__ = MagicMock(return_value=False)
 
-        with patch("urllib.request.urlopen", return_value=mock_response):
-            result = mod.issue_exists_for_run("fake-token", "owner/repo", "12345")
+        with patch("urllib.request.urlopen", return_value=mock_response) as mock_urlopen:
+            result = mod.issue_exists_for_run(
+                "fake-token", "owner/repo", "12345",
+                "https://github.com/owner/repo/actions/runs/12345"
+            )
 
         assert result is True
+        req = mock_urlopen.call_args[0][0]
+        assert '%2A%2ARun+ID%3A%2A%2A+12345' in req.full_url
 
     def test_returns_false_when_no_issue_found(self):
         mod = _load_script()
@@ -74,11 +79,15 @@ class TestIssueExistsForRun:
         mock_response.__exit__ = MagicMock(return_value=False)
 
         with patch("urllib.request.urlopen", return_value=mock_response):
-            result = mod.issue_exists_for_run("fake-token", "owner/repo", "12345")
+            result = mod.issue_exists_for_run(
+                "fake-token", "owner/repo", "12345",
+                "https://github.com/owner/repo/actions/runs/12345"
+            )
 
         assert result is False
 
-    def test_returns_false_on_api_error(self):
+    def test_returns_true_on_api_error_fail_closed(self):
+        """On search failure (e.g. 403), return True to prevent duplicate issues."""
         mod = _load_script()
         import urllib.error
         error = urllib.error.HTTPError(
@@ -89,9 +98,12 @@ class TestIssueExistsForRun:
             io.BytesIO(b'{"message": "rate limited"}'),
         )
         with patch("urllib.request.urlopen", side_effect=error):
-            result = mod.issue_exists_for_run("fake-token", "owner/repo", "12345")
+            result = mod.issue_exists_for_run(
+                "fake-token", "owner/repo", "12345",
+                "https://github.com/owner/repo/actions/runs/12345"
+            )
 
-        assert result is False
+        assert result is True
 
 
 class TestCreateIssue:
@@ -124,6 +136,7 @@ class TestCreateIssue:
         body = json.loads(req.data.decode())
         assert "Test Workflow" in body["title"]
         assert "12345" in body["body"]
+        assert "https://github.com/owner/repo/actions/runs/12345" in body["body"]
 
     def test_returns_false_on_failure(self):
         mod = _load_script()
@@ -230,6 +243,23 @@ class TestWorkflowIntegration:
         assert "open_failure_issue.py" in content
         assert "workflow_run" in content
         assert "failure" in content
+
+    def test_listener_includes_journalism_publish_exact_name(self):
+        """Listener must use the exact name from journalism-publish.yml."""
+        import re
+        repo_root = Path(__file__).parent.parent
+        journalism_path = repo_root / ".github" / "workflows" / "journalism-publish.yml"
+        listener_path = repo_root / ".github" / "workflows" / "open-failure-issue.yml"
+
+        journalism_content = journalism_path.read_text()
+        match = re.search(r'^name:\s*(.+)$', journalism_content, re.MULTILINE)
+        assert match, "journalism-publish.yml must have a name: field"
+        exact_name = match.group(1).strip()
+
+        listener_content = listener_path.read_text()
+        assert exact_name in listener_content, (
+            f"Listener must include exact journalism name {exact_name!r}"
+        )
 
 
 class TestSuccessDoesNotCreateIssue:
