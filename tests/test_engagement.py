@@ -1251,15 +1251,14 @@ class TestHistoryKeyPreservation:
         assert len(saved["reposted_posts"]) == 1, "reposted_posts data was lost!"
         assert saved["last_cleanup"] == "2026-06-01T00:00:00", "last_cleanup was modified unexpectedly!"
 
-    def test_mention_likes_real_main_preserves_all_six_keys(self, tmp_path):
+    def test_mention_likes_real_main_preserves_all_six_keys(self, tmp_path, monkeypatch):
         """
         Mention-likes script REAL main() must preserve all six keys.
 
-        Calls the actual main() function from scripts/bluesky_engage.py.
-        Mocks only BlueskyBot API calls. History load/save is REAL.
+        Imports and calls the actual scripts/bluesky_engage.main() function.
+        Mocks BlueskyBot API. History load/save uses the REAL script code.
         Fails if any of the six keys is dropped after save.
         """
-        (tmp_path / "scripts").mkdir(parents=True, exist_ok=True)
         history_path = tmp_path / "bluesky_engagement_history.json"
         recent_ts = (datetime.now(timezone.utc) - timedelta(days=10)).isoformat()
         initial_history = {
@@ -1283,16 +1282,16 @@ class TestHistoryKeyPreservation:
         mock_bluesky_bot_module.BlueskyBot = MagicMock(return_value=mock_bot_instance)
 
         scripts_dir = Path(__file__).parent.parent / "scripts"
-        fake_script_file = tmp_path / "scripts" / "bluesky_engage.py"
 
         with patch.dict(sys.modules, {"bluesky_bot": mock_bluesky_bot_module, "dotenv": MagicMock()}):
             with patch.dict(os.environ, {"BLUESKY_USERNAME": "test", "BLUESKY_APP_PASSWORD": "pw"}):
-                import importlib.util
-                spec = importlib.util.spec_from_file_location("bluesky_engage_test", scripts_dir / "bluesky_engage.py")
-                bluesky_engage = importlib.util.module_from_spec(spec)
-                spec.loader.exec_module(bluesky_engage)
-
-                bluesky_engage.__file__ = str(fake_script_file)
+                monkeypatch.syspath_prepend(str(scripts_dir))
+                if "bluesky_engage" in sys.modules:
+                    del sys.modules["bluesky_engage"]
+                
+                import bluesky_engage
+                monkeypatch.setattr(bluesky_engage, "__file__", str(tmp_path / "scripts" / "bluesky_engage.py"))
+                (tmp_path / "scripts").mkdir(exist_ok=True)
                 bluesky_engage.main()
 
         with open(history_path, "r") as f:
@@ -1342,14 +1341,14 @@ class TestHistoryKeyPreservation:
         for key in extra_keys:
             assert key in saved, f"Extra key '{key}' missing after cat bot empty-file save!"
 
-    def test_mention_likes_empty_file_creates_all_critical_keys(self, tmp_path):
+    def test_mention_likes_empty_file_creates_all_critical_keys(self, tmp_path, monkeypatch):
         """
-        Mention-likes script on EMPTY file must create all three critical keys.
+        Mention-likes script on EMPTY/missing file must create all three critical keys.
 
         This test FAILS on old behavior where only sessions/liked_uris were ensured.
         PASSES on new behavior where liked_posts/followed_users are also created.
         
-        Calls the REAL main() from scripts/bluesky_engage.py against a non-existent file.
+        Imports and calls the REAL scripts/bluesky_engage.main() against a non-existent file.
         """
         (tmp_path / "scripts").mkdir(parents=True, exist_ok=True)
         history_path = tmp_path / "bluesky_engagement_history.json"
@@ -1363,16 +1362,15 @@ class TestHistoryKeyPreservation:
         mock_bluesky_bot_module.BlueskyBot = MagicMock(return_value=mock_bot_instance)
 
         scripts_dir = Path(__file__).parent.parent / "scripts"
-        fake_script_file = tmp_path / "scripts" / "bluesky_engage.py"
 
         with patch.dict(sys.modules, {"bluesky_bot": mock_bluesky_bot_module, "dotenv": MagicMock()}):
             with patch.dict(os.environ, {"BLUESKY_USERNAME": "test", "BLUESKY_APP_PASSWORD": "pw"}):
-                import importlib.util
-                spec = importlib.util.spec_from_file_location("bluesky_engage_empty_test", scripts_dir / "bluesky_engage.py")
-                bluesky_engage = importlib.util.module_from_spec(spec)
-                spec.loader.exec_module(bluesky_engage)
-
-                bluesky_engage.__file__ = str(fake_script_file)
+                monkeypatch.syspath_prepend(str(scripts_dir))
+                if "bluesky_engage" in sys.modules:
+                    del sys.modules["bluesky_engage"]
+                
+                import bluesky_engage
+                monkeypatch.setattr(bluesky_engage, "__file__", str(tmp_path / "scripts" / "bluesky_engage.py"))
                 bluesky_engage.main()
 
         with open(history_path, "r") as f:
