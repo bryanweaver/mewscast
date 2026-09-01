@@ -1,0 +1,85 @@
+{
+  "story_id": "2026-09-01-congress-clears-funding-patch-6cfc0ae0ac",
+  "headline_seed": "Congress clears funding patch to avert pre-election shutdown - Politico",
+  "brief": {
+    "story_id": "2026-09-01-congress-clears-funding-patch-6cfc0ae0ac",
+    "consensus_facts": [
+      "The House passed a short-term funding bill on Tuesday, September 1, 2026, by a vote of 370-48 (Politico, NBC News).",
+      "The stopgap keeps federal agencies funded at current levels through December 11, 2026 (Politico, NBC News).",
+      "The bill had already passed the Senate and now goes to President Donald Trump, who is expected to sign it (Politico, NBC News).",
+      "The measure averts a government shutdown before the November elections and punts a full-year funding deal until after the midterms (Politico, NBC News).",
+      "House Appropriations Chair Tom Cole (R-Okla.) said the midterm election outcome will significantly affect the year-end funding negotiations (Politico, NBC News).",
+      "Rep. Rosa DeLauro (D-Conn.) is referenced in connection with the Appropriations Committee and the push to finalize full-year funding (Politico, NBC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "What the funding patch contains beyond keeping the government open",
+        "positions": {
+          "Politico": "Emphasizes that the bill delays a ban on intoxicating hemp products, temporarily blocks the OMB rule on political appointees approving federal grants, and prohibits new funding for ICE and Border Patrol \u2014 details that drove Democratic support and Republican hardliner opposition.",
+          "NBC News": "Does not mention hemp, the OMB rule, or the ICE/Border Patrol funding provisions; instead frames the fight around the disputed scope of federal spending and Trump's $1.5 trillion military budget request."
+        }
+      },
+      {
+        "topic": "Why negotiations stalled / who is responsible",
+        "positions": {
+          "Politico": "Frames GOP leaders as managing blowback from their own hardliners over the Senate-crafted contents.",
+          "NBC News": "Reports Cole's accusation that Democrats blocked a deal to weaken vulnerable Sen. Susan Collins (R-Maine), and highlights Democrats rejecting Trump's $1.5 trillion military budget."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg (Article 1 \u2014 'Very Optimistic')": "Headline-only, and the body is a bot-check/paywall stub with no reportable content. The surfaced headline is about House Republicans' optimism on holding Congress \u2014 an election-horse-race angle, not the funding vote itself. Tangential to this story.",
+      "Politico (Article 2 \u2014 funding patch)": "Leads on the vote (370-48) and frames the patch as Speaker Johnson's 'last must-pass bill before the midterms.' Emphasizes the internal GOP blowback, the hemp-ban delay, the blocked OMB grantmaking rule, and the ICE/Border Patrol funding prohibition as the substantive drivers of the vote. Quotes Scalise, Freedom Caucus chair Andy Harris (opposed), Democrat Pete Aguilar (cheering), and Cole. Most detailed and provision-focused account.",
+      "Reuters (Article 3)": "Headline-only and off-topic \u2014 concerns Trump urging Congress to pass tax incentives for the entertainment industry, unrelated to the funding patch. No corroborating value for this story.",
+      "Bloomberg (Article 4 \u2014 hemp ban delay)": "Headline-only. Corroborates at the headline level that Congress passed a hemp-ban delay after hardliner blowback \u2014 consistent with Politico's framing \u2014 but provides no body text to confirm details.",
+      "Politico (Article 5 \u2014 AI privacy)": "Headline-only relevance to this story; the body is an entirely separate feature on AI's data-mining privacy threats to Americans. Not related to the funding patch.",
+      "NBC News (Article 6)": "Leads on the vote (370-48) and the avoidance of a shutdown 'before the election.' Frames the story around the spending-scope dispute \u2014 Democrats rejecting Trump's $1.5 trillion military budget \u2014 and the lame-duck leverage math. Quotes Cole (including his charge against Democrats over Collins) and DeLauro. Omits the hemp, OMB-rule, and ICE/Border Patrol provisions entirely."
+    },
+    "primary_source_alignment": [
+      "No primary source (roll-call vote record, bill text, or press release) was located for this story, so the 370-48 vote count and provision details could not be independently verified against the underlying document. The vote count is corroborated by two full-text outlets (Politico and NBC News) but remains outlet-sourced."
+    ],
+    "missing_context": [
+      "No outlet published the full breakdown of the 48 'no' votes by party, though Politico notes some were GOP hardliners including Andy Harris.",
+      "Neither full-text outlet states the exact expiration/start-date mechanics relative to the October 1 fiscal-year deadline beyond the Dec. 11 funding cutoff.",
+      "Politico mentions the hemp-ban delay, the blocked OMB grantmaking rule, and the ICE/Border Patrol funding prohibition; NBC News omits all three, so a reader relying on a single outlet would get a materially incomplete picture of what is in the bill.",
+      "No bill text or roll-call primary source was available to confirm the precise statutory language of the OMB rule block, the hemp delay, or the immigration-enforcement funding provision.",
+      "Bloomberg Article 4 corroborates the hemp-ban delay only at headline level (no body text); the substance rests on Politico alone among full-text sources.",
+      "Two of the six dossier articles (Reuters, Politico-AI) are unrelated to this story and one Bloomberg item is a paywall/bot-check stub \u2014 only two articles (Politico funding, NBC News) actually report the funding-patch event with usable body text."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only two dossier articles have usable body text on this event, and they agree on the core facts (370-48 House vote, funding through Dec. 11, Senate-passed, heading to Trump); the divergence is mainly one outlet reporting additional bill provisions the other omitted, which is a completeness gap rather than a genuine framing clash warranting META.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/videos/2026-09-01/house-gop-very-optimistic-that-party-will-keep-control-video",
+      "title": "Watch House Republicans 'Very Optimistic' That Party Will Hold Control of Congress - Bloomberg.com"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/09/01/congress-funding-patch-shutdown-midterms-01060046",
+      "title": ""
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/trump-urges-congress-pass-tax-incentives-entertainment-industry-2026-08-31/",
+      "title": "Trump urges Congress to pass tax incentives for entertainment industry - Reuters"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bgov.com/bloomberg-government-news/hemp-ban-delay-passed-by-congress-after-blowback-from-hardliners",
+      "title": "Hemp Ban Delay Passed by Congress After Blowback From Hardliners - Bloomberg Government News"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/09/01/wake-up-call-for-congress-lawmakers-get-a-big-brother-warning-on-ai-01054087",
+      "title": "Own a gun? Go to church? Do yoga? AI can find out in seconds. - Politico"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/congress/house-votes-pass-short-term-funding-bill-prevent-shutdown-election-rcna595350",
+      "title": "House passes short-term funding bill to prevent a shutdown before the election - NBC News"
+    }
+  ]
+}
