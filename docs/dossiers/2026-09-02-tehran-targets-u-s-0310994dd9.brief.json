@@ -1,0 +1,65 @@
+{
+  "story_id": "2026-09-02-tehran-targets-u-s-0310994dd9",
+  "headline_seed": "Tehran targets U.S. allies in Gulf after U.S. launched \u2018large and powerful\u2019 strikes on Iran - NBC News",
+  "brief": {
+    "story_id": "2026-09-02-tehran-targets-u-s-0310994dd9",
+    "consensus_facts": [
+      "Only one outlet in the dossier (NBC News) provided full body text; The Hill's entry is a headline/link stub and Gulf Times' body covers a related but distinct thread, so cross-outlet body-level consensus is limited.",
+      "Both NBC News and The Hill's headlines reference Iran/Tehran targeting U.S. allies in the Gulf following U.S. strikes on Iran.",
+      "NBC News and Gulf Times both report U.S. strikes on Iranian targets near/around the Strait of Hormuz around Sept. 1-2, 2026."
+    ],
+    "disagreements": [
+      {
+        "topic": "Central maritime incident emphasized",
+        "positions": {
+          "NBC News": "Leads on a U.S. strike alleged to have hit a wedding in Kuhestak killing five and injuring nearly 70, plus Iranian retaliation against U.S. bases.",
+          "Gulf Times": "Leads on Iran's targeting of the Saudi tanker SIDR in the Strait of Hormuz causing crew fatalities, and Qatar's condemnation."
+        }
+      },
+      {
+        "topic": "Who is cast as the primary aggressor",
+        "positions": {
+          "NBC News": "Frames escalation as reciprocal \u2014 U.S. strikes and Iranian retaliation both detailed, with civilian casualty allegations against the U.S.",
+          "Gulf Times": "Frames Iran as violating international law and closing the Strait, with Gulf states condemning Iranian attacks."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Only full-text article. Leads with escalation 'overnight into Wednesday' and the alleged U.S. strike on a wedding in Kuhestak (five killed, nearly 70 injured, at least one child, per Iranian Red Crescent via Fars). Reports CENTCOM's claim it struck air defense, radar, maritime assets, communications and mine-laying capabilities. Includes CENTCOM spokesperson Tim Hawkins saying the U.S. 'never targets civilians, unlike the IRGC.' Reports IRGC retaliatory strikes on U.S. bases in Iraq, UAE, Bahrain, Kuwait and Jordan, plus four IRGC aerospace members killed in Kermanshah. Quotes Trump's Truth Social posts calling strikes 'large and powerful,' threatening harder attacks, and saying he is uninterested in negotiations. Notes NBC could not independently confirm the strike but geolocated Red Crescent footage. Balances by including both U.S. and Iranian statements and an oil-flow detail (17 million barrels Monday via Energy Secretary Chris Wright).",
+      "The Hill": "Headline-only Google News RSS stub with no retrievable body text. Headline 'Iran targets US allies in Gulf after latest strikes' frames Iran as the actor targeting U.S. allies. No body-level detail available for analysis.",
+      "Gulf Times": "Body text does not cover the wedding-strike thread; instead leads (via a featured Qatar story) with Iran's targeting of the Saudi tanker SIDR in the Strait of Hormuz, resulting in crew fatalities, and Qatar's Foreign Ministry condemnation calling it a violation of international law and UN Security Council Resolution 2817. Emphasizes demands to reopen the Strait, solidarity with Saudi Arabia, and risk to the global economy. The headline references fresh U.S. strikes around the Strait, but the retrievable body foregrounds Gulf-state condemnation of Iran rather than the U.S. strikes themselves."
+    },
+    "primary_source_alignment": [
+      "No primary sources (CENTCOM releases, IRGC statements, Qatar MFA statement, UN Resolution 2817 text) were included in the dossier, so no direct report-vs-document comparison is possible."
+    ],
+    "missing_context": [
+      "Only one of three articles (NBC News) has substantive body text; The Hill is a headline stub and Gulf Times' body covers a related tanker/Qatar thread, so claims are effectively single-source and cannot be treated as wire consensus.",
+      "No independent confirmation of the Kuhestak wedding casualty figures; NBC explicitly states it could not independently confirm the strike, and the figures originate from the Iranian Red Crescent via Fars/Tasnim (Iranian state-linked sources).",
+      "No U.S. or independent confirmation of the extent of damage or casualties from Iran's claimed strikes on U.S. bases in Iraq, UAE, Bahrain, Kuwait and Jordan.",
+      "The Gulf Times tanker SIDR incident (Saudi crew fatalities, Strait closure) is not corroborated by NBC News, and NBC's account is not corroborated by Gulf Times \u2014 the two full-text sources describe largely different events in the same conflict.",
+      "No casualty verification, timeline reconciliation, or official U.S. response to the civilian-casualty allegations beyond CENTCOM's general denial.",
+      "No primary documents were provided (CENTCOM statements, IRGC statements, Qatar MFA statement, UN Resolution 2817), limiting verification.",
+      "No article-body instruction-injection attempts were detected in the dossier."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (NBC News) provides substantive, time-sensitive body text on a fast-moving conflict, and the other two sources are a headline stub and a related-but-distinct tanker thread \u2014 insufficient corroboration for a confident REPORT, warranting a same-day hedged bulletin.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/world/iran/us-launched-large-powerful-strikes-iran-trump-says-rcna595581",
+      "title": ""
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/policy/international/6065430-iran-retaliation-middle-east-kuwait-bahrain-jordan-iraq-us-war/",
+      "title": "Iran targets US allies in Gulf after latest strikes - The Hill"
+    },
+    {
+      "outlet": "Gulf Times",
+      "url": "https://www.gulf-times.com/article/732357/region/us-launches-fresh-strikes-on-iran-around-strait-of-hormuz",
+      "title": "US launches fresh strikes on Iran around Strait of Hormuz | Gulf Times - Gulf Times"
+    }
+  ]
+}
