@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-09-02-massachusetts-primary-results-live-029ab051bf",
+  "headline_seed": "Massachusetts primary results live updates: Markey\u2019s age becomes key test - USA Today",
+  "brief": {
+    "story_id": "2026-09-02-massachusetts-primary-results-live-029ab051bf",
+    "consensus_facts": [
+      "Incumbent Sen. Ed Markey, 80, defeated Rep. Seth Moulton in the Massachusetts Democratic primary for U.S. Senate (USA Today, AP, Politico, CBS News).",
+      "The race was projected by the Associated Press and/or NBC News shortly after polls closed on Tuesday, Sept. 1, 2026 (USA Today, CBS News).",
+      "Moulton, 47, ran on a message of generational change, arguing Markey was too old for another term (USA Today, AP, Politico, CBS News).",
+      "Markey was backed by prominent progressives including Rep. Alexandria Ocasio-Cortez and Sen. Bernie Sanders (USA Today, AP, Politico).",
+      "Markey first entered Congress in 1976 and has campaigned as a Green New Deal co-author and Medicare for All champion (USA Today, AP, Politico, CBS News).",
+      "Markey will face Republican John Deaton in the November general election, and is heavily favored in the safe blue seat (USA Today, CBS News).",
+      "Markey has pledged this would be his last term (Politico, CBS News).",
+      "In the Republican primary for governor, businessman Mike Minogue defeated former MBTA chief Brian Shortsleeve and will face incumbent Gov. Maura Healey (USA Today, CBS News).",
+      "The 8th Congressional District features incumbent Rep. Stephen Lynch challenged by Patrick Roath (USA Today, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Margin of victory / vote share",
+        "positions": {
+          "USA Today": "With nearly 75% of the vote in early, Markey led by nearly a 3-to-1 margin per AP; cites pre-election polls of 60-32 (UMass) and 63-28 (UNH).",
+          "AP": "Does not give a live margin in the provided text; frames pre-election context and the AP call in a related-story reference.",
+          "Politico": "Describes the win but provides no specific vote margin.",
+          "CBS News": "Reports the win but provides no specific vote margin."
+        }
+      },
+      {
+        "topic": "Which term Markey is seeking",
+        "positions": {
+          "USA Today": "Overwhelmingly expected to win a third term in November.",
+          "CBS News": "Seeking a third full term; first elected to the Senate in 2013."
+        }
+      },
+      {
+        "topic": "Characterization of the challenge / ideological framing",
+        "positions": {
+          "Politico": "Frames it as progressives choosing ideology over generational change, and as the second time Markey survived a 'right-flank challenge'; notes Moulton's past remarks on transgender athletes as a liability.",
+          "AP": "Frames it around whether Markey's age and technological fluency (AI question) disqualify him, emphasizing young voters are divided.",
+          "CBS News": "Frames it as few policy differences between the two, with Moulton stressing AI and new leadership.",
+          "USA Today": "Frames it as an age/generational-change contest across multiple Massachusetts races."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "USA Today": "Live-blog format leading with the projected Markey win and the 3-to-1 margin. Emphasizes the age/generational-change theme as a throughline across multiple Massachusetts House and gubernatorial races (Keating, Clark, Auchincloss, Lynch/Roath, Minogue). Includes Moulton's concession quotes. Heaviest on down-ballot results of any outlet.",
+      "Bloomberg (wire)": "Headline-only ('Octogenarian Markey Fends Off Massachusetts Senate Challenge'); body is a bot-check/paywall notice with no retrievable content. The headline emphasizes Markey's age via 'octogenarian' and frames the outcome as fending off a challenge.",
+      "The New York Times": "Two headline-only entries. One pre-election ('Markey Leads Moulton in Polls') and one result ('Senator Ed Markey, 80, Turns Back Younger Challenger'). Both foreground Markey's age (80) and the generational contrast; no body text available for analysis.",
+      "Associated Press": "Leads not on the result but on the age-and-technology angle, opening with Markey's fumbled debate answer about AI. Uniquely centers young voters and shows they are divided \u2014 featuring young Markey supporters who defend his record (Green New Deal, Medicare for All, 2002 DHS vote) against the assumption that youth equals progressivism. Most nuanced treatment of the 'age' question.",
+      "Politico": "Frames the result as a progressive-vs-moderate victory that 'flipped the script' on anti-incumbent clashes this cycle. Emphasizes ideology over age, notes progressive endorsers vs. Moulton's moderate/veteran backers, and surfaces Moulton's transgender-athletes remarks as a campaign liability \u2014 a detail no other outlet mentions. Notes this is Markey's second win over a younger right-flank challenger.",
+      "CBS News": "Straightforward local-angle report leading with the AP-projected win. Gives extended direct quotes from both Markey (progressive agenda, including a claim about Trump running an 'illegal unconstitutional war in Iran') and Moulton. Provides the most down-ballot detail alongside USA Today, including DA races and the 6th District field."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official vote certifications, roll-call records, campaign filings, or debate transcripts) were located for this story. Alignment between reports and an underlying document cannot be assessed.",
+      "Vote figures cited are attributed to AP/NBC News/DDHQ projections and pre-election polls (UMass Aug. 17, UNH Aug. 26), not to official certified results."
+    ],
+    "missing_context": [
+      "Only four of seven dossier entries have substantial body text (USA Today, AP, Politico, CBS News). Bloomberg and both New York Times entries are headline-only and cannot corroborate body-level facts. Consensus facts here reflect the four full-text outlets.",
+      "No outlet in the dossier provides final certified vote totals; all figures are early counts or projections.",
+      "Turnout figures for the primary are not reported by any outlet.",
+      "Republican nominee John Deaton's platform, background, and general-election viability are not discussed beyond his name (he ran unopposed).",
+      "The substance of the transgender-athletes remarks by Moulton \u2014 surfaced only by Politico \u2014 is not explained or dated in any outlet.",
+      "CBS News reports Markey's campaign-trail claim about Trump running an 'illegal unconstitutional war in Iran' without context, verification, or response; no other outlet mentions it.",
+      "Down-ballot House results are covered unevenly: USA Today reports called races (Keating, Clark, Auchincloss) that CBS News, AP, and Politico do not."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same Markey win but with materially different framings \u2014 AP centers age and AI, Politico centers progressive-vs-moderate ideology, USA Today centers generational change across races, and CBS centers local quotes \u2014 making the divergence in emphasis the story. No primary source was available to adjudicate.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/politics/elections/2026/09/01/massachusetts-primary-election-markey-moulton-results-updates--live/91494554007/",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-02/markey-wins-massachusetts-dem-senate-primary-nbc-projects",
+      "title": "Octogenarian Markey Fends Off Massachusetts Senate Challenge - Bloomberg.com"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/01/us/elections/massachusetts-senate-primary-polls-markey-moulton.html",
+      "title": "Markey Leads Moulton in Polls of Senate Primary in Massachusetts - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/01/us/politics/massachusetts-senate-democratic-primary.html",
+      "title": "Senator Ed Markey, 80, Turns Back Younger Challenger in Massachusetts - The New York Times"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/markey-moulton-election-massachusetts-2281949ec2b785f62667d328b8a88f70",
+      "title": "Moulton says Sen. Markey, 80, is too old for another term. Young Massachusetts Democrats are divided - AP News"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/09/01/markey-wins-massachusetts-senate-primary-01061047",
+      "title": "Markey defies age concerns, defeats Moulton in Massachusetts - Politico"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/boston/news/massachusetts-primary-election-senate-markey-moulton-ballot/",
+      "title": "Ed Markey defeats Seth Moulton in Massachusetts' Democratic primary for Senate - CBS News"
+    }
+  ]
+}
