@@ -151,7 +151,7 @@ mewscast/
 │   ├── journalism-republish.yml    # Republish a saved draft
 │   ├── post-correction.yml         # Manual correction post
 │   ├── bluesky-engage.yml          # Bluesky engagement automation
-│   ├── engage-cats-bluesky.yml     # Cat community engagement (Bluesky)
+│   ├── open-failure-issue.yml      # workflow_run listener that opens a GitHub issue on failed runs
 │   ├── bluesky-outlet-reply.yml    # Bluesky outlet reply bot
 │   ├── triage-review.yml           # Triage decision logging
 │   ├── track-analytics.yml         # Engagement analytics
@@ -161,7 +161,7 @@ mewscast/
 │   ├── twitter_bot.py              # X/Twitter API integration (publish path)
 │   ├── bluesky_bot.py              # Bluesky API integration
 │   ├── bluesky_client.py           # Low-level Bluesky client
-│   ├── content_generator.py        # Content generation (source replies, image prompts)
+│   ├── truncate.py                 # Sentence-truncation helper (function formerly in content_generator)
 │   ├── image_generator.py          # AI image generation (Grok)
 │   ├── image_qc.py                 # Image quality checks
 │   ├── news_fetcher.py             # Google News RSS fetching
