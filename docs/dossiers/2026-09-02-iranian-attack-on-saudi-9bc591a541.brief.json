@@ -1,0 +1,93 @@
+{
+  "story_id": "2026-09-02-iranian-attack-on-saudi-9bc591a541",
+  "headline_seed": "Iranian attack on Saudi tanker killed two Filipino sailors, Saudi Arabia says - BBC",
+  "brief": {
+    "story_id": "2026-09-02-iranian-attack-on-saudi-9bc591a541",
+    "consensus_facts": [
+      "Saudi Arabia's national shipping company Bahri confirmed that two Filipino seafarers were killed in a security incident involving its oil tanker Sidr while it transited the Strait of Hormuz on Monday.",
+      "The incident aboard Sidr occurred at 23:40 local time (roughly 19:40-20:40 GMT) on Monday.",
+      "Saudi Arabia condemned what it called an Iranian attack on the Saudi tanker Sidr and also condemned Iranian attacks on Bahrain, Jordan and Kuwait, calling for de-escalation and respect for maritime safety.",
+      "About one-fifth (roughly 20%) of global oil and gas shipments usually pass through the Strait of Hormuz.",
+      "The Strait of Hormuz situation is tied to a broader conflict between the US/Israel and Iran that began with strikes on Iran in late February 2026.",
+      "A collapse of a US-Iran ceasefire was linked to renewed attacks on commercial shipping in the strait."
+    ],
+    "disagreements": [
+      {
+        "topic": "Cause of the tanker incident / attribution of responsibility",
+        "positions": {
+          "BBC News": "Saudi Arabia and maritime firms attribute it to an Iranian attack by 'unknown projectiles'; Iran's IRGC counter-claims the tankers hit mines while using an illegal/unauthorised route at the urging of the US military.",
+          "The Economic Times (Reuters)": "Frames it as an Iranian attack per Saudi Arabia; notes Iran has threatened tankers sailing without authorisation, without prominently airing Iran's mine counter-claim.",
+          "The Manila Times": "States plainly the tanker 'was attacked' without attributing the mines-versus-projectiles dispute.",
+          "The Times of India": "Frames it as a 'deadly revenge strike' by Iran killing the crew, presenting Iranian responsibility as established fact."
+        }
+      },
+      {
+        "topic": "Number of Iranian casualties in US strikes",
+        "positions": {
+          "BBC News (Article 1/2)": "Iran's health minister said 18 people killed and 108 injured in the US attacks.",
+          "BBC News (Article 3)": "Reports four killed (including two children) at the wedding, seven near Ahvaz/Aqajari, four IRGC aerospace members, three Basij members \u2014 an itemized tally without a single total figure, and notes media initially quoted five wedding deaths."
+        }
+      },
+      {
+        "topic": "Casualties from Iran's retaliatory strikes on US bases",
+        "positions": {
+          "BBC News (Article 3)": "IRGC/Iranian military claimed casualties and damage at Camp Titin in Jordan; Reuters cited US officials saying there were no casualties; Jordan said 10 of 13 missiles were destroyed and three fell in uninhabited areas."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News": "Two near-identical BBC articles (.com and .co.uk) lead with the Saudi allegation of an Iranian attack and the two Filipino deaths, then situate the incident inside the wider US-Iran war, mine-versus-projectile dispute, and the strait's closure. Careful attribution throughout ('what it said was', 'according to maritime security firms', 'Iran has not responded'). Article 3 shifts framing to the Iranian civilian wedding deaths and the 'war crime' accusation, with BBC Verify forensic detail on the missile type; it treats the tanker deaths as a secondary line. BBC gives the most airtime to Iran's counter-narrative and includes both sides' claims and denials.",
+      "The Economic Times": "Republishes a Reuters wire that leads on Saudi Arabia as 'the world's biggest crude exporter' condemning an Iranian attack. Emphasizes the pattern of prior attacks on Bahri vessels (Wedyan, Masa, Amzan) and Houthi blockade context. Airs Iran's threat to unauthorised tankers but not Iran's mines counter-claim. Body is heavily padded with unrelated 'quote of the day' filler, diluting the news content.",
+      "The Manila Times": "Video-first breaking item with a thin text blurb centered on the national angle \u2014 two Filipino seamen killed. States the tanker 'was attacked' without dispute or attribution, and ties the event to the collapse of the US-Iran ceasefire. Minimal detail; mostly promotional/subscription boilerplate.",
+      "The Times of India": "Most editorially loaded framing: headline 'MBS Explodes After Iran KILLS Crew In DEADLY Revenge Strike' asserts Iranian responsibility and a 'revenge' motive as fact. The short body is more measured, using 'accused' language and noting Saudi condemnation of attacks on Bahrain, Jordan and Kuwait and a call for a return to negotiations, but the packaging sensationalizes."
+    },
+    "primary_source_alignment": [
+      "No primary source (Bahri statement text, Saudi foreign ministry statement, IRGC statement, maritime firm reports from Marisks/Kpler/UKMTO) was provided in the dossier; alignment cannot be independently verified against underlying documents.",
+      "Outlets quote the Bahri statement and Saudi foreign ministry statement consistently in substance (two Filipino deaths, 23:40 local time, condemnation and call for de-escalation), but this is second-hand quotation, not a retrievable primary document."
+    ],
+    "missing_context": [
+      "No outlet provided forensic or independent physical evidence establishing whether Sidr was struck by projectiles (Saudi/maritime-firm claim) or by mines (Iran's claim); the two accounts remain unreconciled.",
+      "The names, ages, or personal details of the two killed Filipino sailors are absent from all outlets despite the strong Philippine national interest angle.",
+      "No response or comment from the Philippine government or its foreign ministry is reported in any outlet.",
+      "The fate and casualty status of the second struck tanker, the South Korean-owned Senegal Prosperity, is mentioned only by BBC and left largely unfollowed.",
+      "The US military declined to comment on the tanker incident specifically; no outlet obtained direct US confirmation or denial of involvement in the vessels' routing.",
+      "Total civilian versus military casualty breakdowns for the US strikes on Iran diverge between BBC articles (a single '18 killed' figure versus an itemized tally) and are not reconciled.",
+      "Only two distinct newsroom sources have full body text with substantive reporting (BBC and a Reuters wire via Economic Times); Manila Times and Times of India are video blurbs, and both BBC URLs are the same article \u2014 narrowing genuine independent corroboration."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six dossier entries cover the same event but with sharply different framings \u2014 from BBC's carefully attributed dispute (projectiles vs. mines) to Times of India's flat 'deadly revenge strike' assertion \u2014 and the core attribution of responsibility is contested between Saudi Arabia and Iran, making the coverage divergence itself the story.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cx2zxgg4mx9o",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cx2zxgg4mx9o",
+      "title": "Iranian attack on Saudi tanker killed two Filipino sailors, Saudi Arabia says - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cj06q4ynpmjo",
+      "title": "Iran says US strike killed four at wedding in 'war crime' as US denies targeting civilians - BBC"
+    },
+    {
+      "outlet": "The Economic Times",
+      "url": "https://m.economictimes.com/news/international/world-news/saudi-arabia-says-iran-attacked-vessel-in-hormuz-killing-two-sailors/amp_articleshow/133711921.cms",
+      "title": "Saudi Arabia says Iran attacked vessel in Hormuz, killing two sailors - The Economic Times"
+    },
+    {
+      "outlet": "The Manila Times",
+      "url": "https://www.manilatimes.net/2026/09/03/videos/breaking-two-filipino-seamen-killed-in-attack-on-saudi-oil-tanker-in-hormuz/2417378",
+      "title": "BREAKING: Two Filipino seamen killed in attack on Saudi oil tanker in Hormuz - The Manila Times"
+    },
+    {
+      "outlet": "The Times of India",
+      "url": "https://timesofindia.indiatimes.com/videos/international/mbs-explodes-after-iran-kills-crew-in-deadly-revenge-strike-on-saudi-tanker/amp_videoshow/133716039.cms",
+      "title": "MBS Explodes After Iran KILLS Crew In DEADLY Revenge Strike On Saudi Tanker - The Times of India"
+    }
+  ]
+}
