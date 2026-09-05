@@ -1,0 +1,63 @@
+{
+  "story_id": "2026-09-05-greek-air-force-jet-a334d36a64",
+  "headline_seed": "Greek air force jet crashes at annual aerial show, starts fire - AP News",
+  "brief": {
+    "story_id": "2026-09-05-greek-air-force-jet-a334d36a64",
+    "consensus_facts": [
+      "A Greek air force jet crashed during the Athens Flying Week airshow north of Athens on Saturday, September 5, 2026.",
+      "The aircraft was a twin-seat Phantom F4 (F-4) jet.",
+      "The crash occurred while the jet was performing a low-altitude maneuver.",
+      "The crash triggered a fire that sent large plumes of black smoke into the sky.",
+      "There were no injuries reported among the spectators.",
+      "The crash happened at Tanagra air force base, located 60 kilometers (about 40 miles) north of Athens.",
+      "Eighty-five firefighters, assisted by 11 water-dropping planes and helicopters, worked to contain the blaze.",
+      "The fire was kept at a distance from the crowd at the annual Athens Flying Week event.",
+      "Thousands of spectators were in attendance."
+    ],
+    "disagreements": [
+      {
+        "topic": "Status of the two crew members / pilots",
+        "positions": {
+          "Associated Press": "Reports the two pilots were killed; officials said their bodies were located during a rescue operation hampered by fire.",
+          "The Independent": "Reports air force officials offered no immediate update on the condition of the two crew members, citing responders hindered by the fire."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Leads with the fatality: headline and lede both state two pilots were killed. Emphasizes the death toll, the rescue operation hampered by fire, the cancellation of remaining weekend events, and an evacuation order near the base. Includes reactions from Cyprus' Defense Minister Vasilis Palmas and reference to Greek counterpart Nikos Dendias. Includes detail of a second, larger explosion as the plane broke apart. Straightforward wire framing centered on the human cost and official response.",
+      "The Seattle Times": "Headline-only in this dossier (republished wire item, likely AP/Google News feed). Headline frames the story as 'crashes at annual aerial show, starts fire' \u2014 emphasizes the fire rather than fatalities. No body text available to assess framing beyond the headline.",
+      "The Independent": "Headline emphasizes the 'huge fire' rather than deaths ('jet crash starts huge fire at flying show near Athens'). Notably does NOT confirm the pilots' deaths, stating officials gave no immediate update on the crew \u2014 suggesting an earlier snapshot in the news cycle. Roughly half the article body is a fundraising/mission appeal for The Independent, and a large portion pivots to an unrelated prior story: the August helicopter crash on Sifnos that killed a British honeymoon couple (Alexander Cromie and Marie Ebert). Uses the current crash as a peg to bundle in a separate Greek aviation tragedy."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official air force statements, incident reports, or transcripts) were located for this story. Both official-attributed claims trace to statements relayed through the outlets, not to a retrievable primary document."
+    ],
+    "missing_context": [
+      "No outlet reported the cause of the crash beyond describing it as occurring during a low-altitude maneuver; no official cause or investigation status is given.",
+      "The two pilots are not named in any of the retrievable articles.",
+      "The F-4 Phantom is an aging airframe; no outlet addresses the aircraft's age, maintenance history, or Greece's continued operation of the platform \u2014 context a fair-minded reader would want.",
+      "The AP and The Independent share near-identical core wording (both cite the 60km distance, 85 firefighters, 11 water-dropping aircraft, twin-seat Phantom F4, low-altitude maneuver), indicating they draw from the same wire feed \u2014 this is effectively one primary reporting source, not two independent ones.",
+      "The Independent's account predates confirmation of the fatalities, so readers relying on it alone would not know the two crew members died.",
+      "Only one outlet (AP) provided substantive full body text; The Seattle Times is headline-only and The Independent's body is largely fundraising boilerplate and unrelated prior-incident material. This limits the depth of true multi-outlet corroboration."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets with body text corroborate the core event (crash, F-4 Phantom, fire, no spectator injuries, firefighting response), with only a single material divergence \u2014 whether the pilots' deaths were confirmed \u2014 that reflects news-cycle timing rather than genuine framing conflict. There is no primary source and no strong multi-outlet framing war, so this is a straightforward REPORT rather than a META.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/greece-jet-crash-air-show-athens-532058afd7757cbf8725b95b34dc9acd",
+      "title": ""
+    },
+    {
+      "outlet": "The Seattle Times",
+      "url": "https://www.seattletimes.com/nation-world/world/greek-air-force-jet-crashes-at-annual-aerial-show-starts-fire/",
+      "title": "Greek air force jet crashes at annual aerial show, starts fire - The Seattle Times"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://www.independent.co.uk/news/world/europe/greek-air-force-jet-crash-fire-athens-b3045246.html",
+      "title": "Greek air force jet crash starts huge fire at flying show near Athens - The Independent"
+    }
+  ]
+}
