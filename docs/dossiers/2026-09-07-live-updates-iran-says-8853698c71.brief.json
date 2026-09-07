@@ -1,0 +1,98 @@
+{
+  "story_id": "2026-09-07-live-updates-iran-says-8853698c71",
+  "headline_seed": "Live Updates: Iran says it will expand control in Strait of Hormuz as oil and gas prices continue to climb - CBS News",
+  "brief": {
+    "story_id": "2026-09-07-live-updates-iran-says-8853698c71",
+    "consensus_facts": [
+      "The head of Iran's Supreme National Security Council (identified by AP as Mohsen Rezaei) said Iran plans to announce an 'exclusion zone' or restricted zone outside the Strait of Hormuz targeting vessels attempting to transit without Iranian permission, to be announced in the coming days/weeks (reported by CBS News, CNBC, and AP).",
+      "The U.S. military struck three Iranian oil tankers after saying its Navy warships were targeted with ballistic missiles (reported by CBS News, CNBC, and AP).",
+      "Both the U.S. and Iran claim control over the Strait of Hormuz, a waterway vital to global energy supply (reported by CNBC and AP).",
+      "Traffic through the Strait of Hormuz dipped to its lowest level since May, based on shipping data attributed to Kpler and cited via Reuters (reported by CBS News body text and referenced in the Reuters headline).",
+      "The U.S. and Iran have been engaged in an on-again, off-again conflict that began Feb. 28, 2026 with U.S. and Israeli strikes (reported by AP; referenced in CBS News framing of 'the Iran war')."
+    ],
+    "disagreements": [
+      {
+        "topic": "Terminology for Iran's planned maritime zone",
+        "positions": {
+          "CBS News": "Describes it as a maritime 'exclusion zone' where Iran intends to stop vessels transiting without permission",
+          "CNBC": "Describes it as a 'restricted zone' outside the Strait of Hormuz",
+          "Associated Press": "Describes it as an 'exclusion zone' where identified ships would be 'placed on our sanctions list' rather than physically stopped"
+        }
+      },
+      {
+        "topic": "Whether Iran struck a U.S. vessel in the Strait",
+        "positions": {
+          "Associated Press": "Iran claimed Sunday it struck an unmanned U.S. vessel trying to enter the Strait; the U.S. military dismissed the claim as a 'total lie'",
+          "CBS News": "Does not include this specific claim/denial in the provided body",
+          "CNBC": "States the U.S. hit three Iranian tankers after Iran launched ballistic missiles at two U.S. navy ships, without the uncrewed-vessel dispute"
+        }
+      },
+      {
+        "topic": "Retaliation and counter-strike claims",
+        "positions": {
+          "CBS News": "Iran threatened Sunday to deliver a 'more intense and more painful' retaliation after the U.S. struck three Iranian oil tankers",
+          "Associated Press": "Iran's state broadcaster claimed Iran targeted three oil tankers and three American vessels in response, which AP says could not be immediately confirmed"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only in the dossier ('Iran Says Strait of Hormuz Deal With Oman Just Days Away'). The body is a bot-check/paywall notice with no reportable content. Notably, the headline frames an Oman-mediated deal as imminent \u2014 a diplomatic/de-escalation angle absent from every other outlet's available text. This cannot be corroborated from the dossier.",
+      "CBS News": "Presents the story as an ongoing 'Iran war' live blog. Leads with the exclusion-zone announcement and oil/gas price spikes (Brent near $97, U.S. gas at a record $4.14 Labor Day average), tying the geopolitical conflict directly to consumer economic impact. Gives substantial space to Lebanon/Hezbollah strikes and civilian casualties, and to IAEA chief Grossi's stalled inspections \u2014 broadening the frame beyond the Strait itself.",
+      "CNBC": "A short video segment (Squawk Box Europe) framed for a markets audience. Emphasizes the escalation exchange (U.S. hit three tankers after Iran fired ballistic missiles at two U.S. navy ships) and the forthcoming restricted zone. Terse and market-focused; minimal humanitarian or diplomatic context.",
+      "Associated Press": "Provides the most detailed reporting across three articles. One is a human-interest photo gallery humanizing daily life in Bandar Abbas amid the conflict (children swimming, families on motorcycles), a frame no other outlet offers. The news articles carefully attribute and hedge competing claims (naming Rezaei, noting the disputed uncrewed-vessel strike, flagging Iran's counter-claims as unconfirmed), and add context on collapsed U.S.-Iran negotiations, the June memorandum of understanding, the U.S. blockade (20+ warships, 92 ships redirected, 3 disabled), and expert commentary calling the missile launches a dangerous escalation.",
+      "Reuters": "Headline-only in the dossier ('Hormuz traffic dips to lowest since May after US, Iranian strikes on ships'). Frames the story through shipping/traffic data. The underlying Kpler figures are echoed in CBS News's body, but Reuters's own body text is unavailable."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court filings, official Iranian or U.S. military statements in full text, IAEA transcripts, or shipping-data releases were provided in the dossier. All claims rest on outlet reporting and quoted statements, several of which the outlets themselves flag as unconfirmed (e.g., Iran's counter-strike claims, the disputed uncrewed-vessel strike)."
+    ],
+    "missing_context": [
+      "No primary source (U.S. Central Command statement, Iranian SNSC announcement, IAEA briefing transcript, or Kpler dataset) was available to independently verify the competing military claims.",
+      "Bloomberg's headline asserts an Iran-Oman Strait deal is 'just days away,' but no body text was retrievable and no other outlet corroborates this diplomatic development \u2014 a potentially significant de-escalation angle left unverified.",
+      "The exact legal or geographic definition of Iran's planned 'exclusion zone' is unclear; AP notes it is not even clear where Iran defines the U.S. naval blockade line from which the zone would extend.",
+      "No outlet in the dossier provides Iran's full stated rationale beyond quoted threats, nor a detailed U.S. State Department position on the exclusion-zone plan.",
+      "The precise timeline of when the Iranian ballistic missiles were fired is unresolved \u2014 AP explicitly notes 'It wasn't clear when the Iranian missiles were fired.'",
+      "Casualty figures are fragmented across incidents (2 Filipino sailors on the Saudi tanker per CBS/AP; 11-12 killed in Lebanon strikes per CBS; 5 killed in the wedding/Kuhestak strike per AP; 11 killed in a separate Iranian fuel-tanker road explosion per AP) with no consolidated accounting.",
+      "Two AP news articles share bylines (Cara Anna appears on both) and both AP and CBS draw on AFP and Reuters wire material, so apparent multi-outlet corroboration partly traces to shared wire sourcing rather than fully independent reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same Strait of Hormuz escalation but with materially different framings \u2014 CBS on economic/consumer impact and regional war, CNBC on markets, AP on humanitarian and diplomatic context, and Bloomberg headlining an uncorroborated Oman peace deal \u2014 while no primary source was available to verify the disputed military claims. This is a coverage-comparison story, not a straight report.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-07/iran-says-strait-of-hormuz-deal-with-oman-just-days-away",
+      "title": "Iran Says Strait of Hormuz Deal With Oman Just Days Away - Bloomberg.com"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-strait-of-hormuz-oil-gas-price-strikes/",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/video/2026/09/07/iran-to-announce-a-restricted-zone-outside-the-strait-of-hormuz.html",
+      "title": "Iran to announce a restricted zone outside the Strait of Hormuz - CNBC"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/photo-gallery/photos-show-daily-life-iran-beach-along-strait-hormuz-0423b300b0c642b796a9078541992bb0",
+      "title": "Photos show daily life in Iran on the beach along the Strait of Hormuz - AP News"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/hormuz-traffic-dips-lowest-since-may-after-us-iranian-strikes-ships-2026-09-06/",
+      "title": "Hormuz traffic dips to lowest since May after US, Iranian strikes on ships - Reuters"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/iran-us-war-strait-hormuz-ship-attack-a52beec77dc90af3d040d0553837ad20",
+      "title": "Iran says it plans to announce a new \u2018exclusion zone\u2019 near the Strait of Hormuz - AP News"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/iran-us-war-oil-tankers-b3650799901c56a6deeca962cbaa4109",
+      "title": "US strikes 3 Iranian oil tankers after saying warships were targeted with ballistic missiles - AP News"
+    }
+  ]
+}
