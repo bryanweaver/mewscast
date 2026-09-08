@@ -1,0 +1,108 @@
+{
+  "story_id": "2026-09-08-amazon-plane-crash-starts-708004ad47",
+  "headline_seed": "Amazon Plane Crash Starts Debate About Requiring a Buffer for Runways - The New York Times",
+  "brief": {
+    "story_id": "2026-09-08-amazon-plane-crash-starts-708004ad47",
+    "consensus_facts": [
+      "An Amazon cargo plane overran a runway at Miami International Airport on Sunday, September 6, 2026, and crashed.",
+      "Five people were killed and five others were injured in the incident.",
+      "The aircraft was a Boeing 767 operated by 21 Air, a cargo carrier based in North Carolina.",
+      "The plane struck multiple vehicles on the ground after overrunning the runway and burst into flames.",
+      "At least three of the injured were in critical condition, and some victims were trapped inside or under vehicles.",
+      "The flight originated in San Juan, Puerto Rico (Luis Mu\u00f1oz Mar\u00edn International Airport) before landing in Miami.",
+      "The FAA temporarily grounded flights at the airport, and the NTSB is investigating the crash.",
+      "The crash occurred over Labor Day weekend, one of the busiest US travel periods of the year.",
+      "Miami-Dade County Mayor Daniella Levine Cava announced the casualty figures at a news conference.",
+      "The Amazon flight was designated as Prime Air Flight 7598 (also referenced as Amazon Air flight 7598)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether an EMAS runway buffer is central to the story",
+        "positions": {
+          "The New York Times": "Headline frames the crash as sparking a debate about requiring an engineered buffer (EMAS) at runway ends.",
+          "The Guardian": "Reports NTSB chair noted the 'lack thereof of an engineered materials arresting system (EMAS)' and that Miami is not equipped with arresting beds, which the FAA says are installed at more than 120 airports nationwide.",
+          "BBC News": "Does not mention EMAS or runway buffers at all; focuses on the incident, casualties, and travel disruption.",
+          "The Washington Post": "Does not mention EMAS; body text is truncated to the basic casualty report.",
+          "USA Today": "Does not mention EMAS; brief item within a daily briefing roundup."
+        }
+      },
+      {
+        "topic": "Number of airports with EMAS installed",
+        "positions": {
+          "The Guardian": "States the FAA says arresting beds have been installed at more than 120 airports nationwide.",
+          "The New York Times": "Headline-only; no body figure available.",
+          "BBC News": "Does not report this figure."
+        }
+      },
+      {
+        "topic": "Details of the crash path and vehicles struck",
+        "positions": {
+          "The Guardian": "Provides detailed NTSB account: overran runway 30, struck navigational aids, hit a 2012 white Ford Econoline van (with seven persons on board) owned by a contract cleaning company, then a Toyota Corolla Cross LE on NW 67th Avenue, traveling roughly 1,300 ft past the paved surface, near an area where Tesla robotaxis were stationed.",
+          "BBC News": "Reports the plane crossed a road beyond the runway and hit several vehicles, and that the plane came to rest near a car park serving an Amazon warehouse; cites FlightRadar24 speed of 112 knots at exit of usable runway.",
+          "The Washington Post": "Reports only that the plane overshot the runway and hit multiple vehicles.",
+          "USA Today": "Reports the plane struck multiple vehicles and some victims were trapped inside."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Three of the four NYT items in the dossier are headline-only (no retrievable body). The lead headline reframes the crash from a breaking-news event into a policy debate \u2014 'Amazon Plane Crash Starts Debate About Requiring a Buffer for Runways' \u2014 foregrounding the EMAS/runway-buffer angle over the human toll. Other NYT headlines emphasize the Amazon logo ('Plane With Amazon Logo Crashes') and a 'What to Know' explainer about the 21 Air carrier. Because bodies are unavailable, the substance behind the NYT framing cannot be verified from the dossier.",
+      "BBC News": "Leads with the investigation and human impact \u2014 casualties, rescue operations, and eyewitness accounts. Emphasizes traveler disruption at length (cancellations, delays, Labor Day travel volume) and airport context/statistics. Includes company statements from Amazon and 21 Air. Notably omits any discussion of the EMAS runway buffer that anchors the NYT frame.",
+      "The Washington Post": "Body text is heavily truncated (near-boilerplate). What survives is a bare-bones breaking report: overshot runway, five dead, five injured, mayor's quote naming Prime Air Flight 7598. No framing beyond straight incident reporting; no EMAS, no investigation detail.",
+      "USA Today": "Buries the crash inside a 'Daily Briefing' roundup alongside gas prices, college football, and political items. Treats it as one bullet among many rather than a standalone story. Confirms core facts (five dead, five injured, multiple vehicles struck, three critical) but offers no depth or framing.",
+      "The Guardian": "Most substantive body in the dossier. Leads on the federal investigation and the technical question of whether the plane touched down too late in its glide path. Quotes NTSB chair Jennifer Homendy extensively with a detailed crash reconstruction, and cites aviation experts (Steve Arroyo, Mary Schiavo) on possible tail wind and failure to flare. Surfaces the EMAS/arresting-bed absence as an NTSB focus area, aligning with the NYT's runway-buffer frame while grounding it in the investigation."
+    },
+    "primary_source_alignment": [
+      "No primary source (NTSB transcript, FAA filing, or press release) was included in the dossier. The Guardian quotes NTSB chair Jennifer Homendy's Monday press conference secondhand, but the underlying transcript was not provided, so primary-source verification is not possible.",
+      "The specific figures attributed to the NTSB via The Guardian \u2014 runway 30 overrun, ~1,300 ft past paved surface, seven persons in the Ford Econoline van, the vehicle makes/models, and the EMAS focus \u2014 are single-outlet and uncorroborated by any primary document in this dossier."
+    ],
+    "missing_context": [
+      "Only two of the seven dossier articles (BBC News and The Guardian) have substantial retrievable body text; three New York Times items are headline-only and the Washington Post body is truncated to near-boilerplate. Consensus is therefore limited to facts confirmed by at least two full bodies plus the truncated WaPo/USA Today reports.",
+      "The New York Times headline drives the 'runway buffer / EMAS debate' framing for this story, but no NYT body text was retrievable to substantiate it; only The Guardian independently supports the EMAS angle.",
+      "No outlet clarifies whether the five people killed were aboard the aircraft, on the ground, or a mix \u2014 BBC explicitly notes this was not yet clear.",
+      "The cost, feasibility, and regulatory history of requiring EMAS at existing airports like Miami is asserted as a debate but not explained; no outlet reports why Miami lacks the system or what installation would require.",
+      "No primary NTSB or FAA document was located, so all investigation details rest on The Guardian's account of a single press conference.",
+      "Weather at the time (light thunderstorms, gusting winds, possible tail wind) is mentioned by BBC and The Guardian but not established as a cause; the investigation's probable-cause determination is explicitly not expected for at least a week.",
+      "The identities and roles of the deceased and injured, and the status of the two flight crew members, are not fully reported."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The same crash is covered across multiple outlets with materially different framings \u2014 NYT elevates it into a policy debate about runway buffers (EMAS), The Guardian grounds that angle in the NTSB investigation, while BBC, WaPo, and USA Today treat it as a straight incident or a roundup bullet \u2014 making this a coverage-divergence story rather than a straightforward REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/07/us/miami-crash-emas-buffer-runways.html",
+      "title": "Amazon Plane Crash Starts Debate About Requiring a Buffer for Runways - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/c0e3p1j7n3ro",
+      "title": "Investigators begin work on why cargo plane overran Miami runway - BBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/nation/2026/09/06/amazon-cargo-plane-crashes-after-veering-off-runway-miami-airport/",
+      "title": "Amazon cargo plane crashes at Miami airport, killing five people - The Washington Post"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/2026/09/07/plane-crash-labor-day-college-football-midterms-data-centers/91647763007/",
+      "title": "Daily Briefing: Plane crash kills five - USA Today"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/06/us/amazon-air-21-cargo-airline.html",
+      "title": "What to Know About Amazon Air Cargo Carrier Involved in Miami Crash - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/09/06/us/miami-plane-crash",
+      "title": "5 Killed and 5 Injured After Plane With Amazon Logo Crashes at Miami Airport - The New York Times"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/sep/07/amazon-cargo-plane-crash-miami-airport",
+      "title": "Federal investigators search for cause of Amazon cargo jet crash that killed five - The Guardian"
+    }
+  ]
+}
