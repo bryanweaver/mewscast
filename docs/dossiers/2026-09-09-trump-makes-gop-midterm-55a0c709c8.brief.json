@@ -1,0 +1,102 @@
+{
+  "story_id": "2026-09-09-trump-makes-gop-midterm-55a0c709c8",
+  "headline_seed": "Trump makes GOP midterm convention about himself, much to Democrats\u2019 delight - The Washington Post",
+  "brief": {
+    "story_id": "2026-09-09-trump-makes-gop-midterm-55a0c709c8",
+    "consensus_facts": [
+      "Republicans are holding a first-ever GOP midterm convention in Dallas, Texas, starting Wednesday, with Trump scheduled to speak on both nights (CNN, ABC News).",
+      "Trump is set to be the dominant figure at the convention and has promised to campaign heavily for the party in the final stretch before the November midterms (CNN, ABC News).",
+      "Several notable battleground GOP candidates are choosing not to attend the convention (CNN, ABC News).",
+      "Trump's popularity/approval is at a low point heading into the midterms (CNN, Axios, ABC News, CBS News).",
+      "To win a Senate majority, Democrats need to net four seats (CNN, CBS News).",
+      "Affordability/cost-of-living issues and Trump's war with Iran have made several Republican-held Senate seats more competitive (CNN, CBS News).",
+      "Maine, North Carolina, and Ohio are considered core Democratic Senate pickup opportunities, with additional targets in tougher territory such as Alaska, Iowa, and Texas (CNN, CBS News).",
+      "In Michigan, Democrats nominated progressive Abdul El-Sayed over a more moderate candidate backed by national Democrats (CNN, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Convention keynote lineup detail",
+        "positions": {
+          "CNN": "Reports Trump speaks both nights and RNC chairman Joe Gruters hyped it as 'Trumpapalooza'; does not detail the full speaker roster.",
+          "ABC News": "Provides a detailed speaker lineup including Vance, Cabinet members (Bessent, Blanche, Kennedy, Turner) and congressional leaders (Johnson, Barrasso, Scott), with Trump giving keynote and closing remarks."
+        }
+      },
+      {
+        "topic": "Number of races Trump will target",
+        "positions": {
+          "CNN": "Reports Trump plans to spend the final 30 days targeting 35 races he believes will determine control of Congress.",
+          "ABC News": "Does not specify a number of targeted races."
+        }
+      },
+      {
+        "topic": "Direction of Latino voters",
+        "positions": {
+          "Axios": "Reports Democrats have gained sharply among Latino voters in competitive House districts, opening a 58%-35% generic ballot lead, reversing Trump's 2024 gains.",
+          "CNN": "Frames the GOP as hoping to make democratic socialists a liability for Democrats, without addressing Latino voter shifts."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in dossier ('Warning signs abound for Trump's Republicans as midterm campaign begins final sprint'). Frames the story around GOP peril and challenges heading into the final sprint. No body text available to corroborate specifics.",
+      "CNN": "Leads with Democratic optimism in deep-red territory (Kansas Senate race), framing the midterms as an expanding Democratic map. Emphasizes Trump's unpopularity and his 'emergence as a main character' delighting Democrats. Quotes Newsom's sarcastic praise of Trump and notes both parties' spending. Acknowledges GOP financial advantages ($400M+ MAGA Inc. war chest) and Democratic vulnerabilities (Michigan, New Hampshire, Georgia). Uses the 'Trumpapalooza' label.",
+      "Axios": "Data-forward framing built around an exclusive Hart Research/TelevisaUnivision poll. Leads on eroding GOP gains among Latinos, emphasizing a 23-point Democratic generic-ballot lead and Trump's underwater numbers on prices and immigration. Includes methodology and margin of error. Frames the shift as economy-driven rather than immigration-driven.",
+      "NBC News": "Effectively body-less in dossier (truncated by a loading paywall). Framing signaled by headline and lede: the Senate is 'up for grabs' with Democrats navigating a tough map and Republicans facing a 'stormy environment.' Neutral both-sides framing.",
+      "The Washington Post": "Headline-only in dossier ('Trump makes GOP midterm convention about himself, much to Democrats' delight'). Framing centers Trump's self-focus at the convention as a strategic gift to Democrats. This is the headline seed for the story but no body text is available.",
+      "ABC News": "Straight preview/logistics framing of the convention. Leads on the event mechanics \u2014 55 days out, two nights in Dallas, keynote speakers, themes (tax legislation, immigration, economy). Quotes the RNC's messaging on borders and immigration verbatim. Notes matter-of-factly that notable battleground candidates are skipping and that Trump's popularity is low. Most neutral, least interpretive of the full-text outlets.",
+      "CBS News": "Race-by-race explainer framing. Focuses on the Senate battleground map, listing 12 key races with candidate profiles and Cook/UVA ratings. Emphasizes structural factors \u2014 GOP defending 22 seats, the Iran war and affordability making seats competitive, Democrats needing to net four. Least focused on the convention itself."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The convention had not yet occurred at the time of the dossier (scheduled to begin Wednesday), so no transcripts, roll-call votes, or official filings are available for alignment.",
+      "Poll-based claims rest entirely on Axios's summary of the Hart Research/TelevisaUnivision survey; the underlying crosstabs and full questionnaire were not provided in the dossier."
+    ],
+    "missing_context": [
+      "Reuters, The Washington Post (the headline-seed outlet), and NBC News provided only headlines or truncated text, so their specific reporting could not be corroborated \u2014 the convention framing rests largely on CNN and ABC News body text.",
+      "No outlet quantifies exactly how many or which battleground GOP candidates are skipping the convention, beyond CNN naming Reps. Tom Barrett and Derrick Van Orden's attitudes.",
+      "The Axios poll covers only Latino voters in 17 competitive House districts and is a single-source survey; no competing poll is presented for cross-validation, and no outlet independently corroborates its findings.",
+      "None of the full-text outlets detail the substance of the Iran war or when it began, though multiple cite it as a driver of GOP difficulty \u2014 readers get the effect without the underlying facts.",
+      "Democratic counter-programming is mentioned only by CNN (Jeffries' delegation, Pritzker's trip); no outlet details what Democrats plan to do or say at their counter-event.",
+      "No outlet provides Trump's specific national approval number at this moment, referring only generally to 'low' popularity or 'record lows.'",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets cover the same event (the Dallas convention and the midterm environment) with materially different emphasis \u2014 CNN and ABC on the convention, Axios on Latino polling, CBS on the Senate map \u2014 while three key outlets including the headline-seed Washington Post are headline-only, making a coverage-comparison the honest frame rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/warning-signs-abound-trumps-republicans-midterm-campaign-begins-final-sprint-2026-09-07/",
+      "title": "Warning signs abound for Trump's Republicans as midterm campaign begins final sprint - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/08/politics/democrats-target-red-territory-2026-midterms",
+      "title": "GOP turns to Trump as Democrats expand their target map in midterm sprint - CNN"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/09/08/poll-latino-voters-trump-gains-fade",
+      "title": "Exclusive poll: GOP's gains among Latinos fade in House battlegrounds - Axios"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/2026-election/senate-grabs-democrats-navigate-tough-map-republicans-face-stormy-envi-rcna593011",
+      "title": "The Senate is up for grabs as Democrats navigate a tough map and Republicans face a stormy environment - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/09/09/gop-indulges-trump-with-2-day-pep-rally-putting-him-right-where-democrats-want-him/",
+      "title": "Trump makes GOP midterm convention about himself, much to Democrats\u2019 delight - The Washington Post"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/trump-gop-hosting-midterm-convention-notable-republicans-plan/story?id=136201624",
+      "title": "Trump and GOP hosting first midterm convention, but notable Republicans plan to skip - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/key-senate-races-2026/",
+      "title": "12 key races that will determine who controls the Senate - CBS News"
+    }
+  ]
+}
