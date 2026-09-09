@@ -1,0 +1,124 @@
+{
+  "story_id": "2026-09-09-fold-the-phone-apple-f944a59506",
+  "headline_seed": "Fold the phone: Apple's new CEO unveils a foldable iPhone - NPR",
+  "brief": {
+    "story_id": "2026-09-09-fold-the-phone-apple-f944a59506",
+    "consensus_facts": [
+      "Apple unveiled its first foldable iPhone, called the iPhone Duo, at its 'Surprise and Shine' event at its Cupertino, California headquarters on Wednesday, September 9, 2026.",
+      "The iPhone Duo starts at a base price of $1,999.",
+      "The device opens like a book, with a smaller outer screen when folded and a larger internal screen when unfolded.",
+      "The device measures 7.6 inches on the internal display when unfolded (NPR and NBC News both cite 7.6 inches; ABC describes it as one continuous screen).",
+      "The iPhone Duo will be available in stores on October 23 (NPR, NBC, ABC), with preorders beginning October 16 (NBC and ABC).",
+      "The Duo comes in two colors, described as 'star white' and 'night sky' (NBC and ABC).",
+      "The announcement was made by Apple's new CEO John Ternus, who succeeded Tim Cook, in Ternus's first keynote as CEO.",
+      "Apple also announced the iPhone 18 Pro and iPhone 18 Pro Max at the same event, with incremental upgrades and AI/Siri features.",
+      "Ternus used the phrase 'one more thing,' a line associated with Steve Jobs, to introduce the foldable device (NPR and NBC).",
+      "Ternus characterized rivals' foldables as feeling like 'two phones awkwardly stuck together' (NBC and ABC quote this line).",
+      "Foldable phones are an existing category dominated for years by competitors such as Samsung and Huawei; Apple is entering as a follower.",
+      "The device is described as roughly passport-sized when folded (NPR and NBC)."
+    ],
+    "disagreements": [
+      {
+        "topic": "When foldable phones first came to market",
+        "positions": {
+          "NPR": "Samsung and Huawei have had products on the market since 2019.",
+          "ABC News": "Foldable phones came onto the market in 2018."
+        }
+      },
+      {
+        "topic": "How much larger the unfolded screen is versus prior iPhones",
+        "positions": {
+          "NBC News": "The double-wide screen is 50% larger than the iPhone Pro Max, measured 7.6 inches diagonally.",
+          "ABC News": "The continuous screen is 80% larger than the latest iPhone Pro."
+        }
+      },
+      {
+        "topic": "Outer/folded screen size",
+        "positions": {
+          "NPR": "5.4-inch outer screen when folded.",
+          "NBC News": "5.4-inch outer display; external screen is about 90% of the surface area of an iPhone Pro.",
+          "ABC News": "Does not specify outer screen dimension."
+        }
+      },
+      {
+        "topic": "iPhone 18 Pro pricing and availability",
+        "positions": {
+          "NPR": "iPhone 18 Pro is the entry-level model at $1,299 ($700 less than the Duo); no separate pre-order dates given.",
+          "ABC News": "iPhone 18 Pro starts at $1,199 and iPhone 18 Pro Max starts at $1,299; both pre-order Sept. 12, in-store Sept. 18."
+        }
+      },
+      {
+        "topic": "Pre-launch product name speculation",
+        "positions": {
+          "CBS News": "Reported (pre-event) the foldable could be dubbed the 'iPhone Ultra' per MacRumors.",
+          "Reuters": "Headline refers to the device as 'iPhone Duo.'",
+          "NPR/NBC/ABC": "Confirm the actual name is iPhone Duo."
+        }
+      },
+      {
+        "topic": "Wall Street / market reaction",
+        "positions": {
+          "NBC News": "Investors appeared to shrug; Apple shares were down 1.9% in afternoon trading.",
+          "NPR / ABC": "Do not report a stock-price reaction.",
+          "CBS News": "Pre-event framing emphasizes pressure on Ternus to satisfy Wall Street on AI; no post-announcement market data."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Frames the device as Apple 'joining the foldable phone race' with a '$1,999 passport-shaped iPhone Duo' \u2014 emphasizes Apple as a market follower and leads with price. No body text available to assess deeper framing.",
+      "Bloomberg": "No usable body text \u2014 the article body is a bot-check/paywall interstitial. From the headline: 'Apple's Rally Pressures New CEO to Deliver on Foldable iPhone' \u2014 a markets-and-leadership frame centered on investor expectations and Ternus's mandate. Cannot verify further.",
+      "NPR": "Leads with a wordplay hook ('Fold the phone') and frames the story around Apple history and leadership transition \u2014 casts the Duo as 'the most radical physical change to the iPhone since' 2007. Emphasizes the Jobs-era 'wow factor' narrative and Ternus as a mechanical engineer who might restore product magic. Highlights Apple's 'market follower' strategy as a strength. Includes AI/Siri Beta context.",
+      "NBC News": "Most technically detailed report. Leads with the device as 'the biggest change to the iPhone since 2007' and Apple's entry into a Samsung-dominated category. Heavily quotes Apple executives (Ternus, Joswiak, Federighi) on specs \u2014 titanium build, dual batteries, battery-life estimates, Touch ID return, magnets, multitasking. Notably also surfaces the muted investor reaction (shares down 1.9%) and frames Ternus as inheriting competitive pressure \u2014 a slightly more skeptical business angle than NPR.",
+      "ABC News": "Shortest, most consumer-facing report. Leads with availability dates and the $1,999 price. Emphasizes product-marketing points (thinnest iPhone ever, iPhone Pencil and Apple Watch compatibility, '80% larger' screen). Frames it as Apple's 'splashy entry' into a niche category. Light on business/competitive context and offers no market reaction.",
+      "CBS News": "This is a pre-event preview, not a post-announcement report, so its framing is anticipatory. Leads on two 'firsts' (foldable and new CEO) and heavily foregrounds the business stakes: slowing iPhone sales, affordability pressures, Apple's AI-laggard reputation, and analyst commentary (Dan Ives, Melissa Otto, Patrick McGee). Includes IDC market-projection data (foldables the only growing segment, +13% boost, 22.9M units; overall shipments down 16.7%). Frames Ternus as having 'big shoes to fill' and raises the question of whether he can deliver a product 'visionary' vs. being a 'nuts and bolts' engineer."
+    },
+    "primary_source_alignment": [
+      "No primary source (Apple press release, event transcript, or official spec sheet) was located for this story. All facts derive from outlet reporting of the live event, so no independent primary-source verification of specs, pricing, or dates was possible."
+    ],
+    "missing_context": [
+      "No outlet independently verified Apple's manufacturer battery-life claims (31/44/24 hours) \u2014 these are Apple figures repeated by NBC, not tested.",
+      "No primary Apple press release or official spec sheet was in the dossier, so screen-size and 'percent larger' discrepancies (50% per NBC vs. 80% per ABC) cannot be reconciled against source documentation.",
+      "The two outlets disagree on when foldables first hit the market (2018 vs. 2019); neither cites a source for the date.",
+      "Only NBC reported the stock-market reaction; a reader would want to know whether the 1.9% dip reflects the announcement or broader market movement \u2014 no outlet contextualizes this.",
+      "No coverage addresses durability of Apple's specific hinge/fold mechanism \u2014 a notable omission given that early competitor foldables (referenced by NPR) had durability problems.",
+      "No outlet reported international pricing/availability or whether the Duo launches outside the U.S.",
+      "CBS's rich analyst and market-projection context (IDC forecasts, affordability crunch, AI-laggard framing) predates the event and was not updated with post-announcement reactions from those same analysts.",
+      "The Bloomberg source could not be read (bot-check interstitial) and the Reuters source was headline-only, so two of six outlets contributed no verifiable body-level reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same event but with materially different emphasis \u2014 NBC leans technical-and-skeptical, ABC consumer-marketing, NPR leadership-legacy, and CBS pre-event business stakes \u2014 and they diverge on concrete figures (screen size, foldable market debut year, iPhone 18 Pro pricing) with no primary source available to adjudicate. That combination of framing divergence plus unresolved factual discrepancies makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/retail-consumer/apple-expected-unveil-first-folding-phone-with-new-ceo-ternus-command-2026-09-09/",
+      "title": "Apple joins foldable phone race with $1,999 passport-shaped iPhone Duo - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/09/09/nx-s1-5961487/apple-duo-foldable-iphone-john-ternus",
+      "title": ""
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-09/apple-s-rally-pressures-new-ceo-to-deliver-on-foldable-iphone",
+      "title": "Apple\u2019s Rally Pressures New CEO to Deliver on Foldable iPhone - Bloomberg"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/tech/apple/apple-foldable-phone-new-fold-18-launch-ceo-john-ternus-rcna596652",
+      "title": "Apple announces long-awaited foldable iPhone Duo - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Business/apple-set-announce-new-products/story?id=136299541",
+      "title": "Apple announces first-ever foldable iPhone, starting at $1,999 - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/apple-event-foldable-iphone-john-ternus/",
+      "title": "Apple event expected to deliver foldable iPhone and debut of new CEO John Ternus - CBS News"
+    }
+  ]
+}
