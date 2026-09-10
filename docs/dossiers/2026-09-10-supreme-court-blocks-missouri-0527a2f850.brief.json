@@ -1,0 +1,118 @@
+{
+  "story_id": "2026-09-10-supreme-court-blocks-missouri-0527a2f850",
+  "headline_seed": "Supreme Court blocks Missouri\u2019s attempt to use newly drawn Republican congressional map - NBC News",
+  "brief": {
+    "story_id": "2026-09-10-supreme-court-blocks-missouri-0527a2f850",
+    "consensus_facts": [
+      "On Thursday, Sept. 10, 2026, the U.S. Supreme Court blocked Missouri from using a newly drawn Republican-favoring congressional map for the November 2026 midterm elections.",
+      "The Supreme Court's order was unsigned/brief with no noted dissents, and the justices gave no reasoning for their decision.",
+      "The ruling blocked an order by U.S. District Judge Stephen Clark, a Trump appointee, who ruled Tuesday that the new map must be used.",
+      "Missouri's current U.S. House delegation has six Republicans and two Democrats; the new map would likely have shifted this to a 7-1 Republican split.",
+      "The new map targeted the seat of longtime Democratic Rep. Emanuel Cleaver.",
+      "The state is now expected to use the previous 2022 congressional map.",
+      "Missouri Secretary of State Denny Hoskins, a Republican, led the effort to use the new map.",
+      "This was the second time the fight reached the Supreme Court; earlier in the week Justice Brett Kavanaugh, who handles emergency matters from Missouri, rejected a request from Hoskins to block the Missouri Supreme Court ruling.",
+      "The Missouri Supreme Court ruled in favor of challengers (the group People Not Politicians, led by Richard von Glahn) and ordered use of the existing districts.",
+      "The Missouri Supreme Court held a contempt hearing Thursday regarding Hoskins defying its order, which convened around the same time as the Supreme Court's ruling.",
+      "The new map was enacted by Missouri Republicans (in 2025) as part of a nationwide redistricting push led by President Trump to hold the GOP House majority.",
+      "Hoskins' lawyers argued minutes before the ruling that changing maps would risk the disenfranchisement of hundreds of thousands of voters who participated in the primary using the new map.",
+      "First/mail ballots in Missouri are set to go out around Sept. 19.",
+      "The state's primaries were held (in August) using the new, more GOP-friendly maps."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the ruling is permanent or temporary",
+        "positions": {
+          "NBC News": "Frames the action as likely signaling 'the end of the battle,' with the state 'likely to use the previous map.'",
+          "Politico": "Frames it as appearing to 'kill GOP redistricting hopes' and 'settle' the fight, per von Glahn.",
+          "The Washington Post": "Frames it as a temporary block that 'will remain in place while a legal fight over the map works its way through the courts.'",
+          "CBS News": "Describes it as 'temporarily' blocking the map and notes an active appeal before the Eighth Circuit is ongoing."
+        }
+      },
+      {
+        "topic": "Characterization of who requested/backed the map blocked",
+        "positions": {
+          "Al Jazeera English": "Frames it primarily as the Supreme Court rejecting 'a request from the administration of President Donald Trump,' emphasizing Trump/administration as the requesting party.",
+          "NBC News": "Frames it as an emergency request by People Not Politicians against Hoskins, with the Trump administration filing a brief backing Hoskins.",
+          "Politico": "Frames it as an emergency appeal by redistricting opponents, describing it as a win for Democrats."
+        }
+      },
+      {
+        "topic": "The vote by which the Missouri Supreme Court ruled",
+        "positions": {
+          "CBS News": "States the Missouri Supreme Court ruled 'unanimously' in favor of challengers.",
+          "NBC News": "Notes the Missouri Supreme Court 'has a majority of Republican appointees' but does not specify a unanimous vote."
+        }
+      },
+      {
+        "topic": "Details of the referendum/ballot-initiative process",
+        "positions": {
+          "NBC News": "Provides detail that opponents gathered signatures for a state referendum, and Hoskins delayed then rejected including it, arguing redistricting plans aren't subject to voter approval.",
+          "CBS News": "Frames it as a petition by People Not Politicians demanding a statewide vote that 'superseded' the new map."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('US Supreme Court blocks Republican-drawn congressional map in Missouri'). Neutral wire phrasing; frames the map by party origin ('Republican-drawn'). No body text available to assess emphasis.",
+      "NBC News": "Most detailed account. Leads on the Court blocking a 'Republican state official's' attempt. Emphasizes procedural history, the contempt hearing, and quotes von Glahn attacking Hoskins ('cannot effectively do the job he was elected to do'). Gives space to Hoskins' and the Trump administration's disenfranchisement arguments. Frames the stakes around Cleaver's seat and the 6-2 delegation. Balanced sourcing but leads with the anti-map victory.",
+      "Al Jazeera English": "Frames the story most explicitly around Trump: leads with the Court 'again' rejecting 'a request from the administration of President Donald Trump' to use maps favoring his party. Repeatedly labels the map 'Trump-backed' and notes Kavanaugh and Clark are both Trump appointees. Emphasizes the international/House-control stakes and the confusion spanning 'more than a year.'",
+      "Politico": "Most explicitly partisan-scorekeeping framing. Headline: 'Supreme Court appears to kill GOP redistricting hopes.' Leads by calling it 'a significant victory' and 'a major win to Democrats.' Emphasizes the near-dozen legal battles and the administrative chaos of a late map switch. Quotes von Glahn blaming Hoskins for 'manufactured confusion.' Frames the Court as signaling federal courts should stay out.",
+      "The New York Times": "Headline-only ('Supreme Court Again Blocks Republican-Backed Missouri Voting Map'). The word 'Again' emphasizes repetition; 'Republican-Backed' frames the map by party. No body text available to assess emphasis.",
+      "The Washington Post": "Very short body (~1 min read). Neutral, restrained framing: leads on the Court 'again' blocking the map 'for the second time this week.' Emphasizes the block is temporary and pending further litigation. Describes the situation as an 'intense legal drama' that 'plunged the state into electoral confusion.' Notes the justices gave no reasoning.",
+      "CBS News": "Straightforward reporting. Leads on the temporary block requiring use of the 2022 map. Uniquely notes Clark refused to stay his order late Thursday and that an Eighth Circuit panel is overseeing an appeal \u2014 emphasizing the fight is not fully over. Uniquely places Missouri in national context alongside Texas, North Carolina (GOP), California (Democratic), and Virginia. Includes 'The Free Press' related links skeptical of gerrymander-as-racial framing."
+    },
+    "primary_source_alignment": [
+      "No primary sources (the Supreme Court order, the district court order, or the Missouri Supreme Court ruling) were located for this story. Alignment between coverage and the underlying documents cannot be verified from the dossier.",
+      "All full-text outlets agree the Supreme Court order was unsigned/brief with no noted dissents and no stated reasoning; because the order text itself was not provided, this characterization rests entirely on outlet reporting."
+    ],
+    "missing_context": [
+      "No primary source documents (the SCOTUS order, Judge Clark's order, or the Missouri Supreme Court ruling) were available in the dossier, so all procedural characterizations depend on outlet reporting.",
+      "The exact standard the Supreme Court applied (e.g., Purcell principle concerns about changing election rules close to an election) is not explained by any outlet, though it appears implicit in the timing arguments.",
+      "Only CBS News reports the current live procedural posture \u2014 that Judge Clark refused to stay his order and an Eighth Circuit appeal remains pending \u2014 leaving the finality of the ruling ambiguous across outlets.",
+      "No outlet quotes Denny Hoskins directly or provides his post-ruling response beyond his lawyers' filings; his 'next steps' remain unspecified.",
+      "The precise margin/vote of the Missouri Supreme Court ruling is inconsistent \u2014 CBS says unanimous, others do not specify.",
+      "No outlet details what specifically happens to the 'hundreds of thousands' of primary voters' ballots under the reverted 2022 map, despite that being Hoskins' central argument.",
+      "Reuters and The New York Times appear as headline-only entries; their framing beyond headline word choice cannot be assessed, and their reporting is not corroboration for body-level facts."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with body text reported the same event but with materially divergent framings \u2014 ranging from 'kills GOP hopes' (Politico) and a Trump-centered rejection (Al Jazeera) to a merely temporary block pending appeal (Washington Post, CBS) \u2014 making the coverage divergence itself the story. No primary source was available, which further warrants a coverage-comparison rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us-supreme-court-blocks-republican-drawn-congressional-map-missouri-2026-09-10/",
+      "title": "US Supreme Court blocks Republican-drawn congressional map in Missouri - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/supreme-court/supreme-court-blocks-missouris-attempt-use-newly-drawn-republican-cong-rcna596857",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/9/10/us-supreme-court-blocks-republican-drawn-congressional-map-in-missouri",
+      "title": "US Supreme Court blocks Republican-drawn congressional map in Missouri - Al Jazeera"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/09/10/supreme-court-missouri-redistricting-midterms-01070432",
+      "title": "Supreme Court appears to kill GOP redistricting hopes in Missouri - Politico"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/10/us/politics/supreme-court-missouri-congress.html",
+      "title": "Supreme Court Again Blocks Republican-Backed Missouri Voting Map - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/politics/2026/09/10/supreme-court-again-blocks-new-missouri-congressional-map-favoring-gop/",
+      "title": "Supreme Court again blocks new Missouri congressional map favoring GOP - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/supreme-court-missouri-new-map-2026-midterm-elections/",
+      "title": "Supreme Court blocks Missouri from using new map favoring GOP in midterm elections - CBS News"
+    }
+  ]
+}
