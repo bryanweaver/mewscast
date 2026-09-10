@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-09-09-trump-says-oil-prices-73e3930d21",
+  "headline_seed": "Trump says oil prices that spiked because of Iran war likely won't come down until after midterms - AP News",
+  "brief": {
+    "story_id": "2026-09-09-trump-says-oil-prices-73e3930d21",
+    "consensus_facts": [
+      "President Donald Trump said on Sept. 9, 2026, that oil and gas prices that spiked because of the Iran war likely won't come down until after the U.S. midterm elections, predicting 'Right after the election, oil prices are going to be tumbling downward.'",
+      "Trump predicted the Iran war will end 'immediately after the election,' arguing Iran 'can't hold out any longer.'",
+      "Trump claimed Iran is 'desperate to try and affect the election, so that we can get a nice weak group of people in there, and leave them alone and let them have their nuclear weapon.'",
+      "Trump made the comments to reporters before departing Joint Base Andrews for the Republican Party's midterm convention in Dallas.",
+      "The Iran war is in its seventh month with no clear resolution in sight, after Trump initially predicted it would last only weeks.",
+      "The U.S. military reported destroying Iranian oil tankers over the past week in response to attempted Iranian missile attacks on U.S. Navy warships.",
+      "Trump previously described the conflict as 'small potatoes,' and Vice President JD Vance last week declined to characterize it as a war.",
+      "Trump tempered his prediction by adding that gas dropping below $2 a gallon would 'take a little bit longer than the midterm(s).'",
+      "The midterm elections are roughly 55 days away / nearly two months out from the Sept. 9 comments (election referenced as Nov. 3 by AP)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of Iranian tankers destroyed",
+        "positions": {
+          "Associated Press": "Says the U.S. military reported striking five Iranian tankers in response to attempted missile attacks on a Navy warship.",
+          "CNBC": "Says the U.S. military said Tuesday its forces destroyed 10 Iranian tankers in the last week.",
+          "USA Today": "Says U.S. military forces destroyed 10 Iranian oil tankers over the past week."
+        }
+      },
+      {
+        "topic": "Brent crude price level",
+        "positions": {
+          "Associated Press": "Brent crude surged more than 3%, topping $100 a barrel for the first time since July.",
+          "CNBC": "Brent crude futures traded above $101 per barrel for the first time since July.",
+          "USA Today": "Does not cite a specific Brent price."
+        }
+      },
+      {
+        "topic": "Additional reporting details unique to each outlet",
+        "positions": {
+          "Associated Press": "Reports AAA gas average ticked up 7 cents to $4.22, diesel hit an all-time high of $5.94, strategic petroleum reserves fell below 300 million barrels, and Houthi attacks ignited fires at Saudi oil facilities.",
+          "CNBC": "Reports fuel analyst Patrick De Haan of GasBuddy is skeptical of Trump's prediction, and cites Trump's Truth Social claim that oil 'will drop precipitously' when the U.S. wins.",
+          "USA Today": "Reports Iran fired 20 ballistic missiles on Sept. 8 at U.S. forces at Al-Azraq air base in Jordan, with 18 intercepted; and that U.S. war goals expanded to include reopening the Strait of Hormuz."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Straight wire framing centered on Trump's admission that relief won't come until after the midterms. Leads on the political-timing angle, foregrounds concrete consumer data (gas at $4.22, diesel record $5.94, SPR below 300 million barrels) and the GOP's electoral vulnerability. Notes Vance's contrasting refusal to set 'artificial timelines.' Reports five tankers struck.",
+      "The New York Times": "Headline-only in dossier. Headline 'Trump's Midterm Pitch Clouded by Iran War and Canada Tariffs' frames the story as a political-liability narrative and bundles in Canada tariffs, a broader economic-headwinds angle not present in other outlets. No body text available to corroborate.",
+      "CNBC": "Business-desk framing emphasizing the markets and Trump's own contradictions. Foregrounds Brent above $101 and WTI above $96, frames Trump's remarks as a 'rare acknowledgement' and highlights the tension with his earlier Truth Social promise that prices 'will drop precipitously.' Uniquely includes an expert skeptic (GasBuddy's Patrick De Haan) casting doubt on the prediction. Reports 10 tankers destroyed.",
+      "NBC News (nightly netcast, Article 4)": "Headline/video-only in dossier. Packages Trump's Iran-war-end comment alongside an Air Force One emergency slide mishap and a Miami cargo plane crash, treating the Iran remark as one segment in a broader nightly roundup rather than a standalone story. No substantive body text.",
+      "The Washington Post": "Headline-only opinion piece 'War is never small potatoes,' framing that directly rebuts Trump's minimizing 'small potatoes' characterization. Opinion, not reporting; no body text available.",
+      "NBC News (nightly video, Article 6)": "Headline/video-only in dossier. Frames the story narrowly around Trump's claim the war will end 'after the election,' embedded in a nightly-news video playlist. No substantive body text.",
+      "USA Today": "Framing leads on Trump's 'immediately after the election' prediction and repeats his verbatim phrasing twice for emphasis. Foregrounds the 55-day timeline, catalogs Trump's shifting labels ('detour,' 'excursion,' 'small potatoes'), notes the Sept. 8 Iranian ballistic-missile barrage on Al-Azraq air base in Jordan, and highlights that U.S. war goals have expanded to reopening the Strait of Hormuz. Reports 10 tankers destroyed."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., a full transcript of Trump's Joint Base Andrews remarks or the convention keynote) was located for this story, so direct quotes could not be verified against an underlying document.",
+      "Three full-text outlets (AP, CNBC, USA Today) independently quote the same core Trump lines, which provides strong cross-outlet corroboration of the quotes even absent a primary transcript."
+    ],
+    "missing_context": [
+      "Only three of seven dossier items (Associated Press, CNBC, USA Today) contain substantive body text; the New York Times and Washington Post entries are headline-only and both NBC News entries are video/netcast pages without reporting text.",
+      "The tanker-destruction count is inconsistent across full-text outlets: AP says five tankers, while CNBC and USA Today say ten \u2014 no outlet reconciles the discrepancy.",
+      "No outlet provides independent economic analysis of whether ending the war would in fact cause prices to 'tumble' on Trump's timeline; only CNBC includes a single skeptical expert voice (GasBuddy's Patrick De Haan).",
+      "No outlet quantifies how much of the price spike is attributable to the Strait of Hormuz disruption versus other factors, though AP notes ~20% of global petroleum passed through the strait pre-conflict.",
+      "No outlet independently assesses Trump's claim that Iran is deliberately timing the conflict to affect the U.S. election, or provides any Iranian response to that assertion.",
+      "The Washington Post opinion headline and NYT headline suggest broader angles (the morality of 'small potatoes' framing; Canada tariffs) that the reporting-outlets do not cover, but their bodies were unavailable to develop those threads.",
+      "No injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (AP, CNBC, USA Today) corroborate the same core facts with only modest framing differences and one factual discrepancy (tanker count), while the remaining four dossier entries are headline- or video-only and cannot support a coverage-divergence META. This is a straightforward multi-source REPORT with the tanker-count discrepancy flagged.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-oil-prices-iran-midterms-22ffe753bb2d60c99024ca6cfbec4142",
+      "title": ""
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/09/business/canada-iran-war-trump-midterms.html",
+      "title": "Trump\u2019s Midterm Pitch Clouded by Iran War and Canada Tariffs - The New York Times"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/09/09/trump-oil-gas-prices-midterm-elections.html",
+      "title": "Trump says oil and gas prices won't fall until 'right after' midterm election - CNBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/nightly-news-netcast/video/nbc-nightly-news-full-episode-sept-9-269589573981",
+      "title": "Sept. 9: AF1 emergency slide deployed; Trump on Iran war end - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/opinions/2026/09/09/trump-called-iran-conflict-small-potatoes-war-is-anything/",
+      "title": "Opinion | War is never \u2018small potatoes\u2019 - The Washington Post"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/nightly-news/video/trump-says-iran-war-will-end-after-the-election-269584965767",
+      "title": "Trump says Iran war will end \u2018after the election\u2019 - NBC News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/news/world/2026/09/09/trump-iran-war-end-midterm-election/91678565007/",
+      "title": "Trump predicts Iran war will end 'immediately after' midterm election - USA Today"
+    }
+  ]
+}
