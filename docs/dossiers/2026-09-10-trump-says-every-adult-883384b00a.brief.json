@@ -1,0 +1,101 @@
+{
+  "story_id": "2026-09-10-trump-says-every-adult-883384b00a",
+  "headline_seed": "Trump says every adult American will get $5,000 if Republicans win midterms - BBC",
+  "brief": {
+    "story_id": "2026-09-10-trump-says-every-adult-883384b00a",
+    "consensus_facts": [
+      "At the Republican midterm convention in Dallas on Wednesday, Sept. 9, 2026, President Donald Trump pledged to issue a $5,000 payment \u2014 which he called the 'Trump dividend' \u2014 to every adult American if Republicans win both the House and Senate in November's midterms.",
+      "Trump provided no details on how the plan would be implemented or funded, saying only that recipients would have to spend the money in the United States.",
+      "The proposal would cost at least $1 trillion (BBC estimates roughly $1.3 trillion for ~270 million adults; CBS estimates over $1.2 trillion for ~245 million citizens over 18).",
+      "Vice-President JD Vance told Fox News the payments would be funded by revenue from Trump's tariffs, describing the plan as a 'dividend for American workers.'",
+      "Questions have been raised about whether the pledge is legally permissible and financially feasible.",
+      "Trump defended the war in Iran during the same speech, acknowledging economic pain but arguing it was worth it to prevent Iran from developing a nuclear weapon.",
+      "The midterm elections will be held on Nov. 3, and Congress must authorize any such spending.",
+      "Trump has previously promised cash payments (including roughly $2,000 tariff-funded checks) that never materialized."
+    ],
+    "disagreements": [
+      {
+        "topic": "Size of the eligible adult population and total cost",
+        "positions": {
+          "BBC News (international)": "Nearly 270 million American adults, total cost about $1.3 trillion.",
+          "CBS News (lean-left)": "About 245 million U.S. citizens over 18, total cost over $1.2 trillion; cites Census Bureau."
+        }
+      },
+      {
+        "topic": "Whether the plan is legal",
+        "positions": {
+          "BBC News (international)": "Presents both sides \u2014 notes federal laws prohibit payments intended to influence voting, but cites lawyer John Day saying the plan would be legal as a campaign promise/tax-cut pledge.",
+          "Associated Press (wire)": "Frames it as 'financially and politically implausible' and questions '\u200bwhether it's even legal' without resolving the question.",
+          "CBS News (lean-left)": "Focuses on logistical/political hurdles (requires Congress, tariff revenue insufficient) rather than election-law legality."
+        }
+      },
+      {
+        "topic": "Feasibility of tariff funding",
+        "positions": {
+          "CBS News (lean-left)": "States tariff revenue falls far short \u2014 about $210 billion in gross tariff/excise taxes in 2026 (~$857 per person), with over half already returned to companies as refunds; cites Bipartisan Policy Center and Cato Institute.",
+          "BBC News (international)": "Reports Vance's tariff-funding claim without independent revenue figures, noting the Supreme Court ruled most tariffs unlawful.",
+          "Associated Press (wire)": "Notes Trump tied the dividend to 'tremendous strength and success economically' and defended tariffs, without detailed revenue math."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters (wire)": "Headline-only in this dossier. One headline ('Trump touts $5,000 payout if Republicans win as Vance waits in wings') frames the story around 2028 succession subtext by mentioning Vance 'waiting in the wings'; a second Reuters item is an explainer headline ('Is Trump's $5,000 dividend legal and how would it work?') signaling a legal/feasibility angle. No body text available to assess.",
+      "The New York Times (lean-left)": "Provided only an aggregated RSS list of other outlets' headlines and a headline-only explainer ('Pleading for Votes, Trump Tries a New Spin on an Old Promise: Free Money'). The word choice 'Free Money' and 'Old Promise' frames the pledge as a recycled, skeptical-worthy political gambit. No usable body text.",
+      "BBC News (international)": "Full body text. Leads with the raw promise and the trillion-dollar-plus price tag, then weaves in the Iran war and oil-price context as the economic backdrop. Balances skepticism (Democrats call it an 'empty promise,' legal questions, prior unfulfilled promises) with a legal expert saying it may be lawful. Emphasizes campaign timing via GOP pollster Robert Moran. Notable framing choice: attributes rising US prices partly to 'the war that the US and Israel started with Iran in February.'",
+      "Associated Press (wire)": "Full body text. Leads by bundling the dividend pledge with Trump defending the Iran war and attacking Democrats, framing the event as a whole. Uses strong evaluative language early \u2014 'financially and politically implausible,' 'dubious pledge.' Emphasizes the 'pretend I'm on the ballot' strategy, GOP absentees skipping the convention, and Trump making the midterms about himself. Buries funding mechanics.",
+      "CBS News (lean-left)": "Full body text. Frames the story explicitly as debunking/caution \u2014 headline 'Why not to bank on Trump's $5,000 dividends happening.' Leads with logistical and financial reasons the payment likely won't occur: requires an act of Congress, unfavorable GOP polling, failed prior DOGE and tariff dividends, and hard numbers showing tariff revenue is far too small. Most quantitatively detailed and skeptical of the outlets with body text."
+    },
+    "primary_source_alignment": [
+      "No primary source (full convention transcript, White House statement, or legislative text) was located for this story. Quoted lines from Trump's speech ('I will issue a dividend to every adult citizen... for $5,000') are consistent across BBC and AP, but no independent transcript was available to verify the full context."
+    ],
+    "missing_context": [
+      "Only three of seven dossier articles (BBC, AP, CBS) contain substantial body text; Reuters (x2), NYT (x2), and the NYT aggregation are headline-only or non-retrievable, limiting corroboration on some details.",
+      "No primary source \u2014 no convention transcript or official White House statement \u2014 was available to verify Trump's exact wording or any implementation details.",
+      "None of the retrievable articles provides a mechanism for how spending 'in the United States' would be monitored or enforced.",
+      "No outlet clarifies whether Trump plans to seek congressional authorization, or how a payment could pass if Democrats gain control of a chamber \u2014 CBS notes the tension but no source resolves it.",
+      "The claim that US/Israel 'started' the war with Iran in February appears only in the BBC piece as stated fact; other body-text outlets (AP) frame Trump as defending 'the war in Iran' without attributing its origin, and this characterization is not corroborated across the dossier.",
+      "No outlet provides current national approval polling numbers or specific generic-ballot figures beyond CBS's general statement that 'Democrats are outperforming Republicans.'",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (BBC, AP, CBS) reported the same speech with materially different emphasis \u2014 BBC balances it against the Iran war, AP frames it as an implausible campaign stunt, and CBS treats it as a debunking of whether it will ever happen \u2014 while several other outlets appear headline-only, making a coverage-comparison the honest framing rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/trump-touts-5000-payout-if-republicans-win-vance-waits-wings-2026-09-10/",
+      "title": "Trump touts $5,000 payout if Republicans win as Vance waits in wings - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/live/2026/09/09/us/rnc-trump-midterm-convention-updates",
+      "title": "Trump Floats $5,000 Checks to Americans if Republicans Win Midterms - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c62kzr1jg0jo",
+      "title": ""
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/trump-midterm-convention-dallas-speakers-trumpapalooza-5be7a32b6cffb5b1eaa58d982fdb3448",
+      "title": "Trump defends Iran war, slams Democrats and promises cash at Republicans' midterm convention - AP News"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/is-trumps-5000-dividend-legal-how-would-it-work-2026-09-10/",
+      "title": "Explainer: Is Trump's $5,000 'dividend' legal and how would it work? - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/trump-5000-dividend-checks-midterms/",
+      "title": "Why not to bank on Trump's $5,000 dividends happening - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/10/us/politics/trump-dividend-5000-dollar-checks.html",
+      "title": "Pleading for Votes, Trump Tries a New Spin on an Old Promise: Free Money - The New York Times"
+    }
+  ]
+}
