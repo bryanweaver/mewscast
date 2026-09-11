@@ -1,0 +1,84 @@
+{
+  "story_id": "2026-09-11-tourists-should-skip-kauai-e36f93b2c2",
+  "headline_seed": "Tourists should skip Kauai for now as it recovers from Hurricane Lowell, officials say - AP News",
+  "brief": {
+    "story_id": "2026-09-11-tourists-should-skip-kauai-e36f93b2c2",
+    "consensus_facts": [
+      "Hurricane Lowell skirted along Hawaii's western edge early the week of Sept. 7-8, 2026, damaging Kauai's oceanfront resorts, roads, and power infrastructure.",
+      "Tourism officials urged visitors to stay away from Kauai for now while the island recovers.",
+      "Caroline Anderson, interim president and CEO of the Hawaii Tourism Authority, said in a written statement that officials hope visitors will adjust travel plans rather than cancel Hawaii trips altogether.",
+      "Kauai sees only a small fraction of Hawaii's nearly 10 million annual visitors, but tourism is its top economic driver, accounting for an estimated 4 out of every 10 jobs on the island (per local estimates).",
+      "Thousands of customers, including some resorts, remained without power, and crews continued clearing streets of downed trees and utility poles.",
+      "Extensive lines backed up at Kauai's primary airport as people tried to leave the island.",
+      "The storm was blamed for at least two deaths: a 74-year-old man found Wednesday near Kauai's south shore, and a man found dead Monday on Oahu after a large tree fell on his tent.",
+      "Democratic Gov. Josh Green asked President Donald Trump on Wednesday to issue a major disaster declaration to expedite federal help for Kauai and Maui counties.",
+      "On Lanai, storm damage rendered inoperable a harbor that supplies much of the food and fuel to the island's 3,300 residents.",
+      "Larry Ellison bought nearly all of Lanai in 2012 for about $300 million.",
+      "The Ko'a Kea Resort in Poipu said it would offer refunds for guests who had to cancel rather than reschedule, and expected to resume normal operations within two weeks.",
+      "The Sheraton Kauai Coconut Beach Resort, which sustained no structural damage, closed beginning Thursday evening but hoped to reopen soon after power is restored.",
+      "The storm surge buckled and washed away roads, knocked down home walls, and flooded resorts, sending rapids through a hotel lobby and scattering debris."
+    ],
+    "disagreements": [
+      {
+        "topic": "Lanai harbor repair timeline",
+        "positions": {
+          "Associated Press": "Officials initially said two weeks to repair, but Thursday updated the estimate to say it should be ready for operations by Sunday, with additional repairs to a sinkhole and pier taking about a week.",
+          "NBC News": "Reports the harbor 'will take about two weeks to repair,' reflecting the earlier estimate without the updated Sunday timeline.",
+          "ABC News": "Does not mention the Lanai harbor at all."
+        }
+      },
+      {
+        "topic": "Airport backup power detail",
+        "positions": {
+          "Associated Press": "Reports the airport was operating on a lone backup generator because a second generator was damaged, reducing security screening to a single line with long delays.",
+          "ABC News": "Notes long airport lines but omits the generator/security-screening detail.",
+          "NBC News": "Notes extensive airport lines but omits the generator detail."
+        }
+      },
+      {
+        "topic": "Sourcing / independence",
+        "positions": {
+          "Associated Press": "Original wire report bylined Gene Johnson and Olga R. Rodriguez.",
+          "ABC News": "Wire-derived; republishes AP copy nearly verbatim \u2014 not an independent source.",
+          "NBC News": "Explicitly credits 'Source: The Associated Press' \u2014 not an independent source."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "The fullest version and the origin wire. Leads with the tourism advisory ('Tourists should skip Kauai for now'), then pivots to recovery logistics, economic dependence, deaths, and the disaster declaration request. Adds the airport-generator detail and the updated Lanai harbor timeline. Closes with a balancing voice \u2014 lifelong resident Chris White \u2014 who argues much of the island was spared and urges nuance ('a beautiful day here'). Neutral wire phrasing throughout.",
+      "ABC News": "A condensed, wire-derived republication of AP copy. Same lead and framing on the tourism advisory and economic stakes, but trims the airport-generator detail, the Lanai harbor section, and the Hurricane Iniki historical comparison. Retains the Chris White balancing quote. No independent reporting added.",
+      "NBC News": "Also AP-sourced but reorganized around infrastructure. Leads with the Lanai cargo port and power restoration rather than the tourism advisory, then treats tourism under a 'Tourism takes a hit' subhead. Uniquely surfaces the Hurricane Iniki 1992 Category 4 / $3 billion comparison and the 2026 Pacific hurricane-season context (four Pacific hurricanes since August). Adds a local business voice \u2014 Kelly Kakalia of The Musubi Truck \u2014 emphasizing that the island 'needs time to rest and rebuild.' Includes Gov. Green's fuller quote on not waiting to assign dollar values."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the Hawaii Tourism Authority statement in full, Gov. Green's disaster-declaration letter, or state Transportation Department damage report) was located for this story, so no direct document-to-coverage comparison is possible."
+    ],
+    "missing_context": [
+      "No outlet provided a dollar estimate of Lowell's damage; NBC only notes the storm was 'expected to be the worst since Hurricane Iniki' but gives no figure for Lowell itself.",
+      "No outlet reported when Kauai's power was expected to be fully restored or how many customers remained without power in absolute numbers beyond 'thousands.'",
+      "No outlet reported whether Trump had responded to or acted on Gov. Green's major disaster declaration request.",
+      "None of the three sources is independent of the AP \u2014 ABC and NBC both republish AP copy \u2014 so the dossier effectively represents a single wire report, not corroboration by three newsrooms.",
+      "No outlet quantified how much of Kauai was actually affected versus spared; the resident Chris White's claim that 'much of the island was spared' is presented as a single anecdotal counterpoint without official damage-mapping data.",
+      "No injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "All three sources trace back to a single AP wire and agree on the core facts with only minor framing differences (NBC leads on infrastructure and adds historical/seasonal context; ABC trims detail). With no independent corroboration and no primary source to diverge from, this is a straightforward single-wire REPORT rather than a META coverage-comparison.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/poipu-kauai-tourism-resort-hurricane-lowell-4a2206866a4533a0c2e428414bd8b241",
+      "title": ""
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/wireStory/tourists-skip-kauai-now-recovers-hurricane-lowell-officials-136356346",
+      "title": "Tourists should skip Kauai for now as it recovers from Hurricane Lowell, officials say - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/hurricane-lowell-knocks-hawaii-port-kauai-islands-source-food-fuel-rcna597177",
+      "title": "Hurricane Lowell knocks out a Hawaii port that is main source for food and fuel - NBC News"
+    }
+  ]
+}
