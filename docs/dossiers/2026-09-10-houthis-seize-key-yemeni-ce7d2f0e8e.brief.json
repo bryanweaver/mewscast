@@ -1,0 +1,98 @@
+{
+  "story_id": "2026-09-10-houthis-seize-key-yemeni-ce7d2f0e8e",
+  "headline_seed": "Houthis seize key Yemeni port of Mocha in drive to take control of Red Sea coast - The Guardian",
+  "brief": {
+    "story_id": "2026-09-10-houthis-seize-key-yemeni-ce7d2f0e8e",
+    "consensus_facts": [
+      "Iran-backed Houthi (Ansar Allah) forces seized the Yemeni Red Sea port city of Mocha on Thursday, September 10, 2026 (reported by CNN and Al Jazeera).",
+      "Internationally recognized government forces, led/commanded in this theater by Tariq (Tarik) Saleh, withdrew from Mocha; Saleh described it as a 'tactical withdrawal' (CNN and Al Jazeera).",
+      "The seizure expands Houthi influence over the Bab al-Mandeb Strait, a key global shipping chokepoint linking the Red Sea, Gulf of Aden and the Suez Canal route between Asia and Europe (CNN and Al Jazeera).",
+      "After Mocha, the Houthis were advancing/moving south toward Dhubab and other coastal areas (CNN and Al Jazeera).",
+      "The fighting has driven significant civilian displacement and worsened Yemen's humanitarian crisis; Al Jazeera reports hundreds fleeing Mocha toward Lahij, Aden and Dhubab (CNN references the worsening humanitarian crisis; Al Jazeera details displacement)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Casualty and displacement figures",
+        "positions": {
+          "Al Jazeera (Article 3)": "More than 20,000 people displaced across Taiz and al-Hodeidah over the past two weeks of clashes.",
+          "Al Jazeera (Article 7)": "At least 194 people killed and 880 wounded in the past two weeks of fighting across Taiz, the western coast, al-Jawf, Marib and Dhalea.",
+          "CNN": "Does not provide a specific death toll or displacement figure; refers generally to a worsening humanitarian crisis."
+        }
+      },
+      {
+        "topic": "Role of Iran in the offensive",
+        "positions": {
+          "Reuters (Article 4, headline-only)": "Headlines that Iranian arms and advice helped the Houthis seize the city, per sources.",
+          "CNN": "Describes the Houthis as Iran-backed proxies trained and aided by Iran's Revolutionary Guards, framing the advance as part of a wider Iran-US conflict.",
+          "Al Jazeera": "Describes the Houthis as Iran-aligned/Iran-backed but does not attribute the specific offensive to Iranian arms or advisers."
+        }
+      },
+      {
+        "topic": "Immediate market/economic impact",
+        "positions": {
+          "CNN": "Oil prices jumped 4% on Thursday, with Brent crude hitting $105 as news broke.",
+          "Al Jazeera": "Does not report specific oil-price movements.",
+          "Reuters (Article 5, headline-only)": "Headlines a threat to Saudi oil exports in the Red Sea but body text unavailable."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Four Reuters entries appear in the dossier, all headline-only with no retrievable body text. Headlines emphasize escalation and threat framing: 'close in on Bab el-Mandeb Strait in new threat to shipping,' 'Iranian arms and advice helped Yemen's Houthis seize key Red Sea city, sources say,' and 'Houthis advance along Yemeni coast, threaten Saudi oil exports.' A fourth URL references a Saudi 'Khamis Mushait alert' and Trump saying an Iran war would end after US midterm elections \u2014 indicating Reuters tied the story to US politics and Saudi territory, but no body text is available to confirm.",
+      "CNN": "Leads hard on the Iran angle \u2014 headline and repeated body references to 'Iran-backed rebels' and 'Tehran's influence.' Frames the seizure primarily through global-chokepoint and oil-market stakes (Brent at $105, 4% jump), and situates it inside the broader Iran-US regional war and US naval blockade of Iran. Provides the most detailed backstory (July Iranian plane landing in Sanaa, Saudi strikes on Sanaa airport, breaking the 2022 truce). Cites named experts (Ahmed Nagi, ICG) and Yemeni officials. Emphasizes potential need for US military intervention.",
+      "Al Jazeera English": "Three Al Jazeera articles, all with body text. Emphasizes on-the-ground military detail and the humanitarian toll: displacement figures, casualty counts (194 killed, 880 wounded), and multi-front fighting (Taiz, Marib, al-Jawf, Dhalea). Foregrounds Yemeni government voices calling for international intervention \u2014 al-Alimi ('Bab al-Mandeb cannot become another Strait of Hormuz,' 'Yemen cannot become another Iran'), Saleh's 'tactical withdrawal,' and FM al-Zouba's UN Security Council appeal. Uses the group's self-designation 'Ansar Allah.' Less emphasis on oil-price market mechanics than CNN."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. No court filings, official statements in full, UN documents, or transcripts were provided in the dossier \u2014 only outlet articles. Government statements (al-Alimi, al-Zouba, Saleh) reach the brief only as quoted secondhand within Al Jazeera's reporting and cannot be independently verified against an original document."
+    ],
+    "missing_context": [
+      "Editorial disclosure: Of the seven dossier entries, only three (CNN and two Al Jazeera pieces, plus a short third Al Jazeera piece) contain substantive body text over ~500 characters. All four Reuters entries are headline-only and do not count as corroboration. Consensus facts here rest primarily on CNN + Al Jazeera overlap.",
+      "The Reuters headline claiming 'Iranian arms and advice' helped the Houthis is attributed to anonymous sources and has no accompanying body text in the dossier \u2014 the specific evidence for direct Iranian material involvement in this offensive cannot be assessed.",
+      "No outlet provides an independent, verified death toll; the 194 killed / 880 wounded and 20,000+ displaced figures come solely from Al Jazeera citing 'aid agencies,' unnamed.",
+      "No Houthi/Ansar Allah spokesperson statement is quoted directly; the group's own account of the seizure and its intentions for Bab al-Mandeb is absent from all articles.",
+      "No outlet clarifies whether the Houthis have actually taken or threatened Perim Island \u2014 the point CNN's cited official (Saleh) says would give control of the strait itself \u2014 leaving the actual current threat level to shipping unconfirmed.",
+      "The status and content of Yemen's message to the UN Security Council, and any UN or US official response, are referenced (Al Jazeera) but not detailed or independently sourced.",
+      "No article independently confirms the CNN-reported oil-price movement (Brent at $105, +4%) via a second outlet with body text.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (CNN and three Al Jazeera pieces) reported the same core event \u2014 the Houthi seizure of Mocha \u2014 but with materially different emphasis: CNN foregrounds the Iran-US/oil-market angle while Al Jazeera foregrounds the humanitarian toll and Yemeni government appeals, and the four Reuters entries are headline-only escalation labels. This divergence in framing, combined with the absence of any primary source, makes it a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/saudi-says-no-danger-after-khamis-mushait-alert-amid-clashes-with-houthis-2026-09-10/",
+      "title": "Yemen's Houthis close in on Bab el-Mandeb Strait in new threat to shipping - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/10/middleeast/houthis-capture-mocha-red-sea-strait-intl",
+      "title": "Iran-backed rebels capture Red Sea port, tightening grip on a key global chokepoint - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/9/10/houthis-capture-yemeni-town-of-mocha-why-it-matters",
+      "title": "Houthis capture Yemeni town of Mocha: Why it\u2019s important - Al Jazeera"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/iranian-arms-advice-helped-yemens-houthis-seize-key-red-sea-city-sources-say-2026-09-10/",
+      "title": "Iranian arms and advice helped Yemen's Houthis seize key Red Sea city, sources say - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/trump-says-iran-war-end-after-us-midterm-elections-threatens-attack-pickaxe-2026-09-10/",
+      "title": "Houthis advance along Yemeni coast, threaten Saudi oil exports in the Red Sea - Reuters"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/9/10/yemens-houthis-seize-strategic-red-sea-city-of-mocha",
+      "title": "Yemen\u2019s Houthis seize strategic Red Sea city of Mocha - Al Jazeera"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/9/10/houthis-yemeni-forces-engaged-in-fierce-battles-why-each-front-matters",
+      "title": "Houthis, Yemeni forces engaged in fierce battles: Why each front matters - Al Jazeera"
+    }
+  ]
+}
