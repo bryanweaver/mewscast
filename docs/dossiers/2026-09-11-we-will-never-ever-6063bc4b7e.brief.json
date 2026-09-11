@@ -1,0 +1,56 @@
+{
+  "story_id": "2026-09-11-we-will-never-ever-6063bc4b7e",
+  "headline_seed": "'We will never, ever forget,' Trump says as US marks 25th anniversary of 9/11 - BBC",
+  "brief": {
+    "story_id": "2026-09-11-we-will-never-ever-6063bc4b7e",
+    "consensus_facts": [
+      "The United States marked the 25th anniversary of the September 11, 2001 terrorist attacks on September 11, 2026.",
+      "Commemorative ceremonies were held in New York (ground zero) and Shanksville, Pennsylvania.",
+      "The attacks killed nearly 3,000 people."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of people killed",
+        "positions": {
+          "BBC News": "Does not cite a specific figure; references 'the attacks' and lives lost without a number.",
+          "NBC News": "Cites 'nearly 3,000 lives lost' and, quoting Gov. Josh Shapiro, '2,977 people who were killed.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News": "Files a human-interest, on-the-ground color piece from a reporter near the World Trade Center. Leads with atmosphere and personal reflection \u2014 the reverence of the crowd, a man who broke into tears, commuters and pigeons signaling the city's resilience. Despite the headline seed quoting Trump ('We will never, ever forget'), this body text contains no Trump quote, no policy content, and no casualty figures. Emphasizes memory and emotion over event mechanics.",
+      "The Washington Post": "Headline-only in the dossier, and notably off-topic \u2014 the retrievable item ('Court deals blow to Trump's plan to revive coal') concerns coal policy litigation, not the 9/11 anniversary. Provides no body-level reporting on this story and cannot corroborate any anniversary facts.",
+      "NBC News": "Runs a live-blog aggregation covering ceremonies at ground zero, the Pentagon, and Shanksville. Leads on logistics and official participation \u2014 all living former presidents attending, Trump's Pentagon remarks 'heralding human sacrifices' and mentioning 'the war with Iran,' a new moment of silence for those lost to 9/11 health effects. Gives significant space to Michael Massaroli Jr.'s unscripted plea not to use the tragedy to 'spread hate' against Muslims, and to Gov. Shapiro's call for 'active' remembrance. Frames the anniversary through official ceremony, political figures, and social tension over the attacks' legacy."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story, so no direct document-to-report comparison is possible."
+    ],
+    "missing_context": [
+      "Only two of three dossier articles address the anniversary at all; The Washington Post entry is headline-only and off-topic (coal policy), so no cross-outlet body corroboration exists beyond BBC and NBC.",
+      "The headline seed attributes a direct quote to Trump ('We will never, ever forget'), but neither retrievable body text contains that quote; the BBC live-blog excerpt has no Trump content and the NBC excerpt only paraphrases his Pentagon remarks. The exact quote's sourcing is not verifiable from the dossier.",
+      "NBC references Trump 'mentioned the war with Iran' during the Pentagon ceremony but provides no detail on what was said or its context \u2014 a potentially significant detail left unexplained.",
+      "No article provides the full text or substance of any president's or official's remarks; coverage is impressionistic (color piece) or aggregated (live blog).",
+      "No breakdown is given of the 9/11-health-effects death toll that prompted this year's new moment of silence."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only two outlets have usable body text (BBC and NBC) and they cover the same commemorative event without materially conflicting framings \u2014 one offers on-the-ground color, the other official-ceremony aggregation. There is no primary source and no substantive framing war, so a straightforward REPORT on the 25th-anniversary commemorations fits better than META.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/live/cv62kxgzr5z4t",
+      "title": ""
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/business/2026/09/11/court-deals-blow-trumps-plan-revive-coal/",
+      "title": "Court deals blow to Trump\u2019s plan to revive coal - The Washington Post"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/live-blog/9-11-attacks-memorial-ceremony-nyc-trump-mamdani-live-updates-rcna597049",
+      "title": "9/11 anniversary live updates: Memorial ceremonies underway in New York and Pennsylvania - NBC News"
+    }
+  ]
+}
