@@ -1,0 +1,105 @@
+{
+  "story_id": "2026-09-12-trump-says-irish-unification-5c19f9c54b",
+  "headline_seed": "Trump Says Irish Unification Would Be \u2018Fantastic,\u2019 Breaking With Precedent - The New York Times",
+  "brief": {
+    "story_id": "2026-09-12-trump-says-irish-unification-5c19f9c54b",
+    "consensus_facts": [
+      "During a visit to Dublin on Saturday, September 12, 2026, President Donald Trump said he would 'love' to see a united Ireland and called it a 'fantastic thing.'",
+      "Trump made the remarks while sitting next to Ireland's Taoiseach (Prime Minister) Miche\u00e1l Martin.",
+      "Trump prefaced his comments by saying he didn't want to cause any problems/trouble, but predicted unification is 'going to happen eventually.'",
+      "Trump acknowledged that the UK 'will have something to say about it.'",
+      "Trump's remarks break with the precedent of prior US presidents, who have avoided explicitly endorsing Irish reunification (including Joe Biden, who often referenced his Irish heritage).",
+      "The 1998 Good Friday Agreement, which the US helped broker and which largely ended the Troubles, requires a majority vote in border polls in Northern Ireland for reunification to take place.",
+      "UK Prime Minister Andy Burnham had said the prior month that a referendum on Northern Ireland's status was 'off the table,' and that he was not aware of majority public support for another referendum.",
+      "After Trump's comments, Burnham's office/Downing Street said his position on Irish unity remained unchanged.",
+      "Gavin Robinson, leader of the Democratic Unionist Party (DUP), responded that Northern Ireland's future 'will be decided by the people of Northern Ireland, not by commentary in London, Dublin or Washington.'",
+      "Trump also met with Irish President Catherine Connolly during the visit and addressed US and Irish business leaders at the US ambassador's residence in Dublin.",
+      "Trump's visit combined diplomacy with attending a golf tournament (the Irish Open) at his Doonbeg golf course in western Ireland.",
+      "Anti-Trump protests took place in Dublin, Doonbeg, and at Shannon Airport during the visit."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scale of the protests",
+        "positions": {
+          "CNN": "Reports 'thousands of people joined an anti-Trump march through central Dublin,' but also notes a CNN photojournalist captured only about 20 to 30 protesters in Doonbeg and Shannon in the morning; quotes Trump saying he was unaware of any protest.",
+          "CBS News": "Describes planned demonstrations by a coalition of left-leaning opposition parties, anti-military groups, pro-Palestinian organizations and environmentalists, without a crowd-size estimate.",
+          "Al Jazeera English": "Does not mention protests.",
+          "Newsweek": "References Sinn Fein's planned protests but gives no crowd size."
+        }
+      },
+      {
+        "topic": "How Trump's exact quote is rendered",
+        "positions": {
+          "Al Jazeera English": "'It's going to happen eventually \u2026 I think it would be a fantastic thing' and 'Now the UK will have something to say about it \u2026 but I think it would be a great thing.'",
+          "CBS News": "Adds that Trump said unification 'may as well happen now.'",
+          "CNN": "'It's going to happen eventually. \u2026 I think it will happen now. You've got the right man over here to get it moving,' pointing at Martin.",
+          "Newsweek": "Adds fuller quotes: 'I think it would be a great feather in everybody's hat if that happened' and 'how could it be bad?' plus later remarks at the embassy: 'I gave a nice answer, I think' and 'I think it would be cool.'"
+        }
+      },
+      {
+        "topic": "Characterization of prior US presidents' positions",
+        "positions": {
+          "CNN": "States US presidents have 'typically avoided explicitly commenting on the issue, even President Joe Biden.'",
+          "Newsweek": "Provides the most detail, stating Trump's comments 'appear to be the first time a sitting president has said he would like to see both sides of the border reunified,' and detailing Clinton, Bush, Obama, Biden, Reagan and Kennedy positions.",
+          "Al Jazeera English": "Does not address presidential precedent.",
+          "CBS News": "Notes the US was 'instrumental' in the 1998 accord but does not detail prior presidents' positions on unification."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Frames the story through the UK government's reaction ('position on Irish unity unchanged after Trump comments'), centering London's pushback rather than Trump's remark itself. No body text available to corroborate.",
+      "The New York Times": "Provided only as a Google News aggregation list (no substantive body text). Its headline seed emphasizes the 'Breaking With Precedent' angle \u2014 framing the newsworthiness as Trump's departure from decades of presidential restraint rather than the unification prospect itself.",
+      "Al Jazeera English": "Leads with the substance of Trump's 'fantastic' quote and immediately pivots to the diplomatic friction ('not welcomed by government ministers in London'). Tightest, most neutral wire-style treatment. Foregrounds Burnham's 'off the table' stance and Martin's refusal to respond. Omits protests, golf-business angle, and presidential precedent.",
+      "CNN": "Most comprehensive body. Frames Trump as 'wading in to a sensitive topic,' emphasizing the contentiousness (Unionist/Republican, Protestant/Catholic, the Troubles, Good Friday mechanics). Balances Trump's confidence against DUP and Downing Street pushback. Gives substantial space to protests, the golf-course/business tension, and situates the trip against Trump's domestic political timing (midterms, Yemen/Houthis). Notes crowd-size discrepancy candidly.",
+      "CBS News": "Frames the story as diplomacy-mixed-with-golf, foregrounding the self-dealing angle (Trump watching a tournament at his own Doonbeg course, prior European Tour events at Trump properties). Amplifies Irish public discontent through vox-pop quotes (taxi driver, student) and lists the opposition coalition. Includes Sinn F\u00e9in's 'sharp response' to Burnham. Leads with the quote but treats the golf/business dimension as co-equal.",
+      "Newsweek": "Deepest historical context piece. Leads on the quote and the 'going to happen eventually' prediction, then provides original detail: current polling (34.13% for unity vs. 46.99% for the UK in the North per irishpolitics.ie), the Good Friday referendum trigger mechanism, and a detailed survey of prior presidents (Clinton, Bush, Obama, Biden, Reagan, Kennedy). Adds DUP's Gregory Campbell dismissing the remark as a 'Trumpism' and a Father Ted joke about confused Sinn F\u00e9in protesters."
+    },
+    "primary_source_alignment": [
+      "No primary source (official transcript, White House readout, or Downing Street statement text) was located for this story. Trump's quotes are reconstructed from reporters present, and the exact wording varies slightly between outlets \u2014 no authoritative verbatim record is available in the dossier to arbitrate the differences."
+    ],
+    "missing_context": [
+      "No outlet quotes an official transcript of Trump's full remarks; all versions are journalist reconstructions, which explains the phrasing variations across outlets.",
+      "Only Newsweek provides current polling figures on unification sentiment in Northern Ireland (34.13% for unity, 46.99% for the UK) \u2014 a fact-check that materially undercuts the 'inevitable' framing but is absent from the other bodies.",
+      "No outlet reports Martin's own substantive view on unification \u2014 several note only that he declined to respond to reporters' questions.",
+      "The economic stakes are only partially explored: CBS and CNN note US companies' importance to Ireland's economy, but no outlet details the tariff/trade context that likely underpinned the 'bilateral economic cooperation' talks referenced by CNN.",
+      "No outlet independently verifies the competing protest crowd-size claims (CNN's 'thousands' in Dublin vs. '20 to 30' in Doonbeg); the discrepancy is left unresolved.",
+      "The reaction of Sinn F\u00e9in \u2014 the main pro-unity party \u2014 to Trump's actual comments is largely absent; outlets note Sinn F\u00e9in's opposition to the visit and its response to Burnham, but not a direct response to Trump's endorsement.",
+      "No White House clarification or walk-back is reported, leaving open whether these were considered official US policy or off-the-cuff remarks (Newsweek quotes a DUP figure characterizing it as a 'Trumpism')."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full body text reported the same event but with materially different emphasis \u2014 Al Jazeera on diplomatic friction, CNN on sensitivity and protests, CBS on the golf/self-dealing angle, and Newsweek on historical precedent and polling \u2014 while headline-only outlets (Reuters, NYT) frame it around UK pushback and precedent-breaking. This divergence in emphasis, plus the absence of any authoritative transcript, makes it a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/uk/uk-pms-office-says-position-irish-unity-unchanged-after-trump-comments-2026-09-12/",
+      "title": "UK PM's office says position on Irish unity unchanged after Trump comments - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/12/world/europe/trump-ireland-unification-remarks.html",
+      "title": "Trump Says Irish Unification Would Be \u2018Fantastic,\u2019 Breaking With Precedent - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/9/12/trump-says-a-unified-ireland-would-be-fantastic-during-irish-visit",
+      "title": "Trump says a unified Ireland would be \u2018fantastic\u2019 during Irish visit - Al Jazeera"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/12/politics/president-donald-trump-arrives-ireland",
+      "title": "Trump says Irish unification would be \u2018fantastic,\u2019 wading in to sensitive topic during weekend visit - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/trump-ireland-dublin-visit-irish-open-golf/",
+      "title": "Trump says he would \"love\" a unified Ireland, as he kicks off visit that mixes diplomacy and golf - CBS News"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/trump-wants-to-see-united-ireland-its-going-to-happen-eventually-12434978",
+      "title": "Trump wants to see united Ireland: \u201cit's going to happen eventually\u201d - Newsweek"
+    }
+  ]
+}
