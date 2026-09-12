@@ -1,0 +1,86 @@
+{
+  "story_id": "2026-09-12-gop-anxiety-grows-over-f48d3d1977",
+  "headline_seed": "GOP anxiety grows over North Carolina Senate race - Politico",
+  "brief": {
+    "story_id": "2026-09-12-gop-anxiety-grows-over-f48d3d1977",
+    "consensus_facts": [
+      "The North Carolina Senate race pits Republican nominee Michael Whatley, former chairman of the RNC and the North Carolina GOP, against Democrat Roy Cooper, former North Carolina governor.",
+      "The seat is currently held by Republican Sen. Thom Tillis, who is not seeking reelection.",
+      "A new Elon University poll released Thursday found Cooper leading Whatley by 11 points (49% to 38%) among likely voters.",
+      "The race is widely viewed as one of Democrats' top pickup/flip opportunities in the 2026 midterms and could help decide control of the Senate.",
+      "Cost of living and inflation are voters' top concerns heading into the election.",
+      "President Trump handpicked Whatley to lead the RNC before Whatley stepped down to run for Senate at Trump's urging.",
+      "Whatley spoke at the Republican convention in Dallas in September 2026.",
+      "Christopher (Chris) Cooper, a political science professor at Western Carolina University (not related to Roy Cooper), commented on the race's dynamics.",
+      "North Carolina last elected a Democratic U.S. senator in 2008, and Trump has carried the state in recent presidential elections."
+    ],
+    "disagreements": [
+      {
+        "topic": "Central story angle / lead",
+        "positions": {
+          "Associated Press": "Leads on a scandal \u2014 a registered sex offender pastor delivered the opening prayer at a Whatley rally, framed as undermining Whatley's anti-crime message.",
+          "Politico": "Leads on GOP strategic anxiety and internal doubts about whether the race is winnable and worth continued spending.",
+          "Newsweek": "Leads on polling data showing Cooper's double-digit lead and the mechanics of the Senate control math."
+        }
+      },
+      {
+        "topic": "Whether North Carolina is still competitive / worth GOP investment",
+        "positions": {
+          "Politico": "Cites anonymous GOP sources saying NC and Georgia are 'off the map,' while the NRSC publicly insists summer polling has misled before (citing Tillis 2020) and is not worried.",
+          "Newsweek": "Frames the race as a top Democratic flip opportunity but notes NC is historically a closely watched battleground; quotes professor questioning whether poor polling leads to reduced GOP spending.",
+          "Associated Press": "Does not directly address spending viability; focuses on the campaign's vulnerabilities."
+        }
+      },
+      {
+        "topic": "Poll figures cited",
+        "positions": {
+          "Politico": "References a survey showing Cooper ahead by 11 points among likely voters.",
+          "Newsweek": "Specifies Elon University poll (49-38, 11-point lead, 800 voters, Aug 21-31, MoE \u00b15.6); also cites High Point (Cooper +5) and Carolina Journal (Cooper +12.5)."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Investigative-scandal frame. Leads with the convicted sex offender pastor (Daimon L. King) who gave the opening prayer at an Aug. 28 Whatley/Dr. Oz event, emphasizing this undercuts Whatley's 'Cooper is soft on crime' argument and ties it to a Democratic ad blitz over Whatley's association with another convicted sex offender (Harvey L. West Jr.). Includes campaign denial (spokesman DJ Griffin says event was not planned/organized by the campaign and King was invited by the Craven County GOP). Neutral, sourced wire language; contextualizes with Epstein-case fallout on the right and Chris Cooper's observation that the far right has not coalesced behind Whatley. Buries polling and horse-race data.",
+      "The Washington Post": "Body text unavailable \u2014 page returned a CAPTCHA/security-verification block, not article content. Headline (as listed, attributed to Washington Times) indicates a convention-speech frame in which Whatley casts Cooper as 'radical.' Cannot corroborate any body-level claim from this outlet.",
+      "Politico": "Insider/strategy frame built on anonymous GOP sources from the Dallas convention. Leads on 'GOP anxiety' and the fear the race is 'slipping out of contention.' Emphasizes Thune's private lunch prioritizing Alaska, Maine, Michigan; a pollster calling NC and Georgia 'off the map'; and SLF's $71M pledge and MAGA Inc./No Going Back PAC's $5M drop. Balances with NRSC pushback and the Tillis-2020 comeback precedent, plus a Whatley-camp claim that Cooper has 'maxed out' and NC voters break late. Frames the story around resource allocation and internal doubt rather than scandal.",
+      "Newsweek": "Data/explainer frame. Leads with the Elon poll's 11-point Cooper lead and structures the piece around the Senate control math (GOP 53-47 majority, Democrats needing to flip four). Emphasizes Cooper's name-recognition and fundraising advantages ($20.7M vs. $3.4M cash on hand at end of June), voter priorities (86% cite inflation/cost of living), and aggregates multiple polls (Elon, High Point, Carolina Journal). Includes the Cooper campaign manager's statement; notes it reached out to Whatley for comment. Neutral, poll-aggregation tone."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court records, poll cross-tabs, FEC filings, roll-call votes, or transcripts were provided in the dossier, so primary-source alignment cannot be assessed. Poll figures (Elon, High Point, Carolina Journal) and FEC cash-on-hand figures are reported secondhand via Newsweek and Politico and could not be verified against the underlying documents."
+    ],
+    "missing_context": [
+      "The Washington Post entry (article 2) returned only a CAPTCHA/security-verification page, not article content; its 'radical' convention-speech framing could not be verified and does not count toward consensus.",
+      "No primary source (poll toplines/cross-tabs, FEC filings, court/registry records on the pastor, campaign statements in full) was available; all figures are secondhand.",
+      "No outlet provided Whatley's own response to the Elon poll or to the Politico 'off the map' characterization beyond his general confidence about resources; Newsweek and AP both noted the campaign was contacted but did not fully respond.",
+      "The AP scandal story and the Politico/Newsweek horse-race stories are not cross-referenced by one another \u2014 no single outlet ties the pastor episode to the polling deficit, so the relationship between the two is unestablished in the dossier.",
+      "None of the outlets specifies the exact source or methodology behind the 'survey released Thursday' beyond Newsweek identifying it as the Elon University poll; Politico cites the 11-point figure without naming the pollster in the excerpt.",
+      "No breakdown of how much money each side has actually spent versus pledged, nor the current state of Cooper's own ad spending, is provided.",
+      "No article body contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (AP, Politico, Newsweek) cover the same North Carolina Senate race through materially different lenses \u2014 scandal, GOP strategic anxiety, and polling data \u2014 while a fourth (Washington Post) yielded no usable body. This divergence in framing, with no primary source to anchor it, makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/whatley-pastor-sex-offender-prayer-rally-01eab33af03f6a308719ce6a62157451",
+      "title": "Convicted sex offender offered opening prayer at rally for GOP Senate nominee in North Carolina - AP News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/sep/9/michael-whatley-casts-senate-rival-roy-cooper-radical-gop-convention/",
+      "title": "Michael Whatley casts Senate rival Roy Cooper as \u2018radical\u2019 in GOP convention speech - Washington Times"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/09/12/gop-anxiety-grows-north-carolina-senate-race-01073311",
+      "title": ""
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://www.newsweek.com/cooper-vs-whatleywhat-north-carolina-polls-show-under-2-months-to-midterm-12427356",
+      "title": "Cooper vs. Whatley\u2014What North Carolina Polls Show Under 2 Months to Midterm - Newsweek"
+    }
+  ]
+}
