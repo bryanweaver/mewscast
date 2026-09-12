@@ -1,0 +1,137 @@
+{
+  "story_id": "2026-09-12-man-arrested-over-death-847ec0eadc",
+  "headline_seed": "Man arrested over death of Mississippi woman found hanging from a tree - The Guardian",
+  "brief": {
+    "story_id": "2026-09-12-man-arrested-over-death-847ec0eadc",
+    "consensus_facts": [
+      "Police in Jackson, Mississippi, arrested a man in connection with the death of Tasia Fortune, a Black woman found hanging from a tree last month.",
+      "Jackson Police Chief RaShall Brackney announced the arrest at a news conference on Friday.",
+      "The state medical examiner's office determined on Thursday evening that Fortune's death was a homicide.",
+      "Police had already secured search and arrest warrants and executed them after the homicide determination.",
+      "The suspect was arrested when officers encountered him walking on the street.",
+      "Brackney said the case remains active and additional arrests are pending.",
+      "Fortune's body was discovered hanging in the backyard of an abandoned home in Jackson on Aug. 3.",
+      "The suspect had an 'association' with Fortune, but the chief declined to elaborate on the relationship.",
+      "Fortune was 29 years old and the mother of four children.",
+      "Fortune's death came less than a year after the hanging deaths of 21-year-old Trey Reed, a Black student at Delta State University in Cleveland, and Cory Zukatis, an unhoused white man in his 30s, in Vicksburg.",
+      "Fortune's mother, Christy Spivey, said she cried and thanked police after being told of the arrest, and that police did not share a motive or whether DNA led to the arrest.",
+      "Spivey said she did not know the man arrested and described the family as being in disbelief and shock."
+    ],
+    "disagreements": [
+      {
+        "topic": "Suspect's name and spelling",
+        "positions": {
+          "Associated Press": "Names the suspect as Jarques Ratliff, 51",
+          "BBC News": "Names the suspect as Jarques Ratliff, 51, and notes he is also Black",
+          "CNN": "Names the suspect as Jarques Ratliff, 51, and reports he was charged with murder",
+          "The Guardian": "Names the suspect as 'Jacques Ratliff' (variant spelling) and the headline seed uses this spelling",
+          "ABC News": "Does not name the suspect in body text",
+          "Delco Times": "Does not name the suspect in body text"
+        }
+      },
+      {
+        "topic": "Police chief's name",
+        "positions": {
+          "Associated Press": "RaShall Brackney",
+          "CNN": "RaShall Brackney",
+          "BBC News": "RaShall Brackney",
+          "The Guardian": "RaShall Brackney-Wheelock (also refers to her as 'Brackney')"
+        }
+      },
+      {
+        "topic": "Whether a murder charge was explicitly filed",
+        "positions": {
+          "CNN": "States Ratliff has been charged with murder",
+          "BBC News": "Says Brackney stated there would be a murder charge",
+          "Associated Press": "Reports the arrest but does not explicitly state a murder charge was filed",
+          "The Guardian": "Reports the arrest but does not explicitly state a formal murder charge"
+        }
+      },
+      {
+        "topic": "Number of people interviewed by investigators",
+        "positions": {
+          "BBC News": "Says investigators interviewed 15 people",
+          "CNN": "Says police interviewed nearly 15 people",
+          "Associated Press": "Does not cite an interview count",
+          "The Guardian": "Does not cite an interview count"
+        }
+      },
+      {
+        "topic": "Family's account of police communication",
+        "positions": {
+          "BBC News": "Reports Spivey said police did not respond to her multiple voicemails over two weeks; Brackney countered that police were in 'constant contact' with the family",
+          "Associated Press": "Does not raise the communication dispute",
+          "CNN": "Does not raise the communication dispute",
+          "The Guardian": "Does not raise the communication dispute"
+        }
+      },
+      {
+        "topic": "Determination of the earlier Reed and Zukatis hanging deaths",
+        "positions": {
+          "CNN": "Both deaths were determined by authorities to be suicides",
+          "Delco Times": "Reed's death ruled suicide with no evidence of foul play; family called for an independent autopsy; Zukatis ruled suicide by the state medical examiner",
+          "ABC News": "Mentions the two deaths but does not state their rulings",
+          "The Guardian": "Mentions the two deaths but does not state their rulings"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Wire-style but heavily humanized. Leads on the arrest and the homicide determination, then devotes the bulk of the piece to Christy Spivey's biography of her daughter \u2014 foster care, homelessness, an abusive partner, plans to start a cleaning business. Emphasizes the mother's certainty that her daughter did not die by suicide and her plea to 'say her name.' Names the suspect but keeps his relationship to the victim vague per the chief.",
+      "ABC News": "Runs a short, unbylined AP-derived wire story. Leads on the arrest and homicide ruling. Notably does NOT name the suspect. Distinctively places the story in the context of the earlier Reed and Zukatis hangings in the final line, but omits that those two were ruled suicides \u2014 leaving the pattern implication open.",
+      "BBC News": "Frames the story most explicitly around race and national significance. Leads on the arrest but foregrounds Jackson as a 'majority-black city in a state with a history of racial violence and lynching.' Uniquely surfaces the letter from 50+ members of Congress to the FBI/DOJ describing 'possible modern-day lynchings,' the statistic of at least 10 reported hangings of Black people in the US this year and 70+ documented lynchings from 2000\u20132025, and the family's dispute with police over communication. Most contextually expansive of all outlets.",
+      "CNN": "Most procedurally detailed. Leads on the arrest tied directly to the medical examiner's homicide ruling. Uniquely reports Ratliff was formally 'charged with murder,' details the two search warrants and one arrest warrant, and includes the chief's caution against speculating on the manner of death. Notes the body was found in 'various states of decomposition.' Explicitly states the earlier two hanging deaths were ruled suicides, tempering the pattern framing.",
+      "The Guardian": "Leads on the arrest and homicide ruling, and foregrounds 'Mississippi's brutal history of racist violence and lynchings' and the 'global lens' quote from the chief. Emphasizes the national attention the killing has drawn. Uses a variant spelling of the suspect's name ('Jacques Ratliff') and a typo in its own dek ('homocide'). Closely tracks AP wire content for the family quotes.",
+      "Delco Times": "Republishes the AP wire verbatim. Does not name the suspect in the body. Distinctively expands on the earlier Reed and Zukatis cases \u2014 noting Reed's suicide ruling, the family's demand for an independent autopsy and security footage, and Zukatis's suicide determination \u2014 providing the most detail on the comparison cases while being generically local-outlet in presentation."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, arrest warrant, medical examiner report, or the congressional letter itself) were located for this story, so no direct document-to-coverage comparison can be made.",
+      "The BBC references a letter from more than 50 members of Congress to the FBI and DOJ and quotes it, but the underlying letter was not provided in the dossier and cannot be independently verified here.",
+      "CNN and the BBC reference the state medical examiner's homicide ruling; the actual autopsy report was not available, and CNN notes it had reached out to the Jackson PD and Hinds County Coroner for the report."
+    ],
+    "missing_context": [
+      "No outlet reports the alleged manner of killing or cause of death beyond the label 'homicide' \u2014 the chief explicitly declined to speculate, but this leaves the central question of how she died unanswered.",
+      "The precise nature of the 'association' between Ratliff and Fortune is unstated across all outlets; the chief declined to elaborate.",
+      "No outlet reports whether Ratliff has legal representation \u2014 AP and CNN both note they could not determine this, but it remains an open gap.",
+      "The gap between the Aug. 3 discovery of the body and the Sept. 11 homicide determination/arrest is noted but not explained by any outlet \u2014 why the ruling took roughly five weeks is not addressed.",
+      "Only Delco Times and CNN clarify that the two earlier Mississippi hanging deaths (Reed and Zukatis) were ruled suicides; ABC News and The Guardian invoke the comparison without that key qualifier, which materially affects how the 'pattern' reads.",
+      "The congressional letter's claims (10 reported hangings this year, 70+ lynchings 2000\u20132025) appear only in the BBC and are unverified against a primary source in this dossier.",
+      "No outlet reports whether DNA or forensic evidence tied Ratliff to the scene \u2014 Spivey explicitly said police did not tell her whether DNA led to the arrest.",
+      "The factual discrepancy between Spivey's account (unreturned voicemails over two weeks) and the chief's claim of 'constant contact' with the family is surfaced only by the BBC and is left unresolved."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six outlets reported the same arrest but with materially different framing \u2014 CNN and Delco Times note the earlier hangings were ruled suicides while ABC News and The Guardian invoke the 'pattern' without that qualifier, and the BBC alone surfaces the congressional letter and the family-vs-police communication dispute. That divergence in emphasis around race, lynching history, and the comparison cases makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/tasia-fortune-mississippi-hanging-arrest-4aa7ada8208008fea580369ede0eef37",
+      "title": "Mississippi police arrest a man in the death of Tasia Fortune - AP News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/US/wireStory/mississippi-police-arrest-man-death-tasia-fortune-136379033",
+      "title": "Mississippi police arrest a man in the death of Tasia Fortune - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cqjkejq5750o",
+      "title": "Tasia Fortune: Arrest made over the death of black woman found hanged from tree - BBC"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/11/us/tasia-fortune-homicide",
+      "title": "Mississippi police make arrest in Tasia Fortune case after medical examiner rules death a homicide - CNN"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/sep/11/man-arrested-over-death-of-tasia-fortune",
+      "title": ""
+    },
+    {
+      "outlet": "Delco Times",
+      "url": "https://www.delcotimes.com/2026/09/11/mississippi-woman-hanging-arrest/",
+      "title": "Mississippi police arrest a man in the death of Tasia Fortune, who was found hanging from a tree - Delco Times"
+    }
+  ]
+}
