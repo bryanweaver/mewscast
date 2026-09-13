@@ -1,0 +1,113 @@
+{
+  "story_id": "2026-09-12-iraq-says-saudi-pipeline-7fe6bb74e8",
+  "headline_seed": "Iraq says Saudi pipeline attack originated from its territory, and other Mideast news - AP News",
+  "brief": {
+    "story_id": "2026-09-12-iraq-says-saudi-pipeline-7fe6bb74e8",
+    "consensus_facts": [
+      "Iraq said attacks on a key Saudi oil pipeline (the East-West pipeline) were launched from its territory.",
+      "US President Donald Trump said Iran was 'probably' behind the pipeline attack, telling reporters: 'Well, I think they are. Probably they are.'",
+      "Trump said his administration has 'had discussions' with the Houthis and quoted them as saying they 'don't want to fight with us' and are 'letting most ships go through.'",
+      "Trump described Saudi Crown Prince Mohammed bin Salman as 'a good friend' and said everything is 'going to work out fine and dandy.'",
+      "At least 76,000 people have fled their homes in Yemen since July, up sharply from 46,000 just days earlier, according to the International Organization for Migration.",
+      "The escalation in Yemen has raised fears of a return to the civil war that killed about 150,000 people before a 2022 ceasefire.",
+      "Fighting has intensified between the Iran-backed Houthis and forces aligned with Yemen's Saudi-backed, internationally recognized government.",
+      "The Houthis' advance near the Bab el-Mandeb strait threatens a key alternative shipping route to the Strait of Hormuz.",
+      "Lebanese and Israeli negotiators are scheduled to meet in Rome in October for another round of US-brokered direct talks.",
+      "Iranian President Masoud Pezeshkian met with a UAE leader on the sidelines of the BRICS summit in New Delhi."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which Iraqi official ordered the investigation/dismissal",
+        "positions": {
+          "The Times of India": "Names 'Iraq's Prime Minister Ali al-Zaidi' as having ordered an investigation into the Maysan operations command and dismissed its commander.",
+          "Associated Press": "Does not name the prime minister; AP's body does not mention the dismissal of the Maysan commander at all.",
+          "Reuters": "Headline states the Iraqi military commander was dismissed 'after drone attacks against Saudi Arabia, prime minister's office says' \u2014 but only a headline is available, no body text to confirm the name."
+        }
+      },
+      {
+        "topic": "Which UAE official met Iran's president at BRICS",
+        "positions": {
+          "Associated Press": "Identifies the counterpart as Abu Dhabi Crown Prince Khaled bin Mohamed bin Zayed Al Nahyan.",
+          "The Times of India": "Identifies the counterpart as UAE President Sheikh Mohamed bin Zayed Al Nahyan."
+        }
+      },
+      {
+        "topic": "Saudi response to the pipeline attack",
+        "positions": {
+          "The Times of India": "Reports Saudi Arabia said the attacks were carried out by several drones launched from Iraq and that Riyadh would not retaliate, giving Iraq 'an opportunity to take the necessary measures.'",
+          "Associated Press": "Does not report a Saudi statement on non-retaliation; frames the Saudi angle through Trump's comments about the crown prince."
+        }
+      },
+      {
+        "topic": "Coordination behind the attacks",
+        "positions": {
+          "The Times of India": "Reports that regional officials said the Houthis and Iraqi militias recently coordinated attacks on Saudi oil facilities.",
+          "Associated Press": "Does not include a claim of Houthi-Iraqi militia coordination."
+        }
+      },
+      {
+        "topic": "Oil price impact",
+        "positions": {
+          "The Times of India": "States global oil markets 'have already moved above $100 a barrel.'",
+          "Associated Press": "Does not cite a specific oil price figure."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Neutral wire roundup format ('and other Mideast news'), packaging multiple developments into a single digest. Leads with Iraq's admission and Trump blaming Iran, but gives substantial space to human-interest displacement testimony ('hysterical panic,' the injured motorcyclist, the pregnant daughter in a coma). Emphasizes on-the-ground suffering in Yemen and diplomatic threads (Lebanon-Israel talks, Iran-UAE meeting). Notably does NOT report the dismissal of the Iraqi Maysan commander or a Saudi non-retaliation statement.",
+      "The Washington Post": "Two headline-only entries. First headline ('As Iran proxies activate in Yemen and Iraq, Trump's Mideast morass deepens') frames the story around Trump's foreign-policy predicament and an Iran-proxy narrative \u2014 an analytical, politically-inflected framing. Second headline ('Oil routes in peril as attacks shut Saudi pipeline and Houthis threaten key waterway') foregrounds the energy/shipping-disruption angle. No body text available to corroborate either framing.",
+      "Reuters": "Headline-only. Frames the story narrowly and factually around accountability \u2014 the dismissal of an Iraqi military commander, attributed to the prime minister's office. This is the accountability/consequence angle that AP's body omitted. No body text available to verify.",
+      "The New York Times": "Headline-only ('Saudis Shut Down Crucial Pipeline After Drone Attack From Iraq'). Leads with the economic/energy consequence (pipeline shutdown) and geographic origin (Iraq). The URL slug ('diesel-fuel-prices-oil-iran-war') signals a domestic economic/price framing tied to a broader 'Iran war.' No body text available.",
+      "The Times of India": "Most detailed non-wire body text. Leads with the Iraq-origin admission and Trump's finger-pointing, then adds accountability detail absent from AP: names PM Ali al-Zaidi, the Maysan province investigation, the commander's dismissal, and Saudi's stated non-retaliation. Adds market context ($100+/barrel oil) and a Houthi-Iraqi militia coordination claim attributed to 'regional officials.' Quotes an International Crisis Group analyst on Iran-UAE diplomacy. Heavier on strategic/market framing and lighter on human-interest testimony than AP. Page is cluttered with navigation and ad/taboola content."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court filings, official statements, IOM reports, or transcripts were available in the dossier to independently verify outlet claims \u2014 including the 76,000 displacement figure (attributed to IOM), Trump's exact quotes, or the Iraqi commander's dismissal (attributed to the prime minister's office by Reuters)."
+    ],
+    "missing_context": [
+      "Only two outlets (Associated Press and The Times of India) provided substantial body text (>500 characters); the other four entries (both Washington Post links, Reuters, and The New York Times) were headline-only and cannot corroborate body-level detail. Reuters' dismissal-of-commander story and the NYT/WaPo framings are therefore uncorroborated within this dossier.",
+      "The Times of India names 'Iraq's Prime Minister Ali al-Zaidi' \u2014 a detail no other full-text outlet confirms and one that should be verified against Iraqi government records, as this differs from previously known Iraqi leadership names.",
+      "No outlet in the dossier provides evidence for Trump's 'probably Iran' attribution; it is presented as an opinion asked of him by reporters, not as an intelligence finding or official determination.",
+      "No independent confirmation of the claim (Times of India only) that Houthis and Iraqi militias 'coordinated' attacks on Saudi oil facilities \u2014 the source is described only as unnamed 'regional officials.'",
+      "No outlet quantifies casualties from the current Yemen fighting or the pipeline attack itself (only displacement figures and a historical civil-war death toll are given).",
+      "No detail on the extent of pipeline damage, how long the East-West pipeline is expected to remain shut, or the volume of Saudi exports affected.",
+      "Iran's own response to Trump's accusation is absent from all available body text.",
+      "The reason the earlier Lebanon-Israel talks round this month was 'postponed without explanation' is not explored.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same cluster of Mideast developments with materially different emphasis \u2014 AP foregrounds human displacement while The Times of India foregrounds accountability (a named PM, a dismissed commander) and oil-market impact, and the headline-only Reuters/NYT/WaPo entries each pick a distinct frame. With no primary source to verify divergent single-source claims, a coverage-comparison post is more honest than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/mideast-yemen-iran-saudi-houthis-12-september-2026-324485fad65647d4a897d5bfdcb7849c",
+      "title": ""
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/09/12/with-no-clear-path-out-us-war-iran-messy-mideast-gets-messier/",
+      "title": "As Iran proxies activate in Yemen and Iraq, Trump\u2019s Mideast morass deepens - The Washington Post"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/iraqi-military-commander-dismissed-after-drone-attacks-against-saudi-arabia-2026-09-11/",
+      "title": "Iraqi military commander dismissed after drone attacks against Saudi Arabia, prime minister's office says - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/11/business/diesel-fuel-prices-oil-iran-war.html",
+      "title": "Saudis Shut Down Crucial Pipeline After Drone Attack From Iraq - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/world/2026/09/11/iran-denounces-us-israeli-oppression-houthis-advance-yemen/",
+      "title": "Oil routes in peril as attacks shut Saudi pipeline and Houthis threaten key waterway - The Washington Post"
+    },
+    {
+      "outlet": "The Times of India",
+      "url": "https://timesofindia.indiatimes.com/world/middle-east/middle-east-war-iraq-links-saudi-pipeline-attack-to-its-territory-as-yemen-displacement-surges/articleshow/134147260.cms",
+      "title": "Middle East war: Iraq links Saudi pipeline attack to its territory as Yemen displacement surges - The Times of India"
+    }
+  ]
+}
