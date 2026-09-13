@@ -1,0 +1,122 @@
+{
+  "story_id": "2026-09-13-russia-hits-ukrainian-train-7c61290e4e",
+  "headline_seed": "Russia hits Ukrainian train shortly after Boris Johnson and top European officials leave station - BBC",
+  "brief": {
+    "story_id": "2026-09-13-russia-hits-ukrainian-train-7c61290e4e",
+    "consensus_facts": [
+      "A Russian drone struck a train near the Yahodyn area on Ukraine's border with Poland on Sunday, September 13, 2026.",
+      "No casualties were reported from the strike on the train itself.",
+      "The train that was hit had its passengers evacuated before the strike; the drone hit the train's engine/locomotive.",
+      "Former UK Prime Minister Boris Johnson and other European security officials had travelled along the same rail line on a different ('diplomatic') train shortly before the strike, after attending a conference in Kyiv.",
+      "Former CIA director David Petraeus was also associated with rail travel through the area at the time (BBC places him on another train at Yahodyn; The Guardian says he was on the diplomatic train with Johnson).",
+      "Ukraine's state railway operator Ukrzaliznytsia said it was 'quite possibly'/'entirely possible' that the drone's intended target was the diplomatic train, which had departed earlier than scheduled due to real-time timetable changes prompted by the constant threat of Russian strikes.",
+      "The strike occurred approximately 2 km from the Polish border (BBC, Times of India), with a truck/lorry also struck less than 1 km from the Dorohusk-Yahodyn crossing (Guardian, Times of India).",
+      "Russia's Defence Ministry said it had struck railway/logistical infrastructure used to move military cargo into western Ukraine.",
+      "Ukrainian Foreign Minister Andrii Sybiha described the attack as 'Putin's terror knocking directly on the doors of the EU and Nato' and renewed calls for sanctions.",
+      "Johnson wrote on X/social media calling it a 'random and senseless' attack and urging allies to provide Ukraine more air defences.",
+      "Former Swedish PM Carl Bildt, who attended the Kyiv conference, said his train was told to prepare for evacuation before being cleared to continue.",
+      "Polish PM Donald Tusk held an emergency meeting and warned that Russian escalation could affect Polish territory (BBC, Guardian)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether Petraeus and Johnson were on the same train",
+        "positions": {
+          "BBC News": "Says Petraeus was on 'another train' at Yahodyn station, distinct from Johnson's train.",
+          "The Guardian": "Says the train carrying Johnson also carried Petraeus (both on the 'diplomatic train').",
+          "The Times of India": "Focuses on Johnson and 'European leaders' on the diplomatic train; does not clearly place Petraeus with Johnson."
+        }
+      },
+      {
+        "topic": "Distance of the strike from the Polish border",
+        "positions": {
+          "BBC News": "Both Ukrainian and Polish authorities said the drone struck 2 km from the Polish border.",
+          "The Times of India": "About 2 km (1.2 miles) from the Polish border.",
+          "The Guardian": "States a lorry was struck less than 1 km from the Dorohusk-Yahodyn crossing; does not specify the train's exact distance."
+        }
+      },
+      {
+        "topic": "How Russia characterized the target",
+        "positions": {
+          "BBC News": "Russia said it struck 'railway infrastructure' in western Ukraine.",
+          "The Times of India": "Russia's Defence Ministry said it targeted infrastructure used to facilitate military cargo shipments from Europe into western Ukraine.",
+          "The Guardian": "Does not quote a specific Russian characterization of the target."
+        }
+      },
+      {
+        "topic": "Scale of the overnight/broader assault and total casualties",
+        "positions": {
+          "The Guardian": "Overnight attacks across Ukraine involved 450+ Russian drones and missiles, killed at least six and injured 40+; 405 drones and four missiles intercepted; specific deaths cited in Donetsk and Mykolaiv.",
+          "BBC News": "Does not give an overnight nationwide toll; focuses on the border train strike and lists prior recent rail-related deaths.",
+          "The Times of India": "Does not give an overnight nationwide toll but adds reciprocal detail: Ukrainian strikes reportedly killed two in Nizhnekamsk, Russia, and near the Zaporizhzhia nuclear plant."
+        }
+      },
+      {
+        "topic": "Which official framed escalation near NATO",
+        "positions": {
+          "The Times of India": "Cites Polish Foreign Minister Radoslaw Sikorski calling the attacks near NATO territory 'an escalation.'",
+          "BBC News": "Cites Polish PM Donald Tusk on escalation getting closer to Poland's border.",
+          "The Guardian": "Cites Tusk warning escalation could affect Polish territory and that Poland was tipped off by intelligence services."
+        }
+      },
+      {
+        "topic": "Evacuation warning timing on the hit train",
+        "positions": {
+          "BBC News": "Evacuation order given 'just 15 minutes' before the strike.",
+          "The Guardian": "Eyewitness accounts describe multiple evacuations over up to 10 hours at the border, with a final rushed evacuation around 9am.",
+          "The Times of India": "Says the hit train 'was evacuated as the drone approached' (via Bildt), without a specific interval."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (no retrievable body text). Frames the event as Russia hitting a passenger train that 'just misses' the diplomatic train, emphasizing proximity to NATO/Poland. Cannot corroborate body-level details.",
+      "BBC News": "Two near-identical entries (bbc.com and bbc.co.uk) of the same Jaroslav Lukiv report. Leads with the personalities \u2014 Boris Johnson and top European officials \u2014 and the near-miss framing. Emphasizes the human/diplomatic drama, the 15-minute evacuation warning, and a catalogue of recent Russian rail attacks and broader European sabotage claims. Frames Russia as escalating deliberately against civilian rail. Buries reciprocal Ukrainian strikes on Russian territory (not mentioned).",
+      "The Guardian": "Leads with the possibility that Johnson and Petraeus's train was the intended target. Emphasizes eyewitness testimony (Katerina Sergatskova, an unnamed British economist) and the scale of the overnight assault (450+ drones/missiles, six dead nationwide). Foregrounds the 'this is an escalation by Putin' interpretation via witnesses and officials, and notes Poland was pre-warned by intelligence. Includes an opinion-piece cross-link (Simon Tisdall) urging NATO to step in. Does not include Russia's own characterization of the target.",
+      "The Times of India": "Wire-style aggregation leaning on Reuters framing ('just misses diplomatic train'). Most balanced on attribution of claims from both sides: uniquely includes Russia's stated rationale (military cargo infrastructure), reciprocal Ukrainian strikes inside Russia (Nizhnekamsk, two dead), and the Zaporizhzhia nuclear-plant fuel-truck dispute. Page is cluttered with navigation/ad boilerplate. Frames the incident within a mutual intensification of long-range strikes rather than solely Russian escalation."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (railway statements in full, official Polish/Ukrainian releases, or Russian MoD statement text) were located for this story. Alignment cannot be independently verified against a primary document.",
+      "The most-cited primary-like statement is Ukrzaliznytsia's Telegram statement; BBC, The Guardian, and The Times of India all quote it consistently as saying the diplomatic train may have been the target and departed early due to timetable changes."
+    ],
+    "missing_context": [
+      "No primary source documents were located; all claims rest on outlet reporting, official social-media posts, and railway/ministry statements quoted secondhand.",
+      "Reuters appears in the dossier as headline-only, so its body-level reporting could not corroborate any facts; consensus rests on BBC, The Guardian, and The Times of India bodies.",
+      "The two BBC entries are the same article on two domains (bbc.com/bbc.co.uk) and count as a single source, not two independent corroborations.",
+      "No outlet provides independent verification that the diplomatic train was actually the intended target \u2014 this remains Ukrzaliznytsia's stated assessment ('quite possibly'/'entirely possible'), not a confirmed fact.",
+      "No outlet reconciles whether Johnson and Petraeus were on the same train (BBC and Guardian directly conflict on this point).",
+      "Russia's stated rationale (targeting military-cargo infrastructure) is reported only by The Times of India (and referenced generically by BBC as 'railway infrastructure'); the Guardian and Reuters entries omit Russia's characterization.",
+      "Only The Times of India reports reciprocal Ukrainian strikes inside Russia the same night; BBC and Guardian coverage omits this, giving an asymmetric picture of the day's escalation.",
+      "None of the outlets provide details on the type/range of the 'jet-propelled drone' beyond the label, nor independent confirmation of the strike distance from the border (2 km figure attributed to Ukrainian/Polish authorities only).",
+      "No outlet clarifies the exact size, composition, or full passenger manifest of the 'diplomatic train,' nor how the schedule change was decided or communicated."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three independent bodies (BBC, The Guardian, The Times of India) covered the same event with materially different emphasis \u2014 BBC and Guardian foreground Russian escalation and the diplomatic near-miss, while The Times of India uniquely includes Russia's rationale and reciprocal Ukrainian strikes \u2014 and they conflict on details like whether Petraeus rode with Johnson. That divergence in framing, plus the absence of any primary source, makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/china/russia-hits-truck-near-polish-border-latest-strike-near-nato-2026-09-13/",
+      "title": "Russia hits passenger train on Ukraine's border with Poland, just misses 'diplomatic train' - Reuters"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cy5zg41dkqwo",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cy5zg41dkqwo",
+      "title": "Russia hits Ukrainian train shortly after Boris Johnson and top European officials leave station - BBC"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/sep/13/russian-drone-hits-kyiv-warsaw-passenger-train-polish-border",
+      "title": "Train carrying Boris Johnson and ex-CIA chief may have been targeted in Russian strike, officials say - The Guardian"
+    },
+    {
+      "outlet": "The Times of India",
+      "url": "https://timesofindia.indiatimes.com/world/europe/russia-strikes-train-near-poland-border-minutes-after-boris-johnson-european-leaders-pass-through/articleshow/134216343.cms",
+      "title": "Russia strikes Ukrainian train near Poland border minutes after Boris Johnson, European leaders pass thro - The Times of India"
+    }
+  ]
+}
