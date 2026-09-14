@@ -1,0 +1,78 @@
+{
+  "story_id": "2026-09-14-trump-says-ai-doesn-1086656f11",
+  "headline_seed": "Trump says AI doesn\u2019t need guardrails, only a \u2018high IQ\u2019 president - NBC News",
+  "brief": {
+    "story_id": "2026-09-14-trump-says-ai-doesn-1086656f11",
+    "consensus_facts": [
+      "Only NBC News (Article 2) provided full body text on the core AI-guardrails story; Reuters (Article 4) is headline-only, so the AI story cannot be treated as multi-outlet body-text consensus.",
+      "Both NBC News's body and Reuters's headline converge on the same event at the headline level: on Sept. 14, 2026, Trump publicly dismissed calls for AI safety guardrails and asserted the U.S. already possesses the tools/authority to police the AI industry."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether guardrails on AI are needed at all",
+        "positions": {
+          "NBC News": "Reports Trump's Truth Social post saying the only control AI needs is 'a STRONG AND SMART (High IQ!) PRESIDENT,' while also quoting Trump saying over the weekend in Ireland 'We can put guardrails,' showing a shift in his phrasing between venues.",
+          "Reuters": "Headline frames it as Trump dismissing AI safety alarm and asserting the U.S. already has tools to police the industry (body text unavailable for corroboration)."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Off the AI-guardrails topic entirely. Leads on EPA repealing greenhouse-gas limits on coal and gas power plants, framing it as a fundamental reversal of Biden/Obama climate policy. Emphasizes the industry's claimed $300 billion in cost savings alongside health-cost counterpoints (30,000 potential deaths, $275 billion in annual benefits from prior AP analysis). Ties the announcement to a G20 'energy abundance' meeting and quotes Environmental Defense Fund criticism.",
+      "NBC News": "The only full-text account of the core story. Leads on Trump's Truth Social rejection of AI guardrails and his 'High IQ president' quote. Emphasizes Trump's threats of 'CRIMINAL and REGULATORY power' against AI firms and his naming of Anthropic's Dario Amodei. Foregrounds public and intra-party skepticism (NBC poll: 70% more worried than excited; 69% oppose local data centers, including 57% of Republicans), and stacks industry warnings (Amodei, Altman, resigned researcher Jacob Coxon, Evan Hubinger) against Trump's 'HOAX' dismissal. Includes JD Vance's 'Trojan horse' skepticism and China's 'fearmongering' pushback.",
+      "Politico": "Unrelated to AI. Covers the Kennedy Center board weighing a two-year closure or bankruptcy unless Trump leads a fiscal rescue tied to 'appropriate recognition' \u2014 i.e., adding his name to the building. Frames the naming demand through Rep. Joyce Beatty's lawsuit and critics calling it a 'vanity project' and 'hostage' tactic.",
+      "Reuters": "Headline-only. Frames the story as Trump dismissing the AI safety alarm and asserting the U.S. already has tools to police the industry. No body text available to assess emphasis or buried details.",
+      "The New York Times": "Two headline-only entries, both unrelated to the AI story. One covers Saudi Arabia facing a 'worst-case scenario' after being rebuffed by Trump on Iran/Yemen/Houthis; the other covers states and cities suing over Trump's green-card restriction policy. No body text to analyze framing.",
+      "CNN": "Unrelated to AI. Leads on New York and 21 other states plus D.C. suing the Trump administration over a DHS 'public charge' rule expanding grounds to deny green cards. Emphasizes AG Letitia James's and Mayor Zohran Mamdani's 'cruelty is the point' framing, the benefits (Medicaid, SNAP, school meals) newly at risk, and the 'arbitrary and capricious' legal argument."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. Trump's own Truth Social posts are quoted secondhand through NBC News but were not provided as standalone primary documents, so direct alignment cannot be verified."
+    ],
+    "missing_context": [
+      "The dossier is topically fragmented: only 2 of 7 articles (NBC News full-text, Reuters headline) actually concern the headline-seed AI-guardrails story. The AP, Politico, CNN, and both NYT entries cover unrelated Trump-administration stories (EPA power-plant rule, Kennedy Center naming, immigration public-charge rule, Saudi Arabia). This is effectively a single-body-text dossier for the AI story.",
+      "Only one outlet (NBC News) provided retrievable body text on the actual AI story; Reuters corroborates only at the headline level. Trump's AI remarks are therefore single-source at the body-text level and should not be presented as wire consensus.",
+      "No outlet provided the full text of Amodei's Saturday essay or Trump's complete Truth Social posts, so readers cannot independently verify the exact wording or context of the quotes NBC excerpted.",
+      "No outlet clarified what specific 'CRIMINAL and REGULATORY power' or existing legal tools the administration claims to hold over AI companies, leaving Trump's and Reuters's 'tools to police the industry' assertion unexamined.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (NBC News) has full body text on the headline-seed AI story, with Reuters corroborating solely at the headline level; the remaining dossier articles are on unrelated topics, so this is a time-sensitive, effectively single-source item that warrants a same-day hedged bulletin rather than a multi-outlet REPORT or META.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/epa-power-plants-trump-coal-gas-climate-cac1c2c75f8656d8eaf5f0a240edae15",
+      "title": "EPA eliminates rule that limits planet-warming greenhouse gas emissions from power plants - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/politics/trump-administration/trump-rejects-ai-guardrails-rcna597700",
+      "title": ""
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/09/14/kennedy-center-trump-name-resolutions-bankruptcy-01074887",
+      "title": "Kennedy Center leaders say adding Trump\u2019s name might be path to financial rescue - Politico"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/trump-says-there-is-sick-conspiracy-against-ai-data-centers-2026-09-14/",
+      "title": "Trump dismisses AI safety alarm, says US already has tools to police industry - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/14/world/middleeast/saudi-iran-trump-yemen-houthis.html",
+      "title": "Saudi Arabia Faces \u2018Worst-Case Scenario\u2019 After Being Rebuffed by Trump - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/14/us/immigration-public-charge-green-card-lawsuits",
+      "title": "States sue to stop Trump rule that would make it harder for some immigrants to get green cards - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/14/us/politics/green-cards-immigration-lawsuit.html",
+      "title": "States and Cities Sue Over Trump\u2019s Policy to Restrict Green Cards - The New York Times"
+    }
+  ]
+}
