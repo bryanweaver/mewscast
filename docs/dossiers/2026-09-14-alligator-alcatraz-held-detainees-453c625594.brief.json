@@ -1,0 +1,94 @@
+{
+  "story_id": "2026-09-14-alligator-alcatraz-held-detainees-453c625594",
+  "headline_seed": "Alligator Alcatraz held detainees in cages the size of phone booths, DHS watchdog says - The Guardian",
+  "brief": {
+    "story_id": "2026-09-14-alligator-alcatraz-held-detainees-453c625594",
+    "consensus_facts": [
+      "A DHS Office of Inspector General report found that the 'Alligator Alcatraz' immigration detention facility in Florida held detainees in small metal cages roughly the size of a phone booth, measuring about 18 square feet \u2014 less than half the ICE-required minimum of 37 square feet for single-person spaces.",
+      "Facility staff described the small metal enclosures as 'calming areas,' claiming detainees asked to use them and could stay for a maximum of two hours; the OIG said the practice does not align with standards for humane treatment and is unprecedented among ICE facilities it has inspected.",
+      "Between July 2025 and January 2026, staff confined 79 detainees in the metal cages, which were placed in outdoor recreation areas.",
+      "The OIG documented its findings during an unannounced inspection in January 2026, and identified additional violations including cramped windowless housing, bug-infested showers, insufficient recreation time, and inadequate access to legal materials.",
+      "A DeSantis spokesperson (Alex Lanfranconi) responded that the confinement met federal standards and said, 'We'd make it even smaller if we could.'",
+      "Both Axios and The Guardian report the cages were also used for disciplinary purposes, contradicting the 'calming areas' characterization; ICE officials/records indicated use for discipline, crisis intervention, housing changes, and detainee conflicts."
+    ],
+    "disagreements": [
+      {
+        "topic": "Extent of disciplinary use of the cages",
+        "positions": {
+          "Axios": "ICE officials told the OIG the enclosures were also used for disciplinary issues, along with crisis intervention, housing changes, and conflicts among detainees.",
+          "The Guardian": "Inspectors found at least one documented instance where a cage was used as a disciplinary tool for a detainee who 'failed to comply with a lawful command,' and noted cages had locking mechanisms."
+        }
+      },
+      {
+        "topic": "Framing of the DeSantis administration's prior denials",
+        "positions": {
+          "The Guardian": "Emphasizes that DeSantis's office previously called the cage claims 'fabrications' and a 'politically motivated attack,' and declined to explain why it falsely denied the practice.",
+          "Axios": "Reports the DeSantis spokesperson's current defense that cells met federal standards but does not foreground the prior denial history.",
+          "Politico": "Headline frames the story around DeSantis dismissing the claims (body text not retrievable)."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Body text not retrievable (only a Google News link aggregation). Headline leads with the euphemism angle \u2014 'Used Small Cages as \"Calming Areas,\"' foregrounding the sanitized official language in scare quotes.",
+      "Politico": "Body text not retrievable (navigation/boilerplate only). Headline uniquely frames the story around DeSantis's rebuttal \u2014 'DeSantis dismisses claims that Alligator Alcatraz violated detention standards' \u2014 centering the political defense rather than the watchdog findings.",
+      "The Washington Post": "Body text not retrievable (CAPTCHA wall; dossier entry actually points to a Washington Times URL/headline). Headline emphasizes 'metal cages' and the DHS inspector general as source.",
+      "NBC News": "Body text not retrievable (video page with playlist metadata only). Headline emphasizes the visceral 'cages the size of phone booths' comparison.",
+      "Axios": "Full body text. Leads with the most graphic, granular violations \u2014 'bug-infested showers, tiny holding cells' \u2014 and provides the most detailed enumeration of OIG findings (18 sq ft cells, less than half required living space, dirty communal water, three showers/week vs. recommended five, one hour of recreation three days/week, food-storage freezer above safe temperature, special management units lacking legal materials). Notes the facility opened in 2025, closed in June, was state-operated with state and federal funding, and cites the DeSantis 'even smaller' quote.",
+      "The Guardian": "Full body text. Most contextual and adversarial framing. Leads with the 'phone booth' cage imagery and the 'humane treatment' failure, then ties the report to its own prior December scoop on the Amnesty International dossier. Heavily foregrounds DeSantis's prior denials as 'fabrications,' the falseness of those denials, the $1.2m/day cost, the 21,000 figure DeSantis 'boasted' of, environmental lawsuits, and Democratic lawmakers' 'torture' characterization. Includes reaction quotes from Amnesty International's Amy Fischer. Frames the report as 'rare criticism of the Trump administration by one of its own agencies.'",
+      "Forbes": "Body text not retrievable (Google News link only). Headline mirrors the consensus 'phone booth' cage framing and credits the DHS inspector."
+    },
+    "primary_source_alignment": [
+      "No primary source (the DHS OIG report itself) was included in the dossier; alignment is assessed only against outlet reporting.",
+      "Axios and The Guardian both attribute the 18 sq ft measurement, the 37 sq ft ICE minimum, the 79-detainee/July 2025\u2013January 2026 figure, the two-hour maximum, and the 'calming areas'/'unprecedented among ICE facilities' language directly to the OIG report, and their accounts are consistent with each other.",
+      "The Guardian adds that the OIG report acknowledged concerns previously raised by Senators Jon Ossoff and Dick Durbin in March about the cages known to detainees as 'The Box' \u2014 a detail not surfaced by any other retrievable body text."
+    ],
+    "missing_context": [
+      "Editorial disclosure: Only two of the seven dossier articles (Axios and The Guardian) had retrievable full body text. The New York Times, Politico, Washington Post/Washington Times, NBC News, and Forbes entries were headline-only or boilerplate/paywall/CAPTCHA fragments. Consensus facts are drawn from the two full-text outlets that corroborate one another.",
+      "The underlying DHS OIG report itself was not provided in the dossier, so the brief cannot verify outlet claims against the primary document.",
+      "No outlet in the retrievable text quotes a response from DHS or ICE at the federal level \u2014 only the state (DeSantis) response is captured, despite the facility being federally funded and the report coming from a federal watchdog.",
+      "No coverage details whether the OIG report contained specific recommendations or whether DHS/ICE agreed to remediation, a standard component of inspector general reports.",
+      "No retrievable outlet reports the current status or treatment of the detainees formerly held at the facility after its June closure.",
+      "The dossier's Washington Post entry is labeled 'The Washington Post (lean-left)' but the URL and headline point to the Washington Times \u2014 a discrepancy a reader should be aware of."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only two outlets have retrievable full body text, and they corroborate the same core OIG findings with no material factual divergence \u2014 this is a straightforward confirmed-facts story rather than a framing-divergence META, since the headline-only outlets can't establish enough independent framing to compare against.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/14/us/alligator-alcatraz-dhs-inspector-general.html",
+      "title": "\u2018Alligator Alcatraz\u2019 Used Small Cages as \u2018Calming Areas,\u2019 Report Says - The New York Times"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/09/14/desantis-dismisses-claims-that-alligator-alcatraz-violated-detention-standards-01074807",
+      "title": "DeSantis dismisses claims that Alligator Alcatraz violated detention standards - Politico"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/sep/14/floridas-former-alligator-alcatraz-kept-migrants-metal-cages-dhs/",
+      "title": "Florida\u2019s former \u2018Alligator Alcatraz\u2019 kept migrants in metal cages: DHS inspector general - Washington Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/video/report-finds-alligator-alcatraz-held-immigrants-in-cages-the-size-of-phone-booths-269820997674",
+      "title": "Report finds 'Alligator Alcatraz' held immigrants in cages the size of phone booths - NBC News"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/local/miami/2026/09/14/alligator-alcatraz-inspector-general-report-violations",
+      "title": "Watchdog: Alligator Alcatraz had bug-infested showers, tiny holding cells - Axios"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/sep/14/alligator-alcatraz-immigration-jail-cages-report",
+      "title": ""
+    },
+    {
+      "outlet": "Forbes",
+      "url": "https://www.forbes.com/sites/saradorn/2026/09/14/alligator-alcatraz-put-detainees-in-cages-the-size-of-phonebooths-dhs-inspector-found/",
+      "title": "\u2018Alligator Alcatraz\u2019 Put Detainees In Cages The Size Of Phonebooths, DHS Inspector Found - Forbes"
+    }
+  ]
+}
