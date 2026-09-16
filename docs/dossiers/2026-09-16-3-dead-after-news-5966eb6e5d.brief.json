@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-09-16-3-dead-after-news-5966eb6e5d",
+  "headline_seed": "3 dead after news helicopter crashes while covering deadly Los Angeles bus collision - NBC News",
+  "brief": {
+    "story_id": "2026-09-16-3-dead-after-news-5966eb6e5d",
+    "consensus_facts": [
+      "A news helicopter used by NBC4 Los Angeles and Telemundo 52 crashed in the Chatsworth neighborhood of the San Fernando Valley on Tuesday, Sept. 15, 2026, shortly before 7 p.m. local time.",
+      "Three people were killed: aerial photojournalist/reporter Eliana Moreno, pilot George Marciniw, and a third victim on the ground identified as 29-year-old Edy Gutierrez Mejia.",
+      "Moreno and Marciniw were employees of Angel City Air, the company that operated the helicopter for the station.",
+      "The helicopter was covering a nearby collision in which an SUV struck a Los Angeles Metro city bus, killing two people and injuring six others.",
+      "The aircraft involved was a Eurocopter AS350 (AS 350 B2).",
+      "The helicopter burst into flames on impact, and the fire spread to nearby vehicles and two storage containers.",
+      "Eliana Moreno was born in Orange County and earned a broadcast journalism and political science degree from Chapman University in 2010, the same year she joined Angel City Air.",
+      "The National Transportation Safety Board (NTSB) is leading the investigation into the crash.",
+      "Los Angeles Mayor Karen Bass and California Gov. Gavin Newsom publicly offered condolences over the bus and helicopter crashes.",
+      "The crash occurred while multiple news helicopters were in the area covering the bus collision."
+    ],
+    "disagreements": [
+      {
+        "topic": "Exact date labeling of the crash",
+        "positions": {
+          "Associated Press": "Photo captions inconsistently label the crash as both Tuesday, Sept. 15, 2026 and Wednesday, Sept. 16, 2026; text states the crash happened Tuesday.",
+          "NBC News": "States the crash occurred Tuesday, Sept. 15, 2026.",
+          "BBC News": "States the crash occurred Tuesday just before 19:00 local time."
+        }
+      },
+      {
+        "topic": "Number of people taken to hospital / total injured",
+        "positions": {
+          "Associated Press": "Reports the bus collision injured six others; does not clearly separate hospital transports from the helicopter crash.",
+          "NBC News": "Reports three dead at the scene and two others taken to hospital (conditions unavailable), per Fire Battalion Chief Rico A. Gross.",
+          "BBC News": "Reports an unidentified pedestrian killed and two others taken to hospital; bus crash injured six."
+        }
+      },
+      {
+        "topic": "Cause of the crash",
+        "positions": {
+          "Associated Press": "No immediate cause; notes a cockpit alarm and a woman's voice saying 'uh oh' and 'You can't pull up?' in final broadcast video.",
+          "NBC News": "No cause given; cites witness Zareh Sevanesian describing the helicopter swaying and losing altitude.",
+          "BBC News": "No cause given; states only that the NTSB will investigate."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Wire-style, fact-forward framing. Leads with the casualty count and the NBC/Telemundo ownership of the aircraft. Uniquely surfaces the dramatic final cockpit audio (alarm, 'uh oh', 'You can't pull up?') as a narrative hook. Devotes significant space to victim biography, especially Moreno. Includes a 'Related Stories' rail of other aviation incidents. Some internal date inconsistency in photo captions.",
+      "NBC News": "As the outlet whose own helicopter and colleagues were lost, framing is personal and grief-centered. Leads with the third victim's identification and the newsroom 'reeling.' Foregrounds emotional on-air moments from anchors Colleen Williams and Lynette Romero, and extensive witness testimony from Zareh Sevanesian. Quotes Mayor Bass's 'We lost five Angelenos today.' Heavy on tribute and human impact, lighter on investigative/aviation-safety framing.",
+      "BBC News": "Concise international framing. Leads by naming the journalist and pilot. Emphasizes cross-outlet solidarity within the LA news-helicopter community, quoting a CBS assignment editor. Aggregates official condolences (Bass, Newsom, LAFD) and operational scene details (70+ firefighters, fire spread). Attributes several details to its US partner CBS. Least emotional of the three, most summary-oriented.",
+      "Reuters": "Headline-only in this dossier and unrelated to the story \u2014 the entry concerns a lawyer fined over an AI hallucination in a Los Angeles lawsuit. Contributes no reporting on the helicopter crash.",
+      "Los Angeles Times": "Two articles present, both unrelated to the helicopter crash \u2014 one on 'American Idol' relocating from LA to Georgia amid a production-industry decline, and one on the Dodgers clinching a playoff berth. Neither addresses the crash.",
+      "USA Today": "Article present is unrelated to the helicopter crash \u2014 it covers 'American Idol' moving from Los Angeles to Georgia. Contributes no reporting on the crash."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (NTSB preliminary report, FAA statement in full, medical examiner records, transcripts) were located for this story, so no direct primary-to-coverage comparison is possible.",
+      "The closest primary-adjacent material cited is the NTSB and FAA statements paraphrased by NBC News and BBC News confirming the NTSB will lead the investigation of a Eurocopter AS 350 B2 crash; these are consistent across both outlets."
+    ],
+    "missing_context": [
+      "No outlet reports a determined cause of the crash \u2014 all note the investigation is only beginning; the cockpit alarm and 'You can't pull up?' audio are described but not explained.",
+      "No maintenance, flight-history, or prior-safety-record information on the specific helicopter or Angel City Air is provided.",
+      "No detail on whether proximity/coordination among the multiple news helicopters over the same scene played any role \u2014 a question a fair reader would want addressed given several choppers were reportedly in the area.",
+      "The identity, circumstances, and any relationship of ground victim Edy Gutierrez Mejia to the crash site (e.g., why he was in the parking lot) are minimal beyond his age and location.",
+      "No context on regulatory oversight of news/aerial-production helicopter operations in the LA basin, despite this being framed as relevant by the reporting.",
+      "Of the seven articles in the dossier, only three (Associated Press, NBC News, BBC News) actually cover this story; the remaining four (Reuters headline-only, two Los Angeles Times pieces, and USA Today) are off-topic, so the effective corroboration base is three outlets \u2014 one of which (NBC News) is directly involved in the event.",
+      "The three outlets that reported the crash rely heavily on the same institutional sources (NBC4/NBC Los Angeles, LAFD officials, and CBS/KABC affiliate feeds), so apparent agreement partly reflects shared sourcing rather than fully independent verification."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets independently confirm the core facts with no material framing conflict \u2014 differences are only in emphasis (AP's cockpit audio, NBC's grief, BBC's cross-outlet solidarity), not in substance \u2014 and no primary source diverges from coverage, making this a straightforward REPORT rather than a META coverage-comparison story.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/helicopter-crash-los-angeles-7bf9274cd463e4c53b122ff958b0ed9f",
+      "title": "3 people killed when NBC and Telemundo news helicopter crashes while covering LA bus collision - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/helicopter-crashes-los-angeles-chatsworth-rcna598061",
+      "title": ""
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cw4gq0j5jg10o",
+      "title": "Journalist Eliana Moreno and pilot George Marciniw among three killed in Los Angeles news helicopter crash - BBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/litigation/lawyer-state-farm-fined-over-ai-hallucination-los-angeles-lawsuit-2026-09-14/",
+      "title": "Lawyer for State Farm fined over AI hallucination in Los Angeles lawsuit - Reuters"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://www.latimes.com/entertainment-arts/business/story/2026-09-15/abcs-american-idol-is-leaving-los-angeles-in-another-blow-to-industry",
+      "title": "ABC\u2019s \u2018American Idol\u2019 is leaving Los Angeles, in another blow to the industry - Los Angeles Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/09/15/american-idol-los-angeles-georgia/91784857007/",
+      "title": "'American Idol' is moving from Los Angeles to Georgia after 24 seasons - USA Today"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://www.latimes.com/sports/dodgers/story/2026-09-14/dodgers-match-braves-record-for-consecutive-playoff-berths",
+      "title": "Dodgers clinch playoff berth, match MLB record for consecutive postseason trips - Los Angeles Times"
+    }
+  ]
+}
