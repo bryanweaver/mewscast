@@ -1,0 +1,120 @@
+{
+  "story_id": "2026-09-15-republican-rep-massie-moves-69ae7086ea",
+  "headline_seed": "Republican Rep. Massie moves to impeach Defense Secretary Hegseth over Iran war - NPR",
+  "brief": {
+    "story_id": "2026-09-15-republican-rep-massie-moves-69ae7086ea",
+    "consensus_facts": [
+      "Republican Rep. Thomas Massie of Kentucky introduced articles of impeachment against Defense Secretary Pete Hegseth on Tuesday.",
+      "Massie read the articles of impeachment aloud from the House floor.",
+      "The impeachment articles center on the Iran war, alleging Hegseth waged war unlawfully/without congressional approval.",
+      "The articles accuse Hegseth of disregarding laws meant to minimize civilian casualties.",
+      "Massie lost his primary earlier this year to a Trump-backed challenger and is leaving office.",
+      "Massie is a long-time critic of the Trump administration and its foreign policy, frequently siding with Democrats.",
+      "The resolution faces long odds of success in the Republican-controlled House.",
+      "The House must vote on the impeachment articles within about two days, before it leaves Washington for an extended recess until after the November midterms.",
+      "Pentagon press secretary Kingsley Wilson defended Hegseth, calling him a 'transformative leader' and saying the 'entire Department is unified behind the Secretary's vision and will continue working to put our warfighters and America first.'",
+      "The articles also reference offenses beyond Iran, including the capture of former Venezuelan leader Nicolas Maduro and suppression of free speech."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of articles of impeachment and resolution length",
+        "positions": {
+          "NPR": "Does not specify a number of articles or page length.",
+          "Al Jazeera English": "Does not specify a number of articles or page length.",
+          "ABC News": "34-page resolution with eight articles of impeachment; Massie read for more than 67 minutes.",
+          "CBS News": "Eight articles of impeachment; does not cite page length or reading duration."
+        }
+      },
+      {
+        "topic": "Scope of alleged offenses beyond Iran",
+        "positions": {
+          "NPR": "Focuses on Iran: illegal war, defying withdrawal order, unnecessary civilian casualties.",
+          "Al Jazeera English": "Iran, extrajudicial killings, disregard for civilian casualties.",
+          "ABC News": "Iran, an 'unlawful war' in Yemen, extrajudicial killings, suppressing free speech, and kidnapping a sovereign leader (Maduro).",
+          "CBS News": "War Powers Resolution violations, civilian casualties (girls' school strike), demotion of Sen. Mark Kelly, Caribbean boat strikes, Maduro capture, Houthi/Yemen strikes, free speech suppression."
+        }
+      },
+      {
+        "topic": "Whether Massie kept the plan secret and why",
+        "positions": {
+          "NPR": "Does not mention secrecy.",
+          "Al Jazeera English": "Does not mention secrecy.",
+          "ABC News": "Quotes Massie saying he 'shared the idea with nobody' out of concern Mike Johnson would further shorten the work period.",
+          "CBS News": "Reports Massie did not tell anyone because GOP leadership 'might have canceled' voting days."
+        }
+      },
+      {
+        "topic": "Characterization of Iran nuclear threat",
+        "positions": {
+          "NPR": "States the administration maintains the conflict was necessary to prevent a nuclear weapon, but 'experts maintain the country was not close to developing one' before the conflict began six months ago.",
+          "Al Jazeera English": "Does not address the nuclear justification.",
+          "ABC News": "Does not address the nuclear justification.",
+          "CBS News": "Does not address the nuclear justification; focuses on legal War Powers timeline instead."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('US Republican lawmaker seeks Hegseth's impeachment over Iran'). Frames the story narrowly around Iran and emphasizes the actor is a Republican. No body text to analyze.",
+      "NPR": "Leads on Massie's Republican identity and status as a Trump critic ending his term. Emphasizes the Iran war's unpopularity and economic cost, and inserts an editorial-adjacent expert claim that Iran was 'not close' to a nuclear weapon. Notes the Epstein files fight as context for Massie's anti-Trump record. Frames Republicans as having votes to defeat it but facing a 'complicated vote.'",
+      "Al Jazeera English": "International framing centered on civilian casualties and 'extrajudicial killings.' Foregrounds the 'US-Israel war on Iran' and Hegseth's dismissive remarks about rules of engagement as 'stupid' and 'politically correct.' Emphasizes long odds. Least focus on U.S. domestic politics.",
+      "Axios": "Does not cover the Hegseth impeachment at all \u2014 instead covers Massie's separate Epstein files discharge petition. Frames Massie as a persistent thorn one signature away from forcing an Epstein vote, and details his accusations that Speaker Johnson manipulated the calendar. Useful adjacent context on Massie's methods and clash with leadership, but off the central impeachment event.",
+      "Bloomberg (Bloomberg Government News)": "Headline-only ('House to Vote on Impeaching Hegseth Under Maneuver by Massie'). Frames the vote as procedurally forced ('maneuver'). No body text to analyze.",
+      "ABC News": "Leads on procedural drama and spectacle \u2014 the 67-minute floor reading, 34-page resolution, eight articles. Emphasizes the breadth of the charges (Yemen, Maduro, free speech) and Massie's secrecy strategy against Johnson. Frames Massie as a 'constitutionalist' with seven terms. Prominently carries the Pentagon's defense.",
+      "CBS News": "Most legally detailed framing. Grounds the story in the 1973 War Powers Resolution mechanics, the 48-hour/60-day/30-day timeline, and the disputed Iran war start date (Feb vs. Operation Epic Fury ending in May, restarted July 10). Notes Trump calling the War Powers Resolution unconstitutional. Adds specifics others omit: the girls' school strike, the Kelly demotion. Includes a sidebar of related war-cost stories, subtly framing the war as costly and troubled."
+    },
+    "primary_source_alignment": [
+      "No primary source (the articles of impeachment resolution, the press release, or a roll-call vote) was located for this story. Direct quotes from the resolution appear in ABC News and CBS News but could not be verified against the underlying 34-page document.",
+      "ABC News and CBS News both quote identical language from the resolution ('acted in a manner contrary to his trust as Secretary of Defense and subversive of constitutional government...'), suggesting a shared source text, but the full resolution itself is absent from the dossier."
+    ],
+    "missing_context": [
+      "No primary source was located: the actual articles of impeachment, Massie's press release, and any roll-call vote result are absent, so specific claims (34 pages, eight articles, exact charges) could not be independently verified.",
+      "No outlet reports the outcome of the required vote \u2014 the brief captures only the introduction of the articles, not their disposition.",
+      "The number of articles is inconsistent/unspecified: NPR and Al Jazeera give no count, while ABC and CBS both say eight; only ABC cites the 34-page figure.",
+      "NPR's claim that 'experts maintain' Iran was not close to a nuclear weapon is presented without named experts or sourcing and is not corroborated by any other outlet.",
+      "CBS is the only outlet to detail the contested Iran war timeline (Feb start vs. May end of Operation Epic Fury vs. July 10 restart); other outlets vaguely say 'six months ago' or 'late February' without reconciling the ceasefire and restart.",
+      "No outlet quantifies the civilian casualties Massie alleges beyond CBS's single reference to a girls' school strike a 'preliminary assessment' deemed the U.S. 'likely' responsible for but not intentional.",
+      "Hegseth's or the administration's substantive response to the specific legal War Powers allegations is absent \u2014 only the Pentagon's general defense of Hegseth's leadership is quoted.",
+      "No outlet provides a whip count or names of members expected to support or oppose the resolution beyond generalities about 'competitive districts.'"
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full or headline-level coverage reported the same event but with materially different framings \u2014 CBS on War Powers legal mechanics, ABC on floor spectacle and breadth of charges, Al Jazeera on civilian casualties, NPR on Trump-critic politics, and Axios diverting entirely to the Epstein fight \u2014 making this a coverage-comparison story rather than a straightforward REPORT.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/us-republican-lawmaker-seeks-hegseths-impeachment-over-iran-2026-09-15/",
+      "title": "US Republican lawmaker seeks Hegseth's impeachment over Iran - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/09/15/g-s1-143407/massie-impeach-hegseth-iran",
+      "title": ""
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/news/2026/9/15/republican-congressman-calls-to-impeach-us-defence-secretary-pete-hegseth",
+      "title": "Republican congressman calls to impeach US Defence Secretary Pete Hegseth - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/09/15/house-republicans-epstein-files-thomas-massie",
+      "title": "House GOP's Epstein files headache is back - Axios"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.bgov.com/bloomberg-government-news/house-to-vote-on-impeaching-hegseth-under-maneuver-by-massie",
+      "title": "House to Vote on Impeaching Hegseth Under Maneuver by Massie - Bloomberg Government News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/rep-thomas-massie-forcing-vote-pete-hegseths-impeachment/story?id=136470894",
+      "title": "Rep. Thomas Massie forcing vote on Pete Hegseth's impeachment - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/news/pete-hegseth-iran-war-impeachment-thomas-massie/",
+      "title": "GOP Rep. Thomas Massie introduces impeachment articles against Hegseth over Iran war - CBS News"
+    }
+  ]
+}
