@@ -1,0 +1,108 @@
+{
+  "story_id": "2026-09-16-fed-hikes-rates-in-e5e8fa7728",
+  "headline_seed": "Fed hikes rates in search of 'timelier' drop in inflation, sees more tightening ahead - Reuters",
+  "brief": {
+    "story_id": "2026-09-16-fed-hikes-rates-in-e5e8fa7728",
+    "consensus_facts": [
+      "The Federal Reserve raised its benchmark interest rate by 0.25 percentage points on Wednesday, September 16, 2026, setting the target range at 3.75% to 4.00%.",
+      "This was the Fed's first rate increase since 2023 (described as the first in three years).",
+      "The vote to hike was unanimous among FOMC members.",
+      "The Fed signaled at least one additional rate hike could come before the end of the year.",
+      "Kevin Warsh is the Fed chairman and made the decision despite President Donald Trump's repeated demands for lower interest rates.",
+      "The Fed's post-meeting statement said the action 'will support a timelier return to the Committee's 2 percent goal.'",
+      "The rate hike is a response to elevated inflation driven in part by soaring oil prices linked to the war with Iran/Middle East.",
+      "At his press conference, Warsh declined to discuss his conversations with the president, stating the Fed 'stays in its lane.'",
+      "Rising AI investment/competition for capital was cited as a factor in the inflation and rate environment.",
+      "Long-term Treasury yields were near multi-decade highs around the time of the decision."
+    ],
+    "disagreements": [
+      {
+        "topic": "FOMC members forecasting additional hikes",
+        "positions": {
+          "NBC News": "All but two of the FOMC members forecast another rate increase later this year.",
+          "Politico": "Only two of the committee's 19 members thought rates should stay where they are through year-end; most forecast one more hike, and four thought two increases might be warranted."
+        }
+      },
+      {
+        "topic": "Warsh's economic projections submission",
+        "positions": {
+          "NBC News": "Does not mention that Warsh withheld his own projections; presents projections as released alongside the decision.",
+          "Politico": "Reports that Warsh, a critic of forward guidance, did not submit projections alongside his colleagues."
+        }
+      },
+      {
+        "topic": "Whether this begins a rate-hiking cycle",
+        "positions": {
+          "NBC News": "Frames the hike as potentially 'the start of a rate-hiking cycle,' noting central banks historically follow one hike with more.",
+          "Politico": "Notes Wall Street is betting more hikes could be in store but does not characterize it as a formal cycle."
+        }
+      },
+      {
+        "topic": "White House reaction",
+        "positions": {
+          "NBC News": "Cites Wells Fargo analyst on the Fed resisting political pressure; no direct White House statement quoted.",
+          "Politico": "Quotes White House spokesperson Kush Desai on Fox News calling it a 'rather unfortunate decision' not 'backed by a compelling economic case,' while affirming Trump's commitment to Fed independence."
+        }
+      },
+      {
+        "topic": "Market reaction detail",
+        "positions": {
+          "NBC News": "Reports specifics: S&P 500 closed down 0.4%, Nasdaq flat, Dow fell 630 points on IBM, Goldman Sachs, Boeing and American Express drops.",
+          "Politico": "Does not report intraday index moves; focuses on long-term yields near two-decade highs.",
+          "Bloomberg": "Body text unavailable beyond takeaways; no market close detail retrievable."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Wall Street gyrates after Fed hikes interest rate to battle inflation'). Frames the story through market volatility rather than the Fed-vs-Trump political angle. No body text retrievable, so its actual reporting cannot be assessed.",
+      "NBC News": "Leads with the political defiance angle ('defying Trump as inflation mounts') and the historic 'first since 2023' hook. Emphasizes the Iran war's effect on oil and gas prices (gas up 45% since late February, inflation at 3.4% vs 3.1% wage growth), extensive market close detail, and Warsh quotes on the limits of Fed power. Foregrounds the political tension and consumer-facing price impacts.",
+      "CNBC": "Effectively video-index/headline-only in this dossier. Content is a list of clip titles emphasizing Warsh's framing ('Inflation is the problem,' 'Inflation trends weren't passing the test') plus a Tom Lee clip saying markets are overreacting and he'd be a dip buyer. Frames the story around Warsh's own words and a bullish market counter-take; almost no independent reporting text retrievable.",
+      "Bloomberg": "Headline frames it as 'Warsh Bucks Trump to Contain Inflation' \u2014 foregrounding the political confrontation. Retrievable body is mostly site chrome plus a single Warsh quote ('We removed a dose of accommodation'). Navigation hints at emphasis on the skipped dot plot, core CPI, Trump's pressure campaign, and Warsh's Jackson Hole speech, but the substance is behind a paywall and not analyzable.",
+      "Politico": "Leads with the Warsh-vs-Trump relationship test and the electoral context (less than seven weeks before midterms). Emphasizes the granular projection breakdown (2 of 19 members hold, four want two hikes), Warsh's refusal to submit projections, the White House's on-the-record Fox News reaction, and Warsh's optimistic framing of a 'resilient' economy at full employment. Most detailed on the political and internal-committee dynamics."
+    },
+    "primary_source_alignment": [
+      "No primary source (FOMC statement, Summary of Economic Projections, or press conference transcript) was located for this story, so reported quotes and the dot-plot breakdown cannot be verified against the underlying documents.",
+      "Two outlets (NBC News and Politico) independently quote the same FOMC statement line \u2014 'Today's policy action will support a timelier return to the Committee's 2 percent goal' \u2014 providing strong cross-outlet corroboration of that language even absent the source document.",
+      "The dot-plot / projection figures differ in presentation between NBC News and Politico; without the actual Summary of Economic Projections, the precise member breakdown cannot be confirmed."
+    ],
+    "missing_context": [
+      "No primary source (FOMC statement, dot plot, or full press-conference transcript) was included in the dossier; all projection and quote details rely on outlet reporting.",
+      "Of five outlets, only NBC News and Politico provided substantial retrievable body text. Reuters is headline-only, CNBC is a video-clip index, and Bloomberg's body is mostly site navigation behind a paywall \u2014 so genuine multi-outlet corroboration is limited to two sources.",
+      "No outlet in the retrievable text explains what the pre-hike rate range was, making the size of the policy shift harder for readers to contextualize.",
+      "The exact August inflation reading is only given by one outlet (NBC News at 3.4%); Politico refers to inflation being above target 'for more than five years' without a current figure, and no outlet cites the specific measure (CPI vs PCE) the Fed targets.",
+      "No outlet quantifies the projected terminal rate implied by the additional forecasted hike(s).",
+      "No outlet details how the AI investment boom mechanically feeds inflation or bond yields beyond Warsh's brief attribution.",
+      "No outlet reports dissent within the FOMC beyond the vote being unanimous, nor whether any members publicly explained their year-end projections."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same event with materially different emphasis \u2014 NBC News foregrounds consumer price/market impact while Politico foregrounds the Warsh-Trump political test and internal projection breakdown \u2014 and the two full-text outlets diverge on the projection numbers, making a coverage-comparison the honest frame. Note that only two of five outlets had substantial body text, so consensus rests on a narrow base.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/wall-st-futures-edge-higher-countdown-fed-decision-2026-09-16/",
+      "title": "Wall Street gyrates after Fed hikes interest rate to battle inflation - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/business/economy/fed-raises-rates-defying-trump-rcna598148",
+      "title": "Fed raises interest rates for first time since 2023, defying Trump as inflation mounts - NBC News"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/video/2026/09/16/federal-reserve-chairman-warsh-inflation-is-the-problem.html",
+      "title": "Federal Reserve Chairman Warsh: Inflation is the problem - CNBC"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-16/fed-raises-rates-as-warsh-bucks-trump-to-contain-inflation",
+      "title": "Fed Raises Rates as Warsh Bucks Trump to Contain Inflation - Bloomberg.com"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/09/16/fed-rates-trump-warsh-inflation-01079371",
+      "title": "Fed hikes rates and signals more to come this year, defying Trump - Politico"
+    }
+  ]
+}
