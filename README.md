@@ -66,6 +66,7 @@ python src/main.py journalism --dry-run
 | `BLUESKY_PASSWORD` | Bluesky app password |
 | `ANTHROPIC_API_KEY` | Anthropic API key |
 | `X_AI_API_KEY` | X AI API key (Grok image generation) |
+| `TYPESAFE_API_KEY` | TypeSafe / Jev API key (decision calls; optional until wired) |
 
 3. Go to Actions tab, enable workflows. `journalism-publish.yml` runs on schedule automatically.
 
