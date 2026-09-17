@@ -8,9 +8,9 @@ Live HTTP is never called from pytest — tests mock ``TypeSafeClient.evaluate``
 or construct a client with a stub ``post`` function. Production fails open:
 a missing key, timeout, or unexpected payload never blocks a publish cycle.
 
-Decision rows are appended to ``docs/reports/typesafe_decisions.jsonl`` so
-later review can see what Jev returned, which threshold fired, and whether
-the hop skipped a story, dropped an article, or let the pipeline continue.
+Each hop prints a ``[typesafe]`` block to stdout (Actions runner logs) with
+the action, answers, thresholds, and token usage so we can judge the effect
+without persisting a sidecar log.
 """
 from __future__ import annotations
 
@@ -18,7 +18,6 @@ import json
 import os
 import time
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
 from typing import Any, Callable, Optional
 
 import requests
@@ -26,7 +25,6 @@ import requests
 API_URL = "https://api.typesafe.ai/v1/systemone"
 DEFAULT_MODEL = "jev-latest"
 DEFAULT_TIMEOUT_S = 20
-DEFAULT_LOG_RELPATH = os.path.join("docs", "reports", "typesafe_decisions.jsonl")
 
 # Conservative first-wiring thresholds. Auto-skip / auto-drop only when Jev
 # is this sure; anything fuzzier falls through (fail-open).
@@ -99,17 +97,6 @@ class BriefWorthVerdict:
     fallback_reason: str = ""
 
 
-def _project_root() -> str:
-    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-def default_log_path() -> str:
-    override = os.getenv("TYPESAFE_LOG_PATH", "").strip()
-    if override:
-        return override
-    return os.path.join(_project_root(), DEFAULT_LOG_RELPATH)
-
-
 def typesafe_config(journalism_cfg: Optional[dict] = None) -> dict:
     """Normalize ``journalism.typesafe`` with defaults for missing keys."""
     raw = (journalism_cfg or {}).get("typesafe") or {}
@@ -127,18 +114,6 @@ def typesafe_config(journalism_cfg: Optional[dict] = None) -> dict:
         "max_borderline": int(raw.get("max_borderline", DEFAULT_MAX_BORDERLINE)),
         "timeout_s": int(raw.get("timeout_s", DEFAULT_TIMEOUT_S)),
     }
-
-
-def append_typesafe_decision(record: dict, path: Optional[str] = None) -> None:
-    """Append one JSON line. Failure is non-fatal — never block publish."""
-    dest = path or default_log_path()
-    try:
-        os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
-        row = {"ts": datetime.now(timezone.utc).isoformat(), **record}
-        with open(dest, "a", encoding="utf-8") as fh:
-            fh.write(json.dumps(row, ensure_ascii=False, default=str) + "\n")
-    except Exception as exc:
-        print(f"[typesafe] could not append decision log: {exc}")
 
 
 def client_from_env(
@@ -160,13 +135,11 @@ class TypeSafeClient:
         model: str = DEFAULT_MODEL,
         timeout_s: int = DEFAULT_TIMEOUT_S,
         post: Optional[Callable[..., Any]] = None,
-        log_path: Optional[str] = None,
     ):
         self.api_key = api_key
         self.model = model
         self.timeout_s = timeout_s
         self._post = post or requests.post
-        self.log_path = log_path
 
     def evaluate(self, state: Any, questions: dict) -> TypeSafeResult:
         if not questions:
@@ -234,6 +207,7 @@ def _log_call(
     extra: dict,
     error: str = "",
 ) -> None:
+    """Print a hop so GitHub Actions logs are enough to review the effect."""
     usage = (result.usage if result else {}) or {}
     record = {
         "kind": kind,
@@ -241,31 +215,44 @@ def _log_call(
         "model": result.model if result else client.model,
         "action": action,
         "elapsed_ms": result.elapsed_ms if result else None,
-        "usage": {
-            "input_tokens": usage.get("input_tokens"),
-            "output_tokens": usage.get("output_tokens"),
-        },
+        "input_tokens": usage.get("input_tokens"),
+        "output_tokens": usage.get("output_tokens"),
         "answers": result.answers if result else {},
-        "questions": {
-            name: {
-                "type": (spec or {}).get("type"),
-                "instructions": (spec or {}).get("instructions"),
-            }
-            for name, spec in questions.items()
-        },
+        "questions": list(questions),
         "state_summary": state_summary,
         **extra,
     }
     if error:
         record["error"] = error
         record["engine"] = "error"
-    append_typesafe_decision(record, path=client.log_path)
     print(
-        f"[typesafe] {kind} action={action} model={record['model']} "
-        f"elapsed_ms={record['elapsed_ms']} "
-        f"tokens={usage.get('input_tokens')}/{usage.get('output_tokens')}"
+        f"[typesafe] {kind} action={action} engine={record['engine']} "
+        f"model={record['model']} elapsed_ms={record['elapsed_ms']} "
+        f"tokens={record['input_tokens']}/{record['output_tokens']}"
         + (f" error={error}" if error else "")
     )
+    headline = extra.get("headline") or (state_summary or {}).get("headline")
+    if headline:
+        print(f"[typesafe]   headline={headline!r}")
+    if extra.get("story_id"):
+        print(f"[typesafe]   story_id={extra['story_id']}")
+    if extra.get("choice") is not None or extra.get("confidence") is not None:
+        print(
+            f"[typesafe]   choice={extra.get('choice')} "
+            f"confidence={extra.get('confidence')} "
+            f"threshold={extra.get('threshold')} "
+            f"matched={extra.get('matched_story_id') or ''}"
+        )
+    if extra.get("nouls"):
+        print(f"[typesafe]   nouls={extra['nouls']}")
+    if extra.get("keep") is not None:
+        print(f"[typesafe]   keep={extra['keep']} outlets={extra.get('outlets')}")
+    if extra.get("skip_reason"):
+        print(f"[typesafe]   skip_reason={extra['skip_reason']}")
+    if extra.get("thresholds"):
+        print(f"[typesafe]   thresholds={extra['thresholds']}")
+    # One JSON line for grepping the Actions log without a sidecar file.
+    print("[typesafe]   detail=" + json.dumps(record, ensure_ascii=False, default=str))
 
 
 def judge_same_event(

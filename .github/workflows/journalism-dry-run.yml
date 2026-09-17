@@ -127,7 +127,6 @@ jobs:
             drafts/
             dossiers/
             docs/dossiers/
-            docs/reports/typesafe_decisions.jsonl
           retention-days: 14
           if-no-files-found: warn
 

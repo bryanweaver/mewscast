@@ -201,7 +201,6 @@ mewscast/
 │   ├── rebuild_history.py          # Rebuild post history from X
 │   ├── track_analytics.py          # Engagement analytics
 │   ├── triage_review.py            # Triage review tooling
-│   ├── typesafe_review.py          # TypeSafe / Jev decision-log review
 │   └── test_typesafe.py            # Live Jev smoke test (not pytest)
 ├── docs/                           # Documentation (see docs/README.md)
 ├── dossiers/                       # Story dossiers (gitignored)
@@ -253,7 +252,7 @@ pytest tests/ --cov=src --cov-report=html
 | `test_engagement.py` | 95 | Engagement bot behavior |
 | `test_content_generator.py` | 95 | Legacy content generation |
 | `test_field_notes.py` | 49 | Field-notes reply composer |
-| `test_typesafe_client.py` | 16 | Jev client, L4/relevance/brief-gate judgments, jsonl log |
+| `test_typesafe_client.py` | 14 | Jev client, L4/relevance/brief-gate judgments |
 | `test_source_gatherer.py` | 41 | Stage 3: slant-diverse fetch |
 | `test_deduplication.py` | 70 | Post deduplication logic |
 | `test_verification_gate.py` | 58 | Stage 6: keystone sign-off matrix + all hard rules |

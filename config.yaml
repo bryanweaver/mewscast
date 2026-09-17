@@ -337,8 +337,8 @@ journalism:
   # TypeSafe / Jev — typed judgment hops. Missing TYPESAFE_API_KEY fails
   # open: L4 and relevance fall back to Haiku; the pre-Opus brief gate is
   # skipped. Thresholds are conservative so only high-confidence "no"s
-  # skip a story or drop an article. Every call is appended to
-  # docs/reports/typesafe_decisions.jsonl for later review.
+  # skip a story or drop an article. Each hop prints a [typesafe] block
+  # to the Actions log (action, answers, thresholds, tokens).
   typesafe:
     enabled: true
     model: jev-latest
