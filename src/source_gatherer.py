@@ -284,10 +284,18 @@ class SourceGatherer:
     # from each of these functional slant groups in every dossier.
     REQUIRED_SLANTS = ["wire", "lean-left", "lean-right", "international", "specialized"]
 
-    def __init__(self, news_fetcher=None, registry_path: Optional[str] = None):
+    def __init__(
+        self,
+        news_fetcher=None,
+        registry_path: Optional[str] = None,
+        typesafe_client=None,
+        typesafe_cfg: Optional[dict] = None,
+    ):
         self.news_fetcher = news_fetcher
         self.registry_path = registry_path or _default_registry_path()
         self.registry = _load_outlet_registry(self.registry_path)
+        self.typesafe_client = typesafe_client
+        self.typesafe_cfg = typesafe_cfg or {}
 
     # ---- public ------------------------------------------------------------
 
@@ -486,9 +494,9 @@ class SourceGatherer:
             article_records.append(record)
 
         # ---- Relevance filter -----------------------------------------------
-        # Two-pass: (1) cheap proper-noun heuristic on title+body, (2) Haiku
-        # classifier for borderline cases. Removes off-topic articles before
-        # they pollute the meta-analysis.
+        # Two-pass: (1) cheap proper-noun heuristic on title+body, (2) Jev
+        # (batched Noul) or Haiku for borderline cases. Removes off-topic
+        # articles before they pollute the meta-analysis.
         # Seed articles came from the trending tweet itself — definitionally
         # relevant, exempt from filtering (their bodies are often shell URLs
         # with no proper-noun overlap, e.g. x.com photo/video links).
@@ -729,8 +737,9 @@ class SourceGatherer:
         article title+body. Articles with 2+ matches are kept, 0 matches
         are dropped, 1 match is borderline.
 
-        Pass 2 (Haiku): borderline articles are sent to Claude Haiku for a
-        yes/no classification. ~$0.001 per call.
+        Pass 2 (Jev, else Haiku): borderline articles are scored together
+        with one TypeSafe Noul each when a client is injected. Missing key
+        or a failed Jev call falls back to per-article Haiku.
 
         Seed articles (URLs in ``seed_urls``) are exempt: they came from the
         trending tweet itself and are definitionally on-topic, even when the
@@ -769,7 +778,28 @@ class SourceGatherer:
             print(f"[source_gatherer] relevance filter dropped {len(dropped)} "
                   f"off-topic articles: {', '.join(dropped)}")
 
-        # Pass 2: Haiku for borderline cases
+        # Pass 2: Jev batch (preferred) or per-article Haiku
+        if borderline and self.typesafe_client is not None:
+            from typesafe_client import judge_article_relevance
+            print(f"[source_gatherer] {len(borderline)} borderline article(s) "
+                  f"— checking with Jev...")
+            keep_flags = judge_article_relevance(
+                self.typesafe_client,
+                headline,
+                borderline,
+                noul_threshold=float(self.typesafe_cfg.get("relevance_noul", 0.50)),
+                max_borderline=int(self.typesafe_cfg.get("max_borderline", 12)),
+                story_id="",
+            )
+            if keep_flags is not None:
+                for article, keep in zip(borderline, keep_flags):
+                    if keep:
+                        print(f"   ✓ Jev says relevant — {article.outlet}")
+                        relevant.append(article)
+                    else:
+                        print(f"   ✗ Jev says off-topic — dropping {article.outlet}")
+                borderline = []
+
         for article in borderline:
             print(f"[source_gatherer] borderline article from {article.outlet} "
                   f"— checking with Haiku...")

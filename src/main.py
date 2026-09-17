@@ -45,6 +45,12 @@ from dossier_renderer import (
     render_sitemap,
 )
 from r2_uploader import upload_dossier_image, public_image_url
+from typesafe_client import (
+    client_from_env,
+    judge_brief_worth,
+    judge_same_event,
+    typesafe_config,
+)
 
 
 def _load_config():
@@ -1061,6 +1067,22 @@ def post_journalism_cycle(
     composer_cfg = journalism_cfg.get("composer", {}) or {}
     verification_cfg = journalism_cfg.get("verification", {}) or {}
     dry_run_cfg = journalism_cfg.get("dry_run", {}) or {}
+    ts_cfg = typesafe_config(journalism_cfg)
+    typesafe_client = (
+        client_from_env(model=ts_cfg["model"], timeout_s=ts_cfg["timeout_s"])
+        if ts_cfg["enabled"]
+        else None
+    )
+    if typesafe_client is not None:
+        print(
+            f"[journalism] TypeSafe Jev enabled (model={ts_cfg['model']}) "
+            f"for L4 same-event, relevance, and pre-Opus brief gate"
+        )
+    else:
+        print(
+            "[journalism] TypeSafe Jev unavailable — L4/relevance fall back "
+            "to Haiku; pre-Opus brief gate skipped"
+        )
 
     max_candidates = int(trend_cfg.get("max_candidates", 15))
     use_llm_triage = bool(triage_cfg.get("use_llm", False))
@@ -1135,6 +1157,8 @@ def post_journalism_cycle(
     source_gatherer = SourceGatherer(
         news_fetcher=news_fetcher,
         registry_path=registry_path,
+        typesafe_client=typesafe_client,
+        typesafe_cfg=ts_cfg,
     )
     primary_finder = PrimarySourceFinder()
     meta_analyzer = MetaAnalyzer(model=meta_model)
@@ -1268,9 +1292,10 @@ def post_journalism_cycle(
 
     def _llm_same_event_check(cand_headline: str,
                               recent_seen: list[tuple[str, str]]) -> tuple[bool, str]:
-        """Layer 3 dedup: ask Haiku whether the candidate is the same news
-        event as any seen headline in the prune window, regardless of
-        phrasing/outlet/angle. Returns (is_duplicate, matched_story_id).
+        """Layer 4 dedup: ask Jev (or Haiku if TypeSafe is off) whether the
+        candidate is the same news event as any seen headline in the prune
+        window, regardless of phrasing/outlet/angle. Returns
+        (is_duplicate, matched_story_id).
 
         Why this exists: the proper-noun semantic layer is blind to
         topic-driven stories where the subject is lowercase ('mifepristone',
@@ -1282,11 +1307,30 @@ def post_journalism_cycle(
         Failure mode: returns (False, '') on API error or missing API key
         — the caller falls through to the next candidate, never silently
         publishes. The mechanical URL-overlap and proper-noun layers
-        remain as belt-and-suspenders. Same-cycle latency is one Haiku
-        call per candidate evaluated (~500ms), short-circuited as soon
-        as a non-duplicate is found."""
+        remain as belt-and-suspenders. When TypeSafe is configured, Jev
+        Choice is the only L4 judge (low confidence fails open). Haiku
+        remains the fallback when TYPESAFE_API_KEY is unset."""
         if not recent_seen:
             return (False, "")
+        if typesafe_client is not None:
+            verdict = judge_same_event(
+                typesafe_client,
+                cand_headline,
+                recent_seen,
+                confidence_threshold=ts_cfg["same_event_confidence"],
+                max_seen_options=ts_cfg["max_seen_options"],
+            )
+            if verdict.is_duplicate:
+                print(
+                    f"[journalism] Jev L4: candidate matches seen "
+                    f"story_id={verdict.matched_story_id} "
+                    f"choice={verdict.choice} confidence={verdict.confidence}"
+                )
+            elif verdict.fallback_reason:
+                print(
+                    f"[journalism] Jev L4 fail-open ({verdict.fallback_reason})"
+                )
+            return (verdict.is_duplicate, verdict.matched_story_id)
         api_key = os.getenv("ANTHROPIC_API_KEY")
         if not api_key:
             print("[journalism] LLM dedup: ANTHROPIC_API_KEY missing — skipping LLM check")
@@ -1528,11 +1572,12 @@ def post_journalism_cycle(
     #   L1 story_id exact      — cheap, byte-identical headline+URL match
     #   L2 URL overlap         — deterministic; same article URL across cycles
     #   L3 proper-noun overlap — semantic, same named entities
-    #   L4 LLM same-event check — Haiku judges "same news event?" semantically;
-    #                             catches the L3-blind case where the topic is
+    #   L4 same-event check     — Jev Choice (or Haiku fallback) judges
+    #                             "same news event?" semantically; catches
+    #                             the L3-blind case where the topic is
     #                             lowercase ('mifepristone', 'tariffs') and no
     #                             distinctive proper nouns survive the stoplist.
-    # On L4 LLM error: fall through (treat as not-duplicate). Reaches into the
+    # On L4 error: fall through (treat as not-duplicate). Reaches into the
     # next candidate via the loop, never publishes silently.
     for c in passed:
         if candidate is not None:
@@ -1580,7 +1625,7 @@ def post_journalism_cycle(
         print(
             f"[journalism] all {len(passed)} triage-passed candidates are already "
             f"covered (rejected by L1 story_id / L2 URL-overlap / L3 proper-noun / "
-            f"L4 LLM-judged); clean exit, nothing new to report this cycle"
+            f"L4 same-event); clean exit, nothing new to report this cycle"
         )
         print("[journalism] CYCLE END: published=0 reason=all_candidates_seen")
         return True
@@ -1617,6 +1662,7 @@ def post_journalism_cycle(
         fallback_candidates.append(c)
 
     dossier = None
+    brief_gate_skips = 0
     for fb_idx, fb_candidate in enumerate(fallback_candidates, start=1):
         fb_label = f"[{fb_idx}/{len(fallback_candidates)}]"
         print(f"[journalism] {fb_label} Stage 3a — gathering sources for: "
@@ -1641,13 +1687,50 @@ def post_journalism_cycle(
                   f"— trying next candidate")
             continue
 
+        # Pre-Opus brief gate — skip a wasted Opus call when Jev is sure
+        # the dossier is gossip/thin. Fail-open if TypeSafe is off or errors.
+        if typesafe_client is not None:
+            brief_verdict = judge_brief_worth(
+                typesafe_client,
+                fb_dossier,
+                worth_threshold=ts_cfg["brief_worth_noul"],
+                gossip_threshold=ts_cfg["brief_gossip_noul"],
+                thin_threshold=ts_cfg["brief_thin_noul"],
+            )
+            if not brief_verdict.proceed:
+                brief_gate_skips += 1
+                print(
+                    f"[journalism] {fb_label} Jev pre-Opus gate skipped "
+                    f"({brief_verdict.skip_reason}) — trying next candidate"
+                )
+                continue
+            if brief_verdict.fallback_reason:
+                print(
+                    f"[journalism] {fb_label} Jev pre-Opus gate fail-open "
+                    f"({brief_verdict.fallback_reason})"
+                )
+            else:
+                print(
+                    f"[journalism] {fb_label} Jev pre-Opus gate proceed "
+                    f"nouls={brief_verdict.nouls}"
+                )
+
         # This candidate worked — use it
         dossier = fb_dossier
         candidate = fb_candidate
         break
 
-    # If all fallback candidates yielded too few articles, clean exit.
+    # If all fallback candidates yielded too few articles, or Jev skipped
+    # every remaining dossier as not worth a brief, clean exit.
     if dossier is None or len(dossier.articles) < 2:
+        if brief_gate_skips > 0:
+            print(
+                f"[journalism] Jev pre-Opus gate skipped all "
+                f"{len(fallback_candidates)} candidate(s) — clean exit, "
+                f"no Opus brief this cycle"
+            )
+            print("[journalism] CYCLE END: published=0 reason=typesafe_brief_skip")
+            return True
         print(
             f"[journalism] Stage 3 returned 0 articles for all "
             f"{len(fallback_candidates)} candidate(s) — clean exit, "

@@ -25,6 +25,9 @@ for _p in (_project_root, _src_dir):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
+# Cloud / local VMs may inject TYPESAFE_API_KEY. Tests stay offline.
+os.environ.pop("TYPESAFE_API_KEY", None)
+
 
 def _ensure_module(name: str) -> types.ModuleType:
     mod = sys.modules.get(name)

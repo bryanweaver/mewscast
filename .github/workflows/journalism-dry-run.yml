@@ -78,6 +78,9 @@ jobs:
           # Anthropic: Stage 4 meta-analysis (Opus) + Stage 5 composition (Sonnet)
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+          # TypeSafe / Jev: L4 same-event, borderline relevance, pre-Opus gate
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+
           # Grok: image generation (best-effort in dry-run)
           X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
 
@@ -124,6 +127,7 @@ jobs:
             drafts/
             dossiers/
             docs/dossiers/
+            docs/reports/typesafe_decisions.jsonl
           retention-days: 14
           if-no-files-found: warn
 

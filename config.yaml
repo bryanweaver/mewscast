@@ -334,6 +334,22 @@ journalism:
     target_count: 7
     require_slant_diversity: true
     max_fallback_candidates: 3
+  # TypeSafe / Jev — typed judgment hops. Missing TYPESAFE_API_KEY fails
+  # open: L4 and relevance fall back to Haiku; the pre-Opus brief gate is
+  # skipped. Thresholds are conservative so only high-confidence "no"s
+  # skip a story or drop an article. Every call is appended to
+  # docs/reports/typesafe_decisions.jsonl for later review.
+  typesafe:
+    enabled: true
+    model: jev-latest
+    same_event_confidence: 0.85   # L4 Choice: skip only at/above this confidence
+    relevance_noul: 0.50          # borderline article keep/drop midpoint
+    brief_worth_noul: 0.35        # skip Opus only if world-change/checkable below this
+    brief_gossip_noul: 0.80       # ...and gossip noul is at least this high
+    brief_thin_noul: 0.85         # ...or thin/off-topic is at least this high
+    max_seen_options: 40          # cap L4 Choice options (plus `novel`)
+    max_borderline: 12            # cap batched relevance Nouls
+    timeout_s: 20
   meta_analysis:
     model: claude-opus-4-8
     max_tokens: 4000
