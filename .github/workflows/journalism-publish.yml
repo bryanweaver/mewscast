@@ -172,8 +172,10 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          if [ -f docs/reports/typesafe_decisions.jsonl ] && ! git diff --quiet docs/reports/typesafe_decisions.jsonl; then
+          if [ -f docs/reports/typesafe_decisions.jsonl ]; then
             git add docs/reports/typesafe_decisions.jsonl
+          fi
+          if ! git diff --staged --quiet -- docs/reports/typesafe_decisions.jsonl; then
             git commit -m "Update TypeSafe decision log [skip ci]"
             for i in {1..3}; do
               git pull --rebase --autostash origin main && git push && break || {
