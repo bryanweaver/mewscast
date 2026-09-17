@@ -1,0 +1,128 @@
+{
+  "story_id": "2026-09-16-house-passes-russia-sanctions-d766be780d",
+  "headline_seed": "House passes Russia sanctions, sending bill named for Lindsey Graham to Trump's desk - NPR",
+  "brief": {
+    "story_id": "2026-09-16-house-passes-russia-sanctions-d766be780d",
+    "consensus_facts": [
+      "The U.S. House of Representatives passed a Russia sanctions bill by a vote of 262-159, sending it to President Trump's desk.",
+      "The bill is named for the late Sen. Lindsey Graham (R-S.C.), who championed the legislation and died earlier in 2026.",
+      "The measure had previously passed the Senate by an 86-11 margin in August.",
+      "The legislation grants the president authority to impose tariffs of up to 100% on top purchasers of Russian oil and gas, such as China and India.",
+      "The bill targets Russian officials, oligarchs, banks and financial institutions, and Russia's 'shadow fleet' of tankers used to evade sanctions.",
+      "The vote scrambled usual partisan lines, with some Democrats supporting the bill and some Republicans (particularly the isolationist wing) opposing it.",
+      "Democratic opposition centered on concerns that the tariff authority could be used by Trump against other countries, including U.S. allies.",
+      "The legislation was more than a year (or a year and a half) in the making, dating to a sanctions push Graham launched in spring 2025.",
+      "The White House/Trump administration had held up the bill for months before eventually backing it."
+    ],
+    "disagreements": [
+      {
+        "topic": "Day of the House vote",
+        "positions": {
+          "NPR": "Passed 'on Wednesday'",
+          "Axios": "'The House passed a sweeping Russia sanctions bill Thursday'",
+          "ABC News": "'Wednesday night'",
+          "The Washington Post": "'on Wednesday'",
+          "CBS News": "'The House on Wednesday evening'",
+          "The Guardian": "'Wed 16 Sep 2026'"
+        }
+      },
+      {
+        "topic": "Number of Democrats voting for/against the bill",
+        "positions": {
+          "NPR": "58 House Democrats joined most Republicans to advance the legislation; seven Republicans joined most Democrats to block it",
+          "The Washington Post": "152 Democrats opposed the bill, with only 58 supporting it",
+          "ABC News": "Does not give a Democratic count; names the seven Republicans who voted against (Massie, Harris, Norman, Self, McClintock, Roy, Davidson)"
+        }
+      },
+      {
+        "topic": "Whether the bill also targets Iran",
+        "positions": {
+          "ABC News": "Frames it as a 'Russia and Iran sanctions bill'; notes a provision preventing a lapse in sanction authority on Iran's energy and weapons sectors",
+          "The Washington Post": "States it would extend separate financial penalties on Iran, a priority Trump insisted Congress add late in negotiations",
+          "The Guardian": "Names the bill 'The Lindsey O Graham Sanctioning Russia and Iran Act of 2026'",
+          "NPR": "Does not mention Iran",
+          "Axios": "Does not mention Iran"
+        }
+      },
+      {
+        "topic": "Scope/limits of tariff authority",
+        "positions": {
+          "ABC News": "Limits tariffs to the five largest importers of Russian crude oil or gas and top five countries aiding energy sanctions evasion",
+          "NPR": "Democrats warn of a 'loophole' allowing Trump to define basically any country as a facilitator, with tariffs up to 100% and no guardrails or expiration",
+          "Axios": "Describes secondary tariffs of up to 100% on buyers of Russian oil and gas without noting numeric caps"
+        }
+      },
+      {
+        "topic": "Cause and timing of Graham's death",
+        "positions": {
+          "Axios": "'died suddenly in July'",
+          "The Washington Post": "'died in July from a heart condition' shortly after returning from Kyiv",
+          "ABC News": "'sudden death,' about two months before the House vote"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "Leads on the vote and its bipartisan splits, then centers the tariff 'loophole' concern via Rep. Don Beyer's quote. Balances a moral-courage quote from Rep. McCaul with Democratic tariff objections. Emphasizes civilian deaths since 2022 and Graham's role as negotiator with Trump. Does not mention Iran.",
+      "Axios": "Compact, mechanics-focused framing. Leads on the transfer to Trump's desk and the tariff/shadow-fleet expansion. Emphasizes the scrambled partisan lines and Republican rejection of Democratic Rules Committee efforts to strip tariff authority. Frames the story around Graham's year-plus legislative arc and White House delay. Omits Iran.",
+      "ABC News": "The only outlet to headline the Iran component ('Russia and Iran sanctions bill'). Leads with the raw tally, names all seven GOP defectors, and details the tariff caps (top five importers). Gives significant space to Graham's sister Darline Graham's celebratory statement, lending a memorial/human angle.",
+      "The Washington Post": "Frames the bill as 'aggressive' and aimed at stifling 'Russia's war machine,' emphasizing it overcame Democratic opposition. Foregrounds the 152-58 Democratic split and Rep. Meeks's 'do more harm than good' statement. Uniquely highlights Zelensky's July visit to Graham's funeral and lobbying, and Trump's late insistence on adding Iran penalties. Includes an AI-generated reader-comment summary skeptical of Trump acting on Russia.",
+      "CBS News": "Minimal body text \u2014 a video teaser only. States the House passed Graham's Russia sanctions bill Wednesday evening and points to a congressional reporter's video. No substantive detail beyond the headline-level fact.",
+      "The Hill": "Headline-only syndication link ('House passes Russia sanctions bill, sending it to Trump's desk'). No retrievable body text; contributes only headline-level corroboration.",
+      "The Guardian": "Frames the story explicitly around expanded presidential power ('giving Trump more power'), filing it under 'Trump tariffs.' Leads with the pitched battle between Ukraine backers and skeptics. Richest on floor debate \u2014 quotes Hakeem Jeffries opposing, Don Bacon's 'Churchill vs Chamberlain' line, and the 214-211 rule vote. Highlights renegade Democrats like Marie Gluesenkamp Perez and includes Ukrainian embassy and activist reaction. Uses the full bill name including Iran."
+    },
+    "primary_source_alignment": [
+      "No primary source (roll-call vote, bill text, or press release) was located for this story, so reported details \u2014 including the exact 262-159 tally, the 58/152 Democratic split, and the named GOP defectors \u2014 could not be verified against the underlying document.",
+      "The precise scope of the tariff authority (a hard 'top five importers' cap per ABC News versus the open-ended 'any country facilitator' loophole described by Democrats in NPR) cannot be adjudicated without the bill text.",
+      "The extent and nature of the Iran provisions, reported by ABC News, The Washington Post, and The Guardian but absent from NPR and Axios, could not be confirmed against the bill itself."
+    ],
+    "missing_context": [
+      "No primary source (bill text or House roll-call vote) was available in this dossier; all vote counts and provision details rest on outlet reporting alone.",
+      "CBS News and The Hill provided only headline/teaser-level content, so consensus rests on the five outlets with substantive body text.",
+      "No outlet reports the specific implementation timeline, effective date, or whether/how the tariff authority is discretionary versus mandatory once Trump signs.",
+      "Outlets do not clarify whether Trump has committed to actually using the tariff authority, though The Washington Post notes reader skepticism that he will act against Russia.",
+      "The exact language defining which countries can be designated 'facilitators' \u2014 the crux of the Democratic 'loophole' objection \u2014 is not quoted from the bill by any outlet, leaving the ABC News 'top five' cap and the Democratic 'any country' warning unreconciled.",
+      "No outlet details the enforcement or sunset provisions (if any) for the sanctions or the tariff authority.",
+      "None of the articles contained apparent instruction-injection attempts."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets reported the same event but with materially different framings \u2014 some headlining Iran, some the vote split, and The Guardian and Washington Post foregrounding expanded presidential power \u2014 and no primary source was available to reconcile divergent claims about the tariff scope and Democratic vote counts. This is a coverage-comparison story rather than a straightforward REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://www.npr.org/2026/09/16/nx-s1-5971289/russia-sanctions-house-vote-lindsey-graham",
+      "title": ""
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://www.axios.com/2026/09/16/house-russia-sanctions-bill-graham",
+      "title": "House passes Russia sanctions bill - Axios"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/house-passes-russia-iran-sanctions-bill-championed-sen/story?id=136510615",
+      "title": "House passes Russia and Iran sanctions bill championed by Sen. Lindsey Graham - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtonpost.com/national-security/2026/09/16/house-passes-russia-sanctions-bill-overcoming-democratic-opposition/",
+      "title": "House passes bill to add economic sanctions on Russia via tariffs - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://www.cbsnews.com/video/house-passes-lindsey-graham-russia-sanctions-bill/",
+      "title": "House passes late Sen. Lindsey Graham's Russia sanctions bill, sending it to Trump's desk - CBS News"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://thehill.com/homenews/house/6093976-house-russia-sanctions-bill-passes-trump/",
+      "title": "House passes Russia sanctions bill, sending it to Trump\u2019s desk - The Hill"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/sep/16/us-lawmakers-pass-bill-giving-trump-more-power-to-sanction-russia-and-its-enablers",
+      "title": "US lawmakers pass bill giving Trump more power to sanction Russia and its enablers - The Guardian"
+    }
+  ]
+}
