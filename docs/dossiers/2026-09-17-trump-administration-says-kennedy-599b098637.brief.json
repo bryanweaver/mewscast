@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-09-17-trump-administration-says-kennedy-599b098637",
+  "headline_seed": "Trump administration says Kennedy Center closure is \u2018temporary\u2019 after Trump alludes to broader shutdown - Politico",
+  "brief": {
+    "story_id": "2026-09-17-trump-administration-says-kennedy-599b098637",
+    "consensus_facts": [
+      "A federal judge (U.S. District Judge Christopher Cooper) blocked returning President Trump's name to the Kennedy Center building.",
+      "The Trump-aligned Kennedy Center board voted to close most of the performing arts center for renovations/repairs.",
+      "Fencing/barriers went up around the main Kennedy Center building on Wednesday, September 16, 2026.",
+      "Congress appropriated $257 million for the Kennedy Center renovation.",
+      "Trump said the Kennedy Center could 'close' or be 'ripped down' if his administration doesn't receive 'recognition,' arguing it deserves credit for taking on the financial burden.",
+      "Rep. Joyce Beatty, an Ohio Democrat and ex officio board member, sought/led an emergency court challenge to what she called the 'unlawful' closure.",
+      "The board's vote to close came after the judge blocked adding Trump's name to the building.",
+      "The stated safety justification for closure involved plaster falling from the Grand Foyer ceiling after a heavy rainstorm/storm earlier in September.",
+      "Judge Cooper ordered the Kennedy Center to provide at least 30 days' notice before any demolition or major physical changes (per CNN body text and AP/Reuters headlines)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Amount Trump says he personally contributed",
+        "positions": {
+          "CNN": "Does not cite a personal donation figure in this framing; focuses on Trump's argument for 'recognition' for taking on the financial burden.",
+          "Associated Press": "Reports Trump said on social media he'd given $17 million to an endowment intended to support the institution."
+        }
+      },
+      {
+        "topic": "Characterization of the closure's duration/intent",
+        "positions": {
+          "CNN": "Reports the administration says the closure is 'temporary' and would last seven days, while Beatty's lawyers call it 'a plain pretext' and 'a recipe for extending the shutdown forever' for up to two years.",
+          "Associated Press": "Frames it as the board voting to close 'most' of the center for repairs, with Beatty calling it an 'unlawful closing.'",
+          "ABC News": "Reports the board voted to close the center 'immediately' for renovations, citing safety concerns."
+        }
+      },
+      {
+        "topic": "Whether Trump is in contempt of court",
+        "positions": {
+          "ABC News": "Quotes Beatty saying Trump 'is in contempt of court' for closing the center.",
+          "CNN": "Does not assert contempt; notes officially closing the monument 'violates a court order' per the lawsuit context.",
+          "Associated Press": "Does not characterize Trump as in contempt."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier. Leads with the judicial check on power: 'Judge orders Trump to give 30 days notice before any steps to demolish Kennedy Center.' Frames Trump as the party being restrained and foregrounds the demolition angle. No body text available to corroborate.",
+      "CNN (Article 2)": "Most detailed narrative. Leads with the striking visual of Trump reviewing a 'Kennedy Center DEMOLISHED' poster on Air Force One, juxtaposed against the administration's simultaneous 'structural deterioration' safety claim \u2014 implicitly framing the safety rationale as pretextual. Emphasizes Beatty's 'plain pretext' language and includes Republican skepticism (Tillis calling demolition 'absurd'). Details the 'temporary'/seven-day closure claim and the sworn statement about the 60-foot plaster fall.",
+      "CNN (Article 7)": "Video item, thin text. Frames narrowly around Trump defending his push to have his name on the building because his administration 'should be recognized' for the financial burden. Reinforces the personal-recognition angle.",
+      "Politico (Article 3)": "Body text is site navigation/boilerplate only \u2014 no substantive article content retrievable. Cannot assess framing beyond the headline seed, which characterizes the closure as 'temporary' per the administration while noting Trump alludes to a 'broader shutdown.'",
+      "Associated Press (Article 4)": "Headline-only. Frames around the judicial order: 'Judge orders Kennedy Center to provide 30 days' notice before making any major physical changes.' Neutral, procedural wire phrasing.",
+      "Associated Press (Article 5)": "Leads with the physical fact of fencing going up 'after Trump-aligned board votes to close it,' immediately pairing the closure with the board's political alignment. Foregrounds Beatty's emergency court request and her 'unlawful closure' language. Surfaces the key quid-pro-quo detail: Trump said repairs would 'only happen if the board was permitted to move forward with plans to add his name.' Notes the $257M appropriation and the $17M endowment claim. Balanced procedural detail with photo-heavy documentation.",
+      "ABC News (Article 6)": "Leads on Trump's conditional threat \u2014 the center could be 'ripped down' if he doesn't get 'recognition.' Emphasizes the transactional framing (won't spend funds unless building bears his name) and gives prominent space to Beatty's charge that Trump 'threw a tantrum because he lost in court' and is 'in contempt of court.' Includes Trump's Carnegie Hall comparison and financial-loss claims."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, the board vote record, the Floca sworn statement, or Cooper's order) were provided in the dossier. Alignment cannot be independently verified against underlying documents.",
+      "CNN quotes directly from what it describes as a sworn statement by executive director Charles 'Matt' Floca and from the DOJ filing, but these documents themselves were not supplied for cross-checking.",
+      "The 30-day-notice order (headlined by Reuters and AP, detailed by CNN) is consistent across the three outlets that reference it, but the actual text of Judge Cooper's order was not available."
+    ],
+    "missing_context": [
+      "No primary sources were located \u2014 the Beatty lawsuit filing, the DOJ response, Cooper's actual orders, the Floca sworn statement, and the board's closure vote record are all absent, so all filing quotes rest on outlet paraphrase.",
+      "Politico (the headline-seed outlet) yielded only navigation boilerplate; its actual reporting on the 'temporary' closure and Trump's 'broader shutdown' allusion could not be read.",
+      "No outlet clarifies the legal status of the earlier standing court order requiring the Kennedy Center to remain open versus the board's vote to close \u2014 i.e., whether the closure is currently permitted, enjoined, or in contempt, which is legally central.",
+      "No outlet independently assessed the structural-damage claim (severity of the plaster collapse, engineering evaluations) beyond citing the administration's own characterization.",
+      "The full text and vote breakdown of the Trump-aligned board's closure decision is not reported.",
+      "Timeline detail is fragmented: outlets reference Tuesday's ruling, Wednesday's closure/fencing, and Thursday's 30-day order, but no single source lays out a clean, reconciled chronology.",
+      "It is unclear across outlets how much of the center is closed ('most' per AP, characterized as a full closure elsewhere) and what remains accessible."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four-plus outlets covered the same events but with materially different emphasis \u2014 CNN foregrounds the 'DEMOLISHED' poster and pretext angle, AP foregrounds the board's political alignment and quid-pro-quo, ABC foregrounds Trump's 'recognition' threat and Beatty's contempt charge, while Reuters and AP headlines lead on the judicial restraint. The divergence in framing (plus an absent primary-source record) makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.68
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/legal/government/court-filing-cites-trump-comments-photo-reading-kennedy-center-demolished-2026-09-17/",
+      "title": "Judge orders Trump to give 30 days notice before any steps to demolish Kennedy Center - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/16/politics/is-the-kennedy-center-closed",
+      "title": "Trump seen with \u2018Kennedy Center demolished\u2019 poster; judge orders 30-day notice before any major changes - CNN"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://www.politico.com/news/2026/09/17/trump-kennedy-center-closure-01082066",
+      "title": ""
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/kennedy-center-fencing-trump-closed-repairs-128f25afb33841baff16245d492f320c",
+      "title": "Judge orders Kennedy Center to provide 30 days\u2019 notice before making any major physical changes - AP News"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://apnews.com/article/kennedy-center-fencing-trump-close-repairs-76857d537ec8cabd87be5065fb9428ac",
+      "title": "Fencing goes up around the main Kennedy Center building after Trump-aligned board votes to close it - AP News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://abcnews.com/Politics/trump-kennedy-center-ripped-recognition/story?id=136513298",
+      "title": "Trump says Kennedy Center could be 'ripped down' if he doesn't get 'recognition' - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/17/politics/video/trump-kennedy-center-bad-shape-digvid",
+      "title": "Trump asked why adding his name to Kennedy Center is important - CNN"
+    }
+  ]
+}
