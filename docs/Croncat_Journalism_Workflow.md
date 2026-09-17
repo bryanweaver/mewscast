@@ -526,6 +526,18 @@ Current state of Stage 1 trend detection, for the record.
 
 ---
 
+## 15. TypeSafe / Jev (2026-09-17)
+
+Jev is wired as a **decision layer**, not a writer. Claude still writes the brief and the post. Three hops, all fail-open, all printed as `[typesafe]` lines in the Actions runner log:
+
+1. **L4 same-event** — Choice over recent seen story_ids + `novel`. Auto-skip only if confidence ≥ `journalism.typesafe.same_event_confidence` (default 0.85). Missing key falls back to the existing Haiku hop.
+2. **Borderline relevance** — one Noul per borderline article in a single call. Keep if noul ≥ 0.50. Failed Jev call falls back to per-article Haiku.
+3. **Pre-Opus brief gate** — atomic nouls (`genuine_world_change`, `checkable`, `gossip_or_vibe`, `thin_or_offtopic`) combined in Python. Skip Opus only on a high-confidence no. Missing key skips the gate (proceed to Opus).
+
+Live key check: `python scripts/test_typesafe.py`.
+
+---
+
 ## Companion Docs
 
 - [`Walter_Cronkite_Report.md`](./Walter_Cronkite_Report.md) — the sourced research underpinning every principle in this document

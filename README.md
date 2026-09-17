@@ -66,7 +66,7 @@ python src/main.py journalism --dry-run
 | `BLUESKY_PASSWORD` | Bluesky app password |
 | `ANTHROPIC_API_KEY` | Anthropic API key |
 | `X_AI_API_KEY` | X AI API key (Grok image generation) |
-| `TYPESAFE_API_KEY` | TypeSafe / Jev API key (decision calls; optional until wired) |
+| `TYPESAFE_API_KEY` | TypeSafe / Jev API key (L4 same-event, relevance, pre-Opus gate) |
 
 3. Go to Actions tab, enable workflows. `journalism-publish.yml` runs on schedule automatically.
 
@@ -80,7 +80,9 @@ A 7-stage pipeline that replaces single-article summarization with real multi-ou
 |-------|--------|---------|
 | 1 — Trend detection | `src/trend_detector.py` | X search over curated outlet watchlist, Google News fallback |
 | 2 — Story triage | `src/story_triage.py` | Need-to-know heuristic filter |
-| 3 — Source gather | `src/source_gatherer.py` + `src/primary_source_finder.py` | Slant-diverse multi-outlet fetch + primary source pattern matching |
+| 2b — Dedup | `src/main.py` + `src/typesafe_client.py` | L1–L3 mechanical + L4 Jev same-event Choice (Haiku fallback) |
+| 3 — Source gather | `src/source_gatherer.py` + `src/primary_source_finder.py` | Slant-diverse multi-outlet fetch + Jev/Haiku relevance + primary source pattern matching |
+| 3b — Brief gate | `src/typesafe_client.py` | Pre-Opus Jev nouls; skip a wasted brief on a high-confidence no |
 | 4 — Meta-analysis | `src/meta_analyzer.py` | Claude Opus call → structured `MetaAnalysisBrief` |
 | 5 — Post composition | `src/post_composer.py` | Dispatches to one of 6 post-type prompts |
 | 6 — Verification gate | `src/verification_gate.py` | Hard rules enforcing journalism discipline |
@@ -177,6 +179,7 @@ mewscast/
 │   ├── trend_detector.py           # Stage 1 — X search + watchlist
 │   ├── story_triage.py             # Stage 2 — need-to-know filter
 │   ├── source_gatherer.py          # Stage 3 — multi-outlet gather
+│   ├── typesafe_client.py          # Jev L4 / relevance / pre-Opus brief gate
 │   ├── primary_source_finder.py    # Stage 3 — primary source pattern matcher
 │   ├── meta_analyzer.py            # Stage 4 — Claude Opus meta-analysis
 │   ├── post_composer.py            # Stage 5 — dispatcher across 6 post types
@@ -193,11 +196,12 @@ mewscast/
 │   ├── correction_post.md          # CORRECTION post type
 │   ├── primary_post.md             # PRIMARY post type
 │   └── journalism_image.md         # Journalism image prompt
-├── tests/                          # pytest test suite (24 files)
+├── tests/                          # pytest test suite
 ├── scripts/                        # Utility scripts
 │   ├── rebuild_history.py          # Rebuild post history from X
 │   ├── track_analytics.py          # Engagement analytics
-│   └── triage_review.py            # Triage review tooling
+│   ├── triage_review.py            # Triage review tooling
+│   └── test_typesafe.py            # Live Jev smoke test (not pytest)
 ├── docs/                           # Documentation (see docs/README.md)
 ├── dossiers/                       # Story dossiers (gitignored)
 ├── drafts/                         # Dry-run drafts (gitignored)
@@ -248,6 +252,7 @@ pytest tests/ --cov=src --cov-report=html
 | `test_engagement.py` | 95 | Engagement bot behavior |
 | `test_content_generator.py` | 95 | Legacy content generation |
 | `test_field_notes.py` | 49 | Field-notes reply composer |
+| `test_typesafe_client.py` | 14 | Jev client, L4/relevance/brief-gate judgments |
 | `test_source_gatherer.py` | 41 | Stage 3: slant-diverse fetch |
 | `test_deduplication.py` | 70 | Post deduplication logic |
 | `test_verification_gate.py` | 58 | Stage 6: keystone sign-off matrix + all hard rules |

@@ -67,6 +67,7 @@ jobs:
           BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
           X_AI_API_KEY: ${{ secrets.X_AI_API_KEY }}
           DIFFBOT_TOKEN: ${{ secrets.DIFFBOT_TOKEN }}
           R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL }}
