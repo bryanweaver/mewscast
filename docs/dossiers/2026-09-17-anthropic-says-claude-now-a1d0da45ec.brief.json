@@ -1,0 +1,55 @@
+{
+  "story_id": "2026-09-17-anthropic-says-claude-now-a1d0da45ec",
+  "headline_seed": "Anthropic says Claude now leads a quarter of work building its next AI models - Reuters",
+  "brief": {
+    "story_id": "2026-09-17-anthropic-says-claude-now-a1d0da45ec",
+    "consensus_facts": [
+      "All three outlets' headlines reference Anthropic and its Claude AI model; two of the three (Reuters and The Seattle Times) headline the specific claim that Claude is contributing to the development of Anthropic's next AI models \u2014 but both of these are headline-only in this dossier, so body-level corroboration is unavailable."
+    ],
+    "disagreements": [
+      {
+        "topic": "Story focus",
+        "positions": {
+          "Reuters": "Headlines Anthropic's claim that Claude now leads a quarter of the work building its next AI models (headline-only, no body text).",
+          "The Seattle Times": "Headlines that Claude is helping to build the next version of itself (headline-only, no body text).",
+          "TechCrunch": "Body text covers an unrelated product update \u2014 the merging of Claude chat and Cowork into a unified interface, plus new presentation and document features. Does not address the 'Claude building its own models' claim at all."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (the body block contains only a Google News redirect link, no article text). The headline frames the story around a quantified corporate claim \u2014 'a quarter of work building its next AI models' \u2014 attributing it explicitly to Anthropic ('Anthropic says'), which is cautious wire framing that flags the source rather than asserting it as established fact.",
+      "The Seattle Times": "Headline-only in this dossier (body block is a Google News redirect link, no article text). Frames the same story more evocatively \u2014 'Claude is helping to build the next version of itself' \u2014 leaning into the self-referential, recursive angle. Also uses 'Anthropic says' to attribute the claim to the company.",
+      "TechCrunch": "The only outlet with full body text, but it covers a different Anthropic story: the merger of Claude chat and Cowork into one interface. TechCrunch reports that Anthropic is unifying the front end for chat, Cowork, and Artifacts so Claude auto-routes requests without tab-switching; that new slide/presentation and document features are launching for Pro and Max plans first (web, desktop, mobile) with free and team tiers later; and that this follows an upgrade to Cowork's memory layer. The article includes an editorializing aside urging OpenAI to fix ChatGPT's interface. Note: none of this addresses the 'Claude leads a quarter of model-building work' claim in the headline seed."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. The core claim \u2014 that Claude now leads a quarter of the work building Anthropic's next models \u2014 cannot be verified against any underlying document, statement, or transcript in this dossier."
+    ],
+    "missing_context": [
+      "The central claim in the headline seed ('Claude now leads a quarter of work building its next AI models') has no retrievable body text in this dossier \u2014 both Reuters and The Seattle Times are headline-only, so no supporting detail, methodology, or direct Anthropic quote is available.",
+      "No definition of what 'a quarter of the work' means \u2014 whether measured in code volume, engineering hours, tasks, or something else \u2014 appears anywhere in the dossier.",
+      "No independent verification or external expert comment on Anthropic's self-reported claim is present; the claim is attributed entirely to the company ('Anthropic says').",
+      "The only full-text article (TechCrunch) is about a separate product-interface update and does not corroborate the headline story, leaving the marquee claim single-sourced at the headline level and unverifiable here.",
+      "Single-source limitation disclosure: of three articles, only one (TechCrunch) has substantial body text, and it covers a different topic than the headline seed. No body-level consensus on the 'Claude building its own models' story is possible from this dossier."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "The headline claim is carried by two headline-only outlets with no retrievable body text and no primary source, while the only full-text article covers an unrelated product update. The dossier is too thin to file a REPORT; a same-day hedged BULLETIN flagging Anthropic's unverified self-report is the responsible call.",
+    "confidence": 0.3
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/business/anthropic-says-claude-now-leads-quarter-work-building-its-next-ai-models-2026-09-17/",
+      "title": "Anthropic says Claude now leads a quarter of work building its next AI models - Reuters"
+    },
+    {
+      "outlet": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/",
+      "title": "Anthropic merges Claude chat and Cowork in one interface - TechCrunch"
+    },
+    {
+      "outlet": "The Seattle Times",
+      "url": "https://www.seattletimes.com/business/anthropic-says-its-model-claude-is-helping-to-build-the-next-version-of-itself/",
+      "title": "Anthropic says its model Claude is helping to build the next version of itself - The Seattle Times"
+    }
+  ]
+}
