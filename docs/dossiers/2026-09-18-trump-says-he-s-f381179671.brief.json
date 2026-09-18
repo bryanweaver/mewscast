@@ -1,0 +1,96 @@
+{
+  "story_id": "2026-09-18-trump-says-he-s-f381179671",
+  "headline_seed": "Trump says he's banning MS NOW, CNN and Politico from White House - CNBC",
+  "brief": {
+    "story_id": "2026-09-18-trump-says-he-s-f381179671",
+    "consensus_facts": [
+      "On Friday, September 18, 2026, President Donald Trump said in a Truth Social post that he is banning CNN, MS NOW and Politico from the White House.",
+      "Trump justified the move by accusing the outlets of reporting 'FAKE NEWS' and said they 'shouldn't be able to constantly write or report FICTION and LIES' when covering him.",
+      "Trump did not identify any specific reporting or coverage that prompted the declaration.",
+      "Trump warned that other media outlets would 'follow,' without specifying which.",
+      "CNN, MS NOW and Politico did not immediately respond to requests for comment."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the ban has actually taken effect",
+        "positions": {
+          "CNN": "Frames it as a claim; says Trump called it 'effective immediately' but 'there was no indication his administration had taken any steps to follow through,' and notes CNN's team remained at the White House Friday afternoon reporting the news.",
+          "NBC News": "Headline and lede state Trump 'had banned' the outlets, but body hedges: 'It was not immediately clear if journalists for those news outlets had been removed from the White House grounds.'",
+          "CNBC": "States Trump 'said he is banning' the outlets; does not report on whether any journalists were removed.",
+          "Reuters": "Headline (only content available) states flatly 'Trump bans media outlets CNN, MS NOW, Politico from White House.'",
+          "Financial Times": "Headline (only content available) states flatly 'Donald Trump bans CNN, MS Now and Politico from White House.'"
+        }
+      },
+      {
+        "topic": "Order of outlets named / emphasis",
+        "positions": {
+          "CNBC": "Leads with 'MS NOW, CNN and Politico' \u2014 foregrounds MS NOW, and discloses that CNBC and MS NOW are both divisions of Versant Media.",
+          "CNN": "Lists 'CNN, MS NOW and Politico.'",
+          "NBC News": "Lists 'CNN, MS NOW and Politico.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Uses declarative wire phrasing \u2014 'Trump bans media outlets' \u2014 treating the ban as an accomplished fact rather than a claim. No body text available to assess sourcing or caveats.",
+      "CNN": "As a directly targeted outlet, frames the story most skeptically: puts 'banning' in scare quotes, leads with the word 'claimed,' and immediately undercuts the claim by noting no administrative steps were taken and that its own team remained working at the White House. Quotes Trump's Truth Social language at length and stresses he cited no specific reporting.",
+      "Financial Times": "Headline-only retrievable; body is a paywall/subscription solicitation with no reporting. Headline states the ban as fact ('Donald Trump bans CNN, MS Now and Politico'). No substantive content to analyze.",
+      "CNBC": "Leads with the ban and foregrounds MS NOW (a corporate sibling). Notably the only outlet to raise the First Amendment dimension, stating the move 'could draw a legal challenge over violations of the First Amendment.' Transparently discloses that CNBC and MS NOW are divisions of Versant Media. Frames it as 'Trump's latest attempt to block access to disfavored news outlets.'",
+      "NBC News": "Uses the strongest headline verb ('banning') and lede ('had banned'), but body hedges on whether journalists were actually removed. Provides the most historical context: cites the prior AP ban over the Gulf of Mexico/America dispute (with ongoing suit) and legal actions against the BBC, New York Times and Wall Street Journal, noting the Times and Journal suits were dismissed. Bylined by a Pulitzer Prize-winning reporter.",
+      "CNN (Fed rate story)": "Off-topic to this story. Article 5 concerns the Federal Reserve raising interest rates, inflation, and 2026 midterm politics \u2014 unrelated to the media ban.",
+      "CNN (Warsh story)": "Off-topic to this story. Article 6 concerns Fed Chair Kevin Warsh, Trump, and Fed independence \u2014 unrelated to the media ban."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. The underlying document \u2014 Trump's Truth Social post \u2014 is quoted across CNN, CNBC and NBC News, but the full verbatim post was not provided as a primary source in this dossier.",
+      "The direct-quote fragments that do appear ('shouldn't be able to constantly write or report FICTION and LIES,' 'Other Fake News Media Outlets to follow') are consistent across CNN, CNBC and NBC News."
+    ],
+    "missing_context": [
+      "Only three of seven articles (CNN, CNBC, NBC News) contain substantive reporting. Reuters and the Financial Times are headline-only (FT's body is a subscription paywall page), and two of the three CNN entries (Articles 5 and 6) are unrelated Fed/economy stories mistakenly included in the dossier.",
+      "No outlet reports the actual legal or procedural mechanism for a 'ban' \u2014 how White House press credentials are issued or revoked, or whether a Truth Social post carries any operational authority.",
+      "No outlet confirms whether any journalist from the three outlets was actually removed from White House grounds; all substantive reports hedge on enforcement.",
+      "No response from the White House press office is included beyond CNBC and NBC noting requests for comment went unanswered; no statement from the White House Correspondents' Association appears in any article.",
+      "Only NBC News provides the precedent of the AP ban and its ongoing lawsuit; only CNBC flags the First Amendment question \u2014 neither the legal precedent nor the constitutional stakes are covered by all outlets.",
+      "The full verbatim text of Trump's Truth Social post is not reproduced in the dossier, only excerpted fragments.",
+      "No injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text reported the same event but diverge materially on framing \u2014 most notably whether the ban is an accomplished fact or an unenforced claim, with directly targeted CNN casting maximum doubt while headline-only Reuters and FT state it flatly. That framing divergence over enforcement, plus the corporate-disclosure and First-Amendment angles unique to individual outlets, makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/us/trump-bans-media-outlets-cnn-msnow-politico-white-house-2026-09-18/",
+      "title": "Trump bans media outlets CNN, MS NOW, Politico from White House - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/18/media/trump-claims-ban-cnn-msnow-politico-white-house",
+      "title": "Trump says he\u2019s \u2018banning\u2019 CNN, MS NOW and Politico from the White House - CNN"
+    },
+    {
+      "outlet": "Financial Times",
+      "url": "https://www.ft.com/content/4cd82226-3d4a-474d-bc3e-de2ed0b1e6f8?syn-25a6b1a6=1",
+      "title": "Donald Trump bans CNN, MS Now and Politico from White House - Financial Times"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/09/18/trump-white-house-ban-msnow-cnn-politico.html",
+      "title": ""
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/18/politics/fed-rate-increase-trump-midterms",
+      "title": "Trump\u2019s claim that \u2018almost every item\u2019 is getting cheaper comes up against a damning reality - CNN"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://www.cnn.com/2026/09/17/economy/fed-trump-rate-hike-warsh",
+      "title": "Kevin Warsh just defied Donald Trump. Now what? - CNN"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://www.nbcnews.com/business/media/trump-bans-cnn-ms-now-politico-white-house-rcna598609",
+      "title": "Trump says he\u2019s banning CNN, MS NOW and Politico from the White House - NBC News"
+    }
+  ]
+}
