@@ -1,0 +1,121 @@
+{
+  "story_id": "2026-09-19-smoke-seen-near-riyadh-3843139e58",
+  "headline_seed": "Smoke seen near Riyadh airport after air raid alerts in Saudi capital - BBC",
+  "brief": {
+    "story_id": "2026-09-19-smoke-seen-near-riyadh-3843139e58",
+    "consensus_facts": [
+      "Saudi civil defense issued aerial-attack/air-raid alerts to residents overnight before giving an all-clear the following (Saturday) morning (BBC, CNBC, The Guardian).",
+      "Flames and a large plume of black smoke were seen near Riyadh's King Khalid International Airport on Saturday, September 19, 2026 (BBC, CNBC, The Guardian).",
+      "Explosions/booms were reported heard in the capital by residents (BBC, CNBC, The Guardian).",
+      "The alert was the first issued for Riyadh since a recent escalation in the conflict with Iran-backed Houthi militants in neighboring Yemen (BBC, The Guardian).",
+      "The smoke was reported to be coming from a burning fuel tank/storage depot bearing the Aramco (Saudi state oil company) logo near the airport (BBC, The Guardian).",
+      "As of reporting, Saudi authorities had not issued official comment on the cause; the cause of the fire was not officially confirmed (BBC, CNBC).",
+      "FlightRadar24 reported major disruption \u2014 delays and cancellations \u2014 at King Khalid International Airport (BBC, The Guardian).",
+      "Iran-backed Houthi forces have escalated attacks on Saudi Arabia and captured the port of Mokha and Perim Island near the Bab el-Mandeb Strait, a key shipping choke point (BBC, CNBC, The Guardian).",
+      "The IOM (a UN body) reported roughly 105,000 people displaced by recent fighting in Yemen (BBC, The Guardian).",
+      "JP Morgan issued a note saying it was struggling to forecast oil prices due to the war (BBC, CNBC \u2014 CNBC frames the war as a US-Iran conflict)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope of overnight alerts (which cities)",
+        "positions": {
+          "CNBC": "Alerts issued for Riyadh and Al-Kharj.",
+          "The Guardian": "Alerts issued for Riyadh, Jeddah, and Yanbu (a major industrial port with oil facilities), among other cities.",
+          "BBC": "Alerts issued for Riyadh and other regions (unspecified)."
+        }
+      },
+      {
+        "topic": "Timeframe of Houthi escalation",
+        "positions": {
+          "BBC": "Refers to a 'recent escalation' without a specific month.",
+          "The Guardian": "States fighting escalated in July.",
+          "CNBC": "Says Houthis stepped up attacks 'in recent weeks.'"
+        }
+      },
+      {
+        "topic": "Which Red Sea islands the Houthis seized",
+        "positions": {
+          "BBC": "Mokha and Perim Island.",
+          "CNBC": "Mokha and nearby islands.",
+          "The Guardian": "Greater and Lesser Hanish islands recently, plus Mokha and Perim island earlier this month."
+        }
+      },
+      {
+        "topic": "Casualty figures from Saturday fighting in Yemen",
+        "positions": {
+          "BBC": "Cites unconfirmed AFP report of 48 killed (31 Houthi fighters per Houthis, 17 government soldiers per government sources).",
+          "CNBC": "Does not report a Saturday casualty count.",
+          "The Guardian": "Does not report a Saturday casualty count."
+        }
+      },
+      {
+        "topic": "Attribution source for eyewitness and fire details",
+        "positions": {
+          "BBC": "Attributes eyewitness accounts and the burnt-out Aramco fuel tank detail to AFP.",
+          "The Guardian": "Attributes eyewitness accounts to AFP (Agence France-Presse) and identifies the Aramco-branded fuel tank.",
+          "CNBC": "Attributes the smoke/flames sighting and 'two booms' to Reuters, not AFP."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (two entries). Both headlines lead with the physical event \u2014 'Flames, smoke seen near Riyadh airport' \u2014 one pairing it with the Saudi aerial-attack warning, the other emphasizing 'eyewitness says,' foregrounding sourcing caution. Neutral wire phrasing; no body text available to assess further. Notably, CNBC credits Reuters for the smoke/flames and 'two booms' details.",
+      "BBC News": "Two near-identical entries (bbc.com and bbc.co.uk). Leads with the visual \u2014 black smoke near the airport \u2014 then the air-raid alerts, framing this as a first-since-escalation moment. Emphasizes on-the-ground human texture (anonymous resident: 'my windows shook... It was definitely scary'). Carefully hedges throughout ('One report suggested,' 'unconfirmed report,' 'no official comment'). Gives substantial space to the wider Yemen war: Houthi claims of thwarting Saudi attacks on Sanaa, 300 Saudi strikes, the downed Saudi jet, casualty counts, displacement, port seizures, and oil-market anxiety. Frames the closed Strait of Hormuz as a consequence of 'the US and Israel's war with Iran.'",
+      "CNBC": "Frames the story through an energy-and-markets lens, its specialty. Leads its bullet points with the Saudi alert and Reuters-sourced smoke, but pivots quickly to Pakistan's foreign minister pressing Iran on 'uninterrupted energy supplies' and 'safe passage of ships.' Uniquely surfaces the $24.3B US sale of ~50 F-35 jets to Saudi Arabia approved by the Trump administration, and provides detailed oil pricing (Brent up 72% YTD, WTI at $100.30, Brent at $103.87) plus the Sept. 11 drone attack on the East-West pipeline. Frames the conflict primarily as a 'US-Iran war' Trump says is 'hopefully' nearing its end. Least focused on the airport incident itself; most focused on macro-economic and diplomatic stakes.",
+      "The Guardian": "Leads with flames and black smoke above the airport tied to overnight aerial-attack alerts. Emphasizes the breadth of the alerts (Riyadh, Jeddah, Yanbu \u2014 flagging Yanbu's oil facilities) and dates the escalation to July. Uniquely foregrounds the UN Security Council's Friday statement condemning Houthi attacks on civilian and energy infrastructure and calling for enforcement of the arms embargo. Broadens the frame to the wider region \u2014 Israeli airstrikes in southern Lebanon and Gaza, and an execution in Iran \u2014 situating the Riyadh event within a region-wide conflict picture. Photo-forward (Reuters image of the fuel depot).",
+      "The Times of Israel": "Headline-only and body inaccessible (CAPTCHA/verification page returned instead of content). Headline frames the event as 'Smoke at Riyadh airport as Saudi capital issues first air raid alert amid renewed Yemen fighting,' foregrounding the 'first air raid alert' angle and the Yemen-fighting context. No substantive body text available to analyze."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. No court filings, official Saudi Civil Defense statements, UN Security Council text, IOM report, or JP Morgan note was included in the dossier, so no report-versus-document divergence can be assessed.",
+      "Several load-bearing claims trace to news agencies rather than documents: the eyewitness accounts and burnt-out Aramco fuel tank (AFP per BBC/Guardian; Reuters per CNBC), and the casualty and displacement figures (AFP/IOM). Absent the underlying statements, these remain agency-sourced, not primary-document-verified."
+    ],
+    "missing_context": [
+      "No outlet obtained on-record confirmation from Saudi authorities on the cause of the airport fire; the fuel-tank-strike explanation rests on an AFP journalist's observation and unnamed residents, not official attribution.",
+      "No outlet definitively links the fire to a Houthi strike \u2014 the connection between the overnight air-raid alerts and the airport fire is implied by proximity and timing, not confirmed as cause and effect.",
+      "The dossier has effectively three usable full-text outlets (BBC, CNBC, The Guardian); Reuters and The Times of Israel are headline-only, and both BBC entries are the same article duplicated across bbc.com and bbc.co.uk \u2014 so apparent breadth of sourcing is narrower than the seven-article count suggests.",
+      "Casualty and displacement figures are explicitly labeled 'unconfirmed' (BBC) and are drawn from military sources on both sides of the war; no independent verification is offered.",
+      "No outlet quantifies the operational impact on King Khalid International Airport beyond FlightRadar24's disruption index \u2014 no figures on stranded passengers, duration of closure, or damage assessment.",
+      "The Times of Israel URL returned a CAPTCHA/verification placeholder rather than article content, so its coverage could not be analyzed beyond the headline.",
+      "No article confirms whether the two BBC URLs represent distinct reporting or a single syndicated piece \u2014 treated here as one source to avoid double-counting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (BBC, CNBC, The Guardian) reported the same Riyadh airport event but with materially different framings \u2014 BBC on-the-ground and war-casualty focused, CNBC energy-markets and US-Iran diplomacy focused, The Guardian region-wide and UN-Security-Council focused \u2014 and diverge on details like which cities were alerted and which islands were seized. The divergence in emphasis, plus the absence of official confirmation and any primary source, makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.68
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/saudi-civil-defence-sends-all-clear-after-danger-warning-capital-riyadh-2026-09-19/",
+      "title": "Flames, smoke seen near Riyadh airport after Saudi warning of aerial attack threat - Reuters"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cwly5d9v7r43o",
+      "title": ""
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://www.cnbc.com/2026/09/19/riyadh-airport-smoke-saudi-arabia.html",
+      "title": "Flames reported near Saudi capital airport as Pakistan presses Iran over energy supplies - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/flames-black-smoke-seen-near-riyadh-airport-eyewitness-says-2026-09-19/",
+      "title": "Flames, black smoke seen near Riyadh airport, eyewitness says - Reuters"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o",
+      "title": "Smoke seen near Riyadh airport after air raid alerts in Saudi capital - BBC"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/sep/19/saudi-arabia-riyadh-airport",
+      "title": "Thick smoke seen near Riyadh airport after air raid alerts in Saudi capital - The Guardian"
+    },
+    {
+      "outlet": "The Times of Israel",
+      "url": "https://www.timesofisrael.com/saudi-capital-issues-first-air-raid-alert-since-renewed-fighting-in-yemen/",
+      "title": "Smoke at Riyadh airport as Saudi capital issues first air raid alert amid renewed Yemen fighting - The Times of Israel"
+    }
+  ]
+}
