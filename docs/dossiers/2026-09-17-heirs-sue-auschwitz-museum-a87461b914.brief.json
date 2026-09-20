@@ -1,0 +1,65 @@
+{
+  "story_id": "2026-09-17-heirs-sue-auschwitz-museum-a87461b914",
+  "headline_seed": "Heirs Sue Auschwitz Museum Over Art Their Mother Made Under the Nazis - The New York Times",
+  "brief": {
+    "story_id": "2026-09-17-heirs-sue-auschwitz-museum-a87461b914",
+    "consensus_facts": [
+      "All four dossier entries headline lawsuits by heirs of Holocaust victims against museums over Nazi-era art; only one outlet (The Guardian) provides retrievable body text, so body-level details below are single-source and not treated as consensus."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which museums and works are central to the story",
+        "positions": {
+          "The New York Times (Article 1, headline-only)": "Frames the story around the Auschwitz Museum and watercolors made by Dina Gottliebova Babbitt under the Nazis.",
+          "The New York Times (Article 3, headline-only)": "Frames a separate bid to claim Cranach paintings held by the Norton Simon Museum.",
+          "The Washington Times (Article 2, no retrievable text)": "Headline references heirs suing 'LA museums' over 'Nazi-looted masterpieces' (body blocked by CAPTCHA).",
+          "The Guardian (Article 4, full text)": "Reports both lawsuits together \u2014 the Norton Simon Cranach 'Adam and Eve' claim and the Auschwitz-Birkenau watercolors claim."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Two separate headline-only entries in the dossier. Article 1 centers the Auschwitz Museum and the personal story of Dina Gottliebova Babbitt ('Art Their Mother Made Under the Nazis'), emphasizing the human/maternal angle. Article 3 frames the Norton Simon dispute as a 'New Bid to Claim' the Cranach paintings, a neutral legal-procedural framing. No body text retrievable for either, so emphasis beyond headline word choice cannot be assessed.",
+      "The Washington Times": "Headline-only and body blocked by a CAPTCHA/security wall. Headline uses 'Nazi-looted masterpieces' and groups the targets as 'LA museums,' foregrounding the looted-property framing and the Los Angeles institutional angle. Note: the dossier labels this outlet 'The Washington Post (lean-left)' but the URL and byline are washingtontimes.com \u2014 an outlet-attribution discrepancy flagged in missing_context.",
+      "The Guardian": "Only outlet with full body text; carries an Associated Press wire story. Leads with the Norton Simon 'Adam and Eve' Cranach paintings (photo caption first), then covers both lawsuits. Frames the story as the first suits filed after new California and US Congress laws strengthening looted-art claims. The Guardian/AP reports: two lawsuits filed the same Monday (one in LA superior court by the Jewish Federation of Greater LA and board chair Daniel Gryczman against Norton Simon; one in federal court by Dina Gottliebova Babbitt's daughters against the Auschwitz-Birkenau museum). It reports both museums say they legally hold title and intend to keep displaying the works; that the suits don't specify monetary value; that the Nazi regime seized more than 600,000 works from Jewish owners 1933\u20131945; and gives detailed provenance of the Cranach works (Stroganoff family, 1931 Soviet Berlin auction, purchase by Goudstikker, later sale to the museum). It quotes Rabbi Noah Farkas, Marei von Saher, and Auschwitz spokesperson Pawel Sawicki, who argues the watercolors 'must remain in the memorial' and should not be mischaracterized as 'Nazi-looted art.' Balances heirs' justice framing against museums' preservation framing."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, statutes, press releases) were located for this story. The two lawsuits, the referenced California law, and the US Congress legislation are described only through The Guardian's AP reporting and cannot be independently verified against source documents in this dossier."
+    ],
+    "missing_context": [
+      "Three of four dossier entries are headline-only (NYT x2) or blocked by CAPTCHA (Washington Times); only The Guardian's AP-sourced article has retrievable body text. All body-level details are effectively single-source (one wire), not corroborated consensus.",
+      "The Guardian's story is an Associated Press wire piece \u2014 so any other outlet carrying AP is not independent corroboration.",
+      "Outlet-attribution discrepancy: Article 2 is labeled 'The Washington Post (lean-left)' in the dossier header, but the URL, byline, and title are from The Washington Times. This should be reconciled before publication.",
+      "No copy of the actual lawsuits, the new California statute, or the federal legislation is in the dossier, so their exact provisions, retroactivity, and how they change prior rulings are unverified.",
+      "The Guardian notes a 2018 federal court ruling and 2019 Supreme Court declination on the Norton Simon Cranach case, but no outlet explains how the new laws would overcome that prior final judgment.",
+      "No outlet quantifies the monetary value of the disputed works (the AP piece explicitly notes the suits don't specify value).",
+      "The distinct legal nature of the two claims \u2014 looted-property (Cranach) vs. coerced-creation/ownership (Auschwitz watercolors) \u2014 is raised only in passing via the Auschwitz spokesperson; the legal theory of the Babbitt daughters' federal suit is not detailed in any retrievable text.",
+      "No response or additional detail from the plaintiffs' attorneys, the California legislature, or the US Congress sponsors appears in the retrievable coverage.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (The Guardian, carrying an AP wire) provides retrievable body text, so there is no true multi-outlet corroboration to support a full REPORT or a framing-divergence META; a same-day hedge BULLETIN attributing the details to The Guardian/AP is the honest posture until independent corroboration or primary documents are obtained.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/17/arts/design/auschwitz-museum-watercolor-paintings-dina-gottliebova-babbitt.html",
+      "title": "Heirs Sue Auschwitz Museum Over Art Their Mother Made Under the Nazis - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://www.washingtontimes.com/news/2026/sep/19/heirs-holocaust-victims-sue-la-museums-nazi-looted-masterpieces/",
+      "title": "Heirs of Holocaust victims sue LA museums over Nazi-looted masterpieces - Washington Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://www.nytimes.com/2026/09/19/arts/design/jacques-goudstikker-art-collection-museum-dispute.html",
+      "title": "New Bid to Claim Cranach Paintings Held by Norton Simon Museum - The New York Times"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/sep/19/lawsuit-california-museum-nazi-looted-art",
+      "title": "Jewish heirs of Holocaust victims sue California museum over Nazi-looted art - The Guardian"
+    }
+  ]
+}
