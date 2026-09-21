@@ -1,0 +1,117 @@
+{
+  "story_id": "2026-09-21-ice-agent-shoots-and-564314d0d2",
+  "headline_seed": "ICE agent shoots and wounds man in Austin, city officials say - The Washington Post",
+  "brief": {
+    "story_id": "2026-09-21-ice-agent-shoots-and-564314d0d2",
+    "consensus_facts": [
+      "An ICE officer shot and wounded a man in Austin, Texas, on Sunday afternoon, September 20, 2026, on the city's north side.",
+      "The man was shot in the torso and was in serious but stable condition at a hospital, per Austin-Travis County EMS Chief Robert Luckritz.",
+      "The man was identified by immigration attorney Kate Lincoln-Goldfinch as Wilber Rafael Garces Perez (also spelled Garc\u00e9s Perez), a 28-year-old Venezuelan.",
+      "The shooting occurred around 1 p.m. following a traffic stop / vehicle pursuit involving a blue Toyota Corolla, and involved a foot chase or 'small foot pursuit' per Austin Police Chief Lisa Davis.",
+      "Austin Police Department was not involved in the ICE operation or the shooting, per Mayor Kirk Watson and Chief Davis.",
+      "The Texas Department of Public Safety received a request from ICE for assistance in a vehicle pursuit, but troopers arrived after the shooting had already occurred and then assisted with medical treatment.",
+      "The Department of Homeland Security, which oversees ICE, did not respond to requests for comment and did not address the incident on its social media accounts.",
+      "Austin Mayor Kirk Watson, a Democrat, expressed anger and skepticism about ICE conducting its own investigation, and stated he wants local/third-party involvement in the investigation.",
+      "Democratic Congressman Greg Casar, who represents parts of Austin, called for transparency and an independent investigation and criticized the ICE surge in the city.",
+      "The man's family and lawyer said they were unable to get information from the hospital about his condition or location.",
+      "A crowd of protesters (roughly 100, per Al Jazeera) gathered at the scene with anti-ICE signs.",
+      "The shooting comes amid a nationwide surge in ICE enforcement during the Trump administration."
+    ],
+    "disagreements": [
+      {
+        "topic": "The man's immigration/removal status",
+        "positions": {
+          "Al Jazeera English": "Attorney Lincoln-Goldfinch initially said she believed he had no criminal history and no final order of removal, but later told AP she did not know his current immigration status.",
+          "CNN": "A law enforcement source said Perez was an undocumented immigrant from Venezuela who had a final order of removal; the attorney said he previously held a valid work permit and entered the U.S. lawfully.",
+          "NBC News": "A law enforcement source said the man is in the U.S. illegally and had a final order of removal."
+        }
+      },
+      {
+        "topic": "The man's occupation / what he was doing",
+        "positions": {
+          "CNN": "Identified him specifically as a DoorDash driver who was working Sunday.",
+          "NBC News": "Described him as a food delivery driver in the middle of a delivery when shot.",
+          "Al Jazeera English": "Did not specify an occupation; described only that he was shot after a traffic stop."
+        }
+      },
+      {
+        "topic": "Which agencies will participate in the investigation",
+        "positions": {
+          "Al Jazeera English": "Mayor wants the city police department involved for 'third-party eyes'; Austin police special investigation unit was at the scene.",
+          "CNN": "Watson said the Texas Rangers and Austin Police will take part in the investigation.",
+          "NBC News": "Chief Davis said she was in contact with Homeland Security Investigations and other state law enforcement agencies; Austin police investigators were on scene."
+        }
+      },
+      {
+        "topic": "Whether the man was released into ICE custody",
+        "positions": {
+          "CNN": "Lincoln-Goldfinch said he was released from the hospital 'into what we believe is ICE custody,' citing hospital attorneys.",
+          "NBC News": "Lincoln-Goldfinch said she believes he was released to ICE; DHS did not confirm whether he was in ICE custody.",
+          "Al Jazeera English": "Does not report the release; states only that he was in serious but stable condition at the hospital."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in dossier. Neutral wire phrasing: 'ICE agent wounds man in Austin, Texas, shooting, city officials say.' Attributes the account to city officials rather than stating it as established fact. No body text available to assess emphasis.",
+      "The Washington Post": "Headline-only in dossier. 'ICE agent shoots and wounds man in Austin, city officials say.' Uses active verb 'shoots and wounds'; attributes to city officials. No body text available to assess emphasis.",
+      "Al Jazeera English": "Full body text. Leads on the shooting and the attorney's identification of the victim, foregrounding uncertainty about his immigration status (attorney's shifting account). Emphasizes the political reaction \u2014 Mayor Watson's demand for a third-party investigation and Casar's 'ICE should end its surge here.' Prominently features protester detail including an 'ICE Nazi' sign and 'Nobody is safe.' Contextualizes with a prior fatal ICE shooting in Houston and July's record 50,000+ monthly arrests. Notably does NOT report the law-enforcement-source claim that the man had a final order of removal.",
+      "CNN": "Full body text. Leads with the DoorDash-driver framing in both headline and lede, humanizing the victim. Uniquely reports the law enforcement source claim that Perez was undocumented with a final order of removal, while balancing it against the attorney's statement that he entered lawfully and had a valid work permit. Emphasizes physical evidence (bullet holes in the sedan, KVUE and witness video). Heavily contextualizes with a CNN analysis tally: at least 20 people shot by ICE/CBP agents in the second Trump administration, eight fatally, including two U.S. citizens. Frames Austin as a blue city in a red state and foregrounds Watson's 'very angry' quote.",
+      "The New York Times": "Headline-only in dossier. 'ICE Agent Shoots Venezuelan Immigrant in Austin, Local Authorities Say.' Frames the victim by nationality/immigration status ('Venezuelan Immigrant') and attributes to local authorities. No body text available to assess emphasis.",
+      "NPR": "Headline-only in dossier. 'Federal immigration agent shoots and injures man in Austin, Texas.' Uses the more generic 'federal immigration agent' rather than 'ICE' in the headline and 'injures' rather than 'wounds.' No body text available to assess emphasis.",
+      "NBC News": "Full body text, marked DEVELOPING and updated. Leads with the food-delivery framing attributed to the lawyer ('lawyer says'). Reports the law enforcement source claim that the man is in the U.S. illegally with a final order of removal. Uniquely provides a detailed description of a verified social-media video (tires screeching, a person exiting a dark SUV, at least three gunshots as the agent approaches the lurching sedan). Emphasizes the family being escorted from the hospital and the DHS non-response ('will look into it'). Notes DHS provided no information on body cameras or whether the man was an operation target."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, DHS/ICE statements, official incident reports, or video transcripts) were located for this story. All accounts rest on a Sunday news conference by Austin city officials, statements from the family's attorney, and anonymous law enforcement sources. DHS/ICE had not provided an official account at publication time, so no authoritative document exists against which to check the reporting."
+    ],
+    "missing_context": [
+      "No outlet obtained an official ICE or DHS account of what led to the shooting \u2014 whether the man was the target of an operation, why the pursuit began, or the agent's justification for firing.",
+      "It is unreported whether the ICE agent was wearing a body camera (NBC explicitly notes DHS provided no such information).",
+      "The identity, whereabouts, and status of the ICE agent involved are unknown; Al Jazeera notes agents have left states after previous shootings but the mayor said Austin does not know where this agent is.",
+      "The central factual dispute \u2014 whether Garces Perez had a final order of removal \u2014 rests entirely on anonymous law enforcement sources (CNN, NBC) versus the family attorney's account; no document has been produced to settle it.",
+      "Only two of the seven dossier outlets (CNN, NBC News) reported the anonymous law-enforcement-source claim about the removal order; Al Jazeera did not, and Reuters, WaPo, NYT and NPR are headline-only, so this significant detail is not broadly corroborated.",
+      "Editorial disclosure: four of seven outlets (Reuters, The Washington Post, The New York Times, NPR) appear in this dossier as headlines only. Consensus facts above are drawn from the three full-text bodies (Al Jazeera, CNN, NBC News); the headline-only outlets corroborate the core event framing at headline level but their body-level reporting was not available for comparison.",
+      "No outlet reported the exact nature or number of shots as officially established \u2014 the multi-shot detail comes from a witness/social-media video verified by NBC, not an official finding.",
+      "The man's current condition and location after the reported release 'to ICE custody' remain unconfirmed by any official source."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (Al Jazeera, CNN, NBC News) plus four headline-only outlets covered the same event with materially different emphasis \u2014 CNN/NBC foreground an anonymous-sourced 'final order of removal' claim that Al Jazeera omits, and each frames the victim differently (DoorDash driver vs. Venezuelan immigrant vs. food-delivery worker). With no official DHS account or primary source to anchor the facts, the story is best served by a coverage-comparison post rather than a straight REPORT.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQN2ZvajMxeXozcWRTdzJYWVVhdHdDMV9KTUM0R1JIX3Y4RkRRTFhCWmNEeHRzazVFSXBNZTBDenJ3aXMzZ1BoemJDZkQ2Y3AzN2NiSjEyWDhOb3cwTzdqeUpqTWs4R3ZJeUJoYzM4enlSQ01MaUx0WjYyR3lma1Z1THpWSXBNNS1DTkdnSUk5XzBEVGVGczd6aUY3eHBOc3oyQkdrRE8wVHNnZw?oc=5",
+      "title": "ICE agent wounds man in Austin, Texas, shooting, city officials say - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQX3prdHA2dkppYXdrdVJzOHdVVWpSVE11ck45c3JPWk81cUVSeFZZRDdlSDhoVHlteGhRMFBya3pqdnVyOTZpM3ZuT0JMMXBnbEMzcktTckdvNWJCT3hHV1NOV3FoM3l4T1ZXUjhtX0NvTm1KNDZORlRvWGs4bW1aeEZEQUN1MkRnV29qMGRIN0FmRWo3emVlRjRNaTYwdVpXM0QxU1Rn?oc=5",
+      "title": "ICE agent shoots and wounds man in Austin, city officials say - The Washington Post"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSzhfRUVJQlNGbEtRdFNZa25BSzVGbXVrSnV6aTI2VEZ3aEJLWDNESzRBMXRJNTVhSkhLbnlPS2xhSm9IdlZJVEhuYUZhQ3M5N21YbU0weGdjakpBaVoxMGtpODlMSWJfMGcteDJ2czNzZlBrR2xYTktuS2RWeDRKclJFUXBNQmdmWm1JdmVvX0RaTU1MV2FSeUNfaE5zbUpacTJKTkQtNNIBrAFBVV95cUxOMVc4d1Q1QkZBenlrUjM0NU9TeVk1aHlObnBpQndRTzRkdmZ6eWFsSWNobTY5dWtFeFBOSlp3aW9pMlNpM0pFQ0VHQ0pDU3VOanoyUldpdDRxNmphM0JtMEhuRlh5Ni1tQ21XcFNxTnotVXJtVU9QYWJxQ0ZOTnI1UXkzZnd0T2VEdTlrWi1MVGRRTDRvOGlOTkZjTXVRT01rNDZWZndtbVhCaDB4?oc=5",
+      "title": "ICE officer shoots and wounds man in Austin, Texas, officials say - Al Jazeera"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1HZnJfV3JMYThUT21NX1VkWHdod2RNSVp3NkwtSF9hWUc1dUpfNHd3NEFMTGFxVjdpTm5GY08xS1p1akxCZ21mY0tiWUNZYVp3MlFjdTdDcDVHcHM2bkdBZ1p6VjNBQUpSYkkw?oc=5",
+      "title": "Venezuelan Door Dash driver shot and wounded by ICE agent in Austin, Texas, officials say - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE11ZzFfeVB1dUxzM0NYWDZHZE1JU1FFVV9MbW5PZFNsZnVYMHB2NWJwbEpMenNxM3JqWTVqMlAwV2t4RVM2Nlp4bUxqRmtGUzJyNzlmTjhJeWlsNlI3MnFLN0JjUmZSMHcwOVZuaV9sQzU3TVZSX2Fj?oc=5",
+      "title": "ICE Agent Shoots Venezuelan Immigrant in Austin, Local Authorities Say - The New York Times"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9TOXNKd1NTc1ZGLXNJX1gySDVLTERVSW9EbXhvdktpTHNFT3lETkR3MlFLTnJzTEZSWW9sY2IyOUNyNVh2azUwYWdJaVdYN19pQVFPNkI3YTVSY3VTTWUxck8xZ3RKb2wwdzZUNldRb3hvelBTQXZPTnJB?oc=5",
+      "title": "Federal immigration agent shoots and injures man in Austin, Texas - NPR"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBMSjRBaHZHYVVaM1dLeFpsdWpHeHhPUHNRUDlBbGRQTldONGJQa0NERE1GXzhsdVpWTFFCTXB4czllVHozNHduMXlNWkNkZXA0aXpIXzF1bHgwc1Rrc0k3UFkydUIyVDBBNS1mY3NlaFBYbXhQZUJKSGpsTURGZw?oc=5",
+      "title": "ICE officer shoots Venezuelan man delivering food in Austin, Texas, lawyer says - NBC News"
+    }
+  ]
+}
