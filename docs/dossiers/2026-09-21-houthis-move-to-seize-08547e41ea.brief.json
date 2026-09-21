@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-09-21-houthis-move-to-seize-08547e41ea",
+  "headline_seed": "Houthis move to seize strategic terrain after Trump calls off airstrikes at last minute - The Guardian",
+  "brief": {
+    "story_id": "2026-09-21-houthis-move-to-seize-08547e41ea",
+    "consensus_facts": [
+      "Iran-backed Houthi forces have seized a large stretch of Yemen's Red Sea coastline in a rapid offensive and are advancing on strategic terrain (CNN, The Guardian).",
+      "The Houthis control or are adjacent to the Bab al-Mandab Strait, a critical maritime chokepoint linking the Red Sea and Gulf of Aden (CNN, The Guardian, CBS News).",
+      "The New York Times reported that after a call from Saudi Crown Prince Mohammed bin Salman, President Trump agreed to prepare airstrikes against the Houthis, then reversed course (CNN, The Guardian).",
+      "Trump has resisted joining Saudi Arabia's fight against the Houthis in Yemen and has kept the US out of direct military involvement (CNN, The Guardian).",
+      "Trump publicly said the Houthis 'don't want to fight' the US, that they were allowing ships to pass the Bab al-Mandab Strait, and that their problem was with 'one country' (an apparent reference to Saudi Arabia) (CNN, The Guardian).",
+      "On Saturday, the Houthis claimed missile/drone attacks on Riyadh (including near the airport) and on an Aramco facility in Yanbu; Saudi authorities said a ballistic missile at Riyadh was intercepted (CNN, CBS News, The Guardian).",
+      "The US State Department warned on Saturday that the conflict 'has the potential to escalate rapidly' and urged Americans in the region to exercise caution (CNN, CBS News).",
+      "Trump told Fox News he is in 'deciding mode' on Iran and forecast 'very big things,' outlining options that included a deal, economic pressure, or military action (CNN, CBS News).",
+      "Fighting has centered on the Taiz province area and mountainous/coastal routes separating the Red Sea coast from Aden, where the internationally recognized Yemeni government is based (CNN, The Guardian).",
+      "Iranian President Masoud Pezeshkian is expected to attend the UN General Assembly after the Trump administration approved travel for a core Iranian delegation (CNN, CBS News).",
+      "The fighting has displaced tens of thousands of people, with Taiz city receiving the largest share of displaced Yemenis (CNN, The Guardian)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of people displaced",
+        "positions": {
+          "The Guardian": "UN says hostilities have displaced at least 125,000 people since the start of September, with Taiz taking in up to 86,000",
+          "CNN": "Describes displacement as 'tens of thousands' and Taiz hosting 'hundreds of thousands of internally displaced people' without a specific UN figure"
+        }
+      },
+      {
+        "topic": "Trump-Alimi call outcome",
+        "positions": {
+          "Reuters (headline)": "Trump, in call with Yemen president, did not pledge military support against Houthis, say sources",
+          "The Guardian": "Confirms Yemeni President Rashad al-Alimi spoke to Trump on Sunday requesting support and that Trump 'made no direct pledge of military support'"
+        }
+      },
+      {
+        "topic": "Houthi strike claims against Saudi Arabia",
+        "positions": {
+          "CNN": "Houthi spokesperson claimed Saudi Arabia carried out 157 aircraft/missile strikes, totaling 917 since the escalation; CNN could not independently verify",
+          "The Guardian": "Cites 'hundreds of strikes' by Saudi Arabia on Houthi positions in the Kahboub mountains per the group, with little impact"
+        }
+      },
+      {
+        "topic": "Houthi ultimate objective",
+        "positions": {
+          "CNN": "Cites analysts saying the ultimate goal may be control of the entire country and capturing Taiz and Marib ('game over'); also cites analyst view that Houthis need not defeat Saudi militarily",
+          "The Guardian": "Frames goal more narrowly as securing the rear around Bab al-Mandab and opening new fronts"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (body text not retrievable). Frames the story narrowly around a single verifiable point: Trump made no military pledge to Yemen's president per sources. Wire-style, attribution-hedged ('say sources'), avoids the drama of the 'flip-flop' narrative.",
+      "CNN": "Two full articles. Leads on regional escalation and the Houthi military campaign 'entering a new phase,' heavily sourced to named analysts (al-Basha, Jalal, ISW). Emphasizes Saudi failure to halt the advance and US reluctance to intervene. Frames Yemen as a new front in the wider Iran war. Uses vivid analyst quotes ('game over') and foregrounds the strategic/maritime stakes. Notably does NOT lead with the Trump 'called off airstrikes' angle \u2014 places the NYT flip-flop report near the bottom.",
+      "CBS News": "Two articles: one headline-only ('deciding mode' on Iran), one full live-blog. The full CBS piece frames the story around US security alerts and the broader Iran war, with detailed sub-items on CIA/Egypt diplomacy, Strait of Hormuz negotiations, and Arab-state condemnations of the Riyadh attack. Emphasizes diplomacy and de-escalation efforts more than the battlefield. Buries the Houthi ground advance relative to CNN and The Guardian.",
+      "The Guardian": "Leads directly and most aggressively on the Trump 'called off airstrikes at last minute' angle \u2014 the headline emphasizes Trump reversing 'as bombs were being loaded.' Frames Trump as erratic ('flip-flopped wildly') and foregrounds the strategic terrain grab. Uniquely emphasizes the political dilemma for Trump (unpopular Iran war, midterms) and the risk of alienating Gulf allies and undermining the 'security for oil' understanding. Most editorially interpretive of the outlets with body text.",
+      "The Times of Israel": "Headline-only in this dossier. Frames the story as 'Houthis push for control of Yemen highlands' with the Trump airstrike reversal as a secondary, hedged ('reported to have') element. Emphasis on territorial/highlands control cannot be assessed beyond the headline."
+    },
+    "primary_source_alignment": [
+      "No primary source documents were located for this story. All claims rest on outlet reporting, which in turn largely traces to a single New York Times report (the airstrike reversal) and to Reuters (the Alimi call).",
+      "The central 'Trump called off airstrikes' claim originates from the New York Times and is relayed second-hand by both CNN and The Guardian; it is not independently corroborated within this dossier and no NYT article or transcript is present to verify it directly."
+    ],
+    "missing_context": [
+      "The pivotal 'Trump agreed to airstrikes then reversed' narrative traces to a single New York Times report cited by multiple outlets; no independent confirmation or White House/Pentagon on-the-record statement is present in the dossier.",
+      "Multiple key claims (Houthi strike totals, downing of a Saudi F-15, targeting of Mecca) are attributed to Houthi or Saudi military spokespeople and explicitly noted by CNN as unverified; readers should know these are combatant claims, not confirmed facts.",
+      "No outlet provides an independent battle-damage assessment or casualty figures from the fighting \u2014 only displacement numbers and strike-count claims.",
+      "No outlet quotes the Houthis' own stated rationale directly beyond secondhand analyst characterization; CNN notes it contacted Houthi officials but includes no response.",
+      "Little context on why Saudi Arabia's own air campaign (hundreds of strikes claimed) is failing to reverse the advance beyond analyst speculation.",
+      "Reuters and The Times of Israel bodies were not retrievable (headline-only), limiting corroboration; the substantive body-level reporting rests on CNN, CBS News, and The Guardian.",
+      "No primary documents (UN displacement reports, State Department alert text, official statements) were included to verify the figures and quotes paraphrased by outlets."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (CNN, CBS News, The Guardian) reported the same escalation with materially different emphasis \u2014 CNN on the battlefield, CBS on diplomacy and alerts, The Guardian on Trump's 'flip-flop' \u2014 and the load-bearing airstrike-reversal claim rests on a single uncorroborated NYT report, making the coverage divergence itself the story.",
+    "confidence": 0.68
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNbWVNTGJMWUoxcU5nWjh1amVGM0MzcFN0allQZ0oxZm96SVEzZzRtUXM3c2ZvM0hYdDlvc19kS1VDQ1kwcmtOTUVBQkJOOFJzekl6d2FVNEdtcWMwNVV1UG5nNzBfSjY5QUxLUlQxWGxwRU12WnJnQ21rZWx3VHhWd3hKV2gzZHdHSHV6Zkw3czZUTlVhUHd2anl6X2YyZ19UckV2Y2ZVcjZTZEJfYlJkZnhDYjZUTXI3RlVuZDBUWUtPSGVBN0ppMU1xQjBzQQ?oc=5",
+      "title": "Trump, in call with Yemen president, did not pledge military support against Houthis, say sources - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOT3dkcFppT0RvcE9GaEZZaGVYbWRCZDlyc28wTHJvZmhtaVVvQ0Z1blFYaFNkOGZHcmZYRzl5WVkwSGZJTGV3Q1hWTzN3NDV5N3JtbkN0c1RuYkRpR1cwbEZSOHBwVXBrUkJaRFNTWmdneTBHQnJvRkM5RFhiczY1d3FMRUNqVFI1OHktT2ZZbGJVQmprejdZY2NXbFJSdw?oc=5",
+      "title": "Iran and Trump exchange fresh warnings as Saudi-Houthi conflict escalates ahead of key UN gathering. Here\u2019s what to know - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdHRuQktjVUxMSU5JSklrek02VGU2SUtTTGItaXdFMVFLcURFcnBqTXBGc2Exd2tqTzAyZnV2d1dzMUJHSDdIY0x0R1NqQlFJSUZiVGNqNm04WFR0TE5nQVZjdi1ub2pVZWZKZUZnSE5HV3hhenBoV29fQ042VzlnMHF3TWFubF9mbUxzSnVTcDg3REFGVjdEWDlyWGxRTXFpcmp4UmtGX3lZeGF6el90Y1BB?oc=5",
+      "title": "Houthis expand attacks on Saudi Arabia as Trump says he's in \"deciding mode\" on Iran - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBKTlFnU2t4XzE4bnZoZWR6cVhKRThiWTRVWWhJUHpFTkREd3lFSzItZWtjSW9oSkFLWFNVWFNVSHdCY3paR2F1VXhXSXdVWjBCdnFMSTNHYnlmZk1rWVhxN2U2MW5NZHdkam1HWUJaTXZDbFFtWmpoMC1n?oc=5",
+      "title": "As US steers clear of Yemen fight, the Iran-backed Houthis launch next phase of campaign - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxON1ROYVJ6T0RNSzVUbXVHZTJTc0NDajFSSzB4VjdJcWVpX2JVVk9KcnpmZHNMZFZxS3pIaTFRMlUzSExKZHBiUlRYa2l2M0s1amg4aTd6alZNLW53cmZsWVhFZFRsUG91NnNLMXNSdnhGckhpTTlRTF9JV0xRS0dDNEh3cUhMcFl3NGNCdQ?oc=5",
+      "title": "U.S. embassies across Middle East issue security alerts for Americans - CBS News"
+    },
+    {
+      "outlet": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTjlZVF83amhsMWNiQjBfMGJTRlBqT1laZUN0NHBPU1lveU91YWxiTF95Qnkzc0ZSVE1SSXg0bFB1aXBJVG42YlkwakFESXV4OWF2YU53NHk2MC16Rk95WXhaTEVTeUEzMmhUZV8tRURvZ2hGeDlyb0ltUjZRbjIxbnQwVHRFejN0VkppeGZjR1lES2ptQ3M3WjZiaEk3eUNHc3FGVTZVcG1rQXFqcU9STlZ0OXlPS3dTb2JxS3dlWQ?oc=5",
+      "title": ""
+    },
+    {
+      "outlet": "The Times of Israel",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQbWdRZzAtOEZGTmNOeUJZcGVIbTVVTkFaTGVIeGRsMWZqMjU4OEtjcVJLRTcwSk1iY3Nmb0JCblRPSTU3aEhuNWJreGQ5c0tvWmJYTGxCWkpSeW8wVGwybTRXVFVISXdBU1FrMEhlRmNNUGlwMjBERmpsN0taNllzS3BNbzIxZ1c3aGEzX2d1X3lBWUNCUzVMemo2dXB0ZVNGQU9TRHl0bGxOTk1hZ2Z2MWNsQlZtYkhuWnp3QXlSNNIBxAFBVV95cUxONTJ2aVQ0RXlqQlNQUXl4aWJ5U0E1WWd5SVNBZXFhclpoaUJwQ1BUUS1HWWRPeUpOZy1nTE42U3REX29iR0E3ZGZ6UTY5aHpmZERKWk4wWHJFT2FlaHpLdFNkVXpETzNHZ194RXpsRHZUekNFZzhlaVM0LUxBekhJVVJvWjJNYnY3SWJEbXdLdlI1cllzeDJId091al9DOVozeGNONVFEbVA1RkhfR3RBUWh2YmtWRkp0V3B0bUoxRGw2ckNs?oc=5",
+      "title": "Houthis push for control of Yemen highlands as Trump reported to have called off airstrikes - The Times of Israel"
+    }
+  ]
+}
