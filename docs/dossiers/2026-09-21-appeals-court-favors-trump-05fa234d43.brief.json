@@ -1,0 +1,56 @@
+{
+  "story_id": "2026-09-21-appeals-court-favors-trump-05fa234d43",
+  "headline_seed": "Appeals court favors Trump-backed Missouri congressional map, but Supreme Court will have final say - AP News",
+  "brief": {
+    "story_id": "2026-09-21-appeals-court-favors-trump-05fa234d43",
+    "consensus_facts": [
+      "On Monday, a three-judge panel of the 8th U.S. Circuit Court of Appeals ruled in favor of new Trump-backed Republican-drawn congressional districts in Missouri.",
+      "The appeals panel said Missouri should use the new districts in the November election, as it did in the August primary, and that reverting to prior districts would violate the U.S. Constitution.",
+      "The ruling has no immediate impact because the appellate panel delayed the effect of its order for one week to allow time for an appeal.",
+      "The U.S. Supreme Court has twice previously sided against the Trump-backed map, including blocking enforcement of a lower court order pending a potential appeal.",
+      "Missouri is currently set to run its November election using the same congressional districts it used in 2024 and 2022, following prior decisions by both the Missouri Supreme Court and the U.S. Supreme Court.",
+      "Local elections officials have already sent absentee ballots to overseas citizens and military voters using the 2022 districts, and state law requires absentee ballots to be available to all other voters by Tuesday.",
+      "Both articles are bylined to or credited to the Associated Press (David A. Lieb)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Sourcing independence",
+        "positions": {
+          "news.google.com (AP)": "Full AP wire story bylined David A. Lieb.",
+          "The Guardian": "Republishes the same Associated Press story (credited 'Associated Press'), so both articles derive from a single wire source rather than independent reporting."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "news.google.com (AP)": "Carries the full AP wire report. Leads on the procedural conflict \u2014 the appeals court favoring Trump's map versus the Supreme Court's prior blocks. Emphasizes the constitutional clash between the 8th Circuit and Missouri's top court, quotes the panel's language directly, and details the practical ballot chaos for absentee and overseas/military voters. Notably includes the panel's composition \u2014 Judge Loken (a G.H.W. Bush appointee) and two Trump appointees (Stras and Smith) \u2014 and specifically flags that Judge Smith previously represented Trump in the E. Jean Carroll appeal. Also gives voice to map opponents (People Not Politicians' Richard von Glahn) and to local clerk Clinton Jenkins on ballot logistics.",
+      "The Guardian": "Runs a heavily condensed version of the same AP wire story under a headline emphasizing 'Trump-backed Missouri congressional maps' with the subhead foregrounding that the Supreme Court 'has twice blocked' the maps and is 'likely to have final say.' Retains the core procedural facts and the constitutional-violation framing but omits the panel's judicial composition, the E. Jean Carroll connection, the opponents' quotes, and the local clerk's logistical detail. Tags the piece under 'US voting rights,' 'Democrats,' and 'Republicans,' orienting readers toward the partisan/voting-rights stakes."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the 8th Circuit panel's written opinion or the court filings referenced) was located in the dossier, so no direct comparison between coverage and the underlying document is possible.",
+      "Both articles quote the panel's stated reasoning ('The Constitution does not permit Missouri to use a different congressional district map in the November 2026 general election than it used in the August 2026 primary election'), but this is quoted via AP, not verified against the opinion itself."
+    ],
+    "missing_context": [
+      "Both articles trace to a single Associated Press wire story (David A. Lieb); there is no genuinely independent second outlet in this dossier, so apparent 'consensus' is really one source republished twice.",
+      "No primary source was located \u2014 the actual 8th Circuit opinion, the delayed injunction order, or the emergency Supreme Court appeal filing are not in the dossier.",
+      "Neither article explains the underlying substance of what the new Trump-backed map changes (e.g., how districts are redrawn or the partisan seat impact), only that it is 'Republican-drawn.'",
+      "The specific legal basis for the appeals panel's constitutional conclusion \u2014 why using a different general-election map than the primary map violates the Constitution \u2014 is quoted but not explained or contextualized in either article.",
+      "No response from Missouri state officials (e.g., Secretary of State Denny Hoskins, referenced only in an AP photo caption) or from the state's top court is included in the article bodies.",
+      "No article contained any apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only one genuine source underlies the dossier \u2014 an AP wire story republished by The Guardian \u2014 so there is no multi-outlet framing divergence or primary-source conflict to justify META, and no primary document to justify PRIMARY. The straightforward move is a REPORT of the confirmed core facts, with explicit disclosure that both articles share a single wire origin.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQ0w4RmpmZFdPVndBNzh0M19ZT1gwZW5ZeTY3cmdLcjU2Y09fTktGM1l3QWc0c01jek9NRlRxN2hEMmxfWDFFdWxTVGVNZVA3UFBmYzJBeWNUUXZVYzF1WmtXTll5MVQ4Z0d0dmNvTVFwWm1ZNmZkbktpRW91dG94V3E3NlVjV1cySEk4VTc3VEQ4ZWphLTRacVRZX1c4NmQ4a3FtSG9adVozVmdPRDI0c0Z3?oc=5",
+      "title": ""
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcUFYX3VhOVp2dHVkT0xyX3NDbGwtVDcyanI1dWZLSi0wdW1DMVZTeXNfSVlrV01uUUtjTENlQ3ZrNEJ3Mkw2UFRWYUw4OENaYzM2TlQwTDNzZWNSTk44T0Z5VWw0cTRyQ1QzaDh3Qy1paFVpVFRNelFNb28tOGxQSGVJODhKQ1JxSUc4UnBMb1N5UDhmXzlnaElR?oc=5",
+      "title": "Appeals court rules in favor of Trump-backed Missouri congressional maps - The Guardian"
+    }
+  ]
+}
