@@ -1,0 +1,86 @@
+{
+  "story_id": "2026-09-23-live-updates-iran-s-469a33ef39",
+  "headline_seed": "Live updates: Iran\u2019s president says \u2018we will never bow our head\u2019 to Trump in defiant UN speech - CNN",
+  "brief": {
+    "story_id": "2026-09-23-live-updates-iran-s-469a33ef39",
+    "consensus_facts": [
+      "In his UN General Assembly speech, Trump framed the situation as a choice between a deal with Iran and further military action, using language about annihilating Iran; this is reported in the CNBC body and the ABC News body.",
+      "Iranian President Masoud Pezeshkian spoke at the UN General Assembly on Wednesday, Sept. 23, 2026, and pushed back at Trump; the scheduling/response is reported in the CNBC body and the ABC News body.",
+      "The US and Iran have been engaged in a conflict for nearly seven months, with the Strait of Hormuz as a central flashpoint; this is reported in the CNBC body, the ABC News body, and the CNN body.",
+      "US-Iran contacts have taken place via a Qatari mediator in New York; this is reported in the CNBC body and the ABC News body."
+    ],
+    "disagreements": [
+      {
+        "topic": "Iran's posture toward negotiations",
+        "positions": {
+          "CNBC": "Reports Iran floated concrete conditions for ending the war and reopening the Strait of Hormuz, and that Trump called the sidelines meeting 'very good,' framing a possible diplomatic off-ramp.",
+          "ABC News": "Reports an Iranian official (Mohsen Rezaei) saying Iran is in 'no hurry' to negotiate and is waiting for the US to implement Iran's fixed conditions, framing Tehran as unyielding."
+        }
+      },
+      {
+        "topic": "Timing of a potential deal",
+        "positions": {
+          "CNBC": "Quotes Trump saying he expects a deal right after November's midterm elections.",
+          "ABC News": "Does not surface a Trump timeline claim; emphasizes Iranian statements of no urgency."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only in this dossier (body is a bot-check/paywall notice). The headline 'Trump Hails Very Good Iran Talks After Annihilation Threat' juxtaposes conciliation and threat, foregrounding a diplomatic angle. No body text available to corroborate.",
+      "The New York Times": "Body is only an RSS aggregation list, not a real article body. The NYT headline 'Trump Threatens Annihilation in Iran in UN Speech and Lays Out Winner-Takes-All Vision' foregrounds Trump's threat and a maximalist framing. The aggregation also surfaces Al Jazeera ('Iran victim of terrorism') and Financial Times ('Iran ready for talks but hits back at bullying') headlines.",
+      "CNBC": "Full body text. Leads with Iran's military calling Trump's threats 'strategic desperation' and its readiness to strike harder, then pivots to markets (oil prices, the Strait of Hormuz carrying ~a fifth of global oil/gas shipments). Emphasizes the diplomatic off-ramp: Iran's conditions (halt to US 'aggression,' end of naval blockade and economic warfare, release of Iranian assets) and Trump's 'very good' three-hour meeting and post-midterm deal prediction. CNBC reports the direct Trump quote: 'Will a deal be made with Iran? Or do I annihilate the Islamic Republic, and do it quickly?' and his call for 'complete economic isolation of Iran.' Financial/energy lens dominates.",
+      "Reuters": "Headline-only in this dossier. Headline 'Iran's Pezeshkian accuses Trump of bullying mentality, vows no surrender' centers Pezeshkian's defiance. No body text available to corroborate.",
+      "ABC News": "Full body text, live-blog format. Leads with Pezeshkian pushing back at Trump and notes the lone US diplomat walked out during the speech. Provides substantial context: Trump's Feb. 28 'major combat operations,' June talks based on an MOU that broke down, an August 'crushing economic operation' threat, a tanker hit in the Strait of Hormuz with 2 casualties (UKMTO), and Iran canceling regional flights due to US sanctions. Surfaces Pezeshkian holding up photos of children, referencing strikes on the Minab school and a Lamerd sports hall that a UN-backed report said could amount to war crimes, plus his 'we will never bow our head' and nuclear-rights statements. Emphasizes Iranian defiance and civilian harm.",
+      "CNN": "Full body text but a different angle: a new CNN/SSRS poll on domestic US opinion, not the UN speech itself. Leads on hardening American opposition to the war \u2014 26% approve of Trump's handling of Iran (down from 33%), 29% approve of his foreign affairs handling (a term low), and erosion of Republican support (73% approval in March down to 60% now). Also reports shifting views of Israel (15% call it an enemy, a record in CNN polling), Canada, and Ukraine. Frames the story around Trump's domestic political vulnerability rather than the diplomatic exchange at the UN."
+    },
+    "primary_source_alignment": [
+      "No primary sources (speech transcripts, UN records, the referenced UN-backed report, or the CNN/SSRS poll methodology) were provided in the dossier, so no direct report-vs-document comparison is possible.",
+      "Quotes attributed to Pezeshkian ('we will never bow our head,' 'we have been victims of terrorism,' nuclear-rights statements) appear only in the ABC News body and cannot be independently verified against a transcript here."
+    ],
+    "missing_context": [
+      "Editorial disclosure: Of the six dossier entries, only three (CNBC, ABC News, CNN) have substantive body text. Bloomberg's body is a bot-check notice, The New York Times' 'body' is an RSS aggregation list, and Reuters is headline-only. Consensus is therefore limited to what the three full-text outlets share.",
+      "The three full-text outlets cover partly different stories: CNBC and ABC News cover the UN exchange and negotiations, while CNN covers domestic US polling \u2014 so cross-outlet corroboration of specific UN-speech details is thinner than the headline count suggests.",
+      "No transcript of either Trump's or Pezeshkian's UN speech was provided; direct quotes rest on single-outlet reporting.",
+      "The UN-backed report ABC references (alleging possible war crimes at the Minab school and Lamerd sports hall) is not provided and its findings, authorship, and status are uncorroborated by other outlets in the dossier.",
+      "Casualty and damage figures for the seven-month conflict overall are absent; only ABC's single tanker incident (2 casualties, per UKMTO) is cited.",
+      "The specific text of Iran's conditions and any US response beyond Trump calling the meeting 'very good' are not detailed; CNBC attributes conditions to 'regional media reports' and an Iranian spokesman, not a document.",
+      "The CNN/SSRS poll's sample size, dates, and margin of error are not included in the excerpt.",
+      "No independent verification of Iran's flight-cancellation claims or the identity/motive of the walked-out US diplomat is provided."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The same event drew materially different framings across the full-text outlets \u2014 CNBC leans into a market-and-diplomacy off-ramp, ABC leads with Iranian defiance and civilian harm, and CNN pivots entirely to domestic polling \u2014 while half the dossier is headline-only, making the divergence in coverage the real story rather than any single clean set of facts.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdDA3R3hpRlNjbHJ5SWc3RnFGbnNNSmp6QVFFZ1hrWFdQMlg5U2JrVnhLd3hTSktKbFBlajJsZWxtSWpoM3pUcURlcmhwVEhkaC1jaGJ4cGdRQk1kLVBKZTZrSF9MNUR5YmJNYTJvaVdjWThBaHpicUQtVUt5OENPdzcxems1ZGlYVFg4Vm5HckdsZlRkMXhXMGozWlR3QU5FMmNnaHdXVmw1cXJqWnZUM3ZoQXdLZw?oc=5",
+      "title": "Trump Hails \u2018Very Good\u2019 Iran Talks After Annihilation Threat - Bloomberg.com"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMC14enRnZ3pSTGZfVXJiNU5CNXdHTVFSdTMwdDE2U3otb1Y3YUJhT1F5TDBFWW9CUlA1MmhNSng3bjNUZGs3em9wbUZYclByTGF0cktEdkZpWVZVeHR1dVJsajlHbjQ4YlF3YXhQcTVJUXBaUml1ajgtNnlNQnM3dFVHeFMwWjNIRmx1SzhSTE5wemJoREhz?oc=5",
+      "title": "Trump Threatens Annihilation in Iran in UN Speech and Lays Out Winner-Takes-All Vision - The New York Times"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5PX1NMYzcycHUtbDllS0RQcVZMeERzRmFwb19ya1d4QWFJRHZRNWx0MTRZenRxYkxabzFnVDFfb1NyZmNXU2FVVTJMN0UxNTQ4N1l1cG1lMUY4SUg2bHNuNDVOcW5wczJSeDJRLXhn0gFzQVVfeXFMTWtwdlB2cnpLdjZXT3pJZHFjUGhSajY0Z1hYQ0lzRzZYaGtNZXBFelNSZjhWTVJqSGd4MHVzb1ExVy1FMW4tUVd1c3BXRkt6aHhzOTdmSzRYX2dqaHI3X0JVYndmbjNrV0stR1ZBMnBOLUkydw?oc=5",
+      "title": "Iran says Trump\u2019s threats a sign of \u2018strategic desperation,\u2019 floats conditions for Hormuz reopening - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMjhvWl9UZXFUYjJ2MHhOTWJvdFgxYUN2b1NuVXYtYTNwVXEzS0J6cVVrZTVBYWxmNHJTLUZ6SG55eFE4azRCZVZDUloyUnVtNE85dGp5Q2xDUmtOVEdVUl8wenVVdUZpWm5ONE5OQUhSYjd1VWNfNm9Ib3g0VjBqdXItY1pTdW5XekI5MFJOWGpoazl2Y29Zb2dMSWx6S2VRckFRVm1WVUlYUkQ1S0dGM3piVGZ6TjgyNGZXcWNFVWFxN2M?oc=5",
+      "title": "Iran's Pezeshkian accuses Trump of 'bullying mentality,' vows no surrender - Reuters"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUGpVLW52MGVOSFZka1dvNzNWdlREU0VObW96TWl3VTdJRHo3LWR2a3Y1VGdWSTdoakNJOU12YVVTamRfN3c4VUdPa0lndHZ3d0x2Z3VJRW05RVhSRHFDTW8weHFPclVnOXdFTkV3WXlieDBDa0NZR2NoZ3FaS2N0MzdaM2l5Qmt6LVdIT0RFR1NHLU1fQUJ5cE9aSTVmTll6RkhpRGtfUkRPcFN0TUZXLVljcDJKUnpw0gG-AUFVX3lxTE51cXR0MEZ0eXRuYWtZc1JKOF92d09DY001TEx3QUV5QnFpMnltdkMtVUNrNFp0WU9LdU1PUDR2X29naENEcER3QWgzQWg3REhtR0tORzlqTVY3cFJkckF6YjNzbGt0S3RHX2NmRWtoZFhzc1ZtQ0RxOUFFS1VhWElLa1RvVDBBM2tpM1dIVG9qWVB2TTlLd1hFMmhady0waDh4d0xKVGtBdW5sZHJzVVFZUktnSzRocmpyM1ZGTEE?oc=5",
+      "title": "Iran live updates: Iranian president due to speak at UNGA on Wednesday - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTTdnWnE4dXVVWW5mOFZyeV9VV0FDaEcwMnBRQm84R19zUjRlTkJJREcwcXdXY3pBWDd3T1J5cVBXVWdUOXEzMm1WTlAzd18xV0pfY2Fxc3cyajNQRWdXTFhfb3J1NUlyY3FiOVhvX2syQTJ1NEtTWWlOZ1hNaEFMTWZoZFIyM1V1eHBld2FtSQ?oc=5",
+      "title": "Republican support for Trump\u2019s handling of war in Iran shows cracks in new CNN poll - CNN"
+    }
+  ]
+}
