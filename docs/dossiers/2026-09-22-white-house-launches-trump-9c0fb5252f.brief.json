@@ -1,0 +1,108 @@
+{
+  "story_id": "2026-09-22-white-house-launches-trump-9c0fb5252f",
+  "headline_seed": "White House launches 'Trump TV' after ban on major news outlets - NPR",
+  "brief": {
+    "story_id": "2026-09-22-white-house-launches-trump-9c0fb5252f",
+    "consensus_facts": [
+      "Trump announced a ban on CNN, MS NOW, and Politico from the White House on Friday, accusing them of writing 'fiction or lies' / 'FAKE NEWS' (BBC, Axios, CNN, USA Today).",
+      "Reporters for the three outlets were denied entry to the White House complex over the weekend (Saturday) (BBC, Axios, CNN, USA Today).",
+      "CNN, MS NOW, and Politico filed a First Amendment lawsuit against the Trump administration on Monday to restore access (BBC, Axios, CNN, USA Today).",
+      "The five networks that make up the TV pool \u2014 ABC, CBS, CNN, Fox News, and NBC \u2014 suspended pooled TV coverage of Trump's designated pool events in solidarity with CNN (BBC, Axios, CNN, USA Today).",
+      "Fox News Washington bureau chief Bryan Boughton, who chairs/organizes the pool, relayed the decision in an email stating there would be 'no replacement pool put in place' (BBC, CNN, USA Today).",
+      "The White House barred CNN from fulfilling its assigned pool duties for Trump's trip to New York for the UN General Assembly (BBC, CNN, USA Today).",
+      "Trump held a ribbon-cutting ceremony for a new Marine One helipad on the White House South Lawn on Monday, which was livestreamed by the White House but his remarks were inaudible/indiscernible (BBC, Axios, CNN, USA Today).",
+      "Still photographers and newsrooms \u2014 including The New York Times, Associated Press, Reuters, and Getty Images \u2014 declined to distribute Monday's Trump pool photos in solidarity, with the Washington Post withholding images until midnight Eastern (CNN, USA Today).",
+      "A White House spokesperson/official said the 'Fake News' has no place demanding a spot in the President's Oval Office and that journalists can report from directly outside the White House (Axios, USA Today).",
+      "Trump defended the move in a Truth Social post, saying it was 'not instituting an assault on the Free Press... It is instituting an assault on the FAKE NEWS' (Axios, USA Today)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Existence and prominence of 'Trump TV' / White House streaming channel",
+        "positions": {
+          "BBC News": "Reports the White House launched its own 24/7 streaming channel, 'Trump TV,' shortly after the outlets announced their lawsuit.",
+          "USA Today": "Notes the White House streams its own feed of Trump's events and will continue to do so, but does not use the 'Trump TV' label.",
+          "Axios": "Refers only to White House-provided video/cameras, does not mention a branded 'Trump TV' channel.",
+          "CNN": "Mentions the ribbon-cutting was livestreamed to the White House website but does not reference a branded 'Trump TV' channel.",
+          "NPR": "Headline-only; headline asserts 'The White House launched Trump TV' but no body text available to corroborate details."
+        }
+      },
+      {
+        "topic": "Characterization of the action as a 'ban'",
+        "positions": {
+          "USA Today": "Reports VP JD Vance disputed that Trump is banning outlets, saying he is only withholding 'special access' from those engaging in 'effectively propaganda,' alleging 92% of the three outlets' Trump stories are 'negative' \u2014 while noting Trump himself described it as a 'ban on the free press.'",
+          "BBC News, Axios, CNN": "Consistently describe the action as a 'ban' without featuring the Vance rebuttal or the 92% claim."
+        }
+      },
+      {
+        "topic": "Cause of inaudible audio at the helipad event",
+        "positions": {
+          "CNN": "Attributes it to the helicopter's loud noise drowning out Trump's voice.",
+          "USA Today": "Attributes it to the lack of boom microphones typically supplied by the pool.",
+          "Axios / BBC": "State the remarks were inaudible / carried no usable audio without specifying the technical cause."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Two headline-only entries; no retrievable body text. One frames the story explanatorily ('What Is the White House Press Pool, and Why Did It Suspend TV Coverage of Trump?'), the other reports the lawsuit ('CNN, Politico and MSNOW Sue Trump After White House Ban'). Cannot assess framing beyond headline emphasis on process/explanation and legal action.",
+      "BBC News": "Leads on networks suspending coverage 'in protest at media ban,' framing it as press-freedom pushback. Uniquely foregrounds the 'Trump TV' 24/7 channel launch as an immediate consequence. Includes Trump's dismissive quote ('they never boycott me') and the Mamdani meeting color. International, arms-length tone.",
+      "Axios": "Leads on the concrete consequence \u2014 'Trump inaudible during TV blackout' \u2014 and pivots to an explainer on the pool's function. Notably includes a first-person 'thought bubble' from an Axios pooler (Brittany Gibson) and extensive quotes from a press-freedom advocate (Seth Stern), giving strong voice to the accountability-journalism frame while also printing the full White House rebuttal as 'the other side.'",
+      "CNN": "Most detailed body text; as a directly affected party, frames the story around network and photographer solidarity ('stand with CNN'). Emphasizes the rare joint network statement, historical context (CNN's 1981 lawsuit to join the pool), logistics/costs, and the substitution of pro-Trump 'secondary' crews (Hearst, Real America's Voice). Self-referential given CNN is the subject.",
+      "NPR": "Headline-only; no body text. Headline uniquely centers 'Trump TV' and poses a forward-looking question about how it may change presidential communication. Cannot assess framing beyond the headline's emphasis on the streaming channel.",
+      "USA Today": "Leads on the networks suspending pool coverage in solidarity. Distinctively includes the administration's defense at length \u2014 VP Vance's argument that this is withholding 'special access' rather than a ban, plus the 92%-negative-coverage claim \u2014 giving the most space to the White House counter-narrative. Body is heavily cluttered with ad content."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The underlying lawsuit filed by CNN, MS NOW, and Politico in US District Court in Washington is referenced by multiple outlets (BBC, Axios, CNN, USA Today) but the filing itself was not provided in the dossier, so its specific claims cannot be verified against coverage.",
+      "The Boughton pool email is quoted by BBC, CNN, and USA Today with consistent wording ('no replacement pool put in place'), but the full email is not in the dossier as a primary source.",
+      "Trump's Truth Social posts are quoted (Axios, USA Today, CNN) but the posts themselves were not provided as primary documents."
+    ],
+    "missing_context": [
+      "The 'Trump TV' branding central to the story ID and headline seed is corroborated only by BBC's body text and NPR's headline; the three other full-text outlets (Axios, CNN, USA Today) describe White House-run streaming without confirming a branded '24/7 Trump TV' channel. Readers should know this key detail is thinly sourced within the dossier.",
+      "No outlet provides the full text or specific legal claims of the lawsuit beyond First Amendment and (per USA Today) 14th Amendment due-process arguments; the actual filing was not available.",
+      "No independent verification of VP Vance's claim (reported by USA Today) that 92% of the three outlets' Trump stories are 'negative' \u2014 the source or methodology of that figure is not provided.",
+      "No outlet reports how long the network pool suspension is intended to last, or what conditions would end it.",
+      "No outlet reports MS NOW's or Politico's individual statements in depth, nor detail on what MS NOW is (a rebranded/renamed entity) for readers unfamiliar with it.",
+      "Limited detail on 'Real America's Voice' beyond CNN's brief description as 'a small pro-Trump network' listed as secondary crew for the NY trip; readers would benefit from more on who now fills the coverage vacuum.",
+      "Only two of seven dossier articles (Axios, CNN) and portions of two others (BBC, USA Today) contain substantial body text; three New York Times/NPR entries are headline-only, limiting corroboration on the 'Trump TV' angle specifically."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with body text reported the same core events but with materially different emphasis \u2014 BBC and NPR center the 'Trump TV' channel while Axios and CNN foreground the audio blackout and network solidarity, and USA Today alone amplifies the White House/Vance rebuttal. The headline-seed's 'Trump TV' claim is unevenly corroborated across the dossier, making a coverage-comparison the honest treatment.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNaTU5Wjducll1NTEzR3MtWlFkRmFBT01sSE1QUDhkbmx6V1FCbFVpcWxnMWlMOGw3YmtnVTNKaGM3aE1SZkp4VHNXdjA3bEphajc3Tl9lcjQxVVlXZTJaYUl1cFdISmIzb1NPWWJuZVNWSHNsbW5pbzFjM1hvLWtWdTViMA?oc=5",
+      "title": "What Is the White House Press Pool, and Why Did It Suspend TV Coverage of Trump? - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBqUEg5eWZZZEZxN29iRUxDRm9qLUF3elppRG8xdTRoeS1TbjluclVxWV8wZjBlNXlfcXJUUndrbjV2U1VrVnl6UEVHWVRONHMwa2lmQlV0TGJQNzg?oc=5",
+      "title": "Major US outlets suspend shared Trump coverage in protest at media ban - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9QZkNET2FRcjBLNDlXS0FVN3EzazB2REtCdWpBdkRkd0RoLWNHS3VHcExkcVpVUUVtRmdIRVdjYkFxWGsxYkFyVG5FeEZKbjRpeUxkVUpoR0w5eVQtZExPbmZscV9OeUlXWGhOQ2pfc3d4LXY3aWVr?oc=5",
+      "title": "Trump inaudible during White House TV pool blackout - Axios"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBUTXNYeWdJU1p5eXktUjhBcWQ5V2kzNmVnU1BtdUR1RDFIRnI1bjRvMWljdkp3OVpqOFZGeEdGZEZ5TFBnY3FpZzEwRFhacXlGc0xvVThLX2NHQ19nd0g1XzJwQkxlRG9oc2tiNl91b1BZSFVvV0E?oc=5",
+      "title": "Major TV networks stand with CNN, decline to replace its White House pool crew - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPd0VsX2hWOXZ5QnpwTWZ0MFNqLWpTdHFmTzlxeWsyR0pkamxxNXRFN3JZTGdYZDJzZ3VnV3VpNFRBdlloRU0wVHVLNGFkTnN5VVRIQ3k2ck8zYTZGRU5YRFExcEpEWjlGcFFQT3p1S2xhVlpPS0xocGUzaFhreHJOdm5MUnNKcHR0bERfdndn?oc=5",
+      "title": "CNN, Politico and MSNOW Sue Trump After White House Ban - The New York Times"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX2xNd3oxeEVUZ2tvM0dYanpfNzI0WUN2UFVoM2lYZXlvellEZ0JxalFlNndfelpWdUVQZWNKSk45aEhodG5yMW14NDc5SDNSYkR1NXdYQTJVNHBjbmpsOWVVNnlSOWJFV1oxNmk3SXNCaV9yRjdLLXJaSVlQS2loWi1iM1VaSGV5WnM3NFU5a05lZ2JIay1nWVFDNlk1ZG84cTZ1ay1yQUt0UkFiUzRJcUYzYzlsb055WlB2bUtkak9Kdw?oc=5",
+      "title": "The White House launched Trump TV. Will it change how the president communicates? - NPR"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZkQ5ZVdQMlpnbkM0QW9URGNWLVdBaVhBOXNrLXZ6LWNneTQ3MG43RGZ2Mkw1Nl9aNldnSlUxbF9mQzhacXR2THhDUnBqWEFfVm1EYWpJZHFxcDAxM0k1SHgxUFZ6NFJDR1lhakFXVWU0LXhjT2pzeXRxMERTdkNrSno5ZkhGN254TERwd3FFTUZVcW1TbjI2NTE1eGRDeWtIZ3FxbnN2TUlOWkM4cHJ4VzAzenF2c3M?oc=5",
+      "title": "Major TV networks suspend White House pool coverage after Trump ban - USA Today"
+    }
+  ]
+}
