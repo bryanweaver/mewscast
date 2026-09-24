@@ -1,0 +1,101 @@
+{
+  "story_id": "2026-09-24-at-trump-meeting-xi-362fef1ae2",
+  "headline_seed": "At Trump meeting, Xi Jinping lays out terms to avoid US-China military conflict - The Guardian",
+  "brief": {
+    "story_id": "2026-09-24-at-trump-meeting-xi-362fef1ae2",
+    "consensus_facts": [
+      "President Donald Trump welcomed Chinese President Xi Jinping to Washington for a high-stakes state visit, with Xi arriving at Joint Base Andrews on Wednesday, Sept. 23, 2026.",
+      "Trump personally greeted Xi on the tarmac at Joint Base Andrews \u2014 a rare step for a sitting US president; both outlets note it was the first such airport greeting in roughly a decade or 11 years.",
+      "The arrival ceremony included a military band, a red carpet, and a bomber flyover (Al Jazeera cites a single B-1; CBS cites two B-1 bombers), with both leaders' wives present (Xi's wife, Peng Liyuan).",
+      "Xi issued a written arrival statement saying China and the United States 'should be partners, not rivals.'",
+      "Trump and Xi last met in May, when Xi hosted Trump for a visit in Beijing.",
+      "Treasury Secretary Scott Bessent met with Chinese Vice Premier He Lifeng ahead of the visit and discussed the possibility of a 'bigger deal' beyond the existing tariff truce.",
+      "The existing tariff truce (referred to as the Busan Agreement/arrangement, struck in Busan, South Korea, in October) was set to expire Nov. 10, 2025.",
+      "Key issues expected to be discussed include trade/tariffs, AI/technology, and Taiwan.",
+      "The visit schedule includes a White House arrival ceremony, a formal meeting of the two presidents, and a state dinner on Thursday, followed by a visit to the National Archives."
+    ],
+    "disagreements": [
+      {
+        "topic": "Status of the trade truce",
+        "positions": {
+          "Al Jazeera English": "Reports the truce was already extended: Bessent said the two countries agreed to extend the Busan Agreement, pushing the expiration from Nov. 10 to Jan. 10.",
+          "CBS News": "Frames it as unresolved \u2014 the US and China 'will have to decide' whether to extend the truce expiring Nov. 10; Bessent said the US is 'open' to continuing Busan or examining a bigger deal, without confirming an extension was finalized."
+        }
+      },
+      {
+        "topic": "Number of B-1 bombers in the arrival flyover",
+        "positions": {
+          "Al Jazeera English": "A B-1 military bomber flew overhead (singular).",
+          "CBS News": "A flyover with two B-1 bombers."
+        }
+      },
+      {
+        "topic": "Prospects for concrete outcomes",
+        "positions": {
+          "Al Jazeera English": "Cites Stimson Center's Yun Sun describing the stabilization of ties as 'quite prominent and very impressive' and expecting most progress on AI.",
+          "CBS News": "Cites experts (James Lewis, Jake Werner) saying not to expect tangible policy achievements, calling the meeting 'largely for show.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Headline-only in the dossier; body text is a CAPTCHA/security block with no retrievable content. Headline frames a personal 'deep friendship' between Trump and Xi and Xi's call for 'healthy' competition \u2014 emphasizes rapport and rivalry balance. No body available to analyze.",
+      "NPR": "Headline-only. Frames the summit around Trump 'rolling out the red carpet' and the 'high-stakes' nature of the talks \u2014 pomp plus stakes. No body text available.",
+      "Al Jazeera English": "Full body. Leads on the trade truce extension as a concrete deliverable, presenting the Busan Agreement extension to Jan. 10 as achieved. Emphasizes the historic, 'unprecedented' nature of reciprocal leader visits within a single year (via Stimson's Yun Sun) and China's framing that 'great rejuvenation' and 'making America great again' can coexist (via Xinhua). More optimistic tone on stabilization; foregrounds AI hotline mechanism and the stalled $14bn Taiwan arms package.",
+      "Reuters": "Two headline-only entries. One leads on Chinese defence ministry urging 'extreme caution' over Taiwan arms sales \u2014 foregrounding military friction. The other leads on the trade truce being extended. Neutral wire phrasing; no body text to analyze.",
+      "The Washington Post": "Headline-only. Frames the story as Trump 'courting' Xi 'with pomp' while 'China seeks greater global influence' \u2014 emphasizes spectacle and Chinese strategic ambition. No body text available.",
+      "CBS News": "Full body. Leads on the tension beneath the warmth \u2014 'despite U.S.-China tensions' \u2014 foregrounding US efforts to choke China's chip supply and concerns over China's ties to Iran and Russia. Emphasizes low expectations, quoting analysts calling the summit 'largely for show.' Frames the trade truce as unresolved rather than extended. Details ceremony logistics extensively and notes China's failure to keep its soybean-purchase pledge under the Busan deal."
+    },
+    "primary_source_alignment": [
+      "No primary sources (transcripts, official readouts, or the Busan Agreement text) were located for this story. Claims about the truce extension, the arms package, and the arrival statement rest entirely on outlet reporting and cited officials/analysts."
+    ],
+    "missing_context": [
+      "The two full-text outlets directly conflict on whether the trade truce was actually extended (Al Jazeera says yes, to Jan. 10; CBS presents it as still undecided). No primary readout is available to resolve this.",
+      "Only two of seven dossier outlets (Al Jazeera English and CBS News) have retrievable full body text; the Associated Press body is a CAPTCHA block, and NPR, both Reuters entries, and The Washington Post are headline-only. Consensus facts are therefore drawn from just two bodies.",
+      "No outlet body text provides China's specific 'terms to avoid US-China military conflict' referenced in the headline seed (from The Guardian, which is not in the dossier) \u2014 the substance of that central claim is absent from all retrievable bodies.",
+      "The $14bn Taiwan arms package is mentioned only by Al Jazeera (via analyst Yun Sun); no corroborating detail on its congressional status appears in a second body.",
+      "No outlet body quantifies the current tariff levels or the terms of the proposed 'bigger deal' beyond that it is under discussion.",
+      "Details of China's ties to Iran and Russia, flagged by CBS as a concern, are asserted but not substantiated in any body text.",
+      "No apparent instruction-injection attempts were detected in the article bodies."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same summit with materially different framings \u2014 Al Jazeera emphasizing a stabilization win and a completed truce extension, CBS emphasizing tension and low expectations with the truce unresolved \u2014 and the two full-text outlets directly contradict each other on whether the trade truce was extended, making the coverage divergence itself the story.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdUlSSmFoWUZsM1V4WlJhUkNONDJwUVRNMEpacHR2ckJUT1ltenVUc2JoSUJMejVtR2g1RkNWZTlpNTFDM1ZTZUhQb0RSbEFTNm40c0Nsc3g0X01ySTZOYWxXT1FUR1FvUmlVV3B4dGhpbDVfcG1FNjNMeXdjSW9BZG9aa1d2c1lMQkhCRDRncw?oc=5",
+      "title": "Trump hails deep friendship with Xi as China's leader urges 'healthy' competition between 2 powers - AP News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPM2JDTXc5S2ZiOEw4TUZ4NDBvdnpmWXFpZGpCcE5SOXV6eVJvSC1ZTVpQUnNYZmRab2hKYWNpY1E0cDM1dDg5UmRMeVBXU0VvOUFCLUxnOEJnZmEyZHhFbDJoQ1dYM05QTlhMaEdHNmVySjVzbVZiQXppVC1RTGlwSzJUMXJ3OUF2R3IzOG03dHJDUlRITHNNZjZnck9aclQ2bTdfRUlvenc?oc=5",
+      "title": "Trump rolls out the red carpet for Xi as high-stakes summit begins - NPR"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUnFlaGxJY2xCbGluOXE3eC1md0FUaUFKNWp5dmNub1pTYXNySE5ROW1lcGhhbXVrd19wZWxfNmx5SEFnSkhLT05XS2k4bUxRN1RYWkRmcTNldHctb21HSjd4eWxHVDMtU0JHQWowLWtiNUpqQVQxbVJCNnZua2Y2ajZqbHJjWldUaGNNNkx6ckZNMjgyREszSmJrUFFzVXdIWmtDcHNnYlNSUXpKMWt1YVZSdHrSAboBQVVfeXFMT25ObG1uWE9BaGV5QVFhRXp3bkdsZVljWmVka1N0dDdWeC1jNTIxZlZGYU50Y043emVvYllTaktPNTEwSG9NenBqTzVBSkR6SXc1b01ZOC1UWXVWMUdaUWdPclhnMVJFNVE2VTFTcUtPZkk5RWZPajZKc3gtMi16cGhfcTNzWUE5b3VyTmxKVVNiTVZ6YmU3ZFZKSXk0LU1NeUpHSW1OU3pmSW9DUWV2VWNaWUV5Z1BqVnlB?oc=5",
+      "title": "Trump welcomes Xi to Washington as US, China agree to extend trade truce - Al Jazeera"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdUJ6eGxzbTYzQkJTMXFqWnhZYU1BakkxZDBONmZEVnV4bkJPMU0tb2w0MEluVF8wSWptWmR0dUNpX1pHbW5YLXRHSnRONnZEYkpRSWNhb1ZRUzlFTDYzdlFnWE5uVy1meDhudTZJUXQ4bVpPckFvRVlveGZuSnpyUVpBa0Faazh6Qm4zSnRXbi1vbDNJS1JsT291enRieEk?oc=5",
+      "title": "Chinese defence ministry urges 'extreme caution' over arms sales to Taiwan ahead of Trump-Xi summit - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaVBYbDJtMVNJRWNyaDlFLXhaWDBIbERYTkRRYVliRGR3eklaai1JTHBhZ2tOTjBqRk1CSTFvOENrMjduNVhWRUFiNzRsbDg0Y1ZJdFlKTy1oSUVBaUpTNlkwVS02emZkaHVUZVRaZjJleVhJWF9uY09xSHZMOVh3YXh2aVMwV09HeGJGSXVZTWZCRE5iNHdNdDI0bDU5aXZvMjJzMQ?oc=5",
+      "title": "US says China trade truce extended as Trump welcomes Xi - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNeHZOX2lNa1g0T1VfeUU0OGVJMXNHZkdZTVhfWUxhdFZ4R3pOaV91M040ZHNWdlJkWVhENWtTVXBCNG9zdURTQzhJb3NrejhsdTY4MnhSbGlMS0pCbnF4a0VWaHhzSW10UWdsUlVoSUNSS2NHWTZKUTBXbl9qWU5SWmpoQkw5d09CbU0wb2JNRnBGNlExTXF6dkpSN3lQUXZlSFZsd1dTVGFvaXlGOUFsNkZDQVNQUFdGRlE?oc=5",
+      "title": "Trump courts Xi with pomp as China seeks greater global influence - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVnVaQ216aHlTUE5KQVJzc3BnTE80U1JOdzlGeXZDc2hEOFpVajlOU0VmTVI5QUlXdjNrUnJ1UVBSWjhFWE10aEtlZnZkZV9ob25GQnEyNlZVWGJqenl4RzU2ZmxXbE9ZTk9lTXprd1pJR3B5Z1VHd01EckVrT3QydF9XbE9DWjZuYlEyM0FVSUY5OHBpbW0zUg?oc=5",
+      "title": "Trump rolls out the red carpet for Chinese President Xi Jinping despite U.S.-China tensions - CBS News"
+    }
+  ]
+}
