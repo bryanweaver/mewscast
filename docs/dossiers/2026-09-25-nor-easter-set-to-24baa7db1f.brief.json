@@ -1,0 +1,134 @@
+{
+  "story_id": "2026-09-25-nor-easter-set-to-24baa7db1f",
+  "headline_seed": "Nor\u2019easter set to hit East Coast today and continue through weekend - NBC News",
+  "brief": {
+    "story_id": "2026-09-25-nor-easter-set-to-24baa7db1f",
+    "consensus_facts": [
+      "A nor'easter is affecting the US East Coast, forecast to continue through the weekend of Sept. 25-28, 2026 (ABC, USA Today, NBC, CBS, Guardian).",
+      "The storm is unusual for occurring so early in the season, in September (NBC, Guardian).",
+      "Coastal flooding is a primary threat, driven by prolonged onshore northeast winds and worsened by a full moon Saturday night raising tides (ABC, USA Today, NBC, CBS, Guardian).",
+      "Significant beach erosion is expected from the pounding surf along the coast (ABC, USA Today, NBC, CBS, Guardian).",
+      "Strong wind gusts, generally in the 40-60 mph range along the coast, are forecast, with risk of downed trees and power lines and resulting power outages (ABC, USA Today, NBC, CBS, Guardian).",
+      "Southeastern Virginia (Virginia Beach/Norfolk area) is identified as being at high risk for major coastal flooding (USA Today, NBC).",
+      "The storm is expected to disrupt air travel, with flight cancellations and delays (ABC, USA Today, Guardian).",
+      "Some airlines issued weather waivers for affected East Coast travelers (USA Today references American, JetBlue, Southwest, United; Guardian notes travelers warned of cancellations).",
+      "Large waves are forecast, ranging roughly from 10-12 feet in the Mid-Atlantic to as high as 17-22 feet in New England (ABC, NBC, USA Today, news.google.com/NBC).",
+      "Nor'easters are named for their northeasterly winds and are most frequent and violent between September and April, per NOAA (ABC, NBC).",
+      "Simultaneously, Hurricane Nolo strengthened to a Category 1 storm near Hawaii's Big Island, threatening heavy rain and flooding (NBC, Guardian, news.google.com/NBC).",
+      "Tens of millions of people are under alert/coastal flood advisories along the East Coast (Guardian cites up to 40 million; news.google.com/NBC cites 33 million under coastal flood alerts)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of people affected/under alert",
+        "positions": {
+          "The Guardian": "Up to 40 million people across multiple states could be affected.",
+          "news.google.com (NBC)": "Coastal flood alerts in effect for 33 million people from Virginia to Rhode Island.",
+          "ABC News / USA Today / NBC News": "Refer generally to 'millions' without a specific figure."
+        }
+      },
+      {
+        "topic": "Storm track certainty",
+        "positions": {
+          "NBC News": "Forecast models Thursday disagreed on the storm's exact track.",
+          "CBS News": "Guidance split into two camps (GFS offshore vs. Euro turning toward coast); leaning toward the higher-impact scenario 2.",
+          "USA Today": "Describes the storm as strengthening and moving up the coast with definite major impacts, less emphasis on track uncertainty.",
+          "The Guardian": "Says the nor'easter strengthened and is expected to stay closer to the shoreline, bringing more rain inland and stronger winds."
+        }
+      },
+      {
+        "topic": "Maximum wind gust forecasts",
+        "positions": {
+          "ABC News": "Gusts up to 60 mph possible in coastal Massachusetts/Rhode Island; ~45 mph for NYC.",
+          "NBC News": "Gusts up to 50 to 60 mph.",
+          "news.google.com (NBC)": "Winds up to 65 mph forecast.",
+          "The Guardian": "40-60 mph along the coast, up to 80 mph in and around Montauk, New York."
+        }
+      },
+      {
+        "topic": "Rainfall totals",
+        "positions": {
+          "ABC News": "2-4 inches New Jersey to Maine; 4-6 inches for Boston and Long Island.",
+          "NBC News": "Highest totals 2-3 inches or more from Rhode Island to eastern Massachusetts.",
+          "news.google.com (NBC)": "Heavy bands up to 4-6 inches; widespread 1-3 inches from I-95 to coast.",
+          "The Guardian": "Up to 8 inches in parts of southeastern Massachusetts; up to 2 inches in Boston and NYC."
+        }
+      },
+      {
+        "topic": "Number of Pacific hurricanes referenced",
+        "positions": {
+          "NBC News": "References Hurricane Nolo near Hawaii.",
+          "news.google.com (NBC)": "References Hurricane Nolo near Hawaii.",
+          "The Guardian": "References three separate hurricanes \u2014 Nolo, Odalys and Polo \u2014 and attributes activity to a record-setting El Ni\u00f1o."
+        }
+      },
+      {
+        "topic": "Hurricane Nolo intensity",
+        "positions": {
+          "NBC News / news.google.com (NBC)": "Category 1 storm with 75 mph winds; expected to strengthen.",
+          "The Guardian": "Expected to become a major Category 3 storm as it passes ~80 miles south of Big Island."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "ABC News": "Frames the story as a tracking/preparedness piece ('Tracking the storm') built around a series of forecast maps. Leads with millions on alert and flight disruptions. Emphasizes concrete forecast numbers (rain totals, wind gusts, wave heights) and includes an explainer on what a nor'easter is. Neutral, service-journalism tone; no political angle.",
+      "USA Today": "Frames the storm as 'strengthening' and 'threatening' with floods and outages, leading with worsening conditions. Heavily sources AccuWeather (Chief Meteorologist Jon Porter) and drills into specific geographies \u2014 southeastern Virginia and the Chesapeake Bay as the worst-hit. Practical traveler focus with a list of airline waivers. Page is cluttered with heavy ad content but reporting stays factual.",
+      "The New York Times": "Headline-only in the dossier ('A Powerful East Coast Storm Is Taking Shape. Here's How It Could Affect You.'). Frames as an explanatory reader-service piece, but no body text is available to assess emphasis or buried details.",
+      "NBC News": "Frames the storm as 'rare' for September and emphasizes human-interest and disruption angles \u2014 Boston Mayor Wu and NYC Mayor Mamdani quotes, a couple changing wedding plans, Red Sox and Yankees rescheduling games. Explicitly flags model disagreement on track while stressing high confidence in coastal flooding. Also pivots to broader extreme-weather roundup (Southwest flooding, Hurricane Nolo).",
+      "CBS News (Philadelphia)": "Most technical and hedged of the outlets, framed around a local question ('Will nor'easter hit Philadelphia?'). Explicitly separates 'high confidence' impacts (coastal flooding, erosion, rip currents at the shore) from 'lower confidence' ones (how much rain reaches inland). Walks through competing GFS vs. Euro model scenarios and discloses the team is leaning toward the higher-impact track while cautioning that one model run is not a forecast.",
+      "news.google.com (NBC)": "An updated NBC News wire framing the storm as actively underway ('set to hit East Coast today'). Leads with 33 million under coastal flood alerts and adds real-time impacts: canceled events (Global Citizen Festival for first time in 14 years, All Things Go, Ed Sheeran's Boston shows), Potomac River flooding, and a car nearly swept into the ocean in North Carolina. Human-quote heavy and event-cancellation focused.",
+      "The Guardian": "Frames the nor'easter within a global extreme-weather narrative, explicitly linking it and three Pacific hurricanes to a 'record-setting El Ni\u00f1o' amplifying severe weather worldwide. Cites the highest affected-population figure (40 million) and the highest localized wind (80 mph at Montauk) and rain (8 inches) figures. Draws a tropical-storm comparison and includes NWS Boston and Weather Channel context on the storm's early-season timing."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (NWS bulletins, official advisories, mayoral statements in full) were located for this story, so the brief cannot verify report claims against underlying documents.",
+      "Several forecast figures are attributed to AccuWeather (USA Today, Guardian) and the National Weather Service Boston office (Guardian), but the original advisories themselves are not in the dossier for direct comparison."
+    ],
+    "missing_context": [
+      "No outlet in the dossier is a strictly right-leaning source; all seven range from lean-left to left, so the framing matrix is one-sided and this brief cannot characterize how center or right outlets covered the storm.",
+      "The affected-population figures differ substantially (33 million vs. 40 million) and no outlet explains the methodology or geographic boundary behind either number.",
+      "The Guardian is the only outlet to attribute the storm activity to a 'record-setting El Ni\u00f1o'; no other outlet corroborates or addresses this climate-attribution claim, and no scientific source is cited for it.",
+      "Wind, rain, and wave figures vary widely between outlets (e.g., 60 vs. 65 vs. 80 mph gusts; 2 vs. 8 inches of rain) partly because articles were published at different times as the forecast evolved, but readers are not consistently told which figures are older versus updated.",
+      "None of the outlets quantify actual damage, injuries, or confirmed power outages as of the reporting \u2014 all figures are forecasts and preparedness measures, not realized outcomes.",
+      "The three New York Times entry is headline-only; its body reporting could not be assessed."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six outlets with full body text reported the same storm but with materially different framings \u2014 from CBS's model-uncertainty caution to the Guardian's El Ni\u00f1o climate framing to NBC's human-interest cancellations \u2014 and key figures (affected population, wind speeds, rainfall) diverge notably across outlets, making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQaUVjejB3OUVINWJ1Y2NqY3FqTG42WHBCNFNfSTVYTGlaS0s0LTdKaEs5LVN2Qll4YU5Udnl6RjR2aENCWFhLdjc3Q2ptWTVyNVpmbk05VU5CQ19RQWotUmhuUHczdVNIMWJ2RkFGSEdSYnlDajZ0RVNGMEV4Z3dkQkl4YzluYlA5QkRtdG1DSmFyV3MzZUZKM0NR0gGfAUFVX3lxTE5OWUc5MVNxTlNweHdtcnpnNFpwUkdwR0dtdUl4SG1RY1dUWU5DZG54YjBzNTN6ZTNqRHBDdWNKUWV5WU9xaVZrdkljRUxjbzd5MjJhZWdrbXRVSTBieXo3dVl1SDU2OEhoZFZZZThMbWdreEdLcVFnOWpNRWdZOWtCdTM0NWxmMzhuUk5hNWY4ZlZKRDhiaVVEQUxaNG8xSQ?oc=5",
+      "title": "Nor'easter heading to New York City, Massachusetts: Tracking the storm - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVm5UM1pBbVRrSkZuQmZ4NWVTNG9SclM2UHlNeUYyeTNrcFZEY01ZYUhFVURkaWpNaTFEMVpOc2NKRWxyNHVmcl9GVnFBZDlvTXUzcVllYWFyeHdzWmpiX3RXR0pTUC1Sa2RsdFctWXdWbGZzcTJWM2pCamd6NzdmV0tGRlF1bEM1b3NTWjF3UFR1aVJtd3lZXzFSVHNEZmxoSTlGLQ?oc=5",
+      "title": "Strengthening nor'easter threatens East Coast with floods, outages - USA Today"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNYjJmT2pGMTI2ekV0N3QwSVN5NG1MV2FBUlViMFZMUlpNUmJYYkZYbmRqUjAtem1vY0hZbVd0T1lwdVRyQWw4em5JY1pPVUZJS0NuYWRVRHlyYnBiT1QyOVRKbXlVVXJfUzN0SFdfeDVOLVYtNzR0ZEFXVktkcmNFV3N2YXI2U0xzLTBUVg?oc=5",
+      "title": "A Powerful East Coast Storm Is Taking Shape. Here\u2019s How It Could Affect You. - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOX282Q2lBdlVfZlpyX1BDbEJ2TFp0Z0xTN2dpSnE5VXJpX2haLUJacnhmSmxZWm83LVNySFVraERiLVhRRU5VMlgxeXhObGVKaldUUzNJUXpaR1dveWZMWTZCSkIxRkluUmdkVFJOQVBxSFM4LXZaN3lwWWFFaHRXSkxsUUk5WGpJcFBDUXlOWWp5RjgzbEQtc0VyRENqQQ?oc=5",
+      "title": "Rare September nor\u2019easter set to slam East Coast with heavy rain, damaging winds - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE81MDc5aUg2RmYxUWNLb2p6ZU1Lem92N1RoOXdRc2lhNTBneGJQTDJHY3BzbjkwQ2Ixako1MEtuNEhjQ19DRGtFMHQxZ2xtSkVkcGE2R3VJSTZjNTNzV0phUFk4RXRTci12dXlqTDB1bUhSWEpJaTlIOUtKV0NUZms?oc=5",
+      "title": "Will nor'easter hit Philadelphia region? Here's what to know about timing and more - CBS News"
+    },
+    {
+      "outlet": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOU2lFODliY1RlVk1Sa1pOR3ZhVEZsc0Z0S1ZyMVZIQWtLUUFKX0NmeG4tUVNyX0RaREdtQzJxSXJBY0NDSVFxYzlGTmE4aDRVN1I5ZkFxZFJtNWdIcUQ0eTVCY0VoOFpNS2Vmd19mZW45T0ZrQ1RzRlNLbzhBSEN6STEyU0FhUVlMMm5hMm41aFlJMW01MXFvNm9UN2RfZw?oc=5",
+      "title": ""
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUnNzTWlBU1hYUjMxa1IzVXNfdzVZUVE2Wnk3eDFnSG9vTUtub01KMHNxcDFZUEdUSlJGT3JyQ2ZCbUgtNWRLS3NfaDdYOTRjSTRLOUV0VUs1WVdyM05Hb0xTWUxYc0hMLXU0Ykw4ODA2ZTRrM2ZPUnFONmU5bGY5cHVXd19KZGRlTWJ1X05zajltd0tJ?oc=5",
+      "title": "\u2018Significant\u2019 nor\u2019easter brings high winds and heavy rain to US east coast - The Guardian"
+    }
+  ]
+}
