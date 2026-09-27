@@ -1,0 +1,143 @@
+{
+  "story_id": "2026-09-27-bomb-squad-searching-vans-13e120055b",
+  "headline_seed": "Bomb squad searching vans near U.S. air base in Britain as five men arrested on terror charge - NBC News",
+  "brief": {
+    "story_id": "2026-09-27-bomb-squad-searching-vans-13e120055b",
+    "consensus_facts": [
+      "British police arrested five men on Sunday near RAF Fairford, an air base in Gloucestershire, western England, used by U.S. forces.",
+      "The men were arrested on suspicion of committing offenses under the Explosives Act and later further arrested on suspicion of preparing/preparation of a terrorist act.",
+      "Police received a call at approximately 12:45 a.m. GMT/local time about three suspicious vehicles that appeared to be traveling toward the base.",
+      "Around 85 households/homes near the base (in or near the village of Whelford) were evacuated as a precaution.",
+      "A 400-meter/440-yard cordon was put in place while the Army's Explosive Ordnance Disposal unit examined the vehicles.",
+      "Counter Terrorism Policing, led by Vicki Evans, took the lead on the investigation, which is in its 'early stages,' with the five men remaining in custody.",
+      "Gloucestershire Police Assistant Chief Constable Richard Ocone made public statements about the incident and the emergency response.",
+      "Aerial/helicopter footage showed a bomb disposal robot operating near three white vans close to the base.",
+      "President Donald Trump told reporters (during a trip to Chicago) that the arrests were 'fantastic' and 'an amazing job,' that the suspects were 'looking to do big damage,' and that the men had been under investigation/view for a long time in cooperation with British authorities.",
+      "Prime Minister Andy Burnham said he was receiving updates and that the incident would be 'deeply concerning' for local residents; Defence Secretary Wes Streeting thanked emergency and specialist responders.",
+      "RAF Fairford has been used by U.S. Air Force bombers (B-1/B-52) to launch strikes against Iran during the U.S.-Israeli war on Iran, and the U.K. government authorized such use.",
+      "Iran's Islamic Revolutionary Guard Corps warned in July that any base used to launch attacks on Iran would be considered a legitimate target.",
+      "Authorities have not officially linked Sunday's arrests to Iran or confirmed a motive, and the men were not named in line with British policing rules.",
+      "The U.S. Air Force / U.S. European Command declined to discuss specific force protection measures but said it remains vigilant and would take steps to protect personnel and their families."
+    ],
+    "disagreements": [
+      {
+        "topic": "Trump's phrasing of the intended target",
+        "positions": {
+          "Al Jazeera English": "Quotes Trump as saying suspects were looking to do big damage 'to our port.'",
+          "CNBC": "Quotes Trump as saying big damage 'to our fort.'",
+          "CBS News": "Quotes Trump as saying big damage 'to our port.'",
+          "CNN": "Quotes Trump as saying big damage 'to our fort.'",
+          "The New York Times": "Quotes Trump only as 'They were looking to do big damage,' without a target noun."
+        }
+      },
+      {
+        "topic": "Suspected motive / who is behind it",
+        "positions": {
+          "CNBC": "Cites a source familiar with the investigation that an Iranian-linked motive is considered most likely, while a Russian sabotage operation or an Islamist plot were also being examined.",
+          "Al Jazeera English": "States authorities have not linked the arrests to Iran; no unnamed-source motive claim.",
+          "CBS News": "Says authorities are investigating a link to Iran 'as one possibility.'",
+          "The New York Times": "Does not name a suspected motive but provides context on prior hybrid attacks attributed to Russia or Iran proxies.",
+          "CNN": "States no clue has been given about a possible motive."
+        }
+      },
+      {
+        "topic": "Which police force made/announced the arrests",
+        "positions": {
+          "CBS News": "Attributes the initial call and details to 'The Metropolitan Police.'",
+          "NBC News": "Attributes the response to 'The Gloucestershire police force' with Counter Terrorism Policing involvement.",
+          "Al Jazeera English": "Attributes to Gloucestershire Police, with counterterrorism police taking the lead."
+        }
+      },
+      {
+        "topic": "Cordon distance",
+        "positions": {
+          "NBC News": "Reports a 440-yard cordon.",
+          "Al Jazeera English / CNBC / The New York Times": "Report a 400-meter cordon."
+        }
+      },
+      {
+        "topic": "Identity of the UK Prime Minister and the base-use policy history",
+        "positions": {
+          "The New York Times": "Names Andy Burnham as PM and says predecessor Keir Starmer initially refused strikes then permitted 'defensive' operations, a policy Burnham continued.",
+          "Al Jazeera English / CNBC / CBS News / CNN": "Refer to Andy Burnham as PM but do not detail the Starmer-to-Burnham policy transition."
+        }
+      },
+      {
+        "topic": "Distance of the base from London",
+        "positions": {
+          "NBC News": "About 90 minutes outside London.",
+          "CBS News": "About 100 miles west of London."
+        }
+      },
+      {
+        "topic": "Additional security at other bases",
+        "positions": {
+          "CNBC": "Reports Reuters witnesses saw armored vehicles and soldiers at the gates of RAF Lakenheath and RAF Mildenhall in eastern England.",
+          "Other outlets": "Do not mention increased security at other named bases."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (no retrievable body text). The headline foregrounds Trump's 'big damage' quote, framing the story around the U.S. president's characterization rather than the police operation itself.",
+      "NBC News": "Leads with the operational spectacle \u2014 bomb squad searching vans, homes evacuated, massive response \u2014 under a headline emphasizing the search and the terror charge. Adds unique local color (resident Julian Tudsbery, 30-year village resident) and unique context that a Cotswold District Council member said an Iran threat six weeks earlier had heightened alert levels. Body is cluttered with heavy site navigation boilerplate.",
+      "Al Jazeera English": "Frames the base squarely in terms of its role striking Iran, leading with the arrests and Trump's 'big damage' quote. Emphasizes the IRGC 'legitimate target' warning and includes an embedded video reference to Al Jazeera footage of bombs being loaded onto US planes at the base. Explicitly notes authorities have NOT linked the arrests to Iran, hedging the Iran angle it foregrounds.",
+      "CNBC": "Headline centers Trump's 'big damage' quote. Uniquely surfaces an unnamed 'source familiar with the investigation' assessing an Iranian-linked motive as most likely, with Russian sabotage and Islamist plot as alternatives \u2014 the most speculative attribution in the dossier. Also uniquely reports Reuters witnesses seeing heightened security at RAF Lakenheath and RAF Mildenhall. Uses Trump's 'fort' wording.",
+      "The New York Times": "Most context-rich account. Leads on the counterterrorism angle and the base's controversial role in the American-Israeli war on Iran. Provides deep historical framing (base opened for D-Day 1944, runway length, bomber types), the Starmer-to-Burnham policy transition, and prior UK/Europe 'hybrid attacks' attributed to Russia or Iran proxies including a June conviction over arson targeting Starmer-linked property. Notably renders Trump's quote without the disputed 'port/fort' noun.",
+      "CBS News": "Straightforward incident report emphasizing the terror-preparation charge and the precautionary evacuation. Attributes the initial call to 'The Metropolitan Police' (differing from other outlets' Gloucestershire attribution). Foregrounds Burnham's plea not to speculate and leads reader toward Iran as 'one possibility.' Uses Trump's 'port' wording. Credits BBC and AP.",
+      "CNN": "Leads on the arrests and the base's role in the war against Iran. Adds unique on-the-ground detail: a Daily Mail video purporting to show shirtless detained individuals, resident accounts of helicopters at 2am and the base being 'like a ghost town all week,' and heavy vehicles/tractors blocking gates. Emphasizes that no motive clue has been given and cites the 14-day pre-charge detention rule. Uses Trump's 'fort' wording."
+    },
+    "primary_source_alignment": [
+      "No primary sources (police statements in full, court filings, or official transcripts) were located for this story; all official quotes are second-hand via outlet reporting, so no independent document-vs-coverage comparison is possible."
+    ],
+    "missing_context": [
+      "No outlet confirmed whether explosives were actually found in the vans; all describe an ongoing EOD examination without a result.",
+      "No official confirmation of the suspects' identities, nationalities, or motive \u2014 the Iran/Russia/Islamist attributions are unnamed-source or 'one possibility' speculation, primarily from CNBC and CBS.",
+      "Discrepancy in which force is credited (CBS says Metropolitan Police; others say Gloucestershire Police) is unresolved and unexplained.",
+      "The disputed 'port' vs 'fort' in Trump's quote is never clarified; no outlet reconciles which word Trump actually used, and RAF Fairford is not a port, which makes 'port' logically odd and unaddressed.",
+      "No outlet independently corroborated Trump's claim that the men were under U.S.-U.K. investigation 'for a long time'; it is reported solely as a presidential assertion.",
+      "No verification of the CNN-cited Daily Mail video of detained individuals; CNN presents it as 'purporting to show.'",
+      "Full text of the underlying Gloucestershire Police / Counter Terrorism Policing statements was not provided as a primary source, so exact official wording could not be checked against paraphrases.",
+      "No primary source located for this story \u2014 official quotes rely entirely on outlet reporting; this is disclosed here as an editorial limitation."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Six outlets reported the same fast-moving incident with materially different framings and at least one substantive quote discrepancy ('port' vs 'fort') plus divergent, unnamed-source motive attributions (Iran vs Russia vs Islamist), which is a coverage-comparison story rather than a settled straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOThaUHcwMHZuZEY2dldUNjhYQ29PeWRJdEYxWFBPV3NEUUdSc0l4MkdhN3liTGdyNG9XaEhwWG8xRk8xR29JVlA0ZEV2ZXM3RVZCRDlPSHhzU29Pek9tZVREdUdvOHRXS1ZuaTR0TXVGV253bkplU1lNbG85WXRjYzcwV2ZSekFCa1gtR1RtV09zM3NYeF93?oc=5",
+      "title": "Trump says men arrested at UK air base used by US were looking to do 'big damage' - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPMzkybDc0THU3R1JKM3YzOVBJOXU1a3hQc3NqbFJRc0tJVVJCemxrYWZvaUl0S0tXeHRmbC02TUpFMjNwNlZRTE5HeGFQT3RmS3FXclphbEdDZWZGa0pQZEJpWGp2ZFpKd2dyTDZLRm5xQzBhZWxSbVBkTnc3WUliNE9hTjRhZlRJaXB5VGNnbnJzVjhxN2l3QWIxak1qaGhlWTk2Tkd2N09SZWNIV0pKWUJIeTRnQUQ2b3c?oc=5",
+      "title": "Bomb squad searching vans near U.S. air base in Britain as five men arrested on terror charge - NBC News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOSUVQdGdQNkExS2gtaXRtcVNzbVp0WXBCei1zZDZXMGpsOUJ3Z0N4eEdvelZUM1ZBRXl6VHpnZWdpWlBsT0lVemdGNy1TdmYzT1RDNVRoNE1PWDdjb3VrV3VaaTlweExWQ1VJdng2Q3B5dGlJQ3BJc21oaEd5ME5ZMWszRlRIOUU0MFU4VjB4YVJqRENy0gGaAUFVX3lxTE5ncmdzQmpQMllQc0lzTk1RUVpRWkoyNFVlaTNWT2p6WDFXWHpuS05zc2g4SU9BQmt1eUt4Q1RXRWxSNFNDbk1BVGFPUW1IUF9SNkc2WWwyQ2NzaFdDUGFDc0JRcUliYlU4aUZUY2V1R3c5X1YxTldyNTlfOUZlN3EwTjhwbHBkR2U0WjYxa1NzaUxjWC16Sk95eVE?oc=5",
+      "title": "UK police evacuate homes near RAF Fairford airbase used by US - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeHI5TXNGWFZCdEpwTHpLTzJUTXdrYlJra1NXV25qOXVrVm1Kb2h2UHltUFVDXzZqSDdxS2lQUHc0Y1NTVW5fUi1rbHBwdlNEOUZJWl9ORWdlNkRwb2NTUzdtaVpmcUJVRHdPUWVROWNwS1BnVkVjcmI5LTBRbTZ0d2ItUlpEc0t5VFh3OFB6V2JscF8tUG5pcXIwX0JxZ2ZE0gGmAUFVX3lxTE9YbHBmTDhyaW5sYnVUZ1NLcUVXVlhQa3BIQWxNUEEyMUxGZDFmRk1SOE5mSGptZEIzRlBVdWdBSWxnMHZOUlVvUXhLTU1IdWl2M3QzeUVKTlFFYWlMNTBuTHR3aTR2eFpMRFVlb2FQbUdlLUEycjRSS014dDlvYXYzcG5nVmpkaG53TTU1Y2dIaFJqdURlWWZXOWE4UHNMaU1nQzZLcFE?oc=5",
+      "title": "Men arrested in major incident at UK air base used by U.S. forces - CNBC"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdFRIdDJNYmMyTW1VV2Uwak04eUdTNVFjbTNEaFdCT0JYZV9kV3paMDJWWUJmVlF2OE8xQUdmb3gzSVJyQ0VTWDFqS0x6ckt2Skw0LWk2RG1aQUNHaXpIZ0VOZW1jZ28tVXFzQWVUQ3BYeXlFandLYjVjVjV0Z1dDY01nZ0pFelh3?oc=5",
+      "title": "5 Men Arrested on Suspicion of Terrorism Offenses Near RAF Fairford, Air Base Used by U.S. - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNaERBSHFQbHFPOTkxVzZvSmJlWkI1VmlMaGxQS2RvMGdhU2FXOXpfMHIyYmFMM3FFdGdTQ0Q2aEFFeFNVaks3VEQ4bDl6aFI5OXd5ZmRZeERldFBxQV96N1JzaHFsRUx2ZEVuSlUzZmtHRTdmcnhDS1d4ZHZsbFVmRE0yY083aDRHUjdSblBtTQ?oc=5",
+      "title": "5 men arrested near a U.K. air base used by U.S. forces on suspicion of preparing a terrorist act - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9NQUdxdkgyTG9ETGFMV3EtWkEwV0NHUGs0LXZjc0FxN0JGN1JCUkp0NXlwdTkxcGVEZzlTU3JfaktwN3E4TFNPWVkxMVV0cGJNSlZYZ200bDFsc2RGVGxGRU1xSzI3ejhDdnZtTng2V1VWaDQ?oc=5",
+      "title": "UK police arrest five men on suspicion of terror offenses near air base used by US forces - CNN"
+    }
+  ]
+}
