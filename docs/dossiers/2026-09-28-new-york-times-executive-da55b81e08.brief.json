@@ -1,0 +1,140 @@
+{
+  "story_id": "2026-09-28-new-york-times-executive-da55b81e08",
+  "headline_seed": "New York Times executive fatally shot allegedly by elderly in-laws - BBC",
+  "brief": {
+    "story_id": "2026-09-28-new-york-times-executive-da55b81e08",
+    "consensus_facts": [
+      "Jonathan McKinsey, 40, a New York Times engineering executive in the company's games department, was fatally shot on Saturday afternoon.",
+      "McKinsey was found with multiple gunshot wounds in a parking lot at the Dublin Sports Grounds in Dublin, California, about 35 miles from San Francisco.",
+      "A Dublin police sergeant was driving near the sports complex, saw a man lying on the ground, and stopped to investigate around the same time police received multiple 911 calls.",
+      "McKinsey was pronounced dead at the scene.",
+      "Police arrested a married couple, Shouyong Zhang and Shili Chen, identified as McKinsey's parents-in-law, who had remained near the scene.",
+      "Both suspects were booked into Santa Rita Jail on suspicion of murder.",
+      "Police said there were no outstanding suspects and no threat to public safety.",
+      "The New York Times / a company spokesperson confirmed McKinsey worked as director of engineering for New York Times Games, employed since January 2023.",
+      "Witness Assad Razawi described hearing several gunshots and seeing a man drop to the ground while a couple walked calmly away from the scene.",
+      "The suspects were scheduled to be arraigned on Wednesday.",
+      "McKinsey and his wife had a turbulent, separated marriage; each had filed for domestic violence restraining orders against the other, and McKinsey had pleaded not guilty to child abuse/endangerment charges filed in October 2025."
+    ],
+    "disagreements": [
+      {
+        "topic": "Age of the suspects",
+        "positions": {
+          "NBC News": "Both 77 years old",
+          "BBC News": "Both 77 years old",
+          "Los Angeles Times": "Both 77 years old",
+          "CBS News": "Both 77 years old",
+          "The New York Times": "Both 76 years old"
+        }
+      },
+      {
+        "topic": "Name of McKinsey's wife",
+        "positions": {
+          "CBS News": "Candace Jang",
+          "The New York Times": "Candice Jang"
+        }
+      },
+      {
+        "topic": "Charges beyond murder",
+        "positions": {
+          "BBC News": "Also felony conspiracy, wilful discharge of a firearm with gross negligence, and child endangerment; multiple charges including first-degree murder",
+          "The New York Times": "Also willful discharge of a firearm with gross negligence, conspiracy, and child endangerment likely to produce great bodily injury or death",
+          "NBC News": "Held pending charges, no itemized list",
+          "Los Angeles Times": "Arrested on suspicion of murder only",
+          "CBS News": "Booked on suspicion of murder only"
+        }
+      },
+      {
+        "topic": "Manner of the shooting",
+        "positions": {
+          "CBS News": "Witnesses said the man shot the victim then handed the gun to the woman, who also shot him; both wore masks",
+          "The New York Times": "Witness saw a man and woman walking calmly away; no detail on gun-handoff or masks",
+          "NBC News": "No detail on manner beyond multiple gunshot wounds",
+          "BBC News": "Witness heard a flurry of gunshots; couple walked casually away; no masks or handoff mentioned"
+        }
+      },
+      {
+        "topic": "Date the body was found",
+        "positions": {
+          "BBC News": "States body found 'on Saturday' but also says 'at 15:00 on Thursday afternoon' \u2014 internally inconsistent",
+          "NBC News": "Saturday afternoon shortly after 3 p.m.",
+          "Los Angeles Times": "Saturday afternoon",
+          "CBS News": "Over the weekend; cites Sept. 26, 2026 in photo caption",
+          "The New York Times": "Saturday around 3 p.m."
+        }
+      },
+      {
+        "topic": "Whether McKinsey's prior legal troubles are foregrounded",
+        "positions": {
+          "The New York Times": "Extensive detail on the child-abuse charges, dueling restraining orders, custody, and specific alleged incidents",
+          "CBS News": "Reports the October 2025 child endangerment/corporal injury charges, restraining orders, and divorce filing",
+          "NBC News": "References an 'ongoing domestic and child abuse legal battle' but no specifics",
+          "BBC News": "Does not mention McKinsey's prior charges or the marital disputes",
+          "Los Angeles Times": "Does not mention McKinsey's prior charges or the marital disputes"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Straightforward crime wire treatment. Headline frames it as 'shot by his in-laws.' Leads with the killing and the domestic/child-abuse legal battle context in the first sentence, but provides no specifics on those charges. Sparse body largely buried under site navigation and unrelated subscriber links.",
+      "BBC News": "Headline hedges with 'allegedly' \u2014 the most legally cautious of the outlets. Emphasizes the elderly ages of the suspects and the vivid witness account (bloody head and chest). Notably omits any mention of McKinsey's prior child-abuse charges or the marital restraining orders, presenting the victim without complicating context. Contains an internal date inconsistency (Saturday vs. Thursday).",
+      "Los Angeles Times": "Concise local-crime framing. Leads with police investigating the killing and quotes local witnesses on the brazenness ('right in front of everybody'). Emphasizes public-safety reassurance and reopening of the park. Omits McKinsey's prior charges and the marital dispute entirely, keeping focus on the shooting itself.",
+      "CBS News": "Most detail on the mechanics of the shooting via witnesses (gun handoff between the two suspects, masks). Uniquely foregrounds both the domestic-violence court record and McKinsey's October 2025 child-endangerment/corporal-injury charges, restraining orders, and divorce filing, while explicitly noting police did not connect these to the shooting. Balanced crime-and-context framing.",
+      "The New York Times": "Its own executive is the victim, and it provides by far the most granular reporting on the family's legal history \u2014 the alleged striking of a 6-year-old, an unsupervised 2-year-old, the wife's alleged abuse and violence toward McKinsey, custody arrangements, and hearing timelines. Uniquely lists suspect ages as 76 (all others say 77) and spells the wife's name 'Candice.' Frames the story as a domestic tragedy with deep documentary backing while withholding any motive claim.",
+      "The New York Times (headline-only, Times Square item)": "Article 5 is an unrelated headline about a woman fatally shot by police in Times Square; not relevant to this story and provides no corroboration.",
+      "The New York Times (headline-only, Cornell item)": "Article 7 is an unrelated full-text piece about a reopened Cornell sexual-assault investigation; not relevant to this story and provides no corroboration."
+    },
+    "primary_source_alignment": [
+      "No primary source (police release, court filing, or booking record) was provided in the dossier. Several outlets paraphrase a Dublin Police Services news release and Alameda County court records, but those underlying documents are not in the dossier and could not be independently checked against the reporting."
+    ],
+    "missing_context": [
+      "No outlet reports a stated motive; police explicitly declined to give one, and none of the reporting resolves whether the killing was connected to the ongoing child-abuse case or custody dispute.",
+      "Suspect age is inconsistent across outlets \u2014 four say 77, The New York Times says 76 \u2014 and no outlet reconciles the discrepancy.",
+      "The wife (Candace/Candice Jang) and her whereabouts, statement, or involvement are not addressed by any outlet beyond noting she filed restraining orders and had custody of the children.",
+      "It is unclear which children the 'child endangerment' booking charge against the suspects pertains to; The New York Times flags this ambiguity but no outlet resolves it.",
+      "No outlet reports whether the suspects had legal representation as of publication (BBC and NYT explicitly note this was unclear).",
+      "No primary source document (the police release, arraignment records, or the underlying court filings referenced by CBS and NYT) is included in the dossier, so the more detailed claims about the family's legal history rest on outlet paraphrase only.",
+      "BBC's body text contains an internal date inconsistency (body found 'Saturday' vs. '15:00 on Thursday afternoon') that no outlet clarifies.",
+      "Articles 5 and 7 from The New York Times are unrelated stories (a Times Square police shooting and a Cornell assault investigation) that appeared in the dossier but do not bear on this story."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets reported the same killing but with materially different framing \u2014 notably CBS and the NYT foreground the victim's own prior child-abuse charges and the marital legal battle, while the BBC and LA Times omit that context entirely, and outlets disagree on the suspects' ages. That divergence in what is emphasized versus buried is the story worth reporting.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZElHWGppSVl5UF9WS3BPdGJlbmUybkp0dzNCbFRBUzJFc0k3UDM1MTZWYWVyR1ZGMEFuenFHMVRvcUVyVzY2Zl9meW8xRmgtMFZFLWZZa1NzNGNTN09xRGlzT2t6RHd1WktLMHZQOTZwa3RrMkJST2dZUEU0QXpQLVAyNThadE9lZzgyeWhocG5ISnRQOExCVWh3TnM3alppNHQxRHJ4bHhVMnZI?oc=5",
+      "title": "New York Times executive fatally shot by his in-laws in Bay Area park, police say - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1HTldwMi0yYnp0aUVvanlPZ250LTYzVGM4c01LV2lSbEZ2QTRoSXNxYThxUlgwRmpEa3hqanEwUW42b29lTVN0TjljNmItTkhsRzdlNUpIU1ZQMnM?oc=5",
+      "title": "New York Times executive fatally shot allegedly by elderly in-laws - BBC"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNcTNCMGM4a1ctR0hub0JybmU5eDJwZlBWRnFvUU8tdmgyR1ljdWtSQ0FvUmZNT2pWVHNfc181RF8xOVdMWVFZWV9tRGhjMXBKNUNKLTdCMnd1cXVUSlNhZTVSRU9oQ0RyMmVURkctOG12a2cxVWEyU28xVWtFQ3hhNGRwZVFTVWM0Ym5xekZCTm1zcmpocC1yUVVicU5EcVIxWU1QbHprMVFKWDZNSDFRWjY5eXMzYjg?oc=5",
+      "title": "New York Times executive fatally shot by in-laws in California, police say - Los Angeles Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOQUxKV28tQndqbUMxUzYzQjFHb01fYnRVUUJlZzd1czA1TGx1anVMdFdqYnRWOEZZMDhPQ1dXbWtSdTlHZWpmRlp1Q0pmLWE3VHVXTVl3Y0lIQ0VpejhIcl9raS11UWZ2YXhwaVhLWmR5eWZ5VnRQTlY1OUEwY1YtOE1ISU9zSUJzNFFHYW9XMFNLODQ?oc=5",
+      "title": "New York Times exec dies in California shooting; elderly in-laws accused of murder - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQcVIwOTR0bEhKNmxpdngxMTI1UWZySzVjdi1YUzgtN2JoVm1sYlF2Z3ZQR0pPa0ZrN0toT1pISTdpT0Zuc0FONm9JLURDWFJZNDNTQlBfT2djQXNhZGhsbXVzck5MU2FCZ2hERXRMOW9IT0ZDa3RsdkxmcUVRLU9tdi1uTVFrUmVhOGE5S1l6OA?oc=5",
+      "title": "Woman Fatally Shot by Police in Times Square: \u2018I\u2019m Tired of This World\u2019 - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZU1nNlFJenBjbHdDTEdfekhIaWc5MU9fU014VlBOTDlBTUYzbkRIbkU4dGE4WDZkTVZURFpuSXVuX2JSVWY0VFgzSC1wVlk5YUdQZkNxUmExRUR2UFlTZ3pJUWlfbnpUOEItYmZwUTFoaG9YZU0wdmRnbFVrblNwV2ttd0ptaXZwdjVMcVJIZ0N4TFloWFNtbkRMWQ?oc=5",
+      "title": "Couple Accused of Killing Their Son-in-Law in Bay Area Park - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNXpVR2ZLcVdtMDdsb1NNLUFtR1o5UXBIR3RZRTJfRlpBYWhsOVRKQ3g4OGZQN29wR0FRODZYQXV4a2xNSGgyQ09ZRzRJQ19BdmZrX0NtZ0toVUhwc3B1Uzg2ckxWWExrSENxZm1UTVRJM1p0UXhmM19pME41RUZZYUVFQVZvd2Q4ZFVv?oc=5",
+      "title": "Cornell Sexual Assault Investigation to Be Reopened - The New York Times"
+    }
+  ]
+}
