@@ -1,0 +1,94 @@
+{
+  "story_id": "2026-09-29-jack-smith-defends-handling-cb4314581c",
+  "headline_seed": "Jack Smith defends handling of Trump probes at heated Senate hearing - CBS News",
+  "brief": {
+    "story_id": "2026-09-29-jack-smith-defends-handling-cb4314581c",
+    "consensus_facts": [
+      "Former special counsel Jack Smith testified before the Senate Judiciary Committee on Tuesday, September 29, 2026.",
+      "Smith told senators he would not 'be silenced by continued threats of prosecution' from President Trump.",
+      "Smith defended his two criminal investigations into Trump: the effort to overturn the 2020 election in the lead-up to the Jan. 6 Capitol attack, and the handling of classified documents.",
+      "Smith stated he stood by his decisions, including the decision to bring charges against Trump.",
+      "Republicans on the committee attacked Smith's conduct and suggested he himself should face prosecution.",
+      "Sen. Eric Schmitt, R-Mo., accused Smith of perjury by asserting Smith attended an Atlanta Hawks basketball game, calling him a 'dirtbag'; Smith explained the game was actually a University of Maryland game (Maryland vs. Iowa), not in Atlanta.",
+      "Sen. Amy Klobuchar, D-Minn., pointed out that Schmitt and his staff had confused the basketball teams.",
+      "Sen. Cory Booker, D-N.J., accused Republicans of 'gaslighting' the American public by perpetuating the claim that Trump was cheated in the 2020 election.",
+      "Both of Smith's criminal cases against Trump were dismissed and never reached a jury, after Smith moved to dismiss based on DOJ policy following Trump's 2024 election victory."
+    ],
+    "disagreements": [
+      {
+        "topic": "Detail of the Schmitt basketball/perjury exchange",
+        "positions": {
+          "NBC News": "Reports Smith recalled a University of Maryland game where Caitlin Clark was playing, identified as Maryland playing Iowa, and that the Marshals Service was with him.",
+          "ABC News": "Reports Smith said the game involved the Iowa Hawkeyes (not the Atlanta Hawks), and dates the alleged Atlanta Hawks game to Feb. 3, 2024, tied to the Fani Willis Georgia probe; also quotes Schmitt calling Smith a 'villain' and 'total dirt bag.'"
+        }
+      },
+      {
+        "topic": "Wire attribution of the 'won't be silenced' framing",
+        "positions": {
+          "Associated Press": "Headlines Smith telling senators he won't 'be silenced' by Trump's threats of prosecution (AP wire).",
+          "Reuters": "Headlines the same 'silenced' framing (Reuters wire) \u2014 headline-only, an independent wire echoing the same quote."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Headline-only usable content; the retrievable body was almost entirely site navigation/menu boilerplate. The AP frames Smith as defiant ('won't be silenced') and, in a nav headline, describes him forcefully defending investigations 'as Republicans assail his team's tactics.' Neutral wire posture positioning Smith and Republicans as adversaries.",
+      "The New York Times": "Headline-only. Frames the event neutrally and biographically \u2014 'Former Special Counsel Who Charged Trump, Appears Before Congress' \u2014 emphasizing the live-updates format and Smith's role as the man who charged Trump.",
+      "Reuters": "Headline-only. Uses the same 'won't be silenced' framing as AP, emphasizing Smith's defiance against 'prosecution threats.' Standard wire neutrality.",
+      "The Washington Post": "Usable body limited to lede and subhead due to paywall/boilerplate. Frames Smith as forcefully defending his 'derailed efforts' to prosecute Trump, foregrounds his 'will not be silenced' quote, and notes Republicans 'are pressing for a Justice Department inquiry of his conduct.' Uses 'clashes with senators' in the headline, emphasizing conflict.",
+      "NBC News": "Two entries. The live-blog (Article 5) leads with a mix of unrelated items (JMSN cease-and-desist, Obama fundraiser) before the hearing, then details specific dramatic exchanges \u2014 Booker on Jan. 6 pardons and 'gaslighting,' and the Schmitt basketball perjury flub, quoting Klobuchar's rebuttal. The standalone piece (Article 6) headline explicitly frames the hearing as 'filled with GOP insults,' leading with Smith's defiance and emphasizing DOJ targeting of his team. Emphasis on GOP overreach and Smith's composure.",
+      "ABC News": "Most complete body text. Balances both sides: quotes Smith's opening ('I stand by my decisions'), Grassley pressing on GOP financial subpoenas and calling Smith's operation a 'partisan weapon,' Cruz calling it 'the most egregious abuse of power' in DOJ history, alongside Booker's 'gaslighting' charge and Durbin calling attacks a 'smokescreen.' Gives detailed play-by-play of the Schmitt perjury-trap exchange and its collapse. Fullest, most both-sides account in the dossier."
+    },
+    "primary_source_alignment": [
+      "No primary source (hearing transcript, committee statements, or video record) was located for this story. All accounts of Smith's testimony and senators' statements are drawn from outlet reporting and cannot be checked against an underlying document.",
+      "Direct quotes attributed to Smith, Booker, Grassley, Cruz, Durbin, Schmitt, and Klobuchar are reported consistently where they overlap across NBC News and ABC News, but remain unverified against the official record."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provided the outcome or next steps of the hearing beyond the testimony itself (e.g., whether the committee voted on or advanced any referral).",
+      "No primary source \u2014 hearing transcript or official committee release \u2014 was available to verify the exact wording of the exchanges.",
+      "The specifics of the Justice Department's current effort to target Smith's former team members (how many fired, under what authority) are referenced (NBC, ABC) but not detailed or independently documented.",
+      "The AP and Washington Post full articles were largely inaccessible (navigation/paywall boilerplate), so their complete framing could not be fully assessed.",
+      "No outlet quantified how many subpoenas Smith's office issued to GOP groups; Grassley alleged unfair targeting and Smith conceded acquiring financial information but could not recite specifics (per ABC).",
+      "The dossier is dominated by lean-left outlets (NYT, WaPo, NBC x2, ABC) plus two wires (AP, Reuters); no right-leaning outlet's full-text framing is present for comparison."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same hearing with materially different emphasis \u2014 NBC foregrounds 'GOP insults' and the Schmitt flub, ABC gives the fullest both-sides play-by-play, and the wires reduce it to Smith's 'won't be silenced' defiance \u2014 making this a coverage-report story rather than a straight REPORT, and no primary source was available to anchor the record.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPN3d0TU9DbGtMZXhOcGVuR0luSmpmLTQwaEMzSHRsbkFVVkVIU2VscG9LLVp1RGpxc1pXREpIbURyWUdVdTczR1FyQVFDTnpieGI4Q0VWVkJubDVXSlZKOWZJUEtSbkRPVVp5SWdJNWZxUjRjV1pma2lXLUUwZmhDT1RvUjJiT1g4TDVMLTNn?oc=5",
+      "title": "Ex-special counsel Smith tells senators he won't 'be silenced' by Trump's threats of prosecution - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZXVQUGNMbFlNc29pdk5oUmdfT2MxRC1NLXJvTF9ic3hwOVgtcDExcWtTbHVoaUlBNUM5RXlHdUZSVDhWdWtqck5iWVpuZDdKOGFNVnhqZUFCN1NtVmhZbkZvZGhvaWtWbzNieWIyRkhYVFhmc1dRZGRoWkxmeVhFbjBR?oc=5",
+      "title": "Jack Smith, Former Special Counsel Who Charged Trump, Appears Before Congress: Live Updates - The New York Times"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPREhyTmwyTVctRWRwWjJyd3hDbmlZdHNXeW9IUzFGR2ItR051WVRCMFNMMHZsVzV1Ry1TWFotTS1mY0lwUkdhdWRqY3AxTXZBQzlhSndYTkRxSlI5VmdEbGRhNWVPc3BxRFhFVXZieE16U3JXQ2ZKa1RISzdkODJBeG9zU2VBTkEwZUpyakhDcThHVnZYb3FxU0dObXFFM3NiN0kzOUt1X3diaEFvMWllRkk5WkxEQjFHUW81VGpn?oc=5",
+      "title": "Former Trump prosecutor Jack Smith tells Senate he won't be 'silenced' by prosecution threats - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPc2xHZzU1dS0yU1hPRjdnMXQ2WUZPcnBPWlhTNEplY0FRbWVWa0ZrQXN5ZllnWG8wWW4zQnZqUjQ1ZzhPRUtiNmstRUlRX1k5TnVycDZNVlp0c3c0TnNGcnhSVVQ4U0x6ZXdDVTdyWmhqY1dvNXF0SzZxeGFidmJIVGJSSWZNS2d5M29IM3BPMkRFVFRxLTA3LVNJOWFqVDNUZmZDTTBHM014RTc1endKeTFXLVA?oc=5",
+      "title": "Jack Smith clashes with senators over Trump probes, says he will not be silenced - The Washington Post"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQT0Q2b3RDYTluWnJ4b2tFSUJ2cFAyRW5PeG0zSmhJYzdaZXQycHY2ZmZkczJqT3B3cl85VnU1NVhnSDVIT0NBWmdzV1pEeU9KNnRVcnpXSHdqTFozRDZPem0xUENrVmRvMENNQXh6R3RGQXZMSHFENnV3NWplNkxDUUJrbGwtUW9mcWtKUnVUS2ZtMWJZX0ZRY2FiQ3BVY3BuNnZLblFmdGIwY2tCMmxSVnJRQ1NxcTh0ZjRNanBSekdkUFo3UVdHWWE4cjVQdV9ISzh1SA?oc=5",
+      "title": "Live updates: Jack Smith defends Trump probes amid grilling from GOP senators - NBC News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPclhzR1k3UEU1NldIcnBrc3BoWUdrVDgyaW1Td084X3FBb2pZVFVJWkFWamJPVmxfZXVtcDY4R1N5eDhsVUZ4a19fcV9rV2FCaENjcmZXTmVJaHNIRUE4cXNHOWZPVUZrdE5vRnRpVnh6VDRqYzdLUmhnUWZEa09LbGRoYm1GM05Ra21GakJyaW83dzFVdDVGTjI4UGdtemZRUnRlVVowRjNZcGhVV3pLMnRDOFRhNU9XUVczbUQzOS1wMkE0STQwV3dldXVnZw?oc=5",
+      "title": "Jack Smith defends Trump probes in Senate hearing filled with GOP insults - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPaUxjcHNwV2FOLV9SZUNSTGRWODNVQWtTTTBkT3pYV1NPbTNZLTFaVWdWN1gzQ2RkcHFfYVRvRk1Gd1RFU2tfTk9GT05LZ2lWNW5SV0twXzlhSEJadHp4X1pIWFZjcXZEYkZUTFFUNHNNd0RUdGZIQ0wxYjEzVGJmRGxxVU1jdnRGeC13NEpZVzBybXdJb3hsdF95ZTlGQmhyeDl3dNIBqgFBVV95cUxNWjVNTlVDZHdDWVZVaVFyemFUWjZxTlhic09lR0RSVHpLSGVmZUZhZWtYcVNzQUxzTE43MkJJYWQ0QTY3c2w4ZDlqN3FWcTlmY2EzTXlhMjVkU05kUV9FQ3RsaWtMYjc3OW5FVE04aDYxTUtfWmFMUzR5bzY5VGFNRVNyRjBGS2FGYUdza0RMem8wTFFhSHdYWm9zTnlYcThwSEVvSFJvVDdJdw?oc=5",
+      "title": "Ex-special counsel Jack Smith tells Senate panel 'I stand by' decisions to charge Trump - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
