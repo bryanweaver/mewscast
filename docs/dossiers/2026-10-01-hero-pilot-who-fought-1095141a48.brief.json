@@ -1,0 +1,120 @@
+{
+  "story_id": "2026-10-01-hero-pilot-who-fought-1095141a48",
+  "headline_seed": "Hero pilot who fought off hijack attempt prevented \u2018disaster for Israel,\u2019 Netanyahu tells CNN - CNN",
+  "brief": {
+    "story_id": "2026-10-01-hero-pilot-who-fought-1095141a48",
+    "consensus_facts": [
+      "A Flydubai flight (FZ1073) from Dubai to Tel Aviv was diverted after one pilot stabbed the other in the cockpit (Al Jazeera, BBC, CNN).",
+      "Israeli Prime Minister Benjamin Netanyahu said the attacker appeared to be trying to crash the plane (Al Jazeera, BBC, CNN).",
+      "The stabbed captain was identified as Indian national Capt. Smit Machchhar, hailed as a hero by Netanyahu (Al Jazeera, BBC).",
+      "An Israeli passenger (named Yaniv Hayun/Hayoun) entered the cockpit, helped subdue the attacker, and grabbed the plane's controls before a pilot took over (Al Jazeera, BBC, CNN).",
+      "The plane made an emergency landing at Tabuk airport in northwestern Saudi Arabia (Al Jazeera, BBC).",
+      "The attacking pilot was arrested and interrogated by Saudi authorities (Al Jazeera, BBC).",
+      "Netanyahu said the captain saved the lives of 174 people on board (Al Jazeera, BBC).",
+      "The aircraft experienced a rapid descent of over 17,000 feet in roughly one to two minutes according to Flightradar24 data (Al Jazeera, BBC).",
+      "Flydubai described the event as an 'altercation' in the cockpit and said on-duty crew diverted and landed the aircraft safely (Al Jazeera, BBC).",
+      "The Indian embassy reported Machchhar was hospitalized in Tabuk in stable condition (Al Jazeera, BBC).",
+      "No official motive for the attack had been established at the time of reporting (Al Jazeera, BBC)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of people on board",
+        "positions": {
+          "Al Jazeera English": "States 174 people on board",
+          "BBC News": "Says 'at least 150 people,' while also quoting Netanyahu's figure of 174 saved"
+        }
+      },
+      {
+        "topic": "Who the heroic passenger was / Trump's account",
+        "positions": {
+          "Al Jazeera English": "Reports Trump told reporters an 'Israeli plumber' intervened, grabbed the stick and leveled out the plane, and claimed the rudder ripped off \u2014 an account diverging from passenger testimony",
+          "BBC News": "Does not repeat Trump's 'plumber' claim; attributes cockpit intervention to passenger Yaniv Hayun who cited watching Air Crash Investigation",
+          "CNN": "Attributes the intervention to passenger Yaniv Hayoun who put the attacker in a chokehold and grabbed the controls"
+        }
+      },
+      {
+        "topic": "Nationality of the pilots who regained control",
+        "positions": {
+          "BBC News": "Quotes passenger Almog Itali saying one landing pilot was British and the other European (nationality unspecified)",
+          "Al Jazeera English": "Does not specify nationalities of the pilots who took over control"
+        }
+      },
+      {
+        "topic": "Characterization of the incident as terrorism",
+        "positions": {
+          "BBC News": "Reports Israeli Defence Minister Israel Katz called it an 'attempted jihadist terror attack'; notes BBC has no official statement on motive",
+          "Al Jazeera English": "Quotes Trump calling the co-pilot 'perhaps a terrorist or perhaps a whack-job' but notes no motive established",
+          "CNN": "Describes it as an 'apparent attempt to crash the plane' without terrorism labeling"
+        }
+      },
+      {
+        "topic": "Descent altitude figures",
+        "positions": {
+          "Al Jazeera English": "Dropped from 33,000 feet to 17,000 feet in about a minute",
+          "BBC News": "Dropped more than 17,000 feet in less than two minutes"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two headline-only entries, no retrievable body text. One frames the story around Netanyahu and Modi jointly hailing the Indian pilot as a hero (nationalistic/tribute angle); the other frames it as passengers foiling a crash bid 'Israel says,' hedging the hijack framing with attribution. Neutral wire phrasing in both headlines.",
+      "The New York Times": "Headline-only, no body text. Frames the story as a plane 'narrowly averting disaster' after a 'pilot stabbing' \u2014 leads with the near-catastrophe and the stabbing act, uses passive/clinical phrasing, does not foreground the terrorism or hijack framing.",
+      "Al Jazeera English": "Full body text. Leads on Netanyahu praising the captain as hero and the operational fallout \u2014 Flydubai halting Israel flights and Israel's plan to vet all pilots' identities. Gives substantial space to Trump's secondhand 'Israeli plumber' account and vivid passenger testimony ('We're going to die'). Carefully attributes hijack intent to Israeli officials and repeatedly notes no motive established and the co-pilot remains unidentified.",
+      "USA Today": "Headline-only, no body text. Frames around collective heroism \u2014 'Pilot, passengers hailed for foiling attack' \u2014 emphasizing the thwarted attack and shared credit between pilot and passengers.",
+      "CNN": "Full body text, though cluttered with unrelated syndicated clips (Vietnam lightning, New Delhi protest, Zoo Atlanta). Core reporting centers the passenger Yaniv Hayoun's first-person account to Netanyahu of the chokehold and seizing the controls. Frames via Netanyahu's characterization of an 'apparent attempt to crash the plane.' Heavy reliance on PM's office framing and CNN correspondent Jeremy Diamond's passenger interviews.",
+      "BBC News": "Full body text, structured as an explainer ('What we know'). Most cautious framing: explicitly states the BBC has received no official statements from police, emergency services, or investigators on motive, and attributes the hijack/crash characterization to Netanyahu. Provides the most detailed flight-tracking timeline (squawk 7700/7500 codes, Jordanian airspace, timestamps) and the widest range of passenger accounts, including divergent details like the British/European pilot nationalities."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No flight data records, official investigator statements, airline incident report, or government transcript was available in the dossier to verify the competing accounts of altitude, passenger count, or motive."
+    ],
+    "missing_context": [
+      "No outlet provides an independently verified motive; the 'jihadist terror attack' characterization comes solely from Israeli officials (BBC via Katz) and remains uncorroborated by investigators.",
+      "The attacking co-pilot remains unidentified in all retrievable sources \u2014 no name, nationality, or background was reported.",
+      "Trump's 'Israeli plumber' account (Al Jazeera) conflicts materially with passenger testimony that Yaniv Hayun \u2014 not identified as a plumber \u2014 grabbed the controls; no outlet reconciles or fact-checks this discrepancy, and the claim that 'the rudder ripped off the back of the plane' is physically implausible and unverified.",
+      "Passenger counts differ (BBC '150' vs 174 cited by Netanyahu); no official manifest figure was provided to settle it.",
+      "No outlet with body text includes a response or statement from the attacking pilot's side or legal representation, nor from Saudi authorities beyond confirming arrest.",
+      "Reuters, NYT, and USA Today are headline-only in this dossier, so their full framing and any unique reporting could not be assessed.",
+      "The GCAA (UAE aviation regulator) and Saudi aviation authorities' detailed findings are absent; only brief characterizations ('security incident brought under control') are available.",
+      "No independent flight-data primary source was available to confirm the dramatic descent figures, which trace back to Flightradar24 as cited by two outlets."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (Al Jazeera, BBC, CNN) reported the same event with materially different framings \u2014 ranging from BBC's motive-cautious explainer to Al Jazeera's inclusion of Trump's contested 'plumber' account to CNN's PM-office-centered passenger narrative \u2014 and key claims (motive, passenger count, who seized the controls) diverge without a primary source to adjudicate.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMHV1SVRpbTNOMkdCZHowZWpBZG5PdUtTTWhtZnNkSXFSZlkxYzctTHdmNzVmZmYzUTROQ05JZ2I0dFRlZ0VLQTNxN2t1YkpHTFBjeFhTczBUTEhEdHp3bE1WZVc1TXQ4YXpfVS1tX0hnRlJkeDVZa2J0Z0FjVEstbVFrcEN2ckNWbjBDRk9wdEx5enlNRVBSMk1VSnhuY3Bh?oc=5",
+      "title": "Netanyahu and Modi hail Indian flydubai pilot as hero - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdlBIQTBLa3lMaHU0V1pOV2YzVnFTa2Rzal9BNGJqZDZiQl9GWkxfWE1GVzFEQkhRVnNjZlFGLVFQTERWUEFFVmpUcVd3dnNUVlpUYWlDR0NMRUF2UmdBUExQbDF2RWlKdl9CYXE4R1plMjVrNy1IT3A1SDNlWTllTlV5NWUtcFFZ?oc=5",
+      "title": "Plane to Israel Narrowly Averts Disaster After Pilot Stabbing - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcTE5VFZqQUtLTFJkMVZLZ2dHSzFMYTQtVlMydkhNT0RYSUJNLU5icjdGRS1vYUppTzREeXd3U0xmUlZtVVRjRl9HcVNsZEsycmRUZ2FjWnNzSnpPVzA1Smh6dVY4Y3BfVlNUaWhLR3d3ckFsVjQzUHVpclhqd1Nhc2V1X2pxYUlrVzZOWGV0R1dSYTRtd1cwSUFDYVo2RjEtMzdobTJKZF9QQkHSAbABQVVfeXFMUFV0ZFROUTBITjNRZTVEckJsWER3MkY2SFBuNnl6V1JOdW12Yy11a3pwV0VSUXJWbHdPcl9jejBRSDg1Q2UyMnlXOUt2YlJWdFRDQjhwUFdidXlPMTlzOGdUZDd6NzVWajhsZzhmeTl1YkR2MmEzb1NpckJEMW12NTNXWEM4Uk55aVJ2Q0RQTVA4UTR3MTRDZTZsc3ZhR0FLQ0RGUV9WX3pKYzE2MkgycDk?oc=5",
+      "title": "Netanyahu calls stabbed Indian pilot a hero; Flydubai halts Israel flights - Al Jazeera"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWnpLNmZJUXN6UzQ0RlhKSFhxT2xYMWZ1R1VwYVdZX3ZuZWFTYUZyV1VYTVhralA5Y0ROVjlNVl9XOGpTSWhEcGM3UE01WVA3clNKcm5KdDZ2dUY1U3FyODdsWkkzSWs2VW5NZUJWQXFYQ0dxamNudlljZl92REs3SnFXSEUzTEswdjh4NnRia2VWZGd2TGE2SmZ6VDBQTXpiRDM0SDZSZ29ubUZUd3Zsa0E4LTBoRmxpSDRjd0JkcmhYbkNV?oc=5",
+      "title": "Passengers foil bid to crash Dubai-Tel Aviv flight, Israel says, after co-pilot stabs pilot - Reuters"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUXJFTWVwZ1N3TjJTbEM2Z3JQUHl6UFV0NzBEcGdOM3NEV3RTbVpUWTlaYXBuNnQta2l1a3ppZmhPWjdxek05Q0s5a2ladlhZcU84T0hyR2l5dFBSUWJlZ2JsbDViblBTbHhqTUVVSEE2QnBjbTdqWXlRYnVvTXhFVFpfd2pfbkExN1diQzg5QVF5YzluVGVMU0U2NDY5d1NVOW1YV2piUFhWdE0?oc=5",
+      "title": "Pilot, passengers hailed for foiling attack on Israel-bound jet - USA Today"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZ0hMNWtUMVE1aW5FeS1HaEFEVS1XczNZZEFPYTFYdEM4OUlkZ1lEV1VIOWQzWmZrNXdRb1BibTA4Y2RITjgzb0dFbl9JX0NmVFBtREtYT2liNU1jMHNzQmNHRDhUaFhVUFp3ZTFvenlhUmJvMlRWeG5aSUVsVkh0Tm50LVJHSEFKbnA4WmFwN1RVZXNMYmFLaXJQVm9Nd3NtY0NZOGUyZw?oc=5",
+      "title": "Hero passenger tells Israeli PM Netanyahu how he broke into cockpit - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5hMkphWkx4ZWFNYVBzdGczb2ozTnNNM2R1X0t5ajczLUk1MlVHOG9xRlM0eTZpUjZvNjZINUVQdmprRDVHMVZPRWUzbTlwQUZhR1BYdm1zaDJSdWc?oc=5",
+      "title": "What we know about stabbing on Flydubai flight to Israel - BBC"
+    }
+  ]
+}
