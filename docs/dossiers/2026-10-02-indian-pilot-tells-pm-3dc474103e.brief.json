@@ -1,0 +1,111 @@
+{
+  "story_id": "2026-10-02-indian-pilot-tells-pm-3dc474103e",
+  "headline_seed": "Indian pilot tells PM Modi he opened flydubai cockpit door during attack - Reuters",
+  "brief": {
+    "story_id": "2026-10-02-indian-pilot-tells-pm-3dc474103e",
+    "consensus_facts": [
+      "Flydubai captain Smit Machchhar, an Indian national, was attacked by his co-pilot during flight FZ1073 bound for Tel Aviv from Dubai on Wednesday (reported by CBS News, BBC News, NBC News, CNN).",
+      "Despite being stabbed and lying injured on the cockpit floor, Machchhar managed to open the cockpit door so passengers could enter and subdue the attacking co-pilot (CBS News, BBC News, NBC News).",
+      "Machchhar described the moment in an emotional video call with Indian Prime Minister Narendra Modi from his hospital bed (CBS News, BBC News, CNN).",
+      "Machchhar said 'I was fighting for my life' but was determined not to let others die (CBS News, BBC News, CNN).",
+      "There were 174 people on board the aircraft \u2014 Machchhar plus 173 others (CBS News, BBC News states more than 170 passengers).",
+      "After the attacker was overpowered, reserve/other pilots on board landed the plane safely in Saudi Arabia (CBS News references passengers subdued the attacker; BBC News specifies two reserve pilots landed the plane at Tabuk Airport).",
+      "Israeli Prime Minister Benjamin Netanyahu stated investigations indicated the attacker had undergone 'Islamist radical indoctrination' and that the attacker was suicidal, shouting 'kill me, kill me' after being subdued (CBS News, BBC News).",
+      "Machchhar was taken to hospital in Saudi Arabia and is reported to be in stable condition / recovering well (CBS News, BBC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Co-pilot's nationality",
+        "positions": {
+          "BBC News": "Reports Netanyahu said the attacker was an Omani national.",
+          "CBS News": "An Omani official confirmed the co-pilot was born in Oman and currently holds Omani citizenship, but Oman's government has not publicly confirmed his nationality."
+        }
+      },
+      {
+        "topic": "How the cockpit door was opened",
+        "positions": {
+          "CBS News": "Machchhar 'managed to open the door.'",
+          "BBC News": "Machchhar told himself to 'go for one last push to open the door from inside.'",
+          "NBC News": "Machchhar 'summoned his last ounce of strength to kick the cockpit door open.'"
+        }
+      },
+      {
+        "topic": "Alleged Iran link",
+        "positions": {
+          "CBS News": "President Trump suggested the co-pilot was linked to Iran, going further than Netanyahu, who said it was 'too early to say'; Trump said 'based on what I'm hearing, is yes.'",
+          "BBC News": "Does not mention a Trump/Iran claim; reports UAE is investigating whether the incident was linked to any terrorist activity.",
+          "CNN": "Does not mention an Iran link.",
+          "NBC News": "Does not mention an Iran link."
+        }
+      },
+      {
+        "topic": "Co-pilot's whereabouts post-incident",
+        "positions": {
+          "CBS News": "Reports the co-pilot was transferred Thursday from Saudi Arabia to the UAE for questioning by Israeli, UAE and Saudi officials, per an Israeli official.",
+          "BBC News": "States the UAE has begun investigating but does not detail a transfer of the co-pilot."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two headline-only entries (Articles 1 and 4) with no retrievable body text. Both frame the story around the pilot's direct account to PM Modi \u2014 one on opening the cockpit door 'during attack,' the other on his stated refusal to 'let anyone die.' Wire-neutral, event-focused phrasing.",
+      "CBS News": "Fullest account. Leads on the heroism and faith angle ('saved himself and 173 others while fighting for his own life'), foregrounding Machchhar's Hindu religious chants and emotional breakdown. Uniquely surfaces the geopolitical dimension \u2014 the co-pilot's transfer to the UAE, Netanyahu's radicalization claims, and Trump's suggestion of an Iran link \u2014 giving the piece the broadest frame of all outlets.",
+      "BBC News": "Leads on Machchhar's moral resolve ('I was not going to let others die') and provides the most operational detail: flight number, the 17,000ft plunge, the 7500 hijacking squawk code, two reserve pilots landing at Tabuk, and the airlift to Abu Dhabi. Frames Machchhar as a nationally celebrated hero, emphasizing Indian government and social-media praise. Attributes the Omani nationality claim to Netanyahu; omits any Trump/Iran angle.",
+      "The Washington Post": "Headline-only, no retrievable body text. Frames the story neutrally as the pilot describing a 'harrowing attack' in a call with Modi \u2014 descriptive rather than heroic or geopolitical.",
+      "NBC News": "Body text is largely obscured by subscriber-wall navigation and unrelated article links. The usable fragment leads vividly on the heroism ('Couldn't let all of them die') and the physical drama ('collapsed in a bloody heap,' 'kick the cockpit door open'). First-person survival framing; little geopolitical context in the retrievable text.",
+      "CNN": "Video-centric entry; body is a transcript/caption set. Leads on the dramatic first-person quote 'I was fighting for my life' and 'I cannot let everybody else die.' Framing is emotional and moment-by-moment ('One last push, Smit!'), emphasizing passenger and family eyewitness accounts. No geopolitical or Iran framing in the retrievable text."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., full transcript of the Modi video call, official UAE/Saudi/Israeli investigation statement, or flight data) was located for this story. Alignment cannot be assessed.",
+      "The quotes attributed to Machchhar in the Modi call are near-identical across CBS News, BBC News, and CNN, suggesting a shared underlying video that none of the outlets provide in full as a primary document."
+    ],
+    "missing_context": [
+      "The co-pilot has not been publicly named by any authority; his identity and confirmed nationality remain unresolved (CBS notes Oman has not officially confirmed, while BBC reports Netanyahu called him Omani).",
+      "No outlet provides independent corroboration of Netanyahu's 'Islamist radical indoctrination' claim; it rests on Israeli officials' initial questioning, and Netanyahu offered no supporting details.",
+      "The Trump/Iran link (reported only by CBS News) is unverified speculation; Trump himself hedged ('we're working on it'), and Netanyahu called an Iran connection 'too early to say.' No corroborating evidence is presented.",
+      "No outlet reports the condition or statements of the co-pilot's own injuries beyond that he was hospitalized and 'treated for unspecified injuries' (CBS).",
+      "The exact mechanism of how a stabbed, floor-bound captain opened a locked, hardened cockpit door is described inconsistently (opened vs. kicked vs. pushed) and never technically explained.",
+      "No casualty figures beyond the pilot's injuries are given; whether any passengers were hurt is not addressed by the outlets with body text.",
+      "Two of the seven dossier entries (Reuters x2) are Google News redirect stubs with no article body, and Washington Post is headline-only; four outlets (CBS, BBC, NBC, CNN) carry substantive text, though NBC's is heavily degraded by paywall/navigation clutter."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (CBS News, BBC News, NBC News, CNN) corroborate the core event and the pilot's account with substantial agreement and only minor framing differences; the geopolitical add-ons (Iran link, radicalization) are single-sourced and belong flagged as disagreements rather than driving a META treatment, so a straightforward REPORT with careful attribution fits best.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYW1JN1lJT0NhMWxSTm4xY1NJWHg4UGp5SzQtUlV2UjB6ZHgzdExsbXRIckJkWWpGWW1aY3dHX2ZBLTh5LS1yME1WaWJPQXdkTVluRVpCOTU2WjVhMm9wb1VVUEdsaG5xWlFYQUdPSndwYmhYN1VzMnBBMFJkdzVMTmJrc3R4cWxlcHBRdE5lWFBVc2NMLTJDSnRGazFDeXJXbW13Vzh0Q0QySjFTVVV3VXZiOHg?oc=5",
+      "title": "Indian pilot tells PM Modi he opened flydubai cockpit door during attack - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxObFJWdHdfOF9pRGM1Yk9mTk80czJQMExhc2RwRlhTOEJ4dW1YNXNsU0toSzZUWEVUNFFJTkZyaERhWGVidVhWRDVGZUl4bWVuSlItNVEzWmtYYWZlR1VBU2RFaE02cV9yRnZMbzB5X29hcDM1VGtTYlI4cm5oNzBfN2l3ekxBaFdoVV9iUUExNUtQMGVhTlR5OUhn?oc=5",
+      "title": "FlyDubai captain tells India's leader how he saved himself and 173 others while fighting for his own life - CBS News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBhQTllbTExbExFXzVvMm4td1B6UHdzRTNhWlJ0N2tpbFlKY1lmSF94US15Z3VPbjNxMHdYd0FLS3NlY1h3ZEdVWVAxZ2pfY241a0Vlc21fRmpPVjQ?oc=5",
+      "title": "'I was not going to let others die' - pilot of Flydubai flight describes cockpit attack by co-pilot - BBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBKOVFvODJKVExGWTBtWU9vZGw1eWhnVFdpeXZkRnNhS3VrRVJ5bXB4dFZjTDltUk5HMkpRYTVXbm1TMkFmSUdFOUlXRktCQXdmcGFCeThydHR2SE4xTFdaVzA4ZkI5R2s?oc=5",
+      "title": "Flydubai pilot tells India PM Modi he couldn't 'let anyone die' - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxORXNhT1F2QWxMR0lpS0ZlSmtOeEU4b3VoNUJXdDNqRUdUa1Fwb25IbGlhazV4MG5CT2RKUFIzc05HamtnUU5keW5SYWk0SndmVG9idXRKaVo0UWVwZHJZdzlUeC13d0NsT0plQ2pyOW5QR1lyWnQ5VElfenFZM3RVamFPNHZTai1PeGpDbjVySURVazVwN25DV2tMOXBXVDhqWnhNMGZQb0MxVVRiN2x4dUNqOHlsd25pVDNMSEYtYnR3b09CTnc?oc=5",
+      "title": "FlyDubai pilot describes harrowing attack in call with Indian Prime Minister Modi - The Washington Post"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbFZDR1paTE5mdnpFV2Z4Q3JSLW4zdGs1ODdRUU9ud3c5ZmdOY3pvVkZwNHJhOVh0UzkyZEhtcG5XVmZFNGFOQzhPTHNBZ2dtU3RpUngtMFFhX1Z3U1FEN0NSZGp2TEZUVWlmQ0ExUldLYUpmQmZTcDJXMDdnV3N0dUhoeDZSUFpERFhHNXJnZUNPQU9mYVRtSU54ZGVfZUhRdjdUcGJIVHJ1dw?oc=5",
+      "title": "\u2018Couldn\u2019t let all of them die\u2019: Hero Indian pilot attacked midair speaks for first time - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTHF0a0hGRW9EbFpmVU05bUNZczRBUzZqY1dZeE91Y0trLUE0Nmg4eVN0Q1k0b05LbXYxR2h3WVh1REZ5MWNPb0F6bGJvRnNQUWZyZWlSU25iYTBwNVpXOWY4Vlc2eHFDZ0VfSmc5LW81WHdodU0wYVNXX2xMZDFCcEQwWXlhUHRyWkpzUDZhbFRQYjVDclRIaUR4NWhjVERSZzZtTVp3?oc=5",
+      "title": "\u2018I was fighting for my life,\u2019 Flydubai pilot tells Indian prime minister - CNN"
+    }
+  ]
+}
