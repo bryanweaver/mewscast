@@ -1,0 +1,129 @@
+{
+  "story_id": "2026-10-02-christa-pike-unconscious-on-e180ab9ece",
+  "headline_seed": "Christa Pike unconscious, on a ventilator at Nashville hospital, her lawyers say - NBC News",
+  "brief": {
+    "story_id": "2026-10-02-christa-pike-unconscious-on-e180ab9ece",
+    "consensus_facts": [
+      "Tennessee attempted to execute death row inmate Christa Pike by lethal injection on Wednesday night but was unable to put her to death.",
+      "Pike, 50, was sentenced to death for the 1995 murder of Colleen Slemmer, a crime she committed when she was 18.",
+      "Pike would have been the first woman executed in Tennessee in more than 200 years.",
+      "Pike survived two lethal doses of the drug pentobarbital and was taken by ambulance to a Nashville-area hospital.",
+      "As of Friday, Pike's attorneys said she was critically ill, unconscious, intubated and on a ventilator.",
+      "Republican Gov. Bill Lee ordered an independent/third-party review of the failed execution and halted all remaining executions in the state for the year.",
+      "At least seven needles were used in attempts to establish IV access, and Pike at one point tried to help officials locate a vein.",
+      "Pike could be heard crying, whimpering, snoring and/or breathing loudly during the procedure, and she said her arm felt like it was about to burst or explode.",
+      "Pike's attorneys filed an emergency motion Friday asking the state to preserve all evidence related to the failed execution attempt.",
+      "Pike's legal team had warned before the execution that her preexisting conditions, including thrombocytosis and small veins, raised the risk of unnecessary pain and suffering.",
+      "Media witnesses reported that curtains to the execution chamber were closed at multiple points, limiting what they could observe.",
+      "The Tennessee Department of Correction stated it followed its lawful, established execution protocol, which does not allow more than two rounds of pentobarbital.",
+      "Multiple last-minute legal challenges, including two efforts the U.S. Supreme Court declined to grant, failed to stop the execution before it proceeded.",
+      "Pike's attorneys are seeking to have her death sentence commuted following the failed execution."
+    ],
+    "disagreements": [
+      {
+        "topic": "Date the execution attempt occurred vs. when it was reported",
+        "positions": {
+          "Axios": "Dateline Sep 30, 2026; describes events as Wednesday night and frames as a breaking story",
+          "Associated Press": "References the attempt as Wednesday, Sept. 30, 2026, with updates through Oct. 1",
+          "NBC News": "Describes the attempt as 'Wednesday night' with the ventilator statement issued Friday, Oct. 2",
+          "BBC News": "Describes the attempt as Wednesday, with Pike unconscious on a ventilator 'on Thursday night'"
+        }
+      },
+      {
+        "topic": "Year Pike was sentenced to death",
+        "positions": {
+          "BBC News": "States she was sentenced to death in 1996",
+          "Associated Press": "States she was sentenced to death for a 1995 murder (does not specify sentencing year)",
+          "NBC News": "States she was convicted in the 1995 murder case and sentenced to death (no year for sentencing)"
+        }
+      },
+      {
+        "topic": "Length of the execution attempt",
+        "positions": {
+          "Associated Press": "Describes more than 90 minutes in the death chamber",
+          "NBC News": "Says the execution process lasted longer than two hours, per Friday's filing",
+          "Axios": "Timeline from curtain opening around 7:27pm to witnesses ordered out at 8:53pm"
+        }
+      },
+      {
+        "topic": "Explanation for why Pike survived",
+        "positions": {
+          "BBC News": "Cites Dr. Joel Zivot that pentobarbital likely never reached a high enough blood level, possibly spreading under the skin or blocked by clots from thrombocytosis; raises possible drug degradation",
+          "NBC News": "Cites Dr. Natalie Azar that pentobarbital flowed into the arm instead of the vein, delivering a less-than-lethal dose that suppressed respiration but did not kill",
+          "Associated Press": "States it was not immediately clear what went wrong and that attorneys cited several possibilities"
+        }
+      },
+      {
+        "topic": "Whether the Supreme Court role is characterized as reversing a stay or thwarting efforts",
+        "positions": {
+          "Axios": "Says the 6th Circuit ordered a short stay, which the Supreme Court reversed in a two-sentence order just before 6pm",
+          "BBC News": "Says the U.S. Supreme Court thwarted two separate efforts to stop the lethal injection"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Wire-neutral but leads with 'critical condition' and 'failed execution attempt.' Prominently features the victim's mother, May Martinez ('I didn't get justice for my daughter'), giving voice to the victim's side alongside the defense's account. Emphasizes the 'unprecedented' nature per a death penalty expert and the governor's halt. Uses attorney Spivey's 'cruel and torturous' characterization with attribution.",
+      "NBC News": "Leads with Pike's clinical condition \u2014 'unconscious, on a ventilator.' Heavily sources the attorneys' emergency motion and foregrounds alleged protocol failures (fresh needles, ignored medical concerns, 'deliberate indifference'). Adds exclusive detail that there was no emergency oxygen in the execution room. Includes two medical experts (Denno, Azar) explaining the mechanics. Mentions the crime details near the bottom; frames predominantly around state failure and the cruelty question.",
+      "BBC News": "International framing leads by labeling Pike a 'US murderer' in the headline, then details her condition. Carries a distressing-content warning. Gives the most technical medical explanation via anaesthesiologist Dr. Zivot. Uniquely details co-defendant Tadaryl Shipp's lesser sentence and the 'media frenzy' context. Balances defense allegations with the Department of Correction's defense of its protocol.",
+      "Axios": "Reconstructs a minute-by-minute timeline (7:27pm curtain open, 8:53pm witnesses removed). Leads strongly on transparency concerns \u2014 repeatedly quotes media witnesses about curtains blocking their view ('happened behind a closed curtain'). Emphasizes what reporters 'don't know.' Local-Nashville angle via reporter Adam Tamburin; foregrounds the courts' back-and-forth and the governor's call for third-party review.",
+      "Reuters": "Headline-only in this dossier ('Christa Pike getting life-saving medical care after surviving Tennessee execution'). No body text available; cannot assess framing beyond the headline's emphasis on 'life-saving medical care' and 'surviving.'",
+      "ABC News": "Leads with 'unconscious and on ventilator' and the 'botched execution' label. Sources the same attorney statement and emergency motion as NBC. Uniquely surfaces the political dimension \u2014 notes Sen. Marsha Blackburn (running for governor) called to bring back the electric chair. Includes the governor's quotes defending that protocol was followed and his insistence that no one wanted this outcome. References the corrections chief's record of botched executions.",
+      "NPR": "Headline-only in this dossier ('Failed torturous execution attempt on Christa Pike reignites death penalty debate'). No body text available; headline emphasizes the 'torturous' characterization and the broader death penalty policy debate."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (the emergency motion, the TDOC statement, the governor's order, or court orders) were included in the dossier, so direct alignment between coverage and the underlying filings cannot be verified.",
+      "Multiple outlets (NBC, BBC, ABC) quote directly from Pike's attorneys' Friday emergency motion \u2014 including the 'bent in a 90-degree angle' needle detail and the 'deliberate indifference' language \u2014 but the brief relies on the outlets' secondhand rendering rather than the motion itself.",
+      "The Tennessee Department of Correction's statement that it 'followed every step of the State's lawful, established execution protocol' is quoted by Axios and referenced by BBC and ABC, but the full statement was not provided as a primary source."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides an official statement from Tennessee medical authorities or the hospital on Pike's actual prognosis; her condition is sourced entirely through her attorneys.",
+      "The state's own detailed account of what went wrong is absent \u2014 the Department of Correction declined to explain beyond asserting protocol was followed, and no official timeline from the state is in the coverage.",
+      "The precise sentencing year is inconsistent across outlets (BBC says 1996; others cite 1995 for the murder), and none reconcile the discrepancy.",
+      "None of the outlets report whether Tennessee intends to attempt to execute Pike again if she recovers; BBC notes authorities have not said.",
+      "The composition and qualifications of the execution team (who inserted the IVs, whether they were medically licensed) are not detailed in any outlet.",
+      "The scope, timeline, and independence of the governor's ordered 'third-party review' are not specified in any article.",
+      "No primary source documents were located for this story, so all quotes from the emergency motion, court orders, and TDOC statement are secondhand through outlet reporting.",
+      "Reuters and NPR appear in the dossier as headlines only, so their full framing could not be assessed."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text reported the same event but with materially different emphasis \u2014 AP centers the victim's mother, NBC and ABC foreground alleged state protocol failures, BBC leads with 'US murderer' and the deepest medical explanation, and Axios drives on transparency and the closed curtains. The divergence in framing (and the competing medical explanations) makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNLW0wLTZ5T1N2WjcyMklRc3F6Wkt1Qk1FRGJWV3NqS1c1QlhiZF90eGtzOXZKWVF5dGJFWkxBNjZ4RnJ1ZkI2LUJUVFh3d3hwU0w0SFNVN1UyUEJvcXotUF9iQUdWSnJNN0hiS2FtZXZBOWdIWVlvbmxiMkR6Z3NKZUphZnYxNEFLdnNwY3hzSEZjT043dmpPMDBKNFBEQQ?oc=5",
+      "title": "Christa Pike is in critical condition after Tennessee\u2019s failed execution attempt, her lawyers say - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPay0waFQtTUlPQ1YtTnZ2XzgyUG1XcFNtS1ZhYy05ZFBnY0NJcjBKYzBvbDFKaXd3OXVETkpWdENZa21iOHBob1phZm5sOVFsUzlHVlpXTlBqb1hHNUwzdUdXNEh3YUViWUVKeW05MnI2dnhkaHF4eFMxd1dBMGhSNnY5dnNaRzhfRURqWnhJLWYxTkJZTUlLOUFTT21zMkYwX3VoN1dBQjZ3RkR6NTUyS0VjWjQ?oc=5",
+      "title": "Christa Pike unconscious, on a ventilator at Nashville hospital, her lawyers say - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5zV016X29nWjlxTGJZS3RDTWIxRlB5WUN3dHJTTlFSYkxOTk1hbWk2U3pfWGo0R0p1ZGIzRGRkY2V0NFBtZDRKRkVPdzhlVG0tSUVtQjRieE5XT2c?oc=5",
+      "title": "US murderer Christa Pike unconscious and on ventilator after failed execution, lawyers say - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPdnZEb3FnZ1BMY28tVDJEUkFMTnZVc3JWUE5QMnVGU1BHZGpCZUtqeng1WE54cHhreTc5V0o3UEJEUGx0T3lDcml5NGthajZLQVVRVUlhOTJLbDJKa2N2NmlsanBqV0FhcHp5SlJGYTN1S0RTX2ZKQTNzT2RlZnkyajV6WUZKYXc3dE5xOTBIYUlhRk1WdmVSbHBrZw?oc=5",
+      "title": "Christa Pike hospitalized after failed execution attempt - Axios"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWk1wTDJka0h4dWZaZ2dlSUUzNHN0NENEUFRPdHctQWhvZHlvSmlBOEVHcktObXItQnF1SlBONDgtQjlSNXlXZzJqenlKRWthVXZ3c2xpSlFVM1R3dEU4RkoySkdXOHZmc0V4LWVodjBXR2hWNjI3WUZ2eFZBSXZjY3kxZkpVdmZOdjBSQVNqRzFSTUZab3BLQ2NfLU1vVXJVSEl0XzF1eXFPMVk?oc=5",
+      "title": "Christa Pike getting 'life-saving medical care' after surviving Tennessee execution - Reuters"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNGtDbnpaajVvdFdRVkVkeGNKMVBSN0JOZnlheExHbzNmY3ktRzlUc25WZjBsREIwblJMVEtFOGZRcHlqd1JiRUVZMWw2ZnI5Xzl0Ui02dlBnRV9LbXc5aFVsMlBnakVudDdLTFVOM3QxVW42bGFBTmJtRXI2M1d1UElqbTJpTXc5eGhubkVjblBZclkwalhmdi1VTDNnVFXSAaQBQVVfeXFMUGFwT19YTFFpMHRtcEYtNnhKemRfdU9YdkJBWkk5cDZma2ZlRTQ1QkJld0VPR20xWFppYWI5MXZsY2I4TG5VVjF3bFY4OVhfQ3djUGhZUDJKcXVwTGF5T1Uyd01uWWlCcWNseGhicERVNWRubGxkRnFMN01ZeVdON3VlVWJhWHUzLVJJd0ZzUUpSb1JjUjc1ckNOaDNHMExLd1hhODE?oc=5",
+      "title": "Christa Pike unconscious and on ventilator in hospital after botched execution, attorneys say - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPelNrMExPUGRROGVSLURvZXViYmVwWDd0dDdRRGowaEdmZktIT3R0LUp4THA1QkFGbk5oeW9CUmxQcWwzUXBnVlFYRWVZZUxKeU1LSUM0cEVxTUdERjkxbFpkb2JCWFJ0alFfRzZQdTRIQnlYLTVwM1puMmRFLW5mU01EVkNIdTh3SmFmOEFnN0o2Zw?oc=5",
+      "title": "Failed \u2018torturous\u2019 execution attempt on Christa Pike reignites death penalty debate - NPR"
+    }
+  ]
+}
