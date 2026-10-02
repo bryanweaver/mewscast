@@ -1,0 +1,125 @@
+{
+  "story_id": "2026-10-02-tennessee-inmate-in-critical-76f83cc174",
+  "headline_seed": "Tennessee Inmate in Critical Condition After \u2018Torturous\u2019 Botched Execution, Lawyer Says - The New York Times",
+  "brief": {
+    "story_id": "2026-10-02-tennessee-inmate-in-critical-76f83cc174",
+    "consensus_facts": [
+      "Christa Gail Pike, 50, is in critical condition and receiving lifesaving medical care at a hospital after Tennessee's failed attempt to execute her.",
+      "Pike survived two doses of the lethal drug pentobarbital administered on Wednesday, Sept. 30, 2026, and remained alive, prompting transport to a hospital by ambulance.",
+      "Pike was sentenced to death for the 1995 murder of 19-year-old Colleen Slemmer, a crime she committed at age 18; she was convicted in 1996.",
+      "She would have been the first woman executed in Tennessee in more than 200 years.",
+      "Attorney Randy Spivey described the execution attempt as 'cruel and torturous' and said at least seven needles were used in Pike's left arm over roughly an hour, with one needle appearing bent when pulled out.",
+      "Spivey said Pike was cooperative, telling the execution team where to find a vein, saying 'please try here' and asking them to try higher on her shoulder.",
+      "Witnesses reported Pike was still breathing, snoring, moaning and moving after the drugs were administered, including after the chamber curtain was closed.",
+      "Republican Gov. Bill Lee ordered an independent/third-party review and indefinitely halted/paused the remaining scheduled executions for the year, calling the event a tragedy and saying it 'shouldn't have happened.'",
+      "Pike's lawyers are calling on Gov. Lee to commute her death sentence to life in prison, a request he had previously denied.",
+      "The Tennessee Department of Correction stated it appeared to have followed its lawful, established execution protocol.",
+      "This is the second failed execution attempt in Tennessee in 2026; in May, the execution of Tony Carruthers was called off when staff could not find a vein, and he received a one-year reprieve.",
+      "The execution pause will affect the December execution of Gary (Wayne) Sutton, a convicted murderer.",
+      "May Martinez, Slemmer's mother, who favored the execution and traveled to witness it, expressed that she did not get justice and described a disturbing scene.",
+      "Pike's attempted execution came after last-minute legal challenges, including appeals that reached the courts."
+    ],
+    "disagreements": [
+      {
+        "topic": "Supreme Court role in allowing the execution to proceed",
+        "positions": {
+          "ABC News": "Reports in detail that the U.S. Supreme Court, in a 6-3 decision, lifted the Sixth Circuit's stay allowing the execution to proceed, with Sotomayor, Kagan, and Jackson dissenting.",
+          "BBC News": "States the US Supreme Court allowed the lethal injections to go ahead, without the vote count or dissent detail.",
+          "Associated Press": "Does not detail the Supreme Court decision in the provided body text.",
+          "NBC News": "Does not detail the Supreme Court decision in the provided body text.",
+          "Kingsport Times News": "References a federal court ordering a pause hours before, but does not detail the Supreme Court vacating the stay."
+        }
+      },
+      {
+        "topic": "Medical cause of the failure",
+        "positions": {
+          "NBC News": "Cites medical experts (Dr. Jonathan Groner) suggesting the IV line may have 'infiltrated' \u2014 the drug deposited in tissue rather than the bloodstream \u2014 consistent with burning, blistering, and purple discoloration.",
+          "Associated Press": "Says it was not immediately clear what went wrong and that Pike's attorneys cited multiple possibilities.",
+          "BBC News": "Does not offer a medical explanation beyond the attorneys' account.",
+          "ABC News": "Does not offer a medical explanation; focuses on witness accounts.",
+          "Kingsport Times News": "Does not offer a medical explanation."
+        }
+      },
+      {
+        "topic": "Scope of the governor's execution pause",
+        "positions": {
+          "Kingsport Times News": "Notes Lee said the pause applied to Pike, but her lawyers said the order did not go far enough.",
+          "BBC News": "States the order to pause all executions overlaps with the Dec. 3 Sutton execution.",
+          "Associated Press": "Says Lee indefinitely postponed Pike's execution and another scheduled this year.",
+          "ABC News": "States the remaining scheduled execution will not be carried out this year."
+        }
+      },
+      {
+        "topic": "Details of injection-site injuries",
+        "positions": {
+          "NBC News": "Reports Pike's right arm turned purple, plus 'blistering and burning around the sites of the injection,' and a quote that her arm felt 'about to burst open.'",
+          "Associated Press": "Does not mention blistering, burning, or purple discoloration; focuses on the two failed doses and snoring.",
+          "BBC News": "Mentions the bent needle and seven needles but not the burning/purple arm details.",
+          "ABC News": "Does not detail injuries beyond breathing/snoring observations.",
+          "Kingsport Times News": "Does not detail injection-site injuries."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Straight wire framing. Leads with Pike's critical condition and the governor's halt and review. Balances the attorney's 'cruel and torturous' account with the victim's mother's grief ('I didn't get justice for my daughter'). Emphasizes the unprecedented nature per a death penalty expert and the procedural failure (two doses of pentobarbital, snoring, microphone cut). Restrained, dual-sourced tone.",
+      "The New York Times": "Headline-only in this dossier (two entries). Both headlines center the 'torturous' botched execution and the critical condition, with one framing the statewide execution pause. Body text not retrievable, so framing cannot be assessed beyond headline emphasis on the 'torturous'/'botched' characterization.",
+      "BBC News": "International framing with a 'what we know' explainer structure. Emphasizes the secrecy ('harrowing scene shrouded in secrecy,' dark room, closed curtain) and adds political dimension absent elsewhere: Sen. Marsha Blackburn's call to 'bring back the electric chair' and Democratic opponent Jerri Green's moratorium pledge. Includes the TDOC and attorney general statements and the Carruthers precedent. Broadest institutional-and-political context.",
+      "NBC News": "Most medically detailed account. Leads with the striking line 'Christa Pike shouldn't still be breathing.' Emphasizes forensic/medical explanation via expert Dr. Groner (infiltration, tissue deposit, burns), injury specifics (purple arm, blistering, burning), and procedural failures (voicemail emergency line). Centers the attorney's 'haunted' and 'torturous' language. Heaviest on how-it-went-wrong mechanics.",
+      "ABC News": "Leads with the botched attempt and Pike as 'the only woman on Tennessee's death row.' Heavily features eyewitness journalist testimony (WKRN reporter Tori Gessner: 'Nothing about today was normal') and the loud snoring detail. Most detailed on the Supreme Court's 6-3 order and the liberal justices' dissent (Sotomayor quote). Frames around the legal path to execution and witness accounts.",
+      "Kingsport Times News": "Republishes New York Times reporting (bylines Billy Witz and Emily Cochrane). Provides the most graphic detail of the underlying crime (box cutter, pentagram carved into chest, piece of skull removed) and the deepest victim/defendant backstory, including Pike's claimed history of child sexual abuse, undiagnosed bipolar disorder and PTSD, and her recorded remarks of remorse. Frames with a 'here's what we're covering' explainer structure balancing victim and defendant narratives."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, the governor's order, TDOC protocol, Supreme Court order, or medical records) were located for this story, so no document-level verification is possible.",
+      "Key contested claims \u2014 the 6-3 Supreme Court vote and dissent, the exact text of the TDOC protocol, and the governor's written suspension order \u2014 are reported secondhand and could not be checked against the underlying documents."
+    ],
+    "missing_context": [
+      "No independent confirmation of Pike's medical condition from the hospital or state; all condition reporting traces to her attorneys, who said they had not personally seen her.",
+      "No named entity has been identified to conduct the 'independent/third-party review'; outlets note Lee had not said who would run it.",
+      "The medical cause of failure (NBC's infiltration theory) is expert speculation, not a confirmed finding; the official review has not reported.",
+      "No outlet provides the full procedural history of the last-minute litigation (the Sixth Circuit stay, the state's motion to vacate, and timing relative to the midnight warrant expiration) in a single coherent timeline.",
+      "The primary documents \u2014 the governor's suspension order, the Supreme Court order, and the TDOC execution protocol \u2014 were not available in the dossier, leaving the protocol-compliance question (TDOC says it followed protocol; lawyers say it was torturous) unresolved at the source level.",
+      "Unclear whether the ABC/BBC/AP/NBC accounts of the attorneys' press conference are independently sourced or all derive from the same single Thursday news conference, which would make them one source rather than several.",
+      "Long-term questions flagged by NBC \u2014 whether Pike was in pain, whether she will remember, whether there is permanent brain damage \u2014 remain unanswered across all outlets."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets reported the same event but with materially different emphasis \u2014 NBC on the medical mechanics, BBC on the political fallout and secrecy, ABC on the Supreme Court decision, Kingsport/NYT on the crime and defendant's backstory \u2014 making this a coverage-divergence story rather than a straight report. The absence of any primary source and the single-press-conference sourcing of key claims further warrant a meta treatment.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNLW0wLTZ5T1N2WjcyMklRc3F6Wkt1Qk1FRGJWV3NqS1c1QlhiZF90eGtzOXZKWVF5dGJFWkxBNjZ4RnJ1ZkI2LUJUVFh3d3hwU0w0SFNVN1UyUEJvcXotUF9iQUdWSnJNN0hiS2FtZXZBOWdIWVlvbmxiMkR6Z3NKZUphZnYxNEFLdnNwY3hzSEZjT043dmpPMDBKNFBEQQ?oc=5",
+      "title": "Christa Pike is in critical condition after Tennessee\u2019s failed execution attempt, her lawyers say - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOODkwTkNfVFQ1SG5sVDFaZlUtTEVwek9zNjJLejNJbDN0eTlnUkpJMC1hMHdwSWc5dExiUFREeGt5Q0xFZE5sQUZfdFp2U3p1X3VZd242V3d5cDJQWDRGU0pib0V6RnJpVUdvNl9KZm90NG9SZ2Y3M1ZQMnZkRHhMVg?oc=5",
+      "title": "Tennessee Inmate in Critical Condition After \u2018Torturous\u2019 Botched Execution, Lawyer Says - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95OEo5YVJpbW01eU0wenp4dmJIZXI5UjhZY3ZaeXpubjRsUVZzaGctbmM3bDVhczBpcV96V2s5WlN4ZGRRMmp0dWxfdzg3OGdFNmhpb1huZHpWa2c?oc=5",
+      "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says - BBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdVkxVG9BVEpHTm1BaHBvSmFOU3pYcmlUYjFSV3JmMVZ1WEd0MzJ2VFJRVXRrQkVkZ0xwNTdNdmMzQWwxZWtSeUJySUV1UzFvbHF3N3BMRmlOVjNpSnhVUzRpVVpmVTVkRm5sU2hvclVCMWtKNUdCbEZBaFFyanotYjhoUkVEOWc2d3NpNmJOWnBZZzlQWExlT09KeVBjcXZqYVhHMkY4QnpXdF9pT25XV1pNWWlZSjdESXc?oc=5",
+      "title": "Christa Pike is in critical condition after failed execution in Tennessee, her lawyers say - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNGtDbnpaajVvdFdRVkVkeGNKMVBSN0JOZnlheExHbzNmY3ktRzlUc25WZjBsREIwblJMVEtFOGZRcHlqd1JiRUVZMWw2ZnI5Xzl0Ui02dlBnRV9LbXc5aFVsMlBnakVudDdLTFVOM3QxVW42bGFBTmJtRXI2M1d1UElqbTJpTXc5eGhubkVjblBZclkwalhmdi1VTDNnVFXSAaQBQVVfeXFMUGFwT19YTFFpMHRtcEYtNnhKemRfdU9YdkJBWkk5cDZma2ZlRTQ1QkJld0VPR20xWFppYWI5MXZsY2I4TG5VVjF3bFY4OVhfQ3djUGhZUDJKcXVwTGF5T1Uyd01uWWlCcWNseGhicERVNWRubGxkRnFMN01ZeVdON3VlVWJhWHUzLVJJd0ZzUUpSb1JjUjc1ckNOaDNHMExLd1hhODE?oc=5",
+      "title": "Christa Pike in critical condition 'receiving life-saving medical care' after botched execution, attorneys say - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNVVkenowWng4STJlblNDLURmcENRb0VQZ09rS1NtVzIwNzhPY2FmNUpTbHZGeExVN3hBam9MRjB0UTRBZGxjcVVxUGRIdnl6dGh1UThoa1ZYbDRCUFllWHRJemtSNEhNZE1xOUxBU3N2cDhmTVN2SlJOb0w1X2JtYl9neWVPeXc4MC1tVTR3WWE?oc=5",
+      "title": "Christa Pike Is in Critical Condition as Tennessee Pauses Executions - The New York Times"
+    },
+    {
+      "outlet": "Kingsport Times News",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPSlFMLXI5X2JSRTNCb3FfOFVUQy1wek42cWxVaXhIalp6MThqVXV4T1duT3JZWTcyQW9yejJvYUxGR19Pd3F1aGIxOS1MbFZnREc3cEtLOEhmc211akxoNFRYTmQ5SU81bXpZSUpodXoyQXZQWnlIZWJKYlNUSTdiS2FWVF9HQ19SV0JCWklvUFNBcDRNLUlpS1UteldtNGFZcjFlaWc3ejBEYVRKek9xVDl1QUtWRlUwWVRv?oc=5",
+      "title": "Tennessee Inmate in Critical Condition After 'Torturous' Botched Execution, Lawyer Says - Kingsport Times News"
+    }
+  ]
+}
