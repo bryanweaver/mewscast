@@ -8,6 +8,8 @@ feedparser==6.0.11
 beautifulsoup4>=4.9.3
 openai>=1.0.0
 googlenewsdecoder>=0.1.7
+# selectolax 1.0 removed the Modest backend; googlenewsdecoder still imports selectolax.parser
+selectolax>=0.3.27,<1
 Pillow>=10.0.0
 playwright>=1.40.0
 boto3>=1.34.0
