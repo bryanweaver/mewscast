@@ -1,0 +1,100 @@
+{
+  "story_id": "2026-10-05-new-supreme-court-term-0c0a58aa6d",
+  "headline_seed": "New Supreme Court term begins with justices stumped by climate change case - NBC News",
+  "brief": {
+    "story_id": "2026-10-05-new-supreme-court-term-0c0a58aa6d",
+    "consensus_facts": [
+      "The U.S. Supreme Court began a new term on Monday, October 5, 2026 (ABC News, NBC News, NPR body text).",
+      "The first case argued involved climate change \u2014 a lawsuit by Boulder, Colorado seeking to hold Exxon Mobil and Suncor Energy liable for climate impacts (NBC News, NPR; ABC News references the climate case as the term's first argument).",
+      "Energy companies warn the lawsuits could expose them to damages in the billions of dollars (ABC News, NBC News).",
+      "Justice Samuel Alito recused himself from the climate case; NPR reports it is because he owns stock in energy companies (NBC News, NPR).",
+      "The term's docket also includes a challenge to state/local bans on AR-15 and other semiautomatic rifles (ABC News, NBC News, NPR).",
+      "The term includes two major cases on the Trump administration's immigration policies (ABC News, NBC News, NPR).",
+      "An Arizona case on proof-of-citizenship voter registration requirements is on the docket but will be heard after the midterms (ABC News references citizenship/ballot requirements; NPR details the Arizona case).",
+      "The new term coincides with the approach of the 2026 midterm elections (ABC News, NPR).",
+      "The climate case is not expected to be decided before the November midterms (ABC News, NPR)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Framing of the climate oral argument outcome",
+        "positions": {
+          "NBC News": "Frames the justices as 'stumped' / lacking consensus, raising the possibility of a 4-4 split given Alito's absence that would leave issues unresolved while allowing the Boulder case to proceed.",
+          "NPR": "Frames the case through Amy Howe's analysis that conservatives like Gorsuch and Thomas may be reluctant to rule for energy companies because their arguments lack a specific textual anchor in the Constitution or federal law."
+        }
+      },
+      {
+        "topic": "How 'Trump-driven' the new term is",
+        "positions": {
+          "ABC News": "Leads on a 'fresh wave of appeals from President Donald Trump,' personal appeals (E. Jean Carroll judgment, Hillary Clinton/DNC claim, CNN defamation), and election drama as a central theme of the term.",
+          "NPR": "Amy Howe says the term is 'not quite as Trump-driven' as last term, which was an 'outlier,' though notes it could change quickly with newly added immigration cases."
+        }
+      },
+      {
+        "topic": "Reason for Alito's recusal",
+        "positions": {
+          "NBC News": "Reports Alito announced he was stepping aside but 'did not say why.'",
+          "NPR": "States Alito is recused 'because he owns stock in energy companies.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Two headline-only entries. One ('How the Midterms Could Complicate the Supreme Court's New Term') frames the term through electoral politics; the other ('Supreme Court Tangles Over a Major Climate Change Case') emphasizes judicial difficulty/conflict on the climate case. No body text available to corroborate specifics.",
+      "The Washington Post": "Headline-only ('6 things to watch in the Supreme Court's new term'). A preview/listicle framing of the term as a slate of cases to watch. No body text available.",
+      "ABC News": "Leads hardest on Trump \u2014 'new wave of Trump cases' and election drama \u2014 foregrounding Trump's personal appeals (Carroll, Clinton, CNN) and challenges to 2026 election results. Positions the climate case as the first argument but devotes significant space to the politicization debate, quoting scholars on both sides (Lakier, Baude, Verrilli, Gornstein, Justice Kagan) and the Marquette poll showing public perception of a political court. Balances 'Republican court' framing against the fact the court ruled against Trump on nearly every major policy last term.",
+      "NPR": "Two entries. The full-text Q&A with SCOTUSblog's Amy Howe is analytical and case-by-case, emphasizing legal mechanics (textualism, Second Amendment history-and-tradition test, the Arizona 'quiet period'). Notably downplays the Trump angle relative to ABC, calling last term an 'outlier.' Supplies the Alito stock-ownership detail. The headline-only NPR entry ('blockbuster climate change case') uses 'blockbuster' framing.",
+      "NBC News": "Leads squarely on the climate oral argument, framing the justices as 'stumped' and lacking consensus. Detailed reconstruction of the argument \u2014 Roberts' skepticism, Kagan's tobacco/opioid comparison and Clean Air Act preemption question, Sotomayor's marketing/advertising point, Kavanaugh as most vocal backer of the oil companies. Emphasizes the 4-4 split possibility from Alito's recusal and the broad ramifications for two dozen similar lawsuits. Least Trump-focused of the body-text outlets."
+    },
+    "primary_source_alignment": [
+      "No primary sources (oral argument transcript, case filings, recusal statement, or Marquette poll) were located for this story, so reporting cannot be checked against underlying documents.",
+      "The climate oral-argument details (specific justice quotes from Roberts, Kagan, Sotomayor, Kavanaugh) appear only in NBC News's account and could not be verified against a transcript in this dossier."
+    ],
+    "missing_context": [
+      "No primary source \u2014 the Boulder v. Exxon/Suncor oral argument transcript \u2014 was available, so the characterization of the justices as 'stumped' (NBC) rests on a single outlet's reading of the argument.",
+      "Of seven dossier articles, only three (ABC News, NBC News, NPR) have substantial body text; four (two NYT, one Washington Post, one NPR) are headline-only. All body-text outlets are classified lean-left, so no center or right-leaning full-text coverage is represented in this dossier.",
+      "No outlet provides the Marquette poll's exact figures, sample size, or date beyond ABC's 'last month' reference and the general claim that 'a majority' view the court as politically motivated.",
+      "The conflicting accounts of Alito's recusal rationale (NBC: 'did not say why'; NPR: owns energy stock) are not reconciled, and no recusal statement is in the dossier.",
+      "None of the full-text articles quantify the 'more than two dozen similar lawsuits' beyond that approximation, or identify which jurisdictions have filed.",
+      "No outlet details the EPA's current effort to eliminate greenhouse-gas regulation beyond NBC's passing mention that it 'lurks in the background' of the Clean Air Act preemption question."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same term-opening with materially different emphasis \u2014 NBC on a 'stumped' court and the climate argument, ABC on a 'wave of Trump cases,' and NPR analyzing the docket while explicitly downplaying the Trump angle \u2014 making the divergence in framing the story. The absence of any primary source and the all-lean-left, mostly headline-only dossier also warrant a coverage-report rather than a straight REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPX0JWdlUzYjdXMGxyUkNMeGx1R1poUzY3TE5YTlJVMEpLdzlUMnlUdzJmX0dSRFFIWEJwVmZjVkVxV1FiS0JoS2Vud1lZR3dQUFkzNjNJRjIxQXQzNHlzVWZvcWJCNW54aElTU1VxMVFGS21ERlRFby1lMlp0R1pNTFhBcndKTzV5TmlfT0tyRlhqa3Fh?oc=5",
+      "title": "How the Midterms Could Complicate the Supreme Court\u2019s New Term - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdDlSRlBheGtfOW83U3VYLXFpRG00UHlaajhGWEdsMWhqRWdjVF95VmhWaHFvbXhITldYVzQ2TVFzZ3dOTkNqZlFSRkVqQnU3UVNwN1NFQWN4S2cwNHlFNXNnaWc5MDJuTWtyOW5RYmdkNFRlRnp5RkRFSlpvcVNUbGNza1VVYjVQc0cyc19yVQ?oc=5",
+      "title": "6 things to watch in the Supreme Court\u2019s new term - The Washington Post"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQSy1XdnpBU2dRQXJVTEloVDg4eDU1UnllN3hWT2d5dmZlNkthX0pnQU5YTWZ6bEtSSEFla1l0Z2MwS3B1cTRjdnJha2xvcEFsNy1PN0RiRzRTSldUS3pCLWJKd284S2plNy10bHBqeURPb0E5NktyRVVHb0FXYzZxQy05WHVlbDhqZE00T0dYZjF2bDhDTHo5eGVxMElVazJTdU1HVtIBqgFBVV95cUxNdG15aENKUU5MZHhyZm03R2JaOU5OOS1hQVUwRnF5SDIzd0dRTnhBbXNPN2hydm9FTDNiYlZyMkFtbDJMVUtHZi1MUUFGU2dzUXhLTm5UQW93cjF5ZGl2eVc3clNFSzV6amVocHZWZUxZaVA0MDZNa0RwbGdWaHRwcUVNd3JScmJjdUwxUzdVTnA1MTJ6MU11el9TdHZuR2RUandXNFEyVjg3QQ?oc=5",
+      "title": "As election looms, Supreme Court reconvenes to new wave of Trump cases - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOYmloaG9scXRWejFqaVBnaEJ3Y2U1eldEbHZ2dHJKVjFmWk04cFh0WGdwdFJLREJZZzYtY09VbU96U3l2bzdBeWVDbmR3bjEzRHktc1BkcVFma1pycVRlZHNpUWxDeW9FaUppZkpOVmIwOVJKaGIyQVE3N081NUxVS21lcEhFZ3JYLWNqUzh6NmFFR2FrTzBvS2djSnhzNE5DU3VOMUNMRTY2YlI4OHR0Wll1dTFIZw?oc=5",
+      "title": "Supreme Court's new term kicks off with blockbuster climate change case - NPR"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQU1FnOFdJSE5xQXFjdUJTaFFpNG51S0JLeVhIWE4zR3BnYW1pdXlFZ1R0RzJYTENIVnUyaEZELXJFZWljVTNVMHE5OXV5dW5LZl9iSTRlTFRUYVZlZF9ESG02eUl0ZUhwVk5ralJxT2NzRFNtUmRqYnNnVjJqOGVycG1XQVFWOUZmb25aakFPUE9yWWpQVjNRdzRUeWJRaVFRWmVJZC11X2RuX3k5aDMwdzBacHRLQzFycnFsMEhZWEZOSGstTUE?oc=5",
+      "title": "New Supreme Court term begins with justices stumped by climate change case - NBC News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVDh6dGcxcGRmd2lUZjBXbUwtVWtPY2ZvY2FycW9iVTBZUl9IVTZmZTNDem1vYWJWUWVBd3J1Z2hhOURhVWRKc2JLVG1ZU2hHNndOZ2ExN1lwNnpQUVJnWkhEUzlxYjRNZlJYZE1MdW1CNVdPYjlJYmJUbjB2cjROWERzSWpYZVRpbDdMWQ?oc=5",
+      "title": "Supreme Court Tangles Over a Major Climate Change Case - The New York Times"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaFJheGFpbXdvMEFKbFB6SHNuVjNTOW9tVUhqWVJ6bmZQcWJ3d1RjZS16am5GcFUxalFQMFkyT1lDQmo4TG1LcE9BQS1TVDhibHZjTFVkdW9mN29NVDI4SUpEWHJkdGNZS1ZyVTJod1lnY2drM1FBVWUtalROZ2EwZG9KRmprRWhCbjNpRnhhNWQ1RDgyQy1GbnJGU3kyemM4TE8wY25iSjVqYS1nRFFMWQ?oc=5",
+      "title": "What's ahead for the Supreme Court as the court begins its new term - NPR"
+    }
+  ]
+}
