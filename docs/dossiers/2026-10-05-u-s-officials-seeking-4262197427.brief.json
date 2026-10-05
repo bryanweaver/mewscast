@@ -1,0 +1,84 @@
+{
+  "story_id": "2026-10-05-u-s-officials-seeking-4262197427",
+  "headline_seed": "U.S. officials seeking details of reported Russian plague death, quarantines - The Washington Post",
+  "brief": {
+    "story_id": "2026-10-05-u-s-officials-seeking-4262197427",
+    "consensus_facts": [
+      "A female employee of the Irkutsk Anti-Plague Research Institute of Siberia and the Far East died from a suspected case of pneumonic plague (Al Jazeera, Axios, NBC News).",
+      "Russian health authorities stated the worker died of 'pneumonia of unknown/undetermined etiology' and that testing detected no microorganisms linked to her professional activities (Al Jazeera, Axios, NBC News).",
+      "Nearly 200 people who had contact with the woman were placed under precautionary medical observation (Al Jazeera, Axios, NBC News).",
+      "At least one inpatient/hospital facility in the area was placed under quarantine (Al Jazeera, Axios, NBC News).",
+      "The U.S. government said it is monitoring the situation closely with the CDC and interagency partners, and urged Russian authorities to share accurate information quickly and openly (Al Jazeera, NBC News).",
+      "Local/Russian media named the deceased as a 28-year-old laboratory technician, Darya Shipilova, though officials have not confirmed these details (Al Jazeera, Axios, NBC News).",
+      "The death occurred in Russia's Irkutsk region in Siberia and the report surfaced over the weekend of Oct. 4-5, 2026 (Al Jazeera, Axios, NBC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which regional governor is cited for the death details",
+        "positions": {
+          "Al Jazeera": "Cites Alexei Tsydenov, governor of the neighbouring Buryatia region, saying the woman 'died, maybe of the plague'.",
+          "NBC News": "Cites Igor Kobsev, the Irkutsk regional governor, for the 'pneumonia of undetermined' origin account and the 'stable' situation."
+        }
+      },
+      {
+        "topic": "Number of quarantined facilities",
+        "positions": {
+          "Axios": "Says five hospitals in the area and dozens of institute workers have been quarantined.",
+          "NBC News": "Says at least one hospital facility was placed under quarantine.",
+          "Al Jazeera": "References nearly 200 people under medical observation but does not specify a count of quarantined hospital facilities."
+        }
+      },
+      {
+        "topic": "U.S. response emphasis",
+        "positions": {
+          "Axios": "Leads on President Trump saying the U.S. 'will help' Russia and his comments about germs getting 'stronger'.",
+          "NBC News": "Leads on Secretary of State Marco Rubio saying the U.S. is 'watching and monitoring it closely' but it is 'not cause for alarm'.",
+          "Al Jazeera": "Leads on the State Department saying it is 'monitoring the situation closely' and urging transparency."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The Washington Post": "Only a Google News RSS aggregation link cluster with no retrievable body text. The headline frames the story around U.S. officials 'seeking details' of the reported death and quarantines, emphasizing the information-gap/transparency angle. The embedded cluster also surfaces Fox News ('Mystery death... sweeping precautions as US watches closely') and BBC ('US watching closely... Rubio says') headlines, both emphasizing U.S. surveillance of the event. No body-level reporting available to assess.",
+      "Al Jazeera English": "International framing. Leads with the suspected plague death and the quarantine of 'dozens'. Gives the most weight to competing official Russian accounts \u2014 citing both the Buryatia governor's 'maybe of the plague' remark and Rospotrebnadzor's 'pneumonia of unknown aetiology' statement. Includes WHO background on Yersinia pestis and plague lethality. Ends by naming the deceased via local media. Frames U.S. involvement narrowly as State Department monitoring.",
+      "Axios": "Specialized/politics framing centered on Trump. Leads with Trump pledging U.S. help ('We'll help them as much as we can') despite not having spoken to Putin. Foregrounds the COVID-19 comparison in its 'why it matters' and explicitly fact-checks Trump's 'germs have gotten stronger' remark by noting pneumonic plague remains treatable with antibiotics. Notes the White House, HHS, State Department and European Commission are monitoring. Scoop-flavored ('Axios scooped').",
+      "NBC News": "Lean-left mainstream framing emphasizing scale ('200 enter medical observation') and official reassurance. Balances multiple official voices: Irkutsk governor Kobsev ('situation is stable', 'no new cases'), Rubio ('not cause for alarm... cause for focus'), WHO ('no cause of death officially confirmed'), and Kremlin spokesman Peskov urging reliance on Rospotrebnadzor over 'rumors'. Stresses transparency calls from the international community. Article is heavily padded with unrelated 'For Subscribers' links."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., Rospotrebnadzor statement, WHO statement, or State Department release in full) was located for this story. Outlets paraphrase the Rospotrebnadzor and State Department statements but no full document was available to verify wording or detail against the reporting."
+    ],
+    "missing_context": [
+      "No outlet confirms the official cause of death; all rely on 'suspected' plague and Russian statements of 'pneumonia of unknown etiology' \u2014 the gap between the two is acknowledged but never resolved in any article.",
+      "The Washington Post entry (the headline-seed outlet) contained no retrievable body text \u2014 only an RSS aggregation cluster linking to Fox News and BBC headlines \u2014 so its reporting could not be analyzed at the body level.",
+      "No primary source document (Rospotrebnadzor statement, State Department release, or WHO statement) was retrievable; all official quotes are secondhand paraphrases.",
+      "Outlets do not reconcile how a lab worker could die of 'pneumonia of unknown etiology' at an anti-plague institute while testing allegedly found 'no microorganisms linked to professional activities' \u2014 the apparent tension is reported but not probed.",
+      "No outlet provides independent (non-Russian-official, non-local-media) verification of the victim's identity, the timeline of her illness, or the exact number of people quarantined.",
+      "The historical base rate of plague in Siberia/Irkutsk and the routine nature of the institute's work with Yersinia pestis is largely absent, which would help readers calibrate alarm.",
+      "No article reports whether any of the ~200 people under observation have developed symptoms beyond NBC's note of 'no new cases' per the Irkutsk governor."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (Al Jazeera, Axios, NBC News) reported the same event with materially different framings \u2014 Axios centers Trump's 'we'll help' pledge, NBC centers official reassurance and transparency calls, Al Jazeera centers competing Russian accounts \u2014 while the headline-seed outlet (Washington Post) provided no body text and no primary source was available. The divergence in emphasis and the unresolved official-cause-of-death gap make this a coverage-report story.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZDVGSEE3WEp6TnEyYU50aERYUHgzbU1VMTZrUG1SRnhHRE9RUkVDUVUwbVZHM3VjLUdaM2dKNmgzeTBpc3hoenpjWV90cHZZOEMxU1habm14bVJBT29Va0UyOUU1MGdiN2RXUWc1Q3pVZEQ4czNGMklEbVB6TEdHTXJXT0J3c0hFeXVidU05c3JqWnBjeG1mN1hCYWFfaUxpczRlQ3VlYjk4cHdiN0kwY3VlTmdwMkt3QnJES01zcw?oc=5",
+      "title": "U.S. officials seeking details of reported Russian plague death, quarantines - The Washington Post"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYU53d1JWY0UzZlJrQlloejFrUnVaSzFpX0xBdVc1N1NxSGJvbC04cVduUkJ6d2lDZ3lMRS0wTml6R1pMaFRjVHRLTVNRQzN1UTQ2amJTVGhhWW1uUTUzMkVsYzhOWDhpRm1SN1dBLW1MMHFUYmdxQ21JRENJN3RSTGNCN0xmM0N2T0ozNHlGTHIwOXAwMm9ZS0duUTdHOXpUUkJaTmlqZGEyUlY2TXV5ZXY3cHjSAboBQVVfeXFMTkRHeFIyM2RzN0dDY1VfZ25WUjZNSl8yaGhQXzJVQ3FwWUhrZGZ1WFc5U1dfQUtHWFlSVURoN3BDLWFndEV0czBSUXB6cndYbXYxV0NodzBGeDhUVVQ0eHp5aG03QWhoZzRycXVfS3RrWVhTVnZPUFdiX2ZKY29EVHVha0VWTVY4WEtONnVDazRlSEw5aXlCYWZRcDRManpKUm9IZzNCaE5KNi0wSExtdV9PcFYtMGtWX3pR?oc=5",
+      "title": "Russian lab worker dies of suspected plague in Siberia; US monitoring case - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQMHpMczZDZkVnU2xJTHItTDZQYlRnWG03QXNLeFBRQ01EWlctdElOelBxMG1zT29wWHVRUi1HUDhJVllTS1JrT0dDZWlSSXJETV83SGdUbW5rMnB5dFVCR19BdTBaMi16TG5PYlRpWTVsSGxDNDB2bkhCNVhlM1lPcDJJc0Q5dw?oc=5",
+      "title": "Trump: U.S. willing to help Russia with potential pneumonic plague outbreak - Axios"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbmdUdVpKNGpYM3p3Y2xCeE5zZzZHUHE1YzR2Mzk1QXNrbzhkNWZFaTJEc1E1cVEtM09oZGpHTXNiMVFma19ObkpHVFVoY2k5MS14eU5YUGppZU5pWVc4YjUtblBLMHRUQk1JQVd2M3VyZ3daMEpVNWxYOVN5RGNZbzFiUzB3bFQ0eVR4MmJ1MlhNWTFPYW1lcmZuSUJwd3FMOTUtTjJrVHl0Q25UM3RiSw?oc=5",
+      "title": "Russian lab worker dies of suspected plague as 200 enter medical observation - NBC News"
+    }
+  ]
+}
