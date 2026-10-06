@@ -1,0 +1,115 @@
+{
+  "story_id": "2026-10-05-a-crowd-of-students-f776abda8a",
+  "headline_seed": "A crowd of students protests Cornell\u2019s response to gang rape complaint - AP News",
+  "brief": {
+    "story_id": "2026-10-05-a-crowd-of-students-f776abda8a",
+    "consensus_facts": [
+      "A former Cornell University student identified as Jane Doe filed a civil lawsuit (filed September/last month) against the university, the Chi Phi fraternity, seven fraternity members, and other defendants, alleging she was drugged and sexually assaulted at a fraternity house.",
+      "The alleged assault occurred on or around October 19-20, 2024, when Jane Doe was a 20-year-old Cornell undergraduate, at the Chi Phi fraternity house in Ithaca, N.Y.",
+      "Jane Doe reported the incident to Cornell University Police roughly two weeks after it happened (reported November 8, 2024 per multiple accounts).",
+      "The lawsuit alleges she was intoxicated/incapacitated \u2014 involving alcohol, ketamine, and/or marijuana \u2014 and could not consent, while some accused men described the activity as consensual.",
+      "Cornell suspended the Chi Phi chapter and conducted an internal investigation that resulted in a range of sanctions, including two expulsions and other suspensions.",
+      "Tompkins County District Attorney Matthew Van Houten declined to pursue charges, defending his decision by saying Jane Doe's initial six-page statement did not allege criminality.",
+      "New York Gov. Kathy Hochul removed Van Houten from the case and appointed state Attorney General Letitia James as special prosecutor to review evidence and consider charges.",
+      "Cornell President Michael Kotlikoff stated the university 'must do better' and that the board of trustees would announce an independent review by an outside law firm.",
+      "Cornell has disputed Jane Doe's claim that it failed to adequately investigate or punish those involved.",
+      "Lawyers for some of the accused former students denied their clients participated in a sexual assault; none of the men have been criminally charged."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of men involved in the alleged assault",
+        "positions": {
+          "Associated Press": "Refers to 'multiple Chi Phi fraternity members' and 'several fraternity brothers'; lawsuit names seven former students among defendants.",
+          "BBC News": "States 'seven men from Cornell's Chi Phi fraternity chapter,' known as the 'Cornell Seven.'",
+          "ABC News": "Cites Cornell Police record memorializing Jane Doe's first report that she 'was recently raped by 8-10 men at the Chi Phi fraternity house.'",
+          "NBC News": "Names 'seven Chi Phi fraternity members' in the lawsuit.",
+          "NPR": "Says she 'sued the seven alleged rapists.'"
+        }
+      },
+      {
+        "topic": "Whether Jane Doe's account was initially consensual or non-consensual",
+        "positions": {
+          "ABC News": "Emphasizes that Doe's perception 'appeared to change' from believing the encounters were largely consensual to describing them as 'gang rape'; cites text messages where the woman wrote 'non(e) of the sexual stuff was illegal.'",
+          "NPR": "States Doe 'consented initially to sexual contact with two men she knew' while intoxicated, then alleges she was drugged and raped by multiple men as the night went on.",
+          "BBC News": "Includes text excerpts in which the woman replied that her memory was 'super clouded' and that she liked being with two of the men, alongside her lawsuit's claim she could not consent.",
+          "Associated Press": "Presents the account primarily as Doe feeling 'like bait' and incapacitated; does not foreground the evolving/consensual framing.",
+          "NBC News": "Presents the lawsuit's assault allegation without dwelling on the consensual-perception question."
+        }
+      },
+      {
+        "topic": "What prosecutors reviewed before declining charges",
+        "positions": {
+          "ABC News": "Prosecutors did not seek records beyond Doe's six-page statement and did not review the voluminous internal probe record.",
+          "NBC News": "Cornell police interviewed witnesses and received anonymous tips, but Van Houten did not review that additional information before deciding not to charge.",
+          "NPR": "Van Houten said he didn't receive full transcripts of Doe's police interview, in which she clearly stated she had been raped.",
+          "BBC News": "Notes Cornell said it supported presenting the case to a grand jury."
+        }
+      },
+      {
+        "topic": "Nature/severity of Cornell's sanctions",
+        "positions": {
+          "BBC News": "University referred matter to a 'panel of trained faculty and staff' that issued 'a range of sanctions, which included expulsions and suspensions'; Cornell did not deny some punishment included writing an essay.",
+          "Associated Press": "Does not detail specific sanction tiers beyond protesters' demands for expulsions/degree revocations.",
+          "ABC News": "States the investigation resulted in two men being expelled while others were suspended.",
+          "NPR": "Does not enumerate specific sanctions."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Leads on the on-campus protest and property damage (graffiti, broken glass at the administration building), foregrounding student activism, chants ('Kotlikoff, resign!', 'ban the frats!') and the list of demands. Centers the demonstration as the news peg rather than the legal or investigative developments. Quotes student speakers and a professor extensively. Uses neutral attribution for Cornell's response ('damaging property is not the answer'). The evolving-consent angle is not emphasized.",
+      "The New York Times": "Headline-only in this dossier ('How Cornell Punished Each of the 7 Men Accused of Sexual Assault'). The framing signaled by the headline is an accountability/breakdown approach focused on institutional sanctions against each of the seven men. No body text available to corroborate; cannot be used for consensus.",
+      "BBC News": "Takes an explanatory 'what we know' explainer structure, laying out the allegations, the Snapchat/text evidence, Cornell's response, and the fraternity's statement in discrete sections. Notably includes the fraternity's own account (Trey Robb: members expelled by unanimous chapter vote three days after the police report) and surfaces text-message excerpts that complicate the narrative, including the woman's own 'super clouded' and 'none of the sexual stuff was illegal' messages. Most balanced in presenting both the assault allegations and the contested-consent material.",
+      "ABC News": "Frames the story around fraternity brothers' alleged 'damage control' efforts to contain the fallout, leading with obtained phone-call recordings and text messages. Heavily emphasizes how Jane Doe's account 'evolved' from believing the encounters were largely consensual to calling it a 'gang rape,' and highlights a defendant's claim he was too intoxicated to consent and that Doe assaulted him. Strongest focus on investigative documents and the shifting-narrative angle; centers the men's conduct and Cornell/prosecutor process failures.",
+      "NBC News": "Leads on threats and intimidation directed at Jane Doe and at women misidentified as her, including a quoted violent, politically-charged Instagram message. Centers the accuser's safety and the harassment campaign rather than the underlying incident details. Secondarily covers Hochul's appointment of James and the DA's failure to review additional evidence. Page is cluttered with unrelated subscriber-link boilerplate.",
+      "NPR": "Frames around Cornell President Kotlikoff's video statement calling the allegations 'deeply disturbing' and pledging reform, legislative advocacy, and an independent review. Uniquely includes the political dimension \u2014 President Trump criticizing James's appointment as 'corrupt' and the accuser's attorney rejecting politicization of the case. Balances the president's institutional accountability language with the lawsuit's allegations and notes Doe's initial consent to two men before alleging she was drugged and raped."
+    },
+    "primary_source_alignment": [
+      "No primary source (court filing, transcript, roll-call, or press release) was located for this story in the dossier. Several outlets quote from documents they independently reviewed \u2014 ABC News cites a recorded phone call and Cornell internal-investigation records; BBC News and NBC News cite Snapchat/text excerpts; AP cites records of Doe's statement to investigators \u2014 but these underlying documents are not provided here and cannot be verified against outlet reporting.",
+      "Because the actual lawsuit, police report, and internal-investigation records are not in the dossier, divergences between outlets on specifics (number of men, evolving-consent narrative, what prosecutors reviewed) cannot be adjudicated against a primary document."
+    ],
+    "missing_context": [
+      "No primary source documents (the civil complaint, the six-page police statement, the Cornell internal-investigation findings, or the Snapchat/text records) were available in the dossier, so outlet-specific quotations from those records could not be independently verified.",
+      "No outlet provides the full breakdown of how each of the seven men was sanctioned \u2014 the NYT headline promises this detail, but no NYT body text was retrievable to confirm it.",
+      "The timeline of the DA's original decision and what specifically triggered the reopening (beyond 'new information') is referenced but not fully explained in any single article.",
+      "None of the outlets report the outcome or scope mandate of Cornell's promised outside-law-firm review, nor who will conduct it.",
+      "The status of the Title IX civil-rights inquiry mentioned by BBC is not updated in the other outlets.",
+      "Little context is given on whether the threats NBC reports (against Doe and misidentified women) were reported to or are being investigated by law enforcement; Giuffra declined to say.",
+      "No outlet provides the fraternity defendants' detailed side beyond blanket denials and one brother's intoxication claim, so the accused's account is thinly represented relative to the accuser's."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text report the same underlying case but with markedly different emphases \u2014 AP leads on the protest, ABC on fraternity 'damage control' and shifting consent, NBC on threats against the accuser, NPR on the president's statement and the Trump/James politics, and BBC as a neutral explainer \u2014 making this a coverage-divergence story best served by a META treatment rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTERaX2dFS1lBNmdENkozTU05UTVKTGx1U3ZubWppbDBuSzEyckJ4NHV2OWNMU2NuMktNNGh3enpBRkptU1lLbFlXZTJZWTd3elVxcnljazFWSm9XeUNIVm13cElYRzExTlNLZlZGdmFYeTlRWndaWnQtcUl6dmxTSGY3UnRuZ1lVT3c2NW50WkF1dlIzdXhSWmQ5WFRNQQ?oc=5",
+      "title": "A crowd of students protests Cornell\u2019s response to gang rape complaint - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOYy16R01Gak0zRHNIRkMydHVicXVBUURmNzUxZEZnVHNMUVhxTWJzaDhMOEM3VDhPcld2UXlBbEdpR1ZCLW5UVXd0VFNreHZzMEE2QjRPRllINGcwbThUeVFIVEg3cDZVR0ZQUnBXbWEzLUE1TlQ2WmZvd0huamI4U3d6VVRYR3hXWGc?oc=5",
+      "title": "How Cornell Punished Each of the 7 Men Accused of Sexual Assault - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5PSVJNb0xQaE1kVGliQktNMUR3c0ZmTGhwd1htTW9sNHdCZUM3YmN6YzE1TkNOSHZuTThCX19SYVNjNF9NRUFPRTZBNjNYcDBTX29BT2lTUklkWUU?oc=5",
+      "title": "What we know about the Cornell University frat house rape investigation - BBC"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNejRRRnRXTUVHWGRKQTd4RGRDMU5DM3RQTzlxVWxaalJycTZ0RE9LZkg2akhWQ1lMaFhtNERhejY3WUhYY0R0ZS1uTG9aU2thUXZKdGlUclE0V3pQZjIteXNhcmNJM29KcFBkVm5OQ2w1TnV0VkFkRTdPSlI3Y3hieVZuZHJzZjU5bE5sYms3dWg1NWp3UjdyU3p6N3NkZ9IBowFBVV95cUxPYUZYd29fVlRJVllPRWNWYVNzc0N4SkFCdV9vMXA4XzNjSEFZeUhTRG9uTl9YdWhLS0lzOWpQWjA3cF9OT3Y1RzNhWGVUZnFDU2JOc3FDNjRGcVdPcHBkV3RFXy1oOVVseXF3a1ZUOFpWc3pkU3JQejZaLWJtZWlCR0pRNTNoMEw5dTd5NzdYX3lkeGF5UEVldHA1WjZ1di01LU44?oc=5",
+      "title": "'Damage control': Phone calls, records suggest some Cornell frat brothers tried to contain 'gang rape' allegations - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSVVvVmRoMHRBTm5KNXFYUjhNZnZUYUF3UXJ4SzdZZjJ3WFRrWWtQZ1pYYkxGdm91Slh3bHNBczR3Q0VGLUt6SE91cGtkRlE2VlM4bmFHbHM5SmVuVmwxX1JuSl8xV3Z2ZDdtcExjdnZBX0FxT1pOSWJSX0EzX0lORG5ldXJ1Rk0?oc=5",
+      "title": "Cornell rape accuser faces threats demanding she drop her lawsuit, attorney says - NBC News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMktjSElFanVXOV9zT015N0RGeVlFTVd1UDJfdEdxZE9UQnRaTkFPR1UyVDBiNmJrZW1GSzQ5SnhnTGV4TGRINjRFVURTcThyNnA3OWFpT01ybzR5Zkh2THlPQmxxMHZqX0pUTlYyNzl2T0dveDk4SWx1bWdZRVFaYXZFOWdJSUVzd2R5blM0VjJTM2E3Rm4wQ3FEbXZFTmk4Y3FtbjJZNzFQdjFk?oc=5",
+      "title": "Cornell president calls gang rape allegations \u2018deeply disturbing\u2019 - NPR"
+    }
+  ]
+}
