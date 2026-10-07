@@ -1,0 +1,89 @@
+{
+  "story_id": "2026-10-06-france-shuts-down-nearly-15a42f58e2",
+  "headline_seed": "France shuts down nearly 900 schools as violent education protests escalate - NBC News",
+  "brief": {
+    "story_id": "2026-10-06-france-shuts-down-nearly-15a42f58e2",
+    "consensus_facts": [
+      "Multiple outlets' headlines report mass student/education protests spreading across France in early October 2026 (The New York Times, NBC News, Fox News, The Washington Post, Politico).",
+      "Both outlets with full body text (The New York Times headline-group listing and Politico) indicate the protests originated over school conditions rather than migration or religion; Politico's body states the movement began over frustrations with school conditions including staff shortages, dilapidated buildings, and overcrowded classrooms."
+    ],
+    "disagreements": [
+      {
+        "topic": "Cause/nature of the protests",
+        "positions": {
+          "Politico": "States explicitly that neither migration nor religion spurred the protests, which began over school conditions (staff shortage, dilapidated buildings, overcrowded classrooms); quotes Trump's contrary framing to rebut it.",
+          "Fox News (headline only)": "Headline frames it as 'FRANCE ON FIRE: Hundreds of thousands take to streets to demand education reform' \u2014 emphasizes scale and intensity.",
+          "NBC News (headline only)": "Headline emphasizes nearly 900 schools shut and characterizes protests as 'violent' and 'escalating.'"
+        }
+      },
+      {
+        "topic": "Level of violence",
+        "positions": {
+          "Politico": "Says protests have 'remained largely peaceful' but notes several instances of violence, including a schoolboy with a severed hand and another blinded in one eye, raising concerns of excessive police force.",
+          "NBC News (headline only)": "Headline frames protests as 'violent' and escalating.",
+          "The Washington Post (headline only)": "Headline frames protests as tapping into broad 'public discontent,' not centered on violence."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two Reuters items in the dossier (Article 1 on a nuclear missile test; Article 4 on an EU trade tool targeting China) are headline-only and unrelated to the education protests. They do not bear on this story and provide no corroboration.",
+      "The New York Times": "Appears twice. Article 2 is an aggregated headline listing ('Student Protests Expand to More Than 40 French Cities') that also embeds the NBC and Fox headlines \u2014 framing the story around geographic spread (40+ cities). Article 5 (Leny Yoro football debut) is unrelated. No retrievable NYT body text on the protests.",
+      "Financial Times": "Headline-only ('France: between the bond market and the barricades') frames the unrest through an economic/fiscal lens, linking street protests to bond-market and budgetary pressures \u2014 a distinct angle from the education-focused outlets. No body text available.",
+      "The Washington Post": "Headline-only ('Protests sweep France, as student walkouts tap into public discontent') frames student walkouts as a symptom of broader national discontent, widening the aperture beyond schools. No body text available.",
+      "NBC News": "Headline-only (via the NYT aggregation), emphasizing scale ('nearly 900 schools') and characterizing the protests as 'violent' and 'escalating' \u2014 the most alarm-forward framing in the dossier. No body text available.",
+      "Fox News": "Headline-only (via the NYT aggregation), using dramatic capitalized framing ('FRANCE ON FIRE') and emphasizing crowd scale ('hundreds of thousands') and the demand for 'education reform.' No body text available.",
+      "Politico": "The only outlet with substantial body text. Politico reports that President Trump, in a Truth Social post, blamed the protests on 'out of control mass migration' and Islam, and the article explicitly fact-checks this by stating the protests began over school conditions, not migration or religion. Politico reports the movement started last week, has spread nationwide, has remained largely peaceful with several violent instances, and cites specific injuries (a schoolboy with a severed hand, another blinded in one eye) alongside concerns about excessive police force."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No alignment check against underlying documents is possible."
+    ],
+    "missing_context": [
+      "Only one outlet in the dossier (Politico) has retrievable full body text longer than ~500 characters; all other protest-related entries are headline-only. Therefore nearly all substantive detail (injury counts, 'largely peaceful' characterization, Trump's framing, the school-conditions origin) is single-source and should not be treated as cross-outlet consensus.",
+      "Three of the seven dossier articles are unrelated to the education protests: two Reuters items (nuclear missile test; EU trade tool) and one NYT item (a football/Leny Yoro story). They provide no corroboration for this story.",
+      "No outlet in the dossier provides a verified total count of participants, a confirmed number of schools closed (NBC's 'nearly 900' appears only in a headline), or official French government casualty/arrest figures from a named authority.",
+      "No primary sources (French Education Ministry statements, police reports, union communiqu\u00e9s, or official injury data) were available to corroborate Politico's specific injury claims or the scale figures in other headlines.",
+      "The Financial Times' economic/bond-market angle and the Washington Post's 'public discontent' angle are not substantiated with body text, so the link between the protests and France's fiscal situation remains unexamined in the available material.",
+      "No article body is available to independently verify the exact wording or timing of Trump's Truth Social post beyond Politico's reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets headline the same French education protests with materially divergent framings (economic/bond-market, broad public discontent, 'violent'/escalating, 'FRANCE ON FIRE,' and a Trump-migration angle that Politico explicitly rebuts), making this a coverage-divergence story. Because only one outlet (Politico) has full body text, a straight REPORT would risk passing single-source detail off as consensus, so a META framing that foregrounds the framing split is the honest choice.",
+    "confidence": 0.45
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdnFZRFNIWk9paTlwTFFMaXJrM1BwQUtRYndNQXZCcXJfMDBadlBXZm85R0VaRFRQa3VrM3UtSGtqbUc4dU1TbU1EeGk3ZTg5eE9Da0FseEtBN3I0aXRoaEpiVW5SQjUwQ3Y0NjlKSjdINU0tM1BlYlo3czk2U3dFbDJRYnhPOGlUeWgyVHlGRnFzUVNpVjBGbVEzdmxOMk43eE50Q2Z3dlFDYUs5NldpYzlkZzEtOGt6cFRuQS1uekl6SHBMM05rc0ZwRkp2dw?oc=5",
+      "title": "France tests upgraded nuclear missile against backdrop of Russia tensions - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNam9vd29RT0d1Y0ZKMmpJbmZFd21XSWlWaDNOTWVWaVhkQ2FhODMzcFJnN2N4Mzg4dnpBRmV6c0g1MG4xTWt2Y0QyMXZNeWhwMHlHNDJGVmdEMFl2RDhhclpiZkRmUzFOZnpJUFdseTF6Q002V1VGVV9KZ09rVDF3dEp0Unc?oc=5",
+      "title": "Student Protests Expand to More Than 40 French Cities - The New York Times"
+    },
+    {
+      "outlet": "Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTGd2SHllWWVRNllScGw2RVRNdlgwZ2pxeW1ycGFzeUkzU0JIRkNlaThRZE5UcV85c1otM1l4ejlGcElFanZGYkhrc09ERDdzWEhFRDF4THlXODZ3RVB0Vm9lNVV5TF9RNTRqdVRpSDNEQmNXOGFMMmFuV2Zvc3pGLUQ4QzY?oc=5",
+      "title": "France: between the bond market and the barricades - Financial Times"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWDQ0OVBka2szNklkWXItcVUwNElEU1RVai0tcTQ5Rm5sNVhjZzBIWnRYRkFVYVV4aHlibWUybzYtVGhIa203N19GZlI0ZkFzMlVGLVVRNGpQZ3BSTC1JWllRUjlxenc1MHBRdEk0T0Y4QUhVcFZhWEs0c0dlLWlJVFhzUlhORzZ4U3VNWVBEMDBhS0RtQU5IT3YyNkxTWlhzNm80ZDFn?oc=5",
+      "title": "France, Germany push for EU rapid-response trade tool with likely focus on China - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMnZqVmYteDQ2OUYtQmNpUWJQWTAtNTBiMkxvNUFhWmdoMmVpUGl2TGZVaGhLZTZFU3VjUVA3QVdfWkpUZUJIbG5fa3JzZUY3cXh3RE9JanI5WHJtOFU4Z3RDT3ZwVUhwNE8yV2tHOEZvSDRkRlhnQTFiaE1TRkZOSA?oc=5",
+      "title": "Leny Yoro\u2019s France debut underlined his potential. Man United must find a way to see more of it - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWEJnYnNGeFpyLTVBM0cyNXJUMzZ0NXp2YmU5Q3k2Tk9HSWd3TXgzV3pKUUtQMEZDclc3YWxjODM3RjFNdmc3bE1rWjBOb2x4eXRvSVFlWVNDUmRiQlB5eGUwNGplWEtVV3kyTE5lNXdtVEpqSHVtbUFqWUd3UGs0NkRHd0ZlQUEtUG91ejluRTNnU0FZMmQ3d1dSYV81eFFZWWN0YjhydGstM2ItbkdfXzdB?oc=5",
+      "title": "Protests sweep France, as student walkouts tap into public discontent - The Washington Post"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWXBqZWRTYXpFUEp6MzZUS3pKc044S2sxbWwtZVZrcmhUUEtGQklmLWlkaUZXbnItYWVDMjEwRmNjbGZnX2JaWk9XaUxZRmdfVnlrY2xPNnZ3c0lwclFfX0wzUVZibkpRaGVZazJjamZuZXl0cVp1c19wTnh0OV9GV0o4aGs?oc=5",
+      "title": "Trump blames mass protests in France on \u2018out of control mass migration\u2019 and Islam - Politico"
+    }
+  ]
+}
