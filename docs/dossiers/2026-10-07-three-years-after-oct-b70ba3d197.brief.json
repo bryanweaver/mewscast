@@ -1,0 +1,102 @@
+{
+  "story_id": "2026-10-07-three-years-after-oct-b70ba3d197",
+  "headline_seed": "Three years after Oct. 7, Israeli strikes in Gaza grind on and deaths climb - The Washington Post",
+  "brief": {
+    "story_id": "2026-10-07-three-years-after-oct-b70ba3d197",
+    "consensus_facts": [
+      "Israel marked the third anniversary of the October 7, 2023 Hamas-led attack on October 7, 2026 (ABC News, Taipei Times, Al Jazeera).",
+      "The 2023 attack killed about 1,200 people in Israel and resulted in 251 people being taken hostage (ABC News, with Taipei Times also describing it as the deadliest/worst attack ever against Israel).",
+      "More than 74,000 Palestinians have been killed in Gaza since the war began, according to the Gaza Health Ministry (ABC News cites 74,000+; Al Jazeera cites 74,245).",
+      "A ceasefire took effect roughly a year ago (October 10, 2025) but Israeli strikes have continued in Gaza (ABC News, Taipei Times).",
+      "Israel carried out new strikes on Gaza on the anniversary; Gaza officials reported multiple Palestinian deaths that day (Al Jazeera reports at least four killed; Taipei Times reports three killed).",
+      "Commemorations were held at the Nova music festival site, where the attack began at 6:29am, and at Kibbutz Kfar Aza (ABC News, Taipei Times).",
+      "Israel is holding elections on October 27, the first since the attack, with the vote looming over the anniversary amid divisions over Netanyahu (ABC News, Taipei Times).",
+      "Family members of Nova victims attended memorials, including a mother who lost a 25-year-old son and played techno music in tribute (ABC News names Anya Davitashili/son Sean; Taipei Times names Anna Davitashvili/son Shaun Davitashvili \u2014 same account)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Palestinian deaths in strikes on the anniversary day",
+        "positions": {
+          "Al Jazeera English": "At least four Palestinians killed, including Civil Defence volunteer Mohamed Tamous near Kamal Adwan Hospital and Hisham Ibrahim Abu Mustafa, 60, in Khan Younis.",
+          "Taipei Times": "Gaza officials said three people were killed in strikes in the territory."
+        }
+      },
+      {
+        "topic": "Total Palestinian death toll figure",
+        "positions": {
+          "Al Jazeera English": "More than 74,245 Palestinians killed.",
+          "ABC News": "More than 74,000 Palestinians killed, per Gaza Health Ministry (noting it does not distinguish civilians from militants; about half women and children; figures seen as generally reliable by UN agencies and independent experts)."
+        }
+      },
+      {
+        "topic": "Characterization of the war",
+        "positions": {
+          "Al Jazeera English": "Repeatedly describes Israel's 'genocidal war on Gaza' launched in response to the October 7 attack.",
+          "ABC News": "Describes an 'Israeli retaliatory campaign' and 'offensive' without the 'genocide' characterization.",
+          "Taipei Times": "Describes a 'massive offensive' and 'relentless bombing in retaliation' without the 'genocide' characterization."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in dossier. Frames the day as parallel grief: 'Israelis mark three years since October 7 as Palestinians mourn Gaza's destruction.' No body text available to assess lead or emphasis.",
+      "The Washington Post": "Headline-only in dossier. Frames around ongoing Israeli strikes and rising death toll: 'Israeli strikes in Gaza grind on and deaths climb.' Emphasis on continuation of violence rather than commemoration; no body text to assess.",
+      "Al Jazeera English": "Leads entirely on Palestinian casualties from anniversary-day strikes, naming individual victims (rescue worker Mohamed Tamous, Hisham Ibrahim Abu Mustafa, a 17-year-old, an injured girl). Uses the phrase 'genocidal war' repeatedly as settled description. Does not cover Israeli commemorations, hostages, or elections. Attributes casualty figures to Gaza medical sources and Anadolu.",
+      "NPR (article 4)": "Headline-only in dossier. Frames the day as dual experience: Israelis mourning, Palestinians grappling with 'the war it sparked.' Attribution of causation ('it sparked') embedded in the headline; no body text to assess.",
+      "NPR (article 5)": "Headline-only in dossier. Distinct angle: focuses on domestic Israeli reckoning over reports that Netanyahu was warned before the attacks. Signals an accountability/political-failure frame absent from most other headlines; no body text to assess.",
+      "ABC News": "Most comprehensive body text. Balances Israeli commemoration (Nova site, Kfar Aza, released hostage Elkana Bohbot's account) with Palestinian devastation (90% displaced, hunger crisis, 74,000+ dead). Provides caveats on the Health Ministry figures and UN assessment of reliability. Situates the anniversary in a wider regional transformation (Lebanon, Iran-US confrontation). Notes political divisions over Netanyahu and his reluctance to launch an inquiry.",
+      "Taipei Times": "Leads on the mix of mourning, new strikes, and election politics. Foregrounds Israeli victim testimony (Katia Zohar, Anna Davitashvili) and the electoral challenge to Netanyahu (quotes Bennett and Golan). Notes Tel Aviv activists demanding accountability. The second half of the article pivots entirely to unrelated Taiwan/China news, suggesting an aggregated or concatenated page rather than a single dedicated story."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. Claims rest on outlet reporting, Gaza Health Ministry figures, and wire/medical-source attributions (Anadolu, AP, AFP, Reuters) rather than any independently verifiable primary document in the dossier."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides a breakdown of the anniversary-day Palestinian deaths that reconciles Al Jazeera's 'at least four' with Taipei Times' 'three' \u2014 the discrepancy is left unexplained.",
+      "Israel's own account or military statement on the anniversary-day strikes is largely absent; only ABC News briefly notes Israel says it targets Hamas militants. No Israeli casualty figures for the strikes are given.",
+      "The NPR headline about Netanyahu being warned before Oct. 7 is a significant accountability angle, but no body text was retrievable, so the substance of those reports cannot be assessed.",
+      "Four of seven dossier articles (Reuters, The Washington Post, both NPR pieces) are headline-only, so most of the 'coverage' cannot be analyzed at the body level; consensus here rests on only three full-text outlets (Al Jazeera English, ABC News, Taipei Times).",
+      "The term 'genocidal war,' used as settled fact by Al Jazeera, is contested and not adopted by ABC News or Taipei Times; the dossier does not present any adjudication (e.g., ICJ status) to contextualize the differing characterizations.",
+      "The Taipei Times article body is partly contaminated with unrelated Taiwan/China stories, which limits confidence in treating it as a clean single-topic source.",
+      "No outlet details current hostage status beyond ABC News noting this is the first anniversary with 'all the hostages home'; the dossier does not corroborate or elaborate this claim elsewhere."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same anniversary with materially different framings \u2014 Al Jazeera leads on Palestinian casualties and 'genocidal war,' ABC News and Taipei Times balance Israeli commemoration with Gaza devastation, and headline-only outlets emphasize divergent angles (ongoing strikes, Netanyahu warnings) \u2014 making the coverage divergence itself the story. No primary source exists and casualty figures conflict, so a straight REPORT would overstate consensus.",
+    "confidence": 0.58
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVEc3R0oyN1N1QkF0Q09Zb1hfWURTdDRRSnFvaVNlQU42cXJCNEhNNXdLOW11NTRsVi1VVlJKV0NSTm1CMVg3c3RMQ3pHcEV3VGpCNGF1UHBobHVhYkFQY0pNS2NvMXBQMWxSTEVhQTF6a01jRzBpXzFKajQ2NWxIZm5BdGQ4azhfYnBwVnh1enVzc04xeElNSTZFMHcyNmlfUElEM2s3RVFRXzFScUcyNUlfbFVrSjA5LVNjMlhQZzVBUQ?oc=5",
+      "title": "Israelis mark three years since October 7 as Palestinians mourn Gaza's destruction - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMm1kWlRJQmYxbUtXcEpCcjV6ZGdzSGRlZ1ZGaUhHMWRzc3hMb3FFQnA5Ym5zV1F3UHNhUnhPWDh2Y2U4OVZ3YWFmdVdySEc3VEIyRzI3azV2S3hrWkVrTmI1OG1GdFMxVnJqbXZJMTlkRjZLano5d01JMldGUmF4MFZEMlZNSU5uaUJCRkpHX1k3WkxObXBJVmJVRzBLcTlNb29sSnpfTXBFd2ZIZzBoYTln?oc=5",
+      "title": "Three years after Oct. 7, Israeli strikes in Gaza grind on and deaths climb - The Washington Post"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbk9QTVRzSk81NnItMHE3OU5JX0N2ZGJFcEpLRG90dG5zRFU4OThMS3FJUnpLd21ZNVZINEFlNEoyY2o5SHdNczJXT2hYbjd2WTVfWGxMc0NobGlzdDBlclU2NHJWNlFYTVFRdHZBWDBQbVRlZXgyb0pPeWhJTEhWOU82TW4zb0RiN2hBYVhLQ2h5T3JRczFYWHQ5azgxS0Q3d0HSAacBQVVfeXFMTWxPaXJINFh5NXh5TUxDRHB5WV83OW1mYlpRaF9LLXVDTVVtVVUtNlZEaFpfUy1mb1I4NnRGZU1sbVh5Z0x2a2NfcGZoTE16dWF4ampYbFFhTmh3dW04R0NUMnJnYWMwT0tCSTRRdm9MZl9Ga19ZSXM4c1dEMnVTZjhzdjNVamkxbThpLUFvcjduMzhWcU05eW11TXlqd3I5bHo0M2FTMmM?oc=5",
+      "title": "Israeli attacks across Gaza kill at least four Palestinians - Al Jazeera"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOOC1XUGh0RUV2VjZ0b25fRzBvZWdoS1BCMU80OWwzaWE4N1hOXzZpM2s0Smt2LTB6Umt3eklvSHVRM29CTjJKY2FYT3lId0NzSm85bVNnaEswdFJ4VTJ2ekJVY1VnOEEzSF8tSUpiRTFsb3Q2c2hUZ0VrUTR2N0M3WF9R?oc=5",
+      "title": "Israelis mourn on the anniversary of the Oct. 7 as Palestinians grapple with war it sparked - NPR"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPa2VYWmN5ak4zMjdFSWFPcXdqU2RzbzI1QmhpQTNiX1VHTHpBMjB1VWprQWdMZFdBcFBxakZCWUJoWUlXOGp5N2Zvb0trakdZS1VaSUxHbmk3X1JpWWhxeWJGcXA0ZzZkZnNEZ2RrSlotSVhtWDV3YUQxVkxtSU5oTWZOS290cmgzYnhITENR?oc=5",
+      "title": "3 years on, Israelis grapple with reports Netanyahu was warned before Oct. 7 attacks - NPR"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMXNpLU1SeXZYZ0I5ZVlKRjBKOHcyNzROYS05N2pVeGtNbGxuWDZxVTVZdFIwMGt5aWp3ZVN1Z0lobVIwa2lCQmNZR3FXelF5NDBOV0JrUk5Ub2RoZElFOTJod2h1Zk9CSENINEZ5UVZxZ3k0S1VNaTB0UjFMTHI3TnF0bUlsaFpYTzJOVkFZVlBnMEl2U2pqSUFESFFBdlRvNlg3Wg?oc=5",
+      "title": "Israelis mourn on October 7 as Palestinians live in devastated Gaza - ABC News & Headlines \u2013 Australian Broadcasting Corporation"
+    },
+    {
+      "outlet": "Taipei Times",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAySEwwN0stREI0WkZ1Q1Exa3dWZkd6MGhtanlMMWViczJvdWJzZG1vTVBKZ0NIYkdubHAzckFqTDFzNWNtcE1TQWhGMnhyTDdkTmpJMTkzVGloY2t4eTFPdFhUQ01lelpBXy1Nekg5SGExZ2puZ05SNQ?oc=5",
+      "title": "Mourning, war and elections as Israel marks anniversary of Oct. 7 attacks - Taipei Times"
+    }
+  ]
+}
