@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-10-09-katie-zacharia-will-be-1973a0be3e",
+  "headline_seed": "Katie Zacharia will be the next White House press secretary - NBC News",
+  "brief": {
+    "story_id": "2026-10-09-katie-zacharia-will-be-1973a0be3e",
+    "consensus_facts": [
+      "Katie Zacharia has been offered the position of White House press secretary; multiple outlets (Al Jazeera, Axios, ABC News, BBC) report this via White House sources or officials.",
+      "The press secretary role has been vacant since Karoline Leavitt left the post in August 2026 (Al Jazeera, Axios, ABC News, BBC).",
+      "Zacharia currently works as a communications advisor at Trump Media & Technology Group, which operates Truth Social (Axios, BBC).",
+      "Zacharia previously had a brief stint as a spokesperson at the Department of Homeland Security (Axios, BBC).",
+      "Zacharia is a conservative commentator who has appeared on conservative and mainstream media programs (Axios, BBC).",
+      "The news broke on October 9, 2026 (Al Jazeera, ABC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Status of the appointment (offered vs. selected/picked)",
+        "positions": {
+          "Al Jazeera English": "Reports the position has 'been offered' to Zacharia, framing it as an offer not yet confirmed as accepted.",
+          "Axios": "Says she 'has been offered' the post and explicitly notes 'if she accepts,' signaling acceptance is not confirmed.",
+          "ABC News": "Says she was 'offered' the job, a White House official confirmed.",
+          "BBC News": "Headline and body shift between 'picked' and 'offered'; body states she was 'offered the job.'",
+          "CNBC": "Video segment framed as White House 'picks' Zacharia, implying a firmer decision."
+        }
+      },
+      {
+        "topic": "Length of DHS tenure",
+        "positions": {
+          "Axios": "States she spent 'about two months' as DHS deputy assistant secretary for Public Affairs and spokesperson.",
+          "BBC News": "States she worked at Homeland Security 'briefly from February to March this year.'"
+        }
+      },
+      {
+        "topic": "Where Leavitt went after leaving",
+        "positions": {
+          "BBC News": "Reports Leavitt has 'reportedly taken a job with Fox News.'",
+          "Al Jazeera English": "Only states the role has been vacant since Leavitt left in August; no destination mentioned.",
+          "Axios": "Describes Leavitt as 'a tenacious Trump loyalist' who announced departure in August; no destination mentioned."
+        }
+      },
+      {
+        "topic": "Count of Trump spokespersons",
+        "positions": {
+          "BBC News": "States Zacharia would become Trump's 'sixth chief spokesperson across his two administrations.'",
+          "Other outlets": "Do not provide this count."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only in the dossier; body text is a bot-detection/paywall notice containing no reportable content. Headline frames the move as a succession ('to Succeed Leavitt'), treating the appointment as settled.",
+      "The New York Times": "Dossier entry is a Google News aggregation list of other outlets' headlines, not NYT body text. The NYT headline itself ('Picked as the New White House Press Secretary') frames the decision as final rather than a pending offer. No retrievable NYT reporting to analyze.",
+      "Al Jazeera English": "Leads on the 'offered' framing, carefully quoting the word 'offered' and attributing to an unnamed White House source. Emphasizes the vacancy since August and labels Zacharia a 'conservative commentator.' Explicitly flags the story as developing. Minimal biographical detail.",
+      "Axios": "Most detailed body text. Leads with sourcing ('multiple sources familiar with the offer'), hedges on acceptance ('If she accepts'). Provides the fullest biography \u2014 Trump Media senior communications advisor, ~two months at DHS, commentator on Fox, CNN, Newsmax, OAN. Characterizes predecessor Leavitt as 'a tenacious Trump loyalist.' Neutral, sourcing-forward tone.",
+      "ABC News": "Short breaking-news item leading on official confirmation ('a White House official confirmed Friday'). Minimal detail beyond the offer and the August vacancy. Page is cluttered with unrelated promotional content. Frames strictly as developing news.",
+      "BBC News": "Provides substantial biographical context and situates the role's responsibilities beyond the podium. Uniquely reports the 'sixth chief spokesperson' count and that Leavitt reportedly joined Fox News. Notes the BBC contacted Zacharia for comment. Explains the complexity of the job, adding analytical framing a straight wire would omit.",
+      "CNBC": "Dossier entry is a video segment description, not article prose. Headline frames the move as the White House having 'picked' Zacharia, a firmer framing than the 'offered' language used by Axios, ABC, and Al Jazeera. No substantive body text to analyze."
+    },
+    "primary_source_alignment": [
+      "No primary source (official White House announcement, press release, or statement from Zacharia) was located for this story. All reporting rests on unnamed White House sources/officials, so no document-level verification is possible."
+    ],
+    "missing_context": [
+      "No outlet reports whether Zacharia has accepted the offer \u2014 all framings range from 'offered' to 'picked,' leaving the key question of acceptance unresolved.",
+      "No official White House statement or on-the-record confirmation is cited; every report relies on unnamed sources or officials.",
+      "No comment from Zacharia herself was obtained (BBC notes it contacted her; no response reported).",
+      "The dossier reflects reliance on a small number of original reporters \u2014 Axios, ABC, BBC, and Al Jazeera each cite White House sources, which may trace to the same leak rather than independent confirmation.",
+      "Discrepancy between Axios ('about two months' at DHS) and BBC ('February to March') on the length and dates of her DHS tenure is unexplained.",
+      "No outlet details why the press secretary position remained vacant for roughly two months (August to October), or who filled the role in the interim.",
+      "Bloomberg, NYT, and CNBC entries in the dossier are either paywall/bot-detection text, aggregation lists, or video stubs \u2014 not retrievable article prose \u2014 limiting independent corroboration to four outlets."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with usable body text (Al Jazeera, Axios, ABC, BBC) corroborate the core facts with only minor framing differences (offered vs. picked, DHS tenure length), and no primary source diverges from coverage \u2014 this is a straightforward multi-outlet confirmation of a personnel offer rather than a coverage-divergence story.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQWFOQV9BczhQN0RJWkZScWtYekp6QThXOEtCbW5TUWRtdWdEVXplY3FwbXFWSW13dnd3MWlqSnMyT3p4aGp2YndkRmNsUWxTTmhKNkhDVks4b3Ytd2hJZDJPZFBVcW4wS3BFSEkyTUg2ZlI1WTJDUlpzbzF1U2ZfME9EOUt5dUJyVkwxZ0t4SVBfOC1SZ0M0UVNLT1pkWXA1emJKcG9kdExycFJpc0l5cjdqRmpodw?oc=5",
+      "title": "Katie Zacharia to Succeed Leavitt as White House Press Secretary - Bloomberg.com"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQc3drMkRmc2YyUGl4RkMzcXozV0xxbDk1RUlLV29TRHVKcG9rUnNoNnllQkV4V0ZQMVpzTXpLbkd3aWNuNkx2a0ZGbG9JRmwwTElXYWkyY294Rl9VT1VCOGhUd1RvYUcyYkxxNHYxZnVLQ2FKX3FrSDIwR3BhUDk4VV9VZlZpVEd1QmRNZW1yNE9TQ1RNV2VzMjBISUtqeVJBRUE?oc=5",
+      "title": "Katie Zacharia Picked as the New White House Press Secretary - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQanJ0aWhwZ0dIT1Bvc3hGVkZ6N005TU5qUHZJTVdOMnJRZ1F0dFk3Mm45VE1NTXJpeHFrYlNrdzQybUtFYTlQVkUxOVdmd0pjT1FmbktEcDFMQXcxMjdnRHJGeDFHallOZnNwc2U0bUJiZzZoRjhzYnpOZVk5S0pBdmFraVBCdldpbERKZTFHdTBBbEYwUVR2MENLMnlNcWFoTWR3LXRB0gGrAUFVX3lxTFBKNWhBcGl2QVB6VUYtUzJ6Z2FWa2c5QkJQclNCY2VfTjB0RGlfaFg0ZjdXdzBsbXdTdlFrRHNuVVRSbmx0UktRMlB0dXZ6LTJTc2NzbF9xV2syQUFIY2F1eVpTMm1VZGlxS0x1ZVpOdVNCODRtZi1iQVFfczFYSFcxS0Z2ekxtV3pPR0ZaOVlza0VvT3pfZ2p6Zy10TkFLeW9ISWhjWnlQTzhPaw?oc=5",
+      "title": "Katie Zacharia \u2018offered\u201d position as White House press secretary - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUzdrS2xzX3RHcllxcEpsVXYtLTNhRjVhRUVETDZSZzVKa3FNMjBIVzZVTkt0cVpkN3VkbVBQOHYyQ29mVFFiRDVmelR4WGE4RktaaWZwTDVHMlZtLWI0TUctMFpKMUJIck9DMkxmUHhIaEo1LVNoUG1DX3pPM1Y1Ny1zTEQ?oc=5",
+      "title": "Katie Zacharia tapped as next White House press secretary - Axios"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVlFMRDhhYktaQ0Z1M0liYV9HZ2pyWkdVdWZxeXJsN3RHODktdDZUYVJyWUEzekR3a1BYUEx1VGZvdXN3Y2F6MnV1cGtYaHNiN2VzWHNWVEd2bzBTaTF0S3BNZTRza3J0aFptSTVUZzF1MUZIOUs1eVRjdUhoLXNrZjNiUzVoRUlBLVlPX3lidlVfdWZmM2VzX3VEbWg5NkkwcnZ4eNIBqgFBVV95cUxOSC1NYmFqWElSbmV0RUhtOGo4dExJVjBLa2NqVDU5QmZvUFZ2Z0RjaTJKd2VLeE1BcHRkYWxuUXVuakFHLTMzUkpJa012VjZxaXdzbVJnN29tdDRsTzlKWm5rMnJmS3dpZGZLSk1JTmNvckV6QUdBd2FBNWdxQkpoM2hIRFFjSGFSMURlQWVuRm9pOF92UDk0UmhaajlQTGZkTm5GTmNuOXFRUQ?oc=5",
+      "title": "Katie Zacharia offered White House press secretary job - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9EWGlBSlA0cWdBdmpNc0trbXpFVjI1UVRwUm03SUh5eTNYOHFwWkhuaHQyNFhLWi1VclhtQ0s3enVCMlJGYVVvWURkZ0huVlItTlk0NXliRXhNdXZHVUE?oc=5",
+      "title": "Commentator Katie Zacharia offered job of new White House press secretary - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSS1WekxwTDVZXzFLNlNJdXQ4OGI1R1ZWdlR0d0lZdDFrekc1RjY4RFI2VHpvQ19vVTNqX2RRNkR5NEVKcWx4R3dyQXpSVHVKeEJXQTh1UUhYRU9TV3ppMExWQjA1RC0wdG13RUY2Nnpib0RWdlRVUkRTdnVlbDlLN0dHNDVfTng1Z2VwQTdDeUdGY3FYalh4LThHX0dBUG8?oc=5",
+      "title": "White House picks Katie Zacharia as new press secretary - CNBC"
+    }
+  ]
+}
