@@ -1,0 +1,129 @@
+{
+  "story_id": "2026-10-10-nine-people-including-children-a6344324d3",
+  "headline_seed": "Nine people, including children, dead after mass shooting in Pennsylvania - The Guardian",
+  "brief": {
+    "story_id": "2026-10-10-nine-people-including-children-a6344324d3",
+    "consensus_facts": [
+      "A mass shooting occurred at a home near 7th and Perry Streets in Erie, Pennsylvania, on the evening of Friday, Oct. 9, 2026.",
+      "Officers responded at approximately 4:50\u20135:00 p.m. after reports of gunfire; ABC News attributes this to a ShotSpotter alert.",
+      "The suspected shooter is dead, and authorities believe he died of a self-inflicted gunshot wound.",
+      "Erie Police Chief Rick Lorah described the scene as among the most difficult and heartbreaking of his nearly three-decade (28-plus year) career.",
+      "Authorities said there is no ongoing threat to the public and that a motive has not yet been established.",
+      "Pennsylvania Gov. Josh Shapiro said he spoke with Erie Mayor Daria Devlin and offered his administration's 'full support,' writing 'My heart breaks for this family' and that he and Lori are praying for the loved ones and the Erie community.",
+      "Officials said all deaths occurred before officers arrived, and no additional shots were fired between officers' arrival and their entry into the home.",
+      "Victims had not been publicly identified at the time of reporting, and a follow-up news conference was scheduled for 4 p.m. Saturday, Oct. 10.",
+      "Erie is roughly 117\u2013128 miles north of Pittsburgh."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total death toll",
+        "positions": {
+          "ABC News": "9 people killed",
+          "NBC News": "9 dead",
+          "The Guardian (Article 4)": "9 people, including children, dead",
+          "People.com": "9 fatally shot, including 2 children",
+          "East Bay Times (headline-only)": "9 dead; suspected shooter also dead",
+          "Associated Press": "8 dead, not including the shooter \u2014 AP explicitly updated its story to correct the number to eight per authorities",
+          "CBS News (headline-only)": "At least 5 dead (apparently an earlier, lower figure in the headline)"
+        }
+      },
+      {
+        "topic": "Whether the shooter is counted in the death toll",
+        "positions": {
+          "ABC News": "Police did not immediately disclose whether the shooter was among the nine victims",
+          "NBC News": "Officials did not specify whether the shooter was included in the death toll",
+          "Associated Press": "Frames 8 dead as separate from the shooter ('not including the shooter')"
+        }
+      },
+      {
+        "topic": "Children among the victims",
+        "positions": {
+          "The Guardian (Article 4)": "States children were among the dead found inside the home",
+          "People.com": "Specifies two children were among the victims, citing Erie News Now and KBTX News 3",
+          "ABC News / NBC News / Associated Press": "Do not specify children among the victims"
+        }
+      },
+      {
+        "topic": "Sequence of events and victims found outside",
+        "positions": {
+          "The Guardian (Article 4)": "Two women found dead in the street; attacker went inside; more gunshots heard; officers entered and found seven more victims plus the suspect",
+          "People.com": "Two women found dead outside; shooter then entered home, shot multiple victims, and barricaded himself, sparking a standoff",
+          "ABC News / NBC News": "Do not describe victims outside or a detailed sequence; NBC notes officers faced uncertainty about whether the individual remained inside"
+        }
+      },
+      {
+        "topic": "Existence/nature of a standoff",
+        "positions": {
+          "ABC News": "SWAT team called in and entered after obtaining a warrant; no active standoff with a live shooter described",
+          "The Guardian (Article 4)": "Describes a standoff with police and tactical teams and more gunshots heard from inside",
+          "People.com": "Describes shooter barricading himself and a standoff with SWAT",
+          "NBC News / Associated Press": "Do not emphasize a standoff; NBC/ABC/officials say all deaths occurred before officers arrived"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "ABC News": "Straight breaking-news framing with heavy police attribution ('Police said'). Leads on the nine dead and the self-inflicted wound, emphasizes 'no threat to the community.' Notes police did not say whether the shooter is among the nine. Includes the ShotSpotter detail and Lorah's 'horrific scene' quote. Tagged under 'Gun Violence.'",
+      "NBC News": "Files under a standing 'Guns in America' vertical, signaling a gun-policy lens even in a breaking report. Lean, fact-forward body emphasizing no ongoing threat, that all deaths preceded officers' arrival, and Shapiro's 'full support.' Notably restrained \u2014 does not mention children. Page is heavily padded with unrelated subscriber links.",
+      "CBS News": "Headline-only in this dossier ('At least 5 dead'), reflecting an earlier, lower casualty figure; body text is navigation boilerplate with no reporting. Does not corroborate later details.",
+      "The Guardian (Article 4)": "Most expansive and most explicitly thematic. Uses 'mass murder' and foregrounds 'including children.' Reconstructs a narrative sequence (two women dead in street, standoff, seven more inside). Pivots to national context: cites Gun Violence Archive on the 19th mass murder of the year, 500+ mass shootings, 'family annihilations,' and ties the event to stalled federal gun-control legislation in Congress.",
+      "People.com": "Human-interest and true-crime framing. Headline foregrounds '2 Children' and 'Before Killing Himself.' Rich with scene color \u2014 eyewitness SWAT photographer quote, screams and gunfire, 'chaos.' Attributes the two-children and sequence claims to Erie News Now and KBTX News 3. Links to related murder-suicide stories, nudging a family-annihilation interpretation. Notes it reached out to EPD and sheriff for comment.",
+      "East Bay Times": "Headline-only; attributes the figure ('9 dead') to the governor and notes the suspected shooter also dead. No body text to corroborate detail.",
+      "Associated Press": "Wire caution and the key outlier on the number. Explicitly corrected its story to 'eight, not including the shooter,' per authorities. Minimal narrative, heavy on Lorah's '28-plus years' quote and Shapiro's support. Does not mention children. The embedded correction note is itself newsworthy as evidence the toll figure was in flux."
+    },
+    "primary_source_alignment": [
+      "No primary sources (police press release, official news-conference transcript, or Gun Violence Archive record) were included in the dossier.",
+      "Several outlets paraphrase a City of Erie statement (People.com quotes it most fully from Facebook) and Lorah's press-conference remarks, but the underlying documents themselves were not provided for direct verification.",
+      "The Guardian's national-context figures (19th mass murder of the year, 500+ mass shootings) are attributed to the Gun Violence Archive, but the archive data itself is not in the dossier and could not be independently checked against the source."
+    ],
+    "missing_context": [
+      "The death toll is unresolved across outlets: AP reports 8 (excluding the shooter) and explicitly corrected downward, while ABC, NBC, Guardian, and People report 9. Whether '9' includes the shooter is never confirmed, so the two figures may describe the same event counted differently.",
+      "No victim names, ages, or relationships were released at the time of reporting; whether the victims were a single family (a key question for the 'family annihilation' framing the Guardian and People suggest) is not confirmed.",
+      "The shooter's identity, age, and relationship to the victims are entirely absent.",
+      "No motive has been established by any outlet.",
+      "CBS's 'at least 5 dead' headline reflects an early, lower count; no outlet in the dossier reconciles the evolution of the figure from 5 to 8/9 over the course of the day.",
+      "The specifics of how/whether a 'standoff' occurred conflict with officials' statement that all deaths preceded officers' arrival \u2014 no outlet fully reconciles the standoff narrative (Guardian, People) with the 'deaths occurred before officers arrived' statement (ABC, NBC).",
+      "Only the Guardian provides national gun-violence context; other outlets report the event in isolation. Conversely, the Guardian and People lean toward a family-annihilation interpretation without confirmed victim relationships.",
+      "Outcomes of the scheduled Saturday 4 p.m. news conference are not included in any article in the dossier."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text reported the same Erie shooting but materially diverge on the death toll (AP's corrected '8, not including the shooter' vs. '9' elsewhere, with CBS's early '5'), on whether children died, and on whether a standoff occurred versus all deaths preceding police arrival. The reporting disagreements and framing differences are the story, making this a coverage-report rather than a straight REPORT.",
+    "confidence": 0.74
+  },
+  "articles": [
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQbWMzQklvSHBFU3VZc0Vzc01YQ09iYVRobU5ac2pOS3FsdEM2MWtkYkFJaUUtUHlXWHo2N0JzaU8weXpYNmxlaDZrbFJkTF9vOWRJckZtbEYtR3YtX3lOUDd4VVdEaEw3OWJaSnU4bk5SVHFLRi11M1h4bWNHemtIbmY2RUx1ZEFWVXdvSVRmRWNPcmxxUmNCdjBn0gGfAUFVX3lxTFBqTUpSbzhqWTkwUWpEUVliMExwX3p3TXpFQ3JkZFNqWmhZMzZLejhXYVhkNFAxajgzWnl3SDBiZzUxN0JzNEpZODAycnlRLUxZQm1uM2lTNTkwNzNIWllYM3JMVENxNjhNdFplMlVMd1UyWXNlcVNNYUhEa0trWm0tS2hOWmhvdWFzbzJtNWh5a1VpeVRNRVR4WGZWQXZFaw?oc=5",
+      "title": "9 people killed in mass shooting at Erie, Pennsylvania, home: Police - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUzdsRkdsVUptbWlVdVFrX2dhSXhYUk10UVo0U1FfSXQ1X3dBbWxPaC02UTBfdnhTcWkzSkpGX3VMMnVtMkZza1l5am1xSmY2clplOGdGekNaWFc3OFFCYWQxUmU2R0t0cXpUUmFrc0hXYVR1VW03SC1WSzV1dXYtcEZKNm15QQ?oc=5",
+      "title": "9 dead in Pennsylvania shooting, Erie officials say - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMXpUbHptZDcybHg5ZlR6VTJMcDlZVFFjQzRmYUxzMXZLQmd6RUthVWVoUFltM2pUTnRZOERoWXU2dVMtazdrT29RQWQ0d1ZLNFdZMklFNVk4bEQ3NDBUa2x2MTNKaVFjci1KNE92ZXBHa0hKb1gzTGRFZ3pVdVh3T3daVG5yZjJZLTdfcQ?oc=5",
+      "title": "At least 5 dead after shooting in Erie, Pennsylvania - CBS News"
+    },
+    {
+      "outlet": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNYUdlUmRJck1XeGx3YldPRldSZHRkUjdUVXNBQnhIc28tdkR2d3E4YlBFclpXcWF3b3o4T1hiaXRXRE0yMVpLWXFYU2YycWNweDdCWERYRjNsNFRnUVRuRjlTbTlEa3F5RXd3NDJIWXVHRHRlM3JnTTN6OWF5NDJfUGlYZEFIcTc2dGZpYVFwYw?oc=5",
+      "title": ""
+    },
+    {
+      "outlet": "People.com",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQTHEzWEJxbFhHcVotTUdMQzFQWmstUmlLa2RhSWNCZkFCZVlocjNmRk1pS0pKRm5sRHNudEtJWGhESml0M2VrdURXNEVPLV9vSDhpd1VGQTZWcExNeDdWc0t4TGNyX2hWZ01POXlZS3BpQXhHbDN2ZlpCVGlheS1rMVZRb0o3aVVLUHNnWElNcjNWQQ?oc=5",
+      "title": "2 Children Among 9 Fatally Shot After Gunman Opened Fire at Pennsylvania Home Before Killing Himself - People.com"
+    },
+    {
+      "outlet": "East Bay Times",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPR2hza0tvWFZ0bW1CZ21xTy16Mnc4YTRkb0NfT2cwWDZtNC1saVRTRy0xNDdOX2lFcVh1M0VyUlM1V2Z0ZUpjQVJoUlhiYWF0ZXpfRlNjMk41Y2RRamhWUXlKYTliYzlmRlJ6dk0wVWRDWmkzZVpNVFpzVmJwQ1lUMnRZZmdHb2dMekNDeWdTNk5FazJiYVNuOGpwMXhRTG5CMlk1U0dMUHJpd2YwU29LS0lhOHUzSDh6WkVldVI2VXBTcDRKZkwyXw?oc=5",
+      "title": "9 dead after shooting in northern Pennsylvania, governor says; suspected shooter also dead - East Bay Times"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdDlfNkVpRUN6UE1fSVJzM3htbVFTcThFOHl4clZ1UFd1XzFwTGNRYW8wdGswdnFwSnViSlV5RVZjbkZUYlMzX0RXaEI4ZzY0TWR4eE9GWTRTOU50NDVacTdWZUliN0pDYkJCcHVPc2FKbTZKNkhoNXM3YVUzeEtwWEZENTByOWpSRUlGTnlDcmt4dDJXRmlPT3QyZlpSQ3c?oc=5",
+      "title": "8 dead after shooting in Erie, Pennsylvania, governor says. Shooter also dead - AP News"
+    }
+  ]
+}
