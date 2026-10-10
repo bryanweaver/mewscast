@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-10-10-several-wounded-in-riyadh-5a7d143a2e",
+  "headline_seed": "Several wounded in Riyadh airport attack, operations suspended, Saudi aviation authority says - Reuters",
+  "brief": {
+    "story_id": "2026-10-10-several-wounded-in-riyadh-5a7d143a2e",
+    "consensus_facts": [
+      "King Khalid International Airport in Riyadh, Saudi Arabia, was attacked on Saturday, October 10, 2026, wounding several people (Al Jazeera, AP; CNN corroborates the wounding and suspension at headline/caption level).",
+      "Saudi Arabia's civil aviation authority said airport operations were suspended following the attack (Al Jazeera, AP, CNN).",
+      "Saudi authorities said they were still assessing the extent of injuries and damage (Al Jazeera, AP).",
+      "Earlier in the week (Thursday), attacks on the Riyadh airport killed three Saudi citizens, including a pilot (Al Jazeera, AP).",
+      "President Donald Trump, asked by reporters, said the U.S. was evaluating whether to join Saudi strikes against the Houthis, saying 'We may. We're going to look at it... We move very quickly.' (Al Jazeera, AP).",
+      "Multiple foreign governments, including the United States, Britain and Canada, issued advisories warning their citizens to avoid the airport (Al Jazeera, AP).",
+      "The attacks are tied to the conflict between the Houthis and the Saudi-led coalition, with the Houthis having warned airlines against operating in Saudi airspace (Al Jazeera, AP)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Attribution of the Saturday attack to the Houthis",
+        "positions": {
+          "Al Jazeera English": "States the Houthis had 'yet to claim responsibility for the latest attack' as of Saturday, attributing only the earlier Thursday attacks to them.",
+          "Associated Press": "Says 'There was no immediate statement from the rebels' on the Saturday attack; frames the earlier week's attacks as Houthi-claimed and the latest as part of an escalating pattern.",
+          "Reuters (headline-only)": "Headline 'Plane damaged at Riyadh airport as Houthis escalate attacks, sources say' attributes escalation directly to the Houthis but provides no retrievable body text to corroborate the Saturday attack specifically."
+        }
+      },
+      {
+        "topic": "Casualty count from earlier-in-the-week attacks",
+        "positions": {
+          "Al Jazeera English": "Says Thursday attacks killed at least three Saudi citizens including a pilot; separately says 'Days earlier, alleged Houthi attacks on Abha and King Khalid airports killed three civilians and injured 36 others.'",
+          "Associated Press": "Says the Houthis claimed attacks earlier in the week that killed three Saudis including a pilot; does not cite the '36 injured' figure."
+        }
+      },
+      {
+        "topic": "Nature/location of the Saturday strike",
+        "positions": {
+          "Associated Press": "Reports a missile struck a complex housing terminals 3 and 4 for domestic flights, per an anonymous regional official.",
+          "Al Jazeera English": "Does not specify a missile or terminal location, citing only that the Civil Aviation Authority reported several injured and operations suspended.",
+          "CNN": "Body text not substantively retrievable (navigation/boilerplate); provides only that several were wounded and operations suspended per Saudi officials."
+        }
+      },
+      {
+        "topic": "Date of the fire/attack imagery",
+        "positions": {
+          "Associated Press": "AP photo caption describes smoke and flames at the airport dated Friday, Oct. 9, 2026, while the narrative attack is reported as Saturday, Oct. 10."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Four Reuters entries appear in the dossier, all headline-only with no retrievable body text. Framings range across angles: the lead headline emphasizes wounded and suspended operations citing the Saudi aviation authority; a second headline ('Houthi strikes on Riyadh airport killed three Saudis as war escalates') directly attributes and foregrounds escalation; a third ('Plane damaged at Riyadh airport as Houthis escalate attacks, sources say') leads on aircraft damage and anonymous sourcing; a fourth pivots to the EU aviation body widening its Saudi airspace warning. Collectively neutral wire phrasing, but none can be corroborated at body level.",
+      "CNN": "Lean-left outlet; the retrievable content is almost entirely site navigation, ad-feedback boilerplate, and a video caption. The substantive text attributes the wounding and suspension to 'Saudi officials' and frames it as a video report by Matthew Chance. CNN leads with the human/visual angle ('Several people wounded') and attributes carefully to Saudi officials without naming a perpetrator in the retrievable text.",
+      "Al Jazeera English": "International outlet; provides the most detailed Houthi/Yemen context. Leads on operations suspended and injuries per the Civil Aviation Authority, then situates the attack within the broader Saudi-Houthi war. Notably cautious on attribution, stating the Houthis had not yet claimed the Saturday attack. Emphasizes the Houthi airspace warning, embassy advisories, and Trump's remarks; includes a reporter dateline from Yemen. Foregrounds diplomatic and regional dimensions.",
+      "Associated Press": "Wire; the most comprehensive body text. Leads on the geopolitical angle \u2014 Trump weighing U.S. entry into the fight \u2014 and frames the attack within 'the new front in the Iran war.' Adds granular operational detail (terminals 3 and 4, 291 canceled flights, midnight suspension, dimmed lights, blocked entrances), market/oil impacts, Saudi interceptor shortages, requests to France/Britain/Pakistan/Egypt for air defense, and Saudi restrictions on filming strike sites. Broadest contextual scope of any source in the dossier."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court filings, press releases, official GACA statements, or transcripts were provided in the dossier, so no report-vs-document alignment can be assessed.",
+      "The closest thing to primary material is the directly quoted Trump remark ('We may. We're going to look at it... We move very quickly'), which appears identically in both Al Jazeera and AP, suggesting a shared pool/transcript origin rather than independent corroboration."
+    ],
+    "missing_context": [
+      "Only two of the seven dossier articles (Al Jazeera English and Associated Press) have substantive retrievable body text. The four Reuters entries are headline-only, and the CNN entry is almost entirely navigation/ad boilerplate \u2014 so much of the apparent 'coverage breadth' cannot be corroborated at body level. This is an editorial disclosure, not a pipeline complaint.",
+      "No confirmed casualty count for the Saturday attack appears in any source \u2014 all say 'several' wounded with injuries still being assessed.",
+      "No source in the dossier independently confirms the Houthis as the perpetrator of the specific Saturday attack; attribution to them rests on pattern inference and headline framing, with the two full-text sources explicitly noting no Houthi claim as of Saturday.",
+      "The AP photo caption dates the fire imagery to Friday, Oct. 9, while the reported attack is Saturday, Oct. 10 \u2014 no source clarifies whether these are the same event or separate incidents.",
+      "No source provides the Houthi perspective or quotes beyond their general airspace warning; the Houthi counter-claim that Saudi Arabia struck Sanaa International Airport appears only in AP and is not corroborated.",
+      "Civilian casualty figures from the Yemeni/Houthi side of the escalating conflict are absent from all coverage.",
+      "No outlet in the dossier contained an apparent instruction-injection attempt; the CNN body contained ad-feedback form boilerplate but no commands directed at the reader or processor."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same event but with materially different framings (AP leads on potential U.S. intervention and operational detail, Al Jazeera on regional/diplomatic context and attribution caution, Reuters on escalation), while most of the dossier is headline-only or boilerplate \u2014 making the coverage pattern itself, and the gap on Saturday-attack attribution, the most newsworthy angle. A straight REPORT would overstate corroboration given only two usable bodies.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbV9hVGtMSXpTVDJ3c05vRW9SQ2lRLTg3cUlOeWxDc2w4amF5V2N2Ul9YazdxcHJGNDRwd3hlQi15a2ZGWWZoZnc1dlA5UkY3cU9PclVCNkh6SVkzQ25waEVRRlN2TVdES3lKV1VuVXN6QnJycWxtdkNOdUIwMTdTRE9fbko3Umt5d0huNVY1dW9ZcFpLSF9yczRGRHJfSWZhM1AtTkVzbVR4TlRUdzhIb19JN3o?oc=5",
+      "title": "Several wounded in Riyadh airport attack, operations suspended, Saudi aviation authority says - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPYlJvUEZseU5jS2dESnd3b0JPQ3pLUlFMZDZ0YWtGd2NCSTE5elh3dE4zY2NJdFJjZGhnSzlmd0tvVDZEU3FOcVBacnQtYlg1SG1FU1ZJOHZ3dTNWMU5obTk3aFIzMWVpTWFuVkcyM3lKZzhFQ0RHemw3c2FmYW5IZ3kzRGdsY1BoRUNheGs0OFJ6d2M?oc=5",
+      "title": "Saudi officials: Several people wounded in Riyadh airport attack - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdGcxd2Q2QXhUSGFCZ3NmdUotNFR2bkxvZ0t5dUN3ZGFoWnEyeVVMaXU3YmxST3daXzhOeVpCcDRIbXJhYlJ2MUdsOEhNYVcwcThEZlQyZUFGQWFpeklPYlY2T0FZb3hQY0liUkRfZ3hpT3pOUTRkb2hhSUhkdmJSTmtrSURzZEhMdllIa1pqNm9mUDhCT3hnM1k5cDQ4bjh0OVBaNk9YMHpJd9IBrwFBVV95cUxOeEY5RWlrVmxYUFllYXkyMk5QeUZQZGZ6OGNGZ2dvVlo5cXB3STlBbnMxWmFpQUJYQ200VFZoaVdmM0lTRFpKTWRWMXRQUDhuc1lSdjduZHhSSXRLQjZNalhjNXdiYjhwd2xhbzlqbUF3RnN4bmV2U1hFdHJKYTZlWkllancybkk4Y0Rkc2tSZ0dPZlFiZzAyT0EzX29wMEJ0WnRGR3JUdU80aWU2TU00?oc=5",
+      "title": "Attack on airport in Saudi capital, Riyadh, leaves several injured - Al Jazeera"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNUGZwcDY1YlloN3oyNzFVMFZTcExnWXZqTzVQNEFkNnBoN2xGR0FEWEVjeUU2OVFEQ21hLUtXRzF2WHVnMzFuVUoxWGQzUFBVTjV2cWNmeFhmWTVvQ19iZ0xxV1c2OXRWMjBFOURBSzc2TWlaQUxENnpCU1ptX0Rna0E4Sl8zNE5aRmpNVkhrclRWUFdIcElCMg?oc=5",
+      "title": "Trump weighs joining the fight against Houthis after Saudi capital\u2019s airport is struck again - AP News"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMEFCQWZhWGJXa25ZeDBOZlE3b3RWQldSSUM5MmRDd1JqdFNvbl83R19nc014ek1YTW1iQlBqbW1paUlManF3UzlNT21BTl81cG5NNGQ5MWhWOWZOMnpQamN6TmxrUFVLVXRCaTl2T0JYclhVc3dvLUpNeG5wY3JSci02OHVtWmRpemp2UExRUGRoTnpyN3lKUGlRQ3FHdS1pZDNvNVM0bWE2djAzNzNvNTg4RVdXVEhw?oc=5",
+      "title": "Houthi strikes on Riyadh airport killed three Saudis as war escalates - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQS3RjWlUtbVhIS3V2UlRkMFZOT3pESFlCZGVKcVp5N1lwX1JCTGRrXzI3dXdHT3diVGZUWENHREJ3MW5zQUpRamZpbkV0dTdoNDhRUzl6OW5FT2JZSjZHaHY2T2ltMm1fNTZVNHhuQzdZTmJVRHhSbE1vYnNpZTR4SGJONWhxVWxoYmxBLW1SRkpBNlROdHBxN3VjMUtpcHFaVzgzQ1ZvcmIyVllXcjBhSTY3TlhuLXpQRExkZmYtd29TOEppUkYwOA?oc=5",
+      "title": "Plane damaged at Riyadh airport as Houthis escalate attacks, sources say - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxObUF1S2Y0LTFHM0JDbXRLY05aMmVvUDJqOU1ZNjEtLVlDdFVMelgyTlN0d3BvY0lrLVJkZEc4VGI0eEMtWTVnbDBGQnNVSGx1bklCQkxiNEs3RzFlWklGSWtoMFpyLV9zb2N6Y1VlVjQ2b2pqMy1ld0IyZ2RQMGt3YmFRaWQyUFBrYnVua2VyWGdyQW4wU0xGWm91d2prUlRLSHZrZXNwZjl0MVBuQV9ZeFZmZi15Nmh1VGFvV25xeVJfYkNGWkE?oc=5",
+      "title": "EU aviation body widens Saudi airspace warning after Houthi strikes - Reuters"
+    }
+  ]
+}
