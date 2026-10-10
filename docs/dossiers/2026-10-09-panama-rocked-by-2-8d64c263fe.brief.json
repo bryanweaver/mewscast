@@ -1,0 +1,121 @@
+{
+  "story_id": "2026-10-09-panama-rocked-by-2-8d64c263fe",
+  "headline_seed": "Panama rocked by 2 powerful earthquakes and multiple aftershocks, prompting evacuations - AP News",
+  "brief": {
+    "story_id": "2026-10-09-panama-rocked-by-2-8d64c263fe",
+    "consensus_facts": [
+      "A magnitude 7.7 earthquake struck Panama on Friday, October 9, 2026, according to the US Geological Survey.",
+      "The earthquake was centered about 6 miles (10km) southwest of the remote community of Pitaloza Arriba, roughly 100+ miles southwest of Panama City.",
+      "The quake triggered tsunami warnings for multiple countries in Central and South America, including Colombia, Ecuador, Nicaragua, and Guatemala.",
+      "Tremors were felt in Panama City, where buildings shook and people evacuated into the streets.",
+      "The earthquake was followed by powerful aftershocks.",
+      "President Jos\u00e9 Ra\u00fal Mulino called for calm and said no deaths had been reported immediately after the quake."
+    ],
+    "disagreements": [
+      {
+        "topic": "Earthquake magnitude",
+        "positions": {
+          "Bloomberg": "7.7-magnitude, described as Panama's strongest earthquake in more than seven decades",
+          "NBC News": "7.7-magnitude initial quake followed by a second 6.6-magnitude quake; also references a '7.6 magnitude' in a photo caption",
+          "Al Jazeera English": "magnitude 7.7",
+          "Axios": "magnitude 7.7",
+          "CNN": "refers to a '7.6 magnitude earthquake' in captions describing the same event"
+        }
+      },
+      {
+        "topic": "Number of major quakes",
+        "positions": {
+          "NBC News": "Two powerful earthquakes \u2014 a 7.7 and, about three hours later, a 6.6 \u2014 plus more than 45 aftershocks recorded by University of Panama seismologists",
+          "Bloomberg": "One strongest quake (7.7) followed by powerful aftershocks; headline references 'aftershocks' rather than a distinct second major quake",
+          "Axios": "A single magnitude 7.7 quake; USGS warned strong aftershocks may follow",
+          "Al Jazeera English": "A single magnitude 7.7 quake plus implied tremors"
+        }
+      },
+      {
+        "topic": "List of countries under tsunami warning",
+        "positions": {
+          "Al Jazeera English": "Panama, Colombia, Ecuador, Nicaragua, Guatemala; notes Chile's naval service also issued a tsunami warning",
+          "NBC News": "Ecuador, Colombia, Nicaragua, Guatemala, Mexico, El Salvador, Costa Rica, Peru, and Panama"
+        }
+      },
+      {
+        "topic": "Damage severity",
+        "positions": {
+          "Al Jazeera English": "Reports a historic building's tower collapsed and residential balconies fell in Penonome; schools ordered closed",
+          "Axios": "Cites USGS that 'the disaster is likely widespread' and ~4.6 million people experienced moderate-to-severe shaking; notes Panama Canal operations reportedly unaffected",
+          "Bloomberg": "Economic losses likely to exceed $1 billion per early USGS estimate; no immediate deaths reported",
+          "CNN": "States no casualties or damage reported so far (in photo caption)"
+        }
+      },
+      {
+        "topic": "Economic impact estimate",
+        "positions": {
+          "Bloomberg": "Economic losses in the region likely to exceed $1 billion, per early USGS estimate",
+          "Other outlets": "Do not cite a dollar figure"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Frames the event in economic and historical terms \u2014 leads with 'strongest earthquake in more than seven decades' and foregrounds the USGS estimate of $1 billion-plus in regional economic losses. Emphasizes no immediate deaths and the quake's distance from the Panama Canal (an implicit business/markets angle). Most of the retrievable text is site chrome; usable reporting is thin.",
+      "The New York Times": "Appears twice in the dossier. Article 2 is a Google News aggregation cluster listing many outlets' headlines rather than NYT body text; Article 7 is headline-only ('Map: Large Earthquake Shakes Panama'), signaling an explainer/visual-forward approach. No substantive NYT body text is available to analyze.",
+      "Al Jazeera English": "Leads with the tsunami-warning dimension and regional scope, naming affected countries. Provides on-the-ground color (eyewitness Rosendo Dominguez via AP, collapsed historic tower in Penonome) and contextualizes with other 2026 regional quakes (Venezuela twin quakes killing ~6,500 in June; Colombia's 7.4 killing ~289 in August). Frames Panama within a pattern of regional seismic disaster.",
+      "Axios": "Classic Axios 'big picture / driving the news / between the lines' breakdown. Emphasizes scale via USGS data (4.6 million people felt moderate-to-severe shaking, 'disaster likely widespread') while reassuring on the Panama Canal angle. Flags it as a breaking, to-be-updated story. Much of the retrievable text is cookie-consent boilerplate.",
+      "NBC News": "Provides the most granular seismological detail: a 7.7 initial quake, a 6.6 follow-on roughly three hours later, aftershocks between 4.8 and 5.8, and 45+ aftershocks per University of Panama seismologists. Also the broadest tsunami-warning country list. Credits The Associated Press as co-byline. Leads on the sequence/scale of the seismic event itself.",
+      "CNN": "Human-interest/eyewitness framing built around a video package: photojournalist Carlos Martinelli describing his car swaying and people fleeing buildings. Captions describe a '7.6 magnitude' quake and state no casualties or damage reported so far. Reporting is minimal text; the story is the firsthand account and footage."
+    },
+    "primary_source_alignment": [
+      "No primary sources (USGS bulletins, Panamanian government statements, tsunami center advisories) were included in the dossier, so no direct report-versus-document comparison is possible.",
+      "Multiple outlets attribute core facts to the USGS and the US Tsunami Center, but the underlying advisories themselves were not provided for verification."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides a confirmed casualty or injury count beyond 'no deaths reported immediately' \u2014 the human toll remains unresolved at the time of coverage.",
+      "The magnitude figure is inconsistent across outlets (7.7 vs. 7.6 appearing in CNN and NBC captions); no source reconciles whether this reflects a revised USGS estimate or caption error.",
+      "Whether there were one or two distinct major quakes is unsettled \u2014 only NBC clearly describes a separate 6.6 event three hours later, while Bloomberg/Axios/Al Jazeera frame it as one quake plus aftershocks.",
+      "No primary USGS bulletin, Panamanian civil-protection statement, or official tsunami advisory was included in the dossier for verification.",
+      "No outlet details whether tsunami warnings were later downgraded, cancelled, or whether any actual waves were observed.",
+      "Depth of the quake (6 miles, per NBC) is reported by only one outlet and not corroborated.",
+      "The $1 billion economic-loss figure (Bloomberg) is a single-outlet, early USGS modeled estimate and is not independently corroborated in the dossier.",
+      "Articles 1 (Bloomberg), 4 (Axios), 5 (NBC), and 6 (CNN) contained large volumes of website navigation, cookie-consent, and subscription boilerplate rather than article text, limiting the retrievable reporting; Article 2 is a Google News headline cluster, not NYT body text."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with usable body text reported the same event but with materially divergent framings (economic vs. tsunami-scope vs. seismological-detail vs. eyewitness) and unreconciled facts \u2014 notably magnitude (7.7 vs. 7.6) and whether there were one or two major quakes \u2014 making this a coverage-comparison story rather than a straightforward REPORT.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaS16Y1NCVFJaZHJRUW1LbHFhTW9ERDdVQWxNUmV5VVlwMm1Zbmc0QTVJM2E3dURlZGgydHNfRG5jdEJ3SGdFclNTMkloN1VTeXVERV95R3JRcldidTlkbFJTaTNUSEpfamRDWWtOOVV5UnVqbTlvMHhpbnBQb2Z5RHlFYnhnSHgtLXU0b1dJZnU5SkpUSkwwcVBTdlFHa29VZVIzaGI3Z3JYUFRsVlVyb2hn?oc=5",
+      "title": "Panama Struck by Massive Quake, Sparking Tsunami Warnings - Bloomberg.com"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSjk5Q1BOX1YzazBLRXlsMjU1NU15VmVpbFI0MjhpZFpadm5PNTBIMnV0ZXBsWUVpb2VOdjBDMG52d1JnYW92T2NIeHlIdV9lTmZ6bDFDTXkxckZYSmN0Q0pVVUpGUnBRbHE4WXRnbHhSNTVNMDJtMVk2aUJyM015LTUyWEtfaXM?oc=5",
+      "title": "7.7-Magnitude Panama Earthquake Sets Off Series of Aftershocks - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOM29LUTBWYWZpZ0Q1eTloYU1JV0RSRjRyZHgxcG9SaFVGMGtiYVo4bjU4OVhWaHJPQjNKeHhxQ2U4OHlUVTByQmZSa0tWd1oxMXd2X1dwbHczRmlLY0g3WDJwU2JHY0w3ZUE2VTE2T2FuaXZuWHNtSFJSaTI0Q1hybjY5UFZkQzdySnlUTDF5VWFDT0xRczA0Ml8ydmJscjVaRFIxMmgzaFhtLU9UcV96V3hPelXSAboBQVVfeXFMTmVRWEtHM0Y5ekVDRzNFUjdkS1dtUGdtZUdBanJKYVFEdmQwSVBTR0JtYnBTUnhVXzRDNGN5YUdlTUdEOXVvRkp4Q3ZZTG9wSElucDNEdzZZdlNnSUZjMGRYX3RNRDhiZE5QTHlNeEVoakp3aFBnMkJ0emZVcFZfWEZMQXQ0dmoxZHBhVUU1bnZaQmtZRmpObGhrc29haWhIbVJCMkdJQ2RlU013cEJqclFnYTRVUzQxT1RR?oc=5",
+      "title": "Panama earthquake: Tsunami warnings issued after magnitude 7.7 quake - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE81VEd5LWdhWkF1aTZZSXhFOW9CTWw5a0JsSmNGSnJqaW0tSWk4azQtQ1JETG9JVm9CZmNPVzU5c3dUY0pWTm9RWVVDR19kTkpPcVBIVWZUc3l2d2VGQ3B3?oc=5",
+      "title": "Panama rocked by major earthquake - Axios"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcGpCWG9ab0pJcjFtRmN0a2tjVnVzTkRoLVZ6SGRXTnBuNkUteEFCbElWeVFXZUVPSi11QndGLXBQY3ZxX29hdlBKNjlKcVNZMnNqSUtWMm9ZdTFxNnAwYzB6eTVORTlnZzI2NHVTMUJQbWU2dVJrSWxkUWxxR3RYUUNfcVRsUE5sUlFLcw?oc=5",
+      "title": "A 7.7-magnitude earthquake rocks Panama - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNX0ZQdzhxU3FTMk9LS1F4cDdTNXRfLUphWlc3OEJlOWxoX0wzZ08yUlUzXzRYeklsOWFzcEhjNzJVYzNzQ0dXY3Y1YldOWTctckY5eWswTFBIY0k5elNTQnNSSGVPdzRDcG5wdm9mbkJNcFpzZ2VFdXlNaWUzclBkckx2NWxiUnowa0E0dmVzc3A?oc=5",
+      "title": "CNN photojournalist describes powerful Panama earthquake - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPelZreWFHM040c05xcjRySFgzejdBRHc3ZGd2MGZWT0tyZnk0UmZRcDJsNFBVeWo2X2xMRlVJdzhpWkMwZVh0WHlxVzhFa3Z6SS15TzQwcTFSSDZLSFlSZmpFUHEyN0gyb0l4RUFOSnZzQlJnRFcxcjZXdjgtQ3dObkRpci1CdHVzVkh1Ml9BdG5IRDk5WmJF?oc=5",
+      "title": "Map: Large Earthquake Shakes Panama - The New York Times"
+    }
+  ]
+}
