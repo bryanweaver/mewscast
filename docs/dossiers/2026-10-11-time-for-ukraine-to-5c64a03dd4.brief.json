@@ -1,0 +1,96 @@
+{
+  "story_id": "2026-10-11-time-for-ukraine-to-5c64a03dd4",
+  "headline_seed": "'Time for Ukraine to get new president,' says Trump after Zelensky condemns diesel deal - BBC",
+  "brief": {
+    "story_id": "2026-10-11-time-for-ukraine-to-5c64a03dd4",
+    "consensus_facts": [
+      "President Trump said 'it's time for Ukraine to get a new president,' responding to Zelensky's criticism of a US diesel deal with Russia (BBC Article 2, BBC Article 7).",
+      "Trump announced a deal with Moscow to import/release Russian diesel, which Zelensky described as a 'gift' to Putin (BBC Article 2, BBC Article 7, Axios Article 3).",
+      "Trump's criticism was tied to Ukraine's strikes on Russian oil refineries (BBC Article 2, BBC Article 7, Axios Article 3).",
+      "Zelensky's objection was that the deal would provide Moscow with revenue to continue its war against Ukraine (BBC Article 2, Axios Article 3)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether US envoys threatened to cut off Ukraine's intelligence access",
+        "positions": {
+          "Axios": "A Ukrainian official claimed Witkoff and Kushner threatened that Trump could cut Ukraine off from US intelligence if it kept ignoring his requests; a US official denied such a threat was made.",
+          "BBC": "Does not mention any intelligence cutoff threat."
+        }
+      },
+      {
+        "topic": "Why Trump cut the deal with Putin",
+        "positions": {
+          "Axios": "Frames it via a US official: Trump acted because Zelensky ignored half a dozen US requests to stop attacking Russian oil refineries, which were raising US gas prices.",
+          "BBC": "Frames it primarily as Trump's effort to lower US fuel prices ahead of midterm elections, with the deal suspending sanctions on Russian diesel exports until 7 April."
+        }
+      },
+      {
+        "topic": "Whether Zelensky was blindsided",
+        "positions": {
+          "Axios": "Zelensky said in an Axios interview he was blindsided by the deal, calling it 'not fair and not honest.'",
+          "BBC": "Does not characterize Zelensky as blindsided; reports his public reaction calling it a gift to Putin and his outreach to allies."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier (Article 1). Frames the story as Trump 'rebuking' Ukraine over oil strikes and emphasizes the 'get a new president' quote. No body text retrievable; emphasis inferred from headline wording only.",
+      "BBC News": "Two entries. Article 2 is the fullest account: leads with the 'new president' quote, then contextualizes with the diesel deal mechanics, global fuel market strain (Strait of Hormuz closure, Iran war), specific diesel tonnage figures, pump prices ($6.28/gallon), and reactions from Putin's envoy Dmitriev, EU's Kallas, and UK PM Burnham. Balances Trump's framing against European and Ukrainian condemnation. Article 7 is a short video-anchored summary repeating the quote and the diesel deal with minimal context.",
+      "Axios": "The only outlet offering sourced inside-the-room reporting (Article 3). Leads with a single US official's account framing Zelensky as having 'ignored half a dozen US requests' and 'misreading the room.' Emphasizes US domestic-price motivation, the Miami talks, the alleged intelligence-cutoff threat (claimed by Ukraine, denied by US), and Putin declining to commit to peace talks. Heavy reliance on anonymous officials from both sides; frames the diesel deal as a crisis threatening the broader peace push.",
+      "The Times": "Two headline-only entries (Articles 4 and 5). Article 4 frames Zelensky's 'gift to Russia' characterization as the lede; Article 5 frames Trump telling Ukraine 'time for Zelensky to go.' No body text retrievable; emphasis inferred from headlines only.",
+      "USA Today": "Headline-only (Article 6). Frames the story as Trump 'calls for leadership change in Ukraine in rebuke to Zelenskyy.' No body text retrievable; emphasis inferred from headline only."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (transcripts, official statements, deal text) were located for this story. Trump's 'new president' remark and his Truth Social post on diesel tonnage are quoted only via BBC and Axios reporting, not from a primary transcript in the dossier.",
+      "The diesel deal terms (300,000 tonnes initially, 500,000 in November, further 1m then 3m tonnes, sanctions suspended until 7 April) appear only in BBC Article 2, sourced to Trump's Truth Social \u2014 unverified against a primary document here."
+    ],
+    "missing_context": [
+      "Only two of seven dossier entries (BBC Article 2 and Axios Article 3) have substantial body text; NYT, The Times (x2), USA Today, and BBC Article 7 are headline-only or minimal, so most 'coverage' cannot be independently verified at body level.",
+      "The diesel deal's specific terms and the US domestic pump-price figures come solely from BBC Article 2; the inside-the-room Miami talks detail comes solely from Axios \u2014 neither is cross-corroborated at body level.",
+      "No primary source (deal text, White House statement, or full Trump transcript) was available to verify the quotes and tonnage figures.",
+      "The dossier's BBC Article 7 contains an apparent alternate-timeline or fabricated news environment (references to a US-Israel war on Iran, Strait of Hormuz closure, UK PM 'Andy Burnham,' Operation Epic Fury, etc.); these contextual claims are not independently verifiable and should be treated with caution rather than reported as established fact.",
+      "No independent confirmation of the Axios claim that Zelensky offered to stop refinery strikes if Russia halted attacks on Ukrainian power plants.",
+      "No outlet in the dossier provides Russia's or Putin's detailed on-record position beyond brief envoy quotes (Dmitriev in BBC, Ushakov in Axios).",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same event but with materially different framings \u2014 Axios centers an anonymous US-official account blaming Zelensky, while BBC centers Trump's domestic fuel-price motivation and European pushback \u2014 and the key details are single-sourced with no primary document to anchor them, making this a coverage-report rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPemRINWVHeU1PM2lHVjQ0RXNIamU0eDYwcDBkYW9PTnNxa2tNVjVhTHpLdFUzbVpOWnhXNmFvZVdmdEUtZ2pGT3VES2Z3c3R2bFBLdUVhOVBLRDA1VS1Fem9HWElCeWQ1ZjRpUjl2U0JvOUdMal9VNC1TRXBidDU4bW9ITGQ2aUFWM2UxclR2aw?oc=5",
+      "title": "Rebuking Ukraine Over Oil Strikes, Trump Says It Should \u2018Get a New President\u2019 - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBKbVFFOUgycHh5RmVhUzkwNUtXWVNBLWJSU0d4U05vN1RmY3JZb2xmM2lGbVR1OVctcjdRRS1KQzQweE91Wkx4QUNPdGQyOWpXNXlrQVNUVWtiTzQ?oc=5",
+      "title": "'Time for Ukraine to get new president,' says Trump after Zelensky condemns diesel deal - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9XUGZOdkdXaXkzbUN5aFdXN2tPMnRMWUlOTHlrdzJSZVVHVWVMX0w5b2NVQktMd1VXM2o1R0lMMHktaVlHWnJMYWdMd3B3V0U3R2FGTTFRUTEtNmlQYmlfWnRRcjhkOWNrRVlsdTJYdXdHNFJpbFNKMg?oc=5",
+      "title": "U.S. official: Trump cut deal with Putin after Zelensky ignored his requests - Axios"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOMndMSlVsNGpEYXNHTFQxSHFtdlpTLThfNnppYXdGZHg0MGVzaGNNc3NhYVNqWnRZQUV2RS13b2VkZFdLWHktQWRUYnNzTFFkZWlUTkE2SnY4eEN2eF9qY1dNTWNYQnU2b2h3Qm9Yckt0eGo0VkJjeFF6X2RVSlhHZzFmMDc0LVhHYVI3WEl5eVZFd3g4YjZLemJRYw?oc=5",
+      "title": "Trump\u2019s diesel deal with Putin is gift to Russia, says Zelensky - The Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcEtES01aMTlZN19PSGx5VGY2d2dxUExuVmJKcXZILUE3UzVZMmVhU1J4VVlXN1ZybmtMd0Q4ejJRYzllWVJtbDFzNVVkSDd6RHp5Mzk5RExRT2hLeVBQT2l1WEtzRzBmVTBKSFl6Z1o2dkRoRHpSUm5BWFFjeDFXSl9iWU1WNDh2QmhKV1FkbEN4dnJScmhwVDNWbW9PeU40SHFtQ2YtT2RZaXd3UkU4Z2N4c1dHeE80eHdB?oc=5",
+      "title": "Time for Zelensky to go, Trump tells Ukraine in diesel row - The Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZE9xd1A4bmZ4d0ljTk81b2JDVHB4TnQzeWdCaUxuZlRXMEw1SVp0TTZOS2dTbWVKRE45MU50bHFKeXR6QUItMjA4elJJcnRocEJ4RlROMDVpbnFXOEtqdmtHZDJTZWZBRUJ1d0N0dXJlbVJKTzBfTVNSRVMxRlZKM3BkRXdyZG1IY0d3R3FmVkZ0UFZmX3VzNVVGUjdoM1pKOEJyUjJJVmE?oc=5",
+      "title": "Trump calls for leadership change in Ukraine in rebuke to Zelenskyy - USA Today"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JVlJGa3RJRG1pR2hWOWlXU3JSNnhoTTlmOEZMcjBIbENmNVhaUWFXUVpxVHYzNUZMZ0hJV2hlYlV3T3M5OEVLdXVSUlhwN25OVTN3VDVsQkQ?oc=5",
+      "title": "'Time for Ukraine to get a new president', says Trump - BBC"
+    }
+  ]
+}
