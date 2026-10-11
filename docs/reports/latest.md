@@ -1,56 +1,56 @@
 # Mewscast Nightly Report
-_Generated: 2026-10-10T01:57:31.292860+00:00_
+_Generated: 2026-10-11T01:22:20.901081+00:00_
 
 ## Quick Stats
 - Posts (last 24h): **6** (X: 3, Bluesky: 3) across 3 unique stories
-- Engagement (24h, latest snapshots): **1 likes / 0 reposts / 4 replies / 0 impressions**
-- Follower delta (24h): X 0 | Bluesky 3
-- Follower delta (7d):  X 0 | Bluesky 8
+- Engagement (24h, latest snapshots): **3 likes / 1 reposts / 3 replies / 0 impressions**
+- Follower delta (24h): X 0 | Bluesky 4
+- Follower delta (7d):  X 0 | Bluesky 10
 - Issues detected: **2** (high: 0, med: 0, low: 2)
 - META posts (24h): **0**
 
 ## 1. Daily Performance Summary
 **Posts in last 24h:** 6 total — X: 3, Bluesky: 3 (3 unique stories)
-**Total engagement (latest snapshots):** 1 likes, 0 reposts, 4 replies, 0 impressions
+**Total engagement (latest snapshots):** 3 likes, 1 reposts, 3 replies, 0 impressions
 
 **Top 3 performing posts:**
-1. [bluesky] eng=3 (L:1 R:0 Re:2 Impr:0) — [journalism/BULLETIN] Reuters: Trump says Russia to supply diesel to US and global market - Reuters (2026-10-09T21:52:25.213051+00:00)
-2. [bluesky] eng=1 (L:0 R:0 Re:1 Impr:0) — [journalism/REPORT] Associated Press: Fort Hood attacker's execution by firing squad will be livestreamed, Pentagon... (2026-10-09T04:08:27.951765+00:00)
-3. [bluesky] eng=1 (L:0 R:0 Re:1 Impr:0) — [journalism/REPORT] Bloomberg: Katie Zacharia will be the next White House press secretary - NBC News (2026-10-09T18:58:38.631980+00:00)
+1. [bluesky] eng=3 (L:2 R:0 Re:1 Impr:0) — [journalism/REPORT] Bloomberg: Panama rocked by 2 powerful earthquakes and multiple aftershocks, prompting e... (2026-10-10T03:53:15.351022+00:00)
+2. [bluesky] eng=3 (L:1 R:1 Re:1 Impr:0) — [journalism/REPORT] ABC News: Nine people, including children, dead after mass shooting in Pennsylvania - T... (2026-10-10T17:59:59.039938+00:00)
+3. [bluesky] eng=1 (L:0 R:0 Re:1 Impr:0) — [journalism/BULLETIN] Reuters: Several wounded in Riyadh airport attack, operations suspended, Saudi aviatio... (2026-10-10T20:41:26.308443+00:00)
 
 **Bottom 3 performing posts:**
-1. [x] eng=0 (L:0 R:0 Re:0 Impr:0) — [journalism/BULLETIN] Reuters: Trump says Russia to supply diesel to US and global market - Reuters (2026-10-09T21:52:25.213051+00:00)
-2. [x] eng=0 (L:0 R:0 Re:0 Impr:0) — [journalism/REPORT] Bloomberg: Katie Zacharia will be the next White House press secretary - NBC News (2026-10-09T18:58:38.631980+00:00)
-3. [x] eng=0 (L:0 R:0 Re:0 Impr:0) — [journalism/REPORT] Associated Press: Fort Hood attacker's execution by firing squad will be livestreamed, Pentagon... (2026-10-09T04:08:27.951765+00:00)
+1. [x] eng=0 (L:0 R:0 Re:0 Impr:0) — [journalism/BULLETIN] Reuters: Several wounded in Riyadh airport attack, operations suspended, Saudi aviatio... (2026-10-10T20:41:26.308443+00:00)
+2. [x] eng=0 (L:0 R:0 Re:0 Impr:0) — [journalism/REPORT] ABC News: Nine people, including children, dead after mass shooting in Pennsylvania - T... (2026-10-10T17:59:59.039938+00:00)
+3. [x] eng=0 (L:0 R:0 Re:0 Impr:0) — [journalism/REPORT] Bloomberg: Panama rocked by 2 powerful earthquakes and multiple aftershocks, prompting e... (2026-10-10T03:53:15.351022+00:00)
 
 **Follower counts:**
 - X: 58 followers, following 332 (24h delta: 0, 7d delta: 0)
-- Bluesky: 462 followers, following 1152 (24h delta: 3, 7d delta: 8)
-- Analytics last_updated: 2026-10-10T01:57:31.019284+00:00 (0.0h ago)
+- Bluesky: 464 followers, following 1156 (24h delta: 4, 7d delta: 10)
+- Analytics last_updated: 2026-10-11T01:22:20.517723+00:00 (0.0h ago)
 
 **Zero-engagement posts older than 6h (in window):** 2
-- [x] [journalism/REPORT] Associated Press: Fort Hood attacker's execution by firing squad will be livestreamed, Pentagon... (2026-10-09T04:08:27.951765+00:00)
-- [x] [journalism/REPORT] Bloomberg: Katie Zacharia will be the next White House press secretary - NBC News (2026-10-09T18:58:38.631980+00:00)
+- [x] [journalism/REPORT] Bloomberg: Panama rocked by 2 powerful earthquakes and multiple aftershocks, prompting e... (2026-10-10T03:53:15.351022+00:00)
+- [x] [journalism/REPORT] ABC News: Nine people, including children, dead after mass shooting in Pennsylvania - T... (2026-10-10T17:59:59.039938+00:00)
 
 ## 2. A/B Test: Legacy vs Journalism Pipeline (all time)
 **legacy** — 60 posts with analytics: avg likes=0.77, reposts=0.13, replies=1.88, impressions=31.13, total-engagement=2.78
-**journalism** — 484 posts with analytics: avg likes=1.16, reposts=0.20, replies=1.09, impressions=2.06, total-engagement=2.45
+**journalism** — 487 posts with analytics: avg likes=1.16, reposts=0.20, replies=1.09, impressions=2.05, total-engagement=2.45
 
 **Journalism pipeline breakdown by post_type:**
-- BULLETIN (58 posts): avg likes=1.02, reposts=0.26, replies=1.12, impressions=1.78, total-eng=2.40
+- BULLETIN (59 posts): avg likes=1.00, reposts=0.25, replies=1.12, impressions=1.75, total-eng=2.37
 - META (3 posts): avg likes=1.00, reposts=0.00, replies=1.33, impressions=15.00, total-eng=2.33
-- REPORT (423 posts): avg likes=1.18, reposts=0.19, replies=1.08, impressions=2.01, total-eng=2.46
+- REPORT (425 posts): avg likes=1.19, reposts=0.19, replies=1.08, impressions=2.00, total-eng=2.46
 
 **Rolling 7-day trend:**
 - legacy: 0 posts in last 7d
-- journalism: 14 posts — avg likes=0.50, reposts=0.14, replies=1.14, impressions=0.00, total-eng=1.79
+- journalism: 16 posts — avg likes=0.56, reposts=0.19, replies=1.12, impressions=0.00, total-eng=1.88
 
-_Note: post_pipeline populated on 553/553 posts. post_type populated on 493/553 posts (only journalism-pipeline posts carry post_type)._
+_Note: post_pipeline populated on 556/556 posts. post_type populated on 496/556 posts (only journalism-pipeline posts carry post_type)._
 
 ## 3. META Post Quality Audit (last 24h)
 _No META posts in the last 24 hours._
 
 ## 4. Bug & Improvement Detection
 **Low severity (2):**
-- [zero_engagement_6h] x post has 0 engagement after >6h (key=x:2108409230491267253) — [journalism/REPORT] Associated Press: Fort Hood attacker's execution by firing squad will be livestreamed, Pentagon... (2026-10-09T04:08:27.951765+00:00)
-- [zero_engagement_6h] x post has 0 engagement after >6h (key=x:2108633250893570168) — [journalism/REPORT] Bloomberg: Katie Zacharia will be the next White House press secretary - NBC News (2026-10-09T18:58:38.631980+00:00)
+- [zero_engagement_6h] x post has 0 engagement after >6h (key=x:2108767790698234023) — [journalism/REPORT] Bloomberg: Panama rocked by 2 powerful earthquakes and multiple aftershocks, prompting e... (2026-10-10T03:53:15.351022+00:00)
+- [zero_engagement_6h] x post has 0 engagement after >6h (key=x:2108980876360982787) — [journalism/REPORT] ABC News: Nine people, including children, dead after mass shooting in Pennsylvania - T... (2026-10-10T17:59:59.039938+00:00)
