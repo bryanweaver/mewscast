@@ -1,0 +1,114 @@
+{
+  "story_id": "2026-10-11-why-are-houthi-missiles-ad5d2d4139",
+  "headline_seed": "Why are Houthi missiles breaking through Saudi Arabia\u2019s air defences? - Al Jazeera",
+  "brief": {
+    "story_id": "2026-10-11-why-are-houthi-missiles-ad5d2d4139",
+    "consensus_facts": [
+      "A missile attack on Riyadh's King Khalid International Airport on Saturday, October 11, 2026, killed at least 12 people and wounded roughly 300-309 others (Al Jazeera, CNBC, CNN, CBS News).",
+      "It was described as the deadliest attack on Saudi soil in more than a decade (Al Jazeera, CBS News).",
+      "The dead included four Saudi citizens, two Bangladeshis, and one person each from the United States, Jordan, Palestine, Syria, Sudan and Egypt (Al Jazeera, CBS News).",
+      "The attack is attributed to Yemen's Iran-backed Houthi group (Al Jazeera, CNBC, CNN, CBS News).",
+      "US President Donald Trump described the attack as 'terrible' and said he is considering/'going to look at' joining Saudi Arabia in the fight against the Houthis, saying the US would 'move very quickly' (Al Jazeera, CNBC, CBS News).",
+      "US Secretary of State Marco Rubio condemned the attack, noted it killed an American, and said the US stands with Saudi Arabia (Al Jazeera, CBS News).",
+      "The UN condemned the attack; Secretary-General Antonio Guterres said he was 'deeply shocked' (Al Jazeera, CBS News).",
+      "Earlier the same week, Houthi attacks on the Riyadh airport killed three Saudis, including a pilot (CNBC, CBS News).",
+      "The Houthis issued warnings against using Saudi airports and airspace, exempting the holy cities of Mecca and Medina, calling the airports a 'theatre of operations' (CNBC, CBS News).",
+      "The attacks came in the week after a Saudi-led coalition launched a major military offensive against the Houthis to support Yemeni government forces (Al Jazeera, CNN, CBS News).",
+      "A passenger terminal at the Riyadh airport (terminals 3 and 4 complex for domestic flights) was struck again on Sunday, the day after the deadly Saturday strike (CNBC, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number wounded in Saturday's attack",
+        "positions": {
+          "Al Jazeera English": "300 others wounded",
+          "CNBC": "309 injured",
+          "CBS News": "hundreds / 309 injured",
+          "CNN": "300+ wounded"
+        }
+      },
+      {
+        "topic": "Current level of US involvement",
+        "positions": {
+          "CNBC / Al Jazeera / CBS News": "Frame Trump as newly considering whether to join Saudi strikes; cite Saudi officials requesting 'urgent defense support'.",
+          "CNN": "Reports the US has NOT supported air strikes and instead sent more than 100 military advisers for intelligence under a newly formed joint command, and that Trump previously declined MBS's requests to strike the Houthis."
+        }
+      },
+      {
+        "topic": "Who requested US intervention and how",
+        "positions": {
+          "CNBC": "Two unnamed Saudi officials, including a senior Foreign Ministry member, told MS NOW the kingdom is requesting 'urgent defense support' and needs US to intervene 'as soon as possible'.",
+          "CNN": "Unnamed sources told CNN that MBS spoke twice with Trump last month urging strikes, but Trump declined."
+        }
+      },
+      {
+        "topic": "Scope of additional Houthi targets claimed",
+        "positions": {
+          "CBS News": "Houthis claimed attacks on the Shugadam Aramco gas facility, the Tanajib oil refinery, and King Fahd International Airport in Dammam, plus 120+ Saudi airstrikes in 24 hours (via BBC).",
+          "CNBC": "Focuses on Houthi efforts to choke oil tanker traffic through the Bab el-Mandeb strait; does not list the specific Aramco/Dammam targets."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier. Frames the story around Saudi strategic limits ('Has Few Options as Houthis Aim at Heart of Its Ambitions'), emphasizing MBS's dilemma and economic/image stakes rather than the casualty event itself. No body text available to corroborate.",
+      "Al Jazeera English": "Leads with global condemnation, assembling a long roundup of statements from the US, UN, Egypt, Qatar, Pakistan, Jordan, Oman, Palestine, Syria, India, Japan and Canada. Foregrounds the attack as a 'deadly Houthi attack' and international reaction; emphasizes the Saudi/coalition framing and casualties. Provides context that Saudi Arabia is waging an air campaign supporting the Yemeni government.",
+      "CNBC": "Specialized/business lens. Leads on Trump weighing US entry and the military/resource cost of a 'second front in the Iran war.' Uniquely emphasizes energy angles: the Bab el-Mandeb strait chokepoint, the ongoing WPC Energy Congress in Riyadh, oil prices, US midterm politics over fuel costs, and the pending $24.3B F-35 sale to Saudi Arabia. Cites Critical Threats Project (AEI) on potential US action and Operation Rough Rider.",
+      "The Washington Post": "Headline-only in this dossier. Frames the story on casualties and escalation ('12 killed, hundreds injured... as Houthi strikes intensify'). No body text available to corroborate.",
+      "CNN": "Analysis-driven, framed around 'why are the missiles getting through' and Saudi's 'stark' response choices. Uniquely details Houthi military evolution: thermal-tracking modified missiles developed with Iranian Revolutionary Guard help, and an Anthropic report that a northern-Yemen group used Claude AI tools to develop missile guidance software. Notably diverges from others by stressing US restraint (advisers, not airstrikes) and Trump's prior refusals. Includes Saudi analyst Ali Shihabi's 'dealt with once and for all' quote.",
+      "NPR": "Headline-only in this dossier. Frames around Trump weighing whether to join the fight after the Riyadh attack. No body text available to corroborate.",
+      "CBS News": "Leads on the repeat Sunday strike on the same terminal and the ongoing nature of the campaign. Provides the most granular casualty detail (named victims, Indian national's later death, Egyptian flight attendant Azza Ramzy) and the widest list of claimed Houthi targets via BBC. Includes condensation of international reaction (Rubio, von der Leyen, Netanyahu), and notes schools moved online and airport closure. Attributes much reporting to BBC and AP."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No direct document-level verification of casualty figures, Houthi claims, coalition statements, or US-Saudi communications was possible. All claims rest on outlet reporting and officials quoted within it."
+    ],
+    "missing_context": [
+      "Four of seven outlets (The New York Times, The Washington Post, NPR) are headline-only, so several consensus facts rest on the four full-text outlets (Al Jazeera, CNBC, CNN, CBS News); readers should know the broader slant matrix could not be fully assessed at body-text level.",
+      "No outlet in the dossier provides independent verification of the casualty figures beyond Saudi government sources (General Authority of Civil Aviation / Saudi Gazette); the numbers are official Saudi claims relayed by the press.",
+      "No Houthi-side casualty figures for the reported 120+ Saudi airstrikes in Yemen are given; the humanitarian cost inside Yemen is referenced (CNN notes 'world's worst humanitarian crisis') but not quantified for the current offensive.",
+      "The headline seed question ('Why are Houthi missiles breaking through Saudi air defences?') is only partially answered \u2014 CNN discusses improved Houthi missile sophistication and AI-assisted guidance, but no outlet details the specific state or failure of Saudi/Patriot-type air defenses.",
+      "Outlets disagree on the current US posture (newly considering intervention vs. already providing advisers and previously declining strikes) but none fully reconciles the timeline of US involvement.",
+      "The MS NOW-sourced Saudi request for 'urgent defense support' (CNBC) and the CNN-sourced account of MBS's prior calls to Trump both rely on unnamed officials and are not independently corroborated across outlets.",
+      "No primary documents (coalition statements in full, UN envoy statement text, Anthropic's actual report) were provided for direct verification.",
+      "No article body contained apparent instruction-injection attempts."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four full-text outlets reported the same Riyadh airport attack with materially different emphases \u2014 Al Jazeera on global condemnation, CNBC on energy and US cost, CNN on Houthi missile/AI sophistication and US restraint, CBS on the repeat strike and victims \u2014 and they diverge notably on current US involvement, making this a coverage-comparison story rather than a straight REPORT. Confidence is moderate because three outlets are headline-only and no primary source was available.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaUVTX184M1ZxZGwtNFBoOHM5SzVaZ2RTYm42aWx6bTR1dGdDbl9fNjFLaDI4OG9JMG1RTmdrNWpyZGtucXJpVl8weFZjTEt5clItZ19hSFJOLWdhdjNHX285WmhoeGRfdVZaN1hra1ViOWp5VWQ2eHVUc0lxSDBEdVpwbEhFQjZhWm02ekxB?oc=5",
+      "title": "Saudi Arabia Has Few Options as Houthis Aim at Heart of Its Ambitions - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOLWVoSG40NmNyb1B5YkpTVUlpc1l3b1FaYTdlczcwUURLTkt2R2FUX2dfTGFsc2pJS2lfSDY0Tzd5RUpVWjFZdEw1R0o4UUhkdEJSSWpsd0hIRTU5eTZpRkRhV2IyazRnRVc4dzk4STlZWVpobkF1am84bGtHOXZFbk9Kdk5rMU9yR0pGajk1STBYTkdGZFhVbzM1MU1hdV9Rcm11d1ZrdFdCWG96VHfSAbMBQVVfeXFMTmpLZWNQZ1RyWXk2Q0VHMUs3cUpwUGtUQVRJdGgxd01rV1RsbWg0ZkdQTGtyNTlVRFRDcXVGWU5lQTd0VXZYV0FKSlQzWDh2MmZyeWFiNlVYRHBPcTJoTnRLQVRfWFVBb09UUDduNFBfdktFM1k2UDByaFFtNnV6c1l4SHg5bXkyYXQ0a0dDU3hFUFcyUDUtdzNNMHdYTnFCbkFYa2hIeWZfd1BCTjltNktXanc?oc=5",
+      "title": "World condemns deadly Houthi attack on Saudi Arabia\u2019s Riyadh airport - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE51bzM0YzNwbUhGUUpVMHhPQWNZenkwZDdQM3QxdVdpQ2xOYjROVkZpVHU5cko1VDFUMnRVd3o0S3dmZVdlTlZ6cldhZ0RqTEgzREZhSXA3d1hFakpMYnNiaUxja2hyTThCejJOVEhnSFEzcGR3eF9N0gF8QVVfeXFMTVZ4YzZyc1U3S2NyVFBIVXpPZ3BJenI3T1lTZ0tGZ0ozcDZRZGJ0SEM0a21KTDhXdjN3VGxocXEteUlhbnJVRVhTRGlNRkdrb25NaEdfNVFYc0J6ZUN6b2pTUHNYcDdIY3c2T1dTekwxYUJReTlwS2NoSFBZOQ?oc=5",
+      "title": "Trump says he is 'going to look at' joining Saudi Arabia in the fight against Iran-backed Houthis after deadly airport strike - CNBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQX1ZaSjhHakhEb2hLUXUxdWZVb1pVQXJicTgtVENldndaRTI4VG5iaFJyV0sxSTRieVliX0c3SV81SEYtNmFxOXd2YUM2bDh6Tjk0cnBCVWM0RWNJeE4xLUVKXy10ZUM5cVNHc2tZYXR2R1A5U21MRVVjb0hMcHp5VTNfc29FTWFUaW51MVhnemJfRW9CMk8wb29HWVpzQ3pENDZscW43SEVxNHhUcUxrN3JBaUo4bWtENEE?oc=5",
+      "title": "12 killed, hundreds injured in Saudi Arabia airport attack as Houthi strikes intensify - The Washington Post"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMWFHWG5oa1FEYjBYQk52N3BjUHY5bDhwVnUtdzZGaGduc2YxdV9UbEFPNkZIdVhCM0EzemFCQjNIUlJSb01nZUZFR005UzVmM0VvcUpkNG1kTXdaOU9pa2RHY0ZlRzZHak5sQXcxa2JUemhrR3RLTmFMODZPRm9uaEF1UlA?oc=5",
+      "title": "Saudi Arabia will have to respond to Houthi airport attack - but the choices are stark - CNN"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTHppNFllbVBxRmdxSUhRdWhDeGNyTkNEMnpYY1hxU2RSb2JRd3J2Q0poWk1xWlZ0M2xkdzhqNkFxa2tSMk9CTzFMTXk3OVNzVHphb0NBUGhhZXdTbloyQ3lacGdwbE5ZU0lxdDFmYXZ1RXg0WGxOVkltNVpLdmRNOFVoSF9sd2NBZ29odHdaRnY?oc=5",
+      "title": "Trump weighs joining the fight against Houthis after Riyadh airport attack - NPR"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa2ZUXzc2NDROUjFFVXpwbFA1S0hXSEZ0eGlYMkdNNDQtay13MDkzc3VBZUdQZ3FDREtlelF1Ri1tbEl0eXF0ZkxsbUZkaG13T1V0RHlFWXBmZ0pFa3JsRHhUVGZJbUd4cWJnaFRsMzh6TEowM0ZQOGo4anM5MjBvcld4bU1kWlAz?oc=5",
+      "title": "Passenger terminal in Riyadh airport hit again, a day after deadly strike killed at least 12 - CBS News"
+    }
+  ]
+}
