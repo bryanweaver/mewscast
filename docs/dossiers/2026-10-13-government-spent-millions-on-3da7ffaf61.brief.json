@@ -1,0 +1,102 @@
+{
+  "story_id": "2026-10-13-government-spent-millions-on-3da7ffaf61",
+  "headline_seed": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home - NPR",
+  "brief": {
+    "story_id": "2026-10-13-government-spent-millions-on-3da7ffaf61",
+    "consensus_facts": [
+      "Federal agents searched/raided the home of Rep. Ilhan Omar (D-Minn.) in Washington, D.C., on the morning of Monday, Oct. 12, 2026 (reported by CNBC and NBC News body text).",
+      "The search was conducted by Homeland Security Investigations (HSI), a division of the Department of Homeland Security, under a judicially authorized search warrant secured by the Department of Justice (CNBC and NBC News).",
+      "The Justice Department confirmed in a statement that HSI 'executed a judicially authorized search warrant' as part of an ongoing federal criminal investigation, without specifying details tying it publicly to Omar (CNBC and NBC News).",
+      "The investigation is a yearslong/complex criminal probe that involves allegations of fraud and matters partly related to immigration (CNBC and NBC News).",
+      "Omar has not been charged with a crime (CNBC; NBC News notes she is under investigation but reports no charges).",
+      "Omar responded on X, calling the action an attempt to 'target political enemies and weaponize federal law enforcement,' saying Trump has targeted her for a decade with 'baseless lies and smear campaigns,' and declaring 'I will not be silenced' (CNBC and NBC News).",
+      "House Democratic leaders Hakeem Jeffries, Katherine Clark and Pete Aguilar issued a joint statement calling the search 'deeply disturbing' and alleging 'corrupt weaponization of the federal government' (CNBC and NBC News).",
+      "The search was first reported by Fox News (CNBC and NBC News).",
+      "Omar immigrated to the U.S. from Somalia as a child and is running for reelection; the search came roughly three weeks before the Nov. 3 midterm elections (CNBC and NBC News).",
+      "A long-standing DOJ practice/policy counsels caution about investigative steps near an election that could appear to help or hurt a candidate (CNBC and NBC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope and focus of the investigation",
+        "positions": {
+          "CNBC": "Cites MS NOW source saying the probe is based on allegations of fraud, and Fox News source saying it focuses on Omar's immigration paperwork filled out by her father; a source called it 'complex' and ongoing for years.",
+          "NBC News": "A source said the probe 'deals partly with immigration and fraud, but it goes beyond those things,' involving whistleblowers, documents and witness testimony."
+        }
+      },
+      {
+        "topic": "Trump's involvement",
+        "positions": {
+          "CNBC": "Does not quote Trump directly on the raid; notes Omar's long history of being targeted by Trump and DHS Secretary Mullin's September comments about investigating Omar's family immigration.",
+          "NBC News": "Quotes Trump saying he had 'nothing to do with it,' that he finds her 'totally crooked,' but 'that's really up to the DOJ.'"
+        }
+      },
+      {
+        "topic": "Whether the action violates DOJ pre-election policy",
+        "positions": {
+          "CNBC": "A person familiar with the raid said DOJ does not consider the action to violate the policy because the raid was not meant to be public.",
+          "NBC News": "Frames the timing as under 'added scrutiny,' notes the policy is an unwritten practice that 'is not always followed,' and cites the 2016 Comey precedent and the Eric Adams case."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Frames Omar primarily as a 'Democratic Trump critic' and uses the word 'raid.' No body text available to assess lead or buried details.",
+      "NPR": "Headline-only (appears twice in dossier). Packages the Omar raid alongside a separate story about government spending 'millions on Trump ads,' creating a thematic pairing about government power and political favoritism. The raid is the second of two items; no body text available to assess substance.",
+      "CNBC": "Full body text. Leads with Omar's defiant 'I will not be silenced' and her political-intimidation framing in the headline, foregrounding her response. Emphasizes that she has not been charged, the yearslong nature of the probe, the fraud and immigration-paperwork angles, DHS Secretary Mullin's September comments floating possible deportations, and the proximity to the midterms. Gives substantial space to Democratic leadership condemnation and the DOJ pre-election policy, including the anonymous rationale that the policy was not violated.",
+      "NBC News": "Full body text. Headline uses the more neutral 'searched by federal agents in criminal probe' rather than 'raid.' Leads with the factual search and the two-source sourcing, then Omar's reaction. Notably includes Trump's direct on-camera comments ('nothing to do with it' / 'totally crooked'), and devotes extended context to the DOJ pre-election norm, the 2016 Comey disclosure, and the Eric Adams case \u2014 framing the timing as historically significant and contested.",
+      "USA Today": "Headline-only. Frames its angle around explainer/background \u2014 'What to know about her immigration story' \u2014 signaling a focus on Omar's biography and the immigration dimension rather than the raid itself. No body text available.",
+      "The Hill": "Headline-only. 'The Memo' framing signals analysis/commentary; headline centers the 'Trump critics allege abuse of power' angle, foregrounding the political-weaponization claim. No body text available to assess substance."
+    },
+    "primary_source_alignment": [
+      "No primary sources (search warrant, DOJ filing, court documents) were located for this story. The only official document quoted is the DOJ's brief public statement confirming a 'judicially authorized search warrant,' reproduced consistently by both CNBC and NBC News.",
+      "The underlying warrant and its supporting affidavit \u2014 which would state the actual allegations and probable cause \u2014 are not available, so all characterizations of the investigation's scope (fraud, immigration paperwork, 'beyond those things') rest on anonymous sources, not the primary document."
+    ],
+    "missing_context": [
+      "Only two of seven dossier articles (CNBC and NBC News) have retrievable full body text; the other five (Reuters, NPR x2, USA Today, The Hill) are headline-only and cannot corroborate body-level detail.",
+      "No primary source \u2014 the search warrant, affidavit, or any charging document \u2014 was available, so the specific allegations against Omar remain uncorroborated by any official filing.",
+      "Neither full-text outlet reports a response from the U.S. attorney in Minneapolis or specifies what items were seized beyond photos described as police removing documents.",
+      "The dossier does not include the content of the separate NPR 'government spent millions on Trump ads' story paired in the headline, so that angle cannot be analyzed.",
+      "No outlet in the available body text provides the view of independent legal experts on whether this specific search would fall within or outside the DOJ pre-election norm, beyond the competing anonymous-source and institutional framings.",
+      "The identity and credibility of the 'whistleblowers' referenced by NBC News are not described, and no on-record law enforcement official has detailed the allegations."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two full-text outlets (CNBC and NBC News) cover the same event with materially different framing \u2014 most notably CNBC's 'raid'/'I will not be silenced' emphasis versus NBC's more neutral 'searched'/criminal-probe framing with Trump's direct quotes and extended pre-election-norm context \u2014 while five other outlets offer only headlines with divergent angles (immigration explainer, abuse-of-power memo, Trump-ads pairing), making this a coverage-divergence story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOMDJQVmVIaFZGdTRES18xTGZOQTgtMzMyWGVOb2VxOUxpWUpQNDlhXzZIdXU0bE81bHVqZ2dRcnVqeE1NWkhtNXNQMTZHb0RtWUhibjBiVkF5MWdSTHJZLW0yNjJrWFYxRVpHQjBnZHJDWGhwVTBIanpDak5iLWc0Y1NIVjN1VmRhTVV2WXE1X0VHQ2gwZXNwb2FIQlEwaGtDWFVnMGpDTlQzLVd2SlNXcVB6dmpDYzJmMURtbUdQYmVra3dtc0ViRWl6NU4?oc=5",
+      "title": "US immigration authorities raid home of Democratic Trump critic Ilhan Omar - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQWNObUNPcTNjYlNXa09XUG56dFpJX19Cclp3MEF2UkpFc3JOVk8zaldQaWhkZDZmOHp3bm4ta0kyWDFpakpZZ2w0bS1qRENVQU1qd3VmandYSC1ibXM0cjlISHl5T2dycTJKSU5qdml2dks3Tmc0QU11aHJIWjJRcXBONEdObmo2WVNjc2p5ODItdlVlVDZaNjlyc3JqQlJucVhmbHNaMElsMkpm?oc=5",
+      "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home - NPR"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPUkc1SXY2eVgyXzZnSktQRktCWVRVUjYwbTN3ZXRoY01DZUF4d2RsTzZFamdOODl4VlpDVjhYWEwwYkdiZ0FRaHFJU0k0MGQwcjA2SnhJYkY1d2dtVXBrX1FuM3JVdGE4RFhpcTJQUFhXeXdBRjA3WHZPUG9VTExKM3BsWUdtSFMtNV9FS3ktR1JMTXPSAZgBQVVfeXFMUFVtU1JWbGNOQm0yVmdoYzJxTnh0dVhZamU5bHZ3ZGpKMTk5UTFncFZpNWFTOHBwUXF5RGV1enY3Q1NqbnJHMzRRZ0tOaUE5TUFMc1JMaDU2c2U5Vm53QjFMQVhjU0d4NHY1SnRHaHZpQ2lVQkVQODZud2tvU3FldnBvSGJQNUtHY19TM2w2V2c1cVNSM0FKLTI?oc=5",
+      "title": "Rep. Ilhan Omar blasts federal criminal raid on home: 'I will not be silenced' - CNBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNenhTcUF0eV9qanBKUnNlaU9QV2EwNjhZUUlfMjc2QVNDOXpkcUJ3bVpnMW1sNlVFaFVHZlpkXzZxdDYwWUJtVG1OWk9iSzNrcVlVcEM2aXQ4Qk85cW9uRzh3RVE4SXZMMUV3MEhVcDN6bUNaNjJyd201S21ESmZDZndoVUQ3djQtdXVOX2VuZjVhek5rSGdJdExiRFpiQ05KcnVLa25tOV9CTjRfUFEyVHZxTG5Xd2ppT0tWT3BHYUtqaDYzMFE?oc=5",
+      "title": "Rep. Ilhan Omar\u2019s home searched by federal agents in criminal probe - NBC News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB4cmdmLXFvT0VETHVHZ1hPZEEwal9nTERTbmtKX1M1Uk4wWnhmVzREYzFfVGxNcjFHZ21nUi16clZXQWU0M1ZwbmUtSm5hdTJ6WUZ6YmJn?oc=5",
+      "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home - NPR"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNeGV6YmtaYjBBXzljV0I5bkFiOEZqODdiXzNZZG4wY01Nc2FnZGMyN3paaXdPcVBhYjZxZFBNNU1VZjdLRnhtT1hpVk96ZVc5bDdTUERsUHJsNzFfN3JUQ3VNeFB5cG5nUGdGWU45VUctek5rUUlWUjc0dmtBNEQydDZGSFU5eU9CRHQyYldQMzRvNEpZNmtTcVFJRldjbF94WjctcGFIY3VMSDBKcTQzbWJ1ZVlPdw?oc=5",
+      "title": "Ilhan Omar\u2019s home was searched. What to know about her immigration story - USA Today"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNdklHT3RYelZmbmtRbGJ5WFN5VkZVbGczOUt5Ym5zQ2RoQU1CRGFpR2VOM0RVbTBWYmMzVDgyeXZOUC1UMjN0NEdtWHYwRFllSkNTYVJCaVdNMTNDdE9fM0l2SnhLX05SWHJPR3l2STdCU0t6XzV3NEdCdkpmUFBtZnl0MWNBY2h5Yjg3SmR1WWdKbXJP0gGaAUFVX3lxTE1kdWhJS0FweFRNM3NxR1ZPLU93bEZXM1hYM05TQjVSRzBuTGhFQXFJcHljOVMwSlZXRURGaW82Q1FGWTZWLVdQMmlheVZhR2xVM1RoWGJ2d1pXUzNjT2xPYzJMeFpTYTB2c04wUzJzTXpsWFpsVS16cDBBNjZfWTJiX0VycDl5Y3VHUnZFUWhneEprQ3A1QzJvMnc?oc=5",
+      "title": "The Memo: Trump critics allege abuse of power as Ilhan Omar\u2019s home is raided - The Hill"
+    }
+  ]
+}
