@@ -1,0 +1,113 @@
+{
+  "story_id": "2026-10-14-starlink-restrictions-affecting-ukraine-ea4d90e30d",
+  "headline_seed": "Starlink restrictions affecting Ukraine's front line operations, Kyiv says - BBC",
+  "brief": {
+    "story_id": "2026-10-14-starlink-restrictions-affecting-ukraine-ea4d90e30d",
+    "consensus_facts": [
+      "Ukrainian officials, led by presidential adviser Serhiy Beskrestnov, said SpaceX imposed overnight speed restrictions on Starlink/Starshield terminals that disrupted a number of military missions (BBC, Politico, NBC News, CNN).",
+      "The restriction causes terminals to lose connection when a vehicle or asset exceeds roughly 100 mph / 160 km/h (BBC, CNN).",
+      "Ukrainian officials said they received no prior warning of the restriction from SpaceX (BBC, NBC News, CNN).",
+      "Beskrestnov said the move 'cannot be a coincidence' and is 'linked to the current political situation' (BBC, NBC News, CNN).",
+      "The disruption particularly affects interceptor drones and mid-range strike drones, as well as front-line logistics, reconnaissance and communications/signal relaying (BBC, NBC News, CNN).",
+      "SpaceX had not commented or responded to Ukraine as of the reporting (BBC, NBC News, CNN).",
+      "The Starlink issue occurred alongside a major overnight Russian strike that left about 600,000 people without power (BBC, Politico, CNN).",
+      "Russia launched 39 ballistic missiles and more than 120 drones at Kyiv, the surrounding region and Kharkiv, targeting energy infrastructure (BBC, Politico, CNN).",
+      "Zelensky said the strikes hit energy infrastructure covered by the 'energy ceasefire' that President Trump announced the prior weekend (BBC, Politico, CNN).",
+      "The Starlink disruption coincided with a dispute over US intelligence sharing, with Trump denying the US had stopped sharing intel while Ukraine said it received no early warning of the strikes (BBC, NBC News, CNN)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Overnight death toll",
+        "positions": {
+          "BBC": "Reports three killed in Kyiv, plus at least six later killed in a drone strike on a warehouse in Lutsk.",
+          "Politico": "At least three people killed and 22 injured in Kyiv, including an eight-year-old child.",
+          "CNN": "At least 10 people killed and dozens injured across several regions overnight and early Wednesday."
+        }
+      },
+      {
+        "topic": "Which Starlink product is restricted",
+        "positions": {
+          "BBC": "Refers generally to Starlink terminals and Starlink connectivity.",
+          "NBC News": "Refers to Starlink and quotes an official calling 'Starshield' life-saving.",
+          "CNN": "Explicitly identifies the restriction as affecting the military-grade version called Starshield."
+        }
+      },
+      {
+        "topic": "Source of Ukraine's knowledge of the speed limit",
+        "positions": {
+          "BBC": "Attributes details to Beskrestnov's Telegram posts and unnamed Ukrainian defence ministry sources.",
+          "CNN": "Reports Ukraine's Armed Forces learned of the speed limitation from SpaceX customer support after filing a complaint, and that the arrangements were contracted through the US government until mid-May 2027."
+        }
+      },
+      {
+        "topic": "Musk's prior statements/role",
+        "positions": {
+          "BBC": "Notes that in February Musk denied Russian forces access to Starlink, blunting Moscow's advance.",
+          "NBC News": "Quotes Musk calling Starlink the 'backbone' of Ukraine's army and noting he is a close Trump ally.",
+          "CNN": "Notes Musk criticized Zelensky on Saturday, writing 'Zelensky has gone too far' over strikes on Russian fuel facilities."
+        }
+      },
+      {
+        "topic": "Reported impact threshold vs. observed effects",
+        "positions": {
+          "CNN": "States the restriction applies to assets at 100 mph or higher.",
+          "NBC News": "Reports Ukrainian units are already experiencing issues even at lower UAV speeds."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Ukraine says SpaceX limits Starlink operations, disrupting military'). Frames the story as Ukraine's accusation against SpaceX with neutral wire attribution ('Ukraine says'). No body text available to assess lead or buried detail.",
+      "The New York Times": "Headline-only in this dossier ('Ukraine's Vulnerability Grows as Starlink Is Restricted and Russia Escalates'). The headline frames the story around Ukraine's growing vulnerability and pairs the Starlink restriction with Russian escalation. No body text available to assess further.",
+      "BBC News": "Leads with the Starlink speed restriction and the political-situation claim, then pivots heavily to the overnight Russian strikes, civilian casualties and human-interest testimony (resident Tetiana Storozhyk). Emphasizes the broken energy ceasefire and the intelligence-sharing dispute, including Zelensky's claim the US threatened to restrict intel sharing. Attributes Starlink details to Beskrestnov and unnamed defence ministry sources. Includes Russian framing (Lavrov, Russian MoD drone-shootdown claims).",
+      "Politico": "Shortest body; leads on the physical Russian strikes ('Russia pounds Kyiv energy sites') and treats the Starlink throttling as a secondary element folded into the attack narrative. Emphasizes casualties (three dead, 22 injured, an eight-year-old), the deliberate targeting of ceasefire-covered infrastructure, and Zelensky/Klitschko quotes. Minimal detail on the Starlink mechanics themselves.",
+      "NBC News": "Frames the story explicitly around a three-way squeeze: Starlink restrictions, intelligence-sharing gaps, and the Trump clash. Foregrounds the political interpretation (Musk as a close Trump ally; timing 'could not be a coincidence'), quotes Musk's 'backbone' line, and cites a specific army unit (7th Rapid Reaction Corps in Zaporizhzhia) that cancelled operations. Notes units report problems even at lower UAV speeds. Page cluttered with unrelated 'For Subscribers' links.",
+      "CNN": "Most technically detailed account. Leads on the Starshield restriction and the escalating dispute with the Trump administration. Uniquely reports the contract-through-US-government-until-mid-May-2027 detail, that Ukraine learned of limits via SpaceX customer support, that the issue was shared with US lawmakers, and that backup channels are being tested. Also includes Kremlin spokesman Peskov's comments. Pairs the tech story with the energy-infrastructure attack and the intelligence-sharing dispute."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., SpaceX statement, contract document, or official Ukrainian MoD release) was located for this story. All claims about the speed restriction originate from Ukrainian officials and unnamed sources as relayed by the outlets; SpaceX had not commented, so no independent document corroborates the mechanism, timing or motive."
+    ],
+    "missing_context": [
+      "No outlet obtained any on-record statement or confirmation from SpaceX; the entire mechanism (overnight 100mph/160km/h speed cap) is sourced to Ukrainian officials and unnamed defence-ministry sources.",
+      "No technical explanation or independent verification of whether the speed limit is a deliberate policy change, a software/throttling bug, or a standard terms-of-service limitation is provided by any outlet.",
+      "The attribution of motive ('linked to the current political situation') comes entirely from Ukrainian adviser Beskrestnov; no outlet presents evidence connecting the restriction to Trump, Musk's Zelensky criticism, or the ceasefire dispute beyond timing and the Musk-Trump relationship.",
+      "Casualty figures vary significantly across outlets (three to at least ten dead) and none fully reconciles the Kyiv-only versus multi-region totals.",
+      "No outlet reports Russia's position on the Starlink restriction beyond the Kremlin saying it has 'no further information' (CNN only).",
+      "Reuters and The New York Times appear in the dossier as headlines only, so their full reporting and framing could not be assessed; consensus here rests on the four full-text outlets (BBC, Politico, NBC News, CNN)."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same core event but with materially different emphasis \u2014 ranging from a tech/political-squeeze story (NBC, CNN) to a bombardment story with Starlink as a secondary note (Politico) \u2014 and key claims (motive, mechanism, casualty counts) diverge while no primary source or SpaceX statement exists to anchor them. That makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNV2VEUDcwZ1kydUhNRmMzSjVVTEdoLUNlS3FVUjctT1JONXNOZjJzS2wwZ21kOVJwakRkbmU4Mnc0THVxMDAwejAyak90aDNWd0N5SElDRF9sbXVUVk54RGUwUko3Z1FlR0RVQlJFTG5LWVdhY2wtdEtmaFp3WEtzZDZoMTNNYnY5WEhyUXczamlWYVNHMzVTczVST2twUkZGMVI3UGZJODdCSGlfZEZzek94bjROQUc0ZnAw?oc=5",
+      "title": "Ukraine says SpaceX limits Starlink operations, disrupting military - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPNXdEMlRSTDR5bVVYU1RhR1ljMjB3RU5iaFZYZmdndGg5UWdtdjVLOEdibVlXLUtRSVB3S3RGYXhkZnJWY2dNQjlwMWZaSnJ3NTliaTZrQ0p6X2RWYm9CSEZiTmFDWEJVNnZjeGsyMUlPdkVCajIya2tXWWlNeFFTcVBn?oc=5",
+      "title": "Ukraine\u2019s Vulnerability Grows as Starlink Is Restricted and Russia Escalates - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAxQ2dNaDItdmx5VHFaSFYwaGtCTW5LNWdWdkEtVE1DYVZKN1IzcHQyeEl4dUJnUkZQS0hBTGx2aUdFZmZjRHRKekdibjB5b0FqN3BvWERKNlNzLTA?oc=5",
+      "title": "Starlink restrictions affecting Ukraine's front line operations, Kyiv says - BBC"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUzJkUk1pSVdXcmEzWkt3UUloc2FTRzRVaGVJaklQUXpFWjZtTDljZWtsdzl4Vl93Nmk1UEthQzY3Z2N2c0UwUzJnUGFjYk5McUl5NEltdk96bDFyVWVVckctTkM2SlJjVjNaMXIzRm1ScnJoaWFBMF9TWXg5SEk5QTBvdEJsVlJiNmVsMjN6NWVrZFVFV1FiUE85bFVHaS1aSVRGV05vUHk3WjJBRkl3WA?oc=5",
+      "title": "Russia pounds Kyiv energy sites as Ukraine reports Starlink throttling - Politico"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNVFZxOFpYUkhfNjVDUzFoSUhVQ3JRdERHWXdlbk1PUW9zc0tvNEo5cnVnODNTUHA0V1lmX1hyVERYc2FtX0d4MjMzdVZOVGpETjNTTy1FaHpFakZKYzQwWW9RV2hJeE9nQ0JoSUs4c0FJVE1ZSUdsWk5zSmxJcHVEaHJza2NjSEd1RmNYNVM0MHUxcDV1dzBraTB2UUh2RzhSdk05VmMyOUhVeEdKcFZjXzZGYUhTSlE?oc=5",
+      "title": "Ukraine says new Starlink restrictions disrupt military as it reels from intel gaps and Trump clash - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUkFha05hdEJFZHFlendsYVp5c3lNVmlEekxZYzlBaEtsNXRUNGhOaVVuREplSUJBTnlFeW9JcWpCWDV4TE95YVk0TFJFWERuWmk3MG1TUFQtWU5SUWhwZkllNmM4eUlzaU9vVDB0bW8tSXB1a3hPVERXejd1MWdkb1lrWDF4RnZKYTNIRHY3SUlBY2c?oc=5",
+      "title": "Ukraine says some military-grade Starlink services restricted, disrupting operations as Russian attacks continue - CNN"
+    }
+  ]
+}
