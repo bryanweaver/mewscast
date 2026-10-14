@@ -1,0 +1,109 @@
+{
+  "story_id": "2026-10-13-pope-leo-found-to-8ef8774a54",
+  "headline_seed": "Pope Leo Found to Have Lung Cancer During Surgery, Vatican Says - The New York Times",
+  "brief": {
+    "story_id": "2026-10-13-pope-leo-found-to-8ef8774a54",
+    "consensus_facts": [
+      "Pope Leo XIV, 71, was diagnosed with lung cancer after surgery at Rome's Gemelli hospital on Tuesday, October 13, 2026, according to the Vatican.",
+      "Surgeons removed the lower lobe of the pope's right lung.",
+      "The diagnosis was lung adenocarcinoma, confirmed by intraoperative histological examination and consistent with preoperative tests.",
+      "Adenocarcinoma is a type of non-small cell lung cancer that tends to grow more slowly than other kinds.",
+      "The surgery itself lasted approximately 90 minutes and the Vatican described it as successful with no complications.",
+      "The surgery was led by thoracic surgeon Professor Stefano Margaritora.",
+      "The pope returned to his room after surgery and is expected to recover for about a week.",
+      "The Vatican canceled all of Leo's audiences through October 20.",
+      "Leo first disclosed the discovery of a small lung nodule during his Sunday noon prayer in St. Peter's Square and announced he would have it removed.",
+      "Leo is the first American pope, a Chicago native, previously Cardinal Robert Prevost.",
+      "Leo is physically active, known for swimming and tennis, with no reported history of serious illness.",
+      "Leo was scheduled for a Latin America tour November 6-17 with stops in Uruguay, Argentina and Peru; it is unclear whether recovery will affect the itinerary.",
+      "The rosary was recited in the hospital chapel, led by Cardinal Baldassare Reina, Vicar General for the Diocese of Rome.",
+      "It is not clear whether the pope will undergo additional treatment such as chemotherapy, pending results of further tests."
+    ],
+    "disagreements": [
+      {
+        "topic": "Time in the operating room",
+        "positions": {
+          "ABC News": "The pope was in the operating room for about three hours, with the surgery itself lasting approximately 90 minutes.",
+          "Al Jazeera English": "States the procedure lasted 90 minutes without distinguishing total operating-room time.",
+          "NBC News": "Does not specify a total operating-room time."
+        }
+      },
+      {
+        "topic": "Smoking history",
+        "positions": {
+          "NBC News": "Explicitly notes Leo is not known to have ever been a smoker, and that this cancer affects both smokers and nonsmokers.",
+          "Al Jazeera English": "Does not mention smoking history.",
+          "ABC News": "Does not mention smoking history."
+        }
+      },
+      {
+        "topic": "Reason for timing of surgery",
+        "positions": {
+          "NBC News": "Reports Leo chose immediate surgery so he would not have to alter his Latin America travel plans, citing Tokyo Cardinal Kikuchi Tsutomu.",
+          "Al Jazeera English": "Frames the surgery as doctor-advised action after a nodule was found, without the travel-driven timing detail.",
+          "ABC News": "Attributes timing to doctors thinking it 'opportune to intervene,' without the travel motive."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two headline-only entries ('Pope Leo had lobe of lung removed as doctors found cancer' and 'Pope Leo diagnosed with cancer as doctors remove part of lung'). Neutral wire phrasing leading on the factual sequence of surgery and diagnosis. No body text available to assess emphasis.",
+      "The New York Times": "Headline-only ('Pope Leo Found to Have Lung Cancer During Surgery, Vatican Says'). Emphasizes the 'found during surgery' discovery angle and attributes to the Vatican. No body text available.",
+      "Al Jazeera English": "Leads on the diagnosis and the 'radical' removal of the lobe as an attempt to eliminate all cancerous tissue. Emphasizes Vatican transparency on papal health and devotes space to the Latin America tour logistics (flights, helicopter rides, Peru altitude). Includes related links to the pope's AI and death-penalty positions, broadening the religious-affairs context.",
+      "ABC News": "Most clinically detailed account: explains the minimally invasive camera-guided procedure, names both Dr. Luigi Carbone and Prof. Margaritora, and includes an explainer on what lung nodules and adenocarcinoma are (citing the American Lung Association and National Cancer Institute). Emphasizes reassurance \u2014 notes most nodules are benign and that adenocarcinoma is often caught early. Leads with the successful-surgery framing.",
+      "The Washington Post": "Headline-only ('Pope Leo's surgery removed cancerous lung nodule, Vatican says'). Frames the removal as of a 'cancerous lung nodule,' emphasizing the surgical action. No body text available.",
+      "NBC News": "Sources to the Associated Press. Leads on the diagnosis and lung removal, then adds human-interest color from pilgrims in St. Peter's Square and a reassuring doctor soundbite ('one of the more treatable' cancers). Uniquely surfaces the non-smoker detail, the travel-driven timing motive via Cardinal Kikuchi, the detail that Leo is staying in a non-papal room due to renovations, and his 1985 typhoid illness as a young missionary in Peru."
+    },
+    "primary_source_alignment": [
+      "No primary source document (e.g., the full Vatican medical bulletin / Holy See Press Office release) was located for this story. Al Jazeera, ABC News, and NBC News all quote directly from the Vatican's medical statement, but the underlying bulletin itself is not in the dossier for independent verification.",
+      "ABC News provides the most direct quotations from the Holy See Press Office release (attributed to Dr. Luigi Carbone and Prof. Stefano Margaritora), which align with the shorter paraphrases in Al Jazeera and NBC."
+    ],
+    "missing_context": [
+      "No outlet provides a staging of the cancer (e.g., tumor size, stage, or whether it had spread to lymph nodes), which would materially affect prognosis.",
+      "No outlet reports a clear prognosis or survival outlook; coverage relies on general statements that adenocarcinoma 'grows slowly' and is 'treatable.'",
+      "The full text of the Vatican medical bulletin is not included as a primary source, so all quotes depend on outlet transcription.",
+      "Four of seven dossier entries (both Reuters items, The New York Times, The Washington Post) are headline-only with no retrievable body text, so their framing could not be fully assessed.",
+      "No outlet explains what 'radical' removal means in oncological terms beyond Al Jazeera's paraphrase that doctors hoped to eliminate lingering traces.",
+      "NBC and Al Jazeera both ultimately trace to AP/wire reporting, meaning apparent corroboration partly reflects shared wire sourcing rather than fully independent reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (Al Jazeera, ABC News, NBC News) confirm the same core facts \u2014 diagnosis, lung-lobe removal, successful surgery \u2014 with only minor variation in detail and emphasis rather than materially conflicting framings, and no primary source diverges from coverage. This is a straightforward multi-outlet-confirmed event best served by a clean REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbVI1SUJUZTUxMzJJdDlYc2FLVlh1dmZzTnh3andRUW9wZzR6Uk5neHVWcFgwNV9mUENqdENsQS1oVXdUSEltMktJWGZqRXNwcnpwQVdrTXl1NVp3ZFlVczBuN3Z5MDEtYmRfdFdTTkYteGNFNEdncW84RXkybFJfbWhPY0VtNUZmZFk0cjZiemhxUTJrNTNoVmpMbUZoMV9IdDNONG9hcVA5UQ?oc=5",
+      "title": "Pope Leo had lobe of lung removed as doctors found cancer, Vatican says - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0zalk3S3VDUElUcFNEdUpIem4tTmtXbTRVM19GX2ZEV3BFWE15YWhGa19zZFd1cEozS0toNHd6SWdOazhZR2NPYkFkRFU4ZG9BLVFGTi0tVndYR3h1Wl9vMGs3NDl0X2lLZ2Z1Rjd4ZmlldjgzaWt4bU9DNlN0ZUU?oc=5",
+      "title": "Pope Leo Found to Have Lung Cancer During Surgery, Vatican Says - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPYnExOWVvd0ROMDExSzhRU1pELTlrTmpzM3ZpMkVMSzIwQmFXVmVaVlJ6R1RDbVFvMDd1R05WaG1yWVRyRDRrejh0UVhqNkZoaEwtMEJwV0hXd2ZVUmZQX2RJYVdid1hHaS0xNVN5Mm5JR3JPQzJteFVOY1ZJWDdySjN3bi1PY3YtVndUT1g5NWNPaGZGNzNjb29EY0pORlRpdk16WUE3ZkxOR1VXcEHSAbMBQVVfeXFMTWZDVXJzcVAxeDJ5bkJ2cDdWZUN6cmtOYkc0TlhZZjY5TTlhSmxUSEx0UTFQeDlfNTBWSkNaYkhxaGFxZGU4eDB6ZndBeGN1Y3EwMkFsaXZHOGx2R3FVZnRmNDNvS2tkbkxpNU1BYnVmdC1wSzEyeXBEQS0yb2xpcFFjTFA3N1BYYkVMTl9OMFp6N1RMMVJ1Rmh4em45NUZMZlNwT2p3TDV5SFpYYVFQcnhyUms?oc=5",
+      "title": "Pope Leo diagnosed with cancer after surgery to remove part of lung - Al Jazeera"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQ193VGQ1eW5QNDVBUkVxTnh6aGdxU3VqUmo5NUxsa2tZVWxvaS1WdjZGU3NFUlMwd1haTmZMLTdWWFhlcy1aNDhCOThsRmtRWXVqN1pVOWNmQmVqcEhGMmdlWE9YNTZhSHBPMjdJODhMeGlJOVJ3dWpiYmtQMWdpVnQ2enhWWkFXSzB0ODdzMEFYcWI3WG9OVXFES0tIbW81RVE?oc=5",
+      "title": "Pope Leo diagnosed with cancer as doctors remove part of lung, Vatican says - Reuters"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeEpid0wwSGVBWmtpLWgteDR5dlMxY01pTklkU1hDcmU3S3AwX3pKY2NtZWhKR0czaXlyS29QcTEtVjlMUnM3akZuWmg3d1h3RjJGRW5NZmwxaTkxdW9yVTh2ZDd3aXdjdjBCbEpsandCLVRBNmdXXy03WDJleHVLLVpiTHEzUmpfeGN4VmpqUkE5WnFDdnpRSkNfX2otVWgyQ3RDNjlobDBQdFnSAbABQVVfeXFMUEVkMkdVcEU3UUNiTTc1YnJzQjNMRmhXdldYczExNEV3MDdnbHB6ZHprcVhxd1lkbExRQ0xpSnZ2N3YxU3o1cmNlc3NhTF9IMDhsWG1CQnhPOFEzQmdMeW1BYTczMUx6NEd3bUFodUg0WFlpQ1prZnlFRmpFYTgxbGdJUC02MzF1R1ExeVhmem5YYkZ0Y00tQVF6cERkQXJxZGZ6a3Fpb1dVV0RqenR5bGE?oc=5",
+      "title": "Pope Leo diagnosed with lung cancer, Vatican says - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUzJFcHNvd05oN1JwZjZGQVd4ZmRiWFQ0UGVGN3RaWmliZ3Z5OWs3QWhxNjJVWHdrZGhkeGx0dlBBbGtmeWhwVDhpNDNyVDNZZEZ3dXJlWklLVm9tdHlSQjhNY3RPUnVKcTRFdUtBWVJsaTRwOVRqY3R6RjJOYTA1Y1Zpa003eEgycGFFVy1tOWk3cUROTndMWA?oc=5",
+      "title": "Pope Leo\u2019s surgery removed cancerous lung nodule, Vatican says - The Washington Post"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNm9fcTBnZ2hJdE9Jb3hlNDAtTzlYeGdleGlwSFgxZUctblh3SVZPMjUyMGNEdjVxSE15bnZGLUJWRmM5eGdXcEpUOFhfeDQtcTRKU29oWVNsbk1yVUhGWV9IVFBmVDZGeHVMRlNOSEc2WDdieDNJMFFIS0xCR3VrbDJyX3lFZzEzd1Jwd3ZiMU5YTGc2RDUyZU5jNXFiVGxuSkNhZnROYWI?oc=5",
+      "title": "Vatican says pope has lung cancer and had part of his right lung removed - NBC News"
+    }
+  ]
+}
