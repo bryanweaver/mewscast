@@ -1,0 +1,104 @@
+{
+  "story_id": "2026-10-14-supreme-court-sides-with-278a3dada8",
+  "headline_seed": "Supreme Court sides with Republicans in dispute over cost of campaign ads - Los Angeles Times",
+  "brief": {
+    "story_id": "2026-10-14-supreme-court-sides-with-278a3dada8",
+    "consensus_facts": [
+      "On Wednesday, Oct. 14, 2026, the Supreme Court sided with the Trump administration and Republicans in a dispute over discounted broadcast campaign ad rates, issuing an unsigned order.",
+      "Justices Sonia Sotomayor and Ketanji Brown Jackson dissented and would have denied the administration's/appeal applications.",
+      "The dispute centers on an FCC policy (outlined in a March notice from the FCC's Media Bureau) extending discounted broadcast ad rates \u2014 previously reserved for legally qualified candidates \u2014 to political parties and joint fundraising committees.",
+      "Four Democratic candidates for federal office challenged the policy, arguing the discounts should be limited to candidates.",
+      "The U.S. 4th Circuit Court of Appeals ruled against the FCC/for the Democrats, and later ordered the FCC to resolve the challenge; the FCC/Solicitor General D. John Sauer sought emergency relief from the Supreme Court.",
+      "Chief Justice John Roberts issued a temporary administrative stay (Oct. 8) blocking the lower court's deadline while the justices considered the request.",
+      "The Supreme Court wrote that 'our system of separation of powers does not allow the Judiciary to meddle' in the workings of a coordinate branch of government.",
+      "The ruling is seen as advantaging Republicans, who have more money available through party committees than Democrats.",
+      "This was the second time the Supreme Court intervened on the Republicans' side in this dispute (after an earlier September order).",
+      "Democratic FCC Commissioner Anna Gomez objected to the rule change, criticizing the lack of public comment and the process."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of Democratic challengers / who they were",
+        "positions": {
+          "Los Angeles Times": "Names three Democratic Senate candidates \u2014 Sherrod Brown (Ohio), Jon Ossoff (Georgia), and Roy Cooper (North Carolina) \u2014 who objected in April and later filed suit.",
+          "Newsweek": "Refers to 'Four Democratic candidates for federal office' who challenged the policy, without naming them."
+        }
+      },
+      {
+        "topic": "Timing relative to the election",
+        "positions": {
+          "Los Angeles Times": "Describes the outcome as giving Republicans an advertising edge 'in the final weeks of the campaign' without a specific election date in the ruling context.",
+          "Newsweek": "States the order comes 'less than three weeks before the November 3 midterm elections.'"
+        }
+      },
+      {
+        "topic": "Rationale emphasized for the Court's decision",
+        "positions": {
+          "Los Angeles Times": "Emphasizes the Court's view that the issue should be left to the FCC and that the 4th Circuit intervened too soon / in violation of separation of powers.",
+          "Newsweek": "Adds that the Court said the FCC would suffer 'irreparable harm' and that federal law 'does not obligate the commission to act within a particular time frame,' objecting to the 48-hour deadline."
+        }
+      },
+      {
+        "topic": "Financial disparity figures",
+        "positions": {
+          "Los Angeles Times": "States generally that Republicans raised far more through party committees funded by wealthy donors, without dollar figures.",
+          "Newsweek": "Provides specific FEC figures: ~$136 million Democratic committee cash on hand vs. ~$279 million Republican, plus $17.9 million Democratic debt vs. none for Republicans."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg (Bloomberg Law News)": "Headline-only in dossier. Frames the outcome as a repeat Republican victory ('Again Gives Republicans a Win'), emphasizing the partisan result rather than the legal mechanics. No body text available to assess further.",
+      "Los Angeles Times": "Full body text. Leads with 'Supreme Court sided with Republicans' and foregrounds the partisan advantage and the Democratic challengers (named: Brown, Ossoff, Cooper). Prominently quotes the nonpartisan Campaign Legal Center calling the rule 'contrary to the text and purpose' of the statute, Democratic Commissioner Gomez's objection, and 4th Circuit Judge King's 'whole cloth' criticism of the FCC. Emphasizes process concerns (no hearing, no stated basis) and frames the fundraising disparity as a donor-wealth story. Does not quote the FCC or Solicitor General in defense.",
+      "Politico": "Headline in dossier is about an unrelated story \u2014 Senate Republicans urging review of John Eastman's Jan. 6 disbarment. Does not cover the campaign ad dispute; not relevant to this story's consensus.",
+      "USA Today": "Headline-only. Frames the story through Trump ('Supreme Court again sides with Trump in campaign ad dispute'), centering the administration rather than the GOP generally or the legal institutions. No body text to assess.",
+      "Newsweek": "Full body text. Leads on the second-time intervention and the FCC avoiding a lower-court deadline. Notably more balanced in sourcing: quotes an FCC spokesperson ('right on the law'), FCC Chair Brendan Carr posting 'W' on X, Solicitor General Sauer calling the lower ruling 'a flagrant abuse,' AND the Democratic attorney David R. Fox accusing the FCC of 'blatant procedural trench warfare.' Supplies concrete FEC dollar figures and the Television Bureau of Advertising's challenge. Discloses the story was produced with help from its AI assistant 'Martyn.' Emphasizes the order is not a final ruling on the merits.",
+      "The Asheville Citizen Times": "Headline-only and about an unrelated subject \u2014 a North Carolina Supreme Court race concerning Helene recovery and judicial independence. Not relevant to this story."
+    },
+    "primary_source_alignment": [
+      "No primary source (the Supreme Court order, FCC March notice, 4th Circuit opinions, or court filings) was located in the dossier. Alignment cannot be independently verified against the underlying documents.",
+      "Both LA Times and Newsweek quote the Court's 'separation of powers' / 'meddle' language identically, suggesting faithful reproduction of the unsigned order, but the full order text is not in the dossier to confirm context."
+    ],
+    "missing_context": [
+      "Only two of six dossier articles (Los Angeles Times and Newsweek) contain substantive body text; the remaining four (Bloomberg, Politico, USA Today, Asheville Citizen Times) are headline-only, and two of those (Politico, Asheville Citizen Times) are about entirely unrelated stories.",
+      "No primary source documents were available \u2014 the actual text of the Supreme Court order, the dissents' reasoning, the FCC March notice, or the 4th Circuit rulings could not be checked.",
+      "The discrepancy over whether three or four Democratic candidates challenged the policy is unresolved; the LA Times names three Senate candidates while Newsweek cites four federal candidates \u2014 the full roster and whether House candidates were involved is unclear.",
+      "No outlet in the dossier quotes an independent election-law or broadcast-law expert assessing the likely final merits outcome (the order is explicitly not a final ruling).",
+      "Neither full-text outlet details the dollar magnitude of the ad-rate discount itself or an estimate of how much advertising spending it affects in practice.",
+      "The precise procedural history dates are only partly corroborated (Sept. 4 order, Oct. 7 4th Circuit statement, Oct. 8/9 deadlines, Oct. 8 Roberts stay) \u2014 mostly from a single outlet each, not cross-confirmed."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only two outlets (Los Angeles Times and Newsweek) provided substantive body text, and they corroborate the core facts without major conflict \u2014 a straightforward REPORT fits. It falls short of META because the framing divergence is modest and no primary source was available to contrast against coverage; the single-source and headline-only limitations should be disclosed in the post.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNnhIZDZLR0MzQTVGdWRxeXd0dllwMVdkOUxvUXRmMVM2OFh0UjZxSVd2TnNMekZTdjhNV0lZdGhfSXBMWW9XeVRfZlVPYjFpWlRfVzhrd0xpeWFaWmhoUnRhOW9WWERDNVloSDRBeF9GLU5VTmc1ZlVtTEJjZ252MHRmdDFWM0lNenZKaFpBcDJLMWo2cllFZ2RlLWh4TkRhVVBrUUpRUQ?oc=5",
+      "title": "Supreme Court Again Gives Republicans a Win in Ad Rate Dispute - Bloomberg Law News"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNV2hGT1VGc0FZcThkV25YaU4yamRGSzNNeEwtc2RLZkhnOTVJaG9Ydnh0MUxXTWtPMjFzLWxOLXF4WHVGa05zb2ZxdGtBRFpIUjlCOUtOdW9uTUd0blNKa2kzWkgyZXlfMHVPNHU0M0prY045RnprMnJWYzY2ZEJTaFk5VlJ3bS15ZHRRay1Td0tFLWNmZC14LVVmM0ZvTUdjMmNlWERZRlAtV3BOa3Y3Z3NsOVBrSVoycGxqekJUbzE?oc=5",
+      "title": "Supreme Court sides with Republicans in dispute over cost of campaign ads - Los Angeles Times"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQm9YdjVrS3Ezc3hwR3N5bFBkMFExa0dtOF9FVWFKZEZKVnZKeWFiYm1CX3JDQ2lRS3ExUjJHcmI0VEFkNENCdkNLOUQ0djVSSDdoWHFfd3hxMENvSy1sZlAtOTdxYmVKbVota2llQXNnV0ExV3N6UHRkV1BnMmZ1SjRjajB2alo2XzJRTjl6c1c?oc=5",
+      "title": "2 Senate Republicans tell Supreme Court to review John Eastman\u2019s disbarment over Jan. 6 - Politico"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbEtPWXBHa2cwWkZySElpa1NoQjB2RGZYZGJ3XzFHYVZXNWlJLTRTaTlSS0hLNk54dXo1VzM4b2VDb1RpUDlfZGJYOVFzUGNJTkk4V041NDByemNTMW1Sb1I5YXVCb29paWVNNHdJcWVIcnRXLUdoajBfZHRQaVcyZEZFTVVDMGVQMy1OSXFEeEtCY0NCaFEwNVh2WGhOYkYyNnhOSmhCeko1ZHAxYW82S3JlZW0?oc=5",
+      "title": "Supreme Court again sides with Trump in campaign ad dispute - USA Today"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcFdZejM1LXpZUFlmdUFJbG8zM1ZMemNRWFJITno1OXkzSzVfb3NGZWljdVlnbjJwdWtIMVVOejZDM1ZBZ2tzaW5HNk96SmRnOWVfSm5xb3NYdWE2VGlhdm1sSm1lY3JqX2d4TENJX0Jqbmg5LTJ2Q1lzTnBLYUFYWTkzMmpMQVhycG5wd050M202MU13NENPMzZWMWF0MVphQ0JR?oc=5",
+      "title": "Supreme Court Sides With Republicans Again in New Political Ad Rates Order - Newsweek"
+    },
+    {
+      "outlet": "The Asheville Citizen Times",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPRWZnSklieVBBbXd5b1Q0aU1kbzZnUGJ0OUtsMHhWZDlmOV94SEVTUTJyY3F2bXEtcE1TX3dzTld3eWhmOGxqZWs1S1ItdllqOXhsNXZBaDlPbmMxdkZJeERlOHI0UFo1MnFQM2ZweTdZcGtuZnVEOXZrNGJxZkljc2E2cVljVWk5cEZEeF9FaVBpZENiUGZhSERHaVBsZkkyaERfMTVDMnh6TW1IQzZuSDVYNTRXYk54dFdWdW4zQ2lhdml4U1l1MjFJWmpGdmpHeFYwQTZVTTNTRUMweEtLRU12MFpFcEk?oc=5",
+      "title": "NC Supreme Court race tests Helene recovery rights, judicial independence - The Asheville Citizen Times"
+    }
+  ]
+}
