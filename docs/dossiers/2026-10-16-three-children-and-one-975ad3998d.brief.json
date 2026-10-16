@@ -1,0 +1,107 @@
+{
+  "story_id": "2026-10-16-three-children-and-one-975ad3998d",
+  "headline_seed": "Three children and one teacher killed after 16-year-old opens fire at Oregon primary school - BBC",
+  "brief": {
+    "story_id": "2026-10-16-three-children-and-one-975ad3998d",
+    "consensus_facts": [
+      "A shooting occurred at Silver Rail Elementary School in Bend, Oregon, on Thursday, Oct. 15, 2026.",
+      "A 16-year-old male Bend resident was the shooter.",
+      "Three children \u2014 ages 5, 8 and 11 \u2014 and one teacher were killed.",
+      "A 7-year-old child and a 54-year-old teacher were taken to the hospital with critical injuries.",
+      "The shooter forced his way into the school by firing at locked doors with a long gun.",
+      "The incident began shortly before 1 p.m. local time when police received a 911 call from a driver who reported being shot at outside the school.",
+      "A community member/bystander saw the shooter enter the school, pursued him inside, and fatally shot him.",
+      "Police arrived on scene within minutes and confirmed the suspect was dead before evacuating the school.",
+      "The suspect's identity was not publicly released, and officials said they were still investigating whether he had ties to the school.",
+      "Bend Police Chief Mike Krantz spoke at an evening news conference and is the lead investigative agency.",
+      "Oregon Gov. Tina Kotek praised the community member who 'heroically intervened' and acknowledged the emotional burden on them.",
+      "The FBI, under Director Kash Patel, assisted local authorities in the investigation.",
+      "A family reunification site was set up at Journey Church in Bend.",
+      "All Bend-La Pine Schools classes and activities were canceled for Friday.",
+      "Bend-La Pine Schools Superintendent Steven Cook called it an 'unthinkable tragedy.'"
+    ],
+    "disagreements": [
+      {
+        "topic": "Framing of total killed in headlines",
+        "positions": {
+          "Reuters": "Headlines 'kills four' \u2014 aggregates victims into a single number.",
+          "ABC News": "Specifies '3 children, 1 teacher killed; teen suspect dead.'",
+          "The Washington Post": "Headlines '3 children, 1 adult killed' \u2014 uses 'adult' rather than 'teacher.'",
+          "USA Today": "Headlines 'three children, teacher' and frames the shooter as 'Teen gunman.'",
+          "The Guardian": "Headlines 'three children and one teacher.'",
+          "The Independent": "Headlines '3 students and a teacher' and emphasizes 'rampage' and 'armed bystander stops him.'"
+        }
+      },
+      {
+        "topic": "Whether the bystander was described as 'armed'",
+        "positions": {
+          "The Independent": "Explicitly describes an 'armed community member' and 'armed bystander' in the headline and body.",
+          "The Guardian": "Says bystander shot the suspect but does not foreground the 'armed' descriptor in the headline.",
+          "ABC News": "Says a community member 'pursued him and engaged him' and shot him; does not emphasize 'armed' in headline.",
+          "Reuters": "Headline notes shooter 'shot dead by community member' without 'armed' descriptor."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in dossier. Aggregates the toll into 'kills four' and foregrounds the community member who shot the attacker. Neutral wire phrasing; no body text available to assess further.",
+      "ABC News": "Full body text. Leads on the human toll with specific ages and the detail that the shooter 'forced' his way in by shooting locked doors. Emphasizes the heavily trained, rapid law-enforcement response via an eyewitness quote, and foregrounds the governor's 'heroically intervened' language. Tags the story under 'Gun Violence.' Includes unrelated 'Popular Reads' clutter from the site.",
+      "The Washington Post": "Headline-only in dossier. Notable word choice: '1 adult killed' rather than 'teacher,' slightly more cautious attribution ('authorities say'). No body text to assess.",
+      "USA Today": "Headline-only in dossier. Frames around 'Teen gunman' as the actor. No body text to assess.",
+      "news.google.com (BBC-sourced live feed)": "Full body text, clearly BBC live-coverage format. Leads with 'Teenage boy killed after shooting dead four people,' aggregating the toll. Concise, timeline-focused: the car-shooting 911 call, the bystander pursuit, officers arriving three minutes later. Ends by noting schools closed so the community 'needs a moment to heal.'",
+      "The Independent": "Full body text and the most detail-rich. Uses 'rampage' and foregrounds the 'armed bystander' angle prominently. Adds unique color: officers had practiced active-threat training 'just two months prior,' the vigil, Mayor Melanie Kebler's quotes, St. Charles Bend as the receiving hospital, FBI Portland field office detail, and Oregon Dept. of Emergency Management coordination. Detailed minute-by-minute timeline.",
+      "The Guardian": "Full body text. Leads on the toll and the bystander killing. Uniquely contextualizes the shooting within national gun-violence statistics, citing Everytown for Gun Safety's figure of at least 100 incidents of gunfire on school grounds in 2026 resulting in 33 deaths, and notes Oregon's recent gun-safety measures (background-check and permit law). Provides geographic/demographic context (Bend, population ~100,000, ~170 miles from Portland). The only outlet to explicitly place the event in a policy and statistical frame."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All reporting derives from the Thursday evening police news conference led by Chief Mike Krantz and statements from Gov. Kotek, Superintendent Cook, and Mayor Kebler. No court filings, press releases, or official transcripts were available to cross-check against coverage."
+    ],
+    "missing_context": [
+      "No outlet reported the suspect's name or any confirmed motive; officials declined to say whether he had any connection to the school.",
+      "The exact type of long gun, the number of rounds fired, and how the shooter obtained the weapon were not disclosed \u2014 Krantz explicitly declined to specify, citing the ongoing investigation.",
+      "No outlet reported the identity of the community member who shot the suspect, or whether that person faces any legal review for the shooting.",
+      "The conditions/outcomes of the two critically injured victims (the 7-year-old and the 54-year-old teacher) were not updated beyond initial hospitalization.",
+      "Only The Guardian placed the event in the context of national school-shooting statistics and Oregon gun law; other outlets with body text (ABC, The Independent, BBC feed) omitted policy context entirely.",
+      "No primary-source documentation (official police statement text, press-release, or transcript) was available, so all details rest on secondhand accounts of a single news conference.",
+      "No article addressed whether the bystander's intervention or the response raised questions about the school's security, lockdown protocols, or door-locking systems that the shooter breached."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets have substantive body text confirming the same core facts with only minor framing differences (headline toll aggregation, whether the bystander is called 'armed,' and The Guardian's added policy context); there is no primary source and no material divergence from the underlying facts, making this a straightforward multi-outlet REPORT rather than a META.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdzdxY25FWnN6S2wzbW9iMGhHbjRWcEhzQ1cybjFSUUE0c096czJPMDBWQ1Ffem5YU0o4eVV0bUhpQ3FzbmZmRkJway1rV0NadEhGTlZka3FfY2dWbXU2OGRKenFCV3hfb2JTUk1OQnhCNml0WkZlVGlIZkkzdmxLSzZvUHhtTFlRQnpVWUJvd3dXT2FVNDJZNGZ1cmt4Qmt0Q1d3U29fTXJzMUUwTGlScGZ4a1JDdw?oc=5",
+      "title": "Shooter kills four at Oregon elementary school before being shot dead by community member - Reuters"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPOU01ZVozbGhQU2wzWnQ5NDNHejZPUGwyYUVPWlBnS29EdVkzeU9RVklweXdOZGxueHhrcmZQOUhLZ3VQUFBJTnZ2U3FmMTBEQTBJRE5wTVltcjFSM3ZIVHRKS05OR2U1RUM2b2lHbWtuTXg0b1FqLThtWEVjSHZOVTh0ZUNoX18xMG1LMnBxTzdLY1cxLTRSRFVZaVpXd3FJN3FFMUlXTmktamvSAbABQVVfeXFMT2hOTzlGLXowdW1rWE9NYlh5YWw1VnNIc3ZBdFpKd3J4aGtjSjQySDR1OUx5SzFYMVZkM0xocmR2bEZuSHd3QmFENFhrdnEyX1dRajJQTzl3T1ZGM1BSak82dFBoMHhERkNtUzV2R3huMHU0MzlxQ3psMHdkSUg5aWFZcC1JWkF6ZTRsQ1lUMHRrSzZZc2p4a3o3c3FrLXNFdm9HN3NCU2pkNlpwelNXdWc?oc=5",
+      "title": "3 children, 1 teacher killed in shooting at Bend, Oregon, elementary school; teen shooter also dead: Police - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPTm5DakdaQ3lpMnhKWWlFY2xpN2I0UEFpLUcyd0VSNS14R3lwMm03Mk9XY1FxdEFtRmpPd1hXZFJHRGUyOHlUSFBkMnp3YXFJM25IZ18wVEtnbEFGMEF5TGl6bzlhcjAxdWsxSmEzdFgydDhGSUkwZUIwbVhxbG5hcEE4bEVydmhWVGFPTnN1aHJwalNESEhsb3U3akRiUW5XSnNtNG1zcHRvSGtaN0tmM0ItVQ?oc=5",
+      "title": "3 children, 1 adult killed in Oregon elementary school shooting, authorities say - The Washington Post"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWTgzc2htMHh6WWVoUXBkSThKcU9EeUJhQWJSX3ZqNU9BVnRlV044aTQ5cU5kSEpaNnVmZG1kaWZOWDhVeURxcEFQdjlpNGtOU3YzT3ljaFMwdXU5bW1aa21MRENSaW1rMEpZdTlSVkt2TGxibnEyM3ZMb0M2RFZYSjN0MDhobERqWC01bjFxU3dIaXVNVC1hUUJnOG90dVVIR0NiVFV0dVA?oc=5",
+      "title": "Teen gunman kills three children, teacher at Oregon elementary school - USA Today"
+    },
+    {
+      "outlet": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0yaTBMZDFNRHAtdFFvNnl2WUNRVFNQUkN3bTNtbjljQWRXRWRlWXBOS2F4YUlraFNPVUk4Mm45cGotMFd1ZEduRlBTOTlwOFZ5dVhKRmN3?oc=5",
+      "title": ""
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOY2NMeXpkYzY4Vktzc3Itdkh4TWxhT1Q2S2IyRF85N1ZZdTMxSVNneUZEeHVpb2lwaDV1ZjBWRFZCc0E3Sm5qU2xpV0RMeDQzZ3VkN0JFQXdrUExnTU54QktXamVhc1hUSmE1TTZRLW5NV3dIdm9NTFdIMk92VXVWYlpMTE1OaWhHWk9KYTBCNmY3bkJqenAtclVDd1dfa1BPZWxBRVFFb0JuN3ZtelZIVTVrYjBUNUs4bVB2RHJQbUQ?oc=5",
+      "title": "Shooter, 16, kills 3 students and a teacher in Oregon elementary school rampage before armed bystander stops him - The Independent"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONTNGNjRGRC1WTzA5OXI5TDZiRUtDcV9PakRXeEhiaVJuSDhrUHl4UWoweDVDRkx6TXEwWjVjSnlrUklNa0JXRWZjQ0dzN1pKeW9HNXZOS0trcXNQcUNkanRjelo3YjM4eDBTTU1Tel9OdHcyV2xkUlpYX2dNSllwX3RWY1Ruc2Rt?oc=5",
+      "title": "Shooter kills three children and one teacher at Oregon elementary school - The Guardian"
+    }
+  ]
+}
