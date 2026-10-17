@@ -1,0 +1,126 @@
+{
+  "story_id": "2026-10-17-protesters-clash-with-police-1ec05af7af",
+  "headline_seed": "Protesters clash with police in Paris and across France during major day of demonstrations - follow live - BBC",
+  "brief": {
+    "story_id": "2026-10-17-protesters-clash-with-police-1ec05af7af",
+    "consensus_facts": [
+      "On Saturday, October 17, 2026, clashes broke out between police and protesters in cities across France during nationwide demonstrations.",
+      "Protests were driven by anger over rising living costs, declining public services, and in support of high school students' grievances, reviving the 'yellow vest' movement of 2018.",
+      "Police used tear gas during clashes with protesters in multiple cities.",
+      "At least 272 arrests/detentions were reported across France (CNBC and CBS News both cite this figure from the Interior Ministry).",
+      "Protesters in Lyon set fire to a tourist office.",
+      "In Marseille, protesters damaged/vandalized city buildings, including forcing their way into or damaging City Hall.",
+      "Interior Minister Laurent Nu\u00f1ez's office reported a growing number of violent incidents, including assaults on officers, looting, and damage to public buildings.",
+      "The movement began at high schools in Paris' poor northern suburbs over teacher shortages and poor facilities before broadening into a national movement.",
+      "A teenager/protester lost a hand during the protests (CNN reports a protester near Saint-\u00c9tienne/Lyon; CNBC and CBS attribute it to a stun grenade and prompted suspension of that weapon).",
+      "Far-left presidential candidate Jean-Luc M\u00e9lenchon backed and took part in the protests.",
+      "Cars, bikes, and trash bins were set on fire and shops were looted in Paris.",
+      "The French government and police attributed much of the violence to 'far-left'/'ultra-left' groups, while protesters said most demonstrators were peaceful."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of people arrested/detained",
+        "positions": {
+          "CNN": "More than 160 people detained across France (in top summary); later reports 195 detained in Paris alone, including 13 minors, citing the Paris Public Prosecutor's Office via BFMTV.",
+          "CNBC": "272 people arrested by mid-afternoon, per the Interior Ministry.",
+          "CBS News": "At least 272 arrests across the country, attributed to AP/Interior Ministry."
+        }
+      },
+      {
+        "topic": "Where the hand-loss injury occurred and its cause",
+        "positions": {
+          "CNN": "A protester in Saint-\u00c9tienne (about 40 miles southwest of Lyon) lost his hand; no details on how it occurred.",
+          "CNBC": "A teenager lost a hand after picking up a stun grenade; France had suspended stun grenades but the interior minister said they could be used Saturday.",
+          "CBS News": "Nu\u00f1ez suspended the use of a type of police stun grenade after a 15-year-old lost a hand."
+        }
+      },
+      {
+        "topic": "Attribution of responsibility for the violence",
+        "positions": {
+          "CNN": "PM Lecornu accused 'far-left groups' of orchestrating violence; M\u00e9lenchon said demonstrations were peaceful except where police restricted protests; LFI's Cl\u00e9mence Guett\u00e9 (via BBC) blamed the interior minister for provoking escalation.",
+          "CNBC": "Interior Ministry blamed the unrest on the 'ultra-left'; protesters blamed troublemakers who set out to cause damage.",
+          "CBS News": "Attributes violence to masked/hooded groups; frames injuries as blamed on police riot-control weapons.",
+          "BBC News": "Emphasizes LFI criticism that the interior minister's men blocked a legal protest and sought to 'make the situation degenerate.'"
+        }
+      },
+      {
+        "topic": "Scale of participation",
+        "positions": {
+          "CNBC": "Tens of thousands of people took to the streets.",
+          "CBS News": "The CGT union said over 500,000 protesters joined rallies Saturday; about 20,000 protested in Lyon.",
+          "CNN": "Tens of thousands of students, trade union activists and others marching in Paris."
+        }
+      },
+      {
+        "topic": "Use of water cannons",
+        "positions": {
+          "CBS News": "Police used tear gas and water cannons to disperse violent protesters.",
+          "CNBC": "Mentions only tear gas rounds, not water cannons.",
+          "CNN": "Mentions tear gas and baton charges, not water cannons."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Police and protesters clash in some of France's worst unrest in years'). No body text retrievable. The 'worst unrest in years' superlative frames severity; cannot assess lead/bury choices without body.",
+      "CNN": "Live-blog format leading with scale ('huge demonstrations,' detentions) and police defiance. Emphasizes looting, fires, and young people 'marauding' and 'parading stolen goods,' giving vivid play to disorder. Balances with the Paris mayor's call for calm, PM Lecornu blaming 'far-left groups,' and M\u00e9lenchon's counter-claim that violence only occurred where police restricted protests. Foregrounds the detention numbers and prosecutor's justifications.",
+      "BBC News": "Narrow single-update snapshot focused almost entirely on the political criticism of the police response \u2014 LFI vice-president Cl\u00e9mence Guett\u00e9 condemning Interior Minister Nu\u00f1ez for blocking a legal protest and 'putting everyone in danger.' Frames the story around police overreach and official pushback rather than protester violence; buries looting/fires almost entirely.",
+      "CNBC": "Business-desk framing centered on economic grievances \u2014 cost of living, fuel prices, public debt, rising government borrowing costs, and Macron's late-term economic pressure. Leads with 'clash' and 'worst violence in years,' cites 272 arrests and Interior Ministry 'ultra-left' attribution, and uniquely contextualizes the protests internationally (Brussels, Albania). Also uniquely details police tactics under scrutiny, 900+ injured officers, and the watchdog's two dozen allegations of police violence.",
+      "NPR": "Headline-only in this dossier ('Scuffles and fires break out as protesters rally across France, joining students'). No body text retrievable. Headline language ('scuffles') is comparatively mild and emphasizes the student-solidarity angle.",
+      "CBS News": "AP-sourced wire piece with the fullest scene-setting: tear gas and water cannons, burning cars/bikes/kiosks, looted shops, and Place de la R\u00e9publique clashes. Leads with disorder but gives substantial space to peaceful marchers (anthem, flags, trumpets) and individual protester voices (Lola, Sonia Mabrouk) emphasizing economic frustration. Includes CGT's 500,000 figure, M\u00e9lenchon's participation, and the stun-grenade suspension after a 15-year-old lost a hand.",
+      "The New York Times": "Headline-only in this dossier ('Protests and Unrest Spread in France: What to Know'). No body text retrievable. Explainer/'what to know' framing emphasizing spread and reader orientation; cannot assess lead/bury without body."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, official press releases, roll-call votes, transcripts) were located for this story. Official claims (arrest totals, Interior Ministry statements, PM and ministerial quotes) are reported secondhand via the outlets and wire services, not verified against original documents.",
+      "The 272-arrest figure attributed to the Interior Ministry appears in both CNBC and CBS News but could not be checked against an original ministry release; CNN's lower 'more than 160' and separate '195 in Paris' figures suggest reporting captured different moments or jurisdictions rather than a verified single official tally."
+    ],
+    "missing_context": [
+      "No outlet in this dossier provided a single reconciled national arrest figure; readers are left with 160+, 195 (Paris only), and 272 without a clear as-of timestamp for each.",
+      "Only CNBC quantifies police injuries (900+ officers injured in previous protests) and the police watchdog's two dozen open allegations of police violence \u2014 this accountability context is absent from the other full-text outlets.",
+      "Reuters, NPR, and The New York Times are headline-only in this dossier, so three of seven outlets could not be assessed for body-level framing; the 'worst unrest in years' characterization rests on Reuters' and CNBC's headlines plus CNBC's body.",
+      "No outlet provided a death toll or clear total injury count for Saturday specifically beyond the individual hand-loss case.",
+      "No outlet details the government's substantive policy response to the underlying grievances (teacher shortages, cost of living) beyond Lecornu's proposed bill to make rioters financially liable for damage.",
+      "The full-text outlets available here (CNN, BBC, CBS/AP) are all classified lean-left in the slant matrix, and the one specialized outlet (CNBC) is business-focused; no right-leaning full-text source is present, limiting the framing spectrum actually analyzable.",
+      "No article explains why arrest/detention figures diverge so widely (different agencies, time cutoffs, Paris vs. nationwide), leaving readers unable to reconcile them."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple full-text outlets (CNN, CNBC, CBS/AP) plus headline-only Reuters, NPR, and NYT covered the same day of unrest with materially different emphasis \u2014 BBC foregrounds police overreach, CNBC foregrounds economic causes and police-accountability data, CNN and CBS foreground disorder \u2014 and key figures (arrests, where/how the hand was lost) diverge, making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.68
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQ3ZSMTR3dmZDamlnT3EyMWx2U1hma3VycjFxblg3SmxXMi1mUEhibjJVTV8ySGRheTEyVndBWEF4em1sbEdoZ0pKcU0tS0JVSzVVS3VZdUVrOXdHNVNYdThleU0zaDE2RXpwMWxyYURCNGt1akVuRUF0aWhYY1VkQTV6cG9UeWd2eVRjTXV6U2V2NnpCeS1zMUl5M2N3Wk16a0t3ZQ?oc=5",
+      "title": "Police and protesters clash in some of France's worst unrest in years - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9fRUVuRk5wWnVyYThSZlZvdGpteHQ3U3F5M2ZQcjJlMXNobG9sTVBtcm1iVm80Q0RPalhtRmlhRGFIWmNLUDdNZWJOMWdtakdhS25sN3lPcDZ6MFVkeWp1U0Qxb3ByTHJlYm5uSXBUWm5KMGxGa1FjbzZOQ2I1QQ?oc=5",
+      "title": "Police clash with protesters during huge demonstrations across France - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE83QTAzRVNkbmlZSzdDWDY3bFdaTFlHTFIwLUN4b2hCOHQzekVUeElPcFExNzlHbkRZaVI0UFZyT3pMZEdEQjAxY2F1V1dhQ2p1YmRvMTV3?oc=5",
+      "title": "Protesters clash with police in Paris and across France during major day of demonstrations - follow live - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZDlTS0VyMXJ2V0FyWUhYdzdPbUxiVUFrOTl1X3BwNERGU2FVTVQzSHZkVFFVdWtSZ2VrVjV6REJTN1Frem9sS3NzSjZmeEtpYm01T3c3djZUZlNOQ00zWXRDZ2tIZlczejFueGRVdk5hai1neFFtRnU5Q0I5Qk1QdVk2akJ3Mk5pSzZ1UTQ5ZUt3NFB3UlAxYTZQUzZ1VS1xTndwbm95NWFyVGfSAbABQVVfeXFMTlJkWHNlZ2dFelFLTGF5bWFSampxZGlnWXlvaEU2b1o4MjhOeTdERjFzbnVvUEZsbERBd3hzQU1yWUtRWTVXOV9WalZWSVM3ZjJuSlc2Xy1yY19QZEVRNXhDSDh4c3Z1Q2t1U3doUHNZV1FudjBGTWVqSTJ4OUF3dkh1NjR0YjM0dGpDR3BMWkdKejF4NklfQzBiNmlzc0NuV3dPYUNLRURHaUtrd2Q0dG0?oc=5",
+      "title": "French police clash with protesters as tens of thousands rally over cost of living - CNBC"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CbF9jMUNLZGhaWUhMUzBVUU1qMUg3NE9LYklxNVp2U2taYTBvNUdyQ0tmRVlySEozSEo4WlZnYm5KLS16YlVlaGo0SGlOdjUtdjh6TFJrWWF0QWhQS0laYkNHYUYta3I5M0N4a0FmbHhxcmI3b2Jj?oc=5",
+      "title": "Scuffles and fires break out as protesters rally across France, joining students - NPR"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBUbWhjSTZWLW05R2VDdVN6cFV2QTg4VE5rUVV4a2xyVDFla2p0QndEYUhaMDQ0OG81dUp3VHdZX0oyNlItR1VDYmZUYTdaRjZDYklXd0VMRlVucE9zYWMwVm4tcmtRYjhwbGJDNXA0RlNDeVBUZnpjT1FTcEdtWkE?oc=5",
+      "title": "Protests erupt across France against rising living costs and in support of students - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWlJVVVlpSjFDazRyN2xENi1qVzc5TlR2ZHJQWW9ZdWpOVXp1a3ZXTnBTUzRPYno4YUxJVjZPbUxENDRBTmliRG15dVpYTnBQWHNRS2xQUFpsanVKM2tIaTVuMnVfRURKbGhXVDh1dEtUdzZGc0M2TktTRHZ1bDdlZWlZbFh3M00?oc=5",
+      "title": "Protests and Unrest Spread in France: What to Know - The New York Times"
+    }
+  ]
+}
