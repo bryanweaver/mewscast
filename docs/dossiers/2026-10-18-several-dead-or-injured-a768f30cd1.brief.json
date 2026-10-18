@@ -1,0 +1,99 @@
+{
+  "story_id": "2026-10-18-several-dead-or-injured-a768f30cd1",
+  "headline_seed": "Several dead or injured in major fire at Canada military base - BBC",
+  "brief": {
+    "story_id": "2026-10-18-several-dead-or-injured-a768f30cd1",
+    "consensus_facts": [
+      "A major fire broke out on Saturday, Oct. 17, 2026, at Canadian Forces Base (CFB) Wainwright in Alberta province.",
+      "The fire ignited in the base's training area on Saturday afternoon (around 4 p.m. local time) and spread rapidly beyond the training area, fanned by high winds.",
+      "Multiple people were killed and others injured; officials have not provided an official casualty tally pending notification of next of kin.",
+      "Canadian Defense Minister David McGuinty said he 'cannot recall an incident like this in recent memory' and called it a 'very active and delicate situation.'",
+      "Prime Minister Mark Carney described the event as a 'serious incident' that triggered a large-scale fire and said his office is gathering information.",
+      "Alberta Premier Danielle Smith called the incident 'significant and tragic' and said it affects many military personnel.",
+      "The cause of the blaze remains under investigation; CFB Wainwright is one of Canada's largest and busiest military training bases, home to the Canadian Manoeuvre Training Centre."
+    ],
+    "disagreements": [
+      {
+        "topic": "Cause of the incident \u2014 fire vs. explosion",
+        "positions": {
+          "CNN": "Frames the event as a 'major fire' whose cause 'remains unclear'; does not characterize it as an explosion.",
+          "Politico": "Headlines and describes a 'deadly explosion and fire.'",
+          "ABC News": "Describes an 'explosion' that 'erupted' and ignited a massive fire; reports Global News sources saying a gas line or gas well was struck during a live-fire exercise and ignited the explosion.",
+          "Reuters": "Headline references a 'serious incident' and fire (body text unavailable).",
+          "Financial Times": "Headline references a fire (body text unavailable).",
+          "Bloomberg": "Headline references a fire causing casualties (body text unavailable)."
+        }
+      },
+      {
+        "topic": "Casualty count",
+        "positions": {
+          "CNN": "Says 'several people are dead or injured'; no specific number, numbers withheld pending next-of-kin notification.",
+          "Politico": "Reports 'multiple deaths and injuries'; no specific number.",
+          "ABC News": "Reports 'multiple killed, dozens injured'; cites Global News (CGTV) military sources saying at least seven people were killed and dozens injured."
+        }
+      },
+      {
+        "topic": "Terrorism / nature of the incident",
+        "positions": {
+          "CNN": "An official at the Department of National Defence told CBC there was no indication of terrorism.",
+          "ABC News": "Attributes the incident to a live-fire training exercise striking a gas line/well, per Global News sources; does not mention terrorism.",
+          "Politico": "Does not address terrorism; frames as an unprecedented explosion and fire."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only in the dossier; body text is an anti-bot/subscription wall with no reportable content. Headline frames it as a fire that 'rips through' the base 'causing casualties' \u2014 dramatic verb, casualty-forward.",
+      "Financial Times": "Headline-only. Neutral, geographically precise framing: 'Several dead and injured in fire at Alberta military base.' Emphasizes location (Alberta) over base identity.",
+      "Reuters": "Headline-only. Wire-neutral phrasing \u2014 'Deaths confirmed after serious incident, fire at Canada military base in Alberta.' Leads with confirmed deaths and the official 'serious incident' framing rather than an explosion.",
+      "CNN": "Full body text. Leads on the human and emergency-response angle \u2014 ambulances, a 'code orange' in Edmonton, hospitals 'completely overwhelmed,' and an ER physician's 'one in every 15- to 25-year disaster' quote. Emphasizes community impact (mayor, integrated town) and explicitly notes 'no indication of terrorism.' Frames the event as a 'fire' with an unclear cause; does not use the word 'explosion.' Notes no evacuation order and lists CNN's outreach for comment.",
+      "Politico": "Full body text but comparatively brief. Frames the event as a 'deadly explosion and fire' at 'Canada's main NATO military training base.' Distinctively foregrounds the political backdrop \u2014 the Alberta separation vote scheduled for the Monday after, and McGuinty's refusal to discuss its impact. Tags the story Foreign Affairs/NATO/Alberta, emphasizing geopolitical framing.",
+      "ABC News": "Full body text and the most detailed on cause and casualties. Leads with 'explosion' and 'dozens injured,' and is the only outlet to surface a specific death toll (at least seven, per Global News military sources) and a mechanism (live-fire exercise striking a gas line/well). Adds NATO dimension via a quote from the chair of the NATO Military Committee. Page is cluttered with unrelated 'Popular Reads' aggregation."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official statements, press releases, transcripts) were located for this story. Alignment cannot be assessed. Several claims are attributed to secondary channels \u2014 CBC (for the code orange and 'no terrorism' line) and Global News/CGTV (for the seven-death count and gas-line cause) \u2014 which are cited by outlets but not provided as primary documents in the dossier."
+    ],
+    "missing_context": [
+      "No outlet provides an officially confirmed casualty count; the only specific figure (at least seven dead) comes from unnamed Global News military sources via ABC News and is not independently corroborated in the dossier.",
+      "The mechanism of the incident is unresolved across the dossier: CNN calls it a fire of unclear cause, while Politico and ABC call it an explosion, with only ABC offering a specific cause (a struck gas line/well during a live-fire exercise) sourced to Global News.",
+      "Three of six outlets (Bloomberg, Financial Times, Reuters) are headline-only here, so wire-level corroboration of specific details could not be verified from their body text.",
+      "Only Politico connects the incident to the Alberta separation referendum scheduled for the following Monday; other outlets omit this political context entirely, and none assess its relevance.",
+      "No outlet reports the status of the investigation's leadership, whether military or civilian authorities are leading it, or a timeline for official figures beyond 'once next of kin are notified.'",
+      "None of the articles contained apparent instruction-injection attempts; the Bloomberg body was an anti-bot/paywall notice and the FT and Reuters bodies were RSS link wrappers, not substantive content."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets reported the same event with materially different framings \u2014 CNN calls it a 'fire' of unclear cause and foregrounds the hospital overwhelm, while Politico and ABC call it an 'explosion,' with ABC alone surfacing an unconfirmed death toll and a gas-line cause via unnamed sources. The divergence on cause and casualties, plus the single-source nature of the most specific claims, makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQaDlyRC04NzZXRHRMUHNZWnRXVmVlX3ppVlBCaXhXYlJhYVp5Zk5rSWcwcGEzYXY4Q3NPZ3dZSXllaGsxRkVnY1FXZ0dGQmRkSXhkeTJvOEVYMWh5cEt3YW4zMi1XaXdLLW0xb2FnUUlmbW9qWF9JTS1DV2RVeGJmQ2wyVkZzVUxEelJhSG5GSEllZTQxLUtDNUR0YVdOVVY4azE0c3RhcERXTDNO?oc=5",
+      "title": "Fire Rips Through Canada Military Base, Causing Casualties - Bloomberg.com"
+    },
+    {
+      "outlet": "Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObmgxQVpNVF9peHJMbjBHb25ZOWtkQkIwakhXRlA5OGJDcFpEVDNZQmFldVZBaEFZeWRjeV9pMURWdTRWRThDeXFycHhITVBWVnlSRXNqa2Q3dXlfSFFFZXZOYVg2Tm1sUUlncUFzY3BxV0xIb1VWZ0dfTUI2dmIyaHBBNG4?oc=5",
+      "title": "Several dead and injured in fire at Alberta military base - Financial Times"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOU2FXR2gxVGRZLXlocTZDQnduRHpvT3JVUHotdTZsTmczb1B4TDE0OWktQmlDNm1WcGdqcEE2Zm9HTmtpN19Pb29YNnVyVHI4d1hXUG1lb0U2ejg2cDF4VGE5Wng0TGdrVDRaSU85WnNQVmw2WmpOaHhMNlpnTFo0cC1tRkRjTDZJVllKdDJIaUhmM1laR01KS2FrQTRKb1lpQThJZlRIeVd0OVZQUnlFX2tnamx6bHladV95MWZHNUVsSldx?oc=5",
+      "title": "Deaths confirmed after 'serious incident,' fire at Canada military base in Alberta - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPSWJlV2s3SFVLUzA3Q1BtMFhIUkRjT1dvaGhMMU9IWUpSdkZJTXRxWVVST1lnU19LNE1IcU5VaThqcy1ybldHMEVmalJHSG9aa0phUGFhOGZLYkc3aHY0eG1yclpSZ1hKTjE5bllISTJBb0JuUVM2Z3dsOFotQ1NYU21nUV9iVXZ5a0dxa1l3?oc=5",
+      "title": "Several dead after major fire breaks out at Canada military base - CNN"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNUm1FclI0d0hpbkUtZHBkZWdHbWFwSS1uWlF6VmxXRVA4R3FRYjN1UnZnZ3M3QTl3LVFmVDBEX0JxU05lY3ZhRUpPeGJCMllHNkxkd2c4eHFybk85Wm56R0ZueXhjNjVvai1BX0l3ZzRJbTdwT3pteEN3MEc2cVNBUXExQ0ZuMUk?oc=5",
+      "title": "Explosion and fire at Canadian military base lead to multiple deaths - Politico"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeEZZV2h4VWI3S1VtLThtNmpFZ01JcHJwTGZ2LTFFbWhKUFdWaGpma0Zfak1jZEdsVzJjdkxOc2doX1lUdjI0Y0lvMEF6Qi0yd01LLW9QdkhUNXlyeU9KcGhhQW90S0FXWGFiek9pbmU3eFl2aUJ2MWhiaXlIaWVKX2UyREYxcm5SNHBVSG9scEZkTzlST25BQlF1VURtendrM05LdjVGaTNVX0M3TzgtdTNVOHN3RDd0RlHSAb8BQVVfeXFMUEthSVV2blJaTFRBVnhNMWg2cFM2bXRVZkFpajdMUlFqSTNzYjJNQWw2djRpZXRFZEg2ajdjMVlXUm9yRlcyUHJ3ZEw0QjliZVVrOXNCNTQ5SmUwNUJxeF8wbXducVJRbERGV01QdldhXzM2UkxOWkdBcURpUUFmVldzMXhPQy1RYTd2ZnJYX2hRRGtEOFZlSUdRWEp0SnZrZnpuSGNtRm53ekZYNXZkS3Fqa3BEOFhIN3dMWE81ajg?oc=5",
+      "title": "Multiple people killed, dozens injured in explosion a Canadian military training base - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
