@@ -1,0 +1,120 @@
+{
+  "story_id": "2026-10-18-st-petersburg-oil-facilities-09d5e368d6",
+  "headline_seed": "St Petersburg oil facilities ablaze as Ukraine launches more than 1,000 drones at Russia - AP News",
+  "brief": {
+    "story_id": "2026-10-18-st-petersburg-oil-facilities-09d5e368d6",
+    "consensus_facts": [
+      "A Ukrainian drone attack on St. Petersburg overnight into Sunday, Oct. 18, 2026, killed one person and wounded five, according to local Gov. Alexander Beglov.",
+      "The strike sparked fires at the St. Petersburg Oil Terminal and the Ruchi/Ruchyi oil depot.",
+      "A logistics center belonging to Russian retailer Ozon and a data center operated by Russian tech company VK/VKontakte were also targeted; both companies confirmed being hit.",
+      "Russia's Defense Ministry said its forces downed 1,015 Ukrainian drones over Russian territory overnight.",
+      "Ukrainian President Volodymyr Zelensky said Russia had attacked Ukraine's energy, oil and gas sectors 76 times in the week since Trump announced an 'energy ceasefire.'",
+      "Ukraine paused its strikes on Russian oil facilities for roughly three days after Trump's Oct. 11 'energy ceasefire' announcement, then resumed them earlier in the week.",
+      "On Oct. 11, Trump announced that Russia and Ukraine had agreed to an 'energy ceasefire,' but offered no details and neither side fully confirmed it.",
+      "Trump signed an executive order Friday night waiving planned sanctions against Russia, citing U.S. national interests, drawing criticism including from some Republicans.",
+      "Speaking on NBC's 'Meet the Press' on Sunday, Zelensky said waiving sanctions would strengthen Putin's war effort and that siding with Moscow would be a 'historic mistake.'",
+      "Zelensky said U.S.-Ukraine intelligence sharing had been blocked for a period and has since resumed.",
+      "Zelensky said he spoke with U.S. envoys Steve Witkoff and Jared Kushner on Sunday about next diplomatic steps.",
+      "Russia and Ukraine have been escalating strikes on each other's energy infrastructure heading into winter."
+    ],
+    "disagreements": [
+      {
+        "topic": "Facilities named as hit",
+        "positions": {
+          "CNN": "Names the St. Petersburg Oil Terminal, a logistics center, and a VKontakte data center; does not name the Ruchyi oil depot.",
+          "BBC News": "Names two oil facilities: the St Petersburg Oil Terminal and the Ruchyi oil depot, plus Ozon and VK.",
+          "Los Angeles Times / AP": "Names the Petersburg Oil Terminal and the Ruchi oil depot, plus Ozon and VK.",
+          "The Moscow Times": "Names the oil terminal, an oil depot, and industrial warehouses, plus Ozon and VK."
+        }
+      },
+      {
+        "topic": "Drone count framing",
+        "positions": {
+          "CNN": "Frames 1,015 as drones shot down 'over various parts of the country' and emphasizes it as 'one of its biggest drone attacks this year.'",
+          "Los Angeles Times / AP": "Specifies 1,015 drones destroyed over 15 Russian regions, Crimea and the Black Sea; 'one of its largest aerial attacks of the war.'",
+          "BBC News": "States 'more than 1,000' drones downed without regional breakdown.",
+          "The Moscow Times": "States 1,015 drones downed over Russian regions, attributed solely to the Russian Defense Ministry."
+        }
+      },
+      {
+        "topic": "Casualties in Ukraine (same 24-hour period)",
+        "positions": {
+          "CNN": "Reports 11 killed and nearly 50 injured across Ukraine in Russian attacks in the 24 hours to Sunday morning.",
+          "Los Angeles Times / AP": "Reports a woman killed and a 6-year-old among wounded in two Russian attacks on Zaporizhzhia; does not cite a nationwide figure.",
+          "BBC News": "Cites UN noting the first two weeks of October were the deadliest for Ukrainian civilians in years; tens of thousands without power.",
+          "The Moscow Times": "Does not report Ukrainian casualties in this article."
+        }
+      },
+      {
+        "topic": "Starlink / drone speed restrictions",
+        "positions": {
+          "CNN": "Reports Zelensky's claim that Starlink access for battlefield drones was curtailed as a 'message from the American government,' and that the Trump administration denied ordering the restriction.",
+          "Los Angeles Times / AP / BBC News / The Moscow Times": "Do not mention the Starlink speed-limit dispute."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN": "Headline frames the story around politics: 'Ukraine defies Trump.' Leads on defiance of Trump and the 'deepening spat,' foregrounding U.S.-Ukraine tension over the physical attack. Emphasizes Zelensky's grievances (sanctions waiver, Starlink curtailment, blocked intelligence sharing) and includes vivid eyewitness quotes from St. Petersburg residents. Gives most weight of any outlet to the Ukraine-Trump rupture angle.",
+      "BBC News": "Headline is event-focused and neutral: 'Oil facilities hit in deadly overnight attack.' Leads on the casualties and facilities, then broadens to the energy-war context. Uniquely contextualizes with the UN finding that early October was the deadliest for Ukrainian civilians in years, Russia's weekly strike tallies, and prior Ukrainian strikes on Yandex. Most balanced in presenting both sides' energy strikes.",
+      "Los Angeles Times": "Runs the Associated Press wire copy. Headline is descriptive and scale-focused ('more than 1,000 drones'). Leads on the physical attack, then pivots to uncertainty over U.S. sanctions. Includes the Lithuania drone-incursion apology, the Kremlin's Peskov quote, and Zelensky's full 'terrorist' quote about Putin. Balances Russian and Ukrainian framing via wire neutrality.",
+      "Al Jazeera English": "Headline-only / video item: 'St Petersburg under attack from Ukrainian drone swarm.' Frames the event through social-media footage of explosions and fires at the port. No independent body reporting; relies on witness attribution for the oil terminal and data center hits.",
+      "news.google.com": "Carries the same Associated Press wire copy as the LA Times (AP is the byline). Headline emphasizes scale ('more than 1,000 drones'). Identical substantive content to the LA Times version, including the Peskov quote, Zelensky's 'Meet the Press' remarks, and the Lithuania incident. Not an independent source.",
+      "The Hill": "Headline-only link item: 'Ukraine strikes St Petersburg with over 1,000 drones.' No retrievable body text; emphasizes scale of the drone barrage. Cannot assess framing beyond the headline.",
+      "The Moscow Times": "Runs Reuters copy. Headline centers the human toll and official attribution: '1 Killed, 5 Injured ... Governor Says.' Tight, sourcing-forward account attributing figures to Gov. Beglov and the Russian Defense Ministry. Omits the U.S.-Ukraine political dispute entirely. Appends an editorial note about its own 'undesirable organization' designation by Russian authorities and situates the attack within a running series of Ukrainian strikes on Ozon/Wildberries/Yandex logistics and tech targets."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official statements, executive order text, Defense Ministry release, or company statements in full) were located for this story; alignment cannot be verified against underlying documents.",
+      "Key figures \u2014 one killed, five injured, 1,015 drones downed \u2014 trace to two originating sources: Gov. Alexander Beglov and the Russian Defense Ministry. Multiple outlets repeating these does not constitute independent corroboration of the underlying claims."
+    ],
+    "missing_context": [
+      "The casualty and drone-count figures originate from Russian officials (Gov. Beglov and the Russian Defense Ministry); no outlet provides independent verification of the one-killed/five-injured toll or the 1,015-drones-downed claim.",
+      "Russia reports drones 'downed'; none of the outlets quantify how many drones actually struck targets versus were intercepted, making the scale of damage versus the launch count ambiguous.",
+      "The actual text of Trump's Friday executive order waiving sanctions is not quoted or linked in any article, so the specific scope of the waiver is unclear.",
+      "No independent assessment of damage to the St. Petersburg Oil Terminal (which CNN notes can handle up to 12.5 million tons/year) or of any impact on Russian oil exports is provided.",
+      "Ukraine had not officially commented on or claimed the St. Petersburg strikes at the time of the BBC report; only Fire Point, the drone manufacturer (per CNN), acknowledged a fire \u2014 the attribution to Kyiv rests largely on Russian sourcing.",
+      "Articles 5 (news.google.com) and 3 (LA Times) are the same Associated Press wire copy, and Article 7 (Moscow Times) is Reuters copy \u2014 reducing the number of truly independent newsroom accounts below the count of listed outlets.",
+      "No outlet details what, if anything, Trump's team said in the Sunday Witkoff/Kushner talks, or the substance of the Oct. 9 Miami negotiations beyond Zelensky's framing.",
+      "No instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets report the same event but diverge materially in framing \u2014 CNN leads on 'defying Trump,' BBC and the wire copy lead on casualties and the energy war, and The Moscow Times strips out the U.S. politics entirely \u2014 while the hard figures all trace back to Russian official sources with no independent verification, making the coverage divergence itself the story.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQa1NDR01YZm95TF9nSGhfZFdidlRLWDFfNkpVOTd0Ymg3V19laGlfQjUzTVhoWG85NlB3R0ZLN04yWGt3cHB2REszc0R1U3BCVTMzTUxIdnU1c3VTbFFNbm1qTWI1ZFloT0dSaS1JLWtJQnJOUkl5WHR3LXRxeWZpTndR?oc=5",
+      "title": "Ukraine defies Trump and launches one of its biggest drone attacks on Russia this year - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1aZHpqZ094WFBRcGU2MlVrc3U5RTRsX2ZXa1VzZjdUbGNrQmt0TkZTaHRPOUhPd1RzMXlrVHV1cDN3SE0wR3BiVjF0dWdJRXpTQVl4b1VhckJoZVk?oc=5",
+      "title": "Oil facilities hit in deadly overnight attack on St Petersburg - BBC"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQdWx1UXl2TXFLWlVlNFFGZTVOSGJfdXBpQUotUUFmbEJ4TzNYNkJsZHN3VHljVk4zdlh4d29GcWZ3S0haa2lRQ29SMk9PUWdaYXhFUkRMbjRDXzdnV3NVU083VTJVbUpCQ2JDYVY1ejFJMk9yUDgzbldOTHZBVWg3T0otb0VsWV9YUGMza0FvemdYOC1LUWszQUhiYnBOM0tOZEFPUUI5S1Fsby1pX2pPQk40R1Nzdl9JbXFQbXV5QWg2ZUNGUVR6Y1Y4WmdmcEJRdzFCTk1NaENsdw?oc=5",
+      "title": "St. Petersburg oil facilities ablaze as Ukraine launches more than 1,000 drones at Russia - Los Angeles Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNlZMWDY1UWZoZzRJSUFYMnZHbDFGZ0dvVHlxWmpBS0JUVlQyby1BQ3ctOTNTdDZWa2h0cmxrMDlyMlJSZWhCTjNhal9mcE9HVVBWT0JxZVJ2VUMyZFpMRVM1T0Z4NjFsZ2pSVFJ4YjZQUXlpajVXdFpvYXFaY3BuMFp6QzNTMEF1WllwVmlWUUdPNTNpUHZNTlREU1dUZjhoejJhTC1fUHPSAa4BQVVfeXFMTVZKUmZRZFd6eEo3eGw1VGVuRGxiS0hnTnhTMGUxS0ZCYzJ3SmQyUlQzcjJqdHZ2R19qb0Ytc0ttQUt3eENZbDR3UF94dlJMaEJaTVVsMk9RY1NjeEJoU0stLTJzN0dkd25qeXdRektNa2NDWmd3X2NxQ1MzejlMeHExNTRKNGdlSGhEWl9NZ0JfcmpPb0pQbVMwRGc3dVhhaEpFcE5sbUN4b1QtVHhB?oc=5",
+      "title": "St Petersburg under attack from Ukrainian drone swarm - Al Jazeera"
+    },
+    {
+      "outlet": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPb0JsZHhVNVNkaUhpSndSUTRqNjBFN2dpaktfTUZ4dWxBTkxzQ3I1LW5CRlBQNnR3UmJ5R0JzWGFaenZ5TDg3Qkt2bC05cmpYTlAwZkRSRjBoYlN1elkwelNDNmhPbkhhV1BDT05fWm96V3oxbk5YN09nUkQ2VzlvbTR1YV81Zl9wdzU5WEU1UXN3STc0ZHJlUnhiWUc2dUk?oc=5",
+      "title": ""
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPa2VBb25iNXU4aDVrcE5sOHV6MmZTeUhJaWlibnBjUzNwRXo5X05QZUVCazNjclBoZ1hHcEtwYmZ5LW9IY3BHV3g5QjNTendyY0k5RlY1S1ZyX29ETThyR0tuQzVkblRMT2x4QTNlSWZYRVNFRjliZG5BSWZGeW9keXloR0ViUmEy0gGOAUFVX3lxTE5PYU9tc0VsQlludy1YM2pnODhyN0NIYWVJdGZVeVMxTnhHa2hnWEstNnAwdDNOUUdNT3kzSll2Qm1SV21FRWktQ0xSU0VQRkxRME03XzRiUVlwV0hDSHM4WTZrMHpIOEFERzc4WGRqTHpNSHBnczN2WTE3aWF4RTlNWFZoZ0V5cmZnMFU3N3c?oc=5",
+      "title": "Ukraine strikes St Petersburg with over 1,000 drones - The Hill"
+    },
+    {
+      "outlet": "The Moscow Times",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZUcwbUVUNmd0cjd6RnpPWWwzVzc2Yjc4NTNVd0FBTFZHT1UteXE5NE55eWpMaWtCZ05JemRpYlRHbVdUcG9DOWJwb3A2UGdfZXhvZTBJOWRKM0FjUVdTTF81c2EyTGF5RXpoQjBCcXlvSjB1SGZFTTdTemxSVl9HREw5NXJIclVHck9GODR6U1h3SWNLaUVIZFVYQTZlckZUYkJjUjhTcFljUGRVclAzUVphSTZnREVyZTVsaC13V09MbTBEYU9acw?oc=5",
+      "title": "1 Killed, 5 Injured in Ukrainian Drone Attack on St. Petersburg, Governor Says - The Moscow Times"
+    }
+  ]
+}
