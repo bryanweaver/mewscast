@@ -1,0 +1,121 @@
+{
+  "story_id": "2026-10-17-fast-moving-california-wildfire-67ce8b13dc",
+  "headline_seed": "Fast-moving California wildfire burns homes as people are ordered to leave - BBC",
+  "brief": {
+    "story_id": "2026-10-17-fast-moving-california-wildfire-67ce8b13dc",
+    "consensus_facts": [
+      "The Norte Fire ignited around midday Friday, Oct. 16, 2026, in the San Clemente / San Juan Capistrano area of Orange County, California (BBC, ABC News US, CNN).",
+      "The Norte Fire had grown to at least 570 acres with 5% containment as of Saturday morning (BBC, ABC News US, CNN).",
+      "At least six homes were damaged or destroyed by the Norte Fire (BBC, ABC News US, CNN).",
+      "Evacuation orders were in effect for parts of Orange County due to the Norte Fire (BBC, ABC News US, CNN).",
+      "The fires are being driven by fierce Santa Ana winds, high heat, and dry conditions, with the National Weather Service issuing red flag warnings (BBC, ABC News US, CNN).",
+      "Division 3 Fire Chief Mark Backoff attributed the fire's rapid growth to weather and topography (CNN, ABC News US; Backoff also quoted by BBC).",
+      "The Bryson Fire in Malibu (Los Angeles County) burned roughly 147-150 acres and was 52% contained, with over 400 firefighters assigned (BBC, CNN).",
+      "The Henderson Fire near Marine Corps Base Camp Pendleton in San Diego County ignited Thursday and prompted closure of a portion of Interstate 5 (BBC, CNN; ABC News US references the Henderson Fire at Camp Pendleton).",
+      "Several schools in the Capistrano Unified School District were dismissed early Friday 'out of an abundance of caution' (ABC News US, CNN)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of firefighters injured / severity",
+        "positions": {
+          "BBC News": "One firefighter suffered heat exhaustion while battling the Norte Fire.",
+          "ABC News (US)": "No residents injured, but two firefighters have been hurt.",
+          "CNN": "Two firefighters suffered 'significant' injuries but are stable in area hospitals."
+        }
+      },
+      {
+        "topic": "Number of people / homes under evacuation (Norte Fire)",
+        "positions": {
+          "ABC News (US)": "Approximately 4,600 homes and nearly 16,000 people in the evacuation zone.",
+          "CNN": "Evacuation orders affecting about 12,200 people in San Juan Capistrano as of Saturday afternoon.",
+          "BBC News": "States evacuation orders are in effect but gives no population figure."
+        }
+      },
+      {
+        "topic": "Henderson Fire acreage",
+        "positions": {
+          "BBC News": "Over 3,100 acres with about 35% contained.",
+          "CNN": "More than 3,000 acres, 35% contained.",
+          "ABC News (US)": "2,079 acres."
+        }
+      },
+      {
+        "topic": "Wind gust speeds",
+        "positions": {
+          "BBC News": "Winds topped 40 mph in the Los Angeles area.",
+          "CNN": "Wind gusts in the Norte Fire area reached 25 mph Friday afternoon, easing to 17 mph by Saturday."
+        }
+      },
+      {
+        "topic": "Firefighter deployment to Norte Fire",
+        "positions": {
+          "ABC News (US)": "Some 400 firefighters working with another 400 en route.",
+          "CNN": "Attributes the 400 firefighters / 75 ground-and-aerial resources figure to the Bryson Fire in Malibu, not the Norte Fire."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News": "Takes a statewide, aggregated view \u2014 frames the Norte Fire as 'one of 10 burning across the state' and leads with the regional Santa Ana wind and heat threat. Emphasizes weather mechanics (red flag warnings, 40 mph winds, 95F forecast) and gives roughly equal space to the Bryson and Henderson fires. Uses urgent verbs ('erupted,' 'tearing through homes'). Reports a single firefighter heat-exhaustion injury.",
+      "NPR": "Headline-only in this dossier ('Coastal homes burn as hot winds fuel California fires'). No retrievable body text. The headline frame emphasizes coastal homes and wind-driven conditions but cannot be assessed for emphasis beyond that.",
+      "Associated Press": "No usable body text for this story \u2014 the scraped page returned an unrelated 'Latest videos' / 'AP Top Stories' index with no Norte Fire reporting. Cannot assess framing. The AP wire photos (Gregory Bull) do appear attributed inside other outlets' coverage.",
+      "ABC News (US)": "Leads with the human scale of the evacuation \u2014 'nearly 16,000 residents to evacuate' and 4,600 homes \u2014 the largest displacement figure in the dossier. Centers official voices (OCFA Chiefs McGovern and Backoff) and notes partial repopulation and lifted evacuations, giving a sense of incremental progress. Reports two firefighters hurt and gives the lowest Henderson Fire acreage (2,079).",
+      "CNN": "Most detailed and resident-forward framing. Quotes an evacuated homeowner ('a wake-up call') and Democratic US Rep. Mike Levin, who calls 'year-round wildfire season' the 'new normal' \u2014 the only outlet to introduce a climate/political throughline. Describes firefighter injuries as 'significant,' and provides the most granular wind and containment timeline. Covers all three fires in depth.",
+      "ABC News (Australia)": "No usable content \u2014 the scraped page returned an error notice and an unrelated Australian 'Top Stories / Just In' index with no California wildfire reporting. Cannot assess framing.",
+      "ABC News (US) [video page]": "A video/aggregation page, not an article. Repeats the ABC US topline ('More than 500 acres... forcing nearly 16,000 residents to evacuate') but is otherwise a list of unrelated video headlines. Cannot be assessed as independent reporting; corroborates the ABC US evacuation figure only."
+    },
+    "primary_source_alignment": [
+      "No primary sources (Cal Fire incident reports, OCFA press releases, NWS red flag warning text, or official evacuation orders) were located for this story, so reported figures cannot be checked against the underlying documents.",
+      "Several key numbers are directly attributed to officials in the coverage (OCFA spokesperson Steve Concialdi, Chiefs McGovern and Backoff, Cal Fire), but the originating documents themselves are absent from the dossier."
+    ],
+    "missing_context": [
+      "No outlet reports a confirmed cause or ignition source for any of the three fires.",
+      "The firefighter injury count and severity diverge (one vs. two; 'heat exhaustion' vs. 'significant injuries') and no outlet reconciles the discrepancy.",
+      "Evacuation population figures range widely (12,200 to nearly 16,000) with different timestamps; no outlet explains whether these reflect orders vs. warnings or different times of day.",
+      "The Henderson Fire acreage figures conflict by over 1,000 acres (2,079 vs. 3,000+) without explanation \u2014 likely different report times, but unstated.",
+      "No outlet provides the number of fatalities (none reported) explicitly for all three fires as a cross-checked figure; only ABC US states 'no residents injured' for the Norte Fire specifically.",
+      "BBC states the Norte Fire 'is one of 10 burning across the state' but no outlet lists or details the other fires beyond Norte, Bryson, and Henderson.",
+      "Only CNN raises the climate/'new normal' angle (via Rep. Levin); no outlet provides independent climate or historical fire-frequency context for the region.",
+      "Of the seven dossier entries, only three (BBC, ABC News US, CNN) contain substantive body text; NPR is headline-only, and the AP, ABC Australia, and ABC US video entries returned unrelated index pages \u2014 limiting the breadth of true multi-outlet corroboration."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets (BBC, ABC News US, CNN) independently confirm the core facts with broadly consistent framing \u2014 this is a fast-moving event story, not a coverage-divergence story. The numeric discrepancies (injuries, evacuee counts, Henderson acreage) are minor and consistent with different report timestamps, warranting a straightforward REPORT that flags the live-figure caveats rather than a META.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5MQnpkeHh1U2lVU0NmaXZGZG5fVlRhOHFHcUx5QjRQWk12dEpjQnl2RXlQQVIxQV82ZklHSVFHM0pQRUJWN0RlMlFPY1VkYVBmY2tGSUxTb18teWM?oc=5",
+      "title": "Fast-moving California wildfire burns homes as people are ordered to leave - BBC"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNemd6ampqcFFFQ3k1UXFhNU9IeWE2V1d1Zko0cTg0VGlqMV83VlBUaUZ3Vm4zOHJoYVA5d2UyRUY0Y3l4dHBJS1JDSG1OY0VYemEwRzNRUUxxajhTSmllb1VPSGdON29RZUFUS2hEaFkxYTJPM21QNGFiSDBzZjFVd2Z0Y2FkMGh0?oc=5",
+      "title": "Coastal homes burn as hot winds fuel California fires - NPR"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQaHJYdGhuc0JDOXptanc5YktSS3lYOVhkQlNsQkp2VTFPWDNJdlJJX1Vyc3Jsb0hobTdpc1dLTUdVbkRNb3JmaG1SSng5UjZTdUhjZHVjbG9OdFg5Qm1fOGdUZGhPVmQzUnI0R3R0WEljLW90T3hvYW0tMjVMdEpxa0pBRHBsZzVxa2NHbWVPemRoX3ZTU3pnODZoMTFOTFROMEduOGRqdGU5UGdyWkdkaERwYU1RNUJfaWI0bTlFNUFnUGJtUEFN?oc=5",
+      "title": "Homes destroyed by the fast-moving San Clemente wildfire in California - AP News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTFcwRVc4dmRiNFczM2U0S2dCSVd4ZWwtZXFJejlWX25XRTA3em0ybXJkU3gwWkFtb3VyVGhOcm93YW1SVUUxcXRrYnE4cUFod3lVcDBEWTkyTU41YmhzY1A4ejVyRlRUejdiNWVVb0JvWW1oVmpVY0NybFNwSm1URnhacndQN1Y5S0RJbmxqcldIUXBJVWc1dlBGalo3N0J0S0ZrYV9BZm9KV0R6aWdLVVh4ZzFvaTkw0gG-AUFVX3lxTE95YjYtenV2NDJMRlhWQ0pMWi12dlBQLW9JNlhqV1pSeFloMG5ISGNJWS1CWnJiN29TZHNvQUd4VXlvdmdBTkhOOVEwZDNNR3JhVllNMDdWRlVKZlk3RFZlLXVDblYxd1dqQ0p5SkhqXy1mTWVHcGJOazVWc3drcy0tMTJzMHFNZkFEZmUwZlZ6eFVhMWN6dE1SNFQ4YkJCZzBxcXRyVHdRLWlBZ29jLW5IYjFsdG0wc2FQR0FLQVE?oc=5",
+      "title": "Wildfire burns at least 570 acres in Orange County, California, officials say - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZkc1NDhnMkUyTlV6UndVN3BRd090LWphS2Q3WFo5cGl0dDVrc1BZTWVBVjhXME1NQ25rekZDRUZmOTR2WXNGV0g3Y0ZOaEJmeEVaU203TFhRaW1zaDhsUThBVFV4QWIxWldZeWFKTlBmSDhyOWtlSWJHeGhLYVZVQ2RENXJ3LVgya25R?oc=5",
+      "title": "New wildfire in Southern California explodes in size, burning multiple homes - CNN"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdkgweEJaeEJ6TXdPX3JHbjIxdTFyWnRVS2Jjc0dQSzBjdVhubnFLUlFTTFVrbEJGczdtMEZJV2wwOXg3cWtQSExmYjNPMTRDREtsZEp3Y0xGbVE3THJBVkZnTlZaemcyWlRFd3BWOXk2VUxKbTZCVlVyczZhVjFUeExkMDEtQVJrZGZTdXRBUHliSy1NQTJXQmhOVXdSN2MyNlRRRWFHWGM4dw?oc=5",
+      "title": "Wildfires rage in Southern California, burn homes - ABC News & Headlines \u2013 Australian Broadcasting Corporation"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1YbXk1UnhnN21oOU5ZalhRSm82ckFxWnA2UERBamdtX0JaNTZyVG9EMnRtV2R1Wk5FcXZITkhsenNiUFpqY0hFVk1yb2g?oc=5",
+      "title": "Video Fast-moving wildfires burn multiple homes in California - ABC News - Breaking News, Latest News and Videos"
+    }
+  ]
+}
