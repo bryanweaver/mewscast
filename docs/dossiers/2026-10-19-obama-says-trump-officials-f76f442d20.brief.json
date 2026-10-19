@@ -1,0 +1,130 @@
+{
+  "story_id": "2026-10-19-obama-says-trump-officials-f76f442d20",
+  "headline_seed": "Obama says Trump officials\u2019 pursuit of Rep. Omar should \u2018outrage all Americans\u2019 - The Washington Post",
+  "brief": {
+    "story_id": "2026-10-19-obama-says-trump-officials-f76f442d20",
+    "consensus_facts": [
+      "Former President Barack Obama issued a statement on X on Sunday (Oct. 18, 2026) condemning the Trump administration's investigation of Rep. Ilhan Omar, D-Minn.",
+      "Obama wrote that 'the full weight of the federal government is being brought down on a law-abiding elected official because she has dared to criticize the president.'",
+      "Obama wrote that any administration willing to engage in 'transparent efforts to intimidate someone should outrage all Americans, regardless of how they feel about Congresswoman Omar's political views,' warning that if it becomes 'the new normal' it won't stop with her or future presidents of either party.",
+      "Federal agents raided Omar's Washington, D.C., home last week and seized her phone as part of an investigation into her immigration/citizenship paperwork.",
+      "The investigation centers on whether Omar or her father provided false information regarding her age when she obtained U.S. citizenship in 2000.",
+      "Omar arrived in the U.S. from Somalia in 1995 as a child and was naturalized through her father at age 17; investigators are pursuing a theory that she was actually 18 and therefore not automatically eligible.",
+      "Obama described the administration's theory that Omar was 18 at naturalization as 'unsubstantiated' and said agents sought a 'nonexistent smoking gun from 20 years ago.'",
+      "Omar has characterized the investigation as political intimidation, calling it the 'latest escalation' in Trump's campaign against her and vowing 'I will not be silenced.'",
+      "Trump has denied personal involvement, telling reporters the matter is up to the DOJ while disparaging Omar personally.",
+      "Omar has not been charged with a crime and the Justice Department has not publicly revealed evidence against her.",
+      "The timing of the search alarmed observers because it fell close to the November midterm elections, during which Omar is on the ballot, breaching the DOJ's general practice of avoiding overt investigative activity within 60 days of an election.",
+      "Obama himself was previously the target of false Trump-fueled conspiracy theories questioning his citizenship/birthplace."
+    ],
+    "disagreements": [
+      {
+        "topic": "What specifically prompted Obama's statement / what the news hook is",
+        "positions": {
+          "The Guardian": "Frames the statement as a direct response to 'border czar' Tom Homan saying on Fox News that Omar could 'of course' be denaturalized and deported.",
+          "NBC News": "Frames it as a response to the raid itself, with no mention of Homan.",
+          "CNN": "Frames it around the DOJ investigation broadly and notes Trump previously said he'd like Omar sent to Somalia; no Homan mention.",
+          "Axios": "Frames it around the raid and a Wall Street Journal report that the administration aims to build a case to strip her citizenship and deport her; no Homan mention.",
+          "Fox News": "Frames it as Obama 'backing' Omar and pushing an 'unsubstantiated theory'; no Homan mention."
+        }
+      },
+      {
+        "topic": "Omar's age on arrival in the U.S.",
+        "positions": {
+          "Axios": "States she arrived in 1995 'as a child' without specifying age 12.",
+          "Fox News": "States Obama said Omar arrived at age 12.",
+          "The Guardian": "States Obama said Omar arrived when she was 12."
+        }
+      },
+      {
+        "topic": "Potential charges / scope of investigation",
+        "positions": {
+          "NBC News": "A source says possible charges include conspiracy and making false statements in immigration paperwork.",
+          "Axios": "Cites WSJ that the aim is to strip citizenship and deport her; also notes U.S. Attorney Jeanine Pirro is separately investigating Omar's financial disclosures despite a watchdog recommending dismissal.",
+          "The Guardian": "Reports more than a dozen subpoenas issued including of Omar's relatives, and that Homan implied other allegations exist but declined details.",
+          "CNN": "Notes the government has not yet indicated it will attempt to strip her citizenship."
+        }
+      },
+      {
+        "topic": "White House / administration response",
+        "positions": {
+          "Fox News": "Includes a White House statement from spokeswoman Lauren Bis saying Trump has not weaponized the DOJ, 'Unlike Joe Biden,' and that the Department is focused on law and order.",
+          "Axios": "Includes no White House rebuttal; cites 'the other side' primarily through Omar and Democrats.",
+          "CNN": "Includes Trump's denial of involvement but no formal White House rebuttal statement.",
+          "NBC News": "Includes no administration rebuttal."
+        }
+      },
+      {
+        "topic": "Prior history of the allegations",
+        "positions": {
+          "Axios": "Reports the first Trump administration reviewed similar allegations in 2019 but found insufficient evidence; notes the allegation gained traction via a viral social media claim.",
+          "The Guardian": "Notes the probe follows unsubstantiated accusations by right-wing figures, including a claim her ex-husband is her brother.",
+          "CNN / NBC News / Fox News": "Do not detail the 2019 review."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The Washington Post": "Headline-only in dossier. Headline centers Obama's 'outrage all Americans' quote and frames the story as 'Trump officials' pursuit of Rep. Omar' \u2014 emphasizing administration aggression. No body text available to assess lead or omissions.",
+      "The New York Times": "Headline-only in dossier. Headline is comparatively neutral ('Obama Defends Rep. Ilhan Omar Amid Trump Administration Inquiry'), using 'inquiry' rather than 'raid' or 'pursuit.' No body text available to assess framing.",
+      "Axios": "Leads with Obama's 'forceful denunciation' and foregrounds the irony angle (Trump once questioned Obama's own citizenship). Uniquely surfaces the WSJ reporting on the deportation goal, the 2019 prior review that found insufficient evidence, the viral social-media origin of the claim, and the separate Pirro financial-disclosure probe. Includes Omar and Democrats as 'the other side' but no White House rebuttal. Quotes Obama's statement at length.",
+      "NBC News": "Headline calls the investigation 'appalling'; lead frames the raid as a 'transparent' effort to intimidate. Emphasizes DOJ-veteran alarm over the timing (holiday, near election). Uniquely cites a source on possible conspiracy/false-statement charges. Notes Obama's statement is 'unusual' given his selective public voice. No administration rebuttal included. Heavy trailing boilerplate of unrelated subscriber links.",
+      "CNN": "Headline calls the investigation 'appalling.' Leads on Obama's intimidation/deport framing. Adds that Trump said on Truth Social he'd like Omar sent to Somalia, and includes Trump's denial ('nothing to do with me'). Cites House Democratic leaders calling the search 'deeply disturbing.' Emphasizes the 60-day election window. Notes government has not yet moved to strip citizenship \u2014 a hedge other outlets omit.",
+      "Fox News": "Headline frames Obama as 'backing' Omar and foregrounds that Obama 'claims' an 'unsubstantiated theory' \u2014 distancing language that casts Obama's account as assertion rather than fact. Uniquely includes the White House rebuttal invoking Biden. Describes Omar as 'progressive' and references a separate explainer on her 'turbulent week.' Leads with the accusation-countered-by-administration structure and includes Trump's 'totally crooked' remark. Presents Obama's factual claims (age 12, age 17) as things Obama 'said' rather than as established.",
+      "The Guardian": "Only outlet to lead on the Tom Homan 'of course' denaturalization remark as the proximate trigger. Most detailed on the broader denaturalization campaign \u2014 notes DOJ had identified nearly 400 foreign-born citizens for investigation as of April and ties the Omar case to a wider anti-immigrant offensive. Includes the ex-husband/brother allegation and the subpoenas of relatives. Most context-rich; frames the story as part of a systemic pattern rather than a single event."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. Obama's full statement on X is quoted in fragments across outlets but no complete primary text was provided in the dossier, so direct alignment against the original document cannot be performed.",
+      "All five full-text outlets quote the identical core line ('the full weight of the federal government...') and the 'outrage all Americans' passage consistently, suggesting faithful reproduction of Obama's post even absent the primary document."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides the complete text of Obama's 400-plus-word statement, so readers cannot see the full context around the excerpted lines.",
+      "The DOJ has not publicly released any evidence; outlets rely on anonymous sources (NBC's 'person familiar,' Fox's and CNN's prior reporting) for the shape of potential charges \u2014 the underlying documentation is unavailable.",
+      "The factual dispute at the heart of the case \u2014 whether Omar was 17 or 18 when her father was naturalized \u2014 is asserted by both sides but no outlet publishes the primary immigration records that would resolve it.",
+      "Only Fox News includes a White House rebuttal; the other outlets do not seek or surface an on-record administration defense, leaving their accounts one-sided on the government's rationale.",
+      "Only Axios notes that the first Trump administration reviewed similar allegations in 2019 and declined to pursue them \u2014 crucial context for assessing the current probe that four of the five full-text outlets omit.",
+      "The outcome and current status of the separate financial-disclosure investigation by U.S. Attorney Jeanine Pirro (and the watchdog's recommendation to dismiss) is mentioned only by Axios and left unresolved.",
+      "No outlet independently verifies or debunks the right-wing-origin allegations (including the ex-husband/brother claim noted by The Guardian); they are described as 'unsubstantiated' without documentation either way.",
+      "Washington Post and New York Times entries are headline-only, so their actual reporting, sourcing, and emphasis cannot be assessed from the dossier."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets reported the same Obama statement but with materially different framings \u2014 Fox foregrounds an administration rebuttal and casts Obama's facts as 'claims,' The Guardian uniquely centers Homan's denaturalization remark and the wider 400-person denaturalization campaign, and Axios surfaces the 2019 prior review and the Pirro probe that others bury. The divergence in emphasis and omission is the story.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQNVI5WXYxeGxhX3lWS1pMVkpNaGZrWmNMUGlvamZkMVN3eFRNQ1dCSUp2bnY4MUJrS3Q4Ymd4ZEdnV2ItaGtCMDZMVDZqcmhvX01ZUlk5bVB0WWVzODFUa25FSmJ1VzQ3ZFBTWFRZWW5FWHlHOVZzTmJPdF9wY0RacGpaYW8ySm04TmdudXowc2lkVC0xVFh4RlFfbmZHRUZYc0hEcWdBTlRyRDdWMnF3UHYwRHg3YnByaFZCckJhSTRjQQ?oc=5",
+      "title": "Obama says Trump officials\u2019 pursuit of Rep. Omar should \u2018outrage all Americans\u2019 - The Washington Post"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZnpTV2JTem1PdDZiYl96aklFcGhLLXNlNk9QZGpLZHBuUjF3ekJNT1FvUGNRMHN5dUMtdHgtX21ZeFBvWG5YZF90TkdVeTQyVGE5dTdlT1R6dkhIRlY5ZTdlbjd4Qk9BX19jdnh4ejNiNExnVnZDeHU1dWZNWHpCOUE1b0ttOW9xOWJhMW1jZ0VTLW1VblRSdjBn?oc=5",
+      "title": "Trump once questioned Obama's citizenship. Now Obama is speaking out for Ilhan Omar. - Axios"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOaXhrNXpuZVVkekMzclNVR0tYbk1QcGVhWnB0cmNyckZmMldybDR6TFFKLXBsSGFmWk8xN0k3Ml95SlhuaHZSRlJoWGFNRUJiYk9lUnRJbGhHeVNwdlZrbm15bzNhaEx5V25TbEhHOVVjeWpoQ285OFRWZjNlME5Pam5LRkNuUW1IV3l1QlBJbm1ybFJsaU5qZnk3azRsNkpVd1E?oc=5",
+      "title": "Obama Defends Rep. Ilhan Omar Amid Trump Administration Inquiry - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNUzNiaHJ3TEpHV1pzMlNVRVIxT2hWV0NfM1l2cl9uMnFQM0FlQVNYTFZFRWtCdlFlc2dyTXZEMmRIaGp1NTR3eGtEUGJsTUh0eVYwcTZDOWtOLTRRc01naEl3dDZudFJ6Z0Q0cWRzTUVoQXBwZ1JuNUlReWNoZ2JHeU1MaTNucU02T3FVZHBVYURtcDRwVnYweTZaQTI4MmpJWlo2aG00U3c4Qm95R29PZVBuWndtbTI5OVVzNQ?oc=5",
+      "title": "Obama calls Trump officials\u2019 investigation of Ilhan Omar \u2018appalling\u2019 - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5sUW9SNFdwd2NrazFkOFQ5UzNZdkhZUTlsZzJZdGV1RXBXNndfSGtpcnBtWGpsOXZOQi1VTXNqWDNrWmdaZzVUeURLYXhEX2NJelpoUnF0NGwyM09UZVo4WGNobEFyWF9mbjh6aTRVaThpYlh3b0FGQnJB?oc=5",
+      "title": "Obama calls Trump administration\u2019s investigation into Ilhan Omar \u2018appalling\u2019 - CNN"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRTJjVGZpZ2E3Vnd5R1B1cEloQnRtVElyRnlpbE5UWFVCTzhVS3NxakdfcmoxLU5xbnhrOE5rWFl1Wm5oalVfcWJFaW1lTE5VVnJsWTVqc1g5Y25JcUpQWDdwYUFjVXVYT2dEcHlkTlRTMnJWZS16OWhROGIyNGpuMllaUnNGa1FETGMxRjFKcnJyeUZPQzFzS3ZTQThsakpyOHQwZzVVX2N5SFZ3OEZZVmtxUllreENrWV9lYjlONkZKd9IBxwFBVV95cUxQeUp4Z0dmTzdNaDRzZHh1dG9mQTZ2V1JRVXBlZTNrdDJxMV9zQmFQcmhtRWVPakhIVXRHUkZPTnJvRkdaaTlEMWhLRmM3YkxHR21IeG1FQjNQT2tjSjVvcjhUV2Y0elFMOTU5bldBOVpPZ2JQVUJ4d2ZtX2ZyYkdQQlpKUlpGMHN0Qm9WNXpMMEEyRkwwUGN2U3I4dkFSeXdtOE1VeWJWZV9aTHB3MzU2c0pRb2hVbXdsdXZtNG15Q3ZIaTdBbnc4?oc=5",
+      "title": "Obama backs Ilhan Omar amid probe, accuses Trump admin of 'appalling' targeting in lengthy statement - Fox News"
+    },
+    {
+      "outlet": "The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMUFGdW1wMm8wTlN3aG1kM3lJVDJpOXBNcE5EQ2RQeTJwYXFQeS1jYko0cWJQY1Z1blBFWFVCWEFBZk5NdmlJMHNvSElVSEI0bXZNSGlLU1IyQzFWNm14YmVsYzZ0d0xpU2tScWUyVlpXR015UnBiLXdUY25TWlhqQ3RzSFhwSTVBZjBUcWVRY3FXcjN6dFBJaFFrTGwwRkU?oc=5",
+      "title": "Obama condemns comments by \u2018border czar\u2019 that Ilhan Omar could \u2018of course\u2019 be denaturalized - The Guardian"
+    }
+  ]
+}
