@@ -8,6 +8,7 @@
     <meta property="og:description" content="Follower growth, engagement metrics, and posting history for Walter Croncat.">
     <meta property="og:type" content="website">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <style>
         /* ---- Design tokens ------------------------------------------------ */
         :root {
@@ -1296,106 +1297,143 @@
 
         // Filter buttons
         // Render follower growth chart and stats
+        function lastSnapshotPerDay(history) {
+            if (!history || history.length === 0) return [];
+            const byDay = new Map();
+            for (const entry of history) {
+                const day = (entry.timestamp || '').slice(0, 10);
+                if (!day) continue;
+                byDay.set(day, entry); // last snapshot of the day wins
+            }
+            return Array.from(byDay.values());
+        }
+
+        // Weekly delta, or null when no snapshot falls within the last 7 days.
+        function getChange(history) {
+            if (!history || history.length < 2) return null;
+            const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+            const hasRecent = history.some(entry => new Date(entry.timestamp).getTime() >= weekAgo);
+            if (!hasRecent) return null;
+            const latest = history[history.length - 1].followers;
+            let compareEntry = history[0];
+            for (const entry of history) {
+                if (new Date(entry.timestamp).getTime() <= weekAgo) {
+                    compareEntry = entry;
+                }
+            }
+            return latest - compareEntry.followers;
+        }
+
+        function isTrackingPaused(entry, days) {
+            if (!entry) return false;
+            const limit = (days == null ? 3 : days) * 24 * 60 * 60 * 1000;
+            return Date.now() - new Date(entry.timestamp).getTime() > limit;
+        }
+
+        function formatSnapshotDate(ts) {
+            return new Date(ts).toLocaleDateString('en-US', {
+                month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+            });
+        }
+
+        function formatSinceMonth(ts) {
+            return new Date(ts).toLocaleDateString('en-US', {
+                month: 'short', year: 'numeric', timeZone: 'UTC'
+            });
+        }
+
         function renderFollowerChart() {
             const container = document.getElementById('followerStats');
             const followerHistory = ANALYTICS_DATA.follower_history || { bluesky: [] };
 
-            // Get latest follower counts
             const latestBluesky = followerHistory.bluesky && followerHistory.bluesky.length > 0
                 ? followerHistory.bluesky[followerHistory.bluesky.length - 1]
                 : null;
-
-            // Calculate change (compare to oldest in history or 7 days ago)
-            const getChange = (history) => {
-                if (!history || history.length < 2) return null;
-                const latest = history[history.length - 1].followers;
-                // Find entry from ~7 days ago or oldest
-                const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-                let compareEntry = history[0];
-                for (const entry of history) {
-                    if (new Date(entry.timestamp) <= weekAgo) {
-                        compareEntry = entry;
-                    }
-                }
-                return latest - compareEntry.followers;
-            };
-
             const blueskyChange = getChange(followerHistory.bluesky);
 
-            // Render stats cards
             const latestX = followerHistory.x && followerHistory.x.length > 0
                 ? followerHistory.x[followerHistory.x.length - 1] : null;
             const xChange = getChange(followerHistory.x);
+            const xPaused = isTrackingPaused(latestX, 3);
 
             const bsFirst = followerHistory.bluesky && followerHistory.bluesky.length > 0
                 ? followerHistory.bluesky[0] : null;
             const bsGrowth = latestBluesky && bsFirst
                 ? latestBluesky.followers - bsFirst.followers : null;
-            const bsSince = bsFirst
-                ? new Date(bsFirst.timestamp).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
+            const bsSince = bsFirst ? formatSinceMonth(bsFirst.timestamp) : '';
 
             const xFirst = followerHistory.x && followerHistory.x.length > 0
                 ? followerHistory.x[0] : null;
             const xGrowth = latestX && xFirst
                 ? latestX.followers - xFirst.followers : null;
-            const xSince = xFirst
-                ? new Date(xFirst.timestamp).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
+            const xSince = xFirst ? formatSinceMonth(xFirst.timestamp) : '';
+
+            const sinceLine = (growth, since) => growth !== null
+                ? `<div style="font-size:0.75rem;color:#8b949e;margin-top:0.25rem">${growth >= 0 ? '+' : ''}${growth} since ${since}</div>`
+                : '';
+
+            const xCardBody = !latestX
+                ? `<div class="follower-count">\u2014</div>
+                    <div style="font-size:0.75rem;color:#8b949e;">Data starts next analytics run</div>`
+                : (xPaused
+                    ? `<div class="follower-count" style="font-size:0.85rem;line-height:1.35;font-weight:600">Tracking paused \u00b7 last ${latestX.followers.toLocaleString()} on ${formatSnapshotDate(latestX.timestamp)}</div>
+                        ${sinceLine(xGrowth, xSince)}`
+                    : `<div class="follower-count">${latestX.followers.toLocaleString()}</div>
+                        ${xChange !== null ? `<div class="follower-change ${xChange >= 0 ? 'positive' : 'negative'}">${xChange >= 0 ? '+' : ''}${xChange} this week</div>` : ''}
+                        ${sinceLine(xGrowth, xSince)}`);
 
             container.innerHTML = `
                 <div class="follower-stat-card bluesky">
                     <div class="platform-name">Bluesky</div>
                     <div class="follower-count">${latestBluesky ? latestBluesky.followers.toLocaleString() : '\u2014'}</div>
                     ${blueskyChange !== null ? `<div class="follower-change ${blueskyChange >= 0 ? 'positive' : 'negative'}">${blueskyChange >= 0 ? '+' : ''}${blueskyChange} this week</div>` : ''}
-                    ${bsGrowth !== null ? `<div style="font-size:0.75rem;color:#8b949e;margin-top:0.25rem">+${bsGrowth} since ${bsSince}</div>` : ''}
+                    ${sinceLine(bsGrowth, bsSince)}
                 </div>
                 <div class="follower-stat-card x-platform">
                     <div class="platform-name">X / Twitter</div>
-                    <div class="follower-count">${latestX ? latestX.followers.toLocaleString() : '\u2014'}</div>
-                    ${xChange !== null ? `<div class="follower-change ${xChange >= 0 ? 'positive' : 'negative'}">${xChange >= 0 ? '+' : ''}${xChange} this week</div>` : ''}
-                    ${xGrowth !== null ? `<div style="font-size:0.75rem;color:#8b949e;margin-top:0.25rem">+${xGrowth} since ${xSince}</div>` : ''}
-                    ${!latestX ? '<div style="font-size:0.75rem;color:#8b949e;">Data starts next analytics run</div>' : ''}
+                    ${xCardBody}
                 </div>
             `;
 
-            // Render chart
             const canvas = document.getElementById('followerChart');
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
 
+            const toSeries = (history) => lastSnapshotPerDay(history).map(s => ({
+                x: s.timestamp.slice(0, 10),
+                y: s.followers
+            }));
+
             const datasets = [];
 
-            if (followerHistory.bluesky && followerHistory.bluesky.length > 0) {
+            const blueskySeries = toSeries(followerHistory.bluesky || []);
+            if (blueskySeries.length > 0) {
                 datasets.push({
                     label: 'Bluesky Followers',
-                    data: followerHistory.bluesky.map(s => ({
-                        x: s.timestamp.split('T')[0],
-                        y: s.followers
-                    })),
+                    data: blueskySeries,
                     borderColor: '#3fb950',
                     backgroundColor: 'rgba(63, 185, 80, 0.1)',
                     fill: true,
-                    tension: 0.3
+                    tension: 0.3,
+                    spanGaps: false,
+                    pointRadius: 0,
+                    pointHoverRadius: 4
                 });
             }
 
-            // Only show X on chart when we have enough daily snapshots for a meaningful line
-            const hasXData = followerHistory.x && followerHistory.x.length >= 7;
-            if (hasXData) {
+            const xSeries = toSeries(followerHistory.x || []);
+            if (xSeries.length > 0) {
                 datasets.push({
                     label: 'X Followers',
-                    data: followerHistory.x.map(s => ({
-                        x: s.timestamp.split('T')[0],
-                        y: s.followers
-                    })),
+                    data: xSeries,
                     borderColor: '#58a6ff',
                     backgroundColor: 'rgba(88, 166, 255, 0.1)',
                     fill: true,
                     tension: 0.3,
-                    yAxisID: 'yX',
-                    spanGaps: false
+                    spanGaps: false,
+                    pointRadius: 0,
+                    pointHoverRadius: 4
                 });
-                // Also tag bluesky dataset
-                if (datasets.length > 1) datasets[0].yAxisID = 'yBluesky';
             }
 
             if (datasets.length === 0) {
@@ -1403,21 +1441,9 @@
                 return;
             }
 
-            // Get all dates
-            const allDates = [...new Set(datasets.flatMap(d => d.data.map(p => p.x)))].sort();
-
             new Chart(ctx, {
                 type: 'line',
-                data: {
-                    labels: allDates.map(d => new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })),
-                    datasets: datasets.map(ds => ({
-                        ...ds,
-                        data: allDates.map(date => {
-                            const point = ds.data.find(p => p.x === date);
-                            return point ? point.y : null;
-                        })
-                    }))
-                },
+                data: { datasets },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
@@ -1429,41 +1455,22 @@
                     },
                     scales: {
                         x: {
-                            grid: { color: 'rgba(48, 54, 61, 0.5)' },
-                            ticks: { color: '#8b949e' }
-                        },
-                        ...(hasXData ? {
-                            yBluesky: {
-                                position: 'left',
-                                beginAtZero: false,
-                                grid: { color: 'rgba(48, 54, 61, 0.5)' },
-                                ticks: {
-                                    color: '#3fb950',
-                                    callback: function(value) { return value.toLocaleString(); }
-                                },
-                                title: { display: true, text: 'Bluesky', color: '#3fb950', font: { size: 11 } }
+                            type: 'time',
+                            time: {
+                                tooltipFormat: 'MMM d, yyyy',
+                                minUnit: 'day'
                             },
-                            yX: {
-                                position: 'right',
-                                beginAtZero: false,
-                                grid: { drawOnChartArea: false },
-                                ticks: {
-                                    color: '#58a6ff',
-                                    stepSize: 1,
-                                    callback: function(value) { return Number.isInteger(value) ? value.toLocaleString() : ''; }
-                                },
-                                title: { display: true, text: 'X', color: '#58a6ff', font: { size: 11 } }
+                            grid: { color: 'rgba(48, 54, 61, 0.5)' },
+                            ticks: { color: '#8b949e', maxRotation: 0, autoSkip: true }
+                        },
+                        y: {
+                            beginAtZero: false,
+                            grid: { color: 'rgba(48, 54, 61, 0.5)' },
+                            ticks: {
+                                color: '#8b949e',
+                                callback: function(value) { return value.toLocaleString(); }
                             }
-                        } : {
-                            y: {
-                                beginAtZero: false,
-                                grid: { color: 'rgba(48, 54, 61, 0.5)' },
-                                ticks: {
-                                    color: '#8b949e',
-                                    callback: function(value) { return value.toLocaleString(); }
-                                }
-                            }
-                        })
+                        }
                     }
                 }
             });

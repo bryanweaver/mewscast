@@ -43,6 +43,28 @@ def save_analytics_history(history):
         json.dump(history, f, indent=2, ensure_ascii=False)
 
 
+def utc_day(timestamp):
+    """Return YYYY-MM-DD (UTC) for an ISO-8601 timestamp string."""
+    if not timestamp:
+        return None
+    return timestamp.replace("Z", "+00:00")[:10]
+
+
+def upsert_follower_snapshot(snapshots, snapshot):
+    """Append a follower snapshot, replacing the last one if it is the same UTC day.
+
+    Older same-day duplicates already stored in history are left untouched.
+    """
+    if snapshots is None:
+        snapshots = []
+    new_day = utc_day(snapshot.get("timestamp") if snapshot else None)
+    if snapshots and new_day and utc_day(snapshots[-1].get("timestamp")) == new_day:
+        snapshots[-1] = snapshot
+    else:
+        snapshots.append(snapshot)
+    return snapshots
+
+
 def load_posts_history():
     """Load posts history"""
     history_path = os.path.join(REPO_ROOT, 'posts_history.json')
@@ -523,10 +545,13 @@ def main():
     bluesky_followers = fetch_bluesky_follower_count()
     if bluesky_followers:
         print(f"Bluesky followers: {bluesky_followers['followers']}")
-        analytics_history["follower_history"]["bluesky"].append({
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            **bluesky_followers
-        })
+        analytics_history["follower_history"]["bluesky"] = upsert_follower_snapshot(
+            analytics_history["follower_history"].setdefault("bluesky", []),
+            {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                **bluesky_followers
+            },
+        )
         # No pruning — keep all follower history for all-time growth chart
 
     # Fetch X follower count
@@ -534,12 +559,13 @@ def main():
     x_followers = fetch_x_follower_count()
     if x_followers:
         print(f"X followers: {x_followers['followers']}")
-        if "x" not in analytics_history["follower_history"]:
-            analytics_history["follower_history"]["x"] = []
-        analytics_history["follower_history"]["x"].append({
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            **x_followers
-        })
+        analytics_history["follower_history"]["x"] = upsert_follower_snapshot(
+            analytics_history["follower_history"].setdefault("x", []),
+            {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                **x_followers
+            },
+        )
 
     print("\nFetching X metrics...")
     x_metrics = fetch_x_metrics(recent_posts)
