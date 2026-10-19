@@ -1,0 +1,75 @@
+{
+  "story_id": "2026-10-19-doj-charges-28-green-c0de87bda5",
+  "headline_seed": "DoJ charges 28 green card holders in California over alleged voter fraud - The Guardian",
+  "brief": {
+    "story_id": "2026-10-19-doj-charges-28-green-c0de87bda5",
+    "consensus_facts": [
+      "The US Department of Justice sued California over claims the state refused to purge alleged noncitizens from its voter rolls (reported by ABC News and the Guardian).",
+      "The DOJ sent California/Los Angeles officials a password-protected thumb drive purportedly containing names of potential noncitizens on the voter rolls, with a short deadline (two days per ABC News, 48 hours per the Guardian) to review and segregate ballots (reported by ABC News and the Guardian).",
+      "Acting Deputy Attorney General Trent McCotter is the DOJ official driving the demands to California (reported by ABC News and the Guardian).",
+      "California Secretary of State Shirley Weber, a Democrat, condemned the DOJ demands as legally baseless/unlawful and characterized them as an effort to cause chaos and undermine trust in elections (reported by ABC News and the Guardian).",
+      "Election experts/voting rights groups say noncitizen voting is extremely rare and warn the DOJ effort could damage confidence in elections or disenfranchise citizens (reported by ABC News and the Guardian).",
+      "Democrats and voting rights advocates frame the DOJ actions as part of a strategy to sow doubt about the upcoming November midterm elections (reported by ABC News and the Guardian)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Deadline given to California officials to review/segregate ballots",
+        "positions": {
+          "ABC News": "States the letters gave a two-day deadline for officials to confirm review and segregate potential ballots",
+          "news.google.com (The Guardian)": "States the DOJ demanded officials confirm within 48 hours and set aside unconfirmed ballots"
+        }
+      },
+      {
+        "topic": "Core news event (what is new as of this story)",
+        "positions": {
+          "ABC News": "Leads on the DOJ threatening to criminally prosecute local California election workers who tabulate noncitizen ballots (Oct. 17)",
+          "news.google.com (The Guardian)": "Leads on the DOJ filing criminal charges against 28 green card holders in California (Oct. 19)"
+        }
+      },
+      {
+        "topic": "Scale of alleged noncitizen voter figures cited",
+        "positions": {
+          "ABC News": "Cites DOJ letters referencing 'thousands of names' of potential noncitizens on the thumb drive",
+          "news.google.com (The Guardian)": "Cites a DOJ list of more than 20,000 people, and notes DHS first claimed over 190,000 in July before revising down to 20,000"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier ('California Says D.O.J. System for Identifying Noncitizens Is Sloppy'). No body text available. The headline frames the story around California's criticism of the DOJ's data quality, centering the state's pushback rather than the DOJ's charges or threats. No body-level claims can be attributed.",
+      "ABC News": "Leads on the DOJ's threat to criminally prosecute local election workers, framing it as an 'escalation' in Trump's 'feud' with California. Emphasizes Trump's personal involvement (reposting the letter, 'They will all go to jail'). States plainly that Trump has made noncitizen voting a 'personal fixation despite scant evidence that it is widespread,' and quotes the Brennan Center's Sean Morales Doyle saying the administration is 'laying the groundwork to challenge results after Election Day.' Contextualizes with prior threats (Mullin, a Utah indictment) and the SCOTUS 6-3 ruling allowing use of a citizenship database. Does not cover the 28 green card charges (predates them).",
+      "news.google.com (The Guardian)": "Leads on the DOJ filing criminal charges against 28 green card holders, framing it as the 'latest escalation' in Trump's push against alleged noncitizen voting. Emphasizes that voting by noncitizens is 'extremely rare' and foregrounds disenfranchisement concerns. Notably surfaces exculpatory/sympathetic detail in the court papers \u2014 individual defendants (Erick Ronaldo Soto, Jose Probitsado Amaro) who appear to have been confused about eligibility, were registered by canvassers, or cast blank ballots. Also quotes McCotter conceding the list may contain actual citizens ('We're not perfect') and explaining the 190,000-to-20,000 'ceiling vs. floor' confidence tiering. Quotes LA County Supervisor Janice Hahn calling it 'voter intimidation.'"
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, the DOJ letters, the lawsuit, or the Weber letter) were located in this dossier. The Guardian quotes directly from an investigator's affidavit and court documents regarding defendants Soto and Amaro, but the underlying documents were not provided, so their characterizations cannot be independently verified against the source.",
+      "ABC News quotes directly from McCotter's letter to Los Angeles officials; the letter itself was not provided as a primary source for verification."
+    ],
+    "missing_context": [
+      "This is effectively a two-body-text dossier (ABC News and the Guardian); the New York Times article is headline-only and cannot corroborate body-level facts. The NYT headline suggests a distinct angle (California calling the DOJ identification system 'sloppy') whose supporting reporting is unavailable.",
+      "No primary sources were provided \u2014 not the DOJ complaint against California, the McCotter letters, the criminal charging documents for the 28 defendants, or Weber's letter \u2014 so all characterizations rest on outlet summaries.",
+      "No outlet in the dossier provides the DOJ's methodology for identifying alleged noncitizens beyond McCotter's vague 'confidence tier' explanation; the data and matching process remain unexplained.",
+      "None of the available articles report how many of the 28 charged defendants, if any, had their cases tested in court or any defense response; the Guardian notes some cooperated voluntarily but outcomes are unknown.",
+      "No outlet quantifies how 21 unlawful ballots (per the Guardian) or the broader allegations compare to California's 23.1 million registered voters in terms of any effect on outcomes \u2014 ABC notes examples 'fall far short' of figures that would tilt results, but no precise electoral-impact figures are given.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The dossier contains two full-text outlets covering overlapping but distinct escalations (prosecution threats vs. the 28 criminal charges) with materially different emphasis, plus a third headline-only outlet signaling a separate 'sloppy data' angle \u2014 this is a coverage-comparison story rather than a single straightforward event report, and no primary sources were available to adjudicate the competing characterizations.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQay1lNzRaeGxhcl9NdFU5cUxjcEdVR24wbjR0eWh4M0hsMDdlTWIzN3FlblhLc2J1NHcyQmJUYUtvbjhER2JfaGRkVUpzcTg4dzVoTU5FR19qTVlidlVBTlpfNjJHTXk3aFpNTjY4MTdVbERkXzFYcHA2Vl9LNnhlYkJpTE44OG9sQU52NDAxaE91cU45NlNOSU5sVzFtbzZwSlE?oc=5",
+      "title": "California Says D.O.J. System for Identifying Noncitizens Is Sloppy - The New York Times"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPM0hISVd1MUhlOEZYNF9WMTRvbS1WSjVuNFpXZTRSZ2pkUEV6ekU2a1NqbTdKOFpsN2ZvdU9BUmljZ05GMHVtVEZZT3o4NXBiT25mdWNaQm9RX0lydHRjX0lWUVZPZWgxem9WemtRdXZMOUZ4SWhqbjZEU0tOcWtRREJfdE9wU2hqVUNDNVFYYTAzandHSzJlTWJJVkZsbU5xekwwejloM1NJbDZ1YS1rTXE4RWdxdTlCa3Z3UWRBONIBxAFBVV95cUxQRVdmSktndFo4dUlTczZMek85R0lnaFAwSDBFVDBIMVB3Q2NJWm1CeHFEUTFraldVRWlfNy1DWXM5a1BaMHMyemlQMEJZYXR0V0owUUw4b0dJN3BlMnhTRXp0emVoMjMyNHhHczV2TTVuY1QwZ1dCc1pkVUs0SlAxb1QtUGF1S2hTbmlSYlFmdWlhT1JOdmkxLS1yanRzMXhIbWF0cUE3TE9hSlM1SzZqaUJpWmg5Z0l6eERVYTBkcVI0TkVi?oc=5",
+      "title": "Trump administration threatens to prosecute local California election workers - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxORHk0ak02bEpVa1loOUs0eU14dXVmSngyZlM4UEJZYTFTT2NyekR4NzEyQlBEZFZ6aTF6cmNPT0lIRDJtOEotNnFYMTdPNVFYOFRReUlZTzJoUHZEZ0RYMGJIT3pCQXpRNUdQVEFGSEdaZWk0aHNrblVIWFdidkk2YWZWd0ZvVnhIOW9Zd0dB?oc=5",
+      "title": ""
+    }
+  ]
+}
