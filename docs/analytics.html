@@ -1326,7 +1326,7 @@
 
         function isTrackingPaused(entry, days) {
             if (!entry) return false;
-            const limit = (days == null ? 3 : days) * 24 * 60 * 60 * 1000;
+            const limit = (days == null ? 7 : days) * 24 * 60 * 60 * 1000;
             return Date.now() - new Date(entry.timestamp).getTime() > limit;
         }
 
@@ -1354,7 +1354,7 @@
             const latestX = followerHistory.x && followerHistory.x.length > 0
                 ? followerHistory.x[followerHistory.x.length - 1] : null;
             const xChange = getChange(followerHistory.x);
-            const xPaused = isTrackingPaused(latestX, 3);
+            const xPaused = isTrackingPaused(latestX, 7);
 
             const bsFirst = followerHistory.bluesky && followerHistory.bluesky.length > 0
                 ? followerHistory.bluesky[0] : null;
