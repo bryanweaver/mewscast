@@ -1,0 +1,92 @@
+{
+  "story_id": "2026-10-19-trump-rallies-in-kansas-5197a34f00",
+  "headline_seed": "Trump rallies in Kansas as rising farm costs fuel Republican concerns about voter turnout - AP News",
+  "brief": {
+    "story_id": "2026-10-19-trump-rallies-in-kansas-5197a34f00",
+    "consensus_facts": [
+      "President Donald Trump is holding a rally in Kansas (near Wichita) to campaign for Republicans in the 2026 midterms \u2014 corroborated by NBC News and NPR body text.",
+      "Republican Sen. Roger Marshall faces Democratic challenger Adam Hamilton in an unexpectedly competitive Kansas U.S. Senate race \u2014 corroborated by NBC News and NPR body text.",
+      "Republicans have held the Kansas U.S. Senate seat for roughly a century (NBC: 'almost 100 years'; NPR: 'almost a century'), making the current competitiveness historically notable \u2014 corroborated by NBC News and NPR body text."
+    ],
+    "disagreements": [
+      {
+        "topic": "Primary driver of GOP vulnerability in Kansas",
+        "positions": {
+          "NPR": "Frames farm/ranch economic distress as the decisive factor \u2014 Trump's tariffs raised equipment and chemical costs, his Iran attack spiked fertilizer/diesel prices, trade wars shrank export markets, and the Kansas Livestock Association pulled its Marshall endorsement.",
+          "NBC News": "Frames it broadly as a surprising Senate battleground central to the fight for the majority, without (in the retrievable text) attributing a single economic cause.",
+          "The Washington Post (Washington Times headline)": "Headline frames the race around Trump courting the evangelical vote to preserve GOP dominance \u2014 a turnout/religious-base angle rather than farm economics.",
+          "Reuters (headline only)": "Headline foregrounds Trump's rhetoric \u2014 a warning that the US will 'burn' like France if Democrats win \u2014 rather than farm costs or local dynamics."
+        }
+      },
+      {
+        "topic": "Adam Hamilton's profile",
+        "positions": {
+          "NPR": "Describes Hamilton as the pastor of a United Methodist megachurch who was a Republican until earlier this year.",
+          "NBC News": "Identifies Hamilton only as the Democratic challenger, without the biographical detail (in retrievable text)."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Leads entirely on Trump's incendiary rhetoric \u2014 a warning Kansans the US will 'burn' like France if Democrats win. Frames the story as spectacle/quotation rather than the underlying Senate dynamics or farm economy. No body text available to corroborate.",
+      "The New York Times": "Headline-only. Frames the story as an electoral dispatch about Republicans 'fighting to preserve a Senate seat' \u2014 emphasizes stakes and the defensive GOP posture. No body text to corroborate emphasis.",
+      "NBC News": "Full body text is largely navigational boilerplate and subscriber-promo clutter, but the lede frames Kansas as 'the midterms' most surprising battleground,' stressing the ~100-year GOP Senate streak and the seat's centrality to the Senate majority fight. Reports Trump headlining a rally near Wichita Monday afternoon and names Marshall vs. Hamilton. Emphasis is on historical stakes and the national majority battle rather than causes.",
+      "NPR": "The richest body text. Leads with on-the-ground farmer voices (Stephen Kalb, Merrill Nielsen) and an economic-causation frame: Trump's tariffs, the Iran strike's effect on fertilizer/diesel, and trade wars squeezing crop and cattle markets. Reports the Kansas Livestock Association pulled its Marshall endorsement, cites political scientist Alexandra Middlewood, and raises personal liabilities (Marshall suing patients over medical debt; living mostly out of state). Frames the race as a toss-up and explicitly suggests Trump may be hurting Marshall with farmers.",
+      "CBS News": "Full text retrieved is entirely site boilerplate (station listings, copyright) with no substantive reporting on the Kansas race. The headline references Trump rallying Republicans and a Vance 'stunning response about Iran attack,' but no body content supports or expands this.",
+      "The Washington Post (Washington Times)": "Headline-only, and the displayed byline outlet is 'Washington Times' despite the dossier labeling it Washington Post \u2014 a sourcing ambiguity worth flagging. Frames the race around Trump boosting the evangelical vote as Democrats threaten GOP dominance \u2014 a base-turnout and religious-constituency angle.",
+      "The Washington Post": "Second Washington Post entry is headline-only: 'Why Kansas and other red states remain an uphill battle for Democrats.' Frames the story with skepticism toward Democratic prospects, emphasizing structural red-state difficulty rather than GOP vulnerability. No body text to corroborate."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story, so no document-versus-coverage alignment can be assessed."
+    ],
+    "missing_context": [
+      "Only two of seven articles (NBC News and NPR) contained substantive body text; four are headline-only (Reuters, The New York Times, two Washington Post/Washington Times entries) and one (CBS News) returned only site boilerplate. Most of the dossier is therefore uncorroborated at the body level.",
+      "No polling numbers or margins are provided in any retrievable body text \u2014 NPR calls the race a 'toss-up' but no survey data substantiates how close it is.",
+      "No outlet with body text reports the actual rally date explicitly as a calendar date; NBC and NPR both say 'Monday,' with NPR published Oct. 18 and the story detected Oct. 19.",
+      "The headline-level claims \u2014 Trump's 'burn like France' remark (Reuters), the evangelical-vote strategy (Washington Times), and Vance's 'stunning response about Iran attack' (CBS) \u2014 cannot be verified because no corresponding body text was retrieved.",
+      "The outlet labeling is inconsistent: Article 6 is tagged 'The Washington Post (lean-left)' in the dossier but its displayed source is 'Washington Times,' a different publication with a different slant. This discrepancy should be disclosed and not treated as settled attribution.",
+      "No Marshall campaign or Republican response to the farm-cost grievances appears in any retrievable body text; NPR's economic-distress frame is sourced to farmers and one academic, with no counter-perspective from the Marshall side or Trump campaign.",
+      "No article body quantifies the farm-cost increases (tariff percentages, fertilizer/diesel price changes, export-market losses) that NPR attributes to Trump policies.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets cover the same Kansas rally and Senate race but with materially divergent framings \u2014 NPR foregrounds farm-economy distress, NBC the historic battleground stakes, and the headline-only outlets variously spotlight Trump's rhetoric, the evangelical vote, or Democratic structural disadvantage \u2014 making this a coverage-divergence story rather than a straight REPORT, especially since only two outlets provided verifiable body text.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUzBFWW9JSHRPSk43aERfeE1lM0xjYVotbmdUanRNRXd2NlNqVkpMbU82dWJTTEQ3RVlwV0wxWUhhRlJDaEo3SGdORF85QmNFWDA5amw5S3JnY2FVeWpxUzl1azQtLTlISXJTM1R3YUtyZ3NaMTVna1B5NlJBZVBrREowQkpKMUQ5MzBtemptel95RWlwcGs0ak1zamJIVTE5MDV5VC12by1va09DZ2ljUQ?oc=5",
+      "title": "Trump warns Kansans that US will 'burn' like France if Democrats win - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE81NkhNRmZYWVg0YXVtNlJjcHd3Z09RbEU0SHJnZ3hzZ2lWZmVtbGc2aGhYaUhEZjMwSk1FR3g1SEd1TDN4bGV3Zy1VVHRqNkdUa3lZXzctWVp0bnNSSHZ1SFVnZzRuRkdRampzTHlDSjdiWWY3?oc=5",
+      "title": "Election Dispatches: Trump Rallies in Kansas, Where Republicans Are Fighting to Preserve a Senate Seat - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSFN4ZXJDVHNPci1sekdHdkJ6bmdta2hLT0hfVWlaVUpMZlQ5LVFRenJVbFpRQmpjd2VVdWdzc0RrMFFqU1I2WWx6NDctdlNlWlFvSnVZRFFVMDZZUmtvVkFZdjJkT2p1N2RkS3RVQVAySWdEbGVWX1JEUWlqMUQta015ZkVGVnFtdG1SS1AydEdGN0FPa05zRGpTeWxoZVctTXcyQldrRWpRLVZ2emFoSEIxLWZUTGJxaDB4TmVpQUM?oc=5",
+      "title": "Trump and Republicans fight to protect the midterms\u2019 most surprising battleground - NBC News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUnhDeDNsWkFGZlpmZFdiWEczTXlZQlg0QzhnSE4xNnZUTE50X1FCbHl5Nlp0ZlZwaHRxYW9UTW80T3pxUXZVSTYyRm51U2wteDRveXd1Q1A1V3dITTEtV3NTNGNRR1ZXcE5pY3RtWURaaVIybko5Q0RielA2cW1KZlpXOVBPY1JiblBnMjJPY3hRbE5qYXJzdzlwZFhweE9LVXc?oc=5",
+      "title": "Disgruntled farmers may help flip Senate seat in Kansas - NPR"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZWdhUFBRb0NCckNISVVsWW1kai1IbGo1ZXQwX18wVjVaQ2tTWDVxZlpRY08yNUJ5Rm12UWZpd3BVN0tPUFRtRVpFd2s3TFhpXzhtaS00eVFkX2xuTndaQzZaa1JQVTJEdUFtdFg0cFNoZlkwUmJJWTVtTWVrbVZOVVlsOTdSNFlEd1FWMTBMOWtvemNOcHduTmp3eHJsZURlYUZ0clo5RW5URlpjS1FyVmpMS2xGcnc?oc=5",
+      "title": "Trump heads to Kansas to rally Republicans; Vance's stunning response about Iran attack - CBS News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxORmVPOUNvVGptak9OOXhVcjBLUXF1ZWYtRnJRYzZ3R0VWM3c4aWZtNl9XOFlaX0VvckxIbERUQXZNV1JvaEp6Y2xkYlVPMGZkLWpGT2xTRC00TGl4cy1sYVdneDVEYnZCWERuekh1Tzl4WmNoa20zdllYbloxdkMxWVQ2bE8wSXpPVHR6dUFHWVRyOTBnRUNiM2E0OGUwQlNwbG0wUEtGTEFQaUFNSXNKSg?oc=5",
+      "title": "Trump hopes to boost Kansas evangelical vote as Democrats threaten to end GOP dominance - Washington Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNlJIMHlPSUZZam5fY2NuRTNTc0tHLTdwdTlTbkNzY0doM2lLckduTDdxbTYxbkUyR3U4ZVZNZ2ZHbkU3OEYwb0Ntb1BuYldTdUJrQlAxVVhoWTJ4Y1ltaDkwdkJvNEh1cmFfRjJ2RmZaamd0OVZ4cWNKLUljYkJjcVJjZnZkQy0zMGo2b1ZxbmlCVjgyZ2hIYzRpemlRclEwNy0tMUxienktT3ZQXzJRWUMwVQ?oc=5",
+      "title": "Why Kansas and other red states remain an uphill battle for Democrats - The Washington Post"
+    }
+  ]
+}
