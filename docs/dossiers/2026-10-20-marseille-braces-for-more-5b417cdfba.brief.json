@@ -1,0 +1,58 @@
+{
+  "story_id": "2026-10-20-marseille-braces-for-more-5b417cdfba",
+  "headline_seed": "Marseille braces for more unrest after protests give way to 'apocalyptic' disorder - BBC",
+  "brief": {
+    "story_id": "2026-10-20-marseille-braces-for-more-5b417cdfba",
+    "consensus_facts": [
+      "Both BBC full-text articles (Articles 2 and 4) are identical in content and report the same event: Marseille experienced severe disorder on Saturday as protests escalated into looting and vandalism.",
+      "Marseille authorities banned public gatherings for an eight-hour window (reported by the BBC bodies and corroborated at headline level by The Times of Israel's 'noon to 8 p.m.' framing)."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "Associated Press (wire)": "Headline-only in this dossier. Frames the story through the commercial/sports angle \u2014 soccer clubs Marseille and Lille closing shops after vandalism and looting. Emphasizes economic impact rather than politics or policing. No body text available to assess further.",
+      "BBC News (international)": "Provides the only substantive full-text reporting (Articles 2 and 4 are duplicates; Article 3 is a stub). Leads with atmospheric 'apocalyptic' disorder framing and the scale of damage: 500+ premises damaged, majority looted, 118 officers injured (over a tenth of the national figure), 101 arrests (a quarter of them children). Centers the police-union perspective (Arnaud Blaise, UN1TE) attributing provocation to far-left 'Black Bloc' agitators and looting to youths from deprived northern suburbs. Balances this by putting the heavy-handedness accusation directly to the union and quoting Socialist Mayor Beno\u00eet Payan calling the response a 'fiasco.' Includes voices of a young protester (Maryame) weighing the legitimacy of violence and a 79-year-old resident. Notes Interior Minister Nu\u00f1ez's rejected resignation and Macron's refusal to accept it, plus curfews for minors in Marseille and Paris.",
+      "The Times of Israel": "Headline-only in this dossier. Frames narrowly on the public-order measure \u2014 the ban on all gatherings from noon to 8 p.m. after violent protests. Emphasizes the state response/restriction angle. No body text available to assess further."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court filings, press releases, official statements, or transcripts were available to verify claims against."
+    ],
+    "missing_context": [
+      "EDITORIAL DISCLOSURE \u2014 SINGLE-SOURCE LIMITATION: Only one outlet (BBC) provided substantive body text, and Articles 2 and 4 are the same BBC piece duplicated. AP and The Times of Israel appear headline-only. Therefore nearly all specific details (500+ premises damaged, 118 officers injured, 101 arrests, 4,000 tear gas grenades, curfew timings, Nu\u00f1ez's rejected resignation) are single-source BBC reporting, NOT corroborated wire consensus.",
+      "The specific figures for property damage, injuries, and arrests are attributed within the BBC piece to local business leaders and a police union \u2014 not independently verified by multiple outlets in this dossier.",
+      "No outlet in the dossier provides data on injuries to protesters or civilians, only police injuries \u2014 the BBC notes the heavy-handedness accusation but does not quantify the other side.",
+      "The underlying cause and timeline of the protest movement is only briefly sketched (began in September over poor school conditions, broadened to cost of living); no outlet provides deeper background on the movement's organizers or national scope.",
+      "No independent verification of the 'Black Bloc' / far-left attribution, which comes solely from the police union within the BBC article; the claim is contested framing, not established fact.",
+      "No outlet reports the national totals (total nationwide injuries, arrests, or affected cities) beyond the BBC noting Marseille's 118 injuries were 'more than a tenth of the national figure.'"
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (BBC) supplied substantive body text \u2014 with its two full-text articles being duplicates \u2014 while AP and The Times of Israel are headline-only, so there is no genuine multi-source consensus to anchor a REPORT. The story is time-sensitive and ongoing, warranting a same-day, single-source-hedged bulletin that flags the BBC-dependent sourcing.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdWZPVUdRRVRlR2hQdDVDbVBBVVJ2elhJVjFqangxQmtBTlNBSzgwU2pTUk94T1JPTTRLQXh6X2pIWnV2VDNhX3h3S3JpQ1g1bXZUZ0ZQRWpxNjBSQVNYajZSVTdiRnBQUnRqYWIxZHFzLW14UE0zMXkzSU14VHZoS0t0TnE2d2ZHQnRqUnc4a0djXzUwYl82NWQxMGQ1RFdjS05sRlBobHJ0WU5HdktpcERB?oc=5",
+      "title": "Soccer clubs Marseille and Lille close shops after vandalism and looting in France protests - AP News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0zR1RodVJReXhZaVMwQWh4dGNqb0UtUkRZbkR0b3ZfRlZhNHNQWDZSVXF2Wm5DbVFnY0JELXpVOTEyN3lqM2o2LThxWDhBNzlzRXIxalctbC1ldEk?oc=5",
+      "title": "Marseille braces for more unrest after protests give way to 'apocalyptic' disorder - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9GVHMyMC1aOXlRMTZxOGdXZzJaRllQR3FGZjZuOXNkOEs5SUlfNTRsMnIzZDBzdzBSejl6NFhYLWZtVTNveTMxUmo4YzIwSnFpOVlZR1gzcE0?oc=5",
+      "title": "Mass vandalism in Marseille on Saturday - BBC"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBMS1FLVm02QlAzOVRNTERVa2N4bU15RWhyaDF5NjhCQmJBQ0xhbklIRXJvVDB5YTNONEdmNjgyTXJBdGFEd00wYkdobXQ3TFp2cUhTVmNQQXk2bE1mR2c?oc=5",
+      "title": "Marseille braces for more unrest after protests give way to 'apocalyptic' disorder - BBC"
+    },
+    {
+      "outlet": "The Times of Israel",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdmxGeWtwNDdtMVd1dnYtYjAzYjRIOTZoS0xVcTFZSVJJTE5oVzFJYm5fNEkxT0tINnpBT3FCLUh3cXpkZ1JiekEtSng2aEZVNTJLb3NTZFVXU1NWWk95WW9ldFR3cjQ2NmdHY3dhb0E4WVh0NW95cnNDY1h6Y0FDU2l4ckE4WEhsbmRTam1yZHF5OFoxdDl1SW1LUFNfQnJRUUExSmk3NE9xdFIwVUZ5Wm1NZlRyeDhiSlYtS2FwOUtLUzdZQmZWbg?oc=5",
+      "title": "French city Marseille bans all gatherings from noon to 8 p.m. after violent protests - The Times of Israel"
+    }
+  ]
+}
