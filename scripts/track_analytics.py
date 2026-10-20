@@ -180,8 +180,8 @@ def fetch_x_follower_count():
     """Fetch current follower count from X via a single GET /2/users/me.
 
     Fail-soft: any X error is logged and returns None so the analytics build
-    keeps the existing follower history. This is the only X call the daily
-    tracker is allowed to make.
+    keeps the existing follower history. Journalism per-post public_metrics
+    are collected separately by x_engagement.py.
     """
     captured_headers = {}
     request_started = False
@@ -261,80 +261,8 @@ def fetch_bluesky_metrics(posts):
 
 
 def fetch_x_metrics(posts):
-    """Fetch current metrics from X using batch requests (up to 100 per call)"""
-    try:
-        from twitter_bot import TwitterBot
-        bot = TwitterBot()
-        print("Connected to X")
-    except Exception as e:
-        print(f"Could not connect to X (continuing without): {e}")
-        return {}
-
-    # Collect all tweet IDs
-    tweet_ids = [post.get('x_tweet_id') for post in posts if post.get('x_tweet_id')]
-    if not tweet_ids:
-        return {}
-
-    metrics = {}
-    batch_size = 100  # X API allows up to 100 tweets per request
-
-    # Process in batches
-    for i in range(0, len(tweet_ids), batch_size):
-        batch = tweet_ids[i:i + batch_size]
-        try:
-            # Request media attachments along with metrics
-            response = bot.client.get_tweets(
-                batch,
-                tweet_fields=['public_metrics', 'non_public_metrics', 'organic_metrics', 'created_at', 'attachments'],
-                expansions=['attachments.media_keys'],
-                media_fields=['url', 'preview_image_url', 'type'],
-                user_auth=True
-            )
-
-            # Build media lookup from includes
-            media_lookup = {}
-            if response.includes and 'media' in response.includes:
-                for media in response.includes['media']:
-                    media_lookup[media.media_key] = media
-
-            if response.data:
-                for tweet in response.data:
-                    m = tweet.public_metrics
-
-                    # Try to get image URL from attachments
-                    image_url = None
-                    if hasattr(tweet, 'attachments') and tweet.attachments:
-                        media_keys = tweet.attachments.get('media_keys', [])
-                        for key in media_keys:
-                            if key in media_lookup:
-                                media = media_lookup[key]
-                                # Prefer url for images, preview_image_url for videos
-                                if hasattr(media, 'url') and media.url:
-                                    image_url = media.url
-                                    break
-                                elif hasattr(media, 'preview_image_url') and media.preview_image_url:
-                                    image_url = media.preview_image_url
-                                    break
-
-                    # non_public_metrics: link clicks, profile clicks, engagements
-                    # Only available for tweets you own, <30 days old
-                    npm = tweet.non_public_metrics or {}
-                    om = tweet.organic_metrics or {}
-
-                    metrics[str(tweet.id)] = {
-                        "likes": m.get('like_count', 0),
-                        "retweets": m.get('retweet_count', 0),
-                        "replies": m.get('reply_count', 0),
-                        "impressions": m.get('impression_count', 0),
-                        "url_link_clicks": npm.get('url_link_clicks', 0),
-                        "user_profile_clicks": npm.get('user_profile_clicks', 0),
-                        "image_url": image_url,
-                    }
-            print(f"Fetched batch {i//batch_size + 1}: {len(response.data) if response.data else 0} tweets")
-        except Exception as e:
-            print(f"Could not fetch X batch {i//batch_size + 1}: {e}")
-
-    return metrics
+    """Unused by the daily job. Per-post journalism metrics live in x_engagement.py."""
+    return {}
 
 
 def update_history(history, posts, bluesky_metrics, x_metrics):
@@ -658,10 +586,10 @@ def main():
             },
         )
 
-    # Per-tweet X metrics (get_tweets / likes / replies) stay off.
-    # Daily X collection is one GET /2/users/me follower snapshot only.
+    # Old full-history get_tweets stays off here. Journalism per-post
+    # public_metrics are collected by x_engagement after the dashboard write.
     x_metrics = {}
-    print("\nSkipping X post metrics (users/me follower snapshot only)")
+    print("\nSkipping in-tracker X post metrics (see x_engagement.py)")
 
     # Update history
     print("\nUpdating history...")
@@ -686,6 +614,16 @@ def main():
     print("\nGenerating HTML dashboard...")
     generate_dashboard(analytics_history)
     print(f"Saved to {DASHBOARD_FILE}")
+
+    # 14-day journalism X public_metrics (read-only, fail-soft).
+    try:
+        scripts_dir = os.path.dirname(os.path.abspath(__file__))
+        if scripts_dir not in sys.path:
+            sys.path.insert(0, scripts_dir)
+        from x_engagement import run_x_engagement
+        run_x_engagement(posts=posts)
+    except Exception as e:
+        print(f"X engagement snapshot skipped (non-fatal): {e}")
 
     print("\n" + "=" * 60)
     print("DONE")
