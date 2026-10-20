@@ -43,6 +43,28 @@ def save_analytics_history(history):
         json.dump(history, f, indent=2, ensure_ascii=False)
 
 
+def utc_day(timestamp):
+    """Return YYYY-MM-DD (UTC) for an ISO-8601 timestamp string."""
+    if not timestamp:
+        return None
+    return timestamp.replace("Z", "+00:00")[:10]
+
+
+def upsert_follower_snapshot(snapshots, snapshot):
+    """Append a follower snapshot, replacing the last one if it is the same UTC day.
+
+    Older same-day duplicates already stored in history are left untouched.
+    """
+    if snapshots is None:
+        snapshots = []
+    new_day = utc_day(snapshot.get("timestamp") if snapshot else None)
+    if snapshots and new_day and utc_day(snapshots[-1].get("timestamp")) == new_day:
+        snapshots[-1] = snapshot
+    else:
+        snapshots.append(snapshot)
+    return snapshots
+
+
 def load_posts_history():
     """Load posts history"""
     history_path = os.path.join(REPO_ROOT, 'posts_history.json')
@@ -83,21 +105,112 @@ def fetch_bluesky_follower_count():
         return None
 
 
+def _is_x_usage_header(name):
+    """True for x-rate-limit-* or usage/credit response headers."""
+    lower = str(name).lower()
+    return lower.startswith("x-rate-limit") or "usage" in lower or "credit" in lower
+
+
+def _x_usage_headers(headers):
+    """Pick rate-limit / usage / credit headers out of a mapping."""
+    if not headers:
+        return {}
+    try:
+        items = headers.items()
+    except Exception:
+        return {}
+    return {str(key): str(value) for key, value in items if _is_x_usage_header(key)}
+
+
+def _log_x_follower_read_cost(headers=None):
+    """Print the single users/me read plus any usage headers from the response."""
+    print("X follower read: 1 request (users/me)")
+    interesting = _x_usage_headers(headers)
+    if not interesting:
+        print("  (no x-rate-limit-* or usage/credit headers on response)")
+        return
+    for key in sorted(interesting, key=str.lower):
+        print(f"  {key}: {interesting[key]}")
+
+
+def _attach_response_header_capture(client, bucket):
+    """Record response headers from the tweepy client's requests session."""
+    session = getattr(client, "session", None)
+    if session is None:
+        return
+    hooks = getattr(session, "hooks", None)
+    if hooks is None:
+        return
+
+    def _capture(response, *args, **kwargs):
+        try:
+            headers = getattr(response, "headers", None)
+            if headers:
+                bucket.update(headers)
+        except Exception:
+            pass
+
+    try:
+        hooks.setdefault("response", []).append(_capture)
+    except Exception:
+        pass
+
+
+def _public_metrics_dict(metrics):
+    """Normalize tweepy public_metrics (dict or object) to a plain dict."""
+    if not metrics:
+        return {}
+    if isinstance(metrics, dict):
+        return metrics
+    return {
+        "followers_count": getattr(metrics, "followers_count", 0) or 0,
+        "following_count": getattr(metrics, "following_count", 0) or 0,
+        "tweet_count": getattr(metrics, "tweet_count", 0) or 0,
+    }
+
+
+def _headers_from_exception(exc):
+    resp = getattr(exc, "response", None)
+    if resp is None:
+        return {}
+    return getattr(resp, "headers", None) or {}
+
+
 def fetch_x_follower_count():
-    """Fetch current follower count from X using v2 API get_me()."""
+    """Fetch current follower count from X via a single GET /2/users/me.
+
+    Fail-soft: any X error is logged and returns None so the analytics build
+    keeps the existing follower history. This is the only X call the daily
+    tracker is allowed to make.
+    """
+    captured_headers = {}
+    request_started = False
     try:
         from twitter_bot import TwitterBot
         bot = TwitterBot()
-        me = bot.client.get_me(user_fields=['public_metrics'])
-        if me and me.data:
-            metrics = me.data.public_metrics or {}
+        _attach_response_header_capture(bot.client, captured_headers)
+        request_started = True
+        # GET /2/users/me — listed free on X pay-per-use. Do not add other calls.
+        me = bot.client.get_me(user_fields=["public_metrics"])
+        extra = getattr(me, "headers", None)
+        if extra:
+            captured_headers.update(extra)
+        _log_x_follower_read_cost(captured_headers)
+        if me and getattr(me, "data", None):
+            metrics = _public_metrics_dict(getattr(me.data, "public_metrics", None))
             return {
-                "followers": metrics.get("followers_count", 0),
-                "following": metrics.get("following_count", 0),
-                "posts": metrics.get("tweet_count", 0),
+                "followers": metrics.get("followers_count", 0) or 0,
+                "following": metrics.get("following_count", 0) or 0,
+                "posts": metrics.get("tweet_count", 0) or 0,
             }
     except Exception as e:
         print(f"Could not fetch X follower count: {e}")
+        if request_started:
+            merged = dict(captured_headers)
+            extra = _headers_from_exception(e)
+            if extra:
+                merged.update(extra)
+            _log_x_follower_read_cost(merged)
     return None
 
 
@@ -523,10 +636,13 @@ def main():
     bluesky_followers = fetch_bluesky_follower_count()
     if bluesky_followers:
         print(f"Bluesky followers: {bluesky_followers['followers']}")
-        analytics_history["follower_history"]["bluesky"].append({
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            **bluesky_followers
-        })
+        analytics_history["follower_history"]["bluesky"] = upsert_follower_snapshot(
+            analytics_history["follower_history"].setdefault("bluesky", []),
+            {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                **bluesky_followers
+            },
+        )
         # No pruning — keep all follower history for all-time growth chart
 
     # Fetch X follower count
@@ -534,16 +650,18 @@ def main():
     x_followers = fetch_x_follower_count()
     if x_followers:
         print(f"X followers: {x_followers['followers']}")
-        if "x" not in analytics_history["follower_history"]:
-            analytics_history["follower_history"]["x"] = []
-        analytics_history["follower_history"]["x"].append({
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            **x_followers
-        })
+        analytics_history["follower_history"]["x"] = upsert_follower_snapshot(
+            analytics_history["follower_history"].setdefault("x", []),
+            {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                **x_followers
+            },
+        )
 
-    print("\nFetching X metrics...")
-    x_metrics = fetch_x_metrics(recent_posts)
-    print(f"Got metrics for {len(x_metrics)} X posts")
+    # Per-tweet X metrics (get_tweets / likes / replies) stay off.
+    # Daily X collection is one GET /2/users/me follower snapshot only.
+    x_metrics = {}
+    print("\nSkipping X post metrics (users/me follower snapshot only)")
 
     # Update history
     print("\nUpdating history...")
