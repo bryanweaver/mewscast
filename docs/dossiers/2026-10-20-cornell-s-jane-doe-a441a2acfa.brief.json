@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-10-20-cornell-s-jane-doe-a441a2acfa",
+  "headline_seed": "Cornell\u2019s Jane Doe Sent Letter to Faculty Senate Ahead of Vote - The New York Times",
+  "brief": {
+    "story_id": "2026-10-20-cornell-s-jane-doe-a441a2acfa",
+    "consensus_facts": [
+      "A former Cornell student known as Jane Doe sent a letter to Cornell's Faculty Senate stating she felt unsupported and disbelieved by university President Michael Kotlikoff.",
+      "The letter describes a second-hand account in which Kotlikoff allegedly responded to her report by asking why she waited so long to report the incident, relayed to Doe by the then-president of her sorority (Tri Delta).",
+      "Cornell disputed Doe's characterization in a statement, saying her account is 'incorrect, based on a documented first-hand account,' and that Kotlikoff's question was directed at bystanders who did not use Cornell's anonymous tip line, not at Doe herself.",
+      "Jane Doe reported the alleged assault to campus police on Nov. 8, 2024, about three weeks after it allegedly occurred at the Chi Phi fraternity house.",
+      "The alleged assault took place in October 2024, when Doe says she was assaulted by multiple men at a Chi Phi fraternity party.",
+      "Doe filed a civil lawsuit last month naming the university, the Chi Phi fraternity, seven of its then-members, and others including her sorority Delta Delta Delta (Tri Delta).",
+      "All seven former fraternity members have denied wrongdoing, and none has been charged with a crime.",
+      "The letter was sent ahead of the Faculty Senate's consideration of a no-confidence vote in Kotlikoff's administration.",
+      "A former president of the Chi Phi fraternity was dropped from the lawsuit after his attorney said he was mistakenly identified and was not serving as chapter president at the time of the alleged assault.",
+      "The letter was obtained independently by CBS News, NBC News, and the BBC (via Reuters)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Length/date of the letter",
+        "positions": {
+          "BBC News": "Describes a 'two-page letter dated 14 October'",
+          "CBS News": "Describes a 'one-page letter'",
+          "NBC News": "Refers to a 'Wednesday letter' without specifying page count"
+        }
+      },
+      {
+        "topic": "Date of the no-confidence vote",
+        "positions": {
+          "BBC News": "States the faculty senate scheduled the no-confidence vote for Oct. 28",
+          "CBS News": "Does not state a vote date",
+          "NBC News": "Describes a 'potential' no-confidence vote and growing debate over whether to hold one, without a date"
+        }
+      },
+      {
+        "topic": "When Kotlikoff's disputed conversation occurred",
+        "positions": {
+          "BBC News": "A January 2025 meeting, per Cornell's statement",
+          "NBC News": "A meeting 'months after' she reported, which Cornell dates to January 2025",
+          "CBS News": "Does not date the conversation beyond describing it as a conversation between Kotlikoff and the sorority president"
+        }
+      },
+      {
+        "topic": "Status of Title IX / disciplinary outcomes",
+        "positions": {
+          "NBC News": "Reports Cornell investigated via its Title IX process, expelling two students and imposing suspensions or lesser sanctions on others",
+          "BBC News": "Reports Cornell opened an internal investigation and a civil rights inquiry; does not mention expulsions",
+          "CBS News": "Does not report disciplinary outcomes"
+        }
+      },
+      {
+        "topic": "Independent review",
+        "positions": {
+          "NBC News": "Reports Cornell hired former acting U.S. Attorney General Sally Yates to lead an independent review",
+          "BBC News": "Does not mention the Yates review",
+          "CBS News": "Does not mention the Yates review"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Article 1 is a Google News aggregation cluster with no retrievable body text \u2014 only a list of headlines from NYT, NBC, The Cornell Daily Sun, The Guardian, People, WSTM, Newser, and Fingerlakes1. The NYT headline leads with 'Woman Who Says She Was Raped' framing centered on Doe's agency ('Sends Message'). No analyzable NYT body text exists in the dossier.",
+      "BBC News": "Leads on Kotlikoff being 'embattled' and the gang-rape doubt angle, foregrounding institutional crisis. Provides the richest context on the faculty senate meeting itself, quoting professor Paul Ortiz accusing Cornell of treating rape as 'more of a PR problem than a heinous crime' and reporting faculty said they were 'deeply disturbed.' Notes Kotlikoff's 26-year tenure and the banning of fraternity parties. Carries Cornell's rebuttal in full and specifies the Jan. 2025 meeting date.",
+      "CBS News": "Leads with Cornell's response in the headline ('Cornell responds'), structurally balancing Doe's claim against the university's denial. Uniquely emphasizes the court development that a former Chi Phi president was dropped from the lawsuit, quoting his attorney Eric Bernstein ('they had the wrong guy here'). Includes the sorority president's interpretation that the question expressed 'doubt in the veracity' of Doe's story. Links out to Free Press coverage sympathetic to a wrongly-identified defendant.",
+      "NBC News": "Headline frames it as the president appearing 'to question her allegations.' Uniquely surfaces two accountability-forward details: Cornell hiring Sally Yates for an independent review, and the Title IX outcomes (two expulsions, additional sanctions). Also names Orazio Petito as the dropped defendant and clarifies he was not accused of assault. Heavy page clutter with unrelated 'For Subscribers' promotional links appended to the body."
+    },
+    "primary_source_alignment": [
+      "No primary source (the letter itself, court filings, or faculty senate roll-call) was located in the dossier. The letter is quoted second-hand through three outlets (BBC, CBS, NBC), each of which says it independently obtained a copy.",
+      "The three full-text outlets quote the key letter passage nearly identically: Kotlikoff's response was 'along the lines of, Why did she wait so long to report it?' and the sorority president 'interpreted his question as an expression of doubt in the veracity of my story.' This cross-outlet quote consistency raises confidence in the letter's wording even absent the document.",
+      "Cornell's rebuttal statement is also quoted consistently across BBC, CBS, and NBC, asserting the question was 'directed at bystanders who did not use Cornell's anonymous tip line.' No outlet published the underlying 'documented first-hand account' Cornell cites, so that claim cannot be verified against a primary record."
+    ],
+    "missing_context": [
+      "Article 1 (The New York Times) contained no retrievable body text \u2014 it is a Google News headline cluster only. Of four dossier articles, only three (BBC, CBS, NBC) have substantive body text, and consensus facts are drawn from those three.",
+      "No outlet published the actual text of Cornell's 'documented first-hand account' that it uses to contradict Doe, so readers cannot evaluate the competing versions of the Jan. 2025 conversation.",
+      "The sorority president who allegedly relayed Kotlikoff's remark is not named and did not speak on the record in any article; her account reaches readers only via Doe's letter.",
+      "The precise length/date of the letter is inconsistent across outlets (BBC: two-page, Oct. 14; CBS: one-page), and none reconciles the discrepancy.",
+      "Only NBC reports the Sally Yates independent review and the Title IX disciplinary outcomes (two expulsions); the other outlets omit both, leaving a reader relying on any single outlet with an incomplete picture.",
+      "No outlet reports the current status of the reopened criminal case beyond the BBC noting the local prosecutor initially declined charges and the case 'has since reopened' \u2014 no detail on who reopened it or its stage.",
+      "No response from Doe's lawyer was obtained by NBC at publication, and no outlet includes comment from the accused men's attorneys beyond general denials."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets (BBC, CBS, NBC) reported the same letter and Cornell rebuttal but with materially different emphasis \u2014 CBS foregrounds the dropped defendant, NBC surfaces the Yates review and Title IX expulsions, and BBC centers the embattled-president and faculty revolt \u2014 while the fourth source is headline-only and the underlying letter and Cornell's counter-document were never published. That divergence plus the single-source gaps makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPRkpkOUlxTmhMRU9DSGtYb1pKOTRLMjNqVjF3VElIc2RKNlhfTHFEVkdJU1BpTG5wLTRaaE1udnNJaHNiUW14d016SjQwMHdUQ0VHR2U3YVJDYmNsS2ozQkxacTVSTzc1d290QXVxT0huTVFHTE5hX21XdW5WR1VaMHQ2VV9DN1ZTbVE?oc=5",
+      "title": "Woman Who Says She Was Raped at Cornell Sends Message to Faculty Senate - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBBUllRQXR4VGprdlpCc0o2TTBPT2JEVHcxMC1mVmxzanpRTng5cFlIVFdnWnV2M3pzT1hWMjFIUkFpcWc2bmdQY0h3dWNvMkFScDVUUFpRR011OWs?oc=5",
+      "title": "Jane Doe says embattled Cornell head Kotlikoff doubted her gang-rape claim - BBC"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB1ckxpcGo2X05hWGdhSFhXSlhjN05ral8wZXg0OThqTWFmUFZWYXQwUHBDaVRYTDJ4UWFURDFYTTB6YlpucE1iUTYydndMdlhzd0U5bjRIbm1lT056Yi1xVVR6cUx3TGN4RG5jYkJSUkhTOXJFZ0VxcGRpYzdCUUk?oc=5",
+      "title": "Cornell responds to Jane Doe's letter saying she felt disbelieved, unsupported by school president - CBS News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPN29JcXg5eElYVWR6WEY5bXJFRWd2VHJFeHcxSUt4bWg1RS1oOVZ5eXEtcGc4WnRpcXFKalRoT1ZFRDZEbk4xTmNMdHNJUFlaODF4NTRWMlhLV1JzdVI1dE1DRkplallMYTFkcVRIRkdtVVpVNG14dTVTY1NyejJrQlZWbjFmZjdGRUNIU3dVVlBHSFBJeENtQXppLUR1MnlUQ2Y2QkhEWnZPT25yTjBobTlBQUp5NkdWSGc?oc=5",
+      "title": "Jane Doe says Cornell president appeared to question her allegations in letter to faculty senate - NBC News"
+    }
+  ]
+}
