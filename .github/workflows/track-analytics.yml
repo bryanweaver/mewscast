@@ -15,6 +15,16 @@ jobs:
   track-analytics:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      # Same @mewscast tweepy secrets as journalism-publish.yml.
+      # Shared by: GET /2/users/me follower snapshot, the mentions digest
+      # step, and scripts/x_engagement.py get_tweets(public_metrics).
+      # No likes, replies, or posts.
+      X_API_KEY: ${{ secrets.X_API_KEY }}
+      X_API_SECRET: ${{ secrets.X_API_SECRET }}
+      X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+      X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
 
     steps:
       - uses: actions/checkout@v4
@@ -23,15 +33,6 @@ jobs:
 
       - name: Track analytics
         env:
-          # Daily X follower snapshot only: one GET /2/users/me (public_metrics).
-          # Same @mewscast tweepy secrets as journalism-publish.yml.
-          # Do not add other X endpoints — get_tweets and writes stay off.
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-
           # Bluesky credentials
           BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
@@ -40,16 +41,8 @@ jobs:
 
       - name: X mentions digest
         # Read-only mentions + quote-tweet digest for @mewscast.
-        # X creds are passed here only — the Track analytics step above
-        # still omits them so follower/tweet metric READs stay off.
         # Fail-soft: the script logs API errors and exits 0.
         if: always()
-        env:
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: |
           python scripts/x_mentions_digest.py
 
@@ -64,6 +57,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add analytics_history.json docs/ANALYTICS.md docs/analytics.html
+          git add docs/x_engagement.json
           git add docs/reports/
           if [ -f docs/x_mentions_digest.json ]; then
             git add docs/x_mentions_digest.json
