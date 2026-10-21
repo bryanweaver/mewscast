@@ -1,7 +1,750 @@
 {
   "account": "mewscast",
-  "last_updated": null,
-  "since_id": null,
-  "items": [],
-  "last_run": null
+  "last_updated": "2026-10-21T01:04:23.562448+00:00",
+  "since_id": "2112592521339547989",
+  "items": [
+    {
+      "id": "2112592521339547989",
+      "kind": "mention",
+      "author_handle": "pezzibuild",
+      "text": "@mewscast Damaged versus destroyed is the number to watch. Damaged homes often take longer: smoke and heat damage in attics and ducts gets missed on a first adjuster visit.",
+      "url": "https://x.com/pezzibuild/status/2112592521339547989",
+      "created_at": "2026-10-20T17:11:21+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2111647510066254186",
+        "url": "https://x.com/mewscast/status/2111647510066254186",
+        "topic": "Fast-moving California wildfire burns homes as people are ordered to leave - BBC",
+        "timestamp": "2026-10-18T02:36:14.051257+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2104742834436026386",
+      "kind": "mention",
+      "author_handle": "dahuaerda",
+      "text": "@mewscast The shooting happened in public, in daylight, with witnesses saying the couple took turns firing. That is not a court ruling. It is an alleged execution.Family-court filings can be ugly on both sides. Allegations are not verdicts, and a parking-lot ambush does not settle them. https://t.co/wgRguBamLK",
+      "url": "https://x.com/dahuaerda/status/2104742834436026386",
+      "created_at": "2026-09-29T01:19:30+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2104702439429493222",
+        "url": "https://x.com/mewscast/status/2104702439429493222",
+        "topic": "New York Times executive fatally shot allegedly by elderly in-laws - BBC",
+        "timestamp": "2026-09-28T22:39:00.152049+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2102130244270342615",
+      "kind": "mention",
+      "author_handle": "mikeskahantx",
+      "text": "@mewscast And the cat? 🤔",
+      "url": "https://x.com/mikeskahantx/status/2102130244270342615",
+      "created_at": "2026-09-21T20:18:00+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2101505064330490010",
+        "url": "https://x.com/mewscast/status/2101505064330490010",
+        "topic": "Heirs Sue Auschwitz Museum Over Art Their Mother Made Under the Nazis - The New York Times",
+        "timestamp": "2026-09-20T02:53:46.420779+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2101539608773214235",
+      "kind": "mention",
+      "author_handle": "AuschwitzMuseum",
+      "text": "@mewscast The visual documentation of Roma and Sinti victims made in Auschwitz by Dina Gottliebova-Babbitt on the orders of Josef Mengele constitutes unique evidence of the persecution of those individuals and of the crimes committed against Roma people. They are not simply works whose",
+      "url": "https://x.com/AuschwitzMuseum/status/2101539608773214235",
+      "created_at": "2026-09-20T05:11:02+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2101505064330490010",
+        "url": "https://x.com/mewscast/status/2101505064330490010",
+        "topic": "Heirs Sue Auschwitz Museum Over Art Their Mother Made Under the Nazis - The New York Times",
+        "timestamp": "2026-09-20T02:53:46.420779+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2094207602951401534",
+      "kind": "mention",
+      "author_handle": "bryanofearth",
+      "text": "@oldstackjournal Nice to meet you, I am building stuff! I run a saas for aspiring home inspectors to study for their national exams called Bulletproof Test Prep, built the autonomous news anchor cat @mewscast, and I have a YouTube channel for comments section songs https://t.co/18mlinc9RU - I’ve",
+      "url": "https://x.com/bryanofearth/status/2094207602951401534",
+      "created_at": "2026-08-30T23:36:15+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2089839048734970093",
+      "kind": "mention",
+      "author_handle": "BlakePaterson14",
+      "text": "@mewscast Slop slop slop. 😎",
+      "url": "https://x.com/BlakePaterson14/status/2089839048734970093",
+      "created_at": "2026-08-18T22:17:11+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2089353260742123647",
+        "url": "https://x.com/mewscast/status/2089353260742123647",
+        "topic": "Trump envoy Kushner arrives in Israel after rare Hamas talks on Gaza peace plan - BBC",
+        "timestamp": "2026-08-17T14:06:51.055038+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2089363802550640762",
+      "kind": "mention",
+      "author_handle": "BlakePaterson14",
+      "text": "@mewscast Slop",
+      "url": "https://x.com/BlakePaterson14/status/2089363802550640762",
+      "created_at": "2026-08-17T14:48:43+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2089353260742123647",
+        "url": "https://x.com/mewscast/status/2089353260742123647",
+        "topic": "Trump envoy Kushner arrives in Israel after rare Hamas talks on Gaza peace plan - BBC",
+        "timestamp": "2026-08-17T14:06:51.055038+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2087196586870718778",
+      "kind": "mention",
+      "author_handle": "TLO6795",
+      "text": "@mewscast https://t.co/FVJfMGm0LB",
+      "url": "https://x.com/TLO6795/status/2087196586870718778",
+      "created_at": "2026-08-11T15:16:59+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2087187944524448065",
+        "url": "https://x.com/mewscast/status/2087187944524448065",
+        "topic": "Democratic socialist leads Wisconsin governor’s race as progressives gain ground - Financial Times",
+        "timestamp": "2026-08-11T14:42:39.070917+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2082596824955658257",
+      "kind": "mention",
+      "author_handle": "Cptmorgan22",
+      "text": "@mewscast F cornyn",
+      "url": "https://x.com/Cptmorgan22/status/2082596824955658257",
+      "created_at": "2026-07-29T22:39:10+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2082534813701902690",
+        "url": "https://x.com/mewscast/status/2082534813701902690",
+        "topic": "Todd Blanche attorney general nomination on edge as Cornyn questions Trump-IRS settlement - CNBC",
+        "timestamp": "2026-07-29T18:32:46.311260+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2082595247499223316",
+      "kind": "mention",
+      "author_handle": "Average54962557",
+      "text": "@mewscast Awesome. Trump's personal boot licking lawyer doesn't deserve the position.",
+      "url": "https://x.com/Average54962557/status/2082595247499223316",
+      "created_at": "2026-07-29T22:32:54+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2082534813701902690",
+        "url": "https://x.com/mewscast/status/2082534813701902690",
+        "topic": "Todd Blanche attorney general nomination on edge as Cornyn questions Trump-IRS settlement - CNBC",
+        "timestamp": "2026-07-29T18:32:46.311260+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2082546632101445729",
+      "kind": "mention",
+      "author_handle": "eugenewright905",
+      "text": "@mewscast The IRS immunity for the Trump’s is every bit as damnable as the slush fund!",
+      "url": "https://x.com/eugenewright905/status/2082546632101445729",
+      "created_at": "2026-07-29T19:19:43+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2082534813701902690",
+        "url": "https://x.com/mewscast/status/2082534813701902690",
+        "topic": "Todd Blanche attorney general nomination on edge as Cornyn questions Trump-IRS settlement - CNBC",
+        "timestamp": "2026-07-29T18:32:46.311260+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2082242591370653837",
+      "kind": "mention",
+      "author_handle": "KittyCatEmpire",
+      "text": "@mewscast good call",
+      "url": "https://x.com/KittyCatEmpire/status/2082242591370653837",
+      "created_at": "2026-07-28T23:11:34+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2078300449774420136",
+      "kind": "mention",
+      "author_handle": "winemaker1960",
+      "text": "@mewscast Yup, no American wildfires here, just look away https://t.co/jWS2lZWoa0",
+      "url": "https://x.com/winemaker1960/status/2078300449774420136",
+      "created_at": "2026-07-18T02:06:54+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2078298239892111420",
+        "url": "https://x.com/mewscast/status/2078298239892111420",
+        "topic": "Trump blames Canada for wildfire smoke, says he will add cost to tariffs - Reuters",
+        "timestamp": "2026-07-18T01:58:08.415390+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2071607929925460326",
+      "kind": "mention",
+      "author_handle": "director_nat",
+      "text": "@mewscast I think what they said was that there’s nothing in the constitution that mandates a single day to have everything counted by.\n\nWe need to do better in explaining these things.\n\nThe same act can still fix this.",
+      "url": "https://x.com/director_nat/status/2071607929925460326",
+      "created_at": "2026-06-29T14:53:13+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2071607466597429718",
+        "url": "https://x.com/mewscast/status/2071607466597429718",
+        "topic": "Supreme Court allows states to count mail-in ballots that arrive late, rejecting RNC challenge - NBC News",
+        "timestamp": "2026-06-29T14:51:23.719520+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2071332191368257581",
+      "kind": "mention",
+      "author_handle": "Arzoo4560",
+      "text": "@mewscast Promise you'll still be there?",
+      "url": "https://x.com/Arzoo4560/status/2071332191368257581",
+      "created_at": "2026-06-28T20:37:32+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2067280156662571152",
+      "kind": "mention",
+      "author_handle": "MINOPUH_AO",
+      "text": "Your First Week With PolyGun\n\n @sth_to_remember @jannemaa @FelixCriado1 @Younginwrld16 @IGyokov @_Proofmaker @berybut82979 @zhu604 @BarryEffone @mewscast https://t.co/drFSEvmB52 https://t.co/7uP9MXWWmC",
+      "url": "https://x.com/MINOPUH_AO/status/2067280156662571152",
+      "created_at": "2026-06-17T16:16:12+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2067064840162607544",
+      "kind": "mention",
+      "author_handle": "RepPeteStauber",
+      "text": "Polymarket official trading bot is now out, take a look:\nhttps://t.co/lmDtCwQBjT\n@mewscast @RazaTweets123 @adhdincarn27803 https://t.co/H0uV0j1Qej https://t.co/JalEVKmGpx",
+      "url": "https://x.com/RepPeteStauber/status/2067064840162607544",
+      "created_at": "2026-06-17T02:00:36+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2064106424087527855",
+      "kind": "mention",
+      "author_handle": "billyJoe45_47",
+      "text": "@mewscast We need to know where is Judge Leo  T. Sorokin lives and protest infront of his house,  and let his family know , he is a terrorist,  he is against [ Hardworking American citizens taxpayers],.. This judge is against hardworking American Citizens Taxpayers . REMOVE THIS JUDGE NOW",
+      "url": "https://x.com/billyJoe45_47/status/2064106424087527855",
+      "created_at": "2026-06-08T22:04:55+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2064050046962720999",
+        "url": "https://x.com/mewscast/status/2064050046962720999",
+        "topic": "Judge blocks Trump's $100,000 H-1B visa fee - CNBC",
+        "timestamp": "2026-06-08T18:20:54.456873+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2064101584749916473",
+      "kind": "mention",
+      "author_handle": "billyJoe45_47",
+      "text": "@mewscast We as American Citizens need to Protest against this terrorist Judge Leo Sorokin,he should not be a judge,millions of America Citizens getting laid-off including myself, ...And this mother fu..er judge will allow companies to hire foreign workers and take over me without job .",
+      "url": "https://x.com/billyJoe45_47/status/2064101584749916473",
+      "created_at": "2026-06-08T21:45:41+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2064050046962720999",
+        "url": "https://x.com/mewscast/status/2064050046962720999",
+        "topic": "Judge blocks Trump's $100,000 H-1B visa fee - CNBC",
+        "timestamp": "2026-06-08T18:20:54.456873+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2056360557876306163",
+      "kind": "mention",
+      "author_handle": "AfriComDoWRP02",
+      "text": "@mewscast https://t.co/U7JjecMSuj https://t.co/pFbr8CBRfM",
+      "url": "https://x.com/AfriComDoWRP02/status/2056360557876306163",
+      "created_at": "2026-05-18T13:05:36+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2055707621194125435",
+        "url": "https://x.com/mewscast/status/2055707621194125435",
+        "topic": "Trump says Islamic State group leader was killed in a joint US-Nigerian mission - AP News",
+        "timestamp": "2026-05-16T17:51:05.247846+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2053277484586561776",
+      "kind": "mention",
+      "author_handle": "PaulJac02558987",
+      "text": "📢 BREAKING NEWS: 𝗫 𝗽𝗿𝗲𝘀𝗲𝗻𝘁𝘀 𝗶𝘁𝘀 𝗼𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝘁𝗼𝗸𝗲𝗻 𝗲𝗰𝗼𝘀𝘆𝘀𝘁𝗲𝗺 🚀\n\n📌 More info:  https://t.co/3UQZkKlAh8\n\n👥 @mewscast @aliaiyub001 @blogacmak",
+      "url": "https://x.com/PaulJac02558987/status/2053277484586561776",
+      "created_at": "2026-05-10T00:54:35+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2049910133623300226",
+      "kind": "mention",
+      "author_handle": "xade_meow",
+      "text": "📢 LATEST UPDATE: X reveals its official digital currency launch 🚀\n\n📌 More info: https://t.co/CfVV5y62Ne\n\n👥 Invited Users: @comradeisiyaka @peace_abdi1 @mewscast",
+      "url": "https://x.com/xade_meow/status/2049910133623300226",
+      "created_at": "2026-04-30T17:53:56+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2047546433222377716",
+      "kind": "mention",
+      "author_handle": "Dailymeoww1",
+      "text": "@mewscast 🫣😺",
+      "url": "https://x.com/Dailymeoww1/status/2047546433222377716",
+      "created_at": "2026-04-24T05:21:25+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2045564168158183891",
+      "kind": "mention",
+      "author_handle": "israelever117",
+      "text": "@mewscast Peacekeepr? How in the world could Hisbolah should 1000th of missile with Unifil keeping peace?????",
+      "url": "https://x.com/israelever117/status/2045564168158183891",
+      "created_at": "2026-04-18T18:04:37+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2045560775964856382",
+        "url": "https://x.com/mewscast/status/2045560775964856382",
+        "topic": "A French soldier serving with the UN peacekeeping mission in Lebanon has been killed, and three others were wounded in an attack that UNIFIL and French officials said was likely carried out by Hezbollah. 🔗:",
+        "timestamp": "2026-04-18T17:51:15.324646+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2045502087719461097",
+      "kind": "mention",
+      "author_handle": "090_ag",
+      "text": "LFG $SOL 🚀! ⚡💥 \n\n 🔥🔥🔥 ⤵️ \n https://t.co/eOKCDPldEK \n\n @EvillDaGenius @timBoML @GucciLane713 @ThePredictDesk @baileycooke_ @netrade56 @FounderOkinawa @Crypmirr @mewscast @ValentineV2I https://t.co/Gf8mXIfWQL",
+      "url": "https://x.com/090_ag/status/2045502087719461097",
+      "created_at": "2026-04-18T13:57:55+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2040995606148022403",
+      "kind": "mention",
+      "author_handle": "opptruecrime",
+      "text": "@mewscast his own daughter testifying is what gets me. she carried that knowledge for years before it finally came out. curious how many cold cases sit unsolved not because there are no witnesses but because the witnesses are family members who aren't ready to talk yet.",
+      "url": "https://x.com/opptruecrime/status/2040995606148022403",
+      "created_at": "2026-04-06T03:30:47+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2028550206862610849",
+      "kind": "mention",
+      "author_handle": "kellyloverofnat",
+      "text": "@mewscast Are you saying that someone with weed is too dangerous to own a gun?",
+      "url": "https://x.com/kellyloverofnat/status/2028550206862610849",
+      "created_at": "2026-03-02T19:17:12+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2028550030492078198",
+      "kind": "mention",
+      "author_handle": "kellyloverofnat",
+      "text": "@mewscast Because of weed? lol",
+      "url": "https://x.com/kellyloverofnat/status/2028550030492078198",
+      "created_at": "2026-03-02T19:16:30+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2026632714921636343",
+      "kind": "mention",
+      "author_handle": "Market_Pulse_X",
+      "text": "@mewscast Mixed economic signals ahead of the State of the Union address. 📊",
+      "url": "https://x.com/Market_Pulse_X/status/2026632714921636343",
+      "created_at": "2026-02-25T12:17:46+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2024322650953187371",
+      "kind": "mention",
+      "author_handle": "dodgemhire",
+      "text": "@mewscast fakenews....",
+      "url": "https://x.com/dodgemhire/status/2024322650953187371",
+      "created_at": "2026-02-19T03:18:24+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2019093827739685296",
+      "kind": "mention",
+      "author_handle": "TXRU23",
+      "text": "@mewscast Fake News results LOVE THIS!!! 😁 https://t.co/kxitSUMvuk",
+      "url": "https://x.com/TXRU23/status/2019093827739685296",
+      "created_at": "2026-02-04T17:00:56+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2016135938447954114",
+      "kind": "mention",
+      "author_handle": "TravisJone85839",
+      "text": "@mewscast 🤣",
+      "url": "https://x.com/TravisJone85839/status/2016135938447954114",
+      "created_at": "2026-01-27T13:07:20+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2013856778400723245",
+      "kind": "mention",
+      "author_handle": "Anynymity",
+      "text": "@mewscast I'll be gold panning when possible.",
+      "url": "https://x.com/Anynymity/status/2013856778400723245",
+      "created_at": "2026-01-21T06:10:46+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2013696433304539289",
+      "kind": "mention",
+      "author_handle": "Sammyfifield",
+      "text": "@mewscast OMG. Panicans are shouting we have had one bad stock market day. Jump out the windows the sky is falling!",
+      "url": "https://x.com/Sammyfifield/status/2013696433304539289",
+      "created_at": "2026-01-20T19:33:37+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2013312837465125097",
+      "kind": "mention",
+      "author_handle": "genechick50",
+      "text": "@mewscast 💙",
+      "url": "https://x.com/genechick50/status/2013312837465125097",
+      "created_at": "2026-01-19T18:09:20+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2011181594758037789",
+      "kind": "mention",
+      "author_handle": "PepperWingate",
+      "text": "@mewscast Yawn!",
+      "url": "https://x.com/PepperWingate/status/2011181594758037789",
+      "created_at": "2026-01-13T21:00:32+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "2001960302108397923",
+      "kind": "mention",
+      "author_handle": "Jamie022623111",
+      "text": "@mewscast The yen strengthens? It's in freefall",
+      "url": "https://x.com/Jamie022623111/status/2001960302108397923",
+      "created_at": "2025-12-19T10:18:25+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1999901461728383475",
+      "kind": "mention",
+      "author_handle": "JR63226438",
+      "text": "@mewscast Don't you love liberal dump NY. Just like it's twin liberal dump city california. They love their psychotic liberals free on their streets!...when you keep voting liberal idiots to lead you, it's so hard to sympathize with your daily drama...simplified for liberal idiots!",
+      "url": "https://x.com/JR63226438/status/1999901461728383475",
+      "created_at": "2025-12-13T17:57:19+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1997285397077082316",
+      "kind": "mention",
+      "author_handle": "OrangeAndBob",
+      "text": "@mewscast The Senate confirmed? I don’t care if the pope issued a papal bull that this dude is a woman, that doesn’t change the fact that he is not.",
+      "url": "https://x.com/OrangeAndBob/status/1997285397077082316",
+      "created_at": "2025-12-06T12:42:01+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1993994967161696756",
+      "kind": "mention",
+      "author_handle": "VaishnavaVimla",
+      "text": "🔥 The BIGGЕST #Сryрtо #РUMР #Signаl is here! 🚀 Jоin the actiоn!\n\nhttps://t.co/avifFBP93Q $SOL\n\ndSsq4mayYwYMqXYXEpYh @10aakhan @Yek93Are @HaireNet @mewscast @douglaswalls2 @serhan_iam @cdenboer99 @dungdragon88 @AnserMe84076275 @BSCHunter5",
+      "url": "https://x.com/VaishnavaVimla/status/1993994967161696756",
+      "created_at": "2025-11-27T10:47:01+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1993756704819880304",
+      "kind": "mention",
+      "author_handle": "abdollh55575",
+      "text": "🔥 The BIGGЕST #Сryрtо #РUMР #Signаl is here! 🚀 Jоin the actiоn!\n\nhttps://t.co/49IcJoZ0Os $SOL\n\ntt2jKZMVNqtNdnbuJsGS @FarflungLester @The_Paul_Rogers @k_nishay @mewscast @srivardhan6 @Spiral987 @cryptocophagus @Abu_Ammar313 @luchobones @badrfathallah",
+      "url": "https://x.com/abdollh55575/status/1993756704819880304",
+      "created_at": "2025-11-26T19:00:15+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1992908748688683337",
+      "kind": "mention",
+      "author_handle": "gurbindo68",
+      "text": "🔥 The BIGGЕST #Сryрtо #РUMР #Signаl is here! 🚀 Jоin the actiоn!\n\nhttps://t.co/wiGLjaaaEx $SOL\n\n1GfhtlfkcaA0XJpnm3hm @JessieBiggest @ic3b0rg @AnnaSL00W @charless0007 @KSLau14 @RubenC16949504 @mewscast @asaf_shashu @Grondwat76 @UrbanWiza24506",
+      "url": "https://x.com/gurbindo68/status/1992908748688683337",
+      "created_at": "2025-11-24T10:50:46+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1965941824503386345",
+      "kind": "mention",
+      "author_handle": "aaabbn212",
+      "text": "🔥 The BIGGЕST #Сryрtо #РUMР #Signаl is here! 🚀 Jоin the actiоn!\n\nhttps://t.co/lpLEztlNEi $ETH\n\n @mewscast @Armani33886660 @dhpearlman @Bongyblast @AproxieETH @MarkFriedberg4 @Olinda122 @eric_puls @JOSEANT31226996 @zeeskrilla https://t.co/1cXQtoTm67",
+      "url": "https://x.com/aaabbn212/status/1965941824503386345",
+      "created_at": "2025-09-11T00:53:51+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1956391877403365392",
+      "kind": "mention",
+      "author_handle": "ErdoganGuc72640",
+      "text": "https://t.co/ax9MqVY3c3",
+      "url": "https://x.com/ErdoganGuc72640/status/1956391877403365392",
+      "created_at": "2025-08-15T16:25:46+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1955791137920237607",
+      "kind": "mention",
+      "author_handle": "PatrickCan98724",
+      "text": "https://t.co/xVwhA8p694",
+      "url": "https://x.com/PatrickCan98724/status/1955791137920237607",
+      "created_at": "2025-08-14T00:38:38+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1938406242562502673",
+      "kind": "mention",
+      "author_handle": "Praveen14364632",
+      "text": "🔥 The BIGGЕST #Сryрtо #РUMР is here! \n\n🚀 Jоin the actiоn! ➡️ https://t.co/iZKJLrFfRq $ETH \n\nYiXlo @mewscast @GGarcha89 @kuperjoes @filipemelo97 @AKhofipan @edgarcruz61 @LianaLian_p @DorionRome17533 @NerfHerder48 @hongphihoang1 @Crypthub_io",
+      "url": "https://x.com/Praveen14364632/status/1938406242562502673",
+      "created_at": "2025-06-27T01:17:16+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1908034003493425282",
+      "kind": "mention",
+      "author_handle": "sawnkhan361218",
+      "text": "#Oрtimism🔥\n\n➜ https://t.co/lhLKVyMJzu\n\n🔴 Oрtimism Аirdrоp #4 is now LIVЕ! 🪂🚀\n\nS2m6DOKP @HoangAugustus @1118yich @sanatol1987 @tambir43608417 @mewscast @Mohamme42711977 @guro192 @oxA_Axo @samty1210 @omair1992 @wiidi_19",
+      "url": "https://x.com/sawnkhan361218/status/1908034003493425282",
+      "created_at": "2025-04-04T05:48:50+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1902483674207297849",
+      "kind": "mention",
+      "author_handle": "romerosand54286",
+      "text": "#CryptoPump🚀\n\nMake 200-300% within MINUTES! 📈\n\n🎁Welcome: https://t.co/2eg8xmqwpZ\n\ns7GgARdJ @Vishnu00349595 @mewscast @BrokenH40522313 @CraigSchacherer @MalikAj55326644 @Zeeshan42814679 @CCobetto98865 @mar_wendell",
+      "url": "https://x.com/romerosand54286/status/1902483674207297849",
+      "created_at": "2025-03-19T22:13:49+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1899152791370698923",
+      "kind": "mention",
+      "author_handle": "colinasguille",
+      "text": "🚀#CRYPTO PUMP Notice\n📈Get a 3x $ETH Call NOW!🔥Don't miss out\n\nJoin now→ https://t.co/M8wstYGvlR\n\naB1Q2Vjo @mewscast @LisandraStreve4 @Cryptobas1 @Oluwafe88534235 @crypt0bert1 @qzafk @chyven1356 @Tomasperletti @huangkuan @vothlinhf89",
+      "url": "https://x.com/colinasguille/status/1899152791370698923",
+      "created_at": "2025-03-10T17:38:04+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
+    {
+      "id": "1890066850081620427",
+      "kind": "mention",
+      "author_handle": "HalouaniInes",
+      "text": "🚀 Michael Saylor Presale is Live!\n\n1️⃣ More information: https://t.co/1KbI2RnWeN \n2️⃣ Check your еligibility on page listed.\n\n☑️ Еligiblе users: @hghazal @gino_isa @AnaLily82510683 @Austin_Parks93 @DJake_78 @mewscast @DefenceLover9 m0aUp\n\n⚡️",
+      "url": "https://x.com/HalouaniInes/status/1890066850081620427",
+      "created_at": "2025-02-13T15:53:47+00:00",
+      "referenced_mewscast_post": null,
+      "looks_like_correction": false,
+      "correction_keywords": []
+    }
+  ],
+  "last_run": {
+    "finished_at": "2026-10-21T01:04:23.562448+00:00",
+    "request_counts": {
+      "get_me": 1,
+      "get_quote_tweets": 9,
+      "get_users_mentions": 1
+    },
+    "rate_limit_headers": [
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545562",
+          "x-rate-limit-remaining": "73"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "450",
+          "x-rate-limit-reset": "1792545563",
+          "x-rate-limit-remaining": "449"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545564",
+          "x-rate-limit-remaining": "74"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545564",
+          "x-rate-limit-remaining": "73"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545564",
+          "x-rate-limit-remaining": "72"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545564",
+          "x-rate-limit-remaining": "71"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545564",
+          "x-rate-limit-remaining": "70"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545564",
+          "x-rate-limit-remaining": "69"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545564",
+          "x-rate-limit-remaining": "68"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545564",
+          "x-rate-limit-remaining": "67"
+        }
+      },
+      {
+        "method": "session",
+        "error": false,
+        "headers": {
+          "x-rate-limit-limit": "75",
+          "x-rate-limit-reset": "1792545564",
+          "x-rate-limit-remaining": "66"
+        }
+      }
+    ],
+    "errors": [],
+    "new_items": 50,
+    "mentions_fetched": 50,
+    "quotes_fetched": 0
+  }
 }
