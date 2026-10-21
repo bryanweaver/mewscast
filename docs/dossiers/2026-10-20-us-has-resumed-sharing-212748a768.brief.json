@@ -1,0 +1,114 @@
+{
+  "story_id": "2026-10-20-us-has-resumed-sharing-212748a768",
+  "headline_seed": "US has resumed sharing intelligence with Ukraine about Russian strikes, says Zelenskyy - The Guardian",
+  "brief": {
+    "story_id": "2026-10-20-us-has-resumed-sharing-212748a768",
+    "consensus_facts": [
+      "Zelenskyy accused the United States of withholding intelligence and limiting Starlink/Starshield service to Ukraine, inhibiting its defensive and offensive drone operations (CBS, Al Jazeera, NBC).",
+      "Zelenskyy said US-Ukraine intelligence sharing had resumed/early warnings returned after talks with American counterparts, including a phone call with Secretary of State Marco Rubio (CBS, Al Jazeera, NBC).",
+      "Secretary of State Marco Rubio denied that any US support was deliberately withheld, saying it 'wasn't deliberate,' that nobody ordered Starlink speed slowed, and that it had been restored (CBS, NBC, Al Jazeera).",
+      "Trump publicly criticized Zelenskyy, accusing him of not wanting to end the war and saying 'he doesn't want to end this war, and probably never did,' and that Zelenskyy could have made a better deal two years ago (CBS, Al Jazeera, NBC).",
+      "Trump waived/eased sanctions on Russia, including on Russian diesel exports, in a bid to lower US energy/fuel prices (CBS, Al Jazeera, NBC).",
+      "Zelenskyy described the waiving of Russian diesel sanctions as a 'reward' for Putin that would embolden him (CBS, Al Jazeera, NBC).",
+      "Zelenskyy held or planned talks in Norway (Oslo) with US envoys Steve Witkoff and Jared Kushner, with Kushner participating remotely, alongside European leaders including the Norwegian PM and Finnish officials (Al Jazeera, NBC).",
+      "Ukraine and Russia continued trading long-range air strikes over the period, with civilian casualties reported on both sides (CBS, Al Jazeera, NBC).",
+      "Russia struck Ukrainian energy and civilian infrastructure, causing power outages (CBS, Al Jazeera, NBC).",
+      "Kremlin spokesman Dmitry Peskov commented on the diplomacy, framing Russia as valuing US mediation while emphasizing the ongoing conflict (CBS, NBC).",
+      "Zelenskyy said the US was delaying delivery of crucial ballistic missile interceptors (Patriots), which Ukraine has nearly run out of (Al Jazeera, NBC)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the US deliberately withheld intelligence/early warnings",
+        "positions": {
+          "CBS News": "Reports Zelenskyy's claim that data sharing was 'blocked for some period of time'; cites CBS reporting that the US may have intentionally withheld early warnings; quotes Rubio saying it 'wasn't deliberate.'",
+          "NBC News": "Reports Zelenskyy saying 'some political decision has been made to slow down support for us'; Rubio called the accusations 'scandalous' and said 'nothing being deliberately denied.'",
+          "Al Jazeera English": "States Zelenskyy accused Washington of withholding intelligence and limiting Starlink speed, without endorsing deliberateness either way."
+        }
+      },
+      {
+        "topic": "Cause of the Starlink/Starshield slowdown",
+        "positions": {
+          "CBS News": "Rubio said 'it sort of happened' without explaining; CBS's own 'War in Ukraine' sidebar links to a story headlined 'Musk chose to restrict Ukraine's access to SpaceX network, sources say.'",
+          "NBC News": "Ukraine said it was still facing speed restrictions on Starshield with no explanation from the American side.",
+          "Al Jazeera English": "Notes Zelenskyy raised Starlink in talks with Rubio but did not confirm whether Rubio committed to restoring Starshield."
+        }
+      },
+      {
+        "topic": "State of US-Ukraine negotiations / productivity of talks",
+        "positions": {
+          "NBC News": "A US official called the Norway meetings 'very productive and constructive' with 'strong alignment at the working level among the United States, Ukraine, and Europe'; comprehensive peace framework and security guarantees discussed.",
+          "Al Jazeera English": "Frames talks against Trump 'continuing to publicly castigate Zelenskyy'; notes Trump's negotiators 'have had little success' is not stated here but emphasizes friction.",
+          "CBS News": "Emphasizes the terse exchange of accusations between Trump and Zelenskyy and prior unacknowledged 'energy ceasefire.'"
+        }
+      },
+      {
+        "topic": "Drone/strike counts",
+        "positions": {
+          "CBS News": "Russia's Defense Ministry said it intercepted more than 1,015 Ukrainian drones over 15 Russian regions; at least one killed and five wounded in St. Petersburg.",
+          "CNBC": "Headline-only: 'Ukraine launches more than 1,000 drones at Russia.'",
+          "Al Jazeera English": "At least three killed across Ukraine Tuesday; a drone struck the Kyiv-Odesa highway; 32,000+ families without power after DTEK facilities hit."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Headline-only in dossier. Leads on the human/defensive angle: Zelenskyy saying Ukraine got no early warning as Russia hits the power grid again. Frames the story around the withdrawn-warning grievance and infrastructure damage. No body text to assess further.",
+      "CBS News": "Two full articles. Article 2 leads on Trump's accusation that Zelenskyy doesn't want to end the war; Article 7 leads on Zelenskyy's grievance that there was 'no warning from partners' and the US delaying 'vital supplies.' CBS foregrounds the US-side denials (Rubio, Pentagon) alongside the accusations, and uniquely surfaces its own prior reporting that the US 'may have intentionally withheld' warnings and that Musk 'chose to restrict' access. Heavy use of civilian-casualty imagery (child killed, residential buildings). Also notes the unacknowledged 'energy ceasefire' that broke down within hours.",
+      "Al Jazeera English": "Leads on the Oslo diplomacy with Witkoff and European leaders, framing it as talks 'aimed at ending the war.' Emphasizes Trump 'publicly castigating' Zelenskyy and suggesting someone else negotiate. Gives prominent space to the diesel-sanctions 'reward' framing and links Trump's energy-price motive to the US-Israel war on Iran. Includes fresh battlefield tolls (three dead, Kyiv-Odesa highway, 32,000 families without power).",
+      "CNBC": "Headline-only in dossier. Frames the story around the military tit-for-tat: Ukraine launching 1,000+ drones at Russia amid the Trump-Zelenskyy 'spat.' Emphasizes the drone-warfare and diplomatic-friction angle. No body text to assess.",
+      "NPR": "Headline-only in dossier. Frames the story as a mutual exchange of strikes set against souring Trump-Zelenskyy relations \u2014 a symmetrical, relations-focused frame. No body text to assess.",
+      "NBC News": "Leads on the Oslo meeting and the US calling Ukraine's accusations of withdrawn support 'scandalous.' Gives the most detailed account of the diplomatic track, quoting an anonymous US official's upbeat assessment ('very productive and constructive,' 'strong alignment'). Notably includes Trump downplaying Russian attacks ('Russia, frankly, has been fine on Ukraine. They haven't been doing much') and his call for Zelenskyy to 'get somebody else to negotiate.' Reports Witkoff's planned meeting with Putin the next day. Balances Ukrainian grievances with Rubio's 45-minute-call denials and his interceptor-supply rationale."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (transcripts, press releases, roll-call votes, filings) were located for this story, so no document-versus-report comparison is possible. All claims rest on outlet reporting and on-record quotes reproduced within those articles."
+    ],
+    "missing_context": [
+      "No outlet in the dossier independently verified whether the intelligence/Starlink/interceptor slowdowns were deliberate policy or incidental; the claim and denial are presented side by side without resolution.",
+      "CBS references its own prior reporting that 'Musk chose to restrict Ukraine's access to SpaceX network, sources say,' but no dossier article reproduces that sourcing or reconciles it with Rubio's 'nobody ordered it' claim.",
+      "Only three of seven articles (two from CBS, one each from Al Jazeera and NBC) have substantial body text; AP, CNBC, and NPR are headline-only, so their framing is inferred from headlines alone and cannot be corroborated at body level.",
+      "CBS Articles 2 and 7 both note that 'The Associated Press contributed' \u2014 CBS and AP coverage are not fully independent, so apparent corroboration between CBS and the AP headline should be weighted as potentially shared sourcing.",
+      "No outlet provides the underlying text or date of any claimed US 'political decision' to slow support; Zelenskyy's assertion is characterized but not documented.",
+      "The scope and terms of the 'comprehensive peace framework' and 'long-term security guarantees' cited by NBC's anonymous US official are not detailed or independently confirmed.",
+      "No outlet quantifies the total scale of Russia's power-grid strikes (how much generating capacity is affected nationally), beyond the Odesa-region DTEK figure in Al Jazeera."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same cluster of events \u2014 the withheld-intelligence/Starlink dispute, the Trump-Zelenskyy rift, and the Oslo talks \u2014 with materially different emphasis (CBS and Al Jazeera foreground Ukraine's grievances and Trump's attacks, NBC foregrounds the US 'scandalous' denial and upbeat negotiation framing), and the key factual question of whether support was deliberately withheld remains contested and unresolved across the coverage. No primary source exists to adjudicate, making this a coverage-divergence story rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNYm9Fd0ZUSUJudF9abExqQ1dsTEFBbS1nLXRRai1VQk5GRDlXNnFQbHlXM1kzVU41YnRJT3Y5d256eGZzU1lQeFAwamJxQlJKUkFMNkt0RG9lb29SMTJMMEVJSVdreEF6QTdseWI0VzUzTG9oUWtoVEh4UmdTNE44X0tWckx6M2VtZzZNcWRwV0JKMzEy?oc=5",
+      "title": "Zelenskyy says Ukraine got no early warning from partners as Russia hits the power grid again - AP News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSmpzT0JqMHd6elRCQmR4Z1JKWWpycEc4UXI0dXJfQkN0NGlvOENSdjl3REZ6SndFSVRaNUo0cV9hX2hKNEN1bXFwbkdmUTlsUlQzUDgwLTFQUVdJWnRHTm5IMjZPSGw5M0xRTGtvZDA5VFhLeHRLWnVZSGZ0d2dxVklrTU8?oc=5",
+      "title": "Trump accuses Zelenskyy of not wanting to end the war sparked by Russia's full-scale invasion - CBS News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUkNKZjJ5cW9BYU5lSkdiZHVKUFI4WTVFcklmWDZ6QURlWEdNTndCQW1TeEVNdjdPdjZhWDBhcnUwakxBaGtPNXpIaGZrY2pTM2tDNWg1Wm55VnR6YnRoSzFmZ3RlVlExQVl6UXZWLXMwc0VRNzQ3R1FpQVNZbWt0cGdiWmpkR1o2TFo1V0hBa0thaV9WblRwY013MlZ0QmhJXzY0WklSN2hwRU9rTXo40gG0AUFVX3lxTFBmdWhDeUtpVkotOXBReU55Y3Rqb0ZVM3dpYjVleC13bVE2WnUwTGtHWFJRYm81SG5RTmRyRlBzUEZRSzVObnU4Um5yV2JQanMwckQ3LUZER25nei15YmtZTjdfaWlRNXMxNGRybkxacmNLSFZCRi1mVjhvTlVGdmF0SnhpVFdRb2ttTTdYdG1XMUJIbERHb3hVeTN3UlZVZjVVbmJFVXJGLXVaelBWRmF6R2pwMQ?oc=5",
+      "title": "Zelenskyy to hold talks on Russia-Ukraine war with Witkoff, Europeans - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE42ZEs0OWFMVW5tbmNxYzJxeWVmS0xkUUVOaWkyNEJ4Tkd0U1BzMF9MdHh3VjZJNGZnZzg5aDNJT05RV1VkcWFMZC1QLVMxQ2lrd1otZjd6RjEybjNiNEFGX1NTU1BlaDlNSTdEdXowZ2NmZkVYNzNZ0gF8QVVfeXFMUENMMW1oVnFaYjBOaFBUZkViTno0b2hmRHNpOENqSnZYVWljRnc0Y2diXzFnYTRpRDBqbE1SMkxKRDhZdmxzVGRnanFLclVobEt4UDB4Nl9WaTQ5dWEtbVEwbjkyQ0phTF9UaTJXZlp4YUduYjRlUWlobE9YUg?oc=5",
+      "title": "Ukraine launches more than 1,000 drones at Russia as spat between Trump and Zelenskyy continues - CNBC"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNYW1TRkpBakZMTkljdDBKbGxsVFRxVkVLRTNoV005YjYwYTJjX1QtZVhPNENYY1JSNGtIdFVDMWlLMGN4TXIxcmpJaFlpZk1MZ0txZWVJaS1rRUhXN0IzVjBnMGFYMXBrS1RxX1dRbjZjVG1jaFNJMEswQXYyX196X1R4VTA1RTdkNE83bDBXbE12SkYtOVNDc0dVbFR6Mm16Y2lBT3hKQkc0SkYyaGNRWExhd0NhNmIyT19IaDY0Y0MyNWZP?oc=5",
+      "title": "Ukraine and Russia exchange strikes, as relations between Trump and Zelenskyy sour - NPR"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcDR3alJyemVwck9oU194YVRqMFhRQ2lyY3hfUlpwV1U3R001ZjBYamo2MWFEeG1CM1prMEc1Yjc0djM2TlhqQkw2bnp2b3BLMEZjbXlXTXBoWXd5QzVJeFpZTU56NE1IUV9mUFJKUUZLQjlQOTNxc2FYQkp0SkhWQkt3UUphUi1nQUtUZlJKR25yQ01Cb3c2Sm9NLU11eEFGVEVRRzNoZklpT3kwNXVnSmFQSQ?oc=5",
+      "title": "Zelenskyy meets with Trump envoys as U.S. blasts \u2018scandalous\u2019 accusations about withdrawn support - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNUs1WnJWV01qWGFyRk5mTGJkUjd1aWUwY3BXWEZubnVFajF5TUFtNExyempsQTRGbXJieXlVMXlIbDdHMjFiQS04YmZSTElxcFk0WTh5c0U3MVRpUmh6MTJVRUVMa2NsaGN3NDN2YkpfaTV3Y3JKZ3N2WDVOdUUwVUg1SERpVjQwbVU1a1RGOHZKN2pDbHpHZnlR?oc=5",
+      "title": "Zelenskyy says Russia hit Ukraine again with no \"warning from partners,\" U.S. delaying \"vital supplies\" - CBS News"
+    }
+  ]
+}
