@@ -1,8 +1,34 @@
 {
-  "last_updated": "2026-10-21T01:04:23.060806+00:00",
+  "last_updated": "2026-10-22T01:02:16.930873+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2112970515912540202",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-21T18:13:23.175518+00:00",
+      "created_at": "2026-10-21T18:13:22+00:00",
+      "topic": "Putin agrees to resume three-way talks on Ukraine war with Kyiv and Washington, Kremlin says - AP News",
+      "dossier_id": "2026-10-21-putin-agrees-to-resume-7f3459b25f",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 5
+    },
+    {
+      "x_tweet_id": "2112739554977300522",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-21T02:55:37.813561+00:00",
+      "created_at": "2026-10-21T02:55:37+00:00",
+      "topic": "US has resumed sharing intelligence with Ukraine about Russian strikes, says Zelenskyy - The Guardian",
+      "dossier_id": "2026-10-20-us-has-resumed-sharing-212748a768",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 5
+    },
     {
       "x_tweet_id": "2112646947370909761",
       "post_type": "REPORT",
@@ -14,7 +40,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 21
+      "impressions": 23
     },
     {
       "x_tweet_id": "2112606526271807828",
@@ -27,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 15
+      "impressions": 16
     },
     {
       "x_tweet_id": "2112378521528017191",
@@ -105,7 +131,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 119
+      "impressions": 120
     },
     {
       "x_tweet_id": "2111647510066254186",
@@ -144,7 +170,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 47
+      "impressions": 48
     },
     {
       "x_tweet_id": "2111284846064451801",
@@ -457,55 +483,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 24
-    },
-    {
-      "x_tweet_id": "2107956663034499236",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-07T22:10:07.527331+00:00",
-      "created_at": "2026-10-07T22:10:07+00:00",
-      "topic": "Cornell students hold sit-in over alleged 2024 fraternity assault - NBC News",
-      "dossier_id": "2026-10-07-cornell-students-hold-sit-38c358682b",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 134
-    },
-    {
-      "x_tweet_id": "2107917233410498647",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-07T19:33:26.688101+00:00",
-      "created_at": "2026-10-07T19:33:26+00:00",
-      "topic": "Three years after Oct. 7, Israeli strikes in Gaza grind on and deaths climb - The Washington Post",
-      "dossier_id": "2026-10-07-three-years-after-oct-b70ba3d197",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 7
-    },
-    {
-      "x_tweet_id": "2107679211569774843",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-07T03:47:37.945651+00:00",
-      "created_at": "2026-10-07T03:47:37+00:00",
-      "topic": "France shuts down nearly 900 schools as violent education protests escalate - NBC News",
-      "dossier_id": "2026-10-06-france-shuts-down-nearly-15a42f58e2",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 4
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 34,
+      "count": 33,
       "likes": 0.24,
       "reposts": 0.03,
       "replies": 1.15,
       "quotes": 0.0,
-      "impressions": 38.09
+      "impressions": 35.24
     },
     "BULLETIN": {
       "count": 4,
@@ -513,15 +500,15 @@
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 30.0
+      "impressions": 30.5
     },
     "ALL": {
-      "count": 38,
-      "likes": 0.21,
+      "count": 37,
+      "likes": 0.22,
       "reposts": 0.03,
-      "replies": 1.13,
+      "replies": 1.14,
       "quotes": 0.0,
-      "impressions": 37.24
+      "impressions": 34.73
     }
   }
 }
