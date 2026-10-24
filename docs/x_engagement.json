@@ -1,8 +1,21 @@
 {
-  "last_updated": "2026-10-23T01:03:19.794662+00:00",
+  "last_updated": "2026-10-24T01:13:06.204801+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2113730934981763156",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-23T20:35:01.227230+00:00",
+      "created_at": "2026-10-23T20:35:00+00:00",
+      "topic": "Trump to lower Canada tariffs for certain agricultural goods, Collins says - Politico",
+      "dossier_id": "2026-10-23-trump-to-lower-canada-0856c28318",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 13
+    },
     {
       "x_tweet_id": "2113332171729510673",
       "post_type": "REPORT",
@@ -14,7 +27,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 0
+      "impressions": 2
     },
     {
       "x_tweet_id": "2113101581646459325",
@@ -27,7 +40,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 8
+      "impressions": 9
     },
     {
       "x_tweet_id": "2112970515912540202",
@@ -144,7 +157,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 55
+      "impressions": 56
     },
     {
       "x_tweet_id": "2111861527468798099",
@@ -170,7 +183,7 @@
       "reposts": 0,
       "replies": 2,
       "quotes": 0,
-      "impressions": 55
+      "impressions": 56
     },
     {
       "x_tweet_id": "2111542098767774117",
@@ -209,7 +222,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 12
+      "impressions": 14
     },
     {
       "x_tweet_id": "2111186240703959343",
@@ -444,71 +457,32 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 83
-    },
-    {
-      "x_tweet_id": "2108676983118864471",
-      "post_type": "BULLETIN",
-      "posted_at": "2026-10-09T21:52:25.213051+00:00",
-      "created_at": "2026-10-09T21:52:24+00:00",
-      "topic": "Trump says Russia to supply diesel to US and global market - Reuters",
-      "dossier_id": "2026-10-09-trump-says-russia-to-12707abef0",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 18
-    },
-    {
-      "x_tweet_id": "2108633250893570168",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-09T18:58:38.631980+00:00",
-      "created_at": "2026-10-09T18:58:38+00:00",
-      "topic": "Katie Zacharia will be the next White House press secretary - NBC News",
-      "dossier_id": "2026-10-09-katie-zacharia-will-be-1973a0be3e",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 5,
-      "quotes": 0,
-      "impressions": 30
-    },
-    {
-      "x_tweet_id": "2108409230491267253",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-09T04:08:27.951765+00:00",
-      "created_at": "2026-10-09T04:08:27+00:00",
-      "topic": "Fort Hood attacker's execution by firing squad will be livestreamed, Pentagon says - BBC",
-      "dossier_id": "2026-10-09-fort-hood-attacker-s-ad03b1bec4",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 12
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 33,
-      "likes": 0.21,
+      "count": 32,
+      "likes": 0.25,
       "reposts": 0.03,
-      "replies": 1.15,
+      "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 33.06
+      "impressions": 33.41
     },
     "BULLETIN": {
-      "count": 4,
+      "count": 3,
       "likes": 0.0,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 30.5
+      "impressions": 34.67
     },
     "ALL": {
-      "count": 37,
-      "likes": 0.19,
+      "count": 35,
+      "likes": 0.23,
       "reposts": 0.03,
-      "replies": 1.14,
+      "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 32.78
+      "impressions": 33.51
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "account": "mewscast",
-  "last_updated": "2026-10-23T01:03:20.280881+00:00",
+  "last_updated": "2026-10-24T01:13:06.628167+00:00",
   "since_id": "2112592521339547989",
   "items": [
     {
@@ -635,10 +635,10 @@
     }
   ],
   "last_run": {
-    "finished_at": "2026-10-23T01:03:20.280881+00:00",
+    "finished_at": "2026-10-24T01:13:06.628167+00:00",
     "request_counts": {
       "get_me": 1,
-      "get_quote_tweets": 7,
+      "get_quote_tweets": 5,
       "get_users_mentions": 1
     },
     "rate_limit_headers": [
@@ -647,7 +647,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1792718299",
+          "x-rate-limit-reset": "1792805285",
           "x-rate-limit-remaining": "73"
         }
       },
@@ -656,7 +656,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "450",
-          "x-rate-limit-reset": "1792718300",
+          "x-rate-limit-reset": "1792805286",
           "x-rate-limit-remaining": "449"
         }
       },
@@ -665,7 +665,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1792718300",
+          "x-rate-limit-reset": "1792805286",
           "x-rate-limit-remaining": "74"
         }
       },
@@ -674,7 +674,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1792718300",
+          "x-rate-limit-reset": "1792805286",
           "x-rate-limit-remaining": "73"
         }
       },
@@ -683,7 +683,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1792718300",
+          "x-rate-limit-reset": "1792805286",
           "x-rate-limit-remaining": "72"
         }
       },
@@ -692,7 +692,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1792718300",
+          "x-rate-limit-reset": "1792805286",
           "x-rate-limit-remaining": "71"
         }
       },
@@ -701,26 +701,8 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1792718300",
+          "x-rate-limit-reset": "1792805286",
           "x-rate-limit-remaining": "70"
-        }
-      },
-      {
-        "method": "session",
-        "error": false,
-        "headers": {
-          "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1792718300",
-          "x-rate-limit-remaining": "69"
-        }
-      },
-      {
-        "method": "session",
-        "error": false,
-        "headers": {
-          "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1792718300",
-          "x-rate-limit-remaining": "68"
         }
       }
     ],
