@@ -1,0 +1,97 @@
+{
+  "story_id": "2026-10-24-france-deploys-70-000-c55903539e",
+  "headline_seed": "France deploys 70,000 police to try to contain nationwide protests - Reuters",
+  "brief": {
+    "story_id": "2026-10-24-france-deploys-70-000-c55903539e",
+    "consensus_facts": [
+      "French authorities deployed up to 70,000 police officers nationwide, backed by helicopters, armored vehicles and water cannons, as announced by Interior Minister Laurent Nu\u00f1ez (CBS News, NBC News body text).",
+      "Police estimated turnout at the authorized Paris march at 110,000 people (CBS News, NBC News).",
+      "The Paris prosecutor's office said 64 people were arrested in connection with Saturday's demonstration and 40 placed in police custody, including six minors (CBS News, NBC News).",
+      "Most arrests concerned suspected weapons offenses or participation in a group preparing violence or property damage (CBS News, NBC News).",
+      "Police used tear gas in several cities including Lyon, Clermont-Ferrand and Strasbourg, and water cannons in Nice and Nantes (CBS News, NBC News).",
+      "In Marseille, officers fired tear gas during clashes with several dozen people near the march's endpoint (CBS News, NBC News).",
+      "The Paris march was confined to the city's southeastern edge (from Porte d'Italie, ending at Porte de Vincennes), away from the center (CBS News, NBC News).",
+      "The protests are driven by anger over the high cost of living, soaring energy prices and wages, and come in the final months of Macron's presidency before elections for his successor (CBS News, NBC News).",
+      "The demonstrations are unfolding on Saturday, October 24, 2026 (CBS News, NBC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Total number arrested nationwide",
+        "positions": {
+          "CBS News": "Reports Interior Minister Nu\u00f1ez said 135 people had been arrested nationwide, in addition to the Paris prosecutor's figure of 64 arrests tied to the Paris demonstration.",
+          "NBC News": "Does not cite the 135 nationwide figure; reports only the Paris prosecutor's figure of 64 arrests."
+        }
+      },
+      {
+        "topic": "Origin and character of the movement",
+        "positions": {
+          "CBS News": "Frames the day largely around security operations, banned demonstrations in Lyon, and a separate cross-party protest in Orleans against Marine Le Pen's National Rally congress; emphasizes 'Macron resign. Le Pen in prison' chants.",
+          "NBC News": "Frames the movement as having begun last month over staff shortages at one high school southeast of Paris, growing into a national movement over school funding, wages and pensions; does not foreground the Orleans anti-Le Pen protest."
+        }
+      },
+      {
+        "topic": "Orleans protest turnout",
+        "positions": {
+          "CBS News": "Police put the Orleans anti-National Rally crowd at 11,000 while organizers said 26,000 took part.",
+          "NBC News": "Does not mention the Orleans protest or its turnout figures."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Headline 'France deploys 70,000 police to try to contain nationwide protests' leads on the scale of the state security response ('contain') rather than on protester grievances. No body text retrievable.",
+      "NPR": "Headline-only. Headline 'France braces for another volatile weekend as massive police deployment greets protests' emphasizes anticipated volatility and the size of the police deployment; frames the weekend as a recurring confrontation. No body text retrievable.",
+      "Financial Times": "No usable content \u2014 body returned a 403 security-verification error page. Headline 'France deploys 70,000 officers to police latest protests' mirrors the wire framing on deployment scale. Nothing substantive to analyze.",
+      "Bloomberg": "No usable content \u2014 body returned an anti-bot verification wall. Headline 'France Deploys Extra Police as Thousands Join Fresh Protests' pairs the police surge with protest participation ('Thousands Join'), giving slightly more weight to turnout than the Reuters/FT framing.",
+      "CBS News": "Full body text. Leads on police action \u2014 tear gas, arrests, seized weapons (including a katana) \u2014 and heavily details the security posture city by city. Gives prominent space to the separate Orleans protest against Marine Le Pen's National Rally and includes color on disruptions to the NFL game, Art Basel, museums and a postponed PSG match. Foregrounds the government's restriction of protest locations and quotes a union rep calling it 'scandalous.'",
+      "NBC News": "Full body text (credited to The Associated Press). Frames the story as 'Mass protests challenge Macron,' leading on the 100,000+ Paris turnout and the political stakes for Macron in his final months. Emphasizes the movement's origin story (a single high school dispute), economic grievances (21.3% energy price rise, 3.1% inflation per INSEE), and gives space to individual protesters' hardship. Notes the National Rally accusing the government of failing to protect the public and urging votes. Page is cluttered with unrelated 'For Subscribers' links."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No government statements, prosecutor filings, or Interior Ministry press releases were available in the dossier to verify the deployment numbers, arrest figures, or seized-weapons inventory against original documents.",
+      "The 70,000-officer figure, the 64/110,000 Paris figures, and the 135 nationwide arrest figure are all attributed in-article to official sources (Nu\u00f1ez, the Paris prosecutor's office) but could not be checked against the underlying statements."
+    ],
+    "missing_context": [
+      "Only two of six outlets (CBS News and NBC News) provided retrievable full body text; both substantially draw on The Associated Press and AFP wire reporting, so apparent corroboration between them is partly a single-wire effect rather than two fully independent newsrooms.",
+      "Reuters, NPR, Financial Times and Bloomberg are headline-only or blocked (FT returned a 403 error page; Bloomberg returned an anti-bot wall), so the brief cannot assess their actual reporting beyond headline word choice.",
+      "No outlet in the dossier provides a nationwide injury count for either protesters or police, nor a nationwide total turnout figure across all cities.",
+      "No casualty or injury details are given for the earlier week's rioting that authorities say they were trying to prevent a repeat of.",
+      "The specific legal basis and scope of the protest bans (Lyon, Nice, Montpellier) and the last-minute relocation of the Paris march are described but not explained in terms of who ordered them or under what authority.",
+      "Macron's reported Friday promise to 'overhaul university admissions' is mentioned by NBC News only and is not independently detailed or verified.",
+      "No primary documents (Interior Ministry statement, prosecutor's release, INSEE data) were available to confirm the quoted statistics."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The same event was covered across six outlets, but only two (CBS News, NBC News) yielded full text and they diverge materially in framing \u2014 security crackdown versus political challenge to Macron \u2014 while the wire/international outlets are headline-only or paywalled; this is a coverage-comparison story rather than a clean multi-source REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMDZFRzVKWWJMOFp4eGNjbVdnZ1pCd3hVNTdMSWdiaU9uSGxZTi1zZW1DR3JvbjBfZTJIMnF3LVBMMXpWQjI0V1BfTWtFYUZkVWtXc0VmZEZyVWRHU3c3aHFwRm9fN0ZFMTRIaC16ZmhOeTFrRXBsdmpwWXVtRVVCd09ONkp3bFB5QWVRWjlBSmJqbHphYnBiLS0yaVZfRWpxdVAxSGRqYUI4YTBEX2pZeA?oc=5",
+      "title": "France deploys 70,000 police to try to contain nationwide protests - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPUV85dkstb0U2WDVqbGxQbnBUb3UwM2x5TEdwNFdwa2p2N2I4UDg1UHkxOHpmazh3QkN4VFNSMC1UVHlVQVpSOHNJNVB1WllscGtZd2tsc2dpVWRnbzZfTWZLczlxM0tIZlIxd0xuTjFGUU9WOWc4ZTY2LXJxRTB2Z3REX2ZCeE5sYzR6V21MRTFjeVJuYmJmNlhzc3paNnBVa1V0dUs3eklSckNVSWpuSERCMHpjMW5iS2pSQVNGaHVBODZYZHNVd2JVZTc?oc=5",
+      "title": "France braces for another volatile weekend as massive police deployment greets protests - NPR"
+    },
+    {
+      "outlet": "Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOckdiZGNaWVZSQU1nTFpTbUpnZWFDZnpHMXdBd19zeHdqNGxYV1U3MXc5TGZJTXozNkI4N01vclJVY1g3V21pNjhFb1R4UUtCa3huUEtBczRlNlBhUkZoMk1peGF3NHc2UFhZcGt2c1IzMzBjbzNfTUVZcUhjZWdRQUEtVmE?oc=5",
+      "title": "France deploys 70,000 officers to police latest protests - Financial Times"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbVFScDJ1SVVuME1jTXpQV21DNkVFSHJydi1ycHJQVEUzVS1GN0hEbUVVWlRaY25Zc2lsUXg1ci1NZDNWV3RDU0Njc194X0xXVkluZndYdWNnVTFkQVFjbmlDUF8wRU9UTEJDanJhREFNZDhRVk80dW5ndXhCazFMZm15a2FHNGJEZmRubmdKM1F4dGdSX0U2NlVidEdXSlphZzB0aGJGZ2w3UVBYSl85Ym5tQ2Q3dw?oc=5",
+      "title": "France Deploys Extra Police as Thousands Join Fresh Protests - Bloomberg.com"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVV9YUU0tU0VEVXBhV1QwVlRYQUc5YzZfQk9GaGZDZXJlc1JXRDd5WnozSFpoT1NkTmxGc0lxTGZRUGlSRGRucm5qUmQ3SFFGNXNyTlJzZS15Nl85YXBWTzE2cEZqa2dyd1FreUpDd29aSC16dmlDMTFqcEhIMXdMXw?oc=5",
+      "title": "French police fire tear gas, arrest dozens amid another weekend of protests - CBS News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNQnotT1RYWndhM3VHS0dIUUFjZ3NkOVp1VXNJNW1zWlV2MGxpcnBpRUFGSmhuamc2R0RDalhSWkJuQThOa3FCT2RIaFZFUy1ISEdlWUZ1Y1BGRFVGYmFXZmltS1Rla1FSX0x4aUVzb1BwSlhfRF91UFp1MDEzazVMY016MFpFWVp6UG1EakhVMGh0ajVyaUQyX3BlTi1HTnlGZ05hQkN5cDRkT2pZUTgyQVhHbk9tQlhMVGc?oc=5",
+      "title": "Paris shuts Louvre and other museums as police deploy in big numbers for new protests across France - NBC News"
+    }
+  ]
+}
