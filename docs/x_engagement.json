@@ -1,8 +1,21 @@
 {
-  "last_updated": "2026-10-24T01:13:06.204801+00:00",
+  "last_updated": "2026-10-25T00:37:09.780242+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2114037207300264002",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-24T16:52:02.265180+00:00",
+      "created_at": "2026-10-24T16:52:01+00:00",
+      "topic": "France deploys 70,000 police to try to contain nationwide protests - Reuters",
+      "dossier_id": "2026-10-24-france-deploys-70-000-c55903539e",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 796
+    },
     {
       "x_tweet_id": "2113730934981763156",
       "post_type": "REPORT",
@@ -209,7 +222,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 48
+      "impressions": 49
     },
     {
       "x_tweet_id": "2111284846064451801",
@@ -418,71 +431,32 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 22
-    },
-    {
-      "x_tweet_id": "2109021508215701518",
-      "post_type": "BULLETIN",
-      "posted_at": "2026-10-10T20:41:26.308443+00:00",
-      "created_at": "2026-10-10T20:41:25+00:00",
-      "topic": "Several wounded in Riyadh airport attack, operations suspended, Saudi aviation authority says - Reuters",
-      "dossier_id": "2026-10-10-several-wounded-in-riyadh-5a7d143a2e",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 40
-    },
-    {
-      "x_tweet_id": "2108980876360982787",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-10T17:59:59.039938+00:00",
-      "created_at": "2026-10-10T17:59:58+00:00",
-      "topic": "Nine people, including children, dead after mass shooting in Pennsylvania - The Guardian",
-      "dossier_id": "2026-10-10-nine-people-including-children-a6344324d3",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 220
-    },
-    {
-      "x_tweet_id": "2108767790698234023",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-10T03:53:15.351022+00:00",
-      "created_at": "2026-10-10T03:53:14+00:00",
-      "topic": "Panama rocked by 2 powerful earthquakes and multiple aftershocks, prompting evacuations - AP News",
-      "dossier_id": "2026-10-09-panama-rocked-by-2-8d64c263fe",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 83
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 32,
-      "likes": 0.25,
+      "count": 31,
+      "likes": 0.26,
       "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 33.41
+      "impressions": 50.39
     },
     "BULLETIN": {
-      "count": 3,
+      "count": 2,
       "likes": 0.0,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 34.67
+      "impressions": 32.5
     },
     "ALL": {
-      "count": 35,
-      "likes": 0.23,
+      "count": 33,
+      "likes": 0.24,
       "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 33.51
+      "impressions": 49.3
     }
   }
 }
