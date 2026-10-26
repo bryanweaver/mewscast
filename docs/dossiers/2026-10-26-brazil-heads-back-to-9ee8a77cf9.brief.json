@@ -1,0 +1,94 @@
+{
+  "story_id": "2026-10-26-brazil-heads-back-to-9ee8a77cf9",
+  "headline_seed": "Brazil heads back to the future as Flavio Bolsonaro refuses to recognize Lula win - Reuters",
+  "brief": {
+    "story_id": "2026-10-26-brazil-heads-back-to-9ee8a77cf9",
+    "consensus_facts": [
+      "All seven outlets' headlines/bodies agree that Luiz In\u00e1cio Lula da Silva won Brazil's 2026 presidential runoff against Fl\u00e1vio Bolsonaro; this is headline-level consensus across every outlet, with body-text corroboration from BBC News and CNBC.",
+      "Multiple outlets (Reuters, AP, CNBC headlines/body) report that Fl\u00e1vio Bolsonaro rejected or refused to recognize the election results.",
+      "BBC News and CNBC both identify Fl\u00e1vio Bolsonaro as the right-wing challenger and son of former president Jair Bolsonaro, and describe Lula as the incumbent left-wing president seeking re-election."
+    ],
+    "disagreements": [
+      {
+        "topic": "Primary driver of Lula's comeback",
+        "positions": {
+          "BBC News": "Credits a 'Lula's Army' WhatsApp channel (10.8M followers, led by Congressman Andr\u00e9 Janones) combined with grassroots street-level mobilization; cites political scientists cautioning that the electoral impact of online mobilization is impossible to measure.",
+          "CNBC": "Frames the win as an upset that prediction markets (Kalshi, Polymarket) failed to anticipate, noting Lula was a 21% underdog on Kalshi late Sunday despite polls showing a tight race."
+        }
+      },
+      {
+        "topic": "Vote margin",
+        "positions": {
+          "CNBC": "Reports Lula won 51.8% to 48.2% per Brazil's Superior Electoral Court.",
+          "BBC News": "Does not state a numeric margin in the body text.",
+          "Other outlets": "Headline-only; no margin stated."
+        }
+      },
+      {
+        "topic": "Bolsonaro's grievance about extended voting",
+        "positions": {
+          "CNBC": "Reports Brazil's Supreme Court extended voting for two hours late Sunday, which Bolsonaro argued hurt his chances.",
+          "Other outlets": "Do not mention the voting extension in available text."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two entries in the dossier, both headline-only. One frames the story as results-and-rejection ('Lula wins runoff vote but Bolsonaro rejects results'); the headline seed ('Brazil heads back to the future as Flavio Bolsonaro refuses to recognize Lula win') uses a more evocative, almost editorial 'back to the future' phrasing atypical of straight wire copy. No body text available to assess substance.",
+      "The New York Times": "Headline-only. Frames the result through an ideological/regional lens: 'in Blow to Latin America's Right,' emphasizing the geopolitical and partisan significance over mechanics of the vote. No body text available.",
+      "BBC News": "Full body text. Leads on the digital-campaign angle \u2014 the 'Lula's Army' WhatsApp operation and Andr\u00e9 Janones \u2014 crediting it with an 'unlikely comeback.' Notably balances the triumphalist framing by quoting two political scientists (Holzhacker, Goulart) who caution that online mobilization's vote impact is unmeasurable and stress street-level organizing. Mentions Bolsonaro was favored in polls going into the runoff. Does not report the vote margin or Bolsonaro's rejection of results in this piece.",
+      "CNBC": "Full body text. Frames the story around prediction markets being wrong (Kalshi, Polymarket had Bolsonaro at 80%+), with a markets/finance emphasis \u2014 leads into Brazilian stock and ETF declines (EWZ down 22%, Itau, Bradesco, Ambev, Petrobras). Reports the 51.8%\u201348.2% margin, the two-hour voting extension Bolsonaro contested, and that Bolsonaro is expected to challenge the outcome. Discloses its own commercial relationship with Kalshi, which is relevant to its framing of the prediction-market angle.",
+      "Associated Press": "Two entries, both headline-only. One frames the win geopolitically \u2014 'bucks a regional shift to the right and denies Trump a powerful ally.' The other is straightforward: 'Lula is declared winner... as Bolsonaro rejects results.' No body text available."
+    },
+    "primary_source_alignment": [
+      "No primary sources (e.g., Superior Electoral Court official tally, Bolsonaro's challenge filing) were located for this story. CNBC attributes the 51.8%\u201348.2% result to Brazil's Superior Electoral Court, but the underlying document was not in the dossier and could not be independently verified here."
+    ],
+    "missing_context": [
+      "Single-source limitation: only two of seven articles (BBC News and CNBC) have substantive body text. All vote figures (51.8%\u201348.2%), the prediction-market data, and the stock-market reaction come solely from CNBC and are not corroborated by a second full-text outlet in this dossier \u2014 they are single-source claims, not consensus.",
+      "The specific legal or procedural basis for Bolsonaro's rejection of the results is not detailed in any available body text; only CNBC notes he objected to a two-hour voting extension and is 'expected to challenge the outcome.'",
+      "No available body text explains what 'refuses to recognize' concretely entails (formal legal challenge, public statement, refusal to concede) \u2014 the Reuters and AP headlines assert it but provide no retrievable detail.",
+      "The AP and NYT geopolitical framing ('denies Trump a powerful ally,' 'blow to Latin America's Right') is asserted at headline level only; no body text in the dossier substantiates the regional or US-relations analysis.",
+      "CNBC discloses a commercial relationship and minority investment between CNBC and Kalshi; readers should weigh this when assessing CNBC's prominent prediction-market framing.",
+      "No outlet in the available text addresses turnout figures beyond BBC's general reference to reduced abstention, nor the composition of the incoming Congress referenced only in a BBC related-links line ('Lula faces hostile congress')."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Seven outlets covered the same event (Lula's win, Bolsonaro's rejection) with materially different framings \u2014 BBC on digital mobilization, CNBC on prediction markets and market selloff, NYT/AP on geopolitics \u2014 while five are headline-only and the hard numbers rest on a single source. The divergence in emphasis, not the base fact, is the story.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcE5yVlFsZU9uME1vdjIwV3dxeGQ4NXZWZ3dvQ1c2dE5hbVBWWDcwaFNaenZUSWlTTzgyMXJkQjJ0M1MwTFRPZmRHZkZwWjlhYm9NRHN2VXVTVE1KdmFHUlRfN0pXUjNXVEhKNHF5NktzZkhDeW82eW1QaTFIUVU1ZXZpandueUdsQ2JDSHkzSll3bzlobW14MHc2SFAzLXg0c3ZXRi04ZjU?oc=5",
+      "title": "Brazil election: Lula wins runoff vote but Bolsonaro rejects results - as it happened - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcFBVcE5FMzNLY0lmOHZSa3hMSEhZQlpZTzEwQUR1U1k0T1ppXzMyMVZrVHJjTlFWa1E4VU5aRi1VNVJnNE9RVnNuRWtmODN2Qy1xVzVZLVdlVWw0aGdhT1ltSFFuOGFMVjRGTVlCLUFJakVia09pN21mVElsQWpYQ2ltT2NsWGxtamdCcXFfaHdfWWN6YmxzLWhmcw?oc=5",
+      "title": "Lula Defeats Bolsonaro for Brazil Presidency, in Blow to Latin America\u2019s Right - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBaU2ZFeW5GcG5kNHpleXlzcGZqZ3pxcUVLQUVJSkg4RVFJQTBsZVNTeWlmMFB4UUVmZUxXT3NMY0NaX1psR1VlNFNsdlJaS1RjaUFaSUUzTXhWdTA?oc=5",
+      "title": "Brazil election: How 'Lula's Army' WhatsApp chat helped turn race around - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQTVXQ3dycll0QjVZX1o0OTRMeWNyeWxEQ0lnSU5nVWFDOW5qbkJibFM2S0pOLUtOU1I3cVdWS3lKNUJnX1pzbVdIVWI5OVZDVTNHcHNJQjctaUR0dDhwZDRkRnRPS3hvdl92YlFld2c0akEwY3R3QVdxTmpVRFV6S3ZB0gGHAUFVX3lxTE8yWXJicmNCaDNqWlBacU5ucUJ0VmJJbHRrd0RvZGtNUW11ZllQZmtJM04wY0Q1a2FfQVBhMkx4SU9yN0UzMVRaSkd2cmtoTEUyMHZmTFRjOWstNVloQm4yS2U2WFRqdldUeklFQnktQ0hGazhCY2l3YzR4Y01OZU5HS1ZYZ0NISQ?oc=5",
+      "title": "Lula wins Brazil runoff after prediction markets favored Bolsonaro - CNBC"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOLXdnZW1zQllMZHM0bV9NQXpGVW1VWEZUU3ozczVHNjZmTkZOVTRVakJrYXU5RkpId0otb2Z6T3pkTTlaUDV0YklHRTh6R1VEVnBGTG5wQlI2MXByQzhkMGVSX2w5ay1PZUtFVTV2aThFc0J5OXlMRzcwWjRTbW5laWpGcGVOMHJ4NWsyY1Q1X2E1ZVVpRDFpanpPbVNib0E3MVRqb3B3YUpGOHdDQWE0S3RwMWdZUQ?oc=5",
+      "title": "Lula\u2019s win in Brazil bucks a regional shift to the right and denies Trump a powerful ally - AP News"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcTcxYXBQdWxiZ1dwSGEteEw4Z2FtSFF1Nk5jUkdiUXRBMkxTeGhuekNtZFMtSFNTRnhMTG5XbzRNcm80U2ltMEpFNlhuOURXMkprOXYyVWFTWnZLd0NodzUyNGJZVE51N1BWSF9rU0FvUmJEZmJ2a0ktM3hYa1ptaGx1ekllZ2ZqbHZwdThDOXJneHZlTC1qa2VvRnNJX2luWGRROTItMW05ZUhZVVhOdEgzejhBSHktNXB3?oc=5",
+      "title": "Brazil heads back to the future as Flavio Bolsonaro refuses to recognize Lula win - Reuters"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSElINHZmYXlEYkdaa0FvWkZVOVU3Tm4yQmdjZ2tXMXJveURKTkt6TVJDN2lEc2ozZTM5M0F3cWZsamgwa2ZtVFRKajJuU1NXd21kVGdad2hBdnJwdlZLOXFrNjhTbFZIZE5QX2tzYUhrendRVTFuSHpjcU85NEotX29VdjJvd3hvZmlfaUlHSnl0Ym9IYjROMm5tblBjbXNTYzAxLTdRTjJqcDlQTU0yZUlB?oc=5",
+      "title": "Lula is declared winner of Brazil\u2019s election as Bolsonaro rejects results - AP News"
+    }
+  ]
+}
