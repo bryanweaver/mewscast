@@ -1,33 +1,30 @@
 # Mewscast Nightly Report
-_Generated: 2026-10-25T00:37:11.286008+00:00_
+_Generated: 2026-10-26T00:47:47.088044+00:00_
 
 ## Quick Stats
-- Posts (last 24h): **2** (X: 1, Bluesky: 1) across 1 unique stories
-- Engagement (24h, latest snapshots): **1 likes / 0 reposts / 1 replies / 0 impressions**
-- Follower delta (24h): X 2 | Bluesky 2
-- Follower delta (7d):  X 15 | Bluesky 10
-- Issues detected: **1** (high: 0, med: 0, low: 1)
+- Posts (last 24h): **0** (X: 0, Bluesky: 0) across 0 unique stories
+- Engagement (24h, latest snapshots): **0 likes / 0 reposts / 0 replies / 0 impressions**
+- Follower delta (24h): X 0 | Bluesky 3
+- Follower delta (7d):  X 15 | Bluesky 11
+- Issues detected: **1** (high: 1, med: 0, low: 0)
 - META posts (24h): **0**
 
 ## 1. Daily Performance Summary
-**Posts in last 24h:** 2 total — X: 1, Bluesky: 1 (1 unique stories)
-**Total engagement (latest snapshots):** 1 likes, 0 reposts, 1 replies, 0 impressions
+⚠️ **No posts in the last 24 hours.** Last post was at 2026-10-24T16:52:02.265180+00:00 (31.9h ago).
 
-**Top 3 performing posts:**
-1. [bluesky] eng=2 (L:1 R:0 Re:1 Impr:0) — [journalism/REPORT] Reuters: France deploys 70,000 police to try to contain nationwide protests - Reuters (2026-10-24T16:52:02.265180+00:00)
-2. [x] eng=0 (L:0 R:0 Re:0 Impr:0) — [journalism/REPORT] Reuters: France deploys 70,000 police to try to contain nationwide protests - Reuters (2026-10-24T16:52:02.265180+00:00)
-
-**Bottom 3 performing posts:**
-1. [x] eng=0 (L:0 R:0 Re:0 Impr:0) — [journalism/REPORT] Reuters: France deploys 70,000 police to try to contain nationwide protests - Reuters (2026-10-24T16:52:02.265180+00:00)
-2. [bluesky] eng=2 (L:1 R:0 Re:1 Impr:0) — [journalism/REPORT] Reuters: France deploys 70,000 police to try to contain nationwide protests - Reuters (2026-10-24T16:52:02.265180+00:00)
+**Last 5 posts (for context):**
+- [journalism/REPORT] Reuters: France deploys 70,000 police to try to contain nationwide protests - Reuters (2026-10-24T16:52:02.265180+00:00)
+- [journalism/REPORT] NBC News: Trump to lower Canada tariffs for certain agricultural goods, Collins says - ... (2026-10-23T20:35:01.227230+00:00)
+- [journalism/REPORT] Associated Press: 'This is despicable': Amy Acton responds to Ohio attack ad featuring her estr... (2026-10-22T18:10:28.646089+00:00)
+- [journalism/REPORT] Reuters: Vance says Republicans should ‘stop whining’ about Vivek Ramaswamy’s attack a... (2026-10-22T02:54:11.577072+00:00)
+- [journalism/REPORT] Reuters: Putin agrees to resume three-way talks on Ukraine war with Kyiv and Washingto... (2026-10-21T18:13:23.175518+00:00)
 
 **Follower counts:**
-- X: 73 followers, following 336 (24h delta: 2, 7d delta: 15)
-- Bluesky: 479 followers, following 1196 (24h delta: 2, 7d delta: 10)
-- Analytics last_updated: 2026-10-25T00:37:09.570077+00:00 (0.0h ago)
+- X: 73 followers, following 336 (24h delta: 0, 7d delta: 15)
+- Bluesky: 482 followers, following 1200 (24h delta: 3, 7d delta: 11)
+- Analytics last_updated: 2026-10-26T00:47:45.911755+00:00 (0.0h ago)
 
-**Zero-engagement posts older than 6h (in window):** 1
-- [x] [journalism/REPORT] Reuters: France deploys 70,000 police to try to contain nationwide protests - Reuters (2026-10-24T16:52:02.265180+00:00)
+**Zero-engagement posts older than 6h (in window):** 0
 
 ## 2. A/B Test: Legacy vs Journalism Pipeline (all time)
 **legacy** — 60 posts with analytics: avg likes=0.77, reposts=0.13, replies=1.88, impressions=31.13, total-engagement=2.78
@@ -40,7 +37,7 @@ _Generated: 2026-10-25T00:37:11.286008+00:00_
 
 **Rolling 7-day trend:**
 - legacy: 0 posts in last 7d
-- journalism: 15 posts — avg likes=1.47, reposts=0.20, replies=1.00, impressions=0.00, total-eng=2.67
+- journalism: 12 posts — avg likes=1.33, reposts=0.17, replies=1.00, impressions=0.00, total-eng=2.50
 
 _Note: post_pipeline populated on 589/589 posts. post_type populated on 529/589 posts (only journalism-pipeline posts carry post_type)._
 
@@ -48,5 +45,5 @@ _Note: post_pipeline populated on 589/589 posts. post_type populated on 529/589 
 _No META posts in the last 24 hours._
 
 ## 4. Bug & Improvement Detection
-**Low severity (1):**
-- [zero_engagement_6h] x post has 0 engagement after >6h (key=x:2114037207300264002) — [journalism/REPORT] Reuters: France deploys 70,000 police to try to contain nationwide protests - Reuters (2026-10-24T16:52:02.265180+00:00)
+**High severity (1):**
+- [bot_silence] No posts in last 24h. Last post was 2026-10-24T16:52:02.265180+00:00 (31.9h ago).
