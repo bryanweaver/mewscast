@@ -1,0 +1,116 @@
+{
+  "story_id": "2026-10-26-judge-says-doj-illegally-378a847085",
+  "headline_seed": "Judge says DOJ illegally fired the daughter of former FBI director Comey - NPR",
+  "brief": {
+    "story_id": "2026-10-26-judge-says-doj-illegally-378a847085",
+    "consensus_facts": [
+      "A federal judge ruled on Monday that the Justice Department's July 2025 firing of Maurene Comey, daughter of former FBI Director James Comey, was unlawful.",
+      "The judge is U.S. District Judge Jesse Furman, sitting in the Southern District of New York (Manhattan).",
+      "Furman ordered Maurene Comey be reinstated/retroactively reinstated with back pay from her July 16, 2025 termination through Dec. 20, 2025, when she accepted/began a new job.",
+      "The Justice Department said it disagrees with the decision and will appeal 'in due course.'",
+      "Comey's lawyers released a statement calling it a 'hard-earned victory' belonging 'to Ms. Comey, to all civil servants, and to all fighting for the rule of law.'",
+      "Comey's lawsuit (filed September 2025) argued she was fired because her father is James Comey and/or because of her perceived political affiliation and beliefs.",
+      "Maurene Comey worked on high-profile cases including the prosecutions of Jeffrey Epstein, Ghislaine Maxwell, and Sean 'Diddy' Combs.",
+      "The firing was directed by then-Attorney General Pam Bondi, according to a DOJ court filing.",
+      "Furman rejected the DOJ's argument that the attorney general could fire prosecutors at will, saying it conflicts with nearly two centuries of Supreme Court precedent.",
+      "The ruling found the firing violated the constitutional separation of powers and Comey's Fifth Amendment due process rights.",
+      "James Comey, whom Trump fired as FBI director in 2017, is currently under a federal indictment over an Instagram post of seashells arranged as '86 47,' alleged to threaten Trump, and a prior indictment against him was dismissed.",
+      "Furman noted Comey received excellent performance reviews and high accolades from supervisors and peers."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope of legal grounds for the ruling",
+        "positions": {
+          "CNBC": "Based ruling on statutory (Civil Service Reform Act) and Article II constitutional grounds; reserved judgment on First Amendment claim with a Nov. 9 deadline for arguments.",
+          "NBC News": "Cites separation of powers and Fifth Amendment due process and statutory rights.",
+          "Los Angeles Times": "Cites separation of powers, the Administrative Procedure Act, and Fifth Amendment due process/statutory rights; judge inclined to dismiss First Amendment claim as moot since she is in private practice.",
+          "BBC News": "States dismissal violated the Constitution and her right to a fair legal process; does not detail specific statutes."
+        }
+      },
+      {
+        "topic": "Status of the First Amendment claim",
+        "positions": {
+          "CNBC": "Furman reserved judgment and gave Comey until Nov. 9 to argue why it should not be dismissed as moot.",
+          "Los Angeles Times": "Furman reserved judgment but said he was inclined to dismiss it as largely moot because she is in private practice and no longer seeks actual reinstatement.",
+          "BBC News": "Not mentioned.",
+          "NBC News": "Not mentioned."
+        }
+      },
+      {
+        "topic": "Ratification by current AG",
+        "positions": {
+          "CNBC": "Specifically reports Furman rejected the argument that current AG Todd Blanche could ratify the firing after the fact, as he did in May as acting attorney general.",
+          "Others": "BBC, NBC, and LAT do not mention the ratification argument or Todd Blanche."
+        }
+      },
+      {
+        "topic": "Other cases Maurene Comey worked on",
+        "positions": {
+          "NBC News": "Adds the prosecution of former Sen. Bob Menendez, D-N.J., in addition to Epstein, Maxwell, and Combs.",
+          "BBC News / CNBC / Los Angeles Times": "List Epstein, Maxwell, and Combs but do not mention Menendez."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier (no retrievable body). Wire-neutral phrasing: 'firing of prosecutor Maurene Comey was unlawful, judge rules.' Leads on the legal outcome and identifies Comey by her role as prosecutor rather than lineage.",
+      "NPR": "Headline-only in the dossier (no retrievable body). Frames her primarily through family relationship: 'the daughter of former FBI director Comey,' and uses the plain-language 'illegally fired.'",
+      "BBC News": "Full body. Frames her through lineage ('James Comey's daughter') and emphasizes the father-daughter political dimension \u2014 her claim she was fired because of her father, a Trump critic. Leads with the reinstatement and back-pay order, then pivots substantially to James Comey's own legal troubles (the '86 47' indictment, the dismissed lying-to-Congress case), giving the father's saga significant real estate. Lighter on the statutory/constitutional mechanics than CNBC or LAT.",
+      "CNBC": "Full body and the most legally granular. Headline foregrounds 'Epstein prosecutor,' tying her to the highest-profile case. Leads with the KEY POINTS summary. Emphasizes the court's rejection of specific DOJ legal arguments \u2014 quotes Furman calling one argument 'borders on frivolous,' details the Civil Service Reform Act procedural failures, the Article II / 200-years-of-precedent point, and the Blanche ratification issue. Uniquely notes the DOJ 'admitted' the firing was not for cause, the reserved First Amendment claim with the Nov. 9 deadline, and Comey's 'fear is the tool of a tyrant' note to colleagues.",
+      "NBC News": "Full body (though padded with unrelated 'For Subscribers' promo links). Frames via lineage in headline ('daughter of ex-FBI director') and leads on the reinstatement order. Emphasizes the 'well-known and longstanding vendetta' language from her suit and that her boss only told her the firing 'came from Washington.' Uniquely adds the Bob Menendez prosecution and ties the ruling to Bondi's failure to follow the law.",
+      "The Washington Post": "Headline-only in the dossier (no retrievable body). Frames her through lineage ('daughter of former FBI director') and uses 'unlawfully fired.' No body to assess emphasis.",
+      "Los Angeles Times": "Full body, carrying an Associated Press byline (Sisak, Tucker, Durkin Richer, Neumeister). Broadest contextual framing: explicitly states the ruling's 'import stretches beyond her case,' tying it to the administration's 'sweeping purge of the federal workforce' and 'scores' of fired career employees. Notes Furman was an Obama nominee. Emphasizes the Trump-James Comey adversarial backstory and that the seashell indictment has been 'greeted with skepticism' by some legal experts. Most explicitly situates the ruling as a precedent-setting rebuke."
+    },
+    "primary_source_alignment": [
+      "No primary source (the Furman ruling or court docket) was located for this story. Direct quotes from the decision \u2014 'unsettle the very equilibrium established by this Nation's constitutional system,' 'borders on frivolous' \u2014 are reported secondhand via CNBC, NBC, and the Los Angeles Times and could not be verified against the underlying document.",
+      "Because no primary document is in the dossier, the specific legal grounds (which exact statutes and constitutional provisions the ruling rested on) cannot be independently confirmed; outlets' characterizations vary somewhat and should be read as reporters' summaries, not verbatim holdings."
+    ],
+    "missing_context": [
+      "No outlet in the dossier provides the dollar amount of back pay owed, nor Comey's salary as an AUSA.",
+      "No primary source document (the ruling, the complaint, or docket) was located, so all quotes from Furman's opinion are secondhand.",
+      "No outlet reports the DOJ/White House's substantive rebuttal beyond the boilerplate 'will appeal' statement; CNBC notes it requested White House comment but none is included.",
+      "Outlets note the appeal would follow a 'final judgment' (CNBC) but the dossier does not clarify the procedural timeline or when that final judgment is expected \u2014 reporting on next steps is thin by design and left unresolved.",
+      "The LAT is the only outlet connecting this ruling to the broader pattern of career-employee firings and related lawsuits; the other full-text outlets do not quantify or contextualize how many similar cases exist.",
+      "Reuters, NPR, and The Washington Post appear only as headlines in the dossier, so their body-level framing and any unique reporting could not be assessed."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets provided full body text reporting the same ruling but with materially different emphasis \u2014 CNBC foregrounds the legal mechanics, the Los Angeles Times frames it as a precedent against a broader workforce purge, and BBC/NBC lean on the father-daughter political backstory \u2014 making this a coverage-comparison story rather than a straight REPORT, while the absence of the actual ruling leaves a notable primary-source gap.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQcWZ2TUkxWGJOaXdWYTVwUkFCMFJTZlUwTW1GYUZ3LTBxNEtLcE91UGVaWkNJZ0JMTHRUYmRVc2ZObGZ0M1V5YVNWYkZ5UlJBSS16eHpLSTFyRjAxQmc1VFQ1UmhFT2RlNVo3UjFLd0dGRmZSZHFxTXlhTFVwbF9KUU13QmRuaktSZEFnbFgzUXltNGlVQWdXNlJlUDFmdHgtQmRneG5TcmNyUGhYS0pZOHRIalhCMmFMNUF3Z1pJazNnNFRNOWttYmVQOA?oc=5",
+      "title": "Trump administration's firing of prosecutor Maurene Comey was unlawful, judge rules - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbjRoMzctbTZaSWU1NlhlcHB3T2xxY2otclc3MHpZSUlRcHFnSGRyNi0tekR1WTdtT2dwOVI1Z0NiWi1oY1NFRG5lQVY1LWhoUDd0X21rc1ZXU25ObmFKZmJxb0drQXhYbmtQOFhoUzl4ZUI2TnlTRTJ1Vm43N1ZUTjJDbHJRSXc?oc=5",
+      "title": "Judge says DOJ illegally fired the daughter of former FBI director Comey - NPR"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Lb0NoWlVub0VHcF92OFRsZVI2SjVHUFNidzJRMGFRSkUySFdkUUtUOE5hN1VweS1lWGlnbmtnWDJXQmhoeWQxb0IzdzRGWE5UdDZHYkNqR1pzUmc?oc=5",
+      "title": "Trump administration illegally fired James Comey's daughter, judge rules - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5qWEs2R1ppM3BUd1B3OTJCeDRXQjFBdUp5UkJObzBhZnA3WnFsbUc1NFlLRHdEQjA0dUU1dWdoUExsUmJSeHkxNV9TRWtGb3dNRlpQbms2cHJWa3BmcEpFdkwxUl9mc1RHTU9EQkQ5cHloMmExSjY2UnNnZUjSAYIBQVVfeXFMTzcwVVUxOEpXMVRlbzhselB2STJnVk1xX1QzcnRMWmNTNFlxT3UwOHNoaG1WUDMyaHVfWktiZGxPU0M5N1VLLTNvSzVpcEwydE53Sl9PZ0hjbDFVaXZEYmhkSkJ3dHZpZ21WOVBQNFoxR0VJYzU1NUd5bzhEV0JVRmQ3QQ?oc=5",
+      "title": "Trump DOJ unlawfully fired Epstein prosecutor Maurene Comey, judge rules - CNBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYnhpOW5IOXdfZHlzbHRBQU5vMUhmMXVHZFJncGMzNTV2RWNmRTBnV09wSzFNMktvaVctQzBWZzZxRmF0am5WMG9TYzBDRkxpVFNzcVNORjhlTm1ablBHelNhZWRtd2ZhRWFia3NacEJVcTRJdWpVeTJLOUlHaUdLZDh5bUxYOVllMHVQcFpndG85NjRFZ1daX0ozSUJINEhoc2xJRkw2X2hWQQ?oc=5",
+      "title": "Judge orders DOJ to reinstate former federal prosecutor Maurene Comey, daughter of ex-FBI director - NBC News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTTMtckpXeHZoTDRfcTJ2YmJhbzZ3cmlKN05EZ3NHTm9TcW9KMnZjMEZGRlRab0YwcHp3S3RrWW00Qm5sS0VKNTM2VW1YRjJFcTJRZW5FQkFqRnIyZFZJMXpqbnlDNE9SYnpVdGpJUUp6ekt0ZnFsRFpVaTdoRjROZXR1cUh0am1wY3BIQ0ZZMzBkWG80clBQU1lYbEpYXzBXRGNSbkdMVWxBbC1hbjIyT3JWMHhVNFRGWlZTcnlNMk1HQ3VKOXJEbU1NRXgyNGFJTGc?oc=5",
+      "title": "DOJ unlawfully fired Maurene Comey, daughter of former FBI director, judge rules - The Washington Post"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTGF5a2VXbDlKbDNjLWN1ZkliYk5UdlZJcXJaWlVqbTJBencxWm9RaE1BNXU1VzMyU2JHYXJKRVF1TFRaUm9GVWM3RWktZzN1Z25pVUdNcVZaRVY4TWVDUEdIX1NCRVMtY05kXzUxN0xaOWdTWU1od0MxRXYyOFNBVndUdTdUU3NlV3lZMHFsTC1QcV9qRm9kUWNmOGdtQWtvRURHZGF0QjRZbksyZGNxSGQ0UG9uTlhRQ2NBWmU4NjF5dU1GQVZseGNGZTJoanVNX0czeDRORkxKRHl6dFV0UzR1TjhHX0E?oc=5",
+      "title": "Judge: Trump DOJ illegally fired ex-FBI director's daughter, Maurene Comey, as a federal prosecutor - Los Angeles Times"
+    }
+  ]
+}
