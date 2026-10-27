@@ -1,0 +1,115 @@
+{
+  "story_id": "2026-10-26-appeals-court-rules-against-8c4f6e4bec",
+  "headline_seed": "Appeals court rules against DOJ in California ballot fight - The Hill",
+  "brief": {
+    "story_id": "2026-10-26-appeals-court-rules-against-8c4f6e4bec",
+    "consensus_facts": [
+      "A three-judge panel of the 9th U.S. Circuit Court of Appeals ruled 2-1 against the Trump Justice Department's emergency request to force California to set aside roughly 20,000 mail-in ballots from people the administration claims are likely noncitizens.",
+      "The majority held the appeals court lacked jurisdiction at this stage because the district court had not yet been given adequate opportunity to rule, sending the case back to the U.S. District Court in California.",
+      "The panel consisted of Judge Mark Bennett (a Trump appointee) and Judge Gabriel Sanchez (a Biden appointee) in the majority, with Judge Patrick Bumatay (a Trump appointee) dissenting.",
+      "The majority wrote that 'The United States's claimed emergency, at least in part, is a self-constructed one,' attributing the delay in part to DOJ's own late filing.",
+      "The DOJ filed its lawsuit against California earlier this month (Oct. 15), after Acting Deputy AG Trent McCotter gave officials 48 hours to review a list of suspected noncitizen voters.",
+      "DOJ took the unusual step of appealing to the 9th Circuit before the district court ruled, and the panel held a rare emergency Sunday oral argument (held via videoconference/Zoom).",
+      "Bennett repeatedly questioned whether the appeals court had jurisdiction and raised constitutional concerns rooted in the Elections Clause, which gives states (and Congress) primary authority over how elections are run.",
+      "DOJ attorney Matthew Donnelly argued the way California administers its elections infringes on the federal government's ability to enforce the federal statute barring noncitizen voting.",
+      "A district court hearing on DOJ's request for a temporary restraining order was scheduled for Tuesday afternoon.",
+      "The lawsuit was filed less than three weeks before the Nov. 3 midterm elections, while California was already processing hundreds of thousands of mail ballots.",
+      "California officials said the DOJ's list of 20,000 alleged noncitizens was unreliable; Judge Sanchez pressed Donnelly on the reliability and sourcing of the list, and Donnelly said the data came from a purchased list of California voters analyzed by third parties."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of ballots already processed by Los Angeles County",
+        "positions": {
+          "CBS News": "Los Angeles County has already processed an estimated 550,000 mail ballots, according to court filings.",
+          "CNN": "Los Angeles County has already processed more than 300,000 midterm ballots (and 'more than 300,000 mail ballots had already been processed').",
+          "ABC News": "References mail-in ballots already being processed numbering 'in the hundreds of thousands' without a specific LA County figure."
+        }
+      },
+      {
+        "topic": "Characterization of the ruling's scope",
+        "positions": {
+          "CBS News": "Frames it as a 'dismissal' of DOJ's effort on jurisdictional grounds, noting Bennett would have rejected the merits too.",
+          "CNN": "Frames it as a rejection of an 'unprecedented' attempt, emphasizing both procedural ruling and skepticism on the merits.",
+          "ABC News": "Frames it as the court 'declining to step in' / 'punting it back to district court.'",
+          "NBC News": "Earlier-stage piece (Reuters wire) framing the panel as merely 'appearing skeptical' during Sunday argument, before any ruling."
+        }
+      },
+      {
+        "topic": "Whether and how many people were criminally charged from the list",
+        "positions": {
+          "ABC News (Article 6)": "Notes DOJ announced charges of 'roughly 28 individuals from the list accused of voting and immigration-related crimes.'",
+          "NBC News": "Cites a Reuters investigation finding just 129 cases nationally in which noncitizens were federally charged with voting illegally, many stemming from confusion or error.",
+          "CBS News / CNN / ABC (Article 4)": "Do not mention the 28 charged figure in their ruling coverage."
+        }
+      },
+      {
+        "topic": "Underlying motive attributed to DOJ",
+        "positions": {
+          "CNN (Article 7)": "States the action is one of many steps to 'try to help prove President Donald Trump's baseless claims of massive voter fraud,' and links it to a separate Alaska suit.",
+          "NBC News": "Says the lawsuit 'signals the willingness of Trump's administration to contest midterm results.'",
+          "CBS News / ABC News": "Report the dispute more descriptively, quoting Newsom and officials but not characterizing DOJ's claims as 'baseless' in their own voice."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only in this dossier ('Appeals Court Skeptical of DOJ Lawsuit Over California Ballots'). Frames the story around judicial skepticism rather than an outcome. No body text available to analyze.",
+      "CBS News": "Leads on the 'dismissal' as a jurisdictional ruling, then builds out procedural history in detail. Prominently features Gov. Newsom's charged quotes ('disgusting attacks on the Constitution,' 'assault on democracy') and Bumatay's dissent at length, giving space to both sides. Uniquely reports the 550,000 LA County ballot figure and the Oct. 15 county response letter detail.",
+      "CNN": "Most detailed on the merits and the reliability critique of the DOJ list. Leads on 'rejects... unprecedented attempt,' repeatedly characterizes the effort as 'escalating' federal insertion into state elections. In Article 7, states in CNN's own voice that the action aims to prove Trump's 'baseless claims of massive voter fraud' and links it to the Alaska suit \u2014 the most editorially assertive framing in the dossier. Heavy on Sanchez's cross-examination of Donnelly over third-party data sourcing.",
+      "ABC News": "Two articles: one covering Sunday's hearing (no ruling) and one covering Monday's ruling. Frames via the 'self-constructed emergency' quote and the jurisdiction question. Uniquely surfaces LA County's preliminary analysis of 200 names (nearly 40% indicating U.S. birth, 71.2% with no voting history) and the detail that DOJ sent letters to every California county. Also uniquely notes the 28 individuals charged. Balanced, quote-driven, procedural emphasis.",
+      "NBC News": "Republished Reuters wire, timestamped before the ruling, so it frames the panel as 'appearing skeptical' rather than reporting an outcome. Adds broader context no other outlet emphasizes: a Reuters investigation finding only 129 federal noncitizen-voting charges nationally and that ineligible voting is 'exceedingly rare.' Frames DOJ's effort as signaling willingness to 'contest midterm results.'"
+    },
+    "primary_source_alignment": [
+      "No primary source (the 9th Circuit opinion, DOJ complaint, or district court filings) was located for this story. The majority opinion's 'self-constructed emergency' language is quoted consistently across CBS News, CNN, and ABC News, suggesting accurate reproduction, but the full text could not be independently verified against coverage.",
+      "Bennett's and Sanchez's concurring opinions are described by CBS News and CNN; CNN quotes Sanchez's 'usher in electoral chaos' line and Bennett's preemption reasoning, but the underlying opinions were not available in the dossier for direct comparison.",
+      "Bumatay's dissent is quoted by CBS News ('does the federal government have the power to stop this potential attack... the answer must be yes'); no other full-text outlet quotes the dissent at comparable length."
+    ],
+    "missing_context": [
+      "No primary source document (the panel's written opinion, the DOJ complaint, or DHS declarations) was included in the dossier, so all quotes from the ruling rest on outlet reporting alone.",
+      "Outlets do not reconcile the conflicting LA County ballot-processing figures (CBS: 550,000; CNN: 300,000+), leaving unclear which figure the court relied on.",
+      "The methodology behind DOJ's 20,000-name list remains unexplained in coverage \u2014 Donnelly himself reportedly could not identify the third parties involved \u2014 and no outlet independently assessed the list's provenance beyond quoting the courtroom exchange.",
+      "Only ABC News mentions the 28 individuals DOJ says it charged from the list; the ruling-day coverage from CBS, CNN, and ABC Article 4 omits it, and no outlet reconciles that figure against LA County's finding that ~40% of a 200-name sample indicated U.S. birth.",
+      "The ultimate outcome of the Tuesday district court hearing is not reported (it had not yet occurred at the time of these articles); this coverage captures only the procedural posture.",
+      "The exact federal statute DOJ invokes as being frustrated by California's procedures is referenced only generally ('criminal statute,' 'federal statute barring voting by illegal immigrants') and never cited by name in any article."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five full-text outlets covered the same 2-1 ruling but with materially different framings \u2014 from CBS's procedural 'dismissal' to CNN's assertion of 'baseless' fraud claims to NBC's wire-driven rarity context \u2014 and they report conflicting ballot-count figures and uneven mention of the 28 charges. This is a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTDF3M0lVdW1NbkRpU3FLb2JEZGwwTHNwaWRwdmNBdmN3bGF2MDFILWp5NURybjFIdFJCZFRXY3l0X0hkWWd4X0VKLUw2bVhsdUVKYnRfR1otWGR2b2d3b213Rkh3NW5adzlxWUZPeVctZHE3UkxMN25SQ1E2OFl1N2JWUXdOeDZ5ZXhyNHVUdjFlS2ZxdERaclhrcWxXR3E1WXpmVGNaZw?oc=5",
+      "title": "Appeals Court Skeptical of DOJ Lawsuit Over California Ballots - Bloomberg Law News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOeWN1MmpKQlpFR3Rnd29YRHRydHMzSFRhN0RMQ1ZnMncwZXlMSml2UGJYRmplVmxVM0NsVFFkTzZfNUhWcnJwZEE3MkdxdUpoNmY1c1hwVUJpWW83ME1sb0h0R1lsUEtVWjdhaGFZUF9ESGU5aVE0ZlZJY2xHTUMtWHJmV3R6dTF4MUE?oc=5",
+      "title": "Appeals court dismisses DOJ's request to force California to set aside ballots - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOckk2RkdZc3dfdDdQeTVRQkJLNk4yUUwtaHgwRm9UeU1jc1BqczB5TTJEaVRITkdfWG1CUWtRVEZvRktrbDRFN2NsSEtsUmhYSHl2U040MGxRbWZDUy0tYlRvQ3otejl6Uy1yNjZnZlhlOE44dzVCYWVYZzZudmJXSE04cElST0tsX2RhRUtXM09xbmFCeFN3aWhRMA?oc=5",
+      "title": "Appeals court rejects Trump DOJ demand to set aside 20,000 California mail ballots - CNN"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQUHFSLTRaNEllN3Z5MFlTZEJHcHJCTEpma1h4VVdIbG5qVjFCSkUzMm9obkVMdVBwWGZnQWNTRFlLcllWTGhaSllDeGx1bWE1MWNmbG5fX1A4dUV2dS0zYk5IZFlfenNxal9TM2p0M3c2OFdnQ0ZLeEp2Wk1haENFbklJby1MNkFRdnNtZV9VS2pRWmlkRWZiQ1BaZTR4MThCQ2JvbkMzbWEzam9o0gGyAUFVX3lxTE42THhOcjJrQmZaR2JsWVBzZjFsRlAxMHVhNWtLVDdxVndtSVh0MlNyeXZLVUJmOXNsd3ZMYnExZG9uZU1EMy14bzcwVEoyc1NWNU50Q1lYZEtiemNxSGdBdkhrWGpOb2ZXSGlkd2Z3OU10ekRfbFJWSFItclVGT2NJOHA0Mi1fbUpZWnZLUm15eWZJcmJIeGhkMGhSLTg0d00tOXZOcVd1anMycVNka3RwNEE?oc=5",
+      "title": "Appeals court declines to step in on Trump administration's California voting case - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNLUtWclJCTVJSa0xjel83TTFSNVFxai1hQTlET0labDhZUnRzSWx0VUVsQlFIdFM5cVQ1QkVXUGJaeXFpdEtxY3hWS0VNajRGNHIyTkpESUpGcVF3UHV1OUlpQnNXb1lJZ2lVWGpKWmJHTzlmSjRxOExhelpQdXlHbC1pUGltSTcwWkJLQm0wWFFIMzVFNEkxZXFLVGlfRTZ0WW0zOXh2WDNSenU2T3V4NlJWZnRxUUdhTDlLOGZWLVpmQzFORVo0?oc=5",
+      "title": "U.S. appeals court appears skeptical of Trump DOJ\u2019s lawsuit over California voter rolls - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQYnl0NlZncllSN1RVcWdjWGllVEV2V3d4MXdENm1RaVpyM2ZEaFVXZHVRUERhWHZ0cHJqdWstY2VORmFsOEJHbWw0TEF5cmZORlpHSlNZWnltQlZ3TjctNDdSeGFwVDhiNngwX0lSZTlWQ3BreE8zOUgwNFdtMEZMMzBUM0dISlBGZzg3Z0dzZE9qX1NiaFl5QktUYUItdE1ycjdtMzFlV2dodEVyUEtKd280a9IBuAFBVV95cUxOSFdLdWRlYTBnWWVNaG9QaWc1R21sOG5neVAxVmtvQmh5ZVdraEdYOFN6aFJHZ3F1ckI2dWZ4QVZta2xGd2hkY2ktaF9leWc0el94NlZnRXdnb3kxR2hjOE90eV9HRm5FUlllNkR2dDBHbDBpdGFDS0NhSzNPenowUFIySUd3VFB0R19vTHpVVmFHdjlxMks1VzdTWTF3eUdpNDRJN3FKQUNpajJOdjNsSjRraHBXVXJ1?oc=5",
+      "title": "Federal appeals court hears arguments in Trump administration's voting lawsuit against California - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBVYTdTbS1TeF9Jc1dsM2hLWW1vTmVNQlZEX1NINEE5Z1Rndm5YY3FBaGVTVE9WbTBVRkFPeWNJVTlFRTJuR1pHQ285SEo3bVFVRURJMkRzaFM0NzVBTFpXY1NwMTExbVZzdUxSWTB0cXVSZkljV2FZQVVTcnA?oc=5",
+      "title": "Judges skeptical of Trump administration effort to force California to set aside mail ballots - CNN"
+    }
+  ]
+}
