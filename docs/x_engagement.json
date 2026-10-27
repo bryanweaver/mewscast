@@ -1,8 +1,34 @@
 {
-  "last_updated": "2026-10-26T00:47:46.122922+00:00",
+  "last_updated": "2026-10-27T01:39:42.211038+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2114836437958836360",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-26T21:47:53.597985+00:00",
+      "created_at": "2026-10-26T21:47:53+00:00",
+      "topic": "Judge says DOJ illegally fired the daughter of former FBI director Comey - NPR",
+      "dossier_id": "2026-10-26-judge-says-doj-illegally-378a847085",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 5
+    },
+    {
+      "x_tweet_id": "2114802462502609303",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-26T19:32:53.270328+00:00",
+      "created_at": "2026-10-26T19:32:52+00:00",
+      "topic": "Brazil heads back to the future as Flavio Bolsonaro refuses to recognize Lula win - Reuters",
+      "dossier_id": "2026-10-26-brazil-heads-back-to-9ee8a77cf9",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 6
+    },
     {
       "x_tweet_id": "2114037207300264002",
       "post_type": "REPORT",
@@ -14,7 +40,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 801
+      "impressions": 803
     },
     {
       "x_tweet_id": "2113730934981763156",
@@ -366,55 +392,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 6
-    },
-    {
-      "x_tweet_id": "2109792098493104466",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-12T23:43:29.371592+00:00",
-      "created_at": "2026-10-12T23:43:28+00:00",
-      "topic": "Trump's Russia deal leaves GOP candidates with a Putin problem - Axios",
-      "dossier_id": "2026-10-12-trump-s-russia-deal-4c0742bf82",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 8
-    },
-    {
-      "x_tweet_id": "2109764120937439665",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-12T21:52:19.084911+00:00",
-      "created_at": "2026-10-12T21:52:18+00:00",
-      "topic": "Judge tears into Trump administration for felling trees on D.C. golf course the president wants to remake - NBC News",
-      "dossier_id": "2026-10-12-judge-tears-into-trump-92dd4daf22",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 11
-    },
-    {
-      "x_tweet_id": "2109491631321649334",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-12T03:49:32.470896+00:00",
-      "created_at": "2026-10-12T03:49:32+00:00",
-      "topic": "Federal judge orders pro-Trump TV ads funded by taxpayers off air immediately - NBC News",
-      "dossier_id": "2026-10-12-federal-judge-orders-pro-2709f9be7e",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 11
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 29,
-      "likes": 0.28,
-      "reposts": 0.03,
-      "replies": 1.03,
+      "count": 28,
+      "likes": 0.25,
+      "reposts": 0.04,
+      "replies": 1.04,
       "quotes": 0.0,
-      "impressions": 51.93
+      "impressions": 53.18
     },
     "BULLETIN": {
       "count": 2,
@@ -425,12 +412,12 @@
       "impressions": 33.0
     },
     "ALL": {
-      "count": 31,
-      "likes": 0.26,
+      "count": 30,
+      "likes": 0.23,
       "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 50.71
+      "impressions": 51.83
     }
   }
 }
