@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-10-28-fed-holds-rates-steady-e541e6dfe7",
+  "headline_seed": "Fed holds rates steady despite concerns over inflation - CNBC",
+  "brief": {
+    "story_id": "2026-10-28-fed-holds-rates-steady-e541e6dfe7",
+    "consensus_facts": [
+      "The Federal Reserve held interest rates steady on Wednesday, October 28, 2026 (corroborated by CBS News, ABC News, and NBC News).",
+      "The federal funds rate target range stands at 3.75% to 4% (corroborated by CBS News and ABC News).",
+      "The Fed raised rates by a quarter percentage point in September, its first rate increase in three years (corroborated by CBS News, ABC News, and NBC News).",
+      "Kevin Warsh is the current Fed Chairman (corroborated by CBS News, ABC News, and NBC News).",
+      "September inflation came in at a 3.7% annual rate, above the Fed's 2% target (corroborated by CBS News, ABC News, and NBC News).",
+      "The rate decision comes less than a week before the midterm elections, with inflation/affordability a top voter concern (corroborated by CBS News, ABC News, and NBC News).",
+      "Analysts and markets widely expect a possible rate hike at the Fed's December meeting (corroborated by CBS News and ABC News).",
+      "Middle East/Iran unrest has kept energy prices elevated, contributing to inflation (corroborated by CBS News and ABC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Odds of a December rate hike",
+        "positions": {
+          "CBS News": "Reports markets pricing in an additional 0.75 percentage points of tightening over the next year (Pantheon Macroeconomics), and cites Oxford Economics saying hawkish dissents and statement wording suggest a December hike.",
+          "ABC News": "Pegs the odds of a quarter-point December hike at nearly 80% per CME Group's FedWatch Tool.",
+          "NBC News": "Does not quantify December odds; frames the Fed as having 'time to wait and see' and emphasizes officials' reluctance to rush."
+        }
+      },
+      {
+        "topic": "The dissent on the FOMC vote",
+        "positions": {
+          "CBS News": "Reports a 10-2 vote, with Governor Lisa Cook and Cleveland Fed President Beth Hammack dissenting in favor of a 0.25-point hike.",
+          "ABC News": "Does not report the vote breakdown or any dissents.",
+          "NBC News": "Published before the decision; does not report the vote (pre-decision preview)."
+        }
+      },
+      {
+        "topic": "Framing of the decision's wisdom/risk",
+        "positions": {
+          "ABC News": "Cites Bank of America memo: holding risks the Fed's inflation-fighting credibility, while hiking risks overtightening.",
+          "NBC News": "Cites Deutsche Bank calling the case for skipping an October hike 'not terribly compelling,' suggesting holding is risky given inflation's trajectory.",
+          "CBS News": "Frames holding steady as expected by Wall Street, with the main risk being higher consumer borrowing costs ahead into December."
+        }
+      },
+      {
+        "topic": "September jobs data",
+        "positions": {
+          "ABC News": "Reports a weak September jobs report: 29,000 jobs added versus 162,000 in August, below expectations.",
+          "CBS News": "Does not mention the jobs report; emphasizes solid economic growth and steady consumer spending.",
+          "NBC News": "Does not mention the September jobs figures."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two headline-only entries. One frames the story through gold markets ('Gold edges lower ahead of Fed rate decision, Warsh comments'), the other through monetary strategy ('Fed likely to go into wait-and-see mode on rates'). No retrievable body text, so framing inference is limited to headline word choice \u2014 neutral wire phrasing, markets-first and policy-posture angles.",
+      "Bloomberg": "Headline frames the hold around forward guidance ('Fed Holds Rates, Says More Data Will Help Next Decision'). Body text is a bot-detection/paywall interstitial with no retrievable content, so no framing analysis possible beyond the headline's emphasis on data-dependence.",
+      "CBS News": "Leads on the hold despite high inflation and foregrounds the consumer-money angle ('What does this mean for your money?'). Uniquely reports the 10-2 vote and names dissenters Cook and Hammack. Emphasizes the December hike expectation via economist quotes (Oxford Economics, Pantheon, LendingTree). Notes Trump's pressure to lower rates and the midterm timing but keeps it secondary to the economic and personal-finance story.",
+      "ABC News": "Leads with the midterm-election context in its headline ('as midterm elections loom') and gives substantial space to the political dimension \u2014 Trump's all-caps social media demand to lower rates, Fed independence, and whether a hike could look politically motivated. Uniquely surfaces the weak September jobs report (29,000 jobs) and the Fed's dual-mandate tension. Quantifies December hike odds at ~80% via CME FedWatch.",
+      "NBC News": "Published Oct. 27 (before the decision) as a preview framed around voter concerns ('as inflation tops midterm voters' concerns'). Heavily emphasizes the Fed's political-insulation tradition and officials' preference not to move before an election, quoting Bowman, Warsh, and Daly on having 'time to wait and see.' Balances this with the Deutsche Bank view that skipping October is hard to justify. Note: the page is cluttered with a large volume of unrelated 'For Subscribers' election links."
+    },
+    "primary_source_alignment": [
+      "No primary source (FOMC statement, roll-call vote record, or Warsh press conference transcript) was located for this story. CBS News quotes the FOMC statement language ('The accumulation of more information will help the Committee determine the policy stance...') and reports a 10-2 vote with named dissenters, but this cannot be independently verified against the underlying document within this dossier.",
+      "Because the actual FOMC statement and vote tally are absent, the dissent count (10-2), the dissenters' identities (Cook, Hammack), and the statement's exact wording rest on single-outlet (CBS News) reporting and should be treated as such until the primary document is obtained."
+    ],
+    "missing_context": [
+      "Of six dossier outlets, only three (CBS News, ABC News, NBC News) have substantial body text. Reuters appears twice as headline-only, and Bloomberg's body is a bot-detection/paywall placeholder \u2014 so 'consensus' here rests on three lean-left outlets, not the full slant matrix.",
+      "The slant matrix is lopsided for retrievable content: all three full-text outlets (CBS, ABC, NBC) are lean-left. No lean-right or center outlet body text is available, limiting framing comparison.",
+      "No primary source (FOMC statement, official roll-call vote, or Warsh press-conference transcript) was located, so the vote breakdown and statement language cannot be verified.",
+      "NBC News is a pre-decision preview (published Oct. 27), so its 'expected to hold' framing is forward-looking and should not be read as confirming the actual outcome.",
+      "None of the available outlets detail how Warsh's actual press conference remarks (scheduled per CBS) landed \u2014 the dossier was assembled around/just after the announcement.",
+      "The exact composition and reasoning of the FOMC majority (beyond the two dissenters CBS names) is not reported by any outlet.",
+      "No outlet provides the September core inflation and headline figures side-by-side except CBS (3.7% headline, 2.6% core); the other outlets cite only the 3.7% headline rate."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets reported the same Fed hold with materially different emphasis \u2014 CBS foregrounds the vote dissent and personal-finance impact, ABC leads on election politics and the weak jobs report, NBC frames it as deliberate Fed caution before the midterms \u2014 and no primary source was available to verify the vote, making a coverage-comparison the honest treatment rather than a straight REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRUczTDEtcklEQks1UTM3TlZhanpWZ19RUUVMTnkzQTFXWHpmeEF0YWVST0gzamNJNG5KVFJIcUZMOUxnZnBRMkhXYjBkaGdER1Vkc2hQWmplZmluYkQ4YWNsbkwwY0N5ZzFDQldCTDJucHRZY3lOVHdPWEt0RnJmQVprXzBoQnFEZHM3OS13cGNrRFp6MjBuMXJrVTRpcGs3UkpN?oc=5",
+      "title": "Gold edges lower ahead of Fed rate decision, Warsh comments - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPaU93czlpTHJXMTJGby0yOGppZGVlVkZzZW4tNC11WTcwVk1yQUZHTVMza0dTLURMRi0tTUtYTHhITkI2OVBWN2k0anZCN2liNnlyNFpaTmFTaWlFTHItWmtBXzh1VWhkRjZBNjVDejQxOGNUTW1HWWRBUzNjbGdKUDV0MlFSWXRsaWQwMXpWQXI?oc=5",
+      "title": "Fed likely to go into wait-and-see mode on rates - Reuters"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYTNINnF3d0YzSWhxXzBuRUxDc2RycVdyV1FFVGFMcFMtdUZxVmx4RGQ5NDdJRmpRdlhMRlN4d1NTV1BFYVFXekxSQUhjRjBKWlNxTzNrb04xTmx5THJ1OVBZem1HWldlb2EzaWFsbmVNYUIxVWtqano5ZFJZanllZVJTYWNuYXVqRzFxMjRRSjVqaXBvWFQ5cTJiSElpWldqbjA5bXl6eEM?oc=5",
+      "title": "Fed Holds Rates, Says More Data Will Help Next Decision - Bloomberg.com"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSk1RMm9QTGg5a0ZmU1d1OXRGZlFMZjJwZ0pHczhCR3ZHNjdNT0R6ZnhPRjJfMlY3SFB0RzFUcjJQMWQzM01TREpIRlNaaXRYVTVQRXI3S0tTVUJSWkZuMnRHY3JaeVB0cEQ1RmJUSnZZT2prSFk0Z0Z0eFNvREs4Ti1FcWtjNjZSUEJF?oc=5",
+      "title": "Federal Reserve holds interest rates steady even as inflation remains high - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPUEhoYVl4OGJtaXFLRU1idHB1dmlvYk1uNEtNNnlMVkFlZEN4N3hpNVB5cmNjWkFEajM2WUZ4bDJJN0pNYlpra21QSGI4cFFwLWllM0xxZlptYWRmdkRlbXAwRWVLcGRBd3J3MDFpUDBvUjVWMElMOGwtZlJMemRJQzczLXI1cWNFMnJKeEcwcGJhUjkzVjZfZ3puam1BQUZFMTRFZ1BIa9IBrAFBVV95cUxQeXRhLUNLYUFqaEtwY25VNnhEUzVzZmRMczBrdVo0SnJXdjdCZjhCbVpURUZJQ2M2MUwyVzlHblFrcTQ0UGhIYUVubHhUZHFVbldqNnJxOFprRG9FRmJIV3ZPaFJiSHZ2a1k0N2R4Q2swcFJ2cDNhZVVJdG0zbG9qaFdvd1l5MXcwbjFWZnBFelBZdFZBMk9pekEzOGFmaEVqVVNmTkx4dXU0eXha?oc=5",
+      "title": "Federal Reserve holds interest rates steady as midterm elections loom - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOWUYxNmVHWVV4bW1XQVlFRkxtQkk3NlJWNUgzRzZYWVJ2TGE1b3BwQ2Rad3RwY3VhalJVQlk4QUs1MGN0bFFQV0FJNjh1RHJNUTFQMm1HVWMyZDhFUl9pTndNZGloa0Q1b3dYbkk4TkhDZlYwYmlrUFpYOHYtZDdIUmwzbmlXQi1VbHM4YlRuLVJjMDVBWjZvVVRURQ?oc=5",
+      "title": "Fed expected to hold interest rates steady as inflation tops midterm voters\u2019 concerns - NBC News"
+    }
+  ]
+}
