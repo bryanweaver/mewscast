@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-10-27T01:39:42.211038+00:00",
+  "last_updated": "2026-10-28T01:51:17.742027+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2115193701496430842",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-27T21:27:31.881615+00:00",
+      "created_at": "2026-10-27T21:27:31+00:00",
+      "topic": "Alexander brothers, ex-luxury real estate brokers, to be sentenced on federal sex trafficking charges - NBC News",
+      "dossier_id": "2026-10-27-alexander-brothers-ex-luxury-5948db8cd7",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 76
+    },
+    {
+      "x_tweet_id": "2115155243562336355",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-27T18:54:42.799167+00:00",
+      "created_at": "2026-10-27T18:54:42+00:00",
+      "topic": "Israel Election Live Updates: Record Voter Turnout as Netanyahu Faces Challenge Led by Eisenkot - The New York Times",
+      "dossier_id": "2026-10-27-israel-election-live-updates-0863038469",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 56
+    },
+    {
+      "x_tweet_id": "2114919811427811577",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-27T03:19:11.382725+00:00",
+      "created_at": "2026-10-27T03:19:11+00:00",
+      "topic": "Appeals court rules against DOJ in California ballot fight - The Hill",
+      "dossier_id": "2026-10-26-appeals-court-rules-against-8c4f6e4bec",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 5
+    },
     {
       "x_tweet_id": "2114836437958836360",
       "post_type": "REPORT",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 6
+      "impressions": 9
     },
     {
       "x_tweet_id": "2114037207300264002",
@@ -79,7 +118,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 9
+      "impressions": 11
     },
     {
       "x_tweet_id": "2112970515912540202",
@@ -92,7 +131,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 5
+      "impressions": 7
     },
     {
       "x_tweet_id": "2112739554977300522",
@@ -353,55 +392,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 30
-    },
-    {
-      "x_tweet_id": "2110127791987446008",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-13T21:57:24.989143+00:00",
-      "created_at": "2026-10-13T21:57:24+00:00",
-      "topic": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home - NPR",
-      "dossier_id": "2026-10-13-government-spent-millions-on-3da7ffaf61",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 12
-    },
-    {
-      "x_tweet_id": "2110098190183563460",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-13T19:59:47.303350+00:00",
-      "created_at": "2026-10-13T19:59:46+00:00",
-      "topic": "Trump fires ambassador to Greece Guilfoyle after reports of misconduct - Reuters",
-      "dossier_id": "2026-10-13-trump-fires-ambassador-to-59c8919d59",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 11
-    },
-    {
-      "x_tweet_id": "2109873094953242682",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-13T05:05:20.196016+00:00",
-      "created_at": "2026-10-13T05:05:20+00:00",
-      "topic": "Agents search Rep. Omar's Washington home in criminal probe as she vows she won't 'be silenced' - AP News",
-      "dossier_id": "2026-10-13-agents-search-rep-omar-3c3fb9c7e4",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 6
     }
   ],
   "averages": {
     "REPORT": {
       "count": 28,
-      "likes": 0.25,
+      "likes": 0.32,
       "reposts": 0.04,
       "replies": 1.04,
       "quotes": 0.0,
-      "impressions": 53.18
+      "impressions": 57.29
     },
     "BULLETIN": {
       "count": 2,
@@ -413,11 +413,11 @@
     },
     "ALL": {
       "count": 30,
-      "likes": 0.23,
+      "likes": 0.3,
       "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 51.83
+      "impressions": 55.67
     }
   }
 }
