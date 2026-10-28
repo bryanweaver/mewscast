@@ -26,14 +26,108 @@ CUTOFF_7D = NOW - timedelta(days=7)
 SIX_HOURS_AGO = NOW - timedelta(hours=6)
 
 def latest_snapshot_total(snapshots):
+    """Return likes, reposts, replies, impressions from the newest snapshot.
+
+    Impressions is None when the snapshot has no impressions field. Bluesky
+    snapshots never include one, and a missing field is not a count of zero.
+    A stored 0 stays 0.
+    """
     if not snapshots:
-        return 0, 0, 0, 0
+        return 0, 0, 0, None
     s = snapshots[-1]
     likes = int(s.get("likes", 0) or 0)
     reposts = int(s.get("reposts", s.get("retweets", 0)) or 0)
     replies = int(s.get("replies", 0) or 0)
-    impressions = int(s.get("impressions", 0) or 0)
+    if "impressions" not in s or s.get("impressions") is None:
+        impressions = None
+    else:
+        impressions = int(s.get("impressions") or 0)
     return likes, reposts, replies, impressions
+
+
+def load_x_engagement_index():
+    """Map x_tweet_id -> public_metrics row from docs/x_engagement.json.
+
+    Missing or unreadable file returns {}. The daily analytics job writes
+    that file because per-post X snapshots are no longer stored on
+    analytics_history (see track_analytics.fetch_x_metrics).
+    """
+    path = os.path.join(ROOT, "docs", "x_engagement.json")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            doc = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return {}
+    posts = doc.get("posts") if isinstance(doc, dict) else None
+    if not isinstance(posts, list):
+        return {}
+    index = {}
+    for row in posts:
+        if isinstance(row, dict) and row.get("x_tweet_id"):
+            index[str(row["x_tweet_id"])] = row
+    return index
+
+
+def counts_from_x_engagement(row):
+    """likes, reposts, replies, impressions from an x_engagement.json row."""
+    if not isinstance(row, dict):
+        return 0, 0, 0, None
+    raw = row.get("impressions")
+    impressions = None if raw is None else int(raw)
+    return (
+        int(row.get("likes") or 0),
+        int(row.get("reposts") or 0),
+        int(row.get("replies") or 0),
+        impressions,
+    )
+
+
+def resolve_platform_counts(analytics_posts, x_engagement, key, platform, tweet_id):
+    """Counts for one platform.
+
+    Prefer an analytics_history snapshot. For X, fall back to the engagement
+    file when that snapshot was never written. Otherwise likes/reposts/replies
+    are 0 and impressions is None (not measured).
+    """
+    entry = (analytics_posts or {}).get(key)
+    if entry and entry.get("snapshots"):
+        return latest_snapshot_total(entry.get("snapshots", []))
+    if platform == "x" and tweet_id is not None:
+        row = (x_engagement or {}).get(str(tweet_id))
+        if row:
+            return counts_from_x_engagement(row)
+    return 0, 0, 0, None
+
+
+def add_impressions(total, value):
+    """Add a measured impression count. None does not become zero."""
+    if value is None:
+        return total
+    return (0 if total is None else total) + value
+
+
+def fmt_impressions(value):
+    if value is None:
+        return "not measured"
+    return str(value)
+
+
+def avg(items, k):
+    if not items:
+        return 0.0
+    if k == "impressions":
+        vals = [x[k] for x in items if x.get(k) is not None]
+        if not vals:
+            return None
+        return sum(vals) / len(vals)
+    return sum(x[k] for x in items) / len(items)
+
+
+def fmt_avg(items, k):
+    value = avg(items, k)
+    if value is None:
+        return "n/a"
+    return f"{value:.2f}"
 
 def fmt_post_ref(pdoc):
     pipe = pdoc.get("post_pipeline") or "legacy"
@@ -64,19 +158,29 @@ def main():
     bsky_count_24h = sum(1 for p in recent_posts if p.get("bluesky_uri"))
     total_platform_posts = x_count_24h + bsky_count_24h
 
-    # Engagement totals from latest snapshots for recent posts
-    agg_likes = agg_reposts = agg_replies = agg_impr = 0
+    # Engagement totals from latest snapshots for recent posts.
+    # X per-post metrics live in docs/x_engagement.json once analytics_history
+    # stopped recording them. A missing impressions field is left unmeasured.
+    x_engagement = load_x_engagement_index()
+    agg_likes = agg_reposts = agg_replies = 0
+    agg_impr = None
+    impr_unmeasured = 0
     per_post_engagement = []
     zero_engagement_flagged = []
 
     def record_entry(pdoc, key, platform, ts):
-        nonlocal agg_likes, agg_reposts, agg_replies, agg_impr
-        entry = apost.get(key)
-        if entry:
-            l, rp, rep, impr = latest_snapshot_total(entry.get("snapshots", []))
+        nonlocal agg_likes, agg_reposts, agg_replies, agg_impr, impr_unmeasured
+        tweet_id = pdoc.get("x_tweet_id") if platform == "x" else None
+        l, rp, rep, impr = resolve_platform_counts(
+            apost, x_engagement, key, platform, tweet_id,
+        )
+        agg_likes += l
+        agg_reposts += rp
+        agg_replies += rep
+        if impr is None:
+            impr_unmeasured += 1
         else:
-            l = rp = rep = impr = 0
-        agg_likes += l; agg_reposts += rp; agg_replies += rep; agg_impr += impr
+            agg_impr = add_impressions(agg_impr, impr)
         per_post_engagement.append((l+rp+rep, l, rp, rep, impr, platform, pdoc, key))
         if (l + rp + rep) == 0 and ts and ts <= SIX_HOURS_AGO:
             zero_engagement_flagged.append((platform, pdoc, key))
@@ -121,14 +225,28 @@ def main():
     for p in posts:
         pipe = p.get("post_pipeline") or "legacy"
         ptype = p.get("post_type")
-        l = rp = rep = impr = 0
+        l = rp = rep = 0
+        impr = None
         any_found = False
-        for key in ([f"x:{p['x_tweet_id']}"] if p.get("x_tweet_id") else []) + ([p["bluesky_uri"]] if p.get("bluesky_uri") else []):
-            e = apost.get(key)
-            if e:
-                any_found = True
-                ll, rr, pr, ii = latest_snapshot_total(e.get("snapshots", []))
-                l += ll; rp += rr; rep += pr; impr += ii
+        platform_keys = []
+        if p.get("x_tweet_id"):
+            platform_keys.append((f"x:{p['x_tweet_id']}", "x", p.get("x_tweet_id")))
+        if p.get("bluesky_uri"):
+            platform_keys.append((p["bluesky_uri"], "bluesky", None))
+        for key, platform, tweet_id in platform_keys:
+            entry = apost.get(key)
+            has_snapshot = bool(entry and entry.get("snapshots"))
+            has_x_row = platform == "x" and str(tweet_id) in x_engagement
+            if not has_snapshot and not has_x_row:
+                continue
+            any_found = True
+            ll, rr, pr, ii = resolve_platform_counts(
+                apost, x_engagement, key, platform, tweet_id,
+            )
+            l += ll
+            rp += rr
+            rep += pr
+            impr = add_impressions(impr, ii)
         if not any_found:
             continue
         rec = {"likes": l, "reposts": rp, "replies": rep, "impressions": impr, "engagement": l+rp+rep, "ts": p.get("timestamp"), "post": p}
@@ -136,10 +254,6 @@ def main():
             pipeline_stats[pipe].append(rec)
         if pipe == "journalism" and ptype:
             journalism_by_type[ptype].append(rec)
-
-    def avg(items, k):
-        if not items: return 0.0
-        return sum(x[k] for x in items) / len(items)
 
     rolling7 = {"legacy": [], "journalism": []}
     for pipe, items in pipeline_stats.items():
@@ -227,7 +341,9 @@ def main():
 
     P("## Quick Stats")
     P(f"- Posts (last 24h): **{total_platform_posts}** (X: {x_count_24h}, Bluesky: {bsky_count_24h}) across {len(recent_posts)} unique stories")
-    P(f"- Engagement (24h, latest snapshots): **{agg_likes} likes / {agg_reposts} reposts / {agg_replies} replies / {agg_impr} impressions**")
+    P(f"- Engagement (24h, latest snapshots): **{agg_likes} likes / {agg_reposts} reposts / {agg_replies} replies / {fmt_impressions(agg_impr)} impressions**")
+    if impr_unmeasured:
+        P(f"- Impressions not measured on {impr_unmeasured} platform post(s): a missing impressions field is not counted as zero. Bluesky snapshots do not include one. X counts come from analytics_history when that snapshot exists, otherwise from docs/x_engagement.json.")
     P(f"- Follower delta (24h): X {x_delta_24h if x_delta_24h is not None else 'n/a'} | Bluesky {bsky_delta_24h if bsky_delta_24h is not None else 'n/a'}")
     P(f"- Follower delta (7d):  X {x_delta_7d if x_delta_7d is not None else 'n/a'} | Bluesky {bsky_delta_7d if bsky_delta_7d is not None else 'n/a'}")
     P(f"- Issues detected: **{len(unique_bugs)}** (high: {sum(1 for b in unique_bugs if b['severity']=='high')}, med: {sum(1 for b in unique_bugs if b['severity']=='med')}, low: {sum(1 for b in unique_bugs if b['severity']=='low')})")
@@ -248,16 +364,16 @@ def main():
         P("")
     else:
         P(f"**Posts in last 24h:** {total_platform_posts} total — X: {x_count_24h}, Bluesky: {bsky_count_24h} ({len(recent_posts)} unique stories)")
-        P(f"**Total engagement (latest snapshots):** {agg_likes} likes, {agg_reposts} reposts, {agg_replies} replies, {agg_impr} impressions")
+        P(f"**Total engagement (latest snapshots):** {agg_likes} likes, {agg_reposts} reposts, {agg_replies} replies, {fmt_impressions(agg_impr)} impressions")
         P("")
         ranked = sorted(per_post_engagement, key=lambda x: x[0], reverse=True)
         P("**Top 3 performing posts:**")
         for i, (e, l, rp, rep, impr, plat, pdoc, key) in enumerate(ranked[:3], 1):
-            P(f"{i}. [{plat}] eng={e} (L:{l} R:{rp} Re:{rep} Impr:{impr}) — {fmt_post_ref(pdoc)}")
+            P(f"{i}. [{plat}] eng={e} (L:{l} R:{rp} Re:{rep} Impr:{fmt_impressions(impr)}) — {fmt_post_ref(pdoc)}")
         P("")
         P("**Bottom 3 performing posts:**")
         for i, (e, l, rp, rep, impr, plat, pdoc, key) in enumerate(ranked[-3:][::-1], 1):
-            P(f"{i}. [{plat}] eng={e} (L:{l} R:{rp} Re:{rep} Impr:{impr}) — {fmt_post_ref(pdoc)}")
+            P(f"{i}. [{plat}] eng={e} (L:{l} R:{rp} Re:{rep} Impr:{fmt_impressions(impr)}) — {fmt_post_ref(pdoc)}")
         P("")
 
     P("**Follower counts:**")
@@ -281,16 +397,16 @@ def main():
         if n == 0:
             P(f"**{pipe}:** no posts with analytics data"); continue
         P(f"**{pipe}** — {n} posts with analytics: "
-          f"avg likes={avg(items,'likes'):.2f}, reposts={avg(items,'reposts'):.2f}, "
-          f"replies={avg(items,'replies'):.2f}, impressions={avg(items,'impressions'):.2f}, "
-          f"total-engagement={avg(items,'engagement'):.2f}")
+          f"avg likes={fmt_avg(items,'likes')}, reposts={fmt_avg(items,'reposts')}, "
+          f"replies={fmt_avg(items,'replies')}, impressions={fmt_avg(items,'impressions')}, "
+          f"total-engagement={fmt_avg(items,'engagement')}")
     P("")
     if journalism_by_type:
         P("**Journalism pipeline breakdown by post_type:**")
         for t, items in sorted(journalism_by_type.items()):
             n = len(items)
-            P(f"- {t} ({n} posts): avg likes={avg(items,'likes'):.2f}, reposts={avg(items,'reposts'):.2f}, "
-              f"replies={avg(items,'replies'):.2f}, impressions={avg(items,'impressions'):.2f}, total-eng={avg(items,'engagement'):.2f}")
+            P(f"- {t} ({n} posts): avg likes={fmt_avg(items,'likes')}, reposts={fmt_avg(items,'reposts')}, "
+              f"replies={fmt_avg(items,'replies')}, impressions={fmt_avg(items,'impressions')}, total-eng={fmt_avg(items,'engagement')}")
     else:
         P("_No journalism-pipeline posts with post_type found._")
     P("")
@@ -301,8 +417,8 @@ def main():
         if n == 0:
             P(f"- {pipe}: 0 posts in last 7d")
         else:
-            P(f"- {pipe}: {n} posts — avg likes={avg(items,'likes'):.2f}, reposts={avg(items,'reposts'):.2f}, "
-              f"replies={avg(items,'replies'):.2f}, impressions={avg(items,'impressions'):.2f}, total-eng={avg(items,'engagement'):.2f}")
+            P(f"- {pipe}: {n} posts — avg likes={fmt_avg(items,'likes')}, reposts={fmt_avg(items,'reposts')}, "
+              f"replies={fmt_avg(items,'replies')}, impressions={fmt_avg(items,'impressions')}, total-eng={fmt_avg(items,'engagement')}")
     P("")
     populated_pipe = sum(1 for p in posts if p.get("post_pipeline"))
     populated_type = sum(1 for p in posts if p.get("post_type"))
