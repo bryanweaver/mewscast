@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-10-28T01:51:17.742027+00:00",
+  "last_updated": "2026-10-29T01:58:47.691562+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2115561957805719677",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-28T21:50:51.116985+00:00",
+      "created_at": "2026-10-28T21:50:50+00:00",
+      "topic": "Spain train crash kills at least 68 as witnesses describe devastating scenes - CNN",
+      "dossier_id": "2026-10-28-spain-train-crash-kills-d3141d411c",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 182
+    },
+    {
+      "x_tweet_id": "2115519589563994285",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-28T19:02:29.694022+00:00",
+      "created_at": "2026-10-28T19:02:29+00:00",
+      "topic": "Fed holds rates steady despite concerns over inflation - CNBC",
+      "dossier_id": "2026-10-28-fed-holds-rates-steady-e541e6dfe7",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 27
+    },
+    {
+      "x_tweet_id": "2115286050323255557",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-28T03:34:29.515335+00:00",
+      "created_at": "2026-10-28T03:34:29+00:00",
+      "topic": "Grand jury declines to indict former Trump aide Cassidy Hutchinson, star witness of Jan. 6 committee, U.S. official says - NBC News",
+      "dossier_id": "2026-10-27-grand-jury-declines-to-db002e96fc",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 21
+    },
     {
       "x_tweet_id": "2115193701496430842",
       "post_type": "REPORT",
@@ -14,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 76
+      "impressions": 79
     },
     {
       "x_tweet_id": "2115155243562336355",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 56
+      "impressions": 59
     },
     {
       "x_tweet_id": "2114919811427811577",
@@ -353,55 +392,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 45
-    },
-    {
-      "x_tweet_id": "2110473889654681691",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-14T20:52:41.000522+00:00",
-      "created_at": "2026-10-14T20:52:40+00:00",
-      "topic": "DOJ demands California review voting rolls in two days, threatens legal action - Politico",
-      "dossier_id": "2026-10-14-doj-demands-california-review-b4783e3830",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 8
-    },
-    {
-      "x_tweet_id": "2110433022055231933",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-14T18:10:17.409815+00:00",
-      "created_at": "2026-10-14T18:10:17+00:00",
-      "topic": "Starlink restrictions affecting Ukraine's front line operations, Kyiv says - BBC",
-      "dossier_id": "2026-10-14-starlink-restrictions-affecting-ukraine-ea4d90e30d",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 6
-    },
-    {
-      "x_tweet_id": "2110205948434219136",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-14T03:07:58.926714+00:00",
-      "created_at": "2026-10-14T03:07:58+00:00",
-      "topic": "Pope Leo Found to Have Lung Cancer During Surgery, Vatican Says - The New York Times",
-      "dossier_id": "2026-10-13-pope-leo-found-to-8ef8774a54",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 30
     }
   ],
   "averages": {
     "REPORT": {
       "count": 28,
-      "likes": 0.32,
+      "likes": 0.36,
       "reposts": 0.04,
       "replies": 1.04,
       "quotes": 0.0,
-      "impressions": 57.29
+      "impressions": 64.14
     },
     "BULLETIN": {
       "count": 2,
@@ -413,11 +413,11 @@
     },
     "ALL": {
       "count": 30,
-      "likes": 0.3,
+      "likes": 0.33,
       "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 55.67
+      "impressions": 62.07
     }
   }
 }
