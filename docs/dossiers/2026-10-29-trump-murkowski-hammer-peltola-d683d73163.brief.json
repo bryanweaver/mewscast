@@ -1,0 +1,64 @@
+{
+  "story_id": "2026-10-29-trump-murkowski-hammer-peltola-d683d73163",
+  "headline_seed": "Trump, Murkowski hammer Peltola over Alaska ballot-stacking report - Politico",
+  "brief": {
+    "story_id": "2026-10-29-trump-murkowski-hammer-peltola-d683d73163",
+    "consensus_facts": [
+      "All four outlets' headlines/body reference Sen. Lisa Murkowski and Alaska politics in the week before the 2026 election; only NBC News provides full body text, so most specific facts below are single-source and appear in framing_analysis rather than consensus.",
+      "Multiple outlet headlines (Politico, The Hill) reference Murkowski pressing Peltola over an Alaska ballot-related controversy; the substantive details of that controversy are not corroborated by any full body text in the dossier."
+    ],
+    "disagreements": [
+      {
+        "topic": "Primary subject of the Murkowski story",
+        "positions": {
+          "NBC News": "Frames the story around Murkowski endorsing Democrat Jonathan Kreiss-Tomkins in the Alaska governor's race over Trump-backed Bernadette Wilson.",
+          "Politico (headline-only, Article 2)": "Frames the story around Trump and Murkowski 'hammering' Peltola over an Alaska 'ballot-stacking' report.",
+          "Politico (headline-only, Article 3)": "Frames the story around Murkowski endorsing a Democrat while facing a '2028 dilemma' ('Lisa is Lisa').",
+          "The Hill (headline-only)": "Frames the story around Murkowski calling for 'truth' from Peltola amid an alleged 'pattern of lies and coverups.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "The only full-text article in the dossier. Leads on Murkowski's endorsement of Democrat Jonathan Kreiss-Tomkins in the Alaska governor's race, framing it as a snub of Trump-backed Bernadette Wilson a week before Election Day. NBC reports: Murkowski called the three GOP gubernatorial candidates (Bronson, Taylor, Wilson) too partisan; Alaska uses ranked choice voting; the race is to succeed term-limited GOP Gov. Mike Dunleavy; the NBC News Decision Desk rates the race as leaning Democratic despite Trump winning Alaska in 2016, 2020 and 2024. NBC includes Wilson's dismissive response ('Just Keep Taxing JKT') and notes Murkowski endorsed GOP Sen. Dan S. Sullivan, who faces a race involving a similarly-named Dan J. Sullivan Jr. and Democrat Mary Peltola. The Peltola 'ballot-stacking'/'coverup' angle central to the other three headlines is NOT the lead here \u2014 NBC only references a related subscriber item ('Trump says Alaska's Democratic Senate candidate should be prosecuted over Dan Sullivan ballot dispute') in passing.",
+      "Politico (Article 2, headline-only)": "No retrievable body text. Headline emphasizes a Trump-Murkowski alignment ('hammer') against Peltola over an alleged 'ballot-stacking report' \u2014 framing the story as an attack/scandal angle rather than the endorsement angle NBC leads with. Cannot verify body-level claims.",
+      "Politico (Article 3, headline-only)": "No retrievable body text. Headline ('Lisa is Lisa': Murkowski endorses a Democrat as she faces 2028 dilemma) emphasizes Murkowski's maverick persona and her own political future, framing the endorsement through the lens of her 2028 reelection calculus. Cannot verify body-level claims.",
+      "The Hill (headline-only)": "No retrievable body text. Headline emphasizes Murkowski demanding 'truth' from Peltola amid an alleged 'pattern of lies and coverups' \u2014 the most adversarial-toward-Peltola framing in the dossier. Cannot verify body-level claims."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. The underlying 'ballot-stacking report' referenced in the Politico and Hill headlines is not present in the dossier, so no document-level verification of those claims is possible."
+    ],
+    "missing_context": [
+      "Only one of four articles (NBC News) has retrievable full body text; the three others (two Politico, one The Hill) are headline-only. The 'ballot-stacking'/'coverup' allegations against Peltola that dominate three of the four headlines are therefore uncorroborated at the body level in this dossier.",
+      "No primary source \u2014 the actual 'ballot-stacking report' referenced in the headlines is not included, so its specific allegations, author, and evidentiary basis are unknown.",
+      "The nature of the Dan Sullivan 'ballot dispute' is only glancingly referenced via an NBC subscriber-item teaser; no outlet body text in the dossier explains what Peltola allegedly did.",
+      "No outlet body text explains what Trump specifically said or whether/how his and Murkowski's criticisms of Peltola are connected, despite Politico's headline pairing them.",
+      "No details on the timeline or status of the Dan S. Sullivan vs. Dan J. Sullivan Jr. vs. Peltola Senate race beyond NBC noting it is 'competitive.'",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "The scandal angle driving three of four headlines (Peltola 'ballot-stacking'/'coverup') has no retrievable body text and no primary source in the dossier, while only NBC's endorsement-focused story is fully verifiable. This is a time-sensitive, single-full-text, thin-dossier situation that warrants a hedged same-day post rather than a confident REPORT or META.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQelpUTUtOam9YcklFMkNDeGlMS1NnenVnY2ctSWd2Q2YwMXNheC1KQ3hUWnJrQnFDTXFsMUI0a1lpLWs2cGp6Ykt2Tkoxemh1MkE3bDZyZWtySEN0b3YzZzVRRGxMZkUtWG5HUTI2eTFybGZlSG9BRVl5Q0pBVHltcnE2cVdSOGU5UVVCOVMwenhIb01FWFp5ZnZVc0VYTk1lcnV0SDBWaUN3VEZkM081QQ?oc=5",
+      "title": "GOP Sen. Lisa Murkowski endorses Democratic candidate in Alaska governor\u2019s race - NBC News"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd05vMXdMcDdmRWU1d3ktSVI5SW1jQ0VuV21iLWFVYmJkSmpIU3pjOGYxVnRxNG1zalJQMzg5cjcyRUtCV1ZlR2F4MjNiQWdOUU04UXZubFkyX0ppWFBaUWpSQmh0c3p5cE1rdEN2cDZFMUc3WHN5bkw2dGNPUWxQdkJNb2RXeVhJZmR2NnNIeEw?oc=5",
+      "title": "Trump, Murkowski hammer Peltola over Alaska ballot-stacking report - Politico"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbE1IN0ZhckxZdVQ4SllsNXdjVkkwNjI5ZDYxSlA3cVdjX0hFM18xelFnV0NINk1VSXVDQXBuYUdzTGhwYy1MUERJbEQ1WlhkWXEyWlZobThLRmozSXEyeXlScWxFV2xodG41ZmxqM1BTZ29wY1pSZk5lbWw2ZVZSbXFFOWRkOEkwTGhLN25FMXFVWmhN?oc=5",
+      "title": "\u2018Lisa is Lisa\u2019: Murkowski endorses a Democrat as she faces 2028 dilemma - Politico"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQT3U1dDFHU29KVG1KeklOM1poRHE4OWRGZ2ZkVG5fUGlyck5xUFJ0RF81RUU4NFhTaTRhcmNCXzVVMW1fQ3Rva25WZk1XX1FFSk5FSXkzcDRmVGQ3Rmt4cU5oNThHVXFjenNnRjE1SEY1UkplSGRuQlkwSFdrb3lpZEYtLTZUREtadnhXZXVR0gGTAUFVX3lxTE4zZHpvWWUtOG5MNTFVNXFQWlhXV09VcHZVNXVzb0UwTkUwaGI1VFNIeFFXLWhGd3dXS1lnMzZVTktUOXJhR3NidjB4b1ZrdTVjOVV0OEQ4cDZLOUp0eTBnc3VUWDJZQTQ5Y3V5Z3luTzUxVEdTSnppRVFtMkJyaVQ5TDh1V1ZvTTZjN1pXakpRRXlRWQ?oc=5",
+      "title": "Murkowski calls for \u2018truth\u2019 from Peltola amid \u2018pattern of lies and coverups\u2019 - The Hill"
+    }
+  ]
+}
