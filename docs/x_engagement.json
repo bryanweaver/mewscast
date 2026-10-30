@@ -1,8 +1,34 @@
 {
-  "last_updated": "2026-10-29T01:58:47.691562+00:00",
+  "last_updated": "2026-10-30T02:12:04.376244+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2115925930937856345",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-29T21:57:08.938334+00:00",
+      "created_at": "2026-10-29T21:57:08+00:00",
+      "topic": "Patrick Stewart, legendary actor of ‘Star Trek’ and ‘X-Men’ fame, dies at 86 - AP News",
+      "dossier_id": "2026-10-29-patrick-stewart-legendary-actor-28b721ba66",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 32
+    },
+    {
+      "x_tweet_id": "2115653693744009330",
+      "post_type": "BULLETIN",
+      "posted_at": "2026-10-29T03:55:22.567624+00:00",
+      "created_at": "2026-10-29T03:55:22+00:00",
+      "topic": "Trump, Murkowski hammer Peltola over Alaska ballot-stacking report - Politico",
+      "dossier_id": "2026-10-29-trump-murkowski-hammer-peltola-d683d73163",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 14
+    },
     {
       "x_tweet_id": "2115561957805719677",
       "post_type": "REPORT",
@@ -14,7 +40,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 182
+      "impressions": 195
     },
     {
       "x_tweet_id": "2115519589563994285",
@@ -27,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 27
+      "impressions": 29
     },
     {
       "x_tweet_id": "2115286050323255557",
@@ -40,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 21
+      "impressions": 22
     },
     {
       "x_tweet_id": "2115193701496430842",
@@ -66,7 +92,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 59
+      "impressions": 60
     },
     {
       "x_tweet_id": "2114919811427811577",
@@ -118,7 +144,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 803
+      "impressions": 804
     },
     {
       "x_tweet_id": "2113730934981763156",
@@ -379,45 +405,32 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 185
-    },
-    {
-      "x_tweet_id": "2110563325444768122",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-15T02:48:04.161564+00:00",
-      "created_at": "2026-10-15T02:48:03+00:00",
-      "topic": "Supreme Court sides with Republicans in dispute over cost of campaign ads - Los Angeles Times",
-      "dossier_id": "2026-10-14-supreme-court-sides-with-278a3dada8",
-      "likes": 4,
-      "reposts": 1,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 45
     }
   ],
   "averages": {
     "REPORT": {
       "count": 28,
-      "likes": 0.36,
-      "reposts": 0.04,
+      "likes": 0.21,
+      "reposts": 0.0,
       "replies": 1.04,
       "quotes": 0.0,
-      "impressions": 64.14
+      "impressions": 64.32
     },
     "BULLETIN": {
-      "count": 2,
-      "likes": 0.0,
+      "count": 3,
+      "likes": 0.67,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 33.0
+      "impressions": 26.67
     },
     "ALL": {
-      "count": 30,
-      "likes": 0.33,
-      "reposts": 0.03,
+      "count": 31,
+      "likes": 0.26,
+      "reposts": 0.0,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 62.07
+      "impressions": 60.68
     }
   }
 }
