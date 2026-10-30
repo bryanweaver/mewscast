@@ -1,0 +1,120 @@
+{
+  "story_id": "2026-10-30-houston-grand-jury-indicts-8d5595857f",
+  "headline_seed": "Houston Grand Jury Indicts ICE Agent on Charges of Ramming Man in Chase - The New York Times",
+  "brief": {
+    "story_id": "2026-10-30-houston-grand-jury-indicts-8d5595857f",
+    "consensus_facts": [
+      "A Harris County (Texas) grand jury indicted ICE officer Mario Alberto Morales on a charge of aggravated assault with a deadly weapon, announced Friday, Oct. 30, 2026.",
+      "The charge stems from an Oct. 10, 2026 incident in which Morales struck Miguel Parra-Hernandez with his vehicle during an enforcement pursuit in Houston.",
+      "Parra-Hernandez suffered serious injuries, including a broken/fractured leg, and was hospitalized.",
+      "Harris County District Attorney Sean Teare announced the indictment and played video (described as body camera footage) at a news conference Friday.",
+      "In the footage, the officer is heard saying words to the effect of 'I was coming in and I hit him with the car.'",
+      "In an initial statement after the incident, ICE said Parra-Hernandez ran in front of the ICE vehicle; the DA, after reviewing video, accused the agent of deliberately/aggressively driving into him."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether this is the first such indictment of an immigration agent",
+        "positions": {
+          "NBC News": "States the indictment is the first of an immigration agent in Texas, and notes a separate ICE officer, Christian Castro, was charged in a January shooting in Minnesota.",
+          "ABC News": "Does not characterize it as a first.",
+          "CBS News": "Does not characterize it as a first."
+        }
+      },
+      {
+        "topic": "Biographical detail about the victim",
+        "positions": {
+          "CBS News": "Describes Parra-Hernandez as a 48-year-old Mexican national living in Texas for more than 30 years without documentation, with no criminal record and no deportation order.",
+          "NBC News": "Does not provide age, nationality or immigration-status detail.",
+          "ABC News": "Does not provide those details."
+        }
+      },
+      {
+        "topic": "ICE's response to the indictment",
+        "positions": {
+          "CBS News": "Reports ICE called the indictment 'a political stunt,' said local officials lack authority to investigate federal officers, and called intent allegations 'RECKLESS and FALSE' (statements made to the AP).",
+          "NBC News": "Reports only ICE's earlier statement that Parra 'ran in front of an ICE vehicle'; no response to the indictment itself.",
+          "ABC News": "Does not include an ICE response to the indictment."
+        }
+      },
+      {
+        "topic": "Identity discrepancy in who ICE was pursuing",
+        "positions": {
+          "CBS News": "Reports ICE said it was pursuing Jose Mendoza-Cervantes, whom Teare said has apparently been dead for nine years.",
+          "NBC News": "Does not mention the pursuit-target discrepancy.",
+          "ABC News": "Does not mention the pursuit-target discrepancy."
+        }
+      },
+      {
+        "topic": "Vehicle described",
+        "positions": {
+          "NBC News": "Describes it as an SUV.",
+          "CBS News": "Specifies a 2025 Jeep Grand Cherokee.",
+          "ABC News": "Does not specify the vehicle."
+        }
+      },
+      {
+        "topic": "Potential penalty",
+        "positions": {
+          "CBS News": "Reports Teare said conviction carries two to 20 years in prison; characterizes charge as a felony.",
+          "ABC News": "Characterizes it as second-degree aggravated assault but gives no sentencing range.",
+          "NBC News": "Gives no sentencing range."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier. Headline frames it as 'Grand Jury Indicts ICE Agent on Charges of Ramming Man in Chase' \u2014 uses the vivid verb 'ramming' and foregrounds the chase context. No body text available to assess lead or emphasis.",
+      "Axios": "Headline-only. Frames the story around the weapon characterization \u2014 'accused of using SUV as weapon' \u2014 adopting the prosecution's deadly-weapon framing in the headline itself. No body text to assess.",
+      "NBC News": "Full body text. Leads with the indictment and names the officer. Emphasizes the visceral body-camera scene \u2014 quotes Parra crying 'You ran over me' and the officer's admission \u2014 and Teare's 'as clear as any I've ever prosecuted' quote. Uniquely frames it as the 'first' indictment of an immigration agent in Texas and contextualizes with the Minnesota ICE shooting case. Notably cluttered with unrelated 'For Subscribers' promo links.",
+      "ABC News": "Full body text but brief and flagged 'developing.' Leads on the indictment and frames it within 'renewed scrutiny and protests against ICE.' Uses 'intentionally striking' in the lead. Thinner on specifics; omits ICE's rebuttal, victim biography, and the pursuit-target discrepancy.",
+      "CBS News": "Fullest, most detailed body text. Leads on the felony indictment, then adds the most context of any outlet: victim's age/nationality/30-year residency/clean record, the 2025 Jeep Grand Cherokee, the 911 call in which Morales says the man hit his car, ICE's 'political stunt' rebuttal, the two-to-20-year sentencing range, and the striking detail that the man ICE said it was pursuing has been dead nine years. Presents both the DA's intent allegation and ICE's denial.",
+      "USA Today": "Headline-only. Neutral framing \u2014 'ICE officer who struck man with vehicle indicted for aggravated assault' \u2014 uses 'struck' rather than 'ramming' and names the formal charge. No body text to assess."
+    },
+    "primary_source_alignment": [
+      "No primary source (grand jury indictment, DA press release, or full news-conference transcript) was located for this story. All factual claims rest on outlet reporting of the Oct. 30 news conference, and alignment with the underlying indictment document cannot be verified."
+    ],
+    "missing_context": [
+      "No primary source \u2014 the actual indictment, the DA's office statement, or a full news-conference transcript \u2014 was available in the dossier, so outlet claims about Teare's exact words and the charge language could not be checked against the record.",
+      "Three of six outlets (The New York Times, Axios, USA Today) are headline-only; the body-level consensus rests on NBC, ABC, and CBS.",
+      "Only CBS reported ICE's on-record response to the indictment ('political stunt,' 'RECKLESS and FALSE'); readers of the other outlets would not see the agency's rebuttal.",
+      "The claim that the man ICE said it was pursuing (Jose Mendoza-Cervantes) has been dead for nine years appears only in CBS and is uncorroborated by any other full-text outlet in the dossier.",
+      "No outlet reports Morales's custody/arrest status, whether he has entered a plea, retained counsel, or made any statement, or whether he remains employed by ICE.",
+      "No outlet addresses the jurisdictional question ICE raised (whether a county DA can charge a federal officer for conduct during official duties) beyond quoting ICE's assertion \u2014 no independent legal analysis is provided.",
+      "The 'first indictment of an immigration agent in Texas' characterization appears only in NBC and is not corroborated by other full-text outlets."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full text reported the same indictment but with materially different depth and emphasis \u2014 CBS surfaces ICE's rebuttal, the victim's biography, and the dead-pursuit-target discrepancy that NBC and ABC omit \u2014 making the coverage divergence itself the story. No primary source was available, which also argues against a clean straight REPORT.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOelBjSGNxMTN1SkNpSXpmNF80YU5aVV9yZXNCcVlCRzZvQU1xZXlTRWZWOFk5cnY2TUFURU1QU0lXVTh5Z1A4ZzAyWC1ZSmZsR01tRHMxOWlsQVhueXBLVFBXTUpzM1BvRDRZNDU2ZktIcGIwOExUdmUtZ1BzM09tWktn?oc=5",
+      "title": "Houston Grand Jury Indicts ICE Agent on Charges of Ramming Man in Chase - The New York Times"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1UYWtqRGFmZ3pyMWJwclg2NGhNRHV4TWdiR3hhQ1BmTUViQV9kZnJ4MVBZRDFuYkhPOUxzeHY5cWN6bUpQS1VJdzQ3bGdoenFHUXFUUndUTHBjek9MdTZmMWZrUlUzMUpGNURFenJJLUVLbWdSZjhRSV9sQXdKUQ?oc=5",
+      "title": "Texas grand jury indicts ICE agent accused of using SUV as weapon - Axios"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOYU9nYXdZWDdrd0xVMC1QQ2YwclV5TXJKWG4tQm1FZHlpTkVyZnZOWUxxZHI3UkQ5X3phQ2Z5UFY4RHRqZWhhaGpWbVB4WWtSbnl5QnNmbW9fVko2cXFGdWVUaE9uRXg2Z18tbEhIM01EbzQ3SUREY2ZVanpfSVNueFAtU0x0SDFLLWlwNGJSX0R0T0lCRlFzcFpkVlliRTF0LVlCcU8wZzBXV012LVZF?oc=5",
+      "title": "ICE officer is indicted after striking, injuring immigrant with his vehicle in Houston - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWXFYX0R1dERWS0IzNmUxcTlSeS1VSUVpbDVsX0lzeFJMNk1uZzFRcGRiRzlXWFRueUt3Q0pTd2RUM2J1MXlpTlVncWtEYmtrX1N5TlVIekVfMHBBN19aQkdnZzVubEJ4Rko1eXk0T0VQc2owdTA5b0kySUxDQV9OQjh0OUJ4Smpqa2t4bG5Gd2dSOTFNUEVXZ3lYd9IBoAFBVV95cUxOcGM3VVJKSWpvdjJWdll5TGJaLTBjXzJYaWlHSHJJMDB3VG5YMmxRQjlqTEZrdnRtN09HWkRfY09yQ2xQN1BiVVI2MjJoNlZOS1dDSDFOQWNZcGw0d2VOS0hCU094RTNvQ1BjdTZFWlBVTUxFakVxeXpadFBNNk1LWlFEYXE1VmRqNlVZM2hrZ0xVQzBtRDFPU2pySEN0NmpS?oc=5",
+      "title": "ICE officer who struck man with vehicle during pursuit in Texas indicted: DA - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPM1BzZW5GbUx4VGhzdmt3SF9tT0d5SW5QQ3h2NXhvMmxSUmxvNXZSSWp1UHZ5NlhucjE2aFdLTG1ZYXN5RXBWNHJGTk5wX2xkam05R0wwcUsyckZzTlhReUxWYWRJazFCVDFFVTNYQk1XaUZmX2JwdURQX09PVDM4bF8xa3NBdw?oc=5",
+      "title": "ICE officer indicted with felony in Texas after allegedly hitting man with vehicle - CBS News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRkVheHcwVFlFNXFzcUVIRDJGcGZ1V3M5eHBTN3ZFdDVaZFdqTWtLOWU5MHZ5bW9iUGk3cnBvcTl0WUtWMDFyb0dlQ0FqU3p0SmpvcjZqdDREbFB1b3RLUi04bE1xVXBEYkVfbi1hVENyZmNTTi13eDd5Q0t3YllpNHViU0w1eFA2TE5rblBILUFjSnpjaFd6eEtXUzJZN2NpU0ozT1U4a3FxWWJJcHc?oc=5",
+      "title": "ICE officer who struck man with vehicle indicted for aggravated assault - USA Today"
+    }
+  ]
+}
