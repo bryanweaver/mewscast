@@ -1,0 +1,112 @@
+{
+  "story_id": "2026-10-30-alaska-senate-judge-fast-0b34c6e58c",
+  "headline_seed": "Alaska Senate: Judge fast tracks new bids to dismiss DOJ lawsuit over 2nd Sullivan candidacy - CNBC",
+  "brief": {
+    "story_id": "2026-10-30-alaska-senate-judge-fast-0b34c6e58c",
+    "consensus_facts": [
+      "Two candidates named Dan Sullivan appear on Alaska's U.S. Senate ballot: the Republican incumbent Sen. Dan Sullivan and Daniel J. Sullivan, a retired teacher.",
+      "The Department of Justice filed a civil lawsuit seeking to block or delay certification of the Alaska Senate race if Sen. Sullivan loses by a margin attributable to voter confusion over the two Sullivans.",
+      "The DOJ amended its civil complaint on Thursday to add details from a New York Times report and a new legal claim.",
+      "An ongoing criminal investigation into the Alaska Senate race has been underway for months and is being pursued by the DOJ.",
+      "The DOJ has issued a new wave of subpoenas targeting Democratic officials believed to be tied to recruiting Daniel J. Sullivan onto the ballot.",
+      "A New York Times report (published Wednesday) alleged that aides to Mary Peltola's campaign and senior aides at the Democratic Senatorial Campaign Committee helped recruit the retired teacher to run.",
+      "Peltola's campaign and the DSCC have denied any involvement with Daniel J. Sullivan's candidacy.",
+      "U.S. Attorney Michael Heyman had been recused from the matter because he was being considered for a judicial nomination, and that recusal was rescinded after he was no longer under consideration.",
+      "Republican Alaska Gov. Mike Dunleavy ordered a state investigation into the alleged recruitment effort.",
+      "Alaska state election officials initially challenged Daniel J. Sullivan's eligibility, but state courts/Alaska's Supreme Court affirmed his candidacy was legal.",
+      "Election Day is Tuesday, Nov. 3, 2026, and the winner of the Alaska race could determine Senate control.",
+      "No one involved in the race has been charged with a crime."
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether the New York Times findings establish illegality",
+        "positions": {
+          "CNN": "Reports that legal experts say the findings from the Times investigation aren't illegal and don't give the DOJ's lawsuit more credence; quotes White House's Stephen Miller calling the alleged actions 'a profound criminal act.'",
+          "ABC News": "Quotes AG Todd Blanche describing the candidacy and recruitment as 'cheating' and 'fraud'; notes DOJ is probing possible federal conspiracy statutes.",
+          "CBS News": "Reports a DOJ official identified 18 U.S.C. Sections 241 and 242 as potential statutes, while acknowledging DOJ was not aware of any confirmed voter who cast a ballot for the wrong Sullivan."
+        }
+      },
+      {
+        "topic": "Whether Heyman discussed the case with the White House",
+        "positions": {
+          "CNN": "Reports Heyman said he has not had any interaction with the White House about the investigation and is 'not aware of' staff doing so.",
+          "CBS News": "Does not address White House contact; reports Heyman declined to detail specific crimes being investigated.",
+          "CNBC": "Does not address White House contact."
+        }
+      },
+      {
+        "topic": "Whether DOJ is escalating ahead of the election",
+        "positions": {
+          "CBS News": "Heyman said 'We're not escalating anything except to the extent that a new article came out,' and that the probe had been quiet for months.",
+          "CNBC": "Frames the probe as accelerated because of the New York Times report, quoting Heyman that 'we will act on it.'",
+          "ABC News": "Characterizes the subpoenas as 'a new escalation in the Trump administration's efforts to intervene in the race just days before the midterm elections' and notes the 60-day pre-election norm."
+        }
+      },
+      {
+        "topic": "Daniel J. Sullivan's own stated intent",
+        "positions": {
+          "CBS News": "Reports Daniel S. Sullivan has said in the past he is genuinely interested in running.",
+          "CNBC": "Describes him only as a retired schoolteacher whose candidacy the DOJ claims had the 'sole purpose' of benefiting Peltola.",
+          "ABC News": "Does not report his stated personal interest, focusing on recruitment allegations."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CBS News": "Two entries. The Oct. 30 piece leads on Heyman calling the allegations 'troubling' but emphasizes that the focus of the probe is 'unclear' and that he declined to name crimes, foregrounding ambiguity and prosecutorial caution. The Oct. 29 piece leads on subpoenas and the 'conspiracy' framing from the DOJ's filing but includes skeptical detail (DOJ unaware of any confirmed confused voter, the overturned Mackey precedent), giving a mixed, procedurally detailed account. Includes Democrats' counter-argument that Republicans have also stacked ballots.",
+      "CNBC": "Leads on the judge fast-tracking dismissal bids and the dual civil/criminal tracks, written in a specialized/procedural register. Heavy on legal mechanics: Judge Gleason's deadlines, ranked-choice voting explanation, the Supremacy Clause and National Voter Registration Act claims, and Senate control stakes. Presents DOJ's 'sole purpose' claim and the denials side by side.",
+      "CNN": "Presented as a live blog; leads the Alaska item on White House Deputy Chief of Staff Stephen Miller calling the Democrats' alleged actions 'a profound criminal act' and 'sociopathic,' then immediately counterweights with legal experts saying the Times findings aren't illegal. Separately foregrounds Heyman's statement that he had no White House contact and that career prosecutors pushed back, emphasizing political-pressure and independence angles.",
+      "ABC News": "Leads on the 'new wave of subpoenas' as escalation, sourced to anonymous 'multiple sources familiar with the matter.' Emphasizes the Trump administration's intervention days before the election, Trump's public demands that Peltola be prosecuted, and the DOJ's typical 60-day pre-election restraint norm that Blanche downplayed. Includes Dunleavy's and the Times' detail (12 sources, texts, documents) plus Democratic denials.",
+      "NPR": "Headline-only in the dossier. Headline frames the story as the race being 'roiled by a report on alleged spoiler candidate,' centering the NYT report's disruptive effect. No body text available to assess framing further.",
+      "CNBC (specialized)": "See CNBC entry above."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, the DOJ complaint, the amended complaint, the New York Times report, or hearing transcripts) were provided in the dossier, so no direct document-to-coverage comparison is possible.",
+      "Outlets quote fragments of the amended civil complaint (CBS News quotes 'conspiracy to undermine the integrity of the electoral process' and the 'common sense' passage; CNBC describes the added Supremacy Clause and National Voter Registration Act claims), but the underlying filing itself was not available for verification."
+    ],
+    "missing_context": [
+      "No primary sources were located for this story; all characterizations of the DOJ filings, the amended complaint, and the New York Times report are secondhand through the outlets.",
+      "The New York Times report is central to every account but was not included in the dossier, so its exact claims and evidentiary basis cannot be independently assessed here.",
+      "No outlet reports any confirmed instance of an Alaska voter actually casting a ballot for the wrong Sullivan; CBS News notes a DOJ official acknowledged being unaware of any such case.",
+      "Daniel J. Sullivan's own voice is largely absent; only CBS News notes he has said he is genuinely interested in running, and no outlet provides a direct recent interview on the recruitment allegations.",
+      "The specific federal criminal statutes under investigation remain partly unclear \u2014 CBS News cites 18 U.S.C. 241/242 per a DOJ official, but Heyman himself (per CBS and CNBC) declined to name any statute.",
+      "The dossier is heavily weighted toward lean-left outlets (CBS, CNN, ABC, NPR) plus one specialized outlet (CNBC); no clearly right-leaning outlet body text is present, limiting the slant range.",
+      "No outlet details what the earlier June Alaska Division of Elections investigation concluded beyond Dunleavy's assertion that new reporting 'substantially supported' its findings.",
+      "The content of the Democrats' counter-claim that Republicans engaged in similar ballot-stacking (raised by the DSCC per CBS) is not substantiated with specifics in any article."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets (CBS, CNBC, CNN, ABC) report the same escalating civil/criminal probe but with materially different framing \u2014 from 'troubling but unclear' prosecutorial caution to 'profound criminal act' to pre-election 'escalation' \u2014 making the divergence in emphasis the real story, while no primary source was available to adjudicate.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVUZDS2hKVHQ0NzFIT1duQVphZjhFTUM0VV91MGVVTTEzV3FuWUxqaFNmb2JyemhYSEgwbV84aGhJMzlDN094WmtqRURHeEVfcENlNnprdHg0My01c0pDRGlCSlpEYmlqWWtMSG1rdVBfbVpjTFlhdUdTNVlmNkpkLWpYNmQ?oc=5",
+      "title": "DOJ official calls allegations about 2 Dan Sullivans in Alaska Senate race \"troubling,\" but focus of probe is unclear - CBS News"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbWpsMTBpSFJISFJGU3JJRTRJUVlSb3hoLUR1S2o3bDJoZklvWEFEeXRYeGU2RmJYbFF6UWdLNXQzLWVqdTQ0LUwyeTJBZlhiaTdHTTBJOUNROE9fN1FKT0Z5ZmNFRjA4ZHNyRU1JZ2EtT3k3ZEJDeTh6dE1YV1U2MjM1RThFb3RqZm43WG5KVkdUd9IBlwFBVV95cUxQY3Z1VGo3RUR6WFZJOEllamxMeFpybk9wREM0Ry1WazlrdmktWDhweV93TWM0bFdtc0I1VnFyZm5RVmtKWXZMLVo4TFJOUXBtMEpwTjBhMDY4RVY1QzlFYU1jVGpST2xSWjloVXdIcGJtT3VMT2ZmRTdQV1RuNElNSmhnNktEeWYzTXRIbVVLNE9FaDE5MVBN?oc=5",
+      "title": "Alaska Senate: Judge fast tracks new bids to dismiss DOJ lawsuit over 2nd Sullivan candidacy - CNBC"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPZWdxTW0zekNlT3FNQklaSUc4TzdSZmFQQ29qVUFEMzI3MjdwREhxcE9BVlliV0VXdjJBQUJlS0d4Tm02U2pOLXBqT1NGZGM1MkZKb1A3bXJOWDBiaWVJc011bHZnc2VwODRPNlVKdXFwb3pab0xhOC1wTmtwUjR4MXV3RE5lQQ?oc=5",
+      "title": "Legal battle heats up over Alaska Senate race - CNN"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZTc4V0ZWNm9MTnd6Zkc2UEVWbVFVMnNNeWYwXzBTX1N3ZEdEcUNZQ2w3TFdBQXQtX05uVjI2blVyekxhWGplTFFVRjd6UUlnSXRhTUtIckRKSnpEdDhvMl9YWHVSVUpXVG1WR1RXUDR0RUlWUzVydlBpR0FrTjdVdWFyZm9vQnppeFZRUnhnTWN4cEViZkhGdlMtSHNsUEx6S3NuY1BsTXliQdIBrwFBVV95cUxOcHpZWE1VWEZGWWFyNEt3OUVTUHU5bjhkTTZMWk5uamVveUdxVzlIUVpIMHVaR2RPT1o1M2RxMDZoblJVQWtOS21TRGxNOEFIVU1tY1o5QkxYSGhycHNVOGR6Z2JVYXV4QjM0ZFVyd3dlU1QyRjgyTTJNYmUwcUJYTmlwcTlqQVp4dUpZOHY4aHpBV1BqcXlCaEMybE9FTE1wZnlhaEc2Q3hHSC1TdzdZ?oc=5",
+      "title": "DOJ issues new wave of subpoenas in criminal probe of Alaska Senate race, sources say - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOb05QWkdncktjaVdEelV6di1vOG1HanZFdUdad2JjaHBPdlZtcm1adEs5MTg3VkdsUFdEM3FnTVZuZU1uRGJkNlIzdk1KRlhIbUlqYmRtb0twS0U1alhTZlRHSFZiWGlGc29QT1dnSkhCMEcyaFZIeDlDUDJZMDNvaU1JQ083cjc3N3pmWjdvZWpCeHdjdmZZS2lYSHQ3X05YcURRajAyT3V6NGVJRzZQbVBRRGkyNmdZR0pUQXFwMHN0U0FoZ3c?oc=5",
+      "title": "Alaska's all-important Senate race is roiled by a report on alleged spoiler candidate - NPR"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMERZZGdLRXRqRW93OUpDMFVfaF9oems5V1llRklZTXN3Mlk3THNPMmhyUVY1NGxFSTZKUFFGUjJaOU1kOC1BMk1pTVVpQUp2bUhCcmcwZnUwYVdJWlNhX0JxS2Z6MHFzRUJFS0Y1S3lRaWc2VC15aFRUQ2VGV19TbnBieFE2dFp3RTRDOWtmcVA?oc=5",
+      "title": "DOJ issues new subpoenas in Alaska Senate probe, asks judge to intervene over \"conspiracy\" involving 2 Dan Sullivans - CBS News"
+    }
+  ]
+}
