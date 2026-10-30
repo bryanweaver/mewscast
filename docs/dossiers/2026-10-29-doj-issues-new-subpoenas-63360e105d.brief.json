@@ -1,0 +1,116 @@
+{
+  "story_id": "2026-10-29-doj-issues-new-subpoenas-63360e105d",
+  "headline_seed": "DOJ issues new subpoenas in Alaska Senate probe, asks judge to intervene over \"conspiracy\" involving 2 Dan Sullivans - CBS News",
+  "brief": {
+    "story_id": "2026-10-29-doj-issues-new-subpoenas-63360e105d",
+    "consensus_facts": [
+      "The Department of Justice has begun issuing a new wave of subpoenas in a criminal probe tied to Alaska's U.S. Senate race (ABC News, CNBC, CBS News).",
+      "The subpoenas target Democratic officials believed to be tied to efforts to recruit Daniel J. Sullivan, a retired teacher, to appear on Alaska's ballot alongside incumbent Republican Sen. Dan S. Sullivan (ABC News, CBS News).",
+      "The probe follows a New York Times report published Wednesday detailing alleged efforts by people associated with Mary Peltola's campaign and the DSCC to recruit a second Dan Sullivan as a spoiler candidate (ABC News, CNBC, CNN, CBS News).",
+      "The DOJ amended its civil lawsuit seeking to block certification of Alaska's Senate results if Sen. Sullivan loses due to 'voter confusion,' incorporating the Times reporting and adding a new claim under the Constitution's Supremacy Clause (CNBC, CBS News).",
+      "Republican Alaska Gov. Mike Dunleavy ordered the state Department of Public Safety to investigate whether the alleged recruitment effort violated state criminal or civil law (ABC News, CNBC, CNN, CBS News).",
+      "Peltola's campaign (Alaskans for Mary) and the DSCC have denied any involvement with Daniel J. Sullivan's candidacy (ABC News, CNBC, CBS News).",
+      "Alaska's Supreme Court previously affirmed/greenlit Daniel J. Sullivan's candidacy as legal, declining in June to remove him from the ballot (ABC News, CNN, CBS News).",
+      "President Donald Trump has publicly called for Peltola to be prosecuted and/or removed from the ballot, and said he ordered the DOJ to file the lawsuit (ABC News, CNBC, CNN).",
+      "The Senate race could determine the balance of power in the Senate, where Republicans hold a narrow majority; Election Day is Nov. 3 (CNBC, CNN).",
+      "No one involved in the race has been charged with a crime (CBS News, and consistent with ABC News framing)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of subpoenas / document requests",
+        "positions": {
+          "ABC News": "Describes a 'new wave of subpoenas' without a specific count.",
+          "CNBC": "Cites NBC News reporting that the department 'has issued at least three dozen new subpoenas and document preservation requests' to Peltola's and the retiree Sullivan's campaign offices.",
+          "CBS News": "Describes a 'new wave of subpoenas' and references possible preservation requests, search warrants and grand jury subpoenas, without a firm count."
+        }
+      },
+      {
+        "topic": "Whether the alleged conduct is illegal",
+        "positions": {
+          "CNN": "States the alleged electoral gamesmanship, 'while shabby and disrespectful to voters, doesn't seem to be illegal based on current available evidence.'",
+          "ABC News": "Reports DOJ is probing whether the maneuvering 'could violate potential federal conspiracy statutes,' presenting it as an open question.",
+          "CBS News": "Reports a DOJ official identified 18 U.S.C. Sections 241 and 242 as potential charges but acknowledged no confirmed instance of a voter mistakenly casting a ballot for the wrong Dan Sullivan."
+        }
+      },
+      {
+        "topic": "Overall framing of the DOJ civil suit",
+        "positions": {
+          "CBS News": "Quotes a DOJ official downplaying the suit as 'not much more than a preservation suit.'",
+          "CNBC": "Frames the amended suit as an escalation and quotes Alaska election officials accusing DOJ of 'gamesmanship.'",
+          "Washington Post (headline-only)": "Frames the story around Alaska's GOP-led government moving to 'kill' the Trump-ordered suit."
+        }
+      },
+      {
+        "topic": "Characterization of the effort",
+        "positions": {
+          "ABC News": "Quotes AG Todd Blanche calling the recruitment 'cheating' and 'fraud'; notes DOJ's departure from the 60-day pre-election practice.",
+          "CBS News": "Notes the DOJ's amended complaint labels the situation a 'conspiracy to undermine the integrity of the electoral process.'",
+          "CNN": "Characterizes the episode as a political 'gift' to Trump and 'dirty tricks,' emphasizing it is not clearly illegal."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "ABC News": "Leads on the DOJ's 'new wave of subpoenas' and the escalation 'just days before the midterm elections.' Emphasizes the Trump administration's intervention and notes DOJ's typical 60-day pre-election restraint, which AG Blanche downplayed. Gives substantial space to Gov. Dunleavy's state probe and his quotes about voter integrity, and includes Peltola/DSCC denials. Balanced sourcing but foregrounds the aggressive federal posture.",
+      "CNBC": "Specialized/business framing centered on the amended lawsuit and legal procedure \u2014 the new Supremacy Clause claim, mootness arguments over motions to dismiss, and Judge Gleason's 5 p.m. deadline. Uniquely surfaces the 'at least three dozen' subpoena figure via NBC News and the Alaska election officials' 'gamesmanship' accusation. Explicitly flags the Senate balance-of-power stakes and quotes Trump questioning whether Peltola should be 'allowed to run.'",
+      "CNN": "Explicitly an analysis piece: leads on the thesis that 'Alaska Democrats gave Donald Trump exactly what he wanted.' Frames the alleged scheme as 'shabby' but likely not illegal, and places it in a broader narrative about Trump's long history of election conspiracy claims (2020, Georgia 'find the votes'). Emphasizes Alaska's savvy electorate and ranked-choice voting as reasons confusion is unlikely. Reports facts but filters them through electoral and democratic-norms commentary.",
+      "The New York Times": "Headline-only in this dossier ('Inside Democrats' Secret Effort to Stack Alaska's Midterm Ballot With Another Dan Sullivan'). The headline frames Democrats as the active wrongdoers; it is the originating investigative report that every other outlet cites, but no body text is available here to assess its full claims.",
+      "NPR": "Headline-only ('Alaska's all-important Senate race is roiled by a report on alleged spoiler candidate'). Framing emphasizes the race's importance and treats the matter as an 'alleged' report-driven controversy. No body text available to analyze.",
+      "CBS News": "Leads on the subpoenas and the DOJ asking a judge to intervene over a 'conspiracy' involving 2 Dan Sullivans. Provides the most detailed legal reporting on potential statutes (18 U.S.C. 241/242), the Douglass Mackey precedent (conviction later overturned), and DOJ's own characterization of the civil suit as a 'preservation suit.' Notably includes the DOJ official's admission that no confirmed voter confusion has been identified \u2014 a counterweight to the 'conspiracy' label.",
+      "The Washington Post": "Headline-only ('Alaska's GOP-led government moves to kill Trump-ordered suit over Senate results'). This is the only framing centering Alaska's Republican-led state government opposing the Trump DOJ suit \u2014 a counter-angle to the other outlets' focus on Democrats' alleged scheme. No body text available to analyze."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, the amended complaint, Dunleavy's order, or DOJ press materials) were located for this story, so direct report-vs-document verification is not possible.",
+      "CNBC and CBS News both quote language from the amended DOJ complaint ('orchestrated his sham campaign'; 'conspiracy to undermine the integrity of the electoral process'; the hedge that 'what the New York Times reports is not always true'), but the full filing itself is not in the dossier for independent confirmation.",
+      "The underlying New York Times investigative report \u2014 cited as the factual basis by every other outlet \u2014 is present only as a headline, so the specifics it reportedly relied on (12 sources, text messages, documents) cannot be verified against the original here."
+    ],
+    "missing_context": [
+      "No primary sources were available: the amended DOJ complaint, Gov. Dunleavy's investigation order, and the originating New York Times report are all unverifiable from this dossier. This is an editorial disclosure, not a pipeline complaint.",
+      "The exact subpoena count is single-sourced \u2014 only CNBC provides a number ('at least three dozen'), and it attributes that to NBC News reporting rather than independent confirmation.",
+      "No outlet in the dossier provides a response from Daniel J. Sullivan (the retired teacher) himself regarding the recruitment allegations, beyond CBS noting he 'has said in the past he is genuinely interested in running.'",
+      "Limited detail on what specific protected right the 18 U.S.C. 241/242 theory would rest on, and CBS alone notes the cited Mackey precedent conviction was overturned in 2025 \u2014 a caveat the other full-text outlets omit.",
+      "Little explanation of how Alaska's ranked-choice voting system would actually handle votes for a same-named candidate; only CNN gestures at it as a reason confusion is unlikely, and the thought is cut off mid-sentence.",
+      "The dossier is heavily weighted to lean-left outlets plus one specialized (CNBC) and one whose body text is unavailable (Washington Post); no explicitly right-leaning outlet body text is present, limiting the slant matrix.",
+      "Four of seven articles (NYT, NPR, Washington Post, and the originating NYT report) are headline-only, so framing comparison across the full matrix is constrained."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (ABC News, CNBC, CBS News) reported the same core events but with materially different framings \u2014 DOJ escalation vs. legal procedure vs. a 'preservation suit' that may not be illegal \u2014 and CNN adds an explicit analysis angle while the Washington Post headline frames it as Alaska's GOP fighting Trump's own suit. The divergence in emphasis, combined with the absence of any primary source, makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZTc4V0ZWNm9MTnd6Zkc2UEVWbVFVMnNNeWYwXzBTX1N3ZEdEcUNZQ2w3TFdBQXQtX05uVjI2blVyekxhWGplTFFVRjd6UUlnSXRhTUtIckRKSnpEdDhvMl9YWHVSVUpXVG1WR1RXUDR0RUlWUzVydlBpR0FrTjdVdWFyZm9vQnppeFZRUnhnTWN4cEViZkhGdlMtSHNsUEx6S3NuY1BsTXliQdIBrwFBVV95cUxOcHpZWE1VWEZGWWFyNEt3OUVTUHU5bjhkTTZMWk5uamVveUdxVzlIUVpIMHVaR2RPT1o1M2RxMDZoblJVQWtOS21TRGxNOEFIVU1tY1o5QkxYSGhycHNVOGR6Z2JVYXV4QjM0ZFVyd3dlU1QyRjgyTTJNYmUwcUJYTmlwcTlqQVp4dUpZOHY4aHpBV1BqcXlCaEMybE9FTE1wZnlhaEc2Q3hHSC1TdzdZ?oc=5",
+      "title": "DOJ issues new wave of subpoenas in criminal probe of Alaska Senate race, sources say - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPeWFJYmFmMlpEV25qMDhUQkpMUW5qdGN2OGRWU0FJUl9vY3owSjE0cnl2anRKR1BDNDdEZkplcGVsUXVad2F5bURFVDhNenRKMlJtUlFaR2NTTEdYQzExZ2dnX2lTb0tIOVhoVVNTcVFmYXVBLS1NdHJiWXhlQlVVSU9MU1haQkhNVDhyeHREUWJFRVlpM0FCanB30gGfAUFVX3lxTE82cXFabHJhaDVydTl6WC1rRkQ2QktUX3FTUmNsdDNheExNZ21uNUhsOTJCamlWNlVBQ3Zlc2ZQMzBrcUtZcEVjSDJFZnpxck4xd0lycWpoVS01cmFZOFJ5WWFwcDhqY1NmSlBXa0QxZV9tVjM1SDRvcUV1b19xdjh5MnRmb18yTERuRWRTWjBIMVRSdnZHT0VzQ3BwVEhyQQ?oc=5",
+      "title": "DOJ escalates Alaska Senate lawsuit over dueling Sullivan candidacies - CNBC"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8tcjBpTlUwYzNGX0IyZl9zYTJGUnQ3a3p3azZZU0NQUDRVOVEwTVk0TzlrYlRFYjVEVzV0aFRGX0JlWl9tdW96NUF5ejNUZU00VENSZ2JNck1rekRZZU05SXh4MUNCSHNwQ2ZBRGxHQk9RdG8?oc=5",
+      "title": "Analysis: Alaska Democrats just handed Trump a political gift - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVXZoZnd5TWlac1BNQkoyZGw1UHR6RkphN3J4S3E2bkZXbFN4SFhKcWdGQkhyNXJfblNQWTJkbXBxeHZZSTBoa0RLc18xSnpxX3dJR1FiYm5hdTdER0FWVEJRRGg3T0Nwek41ZmJFX3ZFdUtjeV83T0YzUDVvN3BhZEU3d2hocWx5ZUZQdGx0SEx4Y1hu?oc=5",
+      "title": "Inside Democrats\u2019 Secret Effort to Stack Alaska\u2019s Midterm Ballot With Another Dan Sullivan - The New York Times"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOb05QWkdncktjaVdEelV6di1vOG1HanZFdUdad2JjaHBPdlZtcm1adEs5MTg3VkdsUFdEM3FnTVZuZU1uRGJkNlIzdk1KRlhIbUlqYmRtb0twS0U1alhTZlRHSFZiWGlGc29QT1dnSkhCMEcyaFZIeDlDUDJZMDNvaU1JQ083cjc3N3pmWjdvZWpCeHdjdmZZS2lYSHQ3X05YcURRajAyT3V6NGVJRzZQbVBRRGkyNmdZR0pUQXFwMHN0U0FoZ3c?oc=5",
+      "title": "Alaska's all-important Senate race is roiled by a report on alleged spoiler candidate - NPR"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMERZZGdLRXRqRW93OUpDMFVfaF9oems5V1llRklZTXN3Mlk3THNPMmhyUVY1NGxFSTZKUFFGUjJaOU1kOC1BMk1pTVVpQUp2bUhCcmcwZnUwYVdJWlNhX0JxS2Z6MHFzRUJFS0Y1S3lRaWc2VC15aFRUQ2VGV19TbnBieFE2dFp3RTRDOWtmcVA?oc=5",
+      "title": "DOJ issues new subpoenas in Alaska Senate probe, asks judge to intervene over \"conspiracy\" involving 2 Dan Sullivans - CBS News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOby1wS0hCY25KZ08xVFRPTk1MTzA5WmEyUnc5ajFCbHFySFFMOHRxb1BWeG5YOFpMc2hEcmNFMFhtMXc0SlF4cjVSNzR1RlZsOWt2ZFdadkZyamczTjNXNFBGQzFLVS13ZGpEVVc2MU5aOE8wTFB6Y3lEWjU3YkNvbmlSVmVGb21FOEpPMmcyUlVZZ0Z5UGZsbGRsUG1LOF85UTNwekl3SUU0VU55SzZFcC1wTWFEbllVa2poSkphLW9zanpFRWxvU0ZnMUdqVnFidW92Vl9SUDFFMDdk?oc=5",
+      "title": "Alaska\u2019s GOP-led government moves to kill Trump-ordered suit over Senate results - The Washington Post"
+    }
+  ]
+}
