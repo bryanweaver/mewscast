@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-10-30T02:12:04.376244+00:00",
+  "last_updated": "2026-10-31T01:54:21.318474+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2116284530994659671",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-30T21:42:05.949590+00:00",
+      "created_at": "2026-10-30T21:42:05+00:00",
+      "topic": "Alaska Senate: Judge fast tracks new bids to dismiss DOJ lawsuit over 2nd Sullivan candidacy - CNBC",
+      "dossier_id": "2026-10-30-alaska-senate-judge-fast-0b34c6e58c",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 2
+    },
+    {
+      "x_tweet_id": "2116240679756329155",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-30T18:47:50.928840+00:00",
+      "created_at": "2026-10-30T18:47:50+00:00",
+      "topic": "Houston Grand Jury Indicts ICE Agent on Charges of Ramming Man in Chase - The New York Times",
+      "dossier_id": "2026-10-30-houston-grand-jury-indicts-8d5595857f",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 37
+    },
+    {
+      "x_tweet_id": "2116016807173665174",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-30T03:58:15.566980+00:00",
+      "created_at": "2026-10-30T03:58:15+00:00",
+      "topic": "DOJ issues new subpoenas in Alaska Senate probe, asks judge to intervene over \"conspiracy\" involving 2 Dan Sullivans - CBS News",
+      "dossier_id": "2026-10-29-doj-issues-new-subpoenas-63360e105d",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 9
+    },
     {
       "x_tweet_id": "2115925930937856345",
       "post_type": "REPORT",
@@ -14,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 32
+      "impressions": 37
     },
     {
       "x_tweet_id": "2115653693744009330",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 14
+      "impressions": 16
     },
     {
       "x_tweet_id": "2115561957805719677",
@@ -40,7 +79,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 195
+      "impressions": 196
     },
     {
       "x_tweet_id": "2115519589563994285",
@@ -53,7 +92,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 29
+      "impressions": 30
     },
     {
       "x_tweet_id": "2115286050323255557",
@@ -92,7 +131,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 60
+      "impressions": 61
     },
     {
       "x_tweet_id": "2114919811427811577",
@@ -366,45 +405,6 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 14
-    },
-    {
-      "x_tweet_id": "2111186240703959343",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-16T20:03:18.733652+00:00",
-      "created_at": "2026-10-16T20:03:18+00:00",
-      "topic": "Israeli settlers beat Palestinians and a U.S. photojournalist in West Bank attacks - NPR",
-      "dossier_id": "2026-10-16-israeli-settlers-beat-palestinians-42511a4a93",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 21
-    },
-    {
-      "x_tweet_id": "2111150229382988204",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-16T17:40:12.974636+00:00",
-      "created_at": "2026-10-16T17:40:12+00:00",
-      "topic": "GOP senators press Pentagon over Ukraine’s loss of Starshield data - The Hill",
-      "dossier_id": "2026-10-16-gop-senators-press-pentagon-a304590776",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 2
-    },
-    {
-      "x_tweet_id": "2110924634728067241",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-16T02:43:47.108541+00:00",
-      "created_at": "2026-10-16T02:43:46+00:00",
-      "topic": "Three children and one teacher killed after 16-year-old opens fire at Oregon primary school - BBC",
-      "dossier_id": "2026-10-16-three-children-and-one-975ad3998d",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 185
     }
   ],
   "averages": {
@@ -414,7 +414,7 @@
       "reposts": 0.0,
       "replies": 1.04,
       "quotes": 0.0,
-      "impressions": 64.32
+      "impressions": 58.89
     },
     "BULLETIN": {
       "count": 3,
@@ -422,7 +422,7 @@
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 26.67
+      "impressions": 27.33
     },
     "ALL": {
       "count": 31,
@@ -430,7 +430,7 @@
       "reposts": 0.0,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 60.68
+      "impressions": 55.84
     }
   }
 }
