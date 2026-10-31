@@ -1,0 +1,105 @@
+{
+  "story_id": "2026-10-31-justice-department-seeks-to-cc2e18f6d0",
+  "headline_seed": "Justice Department seeks to isolate Alaska ballots amid criminal probe over Senate candidate - NPR",
+  "brief": {
+    "story_id": "2026-10-31-justice-department-seeks-to-cc2e18f6d0",
+    "consensus_facts": [
+      "The Department of Justice filed a court request asking a federal judge to preserve and segregate all ballots ranking candidate Daniel J. Sullivan in Alaska's US Senate race (Al Jazeera, CNBC, NBC News).",
+      "The DOJ is pursuing a civil lawsuit seeking to block or delay certification of the Alaska Senate election result over alleged voter confusion (Al Jazeera, CNBC, NBC News).",
+      "A criminal investigation is underway into how and why a second, retired schoolteacher named Dan Sullivan entered the Senate race (Al Jazeera, CNBC, NBC News).",
+      "Two candidates named Dan Sullivan appear on the ballot: the incumbent Republican Senator Dan S. Sullivan and a retired schoolteacher, Dan J. Sullivan (Al Jazeera, CNBC, NBC News).",
+      "The New York Times reported that aides to Democrat Mary Peltola's campaign and the Democratic Senatorial Campaign Committee helped recruit the second Sullivan to run (Al Jazeera, CNBC, NBC News).",
+      "Mary Peltola has denied any knowledge of or involvement in the second Sullivan's candidacy (Al Jazeera, CNBC, NBC News).",
+      "Election Day is November 3, 2026, and Alaska uses ranked-choice voting with four Senate candidates on the ballot (Al Jazeera, CNBC, NBC News).",
+      "President Donald Trump requested or ordered the DOJ action and characterized the situation as 'election fraud' (Al Jazeera, CNBC).",
+      "US Attorney for Alaska Michael Heyman held a press conference on Friday, Oct. 30, in Anchorage acknowledging both civil and criminal investigations (Al Jazeera, CNBC, NBC News).",
+      "The filing cited the risk that the measures would be 'impossible after Election Day' as grounds for expedited consideration (CNBC, NBC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Who signed/authored the key court filing",
+        "positions": {
+          "CNBC": "Attributes the filing to US Attorney Michael Heyman, 'signed by one of his assistant prosecutors.'",
+          "NBC News": "Attributes the segregation request to Associate Attorney General Stanley Woodward, who 'wrote in a court filing.'"
+        }
+      },
+      {
+        "topic": "DSCC involvement",
+        "positions": {
+          "CNBC": "Peltola's campaign and the DSCC deny being involved in the retiree's Senate campaign.",
+          "NBC News": "The DSCC has said it was 'not involved with Dan J. Sullivan.'",
+          "Al Jazeera": "Reports the NYT alleged the DSCC coordinated the 'ballot composition project' but does not include a DSCC denial."
+        }
+      },
+      {
+        "topic": "Who ordered the criminal/state probe",
+        "positions": {
+          "Al Jazeera": "States Republican Governor Mike Dunleavy ordered a criminal investigation after the NYT report.",
+          "CNBC": "References a Gov. probe of the Peltola campaign in a related-links line but centers the DOJ federal criminal probe; says the probe 'has been underway for months.'",
+          "NBC News": "Describes an FBI/DOJ criminal case but does not mention the governor ordering a probe."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two headline-only entries. One frames the news procedurally and neutrally ('files request for preliminary injunction in Alaska election case'); the other is an explainer ('Is it legal to recruit spoiler candidates in US elections?') that pivots toward the legality of the Democratic tactic rather than the DOJ action. No body text available to assess lead or emphasis.",
+      "NPR": "Headline-only. Frames the DOJ move with the active verb 'seeks to isolate Alaska ballots' and foregrounds the 'criminal probe over Senate candidate.' Emphasis centers the DOJ as the actor. No body text available.",
+      "Al Jazeera English": "Takes an explainer/historical angle, leading with 'How common is ballot stacking, does it work?' Centers the alleged Democratic 'ballot composition project' and the NYT reporting, then contextualizes with past namesake schemes (Florida 2020 Artiles case, Washington 2024 Ferguson case). Quotes Trump's 'total election fraud' line and Heyman's 'sprawling conspiracy' quote prominently, giving significant air to the fraud framing, while also including Peltola's denial. Frames the tactic as the story more than the DOJ's legal authority.",
+      "CNBC": "Leads with the legal/procedural mechanics: the DOJ wants to 'preserve and segregate all ballots,' the civil suit to block certification, the dismissal motions, and Judge Gleason's scheduling. Emphasizes process and the litigation timeline. Notes Heyman's recusal and its Thursday rescission, that the criminal probe 'has been underway for months,' and that the state and Peltola argue the DOJ 'has no legal authority.' Specialized/financial-politics framing focused on Senate control math (Republicans hold 53 seats).",
+      "Associated Press": "Headline-only. Frames the story around Peltola's denial ('denies she knew of effort to put candidate with same name...'), centering the Democratic candidate's response rather than the DOJ action. No body text available.",
+      "NBC News": "Leads with the DOJ request to segregate ballots but immediately and repeatedly flags a gap: the filing 'did not spell out how segregating ballots would determine if a voter was confused' and 'did not spell out a process for ballot review.' Frames the Trump administration as having 'ramped up its efforts to inject itself' into a state-run election. Gives substantial space to Peltola's defiant rally quotes ('deeply offended,' 'hollow accusations,' 'smear campaigns'). Names Associate AG Stanley Woodward as author and details the additional discovery filings targeting Peltola campaign and DSCC communications."
+    },
+    "primary_source_alignment": [
+      "No primary source (court filing) was provided in the dossier, so direct alignment between reports and the underlying document cannot be verified.",
+      "The filing's quoted language is corroborated across outlets: CNBC and NBC News both quote the 'preserve and segregate all ballots' phrasing and the 'impossible after Election Day' justification, suggesting faithful reproduction of the filing text even without the document itself."
+    ],
+    "missing_context": [
+      "No outlet obtained or published the actual DOJ court filing(s); all reporting is secondhand summary of the documents.",
+      "The underlying New York Times report that triggered the probe is referenced by all full-text outlets but is not in the dossier, so its specific claims and sourcing cannot be independently assessed.",
+      "No outlet (per available body text) specifies which criminal statute the DOJ alleges was violated \u2014 CNBC explicitly notes Heyman 'would not say what criminal statute might have been violated.'",
+      "NBC News is the only outlet to flag that the filing does not explain how reviewing a segregated ballot would actually reveal whether a voter was 'confused' \u2014 a methodological gap the other outlets did not surface.",
+      "The second Dan Sullivan's own account is thin: Al Jazeera notes he 'repeatedly denied any Democratic push behind his candidacy,' but no outlet provides a substantive interview or his explanation for running.",
+      "Full body text was retrievable for only three of seven outlets (Al Jazeera, CNBC, NBC News). Reuters (x2), NPR, and AP are headline-only and could not be used for body-level corroboration; consensus facts are drawn only from the three full-text outlets.",
+      "The precise current vote/polling margin and whether the race is actually close enough to trigger the DOJ's proposed intervention is not quantified in the available text (CNBC references ranked-choice mechanics but the excerpt cuts off before completing the point)."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text reported the same DOJ action but with materially different framings \u2014 Al Jazeera on the history of ballot stacking, CNBC on litigation mechanics and Senate math, and NBC News on the Trump administration 'injecting itself' plus the unexplained ballot-review methodology \u2014 making this a coverage-divergence story rather than a straight REPORT. The absence of the underlying court filing and the single-source NYT origin further argue for a comparative treatment.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPb3ZCUmZXTzAtMHhoaFZaM3NyRzBkWjRGbmFMMG9UQmxjY1dvSW80aDNVRGpRcm4talpkRmI5a19Mem5KYy1qaHdCU1BoOHlFMlJ5dGJvcGhZTVdqbUJCX0JpbFMxbjZkaU5uc0Z1M0FmZXRsUnFuYjB3QUl2OHJKcEIya0tBRXRvWEk0Mml6RGg5c292aU5TN3FHLWpJVFZTdXNuNW5KaV9BeVVFUEFJLWJzUFNYMUlndGc?oc=5",
+      "title": "Justice Department files request for preliminary injunction in Alaska election case - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSkh2Z2oyY0s5ajFKc1dRekZ1NFdPdkdDeG01MTlTeWl5T1RnRDJJUHZUdko0MW1VRlJFSkFoa0VSNXAzNWJCN3FGXzNIeG50al9BQmJIXzdZQndvRTJTS2NqeEtDejN2dzB2d2J5YnNubUMwZjJaMVRjOEpvOXNZdHBVWUN2WU82TVhV?oc=5",
+      "title": "Justice Department seeks to isolate Alaska ballots amid criminal probe over Senate candidate - NPR"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTVJZZjdPbVpSRGpWUlpZTjlWa21OTXJQak9CUGFKMnlkWDdkQmowSnZJdWp5UzdnWWJmUEFsNmVROVd1dnF6ZDZqMEJ6dFlZc2YtWUFTeTNveWNKVjRUZE9zOEhQQ2Nub3pCY1NXYmJwc2I2M25WT3FnZEpRX0FwYjB5TUtsYWhaVTdWSVNNUGdkTWhaODFRZVZtcV9XdHdqNDlIeHctYWk1a0phYm000gG0AUFVX3lxTE8wal9wMHhHVU0yaTQ2OEZ3OXMxanJKTW9JRXZZQms2ZWJROG1vdW9mckdWRE16VDVPX1h3UExFdFdXcTVtV080Tlh4Z3pqakVEZ1JSV2ZJNXpzRU5LU3F6dEdCczBkRDAzemh0U0VFYmlpTWZCS1pCdjhuREE5SHpZZ2tQeW5oamVHeGNoeWtvYlVoT3dsaTV3UzhYYUtlb0VCWUFQeHVGeHVjclhkdjcyMEZvaQ?oc=5",
+      "title": "Alaska\u2019s two \u2018Dan Sullivans\u2019: How common is ballot stacking, does it work? - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbWpsMTBpSFJISFJGU3JJRTRJUVlSb3hoLUR1S2o3bDJoZklvWEFEeXRYeGU2RmJYbFF6UWdLNXQzLWVqdTQ0LUwyeTJBZlhiaTdHTTBJOUNROE9fN1FKT0Z5ZmNFRjA4ZHNyRU1JZ2EtT3k3ZEJDeTh6dE1YV1U2MjM1RThFb3RqZm43WG5KVkdUd9IBlwFBVV95cUxQY3Z1VGo3RUR6WFZJOEllamxMeFpybk9wREM0Ry1WazlrdmktWDhweV93TWM0bFdtc0I1VnFyZm5RVmtKWXZMLVo4TFJOUXBtMEpwTjBhMDY4RVY1QzlFYU1jVGpST2xSWjloVXdIcGJtT3VMT2ZmRTdQV1RuNElNSmhnNktEeWYzTXRIbVVLNE9FaDE5MVBN?oc=5",
+      "title": "Alaska Senate election: DOJ wants to 'segregate' all ballots for 2nd Sullivan candidate - CNBC"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZFMwOVMxQVRwVnBFam0waFlKVG8tQ1poNGdDUmhPaXlHX1A0bVRscWFGSmwtMnNtUzFMQnAtbkt4WmtJbWRFUnNnYWhPVGFHOHRsTkdsTzducml1dVlhR25LQTFaeC1Ld0V6amhGS0doakg2dFZ0ckhDeVhqVndUTmliLW8zWDNZV1NvT3pxbk1zdkN2ZFBNaWxnS2FyeldUeFM5YmJmQ1o1QnMyeXJ5YzVjMA?oc=5",
+      "title": "Peltola denies she knew of effort to put candidate with same name as Sen. Sullivan on Alaska ballot - AP News"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPTUszQm9RTnFsZVdtbXV5RUNQeWF0N19TeXNHVi1RcUtQMERtY0F4b1hlNjBlSHNKRzl1RGVvYjNGQ3ViZ1FneU1nLWx4QTZkdHBPblBoMC1hZDc3aExDMWVIckxQaTFFanR2WlBxSDRaTXlYVkgzZ1FfeDdldHNlSnpRenQwV2FhZlBrdmtuUnJmU2lONUdVMkpmLUJ5WHR1Tjk3b0IyWQ?oc=5",
+      "title": "Explainer: Is it legal to recruit spoiler candidates in US elections? - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQTGVrSk1wXzE5RFdpVW1QOGRpV2V1RWs2QjdVTS1tMVdrc1FNb0tIYTVqZWVOQ2xVeXdDUUlLdy1iRjVOeEN1bEtKTGh2NHd2cm5FamVpQUF1VlAyTGlDeDk0d2x0dEF0ZE83UTZieFpRRDlibFpiSDZmRUZYS3ZGWjdoRW1aZlU2b3pkX1diYXpDZ184amp2YmQxb3Z4ODJCTElTYlRsRXhjYTQ1SnRhSVZKeTl3QXBDME91T1A1YzBKZGRTaVRr?oc=5",
+      "title": "Justice Department requests separating Alaska ballots that rank Dan J. Sullivan in Senate race - NBC News"
+    }
+  ]
+}
