@@ -1,0 +1,79 @@
+{
+  "story_id": "2026-11-01-shops-looted-as-german-86eb005d56",
+  "headline_seed": "Shops looted as German cost of living protests turn violent - BBC",
+  "brief": {
+    "story_id": "2026-11-01-shops-looted-as-german-86eb005d56",
+    "consensus_facts": [
+      "A wave of youth-led protests over the cost of living swept Germany on the Halloween weekend of October 31 - November 1, 2026, led by a group called Gen Z regelt.",
+      "The German protests were part of a broader pattern of youth-led demonstrations across Europe, with parallel large-scale protests in France the same weekend.",
+      "Protesters' stated grievances included the high cost of living, underfunding/poor condition of schools, government spending cuts, and (per BBC) compulsory military service.",
+      "Shops and businesses in Germany and France boarded up windows ahead of the protests to guard against potential looting or violence."
+    ],
+    "disagreements": [
+      {
+        "topic": "Severity and characterization of violence (reporting timeframe)",
+        "positions": {
+          "BBC News": "Reports that protests turned violent after nightfall: rioters looted shops in central Frankfurt, molotov cocktails thrown at emergency services, windows of a gun shop smashed and two weapons seized, with clashes also in Berlin, Cologne and Hamburg, and police using water cannon.",
+          "Al Jazeera English": "Published a pre-protest preview (Oct 31) describing preparations and anticipated risk rather than confirmed violence; does not report the Frankfurt looting that later occurred.",
+          "Reuters": "Headline-only in this dossier; headline states rioters looted stores in Frankfurt and protests turned violent, but no body text available to corroborate details."
+        }
+      },
+      {
+        "topic": "Protester turnout numbers",
+        "positions": {
+          "BBC News": "Authorities in Frankfurt, Munich and Berlin reported as many as 18,000 protesters, roughly half of what organisers estimated.",
+          "Al Jazeera English": "Reports approximately 150,000 people registered to turn out across about 30 German cities (pre-event registration figure)."
+        }
+      },
+      {
+        "topic": "Attribution of responsibility for the violence",
+        "positions": {
+          "BBC News": "Cites Hesse interior minister Roman Poseck saying 'around 100 clearly identified left-wing extremists' infiltrated the Frankfurt protest.",
+          "Al Jazeera English": "Does not attribute responsibility; published before the violence and frames grievances as broad youth frustration."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier (body text not retrievable; the 'body' is merely the Google News link markup). Headline frames the event as 'Rioters loot stores in Frankfurt as Gen Z-led protests in Germany turn violent' \u2014 leads with looting and the 'Gen Z-led' label. Cannot assess body-level framing.",
+      "BBC News": "Leads with 'Shops looted... turn violent,' foregrounding the nighttime unrest, looting, molotov cocktails, and the gun-shop detail. Bylined to James Chater but credited to Reuters, so this is wire-sourced copy. Balances the violence framing by quoting Gen Z regelt spokesperson Lina Friedrich on peaceful aims (health, education, anti-conscription) and by noting protests were 'largely peaceful' during the day. Gives prominent space to Hesse minister Poseck's 'left-wing extremists' attribution and his comparison to France. Two identical BBC articles appear in the dossier (Articles 2 and 4).",
+      "Al Jazeera English": "Frames the story as anticipatory ('brace for protests'), published Oct 31 before the violence. Emphasizes scale (150,000 registered, 30 cities), police mobilization, and boarded-up shops. Devotes substantial space to the parallel French situation (70,000 officers, metro closures, mask bans, Chamber of Commerce worries). Leads on grievances \u2014 cost of living, declining schools, 'lack of prospects' \u2014 and sympathetically centers youth frustration rather than disorder."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court filings, police statements, organiser documents, or official turnout data were available in the dossier to verify the reported figures or the 'left-wing extremists' claim independently."
+    ],
+    "missing_context": [
+      "Only two distinct outlets have substantial body text (BBC and Al Jazeera); the BBC article is duplicated and its content is wire copy from Reuters, so BBC and Reuters are not fully independent sources. The Reuters entry itself is headline-only.",
+      "No confirmed final turnout, arrest, or injury figures from German police are present \u2014 BBC gives an 'as many as 18,000' authorities figure and Al Jazeera a pre-event '150,000 registered' figure; neither is a verified post-event count.",
+      "The Hesse interior minister's claim that '~100 left-wing extremists' infiltrated the protest is reported only via BBC/Reuters wire copy and is not independently corroborated or accompanied by evidence in the dossier.",
+      "No voice from police beyond official statements, and no independent eyewitness or on-the-ground reporting distinguishing peaceful protesters from those involved in looting.",
+      "No data quantifying actual economic damage, number of shops looted, or whether the 'gun shop' weapons seizure resulted in charges.",
+      "No comparison of organiser turnout claims versus authority figures beyond the single BBC note that authorities counted 'roughly half' of organiser estimates.",
+      "No reporting on the political or governmental response in Germany (federal officials, chancellor, policy context) beyond one state interior minister."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only two outlets have body text and the BBC copy is Reuters-sourced, so this is effectively a single-wire event report plus a pre-event preview \u2014 not enough independent framing divergence or a primary source to justify META. A straightforward REPORT, clearly flagging the thin and partly non-independent sourcing, is the honest call.",
+    "confidence": 0.45
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVVU2eHhKcXB0TU1teDBNamJNdjczWUVuNFpYVDBQUTNCMEJwYmYweGE1MXFsXzAxcGdYVlVObG1VQjg3dm94dXUyc2F5UHd6TkE0cUdQb2xpTk8tczhWNWdMR3pubExzLVkwZzdTWUY4bjhocmFMeWhzUE01WE1qTkZzNHBZZm1RUDlUQkJxSG5HT2tyS1ZDQm9GeWtXdjJOTXBrY29EZmJVVkxKOHNDLUc0RXY2VG8?oc=5",
+      "title": "Rioters loot stores in Frankfurt as Gen Z-led protests in Germany turn violent - Reuters"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAtRTMtQlNJcjUxVG5zZmwySzJ6NkRoUEtqV0dkWE9INjZMVWVhd2NFaThYMzRPQWlNanM3cUFBYUVEUU9tcnZKWDJZNnJqb2xPdUw4M0VmdFlMMm8?oc=5",
+      "title": "Shops looted as German cost of living protests turn violent - BBC"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbkx6OXpiRVIyUC1aUktnWE1namVwaGstU2JnUGpFTVVUcFg0SFFXd3IwU1Zlanh4QzdPeGt6OUJtb2xnQVhJMmpvWkhnSlBOeXd4bFo4ZFA4Z202YWlsZjAyeWc0TUY5QllQTlQxUVlzNng5RHRkc3RkZHlSS2hSWEdSWE94Z1BxYUpMejFRbGdJbUt3RUZlTlRVbUZKUmF3VWfSAacBQVVfeXFMTnNWNzFFTVZ0dVJVRnFJVkdqMFJxYjJQemtySVVpdmN1Y3NvTEZjUVZickhVcjJIUFcxcGJuU2lQSWpWYnFLR2d4b0RERE9OTFFzWWpnSDBPWEk2LW1yODFVaW5nWmhkZl9pVW9ha19UaWxjNlNfb1JQS1V0bjRndjVVUFJ1SmlYRlhxeTk1TjJlYTNyN05DMEhKX19QZm15ZmhBZF9JeUE?oc=5",
+      "title": "Germany and France brace for protests on Halloween weekend - Al Jazeera"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB0anoyU2dhbXNjTG13MHRkeDlxN1hEdzBXcWRJREtBbWpVQ29Vcmh2emVKUFlKWE5aTHhvVUFJdzBRUTVJMmVyMXBOOFlzYTdrV3JkVnFJSmNrZXljM3c?oc=5",
+      "title": "Shops looted as German cost of living protests turn violent - BBC"
+    }
+  ]
+}
