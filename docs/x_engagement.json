@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-10-31T01:54:21.318474+00:00",
+  "last_updated": "2026-11-01T01:34:10.618150+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2116629993765675198",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-31T20:34:50.704560+00:00",
+      "created_at": "2026-10-31T20:34:50+00:00",
+      "topic": "Ukrainian evacuees reunite with family after years trapped in Russia-occupied city - BBC",
+      "dossier_id": "2026-10-31-ukrainian-evacuees-reunite-with-48e70fff21",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 18
+    },
+    {
+      "x_tweet_id": "2116589855849185686",
+      "post_type": "REPORT",
+      "posted_at": "2026-10-31T17:55:21.049290+00:00",
+      "created_at": "2026-10-31T17:55:20+00:00",
+      "topic": "Justice Department seeks to isolate Alaska ballots amid criminal probe over Senate candidate - NPR",
+      "dossier_id": "2026-10-31-justice-department-seeks-to-cc2e18f6d0",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 21
+    },
+    {
+      "x_tweet_id": "2116375091793551866",
+      "post_type": "BULLETIN",
+      "posted_at": "2026-10-31T03:41:57.259577+00:00",
+      "created_at": "2026-10-31T03:41:56+00:00",
+      "topic": "Federal judge signals she may halt construction on Trump’s arch - The Washington Post",
+      "dossier_id": "2026-10-31-federal-judge-signals-she-6e69a69b6c",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 6
+    },
     {
       "x_tweet_id": "2116284530994659671",
       "post_type": "REPORT",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 37
+      "impressions": 49
     },
     {
       "x_tweet_id": "2116016807173665174",
@@ -66,7 +105,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 16
+      "impressions": 17
     },
     {
       "x_tweet_id": "2115561957805719677",
@@ -118,7 +157,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 79
+      "impressions": 81
     },
     {
       "x_tweet_id": "2115155243562336355",
@@ -183,7 +222,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 804
+      "impressions": 805
     },
     {
       "x_tweet_id": "2113730934981763156",
@@ -366,55 +405,16 @@
       "replies": 2,
       "quotes": 0,
       "impressions": 56
-    },
-    {
-      "x_tweet_id": "2111542098767774117",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-17T19:37:22.029823+00:00",
-      "created_at": "2026-10-17T19:37:21+00:00",
-      "topic": "Protesters clash with police in Paris and across France during major day of demonstrations - follow live - BBC",
-      "dossier_id": "2026-10-17-protesters-clash-with-police-1ec05af7af",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 16
-    },
-    {
-      "x_tweet_id": "2111497219719446916",
-      "post_type": "BULLETIN",
-      "posted_at": "2026-10-17T16:39:01.939241+00:00",
-      "created_at": "2026-10-17T16:39:01+00:00",
-      "topic": "Oregon father is the latest armed civilian to confront a gunman in a US mass shooting - AP News",
-      "dossier_id": "2026-10-17-oregon-father-is-the-7c72bba09d",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 49
-    },
-    {
-      "x_tweet_id": "2111284846064451801",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-17T02:35:08.223580+00:00",
-      "created_at": "2026-10-17T02:35:07+00:00",
-      "topic": "Presidential adviser says Ukraine is in talks to lift speed limit on military satellite network - AP News",
-      "dossier_id": "2026-10-16-presidential-adviser-says-ukraine-aad0855fe1",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 14
     }
   ],
   "averages": {
     "REPORT": {
       "count": 28,
-      "likes": 0.21,
+      "likes": 0.25,
       "reposts": 0.0,
       "replies": 1.04,
       "quotes": 0.0,
-      "impressions": 58.89
+      "impressions": 59.75
     },
     "BULLETIN": {
       "count": 3,
@@ -422,15 +422,15 @@
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 27.33
+      "impressions": 13.33
     },
     "ALL": {
       "count": 31,
-      "likes": 0.26,
+      "likes": 0.29,
       "reposts": 0.0,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 55.84
+      "impressions": 55.26
     }
   }
 }
