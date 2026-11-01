@@ -1,0 +1,91 @@
+{
+  "story_id": "2026-11-01-chris-murphy-is-hospitalized-159e8bc7bb",
+  "headline_seed": "Chris Murphy is hospitalized after stroke - Politico",
+  "brief": {
+    "story_id": "2026-11-01-chris-murphy-is-hospitalized-159e8bc7bb",
+    "consensus_facts": [
+      "Sen. Chris Murphy, Democrat of Connecticut, was hospitalized after suffering a stroke (confirmed in body text by NBC News and CBS News).",
+      "Murphy began experiencing numbness in his arm while at his son's hockey game on Saturday, and was taken to a local hospital where the stroke was discovered (NBC News and CBS News).",
+      "Murphy was transferred to Johns Hopkins for further monitoring and is responding well to treatment (NBC News and CBS News).",
+      "His chief of staff, Allison Herwitt, said in a Sunday statement that Murphy is 'awake and alert' and that the team is 'optimistic he will make a full recovery' (NBC News and CBS News).",
+      "Murphy is 53 years old (NBC News and CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Murphy's 2028 political standing",
+        "positions": {
+          "CBS News": "Explicitly states Murphy 'has been viewed as a possible 2028 White House contender.'",
+          "NBC News": "Does not mention 2028 presidential prospects; frames his travel as campaigning for Democratic candidates in the midterms."
+        }
+      },
+      {
+        "topic": "Additional context beyond the medical event",
+        "positions": {
+          "NBC News": "Adds that Murphy is an outspoken Trump critic, recently called a potential resumption of war with Iran 'insane,' and was among lawmakers who received letters with suspicious substances this fall.",
+          "CBS News": "Omits the Trump-critic framing, Iran remarks, and suspicious-letter detail; instead notes his Senate tenure since 2013 and prior three House terms."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in dossier. Attributes the stroke report to Murphy's chief of staff in neutral wire phrasing. No body text available to assess lead or emphasis.",
+      "The Washington Post": "Headline-only (this entry also aggregates a Google News cluster of other outlets' headlines). Frames straightforwardly: 'hospitalized for stroke, his office says' \u2014 attribution-forward, neutral.",
+      "Axios": "Headline-only. Plain event framing: 'hospitalized after suffering stroke.' No body text to assess.",
+      "Bloomberg": "Body text is a bot-detection / paywall interstitial with no reporting content. Headline frames neutrally: 'Senate Democrat Chris Murphy Hospitalized Due to a Stroke.'",
+      "NBC News": "Full body text. Leads with the medical facts and the chief-of-staff statement, then pivots to political context: emphasizes Murphy as a Trump critic, his 'insane' comment on a potential Iran war, his midterm campaign travel (including a scheduled New Hampshire stop with Chris Pappas), and the suspicious-letter incident. Frames him as an active, combative political figure. Page is heavily cluttered with unrelated subscriber-promo links.",
+      "CBS News": "Full body text. Leads with the medical facts and chief-of-staff statement, then emphasizes his career resume (Senate since 2013, three House terms) and explicitly flags him as a 'possible 2028 White House contender' who has been 'propping up Democrats in the midterm elections.' Framing leans toward his national political trajectory rather than his Trump conflicts.",
+      "USA Today": "Headline-only and off the hard-news beat: a photo retrospective ('Chris Murphy's years as Connecticut senator in photos'). Framing is biographical/retrospective rather than breaking-news, which given the circumstances reads as a legacy-style package."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the full chief-of-staff statement as an official release, or hospital statement) was located in the dossier. The chief-of-staff quote is reproduced near-identically in both NBC News and CBS News, suggesting both drew from the same official statement from Allison Herwitt rather than independent reporting."
+    ],
+    "missing_context": [
+      "Only two of seven dossier articles (NBC News and CBS News) have substantive body text; Reuters, Axios, Bloomberg (bot-check interstitial), The Washington Post, and USA Today are headline-only or contentless, so 'consensus' here rests on just two outlets citing the same official statement.",
+      "No outlet reports the type of stroke (ischemic vs. hemorrhagic), its severity, or any prognosis detail beyond the office's optimistic 'full recovery' framing.",
+      "No outlet reports the name of the 'local hospital' where the stroke was first identified before transfer to Johns Hopkins.",
+      "No independent medical source or treating physician is quoted; all medical characterizations trace to Murphy's chief of staff, not to doctors directly.",
+      "No outlet addresses implications for pending Senate business or votes during Murphy's hospitalization.",
+      "The exact time of the stroke onset Saturday and the timeline of transfer to Johns Hopkins are not precisely stated.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only two outlets provide full body text and they corroborate the same core facts from a single official statement with no material factual conflict; the framing differences (2028 prospects vs. Trump-critic context) are modest, making this a straightforward REPORT rather than a META coverage-divergence story.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNFRBVkdFd1REUGNsaWd3Z2lRUzVQdEwtczZmOUtvZHBiWmVmSkUyMGdURWVNSV9SbV9Oa0hPRW5iV0hXS2JtN1JIYTdqcjJBeXJzOVpGSTYtYVNFM3FHUVdDSU9TcnpoNVF0XzNPTVVsclNPa3JabVlEVEZVbEFYdnA4U1Z1YWxSQ2lkU01lM0YwbHd4dWxqRjNodV8tUDUxWmk3MGxFMHVNLVFRV1FWaWVVUQ?oc=5",
+      "title": "Democratic Senator Murphy hospitalized after stroke, chief of staff says - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZC1FLW8wYndWZjJyYl9IbTZLY3IxdzZEU1dodVA5eWR2WndWQUg1dnU0WnFlWjdsRUVOR08wNmtCbjhnb0s3Q0VxZFRTTm1jNk4yYjF5X1h6T2g1NzgzaEZwbzk1NUlzd3MyekdiQ2s1ZmlQTDE5VlNtM0N0NXk3X1NBdkdDU1FfbWkyM3ROLWdTUQ?oc=5",
+      "title": "Sen. Chris Murphy hospitalized for stroke, his office says - The Washington Post"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBUam1ZZU56TGRZR3JBQTNTQ0U2eEE0VkhUX2dKS1ExX3hQQkI0aWdCQ0cxV3lfMTU0Q1VLSGJWZ3hhQkpoUENwOWthQUlGdWllck5DcWdiWVhud0pKSi1VNUQwTWhJTEdmakZIallPbWw2RlE?oc=5",
+      "title": "Sen. Chris Murphy hospitalized after suffering stroke - Axios"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNV0VHRDhfZjEtSDlkWE1SUXhCRWVsYTRlb2pKYUFjNEFhQnVaYWNNQUd2dmFhalAyZk83MWhuZl9OZVFrbERpal9XTnA2LTFiSE9IcHdTX3F6QW54bGpOME4zVmpHY3Z1RkxzS0hjZnhEYU1YY3UtQXN4SWRINjV5cno4bndmWUpCNnlqSGlDanllZ1czTHd0LWFmeG4ydWhNWnFLd1JjRHhCVmNz?oc=5",
+      "title": "Senate Democrat Chris Murphy Hospitalized Due to a Stroke - Bloomberg"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUDRJVS1hOGJNYWwwajZwWmJ3MXpqOE1odHVadi1TenZET3JoNWZNVVRtdGFNYlVmakR5MGoxNHNzU1JFTjdfMmhsUEtOVVVQaFpySW1jLTNpNEVsbGlFaFRLVGRiQXV6WGlnZnVFYlJpc1dsT0tzR1N4OEwyc2ZYS0NoMFhHUTJ2VE1NS2pudEhWQWFudTBYYS13?oc=5",
+      "title": "Sen. Chris Murphy hospitalized after stroke - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9IR01JV250dHhlVHY3bG9IVHdiLWhTSlBsbGlfQnZueE1FVDBSNzNrWTlIZ3EzZHdaUjl6NmphMDlzUzhNWjdyYnNMOEtqMU1WSktobjFXcVhYSjR4YjUxM1FrTHZWd0dOUDQ4X3lEVQ?oc=5",
+      "title": "Sen. Chris Murphy hospitalized following stroke - CBS News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOa2xzN1pDVi1WY0dLUlB3T3J1WFd4elNYcC1SajM3dkdLN0NocExoV3pQLXFZOHNzckM5RFlCQ0RhY0N0a1htQWFnSnRRaDRoYnVFbmpJaWVaZWp3ZU9JbmgxQ1ktNW5OSUFPcklkMDVRTkN4VzJxcF9aM2N5MFpSWUdNTWxWRmJxS0tqUk1kZERsNDdtUU1PSjFpWURNLTNlOFJydnY5dzdsV2t0dHg3eW8yRW1nWXBJb1E?oc=5",
+      "title": "Chris Murphy\u2019s years as Connecticut senator in photos - USA Today"
+    }
+  ]
+}
