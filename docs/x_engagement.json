@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-01T01:34:10.618150+00:00",
+  "last_updated": "2026-11-02T01:56:15.130809+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2117003785318851071",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-01T21:20:09.530420+00:00",
+      "created_at": "2026-11-01T21:20:09+00:00",
+      "topic": "Chris Murphy is hospitalized after stroke - Politico",
+      "dossier_id": "2026-11-01-chris-murphy-is-hospitalized-159e8bc7bb",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 32
+    },
+    {
+      "x_tweet_id": "2116961574069936638",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-01T18:32:25.683764+00:00",
+      "created_at": "2026-11-01T18:32:25+00:00",
+      "topic": "Democratic Rep. Haley Stevens endorses Republican Mike Rogers for Michigan Senate - Politico",
+      "dossier_id": "2026-11-01-democratic-rep-haley-stevens-821114f1a6",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 9
+    },
+    {
+      "x_tweet_id": "2116739068700557641",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-01T03:48:16.428270+00:00",
+      "created_at": "2026-11-01T03:48:15+00:00",
+      "topic": "Shops looted as German cost of living protests turn violent - BBC",
+      "dossier_id": "2026-11-01-shops-looted-as-german-86eb005d56",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 50
+    },
     {
       "x_tweet_id": "2116629993765675198",
       "post_type": "REPORT",
@@ -14,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 18
+      "impressions": 21
     },
     {
       "x_tweet_id": "2116589855849185686",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 21
+      "impressions": 24
     },
     {
       "x_tweet_id": "2116375091793551866",
@@ -66,7 +105,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 49
+      "impressions": 50
     },
     {
       "x_tweet_id": "2116016807173665174",
@@ -79,7 +118,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 9
+      "impressions": 10
     },
     {
       "x_tweet_id": "2115925930937856345",
@@ -105,7 +144,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 17
+      "impressions": 18
     },
     {
       "x_tweet_id": "2115561957805719677",
@@ -118,7 +157,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 196
+      "impressions": 198
     },
     {
       "x_tweet_id": "2115519589563994285",
@@ -157,7 +196,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 81
+      "impressions": 82
     },
     {
       "x_tweet_id": "2115155243562336355",
@@ -366,55 +405,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 5
-    },
-    {
-      "x_tweet_id": "2111903461855879587",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-18T19:33:17.670663+00:00",
-      "created_at": "2026-10-18T19:33:17+00:00",
-      "topic": "St Petersburg oil facilities ablaze as Ukraine launches more than 1,000 drones at Russia - AP News",
-      "dossier_id": "2026-10-18-st-petersburg-oil-facilities-09d5e368d6",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 56
-    },
-    {
-      "x_tweet_id": "2111861527468798099",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-18T16:46:39.727708+00:00",
-      "created_at": "2026-10-18T16:46:39+00:00",
-      "topic": "Several dead or injured in major fire at Canada military base - BBC",
-      "dossier_id": "2026-10-18-several-dead-or-injured-a768f30cd1",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 120
-    },
-    {
-      "x_tweet_id": "2111647510066254186",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-18T02:36:14.051257+00:00",
-      "created_at": "2026-10-18T02:36:13+00:00",
-      "topic": "Fast-moving California wildfire burns homes as people are ordered to leave - BBC",
-      "dossier_id": "2026-10-17-fast-moving-california-wildfire-67ce8b13dc",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 2,
-      "quotes": 0,
-      "impressions": 56
     }
   ],
   "averages": {
     "REPORT": {
       "count": 28,
-      "likes": 0.25,
+      "likes": 0.21,
       "reposts": 0.0,
-      "replies": 1.04,
+      "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 59.75
+      "impressions": 55.11
     },
     "BULLETIN": {
       "count": 3,
@@ -422,15 +422,15 @@
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 13.33
+      "impressions": 13.67
     },
     "ALL": {
       "count": 31,
-      "likes": 0.29,
+      "likes": 0.26,
       "reposts": 0.0,
-      "replies": 1.03,
+      "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 55.26
+      "impressions": 51.1
     }
   }
 }
