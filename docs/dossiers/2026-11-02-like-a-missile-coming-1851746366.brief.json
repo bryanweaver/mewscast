@@ -1,0 +1,111 @@
+{
+  "story_id": "2026-11-02-like-a-missile-coming-1851746366",
+  "headline_seed": "'Like a missile coming down' - Nine killed in fiery Florida jet crash - BBC",
+  "brief": {
+    "story_id": "2026-11-02-like-a-missile-coming-1851746366",
+    "consensus_facts": [
+      "A Learjet 60 carrying nine people crashed in Palm Beach County, Florida, on Sunday, Nov. 1, 2026, and all nine on board were killed (NBC News, AP, CNN; corroborated in Al Jazeera's body).",
+      "The jet had departed Austin-Bergstrom International Airport in Texas and was bound for the Bahamas (NBC News, AP, CNN, Al Jazeera).",
+      "Transportation Secretary Sean Duffy confirmed the deaths and called the crash a 'horrific tragedy' (NBC News, AP, CNN).",
+      "Florida Gov. Ron DeSantis described the scene, saying 'It looked like a missile going down' and that it left a big crater in the road (NBC News, AP, CNN).",
+      "DeSantis/officials said there were no reports of anyone on the ground being killed or injured, though the crash created a significant debris field (NBC News, AP, CNN).",
+      "The crash occurred around 12:50 p.m. and the plane nose-dived before erupting into a fireball, leaving a crater in the roadway (NBC News, AP, CNN).",
+      "Minutes before the crash, the pilot reported 'light, clear ice that is manageable' and moderate turbulence, then later reported precipitation and requested to climb (NBC News, AP, CNN).",
+      "The pilot declared an emergency and radioed mayday calls describing descent of 10,000 then 20,000 feet per minute, and said 'We're going to crash into the ground' (NBC News, AP, CNN).",
+      "A flood watch / storms were in effect for southern Florida at the time of the crash (NBC News, AP, CNN).",
+      "The aircraft is registered to an LLC in Delaware per FAA records (NBC News, CNN).",
+      "The FAA and NTSB will investigate, with NTSB investigators arriving Sunday and Monday and a Monday news briefing planned in West Palm Beach (AP, CNN).",
+      "About 600 people near the crash site (a mobile home community) needed to be sheltered/evacuated because the scene blocked access (AP, CNN).",
+      "The identities of those on board had not been released at the time of reporting (NBC News, CNN)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Crash location naming",
+        "positions": {
+          "NBC News": "Describes the crash as near Cresthaven, a residential neighborhood in Palm Beach County",
+          "Al Jazeera English": "Says the crash occurred in Greenacres, near West Palm Beach",
+          "Associated Press": "States the crash occurred in Greenacres, a city of 45,000 about 7 miles southwest of West Palm Beach",
+          "CNN": "Places it near Military Trail, between Cresthaven Boulevard and 10th Avenue North"
+        }
+      },
+      {
+        "topic": "Maximum rate of descent reported",
+        "positions": {
+          "NBC News": "Cites descent up to 20,000 feet per minute",
+          "Associated Press": "Reports descent escalating to 10,000, then 20,000, then up to 30,000 feet per minute, beyond design limits",
+          "CNN": "Reports the jet descended 27,000 feet over the course of one minute"
+        }
+      },
+      {
+        "topic": "Historical/contextual framing of the crash",
+        "positions": {
+          "CNN": "Frames it as the second-deadliest US crash this year (after June's Butler, Missouri skydiving crash that killed 12) and the worst-ever Learjet 60 crash per Flight Safety Foundation data",
+          "Associated Press": "Links to related recent icing crashes (Wisconsin crash that killed 6) but does not rank this crash",
+          "NBC News": "Offers no comparative ranking"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Nine people dead in Learjet crash in south Florida'). Neutral wire label citing officials; no body text retrievable to assess framing.",
+      "NBC News": "Leads on the 'cataclysmic' descriptor and the human horror \u2014 dashcam video, the pilot's scream, the mayday audio. Emphasizes weather (flood watch, icing, turbulence) and Bombardier's statement. Body is heavily padded with unrelated 'For Subscribers' promotional links, diluting focus.",
+      "Al Jazeera English": "Brief NewsFeed item. Spare and factual: nine dead, Austin-to-Bahamas route, crash in Greenacres near West Palm Beach. No political context, no ATC audio detail, no proximity-to-Trump angle.",
+      "Associated Press": "Most technically detailed body. Leads on the visceral 'nosedives and erupts into fireball' imagery, then delivers the fullest flight-data timeline (35,000 ft, overspeed, up to 30,000 fpm descent, sharp right bank) and quotes an independent aviation safety expert on icing/stall possibilities. Emphasizes near-misses with homes and the 600-person evacuation. Careful to note nothing is ruled out at this early stage.",
+      "USA Today": "Headline-only ('9 aboard business jet killed in South Florida crash, officials say'). Standard attribution to officials; no body text to assess.",
+      "The New York Times": "Headline-only ('Nine killed as private jet crashes in Palm Beach'). Concise event label; no body text to assess.",
+      "CNN": "Leads with the crash video and the fireball, but uniquely foregrounds geographic/political proximity \u2014 notes the crash site is ~4 miles from the airport recently renamed for President Trump and ~8 miles from Mar-a-Lago, and that Trump departed on Air Force One about an hour before the crash. Also uniquely adds historical ranking (second-deadliest US crash this year, worst Learjet 60 crash), the convective SIGMET weather warning, the -47\u00b0C outside temperature, and the 2024 NTSB icing safety alert. Richest contextual framing of the dossier."
+    },
+    "primary_source_alignment": [
+      "No primary sources (NTSB preliminary report, FAA records, full ATC transcript, or official press release) were located for this story. Alignment cannot be assessed.",
+      "The air traffic control audio quotes (captured by LiveATC.net) function as the closest underlying source; AP and CNN quote it most fully and consistently, and NBC News's quotes align, though exact descent-rate figures differ (see disagreements)."
+    ],
+    "missing_context": [
+      "No outlet identified the nine people on board, whether they were passengers or crew, or their nationalities \u2014 all noted identities were not yet released.",
+      "No confirmed cause of the crash; icing, turbulence, overspeed, and storm cells are discussed as possible factors but the NTSB investigation had not begun reporting.",
+      "The name of the charter operator or the Delaware LLC owner was not reported beyond the registration note.",
+      "No outlet provided the tail number or specific aircraft age/maintenance history of the Learjet 60.",
+      "Only CNN raised the geographic proximity to Trump-associated sites and Trump's departure timing; the other outlets omitted this entirely, and no outlet suggested any connection \u2014 the relevance is left unstated.",
+      "Four of the seven dossier outlets (Reuters, Al Jazeera partially, USA Today, The New York Times) are headline-only or near-headline-only; the substantive reporting rests on NBC News, AP, and CNN. Consensus here is drawn from those three full-text bodies.",
+      "No outlet reported eyewitness ground-casualty verification beyond officials' initial 'no reports' statement, nor the status of the 600 displaced residents beyond shelter arrangements."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (NBC News, AP, CNN) corroborate the core facts with no major factual conflict \u2014 only minor divergences in location naming and peak descent figures. The framing differences (notably CNN's Trump-proximity angle) are real but not load-bearing enough to make this primarily a coverage-about-coverage story, and no primary source exists to diverge from.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTXAwdVdXLUJnR3JHYmUzeFlIQjFKeVB4RmR3QWVoS1F5bVFJaXpaN0JFS05hTFV2THZCUlgtY1JMS2lmWHMxdWNxMWRQRldTZThyZUdJSmJrMVhpRWQ2dTcwSFQ2by1SbXBma1JqckV3U3FtTE9ZZ0ZFN0ZzUHItXy14WTlGY3hwVEU5T0k4TEVZbXZCQ2ZaeExtWGpJV2xYRUFHZFE4cldUMVB0VDlWYU1vLXU0T0xnZzZMb1lB?oc=5",
+      "title": "Nine people dead in Learjet crash in south Florida, officials say - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONUkxcDZGX2dOUUVfOEpxQU5tSjh3eHhHOVBKVVZFajdsSWNsRzhibUM3UGcxVGdBYlVQQUM5S3NidjA3WDIyS0lYaWFyUEotZ2E5MHF5V245MDFmMGF4SUVMU19lQjQzdDM2UTNLVVBXMWtpb0I0SWc4VWZJNUZjLU1wYmE5QkJVcmI5dUpn?oc=5",
+      "title": "\u2018Cataclysmic\u2019 jet crash onto Florida roadway kills all 9 on board - NBC News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOekRMRTU0MGxRTER4TnB4Zkp2ZjEyeE5OVEJXSGZ6RHhIb3J5UU1MVzRqX2FJTENFbDZ5NDJIUE91S0JvM19HcUtlT2R2Q3pHMy1DX3BmeHlWQ3lEYWhlVUNwZFJ2b1cybDhDTFdqdjJuYXBXbFoxLWhSSlhUeGFqRm0zbkxDYlBWVTVvM1pyUmpDSjJ6b0U2aHFXakNvVkNVVEHSAacBQVVfeXFMUFlQS0x4Uy1fcFZNTG1EN1NtNjRVdEdnTWRyLXoyVjg1dkNJT3ZNd2VBZkhWN0k0eFFEYW93TFg3TTlEZ0VJVTdodkhpQlhub1IxN3FSMi1ndnRmal9UMlBwZHNnSEU2OE1PLU51ZXkzSEFkVmpiY2dwaEFJUXBYUlZQc1N1MmI0MjBqMDllazRqOTlheE5VVGpvTlJEdWVVTV9ra2Fpb1U?oc=5",
+      "title": "Nine people dead after Learjet crashes in Florida - Al Jazeera"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPT3VPQVE0dmE3bnM0TVptc2lUeHFmSHNfc1pEdHJPdG01UTRZMW1NaWVZXzRQbWRBcmN3WlJqTTA5YWpOZURQQlUwNTJSNXY2azVQWmVFbmpRWldybndPMzNlWGFnQk5Na0dTdlFmeWRzbW56ZkpOV091MEdmWHViUW1IWFRqOEEzN3c?oc=5",
+      "title": "Jet nosedives and erupts into fireball near busy roadway in South Florida. All 9 on board died - AP News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNWGtDRGFpa0d3QnNFa2JMOFdVazE1VjdKSXcyNmNuNTlNUno2aURTN1RJRG8xQU1xcTQ4ZUthUGE2dF9qMGpLbDZLY2RMZ1pucTltLWVBTUNIQkpLdml3Z0JMeHBKck1GVkRRUE5NNzlkTmZRaE83OHF3dndBSzNGOGlWRUk3MmR5XzF4ZGp5eXVJMy1sUE1NV1UxSzlxOHBmYV9TV3FMUjY?oc=5",
+      "title": "9 aboard business jet killed in South Florida crash, officials say - USA Today"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPOTZFMVRrejF1Rk5icEtqY3VXaGphNTRTdlNmRkhzV0pfS05sbm9EbDFzZ2wtVUZULWdrdmZBNHZZUVpfUUR3NmNxRWREUG5vaV9CZWFCV2tXVkk0S1BTNV9WRXJWZ2lCckVUSk9fNk5ZNDN6UktYTFFJRDluSUFQbE1VT1k5c1dlVUhPNVZNSENhc0xaOTYxV2tWZ3NxWjlo?oc=5",
+      "title": "Nine killed as private jet crashes in Palm Beach - The Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBTcWQ5OXN3NllJNlVibFNZdm95OURiTUxLVThOdHhwQ2RfdmlSRHRYV1F1QlpXZVFTSjVGaTNaZFFUVlcwd1hWVmVQU2NhcXFLS2ZTd0R4aDJqbVZtRklidXR2X1J3V1FlWDNr?oc=5",
+      "title": "Learjet plane crash in Palm Beach County, Florida kills 9 - CNN"
+    }
+  ]
+}
