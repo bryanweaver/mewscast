@@ -1,0 +1,72 @@
+{
+  "story_id": "2026-11-03-midterm-elections-2026-live-9bb92d76d2",
+  "headline_seed": "Midterm elections 2026 live updates: Economy, inflation and other voter concerns - CNBC",
+  "brief": {
+    "story_id": "2026-11-03-midterm-elections-2026-live-9bb92d76d2",
+    "consensus_facts": [
+      "All five outlets' coverage centers on the November 3, 2026 US midterm elections, with inflation and the cost of living as the dominant voter concern (headline-level consensus across Reuters, ABC News, CNBC, The New York Times, and USA Today).",
+      "Both ABC News and CNBC (the two full-text bodies) report that a US war in Iran is a live political issue tied to inflation and energy prices heading into the election.",
+      "Both ABC News and CNBC report that voter frustration with inflation/affordability and the Iran war is weighing on the election, with Democratic candidates invoking an end to the Iran war as part of their economic messaging."
+    ],
+    "disagreements": [
+      {
+        "topic": "Only two outlets have retrievable body text",
+        "positions": {
+          "Reuters": "Headline only \u2014 'US voters in a sour economic mood heading into midterm elections'; no body text to corroborate specifics.",
+          "The New York Times": "Headline only \u2014 'A Midterm Campaign Dominated by Concerns Over High Prices Nears Its End'; no body text to corroborate specifics.",
+          "USA Today": "Headline only \u2014 'Is the economy better than before Trump retook office? See the data'; no body text to corroborate specifics.",
+          "ABC News": "Full body text focuses on evaluating candidate anti-inflation proposals (tax cuts, ending the Iran war, deregulation, tariff removal).",
+          "CNBC": "Full body text focuses on the horse race \u2014 control of Congress, Senate/House seat math, redistricting, and market implications."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Frames the electorate's mood as 'sour' on the economy \u2014 emphasizes voter sentiment over policy specifics. No body text available to assess lead/bury choices.",
+      "ABC News": "Full body text. Leads with affordability as the defining voter concern and structures the piece as an economist fact-check of candidate proposals. Attributes the inflation surge to the Iran war (gas at $4.16/gal, up $1.18 since February; gas +9% in September). Features Democratic candidates (Osborn, Ossoff) calling to end the war, and quotes Trump defending the war while predicting prices will 'come plummeting down.' Balances candidate claims with economist caveats that no single measure will quickly shift prices.",
+      "CNBC": "Full body text. Leads on the stakes for control of Congress and Trump's agenda in a live-blog format. Emphasizes seat math (all 435 House, 35 Senate seats), toss-up states, redistricting in Texas/Florida, and the FiftyPlusOne projection giving Democrats a House edge and Senate favor. Frames voter frustration (Iran war, inflation, corruption, immigration) as a headwind for Republicans, notes billionaire GOP spending, DOJ deployment of ~1,000 election observers, data-center backlash, and market implications. More horse-race and markets oriented than policy oriented.",
+      "The New York Times": "Headline-only in this dossier. Frames the entire campaign as 'dominated by concerns over high prices,' centering inflation as the throughline. No body text available to assess lead/bury choices.",
+      "USA Today": "Headline-only in this dossier. Frames the story as a data-driven comparison of economic conditions before and after Trump retook office, implying a scorecard/accountability angle. No body text available to assess lead/bury choices."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story, so no alignment check against underlying documents is possible."
+    ],
+    "missing_context": [
+      "Single-source limitation: Only 2 of 5 dossier articles (ABC News and CNBC) have substantive body text. Reuters, The New York Times, and USA Today are headline-only and cannot corroborate body-level details. Detailed claims (e.g., gas at $4.16/gal, FiftyPlusOne projections, DOJ sending ~1,000 observers) are single-sourced and should not be presented as wire consensus.",
+      "No primary sources (official vote data, DOJ releases, BLS inflation tables, candidate platforms) were included, so the inflation figures and projection claims rest entirely on the two outlets' own reporting.",
+      "No outlet in the retrievable text provides actual election results \u2014 coverage is pre-results, so outcome claims cannot be verified here.",
+      "USA Today's headline promises a before/after economic data comparison, but without its body text the dossier cannot show whether the economy is objectively better or worse under Trump's current term.",
+      "The ABC News framing attributes the inflation surge primarily to the Iran war without presenting counter-explanations (e.g., tariffs, fiscal policy, bond-yield dynamics) in equal depth, and no second full-text outlet is available to confirm or dispute that causal attribution.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The two full-text outlets (ABC News and CNBC) cover the same election with materially different emphases \u2014 ABC on policy/affordability proposals, CNBC on horse-race and market stakes \u2014 making a coverage-comparison the honest story. With three headline-only outlets and no primary source, a straight REPORT would risk passing single-source body details off as consensus.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUGRVbTNjVkVkWHA5anlUV0l1YUhUUjM2Zy1DOGg0T2l2V0Zqajl2TzVpUW5Wc2s1ZkF6eTRNSmNNMWZCUEZqM0ZjUHNKQ0NkZkNGdlY3U2xHcWhBTUdzcXBnd2p2Z0VjUWFiQ3JRYkdvbTR2NUdnZUlnZHU4ZjY0OTIxa0NSbGhXWE1Yc1A5VmZHQVQ3aEJzcHhHNFVqVTNFa3RKazBydW9TbnBEUlo0aEM4THZmQQ?oc=5",
+      "title": "US voters in a sour economic mood heading into midterm elections - Reuters"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaDZnbjNmS18zRXlCdHpEQVZibXBxMnhCakZxbUt4ZjBYRVpsUTA3QzdSOWRIQTIwYlE2Y1pucm9USWRlMm5kS0N6cHg0Vngzd0dYSDgxbHpPUGRaLVNXN2JrbmhWa1RHclQ3RVAwMHZkR29mVmZ3MVFNTG00Q3NzR3FpYU5tdWFsNEhXRXV2UGVHS2dTWndYSGREYy1IbUtXNEhQdmcxRHRhYzZSbFpEaUJnX2tKM2J50gG-AUFVX3lxTE1NR2JVRXYxd2RBbDVXRkFSNENrQm8wbEpGaDF4anBMcHdQOG4zdlJ1dkxfVHlzQUY1YmM5VDRHYmlYdjZobmdjT19rZ1pOSGF0TmxtSmVyU3VRMTl4cTA2WHdqcFBsbTM3NmZKVkhlUGdRLU0zdDZZaTdIcDNXWXVKYWlkaDM4NG52OXBIazVHWHhoV0xDZXFyT0VaZmNaa1JZUlFKRV9feHhidlJpVGlORFZpVFlobncyb19HWnc?oc=5",
+      "title": "How do midterm candidates plan to fight inflation? Economists evaluate their proposals - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9QMWlJWVhUdU9BWjhRS2dOUTFsclRxbE9SdTlaeml6SzVBcy02WjRxMlZpNmRfSnk0Q1YteGZId0NFN18xMzcwX1ZPLTNZejBmR0Fjc1EzUE9GR2pIM2dIMHlqc3RaeE5sNTUxcGNpUmN4N3d4Wm0zZHJHTVjSAYIBQVVfeXFMUEFNNjBVQWJILWo5UVNqS0lZN0dGYWpuT081UWRILXQ0N1NFcThsRUFIQkdZcWNHRXMzSFpVdU1PeEltUFZidm9ob1B2SUFTVWw5LXFabkxMZk5aeVpKYWVvOXJDWWkwSW1IYjB3b1FyVEZUOHdLS00wQUpxOUJJeWNDQQ?oc=5",
+      "title": "Midterm elections 2026 live updates: Economy, inflation and other voter concerns - CNBC"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPNktSQ1FaUkJwNzVEWGtldncySlJGVWg4eEdZblRoY25NSjMwQnVfa1ZmdWc3eTdhSmFSa0t6dnhhWjM5TU91YnpYMEdtazVXLTZyM280dUlPZkVJYVBGZ3RhbWtYcXU5ZjM2THJSd0dzMkNPMTZhVXdVMWZ2ZFI5d0t2eHdHUQ?oc=5",
+      "title": "A Midterm Campaign Dominated by Concerns Over High Prices Nears Its End - The New York Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONHZNbEpMTEJ4VU92R1lMczc2SVV0dlItb2dIN3R1UnRrY0ZTSUJCSnpGcmJzWjZXNVNCak1NUFU3Z0RZT0ZxWktzWUtPMEVrVXJuSF9BQTF2T2pHODdJekJKRFZFUTFKTmJIcUJpQ0dJcWFJXzFDT1pya1hZUmhkVTk2M1J2STJhcTB0ZzRhb0xvR2xJaG1jbF8xTzQ3LWFsa2NMbTZwV01MYXpTb2dnQ05EbWlHTF9wLS1zZks4emdTQQ?oc=5",
+      "title": "Is the economy better than before Trump retook office? See the data - USA Today"
+    }
+  ]
+}
