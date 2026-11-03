@@ -1,0 +1,73 @@
+{
+  "story_id": "2026-11-02-texas-alaska-maine-senate-fa3ba2944c",
+  "headline_seed": "Texas, Alaska, Maine Senate races flip blue on DDHQ map - The Hill",
+  "brief": {
+    "story_id": "2026-11-02-texas-alaska-maine-senate-fa3ba2944c",
+    "consensus_facts": [
+      "All six outlets' headlines or bodies reference a wave of favorable Democratic polling or map movement in Senate races days before the 2026 midterms; this is headline-level consensus, with body-level detail available from only two outlets (Fox News and the DDHQ-map framing from The Hill's titles).",
+      "Fox News and The Hill both attribute the underlying polling to The New York Times (Times/Siena), and both frame it as Democrats leading or edging Republicans across roughly seven battleground Senate races."
+    ],
+    "disagreements": [
+      {
+        "topic": "Source independence of the polling claim",
+        "positions": {
+          "Fox News": "Reports the New York Times/Siena poll directly, with full numbers per state.",
+          "The Hill": "Headlines explicitly credit 'New York Times polls' and a DDHQ map; derives its framing from the same NYT polling rather than independent reporting.",
+          "The New York Times": "Headline-only in dossier, but is the originating source of the Times/Siena poll that the other outlets cite."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in the dossier. Frames the story as 'Democrats Show Strength in Final Days of Race for the Senate, New Polls Find' \u2014 leads with Democratic momentum and attributes it to new polling. No body text retrievable, so emphasis beyond the headline cannot be assessed.",
+      "The Washington Post": "Headline-only in the dossier. Takes a hedging, scenario-based angle: 'What if the polls are wrong about a Democratic Senate? Mapping 4 scenarios.' Frames uncertainty and poll-error risk rather than asserting a Democratic advantage. No body text retrievable.",
+      "The Hill": "Three entries, all effectively headline-only (bodies are just the linked titles). Headlines emphasize the mechanics of Senate control: 'Texas, Alaska, Maine Senate races flip blue on DDHQ map,' 'The 6 races that could decide Senate control,' and 'Democrats edge out Republicans in 7 heated Senate races: New York Times polls.' Framing is horse-race/map-tracking and explicitly credits the NYT polling. No substantive body text retrievable.",
+      "Fox News": "The only outlet with full body text. Reports that Republicans are 'trailing Democrats in seven key Senate battlegrounds,' headlining it as 'warning signs for Republicans.' Fox News reports specific Times/Siena numbers: Talarico 50-43 over Paxton in Texas (no Democratic senator elected there since 1988); Hamilton 49-44 over Marshall in Kansas (no Democratic Senate win since 1932); Brown 49-44 over Husted in Ohio; Jackson 51-45 over Collins in Maine; Peltola 48-46 over Sullivan in Alaska; Turek 48-47 over Hinson in Iowa; El-Sayed 53-42 over Rogers in Michigan. Fox News notably amplifies caveats favorable to Republicans: Siena director Don Levy's warning that many races are within margin of error, that late-deciding voters favored Republicans by nine points, that Alaska was the lone state where Democrats did not improve since September, and that polling underestimated Collins in 2020. Fox News also reports Trump's 38% approval across the seven states and a nine-point Democratic edge on cost of living."
+    },
+    "primary_source_alignment": [
+      "No primary source (e.g., the full New York Times/Siena poll release, crosstabs, or methodology document) was located for this story. The underlying poll is described only secondhand via Fox News's body text and The Hill's headlines; direct verification against the primary polling data is not possible from this dossier."
+    ],
+    "missing_context": [
+      "Only one outlet in the dossier (Fox News) has retrievable full body text longer than ~500 characters. The New York Times, The Washington Post, and all three The Hill entries are headline-only, so the specific poll numbers are single-source within this dossier and cannot be treated as cross-outlet consensus.",
+      "The specific state-by-state numbers (Texas 50-43, Kansas 49-44, etc.) come solely from Fox News's recounting of the Times/Siena poll; they are not independently corroborated by a second full-text outlet here.",
+      "No primary polling document, full methodology, or complete sample-size breakdown is in the dossier beyond Fox News's note that margins of error ranged from +/-3.4 (Texas) to +/-5 (Alaska).",
+      "The DDHQ (Decision Desk HQ) map referenced in The Hill's lead headline is not represented by any body text; what the map actually shows, and how it relates to the NYT/Siena poll, is not retrievable.",
+      "No outlet body text addresses historical accuracy of these specific pollsters, turnout assumptions, or how early-voting data cited in Fox's video blurb (Kansas, South Carolina) maps onto the poll.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets across the slant matrix are covering the same Times/Siena polling event with materially different framing \u2014 NYT asserts Democratic strength, The Washington Post hedges on poll error, The Hill tracks the map and races, and Fox News foregrounds Republican-favorable caveats \u2014 making the divergence in emphasis the real story, even though only Fox News provided full body text.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPS1FWU3dzc1ljclFJa2ZkLWhzdU1vSWRmQVV4R01VdEV4TFFCLUd4cUNzLXJkemtKX1RjbzlENnU5dC1IR09sMWp1c3E1cGxpaWFhUzdidzNONjF0UEZYRUFtcE5QbHk5Q0dmN28wUmJIM0Q4TmtVOTZ4eXNhMmhUUg?oc=5",
+      "title": "Democrats Show Strength in Final Days of Race for the Senate, New Polls Find - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWHpBVEpNZ1ZKOXdnZTgyeklzd2lLOVNfcXYzREl0OVlwRk1FSndTMDkzWkJRajdDTTgzMGVoR19JQ0p6Vnl5eUNVckN0cDRJZ3lycy1IV1lxeDhjQmptdkRMXzdPMmlBdmhxbkxrYU1ZNk51TmlDRTJDOWNpOW9KT3N3NmxaVTZEc2NpVklDQmpHSnJBaDYyOHNXY3ZIS2E4aWpZdnZBVUU5U3JaMmlJb2dvWWE?oc=5",
+      "title": "What if the polls are wrong about a Democratic Senate? Mapping 4 scenarios. - The Washington Post"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNcGF1VVVxejdyZmt3RlBHTEpqRGUzNl9CeXVZU1Vvbkpxa2VDTmtNMG5qS3luaUhsbzczMXJpV3I5NW9Sd3otczY3NVIxQTVEekxLSUE0WWRyTEh3SWhUeFFWaUo5N1JZODJHNkd3bFA0YUxYbGRTdWZ2VGFBTFJwYml2VdIBiAFBVV95cUxNcklpMmdCODR1WUhueHZsRFZXR090TVFHVElZN1E5ZjFodnE2ZFRQcjNrOHdHeTJnYTNRemZsNFluLXhabEd6TUFKQVdjZE4wa1VacHdPNXpoRDlLNlhSOUJjTExPVEFsaFU3YWk3OXJ2WXFrSTdmeWVzZ2xrblZraVZLQzZzZnZz?oc=5",
+      "title": "Texas, Alaska, Maine Senate races flip blue on DDHQ map - The Hill"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONzZMTzE3bXR3NlRrVzJIQ0lMUzQ1R2JUeXBmRzJZZzY0bEZ6TVNhdHF2eVNxWUxmOG9zR1JqZDdVd243cUl3NGpMbzRlMG04a0o5b29yOW1pVmthRkZZS1dHOTJqQjQ1TmZjMExEVy1GbFJqaWtpcE5VYzROWVAtVjBZYkVvbGxveHQxMS1QeDVOWWRtTkFiMEtJZDk5bUVU0gGmAUFVX3lxTE9iZ2lxSWg2R0ZEbE9iNGExOWRiMUxlMGJtSUtPNm96RXFZbFZPM3UyV3RRdGRKYXE4T1lCZDBUdUdkUk5tV0U3emtzRGZFUm5ZM2FESkFjUS12MTZmTE5yYktwZm5yY0RZSzU3UkdWYUFQQV9IVDY2RjBfX1hXMVRsdGIzbnVKNWJZNkozLS03bDYtcjZITzFpbkt0b0xKdHFGZDVlN0E?oc=5",
+      "title": "Poll flashes warning signs for Republicans in 7 battleground Senate races - Fox News"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdTJ3TFJnMVpKVHdRQnhtcmozLVNIWjQ3VUpSNmVodDhjWEF0eUdBalpxdTRJNC1LZE5PcHNDbEhTdDVkRzZzUUhfcFh4UTIzd2NMdjNteER1am1XUDh3X0VuYnVvRFZOQXVZUUptSFNVWVBaeGdEMmR6YV9aWDgxYVloMkw1VHg50gGOAUFVX3lxTE1MNy1xRFBMeDBJVXg0U0lGX2NBcTFzZmR2YTNfSWNZTDdfSGZ1T3NBbG1mWXR0dFdudW85SXJTcTVab2Y2QkdRcjUxb1NFTVFZV0RLZjZ4ck1GSWszcS1UQlhxOHhaeUxvR09tb1NsaFAyUHFMbXRZbENnVEc4ekpvbkgwM3ppQXRqSGFpVWc?oc=5",
+      "title": "The 6 races that could decide Senate control - The Hill"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE0xUHN0TU1BNTE1OVdYNERYUkx0VzA2WDNiQVV2ODBGOTFKUXlzN2dneHl5RDNoRm1taGNfczJqUUJvQ2lHdmZXdmwydDlfTmxDc1V5TzJpZzNjMXdObDNBd3FBTWh6NFoxcG1Ta3NBQVpYcFFBNU5rYUM3RkrSAYIBQVVfeXFMTTUzX042XzV0X0lCZWMwZmhFMFpVRS02enp5bjZNX2RpeHhDSXM4b25EdGp5Sm00MTFoV1loLUxROHVoNjhaTzFHdGZoQnFXTjk3c0JiQzlJNnowMC1yY0lQYk5vcU4yT0c5dlhERnBhYzhZYl9uRElROERfU0EydUwyUQ?oc=5",
+      "title": "Democrats edge out Republicans in 7 heated Senate races: New York Times polls - The Hill"
+    }
+  ]
+}
