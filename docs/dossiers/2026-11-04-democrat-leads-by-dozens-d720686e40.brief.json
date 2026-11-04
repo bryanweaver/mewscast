@@ -1,0 +1,117 @@
+{
+  "story_id": "2026-11-04-democrat-leads-by-dozens-d720686e40",
+  "headline_seed": "Democrat leads by dozens of votes in surprisingly tight Mississippi Senate race - BBC",
+  "brief": {
+    "story_id": "2026-11-04-democrat-leads-by-dozens-d720686e40",
+    "consensus_facts": [
+      "Democrat Scott Colom, a district attorney, is in an extremely tight US Senate race against Republican incumbent Cindy Hyde-Smith in Mississippi.",
+      "As of Wednesday morning with roughly 96% of the expected vote counted, Colom led Hyde-Smith by about 65 votes (462,857 to 462,792), with both candidates at 48.9%.",
+      "Independent candidate Ty Pinkins held about 2% of the vote with 19,938 votes.",
+      "The race remains uncalled and too close to call, with tens of thousands of ballots still outstanding.",
+      "Mississippi has not elected a Democrat to the US Senate since 1982.",
+      "If Colom wins, he would be the first Black US senator from Mississippi since Reconstruction (1875).",
+      "Donald Trump won Mississippi in 2024 by roughly 20+ points and campaigned alongside Hyde-Smith the previous month.",
+      "Hyde-Smith took office by appointment in 2018 and was later elected to the Senate.",
+      "National Democrats directed additional funding to the Mississippi race in recent weeks, seeing an unexpected pickup opportunity.",
+      "Colom campaigned on cost-of-living and economic/health care concerns.",
+      "Mississippi allows mail-in ballots postmarked by Election Day to be counted if received within five business days afterward.",
+      "The surprisingly close result comes amid broader Democratic Senate gains, including flips in states Trump won by double digits, giving Democrats control of the chamber in the new year."
+    ],
+    "disagreements": [
+      {
+        "topic": "Margin of Trump's 2024 Mississippi win",
+        "positions": {
+          "BBC News": "Trump won the state by more than 22 points in 2024",
+          "CBS News": "Trump won Mississippi by 20 points in 2024",
+          "ABC News": "Mississippi voted for Trump with 61% of the vote in 2024"
+        }
+      },
+      {
+        "topic": "Hyde-Smith's 2020 election margin / context",
+        "positions": {
+          "ABC News": "Hyde-Smith was elected to the Senate with 54% of the vote in 2020",
+          "CBS News": "States only that she has been in the Senate since 2018 and is seeking reelection; references her defeat of Espy context indirectly",
+          "BBC News": "Notes Mike Espy lost to Hyde-Smith by a wide margin in 2020 but gives no percentage"
+        }
+      },
+      {
+        "topic": "Number of outstanding/provisional ballots",
+        "positions": {
+          "BBC News": "about 50,000 ballots still to be counted",
+          "NBC News": "estimates about 46,000 expected votes remaining",
+          "ABC News": "Colom's campaign manager estimated around 15,000 provisional ballots; Secretary of State said about 3,600 outstanding mail ballots plus an unknown number of affidavit ballots; no definitive total"
+        }
+      },
+      {
+        "topic": "Expected timing of a result",
+        "positions": {
+          "BBC News": "Race very likely not called until at least Nov. 10, per political scientist Julie Wronski",
+          "ABC News": "Certification deadline is Nov. 13; mail ballots accepted through Nov. 10"
+        }
+      },
+      {
+        "topic": "Hyde-Smith's age and tenure framing",
+        "positions": {
+          "CBS News": "Describes Hyde-Smith as 67 and Colom as 43; emphasizes her incumbency since 2018",
+          "BBC News": "Describes her as the first woman to represent Mississippi in Congress, elected in 2018"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Live-results data page, not a narrative article. Leads with the raw numbers (Colom 48.9% / Hyde-Smith 48.9%, 65-vote gap) and 'Too close to call' label. Uniquely emphasizes the 22.9-point vote shift toward Democrats versus 2024 and provides county-by-county and exit-poll data, including a near-unanimous Black-voter split for Colom. Neutral, data-driven, no editorial framing.",
+      "BBC News": "Leads on the human and historical drama \u2014 'surprisingly tight' race in a state that hasn't elected a Senate Democrat in 40 years, and the prospect of the first Black senator since 1875. Heavily emphasizes Black voter turnout, quoting the NAACP's Mississippi director. Frames Hyde-Smith's campaign as 'lacklustre' via a political scientist. Foregrounds Colom's critique of national Democrats 'conditioned not to care about Mississippi' and his Christian-faith, working-rural messaging. Ties the race to a national Democratic wave.",
+      "CBS News": "Leads on the 'toss-up' and 'margin of under 100 votes' angle in 'deep-red Mississippi.' Emphasizes the race as part of a broader Democratic Senate takeover ('more than four flips'). Quotes Colom's late-night 'trending in our direction' line. Lighter on historical/racial context than BBC and ABC; frames the story primarily as a national control-of-chamber story with Mississippi as a potential add-on.",
+      "ABC News": "Leads with the mechanics of recounts \u2014 uniquely reporting that Mississippi has no formal recount process, confirmed by the Secretary of State's office, and detailing the 'ballot box exam' and legal-challenge path. Most granular on outstanding ballots (provisional/affidavit/mail) and certification deadlines (Nov. 13). Pairs a live-results dashboard with the narrative. Procedural and process-focused framing rather than drama-focused.",
+      "The Washington Post": "Headline-only in dossier. Headline frames Colom as 'defying odds' with the race 'too close to call' \u2014 emphasis on the underdog narrative. No body text available to assess further.",
+      "NPR": "Headline-only in dossier. Headline is procedural and neutral \u2014 'Votes are still being counted to see who will represent Mississippi in the Senate.' No body text available to assess further."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (official canvass totals, Secretary of State certification records, roll calls) were included in the dossier. ABC News secondhand-cites statements from Mississippi Secretary of State Michael Watson's office, but no primary document was provided for direct verification.",
+      "The vote totals (Colom 462,857 / Hyde-Smith 462,792) are consistently attributed across NBC, ABC and BBC to Associated Press data; this is effectively one shared wire source, not independent corroboration of the raw count."
+    ],
+    "missing_context": [
+      "No outlet provides a definitive count of outstanding provisional/affidavit ballots; estimates range wildly (campaign's 15,000 vs. Secretary of State's ~3,600 mail ballots plus unknowns), which is decisive given a 65-vote margin.",
+      "No outlet explains how provisional/affidavit ballots have historically broken in Mississippi or which counties they come from, information essential to understanding the race's likely direction.",
+      "The 2024 presidential margin is reported inconsistently (20 points vs. 22+ points vs. 61% of vote) without reconciliation.",
+      "No outlet carries a direct on-the-record response from Hyde-Smith or her campaign about the tight result; coverage relies on Trump's earlier rally remarks and a political scientist's characterization of her campaign as 'lacklustre.'",
+      "No primary source (official county-level canvass, certification schedule document, or Secretary of State release) was included, so all vote figures rest on AP data relayed through the outlets.",
+      "Turnout claims about Black voters driving the result (BBC, NBC exit polls) are not quantified against prior-cycle turnout, so the magnitude of the shift is asserted more than measured.",
+      "No outlet details the Independent Ty Pinkins' role as a potential spoiler despite his ~20,000 votes dwarfing the 65-vote margin."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets have full body text reporting the same uncalled race but with materially different emphases \u2014 NBC on vote-shift data, BBC on race and Black turnout, CBS on the national Democratic wave, and ABC on recount mechanics and ballot counts \u2014 making this a coverage-divergence story rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9OODJ1SUdvS2VIR0VXT0kzWFZtSjVIWE4xS3hEQnJTVldLdHc2TGFHYjByRWxuS3BFaEJlQ1JIUmJuWWx0U3JWR2U3X3N6WEJ4S05HMXpSSGVuU2JlZ0lLZUwzUFU4RXVoLURLeHhLV2VIaTNVQnB0S3poWEpHUWs?oc=5",
+      "title": "Mississippi U.S. Senate Midterm Election 2026: Live Results - NBC News"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1HMzQwZkNtWnM3ci1XOWpTeGItSFhoVzUtdGVENE1jZkFDVnFuUzVycjJuSnNUUWNxVzVralZfRkJZcWZvTjhJQnVGMUNiMndIRmQyRzVNczZmVm8?oc=5",
+      "title": "Democrat leads by dozens of votes in surprisingly tight Mississippi Senate race - BBC"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNQWlaQkhSejdocVBYOEhhWUNqamg2cW1MZVVzaEVpRjNHNWNlS1R2T2xzLWlrdUw1amQzMjRCcmhKYjd6cDB2a20yanBZS042Nmx4OU03alFwZWt3bWtrMFdhcl8zSUcwS3VicmJLMENQckI2WC1vZjloQkhPRlNDWg?oc=5",
+      "title": "Mississippi Senate race still a toss-up, with margin of under 100 votes - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONm9GcGFKS0JYYTgxdG1iS3h5OUtSbnpQbkltZlhVT0xya2xxQ21WVFpwYWxFMzBBSTVDRG9jWElpSEhVbnpldjg0MDJNd0N6dkM4NmFqZUxvUlhSc0FyMXVibTZqYTd1LTlVNllpbUx3ajBfUkRtUGtpNVZJS1lnR3hISWRjOVBHZUlQRHFNWnFIOGpJamE1ZTVrQmNjOGvSAaQBQVVfeXFMTWZwSzdJMWFjRDYteGpTZ2lRYjl6YUU5YXA2emZoTUdiSDduTkRiZUZJdHN3Z0NPY1IzNlM2MXZVaU1wTnRHMlhfTnlPMFJIcUthY0d1VV9wME9qLTRfczhTLWlYWnZSd2Nhc1NlRWpKMXc3Rk1SSWJsazlMSzhBcW1KSy1UaUJldjRMa3NjTGJvZkNrMHU4YTFEQzNQMVVuallxVHE?oc=5",
+      "title": "What to know about recounts in Mississippi with razor-thin margin in Senate race - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbDFBUXl1ZFBZNmVUazdWOG5VeHFrakxqM0pmdW05V2NuUko3LWF4bVVVQ3hoNlNaSlF6eDA1VDdLd0pEVnlPM0RpcEZ3UEF2RDdYZ09VOE03aGtOalYxVUNUU0h1QWVjZTkxRjFPVmlKZXpjR2lvOG1aY1V4SXBkLUl2MFBGeWRhNFlkYzFqM3lOUW1EZWc4?oc=5",
+      "title": "Mississippi Democrat Scott Colom defies odds as Senate race is too close to call - The Washington Post"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVXZNUmJiS1BkQWFGRlAyM3VBV0ZzRWtEUlFhOVhNUDBxcmZDNG1tcVBXOVFrejZmR0lqWUZteDlFVm9MZmttVUI1bzhBQ0N1b2JXOEdzR09FZWdmdVlvOVhRcnpwNW5MQTJvamNSQmRfal9CSHRoZ1dsNnBMdUNIMmRoMWNSb013MlMtOHRwZjZMMVlUSjhRUWxZN2wtSXZyV09QTk5Xa0U?oc=5",
+      "title": "Votes are still being counted to see who will represent Mississippi in the Senate - NPR"
+    }
+  ]
+}
