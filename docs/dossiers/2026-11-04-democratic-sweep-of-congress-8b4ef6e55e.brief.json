@@ -1,0 +1,99 @@
+{
+  "story_id": "2026-11-04-democratic-sweep-of-congress-8b4ef6e55e",
+  "headline_seed": "Democratic sweep of Congress ushers in a new era as Trump acknowledges impact of the Iran war - AP News",
+  "brief": {
+    "story_id": "2026-11-04-democratic-sweep-of-congress-8b4ef6e55e",
+    "consensus_facts": [
+      "Democrats won control of both the House and Senate in the November 3, 2026 US midterm elections, ending unified Republican control of Congress (reported in full by Associated Press, Al Jazeera English, and CNBC).",
+      "Trump publicly acknowledged that the war on Iran impacted the midterm results, while saying the action was necessary (Associated Press, Al Jazeera English, and CNBC).",
+      "The war on Iran \u2014 a joint US-Israel campaign \u2014 began in late February 2026 without congressional authorization and has driven up gas, fuel, food, and inflation costs that frustrated voters (Associated Press, Al Jazeera English, and CNBC; Al Jazeera and CNBC cite the start as Feb. 28).",
+      "Democrats' new majorities fall short of the two-thirds supermajority needed in both chambers to override a presidential veto, limiting their ability to directly force an end to the Iran war (Al Jazeera English and CNBC).",
+      "Democrats can use Congress's spending, legislative, and oversight powers to scrutinize and constrain the administration, while Trump retains substantial authority over foreign policy (Associated Press, Al Jazeera English, and CNBC).",
+      "Affordability and the cost-of-living crisis were central to Democratic campaigning and voter frustration (Associated Press, Al Jazeera English, and CNBC)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Where Trump made his acknowledgment and his exact phrasing about the Iran war",
+        "positions": {
+          "Associated Press": "Quotes Trump telling reporters 'The Iran thing we had to do, and we continue to do it,' and telling Politico 'I don't want to be just sitting there for two years vetoing everything.'",
+          "Al Jazeera English": "Quotes Trump in a telephone interview with Fox News: 'I think a part of it was Iran, but at the same time, people understood the importance of what I've done with Iran.'"
+        }
+      },
+      {
+        "topic": "Whether Trump will replace Defense Secretary Pete Hegseth",
+        "positions": {
+          "Associated Press": "Reports Trump said he was NOT considering replacing Hegseth despite voter dissatisfaction and impeachment threats.",
+          "CNBC": "Cites RUSI fellow Mitchell Reiss predicting Trump WOULD replace Hegseth, citing the Bush-Rumsfeld precedent after 2006 midterm losses."
+        }
+      },
+      {
+        "topic": "The scale and character of the Democratic win",
+        "positions": {
+          "Associated Press": "Frames it as a 'blowout' and 'sweep' with unusually wide margins, Democrats flipping long-shot Senate seats in South Carolina, Texas, and Kansas.",
+          "Al Jazeera English": "Describes it as a 'scathing defeat' for Trump but focuses on institutional constraints rather than margin size.",
+          "CNBC": "Describes Democrats winning control and gaining 'greater leverage,' emphasizing oversight scope rather than the breadth of the electoral map."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Leads with the domestic political drama \u2014 a 'blowout,' 'sweep,' and 'stunning rebuke of MAGA extremism' (quoting Jeffries). Centers the new Democratic agenda: a 100-day affordability push plus 'vast oversight and investigations' with impeachment 'an option.' Highlights history-making angles (Jeffries as first Black speaker). Reports Trump's conciliatory-but-combative posture and his refusal to replace Hegseth. The Iran war is framed as the byproduct cause of the gas-price frustration that drove voters.",
+      "NPR": "Headline-only in this dossier. Headline frames the story around Democrats' plans for 'a long list of Trump investigations,' emphasizing the oversight/accountability angle over the affordability angle. No body text available to corroborate.",
+      "Al Jazeera English": "Explainer format focused on institutional mechanics and limits of Democratic power. Leads with the caveat that Democrats lack a veto-proof majority. Devotes substantial space to the War Powers Resolution's weakness, the December 11 funding deadline as leverage, and tariffs. Uniquely surfaces analyst voices (James Boys, Scott Lucas) raising the possibility that a term-limited Trump feels 'unleashed to act with impunity' and could escalate in the Middle East. Notes JD Vance's opposition to the war.",
+      "CNBC": "Specialized/markets framing centered on foreign-policy consequences for Iran and Ukraine. Leads with the theme that Trump 'is not a lame duck' and retains 'enormous latitude' on foreign policy. Features think-tank analysts (Chatham House's Laurel Rapp, GMF's Lintzenich, RUSI's Reiss, Berenberg's Schmieding). Uniquely predicts a replacement of Hegseth and frames Russia/Ukraine as a 'tail risk,' including Zelenskyy and Kremlin reactions.",
+      "Reuters": "Three headline-only entries in this dossier. Framings per headline: (1) 'Trump is still in charge, but Democrats gain leverage in coming economic debate' \u2014 stresses continuity of presidential power alongside new Democratic leverage; (2) 'From Iran to trade: how the US midterms impact the rest of the world' \u2014 international-consequences framing; (3) 'Netanyahu rivals seize on Democrats' sweep of US Congress, seeking his ouster' \u2014 Israeli domestic-politics angle. No body text available to corroborate any of these."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No roll-call vote, certified election result, transcript, or official statement document was provided in the dossier, so coverage cannot be checked against an underlying document.",
+      "Quoted statements (Jeffries, Schumer, Trump) appear only as reported by the outlets and could not be verified against a primary transcript."
+    ],
+    "missing_context": [
+      "Single-source/limited-body-text disclosure: Of 7 dossier articles, only 3 (Associated Press, Al Jazeera English, CNBC) have substantial body text. NPR and all three Reuters entries are headline-only and cannot corroborate body-level claims. Consensus here is drawn strictly from the three full-text outlets.",
+      "No outlet in the full-text set provides the actual projected seat counts or margins in either chamber \u2014 AP references 'unusually wide margins' and 'some races still too early to call' without numbers.",
+      "No outlet provides casualty figures, scope, or current status of the US-Israel war on Iran beyond its economic ripple effects.",
+      "The Netanyahu/Israeli political angle appears only in a Reuters headline with no retrievable body text; the substance of how Democrats' win affects Israeli domestic politics is absent from the full-text coverage.",
+      "No outlet details the specific nature or targets of the threatened Democratic investigations or the impeachment threat against Hegseth beyond mentioning they exist.",
+      "No independent verification of voter-motivation claims (e.g., that the Iran war vs. inflation vs. corruption drove the result) \u2014 these are attributed to the outlets' own framing and to quoted analysts, not polling data cited in the dossier.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (Associated Press, Al Jazeera English, CNBC) reported the same event with materially different emphasis \u2014 AP on the domestic political sweep and investigations, Al Jazeera on institutional limits and possible Middle East escalation, CNBC on foreign-policy latitude and a predicted Hegseth replacement \u2014 including a direct factual divergence on whether Hegseth will be replaced. That spread of framing, plus four headline-only outlets that cannot corroborate, makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQemZtNHA3MndVd0YwZEZjYVZSdXA5NVpnXzhpUnY5Mkp5U2lBTnBtNEV6dVB0LUJZVXBDV2lUNnNHbTczNWFVVEtXUVhFdlUxdm5sOWl6U0JFMjhGXzgzQ19GNXdrNUVJMlB4czlkenlNOUctMGllMmFLRTJrVXl0T1hoQ1ZUcmI4N0xxU18wTEhuQUNHYm5mNFhNc0pVRjJqY0s0clotUW42czd0TTRCNw?oc=5",
+      "title": "Democratic sweep of Congress ushers in a new era as Trump acknowledges impact of the Iran war - AP News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVU04OU4tZ2ZTNTZqQUNEdFlVUnl3NHM3aWpVOFFmeHNaeFl2bVMzc1VTWWJVVmZPQWRkVHJxTzVyOEx6WkJsd2tYOXo4Uk5hQUZ3ZDRON0R6OW50OHY5YjlPUHc5eEFQTzVMclB5amh0XzFHVV9yLWo3dEVWSFBXQ0pVSHd1UG9o?oc=5",
+      "title": "Back in the majority, Democrats have plans for a long list of Trump investigations - NPR"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNjd5aWdVVzA1ZThHeGRqck9pSjhRMjd3R1YyVTRsQlY5MG0wR28yUUJtc0VwTVVYdmJZeWl0VEE0YnhxMXMtQWlWT2lsWHpiQVFXa1dLRHV6ekE4c3lkeWhYOUxSNlRkTXQ3ZG5QRnNNTGd5bnZORWdpVEF3WHBUVU9hQzh3Y0d6QmpYT1M4RGczckx0WWZhTTlGRXhzdktIVFM1ZUxMa1FDNzYxNkpaQURPUdIBuAFBVV95cUxPX1BUN1ZpOUxnM3Izb2s0aU1qQVBHZlZJRVpGbVRnUkVxX3J4QmZ1NDJBenRUXzhNcUJUc1UzM1lyY3dpM1lJaldYS1JrQ2V6emFKYXhOS1BQRm1GR0dLeXdISENVaVQxX09YNFFnSTdEUC14SVFUQy1CRDlEazN1VGRoY0ExVlFreXhfNmNMcjFESW5sV3A1a3hwNk9YVHUyTWxxRDh4V1lmS1RjeFgybHFGNXdOMlpt?oc=5",
+      "title": "Can Democrats stop Iran war, reverse Trump\u2019s tariffs after midterms win? - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMHcwVEFaS2dkU0toVnNZblgyU2ZENUE3N2xnenFSeFpFS25NRzgyT3J6cUk4ekpoV0s0elpUSkFmdDJWRy1QLTRFSXRkamZrN3FEbTR4SVFIZmJOVU56Nm5JaVUzNVlBNTJLOXJUcTFqVjFGUDBLaWtIVnk4ZnZoWUJ30gGHAUFVX3lxTE12LXRMZ1JmbHhncmU0Z1h0VXNMSU9xU05HSnczT3pHOUFQVlBYWk5yckhXQWs5ZmJmclNFV0Jsek9GNXJlRWVIdnhwRjdMR1VrTVJaR290bVFBdW1scFVXNjVwdVBFNHZUQlJqanNxUWFxUDdkT3U0bjVzR05VOEZWUEVDRVhqUQ?oc=5",
+      "title": "What Trump losing power over Congress means for Iran, Ukraine and foreign policy - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeEozcW5LWjk4cHhZdVFGWDhTREJDVHk5ZGVGZk5nTmxXVTN6dE42RzVhbkk4dlFyMk5Qdi1YN1M4c0Fnc0VFOW1ETWFiN2x6QTBmSkRjNTdhWU5wc3hVOGlFNjdFbVdZU2NleGwxM3lfRkhrOEJTUW9INnd6OTM0M3FKaERvQUNPbEllVlpKak9mNUJWSktReEdvYmV4cEtCei1WSkQzVzZyTE1yTGhEVnZRX3B3bS1FaFc4dWhB?oc=5",
+      "title": "Trump is still in charge, but Democrats gain leverage in coming economic debate - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMk5tUl8yRml4eVVXZThHYnhwejMtb3VqUTR6c3lIel9CUjlQYnprMFdJOGRkY1BvcXU5eS0zeEg3Wnc3bHhPTnYyMms5bmpYVmxUVGNpeEJzZGhLUUVWcWY2dDhZTXBOR1pSRldGRUZyeGVkMU5RMkREejBqLUh5Y1IzTklIRTdHeUtweFh0SWVocUZuYlNmNTg5ZGFDa3c?oc=5",
+      "title": "From Iran to trade: how the US midterms impact the rest of the world - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMXFMUXhNOFRueTBpaDBRdk9WX0pJUW5DT21NakZ4WHlIZERjUWpfZHdjUkZ5OTRlSml1WnFNOGIxUEpBakFJbG90ZnFZMFh0Y2VwMGJ0VWJXVWZyMnBMWk5pMGpEa2NyQUN1dExweU1wYVhIdUtFUVBWcEViMlFTS2VBZDNaQmRsU0dfQ09Gd1FKOE9WN2ZDeFlTYjdlQ2k0QnJXeUpUeWgzWENBTkoyTmlwa2lvRkRuRURnZUFsdkw?oc=5",
+      "title": "Netanyahu rivals seize on Democrats' sweep of US Congress, seeking his ouster - Reuters"
+    }
+  ]
+}
