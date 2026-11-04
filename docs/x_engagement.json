@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-03T03:45:22.226416+00:00",
+  "last_updated": "2026-11-04T02:46:57.753508+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2117746080427221133",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-03T22:29:46.498850+00:00",
+      "created_at": "2026-11-03T22:29:46+00:00",
+      "topic": "Midterm elections 2026 live updates: Economy, inflation and other voter concerns - CNBC",
+      "dossier_id": "2026-11-03-midterm-elections-2026-live-9bb92d76d2",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 24
+    },
+    {
+      "x_tweet_id": "2117712889532322111",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-03T20:17:53.150283+00:00",
+      "created_at": "2026-11-03T20:17:52+00:00",
+      "topic": "The unlikely player in contentious Michigan Senate race: Stevens’s fiancé - The Washington Post",
+      "dossier_id": "2026-11-03-the-unlikely-player-in-52fbc7e213",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 77
+    },
+    {
+      "x_tweet_id": "2117481712951439712",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-03T04:59:16.306726+00:00",
+      "created_at": "2026-11-03T04:59:15+00:00",
+      "topic": "Trump makes midterm closing arguments at troubled Reflecting Pool site - The Washington Post",
+      "dossier_id": "2026-11-03-trump-makes-midterm-closing-2c12df5632",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 23
+    },
     {
       "x_tweet_id": "2117406510922039305",
       "post_type": "REPORT",
@@ -14,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 15
+      "impressions": 20
     },
     {
       "x_tweet_id": "2117383534164017191",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 9
+      "impressions": 10
     },
     {
       "x_tweet_id": "2117103025244581889",
@@ -53,7 +92,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 42
+      "impressions": 48
     },
     {
       "x_tweet_id": "2116961574069936638",
@@ -79,7 +118,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 51
+      "impressions": 52
     },
     {
       "x_tweet_id": "2116629993765675198",
@@ -366,58 +405,32 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 6
-    },
-    {
-      "x_tweet_id": "2112646947370909761",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-20T20:47:38.322536+00:00",
-      "created_at": "2026-10-20T20:47:37+00:00",
-      "topic": "Cornell’s Jane Doe Sent Letter to Faculty Senate Ahead of Vote - The New York Times",
-      "dossier_id": "2026-10-20-cornell-s-jane-doe-a441a2acfa",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 23
-    },
-    {
-      "x_tweet_id": "2112606526271807828",
-      "post_type": "BULLETIN",
-      "posted_at": "2026-10-20T18:07:01.227484+00:00",
-      "created_at": "2026-10-20T18:07:00+00:00",
-      "topic": "Marseille braces for more unrest after protests give way to 'apocalyptic' disorder - BBC",
-      "dossier_id": "2026-10-20-marseille-braces-for-more-5b417cdfba",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 17
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 26,
-      "likes": 0.23,
+      "count": 28,
+      "likes": 0.25,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 66.08
+      "impressions": 65.39
     },
     "BULLETIN": {
-      "count": 4,
-      "likes": 0.5,
+      "count": 3,
+      "likes": 0.67,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 13.0
+      "impressions": 12.0
     },
     "ALL": {
-      "count": 30,
-      "likes": 0.27,
+      "count": 31,
+      "likes": 0.29,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 59.0
+      "impressions": 60.23
     }
   }
 }
