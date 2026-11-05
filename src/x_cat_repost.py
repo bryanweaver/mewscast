@@ -94,7 +94,9 @@ def is_own_tweet(tweet_id: str) -> bool:
             print("⚠ Could not fetch authenticated user; skipping own-tweet check")
             return False
 
-        response = bot.client.get_tweet(tweet_id, expansions=["author_id"])
+        # tweet_fields, not expansions: we only need the author ID, and
+        # expanded user objects are billed separately on PPU from 2026-11-22.
+        response = bot.client.get_tweet(tweet_id, tweet_fields=["author_id"])
         if not response or not getattr(response, "data", None):
             print(f"⚠ Could not fetch tweet {tweet_id}; skipping own-tweet check")
             return False

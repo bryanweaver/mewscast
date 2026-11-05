@@ -489,8 +489,9 @@ class XMentionReplyBot:
             mentions = self.twitter_bot.client.get_users_mentions(
                 id=our_id,
                 max_results=20,
+                # No expansions: author_id as a tweet field is enough, and from
+                # 2026-11-22 X bills each expanded user object ($0.010) on PPU.
                 tweet_fields=["conversation_id", "author_id", "in_reply_to_user_id", "created_at"],
-                expansions=["author_id"],
             )
             if not mentions or not mentions.data:
                 return []
