@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-04T02:46:57.753508+00:00",
+  "last_updated": "2026-11-05T02:55:58.034438+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2118112490772898205",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-04T22:45:45.566013+00:00",
+      "created_at": "2026-11-04T22:45:45+00:00",
+      "topic": "Democrat leads by dozens of votes in surprisingly tight Mississippi Senate race - BBC",
+      "dossier_id": "2026-11-04-democrat-leads-by-dozens-d720686e40",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 344
+    },
+    {
+      "x_tweet_id": "2118079145720889700",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-04T20:33:15.481959+00:00",
+      "created_at": "2026-11-04T20:33:15+00:00",
+      "topic": "Democratic sweep of Congress ushers in a new era as Trump acknowledges impact of the Iran war - AP News",
+      "dossier_id": "2026-11-04-democratic-sweep-of-congress-8b4ef6e55e",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 11
+    },
+    {
+      "x_tweet_id": "2117835780198723821",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-04T04:26:12.536365+00:00",
+      "created_at": "2026-11-04T04:26:12+00:00",
+      "topic": "2026 House election live results as Democrats projected to win control - CBS News",
+      "dossier_id": "2026-11-04-2026-house-election-live-05ca160f3c",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 16
+    },
     {
       "x_tweet_id": "2117746080427221133",
       "post_type": "REPORT",
@@ -14,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 24
+      "impressions": 27
     },
     {
       "x_tweet_id": "2117712889532322111",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 77
+      "impressions": 80
     },
     {
       "x_tweet_id": "2117481712951439712",
@@ -53,7 +92,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 20
+      "impressions": 25
     },
     {
       "x_tweet_id": "2117383534164017191",
@@ -92,7 +131,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 48
+      "impressions": 52
     },
     {
       "x_tweet_id": "2116961574069936638",
@@ -366,55 +405,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 2
-    },
-    {
-      "x_tweet_id": "2113101581646459325",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-22T02:54:11.577072+00:00",
-      "created_at": "2026-10-22T02:54:11+00:00",
-      "topic": "Vance says Republicans should ‘stop whining’ about Vivek Ramaswamy’s attack ad if they want to win - NBC News",
-      "dossier_id": "2026-10-21-vance-says-republicans-should-f6bf867c77",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 11
-    },
-    {
-      "x_tweet_id": "2112970515912540202",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-21T18:13:23.175518+00:00",
-      "created_at": "2026-10-21T18:13:22+00:00",
-      "topic": "Putin agrees to resume three-way talks on Ukraine war with Kyiv and Washington, Kremlin says - AP News",
-      "dossier_id": "2026-10-21-putin-agrees-to-resume-7f3459b25f",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 7
-    },
-    {
-      "x_tweet_id": "2112739554977300522",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-21T02:55:37.813561+00:00",
-      "created_at": "2026-10-21T02:55:37+00:00",
-      "topic": "US has resumed sharing intelligence with Ukraine about Russian strikes, says Zelenskyy - The Guardian",
-      "dossier_id": "2026-10-20-us-has-resumed-sharing-212748a768",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 6
     }
   ],
   "averages": {
     "REPORT": {
       "count": 28,
-      "likes": 0.25,
+      "likes": 0.36,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 65.39
+      "impressions": 78.32
     },
     "BULLETIN": {
       "count": 3,
@@ -426,11 +426,11 @@
     },
     "ALL": {
       "count": 31,
-      "likes": 0.29,
+      "likes": 0.39,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 60.23
+      "impressions": 71.9
     }
   }
 }
