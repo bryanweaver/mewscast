@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-11-06-stephen-miller-will-replace-e207eb4f03",
+  "headline_seed": "Stephen Miller will replace Susie Wiles as Trump's chief of staff - NPR",
+  "brief": {
+    "story_id": "2026-11-06-stephen-miller-will-replace-e207eb4f03",
+    "consensus_facts": [
+      "President Trump announced on Friday, November 6, 2026, via a Truth Social post that Stephen Miller will replace Susie Wiles as White House chief of staff.",
+      "Miller, who was serving as White House deputy chief of staff, will take over the chief of staff role starting Monday, November 9, 2026.",
+      "Trump described Miller as one of his most trusted advisors, and multiple outlets identify Miller as an architect of Trump's immigration enforcement and deportation policies.",
+      "Wiles ran Trump's 2024 presidential campaign and had served as his chief of staff since the start of his second administration.",
+      "Trump said Wiles will be moving over to the Trump Political Operation, and thanked her for her service.",
+      "The shakeup follows this week's midterm elections in which Democrats gained ground / Republicans lost power.",
+      "Wiles posted on X that Friday was her last day as chief of staff, calling the role the honor of a lifetime and saying her commitment to the president and mission would not change."
+    ],
+    "disagreements": [
+      {
+        "topic": "Scale and nature of the midterm result",
+        "positions": {
+          "NPR": "States 'Republicans were swept out of power during this week's midterm elections,' without quantifying.",
+          "CNBC": "Describes a 'landslide victory' for Democrats who gained 'majority control in the House and Senate,' three days before the announcement.",
+          "CBS News": "Frames it as 'Republicans' losses in the midterm elections' and 'voters' widespread rejection' of Trump's agenda on Tuesday.",
+          "ABC News": "Does not characterize the midterm outcome in the article text provided."
+        }
+      },
+      {
+        "topic": "Whether Wiles resigned or was removed",
+        "positions": {
+          "CNBC": "Reports Wiles resigned Thursday night, citing a senior White House source via MS NOW, and that she told Trump \u2014 said to be angry after GOP losses \u2014 'let me make this easy on you - I am going to resign.'",
+          "CBS News": "Reports Wiles submitted her resignation Thursday night per a U.S. official and senior White House adviser, tied to midterm defeats per three sources.",
+          "NPR": "Frames it as Wiles 'being replaced by Stephen Miller,' with no mention of a resignation.",
+          "ABC News": "Frames it as Trump saying Wiles 'is out,' with no mention of resignation details."
+        }
+      },
+      {
+        "topic": "Characterization of Miller and Democratic reaction",
+        "positions": {
+          "CBS News": "Emphasizes Miller is 'loathed by Democrats,' quotes Schumer and Rep. Garcia vowing investigations and that Miller 'should lawyer up.'",
+          "CNBC": "Notes elevating Miller is 'bound to raise the hackles' of incoming Democrats who vowed to investigate immigration policies.",
+          "NPR": "Describes Miller neutrally as 'a fixture in Trump's circles since 2016' and 'an architect of some of his core policies, including immigration.'",
+          "ABC News": "Describes Miller neutrally as Trump's 'top aide.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Headline-only (wire). Body text is a bot-check/anti-robot page with no reportable content. Headline frames the move as a straightforward promotion: 'Trump Taps Stephen Miller to Replace Wiles.'",
+      "NPR": "Full body text. Leads cleanly on the personnel swap and ties it directly to Republicans being 'swept out of power' in the midterms. Includes human-interest detail (Wiles' breast cancer diagnosis and recovery this year) that no other outlet surfaces. Neutral characterization of Miller. Does not mention a resignation, Democratic reaction, or DOJ departures.",
+      "CNBC": "Full body text and the richest single account. Frames the move as a 'stunning shake-up' and 'doubling down,' emphasizing the Democratic 'landslide.' Uniquely reports the resignation backstory (Wiles resigned Thursday, Trump 'angry,' the 'let me make this easy on you' quote via MS NOW), the 'It's Miller time' post from Trump's political operation, a cluster of DOJ resignations since Election Day (Dhillon, Eisenberg, Reding Qui\u00f1ones), and the 2025 Vanity Fair reporting about Wiles' remarks on Trump's 'retribution' and 'alcoholic's personality.' Business-news framing with a markets-adjacent tone.",
+      "Reuters": "Headline-only (wire). Body is just the linked headline. Frames the move as a promotion: 'Trump promotes Stephen Miller to post of chief of staff.'",
+      "CBS News": "Full body text. Leads on the political significance \u2014 'most significant shakeup' \u2014 and foregrounds the clash with Democrats, quoting Schumer and Rep. Garcia at length. Emphasizes that the move represents 'doubling down' despite 'voters' widespread rejection.' Uniquely surfaces Trump's mid-October denial ('It's fake news... I could not be more happy with Susie'). Confirms the Thursday-night resignation via multiple sources.",
+      "ABC News": "Effectively headline/video-only; the body is dominated by unrelated site navigation and a long list of other video segments. The substantive content is limited to a two-sentence summary: Trump announced via social media that Wiles is 'out' and Miller 'will replace her.' Neutral framing, no detail on motive, resignation, or reaction.",
+      "USA Today": "Headline-only. Body is just the linked headline. Frames the move as 'Trump taps Stephen Miller to replace Susie Wiles.'"
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. Trump's Truth Social post is the underlying document; CNBC and CBS News both quote it directly and consistently, including the 'one of my most trusted advisors,' the Monday November 9 start date, and the 'moving over to the Trump Political Operation' language. Wiles' X statement is also quoted consistently by CNBC and CBS News. No independent verification against the full original posts was possible within this dossier."
+    ],
+    "missing_context": [
+      "Only four of seven articles carry substantive body text (NPR, CNBC, CBS News, and a thin ABC News summary). Bloomberg, Reuters, and USA Today are headline-only, and Bloomberg's body is a bot-check page \u2014 so wire corroboration is weaker than the outlet count suggests.",
+      "The resignation backstory (Wiles resigning Thursday night, Trump being 'angry,' the 'let me make this easy on you' quote) originates with MS NOW and is carried by CNBC; CBS corroborates a Thursday-night resignation tied to midterms but not the quote or Trump's anger. This chain of unnamed sources is not independently confirmed.",
+      "No outlet details what specific powers or portfolio change Miller's promotion entails, or whether he retains his existing deputy/Homeland Security Advisor duties.",
+      "No outlet clarifies what 'the Trump Political Operation' is structurally or what Wiles' role there will be.",
+      "The DOJ resignations CNBC links to the broader post-election reshuffle (Dhillon, Eisenberg, Reding Qui\u00f1ones) are reported only by CNBC and are not corroborated elsewhere in the dossier.",
+      "No outlet provides concrete midterm numbers (seats gained/lost, margins) to substantiate the 'landslide' versus 'swept out of power' characterizations.",
+      "No response from Stephen Miller himself is included in any article."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same core event but with materially different framings \u2014 NPR frames it as a neutral replacement with a human-interest angle, CNBC and CBS emphasize a 'doubling down' amid a Democratic 'landslide' with resignation drama and investigation threats, while ABC and the wires offer only bare headlines. The divergence in whether Wiles resigned or was pushed, and in how Miller is characterized, makes the coverage comparison the story.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYkxNS2lISllGeUdnc3VBdExJUE5BS0tOeTFTM0h4WmxHb1FOS3R0V3JKUkFnNmFXeFJTdDYtb3lkTHhUM2VoZXdpSHlldHUxcG1BMkhYSENTTUtUMmdYeDdxc3RHQjVNeEU5Z0M5VlNCcDAtaFcyWHZkaEtZanVVdGpBeUplcVdYQnZUeldncF9HallmekRkRFFrWFFNcHRSRll2cnFvZ2MybXlxcklFWA?oc=5",
+      "title": "Trump Taps Stephen Miller to Replace Wiles as Chief of Staff - Bloomberg.com"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTG1zcnVYQ3lRbUhVNUFLSDRmLVp3SXJMc0ZudkdsMjFhMmthTlptYkg2OVBWck1zM3M4bVJlTlpWZjVBZ3lMTjNScjFzUlBDQTNHNnNtWDhadWo0amhOa0I5SWVIVXpXYWRlcXk0Zktnd3l0TDBvRW9pVHBxdlYyV0M0YVVvQXhoSmFhaGRhZUpiaGtibG93OGREaEp0TEYzdWJ3?oc=5",
+      "title": "Stephen Miller will replace Susie Wiles as Trump's chief of staff - NPR"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPamU2dzlBUmJZRE0tcWQzZmFkYjBCVzBTRDdaQ3djMG9HMHlCVTlHTWxvYndYaURTUjI3R3pJRTBUZGZxd3Y0c2Nfbm1UQ1d5M1hfUTNyb0tidHpSRDFxeWpocDdPSVZCOGVqd0laLUozR05nVmlqSDVCaFkzVl9iYzJwZjE?oc=5",
+      "title": "Trump says Stephen Miller to replace Susie Wiles as White House chief of staff - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPRW9VOFJHVC05elRKeHJYaUVfalhSNTJYS0dhNkJobGVIaGU1ZVlLaUNlakI2SURhTHNqc2c2ODFYcWpVaE5uUXpoNEI1d1h3MjFxbTlqNHQwVVJmNEFyUl9uRWktTWdRMGs1Z05GUXRxU2FwVC0wV19JSExCbi1DM1pPNHZVUzFZcVB3ak93TWM4MUk?oc=5",
+      "title": "Trump promotes Stephen Miller to post of chief of staff - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZlVIV1JNZi1YNVV5eEJTODBLUkVPWk01cTFFUkxvbzlPUnFJMHFQNk9vaHM2UzRnSDd1TTFuc1gxVnNmd1FhNktfTFZ6VVlCd09GZ0JoS1N4MGxVS3RPLS1xcnlRSk9PQlgwYmJySTVkLTlQTUtvVE44NjJEd254enk5Zw?oc=5",
+      "title": "Stephen Miller to replace Susie Wiles as White House chief of staff, Trump says - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1udmJhamQ5MVc2a0NqR1RUU0lPLV9nX2Raa0dONmtSaEs0TFAyRTV6WWxpQWpleG9uM0xuUkJlVTlZVjRyWV9VcncyNlI?oc=5",
+      "title": "Video Trump says chief of staff Susie Wiles out, Stephen Miller will replace her - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPb2JzQnQyamlTWnRWR0E0dDh6cl9CMjUyY3JsTV9HQWJncU1zVFJ1cUZjMzVZaFJoWFhIb0dLY0tjM29HQ2hQQkdlUDZVQmJ0OVVMWDVZdW8xclNjZVNvZUllb2RYd2JpN2puLUZZc0VPZFFTb0xmQ3R1cjFMeEU1V1ppbVhyWVNKQzU0TXJINkdFc2dlV0xaSUVPbUZvc3lCQXpFR3Y1bXUyeENNcTdEdkxuQTluVEk?oc=5",
+      "title": "Trump taps Stephen Miller to replace Susie Wiles as chief of staff - USA Today"
+    }
+  ]
+}
