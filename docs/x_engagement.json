@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-05T02:55:58.034438+00:00",
+  "last_updated": "2026-11-06T02:56:00.602022+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2118475197548503420",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-05T22:47:01.508847+00:00",
+      "created_at": "2026-11-05T22:47:01+00:00",
+      "topic": "Democrats add to their blue tsunami as Republicans point fingers after midterm elections: Live updates - The Independent",
+      "dossier_id": "2026-11-05-democrats-add-to-their-6176cd1e31",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 5
+    },
+    {
+      "x_tweet_id": "2118445827911725088",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-05T20:50:19.274327+00:00",
+      "created_at": "2026-11-05T20:50:18+00:00",
+      "topic": "After sweeping midterm wins, here's what Democrats hope to get done in the majority - NPR",
+      "dossier_id": "2026-11-05-after-sweeping-midterm-wins-15a6b1030a",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 22
+    },
+    {
+      "x_tweet_id": "2118202508690755875",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-05T04:43:27.385331+00:00",
+      "created_at": "2026-11-05T04:43:27+00:00",
+      "topic": "Vance says voters want to ‘end the war,’ change Israel relationship - The Washington Post",
+      "dossier_id": "2026-11-05-vance-says-voters-want-4f1d9fc0cf",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 21
+    },
     {
       "x_tweet_id": "2118112490772898205",
       "post_type": "REPORT",
@@ -10,11 +49,11 @@
       "created_at": "2026-11-04T22:45:45+00:00",
       "topic": "Democrat leads by dozens of votes in surprisingly tight Mississippi Senate race - BBC",
       "dossier_id": "2026-11-04-democrat-leads-by-dozens-d720686e40",
-      "likes": 2,
+      "likes": 3,
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 344
+      "impressions": 350
     },
     {
       "x_tweet_id": "2118079145720889700",
@@ -66,7 +105,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 80
+      "impressions": 81
     },
     {
       "x_tweet_id": "2117481712951439712",
@@ -79,7 +118,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 23
+      "impressions": 24
     },
     {
       "x_tweet_id": "2117406510922039305",
@@ -392,29 +431,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 13
-    },
-    {
-      "x_tweet_id": "2113332171729510673",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-22T18:10:28.646089+00:00",
-      "created_at": "2026-10-22T18:10:28+00:00",
-      "topic": "'This is despicable': Amy Acton responds to Ohio attack ad featuring her estranged mother - BBC",
-      "dossier_id": "2026-10-22-this-is-despicable-amy-b405872e69",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 2
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 28,
-      "likes": 0.36,
+      "count": 30,
+      "likes": 0.37,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 78.32
+      "impressions": 74.9
     },
     "BULLETIN": {
       "count": 3,
@@ -425,12 +451,12 @@
       "impressions": 12.0
     },
     "ALL": {
-      "count": 31,
+      "count": 33,
       "likes": 0.39,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 71.9
+      "impressions": 69.18
     }
   }
 }
