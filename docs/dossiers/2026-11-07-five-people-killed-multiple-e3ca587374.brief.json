@@ -1,0 +1,136 @@
+{
+  "story_id": "2026-11-07-five-people-killed-multiple-e3ca587374",
+  "headline_seed": "Five people killed, multiple injured in Poland market shooting - NBC News",
+  "brief": {
+    "story_id": "2026-11-07-five-people-killed-multiple-e3ca587374",
+    "consensus_facts": [
+      "A gunman opened fire in or near the Main Market Square in Krakow, Poland, on Saturday, Nov. 7, 2026, at around 3 p.m. local time.",
+      "The attacker drove into/through the square and fired at random people from a moving vehicle.",
+      "Six people were killed; four women and two men, according to police (several outlets note the toll was earlier reported as five before being updated to six).",
+      "At least 15 people were wounded (CNN describes it as about a dozen).",
+      "Police officers were among the wounded.",
+      "The shooter is a Polish citizen who acted alone.",
+      "The shooter was shot by police, detained/taken into custody, and transported to a hospital for treatment.",
+      "Police described the shooter as wearing military-style attire/fatigues and using a military-type long gun; additional weapons and ammunition were found in his car.",
+      "Polish Prime Minister Donald Tusk said on X that police were investigating the circumstances of the 'tragic shooting' and that he was being updated by the interior ministry.",
+      "Polish President Karol Nawrocki said his thoughts were with the victims, the injured and their families.",
+      "U.S. Ambassador to Poland Tom Rose called it a 'horrific mass shooting' and 'a savage and murderous attack that's shattered the peace of Poland.'",
+      "Krakow is Poland's second-largest city, a major tourist destination located roughly 155 miles (250 km) south of Warsaw.",
+      "Mass shootings are uncommon/extremely rare in Poland, an EU and NATO member with a population of roughly 37-38 million."
+    ],
+    "disagreements": [
+      {
+        "topic": "Death toll in the headline/lead",
+        "positions": {
+          "NBC News": "Headline seed says 'Five people killed' but body text and updated headline state six killed.",
+          "Al Jazeera English": "Headline references 'at least five' in slug but body and updated headline state at least six killed.",
+          "CNN": "Headline updated to 'at least six dead'; body states six killed.",
+          "CBS News": "Headline and body state at least 6 dead, 15 injured.",
+          "Associated Press": "Body states six killed, notes toll earlier stood at five before police updated it to six.",
+          "Reuters": "Headline-only: 'Six people killed.'",
+          "Bloomberg": "Headline-only: 'Gunman Kills Five People.'"
+        }
+      },
+      {
+        "topic": "Injury count",
+        "positions": {
+          "NBC News": "At least 15 injured (text also says 'at least a dozen' in one line).",
+          "Al Jazeera English": "15 others wounded.",
+          "Associated Press": "15 wounded (headline says 'at least 12' per story ID seed).",
+          "CNN": "About a dozen injured.",
+          "CBS News": "At least 15 injured."
+        }
+      },
+      {
+        "topic": "Age of the shooter",
+        "positions": {
+          "Associated Press": "Specifies a 24-year-old Polish citizen.",
+          "NBC News": "Polish national; no age given.",
+          "Al Jazeera English": "Polish citizen; no age given.",
+          "CNN": "Polish citizen; no age given.",
+          "CBS News": "Polish citizen; no age given."
+        }
+      },
+      {
+        "topic": "Condition/number of injured officers",
+        "positions": {
+          "Al Jazeera English": "Two police officers among the injured; one in critical condition (per Interior Minister Kierwinski).",
+          "Associated Press": "Two police officers wounded, one seriously.",
+          "CBS News": "Two police officers wounded by gunfire, one in serious condition.",
+          "NBC News": "References an injured officer seen in video; condition not known; notes police said no officer had been killed, correcting prior reports.",
+          "CNN": "States police officers are among those injured; no count or condition."
+        }
+      },
+      {
+        "topic": "Additional detail on the attacker's gear",
+        "positions": {
+          "Associated Press": "Says the shooter also wore a bulletproof vest and kept firing at police after being shot.",
+          "NBC News / CBS News / CNN / Al Jazeera English": "Mention military-style fatigues and long gun but do not mention a bulletproof vest."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier ('Six people killed by Polish gunman in Krakow's main square'). Neutral wire phrasing; leads with the death toll (six) and the shooter's nationality. No body text available to assess further emphasis.",
+      "NBC News": "Leads as a 'DEVELOPING' breaking story with repeated 'Updated' timestamps. Emphasizes the dramatic eyewitness and social-media video \u2014 an injured officer firing while clutching his arm, a black sedan racing through the square, bodies scattered. Foregrounds the visceral scene and the official-correction that no officer was killed. The body is heavily cluttered with unrelated 'FOR SUBSCRIBERS' promotional links. Byline Shayna Jacobs with AP contribution.",
+      "Al Jazeera English": "International framing. Attributes to AFP, AP and Reuters. Notably contextualizes the shooting within broader Polish security anxieties: references October stabbings Tusk called a 'cult of violence,' Poland's status as a Ukraine ally, and Warsaw's repeated warnings of Russian sabotage and hybrid warfare (while noting Moscow's denials). Gives prominent space to international reaction \u2014 EU's Kaja Kallas and Ukrainian President Zelenskyy. Filed under 'Gun Violence.' Most geopolitically framed of the dossier.",
+      "Bloomberg": "Headline-only; body is a bot-check/paywall wall. Headline 'Gunman Kills Five People in Krakow' reflects the earlier (pre-update) death toll of five. No framing assessable.",
+      "Associated Press": "Most detailed and granular wire report. Leads with the hard numbers and the random, vehicle-based nature of the attack. Uniquely supplies the shooter's age (24), the bulletproof vest, the 'wild ride' quote from police spokesperson Cis\u0142o, the tram driver whose cabin window was shattered, and gun-ownership statistics (411,000 permits in a nation of 37 million, with rising interest). Explicitly notes it was 'not immediately clear' whether the weapons were legal. Photo-heavy with on-scene imagery.",
+      "CNN": "Breaking-news framing. Reports 'at least six dead' and 'about a dozen' injured \u2014 a slightly lower injury figure than other outlets. Cites Reuters for the military-attire detail and for footage. Adds that the head of Poland's National Security Bureau was en route to Krakow. Closes by emphasizing Poland's (and most EU countries') strict gun rules and that 'very few people are allowed to own guns' \u2014 a gun-control-contextual note.",
+      "CBS News": "Filed under 'World.' Emphasizes the heroism of police \u2014 quotes Interior Minister Kierwi\u0144ski praising officers' 'heroic actions' and that they 'risked their lives.' Includes an eyewitness account ('Annette,' in her sixties, who said 'we've never seen anything like this before'). Notes Tusk headed to Krakow. Carries EU reaction (Kallas). Appends a 'Go deeper with The Free Press' module with ideologically charged unrelated headlines about other shootings."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. All reporting derives from Polish police/official X posts, statements by Polish officials (Tusk, Nawrocki, Kierwi\u0144ski), and wire services (AP, AFP, Reuters). No court filing, official incident report, or press-release transcript was available for direct comparison.",
+      "Because the story was still 'developing' at the time of the dossier, figures (notably the death toll moving from five to six) were in flux across reports; readers should weigh the five-vs-six discrepancy as a timing artifact rather than a substantive contradiction."
+    ],
+    "missing_context": [
+      "No outlet reports a confirmed motive for the attack; whether it was terrorism, a personal grievance, or otherwise remains unstated.",
+      "The shooter's identity (name) is not provided in any outlet; only nationality and, in AP's case, age (24).",
+      "Whether the firearms used or found were legally obtained is explicitly flagged as unknown by AP and unaddressed by the others.",
+      "The condition of the hospitalized shooter after surgery is not updated in any report.",
+      "The fate/condition of the specific officer seen in NBC's video reloading while wounded is reported as unknown.",
+      "No outlet independently verifies the social-media video clips they describe; several descriptions of 'scattered bodies' and dramatic footage rest on unverified social media.",
+      "Al Jazeera is alone in connecting the attack to Poland's broader security environment (Russia hybrid-warfare warnings, October stabbings); no outlet establishes any actual link between those events and this shooting, so the juxtaposition is contextual, not evidentiary.",
+      "Several outlets (AP, AJ, CBS) draw on the same wires (AP/AFP/Reuters), so apparent corroboration partly reflects shared source material rather than fully independent reporting."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate a consistent core set of facts about the same breaking event, with divergences limited to a timing-driven death-toll update (five vs. six) and minor detail variations rather than materially different framings or a conflicting primary source. A straightforward REPORT that flags the five-to-six update is the right call.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRTFhVC1uNVB5TFlvcHRtb2h6RmJPdjY0SDZjdWRJSUw0RlVLUUtnbkFlNGtZRlczbE5RU1U0NEhIRG9Ya3ZmNVlRb243YWQ5OTNkNThoaG1ZYUxONkZsaDJTeTctek9yX3hidk5lVU9qRUJidG5PNkczQVhKcEJKMG5nZzdGSVhUZUJ0S3RwWFJqbmVzSFU5YmE3dDgtRllhUVpDNkxxdnN6Q21MQ1A1cjFPNjc4cUdx?oc=5",
+      "title": "Six people killed by Polish gunman in Krakow's main square - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5XLU1MQnRhZXVkS3JYQW1icjAtdDFfR0tBcTF3TzBoeEZRZ3BhSWR4MGlTNGdOTHNzTHFheHlLM0U0UHM3dkVlOHJFUDBrVFFiTGZjUXFTLWRGZ3RQYnRPVEh6MkZ1TzUtMGhQMGVnNTlLTGwyMWNNZEVR?oc=5",
+      "title": "Five people killed, multiple injured in Poland market shooting - NBC News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMjVjMS1hRzNkazY0TXRRbzF3YVQ1SnJZR0VIZV9Tak1NV0pQRk84TlpHekpzRWEtTlRFbk1LR08zZXNMVTBxYnNCY25kVTNHSWtrXzRBcEpIVVItc1VOVnMwT0xBODJLT1NwX3pzb0hyeWZQNGZOX3RrbWpEZGJMRVpkdWVCWmVMYmtiWGhqbk5TZUNSZFNHbNIBngFBVV95cUxPOVBoT0tkYk1ja0FRdjRITVpVZnNTVDRfWFgxTk1XUUpGWUtlZG5OLWd2LWJ3WVRzUmJ1MGhiYzUxM2JlaFZ0UlM3VHU3NjBYMHA3VGs4RWpJNFhsODhwMUpGZjhpOFlNQndBbFB6eFFFMi1RRVJRZlY0azZkY0lTdFRybTBEWHRVTkVHMnNVWk54TW1nUGZCaTdDVFRtQQ?oc=5",
+      "title": "At least five people killed in shooting in Poland\u2019s Krakow - Al Jazeera"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZldLSDJIZzlCNHZ3Wkk0OUdudGMyU29relpRQThWdGVUSm5jYVhSVVpoeUhCdnMtaUlEUlpwMFVUVGdYR1NMb2Q2UzFjeDNVaWszY1dOUUxBakJoZG9VbEMwc0dudmRoRmF0QjVBYnIyUUJxRFd3OWNpRjByTDE5X3I2RUFPbFRZYWRKX1IwUWp4eDc5TUtxazl3TTlxNmktRThidUxFWWo?oc=5",
+      "title": "Gunman Kills Five People in Krakow, Polish Police Say - Bloomberg.com"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOT3JpbnhmUWhOUkNrNkUwYVdXYkk1cDFHbEVsVGlsOElHU1dkOUNWa3JVLUdsWkdlQ1A1aWlqbkRQMmVxMk1iRko4Vng5cWdKWTA2cVdBR0xaVUVWU3pQbjJveEFwbzhmTktUX0dyQWFxX3R4eU9zbFFaWTBBM3FRaDE1TW1pZFJHUlBJbVpGMHZCVnpZVV9FUGVn?oc=5",
+      "title": "Gunman opens fire in Polish city of Krakow, killing 5 people and injuring at least 12 - AP News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE4wMkFOc2xCQlhUQlhTNEVodjYya2h3ek12WUs2cVEwaEVZM1UyOVNqTk1uMTB1cDJBQlBNeWZRZU5qaENXWGtlNGplOUdkRUVUSU5xZkFsOFBFQ0NlZnpaUU0yQzFVMUhxbGxsVTNGTW9RcEJkSE1lM0JVaGQ?oc=5",
+      "title": "At least five dead in shooting in the main market square of Krakow, Poland, police say - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1hNmVNc21wVVZlVi1OM3l4VTV0bGo5SjNyVTNOck4yUmgySzgwRlEydmRONG43YzlPaUY0Y0VpZUF6TkFoZ01kenNhWVBlZnlXenFfOUdNSzlrUE9BMzg5TzZndTJaRFk2akxIeHJOVUpkR2E4ZndwYVE5NA?oc=5",
+      "title": "Mass shooting in Krakow, Poland market leaves at least 6 dead, 15 injured - CBS News"
+    }
+  ]
+}
