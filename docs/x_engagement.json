@@ -1,8 +1,21 @@
 {
-  "last_updated": "2026-11-06T02:56:00.602022+00:00",
+  "last_updated": "2026-11-07T02:25:25.895834+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2118796946676871437",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-06T20:05:32.516727+00:00",
+      "created_at": "2026-11-06T20:05:32+00:00",
+      "topic": "Stephen Miller will replace Susie Wiles as Trump's chief of staff - NPR",
+      "dossier_id": "2026-11-06-stephen-miller-will-replace-e207eb4f03",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 8
+    },
     {
       "x_tweet_id": "2118475197548503420",
       "post_type": "REPORT",
@@ -14,7 +27,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 5
+      "impressions": 7
     },
     {
       "x_tweet_id": "2118445827911725088",
@@ -40,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 21
+      "impressions": 23
     },
     {
       "x_tweet_id": "2118112490772898205",
@@ -53,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 350
+      "impressions": 351
     },
     {
       "x_tweet_id": "2118079145720889700",
@@ -66,7 +79,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 11
+      "impressions": 13
     },
     {
       "x_tweet_id": "2117835780198723821",
@@ -92,7 +105,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 27
+      "impressions": 30
     },
     {
       "x_tweet_id": "2117712889532322111",
@@ -105,7 +118,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 81
+      "impressions": 82
     },
     {
       "x_tweet_id": "2117481712951439712",
@@ -118,7 +131,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 24
+      "impressions": 27
     },
     {
       "x_tweet_id": "2117406510922039305",
@@ -209,7 +222,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 21
+      "impressions": 22
     },
     {
       "x_tweet_id": "2116589855849185686",
@@ -418,29 +431,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 805
-    },
-    {
-      "x_tweet_id": "2113730934981763156",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-23T20:35:01.227230+00:00",
-      "created_at": "2026-10-23T20:35:00+00:00",
-      "topic": "Trump to lower Canada tariffs for certain agricultural goods, Collins says - Politico",
-      "dossier_id": "2026-10-23-trump-to-lower-canada-0856c28318",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 13
     }
   ],
   "averages": {
     "REPORT": {
       "count": 30,
-      "likes": 0.37,
+      "likes": 0.33,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 74.9
+      "impressions": 75.23
     },
     "BULLETIN": {
       "count": 3,
@@ -452,11 +452,11 @@
     },
     "ALL": {
       "count": 33,
-      "likes": 0.39,
+      "likes": 0.36,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 69.18
+      "impressions": 69.48
     }
   }
 }
