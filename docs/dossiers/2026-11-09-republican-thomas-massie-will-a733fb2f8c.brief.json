@@ -1,0 +1,101 @@
+{
+  "story_id": "2026-11-09-republican-thomas-massie-will-a733fb2f8c",
+  "headline_seed": "Republican Thomas Massie will force impeachment vote on Defence Secretary Pete Hegseth - BBC",
+  "brief": {
+    "story_id": "2026-11-09-republican-thomas-massie-will-a733fb2f8c",
+    "consensus_facts": [
+      "Republican Rep. Thomas Massie (R-Ky.) introduced/reintroduced articles of impeachment against Defense Secretary Pete Hegseth on the House floor on Monday, Nov. 9, 2026.",
+      "The central charge is that Hegseth waged the Iran war without a declaration of war or congressional authorization, in violation of the Constitution and the War Powers Resolution.",
+      "Because Massie filed the measure as a privileged resolution, House Republican leaders must bring it up within two legislative days, forcing a floor vote.",
+      "Massie is an outgoing/retiring congressman and a longtime Trump critic who lost his primary after Trump endorsed his opponent.",
+      "A simple majority is required for the articles to pass the House; if passed, the matter would go to the Senate, where a two-thirds majority would be required to convict and remove Hegseth.",
+      "Hegseth announced he would hold a press conference at the Pentagon on Tuesday morning to address the impeachment effort, and said he is 'not worried' about it.",
+      "The effort faces long odds, with the House still under Republican control and the Senate threshold considered unlikely to be met."
+    ],
+    "disagreements": [
+      {
+        "topic": "Likelihood of success in the House",
+        "positions": {
+          "BBC News": "States the effort 'will likely fail, given Republicans will remain in power in Congress until January.'",
+          "ABC News": "Reports Massie told ABC's Jon Karl he is confident there will be enough GOP defectors for it to pass, noting only three Republicans need to join all Democrats; calls House outcome 'unclear.'",
+          "NBC News": "Describes the mechanics (simple majority needed, possible motion to kill) without characterizing likelihood of passage in the House."
+        }
+      },
+      {
+        "topic": "Scope of the charges",
+        "positions": {
+          "BBC News": "Frames the articles narrowly around the Iran war and the 90-day/congressional authorization issue.",
+          "NBC News": "Reports eight charges including the Iran war, alleged 'extrajudicial killings' (drug boat strikes), 'kidnapping of a sovereign foreign leader' (capture of then-Venezuelan President Nicol\u00e1s Maduro), and 'unlawful war in Yemen.'",
+          "ABC News": "Centers on the Iran war and Hegseth's broader 'controversial leadership at the Pentagon' without enumerating the eight charges."
+        }
+      },
+      {
+        "topic": "Day duration cited in the Iran war allegation",
+        "positions": {
+          "BBC News": "Quotes Massie referencing hostilities 'for more than 90 days without congressional authorization.'",
+          "NBC News": "References the 60-day War Powers Resolution window and Massie's claim about actions 'after the expiration of the 60-day period.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in dossier. Headline 'Thomas Massie Moves to Force Vote on Impeaching Pete Hegseth' emphasizes the procedural forcing mechanism. No body text available to assess framing.",
+      "BBC News": "Frames the story as a discrete 'moment' / video clip of Massie introducing articles. Leads with the Iran war and the constitutional violation, quotes Massie directly, and quickly injects the editorial judgment that the effort 'will likely fail.' The usable article body is brief; the remainder is a large block of unrelated US midterm and general-news links, suggesting a thin dedicated report.",
+      "Politico": "Headline-only in dossier. Headline 'House Republican sets off Hegseth impeachment vote' emphasizes the procedural trigger. No body text available to assess framing.",
+      "NPR": "Headline-only in dossier. Headline 'Thomas Massie files articles of impeachment against Defense Secretary Pete Hegseth' is straightforward and descriptive. No body text available to assess framing.",
+      "NBC News": "Most procedurally detailed body in the dossier. Leads on the forced floor vote and privileged-resolution mechanics, enumerates all eight charges, and provides heavy constitutional/legal context (Article 1 war power, 1973 War Powers Resolution, 60-day window, bipartisan reliance on AUMFs). Frames Massie as a 'longtime Trump critic' retiring from Congress. Neutral, explanatory tone; buries political-fallout angle.",
+      "ABC News": "Leads on Hegseth's reaction ('not worried,' rare press conference) alongside Massie's introduction. Emphasizes the political pressure dimension \u2014 that the vote forces Republicans to go 'on the record' after midterm losses \u2014 and ties the Iran war to GOP midterm defeats. Provides the sharpest vote-counting detail (three Republicans needed), Jeffries as a 'hard yes,' named potential defectors (Don Bacon), and Comer declining to back it. Includes Hegseth's combative video quote dismissing 'sham articles.' Most politically contextualized of the full-text articles.",
+      "USA Today": "Headline-only in dossier. Headline 'Republican moves to force vote this week on impeaching Pete Hegseth' emphasizes the forcing mechanism and the 'this week' timing. No body text available to assess framing."
+    },
+    "primary_source_alignment": [
+      "No primary source (the actual articles of impeachment text, House resolution, or floor transcript) was located for this story. Direct quotes attributed to Massie and the enumeration of the eight charges come from NBC News and ABC News reporting, not from a retrieved primary document, and could not be independently verified against the underlying filing."
+    ],
+    "missing_context": [
+      "No primary source document (the articles of impeachment themselves or the privileged resolution text) was available in the dossier, so the full list and exact wording of charges rests on secondary reporting.",
+      "Of seven dossier articles, only three (BBC News, NBC News, ABC News) have substantial body text; four outlets (The New York Times, Politico, NPR, USA Today) are headline-only and cannot corroborate body-level details.",
+      "No article provides a firm whip count or named list of the specific three-plus Republicans Massie believes will defect, despite ABC reporting his confidence; the gap between 'confident' and 'will likely fail' is unresolved.",
+      "Outlets do not clarify the current legal/administration position justifying the Iran military action (e.g., which AUMF or authority the White House claims), beyond NBC's general note that presidents of both parties have relied on AUMFs.",
+      "No outlet details the actual status or outcome of the Iran war, the drug-boat strikes, the Maduro capture, or the Yemen actions referenced as charges \u2014 they are cited as allegations without independent factual context.",
+      "The precise timeline between Massie's original September filing, Speaker Johnson's cancellation of the final pre-midterm legislative day, and the Nov. 9 refiling is described only by ABC News and not corroborated elsewhere in the full-text set."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets reported the same Nov. 9 event but with materially different framings \u2014 BBC calls the effort likely to fail while ABC reports Massie's confidence in GOP defectors, and NBC vs. BBC diverge on the scope of charges \u2014 making this a coverage-divergence story rather than a straight REPORT. The absence of any primary source for the articles of impeachment further warrants a brief that foregrounds how outlets differ.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9PMFBHdGRHNWh3OUhEb3paV0xEd1I4ZVFkMUlfUzVJakkzbkdOVWJkcExZWHZMSFozeUFBQWRQVEtrTmlCcHBuTWZrTG8tWkJha1lhQjFCYm9GbW1zSUVjSmtZSVgxaUllQURvVnM0WFd3LTVMYjRmaw?oc=5",
+      "title": "Thomas Massie Moves to Force Vote on Impeaching Pete Hegseth - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBvamdCS21TSXdvWlNSMXZEZi1EQUN0MWp0a2psY2xocW9HaEtjVlVHb296YnViU0xQOEVPV2Zra2hHU0dPaWt2Zng4VElWNWI5Vy1yVExjSUQ?oc=5",
+      "title": "Moment Republican Congressman introduces articles of impeachment against Pete Hegseth - BBC"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUV9VQnc0Q0ZWMTdfbmJPVlZTenFFXzVTRXVnS2JlbVJxZkU0R2VVR1dsT2NPU3g4eU5xT2w2Z21zNHdfS0FIbVRqNlNfaTJ0bXpWTW5SV2dtRWFiWGR0R2NrTmJsTjVxWjY3blZqVVVkLV85a3Z3bkFCakhHR3EtVnFwaTR3YTNxVkdSenBkZF9adw?oc=5",
+      "title": "House Republican sets off Hegseth impeachment vote - Politico"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVEVycllJNF9meEdQNkVKeTZLWjRmX2t1U3luV3otVkhWbkJPYVNQYl93X3FEUGdrYl9vaXBDT2JBWENBRFlwTlczOHdpbURZMk1fTjc1XzlTcTNWZ1RsZkRqMVhkTnZGMzFWanpYS1NvY2Y0RWFBRG1CeHUzMG56M05DMFZBbGlqZDZJ?oc=5",
+      "title": "Thomas Massie files articles of impeachment against Defense Secretary Pete Hegseth - NPR"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOcVZLUS10dU5IVjRzQlpKeG9pZnJqLTZsNjRzTHk0RTZBN3hRckluYUFNbDJyZVZ5QmU4RUxSdmdvYU9oRExSRDhmTktQa016cXpISi1YY0NtSjJDNy1zRGhDNXB6dGNkT3pEUnE2U0hLR3lDZHA3REVIdTVfNXNydS00YVlQX0QyZEhWbmJQR3RQemk0MHRGWDA1YjZWZ09zM2hoTmIzZzJwbFVmSUJzbVg0X0NJdTI4?oc=5",
+      "title": "GOP Rep. Thomas Massie unveils impeachment articles against Defense Secretary Pete Hegseth - NBC News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcWdjalZiaER0Z1o4Z0tSRnF4dXAwVkxoTG42eXl4aDlNNkNRQmhRZ2ZkZ25KODYyaC04S2o4ZlZ2ZlRLNV9MVk9qc3hOSTR3Nkk0SmQ5QkdWMTBDZmRacmVOVGZIVDY2aWhmUjFBcUNLczdQYU5WNWowcjh6VWltV1pDSURYYWh1ZWs1cUZlbVhCVWJVNlNSSmtia2tBOFNVVEHSAacBQVVfeXFMTzduNEwybzhOTzNoNE1ySGRuMm1EUlJkWDJ6RHF2c1NhOWVmQzZWaW03eG82WWdEb2RwbUttUUNmNWRKcWdlRXhhSTBtXy00NGREQ3Y1N2hYc0FXZTBnb2JQMGQxb1Z6ZnA4Rmc5R0VxbVhWSUNOVFpBeGZyYlg1d1VNdjJIdlJYdDRWWENucWdkbVdJR1I0MnVlRkRBOTdRSmtlTzFpMHc?oc=5",
+      "title": "Massie introduces impeachment articles against Hegseth - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOX1lNQmttd1ZTZHcxUTZNYVp0YkYtZXlDalhDV0FFX0xvREpqVzJhcFItNGhad0pZWVBOenJRdHBjbklySlVrV3R0R1FyUk9uMnZ1ODFFemtSU1dZREpMWVptU2VPNVA2YzlzU2N4VjRwM3VYQlg1SWxfR2lveXVFMk02VG9mS2MxbnNYV2ZGMFVGMDFjZGhjWHljMjZXMnFCTHhJZG1VTVNXdWp6eGdSVzdheE5fMk1vMlE?oc=5",
+      "title": "Republican moves to force vote this week on impeaching Pete Hegseth - USA Today"
+    }
+  ]
+}
