@@ -1,8 +1,34 @@
 {
-  "last_updated": "2026-11-08T01:55:21.507832+00:00",
+  "last_updated": "2026-11-09T02:08:49.828221+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2119497653352366463",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-08T18:29:53.968888+00:00",
+      "created_at": "2026-11-08T18:29:53+00:00",
+      "topic": "How a Mississippi election came down to the clerk’s office - The Washington Post",
+      "dossier_id": "2026-11-08-how-a-mississippi-election-adb8fc5ec6",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 36
+    },
+    {
+      "x_tweet_id": "2119277088335438159",
+      "post_type": "BULLETIN",
+      "posted_at": "2026-11-08T03:53:27.148705+00:00",
+      "created_at": "2026-11-08T03:53:26+00:00",
+      "topic": "Brooklyn Jogger Dies and a Man Is Charged With Murder in Her Stabbing - The New York Times",
+      "dossier_id": "2026-11-07-brooklyn-jogger-dies-and-e6bd8f0de5",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 5
+    },
     {
       "x_tweet_id": "2119173913112465485",
       "post_type": "REPORT",
@@ -14,7 +40,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 58
+      "impressions": 59
     },
     {
       "x_tweet_id": "2119131635933483306",
@@ -27,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 21
+      "impressions": 23
     },
     {
       "x_tweet_id": "2118918591152017758",
@@ -79,7 +105,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 22
+      "impressions": 23
     },
     {
       "x_tweet_id": "2118202508690755875",
@@ -170,7 +196,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 28
+      "impressions": 29
     },
     {
       "x_tweet_id": "2117406510922039305",
@@ -248,7 +274,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 54
+      "impressions": 56
     },
     {
       "x_tweet_id": "2116629993765675198",
@@ -461,28 +487,28 @@
   ],
   "averages": {
     "REPORT": {
-      "count": 32,
-      "likes": 0.34,
+      "count": 33,
+      "likes": 0.33,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 48.97
+      "impressions": 48.79
     },
     "BULLETIN": {
-      "count": 3,
-      "likes": 0.67,
+      "count": 4,
+      "likes": 0.5,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 12.0
+      "impressions": 10.25
     },
     "ALL": {
-      "count": 35,
-      "likes": 0.37,
+      "count": 37,
+      "likes": 0.35,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 45.8
+      "impressions": 44.62
     }
   }
 }
