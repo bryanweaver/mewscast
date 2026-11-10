@@ -1,0 +1,90 @@
+{
+  "story_id": "2026-11-10-senior-us-soldier-arrested-a77909cc5a",
+  "headline_seed": "Senior US soldier arrested by UK counter-terror police - BBC",
+  "brief": {
+    "story_id": "2026-11-10-senior-us-soldier-arrested-a77909cc5a",
+    "consensus_facts": [
+      "A 41-year-old senior U.S. Army serviceman was arrested near Gloucester, England, on Tuesday, November 10, 2026, on suspicion of espionage for Russia.",
+      "The arrest was made by British Counter Terrorism Policing under Section 1 (obtaining or disclosing protected information) and Section 3 (assisting a foreign intelligence service) of the National Security Act 2023.",
+      "The suspect remains in custody at a police station in London and was unnamed in all reports.",
+      "Officers are carrying out searches at two locations in Gloucestershire as part of the investigation.",
+      "The soldier was based at/assigned to Imjin Barracks, the headquarters of NATO's Allied Rapid Reaction Corps (ARRC), near Gloucester.",
+      "FBI Director Kash Patel called the arrest 'important' and said it involves 'allegations of espionage, which is of the utmost concern to the United States and our allies,' adding the FBI has 'no tolerance for anyone who breaks their oath to the United States.'",
+      "Brig. Gen. Sean Stinchon, commanding general of U.S. Army Counterintelligence Command, described the suspect as a senior soldier 'entrusted with sensitive information' and called insider threats 'real and persistent.'",
+      "Deputy Assistant Commissioner Vicki Evans of Counter Terrorism Policing London called the arrest 'significant' and said the investigation is 'very much ongoing.'",
+      "Police stated the arrest is not linked to any other ongoing Counter Terrorism Policing investigations.",
+      "The National Security Act 2023 allows police to hold the suspect without charge for up to 14 days."
+    ],
+    "disagreements": [
+      {
+        "topic": "Specific rank of the suspect",
+        "positions": {
+          "CNN": "Cites a US official saying the soldier is a field grade Army officer \u2014 a mid- to senior-ranking officer including major, lieutenant colonel, and colonel.",
+          "BBC News (international)": "Describes him only as a '41-year-old senior serviceman' with no specific rank.",
+          "NBC News (lean-left)": "Describes him only as a 'senior U.S. Army soldier' with no specific rank.",
+          "ABC News": "Describes him as a 'senior member of the US Army' with no specific rank."
+        }
+      },
+      {
+        "topic": "Attribution of the Imjin Barracks/ARRC detail",
+        "positions": {
+          "BBC News (international)": "'The BBC understands' the soldier was based at Imjin Barracks \u2014 attributed to its own understanding.",
+          "NBC News (lean-left)": "Three people familiar with the matter told NBC the soldier was based at the ARRC headquarters at Imjin Barracks.",
+          "CNN": "A senior NATO official told CNN the soldier was assigned to the Allied Rapid Reaction Corps.",
+          "ABC News": "Does not independently place the soldier at Imjin Barracks in its body text."
+        }
+      },
+      {
+        "topic": "Whether Russia was explicitly named by police in the statement",
+        "positions": {
+          "NBC News (lean-left)": "Police statement explicitly said 'The country to which the allegations relate is Russia.'",
+          "CNN": "Police release stated 'The country to which the allegations relate is Russia.'",
+          "BBC News (international)": "Frames the Russia link via the headline/'suspicion of spying for Russia' but does not quote the police line naming Russia directly.",
+          "ABC News": "States the case is related to Russia but does not quote the police line naming Russia."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News (international)": "Leads flatly on 'suspected of spying for Russia.' Emphasizes the NATO/ARRC strategic significance of Imjin Barracks. Includes the 14-day detention detail and all three official quotes (Patel, Evans, Stinchon). Stays tightly on the arrest itself; omits the broader Iran/Russia sabotage context that other outlets add.",
+      "NBC News (lean-left)": "Leads on 'assisting Russian intelligence.' Uniquely anchors the ARRC detail to 'three people familiar with the matter.' Adds the most geopolitical framing \u2014 ties the arrest to 'heightened tensions around the threat from hostile states,' Iran-linked arsons targeting the Jewish community, and the relocation of U.S. aircraft from RAF Mildenhall. Carries a large block of unrelated 'For Subscribers' promotional links.",
+      "CNN": "Leads on 'espionage related to Russia.' Uniquely surfaces the 'field grade officer' rank detail via a US official and the NATO-official sourcing for the ARRC assignment. Provides the deepest contextual background on prior UK counterterror cases near US bases (RAF Fairford arrests, Latvian men at an RAF base, Iranian militant leader directing a failed attack). Notes it reached out to Russian embassies for comment. Flags the story as developing.",
+      "ABC News": "Leads on 'suspected of helping Russia' in a short-summary format with an 'In short'/'What's next' structure. Carries the Reuters/AFP/AP wire backbone. Adds the broadest Russia-threat context \u2014 references the AP tally of ~200 Russia-linked sabotage incidents across Europe and the German airport drone attack. Explicitly works to distinguish this Russia case from the separate Iran-linked incidents at RAF Fairford and RAF Mildenhall. Surrounded by unrelated Australian top-stories content."
+    },
+    "primary_source_alignment": [
+      "No primary source (police press release, court filing, or official statement) was included in the dossier. The Metropolitan Police statement is quoted secondhand across NBC, CNN, and ABC but was not provided as a standalone document, so direct alignment cannot be verified."
+    ],
+    "missing_context": [
+      "No outlet reports the suspect's name, nationality specifics beyond 'US Army,' or how long the alleged espionage activity lasted.",
+      "No outlet details what specific 'protected information' or sensitive material the soldier allegedly had access to, beyond the general ARRC/NATO posting.",
+      "No response from Russia is included; CNN notes it reached out to Russian embassies but had no reply, and no other outlet obtained comment.",
+      "No defense statement, legal representation, or indication of whether charges have been filed (all note custody without charge) is reported.",
+      "The underlying Metropolitan Police press release itself was not provided as a primary source, so the exact wording attributed to it by multiple outlets cannot be independently confirmed.",
+      "No outlet explains how the alleged espionage was detected or what triggered the US-UK-FBI joint investigation."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets confirm the same core facts with largely consistent framing; the divergences are minor sourcing and detail additions (rank, ARRC attribution, surrounding context) rather than material contradictions, and no primary source diverges from coverage, making this a straightforward REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBiMWd2M1FscDVkVEpkYnZ2R3RnaTc5YURLNWtkWFhDc050U0VPLVJsQnBZOS1LY0ZnVVV6cU10dnNta2hKbXc4ZHBiSEJDaEJhSkVTcGFESElFblE?oc=5",
+      "title": "US Army soldier suspected of spying for Russia arrested in UK - BBC"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNR01STjQ1eEtZVnpFd2tINENEd3ZpbXV5UWZiZVZJT3NaeTltaGZ3NTA4NGo2SHhETzNZaTBFSzkwcFF0OWt0ZWY2MDkzNnlkQjQ5SlhJTzBiQWJjWUY4OVJ2OWhGQ3JKa2VyeEJJMWt2eGhSVVZ4VGhvOWprcWZlbDItd3VkUDBLajE4YUM0N2tvZ3YyajYtSVE2NFh3N3M4Y3BPRmlsdFZ3REtHYzNqNU54SUpONWdicE9QZkRB?oc=5",
+      "title": "Senior U.S. Army soldier arrested in U.K. on suspicion of assisting Russian intelligence - NBC News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUlBQaE11cnl4a0VjOVp6cHJyRGNLbUxNTHg5dXNlakpXRTJuWjdjVF8wTUFBY0xUS1dHQXhiYjdWcFh3WnM3Yjh4bUJFaERJQV8xUjRUVFhEVmxISWxYaEVSOEVGQ0Fac2hMZU9QVDFyc0RaWjExc2ZGNTBDaEY1T3VYVnNLRWwtSG8zQmYtVQ?oc=5",
+      "title": "US Army soldier arrested in UK on suspicion of espionage related to Russia - CNN"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNaVhISGljR01EbjNUaDN6SHE3WmE4VlZpNW1fQzZuQldoeHdXSld5UXBBelQtNUpMRlhnc1IxSmlKd0dtLVlVdlpxRjlQVEVWWV9mNjcwZVV4SmNpa3M1WlhuSkJHNzFzdHExcXlNQ0hWTzJyUXB2Y2RyTW9xWF8zenJ3MEF1SkN4UlpXUGY4Sm83UTBBTTZiVkdLaUh5Z3lvN0lEVzExXzIxMmZmN1VHZFAzVQ?oc=5",
+      "title": "UK arrests US Army member suspected of helping Russia - ABC News & Headlines \u2013 Australian Broadcasting Corporation"
+    }
+  ]
+}
