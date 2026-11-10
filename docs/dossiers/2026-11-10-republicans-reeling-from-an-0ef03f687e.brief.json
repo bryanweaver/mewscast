@@ -1,0 +1,97 @@
+{
+  "story_id": "2026-11-10-republicans-reeling-from-an-0ef03f687e",
+  "headline_seed": "Republicans, reeling from an election drubbing, will choose their leadership in Congress - NBC News",
+  "brief": {
+    "story_id": "2026-11-10-republicans-reeling-from-an-0ef03f687e",
+    "consensus_facts": [
+      "House Republicans elected Rep. Jim Jordan of Ohio as their leader for the next Congress on Tuesday, Nov. 10, 2026.",
+      "Jordan defeated Rep. Steve Scalise of Louisiana in a secret-ballot, closed-door vote.",
+      "The vote tally was 106-73.",
+      "Jordan, 62, is a co-founder and first chairman of the House Freedom Caucus and chairman of the House Judiciary Committee.",
+      "The election followed major Republican losses in the midterms that moved the GOP into the House minority.",
+      "Outgoing Speaker Mike Johnson is stepping aside from the leadership team following the election losses.",
+      "Rep. Tom Emmer of Minnesota won election as GOP whip, the No. 2 position, defeating Rep. August Pfluger of Texas.",
+      "Jordan is a close ally of President Donald Trump, who said he was staying out of the race.",
+      "Senate Republicans held their own closed-door leadership elections the same day, with John Thune running for minority leader; some GOP senators pushed to delay the vote to process the midterm results.",
+      "Jordan cited his oversight experience, saying he is 'battle-tested on the oversight front' and knows 'the Democrats' playbook.'"
+    ],
+    "disagreements": [
+      {
+        "topic": "Scale of Democratic midterm gains / size of GOP losses",
+        "positions": {
+          "NBC News": "Describes a 'blue tidal wave' handing Democrats roughly 260 seats \u2014 the largest majority in 35 years.",
+          "Associated Press": "States Republicans lost 'more than 40 House seats' (via CBS framing); AP itself characterizes it as an 'election debacle' and references the 'scope of Democratic victories' without a specific seat total.",
+          "CBS News": "States Republicans are rebuilding after 'losing more than 40 House seats.'"
+        }
+      },
+      {
+        "topic": "Characterization of Jordan",
+        "positions": {
+          "NBC News": "Frames him as a former 'conservative bomb-thrower' who has become 'more of a team player,' and notes the 2018 Ohio State wrestling abuse allegations.",
+          "Associated Press": "Frames him as an 'ultraconservative' and 'hard-hitting' figure; does not mention the Ohio State allegations.",
+          "CBS News": "Describes him simply as a 'hardline conservative and close ally of President Trump'; does not mention the Ohio State allegations."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier; body text was blocked by a CAPTCHA/authorization wall and contains no reportable content. Headline frames Jordan as 'next party leader' in neutral wire style.",
+      "NBC News": "Most detailed account. Leads on the 'blue tidal wave' and frames Jordan's win as a 'clean break from the Johnson political apparatus.' Emphasizes the historic scale of Democratic gains (roughly 260 seats, largest in 35 years). Uniquely surfaces the 2018 Ohio State University wrestling abuse allegations and Jordan's denials, his prior clashes with Boehner and Ryan, and the Senate dissent led by Sen. David McCormick. Also details down-ballot races (Emmer vs. Pfluger, McClain vs. Houchin vs. Steube).",
+      "Politico": "Headline-only in the dossier. Headline ('House Republicans could be about to clean their own house') frames the leadership contest as an internal housecleaning; no body text available to analyze.",
+      "Associated Press": "Second-most detailed account. Leads on Jordan winning as the GOP prepares for the minority. Labels him 'ultraconservative' and emphasizes his pugnacious committee style. Gives more biographical balance to Scalise \u2014 his 2017 shooting, cancer battle, and $67.9M fundraising. Uniquely surfaces that incoming Democratic leadership would make history (Jeffries as first African-American speaker, Clark as first woman majority leader). Does not mention the Ohio State allegations.",
+      "NPR": "Headline-only in the dossier. Headline frames the event forward-looking, as Republicans looking 'to rebuild from midterm defeat'; no body text available.",
+      "CBS News": "Live-blog format bundling multiple Tuesday stories. Treats the Jordan vote as one item among several, alongside the Hegseth impeachment vote led by Rep. Thomas Massie and Senate leadership maneuvering. Uniquely surfaces Sen. Bernie Sanders opposing Chuck Schumer as Democratic leader, Democratic leaders declining to whip the Hegseth impeachment vote, and the uncalled Hyde-Smith/Colom Mississippi Senate race. Describes Jordan as a 'hardline conservative' and cites 'more than 40' lost House seats.",
+      "USA Today": "Headline-only in the dossier. Headline ('See every House Republican who lost their seat') frames coverage around the casualties of the midterm wipeout rather than the leadership vote itself; no body text available."
+    },
+    "primary_source_alignment": [
+      "No primary sources (roll-call records, press releases, or transcripts) were located for this story. The 106-73 vote tally is attributed in all body-text outlets to unnamed sources or lawmakers in the room ('two lawmakers,' 'sources familiar with the tally'), not to an official published count \u2014 this is a single effective source chain repeated across outlets."
+    ],
+    "missing_context": [
+      "No official roll-call or primary document corroborates the 106-73 figure; it rests on anonymous sourcing repeated across NBC, AP, and CBS, which may trace to the same room-level sources rather than independent confirmation.",
+      "Only NBC News mentions the 2018 Ohio State University wrestling abuse allegations against Jordan and his denials; AP and CBS omit this entirely, leaving readers of those outlets without that context.",
+      "The exact final number of GOP House seats lost is unsettled in the dossier \u2014 NBC cites 'roughly 260' Democratic seats, while CBS cites 'more than 40' GOP seats lost, and at least one race (Hyde-Smith/Colom in Mississippi) remained uncalled per CBS.",
+      "No outlet in the dossier provided body text on the outcomes of the GOP conference chair race (McClain vs. Houchin vs. Steube) \u2014 it was reported as ongoing/contested but not resolved.",
+      "The outcome of the Senate GOP leadership vote and whether the delay motion succeeded is not fully resolved in the available bodies; CBS reports the motion to proceed was accepted but does not confirm Thune's re-election.",
+      "No injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (NBC News, AP, CBS News) reported the same core event but with materially different emphasis \u2014 NBC foregrounds Jordan's controversial history and the historic scale of the Democratic wave, AP balances Scalise's profile and highlights historic Democratic firsts, and CBS buries the vote inside a multi-story live blog. The divergence in framing and the omitted allegations make this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRE5pQkRIY0JYdW1mRGtidndvN2hYcHFRaXRuTVdtTnNLaXNzMGdPcEpWREhMclc0YVdTdk10TGNXR0U2Nml5bkNVdjY4OU90SWdIOXgtLVJwWE9xQ0ttR1MwTkI4SV84VFBlZm9hbXA0d0lFR2dQMW5NR0Q1dmVjRlo4bENFLTJ6NHVGY2NwSGREMzhraXRTQkZZcjNEdkc4TFZZczg1RlZ0V1RNSkdpOEFxV01pWlFPbXc?oc=5",
+      "title": "US House Republicans choose Jim Jordan as their next party leader - Reuters"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSFBKelhaVVFlZVBNM3p1ZGgzVDBEQnlHRWxDTG9EV2xKdTRfbFNsUXN3RmpqUk1NY2tKNlE1V1JsZVhuQk9xY3BEODNxT21nZnpFTDhhV3N4dHlxdnBMSjFJUUZwMzl3UUJpRDMxWTdnN0xhQWt6c1Z2VVF4ZHZpWXRoSWpQOTh2S3kzOEpKVWZ3eEFrY19yenV6dlVLS1JJNFdmNjVSTFZVU2VC?oc=5",
+      "title": "House Republicans elect Rep. Jim Jordan as their next leader following election losses - NBC News"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcUVxMFlKYzBSTl8zOXFlX0FIWTZiVGo1b19Ha3M5Z1hYWVNuN2pDbG90enQ3a1RzUEVMcGYzQ3U2YlRTMWZKZzlxd3hvWmt0QmM5NnRmZHhjMkE5U3pGUE9ibEFJc2xJamU0azJSU01TbG10R0pjdzhrWWg5aWctNnBRSHZlWDdBbjBr?oc=5",
+      "title": "House Republicans could be about to clean their own house - Politico"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOM05VZzZyNlNlZUNTWllYRTl1M0pnaFYzQXZaYjVYQjFrUXFLMzR5YS1Hc0NLNGI1UGd3SzQyVjFwZGdsY3lnVkg1SDdhcVVUbjk3OW8wcnZmSDVrS3JUZXoybDJYb2JUZl9UdzNfd3ZWMGNvTG1vYzAtZkRwQUpteWlPWF8wb2t4RGtzSDRneWZuU0RKZVozWHdXeUJRN3h1Y3FjZkhVZ1RleWk0M1N5Qg?oc=5",
+      "title": "Rep. Jim Jordan of Ohio elected to lead House Republicans in the minority - AP News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZWVhRllMaTJZaWVzbW41ZTl4UnVPc1dvMy1peGhiNkVWdk1LUU5FYjNVc3AycDFGTHRqUHZXVTlRVXdhT2JYdkNUaGwxSHNFSnlJX2FtUVFqaFhZM0F3LUtIM1lIbjJXYW1DcTF1QUhGd2ZZZXJaeWxvbHdpMFNkUDhPS3FlSHRNUFZtMDBHSUMwN0l6V0VOZA?oc=5",
+      "title": "House Republicans to elect a new leader as they look to rebuild from midterm defeat - NPR"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQNE5FTkgySEd2SkpyVlZRZy1jTWpmRVpiU2pEUkdzVFUzNFJUVGY2TFVCNWlaYU9CXzJYR2JidXI2V2xCczdTT1Z3QXNpb0NROE5WaUItS0J6TDhsVy1lYVRJb0IzRW5KcG9jR1pIVzFfMzNRVlhFZHBYRVhPQjQtcTFKNWc0eFpFTlYxbHBiTQ?oc=5",
+      "title": "Congress live updates as House GOP picks Jordan as leader, Hegseth faces impeachment vote - CBS News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRlUyZ2lZWFdSbUwwaTlieFZ4UE9pdDhxVm0yWE5rRFlZUy1qRWtkMzJVSzZPdm02SWZBLTF0VXFCWTk4aGdfTU9icHV5WDRXM2k4S0h0RmVlN05GdDJoeDBjbUxndTY2ZlVwWm9ac2JBaTZIRDJHY1prN2NOYTduS3JpSHoydXhnMy01d1ZJcXU4QTlWTUMxaUt1al9YMzlBcnRCa2FfQmVpS21ZTkRPNmtYZkVvZ3Azem5EVHY0X0Rjdw?oc=5",
+      "title": "See every House Republican who lost their seat in midterm elections - USA Today"
+    }
+  ]
+}
