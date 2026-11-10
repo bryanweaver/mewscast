@@ -1,0 +1,65 @@
+{
+  "story_id": "2026-11-09-after-losing-congress-republicans-04e95393b3",
+  "headline_seed": "After losing Congress, Republicans have one last shot to pass their agenda - The Washington Post",
+  "brief": {
+    "story_id": "2026-11-09-after-losing-congress-republicans-04e95393b3",
+    "consensus_facts": [
+      "All five outlets' headlines/bodies reference that Republicans lost control of Congress in the 2026 midterm elections, with Democrats set to take both chambers; however, only Al Jazeera provides retrievable body text, so most specifics below are single-source and not wire-level consensus.",
+      "Across the headline-level framing of Associated Press, The Washington Post, and Al Jazeera, there is agreement that the midterm result flipped congressional control and that Republicans are now preparing for a transition to minority status."
+    ],
+    "disagreements": [
+      {
+        "topic": "Timing of Senate GOP leadership elections",
+        "positions": {
+          "Al Jazeera English": "Reports leadership elections are scheduled for Tuesday, but notes Sen. Ron Johnson (R-WI) pushed to delay the Senate vote, telling Fox News 'This is time for reflection' and arguing Republicans need more time to assess results; no other outlet's body text addresses this."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Headline-only in dossier. Frames the result as a 'GOP election wipeout' and emphasizes a 'changed Washington' \u2014 strong, dramatic word choice ('wipeout') for a wire outlet. No body text retrievable to assess what it leads with or buries.",
+      "The Washington Post": "Three entries in the dossier, all headline-only. Primary seed headline frames the story around Republicans having 'one last shot to pass their agenda' before losing power \u2014 a forward-looking, strategic frame. A second WaPo entry ('Get ready for an even Trumpier Republican Congress') is explicitly labeled Analysis and frames the minority GOP as moving in a more pro-Trump direction. A third WaPo entry pivots to a GOP House member 'under investigation for pattern of extravagant expenditures' \u2014 a scandal angle. Together WaPo's coverage mixes agenda strategy, ideological trajectory, and a corruption storyline, but no body text is retrievable to verify any of it.",
+      "Al Jazeera English": "The only outlet with full body text. Al Jazeera reports that Democrats will hold majorities of at least 54 seats in the 100-member Senate and at least 254 in the 435-member House when the 120th Congress is sworn in this January. It frames the story as an explainer on minority leadership contests: in the House, Steve Scalise (LA) vs. Jim Jordan (OH) for minority leader, and Tom Emmer (MN) vs. August Pfluger (TX) for minority whip; in the Senate, John Thune (SD) seeking to stay as leader with no public challenger, and John Barrasso (WY) expected to seek another term as the No. 2. Al Jazeera presents candidate self-descriptions (Jordan as 'battle-tested,' Pfluger calling for 'fresh ideas') and explains what each leadership role does. Neutral, procedural explainer framing rather than a dramatic 'wipeout' angle."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No roll-call votes, leadership election results, press releases, or transcripts were available to corroborate or contradict the reporting. All leadership-contest details rest solely on Al Jazeera's reporting."
+    ],
+    "missing_context": [
+      "Single-source limitation: Only one of five dossier articles (Al Jazeera English) has retrievable full body text. The four Washington Post and Associated Press entries are headline-only, so the specific claims about seat counts, leadership candidates, and vote timing cannot be corroborated across outlets and should not be treated as consensus.",
+      "No outlet in the dossier with body text reports the actual outcome of the Tuesday leadership elections \u2014 only the contests and candidates going in.",
+      "The exact final seat totals are reported by Al Jazeera only as minimums ('at least 54' Senate, 'at least 254' House), suggesting some races may still be uncalled; no outlet clarifies how many seats remained outstanding.",
+      "No body-text source explains what specific agenda items Republicans hope to pass in their remaining window, despite the WaPo seed headline framing the story around a 'last shot to pass their agenda.'",
+      "The WaPo scandal headline about a GOP member's 'pattern of extravagant expenditures' is unverifiable here \u2014 no member is named and no body text is available.",
+      "No primary documents (official leadership candidacy letters, the cited Fox News interview with Ron Johnson, or seat-count certifications) were included to verify the quotes and figures attributed in Al Jazeera's report."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets cover the post-midterm GOP transition with materially different frames \u2014 AP's 'wipeout,' WaPo's agenda/Trumpier-Congress/scandal angles, and Al Jazeera's procedural leadership explainer \u2014 but only one has retrievable body text, making this a coverage-divergence story rather than a corroborated REPORT; the single-source limitation itself is worth surfacing.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNUVCNERLb24tNnZmclJZZThDOXZhRkp6bnpLV1pYbVV3RWI1QUVrU1E0QWFWUkVtUEppS2tWZzFYV082Yk5NZWtKMHphdFBwMmRGSWdibWhseDZodUsyVnpWeXF2SFEybzBwcllHeVVkLWJZMnBtLWhNdFpJa204ZU5CLWl6TUdkbXlZLW56S3VzX3VMc3RWS0NmOFRMSkFxbUE?oc=5",
+      "title": "Congress returns to a changed Washington after GOP\u2019s election wipeout - AP News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOM0FwS0ViWkE3ZW54YVBGWk9oOG5vX01SR2ZUdWkxRWQxZ1dFRHR2WFBIc3NaaVRwWDNPS3pKWV9QWWpSd1NTclBGUzVEZWE4WEViWk5zc3VqVTlDNU5VVzF2eTF1OWItVG9WZGRtemJOc3VDMldxMHNyTks4U0V4SHpKdldUVWRyVGxHa0pvdTlOTVQ0QWRpMFVtVlgwTFF4amJWeElGakM5NlZEOTJrbF9xQ2pjRmNSYXpmcGJRWQ?oc=5",
+      "title": "After losing Congress, Republicans have one last shot to pass their agenda - The Washington Post"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTGplbUMyYzNNbXo2WVhPMmtoYWY4am5PYU1IYWZtdjFvVWRKRHVXVkkyZFJyY2RxTGxYVXVmc1hpS1ZYZmRxOWRhdVY4Q2w5S0l4UXh0MVdwdG9jTkZXWi1mZ3R4OEtNaXlsdzNuRWtkVnAtbXlZb29iS3lvQVpZc294bmtUNDdfOVJ1eXVyU0JDMUlQWDhPd18zaVRKUWJESC1CSENFTGRNVVpwVFVLc0l30gG3AUFVX3lxTE5hc2tFdmRBX2FtSUU3OHlIOWJxQWNoZVZObTlvR1VDR3lfZ3FxQlNsX1pwS0d3dlEycU5xNll0TS13RDgyWW9LMWNEY1NKNU1DbDlxWVZnLWJ5VGxNdXpZbGZDMVA3XzlxZk9XT3BsSkdmRnF6UGlwUWhkaExlbGM5R1hCZW94LWRBdmJ3aTBwd3ByaXdSUG43bzZxLVAtMUxkQkhUVkFaWjIwMHFPSEtqM1Z2V0RLZw?oc=5",
+      "title": "Which Republicans are running for minority leadership roles in US Congress? - Al Jazeera"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUEQyY084dWswS214UTlkYjVqdFJJa3k0bDktUFByRkFfZl9mdlh3OEdSYm5XTk03N0phbDU5LU9jN0VWUTIxc19QSDFVOERpcU5leWY1SElUT0N3bGZKX2FRZy1nRXZfOXhiRXpNRjV3c0tQTnEtdXF5c3lySjhjdGhuaVAtTmVxM2dRRzh6VmdHQ05EZlhXTG04UjFEWWM?oc=5",
+      "title": "Analysis | Get ready for an even Trumpier Republican Congress - The Washington Post"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNLVJibkplZ1RHWGVhbjJMZ3RYNEtJQU5QQTEzN19kMXlxVGpLZTB1OXpaSDB5WjZsNThPX0FjZHY0VlZyNlZmN2w2SHltLWZnZTFHN0E0STdTbFowQ0RwQVg0ZUdFT2cwYjZpaVJlZmNHdUs3Q0VYLUlHSmdXTzNoc3NGV1RNM0QxV2JoWWlJNlJWUVAwaThFQlJtVDA3bXg4QVFxQmQ0bzhIYWZmVHhsN0gzRjJ6Z3EzZnZzQ0J3?oc=5",
+      "title": "GOP House member under investigation for \u2018pattern of extravagant expenditures\u2019 - The Washington Post"
+    }
+  ]
+}
