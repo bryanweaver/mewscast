@@ -12,7 +12,14 @@ import pytest
 # Ensure src/ is on the path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from dossier_renderer import bluesky_web_url, render_dossier_page, render_feed_json, render_index_page
+from dossier_renderer import (
+    bluesky_web_url,
+    display_headline,
+    render_dossier_page,
+    render_feed_json,
+    render_index_page,
+    render_rss,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -21,9 +28,11 @@ from dossier_renderer import bluesky_web_url, render_dossier_page, render_feed_j
 
 @pytest.fixture
 def mock_dossier():
-    """Load the mock dossier JSON from the dossiers/ directory."""
-    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    mock_path = os.path.join(project_root, "dossiers", "20260408-senate-approps-mock.json")
+    """Load the committed mock dossier fixture (dossiers/ is gitignored)."""
+    mock_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "fixtures", "20260408-senate-approps-mock.json",
+    )
     with open(mock_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -355,3 +364,98 @@ class TestRenderFeedJson:
         feed_data = json.loads(feed_json_str)
 
         assert feed_data[0]["thumb"] is None
+
+
+class TestDisplayHeadline:
+
+    def test_strips_trailing_outlet_suffix(self):
+        assert display_headline(
+            "California Voters Reject Prop. 40 Billionaire Tax Measure - The New York Times"
+        ) == "California Voters Reject Prop. 40 Billionaire Tax Measure"
+
+    def test_strips_pipe_and_em_dash_suffixes(self):
+        assert display_headline("Fed holds rates steady again | Reuters") == "Fed holds rates steady again"
+        assert display_headline("Fed holds rates steady again — AP News") == "Fed holds rates steady again"
+
+    def test_keeps_headline_without_suffix(self):
+        h = "Ethics panel to decide penalty for Rep. Sheila Cherfilus-McCormick over theft allegations."
+        assert display_headline(h) == h
+
+    def test_keeps_dash_when_tail_is_a_sentence(self):
+        h = "Senate passes the bill - but the House may not take it up this year."
+        assert display_headline(h) == h
+
+    def test_keeps_dash_when_head_too_short(self):
+        assert display_headline("Breaking - Reuters") == "Breaking - Reuters"
+
+    def test_empty(self):
+        assert display_headline("") == ""
+        assert display_headline(None) == ""
+
+    def test_dossier_page_title_uses_display_headline(self, mock_dossier):
+        data = copy.deepcopy(mock_dossier)
+        data["dossier"]["headline_seed"] = "Senate passes appropriations package - The New York Times"
+        output = render_dossier_page(data)
+        assert "<title>Senate passes appropriations package &mdash;" in output
+        assert "The New York Times" not in output.split("</head>")[0]
+
+
+class TestNewsArticleJsonLd:
+
+    def _ld(self, output):
+        start = output.index('<script type="application/ld+json">') + len('<script type="application/ld+json">')
+        return json.loads(output[start:output.index("</script>", start)])
+
+    def test_json_ld_present_and_valid(self, mock_dossier):
+        ld = self._ld(render_dossier_page(mock_dossier))
+        assert ld["@type"] == "NewsArticle"
+        assert ld["headline"].startswith("Senate passes appropriations")
+        assert ld["datePublished"] == "2026-04-08T15:00:00+00:00"
+        assert ld["url"].endswith("/dossiers/20260408-senate-approps-mock.html")
+        assert "https://apnews.com/article/mock-senate-approps" in ld["isBasedOn"]
+
+    def test_json_ld_cannot_break_out_of_script(self, mock_dossier):
+        data = copy.deepcopy(mock_dossier)
+        data["dossier"]["headline_seed"] = "Evil </script><script>alert(1)</script> headline here"
+        output = render_dossier_page(data)
+        head = output.split("</head>")[0]
+        # Exactly one closing script tag in <head>: the JSON-LD block's own.
+        assert head.count("</script>") == 1
+        assert self._ld(output)["headline"].startswith("Evil </script>")
+
+
+class TestRenderRss:
+
+    def _entries(self):
+        return [
+            {
+                "story_id": f"2026-11-0{i}-story-{i}",
+                "dossier": {"headline_seed": f"Story number {i} happened today - Reuters"},
+                "post": {
+                    "draft": {"post_type": "REPORT", "text": f"Post <b>{i}</b> & more.\n\nAnd that's the mews."},
+                    "published_at": f"2026-11-0{i}T12:00:00+00:00",
+                },
+            }
+            for i in range(1, 6)
+        ]
+
+    def test_valid_rss_newest_first(self):
+        import xml.etree.ElementTree as ET
+        root = ET.fromstring(render_rss(self._entries()))
+        items = root.findall("./channel/item")
+        assert len(items) == 5
+        assert items[0].findtext("title") == "Story number 5 happened today"
+        assert items[0].findtext("link") == "https://mewscast.us/dossiers/2026-11-05-story-5.html"
+        assert items[0].findtext("pubDate") == "Thu, 05 Nov 2026 12:00:00 +0000"
+        assert items[0].findtext("description").startswith("Post <b>5</b> & more.")
+
+    def test_limit(self):
+        import xml.etree.ElementTree as ET
+        root = ET.fromstring(render_rss(self._entries(), limit=2))
+        assert len(root.findall("./channel/item")) == 2
+
+    def test_empty_feed_is_valid(self):
+        import xml.etree.ElementTree as ET
+        root = ET.fromstring(render_rss([]))
+        assert root.find("./channel/title") is not None
+        assert root.findall("./channel/item") == []

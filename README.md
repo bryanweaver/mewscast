@@ -40,9 +40,6 @@ cp .env.example .env
 ### Run Locally
 
 ```bash
-# Legacy scheduled post
-python src/main.py scheduled
-
 # Journalism pipeline (one cycle)
 python src/main.py journalism
 
@@ -107,12 +104,11 @@ Walter Cronkite omitted "And that's the way it is" on nights he editorialized �
 
 ```yaml
 # config.yaml
-pipelines:
-  journalism:
-    enabled: true    # Walter Croncat journalism pipeline (the only pipeline)
+journalism:
+  enabled: true    # publish kill switch checked by `python src/main.py journalism`
 ```
 
-`--dry-run` is always allowed regardless of the switch.
+Set it to `false` to stop publishing; `--dry-run` is always allowed regardless. (`pipelines.journalism.enabled` is only consulted by the legacy `scheduled` alias of `main.py`, which no workflow uses.)
 
 ### CLI reference
 
@@ -157,8 +153,12 @@ mewscast/
 │   ├── open-failure-issue.yml      # workflow_run listener that opens a GitHub issue on failed runs
 │   ├── bluesky-outlet-reply.yml    # Bluesky outlet reply bot
 │   ├── triage-review.yml           # Triage decision logging
-│   ├── track-analytics.yml         # Engagement analytics
-│   └── rebuild-history.yml         # Rebuild post history from X
+│   ├── track-analytics.yml         # Engagement analytics + nightly report
+│   ├── x-mention-reply.yml         # Reply to X mentions
+│   ├── x-cat-repost.yml            # Repost cat content on X (manual)
+│   ├── post-pin-explainer.yml      # Post + pin the explainer thread
+│   ├── test-dedup.yml              # Dedup diagnostics (manual)
+│   └── rebuild-history.yml         # Rebuild post history from X (overwrites; see note below)
 ├── src/
 │   ├── main.py                     # Entry point (journalism pipeline + CLI modes)
 │   ├── twitter_bot.py              # X/Twitter API integration (publish path)
@@ -174,6 +174,11 @@ mewscast/
 │   ├── bluesky_outlet_reply.py     # Bluesky outlet reply bot
 │   ├── x_retry.py                  # X API retry helpers
 │   ├── draft_analyzer.py           # Draft analysis helpers
+│   ├── r2_uploader.py              # Cloudflare R2 image upload (dossier images)
+│   ├── thumbnailer.py              # Homepage card thumbnails
+│   ├── watermark.py                # Image watermarking
+│   ├── x_mention_reply.py          # X mention reply bot
+│   ├── x_cat_repost.py             # X cat repost bot
 │   │
 │   ├── # Walter Croncat journalism pipeline (Stages 1–7)
 │   ├── trend_detector.py           # Stage 1 — X search + watchlist
@@ -185,7 +190,7 @@ mewscast/
 │   ├── post_composer.py            # Stage 5 — dispatcher across 6 post types
 │   ├── verification_gate.py        # Stage 6 — hard rules incl. keystone sign-off rule
 │   ├── dossier_store.py            # Data classes, SIGN_OFFS, JSON persistence
-│   ├── dossier_renderer.py         # Renders dossier HTML viewer pages
+│   ├── dossier_renderer.py         # Dossier HTML pages, index, feed.json, rss.xml, sitemap
 │   └── field_notes.py              # Field-notes reply composer
 ├── prompts/                        # Claude prompt templates
 │   ├── meta_analysis.md            # Stage 4 meta-analysis prompt
@@ -195,12 +200,21 @@ mewscast/
 │   ├── bulletin_post.md            # BULLETIN post type
 │   ├── correction_post.md          # CORRECTION post type
 │   ├── primary_post.md             # PRIMARY post type
+│   ├── platform_x.md / platform_bluesky.md  # Per-platform style rules
 │   └── journalism_image.md         # Journalism image prompt
 ├── tests/                          # pytest test suite
 ├── scripts/                        # Utility scripts
-│   ├── rebuild_history.py          # Rebuild post history from X
 │   ├── track_analytics.py          # Engagement analytics
-│   ├── triage_review.py            # Triage review tooling
+│   ├── nightly_report.py           # Nightly report (docs/reports/)
+│   ├── triage_review.py            # Weekly triage review
+│   ├── bluesky_engage.py           # Bluesky engagement runner
+│   ├── x_engagement.py             # X engagement snapshot
+│   ├── x_mentions_digest.py        # X mentions digest
+│   ├── open_failure_issue.py       # Opens an issue when a workflow fails
+│   ├── post_correction.py          # Manual correction post
+│   ├── post_and_pin_explainer.py   # Explainer thread
+│   ├── rebuild_history.py          # Rebuild post history from X
+│   ├── test_dedup.py               # Dedup diagnostics
 │   └── test_typesafe.py            # Live Jev smoke test (not pytest)
 ├── docs/                           # Documentation (see docs/README.md)
 ├── dossiers/                       # Story dossiers (gitignored)
@@ -244,33 +258,9 @@ pytest tests/test_verification_gate.py -v
 pytest tests/ --cov=src --cov-report=html
 ```
 
-**24 test files**, all green in a single `pytest tests/` run.
+28 test files (~850 tests), all offline. Fixtures that must be committed live in `tests/fixtures/` (`dossiers/` is gitignored). Highest-value suites: `test_verification_gate.py` (keystone sign-off matrix + hard rules), `test_post_composer.py`, `test_source_gatherer.py`, `test_deduplication.py`, `test_dossier_renderer.py`, `test_bots.py`.
 
-| Test file | Tests | Coverage area |
-|-----------|-------|---------------|
-| `test_bots.py` | 118 | Bluesky + X bot posting pipeline |
-| `test_engagement.py` | 95 | Engagement bot behavior |
-| `test_content_generator.py` | 95 | Legacy content generation |
-| `test_field_notes.py` | 49 | Field-notes reply composer |
-| `test_typesafe_client.py` | 14 | Jev client, L4/relevance/brief-gate judgments |
-| `test_source_gatherer.py` | 41 | Stage 3: slant-diverse fetch |
-| `test_deduplication.py` | 70 | Post deduplication logic |
-| `test_verification_gate.py` | 58 | Stage 6: keystone sign-off matrix + all hard rules |
-| `test_post_composer.py` | 22 | Stage 5: per-type prompt dispatch |
-| `test_dossier_renderer.py` | 22 | Dossier HTML renderer |
-| `test_dossier_store.py` | 28 | Data classes + JSON persistence |
-| `test_trend_detector.py` | 23 | Stage 1: watchlist query + clustering |
-| `test_story_triage.py` | 25 | Stage 2: heuristic scoring |
-| `test_primary_source_finder.py` | 18 | Stage 3: primary source pattern matching |
-| `test_meta_analyzer.py` | 14 | Stage 4: prompt, JSON parsing, retry |
-| `test_image_generator.py` | 16 | Image generation |
-| `test_bluesky_outlet_reply.py` | 20 | Bluesky outlet reply bot |
-| `test_dossier_reply_compose.py` | 12 | Dossier reply composition |
-| `test_x_retry.py` | 9 | X API retry helpers |
-| `test_image_qc.py` | 6 | Image quality checks |
-| `test_nightly_report_no_issues_json.py` | 2 | Nightly report issues.json removal |
-
-**Test isolation note:** `conftest.py` eagerly pre-imports `bs4`, `bluesky_client`, `content_generator`, and `twitter_bot` before test collection. Module-level `sys.modules.setdefault(...)` stubs in individual test files are silently bypassed for those four names. Mock at the call site instead (e.g. `instance.attr = Mock()`).
+**Test isolation note:** `conftest.py` eagerly pre-imports `bs4`, `bluesky_client`, `truncate`, and `twitter_bot` before test collection. Module-level `sys.modules.setdefault(...)` stubs in individual test files are silently bypassed for those four names. Mock at the call site instead (e.g. `instance.attr = Mock()`).
 
 ## Troubleshooting
 

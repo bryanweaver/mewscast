@@ -42,6 +42,7 @@ from dossier_renderer import (
     render_dossier_page,
     render_feed_json,
     render_index_page,
+    render_rss,
     render_sitemap,
 )
 from r2_uploader import upload_dossier_image, public_image_url
@@ -799,7 +800,10 @@ def _render_dossier_html(dossier_store, draft: DraftPost, dossier: StoryDossier)
                     "story_id": m.get("story_id", ""),
                     "dossier": {"headline_seed": m.get("headline_seed", "")},
                     "post": {
-                        "draft": {"post_type": m.get("post_type", "")},
+                        "draft": {
+                            "post_type": m.get("post_type", ""),
+                            "text": m.get("draft_text", ""),
+                        },
                         "published_at": m.get("published_at", ""),
                     },
                     "brief": {"confidence": m.get("confidence", 0)},
@@ -827,6 +831,18 @@ def _render_dossier_html(dossier_store, draft: DraftPost, dossier: StoryDossier)
             print(f"[journalism] feed.json updated ({count} items)")
         except Exception as e:
             print(f"[journalism] feed.json generation failed (non-fatal): {e}")
+
+        # 3c. RSS feed of the newest dossiers — lets readers, aggregators,
+        # RSS-to-email newsletters and fediverse bridges follow Walter
+        # off-platform.
+        try:
+            rss_xml = render_rss(entries)
+            rss_path = os.path.join(_project_root(), "docs", "rss.xml")
+            with open(rss_path, "w", encoding="utf-8") as f:
+                f.write(rss_xml)
+            print("[journalism] rss.xml updated")
+        except Exception as e:
+            print(f"[journalism] rss.xml generation failed (non-fatal): {e}")
 
         # 4. Regenerate sitemap.xml at docs/ root so new dossier pages
         # are discoverable by crawlers and agents. robots.txt at the same

@@ -13,13 +13,14 @@ Design rules:
   - Failure never blocks the publishing pipeline — callers wrap in try/except.
 
 This module is standalone: ``python src/dossier_renderer.py`` runs a smoke test
-against the mock dossier at dossiers/20260408-senate-approps-mock.json.
+against the mock dossier at tests/fixtures/20260408-senate-approps-mock.json.
 """
 from __future__ import annotations
 
 import html
 import json
 import os
+import re
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
@@ -38,6 +39,34 @@ def _esc(value) -> str:
 
 
 _CENTRAL = ZoneInfo("America/Chicago")
+
+
+# Google News titles arrive as "Headline - Outlet Name". The outlet suffix is
+# kept in headline_seed (story ids hash it), but must not be shown as the
+# title of a Walter Croncat page — it makes our pages read as another
+# outlet's. Strip it at display time only.
+_OUTLET_SUFFIX_RE = re.compile(r"^(?P<head>.+?)\s+[-|\u2013\u2014]\s+(?P<suffix>[^-|\u2013\u2014]{2,60})$")
+
+
+def display_headline(headline: str) -> str:
+    """Return ``headline`` without a trailing " - Outlet" attribution.
+
+    Only strips when the suffix looks like a publication name (at most six
+    words, no sentence punctuation) and the remaining headline still has at
+    least four words, so ordinary dashes inside a headline are preserved.
+    """
+    if not headline:
+        return headline or ""
+    text = headline.strip()
+    m = _OUTLET_SUFFIX_RE.match(text)
+    if not m:
+        return text
+    head, suffix = m.group("head").strip(), m.group("suffix").strip()
+    if len(suffix.split()) > 6 or re.search(r"[.!?,:;\"']$", suffix):
+        return text
+    if len(head.split()) < 4:
+        return text
+    return head
 
 
 def _parse_iso(iso_str: str) -> str:
@@ -598,7 +627,7 @@ def render_dossier_page(dossier_data: dict) -> str:
     All string interpolation uses html.escape().
     """
     dossier = dossier_data.get("dossier") or {}
-    headline = dossier.get("headline_seed", "Walter Croncat Dossier")
+    headline = display_headline(dossier.get("headline_seed", "")) or "Walter Croncat Dossier"
     story_id = dossier_data.get("story_id", "")
     post = dossier_data.get("post") or {}
     draft = post.get("draft") or {}
@@ -611,6 +640,20 @@ def render_dossier_page(dossier_data: dict) -> str:
     og_description = consensus[0] if consensus else (post_text[:200] if post_text else "Walter Croncat journalism dossier")
 
     image_path = dossier_data.get("image_path")
+    og_image = (
+        public_image_url(image_path) if image_path
+        else "https://mewscast.us/images/walter-croncat-dossier-og.png"
+    )
+    json_ld = _news_article_json_ld(
+        headline=headline,
+        description=og_description,
+        story_id=story_id,
+        published_at=published_at,
+        image_url=og_image,
+        source_urls=[
+            a.get("url") for a in (dossier.get("articles") or []) if a.get("url")
+        ],
+    )
 
     sections = [
         _render_section_1_post(dossier_data),
@@ -652,10 +695,12 @@ def render_dossier_page(dossier_data: dict) -> str:
   <meta property="og:title" content="{_esc(headline)}">
   <meta property="og:description" content="{_esc(og_description)}">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="{_esc(public_image_url(image_path)) if image_path else 'https://mewscast.us/images/walter-croncat-dossier-og.png'}">
+  <meta property="og:image" content="{_esc(og_image)}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{_esc(public_image_url(image_path)) if image_path else 'https://mewscast.us/images/walter-croncat-dossier-og.png'}">
+  <meta name="twitter:image" content="{_esc(og_image)}">
+  <link rel="alternate" type="application/rss+xml" title="Walter Croncat" href="../rss.xml">
   <link rel="stylesheet" href="./style.css">
+  <script type="application/ld+json">{json_ld}</script>
 </head>
 <body>
 <div class="page">
@@ -690,7 +735,7 @@ def render_index_page(entries: list[dict]) -> str:
     entry_cards = []
     for entry in sorted_entries:
         dossier = entry.get("dossier") or {}
-        headline = dossier.get("headline_seed", "Untitled")
+        headline = display_headline(dossier.get("headline_seed", "")) or "Untitled"
         story_id = entry.get("story_id", "")
         post = entry.get("post") or {}
         draft = post.get("draft") or {}
@@ -730,6 +775,7 @@ def render_index_page(entries: list[dict]) -> str:
   <meta property="og:image" content="https://mewscast.us/images/walter-croncat-dossier-og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://mewscast.us/images/walter-croncat-dossier-og.png">
+  <link rel="alternate" type="application/rss+xml" title="Walter Croncat" href="../rss.xml">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -777,7 +823,7 @@ def render_feed_json(entries: list[dict], thumbs_dir: str) -> str:
         thumb_fs = os.path.join(thumbs_dir, f"{sid}.webp")
         items.append({
             "id": sid,
-            "headline": (entry.get("dossier") or {}).get("headline_seed", ""),
+            "headline": display_headline((entry.get("dossier") or {}).get("headline_seed", "")),
             "date": pub,
             "date_display": _parse_iso(pub),
             "post_type": post_type,
@@ -788,6 +834,117 @@ def render_feed_json(entries: list[dict], thumbs_dir: str) -> str:
         })
     items.sort(key=lambda x: x["date"] or "", reverse=True)
     return json.dumps(items, ensure_ascii=False)
+
+
+def _news_article_json_ld(
+    *,
+    headline: str,
+    description: str,
+    story_id: str,
+    published_at: str,
+    image_url: str,
+    source_urls: list[str],
+    base_url: str = "https://mewscast.us",
+) -> str:
+    """schema.org NewsArticle markup for a dossier page.
+
+    Helps search engines and AI answer engines identify the page as a
+    sourced news item and attribute it to Walter Croncat. ``isBasedOn``
+    lists the outlet articles the brief was built from (URLs only).
+    Returned JSON is safe to embed inside a <script> element.
+    """
+    org = {"@type": "Organization", "name": "Mewscast", "url": f"{base_url}/"}
+    data = {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": headline[:110],
+        "description": description,
+        "url": f"{base_url}/dossiers/{_safe_filename(story_id)}.html",
+        "image": [image_url],
+        "author": {"@type": "Person", "name": "Walter Croncat", "url": f"{base_url}/"},
+        "publisher": org,
+        "isAccessibleForFree": True,
+    }
+    if published_at:
+        data["datePublished"] = published_at
+    if source_urls:
+        data["isBasedOn"] = source_urls
+    # Escape <, >, & and ' as JSON unicode escapes so no data can close the
+    # <script> element or alter HTML parsing; the JSON value is unchanged.
+    return (
+        json.dumps(data, ensure_ascii=False)
+        .replace("<", "\\u003c")
+        .replace(">", "\\u003e")
+        .replace("&", "\\u0026")
+        .replace("'", "\\u0027")
+    )
+
+
+def render_rss(
+    entries: list[dict],
+    base_url: str = "https://mewscast.us",
+    limit: int = 50,
+) -> str:
+    """Render an RSS 2.0 feed of the newest ``limit`` dossiers.
+
+    ``entries`` is the list shape ``render_index_page`` consumes; when an
+    entry carries ``post.draft.text`` it becomes the item description (the
+    post Walter published). Lets readers, aggregators, RSS-to-email
+    newsletter tools and fediverse bridges follow Walter off-platform.
+    """
+    from email.utils import format_datetime
+
+    def _pub(entry: dict) -> str:
+        return (entry.get("post") or {}).get("published_at") or entry.get("saved_at") or ""
+
+    newest = sorted(entries, key=_pub, reverse=True)[:limit]
+    base = base_url.rstrip("/")
+    items = []
+    for entry in newest:
+        story_id = entry.get("story_id", "")
+        if not story_id:
+            continue
+        link = f"{base}/dossiers/{_safe_filename(story_id)}.html"
+        title = display_headline((entry.get("dossier") or {}).get("headline_seed", "")) or "Walter Croncat"
+        draft = (entry.get("post") or {}).get("draft") or {}
+        desc = draft.get("text") or ""
+        post_type = draft.get("post_type") or ""
+        parts = [
+            "    <item>",
+            f"      <title>{html.escape(title)}</title>",
+            f"      <link>{html.escape(link)}</link>",
+            f'      <guid isPermaLink="true">{html.escape(link)}</guid>',
+        ]
+        pub = _pub(entry)
+        if pub:
+            try:
+                dt = datetime.fromisoformat(pub.replace("Z", "+00:00"))
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                parts.append(f"      <pubDate>{format_datetime(dt)}</pubDate>")
+            except ValueError:
+                pass
+        if post_type:
+            parts.append(f"      <category>{html.escape(post_type)}</category>")
+        if desc:
+            parts.append(f"      <description>{html.escape(desc)}</description>")
+        parts.append("    </item>")
+        items.append("\n".join(parts))
+
+    now = format_datetime(datetime.now(timezone.utc))
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        "  <channel>\n"
+        "    <title>Walter Croncat — Mewscast</title>\n"
+        f"    <link>{base}/</link>\n"
+        f'    <atom:link href="{base}/rss.xml" rel="self" type="application/rss+xml"/>\n'
+        "    <description>AI news reporter cat. Reads every wire, compares every framing, shows the receipts.</description>\n"
+        "    <language>en-us</language>\n"
+        f"    <lastBuildDate>{now}</lastBuildDate>\n"
+        + ("\n".join(items) + "\n" if items else "")
+        + "  </channel>\n</rss>\n"
+    )
 
 
 def render_sitemap(
@@ -866,7 +1023,7 @@ def _safe_filename(text: str) -> str:
 def _smoke_test() -> None:
     """Quick validation against the mock dossier."""
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    mock_path = os.path.join(project_root, "dossiers", "20260408-senate-approps-mock.json")
+    mock_path = os.path.join(project_root, "tests", "fixtures", "20260408-senate-approps-mock.json")
 
     with open(mock_path, "r", encoding="utf-8") as f:
         data = json.load(f)

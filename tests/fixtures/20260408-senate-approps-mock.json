@@ -1,0 +1,89 @@
+{
+  "story_id": "20260408-senate-approps-mock",
+  "saved_at": "2026-04-08T15:00:00+00:00",
+  "image_path": null,
+  "dossier": {
+    "story_id": "20260408-senate-approps-mock",
+    "headline_seed": "Senate passes appropriations package, averting shutdown",
+    "detected_at": "2026-04-08T12:00:00+00:00",
+    "articles": [
+      {
+        "outlet": "Associated Press",
+        "url": "https://apnews.com/article/mock-senate-approps",
+        "title": "Senate passes $1.2 trillion spending package",
+        "body": "The Senate voted 68-32 on Tuesday to approve a $1.2 trillion appropriations package, averting a partial government shutdown hours before funding was set to lapse. The Senate voted 68-32 on Tuesday to approve a $1.2 trillion appropriations package, averting a partial government shutdown hours before funding was set to lapse. The Senate voted 68-32 on Tuesday to approve a $1.2 trillion appropriations package, averting a partial government shutdown hours before funding was set to lapse. The Senate voted 68-32 on Tuesday to approve a $1.2 trillion appropriations package, averting a partial government shutdown hours before funding was set to lapse. The Senate voted 68-32 on Tuesday to approve a $1.2 trillion appropriations package, averting a partial government shutdown hours before funding was set to lapse. The Senate voted 68-32 on Tuesday to approve a $1.2 trillion appropriations package, averting a partial government shutdown hours before funding was set to lapse. The Senate voted 68-32 on Tuesday to approve a $1.2 trillion appropriations package, averting a partial government shutdown hours before funding was set to lapse. The Senate voted 68-32 on Tuesday to approve a $1.2 trillion appropriations package, averting a partial government shutdown hours before funding was set to lapse. ",
+        "headline_only": false
+      },
+      {
+        "outlet": "Fox News",
+        "url": "https://www.foxnews.com/politics/mock-senate-approps",
+        "title": "Senate approves spending bill after border fight",
+        "body": "Senators passed the spending bill after a late-night negotiation over border security provisions, sending the measure to the House where its fate remains uncertain. Senators passed the spending bill after a late-night negotiation over border security provisions, sending the measure to the House where its fate remains uncertain. Senators passed the spending bill after a late-night negotiation over border security provisions, sending the measure to the House where its fate remains uncertain. Senators passed the spending bill after a late-night negotiation over border security provisions, sending the measure to the House where its fate remains uncertain. Senators passed the spending bill after a late-night negotiation over border security provisions, sending the measure to the House where its fate remains uncertain. Senators passed the spending bill after a late-night negotiation over border security provisions, sending the measure to the House where its fate remains uncertain. Senators passed the spending bill after a late-night negotiation over border security provisions, sending the measure to the House where its fate remains uncertain. Senators passed the spending bill after a late-night negotiation over border security provisions, sending the measure to the House where its fate remains uncertain. ",
+        "headline_only": false
+      },
+      {
+        "outlet": "Reuters",
+        "url": "https://www.reuters.com/world/us/mock-senate-approps",
+        "title": "",
+        "body": "",
+        "headline_only": true
+      }
+    ],
+    "primary_sources": [
+      {
+        "kind": "roll_call_vote",
+        "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/mock.htm",
+        "title": "Roll Call Vote 119th Congress"
+      }
+    ],
+    "outlet_slants": {
+      "Associated Press": "center",
+      "Fox News": "right",
+      "Reuters": "center"
+    }
+  },
+  "brief": {
+    "story_id": "20260408-senate-approps-mock",
+    "consensus_facts": [
+      "The Senate approved the appropriations package 68-32 on April 8.",
+      "The package totals roughly $1.2 trillion."
+    ],
+    "disagreements": [
+      {
+        "topic": "Emphasis",
+        "positions": {
+          "Associated Press": "Shutdown averted",
+          "Fox News": "Border security fight"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Procedural, deadline-focused",
+      "Fox News": "Partisan conflict over border"
+    },
+    "primary_source_alignment": [
+      "Roll call tally matches outlet reporting."
+    ],
+    "missing_context": [
+      "House vote timing not yet scheduled."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Consensus facts across slant-diverse outlets.",
+    "confidence": 0.85
+  },
+  "post": {
+    "draft": {
+      "post_type": "REPORT",
+      "text": "The Senate passed a $1.2T spending package 68-32, averting a shutdown. It now heads to the House.",
+      "sign_off": "And that's the mews.",
+      "outlets_referenced": [
+        "Associated Press",
+        "Fox News"
+      ],
+      "hedges_used": []
+    },
+    "published_at": "2026-04-08T15:00:00+00:00",
+    "post_url": null,
+    "bluesky_url": null
+  }
+}
