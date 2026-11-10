@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-09T02:08:49.828221+00:00",
+  "last_updated": "2026-11-10T04:23:23.891157+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2119955374275223583",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-10T00:48:43.086373+00:00",
+      "created_at": "2026-11-10T00:48:42+00:00",
+      "topic": "After losing Congress, Republicans have one last shot to pass their agenda - The Washington Post",
+      "dossier_id": "2026-11-09-after-losing-congress-republicans-04e95393b3",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 24
+    },
+    {
+      "x_tweet_id": "2119930470578221421",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-09T23:09:45.718174+00:00",
+      "created_at": "2026-11-09T23:09:45+00:00",
+      "topic": "Republican Thomas Massie will force impeachment vote on Defence Secretary Pete Hegseth - BBC",
+      "dossier_id": "2026-11-09-republican-thomas-massie-will-a733fb2f8c",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 13
+    },
+    {
+      "x_tweet_id": "2119642712513110447",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-09T04:06:18.901786+00:00",
+      "created_at": "2026-11-09T04:06:18+00:00",
+      "topic": "Trump says deportations were ‘too tough’ and hurt him during the midterms - NBC News",
+      "dossier_id": "2026-11-09-trump-says-deportations-were-619454e097",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 30
+    },
     {
       "x_tweet_id": "2119497653352366463",
       "post_type": "REPORT",
@@ -40,7 +79,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 59
+      "impressions": 61
     },
     {
       "x_tweet_id": "2119131635933483306",
@@ -92,7 +131,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 9
+      "impressions": 11
     },
     {
       "x_tweet_id": "2118445827911725088",
@@ -157,7 +196,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 16
+      "impressions": 17
     },
     {
       "x_tweet_id": "2117746080427221133",
@@ -183,7 +222,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 82
+      "impressions": 83
     },
     {
       "x_tweet_id": "2117481712951439712",
@@ -196,7 +235,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 29
+      "impressions": 30
     },
     {
       "x_tweet_id": "2117406510922039305",
@@ -444,55 +483,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 61
-    },
-    {
-      "x_tweet_id": "2114919811427811577",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-27T03:19:11.382725+00:00",
-      "created_at": "2026-10-27T03:19:11+00:00",
-      "topic": "Appeals court rules against DOJ in California ballot fight - The Hill",
-      "dossier_id": "2026-10-26-appeals-court-rules-against-8c4f6e4bec",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 5
-    },
-    {
-      "x_tweet_id": "2114836437958836360",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-26T21:47:53.597985+00:00",
-      "created_at": "2026-10-26T21:47:53+00:00",
-      "topic": "Judge says DOJ illegally fired the daughter of former FBI director Comey - NPR",
-      "dossier_id": "2026-10-26-judge-says-doj-illegally-378a847085",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 5
-    },
-    {
-      "x_tweet_id": "2114802462502609303",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-26T19:32:53.270328+00:00",
-      "created_at": "2026-10-26T19:32:52+00:00",
-      "topic": "Brazil heads back to the future as Flavio Bolsonaro refuses to recognize Lula win - Reuters",
-      "dossier_id": "2026-10-26-brazil-heads-back-to-9ee8a77cf9",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 10
     }
   ],
   "averages": {
     "REPORT": {
       "count": 33,
-      "likes": 0.33,
+      "likes": 0.27,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 48.79
+      "impressions": 50.42
     },
     "BULLETIN": {
       "count": 4,
@@ -504,11 +504,11 @@
     },
     "ALL": {
       "count": 37,
-      "likes": 0.35,
+      "likes": 0.3,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 44.62
+      "impressions": 46.08
     }
   }
 }
