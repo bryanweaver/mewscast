@@ -53,7 +53,7 @@ outlets:
     priority: 1
 
   - name: Bloomberg
-    handle: business  # TODO verify handle
+    handle: business  # verified 2026-10-24: @business is the Bloomberg newsroom. Corporate @Bloomberg is a separate account.
     domain: bloomberg.com
     bluesky_handle: bloomberg.com   # domain-verified on Bluesky, 2026-04-19
     slant: wire
@@ -92,7 +92,7 @@ outlets:
     priority: 2
 
   - name: The Guardian
-    handle: guardian
+    handle: guardian  # archived 2024-11-13; last post says the Guardian stopped posting on X. No successor account. Domain gather still uses theguardian.com.
     domain: theguardian.com
     bluesky_handle: theguardian.com # domain-verified on Bluesky, 2026-04-19
     slant: left
@@ -155,7 +155,7 @@ outlets:
 
   # --- Left --------------------------------------------------------------
   - name: MSNBC
-    handle: MSNBC
+    handle: MSNOWNews  # verified 2026-10-24: @MSNBC is an empty parked account (0 posts). The network posts as MS NOW at @MSNOWNews.
     domain: msnbc.com
     slant: left
     allsides_rating: Left
@@ -257,7 +257,7 @@ outlets:
     priority: 2
 
   - name: Deutsche Welle
-    handle: dwnews
+    handle: dwnews  # verified 2026-10-24: bio says this account is no longer active, and its timeline is not readable. @DeutscheWelle is the comms desk, so the news handle stays.
     domain: dw.com
     bluesky_handle: not_on_bluesky  # reserved-only account (news.dw.com exists w/ correct bio but 0 posts), 2026-04-19
     slant: international
@@ -266,7 +266,7 @@ outlets:
     priority: 2
 
   - name: Reuters World
-    handle: ReutersWorld  # TODO verify handle
+    handle: ReutersWorld  # verified 2026-10-24: official Reuters World international desk.
     domain: reuters.com
     slant: international
     allsides_rating: Center
@@ -340,7 +340,7 @@ outlets:
     priority: 2
 
   - name: Nature News
-    handle: NatureNews  # TODO verify handle
+    handle: Nature  # verified 2026-10-24: @NatureNews does not exist. @Nature is the journal account that posts news and commentary.
     domain: nature.com
     slant: specialized
     allsides_rating: Not Rated  # Science journal, not covered by AllSides
