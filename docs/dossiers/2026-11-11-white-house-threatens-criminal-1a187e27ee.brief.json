@@ -1,0 +1,108 @@
+{
+  "story_id": "2026-11-11-white-house-threatens-criminal-1a187e27ee",
+  "headline_seed": "White House threatens criminal investigation into Democrats\u2019 oversight efforts - Politico",
+  "brief": {
+    "story_id": "2026-11-11-white-house-threatens-criminal-1a187e27ee",
+    "consensus_facts": [
+      "White House counsel Will Scharf sent a letter dated Monday to Rep. Robert Garcia, D-Calif., the incoming chairman of the House Oversight Committee (NBC News, CNN, CBS News).",
+      "Scharf warned that Democrats' planned investigations of the Trump administration 'may cross the line into blatant criminality' and could warrant executive-branch probes (NBC News, CBS News).",
+      "Scharf cited the constitutional requirement that congressional investigations be tied to a 'legitimate legislative purpose' and accused Democrats of 'abusive and capricious threats' (NBC News, CBS News).",
+      "Garcia responded that 'Congress' authority comes from Article I of the Constitution, not from the permission of the White House,' said Congress has 'wide latitude to conduct investigations and oversight,' and said 'It appears Donald Trump has something to hide' (NBC News, CNN, CBS News).",
+      "Garcia said Democrats 'will not be deterred by baseless threats from a weaponized DOJ or from the President's lawyers' (NBC News, CBS News).",
+      "House Democratic Leader Hakeem Jeffries, poised to become speaker in January, criticized the letter, saying a Democratic Congress would be 'a check and balance on an out-of-control executive branch' and telling the White House to 'consult the Constitution' (NBC News, CBS News).",
+      "Garcia and incoming Democratic chairs are set to take control of committees in January and have previewed probes into Trump, his family, businesses, and administration (NBC News, CNN, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Characterization of the White House action in headlines",
+        "positions": {
+          "Politico": "Frames it as the White House threatening a 'criminal investigation into Democrats' oversight efforts' \u2014 asserts an affirmative threat of prosecution.",
+          "Associated Press": "Frames it as the White House 'confronting' Democrats and 'claiming possible criminality' \u2014 more hedged language.",
+          "NBC News": "Frames it as a warning that 'investigating us may be a crime.'",
+          "CNN": "Frames it as a warning that investigations 'could cross the line into criminality' \u2014 conditional phrasing.",
+          "The New York Times": "Frames it as the White House 'threatens Congress,' saying investigations 'could be crime.'",
+          "CBS News": "Leads on Scharf's specific phrase 'blatant criminality.'"
+        }
+      },
+      {
+        "topic": "Scope of Democratic investigative targets detailed",
+        "positions": {
+          "CBS News": "Provides an itemized list: Trump family business dealings, Epstein scandal, Don Jr.'s Bahamas wedding partly funded by a Russian oligarch, a $2B Saudi investment in Kushner's fund, Trump crypto ventures, Pentagon contracts to companies linked to Trump's sons, alleged DHS pay-to-play, and corporate donations for the White House ballroom.",
+          "NBC News": "States only generally that Democrats will investigate Trump, his family, businesses and administration \u2014 no itemized list.",
+          "CNN": "Mentions probes on a wide range of targets including Cabinet members and family, plus Garcia's Epstein-related remarks, but no full enumeration."
+        }
+      },
+      {
+        "topic": "Trump's own prior role in targeting Democrats",
+        "positions": {
+          "NBC News": "Emphasizes Trump's history of targeting enemies \u2014 the Mark Kelly 'punishable by DEATH' post, failed indictment, and calls to investigate Schiff, Comey, and Letitia James.",
+          "CBS News": "Notes Trump's Sunday Truth Social posts accusing Democrats of 'extortion,' calling them 'SLEAZEBAGS' who 'should go to jail,' and directing DOJ to look into their oversight push.",
+          "CNN": "Does not foreground Trump's personal statements; focuses on the letter and Democratic reactions."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Headline-only in dossier. Uses hedged wire phrasing \u2014 'confronts,' 'claiming possible criminality' \u2014 placing 'criminality' in quotes to attribute rather than assert. No body text available to assess lead or omissions.",
+      "NBC News": "Full body text. Leads with 'previewing the partisan battles to come' and frames the letter as a 'warning shot.' Notably contextualizes the move against Trump's own history of targeting political enemies (Kelly, Schiff, Comey, James) and the failed Kelly indictment, and reminds readers Republicans under Comer pursued Biden-family probes unimpeded. Emphasizes that courts have rarely stopped congressional investigations. Frames the criminality claim as unusual ('the suggestion of a congressional probe constituting criminality is not' commonplace).",
+      "Politico": "Headline-only in dossier. The most assertive framing of all outlets \u2014 states the White House 'threatens criminal investigation into Democrats' oversight efforts' as an affirmative action rather than a conditional warning. Cannot assess body.",
+      "Bloomberg": "Body text unavailable \u2014 returned a bot-check/paywall page with no article content. Headline frames it neutrally as the White House threatening Democrats 'over coming investigations.'",
+      "CNN": "Full body text, presented as a live-blog. Leads with the White House warning but embeds it among other midterm-aftermath items (Mississippi Senate race, Hegseth impeachment, 2028 field, Jeffries speaker math). Gives heavy space to Democratic pushback \u2014 Garcia's 'Give me a break,' his Epstein 'co-conspirator' attack on Trump, and Raskin calling the threat 'meaningless and embarrassing.' Frames the episode largely through Democratic defiance and ties it to broader Democratic accountability agenda.",
+      "The New York Times": "Headline-only in dossier. Frames the letter as the White House threatening 'Congress' as an institution, with the conditional 'could be crime.' Cannot assess body.",
+      "CBS News": "Full body text. Leads directly on Scharf's phrase 'blatant criminality' and quotes the letter at length. Provides the most detailed enumeration of Democrats' planned investigative targets and is alone in detailing Trump's Sunday Truth Social posts directing DOJ action. Includes electoral context (Democrats poised to hold at least 254 House and 54 Senate seats) and first-term precedent on Trump financial-records fights."
+    },
+    "primary_source_alignment": [
+      "No primary source (the full Scharf letter to Garcia) was located for this story. The letter is quoted secondhand by NBC News and CBS News, both of which cite the same document; CBS attributes its copy to the letter directly and NBC notes its copy was 'shared with NBC News by a White House official.'",
+      "Direct quoted language is consistent across NBC and CBS: 'threats to executive branch officials designed to deter them from public service, or process designed merely to abuse or instill fear in the recipient may cross the line into blatant criminality.' Both render this identically, suggesting a shared underlying document.",
+      "Garcia's statement language ('It appears Donald Trump has something to hide'; 'Congress' authority comes from Article I') is quoted identically by NBC and CBS, indicating a single released statement rather than independent interviews \u2014 though CNN separately captured distinct live remarks from Garcia ('Give me a break')."
+    ],
+    "missing_context": [
+      "The full text of the Scharf letter was not available as a primary source; all reporting relies on outlet-selected excerpts, so readers cannot see the letter's complete legal reasoning or any specific statutes cited.",
+      "No outlet identifies which specific criminal statute the White House contends congressional subpoenas could violate; the 'criminality' claim is reported only in general terms.",
+      "Only two of seven outlets (NBC News, CBS News) provided substantive body text quoting the letter; Politico, NYT, AP, and Bloomberg are headline-only or inaccessible in this dossier, so framing comparison for those four is based on headlines alone.",
+      "Bloomberg's article body was unretrievable (returned a bot/subscription verification page rather than content).",
+      "No legal scholar or constitutional expert outside the two partisan camps is quoted assessing whether oversight subpoenas could plausibly constitute a crime; NBC notes courts have rarely stopped congressional probes but no outlet provides an independent legal analysis of this specific threat.",
+      "No outlet reports whether the DOJ has actually opened or committed to any investigation in response to Trump's directive \u2014 only that Trump publicly directed it (per CBS).",
+      "The timeline between Trump's Sunday Truth Social posts and the Monday-dated Scharf letter is noted by CBS but not fully reconciled across outlets as to whether the letter was a direct follow-on to Trump's public demand."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same letter but with materially different framings \u2014 ranging from Politico's assertive 'threatens criminal investigation' to AP's hedged 'claiming possible criminality' \u2014 and the underlying primary source (the Scharf letter) was never located, making the divergence in how outlets characterized it the real story. This is a coverage-comparison piece, not a straight REPORT.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNMkF3VkJLSWtHYzVKNWo1bC1RYmhjSTZLV3lIdjJPSDRudEVXR0tNM0M4VWVtcHJ6VHQ5ME84SGlCVmYyWGRha2NZR1ZZdHQ4dVlsVG1vUXJFdzVoYnIxSlNfZ1NzQ1FWcTNYMFp1RlJEZUx0MkJlZ0pFRGZrX19nNG1QZVYwM1ZrSmtCb1ZPNUFSM28?oc=5",
+      "title": "White House confronts Democrats over planned probes, claiming possible \u2018criminality\u2019 - AP News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPY3NwVERMZkt4QjlkRkc3UXFKa1E4eHRYNmZhdkhCUHV6MEltcjFMZ0ppZFlPdWE0aE9fVVpNQmttSVIyWnY5eExkUGZCdFFOS2xReS12aDRzLVh2QVk0M3d0Zm1UUnNGWVNwYjB4VkllRUNacktDNWQ1dUdJaE1LdTNmcTZmdjJDMU1WdFdTOHVEZTE5MEVnRkJadVg4dHRKVF9ra08wUzFyNGsxZlhfWDhYQ0R0SFRhZ2JsV3l3M2hSdw?oc=5",
+      "title": "White House warns congressional Democrats: Investigating us may be a crime - NBC News"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeDNIeFZyS0ItTDhWSVk1bXdLNGVPSWtBVzMtbm1tc19rX0lsYTNNdUtSSk9FRXc1Yy1Rd1VGcjVvUEdXdDc1cGRXdjUtXzFWYmtaeE14TjJmcy12YTRTeHgyYnc5OXBCRnhvOE5wNXpsYVZQQWNrNGtPc2syTVFWckFqOHBiMmdvOFBZc21qNV9kZEFCenhvdDRiZHdHNHlTaEE?oc=5",
+      "title": "White House threatens criminal investigation into Democrats\u2019 oversight efforts - Politico"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNMERtcFNjX0c4RW9NeVE2eXpjZnRnMUNiUEFIdVpsRmp4cHFwYVJuZktLbkV5bm5CbmgxcU5sX19aNk5FZWc1OVlQQkw1M1hSZU1uSXRGNlZxem1ubE9Iblo4akFHTlVUWjUwUWJ3VW5NNHQ3Zm5vM0s2QzdNQU9GRm1jZkJIX2M5WDY0VlZCVjBuR3ZaVHVWdVdXRlhvUVFURnkyS2gyRjdvQ2swNzREWjhPX2tyZw?oc=5",
+      "title": "White House Threatens Democrats Over Coming Investigations - Bloomberg.com"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbmRPR1E4SjhlNHNfbkdZOFhyb0lNRUxSY0pOUXhNenlRSUFJd0M4NHU0MlRYMGYxdTQxQ3ZnQ3BtUG00RW1ZY3IwamY1aWhicndlaDlpMEJjUHQ5R3AzN2JqRjFhbFBLcndyZFpqOFRCWmJZOWRDLV83MnMxTDFvZi1rbjQ?oc=5",
+      "title": "White House warns Democratic investigations could cross the line into \u2018criminality\u2019 - CNN"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbml3cEZPRHUzOVV3dmRtZUhLMjQ3SmpBT2ZQM0t3S1phTldROVAwTDd3TGxXb040WGpYSUxRZGxPTkUxWFNqY1dNeGVzM0JLcHRMXzZvRGhETm1nUE40YzF2Y2tuNFlWUEoxWVpaOFRiZ1JOSmtZcW93MDNOR1liMWNkTUIwVkQ4dkJjSjBTQzRJT1hDUGdJNi05NGU?oc=5",
+      "title": "White House Threatens Congress, Saying Aggressive Investigations Could Be Crime - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPTF9jYTd1Ny1sUkJheFhFTVBmTjBGNGJiX1VaMWIyRlhRMHE4ME5xanpPYVk3SlRhR20xQnNCT2NyTDUtNWJ2VjA1eUVRbDdVT0M2M2ROSUZyejQ1NFNXY3E5NEVoZm1LNzJkel93QWJtYjU1eXBqMjMxYTA1QXpUOWJzU1ExcDd4dDdHYXh1UDlMTlRHcXItdUh6VE5yYjRhSk9GQzVWSHNtRTRzeDI3UDF5eFFfR2s?oc=5",
+      "title": "Top White House lawyer warns of \"blatant criminality\" in Democrats' investigations push - CBS News"
+    }
+  ]
+}
