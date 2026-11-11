@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-10T04:23:23.891157+00:00",
+  "last_updated": "2026-11-11T02:19:32.551317+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2120282786158305411",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-10T22:29:44.278107+00:00",
+      "created_at": "2026-11-10T22:29:43+00:00",
+      "topic": "Senior US soldier arrested by UK counter-terror police - BBC",
+      "dossier_id": "2026-11-10-senior-us-soldier-arrested-a77909cc5a",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 26
+    },
+    {
+      "x_tweet_id": "2120254240610496873",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-10T20:36:18.416619+00:00",
+      "created_at": "2026-11-10T20:36:18+00:00",
+      "topic": "Republicans, reeling from an election drubbing, will choose their leadership in Congress - NBC News",
+      "dossier_id": "2026-11-10-republicans-reeling-from-an-0ef03f687e",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 5
+    },
+    {
+      "x_tweet_id": "2120028509720723720",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-10T05:39:19.935531+00:00",
+      "created_at": "2026-11-10T05:39:19+00:00",
+      "topic": "California Voters Reject Prop. 40 Billionaire Tax Measure - The New York Times",
+      "dossier_id": "2026-11-10-california-voters-reject-prop-e155173949",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 40
+    },
     {
       "x_tweet_id": "2119955374275223583",
       "post_type": "REPORT",
@@ -14,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 24
+      "impressions": 25
     },
     {
       "x_tweet_id": "2119930470578221421",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 13
+      "impressions": 15
     },
     {
       "x_tweet_id": "2119642712513110447",
@@ -40,7 +79,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 30
+      "impressions": 32
     },
     {
       "x_tweet_id": "2119497653352366463",
@@ -53,7 +92,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 36
+      "impressions": 37
     },
     {
       "x_tweet_id": "2119277088335438159",
@@ -66,7 +105,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 5
+      "impressions": 6
     },
     {
       "x_tweet_id": "2119173913112465485",
@@ -105,7 +144,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 25
+      "impressions": 26
     },
     {
       "x_tweet_id": "2118796946676871437",
@@ -157,7 +196,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 24
+      "impressions": 25
     },
     {
       "x_tweet_id": "2118112490772898205",
@@ -170,7 +209,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 352
+      "impressions": 353
     },
     {
       "x_tweet_id": "2118079145720889700",
@@ -183,7 +222,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 14
+      "impressions": 15
     },
     {
       "x_tweet_id": "2117835780198723821",
@@ -209,7 +248,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 31
+      "impressions": 33
     },
     {
       "x_tweet_id": "2117712889532322111",
@@ -457,42 +496,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 22
-    },
-    {
-      "x_tweet_id": "2115193701496430842",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-27T21:27:31.881615+00:00",
-      "created_at": "2026-10-27T21:27:31+00:00",
-      "topic": "Alexander brothers, ex-luxury real estate brokers, to be sentenced on federal sex trafficking charges - NBC News",
-      "dossier_id": "2026-10-27-alexander-brothers-ex-luxury-5948db8cd7",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 82
-    },
-    {
-      "x_tweet_id": "2115155243562336355",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-27T18:54:42.799167+00:00",
-      "created_at": "2026-10-27T18:54:42+00:00",
-      "topic": "Israel Election Live Updates: Record Voter Turnout as Netanyahu Faces Challenge Led by Eisenkot - The New York Times",
-      "dossier_id": "2026-10-27-israel-election-live-updates-0863038469",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 61
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 33,
-      "likes": 0.27,
+      "count": 34,
+      "likes": 0.29,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 50.42
+      "impressions": 47.18
     },
     "BULLETIN": {
       "count": 4,
@@ -500,15 +513,15 @@
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 10.25
+      "impressions": 10.5
     },
     "ALL": {
-      "count": 37,
-      "likes": 0.3,
+      "count": 38,
+      "likes": 0.32,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 46.08
+      "impressions": 43.32
     }
   }
 }
