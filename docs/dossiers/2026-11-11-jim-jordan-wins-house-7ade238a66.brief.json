@@ -1,0 +1,101 @@
+{
+  "story_id": "2026-11-11-jim-jordan-wins-house-7ade238a66",
+  "headline_seed": "Jim Jordan wins House GOP minority leader race - Axios",
+  "brief": {
+    "story_id": "2026-11-11-jim-jordan-wins-house-7ade238a66",
+    "consensus_facts": [
+      "Rep. Jim Jordan of Ohio was elected the next House GOP minority leader in a closed-door secret ballot vote on Tuesday, November 10, 2026.",
+      "Jordan defeated Majority Leader Steve Scalise of Louisiana by a vote of 106-73.",
+      "Jordan currently chairs the House Judiciary Committee and is a longtime ally of President Donald Trump.",
+      "The leadership change followed a historic Democratic 'blue wave' in the midterms that flipped control to Democrats and prompted Speaker Mike Johnson to step aside from leadership.",
+      "Jordan pitched himself as 'battle-tested on the oversight front,' positioning himself to counter Democratic investigations into the Trump administration, family, and business interests.",
+      "Jordan and Scalise previously both ran for Speaker in 2023 after Kevin McCarthy was ousted, before Republicans rallied around Johnson.",
+      "House Majority Whip Tom Emmer of Minnesota defeated August Pfluger of Texas for the minority whip job.",
+      "House GOP Conference Chair Lisa McClain of Michigan survived a challenge and kept her position."
+    ],
+    "disagreements": [
+      {
+        "topic": "Tom Emmer vs. Pfluger whip race vote count",
+        "positions": {
+          "Fox News": "Reports the final vote count as 103 to 76",
+          "NBC News": "Reports Emmer 'fended off' Pfluger but gives no vote count"
+        }
+      },
+      {
+        "topic": "Size of the Democratic House majority",
+        "positions": {
+          "NBC News": "Describes Democrats as holding roughly 260 seats \u2014 the largest majority in 35 years",
+          "Time Magazine": "Describes a blue wave that shifted control of both chambers to Democrats without a specific seat count",
+          "Fox News": "Describes 'historic' losses across state and federal races without a specific seat count"
+        }
+      },
+      {
+        "topic": "Senate leadership outcome",
+        "positions": {
+          "NBC News": "Reports Senate Republicans re-elected John Thune as minority leader, with Barrasso as whip and Cotton chairing the conference, despite a small group seeking to delay the vote",
+          "Time Magazine": "Does not cover the Senate leadership vote",
+          "Fox News": "Does not cover the Senate leadership vote"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Most comprehensive body text. Leads on Republicans electing a new leader 'following election losses' and frames Jordan's win as a 'clean break from the Johnson political apparatus.' Notably surfaces the 2018 Ohio State sexual abuse allegations against Jordan and his denials \u2014 context no other outlet mentions. Also covers downballot leadership races and the Senate side. Describes Jordan's history as a 'conservative bomb-thrower' who 'became more of a team player.'",
+      "Axios": "Headline only. Neutral transactional phrasing: 'Jim Jordan wins House GOP minority leader race.' No body text to analyze.",
+      "NPR": "Headline only. Frames the win through a rebuilding lens: 'as the party looks to rebuild from midterms.' No body text to analyze.",
+      "Time Magazine": "Leads on the mechanics of the win and gives extensive quotes from both Jordan's and Scalise's letters to colleagues, presenting the race as a contest of competing visions against 'socialists' and 'radical' Democrats. Provides detailed procedural explanation of how House leaders are chosen and recaps the 2023 Speaker fight. Notes Trump said 'we'll stay out of it.'",
+      "The Hill": "Headline only. Neutral center phrasing: 'Jim Jordan elected minority leader by House GOP.' No body text to analyze.",
+      "Fox News": "Frames Jordan explicitly as 'President Donald Trump's top defender in Congress' and the 'go-to defender' against Democratic investigations. Emphasizes 'loud, sustained applause' at his win and quotes allies praising his effectiveness and communication skills. Describes the race as 'believed to be a narrow race.' Includes a co-host video reaction. Omits the Ohio State allegations entirely.",
+      "People.com": "Headline only. Frames the story around succession: 'Succeeding Mike Johnson.' No body text to analyze."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official roll-call records, press releases, or transcripts of the closed-door vote) were located for this story. The 106-73 vote count is attributed by all full-text outlets to unnamed sources 'in the room,' not to an official record \u2014 this is inherent to a secret-ballot closed-door vote."
+    ],
+    "missing_context": [
+      "The 106-73 vote total and the 103-76 whip vote total are sourced entirely to anonymous lawmakers/sources in the room; no official tally exists because the ballots were secret. No outlet independently verified these numbers against a primary document.",
+      "Only NBC News mentions the 2018 Ohio State University sexual abuse allegations and Jordan's repeated denials \u2014 a significant piece of context absent from Time and Fox coverage.",
+      "No outlet reports the exact composition of the voting body beyond Fox's note that it included incumbents plus projected members-elect, leaving the precise denominator of the vote unclear.",
+      "No outlet reports whether any races in the midterms remained uncalled at the time of the vote, which could affect the membership count.",
+      "Coverage does not detail what concrete legislative or oversight strategy Jordan plans beyond general rhetoric about 'offense, not defense.'"
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (NBC News, Time, Fox News) plus four headline-only outlets reported the same event with materially different emphasis \u2014 Fox frames Jordan as 'Trump's top defender,' Time foregrounds competing anti-'socialist' letters, and NBC uniquely surfaces the Ohio State allegations. The vote count rests entirely on anonymous sourcing with no primary record, making the coverage-comparison the real story.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSFBKelhaVVFlZVBNM3p1ZGgzVDBEQnlHRWxDTG9EV2xKdTRfbFNsUXN3RmpqUk1NY2tKNlE1V1JsZVhuQk9xY3BEODNxT21nZnpFTDhhV3N4dHlxdnBMSjFJUUZwMzl3UUJpRDMxWTdnN0xhQWt6c1Z2VVF4ZHZpWXRoSWpQOTh2S3kzOEpKVWZ3eEFrY19yenV6dlVLS1JJNFdmNjVSTFZVU2VC?oc=5",
+      "title": "House Republicans elect Rep. Jim Jordan as their next leader following election losses - NBC News"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZDJ0ZTBiSTByYW4ycmVhb0RHQ05GWHNWUm5JR0RmQVd0WG82UkFKWWRTZUFHcGxSZzVwMWpUeGYzdzZWLXJqNVFOaENUM3MwWHE3Tm1jYWFKTFFnNDBBWTlKcGgxV202UlMyWUtnYTdmeFRoTjZ1WUlpbllvdkRlZVNUT0VUQTBrQUtfS0QtdE4yS0o1?oc=5",
+      "title": "Jim Jordan wins House GOP minority leader race - Axios"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZWVhRllMaTJZaWVzbW41ZTl4UnVPc1dvMy1peGhiNkVWdk1LUU5FYjNVc3AycDFGTHRqUHZXVTlRVXdhT2JYdkNUaGwxSHNFSnlJX2FtUVFqaFhZM0F3LUtIM1lIbjJXYW1DcTF1QUhGd2ZZZXJaeWxvbHdpMFNkUDhPS3FlSHRNUFZtMDBHSUMwN0l6V0VOZA?oc=5",
+      "title": "House GOP elects Jim Jordan as new leader as the party looks to rebuild from midterms - NPR"
+    },
+    {
+      "outlet": "Time Magazine",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcXJSNlFBdDYyTnl4RmZFbE0yTnozWjB4V3I5dWpyWHJmbnpGMjZhc01jTXpLYzBabndIQlUxd1FnRUtJekducGRyR0QxNm90NWxhSHc0c1lKYjU2eUdBeFhVT0dxeG5MM3h1bFVlN2RSTGdCME5CTTlFeFZ1bGNMYUVpLXhkbi1iaUZONXVhMHhxQWFf?oc=5",
+      "title": "Jim Jordan Elected as New House Republican Leader - Time Magazine"
+    },
+    {
+      "outlet": "The Hill",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNVHU5RU5nMWVWWDl5aHp0a2dNZWt6UUt6eE90blRwMkp2M3hfRHdoZnhKM043NkhiQjkzOVRjT2YtQXByS2xERFBIZGs1ME1HNG90UFVBak5CaVNfQWU5VUpGeVdxRVJnM0NqT0RWam5yZ3pRWkpRRWFBdDVncldPM0ZCYlZ2cjZG0gGOAUFVX3lxTE5VMkdpTXFSUXlWNjU4NkJUZVFnRTZKaUd3VWU5ZktEajNqcjd5SzlfS192bjhHdVlLS1VlaTdYRERrNF9NY3B6VWtKZlVuR01xT29GNjdIYWs1M3M4cW1fNkh5OWF5WnJsQkFCYVBYaUNzOWdvZVBYTmE2el9fWjR0MkZRWWtOUUJNcGt0N3c?oc=5",
+      "title": "Jim Jordan elected minority leader by House GOP - The Hill"
+    },
+    {
+      "outlet": "Fox News",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNb1JoVWpkUTJUVXJaLVNFbWRoYWt5LXg5TmRkU3Qzb1FyMmZ2OUhDeUxSWF9UVDRIeS1wMXp3VmxZNjFYSEQ3SEMzM1VhM19SM2Mxc0ZFYVhVRmdXRGdWMGpMMVBSZFF3cVI3eHdkbmwydHFCbTd6MkozcDY3Rmt0Q05hamVrdXBJOWhPNUg0RklSM1A0Mkg3QURodVZvdkpGb1NIUVIyaUNTdHFBX2tkV19nN3laMGRkVHBR0gHAAUFVX3lxTE9OcFl5SUJFVDZMZWNqdHFLbmNKeWhVUkxUT0dLWFVHRll6R3ViMUtCQ0g5YkpWTDVUUFF6M1p2YVNkbW1RYUY5SkUyTV92YXhtUlFVT0JpTUJuajNhU3p5M0h4TmpaZzRSR2RfLTkwOTZkRm9uWHFyanBHMVpjVzFVOTBYZTFNYnpCZkxZRjEwTVlsMnp1bFVTLXAzU0ZtdFY3Q21UblpfeE9JTXkxNjUwa1BnWUVfTnNvendGa0FSNA?oc=5",
+      "title": "Jim Jordan becomes new House GOP leader after closed-door vote, defeating Steve Scalise - Fox News"
+    },
+    {
+      "outlet": "People.com",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPc1RJcVlzcWZZTHdzZG5TRERHQVBYWXNaUDhTQXg5bi1FWVNFWmJVenJiZUlFWTJRdkc4TmFuX0N3ZlpEbXVBMnRDWjNaOXNoX2RZUXVnRkVjdkxIb2t2MDRfWTFFLVVYeG9pUTZpNjI4Q2dXcU5yQld6c0UxaHhhSHE2RXA?oc=5",
+      "title": "Jim Jordan Wins Election for House Minority Leader, Succeeding Mike Johnson - People.com"
+    }
+  ]
+}
