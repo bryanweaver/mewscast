@@ -1,8 +1,34 @@
 {
-  "last_updated": "2026-11-11T02:19:32.551317+00:00",
+  "last_updated": "2026-11-12T03:27:37.355140+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2120612894895153432",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-11T20:21:28.329402+00:00",
+      "created_at": "2026-11-11T20:21:27+00:00",
+      "topic": "White House threatens criminal investigation into Democrats’ oversight efforts - Politico",
+      "dossier_id": "2026-11-11-white-house-threatens-criminal-1a187e27ee",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 2,
+      "quotes": 0,
+      "impressions": 16
+    },
+    {
+      "x_tweet_id": "2120368642189922573",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-11T04:10:53.964368+00:00",
+      "created_at": "2026-11-11T04:10:53+00:00",
+      "topic": "Jim Jordan wins House GOP minority leader race - Axios",
+      "dossier_id": "2026-11-11-jim-jordan-wins-house-7ade238a66",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 31
+    },
     {
       "x_tweet_id": "2120282786158305411",
       "post_type": "REPORT",
@@ -14,7 +40,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 26
+      "impressions": 35
     },
     {
       "x_tweet_id": "2120254240610496873",
@@ -40,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 40
+      "impressions": 41
     },
     {
       "x_tweet_id": "2119955374275223583",
@@ -92,7 +118,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 37
+      "impressions": 38
     },
     {
       "x_tweet_id": "2119277088335438159",
@@ -183,7 +209,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 23
+      "impressions": 24
     },
     {
       "x_tweet_id": "2118202508690755875",
@@ -457,55 +483,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 20
-    },
-    {
-      "x_tweet_id": "2115561957805719677",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-28T21:50:51.116985+00:00",
-      "created_at": "2026-10-28T21:50:50+00:00",
-      "topic": "Spain train crash kills at least 68 as witnesses describe devastating scenes - CNN",
-      "dossier_id": "2026-10-28-spain-train-crash-kills-d3141d411c",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 199
-    },
-    {
-      "x_tweet_id": "2115519589563994285",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-28T19:02:29.694022+00:00",
-      "created_at": "2026-10-28T19:02:29+00:00",
-      "topic": "Fed holds rates steady despite concerns over inflation - CNBC",
-      "dossier_id": "2026-10-28-fed-holds-rates-steady-e541e6dfe7",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 30
-    },
-    {
-      "x_tweet_id": "2115286050323255557",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-28T03:34:29.515335+00:00",
-      "created_at": "2026-10-28T03:34:29+00:00",
-      "topic": "Grand jury declines to indict former Trump aide Cassidy Hutchinson, star witness of Jan. 6 committee, U.S. official says - NBC News",
-      "dossier_id": "2026-10-27-grand-jury-declines-to-db002e96fc",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 22
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 34,
-      "likes": 0.29,
+      "count": 33,
+      "likes": 0.3,
       "reposts": 0.0,
-      "replies": 1.0,
+      "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 47.18
+      "impressions": 42.79
     },
     "BULLETIN": {
       "count": 4,
@@ -516,12 +503,12 @@
       "impressions": 10.5
     },
     "ALL": {
-      "count": 38,
+      "count": 37,
       "likes": 0.32,
       "reposts": 0.0,
-      "replies": 1.0,
+      "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 43.32
+      "impressions": 39.3
     }
   }
 }

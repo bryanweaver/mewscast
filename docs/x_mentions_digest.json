@@ -1,8 +1,24 @@
 {
   "account": "mewscast",
-  "last_updated": "2026-11-11T02:19:33.004623+00:00",
-  "since_id": "2112592521339547989",
+  "last_updated": "2026-11-12T03:27:37.713106+00:00",
+  "since_id": "2120613228862718057",
   "items": [
+    {
+      "id": "2120613228862718057",
+      "kind": "mention",
+      "author_handle": "DreJetmir",
+      "text": "@mewscast Trump: \"If I happen to be president and I see somebody who's doing well and beating me very badly, I say, 'Go down and indict them.' They'd be out of business. They'd be out of the election.\" Nov 9, 2023 Univision.",
+      "url": "https://x.com/DreJetmir/status/2120613228862718057",
+      "created_at": "2026-11-11T20:22:47+00:00",
+      "referenced_mewscast_post": {
+        "x_tweet_id": "2120612894895153432",
+        "url": "https://x.com/mewscast/status/2120612894895153432",
+        "topic": "White House threatens criminal investigation into Democrats’ oversight efforts - Politico",
+        "timestamp": "2026-11-11T20:21:28.329402+00:00"
+      },
+      "looks_like_correction": false,
+      "correction_keywords": []
+    },
     {
       "id": "2112592521339547989",
       "kind": "mention",
@@ -635,7 +651,7 @@
     }
   ],
   "last_run": {
-    "finished_at": "2026-11-11T02:19:33.004623+00:00",
+    "finished_at": "2026-11-12T03:27:37.713106+00:00",
     "request_counts": {
       "get_me": 1,
       "get_quote_tweets": 8,
@@ -647,7 +663,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1794364472",
+          "x-rate-limit-reset": "1794454957",
           "x-rate-limit-remaining": "73"
         }
       },
@@ -656,7 +672,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "450",
-          "x-rate-limit-reset": "1794364473",
+          "x-rate-limit-reset": "1794454957",
           "x-rate-limit-remaining": "449"
         }
       },
@@ -665,7 +681,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1794364473",
+          "x-rate-limit-reset": "1794454958",
           "x-rate-limit-remaining": "74"
         }
       },
@@ -674,7 +690,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1794364473",
+          "x-rate-limit-reset": "1794454958",
           "x-rate-limit-remaining": "73"
         }
       },
@@ -683,7 +699,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1794364473",
+          "x-rate-limit-reset": "1794454958",
           "x-rate-limit-remaining": "72"
         }
       },
@@ -692,7 +708,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1794364473",
+          "x-rate-limit-reset": "1794454958",
           "x-rate-limit-remaining": "71"
         }
       },
@@ -701,7 +717,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1794364473",
+          "x-rate-limit-reset": "1794454958",
           "x-rate-limit-remaining": "70"
         }
       },
@@ -710,7 +726,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1794364473",
+          "x-rate-limit-reset": "1794454958",
           "x-rate-limit-remaining": "69"
         }
       },
@@ -719,7 +735,7 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1794364473",
+          "x-rate-limit-reset": "1794454958",
           "x-rate-limit-remaining": "68"
         }
       },
@@ -728,14 +744,14 @@
         "error": false,
         "headers": {
           "x-rate-limit-limit": "75",
-          "x-rate-limit-reset": "1794364473",
+          "x-rate-limit-reset": "1794454958",
           "x-rate-limit-remaining": "67"
         }
       }
     ],
     "errors": [],
-    "new_items": 0,
-    "mentions_fetched": 0,
+    "new_items": 1,
+    "mentions_fetched": 1,
     "quotes_fetched": 0
   }
 }
