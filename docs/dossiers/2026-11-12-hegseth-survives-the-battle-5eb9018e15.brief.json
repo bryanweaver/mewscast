@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-11-12-hegseth-survives-the-battle-5eb9018e15",
+  "headline_seed": "Hegseth survives the battle. Democrats aren\u2019t done with the war - The Hill",
+  "brief": {
+    "story_id": "2026-11-12-hegseth-survives-the-battle-5eb9018e15",
+    "consensus_facts": [
+      "The US House voted 211-204 on Tuesday to refer articles of impeachment against Defense Secretary Pete Hegseth to the House Judiciary Committee, a procedural move that effectively kills the impeachment effort in the current Congress.",
+      "Eleven House Democrats were absent from the vote; their absence was decisive, as their votes could have changed the outcome.",
+      "The impeachment resolution was introduced by Republican Rep. Thomas Massie of Kentucky, who was the only Republican to oppose the motion to refer.",
+      "Seven House Republicans were also absent from the vote.",
+      "The 11 absent Democrats were Julia Brownley, Lou Correa, Laura Gillen, Steven Horsford, Jonathan Jackson, Nancy Pelosi, Brittany Pettersen, Melanie Stansbury, Haley Stevens, Marilyn Strickland, and Frederica Wilson.",
+      "Several absent Democrats blamed a traffic incident or police motorcade/escort near the Capitol for missing the vote.",
+      "Nancy Pelosi was in San Francisco/California for a Veterans Day event and did not attend; her office said she supports impeaching Hegseth and would have voted no.",
+      "Lou Correa cited a medical procedure that prevented him from traveling to Washington.",
+      "The current (119th) Congress ends on January 3, after which Democrats take control; the referral means the articles are unlikely to return to the floor before then.",
+      "Some absent Democrats filed statements of their intended 'no' vote in the Congressional Record, which does not change the official vote tally.",
+      "Haley Stevens had lost support from Democratic colleagues after endorsing Michigan Republican Mike Rogers for Senate over Democratic candidate Abdul El-Sayed."
+    ],
+    "disagreements": [
+      {
+        "topic": "Length of time the vote was held open",
+        "positions": {
+          "ABC News": "States the vote scheduled for 15 minutes was held open for 29 minutes; six additional Democrats arrived in time for the subsequent vote but not the motion to refer.",
+          "Al Jazeera English": "Does not specify the duration the vote was held open.",
+          "CNN": "Does not specify the duration the vote was held open."
+        }
+      },
+      {
+        "topic": "Hypothetical alternate outcome had Democrats voted",
+        "positions": {
+          "Al Jazeera English": "States that if the 11 absent Democrats had shown up, Democrats would have had the numbers to defeat the procedural move and force a full impeachment vote.",
+          "ABC News": "More granular \u2014 states all 11 Democrats voting would have defeated the motion 215-211, but notes the six who later arrived would have fallen short at 211-210 without the remaining absentees (Horsford, Stevens, Wilson)."
+        }
+      },
+      {
+        "topic": "Characterization of who 'saved' Hegseth",
+        "positions": {
+          "Al Jazeera English": "Frames it as a question ('Did Democrats save Pete Hegseth?') and notes pundits pointed at leader Hakeem Jeffries.",
+          "CNN": "States Democrats 'in part gave House GOP leaders a window' via absences, without assigning blame to leadership.",
+          "ABC News": "Emphasizes Democrats 'squandering' the impeachment attempt through absences."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Two headline-only entries. The first ('US House blocks bid to impeach Defense Secretary Hegseth') frames the event neutrally as a procedural outcome. The second ('Missed Hegseth vote disappointed Americans, Democratic leader says') centers the Democratic leadership's reaction and self-criticism. No body text available to assess lead/burial choices.",
+      "The New York Times": "Headline-only ('Democrats Face Backlash After Missing Hegseth Impeachment Vote'). Framing centers the political fallout for Democrats rather than Hegseth's survival or the procedural mechanics. No body text available.",
+      "Al Jazeera English": "Full explainer format. Leads with the 'surprise reprieve for Trump's administration' and frames it against Republicans' midterm defeat. Poses the question of whether Democrats 'saved' Hegseth. Provides the fullest roster of individual Democratic explanations and quotes progressive critics (Kamlager-Dove, El-Sayed) and points at Hakeem Jeffries. International-outlet framing situates the story within Trump-era politics and the Iran war context.",
+      "ABC News": "Full text, most detailed on vote mechanics. Leads with the 11 missing Democrats and the word 'squandering.' Emphasizes that Democrats 'knew for at least 18 hours' about the scheduled vote, subtly undercutting the traffic excuse. Notes ABC reached out to Capitol Police to verify the traffic incident and had not heard back \u2014 a verification flag no other outlet raises. Tracks each lawmaker's arrival and the running vote math in granular detail.",
+      "The Washington Post": "Headline-only ('Democratic lawmakers apologize after absences on Hegseth vote'). Framing centers Democratic contrition/apology. No body text available.",
+      "CNN": "Short full-text article functioning as a lead-in to a roll-call breakdown ('How each House member voted'). Neutral, data-oriented framing. States Democrats 'in part gave House GOP leaders a window' without heavy editorializing. Mentions Pelosi's Veterans Day event and the traffic incident briefly."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official roll-call record, Congressional Record entries, or Capitol Police statement) were located for this story. The 211-204 vote count and the roster of absent members could not be independently verified against an underlying document in this dossier.",
+      "CNN references a full roll-call breakdown ('How each House member voted') but the actual roll-call data was not included in the dossier body text.",
+      "Several lawmakers' claimed 'no' votes entered into the Congressional Record are cited by ABC News and Al Jazeera, but the Record itself was not provided for verification."
+    ],
+    "missing_context": [
+      "No outlet in this dossier provides an independently verified account of the claimed traffic incident/police motorcade near the Capitol; ABC News explicitly notes it contacted Capitol Police and had not received confirmation.",
+      "The specific nature of Hegseth's alleged conduct (abuses of power and 'illegal military operations' tied to a US war on Iran) is only lightly referenced by Al Jazeera and not detailed by the other outlets.",
+      "No outlet provides the official Judiciary Committee roll-call record or the actual Congressional Record entries to verify the lawmakers' claimed intended votes.",
+      "The explanations of three Democrats \u2014 Brownley, Stevens, and Wilson \u2014 remain unaccounted for or unexplained across all outlets; only ABC News flags this gap and notes Wilson's history of health-related absences.",
+      "No outlet quantifies or sources the 'backlash' and 'apologies' referenced in the NYT and Washington Post headlines, as those bodies were not retrievable.",
+      "The dossier contains no apparent instruction-injection attempts in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets with full body text (Al Jazeera, ABC News, CNN) reported the same procedural event but diverge materially in framing \u2014 from 'did Democrats save Hegseth' to Democrats 'squandering' the vote \u2014 and three headline-only outlets (Reuters, NYT, Washington Post) frame it variously as backlash, apology, and Democratic-leader disappointment. The divergence in emphasis and the absence of a verified primary source make this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObVFtR2hnZ2luVDdXU010VVB4UVpubVBIbUtJc0ZkQVkzLUkzaWxMRDJKaVVoTVNUbzRyRGQ4ZFh1dUZIUFhRVDRTVVNyZ3FWQkRIMm5UTVJOY2J0MDJ4bEFZNkh2MjdUZzRnRkVYbXBKSktfNElhWU42SEVRMktOd0JHYTQyU2N4ZUF2eWZicDRpVHBCTHRYUWFYOVRMT3lrVWNuQldMQkV0MVVGYXc?oc=5",
+      "title": "US House blocks bid to impeach Defense Secretary Hegseth - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQOURyZ0lrSVFQZHl4Z0FMa1hYRFFZM3dmd1UzYWxVbWpkaWo4dHFEY3V1cHdPakstSGZSX3RsWWRVaUVJbWR6c00zaGFpNk9EZDQ1UGxCWXhvR3ROWjNjLWg3M3lEdldLMmdQRGNlN0ZJTTZydXA5eEFIY1NrY05adXNnRktCV2wtaFVmZE04el9YRmxVMEUwNFl1OGN3QTc5R2FnaXJ3?oc=5",
+      "title": "Democrats Face Backlash After Missing Hegseth Impeachment Vote - The New York Times"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbXFnZ3A3NUVfbWRuQ1EyaFF5Y2hUQ1pUYTFicERCRVFlVFFfUDBhcVRiVGRhTDkyVzdQcDk0eHJlNzRZZDVpMTA5QTBvSkp0cFVNVl9FMFVNaHlJcUhzbEtpVTZhb2lFQk9jSnhWR2xIanVoNU1qZ2NlcXJFVjBhUHd1Y2NUcHRNazBfc0NmTFNpZmpf0gGaAUFVX3lxTFBlc2xpNzhVdWZLdy1QU25CWGluSWh1X1MxaXJ2ZG54TTluX3hXa0ppTWVfa2psaHd6SDdYWlBhY2ZYX0pFeFNBdjBjUWlpc283YWFycm41TURhUl9hNTdEU2lfbWMyZ2laN2VyTDVnbzFWR21IRnNfOEtGR3dpek15RUFPVUZ2eS1vSnpGVDQtUFZvR1JDY3FPdUE?oc=5",
+      "title": "Did Democrats save Pete Hegseth from impeachment? - Al Jazeera"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPY0pQNmNjYlhjeTZsSGRnZFUxeUVOb05pRGMzNWY1RTdrTU9OenNJVUZjRHJ5dGlGR2NlX0VHc3JyS0stdXk4bDZyTFJVTnF2QTctLTgtUnlQR0R5RlRLT1dYc21YVWhVSFhJYVQ0Ym1HejhZWHNtRnQ2VGZ4VzZrc2pSQmEtT1hNaGd3Q3cxTlpmMGFZZUp3VHQzeU44amxONXR0LXh4S1RmZE9lYmFWY2JzSUVBMGtXeWc?oc=5",
+      "title": "Missed Hegseth vote disappointed Americans, Democratic leader says - Reuters"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQzJ3djdDc1pjRHpnVEZuUzI1Y25UNm1rVmFZQ3czb0FKLXhWSElwNjBTeEtBS0t0bGlIU1ZHVlNIa2lMSm8yNjl4ZmszSkI3enFOYnQ4MVBZSzh1RERDaEJkT2RaMTgxQUhlVzd3Nk5acVlndi1oandjdkNTVHlOOFNiN2wxVGJsbDB4ZlU5Slh0Z1VSbHpMZTIyZWFGeDJ0RVVUM1VJVnlwb2dDcVFfYUdB0gG3AUFVX3lxTFBnMjlQVmhUR3A3M0tROG1VSVAyM0pBNzhzdkJQT3ZFbGk4WDZCUkdZdm9SVXJ6R29EcGl4YXV1ZDRVamVTbzFZWXkwVTc5WGtWd3NIUy13LUFNVWZnOFZOMVNUMjVNVEh6cWhaN2dxOUh3VHdEWFdXTGwtNjlvOXdkbnVwd2J4QWxXSGJobFRuMnBzeUE5Q0oyR05SVDh5aW0xbEhCU0pPUWJqcVFtVTJ6Zm5qLWZIQQ?oc=5",
+      "title": "Several Democrats missed the crucial Hegseth impeachment vote. Many blamed traffic - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYVpnSzRWYjNuTzdjclRyZUpOZTd0d0V4UVF3NDZXMC14cFBxVG1QZndoYVZaNW1ZWmx2TWQ5azFqYnBkbjJ3d01CdXBOczY5dlB3R3N6d01Db3paMUV3d3NWbEJEckY0ekszUnJsSlNPbDRkb2dqbVRneEpWOHUwa3FUVUNFb1M1MVROdVpuTFN3NzFXUnc5amN4QWRBek9VYzNXTXlmU3NmQnk4U2dF?oc=5",
+      "title": "Democratic lawmakers apologize after absences on Hegseth vote - The Washington Post"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1NMGo1dDh5SkotMFpDQkJablBQUFZwMjVZNjNLc1BsQmZTSnJZel9hQ2ZKUHNiTWlLQ2RidXZUQnI1YllVMUpHelBJUE1fRTZOd2VINTU4WnJvaUU4aXhsc1pHaGE4OGR6aG12ZzRDUUhzLVh6SVFhUkt3alUtRms?oc=5",
+      "title": "Pete Hegseth\u2019s impeachment: How each House member voted - CNN"
+    }
+  ]
+}
