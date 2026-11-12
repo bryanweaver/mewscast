@@ -1,0 +1,111 @@
+{
+  "story_id": "2026-11-12-live-updates-d-c-081c68cdc0",
+  "headline_seed": "Live updates: D.C. gunman fixated on grievances with condo association, people who knew him say - The Washington Post",
+  "brief": {
+    "story_id": "2026-11-12-live-updates-d-c-081c68cdc0",
+    "consensus_facts": [
+      "A gunman opened fire in and around a VIDA Fitness gym in Washington, DC's Logan Circle neighborhood on the morning of November 12, 2026 (CNN, Al Jazeera, CBS News).",
+      "One person was killed and four others were injured, for a total of five people shot not counting the gunman (CNN, Al Jazeera, CBS News).",
+      "The person who was killed was shot inside the gym; the gunman continued firing after leaving the gym (CNN, Al Jazeera, CBS News).",
+      "After the shooting, the gunman barricadied himself inside an apartment building and died of a self-inflicted gunshot wound after about an hour of negotiations with police (CNN, Al Jazeera, CBS News).",
+      "The gunman fired his weapon at police through the barricaded apartment door during the standoff (Al Jazeera, CBS News).",
+      "One victim was in critical condition and three had non-life-threatening injuries; the injured were taken to local hospitals (CNN, Al Jazeera, CBS News).",
+      "Interim Metropolitan Police Department Chief Jeffrey Carroll said the suspect appeared to have had a conflict with the apartment building's homeowners association (CNN, Al Jazeera, CBS News).",
+      "The shooting occurred roughly one mile north of the White House, prompting a shelter-in-place order and a response from local and federal agencies (CNN, Al Jazeera, CBS News).",
+      "Witnesses described being on treadmills when they heard a loud bang and then saw a victim bleeding on the gym floor (CNN, CBS News).",
+      "VIDA Fitness's Logan Circle location was temporarily closed following the shooting (CNN, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Identity of the suspect",
+        "positions": {
+          "CNN": "Does not name the suspect; describes only a barricaded gunman who died of a self-inflicted wound.",
+          "Al Jazeera English": "Cites DC Council member Brooke Pinto identifying the suspect as a physician named Matt Lambert.",
+          "CBS News": "Cites multiple law enforcement sources identifying the shooter as Matthew Lambert, a doctor who lived above VIDA Fitness."
+        }
+      },
+      {
+        "topic": "Nature of the condo/HOA conflict",
+        "positions": {
+          "CNN": "States only that police believe the suspect may have had a conflict with the apartment building.",
+          "Al Jazeera English": "Reports the suspect initially shot a person in the gym with whom he was involved in a court case over a condominium dispute; cites unconfirmed social media account about bad living conditions.",
+          "CBS News": "Reports a long-running conflict with the homeowners association over a water issue; cites neighbor Jonathan Csapo saying the suspect filed a lawsuit and aired complaints on X."
+        }
+      },
+      {
+        "topic": "Location where the suspect barricaded himself",
+        "positions": {
+          "CNN": "Says the suspect barricaded himself inside his own apartment building.",
+          "Al Jazeera English": "Says the suspect entered an adjacent building and barricaded himself in a room on the seventh floor.",
+          "CBS News": "Says the suspect retreated into a parking garage then ascended into the apartment building, barricading himself in a unit on the seventh floor; describes him as living above VIDA Fitness."
+        }
+      },
+      {
+        "topic": "Fire inside the building",
+        "positions": {
+          "CNN": "Mentions a witness noticing water through the ceiling and a flooded hallway but does not confirm a fire was set.",
+          "CBS News": "Reports Carroll said a fire was set inside the building, sprinklers went off, and police 'would kind of expect' the suspect set it.",
+          "Al Jazeera English": "Does not mention a fire."
+        }
+      },
+      {
+        "topic": "Number of shots fired",
+        "positions": {
+          "Al Jazeera English": "Witness James Spellman said he heard about two shots in the gym and five or six outside.",
+          "CNN": "Does not quantify shots.",
+          "CBS News": "Does not quantify shots."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN": "Live-blog format focused on eyewitness accounts and the human experience of the event (gym members, evacuated residents). Leads with the 'What we know' bullet summary. Emphasizes victim resources (DOJ/OVC) and the chaotic scene. Does not name the suspect and downplays political context entirely.",
+      "Al Jazeera English": "Frames the shooting heavily through the lens of US politics and Trump's tough-on-crime capital crackdown. Devotes substantial space to National Guard deployments, the August 2025 Logan Circle assault cited by Trump, and DC's governance status. The only outlet to name DC Council member Brooke Pinto as an identity source and to foreground the national political debate.",
+      "CNBC": "Entirely off-topic for this story. The article concerns the Jensen Huang/Nvidia affair and congressional resignation calls \u2014 it has no bearing on the DC Logan Circle shooting and shares only the 'Washington, DC' location keyword. Provides no corroboration for any shooting fact.",
+      "Reuters": "Headline-only in this dossier: 'Gunman kills one, wounds four in busy Washington, DC, neighborhood.' Neutral wire phrasing consistent with the casualty consensus but no retrievable body text to corroborate details.",
+      "CBS News": "Most procedurally detailed account. Leads with the casualty count and names the suspect (Matthew Lambert) with law enforcement sourcing. Emphasizes the HOA/water-damage conflict via named neighbor Jonathan Csapo, the fire set in the building, and the multi-agency federal response. Explicitly notes there were no Secret Service protectees involved and that federal response was due to proximity, not a White House connection \u2014 neutralizing political speculation."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (court filings, press releases, transcripts) were located for this story, so no divergence between coverage and an underlying document can be assessed.",
+      "The suspect's alleged lawsuit against the building and his social media posts are referenced second-hand by CBS News and Al Jazeera but no actual court filing or verified account was provided in the dossier."
+    ],
+    "missing_context": [
+      "No outlet identified the victim who was killed or any of the four injured victims; their identities were withheld pending notification.",
+      "The suspect's full identity and background beyond 'physician/doctor named Matthew/Matt Lambert' is unconfirmed; CNN did not name him at all, and the name rests on law enforcement sources and a single council member.",
+      "No outlet confirmed the specifics or outcome of the suspect's alleged lawsuit against the homeowners association \u2014 only neighbor and council-member characterizations.",
+      "The social media account attributed to the suspect is described by Al Jazeera as 'unconfirmed'; no outlet verified authorship.",
+      "The timeline is inconsistent across outlets regarding whether the suspect barricaded in his own building or an adjacent one, and how the parking garage figured into his movement.",
+      "CNBC's article about the Jensen Huang/Nvidia affair is entirely unrelated to the DC shooting and appears to have been included in error; it provides no usable reporting for this story.",
+      "Only three of five dossier outlets (CNN, Al Jazeera English, CBS News) have substantive body text; Reuters is headline-only and CNBC is off-topic, so the consensus is built on those three."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets reported the same shooting with materially different emphasis \u2014 CNN leaning on eyewitness chaos, Al Jazeera foregrounding Trump's DC crime crackdown, and CBS supplying procedural detail and suspect identity \u2014 while diverging on the suspect's name, the fire, and the barricade location. That framing spread makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBxRDBQN3NNZV80TkVLTktzU0V2VzdEYVIwNWRqYkhsd1lZYnRCVkxSdzZzREg0cHVPVjNLSmxwclBxRERaR2Vwb1ducldyWDQybzdfZ2M3M1R1dFBBczd2ZFhESjFEd1BaU3IyWmJhSVRDbHdt?oc=5",
+      "title": "Live updates: 1 dead and 4 injured in Washington, DC, shooting, police say - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONTEzd1NTZ2NWWWN4YkV4bnQ1TWJGblMzc3ljQ04xSHZNVHVYR2lOYlFFZDNNTndBR291bzlVcEVXQ21jUUZuQlZEVk1wLWNyTU01REFheEVsTGdNMFBrcHBNeDlyY2pmeEoybzlsSTN5d0lWUHRjWUNCXzZ6Y0JyN04yU1hRclJBOXhhdlZZVkZrZWFTeWl5U3U3eG1rTDdOb0xYbjN30gGrAUFVX3lxTE42OXhQUXlBZ2szWjdKMFBEc1NBdTNqdVNxRFowWmJ1VmozUGpOSDcyR1cwMnIxTktua083UUstR2xaUnF6U3I3ZGhVWk4zTUVIX09PSlV6TjBORExtUGs4cDdZTzFHSTJqY3o3eS1WejJYdmJIeTZoWlpENW01bkVwNEg4RWx4S2FGNV9jX3BRNFAxVm5qWjVsRFJkUkpoX3dBRnVZM05qN1cyMA?oc=5",
+      "title": "What to know about the Logan Circle shooting in Washington, DC - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWjJRY2daaGR0MlE5NzU0bndocWZPVF9qODRlRlBzUUVLN1dyNkE2VXlJeUdGanF2NkQ5OGVZMmJTYk9xY244NU9sUHppeFU2dVlHcVRwWFptNG9CSUN6ay1Ic3NVdFJRZTNkY05nQzJJUFJsSVp1N21LRElnSHotZmZyYVR2a25v?oc=5",
+      "title": "Jensen Huang affair in DC: Resignation calls and moves to tighten Nvidia China exports - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZGs2bU9KX3A5RFVTbXQxaXYwLThLLW1nazNSanR1TTZ6eE5TcjZ4Nl91eTY4blhnVnRVM1k5UW42aXlDOWtyQWI5cm5EYl9jcTg4blhMR3g2VXVhV24tYzRseVBucXk2OHNHU05EWG9xUnhqSU50MU95c2VPYVByak9nYmFpdndfTzlEMlJBYUw4T0VyWVRFajh5UElkV1JDWFdwSXRTR0xkWU9Mb2hkZA?oc=5",
+      "title": "Gunman kills one, wounds four in busy Washington, DC, neighborhood - Reuters"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE95dkVUTlk2aDQ5YWFfUFBxNWRuSDBoQkdsRlpwN2J6ZTZaSDF0STRpTktzVm0yQTBEd3Z1XzVJT2tXb2M3cVFyejJRZ2k1R3JuMlJpQ1pnRmw3YXJ1NEpaY0xKblVHcnd1NmFoMkt3?oc=5",
+      "title": "1 killed, 4 injured in shooting in Washington, D.C.'s Logan Circle neighborhood; suspect is dead - CBS News"
+    }
+  ]
+}
