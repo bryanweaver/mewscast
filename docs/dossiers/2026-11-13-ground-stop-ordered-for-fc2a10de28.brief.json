@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-11-13-ground-stop-ordered-for-fc2a10de28",
+  "headline_seed": "Ground stop ordered for all airports nationwide for \u2018reasons of safety\u2019 - NBC News",
+  "brief": {
+    "story_id": "2026-11-13-ground-stop-ordered-for-fc2a10de28",
+    "consensus_facts": [
+      "The FAA issued a nationwide ground stop for all departing U.S. flights on Friday, Nov. 13, 2026, citing 'extraordinary circumstances and for reasons of safety.' (NBC News, CNN, CBS News, NPR, CNBC)",
+      "The ground stop was attributed to a temporary telecommunications/communications outage affecting air traffic control facilities. (NBC News, CNN, CBS News, NPR, CNBC)",
+      "Transportation Secretary Sean Duffy said FAA technicians are investigating the issue and would provide immediate updates. (NBC News, CBS News, NPR, CNBC)",
+      "The communication issues affected multiple Air Route Traffic Control Centers, which guide aircraft at high altitudes. (CNBC, CBS News, NPR)",
+      "Inbound international flights would be managed on a case-by-case basis while departing traffic was halted until further notice. (NBC News, CNN, CBS News, NPR, CNBC)",
+      "Homeland Security Secretary Markwayne Mullin said there was no indication of a threat to the U.S. and nothing 'nefarious' behind the outage as of that point. (NBC News, CNN, CBS News, CNBC)",
+      "President Donald Trump was briefed on the situation. (NBC News, CNN)",
+      "The FAA said flights were halted out of an 'abundance of caution' and that every flight had been accounted for. (CNBC, NPR, CBS News)",
+      "Planes already in the air would continue their flights. (CNN, CNBC)"
+    ],
+    "disagreements": [
+      {
+        "topic": "Scope of affected air traffic control centers",
+        "positions": {
+          "CNBC": "Communication problems affecting 'multiple' Air Route Traffic Control Centers",
+          "CBS News": "Communication issues impacting 'multiple' Air Route Traffic Control Centers (quoting Duffy)",
+          "NPR": "A 'communication issue impacting ALL Air Route Traffic Control Centers' (quoting Duffy)"
+        }
+      },
+      {
+        "topic": "Nature of the technical outage",
+        "positions": {
+          "CNBC": "Issues related to communications and radar problems per an internal Alaska Airlines message",
+          "CNN": "Outages involve air traffic control radars and radio frequencies simultaneously going out, per an aviation source",
+          "NBC News": "High-altitude control centers affected; described as a telecommunications outage, no mention of radar"
+        }
+      },
+      {
+        "topic": "Possible link to broader events / cause ruling",
+        "positions": {
+          "CNN": "Not linked to this week's Microsoft outage; preliminary reports indicate it was not a cyberattack, per law enforcement sources",
+          "NBC News": "Mullin said they are 'not ruling out anything at this point' regarding the cause",
+          "CNBC": "No indication the issues were a threat; no statement ruling cyberattack in or out"
+        }
+      },
+      {
+        "topic": "Historical precedent for a nationwide ground stop",
+        "positions": {
+          "CNBC": "Extremely rare; last was January 2023 after a pilot alert system failure, and before that after the Sept. 11, 2001 attacks",
+          "NBC News": "Described as 'unprecedented' by Secretary Mullin, without citing the 2023 precedent"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Leads on the 'reasons of safety' language and Secretary Mullin's reassurance that nothing 'nefarious' was behind the outage. Foregrounds the human-safety angle ('everybody is safe') and quotes aviation expert Jeff Guzzetti reframing the event as 'moving from a safety issue to instead become a massive logistics problem.' Adds operational color (Reagan National at capacity, O'Hare nearing capacity, planes possibly parking on taxiways). Heavily padded with unrelated 'For Subscribers' promotional links.",
+      "CNBC": "Frames it as a business-and-aviation-operations story. Leads with 'KEY POINTS' including flight-disruption scale and rarity. Uniquely supplies quantification (11,000 flights scheduled to depart after 4 p.m. ET per Cirium), the January 2023 precedent, and an internal Alaska Airlines message citing radar problems. Emphasizes the snowball/duty-hours cascade risk and airline responses (United, Alaska).",
+      "CNN": "Most detailed live-blog treatment, leading with a bulleted 'What's happening now' and emphasizing what officials ruled out (no threat, not linked to the Microsoft outage, preliminary 'not a cyberattack' per law enforcement sources). Surfaces political accountability earliest by citing Sen. Tammy Duckworth's call for a 'thorough and complete' investigation. Adds analyst framing (Pete Muntean's 'cascading effect') and the 2024 Newark radar/copper-cable precedent for context. Heavy on passenger human-interest vignettes (JFK tarmac wait).",
+      "NPR": "Spare, source-anchored wire treatment. Notably attributes Duffy as saying the issue impacted 'ALL' Air Route Traffic Control Centers \u2014 stronger than CNBC/CBS's 'multiple.' Sticks to the FAA/Duffy statements with minimal interpretation, no expert or political reaction. Includes its standard ethics boilerplate. (One NPR dossier entry is headline-only and does not corroborate body details.)",
+      "CBS News": "Localizes the national story to Southern California (LAX, Ontario, Hollywood Burbank), leading with regional airport impacts and passenger/official reactions (traveler Patty Moore, Mayor Karen Bass). Repeats the core FAA/Duffy statements accurately and links to its sister-station coverage of other cities, framing the event as a widespread local-disruption story rather than a Washington policy story."
+    },
+    "primary_source_alignment": [
+      "No primary source (FAA official order, raw statement text, or technical advisory) was located in the dossier. All outlets paraphrase or quote the FAA's X posts and official statements by Duffy and Mullin secondhand; the underlying documents could not be independently checked against coverage."
+    ],
+    "missing_context": [
+      "No outlet reported an estimated resolution time or whether the ground stop had been lifted by the time of writing; CNN notes officials gave 'no timetable.'",
+      "No outlet explained the specific nature of the telecommunications infrastructure that failed (e.g., carrier, system name, whether redundant systems also failed), beyond CNN's reference to a past Newark copper-cable analog.",
+      "The 'multiple' vs. 'all' Air Route Traffic Control Centers discrepancy (NPR's Duffy quote vs. CNBC/CBS) is never reconciled; no outlet notes which figure is authoritative.",
+      "No primary FAA statement text was provided, so the exact wording attributed to the FAA cannot be verified against the original.",
+      "No outlet quantifies actual cancellations/diversions that resulted \u2014 only CNBC's forward-looking count of 11,000 scheduled departures and general 'hundreds of flights' language.",
+      "No article addresses whether the outage affected safety of airborne flights in any concrete way beyond officials' reassurances that redundancies exist.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets reported the same event but with materially different emphasis \u2014 CNN rules out a cyberattack and foregrounds a congressional investigation, CNBC quantifies scale and cites a radar-problem internal memo, NPR uniquely quotes Duffy saying 'all' centers were affected while others say 'multiple,' and CBS localizes it \u2014 making this a coverage-comparison story rather than a straight REPORT. The absence of any primary source and the 'multiple' vs. 'all' divergence further argue for a META treatment.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcFpNUWJMU2ppemowM1BHcmRhZTc0YkhQTjl5ZVdTX0VIVlhwOGJESXdjcUhiM1lkbWZHUTJManlCYWRWc3FGWVpIUUNSSWhNeGM1TDN6UnJKSUZUUnlpS2Rac3J0M1RNcTg0WmRGYXlfRjlLTmtwd1FXcmpCU1hBX0sxUW4xbTczY1BOcUt6RkhyMzN5Y2x2TTg3MkJlTzBFLWxmdlNQbnlHVkRPeHg0TEI3VWg?oc=5",
+      "title": "Ground stop ordered for all airports nationwide for \u2018reasons of safety\u2019 - NBC News"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBaSWNTSW04MGV3d2hOSXdvNmVnRC1lemI4eE1jMy1KcWdKWlYwUTgtTjhaX1NJb1I4MGxmYXFTeFZlOGxtUlNZaVJpY1B5bEtEb3dsN0VPa1FqVC1vSnlPSEp30gFnQVVfeXFMTnZoYjh6WHJtU0UxdzlLLUpaeHpaQ1N3WHpHRm9NSWRpZWl0RVB1NHhpYzZCUU1feU1iVGp2LTJzSXIzMzZzWm50dTVWQ1J4dXhEQVBqbnZ6QklNLVdwV0NMbGcydFVPOA?oc=5",
+      "title": "FAA issues nationwide ground stop citing communication issues affecting \u2018multiple\u2019 air traffic control facilities - CNBC"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9SU1YyY1lWQzRMUUxCdjVtQWVCbHhrMmJpNGRJeUZjYU5JSnVuUTlIQndfQVdUbE5sY3RoN09BNFFteGdlMGQyYnh3cWZqSlFRdERCT3lZWmRpajdnclVVTkh1MUtXT1JpeWxVcQ?oc=5",
+      "title": "FAA issues nationwide ground stop for all flights due to \u2018extraordinary circumstances\u2019 and safety - CNN"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNdHA4Nmw4RzdjYUNGaUMyXy05STExX1RjeVpwTzJSNTVoSU9RazVzVElXNGlJTmdlQ2ZnS0xwYmdVQ3RrWEpVbERMY1ctalAwVGRFXzBSTkdHcjh0YzI1NlludEliMHMzTGVIRlY3cjZQUEZQeVl5WUJOWU1sbExzUnF6c2t5a05iRzBIM0VDYWtsNXVFWERmZzFn?oc=5",
+      "title": "What we know about the FAA nationwide ground stop - NPR"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWW01SkZhUWVaSlRpakg3dHcxWG1DQWFkc19TTEUzcDN3OGVxSkhtazNMd2NfVTh0ZnNFVjVGSDNhYzQ3T3NNbnVLQTdRVFJoaVJ6UTNOM3RsblhLVVNiZ2NvLUZXQVhMMUFCbmw1V00wZUpjQkpmeS11UkctRi11c2U0bW41RlItY1B3c3dMM3lUY0xuQ0xRNV95X3dtWUY4ZTh3OVNfRW12WXNFa0MySHZJM1lidjA?oc=5",
+      "title": "Several Southern California airports are being impacted by FAA nationwide ground stop - CBS Los Angeles - CBS News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSnc5VU54QUtZcjB0SXpYQk92amU2YTJhRklUV0dkNG9rMTZ6VXkxRFpmRkJTQURILTZYc0RyMFhGWDVyWlluYjNlNDZ4aWs5b1Y3c0FMTkpzdVlFOXlIX1ZZYTZ3bDEzSzZORU8tWVl4UmZHTXBUYklhV3YwTkJYcEZjQWN0Tk9uVzRWalNacm5rbTMw?oc=5",
+      "title": "FAA issues ground stop for all flights due to \u2018extraordinary circumstances\u2019 - CNN"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOc2kyRDhXUVQtNGF4QmxZMkY5Z0dhNFdqVE5DM2FCdGtsNVVZaVJYLVRJcVVBSlZsRmQ5TzlOekhxaEQ2dm85aTNjdWFTc0puQ2xDTjVQdld1NVRpcEtDeHVYODZ1MC1nbGhhbXR6OWwyV2E0Q3g0cWNEajVhV0F2d09IQy1Ydw?oc=5",
+      "title": "FAA issues nationwide ground stop for all U.S. airports - NPR"
+    }
+  ]
+}
