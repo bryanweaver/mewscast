@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-12T03:27:37.355140+00:00",
+  "last_updated": "2026-11-13T02:59:54.775338+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2121012910852079642",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-12T22:50:59.490289+00:00",
+      "created_at": "2026-11-12T22:50:59+00:00",
+      "topic": "Hegseth survives the battle. Democrats aren’t done with the war - The Hill",
+      "dossier_id": "2026-11-12-hegseth-survives-the-battle-5eb9018e15",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 9
+    },
+    {
+      "x_tweet_id": "2120986032778756252",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-12T21:04:11.353749+00:00",
+      "created_at": "2026-11-12T21:04:10+00:00",
+      "topic": "Live updates: D.C. gunman fixated on grievances with condo association, people who knew him say - The Washington Post",
+      "dossier_id": "2026-11-12-live-updates-d-c-081c68cdc0",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 58
+    },
+    {
+      "x_tweet_id": "2120749261315072388",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-12T05:23:20.515955+00:00",
+      "created_at": "2026-11-12T05:23:20+00:00",
+      "topic": "Scott Colom ousts Cindy Hyde-Smith in historic Mississippi Senate flip - Axios",
+      "dossier_id": "2026-11-12-scott-colom-ousts-cindy-f1b5cc4a3d",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 21
+    },
     {
       "x_tweet_id": "2120612894895153432",
       "post_type": "REPORT",
@@ -14,7 +53,7 @@
       "reposts": 0,
       "replies": 2,
       "quotes": 0,
-      "impressions": 16
+      "impressions": 18
     },
     {
       "x_tweet_id": "2120368642189922573",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 31
+      "impressions": 32
     },
     {
       "x_tweet_id": "2120282786158305411",
@@ -40,7 +79,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 35
+      "impressions": 37
     },
     {
       "x_tweet_id": "2120254240610496873",
@@ -53,7 +92,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 5
+      "impressions": 6
     },
     {
       "x_tweet_id": "2120028509720723720",
@@ -79,7 +118,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 25
+      "impressions": 26
     },
     {
       "x_tweet_id": "2119930470578221421",
@@ -92,7 +131,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 15
+      "impressions": 16
     },
     {
       "x_tweet_id": "2119642712513110447",
@@ -105,7 +144,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 32
+      "impressions": 33
     },
     {
       "x_tweet_id": "2119497653352366463",
@@ -457,58 +496,32 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 10
-    },
-    {
-      "x_tweet_id": "2115925930937856345",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-29T21:57:08.938334+00:00",
-      "created_at": "2026-10-29T21:57:08+00:00",
-      "topic": "Patrick Stewart, legendary actor of ‘Star Trek’ and ‘X-Men’ fame, dies at 86 - AP News",
-      "dossier_id": "2026-10-29-patrick-stewart-legendary-actor-28b721ba66",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 37
-    },
-    {
-      "x_tweet_id": "2115653693744009330",
-      "post_type": "BULLETIN",
-      "posted_at": "2026-10-29T03:55:22.567624+00:00",
-      "created_at": "2026-10-29T03:55:22+00:00",
-      "topic": "Trump, Murkowski hammer Peltola over Alaska ballot-stacking report - Politico",
-      "dossier_id": "2026-10-29-trump-murkowski-hammer-peltola-d683d73163",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 20
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 33,
-      "likes": 0.3,
+      "count": 35,
+      "likes": 0.31,
       "reposts": 0.0,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 42.79
+      "impressions": 42.06
     },
     "BULLETIN": {
-      "count": 4,
-      "likes": 0.5,
+      "count": 3,
+      "likes": 0.0,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 10.5
+      "impressions": 7.33
     },
     "ALL": {
-      "count": 37,
-      "likes": 0.32,
+      "count": 38,
+      "likes": 0.29,
       "reposts": 0.0,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 39.3
+      "impressions": 39.32
     }
   }
 }
