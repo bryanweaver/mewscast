@@ -1,0 +1,42 @@
+{
+  "story_id": "2026-11-13-trump-backed-maga-firebrand-917d6f2033",
+  "headline_seed": "Trump-backed Maga firebrand Lauren Boebert defeated in Colorado congressional race - The Guardian",
+  "brief": {
+    "story_id": "2026-11-13-trump-backed-maga-firebrand-917d6f2033",
+    "consensus_facts": [
+      "Both outlets' headlines state that Republican Rep. Lauren Boebert of Colorado lost her re-election race. (Headline-level consensus only; Article 2 is the sole source with full body text.)"
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "The Washington Post": "Headline-only in this dossier (the linked item is actually a Washington Times piece surfaced via Google News). The visible text reduces to the label 'MAGA firebrand Rep. Lauren Boebert of Colorado loses race.' No body text available to assess lead, emphasis, or omissions.",
+      "news.google.com": "Carries the full Guardian article by Dara Kerr. Leads with Boebert's defeat and her record of controversies, framing her as a 'firebrand conservative' whose 'three terms in Congress have been marred by multiple controversies.' Reports she lost to Democrat Eileen Laubacher by a less than 1% margin per the Associated Press in Colorado's 4th district, described as one of the state's most conservative seats. Emphasizes Laubacher's biography (retired two-star navy rear admiral, Afghanistan deployment, Biden-era national security council, registered Democrat only in 2025). Gives extensive space to Boebert's controversies: 2020 election denial, carrying a handgun on the House floor, the 'Today is 1776' Jan. 6 tweet, the 2023 Beetlejuice musical incident, and a pre-election ethics complaint over alleged staffer relationships (which she denies). Also notes Boebert broke with Trump on releasing the Epstein files, drawing Trump's 'carpetbagger' and 'dumb' labels, and that Trump vetoed her unanimously-passed drinking water bill. Includes partisan quotes from Laubacher and from DCCC chair Suzan DelBene ('Lauren Boebert's sideshow is over'), and Boebert's 'dark money'/Hollywood (Streisand, Reynolds) claims from her earlier district switch."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official vote certification, AP race call text, candidate filings, or the ethics complaint) were provided in the dossier, so no report-vs-document comparison is possible."
+    ],
+    "missing_context": [
+      "Only one of the two dossier items (Article 2, the Guardian via Google News) contains retrievable body text; Article 1 is headline-only. All substantive detail in this brief comes from a single outlet and should not be treated as corroborated wire consensus.",
+      "No independent confirmation of the Guardian's margin ('less than 1%') or the AP race call is present in a second full-text source.",
+      "The precise vote totals, turnout figures, and whether any recount threshold applies under Colorado law are not reported.",
+      "No comment or statement from Boebert conceding or disputing the result appears in the coverage.",
+      "The current status and resolution (if any) of the ethics complaint referenced in Article 2 is not detailed.",
+      "No broader context on how this seat compares to other 2026 midterm results or what explained the flip of a historically Republican district is provided.",
+      "No apparent instruction-injection attempts were detected in the article bodies."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet in the dossier provides full body text and the second is headline-only, so this is effectively a single-source, time-sensitive election-result story that warrants a hedged same-day post rather than a multi-outlet REPORT or META.",
+    "confidence": 0.4
+  },
+  "articles": [
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYTUwWTZ3UFdHa01kTngxdWZ3cXRYM1Rlak16NzNIcVdNSTZ2OF9wOUx5ZjFTekpHcFEzaF90ck1fNWFVRkN6V1I4Q19PRU1FVl94ZkNmQmNyXzl4RTVfUngxRzE4TlA0ZUNsX0dybFFCUGhleDBHbHBKZU4wUHBUeTdWd2RQaFFLRUhTenB3YjlZX0N1YkItbDg1NVNxNWxWeUY3cWtB?oc=5",
+      "title": "MAGA firebrand Rep. Lauren Boebert of Colorado loses race - Washington Times"
+    },
+    {
+      "outlet": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOS1oydGg0dGktdzQ5Q0QxX1VQRVZJQUdkZUdwNnRHTGxxZWpjeWJGNlM4cV9CVkxjbko3NXlKcm9qeVBra2lON3k2Y1p5X28tNXo4aGdZUDFUaUoxT0tZcFNnNUNtRnFINTJwVzhDb0lNeWdiRTdBZjRYVVpCc3QzemtWWVBPVG1pQlE?oc=5",
+      "title": ""
+    }
+  ]
+}
