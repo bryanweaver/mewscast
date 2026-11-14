@@ -1,0 +1,128 @@
+{
+  "story_id": "2026-11-14-miracle-on-mississippi-all-df02ee201c",
+  "headline_seed": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision - BBC",
+  "brief": {
+    "story_id": "2026-11-14-miracle-on-mississippi-all-df02ee201c",
+    "consensus_facts": [
+      "A tanker identified as the Atlantic Asphalt collided with the river cruise paddleboat American Heritage while it was docked on the Mississippi River near the Port of New Orleans on Friday, Nov. 13, 2026.",
+      "The collision occurred at approximately 12:30 p.m. local time, roughly two hours after the American Heritage had docked for passenger disembarkation (ABC News, CBS News).",
+      "All passengers and crew aboard both vessels were accounted for, with no fatalities reported.",
+      "New Orleans Mayor Helena Moreno called the outcome 'a miracle on the Mississippi.'",
+      "32 people were taken to hospitals with non-critical injuries, including at least two police officers who were in the water during the rescue (AP, ABC, BBC, LA Times, CBS).",
+      "After the collision the cruise ship took on water, began to sink, listed, and eventually toppled over, sending people into the Mississippi River.",
+      "The rescue involved tugboat operators, nearby workers, police, Coast Guard, and private vessels/volunteers who happened to be on the river.",
+      "U.S. Coast Guard Capt. Melanie Burnham said the tanker appeared to have suffered 'some type of loss of steering,' with the exact cause still unknown and under investigation.",
+      "The American Heritage was built in 2015, is operated by American Cruise Lines, is five stories tall, and can hold up to 150 passengers; it was finishing an eight-day cruise.",
+      "The National Transportation Safety Board planned to investigate, but was affected by a nationwide ground stop that disrupted flights, forcing its team to drive rather than fly (AP, CBS).",
+      "The river water temperature was 66 degrees Fahrenheit (19 degrees Celsius) (AP, LA Times)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of people aboard the American Heritage",
+        "positions": {
+          "Associated Press": "180 people aboard (per the mayor); separately notes the boat can hold up to 150 passengers",
+          "Los Angeles Times": "129 passengers aboard in the summary, but also '180 people aboard' per the mayor in the body (AP-sourced)",
+          "ABC News": "Nearly 200 people on board",
+          "BBC News": "About 130 people rescued",
+          "CBS News": "About 129 passengers plus crew members, per Port NOLA"
+        }
+      },
+      {
+        "topic": "Ownership of the tanker",
+        "positions": {
+          "CBS News": "Reports (via AP/MarineTraffic) the tanker is owned by a subsidiary of the China State Shipbuilding Corporation, a Chinese state-owned conglomerate",
+          "Associated Press": "Does not mention Chinese ownership; notes vessel sailed under a Marshall Islands flag",
+          "Los Angeles Times": "Does not mention Chinese ownership; notes Marshall Islands flag"
+        }
+      },
+      {
+        "topic": "Hospital patient status / later updates",
+        "positions": {
+          "ABC News": "By Saturday afternoon, all but eight victims released; two in serious condition, others stable; no children involved; tanker removed by Saturday; cruise ship removal to take weeks",
+          "Associated Press": "Reports 32 hospitalized with none critical, no Saturday update on patient status",
+          "CBS News": "32 hospitalized, none critical; two officers in good condition; no Saturday follow-up"
+        }
+      },
+      {
+        "topic": "Whether the tanker was carrying cargo",
+        "positions": {
+          "Los Angeles Times": "Explicitly states it is not clear whether the ship was carrying materials; notes asphalt/bitumen is heated above 250 degrees",
+          "CBS News": "Notes the tanker specializes in carrying asphalt and bitumen but does not resolve whether it was loaded",
+          "Associated Press": "Does not address cargo status"
+        }
+      },
+      {
+        "topic": "President Trump's involvement in coverage",
+        "positions": {
+          "CBS News": "Reports a Truth Social post from President Trump praising the Coast Guard and law enforcement response",
+          "Associated Press": "No mention",
+          "ABC News": "No mention; quotes Gov. Jeff Landry instead"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Straight wire treatment. Leads on survival ('All passengers and crew... survive') and the 'miracle on the Mississippi' quote. Heavy on eyewitness color (Devon Flanagan), the physical mechanics of the capsizing, and a Tulane maritime-law expert calling it 'catastrophic system failure' and 'super bad luck.' Uses the mayor's '180 people' figure. Notes the NTSB flight-grounding complication. No mention of tanker ownership or cargo.",
+      "ABC News": "Frames around the 'Miracle' headline and recovery timeline, uniquely carrying Saturday follow-up details (eight still hospitalized, two serious, no children, tanker removed, weeks to remove the ship). Highest casualty-adjacent figure ('nearly 200' aboard). Emphasizes crew competence via quotes from a restaurant manager ('our team knew what we were doing,' weekly training) and includes Gov. Landry's accountability pledge. Human-resilience and official-response framing.",
+      "BBC News": "Shortest treatment \u2014 essentially a watch/video brief. Leads on footage of the ship overturning, cites 'about 130 people' rescued and 32 hospitalized, and the mayor's 'miracle' quote. Notes the steering fault 'suspected.' The page is dominated by unrelated US & Canada links (midterms, Hegseth, Nvidia), suggesting low editorial prioritization relative to US outlets.",
+      "Politico": "Headline-only in the dossier (republished AP wire headline). No body text to analyze; provides no independent framing.",
+      "Los Angeles Times": "Runs the AP wire story (bylined Brook and Collins 'write for the Associated Press') but adds a distinctive cargo/hazmat angle \u2014 detailing that the tanker specializes in asphalt/bitumen heated above 250 degrees and stressing it is unclear whether it was loaded. Mixes a '129 passengers' summary figure with the AP '180 people' body figure. No Chinese-ownership mention.",
+      "CBS News": "Most expansive on investigative and geopolitical threads. Uniquely surfaces that the tanker is owned (per AP/MarineTraffic) by a subsidiary of China State Shipbuilding Corporation, a Chinese state-owned conglomerate, and that CBS sought comment. Also unique in citing Trump's Truth Social praise and in listing the Port of New Orleans's $1 million repair-cost lawsuit and a separate 'magic pipe' criminal probe in its related-links. Vivid witness quotes ('like something off the Titanic,' 'a war movie').",
+      "The New York Times": "Headline-only in the dossier (attributed to 'The Times'). No body text to analyze; provides no independent framing."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, Coast Guard/NTSB releases, Port NOLA statements, transcripts) were located for this story, so no document-level verification was possible.",
+      "Several reports reference underlying records secondhand \u2014 Port NOLA passenger counts, MarineTraffic vessel data, an NTSB social-media post, and a Trump Truth Social post \u2014 but none of these primary documents were provided in the dossier for direct comparison.",
+      "The reported Port of New Orleans lawsuit against the tanker (cited in AP's related stories and CBS's related links) was not provided as a primary source and cannot be verified against a filing here."
+    ],
+    "missing_context": [
+      "The discrepancy in people aboard (129 passengers vs. 180 total vs. 'nearly 200') is never fully reconciled across outlets \u2014 it is unclear how many of the ~180 figure are crew versus passengers, and the mayor's '180' exceeds the boat's stated 150-passenger capacity without explanation.",
+      "No outlet explains why the tanker lost steering or provides technical detail beyond 'loss of steering'; the actual mechanical/human cause remains unestablished at the time of these reports.",
+      "Only CBS News reports the tanker's Chinese state-owned corporate ownership; no outlet explores whether that ownership is relevant to the investigation, liability, or regulatory oversight.",
+      "Whether the tanker was carrying hot asphalt/bitumen cargo \u2014 a material safety concern given the LA Times note about 250+ degree heating \u2014 is left unresolved by every outlet.",
+      "No outlet details the regulatory or navigational context (pilot aboard the tanker, river traffic control, docking safety rules) that would explain how a tanker could strike a docked passenger vessel.",
+      "Only ABC provides Saturday follow-up on the eight patients still hospitalized and the two in serious condition; other outlets' survivor-status reporting is frozen at Friday and may be outdated.",
+      "The financial/liability thread (Port NOLA's reported $1 million repair lawsuit, a separate 'magic pipe' criminal probe referenced by CBS) is only glancingly surfaced and not explained.",
+      "No article reports the identity, size, or steering-system specifics of the Atlantic Asphalt beyond its name and specialization."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets carried full body text on the same event but diverged materially on key figures (129 vs. 180 vs. nearly 200 aboard) and on what they surfaced \u2014 notably CBS alone reported the tanker's Chinese state-owned parent and Trump's response, LA Times alone pressed the hazmat-cargo angle, and ABC alone carried Saturday patient updates. That spread of emphasis over a shared factual core makes this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNlM1d3RDejItNTdSdk9KWU9PaWZPanZTQmNHd3JRY1BPTGJOYWRkaWYweVVqSzUyVkFadl84SmdVT3pyVVk2RzJYZmxMZFBPazVhQ2RKbklvSnlKZHQtWnZuM0xROU1fSDlSZVAtdzg2Y1BKS3VBWlAwMGllM3pLUFkyT1lwcWgxa3YtS0hCYW5NNGFtcGNlT3AtS2YwZnJZbWowSWlXSUhCM0dJSkE?oc=5",
+      "title": "All passengers and crew on New Orleans cruise ship survive crash with tanker on Mississippi River - AP News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPek41NDJkQzhoRExGSVh1a2VOUWQzNkdrRzU3Mk1nRVdHOVRET3dwLTVaN25yRGVLcy1YYnVhS3JQSXptbXIwcmhGUDZfV1Y3bEhQS1IyRVZtUTFPcm1FMlZPeWdoaVFZNmxneE9TQ0ItR0RKR1I2Zm1KeVR1SXJLZzgxbzdsbHU3YkZlY0VWZTBhNnZwUklabk1RMDg5aDBZb1lsZNIBqgFBVV95cUxQWFhpaU15cE1tOHdQSHo1TjZEVExVMERBMERIcE9YNzIwTmttd0pnaFlYTFB3Z3RmcWtoa3pQUE54cGxJSmZjOEpTODdsUHlrcko1dDlHN3ZHOHJERnp1Q3RfN2JKdnVoX1ZSckl0d2lQOUZlTERYRXN1Ynd5b1hjZXRfV0JHS0xSVEFrdlF3UUNRbUZtYXc2d2pyVGRuaC0tUlJHam1vdm1Wdw?oc=5",
+      "title": "'Miracle': All rescued from capsized New Orleans riverboat in tanker collision - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1WQXdzWmgxcmdMUE5QT3lOX0tKdTVtYUFxT1JMX0FlbFMyMTFiX1QyUnUyOTJyMHQyQ1cwMDRYS2lXMkFIMTZ4MVF4b2V0R1pXbHNzcU1JNjA?oc=5",
+      "title": "Watch: Cruise ship overturns after collision with tanker in New Orleans - BBC"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxON3NRdW04OFhpb0gxek5IZ1V1bXJxelVVdWRGcl9IWEJ5NWY2bTV2NkZuZWVrWURTT0MyQlpWVmJvbTNrS2o4T2d3WXNPdVl1Skc4R1RrX1d0UHRRZjZ2aTN2dFEwRVotNWtfS1VIeVViT0NVdkJ2OEFEaTRIbE82QldBNm9oeEdZYWMydk5YZl9hWnhqdjItSXBDWW1vbjVKNjZja2JuNnNMcWhfVlZqV2FmM0lZV05VT0VmUTZDVzFPSDQ2NW5Ca2VMaDdTajZCcmI2MXhCcDA0Z2kwckljM084YWw?oc=5",
+      "title": "All passengers and crew on New Orleans paddleboat survive crash with tanker on Mississippi River - Politico"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQZmZnUjNfWEU1MVNnWHNUeUVWWk5DUG5zR3NTRjVtR3dDV2Z3WkwwaXBEeTZDUmxDVTlHYkZFOEdZeC1jdHdhd2FpRHg3VkhLWU9JVmQwYTN1bWdJS0NaWXJyVDhRcmVFTm8xMmlNRzB4am5IMlFTUVlleFhtU3RVNnZnNzVJT2xXbFhPZHotem5MOEItbEpxcFZaOERvM0tQV29acVg3TkE2cDVXT002S0ZCN0RTUjhlUFRhLVcwRUU3WENidDNwSU90UDVzWl9KcjlUeWYzUlItLTV5N2lZ?oc=5",
+      "title": "All aboard river cruise boat are rescued after it was hit by tanker in New Orleans - Los Angeles Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRG9uQTRQQzVfcDVfdWFEaDBGdWxsVFg0bi1ZNTJZMUlwVUF2M2N3S2FFMzQzYXlrQVlFZmQ3NWVaM3RPVDBQY0ZiclV5TTh3UGpKdExrWWJaSE11OGRBTlY1SUl2eWxzN3NjSXljS041MVFHY2paZ3VoR3JjVjYyUHZtZzlOLWZKU19n?oc=5",
+      "title": "River cruise ship, tanker crash in New Orleans on Mississippi River; passengers rescued - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcEw5c1JyLXd1dDZKeHFJOG1Id0Frc3JoOEUtNmhOOGhYTHNjclYzbWxwSURmMkd5QTBJcEI0UW9CRjlLMy1XVU5zRW5qZy0xRy16N1BoNm00a09ib09EQWw1RzZ2c245cnVYUk42Y3pqZmlESDIwcDZkSzlCcmRydGZEb3E5RGh6NkhEQjhub0RFbjNtVExSbkdTWE8?oc=5",
+      "title": "New Orleans crash: All passengers rescued from cruise ship collision - The Times"
+    }
+  ]
+}
