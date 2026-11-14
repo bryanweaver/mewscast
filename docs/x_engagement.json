@@ -1,8 +1,34 @@
 {
-  "last_updated": "2026-11-13T02:59:54.775338+00:00",
+  "last_updated": "2026-11-14T02:45:57.596117+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2121374331649372266",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-13T22:47:08.890856+00:00",
+      "created_at": "2026-11-13T22:47:08+00:00",
+      "topic": "Ground stop ordered for all airports nationwide for ‘reasons of safety’ - NBC News",
+      "dossier_id": "2026-11-13-ground-stop-ordered-for-fc2a10de28",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 83
+    },
+    {
+      "x_tweet_id": "2121342404166906366",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-13T20:40:16.874198+00:00",
+      "created_at": "2026-11-13T20:40:16+00:00",
+      "topic": "Bessent blames Lutnick’s commerce department over delay blacklisting China-linked data firm – US politics live - The Guardian",
+      "dossier_id": "2026-11-13-bessent-blames-lutnick-s-b42554f527",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 11
+    },
     {
       "x_tweet_id": "2121012910852079642",
       "post_type": "REPORT",
@@ -14,7 +40,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 9
+      "impressions": 11
     },
     {
       "x_tweet_id": "2120986032778756252",
@@ -27,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 58
+      "impressions": 62
     },
     {
       "x_tweet_id": "2120749261315072388",
@@ -457,55 +483,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 6
-    },
-    {
-      "x_tweet_id": "2116284530994659671",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-30T21:42:05.949590+00:00",
-      "created_at": "2026-10-30T21:42:05+00:00",
-      "topic": "Alaska Senate: Judge fast tracks new bids to dismiss DOJ lawsuit over 2nd Sullivan candidacy - CNBC",
-      "dossier_id": "2026-10-30-alaska-senate-judge-fast-0b34c6e58c",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 2
-    },
-    {
-      "x_tweet_id": "2116240679756329155",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-30T18:47:50.928840+00:00",
-      "created_at": "2026-10-30T18:47:50+00:00",
-      "topic": "Houston Grand Jury Indicts ICE Agent on Charges of Ramming Man in Chase - The New York Times",
-      "dossier_id": "2026-10-30-houston-grand-jury-indicts-8d5595857f",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 52
-    },
-    {
-      "x_tweet_id": "2116016807173665174",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-30T03:58:15.566980+00:00",
-      "created_at": "2026-10-30T03:58:15+00:00",
-      "topic": "DOJ issues new subpoenas in Alaska Senate probe, asks judge to intervene over \"conspiracy\" involving 2 Dan Sullivans - CBS News",
-      "dossier_id": "2026-10-29-doj-issues-new-subpoenas-63360e105d",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 10
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 35,
-      "likes": 0.31,
+      "count": 34,
+      "likes": 0.32,
       "reposts": 0.0,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 42.06
+      "impressions": 44.35
     },
     "BULLETIN": {
       "count": 3,
@@ -516,12 +503,12 @@
       "impressions": 7.33
     },
     "ALL": {
-      "count": 38,
-      "likes": 0.29,
+      "count": 37,
+      "likes": 0.3,
       "reposts": 0.0,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 39.32
+      "impressions": 41.35
     }
   }
 }
