@@ -1,0 +1,122 @@
+{
+  "story_id": "2026-11-15-2-planes-collide-on-ffb7895751",
+  "headline_seed": "2 planes collide on the ground in Miami, only minor injuries reported - AP News",
+  "brief": {
+    "story_id": "2026-11-15-2-planes-collide-on-ffb7895751",
+    "consensus_facts": [
+      "Two planes collided while taxiing at Miami International Airport on Saturday night, November 14, 2026, around 9 p.m. ET.",
+      "The aircraft involved were a Copa Airlines Boeing 737 and a UPS Boeing 767.",
+      "The wingtip of the Copa Airlines jet struck the nose of the UPS cargo plane, according to the FAA.",
+      "The Copa flight was carrying 166 passengers and six crew members (172 people total).",
+      "The Copa plane had arrived from Panama City, Panama, and was taxiing to the gate; the UPS plane was preparing to depart for Bogota, Colombia.",
+      "Air traffic controllers had instructed the UPS crew to give way to the Copa flight, per the FAA.",
+      "Two people were treated at the scene for minor injuries and were not hospitalized.",
+      "Greg Chin, a spokesman for the Miami-Dade Aviation Department, stated flights were routed to other taxiways with no disruption to airport operations.",
+      "Air traffic control audio captured a pilot saying 'Somebody hit us' and a UPS pilot saying they 'went too far' and 'clipped' the other plane 'with the wing.'",
+      "The FAA is investigating the collision.",
+      "Both Copa and UPS said they would cooperate with investigating authorities.",
+      "The collision occurred a day after a rare FAA nationwide ground stop on Friday that caused thousands of flight cancellations and delays.",
+      "Federal officials linked Friday's ground stop to problems with aging air traffic control telecommunications equipment, including router issues.",
+      "The collision occurred at the intersection of two taxiways."
+    ],
+    "disagreements": [
+      {
+        "topic": "Time of collision",
+        "positions": {
+          "The New York Times": "Around 9 p.m.",
+          "NBC News": "About 9 p.m. ET",
+          "CBS News": "Around 9 p.m., with Greg Chin citing approximately 9:15 p.m.",
+          "CNN": "Around 9:15 p.m."
+        }
+      },
+      {
+        "topic": "Severity of injuries beyond 'minor'",
+        "positions": {
+          "CBS News": "Reports a passenger's claim that his wife suffered a spinal injury, while noting the extent was not independently confirmed; two passengers evaluated for apparent minor injuries.",
+          "The New York Times": "States two people treated for minor injuries, no mention of spinal-injury claim.",
+          "NBC News": "States two people treated for minor injuries, not hospitalized, no spinal claim.",
+          "CNN": "States injuries to the two people were minor and treated at the scene, no spinal claim."
+        }
+      },
+      {
+        "topic": "Copa aircraft model specificity",
+        "positions": {
+          "CBS News": "Boeing 737-800NG",
+          "The New York Times": "Boeing 737",
+          "NBC News": "Boeing 737",
+          "CNN": "Boeing 737"
+        }
+      },
+      {
+        "topic": "Flight numbers",
+        "positions": {
+          "CBS News": "UPS Flight 358 and Copa Airlines Flight 427",
+          "The New York Times": "Not specified",
+          "NBC News": "Not specified",
+          "CNN": "Not specified"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Headline-only in this dossier; no retrievable body text. Headline frames the story around 'only minor injuries reported,' emphasizing the low-harm outcome of a ground collision.",
+      "The New York Times": "Frames the collision within a broader air-travel-disruption narrative, leading with sidebar links on the nationwide ground stop and 'vulnerabilities in the system.' Precisely describes the mechanics (Copa wingtip struck UPS nose) and connects the event to a September Amazon cargo jet crash at the same airport that killed five, where a controller failed to warn pilots of wind \u2014 subtly building a pattern-of-safety-failures frame. Quotes ATC audio. Keeps a measured, neutral wire tone.",
+      "CBS News": "Most passenger-centric and dramatic framing of the full-text outlets. Leads with the 172-people figure in the headline and foregrounds frightening passenger accounts ('a woman next to me started screaming'), including an unconfirmed spinal-injury claim it explicitly flags as not independently verified. Most granular on official details (flight numbers, aircraft sub-model, Chin's 9:15 p.m. timestamp) and ties the incident to the broader ground-stop context with named officials (Duffy, Bedford).",
+      "NBC News": "Straightforward, spare framing focused on official statements from the FAA, airline, and Miami-Dade Aviation. Notably adds historical context absent elsewhere: a prior UPS cargo plane crash near Louisville that killed 15 people last year. The body is heavily cluttered with unrelated 'For Subscribers' promotional links. Ties the event to the nationwide ground stop and cites updated cancellation/delay figures (1,583 canceled, 2,944 delayed as of Sunday).",
+      "USA Today": "Headline-only in this dossier; no retrievable body text. Headline neutrally names both carriers and foregrounds '2 injuries reported.'",
+      "CNN": "Two entries in the dossier. Article 6 is largely navigation/privacy boilerplate with a thin lede tying the collision to the Friday ground stop and Transportation Secretary Duffy's comments on a 'problematic' router and $12.5 billion in approved ATC funding \u2014 framing the collision primarily as part of a systemic FAA-technology story. Article 7 is the fullest CNN account: vivid first-person passenger testimony from Cesar Ferreira, a detail that the Copa plane was 'missing the left wingtip,' a described photo of the UPS plane's crumpled nose, and the same September Amazon Air crash context (five killed). CNN leans into eyewitness color and the systemic-disruption backdrop."
+    },
+    "primary_source_alignment": [
+      "No primary source documents (FAA report, NTSB filing, full ATC transcript, airline incident report) were located for this story. All details trace to FAA statements, airline statements, and Miami-Dade Aviation spokesman Greg Chin as relayed through the outlets, plus passenger interviews."
+    ],
+    "missing_context": [
+      "No outlet reports whether the Friday nationwide ground stop and ongoing ATC/telecom disruptions had any causal connection to this taxiway collision \u2014 the outlets juxtapose the two events without establishing or ruling out a link.",
+      "No outlet specifies the extent of damage to the Copa aircraft beyond the missing left wingtip, nor the full operational/financial impact or how long either aircraft was out of service.",
+      "The disputed spinal-injury claim (reported only by CBS News and explicitly unconfirmed) is not resolved; no outlet provides follow-up medical confirmation or denial.",
+      "No outlet reports what the UPS plane's cargo was or whether it posed any hazard given the nose damage.",
+      "No independent primary source (FAA preliminary report, NTSB involvement, or ATC recording transcript) is available to verify the exact sequence or assign preliminary cause beyond the attributed quotes.",
+      "No outlet reports the names or statements of the flight crews involved beyond the anonymized ATC audio exchanges.",
+      "Outlets note the controller instructed UPS to give way to Copa but none clarify why the collision occurred despite that instruction \u2014 whether it was crew error, visibility, taxiway geometry, or another factor.",
+      "Two separate CNN entries appear in the dossier covering the same event; one (Article 6) is dominated by boilerplate privacy/cookie text, limiting its reportorial value."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four full-text outlets (NYT, CBS, NBC, CNN) report the same core event with materially different emphasis \u2014 CBS foregrounds passenger panic and an unconfirmed spinal injury, NBC and NYT add different historical-crash context, and CNN frames it through the systemic FAA-technology disruption \u2014 making a coverage-comparison the most honest treatment. No primary source was located, so the story is best served by analyzing how outlets framed the same facts rather than a straight REPORT.",
+    "confidence": 0.82
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPUkFxSFhqYTNCUE50NnBlbDJjQlV6UWZsa2pnb3lfbC03b0czczhqRlRGWHVDNlFvc01rR1B1WkxPdWpTbUp1NFpfQ0dSbG1ydzdlVXZkN25RMTNXb2dFWEFTbEtvZFdNSGc0TmRkY3lSZk00TmpFSDI5Rmg5WllJLWYyRk1tWXF4ZXdxRHM2S2FUSFk?oc=5",
+      "title": "2 planes collide on the ground in Miami, only minor injuries reported - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUjd1SDRtZGxSZlI0ajVyaUU5cWU5OHgzNE5ZZVZWZ0s2Uk1ValVJNDgyUTRIeFlFZkQ0bTBfNHBNLUgzRUFoS285OFoxVzBDM245ZkpQZHZSNUg3QThVRW4tN3F3Rkp3ZGNNZjBRS3RHMHo1dTRlRktFMVFUR1Y2aldjRGlBbnQy?oc=5",
+      "title": "Two Planes Collide on a Taxiway at Miami International Airport - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPekEzQ21XR2ljd25BdEtWV0Q2dHUyc1RGRllwS2l1NEllVV96Y0UyVHptaFd1cGlzbk1TZndqc3RIOWFoSnNZVWg2X0xSSEFmVXU5RXY3QkEyUm5OWXBlQzJSZVQ3YlVIT2M3eGlFazZBSTNIS1dhSEhleUdFejlPRUNtOEpZNUlVVDJMRFU3QldXNGpyWVJkMUdjcDJyaWtE?oc=5",
+      "title": "UPS cargo plane, Copa Airlines jet carrying 172 people collide while taxiing at Miami International Airport - CBS News"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUWpVZGZSSE1kQjNTTDI2VFc3cUNDRmJGdEFTQ0ZlZUpaN1c2SzlNWFotVXBiS3lHNUZNTnFveG81ZDZ0UU1sTGh4MUE2cjNQeGFwRnhWbWd1bi1tMlFhYW1iZVpvc0tIU0otclFfdGdnRWluZDhEc2lYN0RNTU9zUVlQbnJvYjh0dzZYTmZRRE00bjl0SHI4bTJtXzA?oc=5",
+      "title": "2 injured after taxiing planes collide at Miami International Airport - NBC News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOQVdMUzE2N2QtOXZxQThKVEtQNzhEYTQwb0ZqUnJ2WHhYYmkwemtra2Vlc0xhOXdDS0paT3NkWGY2S1dSMFFuV1JRNUpBUlM2Yk9JWWtZWUFwenoxZks0ZHV6anZrRS1yNjJfNDNBXzFxb0diVlNSWldLRzRTa1hNajBCanl1ZExEdXZBZDNNQ2tsZ0dJbVhuS0gzdVlTUDl5NnRlSE9PTGNyc1BsZVpIbjNEUzd2QQ?oc=5",
+      "title": "Copa Airlines, UPS planes collide at Miami airport, 2 injuries reported - USA Today"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTnJpVHpJYUFlWkdCREdJTmlTOElTeUpQaWhZdmxWb1AyUmRMa3F2YmtjcFFpUVBZTVN3a0xyMThzWWRiRjg5dUo3eWtUS0pxOUVfMDEtSV9sc1VLUEVLWm5rT2FJUWdQaHY2V0dOaWI4V0xiTTJvQlRtM3g4ZGUzOTBHSTdmNWcwNzN0TEQ0ZXl1d0hFeDBSWUF3dw?oc=5",
+      "title": "Planes collide at Miami runway crossing - CNN"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYUdCaDZWZzY3LWg1a3AxV19EN2syRnRGS3BrMmlGZUZDNEpyMVl0ckM2bC1vNzlTUU9BLXR3N3NTMlBzb252TS0teDRhZGFUWFFPeWNld1RDNm9CTkdERTZuejNOb2lQSFRaOU1rVE1EZ2ZaVy1NVEpkZ0hEbGxTQQ?oc=5",
+      "title": "Planes collide at Miami runway crossing a day after national grounding - CNN"
+    }
+  ]
+}
