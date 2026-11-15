@@ -1,0 +1,40 @@
+{
+  "story_id": "2026-11-15-lutnick-pushed-to-weaken-54cd4b01ce",
+  "headline_seed": "Lutnick Pushed to Weaken Chip Rules That Overlap With His Family Business - The New York Times",
+  "brief": {
+    "story_id": "2026-11-15-lutnick-pushed-to-weaken-54cd4b01ce",
+    "consensus_facts": [
+      "Both headlines in the dossier are from The New York Times and concern Commerce Secretary Lutnick taking a weaker/softer stance on chip export rules.",
+      "Both headlines reference Nvidia and/or chip controls as the subject matter."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "The New York Times": "Both dossier entries are headline-only from a single outlet (The New York Times), so no body text is available to analyze. The first headline ('Lutnick Pushed to Weaken Chip Rules That Overlap With His Family Business') frames the story around a potential conflict of interest, emphasizing the overlap between Lutnick's official role and his family's business interests. The second headline ('Lutnick Took a Softer Line on Nvidia as Calls for Tougher Controls Grew') frames it as a policy divergence, contrasting Lutnick's leniency with growing pressure for stricter controls. No underlying reporting, sourcing, numbers, or context could be assessed because both articles contain only the headline and a hyperlink wrapper, not body text."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story, so no alignment check against underlying documents is possible."
+    ],
+    "missing_context": [
+      "Both articles are headline-only (no retrievable body text exceeding ~500 characters), so none of the substantive claims \u2014 the nature of the chip rules, what 'weakening' entailed, the specific family business, who pushed whom, or the sourcing \u2014 can be verified from the dossier.",
+      "The dossier contains only one outlet (The New York Times). There is no cross-outlet corroboration, and no conservative-leaning or centrist coverage is present to compare framing against.",
+      "No primary source (regulatory filing, agency memo, ethics disclosure, or official statement) was provided to confirm the alleged overlap between Lutnick's family business and the chip rules.",
+      "No response or comment from Lutnick, the Commerce Department, or Nvidia is available in the dossier.",
+      "Dates, dollar figures, specific rule provisions, and named sources are all absent because no body text was retrieved."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "The dossier contains only headline-level material from a single outlet (The New York Times) with no body text, no corroborating outlets, and no primary source. There is not enough verified content for a REPORT or META; at most this warrants a same-day hedge post flagging the reported claim while noting it is single-outlet and unverified in the dossier.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQSG5Ua0Eya2ctVDEweEN2X3Z4VmxHU0EtZU5ERk5HRUNLZ3lLdWx3VFkzYjBjMzZKS0FPRE9CaHp2MUJNTWJaenk0UV9OQldvdGVrdndRakI2UmxwSllMQVVUZUM3Wi1aaEd3WllvNVRpNWdhaE9aRWJ2Z204WE5nRmtiNFgwMFJfMGlpMmIwdUdIN3gtVk52dXZscHFYRUFF?oc=5",
+      "title": "Lutnick Pushed to Weaken Chip Rules That Overlap With His Family Business - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQ2pMWDA4Sl9yT1B2anJmMndlT3pCSnNTcFdQRGdza2kxOUc1MDVqRURoRDZoVDM1VEN0SmpMNGJFcFRqdHVjOFY5blNPVF8xQVZhOE0zdk84ZnlobGFGSVNsYlEzNkVDbDlNa3hEdk94NXJpbkdjR1hwU1p1bDBxcUxFeFcyWm15b2tSZHMxU1I?oc=5",
+      "title": "Lutnick Took a Softer Line on Nvidia as Calls for Tougher Controls Grew - The New York Times"
+    }
+  ]
+}
