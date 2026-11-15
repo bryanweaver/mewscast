@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-14T02:45:57.596117+00:00",
+  "last_updated": "2026-11-15T02:12:39.886715+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2121720204648645010",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-14T21:41:31.459225+00:00",
+      "created_at": "2026-11-14T21:41:31+00:00",
+      "topic": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision - BBC",
+      "dossier_id": "2026-11-14-miracle-on-mississippi-all-df02ee201c",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 5
+    },
+    {
+      "x_tweet_id": "2121677273573064924",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-14T18:50:55.966365+00:00",
+      "created_at": "2026-11-14T18:50:55+00:00",
+      "topic": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says - BBC",
+      "dossier_id": "2026-11-14-us-has-floated-ukraine-50cbf3a61e",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 18
+    },
+    {
+      "x_tweet_id": "2121461215532630441",
+      "post_type": "BULLETIN",
+      "posted_at": "2026-11-14T04:32:23.933827+00:00",
+      "created_at": "2026-11-14T04:32:23+00:00",
+      "topic": "Trump-backed Maga firebrand Lauren Boebert defeated in Colorado congressional race - The Guardian",
+      "dossier_id": "2026-11-13-trump-backed-maga-firebrand-917d6f2033",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 40
+    },
     {
       "x_tweet_id": "2121374331649372266",
       "post_type": "REPORT",
@@ -14,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 83
+      "impressions": 84
     },
     {
       "x_tweet_id": "2121342404166906366",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 11
+      "impressions": 13
     },
     {
       "x_tweet_id": "2121012910852079642",
@@ -40,7 +79,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 11
+      "impressions": 12
     },
     {
       "x_tweet_id": "2120986032778756252",
@@ -53,7 +92,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 62
+      "impressions": 64
     },
     {
       "x_tweet_id": "2120749261315072388",
@@ -66,7 +105,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 21
+      "impressions": 22
     },
     {
       "x_tweet_id": "2120612894895153432",
@@ -105,7 +144,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 37
+      "impressions": 39
     },
     {
       "x_tweet_id": "2120254240610496873",
@@ -444,55 +483,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 56
-    },
-    {
-      "x_tweet_id": "2116629993765675198",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-31T20:34:50.704560+00:00",
-      "created_at": "2026-10-31T20:34:50+00:00",
-      "topic": "Ukrainian evacuees reunite with family after years trapped in Russia-occupied city - BBC",
-      "dossier_id": "2026-10-31-ukrainian-evacuees-reunite-with-48e70fff21",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 22
-    },
-    {
-      "x_tweet_id": "2116589855849185686",
-      "post_type": "REPORT",
-      "posted_at": "2026-10-31T17:55:21.049290+00:00",
-      "created_at": "2026-10-31T17:55:20+00:00",
-      "topic": "Justice Department seeks to isolate Alaska ballots amid criminal probe over Senate candidate - NPR",
-      "dossier_id": "2026-10-31-justice-department-seeks-to-cc2e18f6d0",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 24
-    },
-    {
-      "x_tweet_id": "2116375091793551866",
-      "post_type": "BULLETIN",
-      "posted_at": "2026-10-31T03:41:57.259577+00:00",
-      "created_at": "2026-10-31T03:41:56+00:00",
-      "topic": "Federal judge signals she may halt construction on Trump’s arch - The Washington Post",
-      "dossier_id": "2026-10-31-federal-judge-signals-she-6e69a69b6c",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 6
     }
   ],
   "averages": {
     "REPORT": {
       "count": 34,
-      "likes": 0.32,
+      "likes": 0.29,
       "reposts": 0.0,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 44.35
+      "impressions": 43.94
     },
     "BULLETIN": {
       "count": 3,
@@ -500,15 +500,15 @@
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 7.33
+      "impressions": 18.67
     },
     "ALL": {
       "count": 37,
-      "likes": 0.3,
+      "likes": 0.27,
       "reposts": 0.0,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 41.35
+      "impressions": 41.89
     }
   }
 }
