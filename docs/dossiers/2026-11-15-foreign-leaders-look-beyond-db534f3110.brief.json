@@ -1,0 +1,46 @@
+{
+  "story_id": "2026-11-15-foreign-leaders-look-beyond-db534f3110",
+  "headline_seed": "Foreign leaders look beyond Trump on his Asian meeting spree - Politico",
+  "brief": {
+    "story_id": "2026-11-15-foreign-leaders-look-beyond-db534f3110",
+    "consensus_facts": [
+      "All three dossier items reference President Trump's Asia trip and his engagement with foreign leaders; however, only one article (ABC News) provides full body text, so the following details are single-source and not wire consensus."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "ABC News": "The only full-text outlet in the dossier. Frames the trip through a domestic-weakness lens: Trump heads to Asia 'hoping to make some big attention-grabbing moves' after Republican midterm losses 'diminishing his standing at home.' ABC reports Trump will make a 'historic three-way meeting' with Xi Jinping and Vladimir Putin on nuclear stockpiles, stop first in the Philippines Tuesday to meet Southeast Asian leaders, then attend the APEC summit in China on Wednesday for his third face-to-face with Xi this year. ABC reports Trump will sign a trade deal with Thailand in Manila and be 'guest of honor' at a leaders' dinner. The piece leads with and emphasizes the 'escape abroad to dodge domestic trouble' narrative, citing former Biden official Kurt Campbell and drawing historical parallels to Obama (2014) and George W. Bush (2006). It foregrounds Trump's limited foreign-policy leverage under a Democratic Congress, the Nvidia/Jensen Huang affair scandal, and Elon Musk accompanying Trump. Democratic voices (Rep. Gregory Meeks) are given the closing word, emphasizing scrutiny of AI chip exports and a tougher line on Putin and Xi. Bylined as Associated Press content.",
+      "Politico": "Represented by two headline-only items, no body text. Headline 1, 'Foreign leaders look beyond Trump on his Asian meeting spree,' frames the story around foreign leaders hedging or working around Trump rather than Trump driving events \u2014 a diminished-influence angle. Headline 2, 'Another international alliance withering under Trust: The Quad,' frames U.S. alliance structures as deteriorating under Trump. Because no body text was retrievable, the substance, sourcing, and supporting detail behind these framings cannot be assessed."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No alignment or divergence assessment is possible."
+    ],
+    "missing_context": [
+      "Only one of three dossier items (ABC News, which is republished Associated Press content) has full retrievable body text; the two Politico items are headlines only. The Politico framings ('foreign leaders look beyond Trump,' 'the Quad withering') cannot be corroborated because their bodies are unavailable.",
+      "The headline seed and the central Politico angle \u2014 that foreign leaders are looking beyond Trump \u2014 is NOT substantiated by any retrievable body text in the dossier; it exists only as a headline label.",
+      "No primary sources (official trip itinerary, APEC summit documents, trade-deal texts, or White House readouts) were provided to verify ABC/AP's claims about the Thailand trade deal, the three-way nuclear meeting, or the summit schedule.",
+      "ABC's claim of a 'historic three-way meeting' with Xi and Putin on nuclear stockpiles is single-source and unverified by any other full-text outlet in the dossier.",
+      "No outlet body text explains the status or details of the Quad alliance referenced in Politico's second headline.",
+      "No independent confirmation is available for the ABC-reported Nvidia/Jensen Huang affair and resignation, Elon Musk's attendance, or Musk's reported $445 million in Republican spending."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet (ABC News, carrying AP wire copy) has full body text; the two Politico items are headline-only and cannot corroborate anything. With a single-source body and no primary documents, this does not meet the bar for REPORT or META \u2014 a same-day hedged BULLETIN noting the trip and flagging the uncorroborated 'leaders look beyond Trump' framing is the responsible call.",
+    "confidence": 0.3
+  },
+  "articles": [
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQVd3cFI2WFNISnp0cUhPYUM3WXdsWmhrZFRNRWdrQ3N4eUlHdlE5aHJVb1gzRmRGUnlraVU1b3RKMUdtVW41Q3cxYXlHWWNmMElNbzZoSm1lWUxmREJKZjB0VE5leURQTk5IT2JTWGh5WFdwYWp0VGEwLS16dklRektPaDk5VkRrVDhzaEFQQzJuU3dIZk9oR3VLaXFmX0hoYlVydld30gGrAUFVX3lxTE9Ra3BMSjY3aWt6MzJlUEZwYUpjcDZDQTNLNUxiTzVYeEZWLXQ3TDVxbGQ1ZGtwWWZlOWlJN21yR1ZQWHhrR0VEbWIxX21yZEE5YVF5d1VDM28xSm42dUJLTlRodmVxZXZjdDNEbnFPSnFsYmtzN0NEYkZCOGZ3QXd3eUtDeFg3RzZZM1FLWjBwX1BIdHl6TllFWHZHRnM3RXdHNm1BcmVuNzhCZw?oc=5",
+      "title": "Trump heads to Asia with hopes of shifting the momentum after midterm setbacks hurt him at home - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4wci1tVVRaX05DXzNoNHROT2h1aGVyaS1IM1ZaTk5DX1pKdGV3TXdjY0I3cVZWbmxMWEVDV0VvVm1Hd2l5MEdzeVVTSExucy15c2tJZktVWmpHemRBcWJ4RXo3eVNzSzJFeGk1SEhSRTRtVFdxdVlBNU1NZjU5QQ?oc=5",
+      "title": "Foreign leaders look beyond Trump on his Asian meeting spree - Politico"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1FGZDYwODBmRktnbUtBX3ZuSFUyWE5zNm9qOVJZVmhWNXp2Nm11UkczbUhRY0taekxUMVlhbzg1ZDFpazhRVl94cXhHUm9wbGd0b3dCYkxWWFozdkhNdWRPbGhHRFh5NWJvbG9IU0sxSjVnRWdGcy1OMFpOMVZHXzNsM0Z5RDlRUGc?oc=5",
+      "title": "Another international alliance withering under Trump: The Quad - Politico"
+    }
+  ]
+}
