@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-15T02:12:39.886715+00:00",
+  "last_updated": "2026-11-16T02:25:57.559168+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2122087048026996906",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-15T21:59:13.745469+00:00",
+      "created_at": "2026-11-15T21:59:13+00:00",
+      "topic": "2 planes collide on the ground in Miami, only minor injuries reported - AP News",
+      "dossier_id": "2026-11-15-2-planes-collide-on-ffb7895751",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 21
+    },
+    {
+      "x_tweet_id": "2122049173247627310",
+      "post_type": "BULLETIN",
+      "posted_at": "2026-11-15T19:28:43.762368+00:00",
+      "created_at": "2026-11-15T19:28:43+00:00",
+      "topic": "Lutnick Pushed to Weaken Chip Rules That Overlap With His Family Business - The New York Times",
+      "dossier_id": "2026-11-15-lutnick-pushed-to-weaken-54cd4b01ce",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 1
+    },
+    {
+      "x_tweet_id": "2121820695827267614",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-15T04:20:50.424099+00:00",
+      "created_at": "2026-11-15T04:20:50+00:00",
+      "topic": "Judge rejects Trump’s bid to immediately close East Potomac golf course - Politico",
+      "dossier_id": "2026-11-15-judge-rejects-trump-s-e2050802c0",
+      "likes": 1,
+      "reposts": 1,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 20
+    },
     {
       "x_tweet_id": "2121720204648645010",
       "post_type": "REPORT",
@@ -10,11 +49,11 @@
       "created_at": "2026-11-14T21:41:31+00:00",
       "topic": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision - BBC",
       "dossier_id": "2026-11-14-miracle-on-mississippi-all-df02ee201c",
-      "likes": 0,
+      "likes": 1,
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 5
+      "impressions": 6
     },
     {
       "x_tweet_id": "2121677273573064924",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 18
+      "impressions": 20
     },
     {
       "x_tweet_id": "2121461215532630441",
@@ -40,7 +79,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 40
+      "impressions": 41
     },
     {
       "x_tweet_id": "2121374331649372266",
@@ -53,7 +92,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 84
+      "impressions": 85
     },
     {
       "x_tweet_id": "2121342404166906366",
@@ -144,7 +183,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 39
+      "impressions": 40
     },
     {
       "x_tweet_id": "2120254240610496873",
@@ -196,7 +235,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 16
+      "impressions": 17
     },
     {
       "x_tweet_id": "2119642712513110447",
@@ -209,7 +248,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 33
+      "impressions": 34
     },
     {
       "x_tweet_id": "2119497653352366463",
@@ -444,71 +483,32 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 173
-    },
-    {
-      "x_tweet_id": "2117003785318851071",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-01T21:20:09.530420+00:00",
-      "created_at": "2026-11-01T21:20:09+00:00",
-      "topic": "Chris Murphy is hospitalized after stroke - Politico",
-      "dossier_id": "2026-11-01-chris-murphy-is-hospitalized-159e8bc7bb",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 52
-    },
-    {
-      "x_tweet_id": "2116961574069936638",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-01T18:32:25.683764+00:00",
-      "created_at": "2026-11-01T18:32:25+00:00",
-      "topic": "Democratic Rep. Haley Stevens endorses Republican Mike Rogers for Michigan Senate - Politico",
-      "dossier_id": "2026-11-01-democratic-rep-haley-stevens-821114f1a6",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 10
-    },
-    {
-      "x_tweet_id": "2116739068700557641",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-01T03:48:16.428270+00:00",
-      "created_at": "2026-11-01T03:48:15+00:00",
-      "topic": "Shops looted as German cost of living protests turn violent - BBC",
-      "dossier_id": "2026-11-01-shops-looted-as-german-86eb005d56",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 56
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 34,
-      "likes": 0.29,
-      "reposts": 0.0,
+      "count": 33,
+      "likes": 0.36,
+      "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 43.94
+      "impressions": 43.15
     },
     "BULLETIN": {
-      "count": 3,
+      "count": 4,
       "likes": 0.0,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 18.67
+      "impressions": 14.5
     },
     "ALL": {
       "count": 37,
-      "likes": 0.27,
-      "reposts": 0.0,
+      "likes": 0.32,
+      "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 41.89
+      "impressions": 40.05
     }
   }
 }
