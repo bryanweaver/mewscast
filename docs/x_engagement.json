@@ -1,8 +1,34 @@
 {
-  "last_updated": "2026-11-16T02:25:57.559168+00:00",
+  "last_updated": "2026-11-17T04:50:07.725226+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2122494347195081068",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-17T00:57:41.526894+00:00",
+      "created_at": "2026-11-17T00:57:41+00:00",
+      "topic": "Lindsay Clancy to face retrial for deaths of her three children in March 2027 - BBC",
+      "dossier_id": "2026-11-16-lindsay-clancy-to-face-2c4e1a7bc7",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 29
+    },
+    {
+      "x_tweet_id": "2122182697212604907",
+      "post_type": "BULLETIN",
+      "posted_at": "2026-11-16T04:19:18.349891+00:00",
+      "created_at": "2026-11-16T04:19:17+00:00",
+      "topic": "Foreign leaders look beyond Trump on his Asian meeting spree - Politico",
+      "dossier_id": "2026-11-15-foreign-leaders-look-beyond-db534f3110",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 18
+    },
     {
       "x_tweet_id": "2122087048026996906",
       "post_type": "REPORT",
@@ -14,7 +40,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 21
+      "impressions": 27
     },
     {
       "x_tweet_id": "2122049173247627310",
@@ -131,7 +157,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 64
+      "impressions": 66
     },
     {
       "x_tweet_id": "2120749261315072388",
@@ -235,7 +261,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 17
+      "impressions": 18
     },
     {
       "x_tweet_id": "2119642712513110447",
@@ -248,7 +274,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 34
+      "impressions": 35
     },
     {
       "x_tweet_id": "2119497653352366463",
@@ -444,55 +470,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 30
-    },
-    {
-      "x_tweet_id": "2117406510922039305",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-03T00:00:26.756026+00:00",
-      "created_at": "2026-11-03T00:00:26+00:00",
-      "topic": "Texas, Alaska, Maine Senate races flip blue on DDHQ map - The Hill",
-      "dossier_id": "2026-11-02-texas-alaska-maine-senate-fa3ba2944c",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 25
-    },
-    {
-      "x_tweet_id": "2117383534164017191",
-      "post_type": "BULLETIN",
-      "posted_at": "2026-11-02T22:29:08.621465+00:00",
-      "created_at": "2026-11-02T22:29:08+00:00",
-      "topic": "Trump administration asks Supreme Court to set aside 20,000 California ballots for now - The Washington Post",
-      "dossier_id": "2026-11-02-trump-administration-asks-supreme-2474768727",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 10
-    },
-    {
-      "x_tweet_id": "2117103025244581889",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-02T03:54:30.093927+00:00",
-      "created_at": "2026-11-02T03:54:29+00:00",
-      "topic": "'Like a missile coming down' - Nine killed in fiery Florida jet crash - BBC",
-      "dossier_id": "2026-11-02-like-a-missile-coming-1851746366",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 173
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 33,
-      "likes": 0.36,
+      "count": 32,
+      "likes": 0.44,
       "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 43.15
+      "impressions": 39.53
     },
     "BULLETIN": {
       "count": 4,
@@ -500,15 +487,15 @@
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 14.5
+      "impressions": 16.5
     },
     "ALL": {
-      "count": 37,
-      "likes": 0.32,
+      "count": 36,
+      "likes": 0.39,
       "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 40.05
+      "impressions": 36.97
     }
   }
 }
