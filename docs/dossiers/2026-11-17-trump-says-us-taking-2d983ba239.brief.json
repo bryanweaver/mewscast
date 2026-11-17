@@ -1,0 +1,107 @@
+{
+  "story_id": "2026-11-17-trump-says-us-taking-2d983ba239",
+  "headline_seed": "Trump says US taking 'very seriously' any Iranian plot against Washington - BBC",
+  "brief": {
+    "story_id": "2026-11-17-trump-says-us-taking-2d983ba239",
+    "consensus_facts": [
+      "President Trump said on Tuesday, Nov. 17, 2026, that the US is taking 'very seriously' a reported Iranian plot to attack Washington, DC (corroborated by CNN, CNBC, and Los Angeles Times bodies; echoed in Al Jazeera).",
+      "Trump said that if such an attack occurred, Iran would 'pay a price the likes of which no country has ever paid before' (CNN, CNBC, LA Times).",
+      "Trump added that the threat is why Iran 'can't have a nuclear weapon,' reiterating his rationale for the war with Iran (CNBC, LA Times; echoed in Al Jazeera).",
+      "The threat concerns a CNN report that new US intelligence indicates Iran is developing plans to target senior administration officials in Washington with a 'dirty bomb' or chemical weapon (CNN, CNBC, LA Times, Al Jazeera).",
+      "CNN's reporting cited US officials describing the Iranian planning as aimed at giving Iran 'options' rather than signaling an imminent attack, with ongoing debate over whether Iran could or would carry it out (CNN, CNBC, LA Times).",
+      "White House spokesperson Lauren Bis said the US is 'monitoring any and all potential threats' but that there are 'no credible threats to the homeland' (CNN, CNBC, LA Times).",
+      "Homeland Security Secretary Markwayne Mullin described Iran's threats as 'aspirational' and not new, and warned such an attack would cause an 'all-out war' (CNN, CNBC, LA Times).",
+      "Trump made the remarks in Manila, Philippines, during his tour through Asia / at an ASEAN summit (CNBC, LA Times).",
+      "A dirty bomb combines conventional explosives with radioactive material and is distinct from a nuclear bomb (CNN, CNBC)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number of US officials cited in the underlying CNN intelligence report",
+        "positions": {
+          "CNN": "Cites 'seven US officials' for the overall reporting, with 'two of the sources' citing specific locations and targets",
+          "CNBC": "Says CNN 'cited two U.S. officials' for the 'very specific' plans, then notes CNN cited 'seven U.S. officials in total'"
+        }
+      },
+      {
+        "topic": "Nature of the weapon threat (dirty bomb vs. chemical weapon)",
+        "positions": {
+          "CNN": "Describes both a 'so-called dirty bomb or a chemical weapon,' and includes Iran's UN mission denial specifically regarding chemical weapons",
+          "CNBC": "Focuses on the 'dirty bomb' framing",
+          "Al Jazeera": "Frames it as a 'dirty bomb' threat in headline and body",
+          "Los Angeles Times": "Leads its summary on 'a chemical weapon in Washington,' then references the dirty bomb"
+        }
+      },
+      {
+        "topic": "Shared sourcing \u2014 independence of the reports",
+        "positions": {
+          "CNN": "Original reporting based on its own US official sources",
+          "CNBC": "Explicitly attributes the intelligence claims to CNN and states 'CNBC has not verified the report'",
+          "Al Jazeera": "Explicitly frames the story as Trump 'responded to a CNN report'",
+          "Los Angeles Times": "Attributes the intelligence to CNN's reporting"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier; no retrievable body text. Headline frames it as Trump taking 'seriously' a 'possible Iranian dirty bomb plot,' hedged with 'report of possible.' Cannot assess body-level emphasis.",
+      "CNN": "The originating outlet and by far the most detailed. Leads on its own exclusive intelligence sourcing ('seven US officials'), emphasizing specificity ('locations and targets') and an 'alarming willingness to escalate' by Iran. Frames the threat within the context of 'the war Trump started in February' and the risk of costs coming home to Americans. Prominently includes Iran's denials (UN mission, Foreign Ministry spokesman Baghaei) and internal US debate over credibility, including the 'aspirational' characterization. Also surfaces that pre-positioned nuclear materials may have been in the US 'for years, if not decades' and that the change is 'the Iranian incentive,' not capability.",
+      "Al Jazeera English": "Shortest full item \u2014 a NewsFeed/video blurb. Frames the story entirely as Trump 'warns Iran' in response to 'a CNN report,' emphasizing 'unprecedented consequences' and Trump's nuclear-weapons line. Minimal independent detail; no Iranian denial or skeptical sourcing surfaced in the short text.",
+      "CNBC": "Leads with Mullin's 'aspirational' characterization and Trump's 'pay a price' quote. Notably cautious on sourcing: explicitly states the intelligence came from CNN and that 'CNBC has not verified the report.' Emphasizes the business/markets angle via Trump's Asia tour and upcoming Xi/Putin meetings, and uniquely surfaces that the NSA's classified communications network (NSANet) was reported down, linking the story to a broader instability frame.",
+      "Bloomberg": "Headline-only (body text blocked by an anti-bot/robot-check page). Headline frames Trump as 'Looking Into' the plan \u2014 a softer verb than 'taking very seriously' used elsewhere. Cannot assess body-level emphasis.",
+      "Los Angeles Times": "Uniquely embeds the Iran threat within a larger 'is everything broken?' narrative \u2014 leading its summary on a string of outages (Microsoft, FAA ground stop, JPMorgan/banks, United Airlines, NSA network) that have 'put Americans on edge.' Gives substantial space to calls for transparency from Trump allies (Karoline Leavitt, Meghan McCain) and officials (Sean Duffy) on the outages. Frames the weapon as 'a chemical weapon' in its lead. Also references prior NYT reporting on Israeli intelligence about Iranian chemical weapons.",
+      "The Washington Post": "Headline-only in this dossier; no retrievable body text. Headline frames it as the government taking the dirty bomb report 'very seriously.' Cannot assess body-level emphasis."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. The underlying material is CNN's own intelligence reporting based on anonymous US officials, which cannot be independently verified from the dossier. No court filing, transcript, press release, or declassified document is available."
+    ],
+    "missing_context": [
+      "The entire intelligence claim traces to a single originating outlet (CNN) citing anonymous US officials; CNBC, Al Jazeera, and LA Times all rest on CNN's reporting rather than independent corroboration. CNBC explicitly notes it 'has not verified the report.' No outlet provides independently sourced confirmation of the alleged plot.",
+      "No outlet provides on-the-record intelligence attribution, declassified evidence, or named officials confirming the specific 'locations and targets' CNN describes.",
+      "Iran's denials are carried in full only by CNN (UN mission statement rejecting chemical-weapons allegations; Foreign Ministry spokesman Baghaei accusing the US of manufacturing 'legitimacy for further aggression'); the shorter items (Al Jazeera) and headline-only outlets do not surface the Iranian response.",
+      "Context that the US war with Iran began in February 2026 and is ongoing \u2014 framing the threat as potential escalation/retaliation \u2014 appears mainly in CNN and briefly in CNBC/LA Times; readers relying on headlines would not see this.",
+      "CNN's note that US officials assume pre-positioned nuclear materials may have been in the US 'for years, if not decades' and that Iran's *capability* has not changed (only its *incentive*) is a significant qualifier carried only by CNN.",
+      "The LA Times uniquely connects the story to a week of infrastructure outages and the NSA network outage; whether these are related to the Iran threat is unestablished, and officials say there is 'no evidence' of a cyberattack \u2014 but this linkage is absent from other outlets' framing.",
+      "Timeline/context: LA Times notes earlier NYT reporting that US officials were split over Israeli intelligence about Iranian chemical-weapons consideration \u2014 relevant background absent from other dossier items.",
+      "No outlet quantifies or corroborates the claim about Secret Service moving Treasury Secretary Scott Bessent into military housing \u2014 it appears only in CNN."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "The same CNN-originated intelligence claim was reported across multiple outlets with materially different emphasis \u2014 from CNN's detailed exclusive, to CNBC's explicit 'we have not verified this,' to the LA Times folding it into a broader 'everything is breaking' outage narrative \u2014 and the core claim rests on a single originating source with no primary document available, making the coverage dynamics the real story.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOQVVnUzJMMDJJUTh1NTl4Vy1VU2U0bjEzVkRGWFBtamliVkRZQkZud2VuZ25YSDc0VzM5aXhQWWN2YTBFSTRaV1BSNUE3aWp5bmpsV0ZSMDMyT2YxcW5LekhIVEt6Tm9Od1ItNUs1U0ZOd2tfeTJSdkJhVVEtbUFzV2d0Z1NGa0doNGljVlhVOUJNS1UwYXFjVVRxMEY2OTRGY1lHQzcxRTlXR2VnVkh3QjRENEd0VTFPMjRJdmk3bVpXUEVWS3RV?oc=5",
+      "title": "Trump says US taking seriously report of possible Iranian dirty bomb plot in Washington - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE03SEs1dzdtOVl4RVo4TjcxOHpLMmpKZlZ4cGFCQjQtMnV3OWhMSnhvemduUWxJSnlYYWstUk5PYURBSmxLQ2VDY3NyUG9fNXhDTlRwSDFEVFNCN29vWWtOaWRhTDlPYk04TThPOTREX2FVSzhZdEExSVVyQQ?oc=5",
+      "title": "Exclusive: US intel indicates Iran developing plans to potentially detonate a dirty bomb in Washington, sources say - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMDlnOVlnZ3ZLTHB4REV3MHBxcS1TZWZxTjhfd3c0bHZmMXg5SWVLd2cyS2hxaXZUaklpaGdVYVYtMGZFWjZwUFM5UlNTUVZQNnZLNTU0UjBzLVhTUnQ2Q3ZpSmRzcEdNOHAta1l5NGJmOFY4SkRGOGIyT0RiZmVYb0FlQ1hjeUpzMjZmSGJzcDl5bmM1bHVRVFBnNmt3d1dVRWlCSjJtbkdCZEhiakQ4V3o4ZTBmbjU2TUl1OVdwUW4zWHPSAcgBQVVfeXFMTUZGT0pyTnFWVTd1RVZVRTlUNDl5SXc0NFdBdDU2ZWVMcE5INEVpa2pqdW44TWJWMUtxaXlnV1JwWkVMVGZKRmFEUXZUenR6M0laQTRwc2pGVFZ4dV9HNjBuUFRKZmhKdC0xcWMxVldvVE1rZmpRQ0hEVnBPSFFfQ29pNVhvTDdSRThGcTlRUDZJV2phaWFwRS1ablNDdXZhV2M1b1dOQ2xiZURhdTgwS2pzMTZrS2dubV9yOWE2RGJNNlYzOTFhTkQ?oc=5",
+      "title": "Trump warns Iran over reported \u2018dirty bomb\u2019 threat plans against Washington - Al Jazeera"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB5YmhqZWRkZFBQT190c2Z2eGZLY1Btc3ZOQWFBemtmYm0tWWhldG81REJrWFlhQ09qU2x4bmZYVExrVURIVzJ4eldVdkJ5M0hsTHBGSU9WOGd5LVFkUmNaNW1PRVJvODhnUDh4am9UZ2hRaXUwTDAxaNIBfkFVX3lxTE80ZWd6TWJmQlZaZlZKZ21seWJtZ01Ea2F2cTlINFRTM3k2UTRIQXBBbkdCTHpsV2JKV0NCZlRLVVBHWGY0N296dDNFd1lZYTFyY1doelVONHRMVEJBZGI1czM4S1NnT2h5RlF2d3E3WUNodmRwOVJxUVJiYUNaUQ?oc=5",
+      "title": "Trump on Iran's reported DC dirty bomb plan: 'We take it very seriously' - CNBC"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOLUxORWFJSDdPSXBQUUhmdDZkT1dVVVNnR1ZDN012TFZHOFlMdjk5WVF0dHpfNl9vSnhFM3RxVU9JUHFhRWdiUkVfREQwUkVYZDM3b3lmMHVCQkF3aExHX0ZKZzFsdGM5OThIamdVT0RaWkF4WnZaZ0hlY0dlbld6aWsyZGNJYVFuRm45TW45UXlMdkhTQUJnVFJteVVvem9jczU5WlFzQXlTNnd3bkZDVk0zNA?oc=5",
+      "title": "Trump Says US \u2018Looking Into\u2019 Any Iran Attack Plan for Washington, DC - Bloomberg.com"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPeDhQLXlSMWVRdGEwZExDcmVFcTRLM0M2U3NFRXVfSzdUaVM1aEh6T0hkanhycW1WeUs5aXdkcGZnMTdIWVlMV3JXYzZOUlE4LWNnSm1MTDBzcVprMXZTTUhRWXV1R2dzZS14cWhDREpVX1hSUllTX2d6Mkpsd1ZMbHRxYXNJUjJUYkFhWENqcGYzZlMzTEN5c3VLZThnRHJweEpXdmJwME9ocGRid1ZFNnBlSUtsSTcwaS02U2trSmNMMkk?oc=5",
+      "title": "Trump says report of Iran bomb plot against D.C. is being taken \u2018very seriously\u2019 - Los Angeles Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcFlvTGVHYURPQUs2bmJTc2VFZkg1VC1WdTRKQnJrV09uTDhwbVRaOXktUFZsbVNrTWwyMlpUNnBUb2hYSjJ0QXhHRGx2T2x5YVZOS0s0R3FpTDRyeXFKX1pUUmJJVnJ0M25PQmlka3JoVWhWa01OZm5CdW55elJSbnRpb2JPQllqckRzM1lwWFhKT253dTZ5SXV5OExpcF9yRjJRa1kyQUN5Y2taWmdWQlNvaEdMQV91emhKb3BTT3o0RElzLUN0Tk9WYW4xZlhs?oc=5",
+      "title": "Trump says government takes report of Iranian plans for dirty bomb \u2018very seriously\u2019 - The Washington Post"
+    }
+  ]
+}
