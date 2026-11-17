@@ -1,0 +1,104 @@
+{
+  "story_id": "2026-11-16-lindsay-clancy-to-face-2c4e1a7bc7",
+  "headline_seed": "Lindsay Clancy to face retrial for deaths of her three children in March 2027 - BBC",
+  "brief": {
+    "story_id": "2026-11-16-lindsay-clancy-to-face-2c4e1a7bc7",
+    "consensus_facts": [
+      "A judge set a new trial date of March 29, 2027, for Lindsay Clancy, whose first trial for the deaths of her three children ended in a deadlocked jury (NYT and BBC body text).",
+      "Judge William Sullivan made the scheduling decision at a hearing on Monday, November 16, 2026 (NYT and BBC).",
+      "Lindsay Clancy is 36 years old (NYT and BBC).",
+      "The three children were Cora, 5; Dawson, 3; and Callan, 8 months (NYT and BBC).",
+      "Prosecutors have not explicitly confirmed whether they will retry Clancy on first-degree murder charges, lesser charges, or at all (NYT and BBC).",
+      "Defense lawyer Kevin Reddington said the DA's request for a jury trial indicated an intent to proceed on first-degree murder charges, saying one can 'read between the lines' (NYT and BBC).",
+      "The first trial's jury deadlocked 11-to-1, with the majority inclined toward a not-guilty-by-reason-of-insanity verdict, and a mistrial was declared in September (NYT and BBC).",
+      "The defense argued Clancy suffered from severe postpartum mental illness/psychosis (NYT and BBC).",
+      "Judge Sullivan previously rejected a defense motion to dismiss the case on double jeopardy grounds (NYT and BBC).",
+      "Clancy is currently held in a state-run psychiatric hospital/medical facility in Massachusetts (NYT and BBC).",
+      "The case sparked a national debate over how postpartum mental illness is treated in the US courts (NYT and BBC)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Date of the mistrial declaration",
+        "positions": {
+          "The New York Times": "States the judge declared a mistrial 'in September' without a specific day.",
+          "BBC News": "States Judge Sullivan declared the mistrial on 4 September."
+        }
+      },
+      {
+        "topic": "Prosecution's preferred trial date",
+        "positions": {
+          "The New York Times": "Does not mention a prosecution-preferred date; only reports March 29 was set.",
+          "BBC News": "Reports prosecutors wanted a May trial date, but the judge chose March instead."
+        }
+      },
+      {
+        "topic": "Additional procedural details",
+        "positions": {
+          "The New York Times": "Reports Clancy's lawyers filed an appeal to the Massachusetts Supreme Judicial Court on Monday and that the next hearing is scheduled for Dec. 30; also details the holdout juror's undisclosed past criminal charges.",
+          "BBC News": "Does not mention the SJC appeal or the Dec. 30 hearing; notes the judge is due to retire in June."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Headline-only in this dossier. Frames the event neutrally as a scheduling development: 'Lindsay Clancy to face March retrial in deaths of her 3 children.' No body text to assess emphasis.",
+      "The New York Times": "Leads with the scheduling decision but devotes substantial space to the procedural chess: the unresolved charging decision, the suggestion that agreeing to a jury date implies first-degree intent, DA Timothy Cruz's 'uncompromising' reputation, the defense appeal to the SJC, double jeopardy arguments, and the holdout juror's disputed questionnaire disclosures. Emphasizes the human and ethical stakes (Reddington calling a retrial 'cruel,' the postpartum mental illness debate, graphic detail of the killings and Clancy's self-harm). Most detailed account in the dossier.",
+      "BBC News": "Opens with a distressing-content warning and frames Clancy as 'accused of murdering her three children.' Leads with the retrial decision and date. Adds the detail that prosecutors wanted May while the judge set March, and that the judge retires in June. Includes the children's names, the date of the killings (24 January 2023), the Duxbury location, the exercise-band method, and Patrick Clancy asking his wife to send him out for takeout. Notes it contacted the DA's office for comment. Links out heavily to prior BBC coverage.",
+      "CNN": "Headline-only in this dossier. Frames the story around the scheduling fact: 'Lindsay Clancy's retrial date set for March 2027.' No body text to assess emphasis.",
+      "NBC News": "Headline-only in this dossier. Terse framing: 'Lindsay Clancy retrial set for March.' No body text to assess emphasis.",
+      "USA Today": "Headline-only in this dossier. Uses the 'accused of killing her children' descriptor: 'Lindsay Clancy, accused of killing her children, to be retried in March.' No body text to assess emphasis.",
+      "The New York Times (Video)": "A video transcript duplicating the NYT print reporting. Centers Reddington's 'read between the lines' quote about the DA's intent to pursue first-degree murder. Brief, functions as a visual companion rather than independent reporting."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, hearing transcripts, the defense SJC appeal, or the double jeopardy ruling) were located for this story, so no document-level verification was possible.",
+      "The NYT references Judge Sullivan's written finding that further juror inquiry would have been 'impermissibly coercive' and the defense's SJC appeal, but neither document is in the dossier to confirm."
+    ],
+    "missing_context": [
+      "No outlet in the dossier published the DA's actual charging decision \u2014 the central unresolved question \u2014 because the DA's office has remained publicly silent.",
+      "Only two of the seven dossier articles (NYT and BBC) contained retrievable full body text; the AP, CNN, NBC, and USA Today entries are headline-only and cannot corroborate detail-level claims.",
+      "The full text of the defense's appeal to the Massachusetts Supreme Judicial Court is not available, so the strength of the double jeopardy argument cannot be independently assessed.",
+      "No outlet provides the identity or the specifics of the holdout juror's alleged undisclosed criminal charges beyond the NYT's brief mention; the juror's lawyer's response is reported only via the NYT.",
+      "None of the available bodies explain what practical options prosecutors have if they reduce charges (NYT notes a judge could decide the case, but the mechanics are thin).",
+      "No outlet reports on the status or wishes of Patrick Clancy, the father, regarding the retrial beyond the BBC's link to prior coverage of his forgiveness statement."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only two outlets (NYT and BBC) have full body text and they largely agree on the core facts with modest, non-contradictory detail differences; no primary source diverges from coverage. This is a straightforward 2-source confirmed event rather than a coverage-divergence META story.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNTXhlVy1lNkh3XzNRSXRLSTVlZUJybGJKdGtnT1RvTjRsVTVOUXd3OXVPbkxVa1hXcFp3eDhUUEFLWnFLZ0lNUXVvRURaekNndi1ESk5UMk45OC1TRjQ2aFYwOC0xNVpjY043M0ZpWHdEdkRmM0phNW5MVzBkejl6eVJVSDBIQk1wMWR2ZUlWdU9xQjVEaF9JV2hraWNYWmlwbWc?oc=5",
+      "title": "Lindsay Clancy to face March retrial in deaths of her 3 children - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9BN3JQVjZNV1FrLUt5dHRNUDBtdElyMmZYVHVsWklNSmozb0xjdEpjYURUQngwV2VsaUhMbUd1bGFCSXZyTE01VFVubHFrRmlfVTlRODZtQ19PWEhHbmpFazJxVzRqd2IxZk9NR0V1QXdTaHNRSmp0Q1d4MA?oc=5",
+      "title": "Judge Sets Spring Retrial for Lindsay Clancy - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBweWFpbm9kbmUtMGF4VnhNX1BUZ1FMaFFrSGRWZTNlV0wwTWRnREFkUzhmZm0tQ0ZFUEJWQWZRU0otRnZKQ1pFaDdMaS1EcnFQZjJQTGNZSUc1TW8?oc=5",
+      "title": "Lindsay Clancy to face retrial for deaths of her three children in March 2027 - BBC"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQc0Q4M3k0ZDIzVDMwNmJqbzR5M1lqOFBSNURwSzNfYVpSVjV4dUVkUDFhLXptejd6Tm82ekVVdnBPdEczZ1JKSHJoMmRTd2c1SndmZHRxdDNfVjJwUXlmUWUwVGt3Z3RQUmEwR19UVHk0R3B4WjVJMnJxZ3pYNXRhQnRFZU5LM2M?oc=5",
+      "title": "Lindsay Clancy\u2019s retrial date set for March 2027 - CNN"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZmw2ZHJ6Vm93RzVFWW1hWTB3TXk5d0RDUnJwdWJNWGVqbTNpek1HYVNpZjQydVg2dkw0RUxHYzk4YlFISGlaRTZPTVV3MVVMMExCYkQtQ1FpSEFWd1VjNGllREZzQV8tT25POE9HZkJibHZDeGRCam01TjV0c2VZU3ZLZ25pM1puZk5ZWHhRU3FhY1l3Mmlj?oc=5",
+      "title": "Lindsay Clancy retrial set for March - NBC News"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQR29CemlETjNmYmJVSktEU3dQUFljWUt4VzQ1UWMxNjllTXIwemdwRXc1MjNqYy1nYlc4SzJrcGp0MkN2QmE4WkpGQmVrU25xclg4SW5hLWJ6MWd4cTZPUnpNd0R5Z182NDR1SFQzbU9kZVJBRU5kQVFjRjZXN2wyWi1qLWJMWDdRaHB1WWdNNzNKWkdjdmttVEhXVDdJNF9KQnJxeFJ5ZlRyYW1x?oc=5",
+      "title": "Lindsay Clancy, accused of killing her children, to be retried in March - USA Today"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xcDlNY0d0dUh1SHNTMFRiNXVwWGdmUnlKR3l4b08zS3V5ZHJKVU9wVEcxd2NjS203QXZ5aVdlLXpFajYxakFRZkhZOVNaTXFVV0p1TV9ENGgxYUN4SEtBZVl1VVF1Q1JDWDFFZG5OV0VxdWxwVWNrYzJJWQ?oc=5",
+      "title": "Video: Judge Sets New March Trial Date for Lindsay Clancy - The New York Times"
+    }
+  ]
+}
