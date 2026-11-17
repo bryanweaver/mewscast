@@ -1,0 +1,115 @@
+{
+  "story_id": "2026-11-17-nsa-s-classified-internal-35f8bdf16a",
+  "headline_seed": "NSA's classified internal network goes down, sources say - CBS News",
+  "brief": {
+    "story_id": "2026-11-17-nsa-s-classified-internal-35f8bdf16a",
+    "consensus_facts": [
+      "The NSA's internal classified communications network, known as NSANet (or 'NSA Net'), went down on Tuesday, November 17, 2026.",
+      "NSANet is used by NSA employees to share and store classified information internally.",
+      "In an official statement, the NSA said it 'experienced temporary degradation during scheduled routine maintenance' and that 'mission-critical capabilities remain fully operational.'",
+      "U.S. officials said there is no evidence the outage was caused by a cyberattack.",
+      "The NSA staggered arrival times for non-emergency personnel at its Fort Meade, Maryland, headquarters in response to the outage.",
+      "The outage occurred during maintenance/system patching of the network, according to sources.",
+      "CNN first reported the story.",
+      "The NSA outage followed a series of recent unrelated outages affecting the FAA (nationwide ground stop), Microsoft (Outlook and Teams), and banks/Chase.",
+      "President Donald Trump, traveling in Asia (the Philippines), downplayed the outages, saying words to the effect of 'things like that happen' and 'it's fine.'",
+      "The NSA's infrastructure is described as having multiple layers of redundancy."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number and type of sources cited",
+        "positions": {
+          "CNN": "Cites six people familiar with the matter.",
+          "CBS News": "Cites multiple/two U.S. officials and two sources familiar with the situation.",
+          "NBC News": "Cites two people with knowledge of the matter and a senior U.S. cybersecurity official.",
+          "Al Jazeera English": "Relies on CNN's reporting of six unnamed sources plus the NSA statement."
+        }
+      },
+      {
+        "topic": "Terminology for the staggered-arrival alert level",
+        "positions": {
+          "CNN": "Describes it as a 'code yellow,' the second-highest in a three-level system (attributing the detail to The New York Times).",
+          "CBS News": "Describes it as 'Code Gray,' part of a modified reporting schedule."
+        }
+      },
+      {
+        "topic": "Impact on NSA operations",
+        "positions": {
+          "CNN": "Quotes a former senior NSA official calling it 'alarming, but likely not crippling,' and notes it could impact analysis and reporting.",
+          "NBC News": "States there was no sign the outage affected the agency's work; experts call government systems highly redundant.",
+          "CBS News": "Notes some activities were redirected to other NSA facilities; unclear how long network was offline."
+        }
+      },
+      {
+        "topic": "Cause specificity",
+        "positions": {
+          "CBS News": "Two sources say the outage resulted from routine system patching, though precise circumstances remain unclear.",
+          "NBC News": "Says the outage happened during maintenance; quotes expert that patching can break complicated software.",
+          "CNN": "Attributes to 'scheduled routine maintenance' per NSA statement; does not specify patching."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Frames the story neutrally around the NSA's own attribution ('NSA says'), emphasizing the official source rather than independent sourcing. No body text available to assess further.",
+      "CNN": "Most detailed account; emphasizes its 'Exclusive' and six-source reporting. Leads on the network being down and no evidence of cyberattack, but gives significant weight to context: redundancies, Five Eyes intelligence sharing unaffected, ability to reach Trump on Air Force One, and a historical precedent (2000 outage). Includes expert reassurance ('alarming but likely not crippling'). Ties the event to the broader string of tech glitches.",
+      "CBS News": "Leads on the classified network going offline and the staggering of personnel arrivals. Uniquely reports the 'Code Gray' terminology and that activities were redirected to other NSA facilities. Emphasizes operational normalcy at Fort Meade (gates, campus services unaffected). Credits CNN as first reporter. Attaches a list of related tech-outage and politics stories.",
+      "The New York Times": "Headline-only in this dossier. Headline frames the story around 'Work Disruptions,' emphasizing the operational/personnel impact. CNN credits NYT as the source of the 'code yellow' detail. No body text available to assess further.",
+      "The Washington Post": "Headline-only in this dossier. Headline emphasizes the 'top-secret' nature of the agency and that its communications system 'goes down.' No body text available to assess further.",
+      "Al Jazeera English": "Frames the story around the NSA's attribution to 'routine maintenance' (scare-quoted in the headline), subtly signaling skepticism. Leans on CNN and Reuters as sources. Heavily emphasizes the broader pattern of unexplained US outages (FAA, Microsoft, banks, United Airlines) and closes with Trump downplaying the events, framing the NSA incident as part of a wider narrative of US technological vulnerability.",
+      "NBC News": "Headline and lead emphasize the reassurance angle \u2014 'no indication it was an attack.' Frames the NSA issue within the context of mass outages affecting air travel, banks and email. Adds analytical voices (former CIA analyst Emily Harding and cybersecurity expert James Lewis) who characterize government systems as outdated and in need of investment, giving the piece a 'wake-up call' framing rather than a crisis framing."
+    },
+    "primary_source_alignment": [
+      "No primary source document was located for this story. The NSA's official statement, quoted consistently across CNN, CBS News, Al Jazeera and NBC News, functions as the closest thing to a primary source and is reported verbatim and consistently by all four full-text outlets.",
+      "No court filing, transcript, or official release beyond the NSA statement was available to check reports against."
+    ],
+    "missing_context": [
+      "No outlet confirmed how long the network was offline or when full service would be restored \u2014 CBS explicitly notes this was unclear.",
+      "No independent verification of the NSA's 'routine maintenance' explanation; all reporting relies on the agency's own statement plus anonymous sources, with no technical evidence presented either way.",
+      "The discrepancy between CNN's 'code yellow' and CBS's 'Code Gray' alert terminology is unresolved and unexplained by either outlet.",
+      "No outlet obtained on-record comment from the White House, CISA, or the Pentagon (CBS noted it reached out but had not received responses).",
+      "The exact scope of 'some internal systems' affected versus 'mission-critical capabilities' remaining operational is not independently detailed \u2014 the distinction comes entirely from the NSA statement.",
+      "No outlet established whether the NSA outage is causally or merely coincidentally linked to the recent FAA, Microsoft, and banking outages \u2014 all note the timing but none confirm a connection, and officials deny a coordinated cyberattack.",
+      "Reuters, The New York Times, and The Washington Post were headline-only in this dossier, so their full framing and any unique reporting could not be assessed."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets with full text (CNN, CBS News, Al Jazeera, NBC News) reported the same event but with materially different emphases \u2014 from CNN's detailed exclusive to NBC's reassurance framing to Al Jazeera's skepticism-tinged 'maintenance' framing \u2014 and there are concrete factual divergences (e.g., 'code yellow' vs. 'Code Gray') worth surfacing as a coverage comparison rather than a single straight report.",
+    "confidence": 0.8
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQc2ZFQXV3ZUxOU0hNN0lPMXA2Z0l6aTNFekJ5cXpuNEVOZk92a0RVOUhZNmVOdXJURUV6Q0VDNzk1Q0ZRYkMyeW1KS0pxcGlESzJ6dER0QWlDdXNTY3pyV1l6NzcyWnhhUkhpYlJwRXMxU3YwdmE4RTZvRFZNbnZwX2ktaDdtTEllZmdlN0ktancwenNjSDhKZ2RpT3lxbXhmdXNkVGZybkFxeDNOeldCbFpQcWhjMi03LXVOeA?oc=5",
+      "title": "Classified US national security communications network hit by outage, NSA says - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQ0tpUkRvaGcwWEh5T0JlUzZzMEdTakNIenJjdjltc1dLb25pdlgxQks1aExOSTQ5UDI4ZVEwTjZDWm5nRk1XTkkxM0tUQVFIS19JSGNsblFxcW9jT0ZPb3U2QmxnVmh6b1hGbjFRcU1SaDRza0lzcEFGRWNMUjdSX1QtVDNTdnRMeUJRb0FRbk5kc1MwVnVTNWJQdXBvM3d2VXhVQzZtenJ5U0I4?oc=5",
+      "title": "Exclusive: Highly classified US national security communications network goes down, sources say - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAtTy1NY0h0Q0NJZXdMWFViWnI3clpteTI3YzRDb0tfM1ZXQ1NqNmNPNDZmWFFZQU5COGNSMzRQWXgyT2pfeVlNdlpzdjU5bWR6Yk5ycXNRVU41SERIZ1dhTU1rdFZQM3dzUnpjV0JHemF3NzVvWEcw?oc=5",
+      "title": "NSA's classified internal network goes down, sources say - CBS News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPa2l0QmN5NDdtbHpuM3Bsc2s1LWJPckU2a25pWFJETmhpY3ZlVzFpa3VHaWd0REZOaWNpbXl2cHlBOU0yaW1WZkVhbGpHYV9wSjF4NGx0cV9wZmMxbGpmYWZvanpkUVdaR202cXlUQTJCOFVVMjBxX1FvbUtheGdsS3BrOHBXcGRCY1E?oc=5",
+      "title": "Classified N.S.A. Network Goes Down, Causing Work Disruptions - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNU2wyWGY3OEl5cXpYTXN6WmFKYWl2c2E4UUZkaE94Z25Tcm9oU1hhRGZyY204UTkxQmJqVnJodm5mRFdmSTR0UGJZclNpS1R3bGRVeFZVSlhqZEJXbFZZRjYzNHY4UGFJdXEtVzdUWUtoQTZ1ZXF6NGs1b1BMcFJ5SWRlRnBSdGNQTnl4X0otTGs4WXNGNmhqelVjTklKLW9oRWpnYnhZcWFnUnFXQkdUaGszMGkzZy1BSU8zeTEza3JldmdhUG80?oc=5",
+      "title": "Communications system at top-secret National Security Agency goes down - The Washington Post"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQzlLcDdqRnN3R1BCUzdfblFWaTZKdEc5ckZldXJ0MGVTdmlLNmdCdWZuWTZqVFdyOUJMN29oSE9VcF9lY2x6cDlWN21lSk1FSnEtZjFGcHRjXy10N0ZWVU9yWC16SkNaZkFXc210em5ockpfZDlKQ0xKQXotaGRZOThOT1lsYk5wY2swMnBQSERBTE5OcElWN1pTdnBJUFF0RWZMSEpIRTd1bUxhcjUtQWxia9IBuAFBVV95cUxNUkI4OHV1OUZJWW1TSFVBc251dG5CTWg4QXNWQmNKNmlqd3gxd2RHVDJrQ1RramtrLUFpZDh3UHFTVmZvWHU4UkxUR2dfeXNVSVFDOUs0YXBkN1BOZFpKRWVobjFGNnlfbzQ1VHNad284QXZiYWYxSmV4ZktLVXNRUjVDbEFSSUZucDg0SFdCVVBRd2ZSaXdqSV9nTkIxTE0yVVEwaG16RlJ3Q2tFYzdObWlvQjNNNkh6?oc=5",
+      "title": "NSA attributes US network outage to routine \u2018maintenance\u2019 activities - Al Jazeera"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQVUZZMWx4elhMTUhLNG82TldaUUUzY2dqWG1EMlhDRWVYTmRUVmIwZ2ZLZW15Uy0tVV80bXBFZTdNdE0xY2Jubll3Q0w0VENPaGpxT0RPdWMwcGhMRmQyNWlyTDZwWEx0RTVSbTVNZW1sRWhWcWhKS0hlMG1lYW1wejB4dkRGdHQxN01oTHhOR3l2WGpuSnAxbVRLVUo3OERWUnY4NHB0NkxQbTBpekNlY0RFTUlSSFVjOVNNS05YeFhsa3NS?oc=5",
+      "title": "Classified NSA network went down, but no indication it was an attack, sources say - NBC News"
+    }
+  ]
+}
