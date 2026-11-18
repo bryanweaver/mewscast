@@ -1,8 +1,34 @@
 {
-  "last_updated": "2026-11-17T04:50:07.725226+00:00",
+  "last_updated": "2026-11-18T03:55:47.946630+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2122841633024598344",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-17T23:57:41.128504+00:00",
+      "created_at": "2026-11-17T23:57:40+00:00",
+      "topic": "Trump says US taking 'very seriously' any Iranian plot against Washington - BBC",
+      "dossier_id": "2026-11-17-trump-says-us-taking-2d983ba239",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 26
+    },
+    {
+      "x_tweet_id": "2122810990257406386",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-17T21:55:55.108510+00:00",
+      "created_at": "2026-11-17T21:55:54+00:00",
+      "topic": "NSA's classified internal network goes down, sources say - CBS News",
+      "dossier_id": "2026-11-17-nsa-s-classified-internal-35f8bdf16a",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 20
+    },
     {
       "x_tweet_id": "2122494347195081068",
       "post_type": "REPORT",
@@ -14,7 +40,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 29
+      "impressions": 32
     },
     {
       "x_tweet_id": "2122182697212604907",
@@ -27,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 18
+      "impressions": 20
     },
     {
       "x_tweet_id": "2122087048026996906",
@@ -157,7 +183,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 66
+      "impressions": 67
     },
     {
       "x_tweet_id": "2120749261315072388",
@@ -431,55 +457,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 17
-    },
-    {
-      "x_tweet_id": "2117746080427221133",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-03T22:29:46.498850+00:00",
-      "created_at": "2026-11-03T22:29:46+00:00",
-      "topic": "Midterm elections 2026 live updates: Economy, inflation and other voter concerns - CNBC",
-      "dossier_id": "2026-11-03-midterm-elections-2026-live-9bb92d76d2",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 33
-    },
-    {
-      "x_tweet_id": "2117712889532322111",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-03T20:17:53.150283+00:00",
-      "created_at": "2026-11-03T20:17:52+00:00",
-      "topic": "The unlikely player in contentious Michigan Senate race: Stevens’s fiancé - The Washington Post",
-      "dossier_id": "2026-11-03-the-unlikely-player-in-52fbc7e213",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 83
-    },
-    {
-      "x_tweet_id": "2117481712951439712",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-03T04:59:16.306726+00:00",
-      "created_at": "2026-11-03T04:59:15+00:00",
-      "topic": "Trump makes midterm closing arguments at troubled Reflecting Pool site - The Washington Post",
-      "dossier_id": "2026-11-03-trump-makes-midterm-closing-2c12df5632",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 30
     }
   ],
   "averages": {
     "REPORT": {
-      "count": 32,
-      "likes": 0.44,
+      "count": 31,
+      "likes": 0.42,
       "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 39.53
+      "impressions": 37.71
     },
     "BULLETIN": {
       "count": 4,
@@ -487,15 +474,15 @@
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 16.5
+      "impressions": 17.0
     },
     "ALL": {
-      "count": 36,
-      "likes": 0.39,
+      "count": 35,
+      "likes": 0.37,
       "reposts": 0.03,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 36.97
+      "impressions": 35.34
     }
   }
 }
