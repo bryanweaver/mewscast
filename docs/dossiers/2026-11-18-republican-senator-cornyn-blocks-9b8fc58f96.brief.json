@@ -1,0 +1,102 @@
+{
+  "story_id": "2026-11-18-republican-senator-cornyn-blocks-9b8fc58f96",
+  "headline_seed": "Republican Senator Cornyn blocks Trump judicial nominee in Texas - Reuters",
+  "brief": {
+    "story_id": "2026-11-18-republican-senator-cornyn-blocks-9b8fc58f96",
+    "consensus_facts": [
+      "Republican Sen. John Cornyn of Texas blocked President Trump's nomination of T. Elliot Gaiser to a federal district court seat in Texas (CNN, CBS News).",
+      "Cornyn did so by withholding/declining to return the 'blue slip' for the Judiciary Committee, a Senate custom allowing home-state senators to block judgeships in their states (CNN, CBS News).",
+      "Gaiser currently serves as head of the Justice Department's Office of Legal Counsel (CNN, CBS News).",
+      "Cornyn objected because Gaiser is not a Texan, lacks trial experience, and was not properly vetted, saying the White House tried to 'jam' the Senate (CNN, CBS News).",
+      "Cornyn has offered the White House an alternative candidate for the seat (CNN, CBS News).",
+      "Gaiser did not appear at Wednesday's Judiciary Committee hearing, where seven other Trump judicial nominees testified (CNN, CBS News).",
+      "Gaiser authored a controversial legal opinion justifying U.S. military strikes on alleged drug-smuggling boats in the Caribbean/eastern Pacific (CNN, CBS News).",
+      "The nomination came during a lame-duck session as Republicans rush to confirm judges before Democrats take control of the Senate in January (CNN, CBS News).",
+      "Democrats are poised to control the Senate following the Nov. 3 midterm elections, making confirmation of Trump's remaining picks unlikely (CNN, CBS News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Name of Cornyn's suggested alternative candidate",
+        "positions": {
+          "CNN": "Names former DOJ prosecutor Steve Fahey as Cornyn's previously suggested alternative.",
+          "CBS News": "Mentions an alternative was offered but does not name the candidate."
+        }
+      },
+      {
+        "topic": "Additional controversial Gaiser opinions emphasized",
+        "positions": {
+          "CNN": "Focuses on the cartel/drug-trafficker lethal-strike opinion and war-powers argument that strikes did not meet the definition of 'hostilities.'",
+          "CBS News": "Cites the drug-boat strike opinion plus an April opinion calling the Presidential Records Act unconstitutional and an August opinion shielding Trump's outside advisers from investigations."
+        }
+      },
+      {
+        "topic": "Nomination timeline detail",
+        "positions": {
+          "CNN": "States Gaiser was nominated 'earlier this month' without a detailed timeline.",
+          "CBS News": "Provides a detailed timeline: contacted by Cruz's staff Nov. 4, discussed with Cornyn's office Nov. 6, questionnaire dated Nov. 7, nomination announced Nov. 10, formally sent to Senate Nov. 17."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in dossier. Neutral wire framing: 'Republican Senator Cornyn blocks Trump judicial nominee in Texas.' States the mechanics without characterizing motive. No body text available to assess.",
+      "CNN": "Headline foregrounds the intra-GOP tension and the reason: 'because Trump didn't choose Texas.' Body leads on Cornyn blocking a 'last-minute' nomination and frames it within Republicans' 'scramble' and 'lame-duck dash.' Devotes substantial space to the Democratic-led hearing, quoting Blumenthal and Booker condemning the GOP 'cynical effort,' and highlights Gaiser's controversial cartel-strike opinion. Emphasizes partisan conflict and January 6 / 2020-election questioning of nominees.",
+      "Politico": "Headline-only in dossier: 'Cornyn links Nvidia scandal to perception of Trump admin corruption.' This headline frames a separate or adjacent angle \u2014 Cornyn's broader critique of the Trump administration \u2014 rather than the judicial-nominee block directly. No body text available to assess.",
+      "Associated Press": "Headline-only in dossier. Neutral wire framing emphasizing Gaiser's standing as a 'top Justice Department official' and the Texas vacancy. No body text available to assess.",
+      "Bloomberg": "Headline-only in dossier. Framing emphasizes the forward-looking solution \u2014 'Cornyn Seeks Alternative to Late Trump Judge Pick in Texas' \u2014 centering the alternative candidate and the lateness of the pick rather than conflict. No body text available to assess.",
+      "CBS News": "Headline is descriptive and procedural: 'Cornyn blocks Trump's nomination of top DOJ official to federal district court in Texas.' Body is the most detailed on the blue-slip process, explaining its mechanics and that both home-state senators (Cornyn and Cruz) must return positive slips. Provides the fullest nomination timeline and Gaiser's thin Texas ties (a one-year Houston clerkship; Ohio native and former Ohio solicitor general). Catalogs multiple controversial Gaiser opinions and notes Trump's push to end the blue-slip policy, resisted by Grassley.",
+      "The Washington Post": "Dossier lists the outlet as The Washington Post but the URL and attribution resolve to Washington Times. Headline-only: 'Cornyn blames Trump, Paxton for Texas Republicans' election disaster.' Framing centers Cornyn's blame of Trump and Paxton for midterm losses \u2014 a separate angle from the judicial block. No body text available to assess."
+    },
+    "primary_source_alignment": [
+      "No primary sources (blue slip documentation, Judiciary Committee records, Gaiser's committee questionnaire, or the underlying OLC opinions) were located for this story, so no report-versus-document comparison is possible.",
+      "CBS News references Gaiser's questionnaire to the Judiciary Committee and its dates, but the questionnaire itself was not provided in the dossier for independent verification."
+    ],
+    "missing_context": [
+      "Only two of seven dossier outlets (CNN and CBS News) provided full body text; the other five (Reuters, Politico, Associated Press, Bloomberg, Washington Post/Washington Times) are headline-only, so consensus is built from just two full-text sources.",
+      "No primary source \u2014 blue slip records, the Judiciary Committee questionnaire, or Gaiser's OLC opinions \u2014 was available to verify the characterizations attributed to them.",
+      "The Politico and Washington Post/Washington Times headlines reference adjacent Cornyn storylines (the Nvidia scandal and blaming Trump/Paxton for midterm losses) that are not clearly tied to the judicial-nominee block; no body text clarifies whether these are the same story or separate ones.",
+      "The dossier labels Article 7's outlet as 'The Washington Post' but the URL and byline indicate Washington Times \u2014 an outlet-identity discrepancy a fair-minded reader should note.",
+      "No outlet in the dossier provides the White House's or Gaiser's response to the block; CNN notes it reached out to the DOJ for comment but reports no reply.",
+      "No reaction from Sen. Ted Cruz specifically on the Gaiser blue slip is reported, despite Cruz being the other home-state senator whose slip is required and whose staff reportedly initiated contact with Gaiser."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Only two outlets provided full body text and they align on the core facts, but the seven-outlet dossier shows materially different framings \u2014 procedural (CBS), partisan-conflict (CNN), solution-focused (Bloomberg), and adjacent-scandal angles (Politico, Washington Times) \u2014 making the coverage divergence itself the story worth reporting.",
+    "confidence": 0.6
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOR0NHZWwycF85Y1NfZ1lEV01yWEpOUWJacnJPRlhBeXNReGR5VXlBODhDMzF3di00amFSNjFVVkNZSGViMkxYWFg2WTBxU0kwdEN5c0FReTZoZk9rVTltSEs5Ym9vRlVQMXVVRkNVSFRXNXBjQnJsV21KVTdGWWhLNUxOMkxseE1kQ29ZOUNBTWdDUnQ1VXNQMDNiM2FHTnBMYlZYY3RiT2s2SGlBeGdjSnJWQjk?oc=5",
+      "title": "Republican Senator Cornyn blocks Trump judicial nominee in Texas - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPenRockMyb0xwZEpMYWc1dmhRZmt2bEU4S21jR00zMEkzb2xVa21LM3kySDFqR3hJRnlVNzBMRUYwUzVKMjFIRUQybmNVWXRKRmkyMF84S0FjMU1FUWxQeHlzS0psVDFKM3BjSXEtVWJJcGVTOThuZ2xhZ3ZOWEZEdUxiUDFJR2JqUVgtemNoLVFLUHdxeU10b1Z6MXVNaEVmREVUY2ln?oc=5",
+      "title": "Sen. Cornyn blocks judicial nominee because Trump didn\u2019t choose Texas - CNN"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPajhUdEF6dGVCVjEyMXhsN2VVcWI2czNYUk9WaGNPRFRuS1gxQXNXVGsxV1VUMXNWOHRBUXl4MFNLVDZoWF9JdmJPRkZxOHVndWhsM2hwWXBTcU1LTG4ybVVUbV9FUk00SmtUd2pMTUpLT1BlLU4xUWNTbHFIdlNycUFaelI2SUFOekowNE5Gd1RxWTkza0hB?oc=5",
+      "title": "Cornyn links Nvidia scandal to perception of Trump admin corruption - Politico"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNZnA5WkdYc21sV1ZVaHBqQTBpRnktWG1hYUw2cGh6QUtvSllCVk9rcmNWd290MjhydWRIVUlyYkE4UnRGcTNSNjBWNFBCaUVsb0NBVjNoS3lfRG5RQVdMMEZNendoajhGRkZoVG9FUl9Zc1ZmNUtEOFdmY05lbVRUc0h2WU54WnZNVV9jeWtNMVNMb084?oc=5",
+      "title": "Cornyn blocks top Justice Department official nominated for judicial vacancy in Texas - AP News"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNa1lNWjJid1VQQTFER3E1aFpQdGkwT3pEM0k2LXFIdzRuM09NYWNfSVFCSkRhOGRZNE9KQkxQTWtIQmdMQkZGZ3FnZkFUN1FVQUpZd01rWVlJYXRTMVJuZlF0blF3enlYUjVBLXBnaThxQ3lMSTZIUUdLMU4wOHdWMTNaVFptR1J5TktKTGwtZTZrS3VGRjY1VG9mZlNXNVQtUmtrVFJ1ZkRHOVE?oc=5",
+      "title": "Cornyn Seeks Alternative to Late Trump Judge Pick in Texas (2) - Bloomberg Law News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNYmp3aHR1Z3VsTlVXSlJXeGpnRUZqTml6Ti00eGZQellGTTRYT2pqekU2bDYxM1NwaFFqczhwWXZhTDFWWlB1RnJkNGRYb21mcERGbTFkLVdSS3ZYYUhKelVaUk9JVzFGWVFBOEQ1V2hsSnR6R2FJSHJDN21oaVpVVTUtVTJWS2Nidkh3NmZvTGUxdG03VDFFYjFB?oc=5",
+      "title": "Cornyn blocks Trump's nomination of top DOJ official to federal district court in Texas - CBS News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRzByVFR5YnFENzBvcnZqTFhydWZKTEFZdy1jMlBPSTBLVlNKSzIwSWNxdFVjTDBLeHFweEpKaXJxVVBTbE5TbFgzaGVkNTdoNjlaRXk4YlQ0M21hYmgydE1mY2RnbWNMOFBRQ1VKSXF3ZWtneXJ0aDFoUFdYTnRTSEpGOHFudVZvSmdWVWJFQW81LVZHWlhXajBlalQwUGlXNzBlRVFVQW9GYW41MEZ5b1d3Z1FKUmlQOXAw?oc=5",
+      "title": "Cornyn blames Trump, Paxton for Texas Republicans\u2019 election disaster - Washington Times"
+    }
+  ]
+}
