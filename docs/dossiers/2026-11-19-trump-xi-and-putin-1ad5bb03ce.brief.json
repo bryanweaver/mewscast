@@ -1,0 +1,106 @@
+{
+  "story_id": "2026-11-19-trump-xi-and-putin-1ad5bb03ce",
+  "headline_seed": "Trump, Xi and Putin set to hold historic meeting on Apec sidelines - BBC",
+  "brief": {
+    "story_id": "2026-11-19-trump-xi-and-putin-1ad5bb03ce",
+    "consensus_facts": [
+      "President Donald Trump arrived in Shenzhen, China for the APEC summit hosted by Chinese leader Xi Jinping (CNN and CNBC).",
+      "An unprecedented three-way (trilateral) meeting between Trump, Xi Jinping and Vladimir Putin is scheduled for Thursday on the APEC sidelines (CNN and CNBC).",
+      "Trump publicly praised his relationship with Putin, and CNN quotes him calling Putin 'my friend' and citing a 'great relationship'; CNBC corroborates the warm framing of the Trump-Putin bilateral (CNN and CNBC).",
+      "Putin told the summit that sanctions imposed on Russia have backfired and strengthened his nation (CNBC); CNN corroborates Putin's posture of projecting strength ahead of the trilateral.",
+      "Trump's delegation included Secretary of State Marco Rubio and Treasury Secretary Scott Bessent (CNN and CNBC).",
+      "A possible appearance by North Korean leader Kim Jong Un was discussed as a prospect around the summit (CNN and CNBC)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Status/formality of the Trump-Putin meeting",
+        "positions": {
+          "CNN": "Describes it as a bilateral/one-on-one that the White House and a US official designated a 'pull-aside' \u2014 a less formal designation than a bilateral \u2014 and reports it lasted roughly 40 minutes.",
+          "CNBC": "Refers to 'bilateral talks' between Trump and Putin without the 'pull-aside' qualifier or a duration."
+        }
+      },
+      {
+        "topic": "Expected agenda of the trilateral",
+        "positions": {
+          "CNBC": "Says discussions are expected to center on the Iran war, Russia's war in Ukraine and broader strategic stability, with low expectations for concrete outcomes.",
+          "BBC News": "Emphasizes that Xi appears reluctant to discuss Russia's war in Ukraine and China's growing nuclear arsenal, framing these as pitfalls rather than agenda items.",
+          "CNN": "Foregrounds Russia's nuclear signaling (nuclear briefcase, bomber deployments, airspace incursions) rather than a defined policy agenda."
+        }
+      },
+      {
+        "topic": "Kim Jong Un's possible attendance",
+        "positions": {
+          "CNN": "Reports Kim was spotted inside North Korea on Wednesday, dampening prospects of travel to China.",
+          "CNBC": "States Kim 'could attend' the summit without the sighting that undercuts it."
+        }
+      },
+      {
+        "topic": "Whether the summit is already a success",
+        "positions": {
+          "Reuters (headline-only)": "Headline states Trump says the historic summit with Xi and Putin is already a 'win' before the event.",
+          "CNN/CNBC (body)": "Body text does not characterize the summit as a pre-emptive 'win'; CNBC notes expectations for concrete outcomes are low."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Bloomberg": "Two entries in the dossier; both bodies are robot-check/paywall boilerplate with no retrievable content. One headline ('Putin in Spotlight of APEC Photos After Decade of Isolation') frames Putin's rehabilitation from pariah status as the story; the other ('Xi, Putin Assail Trade Barriers Ahead of Summit') frames the China-Russia alignment against trade barriers. Neither can be used as a reporting source.",
+      "CNN": "Lean-left outlet that leads with Trump's personal warmth toward Putin ('He's my friend') and then pivots hard to Russian nuclear posturing \u2014 the nuclear briefcase carried by a Putin aide, Tu-95 bombers at Da Nang, and airspace/ADIZ incursions over Japan and Taiwan. Frames Putin as the weaker partner economically and militarily but projecting force, and frames the Xi-Putin 'no limits' partnership as the deeper relationship into which Trump may be the 'third wheel.' Careful to flag the meeting as a White House-labeled 'pull-aside,' not a full bilateral.",
+      "BBC News": "International outlet filing analysis from Shenzhen. Frames the event primarily as a diplomatic triumph for Xi \u2014 China orchestrating a spectacle Washington could not \u2014 with heavy color on Shenzhen's futuristic display (driverless cars, drones, dancing robots). Then pivots to the 'pitfalls': subjects Xi reportedly wants to avoid, namely Russia's war in Ukraine and China's growing nuclear arsenal. Least event-detail, most interpretive.",
+      "CNBC": "Specialized/business outlet with the most granular straight reporting. Leads on logistics and agenda: Trump's arrival, the Thursday trilateral, expected focus on the Iran war, Ukraine and strategic stability, and explicitly low expectations for concrete outcomes. Emphasizes trade, AI cooperation, and the Trump-Xi bilateral aimed at a trade truce beyond January 2027. Reports Xi's and Putin's summit remarks largely through Chinese state media (Xinhua) readouts, and notes discrepancies between Seoul's and Beijing's accounts of a separate Xi-Lee meeting.",
+      "Reuters": "Two headline-only entries, no retrievable body text. One headline ('Putin and Trump expected to hold bilateral talks') frames the meeting as a bilateral, contrasting with CNN's 'pull-aside' qualifier. The other ('Trump says historic summit...already a win before event') foregrounds Trump's self-declared success. Both are labels, not reports, and cannot corroborate body-level facts."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No transcripts, official readouts, or press releases were provided in the dossier, so no report-versus-document comparison is possible.",
+      "Note: both CNN and CNBC rely partly on secondhand official framing \u2014 CNN cites a White House/US official 'pull-aside' designation, and CNBC cites Chinese state media (Xinhua) and Chinese foreign ministry readouts \u2014 but none of these primary texts were included for verification."
+    ],
+    "missing_context": [
+      "Only two of seven dossier articles (CNN and CNBC) contain substantial retrievable body text. Both Bloomberg entries returned robot-check/paywall boilerplate, both Reuters entries are headline-only, and the BBC entry is a short analysis snippet. Consensus is therefore built on a two-outlet base; readers should treat it accordingly.",
+      "No primary source \u2014 no official readout, joint statement, or transcript from the trilateral \u2014 was available, so claims about what was actually discussed rest entirely on pre-meeting expectations and state-media framing.",
+      "CNBC reports Putin's and Xi's summit remarks largely via Chinese state media (Xinhua) and notes that Seoul's readout of a separate Xi-Lee meeting mentioned Korean Peninsula peace while Beijing's omitted it \u2014 a reminder that several quoted statements come through state-controlled channels, but no outlet independently verified the trilateral's substance.",
+      "No outlet provided a confirmed outcome or readout of the trilateral itself; CNN confirms only that the Trump-Putin bilateral/pull-aside ended after roughly 40 minutes.",
+      "The specific status of the Iran war referenced by CNBC is not explained or sourced beyond being listed as an expected agenda item; no background on its current state is provided.",
+      "No outlet in the retrievable set provides Ukraine's or any European perspective on a three-way nuclear-power meeting that may touch on the war in Ukraine.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same scheduled trilateral but with materially different framings \u2014 CNN foregrounds Russian nuclear posturing, BBC frames it as Xi's diplomatic triumph with pitfalls, CNBC emphasizes trade and low-outcome expectations, and the Reuters/Bloomberg headlines diverge on whether it is a 'bilateral,' a 'win,' or Putin's rehabilitation. With only two full-text sources, no primary document, and notable divergence on the meeting's status and agenda, this is best handled as a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPX2VTRS1uUFE0UVZWM19jWUFiQ0hnQ3pWVGlkbUE2bXpBMzdWT3lsRkNTSXdzSnVpX1NTX0F4SmE4NmdIRXVJTUdlRjRocGo5VlFjUDlWNDQ5S0hWSHc5YlNuZ3duSHlPUnVrNXRWVl9zVHk0Q3FGYXotLXhEbDhEU0prdWhfaVdMQmc1ajR4SWlhcGRWRk9YV1BscndYdGpFdWIya3YyTXlJamo5M04yX0lsSzVlZw?oc=5",
+      "title": "Putin in Spotlight of APEC Photos After Decade of Isolation - Bloomberg"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZ25JQjBlM1VSNTUtOE5XcGJSU05pOThhUDRZTVdwUWZEYXdTcDNYYnNDcDRMazdqMUxHV0Z3WHlMem5DNklqVnhvOTlDOGJnYVp1eWdkN3RKUFZhNzI0Q0VIMW5sUUpaT2Vnc0xoRTVYZ0NWWjNWUnF2SGc2S1A4TDkzSENTZw?oc=5",
+      "title": "Trump praises \u2018great relationship\u2019 with Putin ahead of historic three-way talks with Chinese leader Xi - CNN"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1JaDV1Q0dGNjZ3bW8xZEFsR3hsRzFlb1dFUGFoUFlxejBDaUNyeHZqRnpyZkRTTkhHSWFNU2IxeWhoV0M0c1p5ZEcyMmRFMmpJb2R2TmxB?oc=5",
+      "title": "Trump, Xi and Putin set to hold historic meeting on Apec sidelines - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9IeDZBMG0tbFVVVEloVDFOLWF0dXJmYXRDenMyZ2RYODQ5aTdGV0M2eHo4S3RaRVRzWmRSUUxGVXF2TV9VM3NPZFhUS292WGVEQ08zX3dZeDdCUnN4Mno1clcwV1RrbU83QWEtODR5UdIBdEFVX3lxTFBPc2VUaUhhbjdQWHZhX0J6VFNQdmZDTlNTNlZBZDREZlEzMjZWbFFOdDRWbnY1RkNidHFrY1p1RGJMSmxPQ1BFd0dTNEVXZmlKajVDVDhkU0N5SnFBVUlSV2o0VXRKdkNDT08zUGlMMmg5TkZf?oc=5",
+      "title": "Trump arrives in China for historic meeting with Xi, Putin - CNBC"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQmphYzlHTmtWY2ttZUFFb0VmdHRaTUtId2RKT1luZE96cXF2ZjFYTDk3WTlVNEZ5Q0hTc0JrSFpLSEwzSV8wblVNOE03R3BXdXU3bnhxUnpvb2FJd2hSMG1uTU9yMmNQLUdtNW5vTmxrSUNyb1REWDlzRl83SUx6QlE2Y09rSGFjY2JTb1JQRXNISTFoWTFRamF5U2VWNGJpM0JEMkhsLUs3VDJCdEVoMzBoZzFjZWgw?oc=5",
+      "title": "Putin and Trump expected to hold bilateral talks at APEC summit - Reuters"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdzN3ZEpqNW0wZlBtajBvdU9pSzk1MG9RQ2NhVlBuaFMwaVZBWVhkLVNiMnZHTTBRS2J6Z2xkdWkxRERWakdCc0JBdGtUUlhVbHJlR2dMcVVTV0lCNWVGNi1XSG5zVTVrRW84V0JVZUhOVGhKT0FZMk1uRTd3anM1RFhPUWxWNFdQWFF2WjhhYVFCdnpPMGlLYThjMDExVC1fVFJfeFZ2ZXM?oc=5",
+      "title": "Trump says historic summit with Xi, Putin already a 'win' before event - Reuters"
+    },
+    {
+      "outlet": "Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZV9ZWUxMTFhwQXgwVjF2dEctYWZMNTM2YmRDSWtQM005QklCTkgyNF9NTG9YMTV4NHJYWWRBRXBMV20wNFZUOHAwdF9iaUpEYlh3N2hZaDFHWVoxNV8wWkVLYVJOVks0TmpQOGh1LW1Mc0tpSzZuaGl0VUNtR2RrMmhMYXBKYnNyR3BVeTdiQkw1SnNjd2xYR0JYUndnTDJ3aE1JaTZxNjd1aC1oVHZ3?oc=5",
+      "title": "Xi, Putin Assail Trade Barriers Ahead of Summit With Trump - Bloomberg"
+    }
+  ]
+}
