@@ -1,0 +1,72 @@
+{
+  "story_id": "2026-11-19-myanmar-committed-genocide-against-4dff363743",
+  "headline_seed": "Myanmar committed genocide against Rohingya minority, top UN court rules - BBC",
+  "brief": {
+    "story_id": "2026-11-19-myanmar-committed-genocide-against-4dff363743",
+    "consensus_facts": [
+      "All seven outlets' headlines report that the UN's top court (the International Court of Justice) ruled Myanmar committed genocide against the Rohingya minority.",
+      "Multiple outlet headlines (Axios, Associated Press, and Al Jazeera's body text) state this is the first time a state has been found responsible for genocide by the UN's highest court."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Neutral wire phrasing: 'Top UN court finds Myanmar committed genocide against Muslim Rohingya.' Emphasizes the religious identity of the group ('Muslim Rohingya'). No body text available to assess lead or buried details.",
+      "NPR": "Headline-only. Straightforward framing: 'The U.N.'s top court rules Myanmar committed genocide against the Rohingya.' No body text available to assess emphasis.",
+      "Al Jazeera English": "The only outlet with full body text. Reports the ICJ ruled in a 9-6 decision that Myanmar committed genocide in northern Rakhine state, that the 2017 crackdown drove more than 730,000 Rohingya to flee to Bangladesh, and that Myanmar forces killed at least 10,000 Rohingya. Emphasizes the human/victim angle \u2014 leads with imagery of Rohingya refugees, foregrounds emotional reactions from Rohingya advocates (Wai Wai Nu, Yanghee Lee), and quotes legal experts on the high bar for proving genocidal intent. Also reports international reactions (Gambia, UK expelling Myanmar's defence attache), Myanmar's claimed justification (response to ARSA attacks on police posts), and the court's ordered remedies (reparations, restitution, safe return).",
+      "Axios": "Headline-only. Frames the story around the legal milestone: 'Myanmar becomes first state found responsible for genocide by UN court.' Emphasizes the precedent-setting nature over casualty or victim detail. No body text available.",
+      "Associated Press": "Headline-only. Leads with the 'first time' framing: 'For the first time, UN's highest court finds a country responsible for genocide: Myanmar.' Emphasizes historical/legal precedent. No body text available.",
+      "The New York Times": "Headline-only (live-updates format). Neutral framing: 'U.N. Court Rules Myanmar Committed Genocide Against Rohingya.' No body text available to assess emphasis.",
+      "The Washington Post": "Headline-only. Matches the headline seed closely: 'Myanmar committed genocide against Rohingya minority, top U.N. court rules.' No body text available."
+    },
+    "primary_source_alignment": [
+      "No primary source (ICJ ruling text, roll-call of the 9-6 vote, or court press release) was located for this story. The specific figures reported by Al Jazeera \u2014 the 9-6 decision, at least 10,000 killed, and more than 730,000 displaced \u2014 could not be verified against the underlying judgment and rest on a single outlet's reporting."
+    ],
+    "missing_context": [
+      "Single-source limitation: only one of seven dossier articles (Al Jazeera English) has retrievable full body text. All verdict details beyond the bare headline fact \u2014 the 9-6 vote split, the 10,000 killed figure, the 730,000 displaced figure, the ordered reparations, the UK's expulsion of Myanmar's defence attache, and Myanmar's ARSA justification \u2014 come solely from Al Jazeera and are not corroborated by a second full-text outlet.",
+      "No primary source (the ICJ judgment itself) was available, so none of the reported numbers or legal findings could be checked against the court's own words.",
+      "No outlet in the dossier (via available text) explains the enforcement mechanism \u2014 whether or how the ICJ ruling can be enforced against Myanmar's current military government, which did not appear as a cooperative party.",
+      "No coverage addresses the position or response of Myanmar's military government to the ruling itself (only its prior claimed justification for the 2017 crackdown is noted by Al Jazeera).",
+      "The relationship between this ICJ state-responsibility case and any separate individual criminal accountability efforts (e.g., ICC proceedings) is not addressed in available text.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "All seven outlets report the same core fact \u2014 the ICJ ruled Myanmar committed genocide against the Rohingya \u2014 with no framing divergence and no contradictions, making this a straightforward REPORT; however, with only one outlet providing body text and no primary source, the detailed verdict figures must be attributed to Al Jazeera alone rather than presented as wire consensus.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPbzZlQXBMbFU3Qzl0M2E2b0tJZHVzejVGQXczQTUxaHJmV1ZMZ3dVTWFGRzhsT1ZvNmdMMVRQVlNyMnVmX1RoUWo4UmtCT2RSX3Y5Q0JjWm9paEtmbXhCLXM0bTR4aXg5eUQ2dWRSZGlaT09VWTF6Q3FuUHFMR0ZqSmc3UWdDRHc2OHpJNE9pX2FmZldBME1xc29YRENBQkE0ZGhORjlTWkpyMzBCSzF5R21lRmcwMFFRNWltZ1FQYmdROXEtVUxXekp5RQ?oc=5",
+      "title": "Top UN court finds Myanmar committed genocide against Muslim Rohingya - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOOHVhOXZJckQwZHVKTl95bzkyLU8wVHhvUEFnQnZoTHlkcVJ3ZC12VUlwZ05ZMU9oc09LNzBsVjJQTDhkMEU3V1lIZ1ZFRTcwcEx6MF9oRGwzb0lVUm0xWGpKVEpwOFpyMXhrS1ZIdnR2cUhrZi16eWhKVFpvLXlrNVpacw?oc=5",
+      "title": "The U.N.'s top court rules Myanmar committed genocide against the Rohingya - NPR"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbEdpSVlfTkU5TU05bjNlelhReEhNLWdNZ2k4MGNZQ2dlaDFiS1VxSTJ5a0NubVpwZWE4YVBSczBKQXd3UGs4S2c0TzNhWkp4WTR2dmFMaFVKdXZJYXlQRmR0Z2RDOG1QWTVEMTZaa0FTTHZKOEFmbDF1VnBic2oxeDFQbTM5OVVjQWFQWE9fQ2dmcUpSRktudVdtOVFXVFNaQjVRbzQzc0NESGstdkR4eGVVRG_SAboBQVVfeXFMTWhQNlRkYk1STmpVcEN0SDBLamdUdUpJQi0zOU1FRUJUSDYzZ3dra2gxM1dzOFQzbVB3M2hDYVZJWmhLZW1nODBOUVV3NlBHSlFNV19acmVkdWF6Zmh4VmRqRmNBTU9wdFZjc29yMFBvSXhXQzh2QWdWRzFDVzZiTkpDbkRUR1RxemxEcEhSekVjU2hncnd6Sms2cDVXVHlzdTEzQWpNTGxrVERDZ0k3a2F2M2w0UjlWcnpn?oc=5",
+      "title": "UN\u2019s top court finds Myanmar guilty of genocide against Rohingya - Al Jazeera"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5OeTBHVmpPZzUyYWl4RGxKSDFGSzB6VDVQdEVJUE80VDZTMUpOM0JDNmVTX2JfQmtLMTJDV0had18xZmN0QTd5OGx5ZDEzNUV6WU1lUWVTUUtsUVV5UlY0VC1jLWtObnkxbUJnbXpwNEpUZkF3MHA5LS10RlJSSlE?oc=5",
+      "title": "Myanmar becomes first state found responsible for genocide by UN court - Axios"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUGx4TzFaSGk2N3lyTXBVRkEtazdmRjNrcy1TZzN1M2dLNlJEZlRDRFY5cXlKT2s0a09fc05FYW9DT3pFeUd0d0VaaVJtRmkzbFBpcWZ0RnVFQUFjUFFCZVBNVlNPUHNZaGs0ZVkyMDdiXzhubDJmUFBIZVNnbkxCLWNMbmJvQUcxTGtqLTB5M1F1YUdvMFRGZjNsMA?oc=5",
+      "title": "For the first time, UN\u2019s highest court finds a country responsible for genocide: Myanmar - AP News"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5qLUhZWS1IeE93REZvbWFfdUpvcnEyOG1kZjU5M2dMV3N2TFFtZEZsVll5eUx4MWxhcTRaWFlqSndxaVhtRWNrel94QVVCcWgtSGdvd2xvRHZNdm9rNDhJbmhpeWNmSW41bnRZaHo1a0xuRTZmODVXc3Yxemh3QQ?oc=5",
+      "title": "Live Updates: U.N. Court Rules Myanmar Committed Genocide Against Rohingya - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZUJJYWdxLVpXUWxIM1J4YkNvWXNfM2RtQktxZldfWjZKUWJZS1VrOU5vcmpnLTQ2aVhOdDVUT1JfV3l0V0dQX0dkaFJ6VlotcjBCQXZ3ampET0NWV2h3cW5ZRHBTTU9oT3haQmtYbWw2dlpxckswd19wLTlCY2EzbGtBMTJ3ZkFPcElvMGQ5Y2ZRRjZ0R2kxZjRvSWhMYmZDSHpJaWxpQll0aVBMeXZwMlNVaGhqcTN4ZWczcg?oc=5",
+      "title": "Myanmar committed genocide against Rohingya minority, top U.N. court rules - The Washington Post"
+    }
+  ]
+}
