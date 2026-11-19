@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-18T03:55:47.946630+00:00",
+  "last_updated": "2026-11-19T03:53:42.479241+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2123197219335499809",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-18T23:30:39.336776+00:00",
+      "created_at": "2026-11-18T23:30:38+00:00",
+      "topic": "Republican Senator Cornyn blocks Trump judicial nominee in Texas - Reuters",
+      "dossier_id": "2026-11-18-republican-senator-cornyn-blocks-9b8fc58f96",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 21
+    },
+    {
+      "x_tweet_id": "2123167997984702614",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-18T21:34:32.280010+00:00",
+      "created_at": "2026-11-18T21:34:31+00:00",
+      "topic": "Democrat Hakeem Jeffries nominated to be first Black speaker of House next year - The Washington Post",
+      "dossier_id": "2026-11-18-democrat-hakeem-jeffries-nominated-20e3a67fd2",
+      "likes": 1,
+      "reposts": 1,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 15
+    },
+    {
+      "x_tweet_id": "2122926342144700722",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-18T05:34:17.059988+00:00",
+      "created_at": "2026-11-18T05:34:16+00:00",
+      "topic": "Democrat Mary Peltola wins US Senate race in Alaska, beating incumbent Republican Dan Sullivan - AP News",
+      "dossier_id": "2026-11-18-democrat-mary-peltola-wins-0034f46fe1",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 30
+    },
     {
       "x_tweet_id": "2122841633024598344",
       "post_type": "REPORT",
@@ -10,11 +49,11 @@
       "created_at": "2026-11-17T23:57:40+00:00",
       "topic": "Trump says US taking 'very seriously' any Iranian plot against Washington - BBC",
       "dossier_id": "2026-11-17-trump-says-us-taking-2d983ba239",
-      "likes": 0,
+      "likes": 1,
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 26
+      "impressions": 28
     },
     {
       "x_tweet_id": "2122810990257406386",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 20
+      "impressions": 22
     },
     {
       "x_tweet_id": "2122494347195081068",
@@ -418,55 +457,16 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 25
-    },
-    {
-      "x_tweet_id": "2118112490772898205",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-04T22:45:45.566013+00:00",
-      "created_at": "2026-11-04T22:45:45+00:00",
-      "topic": "Democrat leads by dozens of votes in surprisingly tight Mississippi Senate race - BBC",
-      "dossier_id": "2026-11-04-democrat-leads-by-dozens-d720686e40",
-      "likes": 3,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 353
-    },
-    {
-      "x_tweet_id": "2118079145720889700",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-04T20:33:15.481959+00:00",
-      "created_at": "2026-11-04T20:33:15+00:00",
-      "topic": "Democratic sweep of Congress ushers in a new era as Trump acknowledges impact of the Iran war - AP News",
-      "dossier_id": "2026-11-04-democratic-sweep-of-congress-8b4ef6e55e",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 15
-    },
-    {
-      "x_tweet_id": "2117835780198723821",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-04T04:26:12.536365+00:00",
-      "created_at": "2026-11-04T04:26:12+00:00",
-      "topic": "2026 House election live results as Democrats projected to win control - CBS News",
-      "dossier_id": "2026-11-04-2026-house-election-live-05ca160f3c",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 17
     }
   ],
   "averages": {
     "REPORT": {
       "count": 31,
-      "likes": 0.42,
-      "reposts": 0.03,
+      "likes": 0.35,
+      "reposts": 0.06,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 37.71
+      "impressions": 27.55
     },
     "BULLETIN": {
       "count": 4,
@@ -478,11 +478,11 @@
     },
     "ALL": {
       "count": 35,
-      "likes": 0.37,
-      "reposts": 0.03,
+      "likes": 0.31,
+      "reposts": 0.06,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 35.34
+      "impressions": 26.34
     }
   }
 }
