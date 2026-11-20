@@ -1,0 +1,80 @@
+{
+  "story_id": "2026-11-20-senate-passes-landmark-permitting-84839c604f",
+  "headline_seed": "Senate passes landmark permitting deal - Politico",
+  "brief": {
+    "story_id": "2026-11-20-senate-passes-landmark-permitting-84839c604f",
+    "consensus_facts": [
+      "The U.S. Senate passed the Bipartisan American Affordability and Jobs Act (BAAJA) on Thursday, a bill reforming federal environmental permitting and electricity transmission laws.",
+      "The Senate vote was 62-33.",
+      "The bill now heads to the House, where its passage is uncertain.",
+      "President Trump would ultimately need to sign the bill for it to become law.",
+      "The bill split Democrats, with more Democrats voting against it than for it, while more than a dozen Democrats joined virtually all Republicans to pass it.",
+      "Democratic opposition largely centered on concerns the bill would weaken environmental protections and favor fossil fuel projects.",
+      "Sen. Shelley Moore Capito (R-W.Va.) was a key negotiator and supporter of the bill.",
+      "Sen. Ron Wyden (D-Ore.) pushed for an amendment to block data centers from being built on public lands.",
+      "The bill is designed to speed up both renewable energy and fossil fuel infrastructure projects, including transmission lines.",
+      "Negotiators announced a breakthrough on the legislation in September 2026.",
+      "Native American tribes raised objections related to their participation in the permitting process."
+    ],
+    "disagreements": [
+      {
+        "topic": "Breakdown of Democratic 'yes' votes",
+        "positions": {
+          "CBS News": "Fifteen members of the Democratic caucus voted yes; names two GOP 'no' votes (Rounds and Hawley) but does not name Schumer among supporters.",
+          "CNBC": "More than a dozen Democrats voted yes, explicitly naming Senate Minority Leader Chuck Schumer among the supporters."
+        }
+      },
+      {
+        "topic": "Quantified impact of the bill",
+        "positions": {
+          "CBS News": "Does not provide numerical estimates of energy capacity or export changes.",
+          "CNBC": "Cites Rhodium Group estimate of an additional 17 to 249 gigawatts of clean energy by 2040, and natural gas exports rising 8% to 15% beyond the 76%-145% rise already expected under current policy."
+        }
+      },
+      {
+        "topic": "Who brokered the deal",
+        "positions": {
+          "CBS News": "Emphasizes Capito and Barrasso (R-Wyo.) as the central figures driving permitting reform.",
+          "CNBC": "Identifies Sen. Martin Heinrich (D-N.M.) as a lead author who brokered the deal with Sen. Mike Lee (R-Utah), alongside Whitehouse (D-R.I.) and Capito."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Politico": "Headline-only in the dossier ('Senate passes landmark permitting deal'). The word 'landmark' frames it as historic/significant. No body text available to assess lead, emphasis, or omissions.",
+      "CBS News": "Leads on the 'long-sought bipartisan' nature of the vote and frames it around affordability and energy costs. Gives substantial space to GOP supporters (Capito, Barrasso, Thune) and to Democratic environmental objections (Merkley, Wyden, Huffman, Jeffries). Emphasizes the uncertain House future and notes Democrats will take control of both chambers next year, giving space to the argument that Democrats could gain leverage by waiting. Reports Trump's support and the 'block wind energy' concern.",
+      "CNBC": "Frames the story primarily as a window into Democratic Party 'fissures' ahead of taking full control of Congress, and secondarily as a win for the AI/tech and energy sectors (reflected in its headline naming AI and energy backers). Leads with the transmission/green-energy upside and quantifies it heavily (Rhodium figures, export percentages). Notably surfaces Schumer's 'yes' vote and the data-center/hyperscaler provisions. Gives balanced quotes from both the American Clean Power Association and the American Petroleum Institute, both cheering the bill."
+    },
+    "primary_source_alignment": [
+      "No primary source (roll-call vote record, bill text, or press release) was located for this story. The 62-33 vote count, the specific vote breakdowns, and named senators' positions could not be independently verified against an underlying document and rest solely on outlet reporting."
+    ],
+    "missing_context": [
+      "No outlet provides the full roll-call breakdown; CBS says 15 Democratic-caucus members voted yes while CNBC says 'more than a dozen' and names Schumer \u2014 the exact list of defectors on both sides is not reconciled.",
+      "The specific mechanisms by which the bill 'weakens' environmental laws (which statutes, what review timelines, lawsuit limitations) are described only in general terms, not detailed.",
+      "The deficit impact flagged by Sen. Merkley is mentioned but never quantified by any outlet.",
+      "The resolution of the Native American tribes' objections \u2014 what amendments were actually adopted to address them \u2014 is referenced but not specified.",
+      "No outlet explains the procedural path or timeline in the House, or what specific provisions (e.g., transmission/grid reliability) House Republicans want changed, beyond a general note.",
+      "No primary source was available, so vote counts and quotes are single-pipeline and unverified against an official record.",
+      "No apparent instruction-injection attempts were detected in the article bodies."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two full-text outlets (CBS News, CNBC) plus a headline-only Politico cover the same event, but with materially different emphasis \u2014 CBS frames it as a bipartisan affordability win with an uncertain House future, while CNBC frames it as a window into Democratic Party fractures and a boon for AI/energy \u2014 making the divergence in framing the story worth reporting.",
+    "confidence": 0.72
+  },
+  "articles": [
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPc1Z3eHpaNXNYUWs2STZxR29uSE56YzNFdThyZ281MGRFLWw0bUplVDlCaWM5MVVjNlNTWksyTjQ0WVVlU3NjYjdlM3F2VXo3M2g0ZUhzMzQ3TUxldnl4QUJ0U2tBb21WeTBOOEw0eUZtNWQ4Y3U2LVc2UGdIYVo0aS1jeFVRcEFRdkFVcW5TNFhWdw?oc=5",
+      "title": "Senate passes landmark permitting deal - Politico"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZDN6QzBEVjNLWGptMEg0UHBjbWp4R2ZzbzZrTFVTRkxGMC00dWh2THZaWWVRUnM2OGhPckUxSU1BWkNVeklZS2dfZDVfODFIaHBWeFBVdlVwRzcwT1R0NTFJekdSUjVJR0trN0xvM3diMTN3Rms3ZGhYdE5sVHBUYlhQWkZMOTZzT0FHSUpEdzFqVG8?oc=5",
+      "title": "Senate passes bipartisan permitting reform bill designed to boost energy projects - CBS News"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOXzE4cVR3bDhHdFdNT2I5SVd6UEMzbnRkZFJPTC1kRXdVcnFoR21XZzd0WS1MYUJyOERZTjB6MUJISTljWU54OUIweTBrSnVlM21yQzIxaEU5ZlBXb1lNektac1RJU1FTOEhSdUs3N0lBbXhEdG5LWW9ocmpvbHFMV3ItRHRlUdIBiwFBVV95cUxNMGQyeHlqS0xvQ1NhNmg1SDJzcFBvbEJwbW1FRlFVYkFUeWVib3I2ZTBadjlsQ3QzSHRzVm5CYUNGb3ktMVJ6Z0VGOENWQ2ZYcFQtbThEZFY1SmNpc2dXcEstYU9WRVU4RDFfUS1DbHRBQmZsOGs5cVhVMEhpdFJ3c1UtVDBJVFJFZE9v?oc=5",
+      "title": "Senate passes BAAJA permitting reform bill backed by AI, energy sectors - CNBC"
+    }
+  ]
+}
