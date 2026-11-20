@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-19T03:53:42.479241+00:00",
+  "last_updated": "2026-11-20T03:45:53.683049+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2123562707324719469",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-19T23:42:58.310630+00:00",
+      "created_at": "2026-11-19T23:42:57+00:00",
+      "topic": "Senate rejects resolution to block Trump from striking Iran - The Washington Post",
+      "dossier_id": "2026-11-19-senate-rejects-resolution-to-8d09e55dff",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 10
+    },
+    {
+      "x_tweet_id": "2123533149212672330",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-19T21:45:31.220500+00:00",
+      "created_at": "2026-11-19T21:45:30+00:00",
+      "topic": "Myanmar committed genocide against Rohingya minority, top UN court rules - BBC",
+      "dossier_id": "2026-11-19-myanmar-committed-genocide-against-4dff363743",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 4
+    },
+    {
+      "x_tweet_id": "2123288248797495514",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-19T05:32:22.388355+00:00",
+      "created_at": "2026-11-19T05:32:21+00:00",
+      "topic": "Trump, Xi and Putin set to hold historic meeting on Apec sidelines - BBC",
+      "dossier_id": "2026-11-19-trump-xi-and-putin-1ad5bb03ce",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 29
+    },
     {
       "x_tweet_id": "2123197219335499809",
       "post_type": "REPORT",
@@ -14,7 +53,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 21
+      "impressions": 24
     },
     {
       "x_tweet_id": "2123167997984702614",
@@ -27,7 +66,7 @@
       "reposts": 1,
       "replies": 1,
       "quotes": 0,
-      "impressions": 15
+      "impressions": 17
     },
     {
       "x_tweet_id": "2122926342144700722",
@@ -40,7 +79,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 30
+      "impressions": 31
     },
     {
       "x_tweet_id": "2122841633024598344",
@@ -418,45 +457,6 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 10
-    },
-    {
-      "x_tweet_id": "2118475197548503420",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-05T22:47:01.508847+00:00",
-      "created_at": "2026-11-05T22:47:01+00:00",
-      "topic": "Democrats add to their blue tsunami as Republicans point fingers after midterm elections: Live updates - The Independent",
-      "dossier_id": "2026-11-05-democrats-add-to-their-6176cd1e31",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 11
-    },
-    {
-      "x_tweet_id": "2118445827911725088",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-05T20:50:19.274327+00:00",
-      "created_at": "2026-11-05T20:50:18+00:00",
-      "topic": "After sweeping midterm wins, here's what Democrats hope to get done in the majority - NPR",
-      "dossier_id": "2026-11-05-after-sweeping-midterm-wins-15a6b1030a",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 24
-    },
-    {
-      "x_tweet_id": "2118202508690755875",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-05T04:43:27.385331+00:00",
-      "created_at": "2026-11-05T04:43:27+00:00",
-      "topic": "Vance says voters want to ‘end the war,’ change Israel relationship - The Washington Post",
-      "dossier_id": "2026-11-05-vance-says-voters-want-4f1d9fc0cf",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 25
     }
   ],
   "averages": {
@@ -466,7 +466,7 @@
       "reposts": 0.06,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 27.55
+      "impressions": 27.19
     },
     "BULLETIN": {
       "count": 4,
@@ -482,7 +482,7 @@
       "reposts": 0.06,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 26.34
+      "impressions": 26.03
     }
   }
 }
