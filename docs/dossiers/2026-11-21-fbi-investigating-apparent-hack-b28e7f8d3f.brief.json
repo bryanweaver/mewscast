@@ -1,0 +1,98 @@
+{
+  "story_id": "2026-11-21-fbi-investigating-apparent-hack-b28e7f8d3f",
+  "headline_seed": "FBI investigating apparent hack of a key criminal justice information database, AP source says - AP News",
+  "brief": {
+    "story_id": "2026-11-21-fbi-investigating-apparent-hack-b28e7f8d3f",
+    "consensus_facts": [
+      "The FBI is investigating an apparent breach of its National Crime Information Center (NCIC) database (reported by CNN, Axios, and NBC News).",
+      "The NCIC database connects federal, state, and local law enforcement to share information such as warrants and background checks (CNN, Axios, NBC News).",
+      "The breach was first reported Friday night, with CNN reporting it first and NBC and Axios following (CNN, Axios, NBC News).",
+      "The breach claim rests on two people briefed on the matter; the FBI had no comment as of Friday night (CNN, NBC News).",
+      "The NCIC breach follows a series of recent cybersecurity incidents affecting other agencies, including the USDA, the NSA, and the FAA air traffic control system (CNN, Axios, NBC News).",
+      "In a Fox News interview Saturday, President Trump downplayed the breach, saying 'it's not good \u2014 I don't like that,' while suggesting it might reveal information about what he called the 'Russia Russia Russia hoax' and 'voter fraud' (CNN, Axios).",
+      "This is not the FBI's first recent breach; a September incident involving the hacking group ShinyHunters targeted agent/employee data via the FBI jobs portal (CNN, NBC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which outlets first reported the breach",
+        "positions": {
+          "CNN": "Frames CNN as the outlet that first reported the intrusion.",
+          "Axios": "Credits both CNN and NBC with reporting Friday night that the FBI was looking into the breach.",
+          "NBC News": "States 'CNN reported the matter earlier in the evening,' crediting CNN with breaking it first."
+        }
+      },
+      {
+        "topic": "Whether this is the second recent breach of the NCIC specifically",
+        "positions": {
+          "CNN": "Describes the NCIC intrusion as 'the second such breach in recent months.'",
+          "NBC News": "Does not characterize it as a second NCIC breach; frames the September ShinyHunters incident as a separate job-portal hack.",
+          "Axios": "Does not characterize it as a second NCIC breach specifically."
+        }
+      },
+      {
+        "topic": "Source corroboration / independence",
+        "positions": {
+          "Reuters": "Headline-only; attributes the story entirely to CNN ('CNN reports').",
+          "CNN": "Original reporting citing two people briefed on the issue.",
+          "NBC News": "Cites two people briefed on the matter but notes CNN reported it earlier \u2014 potentially overlapping sourcing.",
+          "Axios": "Attributes to CNN and NBC reporting rather than independent sourcing."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier; frames the story strictly as a secondhand attribution to CNN ('FBI's criminal information database hacked, CNN reports'). No independent body text, no detail, pure wire label.",
+      "CNN": "Leads heavily on Trump's political reaction rather than the breach mechanics \u2014 headline centers on him 'downplaying' the breach while 'reviving complaints' about the Russia probe. Provides the most detailed context: history of prior FBI breaches (ShinyHunters, 2023 NY field office/Epstein-related system), Director Kash Patel's Fox News appearance touting 'Operation Winter Shield,' and expert concern about data accuracy being compromised. Devotes substantial space to relitigating Trump's past FBI grievances and 2016 Russia history.",
+      "Axios": "Tight, politics-first framing with its signature 'Why it matters / Driving the news / What they're saying' structure. Leads on Trump's 'silver lining' claim and emphasizes the contrast between his grievance focus and public alarm over infrastructure vulnerability. Adds the 'intrigue' angle tying his comments to a recent summit with Putin and Xi where he called Putin a 'friend.' Light on breach technical detail.",
+      "The New York Times": "Headline-only in this dossier ('F.B.I. Is Still Looking for Evidence That Georgia's 2020 Election Was Rigged'). This headline is not about the NCIC breach at all \u2014 it concerns an unrelated election-fraud investigation story and appears to be a tangential/misfiled inclusion. No body text to assess.",
+      "NBC News": "Most straight-news framing of the breach itself \u2014 headline simply states 'FBI investigating potential breach of its crime database.' Leads on the NCIC breach and its sourcing, then situates it within the broader run of cyber incidents (USDA farmer-payment system, NSA network outage, FAA). Notably omits Trump's reaction entirely. Includes a detail others lack: Sen. Mark Warner saying evidence showed the tech outages were not cyberattacks, and the departure of White House National Cyber Director Sean Cairncross.",
+      "CBS News": "Headline and body are about an unrelated story \u2014 Mexico's arrest of drug kingpin 'El Chapo Isidro' and resulting Sinaloa violence. Mentions the FBI only in the context of its Most Wanted list and 10-Most-Wanted designation. Does not cover the NCIC breach at all; appears to be a tangential FBI-keyword inclusion."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. No FBI statement, court filing, or official document is present in the dossier; the FBI declined or did not respond to comment requests per CNN and NBC. All claims about the breach rest on anonymous sourcing reported by CNN and echoed by NBC and Axios."
+    ],
+    "missing_context": [
+      "No outlet reports who carried out the breach, what data was accessed, or when the intrusion actually occurred \u2014 only that an investigation is underway.",
+      "No official FBI confirmation exists; every account rests on 'two people briefed on the matter,' and CNN's and NBC's sourcing may overlap rather than be independent.",
+      "The expert quoted by CNN raises the possibility that hackers could alter the accuracy of NCIC records officers rely on, but no outlet reports whether any data was in fact altered or exfiltrated.",
+      "No outlet quantifies the scope \u2014 how many records, which jurisdictions, or whether the system was taken offline.",
+      "NBC reports Sen. Mark Warner said the broader tech outages were NOT caused by cyberattacks; CNN and Axios lump the breaches and outages together without that distinction, leaving unclear which incidents were attacks versus technical failures.",
+      "Two of the six dossier items (The New York Times and CBS News) are about unrelated FBI topics (a Georgia 2020 election probe and a Mexican cartel arrest) and contribute nothing to the breach story; only three outlets (CNN, Axios, NBC) have usable body text on the actual event, and Reuters is a headline-only CNN rebroadcast.",
+      "No outlet reports any detail on Kash Patel's 'Operation Winter Shield' beyond CNN noting Patel referred to a months-old operation as if ongoing \u2014 the actual status and efficacy of FBI cybersecurity measures is unexplored."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three outlets (CNN, Axios, NBC) report the same unconfirmed breach but with materially different framings \u2014 CNN and Axios lead on Trump's political reaction while NBC reports the breach as straight news and omits Trump entirely \u2014 making the coverage divergence the story. Half the dossier is off-topic and no primary source or official confirmation exists, so this is a coverage-and-caveats report rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRE83U2NSQ2FlbllBaUxQUzl5UWdfWktnME85LVk1ZkJFczYwOUJEbXpoV0tzUXltYWhtTl8zT05jeW9yX29sREJwZkxCNWdxZWwxcGlUa2N1YzM4YjRZcVF6dWpNbGhfak5zWjNsdnpQcFAzVGdoSmZGLTN5R21KZlcxV2dUZU15czdSQU5fYXJLV1MzWTVuYkdTRi1weFU?oc=5",
+      "title": "FBI's criminal information database hacked, CNN reports - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZnJ0bzNoWGJlbG9sVk43STd6YTFMVEJCS2dHYVJVVnN2TFdWUVZlUWlRVUpBWlZOME5kOVlSV2g1a3U0ZUZJODYwVFJIVVNKRENfS21aYnRjaC1KQ2JnaUp0ZXRMb2JuV1QtU0JqcERjbXJsUlBqeFJQOG5qREozTDlmRFo?oc=5",
+      "title": "Trump downplays breach into FBI\u2019s crime database while reviving complaints about agency\u2019s Russia probe - CNN"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9qZGhVMnlWbTBqVTRJTU95ZjdFTHBEeDIyZHgtQ1pSZ3NCMDhUSGZZazZ0V0ptR0I2ZDZhSUhtUFZRNGRsN3dOMzRZenJHNGlidHB4QnBkYlVVcldoUi13ZjdlZ3g?oc=5",
+      "title": "Trump says FBI hack might expose Russia \"hoax\" - Axios"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNZDhxREFqUnhfejBSazhyaENaRnJJWDBRbW1XN3N1QXY3bU9Tb21pVm1GdlI0aUcxWUQ3RHJiRXVfWXkxRy1KTHg0ZU1xOXRjMGNOUlZRQUp6b0Y0Sm94cVVqb3NXX21OWl9STGJOTklURUUtN2pqa2c0MU1HUDZfT0lnNmp2MUViVktTZTlKTTZCZw?oc=5",
+      "title": "F.B.I. Is Still Looking for Evidence That Georgia\u2019s 2020 Election Was Rigged - The New York Times"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdy14X2NKM3JhWUlQazJaSFZDT3NlSFVYNExGNFA2Nk40VmkyTFNaUlJ5Mkk4LVdOU3BlcmxVNS1XaFBQbG1vNjl5WXpBMUhROXpmYnNMSU1CQ1RVYlljVVk3V2VOampEOWY5SnROLVEzdXFyTEl5Y0l0SXNDOGtiVlJoREdXMUVUcXdHNXNhcE5adTZSVTNENHJNUVNIMjB6aGpCWUdwci16Nm1ZSzlXS0Vn?oc=5",
+      "title": "FBI investigating potential breach of its crime database - NBC News"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPQU02N05ZSjQzY0IyYWZwc2VDSGVzeFBMWmdRLVpMR05HVUViSF9iVjh4VmUwemVaRHRuM1RTek81RXBoZHJOazNBeXpURHhTNnNUZGJRVzJsQ3U0NURZYlNEZGp6d2R1NUZrOUV6ems3ZHZZOXhkUjV5R0laNGlMcjZiQ0hhd1Njd1l6RTFJVnlVOVM5?oc=5",
+      "title": "Mexico arrests drug kingpin on FBI's 10 Most Wanted, sparking violence in Sinaloa - CBS News"
+    }
+  ]
+}
