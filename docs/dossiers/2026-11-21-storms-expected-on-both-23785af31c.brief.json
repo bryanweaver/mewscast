@@ -1,0 +1,46 @@
+{
+  "story_id": "2026-11-21-storms-expected-on-both-23785af31c",
+  "headline_seed": "Storms expected on both coasts threatens Thanksgiving travel - NPR",
+  "brief": {
+    "story_id": "2026-11-21-storms-expected-on-both-23785af31c",
+    "consensus_facts": [
+      "All three outlets' headlines/coverage reference storms threatening Thanksgiving travel in the United States; only The Independent provides retrievable full body text, so body-level details are single-source rather than wire consensus."
+    ],
+    "disagreements": [],
+    "framing_analysis": {
+      "The New York Times": "Headline-only in this dossier. Frames the story around a California storm forecast hitting Thanksgiving week combined with high king tides, emphasizing the West Coast and tidal flooding angle. No body text retrievable, so emphasis beyond the headline cannot be assessed.",
+      "NPR": "Headline-only in this dossier. Frames the story as a dual-coast threat ('Storms expected on both coasts') to Thanksgiving travel, emphasizing the nationwide travel-disruption angle. No body text retrievable, so emphasis beyond the headline cannot be assessed.",
+      "The Independent": "Only outlet with full body text. Leads on a potential late-season Atlantic tropical storm (60 percent chance of forming per the National Hurricane Center) that could become the 11th named storm, 'Kyle,' near Florida's Space Coast and race up the East Coast. The Independent reports the NHC's risk areas as Virginia, D.C., Maryland, Delaware, Pennsylvania, New Jersey, New York, Connecticut, Rhode Island, Massachusetts, Vermont, New Hampshire, and Maine. It cites AAA's estimate that more than 81 million Americans are expected to travel. It frames the season as largely inactive due to a 'super El Ni\u00f1o' while noting that pattern produced record flooding in California and Florida (St. John's River over 18 feet; San Francisco Bay Area record daily rainfall of 2.28 inches breaking a 1918 record). It gives roughly equal weight to the Atlantic storm and the West Coast atmospheric-river flooding, attributing claims to named meteorologists (Ben Knoll, Michael Lowry, Ginger Zee, Daniel Swain, Greg Porter)."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. National Hurricane Center statements and meteorologists' forecasts referenced in The Independent could not be independently verified against original documents within this dossier."
+    ],
+    "missing_context": [
+      "Only one of three dossier articles (The Independent) has retrievable full body text; the New York Times and NPR entries are headline-only, so their body-level reporting and framing cannot be compared. All storm details in this brief derive from a single outlet and should not be treated as cross-outlet consensus.",
+      "No primary source (e.g., official National Hurricane Center advisory, National Weather Service bulletin) was available to verify the 60 percent formation probability, the named-storm designation 'Kyle,' or the listed risk areas.",
+      "The Independent's body text does not confirm the NYT headline's specific California/king-tides framing beyond a passing mention, so the degree to which the two outlets' stories overlap cannot be established.",
+      "No article quantifies expected flight delays, cancellations, or road impacts specific to the forecast period.",
+      "The Independent's article contains a large block of unrelated navigation and 'most popular' links (Brexit, Patrick Stewart, Strictly, etc.) appended to the body; this is site boilerplate, not part of the reporting."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one outlet provides full body text, so core facts cannot be corroborated as wire consensus, yet the story is time-sensitive ahead of Thanksgiving travel. A same-day hedge post attributing details to The Independent and the National Hurricane Center is the responsible format rather than a REPORT or META that would overstate agreement.",
+    "confidence": 0.35
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTmtCRnM2dHg4WnNKVUxGTTRiWVdoR3p2NmxDX1dzd0htUWV5MmNEOTd5WDQtUEpKaWl3Sy1CdzdsdTh0UFJnYk5qMWNXMnAybzF6djZjZVhpcGwtTEJlNG9iM1VZbmh3MnhGVVMyNWtPbVJlekN6d0RLR0ZSVWRJWFg1LWJJOERaZ0wzYzVYMFlYUQ?oc=5",
+      "title": "California Storm Forecast to Hit Thanksgiving Week Amid High King Tides - The New York Times"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQQmxsSmsyUk1zQTI4aGZBcHlQUVpfa1FDY0c3endISlE3QmNLY0t2bjNVaUxQSWl1WFBPZFI4Wk9PTzRvMTAxdVo3eDZuaTJnX2RFQ0Vob1dHXzU2cWJGWndYWUhibklxV0lDOFlPS3U1cFVoeUU1MmRyVGVaZDZHZTZ2dV8?oc=5",
+      "title": "Storms expected on both coasts threatens Thanksgiving travel - NPR"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTVBJQTdWUEhqd3lWLUNaVlg1N2hzTjA4R2VLd1Q0Rk1rbkdmTGprajhWS1JUcXZOM3BCR2dmVTlZX1g4dFJ6aXR1RW5pYUVuV1pmNmhNTkYwNjg5SW5fekw5ZzViTFFaVUdtcXR3SHdXdmdpLWVBMUktOW9uczlRZEpfeDVBUERzb2VWUjRrV2dfMHdwSU1uLU9DQ0FzM0s1elFBTF9lT256Zw?oc=5",
+      "title": "A late tropical storm could impact Thanksgiving travel for some parts of the US - The Independent"
+    }
+  ]
+}
