@@ -1,8 +1,21 @@
 {
-  "last_updated": "2026-11-20T03:45:53.683049+00:00",
+  "last_updated": "2026-11-21T03:35:31.962069+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2123647265462206862",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-20T05:18:58.532681+00:00",
+      "created_at": "2026-11-20T05:18:58+00:00",
+      "topic": "Senate passes landmark permitting deal - Politico",
+      "dossier_id": "2026-11-20-senate-passes-landmark-permitting-84839c604f",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 4
+    },
     {
       "x_tweet_id": "2123562707324719469",
       "post_type": "REPORT",
@@ -14,7 +27,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 10
+      "impressions": 11
     },
     {
       "x_tweet_id": "2123533149212672330",
@@ -444,19 +457,6 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 26
-    },
-    {
-      "x_tweet_id": "2118796946676871437",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-06T20:05:32.516727+00:00",
-      "created_at": "2026-11-06T20:05:32+00:00",
-      "topic": "Stephen Miller will replace Susie Wiles as Trump's chief of staff - NPR",
-      "dossier_id": "2026-11-06-stephen-miller-will-replace-e207eb4f03",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "quotes": 0,
-      "impressions": 10
     }
   ],
   "averages": {
@@ -466,7 +466,7 @@
       "reposts": 0.06,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 27.19
+      "impressions": 27.03
     },
     "BULLETIN": {
       "count": 4,
@@ -482,7 +482,7 @@
       "reposts": 0.06,
       "replies": 1.03,
       "quotes": 0.0,
-      "impressions": 26.03
+      "impressions": 25.89
     }
   }
 }
