@@ -1,0 +1,76 @@
+{
+  "story_id": "2026-11-20-white-house-removes-cyber-f76c67f080",
+  "headline_seed": "White House removes cyber-security chief after series of tech outages - BBC",
+  "brief": {
+    "story_id": "2026-11-20-white-house-removes-cyber-f76c67f080",
+    "consensus_facts": [
+      "Multiple outlets' headlines agree the White House removed/replaced its top cybersecurity official following a series of technology outages (CNBC body text; NYT and Washington Post headlines).",
+      "CNBC (full body) and the New York Times/Washington Post (headlines) corroborate at the headline level that a White House cybersecurity official was replaced amid the tech outages; body-level detail is only available from CNBC."
+    ],
+    "disagreements": [
+      {
+        "topic": "Motive for the removal",
+        "positions": {
+          "CNBC": "Attributes the exit to two competing narratives via unnamed sources: Axios (cited by CNBC) says Chief of Staff Stephen Miller 'pushed for his departure,' while a separate source familiar with White House thinking told CNBC that Trump fully supported firing Cairncross because he 'lacked the strong cyber credentials' for the job.",
+          "The New York Times": "Headline-only ('Top White House Cybersecurity Official Is Replaced') \u2014 states the replacement but gives no motive in retrievable text.",
+          "The Washington Post": "Headline-only ('White House replaces top cybersecurity official after string of outages') \u2014 ties the move to outages but gives no motive in retrievable text."
+        }
+      },
+      {
+        "topic": "Sourcing provenance",
+        "positions": {
+          "CNBC": "Credits Axios as first to report Cairncross' exit (two White House officials), then adds its own anonymous source \u2014 meaning the Miller-pushed-him-out claim traces to a single original wire (Axios), not independent corroboration."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "CNN": "Does not cover the cyber chief removal as its central story at all. Frames the day around Trump's 90-minute press conference \u2014 his defense of Putin, a floated Stephen Miller 2028 run, and a data-center tax crackdown. The tech outages appear only as background context ('a string of sudden tech outages'). Notably buries any connection to the cyber director firing despite prominently featuring Stephen Miller, whom CNBC identifies as the person who pushed Cairncross out.",
+      "CNBC": "The only outlet with substantive body text. Leads with the personnel mechanics: Sean Cairncross out, Pentagon CIO Kirsten Davies in as acting director, Senate-confirmation requirements for a permanent replacement. CNBC reports the outages included a nationwide aviation ground stop, a worldwide Microsoft Outlook outage, and a reported blackout of the NSA's classified communications network. CNBC reports the White House insists there is no indication the outages were coordinated, state-sponsored, or caused by a malign actor. Presents dueling motive narratives (Miller pushed him out vs. credentials) and includes Davies' X statement plus congratulations from Hegseth and Rubio. Business-desk framing, credential-focused.",
+      "The New York Times": "Headline-only in this dossier ('Top White House Cybersecurity Official Is Replaced'). Neutral, passive-voice framing ('Is Replaced') that omits the outage trigger from the headline itself. No body text available to assess emphasis.",
+      "The Washington Post (outages story)": "Headline-only ('White House replaces top cybersecurity official after string of outages'). Explicitly ties the replacement to the 'string of outages' in the headline \u2014 a causal framing \u2014 but no body text is available to assess further.",
+      "The Washington Post (Zacharia story)": "Off-topic to this story. Headline concerns a California Bar investigation into ex-White House press secretary Katie Zacharia, unrelated to the cyber director removal. Included in the dossier but not probative of this story."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No press release, ONCD statement transcript, or official personnel announcement was available to verify the reports against. Davies' quoted X post and the officials' claims cannot be independently confirmed from an underlying document in this dossier."
+    ],
+    "missing_context": [
+      "Only one of five dossier articles (CNBC) has substantive body text; the three on-topic peers (NYT, Washington Post) are headline-only and the fifth Washington Post item is about an unrelated matter. All body-level detail \u2014 the outages' specifics, Davies' appointment, the dueling motives \u2014 rests on a single outlet and should be read as single-source, not wire consensus.",
+      "The two competing motives in CNBC's report (Miller pushed him out vs. Cairncross lacked credentials) both trace to anonymous sources, and the Miller claim originates from Axios, not from independent reporting \u2014 no on-record official confirmed the reason for the firing.",
+      "No outlet in the dossier provides technical detail on the causes of the aviation, Microsoft Outlook, or NSA-network outages, nor evidence for or against the White House's claim that they were not coordinated or state-sponsored.",
+      "No outlet quotes Cairncross himself or confirms whether he resigned versus was fired; framing ('leaving his post,' 'replaces,' 'is replaced,' 'removes') varies across sources.",
+      "No timeline is given tying the specific outages to the decision date, nor the exact date of Cairncross' departure.",
+      "CNN prominently features Stephen Miller (whom CNBC names as the person who pushed Cairncross out) but does not connect him to the cyber firing \u2014 a notable omission given the overlapping figures on the same news day.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "Only one on-topic outlet (CNBC) has retrievable body text; the corroborating NYT and Washington Post items are headline-only, so the substantive details are effectively single-source and cannot be confirmed as wire consensus. This warrants a time-sensitive, clearly hedged same-day post rather than a full REPORT or META built on single-source body detail.",
+    "confidence": 0.45
+  },
+  "articles": [
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1aVkRDOE5ZRG45ZnU2RTVMVWl5SUtXQ21WSWVrbVlWanpsV0tncGhGam5BbGFzWXNUSVNvTDI5S2JYT25SeTNfQlpSaHNzWjVwV1lSMVRiWmFNTktZWE1sYlh4WTBoS05sWFhtbG1pMFd3MW9NdXZQZURYNA?oc=5",
+      "title": "Trump defends Putin, floats a Stephen Miller presidential run and says he\u2019d work with Dems: News briefing takeaways - CNN"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQUW9LOTczSXZYek50cFVBaERKSF9nUlU0bGJEX2owNHM4YjVyemNKX0tqdUU4MVB6WlFybk51Qkp4akNWWGltUGcwWkFUZkx3dkVqV181NjRBbW5oT3RBb3N4SGx4cEVrRWdqTEI4TlU3OEtVMUlzd2ZTTWNXYi01RnVQUVFLUdIBiwFBVV95cUxNVGV3bEU2cktOY1RzdDEyZ3lBc2UtUWViOTc1bGY2Yk1xWlRaaEFOeG81ekNaUGlEVy11VU9naHFZcjlzNTh6UHFZZXFaYTI5NTlqbEtxRFE1c2ZBclJDLWJYMS1udUVXeFoyYkRFOWpDWXB4ZVdXYUdoMGRhYkxja2tpRWExVnFQTEhz?oc=5",
+      "title": "White House replaces cyber director Sean Cairncross amid widespread tech outages - CNBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPX2VJNG1JcVhrdWw1OGhzQWhjTUtMNEZhaUFRLTNyamhHeFpmeEd3OVRKMjJwUHJ6Q2FzRkhYMnlybG9SQ2s3LTZnbVNncGJFMjY2eGNwWWFRZF84R3BPT0hVY2o4QTVqMzQ3SWhzVWt1Nmt6YUFqMWhNVWhjOGcyU0dDdkxUU1hwZjlxbVUyYTdXeEtVQ2JKSktnelctSDRuR1F5MDNMTnh4OXYyUG04Zno3VFlqMzRacTZRaUFsUk5RbTEwSEkxaA?oc=5",
+      "title": "California Bar investigating ex-White House press secretary Katie Zacharia - The Washington Post"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQQi1sTmM2YlFpcGRVc0hnUlRKR1JjVGZDdkxINFRQVzlLNGE2RjN2OW4tT0owZTBNaC0xMmxpS2VIV3NTeWppdzhYb1BwQ0JBSzdyRmJTc0Rsa3cxT1NwZzNxbEdUTE43WHZvcWFtd2VLX0l4aXFHUWlscWwweUFTV3JhaE1wbm41dmlEcjdMSQ?oc=5",
+      "title": "Top White House Cybersecurity Official Is Replaced - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQk5fekl4bHljR2otN1p2QUo0cnV3Qno2aXI1T2MzQ2czcTktLUFGYVN1QnZycFYyMzVwaWZ2XzFRYXZEcl83X0haTFR1cWFKNHViY1hhdkU0LTJFMmhYZHNXSU1fa1dwcGJGNXVzSGZuOUZUUERhaUN5VWYySXBWLXpWZ3VDQW1fV05KTXVmNmFZOW11YTRiSE1ySDFEQ3JP?oc=5",
+      "title": "White House replaces top cybersecurity official after string of outages - The Washington Post"
+    }
+  ]
+}
