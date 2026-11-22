@@ -1,0 +1,114 @@
+{
+  "story_id": "2026-11-22-democrats-win-largest-house-7af12f7e08",
+  "headline_seed": "Democrats win largest House majority since 1992 after flipping North Carolina seat - BBC",
+  "brief": {
+    "story_id": "2026-11-22-democrats-win-largest-house-7af12f7e08",
+    "consensus_facts": [
+      "Democrat Chuck Hubbard defeated longtime Republican Rep. Virginia Foxx in North Carolina's 5th Congressional District (NBC News, Al Jazeera, CBS News, ABC News, Washington Post).",
+      "The win gives Democrats at least 258 House seats, their largest majority since 1992, when the party also won 258 seats (NBC News, Al Jazeera, CBS News, ABC News, Washington Post).",
+      "This is described as the largest House majority either party has held so far this century (NBC News, CBS News, Washington Post, Al Jazeera).",
+      "Foxx requested a recount after Election Day and conceded on Sunday, calling Hubbard to concede the race (NBC News, CBS News, ABC News).",
+      "The race was decided by a razor-thin margin \u2014 fewer than 300 to 330 votes, with Hubbard leading roughly 48.7% to 48.6% (Al Jazeera, ABC News).",
+      "Four House races remain uncalled, meaning Democrats could still expand their majority (NBC News, Al Jazeera, ABC News).",
+      "Hubbard is a former journalist who previously ran against Foxx in 2024 and lost (CBS News, ABC News, Washington Post).",
+      "Virginia Foxx chairs the House Rules Committee and was first elected to the U.S. House in 2004, serving since 2005 (NBC News, Al Jazeera, CBS News, ABC News).",
+      "The race had been rated 'likely Republican' by the Cook Political Report heading into Election Night (CBS News, Washington Post).",
+      "Hubbard's concession statement thanked Foxx for 'her decades of service and countless sacrifices' (CBS News, ABC News).",
+      "Trump won Foxx's district by a wide margin (nearly 18 points per NBC) in 2024, underscoring the scale of the flip (NBC News, implied by CBS News's 'flipped a seat Foxx held').",
+      "The AP projected/called the race in Hubbard's favor on Sunday (Al Jazeera, ABC News)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Exact vote margin",
+        "positions": {
+          "Al Jazeera": "Cites AP that only 330 votes separated Hubbard and Foxx as of Sunday.",
+          "ABC News": "With 99% of estimated vote reported, Hubbard leads 48.7% to 48.6% with fewer than 300 votes separating them."
+        }
+      },
+      {
+        "topic": "Who called/projected the race",
+        "positions": {
+          "NBC News": "NBC News projects the race for Hubbard.",
+          "CBS News": "CBS News projected the race 19 days after Election Day.",
+          "Al Jazeera": "The Associated Press called the race in the Democrat's favour.",
+          "ABC News": "The Associated Press projected the win."
+        }
+      },
+      {
+        "topic": "Scope of the Democratic win beyond the House",
+        "positions": {
+          "Al Jazeera": "Emphasizes Democrats will also hold 56 Senate seats, their largest Senate majority in more than a decade, and attributes GOP losses to cost of living, the US-Israel war on Iran, corruption and immigration raids; cites 32% Trump approval.",
+          "ABC News": "Notes Democrat Roy Cooper flipped the retiring Sen. Thom Tillis's North Carolina Senate seat but does not frame national causes.",
+          "CBS News": "Notes Democrats won majorities in both chambers and flipped several NC House seats and a Senate seat, without listing causal drivers.",
+          "NBC News": "Focuses on the House number and the significance of winning deep-red Trump districts; no Senate/causal framing in body."
+        }
+      },
+      {
+        "topic": "Foxx's tenure / first election year",
+        "positions": {
+          "Al Jazeera": "Foxx was first elected in 2004 and has served 11 terms.",
+          "CBS News": "Foxx has represented the state in the House since 2005.",
+          "ABC News": "Foxx was first elected to the U.S. House in 2004 after serving in the North Carolina state Senate."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NBC News": "Leads on the historic-majority milestone ('largest House majority since 1992') and emphasizes the symbolic magnitude \u2014 Democrats winning in districts Trump carried by double digits (Foxx's by ~18 points). Cites the Office of the House Historian and its own Decision Desk. Frames the flip as part of a 'Democratic wave.' Minimal attention to causes or Senate context; the rest of the page is boilerplate navigation and unrelated subscriber links.",
+      "Al Jazeera English": "The most analytical and causal framing. Goes beyond the House number to tie the result to broad national dynamics \u2014 explicitly attributing the GOP 'drubbing' to cost of living, the 'US-Israel war on Iran,' corruption, and immigration raids, and casting the midterms as a referendum on Trump (32% approval, Reuters/Ipsos). Elevates progressive voices (quotes AOC calling it a 'mandate for change') and notes Trump's veto pledge. Internationalizes and politicizes the story more than the U.S. outlets.",
+      "CBS News": "Leads on the head-to-head matchup (Hubbard defeats Foxx) with biographical color \u2014 Hubbard's age (64), his prior 2024 loss, Foxx's Rules Committee chairmanship. Notes the Cook 'likely Republican' rating to emphasize the upset. Places the race within a broader NC and national Democratic sweep. Surrounding links lean into forward-looking Democratic storylines (Schumer, Jeffries, 2028 momentum).",
+      "ABC News": "Straightforward wire-style report anchored to the AP projection and granular vote data (99% reported, 48.7%\u201348.6%, <300 votes). Includes both Hubbard's and Foxx's full statements, giving the most balanced he-said/she-said of the concession. Adds the Roy Cooper Senate flip as local context. Least editorializing; closest to neutral results reporting.",
+      "The New York Times": "Headline-only in this dossier (body not retrievable due to CAPTCHA). Headline frames the result around Foxx's seniority ('11-Term Republican Virginia Foxx'), emphasizing the toppling of a veteran incumbent. No body-level framing can be assessed.",
+      "The Washington Post": "Shortest hard-news body ('2 min' read); leads on the flip and the 'biggest House majority of this century' framing. Notably surfaces an AI-generated summary of reader comments describing satisfaction/relief at Foxx's defeat and characterizing her as 'negative and extreme' \u2014 a framing choice that injects audience sentiment into the page. Flags the Cook 'likely Republican' rating to stress the upset."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official vote certification, House Historian records, candidate statements in full, Cook Political Report rating document) were included in the dossier, so no direct report-vs-document comparison is possible.",
+      "Multiple outlets attribute the '258 seats / largest since 1992' claim to the Office of the House Historian (NBC) and U.S. House records (ABC); the underlying records themselves were not provided for verification.",
+      "The vote-margin figures (330 votes per AP via Al Jazeera; <300 and 48.7%\u201348.6% per ABC) trace to AP projections rather than certified final results included here."
+    ],
+    "missing_context": [
+      "No certified final vote total is provided \u2014 all figures are projections/estimates from AP, NBC, and CBS decision desks; the recount result itself is not documented in the dossier.",
+      "No outlet in the retrievable bodies explains the recount process, standards, or what changed between Election Day and the Sunday call that flipped or confirmed the outcome.",
+      "The identity and causes of the broader 'Democratic wave' are asserted differently \u2014 only Al Jazeera offers causal drivers (cost of living, Iran war, corruption, immigration raids), and those are attributed to unnamed 'experts' without specifics.",
+      "No Republican-leaning or right-of-center outlet appears in the dossier; all six sources are lean-left or international, limiting the slant matrix and any conservative framing of the loss.",
+      "The exact national seat count is unsettled (four races uncalled); no outlet specifies which districts remain outstanding or their partisan lean.",
+      "No outlet quantifies turnout or demographic shifts in NC-05 that would explain how an R+18 (Trump 2024) district flipped by a fraction of a point.",
+      "The Washington Post page includes an AI-generated summary of reader comments characterizing Foxx as 'negative and extreme' \u2014 this is audience sentiment presented adjacent to news copy, not reporting, and readers may conflate the two.",
+      "New York Times body text was not retrievable (CAPTCHA), so its framing cannot be assessed beyond the headline."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets corroborate the core facts (Hubbard defeats Foxx; 258 seats; largest majority since 1992; recount and concession) with no material factual conflict, only minor emphasis differences, and no primary source diverges from coverage \u2014 making this a straightforward multi-source REPORT rather than a META coverage-story.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRTlBU1JmLURBUE9VNU1CR2xVQVVBMjFPRVZ6NVdCRFNvYVVJUzUxVThLQWdoUUdBYWFnandLaEpBU1EzR2JnYmVLbXduYXAyQXljeGxZNEdTQmpRd1dWTUZ1cmVWNkE5WXJOSmRDQ1ZZdUdaMmJTUUhmMURUNHpIcUFTLXdVbUhzcTBobjA3Wkl3eFhaMmszZWhNU1dLYzhmTzRSWWNQMnJMLU5QMXBxXzN5UzhOUGZpX3c?oc=5",
+      "title": "Democrats win largest House majority since 1992 - NBC News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNEo5SW5YTnlmVE5pcFRLZm1xYXgwRTRITjZTWjlkeDlwTzB1SFRkTjB0NnE5QnFLcTI5ZzRlUzZZTjh5VzZQX2xWb2tOWHF3TjhDd1B6Z0NXLW16eEJfNDJKSW1BUlhkVDEtUVIzRE81X1NjMEFraGI1T3FQeTg4eXhGajRVNW5fczk3OVdrdmIzRE9kTlJiWVBkT05fa2JkdF9JOFF1endEcnBHNWZsTmJmSFLSAboBQVVfeXFMT2ZqMlRQY3UxeEdKMFNvUjk3Q0hSY3BiR1VEOUNoLXo3dGxMQmVPZ3NoQTVLc3YzM0psMEQ1QXJyRDRjYTZIM3NDUExneEpPQjVVQW1BOE1ZalN5cE1maU82SU1TX1hDTmF6SFNDZy1uZGFoN2E0YWxZOEsyUnRsZVc2YnU3OFhRRXdfcEp2eHVKLVozMjNPcG0zM21Ld2lyR1NJX2FKdTBpUGU5ZHhlR05ZRUdaVk9WV3lB?oc=5",
+      "title": "Democrats win largest House majority since 1992 with North Carolina seat - Al Jazeera"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZTVLVGtJMVRtaklNSHA5bVI5eW5jUkFTRUJhTXkwQ2xDTWdyVkNRR0p2c3VJdnRXSkRxaVRCSTVGMDZWeVI0cVJfR2NqbTBzcmNTckp4d0ptNndyYTd6ZlJWTzBqYzFjX1NpemtjdXBMeWRwZmo4WkJaX2N5S0QyMmVweWdyTnFVejdNcXdaSmNJVy1sTDd3d0k5UkJuUQ?oc=5",
+      "title": "Democrat Chuck Hubbard defeats longtime GOP Rep. Virginia Foxx in North Carolina House race - CBS News"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZDFNa0x6Q21tTXlnQ1gzS0tuT3JTNnhTbmdkRjlhVlYxbDE3RWVJZjVaR0Y1NENNZ0ZORDVmYmZKcXRjSUQzbjctb0hJc0didkNmV0xRUmdOUUFicGZvTW1zcV84NE14X0IzLVdpSms3bm1iOW9rcnIxMmc0empQbUxSUEJmU0RSWGlqUkh0RVZKekhIbGY0VG9wTjEtdGdOWk0w0gGoAUFVX3lxTE5wNVRWdkJsT2ttZUlQcTFlT2hqTnVqeERteWVSd1FpMThuVzFDSmpVOXR6Q0FVYkRBOFNFTVpaSGtZLWxwaEFHTWE5NEFzcnQxa1ZCQTJ4Yk9wSFg5YnlibXhsR1d0a1lxOXo2TlJIQUxxTlZadkxBYVhjNXRrLXNfSTRJU01QUWMtekVURF9hN0xlb2lvVjhhUjh3SzJDYXplWXZZeUJwVQ?oc=5",
+      "title": "Democrat Chuck Hubbard wins recount in North Carolina US House race, unseats Republican Rep. Virginia Foxx - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaDFOWlliSFRHZGdqLXJ4Z0xzOVhEc3BLVHpDRjktUUVQTWtzY0h3VnptYzdQNW1GNFMyM2JGT0dkUkJFXy11ZmpURzg2ZzZZbkhaNkJaZVNHVmJIdDhrc0ZqUXdVYmo2c3pYWHktY2d5YmRGdkRzOXVhN2VMaDQzeE9WaERRN05XM0E3SFB3NGVKUDktbFE?oc=5",
+      "title": "Democrat Chuck Hubbard Defeats 11-Term Republican Virginia Foxx in North Carolina - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdHJEVkpMY1lCY0t4amFNXzZkM2VlbzA2YU05NjlNdFBILVdFSUJESmhKcnRlUFdXMUxLLWxGMFJJQ1RGamhzNjBkOFd4cTNuamQxLW5ZZ2JWb2hnS2Q2VmVEMWVoTUw0SEtxUG1GRGV5TUlWaXVOM01OenVtNVF3dFJiT2s4UWZlTHkzZlJzYjBPTXota1FZakkzQWxwNXFUNS13UXBBNmtUSHRidTdwbHJKbllRZUdiMXpSa0VscE95Q2k4VTNj?oc=5",
+      "title": "Democrat Chuck Hubbard defeats GOP incumbent in North Carolina House race - The Washington Post"
+    }
+  ]
+}
