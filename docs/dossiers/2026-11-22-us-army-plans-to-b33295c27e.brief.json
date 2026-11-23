@@ -1,0 +1,110 @@
+{
+  "story_id": "2026-11-22-us-army-plans-to-b33295c27e",
+  "headline_seed": "US Army plans to invoke emergency provisions to detonate bomb-making chemicals in Iowa - AP News",
+  "brief": {
+    "story_id": "2026-11-22-us-army-plans-to-b33295c27e",
+    "consensus_facts": [
+      "The US Army plans to conduct a controlled detonation of degraded lead azide at the Iowa Army Ammunition Plant in Middletown, Iowa.",
+      "The detonation involves roughly 68-70 drums containing nearly five tons (about 10,000 pounds) of lead azide, a compound used to initiate/detonate munitions.",
+      "The material was discovered to be degrading during a routine stockpile/safety review in March, after sitting in storage for about 20 years.",
+      "The EPA issued an emergency permit authorizing the detonation.",
+      "Environmental groups \u2014 the Iowa Environmental Council and the Sierra Club's Iowa chapter \u2014 sued/petitioned a federal appeals court to overturn the permit, arguing inadequate public notice, insufficient safeguards, and failure to consider safer disposal alternatives.",
+      "The Eighth Circuit Court of Appeals granted an administrative stay temporarily pausing the EPA permit on Thursday.",
+      "The Justice Department asked the appeals court to lift the pause and argued the Army can proceed under separate legal authority, citing an EPA permitting exemption for emergency situations requiring immediate action.",
+      "The detonation was originally scheduled for Friday, then rescheduled to Monday, then Tuesday, then to Wednesday.",
+      "The Army said the move to Wednesday was to allow for optimal weather conditions and all mitigation measures to be emplaced.",
+      "The Army argues the degraded lead azide is extremely unstable and sensitive to friction/shock, that dropping temperatures increase the risk of an uncontrolled explosion, and that safely destroying it in place is the only responsible option.",
+      "The planned detonation is expected to produce a dust plume containing some lead, loud noises, ground vibrations, and possibly broken windows.",
+      "Officials and health experts noted lead exposure is unhealthy at any level and especially dangerous to children.",
+      "Patrick O'Shaughnessy, a University of Iowa environmental health professor, called the situation unprecedented and will monitor the fallout."
+    ],
+    "disagreements": [
+      {
+        "topic": "Projected size/spread of the lead dust plume",
+        "positions": {
+          "ABC News": "Cites the environmental groups' filing: dust could reach communities more than 100 miles from the plant, while the Army's latest modeling projects dust settling across an area roughly 25 miles long and 5 miles wide.",
+          "CNN": "Describes the plume spreading over a vast swath of Iowa, the Mississippi River, and into parts of Illinois, without citing specific mileage figures.",
+          "Al Jazeera English": "Emphasizes that the most consequential variable \u2014 exactly how much lead each blast will emit \u2014 remains undisclosed, so the downwind exposure scale is unknown."
+        }
+      },
+      {
+        "topic": "Whether a cleaner/safer disposal alternative existed",
+        "positions": {
+          "The New York Times": "Headline asserts the Army 'Rejected a Cleaner Option to Destroy Lead-Laced Explosives in Iowa' (body text not retrievable).",
+          "CNN": "Quotes experts calling the detonation 'the lesser of two evils' and that the Army is 'up against a wall,' while environmental lawyers argue federal officials did not show they pursued safer alternatives.",
+          "ABC News": "Frames detonation in place as, per the Army, 'the only responsible option.'"
+        }
+      },
+      {
+        "topic": "Number of detonations",
+        "positions": {
+          "Al Jazeera English": "States two controlled detonations are planned.",
+          "ABC News": "Refers to 'two rapid, controlled detonations' initially scheduled, but also describes the event in the singular throughout.",
+          "CNN": "Refers to the event primarily in the singular as 'the detonation.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Frames the story around government power and legal confrontation: 'Army invokes emergency powers to detonate lead in Iowa, bypass court order.' The verb 'bypass' foregrounds the circumvention of the judiciary. No body text available to corroborate.",
+      "CNN": "Full body text. Leads with the DOJ asking the appeals court to lift its pause and the Army's intent to detonate Wednesday despite the court order. Balances the Army's 'planned and mitigated vs. unplanned and unmitigated explosion' framing against Earthjustice's accountability argument and community pushback. Emphasizes health risk to children, the plume's reach into Illinois, and the historical failure ('should have been evaluated 20 years ago'). Quotes expert calling it 'the lesser of two evils.' Structured as an explainer ('Here's what we know').",
+      "Al Jazeera English": "Full body text. Explainer framing centered on environmental and health fears. Distinctively emphasizes the undisclosed emission factor \u2014 the quantity of lead per blast \u2014 as the central unknown, and foregrounds experts' skepticism of the Army's reassurances ('reassurance with a blind spot'). Highlights scant public notice, the tiny population of Middletown (~360), and quotes a Democratic senator-elect demanding transparency. Most critical of official messaging among the full-text outlets.",
+      "ABC News": "Full body text. Leads on the logistics of the schedule change (detonation moved to Wednesday) and heavily features official statements from the Army, EPA, HHS, and the 'entire Trump administration' pledging 'extreme mitigation measures' and that safety is the 'first priority.' Gives substantial space to the environmental groups' filing, including the 100-mile exposure claim and the 25-by-5-mile modeling. Most document/filing-driven of the full-text outlets on the legal mechanics (the DOJ exemption argument).",
+      "The New York Times": "Two headline-only entries in this dossier. One frames the story around a rejected cleaner disposal option ('The Army Rejected a Cleaner Option to Destroy Lead-Laced Explosives in Iowa'), implying editorial fault-finding. The other frames the escalation around a court filing ('Court Filing Shows How Iowa Explosives Crisis Grew'). Both headlines suggest investigative, document-based angles, but no body text is available to verify the claims.",
+      "USA Today": "Headline-only. Neutral service-journalism framing ('Army to proceed with controversial detonation in Iowa. What to know'), labeling the detonation 'controversial' and promising an explainer. No body text to analyze."
+    },
+    "primary_source_alignment": [
+      "No primary sources (court filings, the EPA permit, the DOJ motion, or the environmental groups' petition) were located for this story. CNN and ABC News both paraphrase and quote DOJ court filings, but the underlying documents are not in the dossier, so divergence between reporting and the documents cannot be verified.",
+      "The New York Times headlines reference a 'cleaner option' rejected by the Army and a 'court filing' showing how the crisis grew, implying document-based reporting, but without the body text or the underlying filing the specific claims cannot be checked against a primary source."
+    ],
+    "missing_context": [
+      "Of the 7 articles in the dossier, only 3 (CNN, Al Jazeera English, ABC News) have substantial full body text; Reuters, both New York Times entries, and USA Today are headline-only. Consensus here rests on three full-text outlets.",
+      "No primary source documents were available \u2014 the EPA emergency permit, the Eighth Circuit's stay order, the DOJ motion to lift the pause, and the environmental groups' petition are all referenced but none are in the dossier for direct inspection.",
+      "The New York Times headline claims the Army 'rejected a cleaner option,' but no outlet with retrievable body text describes what that specific alternative disposal method was, why it was rejected, or its cost/timeline \u2014 a reader would want this detail.",
+      "No outlet in the available body text states the actual measured or estimated quantity of lead per detonation; Al Jazeera flags this as the key undisclosed variable, but no figure is provided anywhere.",
+      "None of the full-text articles report the final outcome of the Eighth Circuit's consideration of the stay \u2014 whether the court lifted, extended, or modified the pause before the Wednesday date.",
+      "No outlet explains the legal basis for the EPA's emergency-action permitting exemption in detail, or whether it has been used in comparable situations.",
+      "There is limited reporting on what independent (non-Army) monitoring or post-detonation testing is planned, beyond O'Shaughnessy's stated intent to monitor fallout.",
+      "No apparent instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Three full-text outlets (CNN, Al Jazeera English, ABC News) report the same event with materially different emphasis \u2014 CNN on the legal/health clash, Al Jazeera on the undisclosed lead emission, ABC on official reassurances \u2014 while headline-only outlets (NYT, Reuters) advance distinct document-driven angles like a 'rejected cleaner option' that the full-text coverage does not substantiate, making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWktPQlhDQmZja2RjS09vdFlCdkFtTjVHVE1xRHVMeDBVNkFiVWlrMVdlQXl2SjRsekFabUxiV05Ud0RlR1M3aVhDcVlNNURCYnVFZXBaT1RDTmNQb3ViblpuQVNGdUVwQmlad1dWc2pYaWtpeXZCQVBnalZaT1M5RTcwUzdXZndua3JNdGpHOERNczk0NExoLXRIMUttMlRXRVdTSjNmWFR6dUJVSVVlOEhVNXpHakZfVzNiY1QybVFmeXFCamYtMg?oc=5",
+      "title": "Army invokes emergency powers to detonate lead in Iowa, bypass court order - Reuters"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE13ZGhGOVZ3Y1dvb2FocF9uUnRWcHlsNWJYQXNHbU9yT2VOLTh6VzRwOGxhOFgzOVVWM0xkdlFYR1dVZHhsYVZRU1paM2JXZjA3MEFZMnRRTkhFZWZnUUFYSU15VkRpbWVmYUlnUThEMmZkbWtqWWc?oc=5",
+      "title": "US Army intends to detonate bomb-making material in Iowa on Wednesday despite a court pause. Here\u2019s what we know - CNN"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcDUtYmp4eGRzYzBoYXRwc1ljZE0xTjFBSkR6dG4xVDFpb0VqelVvT2FSLWZoa0lOTXZGUjVaY29XUm01bVlZaXdyVkZKRnRtNkt1MGExQnU3ZDhVeE5KcFV6aE9Wd3ZzbHZxTVVJZmtmZDNvS3ZCM2VaeWwwbjBfczE3Y3RjZ21BT3MzX2F3WDc0WV9aMldIUzlYS29rLXFQanfSAacBQVVfeXFMTi00Q3dWWklVMzlGWnA5VF9RTHJZRWdVTXhZR05WUHhPMUlFUXZuQ20xcENUVkF4V0o4SFRMTElTNHBjQ29ZVHQ0cXN6QlR1Y21NZEtNNGhlOWxBVUc0dFlmeDZ4dktveTcySHVQMkdaM0xkNVhFeU1Mdk1mTjVqLUJXcFU5MzdlbW5hbkY0R0ZtbXh3YjhjcV9CQlY1T1RyVE5mc3NQeHc?oc=5",
+      "title": "Why is the US Army detonating lead-rich explosives in Iowa? - Al Jazeera"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOWTdoMEpQZ3g0TVVmS1JzTWxYV1R6bFplNGxHUkFIVGpwNExVaHhIWFZaM2FmOFpGNW1vVDNZSTFyRVVIcE5NckNxQWlaVDBMcGhIQUExQzFTVDRYRnBFVnBmckdsaWhKRUFOMng3Z1YxUmVnQ19SSlllX3ZaWlp2WUNQYlM4NmNnYlg0OUtzMFBfLXNvNWxfZVdWMEXSAaIBQVVfeXFMTlFKX0lyM2p6alNFX3hHSDJVQkR6eHRWTnJhTVJwckZKUmNEb1c0NmZOTUVIVTQ4cm9lbURxVVBuS1dJQXNMSklXNlo1ekU4Mm8tenF2Z1phX2NHamFKR2I5M0NCMTFuN2s4NFk1WnFHbVBIZllVV0NGMXFFdzhFb1JyczQzbGhGcjRabkM2dEo1SVhDb2R6STlDZGNwanFPVUh3?oc=5",
+      "title": "Army moves detonation of 10,000 pounds of lead azide to Wednesday - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBiRVVwNTRDWXZubUNuR3d5QzlvX29WSzQ3a1JyVTNGTlZFRkVJaUVxLWlXaXRzUnRsbGdEMDgzanhReDdsRFhiUFQ2bFR4Vko3NjkyRUZ2ZXlxVG5UckNxMGM1WUJGdC1lY2Z4RDI2ME9TYzBSY2tpdQ?oc=5",
+      "title": "The Army Rejected a Cleaner Option to Destroy Lead-Laced Explosives in Iowa - The New York Times"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNd2hDdEozeWxiTDhTT21tdnRnY1NwQ2ZTSWFuQWwwTDNURjd2eEdOWXFYQTZXcFRjaVVuVUMtcDR3eEt5Z1cyNFJSNkJKSGhqOTBSYWVXaUpRSG44XzRfcXl1Ukw4UEVvSk03WVFHdmZWalVoTGkzYjBsQktiOWlLcVVwN1JUUTVzOUFSbFNEQnJMNUZqZWFLR19uWXFvWnZlZUVkM2stemN5LXVQYVRGag?oc=5",
+      "title": "Army to proceed with controversial detonation in Iowa. What to know - USA Today"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdUdIZkp4cThpbC1wTFFIMDI0ZUw4OHVSWU95Q0stWkJiUERERGVNWDU3empublo2SlRvUXNrRlZzdXdYYjlMaFowQThDQXdXbWRiVXQ4VHFrVU9lb2JQTnFlMEh1MXNTZnExZFo0dkhjTE9XQ3g1WENtWklmVTRCeGRsVUwxdm9WaFdGdE9MQ3NxZm5MYkJteHo1dGhIV2Vx?oc=5",
+      "title": "Court Filing Shows How Iowa Explosives Crisis Grew - The New York Times"
+    }
+  ]
+}
