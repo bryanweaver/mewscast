@@ -1,0 +1,132 @@
+{
+  "story_id": "2026-11-23-california-democrat-rep-gomez-d3dc67c225",
+  "headline_seed": "California Democrat Rep. Gomez resigns following ethics report on sexual misconduct allegations - NPR",
+  "brief": {
+    "story_id": "2026-11-23-california-democrat-rep-gomez-d3dc67c225",
+    "consensus_facts": [
+      "U.S. Rep. Jimmy Gomez, a California Democrat, announced Monday he will resign from Congress effective Dec. 1, 2026.",
+      "Gomez is 51 years old and was a five-term, married congressman representing part of Los Angeles (California's 34th District).",
+      "The House Ethics Committee released a report on Monday finding substantial/credible evidence that Gomez engaged in sexual misconduct toward a female House staffer.",
+      "The committee found Gomez made unwelcome sexual advances and sexual contact and disregarded the power imbalance between House members and staff.",
+      "The report stated Gomez's behavior could constitute criminal misdemeanor sexual abuse; no criminal charges have been filed.",
+      "In a statement, Gomez said he had strong disagreements with the committee's findings but saw no alternative than to resign, and said he takes full responsibility for personal mistakes committed outside his marriage.",
+      "The staffer (referred to as 'Witness 1') alleged two incidents: one at a Washington bar in February 2024 where Gomez put his hand down her skirt, and one in his congressional office where she described him as 'forceful.'",
+      "The incidents originated around a birthday party hosted by another lawmaker; the woman described the bar incident as nonconsensual.",
+      "The report said Gomez's conduct caused the staffer significant and ongoing distress and contributed to her decision to leave House employment.",
+      "The committee noted it did not have enough time to pursue an adequate House sanction because Gomez lost his reelection bid, but published the report so the House could decide whether to sanction him.",
+      "Gomez lost his reelection this month to fellow Democrat Angela Gonzales-Torres by roughly 25 percentage points.",
+      "The staffer is represented by attorneys Lisa J. Banks and Sarah/Sara E. Nesbitt of Katz Banks Kumin, who applauded the report and accused Gomez of abusing his power.",
+      "The committee formally announced its investigation into Gomez in August 2026.",
+      "The investigation traces back to a report that Gomez was seen kissing a younger staffer at a party hosted by then-Congressman Eric Swalwell, who had resigned over his own sexual misconduct allegations."
+    ],
+    "disagreements": [
+      {
+        "topic": "Evidentiary standard language used by the committee",
+        "positions": {
+          "Los Angeles Times": "Describes the committee as finding 'substantial evidence' Gomez made unwanted sexual advances.",
+          "ABC News": "Describes the committee as finding 'substantial evidence.'",
+          "CBS News": "Describes the committee as finding 'substantial evidence.'",
+          "BBC News": "Describes the committee as finding 'credible evidence' of sexual misconduct."
+        }
+      },
+      {
+        "topic": "Whether penetration occurred at the bar",
+        "positions": {
+          "Los Angeles Times": "Staffer said Gomez put his hand down her skirt 'and penetrated her.'",
+          "CBS News": "Staffer said Gomez 'penetrated her with his fingers'; Gomez denied penetrating her.",
+          "BBC News": "Describes Gomez putting 'his hand down my skirt' without specifying penetration.",
+          "ABC News": "Does not specify penetration; describes 'sexual contact' generally."
+        }
+      },
+      {
+        "topic": "Location of the second bar",
+        "positions": {
+          "Los Angeles Times": "States the group moved to 'a different bar' around 11 p.m. without naming a neighborhood.",
+          "CBS News": "Specifies they went to a bar in Chinatown.",
+          "BBC News": "Does not specify a second location by name."
+        }
+      },
+      {
+        "topic": "Comparison set of recently resigned lawmakers",
+        "positions": {
+          "Los Angeles Times": "Calls Gomez the third male lawmaker this year and second California Democrat to resign over misconduct, naming Eric Swalwell (D) and Tony Gonzales (R-Texas).",
+          "BBC News": "Mentions only Swalwell as the preceding resignation tied to the investigation's origin.",
+          "CBS News": "References Swalwell as origin of the investigation but does not list a broader tally.",
+          "ABC News": "Does not provide a comparison tally of resigned lawmakers."
+        }
+      },
+      {
+        "topic": "When Gomez's term would otherwise have ended",
+        "positions": {
+          "BBC News": "Says he was set to leave the House 'at the end of the year.'",
+          "Los Angeles Times": "Says his term was set to expire 'at the end of the year.'",
+          "CBS News": "Says he was set to leave office 'in early January.'"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "NPR": "Headline-only in the dossier (no retrievable body text beyond the link). Headline frames the event as a resignation 'following ethics report on sexual misconduct allegations' \u2014 neutral, process-focused language ('allegations').",
+      "BBC News": "International framing attributes the core reporting to CBS News ('the BBC's US media partner'), signaling second-hand sourcing. Uses 'credible evidence' rather than 'substantial evidence.' Leads on the resignation and the committee finding, then foregrounds the Swalwell connection and the broader 'toxic and predatory culture' quote from the staffer's attorneys. Emphasizes the electoral context (25-point loss) and institutional reform angle.",
+      "Los Angeles Times": "Most detailed local framing, with bylined reporters and 8-minute read length. Leads on resignation plus the committee's 'substantial evidence' finding, then provides the fullest graphic account of the alleged incidents including explicit penetration allegation. Uniquely situates Gomez within a running tally of resigned lawmakers (Swalwell, Tony Gonzales), foregrounds the DSA-backed challenger angle, and emphasizes the constituent-representation gap and Gonzales-Torres's criticism that he didn't resign sooner.",
+      "The New York Times": "Headline-only in the dossier. Headline frames it as a resignation after a 'Panel Alleges Unwanted Sexual Contact With Aide' \u2014 uses 'alleges,' keeping distance, and foregrounds 'unwanted sexual contact.'",
+      "ABC News": "Leads on the 'substantial evidence' finding and quotes Gomez's statement prominently, giving unusually extensive space to his procedural objections ('significant deficiencies and omissions,' 'selectively quoted,' 'no opportunity to respond'). Balances this with the staffer's 'not consensual' testimony and the attorneys' strong statement. Prominently features House Democratic leadership (Jeffries, Clark, Aguilar) calling the step-down 'appropriate' and framing reform as 'an urgent priority.'",
+      "The Washington Post": "Headline-only in the dossier. Headline frames it plainly as resignation 'following sexual misconduct findings' \u2014 uses 'findings' (more conclusive than 'allegations'), process-focused and neutral.",
+      "CBS News": "Carries a graphic-content warning and provides the most explicit, quote-heavy account of both alleged incidents, including the staffer's direct quotes and Gomez's competing account ('I put my hand down the top of her skirt,' 'she said yes,' 'he denied penetrating her'). Uniquely names the Chinatown bar and details the second July 2024 office incident at length. Leads on the 'substantial evidence' finding and gives the most space to Gomez's point-by-point rebuttal alongside the staffer's testimony."
+    },
+    "primary_source_alignment": [
+      "No primary source (the House Ethics Committee report itself) was included in the dossier; alignment is assessed only against outlet characterizations of the report.",
+      "Four full-text outlets (Los Angeles Times, BBC News, ABC News, CBS News) consistently attribute the 'substantial evidence' / 'credible evidence' finding, the power-imbalance language, and the 'could constitute criminal misdemeanor sexual abuse' characterization to the committee report, with ABC and CBS quoting report language most directly.",
+      "The outlets diverge in how much of the report's graphic detail they surface: LA Times and CBS reproduce the penetration allegation and Gomez's denial; BBC and the headline-only outlets do not \u2014 this divergence cannot be adjudicated without the report text."
+    ],
+    "missing_context": [
+      "The underlying House Ethics Committee report was not provided as a primary source, so all characterizations ('substantial' vs 'credible' evidence, the criminal-misdemeanor language) are second-hand; the exact report wording could not be verified.",
+      "Three of seven dossier articles (NPR, The New York Times, The Washington Post) are headline-only with no retrievable body text, so their full reporting could not be analyzed.",
+      "BBC's account is explicitly sourced to CBS News ('the BBC's US media partner'), meaning BBC and CBS are not fully independent corroboration on shared details.",
+      "No outlet reports whether the full House intends to take up a sanction vote before the 119th Congress ends, despite the committee leaving that door open.",
+      "No outlet reports whether local or federal prosecutors (e.g., the DC US Attorney) are reviewing the conduct the committee said could constitute misdemeanor sexual abuse.",
+      "No outlet clarifies the special-election or appointment timeline to fill the month-long representation gap for the 34th District beyond Gonzales-Torres's general statement about working with other officials.",
+      "Gomez's specific procedural objections (that his testimony was selectively quoted and omitted) are reported by ABC and CBS but no outlet independently examines or evaluates the merits of that claim.",
+      "The LA Times states Gonzales-Torres is 'DSA-backed'; no other outlet confirms or contextualizes this characterization."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same event with materially different emphasis and level of graphic detail, no primary source was available to adjudicate the divergences, and several outlets are not fully independent (BBC sources CBS), making a coverage-comparison post more honest than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNREQ2YXBZV2tPZVd6VWFGeXpqZnZITnRxRkVZVEZWNFlTUUhiZDNqZ2x0RUVkUlNrempYRU4zTENrSENCTk9wckM5ejNoNW9qRTc0MVNab28tRjRVdXpHX29XMllMOHVmUjhVX3RacmNLZFI1aHJfLXNOZFFnZHdhNnlTc0lTUXhpWmhocWhmMWl1THR3UmMtbkJMR18zTzNGamsyMEtndWx3MWhiamVueXpzUzlaYzB6Nmpubmk3WFUzNUFGOWZQZlhtUlpuSHdZeDJR?oc=5",
+      "title": "California Democrat Rep. Gomez resigns following ethics report on sexual misconduct allegations - NPR"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1NcUhYb1NPRTk5QzFyanJlMHJZRmZ2V2NtUjZqZ1VBd3dnSTF4NFlPeklDVWp0NXJaSEdMd1hKcHdvaUtrUDdxWmpueVlpSHRHREk0UXd0UElfTUE?oc=5",
+      "title": "California Democrat Jimmy Gomez to resign from Congress after evidence of sexual misconduct - BBC"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQaHN4UFhDT282MlBzTHlxdndTR3NiTFhmbDhaSDRIeGN3UWxjNFBiVnBDU2RKb2RhLW9jRVFOOTZGRUtJeUphcEZqUDhCMjRUQ2ZCeHQ3ZzlFaEhJV2xGdm1oN3dhUTh3dEZNRGhsY1NWcS1WN1gyVWJYVXF5MUl6aUlqeFk2dERrWFZsZm0tSjBENFEwX25mWThuczlmQXAtNzFTMzBUcDBMR3pRcFl2YnRRd2k4bDdnSkZHWkZyWmwxM0sycGIwRw?oc=5",
+      "title": "L.A. Rep. Jimmy Gomez quitting after ethics panel finds evidence of sexual misconduct - Los Angeles Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNEt2amJ6Zlo1MlpmUl9sN251aDRZOWh4LXE4SVNYaFpoUjQ1VGVyck5HeU9vWFFfMDVtZzhYT2xyTHRUTkRyTnFEZFpOMkpGZFJRRXdlLWktNkYzN2hMN1otd1VSb0ZDTUFmMHczdnFYSzlsZk5KLTBQcnZVZXBQdXgwaWtRTTA?oc=5",
+      "title": "Rep. Jimmy Gomez Resigns After Panel Alleges Unwanted Sexual Contact With Aide - The New York Times"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPTVVjLUZTaENuTDg1QjZXWXVCNzN4MzUwRnJJZ0V4cV92NE5KVWhFNWlFNHFkeXFFcUs4Q2lDcm1qc3BRWlRrdVcwc1psbXJyXy10cEVPcFJEQUJKVnJZcjF0MV9JTld4V0IxMHB6NjRJZVdLQTFQb0tIUFZ4a3FEMEtFcFpqb1BqdUx5dWJYY2djdk5BUFNfbDhMOEpMdUhjYzlj0gGoAUFVX3lxTE1pbWVPbkpyMmFZQTA0V1BDdWladllPcGFLR1pYWEdzZDVmSGZad2xhT3lBVTVoMmpXWkhRQWlveHZJcjdQTzJFZ25hZlBLSnhFRmxpb2ZoQmptamlHRVNKVmpkUWIwQkVzQ054M0FVU3d6UHBFY2R0dWlRR0IyNlBoMVdVc0tWWFRpWkdzNEk2S1UzbS1MSDYwUFF6UzZlQ3VEMEE1eUpFVg?oc=5",
+      "title": "Democratic Rep. Jimmy Gomez to resign following House Ethics report that he engaged in sexual misconduct - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdERLTDAxdzBmSzFzb3F6WTNmMkJQQmsxUjdSQjNFYUdoUmYzLS1HQVY5Q1F2TlRqS0tjVDdPZWs4REFPNWJSVUtHS3E5VzZxbFpMc2VNZnV5ZU44d0pwLUhURWlRREtlRkdtZDlSWDFZNkVIZkdsNXFJVGhnWGFDNXRpRENoeGoyRldrUTNEMHdSNnF1RzJwSjlUNFlmMHRCdGlJckJfZzNpZm1RSHRYRFNFa1NEcTBDcFoyQkdseTliWENZ?oc=5",
+      "title": "Rep. Jimmy Gomez to resign following sexual misconduct findings - The Washington Post"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOS05sYmhEczUzVzBjcHZmbkNVb3N5MWJxbDhJbjg4Si1LTHEtbkNOTVY3TmxGcXZtSDJIM2V5WHRzWjd4TENyUmJGNUUtdUx0MnpabjRGb0lZdlVxc1hQdUhlWGVwNXR1VFVQQ1Z3QVZ6SXYtOUFuTGFrTExXZTYtdXVMcTNjbnRfc2JOeWVyQQ?oc=5",
+      "title": "Rep. Jimmy Gomez to resign after House Ethics panel finds \"substantial evidence\" of sexual misconduct - CBS News"
+    }
+  ]
+}
