@@ -1,0 +1,116 @@
+{
+  "story_id": "2026-11-24-huawei-found-guilty-of-b01ca50dc6",
+  "headline_seed": "Huawei found guilty of stealing trade secrets but acquitted of racketeering - BBC",
+  "brief": {
+    "story_id": "2026-11-24-huawei-found-guilty-of-b01ca50dc6",
+    "consensus_facts": [
+      "A US jury in New York's Eastern District (Brooklyn) convicted Huawei of conspiracy to steal trade secrets and bank fraud.",
+      "The jury acquitted Huawei of the most serious charge, a criminal racketeering (RICO) conspiracy.",
+      "Huawei faced 12 charges and was convicted on 10 of them (BBC and Financial Times both state 10 of 12).",
+      "The trial lasted roughly two months.",
+      "Huawei's defense attorney Brian Heberlig said the company plans to appeal and characterized the racketeering acquittal as a rejection of the government's central narrative.",
+      "Prosecutors alleged Huawei encouraged its workforce of roughly 200,000 employees across about 170 countries to lie, cheat, and steal for competitive advantage.",
+      "The case traces back to the December 2018 detention in Canada of Huawei CFO Meng Wanzhou (daughter of the company's founder) on a US warrant, which she fought for about three years before returning to China under a deal that dropped the charges.",
+      "Prosecutors alleged Huawei stole technology from US companies including Cisco, T-Mobile, Quintel, and Fujitsu.",
+      "Huawei was accused of misleading banks including HSBC about its business dealings in Iran, in violation of US sanctions.",
+      "Huawei has been barred from selling equipment to US carriers for years over security concerns and was blacklisted by other Western allies including Canada and the UK.",
+      "Huawei issued a statement framing the racketeering acquittal as vindication and saying it would take further legal action."
+    ],
+    "disagreements": [
+      {
+        "topic": "Number and nature of convicted counts",
+        "positions": {
+          "BBC News": "Guilty on 10 of 12 counts, including conspiracy to steal trade secrets, bank fraud, and conspiracy to violate US sanctions; acquitted of racketeering conspiracy.",
+          "Financial Times": "Guilty on 10 of 12 charges; acquitted of racketeering and conspiracy to obstruct justice.",
+          "NBC News": "Guilty of seven conspiracy counts (bank fraud, wire fraud, money laundering, defrauding the US, conspiracy to steal trade secrets) plus bank fraud and wire fraud; acquitted of two counts \u2014 racketeering conspiracy and conspiracy to obstruct justice.",
+          "Al Jazeera English": "Convicted of conspiracy to steal trade secrets and bank fraud; acquitted of racketeering conspiracy; does not give a precise 10-of-12 count tally."
+        }
+      },
+      {
+        "topic": "Sentencing date",
+        "positions": {
+          "BBC News": "Sentencing planned for September 2027.",
+          "NBC News": "Sentencing scheduled for Sept. 14 (year not specified).",
+          "Financial Times": "Does not specify a sentencing date.",
+          "Al Jazeera English": "Does not specify a sentencing date."
+        }
+      },
+      {
+        "topic": "Huawei's characterization of the racketeering verdict in its statement",
+        "positions": {
+          "BBC News": "Quotes Huawei saying the acquittal 'confirms that these allegations lack factual basis and vindicates our consistent position over the past eight years.'",
+          "NBC News": "Quotes Huawei saying the charges are 'without legal or factual merit' and that it 'welcomes' the racketeering verdict.",
+          "Financial Times": "Quotes a more muted Huawei statement about compliance obligations and stable business operations, without the vindication language."
+        }
+      },
+      {
+        "topic": "Defense attorney's surname spelling",
+        "positions": {
+          "BBC News": "Spells it 'Heberlig.'",
+          "Al Jazeera English": "Spells it 'Heberlig.'",
+          "Financial Times": "Spells it 'Heberlig.'",
+          "NBC News": "Spells it 'Heberling.'"
+        }
+      },
+      {
+        "topic": "Additional sanctioned countries and spying allegations",
+        "positions": {
+          "NBC News": "States prosecutors accused Huawei of helping Iran spy on its citizens.",
+          "Al Jazeera English": "States Huawei was accused of doing business in Iran and North Korea.",
+          "BBC News": "Mentions only Iran in the sanctions context.",
+          "Financial Times": "Focuses on Iran via the Skycom subsidiary; does not mention North Korea or helping Iran spy."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "BBC News": "Balanced headline naming both the guilty verdict and the acquittal. Leads on the split outcome and gives substantial space to defense attorney Heberlig's reaction and appeal plans, including an extended quote predicting Huawei will 'fight' through every appeal. Frames the racketeering acquittal as a meaningful win for Huawei. Notes the DOJ was contacted for comment but gives no prosecution statement.",
+      "Newsweek": "Headline-only; body failed to load (error page). Headline frames Huawei as an emerging Nvidia rival, suggesting a business/competitive angle, but no retrievable reporting to analyze.",
+      "NBC News": "Leads on the convictions with a national-security-tinged framing, emphasizing accusations that Huawei helped Iran spy on its citizens. Provides the most granular count breakdown but diverges from other outlets' tally. Gives the defense significant space ('caricature-like portrait,' 'isolated events'). Page is heavily cluttered with unrelated subscriber-promo links. Spells the attorney's name differently ('Heberling').",
+      "Al Jazeera English": "Sourced to AP and Reuters. Emphasizes the racketeering charge as a tool 'typically used in organised crime and drug cases,' subtly foregrounding prosecutorial overreach. Gives the most detailed narrative of the underlying allegations (T-Mobile robot, Fujitsu booth, CNEX circuit board) and uniquely surfaces the defense's 'banks knew' argument that HSBC and others were aware of the Iran business. Includes a 'hero's welcome' detail on Meng's return.",
+      "Financial Times": "Leads on the conviction as exposing 'corporate espionage and sanctions evasion' \u2014 the most prosecution-forward framing. Uniquely surfaces the prosecution's 'competition management group' and monthly bonuses for stealing information, and quotes Attorney-General Todd Blanche. Situates the verdict within US-China geopolitics and AI-chip tensions, including a Trump-Xi-Putin meeting in Shenzhen. Carries Huawei's R&D figures ($110bn, $11.4bn licensing) and the Skycom detail."
+    },
+    "primary_source_alignment": [
+      "No primary source (jury verdict form, indictment, or DOJ press release) was located for this story, so count-level discrepancies between outlets cannot be reconciled against the underlying record.",
+      "The clearest factual conflict a primary source would resolve is the exact number and identity of convicted counts: BBC and FT say 10 of 12; NBC describes a different breakdown totaling nine convictions. Without the verdict sheet, the precise tally is unverified."
+    ],
+    "missing_context": [
+      "Only four of five outlets have retrievable body text; Newsweek is headline-only (page error), so its 'Nvidia rival' business framing could not be evaluated.",
+      "No primary source (verdict form, indictment, or DOJ statement in full) was available to confirm the exact count tally, leaving the 10-of-12 vs. NBC's breakdown discrepancy unresolved.",
+      "The sentencing date is inconsistent across outlets (BBC: September 2027; NBC: Sept. 14 with no year); no outlet cites the court docket to confirm.",
+      "No outlet quantifies the maximum potential fines or penalties Huawei faces beyond NBC's vague 'large fines,' nor explains how corporate RICO acquittal affects the practical penalty exposure.",
+      "The three affiliates/subsidiaries charged alongside Huawei (referenced by Al Jazeera and the FT's Blanche quote) are not individually named or their verdicts detailed.",
+      "No outlet reports the prosecution's reaction to the racketeering acquittal beyond the FT's pre-verdict Blanche quote; the defense's framing dominates all four bodies.",
+      "The spelling of the lead defense attorney's surname differs (Heberlig vs. Heberling); no outlet flags the discrepancy."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four outlets reported the same verdict with materially different framings \u2014 from FT's espionage/sanctions-evasion angle to Al Jazeera's prosecutorial-overreach framing \u2014 and they diverge on the convicted-count tally and sentencing date with no primary source to adjudicate. That divergence makes this a coverage-report story rather than a straight REPORT.",
+    "confidence": 0.78
+  },
+  "articles": [
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1Ob0RXbGVjVm9xcjdLQkl6UW9ndDFEcjViS0lpN1c4RW9BX1RBYzNzcmhyN0lVN3JnSU1nY1JDN2ZRemYyY2wzUm9GcjNsMC03cXlGSnRZWTgtTjQ?oc=5",
+      "title": "Huawei found guilty of stealing trade secrets but acquitted of racketeering - BBC"
+    },
+    {
+      "outlet": "Newsweek",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMUtlM0kyQzY4N1dkczNyRUdnaUJmX1k5MDl2Vk5mY1B6NUpjZ0h4bnJsNThXYXhWWVQ2RUV0WndqRzdJdklPRWZ2QWY1a1JoeVpJc0s5cXI1dW5wUklBOEpqVEdrZE5GOTlxbU10Q2xTVzQtVkptVEhFZ0dZY0pDR0lZOGYxRVRpd2RZS3ZpYjlvdGJsUGQ4Q3c4d0NzTVF6eS1ZSg?oc=5",
+      "title": "Huawei Convicted in US as Chinese Tech Giant Emerges as Nvidia Rival - Newsweek"
+    },
+    {
+      "outlet": "NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUjFmSV9iczJEYXZzbjRXbmE5SXJnRVM1NTJhcmkwcVVObDNraDYtaWFGQkF4aHNOMXFVVHNWbWllVDhOUVlvS0Zmck9BRlhYV2dMR3RpRWpsbDNaWGN4UHB0Z2ZrSmtiSExFV3hweTJKU1pkT0ZMZVBQckozZmJDNllLT1ZXU1p3S0JyRndENDdTWVdsQ0JQQVBLdEhSQ2Q5djRB?oc=5",
+      "title": "Chinese tech giant Huawei convicted of federal charges, including conspiracy to steal trade secrets - NBC News"
+    },
+    {
+      "outlet": "Al Jazeera English",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbDNsb3gyVkJQMDFVT0p3QTJtV2tKdEhQbXpad0xXWlViLUNnWHJ1ODJJTE8xOFpjTHV2ZTU3MjRpMmt5MW5zNGhTdWU1SUxrei1aSDNhQmFROEFyUXR6OVU4SUFfb0dZSDlTbjF4dEFsRHlUM25YZ0h1OVlxV3JITjZYM1ZpcVQtU3BnSy1PN3RMR0w1LTkzb3ZJX1I5azdvNW9BR1JQVElYNXJnWlo3VzZVVFFac2gyc1B5NNIBwgFBVV95cUxPTDV0Y2ZVY0tMZEh4R29qbTdPUGUxYWtJelNLZlJrYUIwT3lJV2RPM2dnc0dldjRMT2U1dUN5djZkUFNGMlg3NTU4OVlsTlJCREJoRnNqcU5MbWxHbDFvc3BPOGRGb2p4YzZYOG1RN2VSTUVYZWVWVlZvUWhXckxEUUdsRm9Nb2JZQm9DU1M4OUR6VVNIcy13MVJqbjR0Tnd5RkZNSDN6akVUX3BtalZzU1lhZ2tVMmdHOVBObE1UTmlmUQ?oc=5",
+      "title": "Chinese tech giant Huawei found guilty of conspiracy to steal trade secrets - Al Jazeera"
+    },
+    {
+      "outlet": "Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPT1J2X3AweENxV1VOaTQ2bEFTblFqaDBDWFFnUV8xWFFUbjN5d3N4ajk4LTh6VlVwMkNSSF9YMzlXU0VZYVZzYXlicjZQYnFuR2k1QW9WNVEwQjVIM1dPeEh5VDJCZHczaUJoQ2JYdDh4MlVacGFEMl9mSmJqNF95dmRNY0Y?oc=5",
+      "title": "Huawei convicted in US trial that exposed corporate espionage and sanctions evasion - Financial Times"
+    }
+  ]
+}
