@@ -1,0 +1,134 @@
+{
+  "story_id": "2026-11-25-trump-proposing-new-tariffs-54c4d6c844",
+  "headline_seed": "Trump proposing new tariffs on 14 partners including China and EU - The Guardian",
+  "brief": {
+    "story_id": "2026-11-25-trump-proposing-new-tariffs-54c4d6c844",
+    "consensus_facts": [
+      "The Trump administration proposed a new wave of tariffs on China, the EU, and other major trading partners on November 25, 2026 (AP, Washington Post headline, CNN, CBS).",
+      "The tariffs target 14 trading partners in total, including China and the EU (Washington Post/CNBC aggregation, CNN, CBS; AP cites 'China, the European Union, Taiwan and 11 other countries').",
+      "The tariffs are a response to alleged foreign overcapacity/subsidized manufacturing that the administration says undercuts American firms (AP, CNN, CBS).",
+      "The proposal stems from months-long Office of the US Trade Representative investigations into foreign trade practices (CNN, CBS).",
+      "US Trade Representative Jamieson Greer is the named administration spokesperson, citing 'market-distorting practices that tilt the trade balance in their favor while eroding America's manufacturing base' (AP, CBS).",
+      "The new tariffs are designed to replace, not stack on top of, prior tariffs struck down earlier in the year (AP, CNN, CBS).",
+      "The Supreme Court earlier in 2026 (February) blocked Trump's sweeping emergency-powers tariffs, which this proposal is partly intended to work around and replace lost revenue (AP, CNN, CBS).",
+      "The tariffs require a public notice-and-comment process and hearings before taking effect, with implementation expected no earlier than January\u2013March 2026 (AP, CNN, CBS).",
+      "The proposal includes exclusions/exemptions for certain categories such as semiconductors and other goods (AP cites semiconductors and high-tech goods from Taiwan/South Korea; CNN cites energy, food, certain chips, pharmaceuticals; CBS references targeted products).",
+      "Economists characterized the tariffs as having a modest impact, essentially returning rates to earlier-in-year levels (AP cites Capital Economics' Mark Williams; CBS cites Capital Economics' Stephen Brown).",
+      "Roughly two-thirds (66%) of voters said Trump's tariffs/policies hurt the economy, per post-midterm polling (AP Voter Poll, CNN Voter Poll, CBS News poll).",
+      "The proposal comes after Democrats won majorities in the House and Senate in the recent midterm elections, in which tariff frustration was a factor (AP, CNN, CBS).",
+      "Some Republican lawmakers, alongside Democrats, have publicly raised concerns about Trump's tariff policy (CNN names Sens. Ted Cruz and Todd Young; AP names Democratic Sen. Ron Wyden)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Proposed tariff rate on China",
+        "positions": {
+          "AP News": "Proposed duties range from 15% to 35% overall; characterizes China measure as an additional 20% tariff (per photo caption)",
+          "CNN": "China set to face a 20% tariff, the highest proposed rate among the 14 partners, potentially rising to 40%",
+          "CBS News": "Additional 20% on Chinese goods, raising China's total tariff rate to 45%"
+        }
+      },
+      {
+        "topic": "Highest proposed rate / which country hit hardest",
+        "positions": {
+          "CNN": "China and Vietnam face the highest proposed rate at 20%; Vietnam could rise to 35%, China to 40%",
+          "CBS News": "Brazil is among the countries hardest hit, with new levies on sugar and a 10% levy on aircraft; China total reaches 45%",
+          "AP News": "Describes range of 15%\u201335% without naming a single hardest-hit country"
+        }
+      },
+      {
+        "topic": "Number and identity of targeted partners",
+        "positions": {
+          "AP News": "China, the EU, Taiwan and 11 other countries",
+          "CBS News": "China plus EU, Singapore, Switzerland, Indonesia, Malaysia, Cambodia, Thailand, Korea, Vietnam, Taiwan, Bangladesh, Japan and India; Mexico and Norway under investigation but not yet tariffed",
+          "CNN": "China and dozens of other countries; 14 trading partners targeted by the investigation",
+          "The Washington Post (via CNBC aggregation)": "14 trading partners including China and the EU"
+        }
+      },
+      {
+        "topic": "Expected implementation timeline",
+        "positions": {
+          "AP News": "Hearing January 25; duties likely take effect February or March",
+          "CNN": "Earliest the administration expects tariffs to take effect is January",
+          "CBS News": "A senior official said tariffs are in proposal phase and did not provide an implementation timeline"
+        }
+      },
+      {
+        "topic": "Legal authority invoked",
+        "positions": {
+          "CBS News": "Explicitly cites Section 301 of the Trade Act of 1974",
+          "AP News": "Does not name the statutory section",
+          "CNN": "Attributes to a USTR investigation but does not name Section 301"
+        }
+      },
+      {
+        "topic": "Likelihood of foreign retaliation",
+        "positions": {
+          "AP News": "Greer said he did not expect the tariffs to rattle the global economy; 'a lot of this is baked in'",
+          "CNN": "White House official said he believes retaliation will be limited, citing advanced notice to partners"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Associated Press": "Straight wire framing. Leads on the economic rationale ('subsidized factories') and the Supreme Court revenue angle. Emphasizes economists calling the impact modest ('roughly where we were earlier in the year'). Prominently pairs the policy with its political cost \u2014 midterm losses, two-thirds of voters blaming Trump, and a direct Democratic rebuttal from Sen. Wyden ('illegal global tariffs,' 'tariffs chaos'). Balanced sourcing from the administration and critics.",
+      "The Washington Post": "Available only as a headline/aggregation block (links to WaPo, Bloomberg, CNBC). Neutral descriptive headline ('Trump proposes new tariffs on China, Europe and other trade partners'). Aggregated CNBC headline supplies the '14 trading partners' figure. No retrievable WaPo body text for this story on tariffs.",
+      "BBC News": "Off-topic to the tariff proposal itself; focuses on the Jensen Huang/Nvidia saga and US-China tech rivalry. Frames tariffs as receding in importance ('Trump's tariffs are no longer at the heart of that tussle'), with the real contest being critical technology and rare earth minerals. Reads Xi's leverage over Trump through the stock market and chip exports.",
+      "CNBC": "Also focused on the Nvidia/Huang reinstatement rather than the tariff proposal. Analytical/opinion framing on internal administration power dynamics \u2014 Bessent losing the China-hawk argument to Commerce Secretary Lutnick. Emphasizes bipartisan congressional concern and Trump's stated motive (protecting the stock market, personal Nvidia holdings).",
+      "CNN": "Leads on the policy as a post-Supreme Court revival of Trump's trade agenda. Provides the most granular rate breakdown (China/Vietnam 20%, potential escalation to 40%/35%, EU 15%\u201320%) and detailed exclusion list. Strong 'Post-election maneuver' framing emphasizing political risk \u2014 two-thirds of voters opposed, named Republican defectors (Cruz, Young), and voter backlash at the polls. Ties in the Huang/Nvidia controversy.",
+      "CBS News": "Leads on 'escalation in global trade tensions' and frames via consumer/small-business harm. Most detailed country list and specifics (Brazil sugar/aircraft, China's 45% total). Explicitly cites Section 301 and the Yale Budget Lab average tariff figure (11.2%). Prominently features a small-business coalition ('We Pay the Tariffs') decrying the move during holiday season and the post-midterm 66% poll. Notes Mexico/Norway still under investigation."
+    },
+    "primary_source_alignment": [
+      "No primary source (USTR Section 301 notice, Federal Register filing, or official White House/USTR press release) was located for this story. All tariff specifics rest on outlet reporting and administration statements quoted by those outlets.",
+      "Greer's quoted statement about 'market-distorting practices' appears verbatim in both AP and CBS, suggesting a common official statement, but the underlying statement/notice itself is not in the dossier for direct verification.",
+      "The specific rate figures (China 20% additional / 45% total, Vietnam 35%, EU 15%\u201320%) cannot be reconciled against a primary document; reporting diverges on these numbers and no source text is available to arbitrate."
+    ],
+    "missing_context": [
+      "No primary source (USTR filing, Section 301 notice, or White House release) is in the dossier, so the exact per-country rates cannot be verified \u2014 outlets disagree materially on China's figure (additional 20% vs. 45% total vs. a 15%\u201335% range).",
+      "No outlet provides the full official list of all 14 partners in a single reconciled form; CBS lists specific countries while AP and CNN describe them only partially or in aggregate.",
+      "None of the tariff-focused articles quantify the expected revenue the administration hopes to replace from the struck-down emergency tariffs, despite AP citing revenue replacement as a stated goal.",
+      "No outlet details what, if any, the targeted countries' official responses are beyond AP's note that China is 'pushing back' and CNN's/CNN's unnamed-official claim that retaliation will be 'limited.'",
+      "The relationship between this tariff proposal and the concurrent Nvidia/Huang China-chip story (covered by BBC and CNBC) is noted by CNN but not explored by the tariff-focused outlets \u2014 the two China tracks are reported largely in isolation.",
+      "Reliance on unnamed 'senior administration officials' (CNN, CBS) for key claims about timeline and retaliation is not independently corroborated.",
+      "No outlet contained any apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Four or more outlets reported the same tariff proposal but diverge materially on the central numbers \u2014 China's rate alone is reported as an additional 20%, a 45% total, or part of a 15%\u201335% range \u2014 and no primary USTR document is available to arbitrate, making this a coverage-comparison story rather than a straight REPORT.",
+    "confidence": 0.7
+  },
+  "articles": [
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcWJ0MDE3ZEJzV2tVdThRbXdzcGxXN0phLUpNTHAyVWlEQV9JNzVUWlpsRXp6ZHFTNnY1dnpKMHJjNExkUnZxTlRXdzZNTUFOeXhkUTk5XzF0ZW55b1lZcnhJYTkyYUt5N1lvdm5TZ3QyZDh5UkNsVmtHMmhuNm5xcGc3VmVUcV9fellldEtWcTdaYWJpRUlBcm5R?oc=5",
+      "title": "US to hike tariffs on China, EU, Brazil and others over subsidized factories - AP News"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQRG9IZXZjbjBEQ2tzam5pT0FPZWNFc2hac3ZURjRUaTJITlQwQmt4RElZVGlnM0luQndHeXdRaGRwTUVVbHVqQlcyZC01OC1adzBLT3JWWlNadmw2N01zR3JZT1VwWG1mVVNaSkNUSWExNTlYRWtCejNRUE1KSXk0TFpjaUt5X0Z4LUFLMzB1c3QtRXNpUVc5UzNMeHY4d2paMjVEVGpveFlpM1BvZWRlZzFR?oc=5",
+      "title": "Trump proposes new tariffs on China, Europe and other trade partners - The Washington Post"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zcm1MS3NWUjRhdFJCanRNNmxNcGtkNXl4dDVOSE5sTTloY1FzdC12ZEsybkNaUm13RGdVbU9OVzNUMFhKQ3pUallubEJRdzVZTjF2Qk1pa3dXYTQ?oc=5",
+      "title": "What Jensen Huang's return teaches China's Xi about Trump - BBC"
+    },
+    {
+      "outlet": "CNBC",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOVjZya0NLX2VRMFc5MFdsTUtRNEJGUmRrRDNreUxjWTlhc0oxbnNTVHo0TmJUWF8wdXhxa1QydDV4c3VvRVdtbEdvZzJDX0NhenZQZkxLSG85Qml3dE4xdkdlcXpmQVdfZEZ4ZjR4QzJNQ25DZzdZMUNVaVMzdjR0alFR0gGHAUFVX3lxTE9xT1NrT2Q2TVlKUTNpaFc5R3ZtdDdFMFlEQWFiLVVIbjF6N2ZxTnc0TDBnaGJBcEs0bTUzNDBFOEZzSWJpV082bllSSFltWHJSMlhjanFaZ3VEWERaR3YyUE9vbW00MFlfa3BMbHBKMFYzVnc5S0VNNnIwSmgzUnhmNFk2QUU4NA?oc=5",
+      "title": "Peterson: Here\u2019s what Bessent\u2019s about-face on Jensen Huang reveals about Trump and China - CNBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcmJ6ZEs2YmJNVWgtVTAwMXIycHFWYWdGNlhfLUl6dThuMlY2ODFFZm9LVTlwaThWSWZodUpPbUMxR1pMSEVybEN2MEJ0bUlHV0xyeFpDLVVVZXp1UWtBVnBUUzVMSWlIMFpNQUhvRjlnbXpLaF91NWNFRExIejhjRUZuSmNuS2owVHVqdC1UYVVfSlFzdGtkUDJfY1ZvSG42OEVpYkI3MFNfU3c?oc=5",
+      "title": "In backing Nvidia\u2019s Huang, Trump deals his China hawks a setback - The Washington Post"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5maU9qZ1VMR3l0TDI5UlgyQzBBLUF5a2UwYUUyQjFtZDY4QXdyTXg0cjNSajdVSThyS2xuSEIzMkZ4WEdRaHNTcjFnMjFYNXlmWEtvYjFYdWRjcWlUZUN2bXIweHlyaU0?oc=5",
+      "title": "Trump targets China, EU in new round of tariffs - CNN"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNczFLRXU2LXkzSXFlSVNTSHNiV0FVM2p2SURNQVRqLURpd0RmWTJPeDE4UDJybklVTmtXdFp6b2ZmUWhtY3lKb2MyX3RGd1RCbWdYY3AxSHg0SktaT3VfQzRDNzhnNW9JRlJRYnFQV0ZRalVJRXV1d1MtQ3ZvNllsM1g2N28?oc=5",
+      "title": "Trump administration to introduce new tariffs on China, EU and 12 other major trading partners - CBS News"
+    }
+  ]
+}
