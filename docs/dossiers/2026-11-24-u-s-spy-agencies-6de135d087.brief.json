@@ -1,0 +1,79 @@
+{
+  "story_id": "2026-11-24-u-s-spy-agencies-6de135d087",
+  "headline_seed": "U.S. Spy Agencies Suffer Breach of Some Unclassified Information - The New York Times",
+  "brief": {
+    "story_id": "2026-11-24-u-s-spy-agencies-6de135d087",
+    "consensus_facts": [
+      "All three body-bearing headlines in this cluster (Reuters, The New York Times, The Washington Post) reference a cybersecurity breach affecting U.S. intelligence agencies involving unclassified information or systems; however, no retrievable body text corroborates any specific detail, so this remains a headline-level consensus only."
+    ],
+    "disagreements": [
+      {
+        "topic": "Which agencies were breached",
+        "positions": {
+          "Reuters": "Headline states both the CIA and ODNI suffered a cybersecurity breach of some unclassified information, attributed to a source.",
+          "The New York Times": "Headline refers broadly to 'U.S. Spy Agencies' suffering a breach of some unclassified information, without naming specific agencies.",
+          "The Washington Post": "Headline names only the CIA and specifies an 'unclassified computer system' was breached.",
+          "CBS News": "Headline (body unavailable) references the CIA being targeted and attributes to an official that there was no disruption to critical capabilities."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Article 1 is headline-only (no retrievable body). Headline frames the event as a sourced breach ('source says') affecting both CIA and ODNI, emphasizing the limited scope ('some unclassified information'). Neutral wire phrasing. Note: Reuters appears twice in the dossier \u2014 Article 3 is an unrelated Nvidia/Jensen Huang probe explainer that does not pertain to this story.",
+      "The New York Times": "Article 2 is headline-only. Frames the breach at the broadest level ('U.S. Spy Agencies') while stressing the unclassified, limited nature of what was taken. Separately, Articles 5 and 6 are off-topic NYT pieces on the Nvidia affair and Alice Huang's contacts with a China spy agency \u2014 not part of this breach story, though their proximity in the dossier may reflect an intelligence/China-adjacent news environment.",
+      "The Washington Post": "Article 4 is headline-only. Narrows the story to the CIA specifically and to an 'unclassified computer system,' the most concrete and technical framing of the three breach headlines.",
+      "CBS News": "Article 7's body text contains only CBS station boilerplate and navigation chrome \u2014 no actual reporting was retrievable. The headline frames the story reassuringly, leading with an official's claim of 'no disruption to critical capabilities,' which downplays operational impact relative to the other outlets."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. No court filing, agency statement, or official release is available in the dossier to verify the breach claims or compare against outlet reporting."
+    ],
+    "missing_context": [
+      "SINGLE-SOURCE / NO-BODY LIMITATION: Of the articles in this dossier, zero have retrievable body text on the breach itself. The three relevant Reuters/NYT/WaPo entries are headline-only, and the CBS entry's body is station boilerplate with no reporting. All 'facts' here derive from headlines alone.",
+      "No outlet body text establishes who is responsible for the breach, when it occurred, or how it was discovered.",
+      "No detail on what 'unclassified information' was actually accessed or exfiltrated, or how sensitive it is despite being unclassified.",
+      "The breach claims (Reuters, CBS) are attributed to an anonymous 'source' or 'official'; no on-the-record confirmation from CIA or ODNI appears in the dossier.",
+      "No primary source (agency statement, congressional notification, or IC press release) was located to independently verify the scope or existence of the breach.",
+      "The dossier mixes in unrelated Nvidia/Jensen Huang and Alice Huang/China content (Articles 3, 5, 6) that does not bear on this breach story; a reader should not conflate these threads.",
+      "CBS's 'no disruption to critical capabilities' claim is uncorroborated by any other body text in the dossier and cannot be verified against a source."
+    ],
+    "suggested_post_type": "BULLETIN",
+    "suggested_post_type_reason": "The breach is time-sensitive and newly detected, but the dossier contains no retrievable body text and no primary source \u2014 only headlines from a handful of outlets with minor divergence on which agencies were hit. That warrants a cautious same-day hedge post rather than a full REPORT or META built on unverifiable single-headline claims.",
+    "confidence": 0.3
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMEY3TVFidy1CMzFaVE9HN09yYWVNX25JZ0hKNkhmVmJYMFhNdDQyd2k5TzFHWkhhUjFrbzBiSkIxWkZZREdEZ2Z2b2QwVFhDVEtEYzNuc19LWGd4SkdaMjRuZFVWVjJjMXR0MGwyNWRvOFZCVjdPYUVCaUJzbEpkVmtNWjJQalR2UlVfVVdEUElpZTR1Z0FnVW51alF3SkppOXdWNThkUU84bEgxalNDeTRkaVR5QQ?oc=5",
+      "title": "US CIA, ODNI suffer cybersecurity breach of some unclassified information, source says - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0ZENzdyVk5TQkMwN05tS3VmQXVZOUo1c2g5LTRQenB1RzB1RFo4OTdTdDA3XzRPZEFpLS1PRUZRQWw1NXhmZlZZNWU2NkdJQWFEUlhOZkppQW9YRHFVUzNOVFBkNnlZdmpkVDNwTFRadG5Cd1I3RmR3VXNTYnZ6Yi15VEszSUxKVnZrenExMm1HekZf?oc=5",
+      "title": "U.S. Spy Agencies Suffer Breach of Some Unclassified Information - The New York Times"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQ090d1dDZTh5bFpYYXBUZHhLaFN4dG9SeVYtZWE3MEZYVHVzdEt5RzZBeXo0dlV6ZFpnUlV0V21JWHQ1cUczMFpScjZlT3RTaW1jOEFFU3BQMU1HRER4cURid2VVWXRaQUxIRHVuU0FDekxyUDdoZlRZQUZPcnRoZkZrSU1qTVFJZjlac093MnBvX3JuZmVHYUFrdkNHRUlyaVRpN2tiR3o2QXhNVzZld25IYzdhSUpS?oc=5",
+      "title": "Explainer: What are the various US federal and state probes faced by Nvidia and Jensen Huang? - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUDFaM2tPUHh2SDA3dVZuVnFZSlZCNVpHdmZ3UEpONDcxTGg4RjVLb21Jc3dUYzIzekJnMTdmdWJGRUxYX3dZQ0xHRmYyN3drZHNHX2h1S05WbDhWSFdjYk1mbC1fOVRDWDNzUENJRnVWZkV0aGtuVGVzelBUcGN3WTdkazZUZkhfS1Z5Ym1MVURoeXNRU3hLdWtDSlhGMDRObko4a0tSbnN6TkdL?oc=5",
+      "title": "Hackers breach CIA unclassified computer system - The Washington Post"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVzVyaXo0aXJLT2VuWXdDRlJIWEw1RDBlTWtxcG9RN2ZydEN0T2U5dnlCRnJXWFVKeVZ2X2JXUmpHUTQ5d0tCNHFGc0VKZHE4TFdVQXFId1k5YkRGU29pdF9VM3FES1ZDbEItTW9rQWRYQTVTakxtMG1uVnZwV1ZTRmc4XzV0MmtVX2NWYUhvWHM?oc=5",
+      "title": "U.S. Tracked Alice Huang\u2019s Contacts With China Spy Agency During Nvidia Affair - The New York Times"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOY3A4YXNjbWpURzZIbVp4YTkwUTh0V0V3ekhXbmpjU2RlSzZEV053Zk1NTXFENk5lNDc4TjJWb040em10bzFvU2hvUUpiaFY2TXB3czgzTFpsYk5PeUs4M3VRNy1DUXBKWXd3T2JGNUd6bHMxdTJfSFhQWGxyamlPdjFReEgzS1RoWGc?oc=5",
+      "title": "Trump\u2019s Extraordinary Nvidia Intervention Sidelines National Security Concerns - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcGxWSG5xZ05KWjk2WWNON0JtalU2S3MwYU5YNk85OFpLOXhZdVlYSDRZZ1JCNGRMUEgtSkFzT1MwZ3JoaTh5OExaVWE4bDlBNlVuZ29pSXZ4bDIyYVBvVERqSmRJYWI3UTR4VHA5MHVvS1FneUlDS2hPcE1ydG1KN1Vzb0s3bDYxbEZwQ251YmJSYkptWHBmUk5fXzRSTlo5NHNB?oc=5",
+      "title": "CIA targeted by cyber breach, official says no disruption to critical capabilities - CBS News"
+    }
+  ]
+}
