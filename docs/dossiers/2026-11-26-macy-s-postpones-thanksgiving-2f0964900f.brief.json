@@ -1,0 +1,132 @@
+{
+  "story_id": "2026-11-26-macy-s-postpones-thanksgiving-2f0964900f",
+  "headline_seed": "Macy's postpones Thanksgiving parade due to severe weather - BBC",
+  "brief": {
+    "story_id": "2026-11-26-macy-s-postpones-thanksgiving-2f0964900f",
+    "consensus_facts": [
+      "The Macy's Thanksgiving Day Parade in New York City has been postponed to Saturday, Nov. 28, with the procession beginning at 8:30 a.m. ET.",
+      "This is the first time the parade has been postponed due to weather in its history; it was suspended from 1942 to 1944 during World War II.",
+      "The postponement was driven by a strong coastal storm (nor'easter) bringing heavy rain and high winds to the New York area on Thursday.",
+      "This year marks the 100th edition of the parade, which was expected to feature a record 100 inflatable balloons.",
+      "The parade's giant balloons were grounded once before due to weather, in 1971.",
+      "Macy's and officials stated the decision was made in the interest of safety for participants and spectators, after consultation with the city.",
+      "Will Coss (also rendered Cross) is identified as the executive producer of the parade and said Macy's was 'heartbroken' over the postponement.",
+      "New York City Mayor Zohran Mamdani said he would not attend Saturday's parade because of a scheduled surgery.",
+      "The parade's balloons were to be deflated Wednesday night, stored at a facility in New Jersey, and re-inflated for Saturday.",
+      "NBC planned to air the 2025 parade during Thursday's allotted time slot instead of a live telecast.",
+      "The parade debuted in 1924, originally conceived as a holiday/Christmas parade to boost store sales.",
+      "Featured performers slated for the parade included country artist Megan Moroney and singer Teddy Swims.",
+      "New balloons for the 100th parade included Bluey and a Minion riding a banana.",
+      "A 1997 incident in which a Cat in the Hat balloon was pushed by wind into a lamppost seriously injured a spectator and prompted changes to safety regulations."
+    ],
+    "disagreements": [
+      {
+        "topic": "Executive producer's name",
+        "positions": {
+          "BBC News": "Will Cross, the parade's executive producer",
+          "CNN": "Will Coss, the executive producer of the parade",
+          "Associated Press": "Will Coss, vice president and executive producer of Macy's Studios"
+        }
+      },
+      {
+        "topic": "When balloons will be re-inflated",
+        "positions": {
+          "BBC News": "Deflated Wednesday night and stored in New Jersey until reinflated for Saturday",
+          "CNN": "Deflated Wednesday night, returned to New Jersey, and re-inflated on Friday afternoon"
+        }
+      },
+      {
+        "topic": "Forecast wind gust magnitude",
+        "positions": {
+          "BBC News": "High wind warning with gusts potentially reaching 60 mph (97 km/h)",
+          "Axios": "Sustained winds of 20-30 mph and gusts up to 55 mph for Thursday",
+          "Associated Press": "Wind gusts that could reach 35 mph (56 kph) per AccuWeather",
+          "CNN": "Gusts nearing 40 mph by 8 a.m., approaching 50 mph by noon Thursday"
+        }
+      },
+      {
+        "topic": "Who made or decided the postponement",
+        "positions": {
+          "BBC News": "Macy's postponed the parade; Mamdani confirmed extreme weather forced the change",
+          "Axios": "The retailer confirmed the postponement",
+          "Los Angeles Times": "The city of New York, Macy's and NBC decided jointly, per an NBC spokesperson"
+        }
+      },
+      {
+        "topic": "Balloon grounding wind thresholds and rule origin",
+        "positions": {
+          "Axios": "Balloons can't fly when sustained winds exceed 23 mph or gusts exceed 34 mph, per rules announced by former Mayor Rudy Giuliani in 1998; NYPD has ultimate authority",
+          "Associated Press": "Large balloons must stay grounded if sustained winds exceed 23 mph or gusts exceed 34 mph (no rule-origin attribution)"
+        }
+      },
+      {
+        "topic": "Mayor Mamdani's surgery detail",
+        "positions": {
+          "BBC News": "A scheduled surgery (unspecified)",
+          "CNN": "A scheduled foot surgery"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in the dossier. Frames the event around the 100-year milestone ('for first time in 100 years'). No body text available to assess lead or emphasis.",
+      "USA Today": "Headline-only in the dossier. Frames around the practical reschedule ('postponed to Saturday due to weather'). No body text available to assess emphasis.",
+      "BBC News": "Leads on the postponement and safety framing, heavily centering Mayor Mamdani's quotes and the state-of-emergency context for New York, New Jersey, Long Island and Westchester. Gives the most detailed weather/emergency-declaration picture and the highest gust figure (60 mph). Emphasizes history (WWII suspension, 1971 grounding, wartime rubber/helium diversion) and lists specific balloons and performers. Notes Mamdani's comment that there are 'no known specific or credible threats.'",
+      "Axios": "Business-desk framing ('Why it matters'), leading on the commercial/logistical stakes \u2014 record 100 inflatables, 34.3 million viewership record in 2025, power-outage and travel disruption angles. Uniquely details the balloon wind-rule mechanics attributing them to Giuliani in 1998 and noting NYPD authority. Emphasizes Saturday's favorable forecast (sunny, 55\u00b0). Most explicit about historical injury precedents (1997 Cat in the Hat).",
+      "Associated Press": "Feature/color framing centered on the parade's content and heritage rather than the weather disruption itself \u2014 leads with 'Blue Hippo' and the reconstructed lost 1931 balloon, then gives an extensive history of the parade's origins, Tony Sarg, Goodyear balloons and animal performers. The postponement is treated almost as a backdrop. Richest on lineup detail (Queen Latifah, Keke Palmer, JoJo, Jimmy Fallon, Broadway medley, Dolly Parton tribute).",
+      "CNN": "Leads on the first-ever-postponement framing and the logistical magnitude of rescheduling (law enforcement, city agencies, volunteers). Provides the most granular hour-by-hour wind/rain timeline. Uniquely reports that Philadelphia canceled its Thanksgiving Day parade and cites the 1998 'Where the Wild Things Are' balloon damage in addition to the 1997 Cat in the Hat injury.",
+      "Los Angeles Times": "Television-desk framing centered on the broadcast logistics \u2014 leads on the NBC decision and air times across time zones (NBC, Telemundo, Peacock, Pacific schedule). Attributes the decision jointly to the city, Macy's and NBC via an NBC spokesperson. Notes 'Today' anchors hosting and a Countdown special adding an Al Roker segment on the wind conditions."
+    },
+    "primary_source_alignment": [
+      "No primary sources (official Macy's statement, NYPD authorization, National Weather Service advisory text, or state emergency declarations) were located for this story. All weather figures, quotes, and the postponement decision are reported secondhand through the outlets, several citing NBC, AccuWeather, or the National Weather Service without direct document excerpts."
+    ],
+    "missing_context": [
+      "No outlet provides a confirmed list of which performers and celebrities will actually be able to appear on the rescheduled Saturday date \u2014 all note this is unresolved.",
+      "No outlet quantifies the financial cost of the postponement to Macy's; BBC only notes the company is 'working through what costs it could cover.'",
+      "The actual recorded wind conditions on Thursday (versus forecasts) are not reported, since the dossier is datelined before the originally scheduled parade; only projections are given.",
+      "Outlets diverge on whether re-inflation happens Friday (CNN) or is simply ahead of Saturday (BBC); no source reconciles the timeline.",
+      "The exact chain of decision authority is unclear \u2014 BBC/Axios attribute the call to Macy's, LA Times attributes it to a joint city/Macy's/NBC decision, and Axios notes NYPD holds ultimate balloon authority; no source resolves who had final say.",
+      "No outlet reports the broader regional impact beyond the parade (power outages, Thanksgiving travel disruptions) in detail, though Axios and CNN gesture at it.",
+      "No primary-source documentation (official press release text, emergency-declaration orders) was available to independently verify the quotes and figures attributed to officials and Macy's."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Five outlets with full body text corroborate the same core facts with no substantive conflict over what happened \u2014 the divergences are in emphasis (business, TV, history, logistics) and minor figures rather than contested substance, making this a straightforward multi-source REPORT rather than a coverage-war META.",
+    "confidence": 0.86
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObWhPYmVCWGllQUlkVVlDc2xCb1puNVJmRzRxb0M0TkxUXzJhUF96ZW9HalhkbHdCODVNcW40ZXZrTEhWR0ZpUHZZU1JmZ29TbXdZR2ZLMlNnMzJ2eUhaUXp4VkJOV2RvVnNweTdWbkFuUWptYmRCblc5aXBtOXlQSy1TSHpHQjRrUUpuYXIweEZtbldKSTltWG9US2p3eGZ6UTlBSjE5YW1qdGNsdVI3Y0wxeURLdF9IS1d3c3NuNVpxdTJfQmN5UmpjZ1ZZbFlW?oc=5",
+      "title": "Macy's Thanksgiving Day Parade postponed due to weather for first time in 100 years - Reuters"
+    },
+    {
+      "outlet": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSlpZam1sMjVzWG92OE0xUFJ0YnJGU25ZZVB2dU5sR01ZN3JqQUdvcXV1NEFYaTd3RnNkbzRJU3VKSmowSzBRMEdIRHFQcFRDdy1Sd0g5QmdRWV9jMTljV2VGb3R6ZmdlU3BvLWtOOG12NURuWkVvMmxTWG5JYUxCWHRSc21MNWd5dmljMVg4eUJfaTFrTHRDUERwRlZVczJrMmdDcA?oc=5",
+      "title": "Macy's Thanksgiving Day Parade postponed to Saturday due to weather - USA Today"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE50QUNpS0xGNXpWaUlldGtRQzl6cHdwZFFtSlRKTFR0XzUtU1JEd2c1REhZa1U5YW9ZeVFYSk9EQXFaWHZ6NUJIVmtlRmVGUGNoWUlwZVpKMW9jcTg?oc=5",
+      "title": "Macy's postpones Thanksgiving parade due to severe weather - BBC"
+    },
+    {
+      "outlet": "Axios",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNU9fSWwxVXF0VnltZ3FiOWlpTzJ2ZzR3aWV0UVMycm50dWpLOExIZGlHMjJvNk9hUkhkbEdKTGZKcHBhODVPMFFDZ2s4N3hmU3RhWU5YaGxZRHd6MGpSYWVtcXA2NjItREttZHQzWXlZdTZNRG5WVUhrWVlfSE9WLXA2blk0a1E?oc=5",
+      "title": "Macy's Thanksgiving parade postponed for the first time in the event's history - Axios"
+    },
+    {
+      "outlet": "Associated Press",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORm14bFpCNEQ3SVZfb1VRZEpuWGw3dXpPVjZYRS1zTFJvU2Q2cEZBMGVJNGNOZjVQMGtPTzJWeXo0WldmV0xzN0hjV2djWlRYMThidUZleHVNVTYxcFdBLW94UllVbG9jd0xQMTlyQ3FOdkNIQnpoODhsZmlsUFVEVXUwYzE4MFVaRDl0MGx4NWxLVTNMeXAtd0ZR?oc=5",
+      "title": "A postponed Macy\u2019s Thanksgiving Day Parade to celebrate a milestone with Blue Hippo and Bluey - AP News"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5jcGtDOG81WDYxMW5zZWFuLTZadm1UeWtjNE4xVkRJODN2QUg4OVJOMzJid2dWSlMyZ3ZlQUdKYjFTSWxxXzlOdjJxR0dUZWtpWWdLYVFFeXNRb19OaGFGcmQxRWUxWXE1VHFwMHpZcTdUOHhJRFB5MldUaUJXZw?oc=5",
+      "title": "100th Macy\u2019s Thanksgiving Day Parade moved to Saturday due to projected storm - CNN"
+    },
+    {
+      "outlet": "Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQS3FhRlhac3ExS2lwZVpkS0E5VHBsaFcwN1pfdDlnOWZFR1FBTmRaeGNzV0E2N1RqdHNzSDdOWHEtQkJlOUlUT2oxaENyRnNscGZDalljQU5SRy14d0xpNHJxWVFONGFtLU16NEVROG9UQjROMDJDd19PVHBuLWRhSGtmdExIZ050a29MNE9lNjcxXzk5UmFDX2xKYUVmZU5PdTI4NQ?oc=5",
+      "title": "Macy\u2019s Thanksgiving Day Parade postponed to Saturday due to weather - Los Angeles Times"
+    }
+  ]
+}
