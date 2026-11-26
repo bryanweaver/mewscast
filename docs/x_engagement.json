@@ -1,8 +1,47 @@
 {
-  "last_updated": "2026-11-25T05:06:54.767920+00:00",
+  "last_updated": "2026-11-26T04:32:55.399757+00:00",
   "window_days": 14,
   "request_count": 1,
   "posts": [
+    {
+      "x_tweet_id": "2125757890569101522",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-26T01:05:50.774039+00:00",
+      "created_at": "2026-11-26T01:05:50+00:00",
+      "topic": "Russia's own figures show it has lost nearly 500,000 people in Ukraine war - BBC",
+      "dossier_id": "2026-11-25-russia-s-own-figures-3d21d3a7f2",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 4
+    },
+    {
+      "x_tweet_id": "2125721978904756695",
+      "post_type": "BULLETIN",
+      "posted_at": "2026-11-25T22:43:08.845253+00:00",
+      "created_at": "2026-11-25T22:43:08+00:00",
+      "topic": "Trump proposing new tariffs on 14 partners including China and EU - The Guardian",
+      "dossier_id": "2026-11-25-trump-proposing-new-tariffs-54c4d6c844",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 3
+    },
+    {
+      "x_tweet_id": "2125477791432855893",
+      "post_type": "REPORT",
+      "posted_at": "2026-11-25T06:32:50.071068+00:00",
+      "created_at": "2026-11-25T06:32:49+00:00",
+      "topic": "Abrego Garcia Voluntarily Leaves U.S., Ending 20-Month Legal Fight - The New York Times",
+      "dossier_id": "2026-11-25-abrego-garcia-voluntarily-leaves-608ff500e9",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "impressions": 12
+    },
     {
       "x_tweet_id": "2125402025416663114",
       "post_type": "BULLETIN",
@@ -27,7 +66,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 6
+      "impressions": 8
     },
     {
       "x_tweet_id": "2125137015511363640",
@@ -53,7 +92,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 12
+      "impressions": 13
     },
     {
       "x_tweet_id": "2125034799798669804",
@@ -118,7 +157,7 @@
       "reposts": 0,
       "replies": 1,
       "quotes": 0,
-      "impressions": 415
+      "impressions": 416
     },
     {
       "x_tweet_id": "2124265976564973589",
@@ -444,45 +483,32 @@
       "replies": 1,
       "quotes": 0,
       "impressions": 22
-    },
-    {
-      "x_tweet_id": "2120612894895153432",
-      "post_type": "REPORT",
-      "posted_at": "2026-11-11T20:21:28.329402+00:00",
-      "created_at": "2026-11-11T20:21:27+00:00",
-      "topic": "White House threatens criminal investigation into Democrats’ oversight efforts - Politico",
-      "dossier_id": "2026-11-11-white-house-threatens-criminal-1a187e27ee",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 2,
-      "quotes": 0,
-      "impressions": 18
     }
   ],
   "averages": {
+    "REPORT": {
+      "count": 30,
+      "likes": 0.23,
+      "reposts": 0.07,
+      "replies": 1.0,
+      "quotes": 0.0,
+      "impressions": 34.4
+    },
     "BULLETIN": {
-      "count": 6,
+      "count": 7,
       "likes": 0.0,
       "reposts": 0.0,
       "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 14.5
-    },
-    "REPORT": {
-      "count": 29,
-      "likes": 0.31,
-      "reposts": 0.07,
-      "replies": 1.03,
-      "quotes": 0.0,
-      "impressions": 35.52
+      "impressions": 12.86
     },
     "ALL": {
-      "count": 35,
-      "likes": 0.26,
-      "reposts": 0.06,
-      "replies": 1.03,
+      "count": 37,
+      "likes": 0.19,
+      "reposts": 0.05,
+      "replies": 1.0,
       "quotes": 0.0,
-      "impressions": 31.91
+      "impressions": 30.32
     }
   }
 }
