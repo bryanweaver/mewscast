@@ -1,0 +1,99 @@
+{
+  "story_id": "2026-11-26-flight-delays-flooding-and-cb978f66dd",
+  "headline_seed": "Flight delays, flooding and outages grow as storm batters East Coast - The Washington Post",
+  "brief": {
+    "story_id": "2026-11-26-flight-delays-flooding-and-cb978f66dd",
+    "consensus_facts": [
+      "A powerful coastal storm hit the US East Coast during Thanksgiving 2026, disrupting travel and causing power outages (Business Insider body; AeroTime body).",
+      "The National Weather Service warned of major coastal flooding, heavy rain, and strong wind gusts along the Eastern Seaboard (Business Insider body cites gusts up to 60 mph via NYC; AeroTime body cites NWS gusts could reach 70 mph).",
+      "The Federal Aviation Administration warned that gusty winds and thunderstorms could slow flights at multiple East Coast airports, including LaGuardia, Newark Liberty, and JFK (Business Insider body; AeroTime body).",
+      "The Transportation Security Administration said it expects to screen more than 3 million travelers on Sunday, November 29 (Business Insider body; AeroTime body).",
+      "All seven outlets' headlines frame the story as a Thanksgiving storm disrupting East Coast travel through flight delays/cancellations, flooding, and power outages."
+    ],
+    "disagreements": [
+      {
+        "topic": "Maximum wind gust forecast",
+        "positions": {
+          "Business Insider": "Reports winds up to 60 mph (per NYC Mayor) and LaGuardia gusts up to 45 mph observed",
+          "AeroTime": "Reports NWS says gusts could reach 70 mph along the Eastern Seaboard, with 65 mph possible at Philadelphia"
+        }
+      },
+      {
+        "topic": "Scale of flight disruption",
+        "positions": {
+          "Business Insider": "Over 1,500 flights delayed and 413 canceled as of 2 p.m. ET Thursday; 6,500+ delayed the day before",
+          "BBC (headline-only)": "More than 1,000 flights cancelled or delayed",
+          "AeroTime": "Does not give a disruption tally; frames FAA expectation of 417,000+ flights over the nine-day holiday period"
+        }
+      },
+      {
+        "topic": "Primary story angle",
+        "positions": {
+          "Business Insider": "Leads on real-time disruption, power outages (800,000+), and the Macy's parade postponement",
+          "AeroTime": "Leads on the forecast/aviation outlook ahead of the storm (published Nov 24)",
+          "The Washington Post (Article 4, headline-only) / Forbes (headline-only)": "Lead on airline travel waivers for East Coast hubs"
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline-only in this dossier. Frames the story as a Thanksgiving storm knocking out power and disrupting flights \u2014 neutral wire phrasing emphasizing both outages and air travel. No body text available to assess lead/burial.",
+      "The Washington Post": "Two entries, both headline-only. Article 2 frames the story as escalating impact ('grow as storm batters East Coast'), using active, intensifying verbs. Article 4 pivots to a service-journalism angle \u2014 airline travel waivers up and down the East Coast. No body text available.",
+      "BBC News": "Headline-only. Leads with a quantified figure ('More than 1,000 flights cancelled or delayed') and frames it around holiday travel disruption. Its number is more conservative than Business Insider's body-text tally. No body text available.",
+      "Business Insider": "Full body text. Leads on live disruption metrics: 1,500+ flights delayed, 413 canceled, 800,000+ power outages (190,000 Virginia, 170,000 Maryland). Notably foregrounds the historic postponement of the 100th Macy's Thanksgiving Day Parade to Saturday and quotes NYC Mayor Zohran Mamdani. Also surfaces a FedEx plane overshooting the Miami runway. Reads as a running disruption roundup with service-guide links.",
+      "AeroTime": "Full body text. An aviation-trade framing published Nov 24 (ahead of the storm), heavy on forecast granularity \u2014 airport-by-airport wind/gust outlooks (ATL, PHL, EWR, JFK, LGA, Boston). Emphasizes the FAA's 417,000-flight holiday projection and the busiest Thanksgiving air traffic in 16 years. Frames the storm as a threat to a record travel period rather than reporting realized impact.",
+      "Forbes": "Headline-only. Frames the story through the airline-response angle \u2014 the 'Big Four' airlines issuing waivers for East Coast hubs on Thursday. Service/consumer orientation. No body text available."
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court filings, press releases, roll-call votes, or official documents were available to compare against outlet reporting.",
+      "The closest to primary material are secondhand citations within body text: Business Insider and AeroTime both quote National Weather Service, FAA, and TSA statements, but the underlying advisories themselves were not provided in the dossier for direct verification."
+    ],
+    "missing_context": [
+      "Only two of seven articles (Business Insider, AeroTime) have retrievable full body text. The other five \u2014 Reuters, both Washington Post entries, BBC, and Forbes \u2014 are headline-only, so their body-level reporting could not be assessed and consensus is limited to what two full bodies corroborate plus shared headline framing.",
+      "No outlet in the available body text reports casualties or injuries attributable to the storm (the FedEx Miami runway overshoot is noted by Business Insider as causing no injuries).",
+      "No body-text source gives a total nationwide cancellation figure that reconciles BBC's '1,000+' headline with Business Insider's '1,500+ delayed / 413 canceled' \u2014 the discrepancy may reflect different snapshot times rather than conflicting counts, but no outlet clarifies this.",
+      "Neither full-text outlet provides restoration timelines for the 800,000+ power outages or official damage/economic estimates.",
+      "No outlet discusses whether the storm's intensity is linked to broader climate patterns, nor compares it to prior Thanksgiving weather events beyond AeroTime's 'busiest in 16 years' air-traffic note.",
+      "No instruction-injection attempts were detected in any article body."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Seven outlets across the slant matrix cover the same storm but split into materially different frames \u2014 live disruption roundup (Business Insider), pre-storm aviation forecast (AeroTime), airline-waiver service angle (Washington Post Article 4, Forbes), and quantified travel disruption (BBC) \u2014 and only two have full body text, making a transparent coverage-comparison the honest post rather than a straight REPORT.",
+    "confidence": 0.55
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNR0Rfd3gyc1VTeUhmeUlWc2duZUxMMW03cmFieHhuRzB4QlVlZGxxOWt1emQ0cjRqbmtYYmZrRDFZeG5fM3BRbk9rbkNFTE84OXpHWDZCQ25fWWtEdi1pTFZpa0xwWmpfR3Y2S2JHQkxmcW83NW1IRkNkRXREYjdPUFFTUkxXN2V3dEp3V1pqRTg0c1c5OEhfaUxtREY3anpLV3JSQkhJbW90aHhPZ3dFM1drWlQ3TkJiZG8ybzJCUkY?oc=5",
+      "title": "Thanksgiving storm knocks out power, disrupts flights on US East Coast - Reuters"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVV91OWdaQ1cwTHRxZU5wdzBlZjViam1uYmV3Wmd1bTV1QjJlS2dXLW1STjA1WTFUWElVdlNpMDF1Tk5BZmY4MTN4WVU1UHoyN1NoNUxZdXVkdzFzRVFpZWNfVzl3TW9iRTJNU2xaS3J1SWQ1OGpxV3NwdFhHOU1iSUtYWG9tYlZVX2lVR21yWFZIS1NkQWxOODVlS2dNalRwR01JbUZ0NmhKNVpLMkJHYTZmb1IyVkZaSHZGUEdOZzNlcDQ?oc=5",
+      "title": "Flight delays, flooding and outages grow as storm batters East Coast - The Washington Post"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE45bUpwdlMwTTBqVE5uMnQ0TXQyQ0hnLUVlU1B2akk2bmxaMTQyUG9BOG1xaFE4RUpERmlMS3NQVGJ6ek84Um1UX25PTWJ5Z0Jzd1FaamtsWlZjcjg?oc=5",
+      "title": "More than 1,000 flights cancelled or delayed in US as weather disrupts Thanksgiving travel - BBC"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRDl1dTZfMnVQdzlxX2paS2RpTW1SYnM3TV9LZE9YblFOWTZxcFM0YWtIQmtjcmktR09QTjNoREo4WHRSeUtFRGNYWHBqQ3djamVScGp2WkxZdHcyb09oSy1GSXhxSXFOaHN1aGpScWxsdmc2MDJuZU9DTDhKSkhCbjlING5HY1BHdHdqd3VoRGVlcmN0empqcVpwUG1UVmw5TnE1U3BRSkxfcTNBbUozTW9zVF8yS3ByakY4?oc=5",
+      "title": "Major airlines offer Thanksgiving travel waivers up and down the East Coast - The Washington Post"
+    },
+    {
+      "outlet": "Business Insider",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1WekdzVi1ZVy1ZSVJydTIwUV9OU1pkUFVPOFp2Uld1V0VYS3IyaklYU2NrM2ctdFliNXlYbXpzS0ZRLXVueHZDQ1JzdlpXTElCbmlnOHpMbnNfTnhwT1RPMUFzUWtGampzcjAxdWJMaEhyLTZKaUJzdjJjcnlqdw?oc=5",
+      "title": "Storms disrupt Thanksgiving with flight delays, cancellations, and power outages across the US - Business Insider"
+    },
+    {
+      "outlet": "AeroTime",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPbktKTWV2dkFXSDVnRjVPZXZPM2ZuMXRiRjljWGZ5cDIxVEM3RURQUUFSOE0zYkc0VTktS2h3NFZyaEtpVUI1VmJyVmZkbE5nRzNBcUxhZjZXcVN3SFcxLVRpa0xoRmFlWC10SjY3aFBfZVdmZEhyR0dPdFFXU2s5NFJuZ9IBiAFBVV95cUxPSE1KQk1yR1NtZXBmV1BndmlhUXpFXzVvYVlEVWlTNzhsN3pGSGRmejV3YjRMU0xITXNpMW95OTdXeEJWTTJIQ05JbTljbFAzNTd4UmdQRHlMb0NXYlRreDhGNmlEeXJLakVVTVNmREVyWURrWGJXc3RBcUoxQlp0ekpHaHhmTTAz?oc=5",
+      "title": "Major US East Coast storm threatens Thanksgiving flights from Atlanta to Boston - AeroTime"
+    },
+    {
+      "outlet": "Forbes",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZE9EcTV4cHFJUFQxUG5oTXVTVldUYWpPNWg4aU9hSUItSlhyX2NsVXVZRDVDdWNNMHltZVZtTkhfU3BZMk9ESDdGbVlXeDVqQWdoMTlIVUZKbE16QkZsUUU1WUlLZXZ2U20wc3M5a0o3R3RFTzU3NzN0QXZ6OUl4V25meGlNS3duS3kyT2NTbGdOM3E0OTJzMjRVNmVqMmpTY1dTMzZGS0pOVTBBNk41UXFR?oc=5",
+      "title": "Thanksgiving Travel: \u2018Big Four\u2019 Airlines Issue Waivers For East Coast Hubs On Thursday - Forbes"
+    }
+  ]
+}
