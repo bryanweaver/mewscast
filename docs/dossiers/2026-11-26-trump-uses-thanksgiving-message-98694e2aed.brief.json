@@ -1,0 +1,82 @@
+{
+  "story_id": "2026-11-26-trump-uses-thanksgiving-message-98694e2aed",
+  "headline_seed": "Trump uses Thanksgiving message to lash out at political foes, immigrants, federal government - Reuters",
+  "brief": {
+    "story_id": "2026-11-26-trump-uses-thanksgiving-message-98694e2aed",
+    "consensus_facts": [
+      "On Thanksgiving Day 2026, President Trump posted a lengthy holiday message on social media that, alongside well-wishes, aired grievances against critics, immigrants, and parts of the federal government (corroborated by CBS News body text and multiple outlet headlines including Reuters, The Hill, USA Today, and Forbes).",
+      "Trump's message attacked economic data, specifically characterizing GDP/economic numbers as 'fake' and demanding scrutiny (corroborated by CBS News body text and Forbes headline)."
+    ],
+    "disagreements": [
+      {
+        "topic": "Volume and specificity of Trump's targets",
+        "positions": {
+          "CBS News": "Enumerates specific targets in detail: the Commerce Department over 'fake Economic Numbers,' the 'radical far left,' those seeking to change the court system 'to that of Sharia,' advocates of property redistribution, the Somali community, deported immigrants, and critics of the White House ballroom construction.",
+          "Reuters": "Headline frames targets broadly as 'political foes, immigrants, federal government' (body text not retrievable).",
+          "Forbes": "Headline narrows the emphasis to 'GDP Numbers And Critics' (body text not retrievable).",
+          "The Hill": "Headline characterizes it as a 'wide-ranging Thanksgiving Day rant' (body text not retrievable)."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "Reuters": "Headline 'Trump uses Thanksgiving message to lash out at political foes, immigrants, federal government' uses the active, confrontational verb 'lash out' and lists three categories of targets. Body text not retrievable in this dossier (the Article 1 body is a Google News aggregation link cluster, not article prose). A separate Reuters headline-only item (Article 3) covers the lighter turkey-pardon tradition.",
+      "The Hill": "Headline 'Trump unloads on critics in wide-ranging Thanksgiving Day rant' adopts the most editorially charged language in the dossier, using 'unloads' and the pejorative 'rant.' Body text not retrievable.",
+      "USA Today": "Headline 'Trump uses Thanksgiving message to air grievances, rail at critics' uses 'air grievances' and 'rail,' slightly softer than The Hill but still confrontational. Body text not retrievable.",
+      "CBS News": "The only outlet with full body text. Leads with the setting (Mar-a-Lago, golf club, policy meeting) and the specific Commerce Department 'fake economic numbers' claim, noting Trump cited a GDP revision to 4.3% from 3.4% and demanded an investigation without presenting evidence. CBS explicitly contextualizes that the Commerce Department routinely revises data for accuracy. It itemizes Trump's grievance targets and juxtaposes the message against softer items (turkey pardons, Melania and the Christmas tree) and other news (Iowa detonation, NATO's Rutte meeting). Framing is detailed and fact-checked rather than reliant on a single charged verb.",
+      "Forbes": "Headline 'Trump Uses \u2018Happy Thanksgiving\u2019 Post To Blast GDP Numbers And Critics' foregrounds the economic-data angle (GDP) over the immigration/federal-government angle. Body text not retrievable.",
+      "NPR": "Two headline-only items in the dossier (Articles 2 and 6) do not center on the Trump Thanksgiving message at all; they bundle it within roundups covering Thanksgiving travel storms, an FCC/ABC free-speech ruling, tariffs, and the Iowa post-detonation. NPR's framing effectively buries or omits the Trump message as a standalone story.",
+      "The New York Times": "The single dossier item is a headline-only video feature 'How a Thanksgiving Tradition Connects to Presidential Powers,' focused on the turkey-pardon tradition rather than the grievance message. Does not cover the lash-out angle."
+    },
+    "primary_source_alignment": [
+      "No primary source was located for this story. Trump's actual Thanksgiving social-media post is the underlying primary document, but its verbatim full text was not provided in the dossier; only CBS News quoted fragments of it directly.",
+      "CBS News is the only outlet to quote the post's language directly (e.g., 'those that are looking to change our Court System to that of Sharia,' 'those who refuse to work'), but without the complete post, these quotes cannot be independently verified against the source within this dossier."
+    ],
+    "missing_context": [
+      "Single-source limitation: only one of seven dossier articles (CBS News) has retrievable full body text exceeding ~500 characters. Reuters, The Hill, USA Today, and Forbes provided headlines only, so the detailed grievance list and the GDP-revision figures rest on a single outlet and cannot be treated as wire consensus.",
+      "The full verbatim text of Trump's Thanksgiving post is not in the dossier, so readers cannot see the complete context or ordering of his statements beyond CBS's selected excerpts.",
+      "No outlet in the dossier provides reaction or response from the Commerce Department, immigrant groups, the Somali community, or the 'radical far left' targets named in the post.",
+      "The claim that Republicans 'suffered heavy losses' in the midterms appears only in CBS's framing and is not corroborated or detailed by other retrievable sources here.",
+      "No outlet quantifies or substantiates Trump's assertion that economic numbers were 'fake'; CBS notes he presented no evidence, but the dossier lacks independent expert assessment of the GDP revision's normalcy beyond CBS's brief note that revisions are routine."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Multiple outlets covered the same Thanksgiving-message event with materially different framings\u2014from The Hill's 'rant' to Forbes' GDP focus to NPR's and NYT's near-omission\u2014making the coverage divergence itself the story. However, confidence is tempered because only CBS News supplied full body text, so most framing contrasts are drawn at the headline level.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQmtPdXRIWFFwMkxPY3ZpT0hvLVRPZVRURVFPbTh1ZVZ6aG1aNnNRU1FocksyRWM4UVJ6amxnd0tpQWdIbU02TEg2elQwY0VjTm9pbFVUNjVNRnA4RENJVTdBRTUwM0tLVktMUW5HNkN3Vm1QY1JuRkMwM3Z6X3F3NUtzWC1LVWF4N01hbTRXSGN1Z2dnTzJ2Y0V5RHlMbmhpQVZXZHp6eDhmcmROb2NHUTNmWFFwMjNsX1RF?oc=5",
+      "title": "Trump uses Thanksgiving message to lash out at political foes, immigrants, federal government - Reuters"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNYkMyUFZBaVREeVFqWEFlR2dJbEI1UG9QSkNJN3ZEQ1ppMkZCY083emZNeUVfdVdDYTJjbkZkcDQ3NURIbjlMQ3BXSnNNY2FzOXhaUzJoY3NLN1puR0Q5QU1BaDZZdVdjcnJRdHFZXzR4b1ctN2lnZVpIZGlfTjk5TUR4QndXSVc1OE9iUGRFOXJ4c1NXalo0U3c4NlhGbllDcVpTUWhHWkxDenNGWmZjOWFpUkR6ZFBjaElJRlEwQWtLMl9CZEN2X2Y4SnFKdjZkMFE?oc=5",
+      "title": "Storms disrupt Thanksgiving travel. And, FCC violated ABC's free speech, judge says - NPR"
+    },
+    {
+      "outlet": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQdzl4aXU2WXR6OXo1N1F1QVNfSDNFWVlrNmI3V2FtcWVaQTY2dEhXendOdjhnVjZUSEFDSFl5WTV0NWZ1YzRxckhKcHFMdmtLamJDSHBhdGFOc0VmcExCLThvMlV1YjBwMWxkTzVrMURDcmxnS2s1c2VJQm5NZl8zSXJJb1RDVThZbFIza0VnY3E1TlRFY1ZGOFhrOVV1ZENrNzF2ZUNwODlxZ3RfT3c?oc=5",
+      "title": "Trump spares Thanksgiving turkeys Freedom and Feathers in annual pardon - Reuters"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUVh2ZGVaaUZRT3VqZ2Y0bmNzdFU2MFB0WHI4YzltaUFtMGR3ZU1kYVgxTTJteDFyZXM1M0lSMHFQbERGeHdjTS0tX1YxTU9sOERNZnhMTndPX29ySExCV3o2Q25GYzA4Z1lDQWJrWVZ4clBpUWJxUWZBUFhZMHdHNncyWnF0cVRUbXNNVDh1TUp6czBiWW9Dd1NybDdIQXJiUGZGUDZzMU0?oc=5",
+      "title": "Video: How a Thanksgiving Tradition Connects to Presidential Powers - The New York Times"
+    },
+    {
+      "outlet": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQaTU5SFExTE5aRTdISVVBdDZHZnNPbktKRWE0ZlFPcEF3eUJUWDBOeF93Sm5nckVMbkJtRERONkZOZ3N3X0NaeWJTT2xpc1dTVWFSejZFZVJSY2M4dHdXdFNVOGMtaUJQcXU1UFlwUXYtYWp5WWZEamszMWJqbmcwcUgwRmt3R2FOOERqTnpJOA?oc=5",
+      "title": "Trump spends Thanksgiving at golf club, accuses Commerce Department of releasing \"fake economic numbers\" - CBS News"
+    },
+    {
+      "outlet": "NPR",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdlF6d1l0dHBpcGt2YWxaRkkzYzBaMnhPX01HY051cFFYWXNSazNqeEhLQUFOZUZ3UVdoYy1mZXlYM1k1VGg0MjNVS0ZLQjhnZjNzRXlqV1lCWlRESWpza3Rja2RoeUN5bk1uT2t2TDlWMEw5WHFFY0tINl9mb1dva1VEM1BYbFpUcUpCLUNQWEhkcFJGMUNhdG5CZUFieG9uLVdYc0tnenktRG5NeWpYdVYyQmstaHpvTEJUbjlvN21ZQQ?oc=5",
+      "title": "Storm Postpones Thanksgiving Day Parade, Trump's New Tariffs, Iowa Post-Detonation - NPR"
+    },
+    {
+      "outlet": "Forbes",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOLUlBNncwU09sMG40eEpQN2VlalpPdjdYbFVUc2g4aHdwNDBJQ21tWFJBOFRzX3hTQ3U5eThxd0V4TW5yMjIzeEJCYmxaeDVxNWNDbVQta01ac21KOUQxRXJUVG5RbW5WeVczRDFRd0t4MXR4SVk5TlZOcW5LMWRLdGpJelVRSXdxVmdlaWpZOEZBcjRaSWloOV9uUm4yVHFoR1lnNjZxSG9EZ2lFV3VnZVMwQjBzRnZUcUt0MF9ZMjdPczg?oc=5",
+      "title": "Trump Uses \u2018Happy Thanksgiving\u2019 Post To Blast GDP Numbers And Critics - Forbes"
+    }
+  ]
+}
