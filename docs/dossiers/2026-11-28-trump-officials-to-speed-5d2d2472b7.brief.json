@@ -1,0 +1,87 @@
+{
+  "story_id": "2026-11-28-trump-officials-to-speed-5d2d2472b7",
+  "headline_seed": "Trump officials to speed president\u2019s projects with special meeting before new Congress - The Washington Post",
+  "brief": {
+    "story_id": "2026-11-28-trump-officials-to-speed-5d2d2472b7",
+    "consensus_facts": [
+      "All seven outlets' headlines or bodies frame a common moment: Democrats are poised to retake control of Congress, and the Trump administration is maneuvering to advance its priorities before that new Congress is seated."
+    ],
+    "disagreements": [
+      {
+        "topic": "Primary thrust of the 'pre-Congress' story",
+        "positions": {
+          "The Washington Post (headline, Article 1)": "Frames it as Trump officials convening a special meeting to speed the president's projects before the new Congress.",
+          "The New York Times (headline, Article 5)": "Frames the same beat as a planning board holding a last-minute meeting to consider Trump's D.C. construction \u2014 a narrower D.C.-permitting angle.",
+          "The New York Times (headline, Article 3)": "Frames the broader Democrats-vs-Trump conflict as something whose casualties may be federal contractors."
+        }
+      },
+      {
+        "topic": "Where congressional leverage against Trump will concentrate",
+        "positions": {
+          "Politico (Article 2)": "Centers Jan. 6 oversight \u2014 committees staffing up with fired DOJ prosecutors, a sixth-anniversary marking, and relocation of a police plaque.",
+          "ABC News (Article 4)": "Centers tariffs \u2014 with Republicans themselves open to revisiting levies, giving Democrats a bipartisan opening.",
+          "The Independent (Article 7)": "Centers the Nvidia/Megaspeed scandal and Huang/Lutnick testimony as the coming oversight flashpoint.",
+          "The Washington Post (headline, Article 6)": "Frames foreign policy as a restraint target, but signals Democrats foresee limits."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The Washington Post": "Two headline-only entries. Article 1 ('officials to speed president's projects with special meeting before new Congress') uses action-verb framing ('speed') that casts the administration as racing a deadline. Article 6 ('Democrats vow to restrain Trump's foreign policy, but foresee limits') pre-hedges Democratic power with the word 'limits.' No body text retrievable for either, so no claims can be verified.",
+      "Politico": "Full body text. Leads hard on the Jan. 6 legacy, framing Trump's final two years as haunted by the Capitol attack. Reports concretely: Democrats plan to formally mark the sixth anniversary (first time since 2022); committees are staffing up from 'the large pool of fired Justice Department prosecutors,' including former Jan. 6 case leaders; Rep. Joe Morelle (D-N.Y.), slated to lead House Administration, intends to relocate a police-honoring plaque from a basement corridor to a tourist-visible spot; Trump pardoned roughly 1,500 rioters, including hundreds convicted of assaulting police. Framing is retrospective and accountability-driven.",
+      "The New York Times": "Two headline-only entries. Article 3 ('In Democrats vs. Trump, the Loser May Be Federal Contractors') frames the partisan fight through its collateral economic damage. Article 5 ('Planning Board to Hold Last-Minute Meeting to Consider Trump's D.C. Construction') narrows to a D.C. permitting/construction angle and echoes the WaPo 'last-minute/special meeting' beat. No body text retrievable, so specifics cannot be verified.",
+      "ABC News": "Full body text (an Associated Press wire story bylined Steven Sloan and Kevin Freking). Leads on Republicans themselves rethinking tariffs, giving Democrats a bipartisan opening. Reports: the administration proposed new tariffs Wednesday targeting China, the EU, Japan, South Korea, Taiwan and nine other partners; quotes named Republicans Todd Young (Ind.), Michael Guest (Miss.), John Kennedy (La.), Mike Rounds (S.D.); notes incoming Senate Finance Chair Ron Wyden (Ore.) has targeted Canada tariffs; frames Trump as a lame duck whose 'lockstep fealty' may be loosening. Includes the editorializing line that there is 'scant evidence' tariffs revived manufacturing.",
+      "The Independent": "Full body text, labeled ANALYSIS by Alex Woodward. Frames the Nvidia/Megaspeed scandal as the coming oversight battle. Reports a concrete testimony schedule: Huang testifies behind closed doors to House committees Dec. 1; general counsel Tim Teter Dec. 2; Huang publicly before Senate Banking Dec. 3 ('Protecting America's AI Advantage'); Lutnick before the same committee Dec. 10. Names Elizabeth Warren and Chris Coons (records-preservation letters), Rep. Jamie Raskin (incoming House Judiciary chair), Sen. Dave McCormick (R-Pa.), and ties Trump's intervention to bring Huang back to AG Todd Blanche and DOJ advice. Opinion/analysis framing throughout, posing the questions Congress 'needs to ask.'"
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No court filings, roll-call votes, press releases, hearing transcripts, or official documents were available in the dossier to check reporting against."
+    ],
+    "missing_context": [
+      "The seed headline story \u2014 Trump officials holding a special meeting to speed the president's projects before the new Congress (Washington Post, Article 1) \u2014 has no retrievable body text, so the brief cannot confirm who is meeting, when, or which projects are being accelerated.",
+      "Only three of seven articles (Politico, ABC News, The Independent) have substantial body text; four (two Washington Post, two New York Times) are headline-only link stubs. This means almost none of the dossier's claims can reach two-outlet body-level corroboration, so consensus is limited to the shared headline-level framing.",
+      "The three full-text articles cover three largely separate storylines (Jan. 6 oversight, tariffs, the Nvidia scandal) rather than the same event, so cross-outlet verification of any single detail is not possible from this dossier.",
+      "No primary source (the planning board's meeting notice, the administration's meeting agenda, the proposed tariff list, or the hearing schedules) was supplied to independently verify dates, named participants, or the specifics reporters attribute to unnamed sources.",
+      "The NYT 'federal contractors' and 'planning board' angles and the WaPo 'foreign policy restraint' angle are asserted only in headlines; the substance behind each is unavailable and should be treated as unverified.",
+      "No article in the dossier contained an apparent instruction-injection attempt."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Seven outlets orbit the same transition moment \u2014 a Democratic Congress arriving as the administration races to lock in priorities \u2014 but each frames a completely different battleground (Jan. 6, tariffs, Nvidia, D.C. construction, contractors, foreign policy), and four are headline-only stubs with no verifiable body text. The story is best told as a coverage map of divergent framings, with an explicit disclosure that only three articles are full-text and no primary source exists.",
+    "confidence": 0.5
+  },
+  "articles": [
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcHowUF95QnR0SlhpUlJPV2NWSHZHMGxrOUx4S2gwbTNXY2h6MWxvQ1lRYlhYcEs5c1JWdTVPVlMwOUs5UVRpOVlub3VibHprOWVHNndja0Y3YUdubmExbHV2T01UMVpobVhpYTl3X2xKX0FtTFBadk5xc3lzWF9fOVZFTk81Z3lTc24xbzR6OHI5alFSM3UwcE9IYThQRmZVR0l5aU9MZ2YzdG9mZFh0cERwakZrc0VtRGNKQko2TXVJZw?oc=5",
+      "title": "Trump officials to speed president\u2019s projects with special meeting before new Congress - The Washington Post"
+    },
+    {
+      "outlet": "Politico",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOYXdnS2JhcW9vMnN1NWRNTFotdmRFNjBzak1Udllsd0Q1Sk9KQld4Rzk5aTJqVzM5V1NFTS1SRWxwdjkyRVJmTWxreTlqNEhCdE9oaTh5SENRLVVwXzA4YWw5UXVlS2k3elRpMGJLSk5aZ1JXZWhmeVBaTG9lR1c2NEFSMkVUUk0?oc=5",
+      "title": "Legacy of Jan. 6 to follow Trump to the end of his presidency - Politico"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTEozOEtCeHdxSEpsaDlMaEFiTnJjRGFDcXp3VExCTGphaFppRzJsV0pRdXVhdTZfd1liTUpsUEw4Z3dTRnRUWV9pZE9VWS14N2JiZk05QUtRT1R3SDJBOS1uX1pZOUZ3Vko4djNjWjVLNHBZWGNZNklrNkdaTEZ6RTRmZ0JySmZPVzB1SlBtalJDRDZ5SDRZYnZaRWJqaHM?oc=5",
+      "title": "In Democrats vs. Trump, the Loser May Be Federal Contractors - The New York Times"
+    },
+    {
+      "outlet": "ABC News",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZWpiaWFfMlFaRm0wbWdQNGRyY0g3WmdublpxREhkS0FnSkZIQk5lbDV6cFhjblM2a2RrLVVyNUdqaWNIVFBKcWJPODIyNXdoeVRrR2ViZVNmcmIxd0lFTWNPbXJ3Mzh4WGVESkdYZlk3eDBXdXNaU3hoUTd4ZlhWUFJqNWFpX2hCaDNJelRVdm9MeWx0aG1NZmtxd2dJWWdfc1M5Q1dYSHNZc3hrS0NLWHBVcWlySGhF0gG-AUFVX3lxTE9mOFgxejN3S3J1WVA5ZFFZdHhCYnJUall5aGktMkdPamFLUmRGNTdwdjZtbnlkS21DRGpzcW1FcHpEYU8wTFpYbU1zaXFhcXJwS0xPYzF5QmRLLVI4b1h1QzBkbHNndkF6LW9CNlhiRjhUdllWR3dFOGhwUV9qUGZqNTQ0NWNBSXFCOHNxY3VUSkM3aG5TQUlqMnYyVUV3VnhrWG95MmYxSGZBc29QY3N1Y1E1RTdxeW5YUUQxZHc?oc=5",
+      "title": "Republicans rethink tariffs, giving Democrats an opening to challenge Trump - ABC News - Breaking News, Latest News and Videos"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYXJwZ1pxZEVBUDBreDBmejRaOVNaSjVUM09DS090eTNBXzJ0UkxxWHZqLUU5RDd6RTMwX2xJbHBFUGZjN2Z3RGFQcWdMeWRIOUFGUE1CbzZhLTFNLUFZdC1kQXg1cFBKOHd5cjRVRklGZzdWRHJFN0tEbnIwaUc0czFqaEE0SVZkOEF4RDQ3MndfYml4WXpwUg?oc=5",
+      "title": "Planning Board to Hold Last-Minute Meeting to Consider Trump\u2019s D.C. Construction - The New York Times"
+    },
+    {
+      "outlet": "The Washington Post",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQS2pPOGI3eGpsamlSRzVfcUtiZWh2LUJqSWp1WVdyNmVfRzYwMWhKcXFaeUlQSEppUGNmOEMyOWJJRHQ3ZDY5Q0x4WnBnUHY2UWVCN0JwNHA5TVZPLXhSckhVQVh6cXhLcXJiSlZnQVc0VXRsWUVhTEw2dW5qdmd4Q3kyUHY1dlRCQjFZNHpySEtJZXJKRFZibEhxbnF5RmZJbTBCeW1KbXZqblhfTmQzN01fZ0NmdVZHMC1OWg?oc=5",
+      "title": "Democrats vow to restrain Trump\u2019s foreign policy, but foresee limits - The Washington Post"
+    },
+    {
+      "outlet": "The Independent",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNVWdhTVlIOENzUk94eGVBWDNnemtmXzNUMm4zMDd2TFhRY2t3SDVaTUtLYjZVU3hPdTA0dlNQc2I1U2tYVVZDd3R5X0k4bV9kZVY2TFVwOWthSm5vRDJLQTZ0aXZUanJyQU52MW9FZzVRXzZER0xXeGdfMFlyRjBlOTl2UDBvS2V4ZEZXOEI1eWFDcmZFamhvVWoxU2FXQXp3bmxWUHdRVW5YRlFvYmE5dXVyT0o4RDh4Z2M3dkFSeVgwR1BmX2xPanNB?oc=5",
+      "title": "Lutnick and Huang are testifying about Trump\u2019s Nvidia scandal. Here\u2019s what Congress needs to ask - The Independent"
+    }
+  ]
+}
