@@ -1,0 +1,82 @@
+{
+  "story_id": "2026-11-27-spanish-pm-and-rivals-7c35e99a2d",
+  "headline_seed": "Spanish PM and rivals rally supporters in final pitch for votes - BBC",
+  "brief": {
+    "story_id": "2026-11-27-spanish-pm-and-rivals-7c35e99a2d",
+    "consensus_facts": [
+      "Spain holds a general election on Sunday (November 29, 2026).",
+      "Pedro S\u00e1nchez leads the Socialist party (PSOE) and is the incumbent prime minister.",
+      "Alberto N\u00fa\u00f1ez Feij\u00f3o leads the center-right People's Party (PP), which holds a narrow lead in opinion polls.",
+      "Santiago Abascal leads the far-right anti-immigration party Vox, which could join a PP-led governing coalition.",
+      "Vox promotes a 'remigration' policy for certain immigrants.",
+      "S\u00e1nchez's term was marked by corruption scandals, two deadly high-speed rail crashes in 2026, the Ceuta migrant crisis in summer 2026, and a housing affordability crisis.",
+      "A PP-Vox coalition would mark the first time the far right is part of a Spanish government since the death of dictator Francisco Franco in 1975.",
+      "Housing was a dominant issue in the campaign and in the televised debate; Feij\u00f3o pledged to build homes while S\u00e1nchez framed housing as a right.",
+      "Francisco Franco was Spain's dictator who died in 1975, after which Spain transitioned to democracy."
+    ],
+    "disagreements": [
+      {
+        "topic": "Rail crash casualty figures",
+        "positions": {
+          "BBC News": "References 'rail disasters' but provides no casualty figures.",
+          "CNN": "States two high-speed rail crashes this year killed 115 people and injured more than 300."
+        }
+      },
+      {
+        "topic": "What triggered the snap election",
+        "positions": {
+          "BBC News": "Does not specify the trigger for the snap election.",
+          "CNN": "States the failure to pass emergency measures to curb the housing crisis brought down S\u00e1nchez's coalition and prompted him to call a snap election last month."
+        }
+      },
+      {
+        "topic": "Migrant numbers at Ceuta",
+        "positions": {
+          "BBC News": "Quotes a voter saying more than 70,000 migrants crossed into Ceuta from Morocco in the summer.",
+          "CNN": "Describes a 'deadly surge of migrants into Ceuta in July' without a specific total."
+        }
+      }
+    ],
+    "framing_analysis": {
+      "The New York Times": "Two of three NYT entries are headline-only and off-topic to the election proper. One is an opinion piece headlined 'I Worry the Spanish Are Nostalgic for Franco' \u2014 an alarm-framing editorial invoking the Franco dictatorship; the other ('Vast Marijuana Bunker') is unrelated crime content. No retrievable election body text from NYT, so its reporting cannot be assessed; only the opinion headline signals a frame warning against a rightward/far-right shift.",
+      "BBC News": "Leads on the horse-race drama of final rallies \u2014 S\u00e1nchez's defiance ('I cannot imagine us losing'), Feij\u00f3o's 'new era' pitch, and Vox's Valencia bullring rally. Emphasizes atmospherics (Spanish flags, 'Viva Franco' chants, first-time Vox voters, the 'calladita' sexism clash) and regional electoral math (Andalusia's 61 seats). Neutral correspondent phrasing, balances all four leaders, and foregrounds the possibility of a PP-Vox coalition.",
+      "CNN": "Frames the story through S\u00e1nchez's international standing \u2014 his defiance of Trump, support for Ukraine and Palestinian rights \u2014 then pivots to domestic fatigue (corruption, rail crashes, Ceuta, housing, strikes, blackout) as the force that may unseat him. The headline ('stood up against Trump... his own voters may be about to bring him down') centers a Trump contrast. Notably fact-checks Vox's crime/resource-drain claims as 'not supported by official Spanish data.'"
+    },
+    "primary_source_alignment": [
+      "No primary sources were located for this story. No alignment check against underlying documents (polling releases, electoral law texts, debate transcripts) is possible."
+    ],
+    "missing_context": [
+      "No polling figures or specific margins are given \u2014 Spanish electoral law barred poll publication after Monday, but neither full-text outlet cites the last published numbers.",
+      "No outlet details the exact composition of Spain's 350-seat parliament threshold or what coalition arithmetic would actually be required to form a government.",
+      "CNN's claim that two rail crashes killed 115 people is single-sourced; BBC references 'rail disasters' without numbers, so the casualty figure is not independently corroborated in this dossier.",
+      "Neither full-text outlet addresses the official data on migration-crime links beyond CNN's one-line fact-check; the underlying statistics are not provided.",
+      "The outcome of the election is not reported (dossier is pre-vote, dated November 27 for a November 29 election).",
+      "Only two of four dossier articles (BBC News, CNN) have substantive body text; both NYT election-adjacent entries are headline-only, and the on-point NYT item is an opinion piece, limiting cross-outlet corroboration."
+    ],
+    "suggested_post_type": "REPORT",
+    "suggested_post_type_reason": "Two outlets (BBC News and CNN) provide substantive body text that corroborates the core facts of the pre-election rallies and the stakes, with complementary rather than contradictory framing; the NYT entries are headline-only or opinion and the framing divergence is modest, making a straightforward REPORT the honest fit rather than a META.",
+    "confidence": 0.62
+  },
+  "articles": [
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOZHI5cGF6amtzZHZpdHBFM0NUMWNpQV80R3dvVThrQjk2RS1md3NjcTVlRjlJajh5aHFtbkZtWkIxLTdPWlhKaWwydnBEczZHcmJkVXdDdkhkQkVhSU1odml3THZLbGd0VEEzbUpMRnpHYnpFYVpkenJ6MXhTMXJHdA?oc=5",
+      "title": "Opinion | I Worry the Spanish Are Nostalgic for Franco - The New York Times"
+    },
+    {
+      "outlet": "BBC News",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5BRmFBd1M2LU9Hb2tQTTdrU2xISkctQXZsQXQzSENTdDFUaUstZDRHUXFxMHBVcHUyUDNJd1lrXzlNNmFIOWxkSXdUcEVEWHM0a19SOWxHSncwMFE?oc=5",
+      "title": "Spanish PM and rivals rally supporters in final pitch for votes - BBC"
+    },
+    {
+      "outlet": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWG1ZbTVoNVUtX1hrV1ZfRi1DY0FPcXAwU0hQVzU0Y0RXVmlfcFlKdGp1U190T1RIUVFzR2ZhZjZTSlg3SnltMFR0aDRpX3JXdXNaNnBRT1B2dHhabzJLSk85ek9ybWx6aEJreENyREQ4UUs4d0VIZlhmSDhrNHpUUGNqWnVMV203TkV1Uw?oc=5",
+      "title": "Spanish Police Find a Vast Marijuana Bunker Beneath a Backyard Playground - The New York Times"
+    },
+    {
+      "outlet": "CNN",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNcHByb0VWZ1U5THlzUnR2Q3l3alZ2bXJ0MkE0STJoZGQ5OF9LY3ZNb0pDb181RmJ6SEo3UFFld1FlMzVvY1FMRnVxamNpU2h4T29wR2VXSmYzbXhKRjBMdjNaM0xpdmFmbkdwS2ZvUFdGelRKV205OXRjWXhiMEJOenhlYS00MVdzeUZIY2VubVd5eHBPXzZkVS1WbFBzNzlQUEZWazJISFF2bVlHRDlWS3VubVVLb0I0RzRXTA?oc=5",
+      "title": "Spain election: Sanchez stood up against Trump. His own voters may be about to bring him down - CNN"
+    }
+  ]
+}
